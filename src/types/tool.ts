@@ -31,3 +31,30 @@ export type Tool = {
   long_review?: string;
   faqs: FAQ[];
 };
+
+// Types for Alternatives Page
+export type ComparisonRow = {
+  feature: string;
+  target_tool_value: string | boolean;
+  others: Record<string, string | boolean>;
+};
+
+export type AlternativePageData = {
+  slug: string;
+  target_tool_slug: string;
+  title: string;
+  subtitle: string;
+  updated_at: string;
+  top_picks: {
+    best_overall: string;
+    best_value: string;
+    best_specific: string;
+    specific_label: string;
+  };
+  comparison_table: {
+    headers: string[];
+    rows: ComparisonRow[];
+  };
+  alternatives_list: string[];
+  faqs: FAQ[];
+};
