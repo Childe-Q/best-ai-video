@@ -18,7 +18,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 1.0,
   });
 
-  // 2. Programmatic Pages for each tool
+  // 2. Static Pages
+  routes.push({
+    url: `${BASE_URL}/about`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  });
+  routes.push({
+    url: `${BASE_URL}/privacy`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.5,
+  });
+  routes.push({
+    url: `${BASE_URL}/terms`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.5,
+  });
+
+  // 3. Programmatic Pages for each tool
   tools.forEach((tool) => {
     // Overview Page
     routes.push({
