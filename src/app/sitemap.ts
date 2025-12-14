@@ -5,7 +5,7 @@ import { Tool } from '@/types/tool';
 const tools: Tool[] = toolsData as Tool[];
 
 // Change this to your actual domain
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.your-domain.com';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://best-ai-video.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes: MetadataRoute.Sitemap = [];
