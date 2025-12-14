@@ -1,0 +1,68 @@
+[
+  {
+    "slug": "invideo-alternatives",
+    "target_tool_slug": "invideo",
+    "title": "7 Best InVideo Alternatives & Competitors in 2025",
+    "subtitle": "Looking for better pricing or easier editing? We tested the top AI video tools to help you find the perfect replacement.",
+    "updated_at": "December 2025",
+    "top_picks": {
+      "best_overall": "pictory",
+      "best_value": "descript",
+      "best_specific": "heygen",
+      "specific_label": "Best for AI Avatars"
+    },
+    "comparison_table": {
+      "headers": ["pictory", "heygen", "descript"],
+      "rows": [
+        {
+          "feature": "Starting Price",
+          "target_tool_value": "$20/mo",
+          "others": {
+            "pictory": "$19/mo",
+            "heygen": "$29/mo",
+            "descript": "$12/mo"
+          }
+        },
+        {
+          "feature": "Free Plan",
+          "target_tool_value": "Yes (Watermarked)",
+          "others": {
+            "pictory": "Free Trial (3 videos)",
+            "heygen": "Free Credit",
+            "descript": "Yes (Generous)"
+          }
+        },
+        {
+          "feature": "AI Avatar Quality",
+          "target_tool_value": "Basic",
+          "others": {
+            "pictory": "N/A",
+            "heygen": "Ultra Realistic",
+            "descript": "Voice Only"
+          }
+        },
+        {
+          "feature": "Learning Curve",
+          "target_tool_value": "Medium",
+          "others": {
+            "pictory": "Low (Easy)",
+            "heygen": "Low",
+            "descript": "Medium (New Workflow)"
+          }
+        }
+      ]
+    },
+    "alternatives_list": ["pictory", "heygen", "descript", "synthesia"],
+    "faqs": [
+      {
+        "question": "What is the best free alternative to InVideo?",
+        "answer": "Descript offers a very generous free plan that allows for unlimited screen recording and a good amount of transcription per month without watermarks on 720p exports."
+      },
+      {
+        "question": "Which tool is better for faceless YouTube channels?",
+        "answer": "Pictory is the best choice for faceless channels because it automatically matches stock footage to your script, saving hours of editing time."
+      }
+    ]
+  }
+]
+

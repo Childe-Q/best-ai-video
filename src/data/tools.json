@@ -1,0 +1,152 @@
+[
+  {
+    "id": "1",
+    "slug": "invideo",
+    "name": "InVideo",
+    "logo_url": "/logos/invideo.png",
+    "tagline": "Turn text into video with AI",
+    "short_description": "Best for turning text into video for social media.",
+    "best_for": "Social Media Marketers & YouTubers",
+    "affiliate_link": "https://invideo.io?ref=demo",
+    "pricing": {
+      "free_plan": true,
+      "starting_price": "20",
+      "currency": "$"
+    },
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$20/mo",
+    "rating": 4.8,
+    "features": ["Text to Video", "Stock Media Library", "AI Script Generator"],
+    "pros": ["Very easy to use", "Huge stock library", "Web-based editor"],
+    "cons": ["Watermark on free plan", "Rendering can be slow"],
+    "review_content": "InVideo is a powerful online video editor that simplifies the process of creating professional-quality videos.",
+    "long_review": "<p>InVideo is a game-changer for content creators. Its <strong>Text-to-Video</strong> capability allows you to paste a script, and the AI automatically selects relevant stock footage.</p><p>The platform offers a massive library of over <strong>8 million stock media assets</strong>. The interface is intuitive, making it accessible even for those with zero video editing experience.</p>",
+    "faqs": [
+      {
+        "question": "Is InVideo free to use?",
+        "answer": "Yes, InVideo offers a free plan with watermarks."
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "slug": "heygen",
+    "name": "HeyGen",
+    "logo_url": "/logos/heygen.png",
+    "tagline": "AI Video Generator with Talking Avatars",
+    "short_description": "Create professional videos with AI avatars.",
+    "best_for": "Sales Outreach & L&D Teams",
+    "affiliate_link": "https://heygen.com?ref=demo",
+    "pricing": {
+      "free_plan": true,
+      "starting_price": "29",
+      "currency": "$"
+    },
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$29/mo",
+    "rating": 4.9,
+    "features": ["Custom Avatars", "Voice Cloning", "Text to Speech"],
+    "pros": ["Realistic lip-sync", "High quality avatars", "Easy interface"],
+    "cons": ["Expensive for high usage", "Credit system can be confusing"],
+    "review_content": "HeyGen is a cutting-edge AI video generation platform that specializes in creating realistic talking avatars.",
+    "long_review": "<p>HeyGen is leading the pack when it comes to <strong>AI Avatars</strong>. The lip-sync technology is incredibly realistic. It supports over 40 languages, allowing you to easily localize your content.</p>",
+    "faqs": [
+      {
+        "question": "Does HeyGen support multiple languages?",
+        "answer": "Yes, HeyGen supports over 40 languages."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "slug": "synthesia",
+    "name": "Synthesia",
+    "logo_url": "/logos/synthesia.png",
+    "tagline": "#1 AI Video Generation Platform",
+    "short_description": "Create professional videos without microphones or cameras.",
+    "best_for": "Corporate Training & Enterprise",
+    "affiliate_link": "https://synthesia.io?ref=demo",
+    "pricing": {
+      "free_plan": false,
+      "starting_price": "30",
+      "currency": "$"
+    },
+    "has_free_trial": false,
+    "pricing_model": "Subscription",
+    "starting_price": "$30/mo",
+    "rating": 4.7,
+    "features": ["140+ AI Avatars", "120+ Languages", "Screen Recorder"],
+    "pros": ["Enterprise grade quality", "Multilingual support", "Secure"],
+    "cons": ["No free plan (only demo)", "Can feel slightly robotic"],
+    "review_content": "Synthesia is the market leader in AI avatar video generation. It offers enterprise-grade security and quality.",
+    "long_review": "<p>Synthesia is the go-to choice for <strong>Enterprise</strong> video creation. It focuses heavily on security (SOC 2 compliant) and high-quality avatars.</p>",
+    "faqs": [
+      {
+        "question": "Is there a free trial?",
+        "answer": "Synthesia does not offer a traditional free trial, but you can generate a free demo video."
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "slug": "pictory",
+    "name": "Pictory",
+    "logo_url": "/logos/pictory.png",
+    "tagline": "Video Marketing Made Easy",
+    "short_description": "Automatically create short, highly-sharable branded videos from your long content.",
+    "best_for": "Content Repurposing (Webinars/Zoom)",
+    "affiliate_link": "https://pictory.ai?ref=demo",
+    "pricing": {
+      "free_plan": true,
+      "starting_price": "19",
+      "currency": "$"
+    },
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$19/mo",
+    "rating": 4.6,
+    "features": ["Blog to Video", "Edit Video using Text", "Auto Highlight"],
+    "pros": ["Great for repurposing content", "Auto captioning", "Fast processing"],
+    "cons": ["AI voice quality varies", "Stock footage can be generic"],
+    "review_content": "Pictory uses AI to automatically extract 'golden nuggets' from your long-form recordings.",
+    "long_review": "<p>Pictory is a specialist tool for <strong>Content Repurposing</strong>. If you have long-form content like Zoom recordings, Pictory uses AI to automatically identify the most engaging highlights.</p>",
+    "faqs": [
+      {
+        "question": "Can Pictory edit Zoom recordings?",
+        "answer": "Yes, it is designed to edit webinars and Zoom recordings automatically."
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "slug": "descript",
+    "name": "Descript",
+    "logo_url": "/logos/descript.png",
+    "tagline": "There's a new way to make video and podcasts",
+    "short_description": "All-in-one video and audio editing, as easy as a doc.",
+    "best_for": "Podcasters & Video Editors",
+    "affiliate_link": "https://descript.com?ref=demo",
+    "pricing": {
+      "free_plan": true,
+      "starting_price": "12",
+      "currency": "$"
+    },
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$12/mo",
+    "rating": 4.8,
+    "features": ["Overdub (Voice Cloning)", "Filler Word Removal", "Screen Recording"],
+    "pros": ["Revolutionary text-based editing", "Studio sound", "Collaborative"],
+    "cons": ["Desktop app can be heavy", "Learning curve for new workflow"],
+    "review_content": "Descript is an audio and video editor that works like a word processor. You edit the text, and it edits the media.",
+    "long_review": "<p>Descript has completely revolutionized the editing workflow by treating video/audio editing like <strong>editing a Word document</strong>. You simply delete text from the transcript, and the corresponding video/audio is cut.</p>",
+    "faqs": [
+      {
+        "question": "Is Descript good for podcasts?",
+        "answer": "It is widely considered one of the best tools for podcast editing."
+      }
+    ]
+  }
+]
