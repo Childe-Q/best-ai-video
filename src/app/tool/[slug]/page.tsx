@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import toolsData from '@/data/tools.json';
 import { Tool } from '@/types/tool';
@@ -9,6 +10,31 @@ const tools: Tool[] = toolsData as Tool[];
 
 function getTool(slug: string): Tool | undefined {
   return tools.find((t) => t.slug === slug);
+}
+
+// Weighted Matching System: Find alternatives based on shared tags
+function findBestAlternatives(currentTool: Tool, allTools: Tool[], count: number = 3) {
+  // Filter out the current tool
+  const candidates = allTools.filter((t) => t.id !== currentTool.id);
+  
+  // Calculate shared tags for each candidate
+  const scored = candidates.map((candidate) => {
+    const sharedTags = candidate.tags.filter((tag) => currentTool.tags.includes(tag));
+    return {
+      tool: candidate,
+      sharedTags,
+      score: sharedTags.length,
+    };
+  });
+  
+  // Sort by number of shared tags (highest first)
+  scored.sort((a, b) => b.score - a.score);
+  
+  // Return top N alternatives
+  return scored.slice(0, count).map((item) => ({
+    tool: item.tool,
+    sharedTags: item.sharedTags,
+  }));
 }
 
 export async function generateStaticParams() {
@@ -32,8 +58,8 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
   if (!tool) notFound();
 
-  // Randomly select 2-3 alternatives (excluding current)
-  const alternatives = tools.filter(t => t.id !== tool.id).slice(0, 3);
+  // Use weighted matching to find top 3 alternatives
+  const alternativesWithTags = findBestAlternatives(tool, tools, 3);
 
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans pb-20">
@@ -42,9 +68,32 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
       <header className="bg-gray-50 border-b border-gray-200 py-12 md:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-6 flex justify-center">
-            <div className="h-16 w-16 bg-white rounded-2xl shadow-sm border border-gray-200 flex items-center justify-center text-indigo-600 font-bold text-2xl">
-              {tool.name.charAt(0)}
-            </div>
+            {tool.logo_url && tool.logo_url.endsWith('.svg') ? (
+              // For SVG files, use img tag directly
+              <div className="h-20 w-auto flex items-center justify-center">
+                <img 
+                  src={tool.logo_url} 
+                  alt={`${tool.name} Logo`}
+                  className="h-16 md:h-20 w-auto object-contain"
+                />
+              </div>
+            ) : tool.logo_url ? (
+              // For other image formats, use Next.js Image component
+              <div className="relative h-20 w-20 md:h-24 md:w-24">
+                <Image
+                  src={tool.logo_url}
+                  alt={`${tool.name} Logo`}
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            ) : (
+              // Fallback to initial letter
+              <div className="h-16 w-16 bg-white rounded-2xl shadow-sm border border-gray-200 flex items-center justify-center text-indigo-600 font-bold text-2xl">
+                {tool.name.charAt(0)}
+              </div>
+            )}
           </div>
           <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
             {tool.name} Review, Pricing & Best Alternatives (2025)
@@ -131,6 +180,43 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           </div>
         </section>
 
+        {/* 4.5. Detailed Review with Logo */}
+        {tool.long_review && (
+          <section className="bg-white rounded-2xl border border-gray-200 p-8">
+            <div className="flex flex-col md:flex-row items-start gap-6 mb-6">
+              {tool.logo_url && (
+                <div className="flex-shrink-0">
+                  {tool.logo_url.endsWith('.svg') ? (
+                    <div className="h-24 w-auto">
+                      <img 
+                        src={tool.logo_url} 
+                        alt={`${tool.name} Logo`}
+                        className="h-24 w-auto object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <div className="relative h-24 w-24">
+                      <Image
+                        src={tool.logo_url}
+                        alt={`${tool.name} Logo`}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  )}
+                </div>
+              )}
+              <div className="flex-1">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">In-Depth Review</h2>
+                <div 
+                  className="prose prose-sm max-w-none text-gray-700 leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: tool.long_review }}
+                />
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* 5. Best Alternatives */}
         <section>
            <div className="flex items-center justify-between mb-8">
@@ -140,19 +226,31 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
              </Link>
           </div>
           <div className="space-y-6">
-            {alternatives.map((alt) => (
-              <div key={alt.id} className="group bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md transition-shadow flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
-                <div className="h-14 w-14 bg-gray-50 rounded-lg flex items-center justify-center text-gray-500 font-bold text-xl shrink-0">
-                  {alt.name.charAt(0)}
+            {alternativesWithTags.map(({ tool: alt, sharedTags }) => {
+              // Pick the first matching tag to display as the reason
+              const bestTag = sharedTags.length > 0 ? sharedTags[0] : null;
+              
+              return (
+                <div key={alt.id} className="group bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md transition-shadow flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
+                  <div className="h-14 w-14 bg-gray-50 rounded-lg flex items-center justify-center text-gray-500 font-bold text-xl shrink-0">
+                    {alt.name.charAt(0)}
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-1">
+                      <h3 className="text-lg font-bold text-gray-900">{alt.name}</h3>
+                      {bestTag && (
+                        <span className="text-xs bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded font-medium">
+                          Best for {bestTag}
+                        </span>
+                      )}
+                    </div>
+                    <div className="text-sm text-gray-500 mb-2">Best for: <span className="text-gray-700 font-medium">{alt.best_for}</span></div>
+                    <p className="text-sm text-gray-600 line-clamp-1">{alt.short_description}</p>
+                  </div>
+                  <CTAButton affiliateLink={`/go/${alt.slug}`} hasFreeTrial={alt.has_free_trial} size="sm" className="w-full md:w-auto" />
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-gray-900 mb-1">{alt.name}</h3>
-                  <div className="text-sm text-gray-500 mb-2">Best for: <span className="text-gray-700 font-medium">{alt.best_for}</span></div>
-                  <p className="text-sm text-gray-600 line-clamp-1">{alt.short_description}</p>
-                </div>
-                <CTAButton affiliateLink={`/go/${alt.slug}`} hasFreeTrial={alt.has_free_trial} size="sm" className="w-full md:w-auto" />
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 

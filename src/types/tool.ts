@@ -25,6 +25,7 @@ export type Tool = {
   starting_price: string; 
   rating: number; // Keeping it in type but won't display if not needed
   features: string[];
+  tags: string[]; // e.g., ['Avatar', 'Text-to-Video', 'Editor', 'Repurposing', 'Cheap', 'Professional']
   pros: string[];
   cons: string[];
   review_content: string;

@@ -26,14 +26,39 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
+// Weighted Matching System: Find alternatives based on shared tags
+function findBestAlternatives(currentTool: Tool, allTools: Tool[], count: number = 3) {
+  // Filter out the current tool
+  const candidates = allTools.filter((t) => t.id !== currentTool.id);
+  
+  // Calculate shared tags for each candidate
+  const scored = candidates.map((candidate) => {
+    const sharedTags = candidate.tags.filter((tag) => currentTool.tags.includes(tag));
+    return {
+      tool: candidate,
+      sharedTags,
+      score: sharedTags.length,
+    };
+  });
+  
+  // Sort by number of shared tags (highest first)
+  scored.sort((a, b) => b.score - a.score);
+  
+  // Return top N alternatives
+  return scored.slice(0, count).map((item) => ({
+    tool: item.tool,
+    sharedTags: item.sharedTags,
+  }));
+}
+
 export default async function AlternativesPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const tool = getTool(slug);
 
   if (!tool) notFound();
 
-  // Pick top 3 alternatives (excluding current)
-  const alternatives = tools.filter((t) => t.id !== tool.id).slice(0, 3);
+  // Use weighted matching to find top 3 alternatives
+  const alternativesWithTags = findBestAlternatives(tool, tools, 3);
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900 font-sans pb-20">
@@ -63,33 +88,40 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
 
         {/* 2. Alternatives List */}
         <div className="space-y-8">
-           {alternatives.map((alt) => (
-             <div key={alt.id} className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col md:flex-row">
-                <div className="p-6 md:p-8 flex-1">
-                   <div className="flex items-center gap-4 mb-4">
-                      <div className="h-14 w-14 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 font-bold text-xl shrink-0">
-                        {alt.name.charAt(0)}
-                      </div>
-                      <div>
-                        <h2 className="text-xl font-bold text-gray-900">{alt.name}</h2>
-                        <div className="text-sm text-gray-500">{alt.starting_price}</div>
-                      </div>
-                   </div>
-                   <p className="text-gray-600 mb-6">
-                     {alt.short_description}
-                   </p>
-                   
-                   {/* 3. Why Section */}
-                   <div className="bg-yellow-50 border border-yellow-100 rounded-lg p-4 mb-6">
-                     <p className="text-sm text-yellow-800 font-medium">
-                       <strong>Why choose {alt.name}?</strong> Pick this if you want {alt.best_for.toLowerCase()}.
+           {alternativesWithTags.map(({ tool: alt, sharedTags }) => {
+             // Pick the first matching tag to display as the reason
+             const bestTag = sharedTags.length > 0 ? sharedTags[0] : null;
+             
+             return (
+               <div key={alt.id} className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col md:flex-row">
+                  <div className="p-6 md:p-8 flex-1">
+                     <div className="flex items-center gap-4 mb-4">
+                        <div className="h-14 w-14 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 font-bold text-xl shrink-0">
+                          {alt.name.charAt(0)}
+                        </div>
+                        <div>
+                          <h2 className="text-xl font-bold text-gray-900">{alt.name}</h2>
+                          <div className="text-sm text-gray-500">{alt.starting_price}</div>
+                        </div>
+                     </div>
+                     <p className="text-gray-600 mb-6">
+                       {alt.short_description}
                      </p>
-                   </div>
+                     
+                     {/* 3. Why Section with Shared Tag Badge */}
+                     {bestTag && (
+                       <div className="bg-yellow-50 border border-yellow-100 rounded-lg p-4 mb-6">
+                         <p className="text-sm text-yellow-800 font-medium">
+                           <strong>Best for {bestTag}:</strong> {alt.name} shares the same {bestTag.toLowerCase()} capabilities as {tool.name}.
+                         </p>
+                       </div>
+                     )}
 
-                   <CTAButton affiliateLink={`/go/${alt.slug}`} hasFreeTrial={alt.has_free_trial} />
-                </div>
-             </div>
-           ))}
+                     <CTAButton affiliateLink={`/go/${alt.slug}`} hasFreeTrial={alt.has_free_trial} />
+                  </div>
+               </div>
+             );
+           })}
         </div>
 
         {/* Bottom Section */}
