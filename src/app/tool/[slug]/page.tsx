@@ -70,27 +70,28 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           <div className="mb-6 flex justify-center">
             {tool.logo_url && tool.logo_url.endsWith('.svg') ? (
               // For SVG files, use img tag directly
-              <div className="h-20 w-auto flex items-center justify-center">
+              <div className="h-24 w-24 md:h-28 md:w-28 flex items-center justify-center flex-shrink-0">
                 <img 
                   src={tool.logo_url} 
                   alt={`${tool.name} Logo`}
-                  className="h-16 md:h-20 w-auto object-contain"
+                  className="h-full w-full max-h-24 md:max-h-28 max-w-24 md:max-w-28 object-contain"
                 />
               </div>
             ) : tool.logo_url ? (
               // For other image formats, use Next.js Image component
-              <div className="relative h-20 w-20 md:h-24 md:w-24">
+              <div className="relative h-24 w-24 md:h-28 md:w-28 flex-shrink-0">
                 <Image
                   src={tool.logo_url}
                   alt={`${tool.name} Logo`}
                   fill
                   className="object-contain"
                   priority
+                  sizes="112px"
                 />
               </div>
             ) : (
               // Fallback to initial letter
-              <div className="h-16 w-16 bg-white rounded-2xl shadow-sm border border-gray-200 flex items-center justify-center text-indigo-600 font-bold text-2xl">
+              <div className="h-24 w-24 md:h-28 md:w-28 bg-white rounded-2xl shadow-sm border border-gray-200 flex items-center justify-center text-indigo-600 font-bold text-2xl flex-shrink-0">
                 {tool.name.charAt(0)}
               </div>
             )}
@@ -187,11 +188,11 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
               {tool.logo_url && (
                 <div className="flex-shrink-0">
                   {tool.logo_url.endsWith('.svg') ? (
-                    <div className="h-24 w-auto">
+                    <div className="h-24 w-24 flex items-center justify-center">
                       <img 
                         src={tool.logo_url} 
                         alt={`${tool.name} Logo`}
-                        className="h-24 w-auto object-contain"
+                        className="h-full w-full max-h-24 max-w-24 object-contain"
                       />
                     </div>
                   ) : (
@@ -201,6 +202,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                         alt={`${tool.name} Logo`}
                         fill
                         className="object-contain"
+                        sizes="96px"
                       />
                     </div>
                   )}

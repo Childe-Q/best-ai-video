@@ -408,7 +408,7 @@
     "tagline": "Text to Video with AI Voices",
     "short_description": "Create videos from text using AI voices and stock footage.",
     "best_for": "Bloggers & Content Marketers",
-    "affiliate_link": "https://fliki.ai?ref=demo",
+    "affiliate_link": "https://fliki.ai/?via=jack-shan",
     "pricing": {
       "free_plan": true,
       "starting_price": "21",
@@ -703,57 +703,6 @@
     ]
   },
   {
-    "id": "15",
-    "slug": "hour-one",
-    "name": "Hour One",
-    "logo_url": "",
-    "tagline": "AI Video Presenters for Business",
-    "short_description": "Create professional business videos with AI presenters.",
-    "best_for": "Business Communications & Training",
-    "affiliate_link": "https://hourone.ai?ref=demo",
-    "pricing": {
-      "free_plan": true,
-      "starting_price": "25",
-      "currency": "$"
-    },
-    "has_free_trial": true,
-    "pricing_model": "Freemium",
-    "starting_price": "$25/mo",
-    "rating": 4.5,
-    "features": [
-      "Business Avatars",
-      "Text to Video",
-      "Custom Branding",
-      "Template Library"
-    ],
-    "tags": [
-      "Avatar",
-      "Professional"
-    ],
-    "pros": [
-      "Professional business-focused avatars",
-      "Good for corporate communications",
-      "Custom branding options"
-    ],
-    "cons": [
-      "Limited creative flexibility",
-      "More expensive than alternatives",
-      "Fewer avatar options"
-    ],
-    "review_content": "Hour One focuses on creating professional business videos with AI presenters. It's designed for corporate communications, training, and marketing teams who need consistent, professional video content.",
-    "long_review": "<p>Hour One positions itself as the <strong>business-focused AI video platform</strong>. The avatars are designed to look professional and corporate-appropriate, making them ideal for internal communications, training videos, and customer-facing content. The platform offers custom branding options, allowing companies to maintain brand consistency across all video content.</p><p>While Hour One may not have the creative flexibility of more general-purpose tools, it excels at what it's designed for: creating professional, consistent business videos at scale. The pricing is on the higher side, but the business-focused features and professional avatar quality justify the cost for corporate users.</p>",
-    "faqs": [
-      {
-        "question": "Is Hour One good for corporate training?",
-        "answer": "Yes, Hour One is specifically designed for business use cases including corporate training, with professional avatars and branding options."
-      },
-      {
-        "question": "Can I customize branding in Hour One?",
-        "answer": "Yes, Hour One offers custom branding options, allowing you to maintain brand consistency across all video content."
-      }
-    ]
-  },
-  {
     "id": "16",
     "slug": "deepbrain-ai",
     "name": "DeepBrain AI",
@@ -1012,6 +961,74 @@
       {
         "question": "How much does Steve AI cost?",
         "answer": "Steve AI offers affordable pricing starting at $15/month, making it accessible for small businesses and individual creators."
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "slug": "zebracat",
+    "name": "Zebracat",
+    "logo_url": "/logos/zebracat-logo.png",
+    "tagline": "AI video generator that turns text into high-impact marketing videos",
+    "short_description": "Create professional AI videos with advanced features.",
+    "best_for": "Content Creators & Marketers",
+    "affiliate_link": "http://studio.zebracat.ai/signup/?via=jack-shan",
+    "pricing": {
+      "free_plan": true,
+      "starting_price": "19",
+      "currency": "$"
+    },
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$19/mo",
+    "rating": 4.7,
+    "features": [
+      "Text-to-video",
+      "Auto captions",
+      "Stock library",
+      "Brand kits",
+      "Music sync"
+    ],
+    "tags": [
+      "Text-to-Video",
+      "Marketing",
+      "Social Media",
+      "Viral",
+      "Fast"
+    ],
+    "pros": [
+      "Extremely fast generation",
+      "Optimized for viral social media videos",
+      "Great music & effects sync",
+      "Natural AI voices",
+      "Easy branding"
+    ],
+    "cons": [
+      "Free plan limited to 5 videos/month",
+      "Fewer enterprise features than older tools"
+    ],
+    "review_content": "Zebracat is a cutting-edge AI video generator designed specifically for marketers and content creators in 2025. It excels at transforming text into high-impact marketing videos optimized for social media platforms. The platform stands out for its lightning-fast generation times and viral-optimized templates that help content go viral. With natural AI voices, seamless music synchronization, and easy branding tools, Zebracat makes it effortless to create professional marketing videos that capture attention and drive engagement. Whether you need quick social media content, product demos, or promotional videos, Zebracat delivers impressive results in minutes rather than hours.",
+    "long_review": "<p>Zebracat has emerged as one of the most exciting AI video tools for marketers and creators in 2025. What sets it apart is its laser focus on <strong>viral social media content</strong>. Unlike generic video generators, Zebracat is built from the ground up to create videos that perform exceptionally well on platforms like TikTok, Instagram Reels, and YouTube Shorts.</p><p>The platform's <strong>lightning-fast generation</strong> is a game-changer. While competitors take minutes or even hours to render videos, Zebracat delivers high-quality outputs in seconds. This speed advantage is crucial for marketers who need to capitalize on trending topics or create content on tight deadlines.</p><p>One of Zebracat's standout features is its <strong>music and effects synchronization</strong>. The AI automatically matches background music to your video's pacing and mood, creating a cohesive viewing experience that keeps audiences engaged. The natural AI voices sound remarkably human-like, eliminating the robotic tone that plagues many text-to-speech tools.</p><p>For brands, Zebracat's <strong>easy branding tools</strong> make it simple to maintain consistent visual identity across all videos. You can upload logos, brand colors, and fonts that automatically apply to every video you create. The free plan is generous enough for testing, though serious creators will want the paid plan for unlimited videos and advanced features.</p>",
+    "faqs": [
+      {
+        "question": "How fast is Zebracat compared to other AI video tools?",
+        "answer": "Zebracat is significantly faster than most competitors, generating videos in seconds rather than minutes. This makes it ideal for creating content quickly to capitalize on trends or meet tight deadlines."
+      },
+      {
+        "question": "Is Zebracat good for social media marketing?",
+        "answer": "Yes, Zebracat is specifically optimized for viral social media content. It includes templates and features designed to maximize engagement on platforms like TikTok, Instagram Reels, and YouTube Shorts."
+      },
+      {
+        "question": "What is the free plan limit?",
+        "answer": "The free plan allows you to create 5 videos per month with watermarks. Paid plans start at $19/month and remove watermarks while providing unlimited video generation."
+      },
+      {
+        "question": "Can I use my own branding in Zebracat?",
+        "answer": "Yes, Zebracat offers easy branding tools that let you upload logos, brand colors, and fonts. These automatically apply to all your videos, ensuring consistent brand identity across your content."
+      },
+      {
+        "question": "Does Zebracat support multiple languages?",
+        "answer": "Yes, Zebracat supports multiple languages with natural-sounding AI voices. This makes it easy to create localized content for global marketing campaigns."
       }
     ]
   }

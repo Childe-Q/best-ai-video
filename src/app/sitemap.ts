@@ -37,6 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly',
     priority: 0.5,
   });
+  routes.push({
+    url: `${BASE_URL}/vs`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  });
 
   // 3. Programmatic Pages for each tool
   tools.forEach((tool) => {
@@ -64,6 +70,48 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     });
   });
+
+  // 4. Comparison Pages (VS pages) - Only for tools with overlapping tags (>2 shared tags)
+  // This prevents thin content and focuses on meaningful comparisons
+  const comparisonPairs = new Set<string>();
+  
+  for (let i = 0; i < tools.length; i++) {
+    for (let j = i + 1; j < tools.length; j++) {
+      const toolA = tools[i];
+      const toolB = tools[j];
+      
+      // Calculate shared tags
+      const sharedTags = toolA.tags.filter((tag) => toolB.tags.includes(tag));
+      
+      // Only create comparison if tools share more than 2 tags (meaningful comparison)
+      // OR if both are in top 10 most popular tools (by rating)
+      const topTools = [...tools]
+        .sort((a, b) => b.rating - a.rating)
+        .slice(0, 10)
+        .map((t) => t.slug);
+      
+      const isTopToolPair = topTools.includes(toolA.slug) && topTools.includes(toolB.slug);
+      
+      if (sharedTags.length > 2 || isTopToolPair) {
+        // Create slug: toolA-slug-vs-toolB-slug
+        const slugA = toolA.slug;
+        const slugB = toolB.slug;
+        const comparisonSlug = `${slugA}-vs-${slugB}`;
+        
+        // Avoid duplicates (A vs B is same as B vs A)
+        if (!comparisonPairs.has(comparisonSlug) && !comparisonPairs.has(`${slugB}-vs-${slugA}`)) {
+          comparisonPairs.add(comparisonSlug);
+          
+          routes.push({
+            url: `${BASE_URL}/vs/${comparisonSlug}`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.7,
+          });
+        }
+      }
+    }
+  }
 
   return routes;
 }

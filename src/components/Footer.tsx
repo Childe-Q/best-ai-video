@@ -58,7 +58,7 @@ export default function Footer() {
             © {currentYear} {siteName}. All rights reserved.
           </p>
           <p className="text-xs text-gray-500">
-            Independent reviews. We may earn commissions from purchases made through our links.
+            Disclosure: Some links are affiliate links. We may earn a commission at no extra cost to you.
           </p>
         </div>
       </div>
