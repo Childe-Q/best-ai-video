@@ -3,7 +3,7 @@
     "id": "1",
     "slug": "invideo",
     "name": "InVideo",
-    "logo_url": "/logos/invideo.png",
+    "logo_url": "/logos/InVideo_logo.svg",
     "tagline": "Turn text into video with AI in minutes",
     "short_description": "Best for turning text into video for social media and marketing.",
     "best_for": "Social Media Marketers & YouTubers",
@@ -17,10 +17,26 @@
     "pricing_model": "Freemium",
     "starting_price": "$20/mo",
     "rating": 4.8,
-    "features": ["Text to Video", "Stock Media Library", "AI Script Generator", "Auto Captions"],
-    "tags": ["Text-to-Video", "Editor", "Cheap"],
-    "pros": ["Very easy to use", "Huge stock library with 8M+ assets", "Web-based, no download needed"],
-    "cons": ["Watermark on free plan", "Rendering can be slow for long videos"],
+    "features": [
+      "Text to Video",
+      "Stock Media Library",
+      "AI Script Generator",
+      "Auto Captions"
+    ],
+    "tags": [
+      "Text-to-Video",
+      "Editor",
+      "Cheap"
+    ],
+    "pros": [
+      "Very easy to use",
+      "Huge stock library with 8M+ assets",
+      "Web-based, no download needed"
+    ],
+    "cons": [
+      "Watermark on free plan",
+      "Rendering can be slow for long videos"
+    ],
     "review_content": "InVideo is a powerful online video editor that simplifies the process of creating professional-quality videos. Its AI-powered features allow you to convert text scripts into ready-to-publish videos in minutes.",
     "long_review": "<p>InVideo is a game-changer for content creators who need to produce high-quality videos quickly. Its standout feature is the <strong>Text-to-Video</strong> capability, which allows you to paste a script or a blog post URL, and the AI automatically selects relevant stock footage, adds subtitles, and creates a rough cut for you.</p><p>The platform offers a massive library of over <strong>8 million stock media assets</strong> from iStock, Shutterstock, and Storyblocks, which is a huge value add compared to competitors. The interface is intuitive, making it accessible even for those with zero video editing experience.</p>",
     "faqs": [
@@ -38,7 +54,7 @@
     "id": "2",
     "slug": "heygen",
     "name": "HeyGen",
-    "logo_url": "/logos/heygen.png",
+    "logo_url": "/logos/heygen-logo.png",
     "tagline": "AI Video Generator with Realistic Talking Avatars",
     "short_description": "Create professional videos with AI avatars and voice cloning.",
     "best_for": "Sales Outreach & L&D Teams",
@@ -52,10 +68,25 @@
     "pricing_model": "Freemium",
     "starting_price": "$29/mo",
     "rating": 4.9,
-    "features": ["Custom Avatars", "Voice Cloning", "Text to Speech", "40+ Languages"],
-    "tags": ["Avatar", "Professional"],
-    "pros": ["Ultra-realistic lip-sync technology", "High quality avatars", "Easy interface, no technical skills needed"],
-    "cons": ["Expensive for high usage", "Credit system can be confusing"],
+    "features": [
+      "Custom Avatars",
+      "Voice Cloning",
+      "Text to Speech",
+      "40+ Languages"
+    ],
+    "tags": [
+      "Avatar",
+      "Professional"
+    ],
+    "pros": [
+      "Ultra-realistic lip-sync technology",
+      "High quality avatars",
+      "Easy interface, no technical skills needed"
+    ],
+    "cons": [
+      "Expensive for high usage",
+      "Credit system can be confusing"
+    ],
     "review_content": "HeyGen is a cutting-edge AI video generation platform that specializes in creating realistic talking avatars. It is perfect for training videos, marketing materials, and personalized sales outreach.",
     "long_review": "<p>HeyGen is leading the pack when it comes to <strong>AI Avatars</strong>. The lip-sync technology is incredibly realistic, and the ability to create a custom avatar of yourself (Instant Avatar) in just a few minutes is mind-blowing. This makes it perfect for scaling personalized sales videos or internal training content.</p><p>The platform supports over 40 languages, allowing you to easily localize your content. You can simply type your script, choose a voice, and the avatar will speak it naturally. The interface is clean and modern, making it accessible even for non-technical users.</p>",
     "faqs": [
@@ -87,10 +118,25 @@
     "pricing_model": "Subscription",
     "starting_price": "$30/mo",
     "rating": 4.7,
-    "features": ["140+ AI Avatars", "120+ Languages", "Screen Recorder", "Enterprise Security"],
-    "tags": ["Avatar", "Professional"],
-    "pros": ["Enterprise grade quality and security", "Multilingual support for 120+ languages", "SOC 2 compliant"],
-    "cons": ["No free plan (only demo)", "Can feel slightly robotic compared to HeyGen"],
+    "features": [
+      "140+ AI Avatars",
+      "120+ Languages",
+      "Screen Recorder",
+      "Enterprise Security"
+    ],
+    "tags": [
+      "Avatar",
+      "Professional"
+    ],
+    "pros": [
+      "Enterprise grade quality and security",
+      "Multilingual support for 120+ languages",
+      "SOC 2 compliant"
+    ],
+    "cons": [
+      "No free plan (only demo)",
+      "Can feel slightly robotic compared to HeyGen"
+    ],
     "review_content": "Synthesia is the market leader in AI avatar video generation. It offers enterprise-grade security and quality, making it the top choice for corporate training and internal communications.",
     "long_review": "<p>Synthesia is the go-to choice for <strong>Enterprise</strong> and corporate video creation. It focuses heavily on security (SOC 2 compliant) and high-quality, professional avatars. It is widely used for creating Learning & Development (L&D) content, onboarding videos, and corporate communications.</p><p>With over 140 avatars and 120 languages, it offers immense versatility. The built-in screen recorder and simple slide-based editor make it feel like using PowerPoint for video. Unlike some competitors, Synthesia does not offer a free forever plan, only a free demo video generation.</p>",
     "faqs": [
@@ -108,7 +154,7 @@
     "id": "4",
     "slug": "descript",
     "name": "Descript",
-    "logo_url": "/logos/descript.png",
+    "logo_url": "/logos/descript-logo.svg",
     "tagline": "Edit video and audio like a document",
     "short_description": "All-in-one video and audio editing, as easy as editing text.",
     "best_for": "Podcasters & Video Editors",
@@ -122,10 +168,25 @@
     "pricing_model": "Freemium",
     "starting_price": "$12/mo",
     "rating": 4.8,
-    "features": ["Overdub (Voice Cloning)", "Filler Word Removal", "Screen Recording", "Text-Based Editing"],
-    "tags": ["Editor", "Professional"],
-    "pros": ["Revolutionary text-based editing workflow", "Studio Sound removes background noise", "Collaborative editing features"],
-    "cons": ["Desktop app can be heavy on resources", "Learning curve for new workflow"],
+    "features": [
+      "Overdub (Voice Cloning)",
+      "Filler Word Removal",
+      "Screen Recording",
+      "Text-Based Editing"
+    ],
+    "tags": [
+      "Editor",
+      "Professional"
+    ],
+    "pros": [
+      "Revolutionary text-based editing workflow",
+      "Studio Sound removes background noise",
+      "Collaborative editing features"
+    ],
+    "cons": [
+      "Desktop app can be heavy on resources",
+      "Learning curve for new workflow"
+    ],
     "review_content": "Descript is an audio and video editor that works like a word processor. You edit the text, and it edits the media. It is a game-changer for podcasters and video creators who want a fast, text-based workflow.",
     "long_review": "<p>Descript has completely revolutionized the editing workflow by treating video/audio editing like <strong>editing a Word document</strong>. You simply delete text from the transcript, and the corresponding video/audio is cut. This is incredibly intuitive for podcasters and content creators who are more comfortable with text than timeline editing.</p><p>Key features include <strong>Studio Sound</strong> (which removes echo and background noise instantly), <strong>Overdub</strong> (allowing you to fix voice mistakes by typing), and automatic filler word removal ('ums' and 'ahs'). It is a heavy application, however, and can sometimes be resource-intensive on older computers.</p>",
     "faqs": [
@@ -157,10 +218,24 @@
     "pricing_model": "Freemium",
     "starting_price": "$19/mo",
     "rating": 4.6,
-    "features": ["Auto Clip Generation", "AI Highlights Detection", "Auto Captions", "Multi-Platform Export"],
-    "tags": ["Repurposing"],
-    "pros": ["Saves hours of manual editing", "Intelligent scene detection", "Optimized for TikTok and YouTube Shorts"],
-    "cons": ["Limited customization options", "Requires good source video quality"],
+    "features": [
+      "Auto Clip Generation",
+      "AI Highlights Detection",
+      "Auto Captions",
+      "Multi-Platform Export"
+    ],
+    "tags": [
+      "Repurposing"
+    ],
+    "pros": [
+      "Saves hours of manual editing",
+      "Intelligent scene detection",
+      "Optimized for TikTok and YouTube Shorts"
+    ],
+    "cons": [
+      "Limited customization options",
+      "Requires good source video quality"
+    ],
     "review_content": "Opus Clip uses AI to automatically identify the most engaging moments in your long-form videos and turns them into short, viral-ready clips perfect for TikTok, YouTube Shorts, and Instagram Reels.",
     "long_review": "<p>Opus Clip is a specialist tool for <strong>Content Repurposing</strong>. If you create long-form YouTube videos or podcasts, Opus Clip uses AI to automatically identify the most engaging highlights and turns them into short, social-ready clips. The AI analyzes your video for key moments, interesting quotes, and visual appeal.</p><p>The platform is particularly effective for YouTube creators who want to maximize their content's reach across multiple platforms. It automatically adds captions, selects the best aspect ratios, and even suggests optimal clip lengths for different platforms. The free plan is generous, allowing you to process several videos per month.</p>",
     "faqs": [
@@ -192,10 +267,25 @@
     "pricing_model": "Freemium",
     "starting_price": "$15/mo",
     "rating": 4.9,
-    "features": ["Gen-2 Video Generation", "Inpainting & Outpainting", "Motion Tracking", "Green Screen"],
-    "tags": ["Professional", "Text-to-Video"],
-    "pros": ["Industry-leading AI video quality", "Professional-grade editing tools", "Active creative community"],
-    "cons": ["Steep learning curve", "Credit system can be expensive"],
+    "features": [
+      "Gen-2 Video Generation",
+      "Inpainting & Outpainting",
+      "Motion Tracking",
+      "Green Screen"
+    ],
+    "tags": [
+      "Professional",
+      "Text-to-Video"
+    ],
+    "pros": [
+      "Industry-leading AI video quality",
+      "Professional-grade editing tools",
+      "Active creative community"
+    ],
+    "cons": [
+      "Steep learning curve",
+      "Credit system can be expensive"
+    ],
     "review_content": "Runway is at the forefront of AI video generation technology, offering professional-grade tools for video creation, editing, and manipulation. It's used by filmmakers, content creators, and creative professionals worldwide.",
     "long_review": "<p>Runway is pushing the boundaries of <strong>AI video generation</strong> with its Gen-2 model, which can generate high-quality video from text prompts or images. The platform offers a comprehensive suite of AI-powered editing tools, including inpainting (removing objects), outpainting (extending scenes), and motion tracking.</p><p>What sets Runway apart is its focus on professional creators. The quality of generated videos is among the best in the industry, and the editing tools rival traditional video editing software. However, the credit-based pricing model can get expensive for heavy users, and there's a learning curve to master all the features.</p>",
     "faqs": [
@@ -213,7 +303,7 @@
     "id": "7",
     "slug": "pika",
     "name": "Pika",
-    "logo_url": "/logos/pika.png",
+    "logo_url": "/logos/pika-logo.jpeg",
     "tagline": "AI Video Generation Made Simple",
     "short_description": "Create stunning AI videos from text prompts with ease.",
     "best_for": "Content Creators & Social Media Managers",
@@ -227,10 +317,25 @@
     "pricing_model": "Freemium",
     "starting_price": "$10/mo",
     "rating": 4.7,
-    "features": ["Text to Video", "Image to Video", "Video Extension", "Style Transfer"],
-    "tags": ["Text-to-Video", "Cheap"],
-    "pros": ["Very user-friendly interface", "Fast generation times", "Affordable pricing"],
-    "cons": ["Limited video length", "Fewer advanced features than Runway"],
+    "features": [
+      "Text to Video",
+      "Image to Video",
+      "Video Extension",
+      "Style Transfer"
+    ],
+    "tags": [
+      "Text-to-Video",
+      "Cheap"
+    ],
+    "pros": [
+      "Very user-friendly interface",
+      "Fast generation times",
+      "Affordable pricing"
+    ],
+    "cons": [
+      "Limited video length",
+      "Fewer advanced features than Runway"
+    ],
     "review_content": "Pika makes AI video generation accessible to everyone with its simple interface and fast generation times. It's perfect for creators who want to quickly turn ideas into videos without a steep learning curve.",
     "long_review": "<p>Pika stands out for its <strong>simplicity and speed</strong>. Unlike more complex tools, Pika focuses on making AI video generation accessible to everyone. You can create videos from text prompts or images in just a few clicks, with generation times that are impressively fast.</p><p>The platform is particularly popular among social media creators who need quick, engaging content. While it may not have all the advanced features of professional tools like Runway, Pika excels at what it does: making AI video creation easy and affordable. The free plan is generous, and paid plans start at just $10/month.</p>",
     "faqs": [
@@ -262,10 +367,26 @@
     "pricing_model": "Subscription",
     "starting_price": "$20/mo",
     "rating": 4.8,
-    "features": ["Text to Video", "Long Video Generation", "High Quality Output", "Realistic Physics"],
-    "tags": ["Text-to-Video", "Professional"],
-    "pros": ["Cutting-edge AI technology", "Exceptional video quality", "Realistic physics and motion"],
-    "cons": ["Limited availability", "No free plan", "Requires API access"],
+    "features": [
+      "Text to Video",
+      "Long Video Generation",
+      "High Quality Output",
+      "Realistic Physics"
+    ],
+    "tags": [
+      "Text-to-Video",
+      "Professional"
+    ],
+    "pros": [
+      "Cutting-edge AI technology",
+      "Exceptional video quality",
+      "Realistic physics and motion"
+    ],
+    "cons": [
+      "Limited availability",
+      "No free plan",
+      "Requires API access"
+    ],
     "review_content": "Sora is OpenAI's groundbreaking text-to-video model that can generate high-quality, realistic videos up to 60 seconds long from simple text prompts. It represents the cutting edge of AI video generation technology.",
     "long_review": "<p>Sora represents the <strong>next generation of AI video generation</strong>. Developed by OpenAI, it can create highly realistic videos up to 60 seconds long from text prompts, with impressive understanding of physics, lighting, and motion. The quality of generated videos is among the best available, with realistic character movements and scene transitions.</p><p>However, Sora is currently in limited access, primarily available through API or select partnerships. It requires technical knowledge to integrate and doesn't offer a simple web interface like consumer-focused tools. For early adopters and developers, Sora offers unparalleled quality, but it's not yet accessible to the average user.</p>",
     "faqs": [
@@ -297,10 +418,25 @@
     "pricing_model": "Freemium",
     "starting_price": "$21/mo",
     "rating": 4.6,
-    "features": ["Text to Video", "900+ AI Voices", "Blog to Video", "Auto Subtitles"],
-    "tags": ["Text-to-Video", "Repurposing"],
-    "pros": ["Excellent AI voice quality", "Blog to video conversion", "Large voice library"],
-    "cons": ["Limited video editing features", "Stock footage can be generic"],
+    "features": [
+      "Text to Video",
+      "900+ AI Voices",
+      "Blog to Video",
+      "Auto Subtitles"
+    ],
+    "tags": [
+      "Text-to-Video",
+      "Repurposing"
+    ],
+    "pros": [
+      "Excellent AI voice quality",
+      "Blog to video conversion",
+      "Large voice library"
+    ],
+    "cons": [
+      "Limited video editing features",
+      "Stock footage can be generic"
+    ],
     "review_content": "Fliki specializes in converting text content into engaging videos using AI voices and stock footage. It's particularly powerful for turning blog posts into video content automatically.",
     "long_review": "<p>Fliki excels at <strong>text-to-video conversion</strong>, making it ideal for bloggers and content marketers who want to repurpose written content into video format. The platform offers over 900 AI voices in 75+ languages, with natural-sounding speech that rivals human narration.</p><p>The standout feature is the 'Blog to Video' function, which can automatically convert entire blog posts into video format by extracting key points, matching stock footage, and adding narration. While the video editing capabilities are more limited compared to full-featured editors, Fliki's strength lies in speed and automation for content repurposing.</p>",
     "faqs": [
@@ -332,10 +468,25 @@
     "pricing_model": "Freemium",
     "starting_price": "$19/mo",
     "rating": 4.6,
-    "features": ["Blog to Video", "Edit Video using Text", "Auto Highlight", "Auto Captions"],
-    "tags": ["Repurposing", "Editor"],
-    "pros": ["Great for repurposing long-form content", "Auto captioning", "Fast processing"],
-    "cons": ["AI voice quality varies", "Stock footage can be generic"],
+    "features": [
+      "Blog to Video",
+      "Edit Video using Text",
+      "Auto Highlight",
+      "Auto Captions"
+    ],
+    "tags": [
+      "Repurposing",
+      "Editor"
+    ],
+    "pros": [
+      "Great for repurposing long-form content",
+      "Auto captioning",
+      "Fast processing"
+    ],
+    "cons": [
+      "AI voice quality varies",
+      "Stock footage can be generic"
+    ],
     "review_content": "Pictory uses AI to automatically extract 'golden nuggets' from your long-form recordings (like Zoom calls or webinars) and turns them into short, shareable clips for social media.",
     "long_review": "<p>Pictory is a specialist tool for <strong>Content Repurposing</strong>. If you have long-form content like Zoom recordings, webinars, or podcasts, Pictory uses AI to automatically identify the most engaging highlights and turns them into short, social-ready clips. It also features a 'Blog to Video' mode, where you can paste a URL, and it will summarize the article and create a video with stock footage.</p><p>The 'Edit Video by Text' feature is also a huge time-saver, allowing you to cut video parts by simply deleting text from the transcript. The AI voiceovers are decent but can sound a bit robotic compared to dedicated voice tools. The stock footage selection is good but can sometimes feel generic if not manually curated.</p>",
     "faqs": [
@@ -353,7 +504,7 @@
     "id": "11",
     "slug": "veed-io",
     "name": "Veed.io",
-    "logo_url": "/logos/veed-io.png",
+    "logo_url": "/logos/VEED-Logo.svg",
     "tagline": "Online Video Editor with AI Features",
     "short_description": "Simple video editing with AI-powered tools in your browser.",
     "best_for": "Social Media Creators & Beginners",
@@ -367,10 +518,25 @@
     "pricing_model": "Freemium",
     "starting_price": "$12/mo",
     "rating": 4.7,
-    "features": ["Auto Subtitles", "Video Editing", "Screen Recording", "AI Background Removal"],
-    "tags": ["Editor", "Cheap"],
-    "pros": ["Very easy to use", "Excellent auto-subtitle feature", "No software download needed"],
-    "cons": ["Watermark on free plan", "Limited advanced editing features"],
+    "features": [
+      "Auto Subtitles",
+      "Video Editing",
+      "Screen Recording",
+      "AI Background Removal"
+    ],
+    "tags": [
+      "Editor",
+      "Cheap"
+    ],
+    "pros": [
+      "Very easy to use",
+      "Excellent auto-subtitle feature",
+      "No software download needed"
+    ],
+    "cons": [
+      "Watermark on free plan",
+      "Limited advanced editing features"
+    ],
     "review_content": "Veed.io is a user-friendly online video editor that makes professional video editing accessible to everyone. Its auto-subtitle feature is particularly impressive, automatically generating accurate captions for your videos.",
     "long_review": "<p>Veed.io has built its reputation on <strong>simplicity and accessibility</strong>. As a web-based video editor, it requires no downloads and works on any device with a browser. The interface is clean and intuitive, making it perfect for beginners who are intimidated by complex editing software like Premiere Pro.</p><p>The standout feature is the auto-subtitle generation, which uses AI to create accurate captions in multiple languages. This is invaluable for social media creators who want to improve accessibility and engagement. While Veed.io may not have all the advanced features of desktop editors, it excels at the core tasks most creators need: trimming, adding text, subtitles, and basic effects.</p>",
     "faqs": [
@@ -402,10 +568,26 @@
     "pricing_model": "Subscription",
     "starting_price": "$28/mo",
     "rating": 4.6,
-    "features": ["AI Avatars", "70+ Languages", "Screen Recording", "Template Library"],
-    "tags": ["Avatar", "Professional"],
-    "pros": ["Focused on L&D use cases", "Good avatar quality", "Multilingual support"],
-    "cons": ["No free plan", "More expensive than alternatives", "Limited to training content"],
+    "features": [
+      "AI Avatars",
+      "70+ Languages",
+      "Screen Recording",
+      "Template Library"
+    ],
+    "tags": [
+      "Avatar",
+      "Professional"
+    ],
+    "pros": [
+      "Focused on L&D use cases",
+      "Good avatar quality",
+      "Multilingual support"
+    ],
+    "cons": [
+      "No free plan",
+      "More expensive than alternatives",
+      "Limited to training content"
+    ],
     "review_content": "Colossyan specializes in creating training and educational videos with AI avatars. It's designed specifically for Learning & Development teams who need to create engaging training content at scale.",
     "long_review": "<p>Colossyan has carved out a niche in the <strong>corporate training and L&D space</strong>. Unlike general-purpose AI video tools, Colossyan is specifically designed for creating educational and training content. The platform offers a library of professional avatars optimized for instructional content, with natural gestures and expressions.</p><p>The platform supports 70+ languages, making it ideal for global organizations. The template library includes pre-built structures for common training scenarios, which speeds up content creation. However, Colossyan is more expensive than general-purpose tools and doesn't offer a free plan, which may be a barrier for smaller teams.</p>",
     "faqs": [
@@ -437,10 +619,25 @@
     "pricing_model": "Freemium",
     "starting_price": "$23/mo",
     "rating": 4.5,
-    "features": ["Custom Avatar Creation", "80+ Languages", "PPT to Video", "Template Library"],
-    "tags": ["Avatar"],
-    "pros": ["Custom avatar creation from photos", "Good template selection", "Multilingual support"],
-    "cons": ["Avatar quality varies", "Limited video editing features", "Can be slow to render"],
+    "features": [
+      "Custom Avatar Creation",
+      "80+ Languages",
+      "PPT to Video",
+      "Template Library"
+    ],
+    "tags": [
+      "Avatar"
+    ],
+    "pros": [
+      "Custom avatar creation from photos",
+      "Good template selection",
+      "Multilingual support"
+    ],
+    "cons": [
+      "Avatar quality varies",
+      "Limited video editing features",
+      "Can be slow to render"
+    ],
     "review_content": "Elai.io allows you to create professional videos with AI presenters, including the ability to create custom avatars from your own photos. It's great for marketing teams who need consistent video content.",
     "long_review": "<p>Elai.io stands out for its <strong>custom avatar creation</strong> feature, which allows you to upload a photo and create a personalized AI presenter. This is particularly valuable for brands that want a consistent on-screen presence across all their video content. The platform supports 80+ languages and offers a good selection of templates for different use cases.</p><p>The 'PPT to Video' feature is also useful for converting existing presentations into video format. However, the avatar quality can vary depending on the source photo, and the rendering process can be slower than some competitors. The free plan is limited but allows you to test the core features.</p>",
     "faqs": [
@@ -472,10 +669,26 @@
     "pricing_model": "Freemium",
     "starting_price": "$5/mo",
     "rating": 4.4,
-    "features": ["Photo Animation", "Talking Photos", "Video Cloning", "API Access"],
-    "tags": ["Avatar", "Cheap"],
-    "pros": ["Very affordable pricing", "Unique photo animation feature", "API available for developers"],
-    "cons": ["Limited video length", "Fewer features than competitors", "Basic avatar options"],
+    "features": [
+      "Photo Animation",
+      "Talking Photos",
+      "Video Cloning",
+      "API Access"
+    ],
+    "tags": [
+      "Avatar",
+      "Cheap"
+    ],
+    "pros": [
+      "Very affordable pricing",
+      "Unique photo animation feature",
+      "API available for developers"
+    ],
+    "cons": [
+      "Limited video length",
+      "Fewer features than competitors",
+      "Basic avatar options"
+    ],
     "review_content": "D-ID specializes in animating still images and creating talking photos. It's one of the most affordable AI video tools, making it accessible for small creators and developers.",
     "long_review": "<p>D-ID has a unique focus on <strong>photo animation</strong>, allowing you to bring still images to life by making them talk or move. This creates a distinctive style that's different from traditional AI avatar videos. The platform is one of the most affordable options in the market, with plans starting at just $5/month.</p><p>The API access is a significant advantage for developers who want to integrate AI video capabilities into their own applications. However, D-ID has fewer features compared to more comprehensive platforms, and the video length is limited. It's best suited for short-form content and creative projects rather than long-form video production.</p>",
     "faqs": [
@@ -493,7 +706,7 @@
     "id": "15",
     "slug": "hour-one",
     "name": "Hour One",
-    "logo_url": "/logos/hour-one.png",
+    "logo_url": "",
     "tagline": "AI Video Presenters for Business",
     "short_description": "Create professional business videos with AI presenters.",
     "best_for": "Business Communications & Training",
@@ -507,10 +720,26 @@
     "pricing_model": "Freemium",
     "starting_price": "$25/mo",
     "rating": 4.5,
-    "features": ["Business Avatars", "Text to Video", "Custom Branding", "Template Library"],
-    "tags": ["Avatar", "Professional"],
-    "pros": ["Professional business-focused avatars", "Good for corporate communications", "Custom branding options"],
-    "cons": ["Limited creative flexibility", "More expensive than alternatives", "Fewer avatar options"],
+    "features": [
+      "Business Avatars",
+      "Text to Video",
+      "Custom Branding",
+      "Template Library"
+    ],
+    "tags": [
+      "Avatar",
+      "Professional"
+    ],
+    "pros": [
+      "Professional business-focused avatars",
+      "Good for corporate communications",
+      "Custom branding options"
+    ],
+    "cons": [
+      "Limited creative flexibility",
+      "More expensive than alternatives",
+      "Fewer avatar options"
+    ],
     "review_content": "Hour One focuses on creating professional business videos with AI presenters. It's designed for corporate communications, training, and marketing teams who need consistent, professional video content.",
     "long_review": "<p>Hour One positions itself as the <strong>business-focused AI video platform</strong>. The avatars are designed to look professional and corporate-appropriate, making them ideal for internal communications, training videos, and customer-facing content. The platform offers custom branding options, allowing companies to maintain brand consistency across all video content.</p><p>While Hour One may not have the creative flexibility of more general-purpose tools, it excels at what it's designed for: creating professional, consistent business videos at scale. The pricing is on the higher side, but the business-focused features and professional avatar quality justify the cost for corporate users.</p>",
     "faqs": [
@@ -542,10 +771,29 @@
     "pricing_model": "Subscription",
     "starting_price": "$30/mo",
     "rating": 4.8,
-    "features": ["Ultra-Realistic AI Humans", "100+ Languages", "API Integration", "Enterprise Security", "White-Label Options"],
-    "tags": ["Avatar", "Professional"],
-    "pros": ["Industry-leading realistic AI humans with natural expressions", "Comprehensive API for seamless integration", "Enterprise-grade security and compliance", "Supports 100+ languages for global reach", "White-label options for brand consistency"],
-    "cons": ["No free forever plan (trial available)", "Higher pricing tier for individual creators", "Requires technical knowledge for API integration"],
+    "features": [
+      "Ultra-Realistic AI Humans",
+      "100+ Languages",
+      "API Integration",
+      "Enterprise Security",
+      "White-Label Options"
+    ],
+    "tags": [
+      "Avatar",
+      "Professional"
+    ],
+    "pros": [
+      "Industry-leading realistic AI humans with natural expressions",
+      "Comprehensive API for seamless integration",
+      "Enterprise-grade security and compliance",
+      "Supports 100+ languages for global reach",
+      "White-label options for brand consistency"
+    ],
+    "cons": [
+      "No free forever plan (trial available)",
+      "Higher pricing tier for individual creators",
+      "Requires technical knowledge for API integration"
+    ],
     "review_content": "DeepBrain AI (AI Studios) is a cutting-edge platform that creates incredibly realistic AI human videos using advanced deep learning technology. It's the go-to solution for enterprises and large teams that need scalable, high-quality video production with API integration and extensive customization options.",
     "long_review": "<p>DeepBrain AI, also known as <strong>AI Studios</strong>, stands out as one of the most advanced AI video generation platforms in the market. The platform specializes in creating ultra-realistic AI human presenters with natural movements, expressions, and lip-sync that rivals real human performance. This level of quality makes it perfect for enterprise use cases where brand image and professionalism are paramount.</p><p>What sets DeepBrain AI apart is its comprehensive <strong>API integration</strong> and enterprise-focused features. Organizations can seamlessly integrate AI video generation into their existing workflows, automate content creation at scale, and maintain brand consistency through white-label options. The platform supports over 100 languages, making it ideal for global enterprises that need to localize content across multiple markets. While the pricing is positioned for enterprise budgets, the quality, scalability, and integration capabilities justify the investment for organizations serious about AI video production.</p>",
     "faqs": [
@@ -567,7 +815,7 @@
     "id": "17",
     "slug": "synthesys",
     "name": "Synthesys",
-    "logo_url": "/logos/synthesys.png",
+    "logo_url": "/logos/Synthesys-logo.png",
     "tagline": "AI Voice and Video Studio",
     "short_description": "Create AI videos and voices for marketing and training.",
     "best_for": "Marketing & E-Learning",
@@ -581,10 +829,26 @@
     "pricing_model": "Subscription",
     "starting_price": "$29/mo",
     "rating": 4.5,
-    "features": ["AI Avatars", "AI Voices", "Text to Video", "Multilingual Support"],
-    "tags": ["Avatar", "Professional"],
-    "pros": ["Combines video and voice AI", "Good for e-learning", "Professional quality"],
-    "cons": ["No free plan", "Limited customization", "Can be expensive"],
+    "features": [
+      "AI Avatars",
+      "AI Voices",
+      "Text to Video",
+      "Multilingual Support"
+    ],
+    "tags": [
+      "Avatar",
+      "Professional"
+    ],
+    "pros": [
+      "Combines video and voice AI",
+      "Good for e-learning",
+      "Professional quality"
+    ],
+    "cons": [
+      "No free plan",
+      "Limited customization",
+      "Can be expensive"
+    ],
     "review_content": "Synthesys combines AI video generation with AI voice synthesis, making it a comprehensive solution for creating marketing and training videos with both visual and audio AI.",
     "long_review": "<p>Synthesys is unique in combining <strong>AI video and AI voice</strong> in a single platform. This makes it particularly powerful for e-learning and training content, where you need both a visual presenter and high-quality narration. The platform offers a library of AI avatars and voices that can be used together to create cohesive video content.</p><p>The quality is professional-grade, suitable for customer-facing marketing materials and internal training. However, Synthesys doesn't offer a free plan, and the pricing is on the higher side. The customization options are more limited compared to platforms that focus solely on video or voice, but the integrated approach can save time for teams that need both.</p>",
     "faqs": [
@@ -602,7 +866,7 @@
     "id": "18",
     "slug": "flexclip",
     "name": "FlexClip",
-    "logo_url": "/logos/flexclip.png",
+    "logo_url": "/logos/FlexClip-logo.svg",
     "tagline": "Simple Online Video Editor",
     "short_description": "Easy-to-use video editor with AI features and templates.",
     "best_for": "Small Businesses & Beginners",
@@ -616,10 +880,26 @@
     "pricing_model": "Freemium",
     "starting_price": "$9/mo",
     "rating": 4.4,
-    "features": ["Video Editing", "Template Library", "Stock Media", "Text to Speech"],
-    "tags": ["Editor", "Cheap"],
-    "pros": ["Very affordable", "Easy to use", "Good template selection"],
-    "cons": ["Limited AI features", "Basic editing tools", "Watermark on free plan"],
+    "features": [
+      "Video Editing",
+      "Template Library",
+      "Stock Media",
+      "Text to Speech"
+    ],
+    "tags": [
+      "Editor",
+      "Cheap"
+    ],
+    "pros": [
+      "Very affordable",
+      "Easy to use",
+      "Good template selection"
+    ],
+    "cons": [
+      "Limited AI features",
+      "Basic editing tools",
+      "Watermark on free plan"
+    ],
     "review_content": "FlexClip is an affordable, user-friendly video editor that's perfect for small businesses and beginners. It offers essential editing features with a simple interface and helpful templates.",
     "long_review": "<p>FlexClip positions itself as an <strong>affordable and accessible</strong> video editing solution. With plans starting at just $9/month, it's one of the most budget-friendly options in the market. The interface is clean and intuitive, making it perfect for users who are new to video editing or don't need advanced features.</p><p>The platform offers a good selection of templates for common use cases like social media posts, presentations, and marketing videos. While FlexClip doesn't have the advanced AI features of specialized tools, it provides essential editing capabilities at an unbeatable price point. The free plan is generous but includes watermarks, which is removed in paid plans.</p>",
     "faqs": [
@@ -637,7 +917,7 @@
     "id": "19",
     "slug": "lumen5",
     "name": "Lumen5",
-    "logo_url": "/logos/lumen5.png",
+    "logo_url": "/logos/Lumen5-Logo.svg",
     "tagline": "Create Video Content from Articles",
     "short_description": "Transform blog posts and articles into engaging video content.",
     "best_for": "Content Marketers & Bloggers",
@@ -651,10 +931,26 @@
     "pricing_model": "Freemium",
     "starting_price": "$19/mo",
     "rating": 4.5,
-    "features": ["Article to Video", "Template Library", "Stock Media", "Brand Kit"],
-    "tags": ["Repurposing", "Editor"],
-    "pros": ["Excellent for content repurposing", "Fast article-to-video conversion", "Good brand customization"],
-    "cons": ["Limited video editing features", "Template-based approach", "Can feel repetitive"],
+    "features": [
+      "Article to Video",
+      "Template Library",
+      "Stock Media",
+      "Brand Kit"
+    ],
+    "tags": [
+      "Repurposing",
+      "Editor"
+    ],
+    "pros": [
+      "Excellent for content repurposing",
+      "Fast article-to-video conversion",
+      "Good brand customization"
+    ],
+    "cons": [
+      "Limited video editing features",
+      "Template-based approach",
+      "Can feel repetitive"
+    ],
     "review_content": "Lumen5 specializes in converting written content into video format. It's perfect for content marketers who want to repurpose blog posts and articles into engaging video content for social media.",
     "long_review": "<p>Lumen5 has built its reputation on <strong>content repurposing</strong>, specifically converting articles and blog posts into video format. The platform uses AI to analyze your text, extract key points, and automatically match them with relevant stock footage and visuals. This makes it incredibly fast to create video content from existing written material.</p><p>The brand kit feature allows you to maintain consistent branding across all videos, which is valuable for marketing teams. However, Lumen5's template-based approach means videos can start to look similar if not customized. The platform is best for quick content repurposing rather than original video creation, but it excels at that specific use case.</p>",
     "faqs": [
@@ -672,7 +968,7 @@
     "id": "20",
     "slug": "steve-ai",
     "name": "Steve AI",
-    "logo_url": "/logos/steve-ai.png",
+    "logo_url": "/logos/steve-ai-logo.png",
     "tagline": "AI Video Creator for Everyone",
     "short_description": "Create professional videos with AI in minutes.",
     "best_for": "Content Creators & Small Businesses",
@@ -686,10 +982,26 @@
     "pricing_model": "Freemium",
     "starting_price": "$15/mo",
     "rating": 4.5,
-    "features": ["Text to Video", "AI Avatars", "Template Library", "Auto Subtitles"],
-    "tags": ["Text-to-Video", "Cheap"],
-    "pros": ["User-friendly interface", "Affordable pricing", "Good template selection"],
-    "cons": ["Limited advanced features", "Avatar quality varies", "Can be slow"],
+    "features": [
+      "Text to Video",
+      "AI Avatars",
+      "Template Library",
+      "Auto Subtitles"
+    ],
+    "tags": [
+      "Text-to-Video",
+      "Cheap"
+    ],
+    "pros": [
+      "User-friendly interface",
+      "Affordable pricing",
+      "Good template selection"
+    ],
+    "cons": [
+      "Limited advanced features",
+      "Avatar quality varies",
+      "Can be slow"
+    ],
     "review_content": "Steve AI makes video creation accessible to everyone with its simple interface and affordable pricing. It's perfect for content creators and small businesses who need professional videos without the complexity.",
     "long_review": "<p>Steve AI focuses on <strong>accessibility and ease of use</strong>. The platform is designed for users who want to create professional videos without learning complex editing software. The interface is intuitive, with a template-based approach that makes video creation as simple as filling in a form.</p><p>The pricing is competitive, starting at $15/month, making it accessible for small businesses and individual creators. While Steve AI may not have all the advanced features of premium platforms, it provides everything needed for basic to intermediate video creation. The avatar quality is decent, though it may not match the realism of higher-end tools, but for most use cases, it's more than sufficient.</p>",
     "faqs": [

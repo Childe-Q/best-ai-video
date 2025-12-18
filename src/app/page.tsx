@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import toolsData from '@/data/tools.json';
 import { Tool } from '@/types/tool';
 
@@ -32,10 +33,30 @@ export default function Home() {
             <div key={tool.id} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-300 flex flex-col">
               <div className="p-6 flex-1">
                 <div className="flex items-center justify-between mb-4">
-                  {/* Logo Placeholder - using a colored div if image fails or for MVP */}
-                  <div className="h-12 w-12 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-600 font-bold text-xl">
-                    {tool.name.charAt(0)}
-                  </div>
+                  {/* Logo - display real logo if available, otherwise show letter placeholder */}
+                  {tool.logo_url && tool.logo_url.endsWith('.svg') ? (
+                    <div className="h-12 w-12 flex items-center justify-center" suppressHydrationWarning>
+                      <img 
+                        src={tool.logo_url} 
+                        alt={`${tool.name} Logo`}
+                        className="h-12 w-auto max-w-full object-contain"
+                      />
+                    </div>
+                  ) : tool.logo_url ? (
+                    <div className="relative h-12 w-12" suppressHydrationWarning>
+                      <Image
+                        src={tool.logo_url}
+                        alt={`${tool.name} Logo`}
+                        fill
+                        className="object-contain"
+                        sizes="48px"
+                      />
+                    </div>
+                  ) : (
+                    <div className="h-12 w-12 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-600 font-bold text-xl">
+                      {tool.name.charAt(0)}
+                    </div>
+                  )}
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
                     {tool.pricing_model}
                   </span>
