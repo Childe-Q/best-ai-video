@@ -1,15 +1,24 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Metadata } from 'next';
 import toolsData from '@/data/tools.json';
 import { Tool } from '@/types/tool';
+import { getSEOCurrentYear } from '@/lib/utils';
 
 // Force cast to Tool[] to ensure type safety if JSON import inference is loose
 const tools: Tool[] = toolsData as Tool[];
 
-export const metadata = {
-  title: 'Best AI Video Tools in 2025 | Reviews & Comparisons',
-  description: 'Compare features, pricing, pros & cons, and alternatives of top AI video software.',
-};
+// Calculate dynamic tool count
+const toolCount = tools.length;
+const displayCount = toolCount >= 10 ? `${toolCount}+` : '';
+const seoYear = getSEOCurrentYear();
+
+export function generateMetadata(): Metadata {
+  return {
+    title: `${displayCount ? `${displayCount} ` : ''}Best AI Video Generators & Tools ${seoYear} | Free & Paid Reviews`,
+    description: `Discover ${displayCount ? `${displayCount} ` : ''}best AI video generators for ${seoYear}. Free plans, no watermark, text-to-video, 4K export. In-depth reviews, pricing comparisons & alternatives for YouTube creators.`,
+  };
+}
 
 export default function Home() {
   return (
@@ -18,7 +27,7 @@ export default function Home() {
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 mb-4">
-            Best AI Video Tools in 2025
+            {displayCount ? `${displayCount} ` : ''}Best AI Video Generators in {seoYear} – Free, Tested & Compared
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Compare features, pricing, and alternatives of top AI video software
