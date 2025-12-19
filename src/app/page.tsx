@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Metadata } from 'next';
 import toolsData from '@/data/tools.json';
 import { Tool } from '@/types/tool';
-import { getSEOCurrentYear } from '@/lib/utils';
+import { getSEOCurrentYear, getCurrentMonthYear } from '@/lib/utils';
 
 // Force cast to Tool[] to ensure type safety if JSON import inference is loose
 const tools: Tool[] = toolsData as Tool[];
@@ -12,6 +12,7 @@ const tools: Tool[] = toolsData as Tool[];
 const toolCount = tools.length;
 const displayCount = toolCount >= 10 ? `${toolCount}+` : '';
 const seoYear = getSEOCurrentYear();
+const currentMonthYear = getCurrentMonthYear();
 
 export function generateMetadata(): Metadata {
   return {
@@ -25,12 +26,26 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 text-gray-900 pb-20">
       {/* Hero Section */}
       <header className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 mb-4">
-            {displayCount ? `${displayCount} ` : ''}Best AI Video Generators in {seoYear} – Free, Tested & Compared
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+          {/* Status Pill */}
+          <div className="mb-6">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-700">
+              ✨ Updated {currentMonthYear}
+            </span>
+          </div>
+          
+          {/* H1 Title with Gradient */}
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-gray-900 mb-6">
+            The Ultimate List of {toolCount}+{' '}
+            <span className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 bg-clip-text text-transparent">
+              AI Video Generators
+            </span>{' '}
+            in {seoYear}
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Compare features, pricing, and alternatives of top AI video software
+          
+          {/* Description */}
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto mt-6">
+            Stop guessing. Compare the top {toolCount}+ tools for YouTube, Text-to-Video, and Avatars. Filter by Free Plan, No Watermark, and 4K Export capabilities.
           </p>
         </div>
       </header>
