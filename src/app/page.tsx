@@ -132,6 +132,7 @@ export default function Home() {
                         fill
                         className="object-contain"
                         sizes="56px"
+                        unoptimized
                       />
                     </div>
                   ) : (
