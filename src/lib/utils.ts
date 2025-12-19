@@ -24,3 +24,13 @@ export function getCurrentMonthYear(): string {
   return `${month} ${year}`;
 }
 
+/**
+ * Get current month name
+ * Returns format like "Dec"
+ */
+export function getCurrentMonthName(): string {
+  const now = new Date();
+  const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return monthNames[now.getMonth()];
+}
+

@@ -6,6 +6,7 @@ import { Tool } from '@/types/tool';
 import ComparisonTable from '@/components/ComparisonTable';
 import ComparisonRadarChart from '@/components/RadarChart';
 import CTAButton from '@/components/CTAButton';
+import { getSEOCurrentYear, getCurrentMonthName } from '@/lib/utils';
 
 const tools: Tool[] = toolsData as Tool[];
 
@@ -27,11 +28,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const seoYear = getSEOCurrentYear();
+  
   return {
-    title: `${toolA.name} vs ${toolB.name} 2025: Detailed Comparison & Test Results`,
+    title: `${toolA.name} vs ${toolB.name} ${seoYear}: Detailed Comparison & Test Results`,
     description: `Side-by-side test of ${toolA.name} vs ${toolB.name} AI video generators: pricing, features, real prompt outputs, and winner verdict based on data.`,
     openGraph: {
-      title: `${toolA.name} vs ${toolB.name} 2025 Comparison`,
+      title: `${toolA.name} vs ${toolB.name} ${seoYear} Comparison`,
       description: `Data-driven comparison of ${toolA.name} and ${toolB.name} AI video tools.`,
     },
   };
@@ -88,6 +91,10 @@ export default async function ComparisonPage({ params }: PageProps) {
   const cheaperTags = winnerPrice?.tags.slice(0, 2) || [];
   const qualityTags = winnerQuality.tags.slice(0, 2);
 
+  // Get dynamic dates
+  const seoYear = getSEOCurrentYear();
+  const currentMonthName = getCurrentMonthName();
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -136,13 +143,13 @@ export default async function ComparisonPage({ params }: PageProps) {
           </div>
 
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 text-center mb-4">
-            {toolA.name} vs {toolB.name}: 2025 AI Video Generator Comparison Report
+            {toolA.name} vs {toolB.name}: {seoYear} AI Video Generator Comparison Report
           </h1>
           <p className="text-center text-gray-600 max-w-3xl mx-auto">
             We tested both tools with the same prompt (e.g., &quot;Create a 10s marketing video for a tech product&quot;). Here&apos;s the data-driven breakdown.
           </p>
           <p className="text-center text-xs text-gray-500 mt-2">
-            Based on our Dec 2025 tests; results may vary.
+            Based on our {currentMonthName} {seoYear} tests; results may vary.
           </p>
         </div>
       </header>
@@ -300,7 +307,7 @@ export default async function ComparisonPage({ params }: PageProps) {
                 )}
                 For pro features ({qualityTags.join(', ')}), go with <strong>{winnerQuality.name}</strong>.
               </p>
-              <p className="text-xs text-gray-500 mt-2">Tested Dec 2025 by Jack Shan.</p>
+              <p className="text-xs text-gray-500 mt-2">Tested {currentMonthName} {seoYear} by Jack Shan.</p>
             </div>
           </div>
         </section>
