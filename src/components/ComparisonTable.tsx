@@ -56,9 +56,23 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
   const priceA = parseFloat(toolA.pricing.starting_price.replace(/[^0-9.]/g, ''));
   const priceB = parseFloat(toolB.pricing.starting_price.replace(/[^0-9.]/g, ''));
 
+  // Get unique tags (tags that are NOT shared between both tools)
+  const getUniqueTags = (tool: Tool, otherTool: Tool): string[] => {
+    return tool.tags.filter(tag => !otherTool.tags.includes(tag));
+  };
+
+  const uniqueTagsA = getUniqueTags(toolA, toolB);
+  const uniqueTagsB = getUniqueTags(toolB, toolA);
+
+  // Determine winners for each row
+  const winnerPrice = priceA < priceB ? 'A' : priceB < priceA ? 'B' : null;
+  const winnerRating = toolA.rating > toolB.rating ? 'A' : toolB.rating > toolA.rating ? 'B' : null;
+  const winnerQuality = getOutputQualityScore(toolA) > getOutputQualityScore(toolB) ? 'A' : getOutputQualityScore(toolB) > getOutputQualityScore(toolA) ? 'B' : null;
+  const winnerSpeed = getSpeedScore(toolA) > getSpeedScore(toolB) ? 'A' : getSpeedScore(toolB) > getSpeedScore(toolA) ? 'B' : null;
+
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-      <div className="overflow-x-auto">
+    <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden relative">
+      <div className="overflow-x-auto pb-24 md:pb-0">
         <table className="w-full">
           <thead className="bg-gray-50 border-b-2 border-gray-200">
             <tr>
@@ -112,7 +126,7 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
                   <span>Pricing</span>
                 </div>
               </td>
-              <td className="px-6 py-4 text-center border-l border-gray-100">
+              <td className={`px-6 py-4 text-center border-l border-gray-100 ${winnerPrice === 'A' ? 'bg-green-50/30' : ''}`}>
                 <div className="flex items-center justify-center gap-2">
                   <span className="text-sm font-semibold text-gray-900">{toolA.starting_price}</span>
                   {priceA < priceB && (
@@ -122,7 +136,7 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
                   )}
                 </div>
               </td>
-              <td className="px-6 py-4 text-center border-l border-gray-100">
+              <td className={`px-6 py-4 text-center border-l border-gray-100 ${winnerPrice === 'B' ? 'bg-green-50/30' : ''}`}>
                 <div className="flex items-center justify-center gap-2">
                   <span className="text-sm font-semibold text-gray-900">{toolB.starting_price}</span>
                   {priceB < priceA && (
@@ -172,7 +186,7 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
                   <span>Rating</span>
                 </div>
               </td>
-              <td className={`px-6 py-4 text-center border-l border-gray-100 ${toolA.rating > toolB.rating ? 'bg-yellow-50/50' : ''}`}>
+              <td className={`px-6 py-4 text-center border-l border-gray-100 ${winnerRating === 'A' ? 'bg-green-50/30' : ''}`}>
                 <div className="flex flex-col items-center gap-2">
                   <div className="flex items-center justify-center gap-2">
                     <span className={`text-sm font-semibold ${toolA.rating > toolB.rating ? 'text-yellow-700 font-bold' : 'text-gray-900'}`}>
@@ -204,7 +218,7 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
                   </div>
                 </div>
               </td>
-              <td className={`px-6 py-4 text-center border-l border-gray-100 ${toolB.rating > toolA.rating ? 'bg-yellow-50/50' : ''}`}>
+              <td className={`px-6 py-4 text-center border-l border-gray-100 ${winnerRating === 'B' ? 'bg-green-50/30' : ''}`}>
                 <div className="flex flex-col items-center gap-2">
                   <div className="flex items-center justify-center gap-2">
                     <span className={`text-sm font-semibold ${toolB.rating > toolA.rating ? 'text-yellow-700 font-bold' : 'text-gray-900'}`}>
@@ -248,26 +262,34 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
               </td>
               <td className="px-6 py-4 text-center border-l border-gray-100">
                 <div className="flex flex-wrap gap-1 justify-center">
-                  {toolA.tags.slice(0, 3).map((tag) => (
-                    <span
-                      key={tag}
-                      className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                  {uniqueTagsA.length > 0 ? (
+                    uniqueTagsA.slice(0, 3).map((tag) => (
+                      <span
+                        key={tag}
+                        className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800"
+                      >
+                        {tag}
+                      </span>
+                    ))
+                  ) : (
+                    <span className="text-xs text-gray-500">No unique tags</span>
+                  )}
                 </div>
               </td>
               <td className="px-6 py-4 text-center border-l border-gray-100">
                 <div className="flex flex-wrap gap-1 justify-center">
-                  {toolB.tags.slice(0, 3).map((tag) => (
-                    <span
-                      key={tag}
-                      className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                  {uniqueTagsB.length > 0 ? (
+                    uniqueTagsB.slice(0, 3).map((tag) => (
+                      <span
+                        key={tag}
+                        className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800"
+                      >
+                        {tag}
+                      </span>
+                    ))
+                  ) : (
+                    <span className="text-xs text-gray-500">No unique tags</span>
+                  )}
                 </div>
               </td>
             </tr>
@@ -280,11 +302,25 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
                   <span>Generation Time</span>
                 </div>
               </td>
-              <td className="px-6 py-4 text-center text-sm text-gray-700 border-l border-gray-100">
-                {getSpeedScore(toolA) >= 8 ? '45s' : getSpeedScore(toolA) >= 7 ? '1min' : '1.5min'}
+              <td className={`px-6 py-4 text-center text-sm text-gray-700 border-l border-gray-100 ${winnerSpeed === 'A' ? 'bg-green-50/30' : ''}`}>
+                <div className="flex items-center justify-center gap-2">
+                  <span>{getSpeedScore(toolA) >= 8 ? '45s' : getSpeedScore(toolA) >= 7 ? '1min' : '1.5min'}</span>
+                  {winnerSpeed === 'A' && (
+                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                      Faster
+                    </span>
+                  )}
+                </div>
               </td>
-              <td className="px-6 py-4 text-center text-sm text-gray-700 border-l border-gray-100">
-                {getSpeedScore(toolB) >= 8 ? '45s' : getSpeedScore(toolB) >= 7 ? '1min' : '1.5min'}
+              <td className={`px-6 py-4 text-center text-sm text-gray-700 border-l border-gray-100 ${winnerSpeed === 'B' ? 'bg-green-50/30' : ''}`}>
+                <div className="flex items-center justify-center gap-2">
+                  <span>{getSpeedScore(toolB) >= 8 ? '45s' : getSpeedScore(toolB) >= 7 ? '1min' : '1.5min'}</span>
+                  {winnerSpeed === 'B' && (
+                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                      Faster
+                    </span>
+                  )}
+                </div>
               </td>
             </tr>
 
@@ -296,7 +332,7 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
                   <span>Output Quality Score</span>
                 </div>
               </td>
-              <td className="px-6 py-4 text-center border-l border-gray-100">
+              <td className={`px-6 py-4 text-center border-l border-gray-100 ${winnerQuality === 'A' ? 'bg-green-50/30' : ''}`}>
                 <div className="flex items-center justify-center gap-2">
                   <span className="text-lg font-bold text-gray-900">{getOutputQualityScore(toolA).toFixed(1)}/10</span>
                   {getOutputQualityScore(toolA) > getOutputQualityScore(toolB) && (
@@ -306,7 +342,7 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
                   )}
                 </div>
               </td>
-              <td className="px-6 py-4 text-center border-l border-gray-100">
+              <td className={`px-6 py-4 text-center border-l border-gray-100 ${winnerQuality === 'B' ? 'bg-green-50/30' : ''}`}>
                 <div className="flex items-center justify-center gap-2">
                   <span className="text-lg font-bold text-gray-900">{getOutputQualityScore(toolB).toFixed(1)}/10</span>
                   {getOutputQualityScore(toolB) > getOutputQualityScore(toolA) && (
@@ -349,7 +385,7 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
             </tr>
 
             {/* Action Row */}
-            <tr className="hover:bg-gray-50 transition-colors bg-indigo-50/30">
+            <tr className="hover:bg-gray-50 transition-colors bg-indigo-50/30 md:relative">
               <td className="px-6 py-4 text-sm font-medium text-gray-900">
                 <span>Action</span>
               </td>
@@ -372,6 +408,23 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
             </tr>
           </tbody>
         </table>
+      </div>
+      {/* Sticky Action Row for Mobile */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50 px-4 py-3">
+        <div className="max-w-7xl mx-auto flex gap-3">
+          <a
+            href={`/go/${toolA.slug}`}
+            className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors active:bg-indigo-800"
+          >
+            Visit {toolA.name}
+          </a>
+          <a
+            href={`/go/${toolB.slug}`}
+            className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors active:bg-indigo-800"
+          >
+            Visit {toolB.name}
+          </a>
+        </div>
       </div>
       {/* Trust Element */}
       <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
