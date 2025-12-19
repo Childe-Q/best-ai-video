@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { Metadata } from 'next';
 import toolsData from '@/data/tools.json';
 import { Tool } from '@/types/tool';
@@ -116,23 +115,14 @@ export default function Home() {
               <div className="p-6 flex-1">
                 <div className="flex items-center justify-between mb-4">
                   {/* Logo - display real logo if available, otherwise show letter placeholder */}
-                  {tool.logo_url && tool.logo_url.endsWith('.svg') ? (
+                  {tool.logo_url ? (
                     <div className="h-14 w-14 flex items-center justify-center flex-shrink-0" suppressHydrationWarning>
                       <img 
                         src={tool.logo_url} 
                         alt={`${tool.name} Logo`}
                         className="h-full w-full max-h-14 max-w-14 object-contain"
-                      />
-                    </div>
-                  ) : tool.logo_url ? (
-                    <div className="relative h-14 w-14 flex-shrink-0" suppressHydrationWarning>
-                      <Image
-                        src={tool.logo_url}
-                        alt={`${tool.name} Logo`}
-                        fill
-                        className="object-contain"
-                        sizes="56px"
-                        unoptimized
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   ) : (
