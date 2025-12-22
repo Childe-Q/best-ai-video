@@ -5,6 +5,12 @@ import toolsData from '@/data/tools.json';
 import { Tool } from '@/types/tool';
 import ToolNav from '@/components/ToolNav';
 import CTAButton from '@/components/CTAButton';
+import PricingTable from '@/components/PricingTable';
+import PricingSnapshot from '@/components/PricingSnapshot';
+import Navbar from '@/components/Navbar';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ToolLogo from '@/components/ToolLogo';
+import { getSEOCurrentYear, hasFreePlan, getStartingPrice } from '@/lib/utils';
 
 const tools: Tool[] = toolsData as Tool[];
 
@@ -13,12 +19,41 @@ function getTool(slug: string): Tool | undefined {
 }
 
 // Weighted Matching System: Find alternatives based on shared tags
+// Priority: Always show Fliki, Zebracat, or Veed if they match the category
 function findBestAlternatives(currentTool: Tool, allTools: Tool[], count: number = 3) {
+  // Define affiliate tools (money tools) to prioritize
+  const affiliateTools = ['fliki', 'zebracat', 'veed-io'];
+  
   // Filter out the current tool
   const candidates = allTools.filter((t) => t.id !== currentTool.id);
   
-  // Calculate shared tags for each candidate
-  const scored = candidates.map((candidate) => {
+  // Step 1: Find affiliate tools that match the category (have shared tags)
+  const affiliateMatches: Array<{ tool: Tool; sharedTags: string[]; score: number }> = [];
+  
+  for (const affiliateSlug of affiliateTools) {
+    const affiliateTool = candidates.find((t) => t.slug === affiliateSlug);
+    if (affiliateTool) {
+      const sharedTags = affiliateTool.tags.filter((tag) => currentTool.tags.includes(tag));
+      // Even if they share 0 tags, we still want to show them (force them in)
+      // But prioritize those with shared tags
+      affiliateMatches.push({
+        tool: affiliateTool,
+        sharedTags,
+        score: sharedTags.length + 10, // Add 10 to ensure they rank higher
+      });
+    }
+  }
+  
+  // Sort affiliate matches by score (highest first)
+  affiliateMatches.sort((a, b) => b.score - a.score);
+  
+  // Step 2: Get other candidates (excluding affiliate tools)
+  const otherCandidates = candidates.filter(
+    (t) => !affiliateTools.includes(t.slug.toLowerCase())
+  );
+  
+  // Calculate shared tags for other candidates
+  const otherScored = otherCandidates.map((candidate) => {
     const sharedTags = candidate.tags.filter((tag) => currentTool.tags.includes(tag));
     return {
       tool: candidate,
@@ -27,14 +62,24 @@ function findBestAlternatives(currentTool: Tool, allTools: Tool[], count: number
     };
   });
   
-  // Sort by number of shared tags (highest first)
-  scored.sort((a, b) => b.score - a.score);
+  // Sort other candidates by number of shared tags (highest first)
+  otherScored.sort((a, b) => b.score - a.score);
   
-  // Return top N alternatives
-  return scored.slice(0, count).map((item) => ({
-    tool: item.tool,
-    sharedTags: item.sharedTags,
-  }));
+  // Step 3: Combine results - affiliate tools first, then others
+  // Always prioritize affiliate tools, even if they have 0 shared tags
+  const allAlternatives = [
+    ...affiliateMatches.map((item) => ({
+      tool: item.tool,
+      sharedTags: item.sharedTags,
+    })),
+    ...otherScored.map((item) => ({
+      tool: item.tool,
+      sharedTags: item.sharedTags,
+    })),
+  ];
+  
+  // Return top N alternatives (affiliate tools will be first)
+  return allAlternatives.slice(0, count);
 }
 
 export async function generateStaticParams() {
@@ -46,8 +91,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const tool = getTool(slug);
   if (!tool) return {};
 
+  const seoYear = getSEOCurrentYear();
+
   return {
-    title: `${tool.name} Review, Pricing & Best Alternatives (2025)`,
+    title: `${tool.name} Review, Pricing & Best Alternatives (${seoYear})`,
     description: `Is ${tool.name} worth it? In-depth review of pricing, features, pros & cons, and top competitors like ${tools.find(t => t.id !== tool.id)?.name}.`,
   };
 }
@@ -60,54 +107,35 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
   // Use weighted matching to find top 3 alternatives
   const alternativesWithTags = findBestAlternatives(tool, tools, 3);
+  const seoYear = getSEOCurrentYear();
 
-  return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans pb-20">
+      return (
+        <div className="min-h-screen bg-white text-gray-900 font-sans">
+          <Navbar />
+          
+          {/* Main Content - Centered */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            {/* Breadcrumbs */}
+            <Breadcrumbs toolName={tool.name} toolSlug={tool.slug} />
       
-      {/* 1. Hero Section */}
-      <header className="bg-gray-50 border-b border-gray-200 py-12 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            {/* 1. Hero Section */}
+            <header className="bg-gray-50 border-b border-gray-200 py-12 md:py-20 rounded-lg mb-8">
+              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-6 flex justify-center">
-            {tool.logo_url && tool.logo_url.endsWith('.svg') ? (
-              // For SVG files, use img tag directly
-              <div className="h-24 w-24 md:h-28 md:w-28 flex items-center justify-center flex-shrink-0">
-                <img 
-                  src={tool.logo_url} 
-                  alt={`${tool.name} Logo`}
-                  className="h-full w-full max-h-24 md:max-h-28 max-w-24 md:max-w-28 object-contain"
-                />
-              </div>
-            ) : tool.logo_url ? (
-              // For other image formats, use Next.js Image component
-              <div className="relative h-24 w-24 md:h-28 md:w-28 flex-shrink-0">
-                <Image
-                  src={tool.logo_url}
-                  alt={`${tool.name} Logo`}
-                  fill
-                  className="object-contain"
-                  priority
-                  sizes="112px"
-                />
-              </div>
-            ) : (
-              // Fallback to initial letter
-              <div className="h-24 w-24 md:h-28 md:w-28 bg-white rounded-2xl shadow-sm border border-gray-200 flex items-center justify-center text-indigo-600 font-bold text-2xl flex-shrink-0">
-                {tool.name.charAt(0)}
-              </div>
-            )}
+            <ToolLogo logoUrl={tool.logo_url} toolName={tool.name} size="xl" withContainer={true} />
           </div>
           <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight leading-tight">
-            {tool.name} Review, Pricing & Best Alternatives (2025)
+            {tool.name} Review, Pricing & Best Alternatives ({seoYear})
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             {tool.tagline}
           </p>
-        </div>
-      </header>
+              </div>
+            </header>
 
-      <ToolNav toolSlug={tool.slug} />
+            <ToolNav toolSlug={tool.slug} />
 
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+            <main className="max-w-3xl mx-auto space-y-16">
 
         {/* 2. Quick Verdict */}
         <section className="bg-indigo-50/50 rounded-2xl p-8 border border-indigo-100">
@@ -124,30 +152,35 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
         {/* 3. Pricing Snapshot */}
         <section>
-          <div className="flex items-center justify-between mb-6">
-             <h2 className="text-2xl font-bold text-gray-900">Pricing Snapshot</h2>
-             <Link href={`/tool/${tool.slug}/pricing`} className="text-indigo-600 font-medium hover:underline text-sm">
-               View Full Pricing Details →
-             </Link>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm text-center">
-              <div className="text-xs font-bold text-gray-400 uppercase mb-1">Starting Price</div>
-              <div className="text-2xl font-bold text-gray-900">{tool.pricing.currency}{tool.pricing.starting_price}</div>
-              <div className="text-xs text-gray-500">per month</div>
-            </div>
-            <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm text-center">
-              <div className="text-xs font-bold text-gray-400 uppercase mb-1">Free Plan</div>
-              <div className={`text-xl font-bold ${tool.pricing.free_plan ? 'text-green-600' : 'text-gray-900'}`}>
-                {tool.pricing.free_plan ? 'Yes' : 'No'}
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Pricing</h2>
+          
+          {/* Compact Pricing Snapshot Table */}
+          {tool.pricing_plans && tool.pricing_plans.length > 0 ? (
+            <PricingSnapshot 
+              plans={tool.pricing_plans} 
+              affiliateLink={`/go/${tool.slug}`}
+              toolSlug={tool.slug}
+            />
+          ) : (
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm text-center">
+                <div className="text-xs font-bold text-gray-400 uppercase mb-1">Starting Price</div>
+                <div className="text-2xl font-bold text-gray-900">{getStartingPrice(tool)}</div>
+                <div className="text-xs text-gray-500">per month</div>
               </div>
-              <div className="text-xs text-gray-500">{tool.pricing.free_plan ? 'Forever free' : 'Paid only'}</div>
+              <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm text-center">
+                <div className="text-xs font-bold text-gray-400 uppercase mb-1">Free Plan</div>
+                <div className={`text-xl font-bold ${hasFreePlan(tool) ? 'text-green-600' : 'text-gray-900'}`}>
+                  {hasFreePlan(tool) ? 'Yes' : 'No'}
+                </div>
+                <div className="text-xs text-gray-500">{hasFreePlan(tool) ? 'Forever free' : 'Paid only'}</div>
+              </div>
+              <div className="col-span-2 md:col-span-1 bg-gray-50 p-5 rounded-xl border border-gray-200 text-center flex flex-col justify-center items-center">
+                <div className="text-xs font-bold text-gray-400 uppercase mb-1">Best For</div>
+                <div className="text-sm font-bold text-gray-900 leading-tight">{tool.best_for}</div>
+              </div>
             </div>
-             <div className="col-span-2 md:col-span-1 bg-gray-50 p-5 rounded-xl border border-gray-200 text-center flex flex-col justify-center items-center">
-               <div className="text-xs font-bold text-gray-400 uppercase mb-1">Best For</div>
-               <div className="text-sm font-bold text-gray-900 leading-tight">{tool.best_for}</div>
-            </div>
-          </div>
+          )}
         </section>
 
         {/* 4. Pros & Cons */}
@@ -265,7 +298,8 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           <CTAButton affiliateLink={`/go/${tool.slug}`} hasFreeTrial={tool.has_free_trial} size="lg" />
         </section>
 
-      </main>
-    </div>
-  );
-}
+            </main>
+          </div>
+        </div>
+      );
+    }

@@ -3,10 +3,16 @@ export type FAQ = {
   answer: string;
 };
 
-export type PricingDetails = {
-  free_plan: boolean;
-  starting_price: string;
-  currency: string;
+export type PricingPlan = {
+  name: string; // e.g. "Free", "Creator"
+  price: string; // e.g. "$20", "Free"
+  period: string; // e.g. "/mo", "/yr", or "" for free
+  description: string; // Short descriptor like "For beginners"
+  highlights: string[]; // Top section: Key highlights like "3 videos/mo", "1080p export"
+  detailed_features: string[]; // Bottom section: Detailed feature list
+  features?: string[]; // Legacy field for backward compatibility
+  badge: string | null; // Psychological badge like "🔥 Most Popular", "Risk-Free Entry", etc.
+  btn_text: string; // "Start Free Trial" or "Get Started"
 };
 
 export type Tool = {
@@ -18,7 +24,12 @@ export type Tool = {
   short_description: string;
   best_for: string; // e.g. "YouTube Beginners"
   affiliate_link: string;
-  pricing: PricingDetails;
+  pricing_plans?: PricingPlan[]; // New structure
+  pricing?: {
+    free_plan: { exists: boolean; details: string };
+    starting_price: string;
+    tiers: Array<{ name: string; monthly: string; annual: string | null; key_features: string[] }>;
+  }; // Old structure - for backward compatibility during migration
   has_free_trial: boolean;
   // Kept for backward compatibility but mapped to new structure
   pricing_model: string; 
@@ -31,6 +42,11 @@ export type Tool = {
   review_content: string;
   long_review?: string;
   faqs: FAQ[];
+  // Scoring fields for comparison tables (scale 1-10)
+  ease_of_use_score?: number;
+  speed_score?: number;
+  price_score?: number; // Higher score = Cheaper/Better Value
+  output_quality_score?: number;
 };
 
 // Types for Alternatives Page

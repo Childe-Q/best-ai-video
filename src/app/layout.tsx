@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import GlobalErrorHandler from "@/components/GlobalErrorHandler";
+import { getSEOCurrentYear } from "@/lib/utils";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +16,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const seoYear = getSEOCurrentYear();
+
 export const metadata: Metadata = {
-  title: "Best AI Video Tools in 2025 | Reviews & Comparisons",
+  title: `Best AI Video Tools in ${seoYear} | Reviews & Comparisons`,
   description: "Compare features, pricing, pros & cons, and alternatives of top AI video software.",
   icons: {
     icon: '/favicon.ico',
@@ -40,7 +43,7 @@ export default function RootLayout({
       >
         <GlobalErrorHandler />
         <ErrorBoundary>
-          {children}
+        {children}
           <Footer />
         </ErrorBoundary>
       </body>

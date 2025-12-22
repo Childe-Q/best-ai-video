@@ -4,6 +4,9 @@ import toolsData from '@/data/tools.json';
 import { Tool } from '@/types/tool';
 import CTAButton from '@/components/CTAButton';
 import ToolNav from '@/components/ToolNav';
+import Navbar from '@/components/Navbar';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { getSEOCurrentYear } from '@/lib/utils';
 
 const tools: Tool[] = toolsData as Tool[];
 
@@ -20,19 +23,50 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const tool = getTool(slug);
   if (!tool) return {};
 
+  const seoYear = getSEOCurrentYear();
+
   return {
-    title: `Top 3 ${tool.name} Alternatives & Competitors (2025)`,
+    title: `Top 3 ${tool.name} Alternatives & Competitors (${seoYear})`,
     description: `Looking for better than ${tool.name}? Here are the 3 best alternatives for features, pricing, and ease of use.`,
   };
 }
 
 // Weighted Matching System: Find alternatives based on shared tags
+// Priority: Always show Fliki, Zebracat, or Veed if they match the category
 function findBestAlternatives(currentTool: Tool, allTools: Tool[], count: number = 3) {
+  // Define affiliate tools (money tools) to prioritize
+  const affiliateTools = ['fliki', 'zebracat', 'veed-io'];
+  
   // Filter out the current tool
   const candidates = allTools.filter((t) => t.id !== currentTool.id);
   
-  // Calculate shared tags for each candidate
-  const scored = candidates.map((candidate) => {
+  // Step 1: Find affiliate tools that match the category (have shared tags)
+  const affiliateMatches: Array<{ tool: Tool; sharedTags: string[]; score: number }> = [];
+  
+  for (const affiliateSlug of affiliateTools) {
+    const affiliateTool = candidates.find((t) => t.slug === affiliateSlug);
+    if (affiliateTool) {
+      const sharedTags = affiliateTool.tags.filter((tag) => currentTool.tags.includes(tag));
+      // Even if they share 0 tags, we still want to show them (force them in)
+      // But prioritize those with shared tags
+      affiliateMatches.push({
+        tool: affiliateTool,
+        sharedTags,
+        score: sharedTags.length + 10, // Add 10 to ensure they rank higher
+      });
+    }
+  }
+  
+  // Sort affiliate matches by score (highest first)
+  affiliateMatches.sort((a, b) => b.score - a.score);
+  
+  // Step 2: Get other candidates (excluding affiliate tools)
+  const otherCandidates = candidates.filter(
+    (t) => !affiliateTools.includes(t.slug.toLowerCase())
+  );
+  
+  // Calculate shared tags for other candidates
+  const otherScored = otherCandidates.map((candidate) => {
     const sharedTags = candidate.tags.filter((tag) => currentTool.tags.includes(tag));
     return {
       tool: candidate,
@@ -41,14 +75,24 @@ function findBestAlternatives(currentTool: Tool, allTools: Tool[], count: number
     };
   });
   
-  // Sort by number of shared tags (highest first)
-  scored.sort((a, b) => b.score - a.score);
+  // Sort other candidates by number of shared tags (highest first)
+  otherScored.sort((a, b) => b.score - a.score);
   
-  // Return top N alternatives
-  return scored.slice(0, count).map((item) => ({
-    tool: item.tool,
-    sharedTags: item.sharedTags,
-  }));
+  // Step 3: Combine results - affiliate tools first, then others
+  // Always prioritize affiliate tools, even if they have 0 shared tags
+  const allAlternatives = [
+    ...affiliateMatches.map((item) => ({
+      tool: item.tool,
+      sharedTags: item.sharedTags,
+    })),
+    ...otherScored.map((item) => ({
+      tool: item.tool,
+      sharedTags: item.sharedTags,
+    })),
+  ];
+  
+  // Return top N alternatives (affiliate tools will be first)
+  return allAlternatives.slice(0, count);
 }
 
 export default async function AlternativesPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -61,18 +105,15 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
   const alternativesWithTags = findBestAlternatives(tool, tools, 3);
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 font-sans pb-20">
+    <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
+      <Navbar />
       
-      {/* Navigation */}
-      <nav className="bg-white border-b border-gray-200 py-4">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 text-sm">
-           <Link href={`/tool/${tool.slug}`} className="text-gray-500 hover:text-indigo-600">
-             ← Back to Review
-           </Link>
-        </div>
-      </nav>
+      {/* Main Content - Centered */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Breadcrumbs */}
+        <Breadcrumbs toolName={tool.name} toolSlug={tool.slug} currentPage="Alternatives" />
 
-      <ToolNav toolSlug={tool.slug} />
+        <ToolNav toolSlug={tool.slug} />
 
       <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
         
@@ -136,6 +177,7 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
         </div>
 
       </main>
+      </div>
     </div>
   );
 }

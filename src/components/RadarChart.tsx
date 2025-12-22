@@ -2,6 +2,7 @@
 
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend } from 'recharts';
 import { Tool } from '@/types/tool';
+import { getStartingPrice } from '@/lib/utils';
 
 interface RadarChartProps {
   toolA: Tool;
@@ -11,7 +12,8 @@ interface RadarChartProps {
 export default function ComparisonRadarChart({ toolA, toolB }: RadarChartProps) {
   // Calculate scores (same logic as ComparisonTable)
   const getPriceValueScore = (tool: Tool): number => {
-    const price = parseFloat(tool.pricing.starting_price.replace(/[^0-9.]/g, ''));
+    const startingPrice = getStartingPrice(tool);
+    const price = parseFloat(startingPrice.replace(/[^0-9.]/g, ''));
     if (price <= 10) return 10;
     if (price <= 20) return 9;
     if (price <= 30) return 7;

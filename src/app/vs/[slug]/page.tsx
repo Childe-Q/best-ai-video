@@ -1,12 +1,13 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
+import ToolLogo from '@/components/ToolLogo';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import toolsData from '@/data/tools.json';
 import { Tool } from '@/types/tool';
 import ComparisonTable from '@/components/ComparisonTable';
 import ComparisonRadarChart from '@/components/RadarChart';
 import CTAButton from '@/components/CTAButton';
-import { getSEOCurrentYear, getCurrentMonthName } from '@/lib/utils';
+import { getSEOCurrentYear, getCurrentMonthName, getStartingPrice } from '@/lib/utils';
 
 const tools: Tool[] = toolsData as Tool[];
 
@@ -63,28 +64,103 @@ export default async function ComparisonPage({ params }: PageProps) {
     );
   }
 
-  // Calculate winners
-  const priceA = parseFloat(toolA.pricing.starting_price.replace(/[^0-9.]/g, ''));
-  const priceB = parseFloat(toolB.pricing.starting_price.replace(/[^0-9.]/g, ''));
+  // Define affiliate tools and their superpowers
+  const moneyTools = ['fliki', 'zebracat', 'veed-io', 'synthesia', 'elai-io', 'pika'];
+  const affiliateSuperpowers: Record<string, { superpower: string; keyMetric: 'ease' | 'quality' | 'speed' | 'value' }> = {
+    'fliki': { superpower: 'Speed & Bulk Creation', keyMetric: 'ease' },
+    'zebracat': { superpower: 'Marketing ROI & Ads', keyMetric: 'speed' },
+    'veed-io': { superpower: 'All-in-One Editing', keyMetric: 'ease' },
+    'synthesia': { superpower: 'Enterprise Security & Quality', keyMetric: 'quality' },
+    'elai-io': { superpower: 'Best Value Avatar Tool', keyMetric: 'value' },
+    'pika': { superpower: 'Cinematic Effects', keyMetric: 'quality' },
+  };
+
+  const isMoneyTool = (slug: string) => moneyTools.includes(slug.toLowerCase());
+  const getAffiliateTool = (tool: Tool) => {
+    const slug = tool.slug.toLowerCase();
+    return affiliateSuperpowers[slug] || null;
+  };
+
+  // Calculate winners with affiliate bias
+  const priceA = parseFloat(getStartingPrice(toolA).replace(/[^0-9.]/g, ''));
+  const priceB = parseFloat(getStartingPrice(toolB).replace(/[^0-9.]/g, ''));
   
   const getOutputQualityScore = (tool: Tool): number => {
     const baseScore = tool.rating * 2;
     const prosCount = tool.pros.length;
     const consCount = tool.cons.length;
     const balance = prosCount / (prosCount + consCount);
-    return Math.min(10, baseScore * balance);
+    let score = Math.min(10, baseScore * balance);
+    
+    // Boost affiliate tools that rely on quality
+    const affiliate = getAffiliateTool(tool);
+    if (affiliate && affiliate.keyMetric === 'quality') {
+      score = Math.max(9.5, score); // Ensure minimum 9.5 for quality-focused affiliate tools
+    }
+    
+    return score;
   };
 
   const getSpeedScore = (tool: Tool): number => {
     const consText = tool.cons.join(' ').toLowerCase();
-    if (consText.includes('slow')) return 6;
-    if (consText.includes('fast') || tool.pros.some(p => p.toLowerCase().includes('fast'))) return 9;
-    return 7.5;
+    let score = 7.5;
+    if (consText.includes('slow')) score = 6;
+    if (consText.includes('fast') || tool.pros.some(p => p.toLowerCase().includes('fast'))) score = 9;
+    
+    // Boost affiliate tools that rely on speed
+    const affiliate = getAffiliateTool(tool);
+    if (affiliate && affiliate.keyMetric === 'speed') {
+      score = Math.max(9.5, score); // Ensure minimum 9.5 for speed-focused affiliate tools
+    }
+    
+    return score;
   };
 
-  const winnerPrice = priceA < priceB ? toolA : priceB < priceA ? toolB : null;
-  const winnerQuality = getOutputQualityScore(toolA) > getOutputQualityScore(toolB) ? toolA : toolB;
-  const winnerSpeed = getSpeedScore(toolA) > getSpeedScore(toolB) ? toolA : toolB;
+  const getEaseOfUseScore = (tool: Tool): number => {
+    // Base score from rating and pros/cons
+    const baseScore = tool.rating * 1.5;
+    const prosCount = tool.pros.length;
+    const consCount = tool.cons.length;
+    const balance = prosCount / (prosCount + consCount);
+    let score = Math.min(10, baseScore * balance);
+    
+    // Boost affiliate tools that rely on ease of use
+    const affiliate = getAffiliateTool(tool);
+    if (affiliate && affiliate.keyMetric === 'ease') {
+      score = Math.max(9.5, score); // Ensure minimum 9.5 for ease-focused affiliate tools
+    }
+    
+    return score;
+  };
+
+  // Calculate winners with affiliate bias
+  // If one tool is affiliate and the other isn't, affiliate tool wins in its key metric
+  const affiliateA = getAffiliateTool(toolA);
+  const affiliateB = getAffiliateTool(toolB);
+  
+  let winnerPrice = priceA < priceB ? toolA : priceB < priceA ? toolB : null;
+  // If one is affiliate with 'value' metric, it wins price
+  if (affiliateA?.keyMetric === 'value' && (!affiliateB || affiliateB.keyMetric !== 'value')) {
+    winnerPrice = toolA;
+  } else if (affiliateB?.keyMetric === 'value' && (!affiliateA || affiliateA.keyMetric !== 'value')) {
+    winnerPrice = toolB;
+  }
+  
+  let winnerQuality = getOutputQualityScore(toolA) > getOutputQualityScore(toolB) ? toolA : toolB;
+  // If one is affiliate with 'quality' metric, it wins quality
+  if (affiliateA?.keyMetric === 'quality' && (!affiliateB || affiliateB.keyMetric !== 'quality')) {
+    winnerQuality = toolA;
+  } else if (affiliateB?.keyMetric === 'quality' && (!affiliateA || affiliateA.keyMetric !== 'quality')) {
+    winnerQuality = toolB;
+  }
+  
+  let winnerSpeed = getSpeedScore(toolA) > getSpeedScore(toolB) ? toolA : toolB;
+  // If one is affiliate with 'speed' metric, it wins speed
+  if (affiliateA?.keyMetric === 'speed' && (!affiliateB || affiliateB.keyMetric !== 'speed')) {
+    winnerSpeed = toolA;
+  } else if (affiliateB?.keyMetric === 'speed' && (!affiliateA || affiliateA.keyMetric !== 'speed')) {
+    winnerSpeed = toolB;
+  }
 
   // Get shared tags for recommendation
   const sharedTags = toolA.tags.filter((tag) => toolB.tags.includes(tag));
@@ -95,50 +171,32 @@ export default async function ComparisonPage({ params }: PageProps) {
   const seoYear = getSEOCurrentYear();
   const currentMonthName = getCurrentMonthName();
 
+  // Check if we should show the recommendation banner
+  const showRecommendationBanner = !isMoneyTool(toolA.slug) && !isMoneyTool(toolB.slug);
+  
+  // Get the best affiliate tool to recommend (prefer Zebracat, fallback to Fliki)
+  const recommendedTool = tools.find(t => t.slug === 'zebracat') || tools.find(t => t.slug === 'fliki');
+  const recommendedToolName = recommendedTool?.name || 'Zebracat';
+  const recommendedToolSlug = recommendedTool?.slug || 'zebracat';
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          {/* Breadcrumbs */}
+          <Breadcrumbs toolA={toolA.name} toolB={toolB.name} />
           <div className="flex items-center justify-center gap-8 mb-6">
             {/* Tool A */}
             <div className="flex items-center justify-center">
-              {toolA.logo_url ? (
-                toolA.logo_url.endsWith('.svg') ? (
-                  <div className="h-24 w-24 flex items-center justify-center flex-shrink-0">
-                    <img src={toolA.logo_url} alt={toolA.name} className="h-full w-full max-h-24 max-w-24 object-contain" />
-                  </div>
-                ) : (
-                  <div className="relative h-24 w-24 flex-shrink-0">
-                    <Image src={toolA.logo_url} alt={toolA.name} fill className="object-contain" sizes="96px" />
-                  </div>
-                )
-              ) : (
-                <div className="h-24 w-24 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 font-bold text-2xl flex-shrink-0">
-                  {toolA.name.charAt(0)}
-                </div>
-              )}
+              <ToolLogo logoUrl={toolA.logo_url} toolName={toolA.name} size="xl" />
             </div>
 
             <div className="text-3xl font-bold text-gray-400">VS</div>
 
             {/* Tool B */}
             <div className="flex items-center justify-center">
-              {toolB.logo_url ? (
-                toolB.logo_url.endsWith('.svg') ? (
-                  <div className="h-24 w-24 flex items-center justify-center flex-shrink-0">
-                    <img src={toolB.logo_url} alt={toolB.name} className="h-full w-full max-h-24 max-w-24 object-contain" />
-                  </div>
-                ) : (
-                  <div className="relative h-24 w-24 flex-shrink-0">
-                    <Image src={toolB.logo_url} alt={toolB.name} fill className="object-contain" sizes="96px" />
-                  </div>
-                )
-              ) : (
-                <div className="h-24 w-24 bg-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 font-bold text-2xl flex-shrink-0">
-                  {toolB.name.charAt(0)}
-                </div>
-              )}
+              <ToolLogo logoUrl={toolB.logo_url} toolName={toolB.name} size="xl" />
             </div>
           </div>
 
@@ -156,6 +214,32 @@ export default async function ComparisonPage({ params }: PageProps) {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Recommendation Banner - Show only if neither tool is a money tool */}
+        {showRecommendationBanner && recommendedTool && (
+          <section className="mb-8">
+            <div className="bg-gradient-to-r from-yellow-50 to-blue-50 border border-yellow-200 rounded-xl p-6 shadow-sm">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div className="flex-1 text-center md:text-left">
+                  <p className="text-base md:text-lg font-medium text-gray-900 mb-1">
+                    💡 Pro Tip: Need a tool that is faster than {toolA.name} and cheaper than {toolB.name}?
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    {recommendedToolName} combines the best of both worlds with lightning-fast generation and competitive pricing.
+                  </p>
+                </div>
+                <div className="flex-shrink-0">
+                  <Link
+                    href={`/tool/${recommendedToolSlug}`}
+                    className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors shadow-sm hover:shadow-md"
+                  >
+                    Try {recommendedToolName} Instead →
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Comparison Table */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Side-by-Side Comparison</h2>
@@ -300,12 +384,45 @@ export default async function ComparisonPage({ params }: PageProps) {
             <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Our Recommendation</h3>
               <p className="text-sm text-gray-700 mb-2">
-                {winnerPrice && (
-                  <>
-                    If budget is key ({cheaperTags.join(', ')}), choose <strong>{winnerPrice.name}</strong>.{' '}
-                  </>
-                )}
-                For pro features ({qualityTags.join(', ')}), go with <strong>{winnerQuality.name}</strong>.
+                {(() => {
+                  // Pivot Logic: If one tool is affiliate, make it the winner
+                  const affiliateA = getAffiliateTool(toolA);
+                  const affiliateB = getAffiliateTool(toolB);
+                  
+                  if (affiliateA && !affiliateB) {
+                    // Tool A is affiliate, Tool B is not
+                    const toolBStrength = toolB.pros[0] || `${toolB.name} has better features`;
+                    return (
+                      <>
+                        While <strong>{toolB.name}</strong> wins on {toolBStrength.toLowerCase()},{' '}
+                        <strong>{toolA.name}</strong> is the smarter choice for {toolA.best_for.toLowerCase()} because it offers{' '}
+                        <strong>{affiliateA.superpower}</strong>.
+                      </>
+                    );
+                  } else if (affiliateB && !affiliateA) {
+                    // Tool B is affiliate, Tool A is not
+                    const toolAStrength = toolA.pros[0] || `${toolA.name} has better features`;
+                    return (
+                      <>
+                        While <strong>{toolA.name}</strong> wins on {toolAStrength.toLowerCase()},{' '}
+                        <strong>{toolB.name}</strong> is the smarter choice for {toolB.best_for.toLowerCase()} because it offers{' '}
+                        <strong>{affiliateB.superpower}</strong>.
+                      </>
+                    );
+                  } else {
+                    // Neither or both are affiliate - use original logic
+                    return (
+                      <>
+                        {winnerPrice && (
+                          <>
+                            If budget is key ({cheaperTags.join(', ')}), choose <strong>{winnerPrice.name}</strong>.{' '}
+                          </>
+                        )}
+                        For pro features ({qualityTags.join(', ')}), go with <strong>{winnerQuality.name}</strong>.
+                      </>
+                    );
+                  }
+                })()}
               </p>
               <p className="text-xs text-gray-500 mt-2">Tested {currentMonthName} {seoYear} by Jack Shan.</p>
             </div>
@@ -321,8 +438,18 @@ export default async function ComparisonPage({ params }: PageProps) {
                 Which is better for beginners?
               </h3>
               <p className="text-gray-700">
-                {getEaseOfUseScore(toolA) > getEaseOfUseScore(toolB) ? toolA.name : toolB.name} is more beginner-friendly 
-                due to its {getEaseOfUseScore(toolA) > getEaseOfUseScore(toolB) ? toolA.tags.find(t => t.toLowerCase().includes('easy') || t === 'Cheap') || 'simpler interface' : toolB.tags.find(t => t.toLowerCase().includes('easy') || t === 'Cheap') || 'simpler interface'}.
+                {(() => {
+                  const easeA = getEaseOfUseScore(toolA);
+                  const easeB = getEaseOfUseScore(toolB);
+                  const winner = easeA > easeB ? toolA : toolB;
+                  const winnerAffiliate = getAffiliateTool(winner);
+                  
+                  if (winnerAffiliate && winnerAffiliate.keyMetric === 'ease') {
+                    return `${winner.name} is more beginner-friendly due to its ${winnerAffiliate.superpower.toLowerCase()}, making it ideal for ${winner.best_for.toLowerCase()}.`;
+                  }
+                  
+                  return `${winner.name} is more beginner-friendly due to its ${winner.tags.find(t => t.toLowerCase().includes('easy') || t === 'Cheap') || 'simpler interface'}.`;
+                })()}
               </p>
             </div>
             <div>
@@ -399,15 +526,7 @@ export default async function ComparisonPage({ params }: PageProps) {
               rel="noopener noreferrer nofollow"
               className="inline-flex items-center gap-3 px-6 py-4 bg-white text-indigo-600 rounded-lg font-bold hover:bg-gray-50 transition-all transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl min-w-[200px] justify-center"
             >
-              {toolA.logo_url ? (
-                toolA.logo_url.endsWith('.svg') ? (
-                  <img src={toolA.logo_url} alt={toolA.name} className="h-6 w-6 object-contain flex-shrink-0" />
-                ) : (
-                  <div className="relative h-6 w-6 flex-shrink-0">
-                    <Image src={toolA.logo_url} alt={toolA.name} fill className="object-contain" sizes="24px" />
-                  </div>
-                )
-              ) : null}
+              <ToolLogo logoUrl={toolA.logo_url} toolName={toolA.name} size="sm" />
               <span>Try {toolA.name} Free</span>
             </a>
             
@@ -418,15 +537,7 @@ export default async function ComparisonPage({ params }: PageProps) {
               rel="noopener noreferrer nofollow"
               className="inline-flex items-center gap-3 px-6 py-4 bg-white text-indigo-600 rounded-lg font-bold hover:bg-gray-50 transition-all transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl min-w-[200px] justify-center"
             >
-              {toolB.logo_url ? (
-                toolB.logo_url.endsWith('.svg') ? (
-                  <img src={toolB.logo_url} alt={toolB.name} className="h-6 w-6 object-contain flex-shrink-0" />
-                ) : (
-                  <div className="relative h-6 w-6 flex-shrink-0">
-                    <Image src={toolB.logo_url} alt={toolB.name} fill className="object-contain" sizes="24px" />
-                  </div>
-                )
-              ) : null}
+              <ToolLogo logoUrl={toolB.logo_url} toolName={toolB.name} size="sm" />
               <span>Try {toolB.name} Free</span>
             </a>
           </div>
@@ -435,13 +546,3 @@ export default async function ComparisonPage({ params }: PageProps) {
     </div>
   );
 }
-
-// Helper function
-function getEaseOfUseScore(tool: Tool): number {
-  const easyKeywords = tool.pros.join(' ').toLowerCase();
-  if (easyKeywords.includes('very easy') || easyKeywords.includes('extremely easy')) return 10;
-  if (easyKeywords.includes('easy') || easyKeywords.includes('simple')) return 8;
-  if (easyKeywords.includes('intuitive')) return 7;
-  return 6;
-}
-

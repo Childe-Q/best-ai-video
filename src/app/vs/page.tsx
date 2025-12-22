@@ -1,40 +1,97 @@
 import Link from 'next/link';
 import toolsData from '@/data/tools.json';
 import { Tool } from '@/types/tool';
+import { getSEOCurrentYear } from '@/lib/utils';
 
 const tools: Tool[] = toolsData as Tool[];
 
+const seoYear = getSEOCurrentYear();
+
 export const metadata = {
-  title: 'AI Video Tools Comparison | Side-by-Side Comparisons 2025',
+  title: `AI Video Tools Comparison | Side-by-Side Comparisons ${seoYear}`,
   description: 'Compare AI video generators side-by-side with data-driven analysis, test results, and performance metrics.',
 };
 
 export default function VSIndexPage() {
-  // Generate popular comparison pairs
-  const topTools = [...tools]
-    .sort((a, b) => b.rating - a.rating)
-    .slice(0, 10);
+  // Define affiliate tools (money tools)
+  const moneyTools = ['fliki', 'zebracat', 'veed-io', 'synthesia', 'elai-io', 'pika'];
+  
+  // Helper function to check if a tool is a money tool
+  const isMoneyTool = (slug: string) => moneyTools.includes(slug.toLowerCase());
+  
+  // Helper function to check if a comparison pair includes at least one money tool
+  const hasMoneyTool = (toolA: Tool, toolB: Tool) => 
+    isMoneyTool(toolA.slug) || isMoneyTool(toolB.slug);
 
-  const comparisonPairs: Array<{ toolA: Tool; toolB: Tool; slug: string }> = [];
-
+  // Get all tools sorted by rating
+  const allTools = [...tools].sort((a, b) => b.rating - a.rating);
+  
+  // Priority A: Generate ALL pairs where at least one tool is in moneyTools
+  const priorityAPairs: Array<{ toolA: Tool; toolB: Tool; slug: string }> = [];
+  const seenSlugs = new Set<string>();
+  
+  // Generate pairs: money tool vs all other tools
+  for (const moneyTool of tools.filter(t => isMoneyTool(t.slug))) {
+    for (const otherTool of allTools) {
+      if (moneyTool.slug !== otherTool.slug) {
+        // Ensure consistent slug format (alphabetical order)
+        const slugA = moneyTool.slug < otherTool.slug ? moneyTool.slug : otherTool.slug;
+        const slugB = moneyTool.slug < otherTool.slug ? otherTool.slug : moneyTool.slug;
+        const toolA = moneyTool.slug < otherTool.slug ? moneyTool : otherTool;
+        const toolB = moneyTool.slug < otherTool.slug ? otherTool : moneyTool;
+        
+        const slug = `${slugA}-vs-${slugB}`;
+        
+        // Avoid duplicates
+        if (!seenSlugs.has(slug)) {
+          seenSlugs.add(slug);
+          priorityAPairs.push({
+            toolA,
+            toolB,
+            slug,
+          });
+        }
+      }
+    }
+  }
+  
+  // Priority B: Generate pairs of other popular tools (excluding money tool pairs)
+  const priorityBPairs: Array<{ toolA: Tool; toolB: Tool; slug: string }> = [];
+  const topTools = allTools.slice(0, 15); // Get top 15 tools for variety
+  
   for (let i = 0; i < topTools.length; i++) {
     for (let j = i + 1; j < topTools.length; j++) {
       const toolA = topTools[i];
       const toolB = topTools[j];
+      
+      // Skip if this pair includes a money tool (already in Priority A)
+      if (hasMoneyTool(toolA, toolB)) {
+        continue;
+      }
+      
       const sharedTags = toolA.tags.filter((tag) => toolB.tags.includes(tag));
-
-      if (sharedTags.length > 2 || (i < 5 && j < 5)) {
-        comparisonPairs.push({
+      const slug = `${toolA.slug}-vs-${toolB.slug}`;
+      
+      // Only add if they share tags or are both in top 5, and not already seen
+      if ((sharedTags.length > 0 || (i < 5 && j < 5)) && !seenSlugs.has(slug)) {
+        seenSlugs.add(slug);
+        priorityBPairs.push({
           toolA,
           toolB,
-          slug: `${toolA.slug}-vs-${toolB.slug}`,
+          slug,
         });
       }
     }
   }
 
-  // Limit to 30 most relevant comparisons
-  const popularComparisons = comparisonPairs.slice(0, 30);
+  // Combine and sort: Priority A first, then Priority B
+  const allComparisons = [
+    ...priorityAPairs,
+    ...priorityBPairs.slice(0, 20), // Limit Priority B to 20 to keep focus on money tools
+  ];
+
+  // Limit total to 50 comparisons (all Priority A + up to 20 Priority B)
+  const popularComparisons = allComparisons.slice(0, 50);
 
   return (
     <div className="min-h-screen bg-gray-50">

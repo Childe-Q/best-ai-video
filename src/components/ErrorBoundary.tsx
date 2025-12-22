@@ -25,7 +25,11 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
       error.stack?.includes('webkit-masked-url') ||
       error.stack?.includes('chrome-extension://') ||
       error.stack?.includes('moz-extension://') ||
-      error.name === 'ReferenceError' && error.message?.includes('Can\'t find variable');
+      (error.name === 'ReferenceError' && error.message?.includes('Can\'t find variable')) ||
+      // Handle NotAllowedError from browser extensions trying to autoplay
+      (error.name === 'NotAllowedError' && (error.stack?.includes('webkit-masked-url') || error.stack?.includes('chrome-extension://') || error.stack?.includes('moz-extension://'))) ||
+      // Handle play() errors from extensions
+      (error.message?.includes('play') && error.stack?.includes('webkit-masked-url'));
     
     // If it's an extension error, don't show error UI
     if (isExtensionError) {
@@ -42,11 +46,15 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
       error.stack?.includes('webkit-masked-url') ||
       error.stack?.includes('chrome-extension://') ||
       error.stack?.includes('moz-extension://') ||
-      (error.name === 'ReferenceError' && error.message?.includes('Can\'t find variable'));
+      (error.name === 'ReferenceError' && error.message?.includes('Can\'t find variable')) ||
+      // Handle NotAllowedError from browser extensions trying to autoplay
+      (error.name === 'NotAllowedError' && (error.stack?.includes('webkit-masked-url') || error.stack?.includes('chrome-extension://') || error.stack?.includes('moz-extension://'))) ||
+      // Handle play() errors from extensions
+      (error.message?.includes('play') && error.stack?.includes('webkit-masked-url'));
     
     // Silently ignore extension errors
     if (isExtensionError) {
-      console.debug('Ignored browser extension error:', error.message);
+      console.debug('Ignored browser extension error:', error.name || error.message);
       return;
     }
     

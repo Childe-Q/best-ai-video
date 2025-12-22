@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import toolsData from '@/data/tools.json';
 import { Tool } from '@/types/tool';
 import { getSEOCurrentYear, getCurrentMonthYear } from '@/lib/utils';
+import HomeToolGrid from '@/components/HomeToolGrid';
 
 // Force cast to Tool[] to ensure type safety if JSON import inference is loose
 const tools: Tool[] = toolsData as Tool[];
@@ -102,73 +103,14 @@ export default function Home() {
             <Link
               href="/vs"
               className="text-sm text-indigo-600 hover:text-indigo-700 font-medium"
-            >
+          >
               View All Comparisons →
             </Link>
-          </div>
+        </div>
         </section>
 
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">All AI Video Tools</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {tools.map((tool) => (
-            <div key={tool.id} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow duration-300 flex flex-col">
-              <div className="p-6 flex-1">
-                <div className="flex items-center justify-between mb-4">
-                  {/* Logo - display real logo if available, otherwise show letter placeholder */}
-                  {tool.logo_url ? (
-                    <div className="h-14 w-14 flex items-center justify-center flex-shrink-0" suppressHydrationWarning>
-                      <img 
-                        src={tool.logo_url} 
-                        alt={`${tool.name} Logo`}
-                        className="h-full w-full max-h-14 max-w-14 object-contain"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
-                  ) : (
-                    <div className="h-14 w-14 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-600 font-bold text-xl flex-shrink-0">
-                      {tool.name.charAt(0)}
-                    </div>
-                  )}
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                    {tool.pricing_model}
-                  </span>
-                </div>
-                
-                <Link href={`/tool/${tool.slug}`} className="block group">
-                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors mb-2">
-                    {tool.name}
-                  </h3>
-                </Link>
-                
-                <p className="text-gray-500 text-sm mb-4">
-                  {tool.short_description}
-                </p>
-                
-                <div className="text-sm font-medium text-gray-900">
-                  {tool.starting_price}
-                </div>
-              </div>
-
-              <div className="bg-gray-50 px-6 py-4 border-t border-gray-100 flex items-center justify-between">
-                <Link 
-                  href={`/tool/${tool.slug}`}
-                  className="text-sm font-medium text-gray-600 hover:text-gray-900"
-                >
-                  View Review →
-                </Link>
-                <a
-                  href={`/go/${tool.slug}`}
-            target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          >
-                  Visit Website
-          </a>
-              </div>
-            </div>
-          ))}
-        </div>
+        <HomeToolGrid tools={tools} />
       </main>
     </div>
   );
