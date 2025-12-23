@@ -22,8 +22,10 @@ export default function PricingCard({
   const isFree = plan.price.toLowerCase() === 'free';
   
   // Split features into "What's included" (first 6) and "Key features" (rest)
-  const whatsIncluded = plan.features.slice(0, 6);
-  const keyFeatures = plan.features.slice(6);
+  // Use features if available, otherwise fallback to detailed_features or empty array
+  const allFeatures = plan.features || plan.detailed_features || [];
+  const whatsIncluded = allFeatures.slice(0, 6);
+  const keyFeatures = allFeatures.slice(6);
 
   return (
     <div className={`relative bg-white rounded-2xl border-2 ${isPopular ? 'border-indigo-500 shadow-xl md:scale-105' : 'border-gray-200 shadow-lg'} overflow-hidden flex flex-col h-full transition-transform`}>
