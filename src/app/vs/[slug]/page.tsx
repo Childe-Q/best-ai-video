@@ -342,7 +342,9 @@ export default async function ComparisonPage({ params }: PageProps) {
               {winnerPrice ? (
                 <div>
                   <a
-                    href={`/go/${winnerPrice.slug}`}
+                    href={winnerPrice.affiliate_link}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
                     className="text-2xl font-bold text-gray-900 mb-2 hover:text-indigo-600 transition-colors block"
                   >
                     {winnerPrice.name}
@@ -360,7 +362,9 @@ export default async function ComparisonPage({ params }: PageProps) {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Winner for Quality</h3>
               <div>
                 <a
-                  href={`/go/${winnerQuality.slug}`}
+                  href={winnerQuality.affiliate_link}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
                   className="text-2xl font-bold text-gray-900 mb-2 hover:text-indigo-600 transition-colors block"
                 >
                   {winnerQuality.name}
@@ -521,7 +525,7 @@ export default async function ComparisonPage({ params }: PageProps) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             {/* Tool A CTA */}
             <a
-              href={`/go/${toolA.slug}`}
+              href={toolA.affiliate_link}
               target="_blank"
               rel="noopener noreferrer nofollow"
               className="inline-flex items-center gap-3 px-6 py-4 bg-white text-indigo-600 rounded-lg font-bold hover:bg-gray-50 transition-all transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl min-w-[200px] justify-center"
@@ -532,7 +536,7 @@ export default async function ComparisonPage({ params }: PageProps) {
             
             {/* Tool B CTA */}
             <a
-              href={`/go/${toolB.slug}`}
+              href={toolB.affiliate_link}
               target="_blank"
               rel="noopener noreferrer nofollow"
               className="inline-flex items-center gap-3 px-6 py-4 bg-white text-indigo-600 rounded-lg font-bold hover:bg-gray-50 transition-all transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl min-w-[200px] justify-center"

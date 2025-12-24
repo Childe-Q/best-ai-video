@@ -69,7 +69,7 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
           {pricingPlans.length > 0 ? (
             <PricingTable 
               plans={pricingPlans} 
-              affiliateLink={`/go/${tool.slug}`}
+              affiliateLink={tool.affiliate_link}
               hasFreeTrial={tool.has_free_trial}
             />
           ) : (
@@ -128,7 +128,7 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
             If you are serious about {tool.best_for.toLowerCase()}, then <strong>yes</strong>. The time saved by its AI features justifies the monthly cost. 
             {hasFreePlan(tool) ? ' Plus, you can start for free to test it out.' : ' Plus, the free trial lets you test it risk-free.'}
           </p>
-          <CTAButton affiliateLink={`/go/${tool.slug}`} hasFreeTrial={tool.has_free_trial} />
+          <CTAButton affiliateLink={tool.affiliate_link} hasFreeTrial={tool.has_free_trial} />
         </section>
 
         {/* 6. Footer Note */}

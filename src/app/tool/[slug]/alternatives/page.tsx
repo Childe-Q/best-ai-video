@@ -158,7 +158,7 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
                        </div>
                      )}
 
-                     <CTAButton affiliateLink={`/go/${alt.slug}`} hasFreeTrial={alt.has_free_trial} />
+                     <CTAButton affiliateLink={alt.affiliate_link} hasFreeTrial={alt.has_free_trial} />
                   </div>
                </div>
              );

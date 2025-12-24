@@ -54,7 +54,7 @@
     ],
     "has_free_trial": true,
     "pricing_model": "Freemium",
-    "starting_price": "$21/mo",
+    "starting_price": "$28/mo",
     "rating": 4.9,
     "features": [
       "Text to Video",
@@ -364,7 +364,7 @@
     ],
     "has_free_trial": false,
     "pricing_model": "Subscription",
-    "starting_price": "$30/mo",
+    "starting_price": "$29/mo",
     "rating": 4.9,
     "features": [
       "140+ AI Avatars",
@@ -457,7 +457,7 @@
     ],
     "has_free_trial": true,
     "pricing_model": "Freemium",
-    "starting_price": "$23/mo",
+    "starting_price": "$29/mo",
     "rating": 4.8,
     "features": [
       "Custom Avatar Creation",
@@ -578,7 +578,7 @@
     ],
     "has_free_trial": true,
     "pricing_model": "Freemium",
-    "starting_price": "$10/mo",
+    "starting_price": "$8/mo",
     "rating": 4.9,
     "features": [
       "Text to Video",
@@ -765,7 +765,7 @@
     ],
     "has_free_trial": true,
     "pricing_model": "Freemium",
-    "starting_price": "$20/mo",
+    "starting_price": "$28/mo",
     "rating": 4.8,
     "features": [
       "Text to Video",
@@ -1074,7 +1074,7 @@
     ],
     "has_free_trial": true,
     "pricing_model": "Freemium",
-    "starting_price": "$19/mo",
+    "starting_price": "$15/mo",
     "rating": 4.6,
     "features": [
       "Auto Clip Generation",
@@ -1152,7 +1152,7 @@
     ],
     "has_free_trial": true,
     "pricing_model": "Freemium",
-    "starting_price": "$15/mo",
+    "starting_price": "$12/mo",
     "rating": 4.9,
     "features": [
       "Gen-2 Video Generation",
@@ -1540,7 +1540,7 @@
     ],
     "has_free_trial": true,
     "pricing_model": "Freemium",
-    "starting_price": "$5/mo",
+    "starting_price": "$16/mo",
     "rating": 4.4,
     "features": [
       "Photo Animation",
@@ -1620,7 +1620,7 @@
     ],
     "has_free_trial": true,
     "pricing_model": "Subscription",
-    "starting_price": "$30/mo",
+    "starting_price": "$24/mo",
     "rating": 4.8,
     "features": [
       "Ultra-Realistic AI Humans",
@@ -1735,7 +1735,7 @@
     ],
     "has_free_trial": true,
     "pricing_model": "Subscription",
-    "starting_price": "$29/mo",
+    "starting_price": "$20/mo",
     "rating": 4.5,
     "features": [
       "AI Avatars",
@@ -1829,7 +1829,7 @@
     ],
     "has_free_trial": true,
     "pricing_model": "Freemium",
-    "starting_price": "$9/mo",
+    "starting_price": "$12/mo",
     "rating": 4.4,
     "features": [
       "Video Editing",
@@ -2073,7 +2073,7 @@
     ],
     "has_free_trial": true,
     "pricing_model": "Freemium",
-    "starting_price": "$15/mo",
+    "starting_price": "$10/mo",
     "rating": 4.5,
     "features": [
       "Text to Video",

@@ -520,7 +520,9 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
               </td>
               <td className="px-6 py-4 text-center border-l border-gray-100">
                 <a
-                  href={`/go/${toolA.slug}`}
+                  href={toolA.affiliate_link}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
                   className="inline-flex items-center justify-center px-4 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
                 >
                   Visit {toolA.name}
@@ -528,7 +530,9 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
               </td>
               <td className="px-6 py-4 text-center border-l border-gray-100">
                 <a
-                  href={`/go/${toolB.slug}`}
+                  href={toolB.affiliate_link}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
                   className="inline-flex items-center justify-center px-4 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
                 >
                   Visit {toolB.name}
@@ -542,13 +546,17 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50 px-4 py-3">
         <div className="max-w-7xl mx-auto flex gap-3">
           <a
-            href={`/go/${toolA.slug}`}
+            href={toolA.affiliate_link}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
             className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors active:bg-indigo-800"
           >
             Visit {toolA.name}
           </a>
           <a
-            href={`/go/${toolB.slug}`}
+            href={toolB.affiliate_link}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
             className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors active:bg-indigo-800"
           >
             Visit {toolB.name}

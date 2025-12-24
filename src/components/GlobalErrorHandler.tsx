@@ -11,6 +11,14 @@ export default function GlobalErrorHandler() {
       const errorName = error?.name || '';
       const errorMessage = error?.message || '';
       const filename = event.filename || '';
+      const target = event.target as HTMLElement;
+      
+      // Check if error is from image loading failure
+      const isImageLoadError = 
+        (target?.tagName === 'IMG' || target?.tagName === 'img') ||
+        errorMessage?.toLowerCase().includes('load failed') ||
+        errorMessage?.toLowerCase().includes('failed to load') ||
+        errorString?.toLowerCase().includes('load failed');
       
       // Check if error is from browser extension (obfuscated code)
       const isExtensionError = 
@@ -27,6 +35,14 @@ export default function GlobalErrorHandler() {
         (errorName === 'NotAllowedError' && (filename.includes('chrome-extension://') || filename.includes('moz-extension://'))) ||
         // Handle play() errors from extensions
         (errorMessage.includes('play') && filename.includes('webkit-masked-url'));
+      
+      // Silently ignore image load errors (they're handled by onError handlers)
+      if (isImageLoadError) {
+        event.preventDefault();
+        event.stopPropagation();
+        console.debug('Ignored image load error:', errorMessage || errorString);
+        return false;
+      }
       
       // Silently ignore extension errors
       if (isExtensionError) {

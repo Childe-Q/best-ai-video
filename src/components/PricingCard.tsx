@@ -57,8 +57,10 @@ export default function PricingCard({
           </div>
 
           {/* CTA Button */}
-          <Link
+          <a
             href={affiliateLink}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
             className={`block w-full py-3.5 px-6 rounded-lg font-bold text-base text-center transition-all duration-200 ${
               isPopular
                 ? 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-md hover:shadow-lg'
@@ -70,7 +72,7 @@ export default function PricingCard({
             }`}
           >
             {plan.btn_text || (isEnterprise ? 'Contact Us' : 'Get Started')}
-          </Link>
+          </a>
         </div>
 
         {/* What's Included */}

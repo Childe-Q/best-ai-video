@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { PricingPlan } from '@/types/tool';
-import Link from 'next/link';
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid';
 
 interface PricingTableProps {
@@ -330,12 +329,14 @@ export default function PricingTable({ plans, affiliateLink, hasFreeTrial }: Pri
           </div>
 
           {/* CTA Button - Pinned to bottom */}
-          <Link
+          <a
             href={affiliateLink}
+            target="_blank"
+            rel="noreferrer noopener"
             className={`block w-full py-3 px-6 rounded-xl font-bold text-base text-center transition-all duration-200 mt-auto ${buttonClasses}`}
           >
             {plan.btn_text || (isEnterprise ? 'Contact Us' : 'Get Started')}
-          </Link>
+          </a>
         </div>
       </div>
     );

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import toolsData from '@/data/tools.json';
 import { Tool } from '@/types/tool';
@@ -147,7 +146,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
             <strong>Yes, if you are {tool.best_for}.</strong> It offers excellent value with its {tool.starting_price} starting price. 
             However, if you need more advanced features, you might want to consider alternatives below.
           </p>
-          <CTAButton affiliateLink={`/go/${tool.slug}`} hasFreeTrial={tool.has_free_trial} />
+          <CTAButton affiliateLink={tool.affiliate_link} hasFreeTrial={tool.has_free_trial} />
         </section>
 
         {/* 3. Pricing Snapshot */}
@@ -158,7 +157,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           {tool.pricing_plans && tool.pricing_plans.length > 0 ? (
             <PricingSnapshot 
               plans={tool.pricing_plans} 
-              affiliateLink={`/go/${tool.slug}`}
+              affiliateLink={tool.affiliate_link}
               toolSlug={tool.slug}
             />
           ) : (
@@ -220,25 +219,12 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
             <div className="flex flex-col md:flex-row items-start gap-6 mb-6">
               {tool.logo_url && (
                 <div className="flex-shrink-0">
-                  {tool.logo_url.endsWith('.svg') ? (
-                    <div className="h-24 w-24 flex items-center justify-center">
-                      <img 
-                        src={tool.logo_url} 
-                        alt={`${tool.name} Logo`}
-                        className="h-full w-full max-h-24 max-w-24 object-contain"
-                      />
-                    </div>
-                  ) : (
-                    <div className="relative h-24 w-24">
-                      <Image
-                        src={tool.logo_url}
-                        alt={`${tool.name} Logo`}
-                        fill
-                        className="object-contain"
-                        sizes="96px"
-                      />
-                    </div>
-                  )}
+                  <ToolLogo 
+                    logoUrl={tool.logo_url} 
+                    toolName={tool.name} 
+                    size="xl" 
+                    withContainer={false}
+                  />
                 </div>
               )}
               <div className="flex-1">
@@ -282,7 +268,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                     <div className="text-sm text-gray-500 mb-2">Best for: <span className="text-gray-700 font-medium">{alt.best_for}</span></div>
                     <p className="text-sm text-gray-600 line-clamp-1">{alt.short_description}</p>
                   </div>
-                  <CTAButton affiliateLink={`/go/${alt.slug}`} hasFreeTrial={alt.has_free_trial} size="sm" className="w-full md:w-auto" />
+                  <CTAButton affiliateLink={alt.affiliate_link} hasFreeTrial={alt.has_free_trial} size="sm" className="w-full md:w-auto" />
                 </div>
               );
             })}
@@ -295,7 +281,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           <p className="text-gray-300 mb-8 max-w-lg mx-auto">
             Get started with {tool.name} today. {tool.has_free_trial ? 'Start your free trial now.' : 'Check the latest deal.'}
           </p>
-          <CTAButton affiliateLink={`/go/${tool.slug}`} hasFreeTrial={tool.has_free_trial} size="lg" />
+          <CTAButton affiliateLink={tool.affiliate_link} hasFreeTrial={tool.has_free_trial} size="lg" />
         </section>
 
             </main>
