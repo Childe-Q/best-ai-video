@@ -47,6 +47,20 @@ export type Tool = {
   speed_score?: number;
   price_score?: number; // Higher score = Cheaper/Better Value
   output_quality_score?: number;
+  // Rich content fields
+  video_url?: string; // YouTube video URL
+  target_audience_list?: string[]; // e.g. ['Content Creators', 'Educators', 'Marketing Teams']
+  // Social and metadata fields
+  social_links?: {
+    twitter?: string;
+    linkedin?: string;
+    youtube?: string;
+    instagram?: string;
+  };
+  deal?: string | null; // e.g., 'Code FLIKI10 for 10% Off'
+  review_count?: number; // e.g., 7
+  is_verified?: boolean; // true if verified
+  categories?: string[]; // e.g., ['Video Generators', 'Text to Speech']
 };
 
 // Types for Alternatives Page

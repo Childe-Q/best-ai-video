@@ -90,7 +90,26 @@
     "ease_of_use_score": 9.8,
     "speed_score": 9.8,
     "price_score": 9.5,
-    "output_quality_score": 9.2
+    "output_quality_score": 9.2,
+    "video_url": "https://youtu.be/FRLzYf52GZY",
+    "target_audience_list": [
+      "Marketing Teams",
+      "Content Creators",
+      "Bloggers"
+    ],
+    "social_links": {
+      "twitter": "https://twitter.com/fliki_ai",
+      "linkedin": "https://www.linkedin.com/company/fliki-ai",
+      "youtube": "https://www.youtube.com/@fliki",
+      "instagram": "https://www.instagram.com/fliki.ai"
+    },
+    "deal": "Code FLIKI10 for 10% Off",
+    "review_count": 7,
+    "is_verified": true,
+    "categories": [
+      "Video Generators",
+      "Text to Speech"
+    ]
   },
   {
     "id": "21",
@@ -215,7 +234,28 @@
     "ease_of_use_score": 9.8,
     "speed_score": 9.8,
     "price_score": 9.5,
-    "output_quality_score": 9.2
+    "output_quality_score": 9.2,
+    "video_url": "",
+    "target_audience_list": [
+      "Content Creators",
+      "Marketing Teams"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Generators",
+      "Marketing",
+      "Social Media",
+      "Viral",
+      "Fast"
+    ]
   },
   {
     "id": "11",
@@ -308,7 +348,25 @@
     "ease_of_use_score": 9.8,
     "speed_score": 9.8,
     "price_score": 9.5,
-    "output_quality_score": 8.8
+    "output_quality_score": 8.8,
+    "video_url": "",
+    "target_audience_list": [
+      "Content Creators",
+      "Social Media Managers"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Editors",
+      "Budget-Friendly"
+    ]
   },
   {
     "id": "3",
@@ -400,7 +458,25 @@
     "ease_of_use_score": 9.8,
     "speed_score": 9.8,
     "price_score": 6.5,
-    "output_quality_score": 9.8
+    "output_quality_score": 9.8,
+    "video_url": "",
+    "target_audience_list": [
+      "Educators",
+      "Enterprise Teams"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "AI Avatars",
+      "Professional Tools"
+    ]
   },
   {
     "id": "13",
@@ -493,7 +569,24 @@
     "ease_of_use_score": 9.8,
     "speed_score": 9.8,
     "price_score": 9.5,
-    "output_quality_score": 8.7
+    "output_quality_score": 8.7,
+    "video_url": "",
+    "target_audience_list": [
+      "Content Creators",
+      "Marketing Teams"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "AI Avatars"
+    ]
   },
   {
     "id": "7",
@@ -614,7 +707,25 @@
     "ease_of_use_score": 9.8,
     "speed_score": 9.8,
     "price_score": 9.5,
-    "output_quality_score": 8.8
+    "output_quality_score": 8.8,
+    "video_url": "",
+    "target_audience_list": [
+      "Content Creators",
+      "Social Media Managers"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Generators",
+      "Budget-Friendly"
+    ]
   },
   {
     "id": "1",
@@ -802,7 +913,27 @@
     "ease_of_use_score": 7.6,
     "speed_score": 7.8,
     "price_score": 9,
-    "output_quality_score": 8.1
+    "output_quality_score": 8.1,
+    "video_url": "",
+    "target_audience_list": [
+      "Marketing Teams",
+      "Social Media Managers",
+      "YouTubers"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Generators",
+      "Video Editors",
+      "Budget-Friendly"
+    ]
   },
   {
     "id": "2",
@@ -896,7 +1027,24 @@
     "output_quality_score": 9.6,
     "price_score": 6.4,
     "ease_of_use_score": 8,
-    "speed_score": 7.9
+    "speed_score": 7.9,
+    "video_url": "",
+    "target_audience_list": [
+      "Educators"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "AI Avatars",
+      "Professional Tools"
+    ]
   },
   {
     "id": "4",
@@ -1003,7 +1151,24 @@
     "ease_of_use_score": 7.8,
     "speed_score": 7.6,
     "price_score": 9,
-    "output_quality_score": 8.4
+    "output_quality_score": 8.4,
+    "video_url": "",
+    "target_audience_list": [
+      "Podcasters"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Editors",
+      "Professional Tools"
+    ]
   },
   {
     "id": "5",
@@ -1109,7 +1274,24 @@
     "ease_of_use_score": 7.9,
     "speed_score": 7.8,
     "price_score": 9,
-    "output_quality_score": 7.8
+    "output_quality_score": 7.8,
+    "video_url": "",
+    "target_audience_list": [
+      "Content Creators",
+      "YouTubers"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Content Repurposing"
+    ]
   },
   {
     "id": "6",
@@ -1188,7 +1370,25 @@
     "output_quality_score": 9.6,
     "price_score": 6.9,
     "ease_of_use_score": 8,
-    "speed_score": 8.1
+    "speed_score": 8.1,
+    "video_url": "",
+    "target_audience_list": [
+      "Content Creators",
+      "Filmmakers"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Professional Tools",
+      "Video Generators"
+    ]
   },
   {
     "id": "8",
@@ -1268,7 +1468,24 @@
     "output_quality_score": 9.7,
     "price_score": 6.3,
     "ease_of_use_score": 8,
-    "speed_score": 8.4
+    "speed_score": 8.4,
+    "video_url": "",
+    "target_audience_list": [
+      "Content Creators"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Generators",
+      "Professional Tools"
+    ]
   },
   {
     "id": "10",
@@ -1375,7 +1592,24 @@
     "ease_of_use_score": 8.1,
     "speed_score": 7.8,
     "price_score": 9,
-    "output_quality_score": 8.2
+    "output_quality_score": 8.2,
+    "video_url": "",
+    "target_audience_list": [
+      "Content Creators"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Content Repurposing",
+      "Video Editors"
+    ]
   },
   {
     "id": "12",
@@ -1469,7 +1703,25 @@
     "ease_of_use_score": 8,
     "speed_score": 8.1,
     "price_score": 8.5,
-    "output_quality_score": 7.9
+    "output_quality_score": 7.9,
+    "video_url": "",
+    "target_audience_list": [
+      "Educators",
+      "Enterprise Teams"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "AI Avatars",
+      "Professional Tools"
+    ]
   },
   {
     "id": "14",
@@ -1577,7 +1829,24 @@
     "ease_of_use_score": 8.1,
     "speed_score": 8.2,
     "price_score": 9.5,
-    "output_quality_score": 8.1
+    "output_quality_score": 8.1,
+    "video_url": "",
+    "target_audience_list": [
+      "Marketing Teams"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "AI Avatars",
+      "Budget-Friendly"
+    ]
   },
   {
     "id": "16",
@@ -1664,7 +1933,24 @@
     "ease_of_use_score": 8,
     "speed_score": 8.4,
     "price_score": 8.5,
-    "output_quality_score": 8.4
+    "output_quality_score": 8.4,
+    "video_url": "",
+    "target_audience_list": [
+      "Enterprise Teams"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "AI Avatars",
+      "Professional Tools"
+    ]
   },
   {
     "id": "17",
@@ -1772,7 +2058,24 @@
     "ease_of_use_score": 8.4,
     "speed_score": 8,
     "price_score": 8.5,
-    "output_quality_score": 8.2
+    "output_quality_score": 8.2,
+    "video_url": "",
+    "target_audience_list": [
+      "Marketing Teams"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "AI Avatars",
+      "Professional Tools"
+    ]
   },
   {
     "id": "18",
@@ -1866,7 +2169,25 @@
     "ease_of_use_score": 8.1,
     "speed_score": 8.1,
     "price_score": 9.5,
-    "output_quality_score": 8.4
+    "output_quality_score": 8.4,
+    "video_url": "",
+    "target_audience_list": [
+      "Enterprise Teams",
+      "Small Businesses"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Editors",
+      "Budget-Friendly"
+    ]
   },
   {
     "id": "19",
@@ -1988,7 +2309,26 @@
     "ease_of_use_score": 8.4,
     "speed_score": 8.1,
     "price_score": 9,
-    "output_quality_score": 8.1
+    "output_quality_score": 8.1,
+    "video_url": "",
+    "target_audience_list": [
+      "Marketing Teams",
+      "Content Creators",
+      "Bloggers"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Content Repurposing",
+      "Video Editors"
+    ]
   },
   {
     "id": "20",
@@ -2110,6 +2450,25 @@
     "ease_of_use_score": 8.5,
     "speed_score": 8.4,
     "price_score": 9,
-    "output_quality_score": 7.6
+    "output_quality_score": 7.6,
+    "video_url": "",
+    "target_audience_list": [
+      "Content Creators",
+      "Enterprise Teams",
+      "Small Businesses"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Generators",
+      "Budget-Friendly"
+    ]
   }
 ]
