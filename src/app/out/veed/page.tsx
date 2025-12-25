@@ -1,13 +1,37 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 
 export default function VeedBridgePage() {
-  // Track page view for analytics (optional)
-  useEffect(() => {
-    // You can add analytics tracking here if needed
-  }, []);
+  const [copied, setCopied] = useState(false);
+  const veedAffiliateLink = 'https://veed.cello.so/oWfwy8CyrIS';
+
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(veedAffiliateLink);
+      setCopied(true);
+      // Reset after 3 seconds
+      setTimeout(() => setCopied(false), 3000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = veedAffiliateLink;
+      textArea.style.position = 'fixed';
+      textArea.style.opacity = '0';
+      document.body.appendChild(textArea);
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        setCopied(true);
+        setTimeout(() => setCopied(false), 3000);
+      } catch (fallbackErr) {
+        console.error('Fallback copy failed:', fallbackErr);
+      }
+      document.body.removeChild(textArea);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex items-center justify-center p-4">
@@ -41,16 +65,44 @@ export default function VeedBridgePage() {
           We have secured an exclusive <span className="text-indigo-600 font-bold">50% OFF</span> deal for you at Veed.io.
         </p>
 
-        {/* Main CTA Button */}
-        <div className="mb-6">
-          <a
-            href="https://veed.cello.so/oWfwy8CyrIS"
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            className="inline-block w-full md:w-auto px-12 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-xl md:text-2xl font-bold rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-200 hover:from-indigo-700 hover:to-purple-700"
-          >
-            Continue to Veed & Claim Discount
-          </a>
+        {/* Manual Claim Section */}
+        <div className="mb-8">
+          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-6 md:p-8 border-2 border-indigo-200">
+            <p className="text-base md:text-lg text-gray-700 mb-6 font-medium">
+              To activate your <span className="text-indigo-600 font-bold">50% OFF discount</span>, please copy the secure link below and paste it into a new tab.
+            </p>
+
+            {/* Input Field with Copy Button */}
+            <div className="flex flex-col sm:flex-row gap-3 mb-4">
+              <input
+                type="text"
+                readOnly
+                value={veedAffiliateLink}
+                className="flex-1 px-4 py-3 bg-white border-2 border-gray-300 rounded-lg text-sm md:text-base text-gray-700 font-mono focus:outline-none focus:border-indigo-500"
+                onClick={(e) => (e.target as HTMLInputElement).select()}
+              />
+              <button
+                onClick={handleCopyLink}
+                className={`px-6 py-3 rounded-lg font-semibold text-base md:text-lg transition-all duration-200 ${
+                  copied
+                    ? 'bg-green-500 text-white shadow-lg'
+                    : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-md hover:shadow-lg'
+                }`}
+              >
+                {copied ? 'Copied! ✅' : 'Copy Link'}
+              </button>
+            </div>
+
+            {/* Secondary Direct Click Button */}
+            <a
+              href={veedAffiliateLink}
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="inline-block w-full sm:w-auto px-6 py-3 border-2 border-indigo-600 text-indigo-600 font-semibold rounded-lg hover:bg-indigo-50 transition-all duration-200"
+            >
+              Open Veed.io (Try Direct Click)
+            </a>
+          </div>
         </div>
 
         {/* Safety Text */}
