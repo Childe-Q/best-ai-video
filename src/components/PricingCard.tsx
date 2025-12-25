@@ -27,6 +27,12 @@ export default function PricingCard({
   const whatsIncluded = allFeatures.slice(0, 6);
   const keyFeatures = allFeatures.slice(6);
 
+  // Check if link needs cloaking (Veed.io or cello.so links)
+  const needsCloaking = affiliateLink.includes('cello.so') || affiliateLink.includes('veed.io');
+  const finalHref = needsCloaking 
+    ? `/api/visit?url=${encodeURIComponent(affiliateLink)}`
+    : affiliateLink;
+
   return (
     <div className={`relative bg-white rounded-2xl border-2 ${isPopular ? 'border-indigo-500 shadow-xl md:scale-105' : 'border-gray-200 shadow-lg'} overflow-hidden flex flex-col h-full transition-transform`}>
       {/* Popular Badge */}
@@ -58,9 +64,10 @@ export default function PricingCard({
 
           {/* CTA Button */}
           <a
-            href={affiliateLink}
+            href={finalHref}
             target="_blank"
-            rel="noopener noreferrer nofollow"
+            rel="nofollow noopener noreferrer"
+            referrerPolicy="no-referrer"
             className={`block w-full py-3.5 px-6 rounded-lg font-bold text-base text-center transition-all duration-200 ${
               isPopular
                 ? 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-md hover:shadow-lg'

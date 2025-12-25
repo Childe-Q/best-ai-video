@@ -344,7 +344,8 @@ export default async function ComparisonPage({ params }: PageProps) {
                   <a
                     href={winnerPrice.affiliate_link}
                     target="_blank"
-                    rel="noopener noreferrer nofollow"
+                    rel="nofollow noopener noreferrer"
+                    referrerPolicy="no-referrer"
                     className="text-2xl font-bold text-gray-900 mb-2 hover:text-indigo-600 transition-colors block"
                   >
                     {winnerPrice.name}
@@ -364,7 +365,8 @@ export default async function ComparisonPage({ params }: PageProps) {
                 <a
                   href={winnerQuality.affiliate_link}
                   target="_blank"
-                  rel="noopener noreferrer nofollow"
+                  rel="nofollow noopener noreferrer"
+                  referrerPolicy="no-referrer"
                   className="text-2xl font-bold text-gray-900 mb-2 hover:text-indigo-600 transition-colors block"
                 >
                   {winnerQuality.name}
@@ -527,7 +529,8 @@ export default async function ComparisonPage({ params }: PageProps) {
             <a
               href={toolA.affiliate_link}
               target="_blank"
-              rel="noopener noreferrer nofollow"
+              rel="nofollow noopener noreferrer"
+              referrerPolicy="no-referrer"
               className="inline-flex items-center gap-3 px-6 py-4 bg-white text-indigo-600 rounded-lg font-bold hover:bg-gray-50 transition-all transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl min-w-[200px] justify-center"
             >
               <ToolLogo logoUrl={toolA.logo_url} toolName={toolA.name} size="sm" />
@@ -538,7 +541,8 @@ export default async function ComparisonPage({ params }: PageProps) {
             <a
               href={toolB.affiliate_link}
               target="_blank"
-              rel="noopener noreferrer nofollow"
+              rel="nofollow noopener noreferrer"
+              referrerPolicy="no-referrer"
               className="inline-flex items-center gap-3 px-6 py-4 bg-white text-indigo-600 rounded-lg font-bold hover:bg-gray-50 transition-all transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl min-w-[200px] justify-center"
             >
               <ToolLogo logoUrl={toolB.logo_url} toolName={toolB.name} size="sm" />

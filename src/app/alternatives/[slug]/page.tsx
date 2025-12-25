@@ -106,7 +106,7 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
                   <li className="flex items-center gap-2">✓ No editing skills needed</li>
                   <li className="flex items-center gap-2">✓ Huge stock library</li>
                 </ul>
-                <a href={bestOverall.affiliate_link} target="_blank" rel="noopener noreferrer nofollow" className="block text-center bg-indigo-600 text-white py-2 rounded-lg font-bold hover:bg-indigo-700 transition">
+                <a href={bestOverall.affiliate_link} target="_blank" rel="nofollow noopener noreferrer" referrerPolicy="no-referrer" className="block text-center bg-indigo-600 text-white py-2 rounded-lg font-bold hover:bg-indigo-700 transition">
                   Try {bestOverall.name}
                 </a>
               </div>
@@ -129,7 +129,7 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
                    <li className="flex items-center gap-2">✓ Cheapest paid plan</li>
                    <li className="flex items-center gap-2">✓ Generous free tier</li>
                 </ul>
-                <a href={bestValue.affiliate_link} target="_blank" rel="noopener noreferrer nofollow" className="block text-center bg-white border border-indigo-600 text-indigo-600 py-2 rounded-lg font-bold hover:bg-indigo-50 transition">
+                <a href={bestValue.affiliate_link} target="_blank" rel="nofollow noopener noreferrer" referrerPolicy="no-referrer" className="block text-center bg-white border border-indigo-600 text-indigo-600 py-2 rounded-lg font-bold hover:bg-indigo-50 transition">
                   Try {bestValue.name}
                 </a>
               </div>
@@ -152,7 +152,7 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
                    <li className="flex items-center gap-2">✓ Best AI Avatars</li>
                    <li className="flex items-center gap-2">✓ 40+ Languages</li>
                 </ul>
-                 <a href={bestSpecific.affiliate_link} target="_blank" rel="noopener noreferrer nofollow" className="block text-center bg-white border border-gray-300 text-gray-700 py-2 rounded-lg font-bold hover:bg-gray-50 transition">
+                 <a href={bestSpecific.affiliate_link} target="_blank" rel="nofollow noopener noreferrer" referrerPolicy="no-referrer" className="block text-center bg-white border border-gray-300 text-gray-700 py-2 rounded-lg font-bold hover:bg-gray-50 transition">
                   Try {bestSpecific.name}
                 </a>
               </div>
@@ -243,7 +243,8 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
                     <a 
                       href={tool.affiliate_link}
                       target="_blank"
-                      rel="noopener noreferrer nofollow"
+                      rel="nofollow noopener noreferrer"
+                      referrerPolicy="no-referrer"
                       className="block w-full text-center bg-indigo-600 text-white font-bold py-3 rounded-lg hover:bg-indigo-700 transition shadow-md"
                     >
                       Visit Website

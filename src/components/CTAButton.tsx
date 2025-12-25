@@ -20,7 +20,8 @@ export default function CTAButton({ affiliateLink, hasFreeTrial, className = '',
     <a
       href={affiliateLink}
       target="_blank"
-      rel="noopener noreferrer nofollow sponsored"
+      rel="nofollow noopener noreferrer sponsored"
+      referrerPolicy="no-referrer"
       className={`inline-flex items-center justify-center font-bold text-white rounded-lg transition-all transform hover:-translate-y-0.5 shadow-md hover:shadow-lg bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 ${sizeClasses[size]} ${className}`}
     >
       {label}

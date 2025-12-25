@@ -16,6 +16,12 @@ export default function PricingTable({ plans, affiliateLink, hasFreeTrial }: Pri
   // Track expanded state for each card individually
   const [expandedCards, setExpandedCards] = useState<Record<string, boolean>>({});
 
+  // Check if link needs cloaking (Veed.io or cello.so links)
+  const needsCloaking = affiliateLink.includes('cello.so') || affiliateLink.includes('veed.io');
+  const finalHref = needsCloaking 
+    ? `/api/visit?url=${encodeURIComponent(affiliateLink)}`
+    : affiliateLink;
+
   // Calculate yearly price (20% discount)
   const getYearlyPrice = (monthlyPrice: string): string => {
     if (!monthlyPrice) return monthlyPrice;
@@ -330,9 +336,10 @@ export default function PricingTable({ plans, affiliateLink, hasFreeTrial }: Pri
 
           {/* CTA Button - Pinned to bottom */}
           <a
-            href={affiliateLink}
+            href={finalHref}
             target="_blank"
-            rel="noreferrer noopener"
+            rel="nofollow noopener noreferrer"
+            referrerPolicy="no-referrer"
             className={`block w-full py-3 px-6 rounded-xl font-bold text-base text-center transition-all duration-200 mt-auto ${buttonClasses}`}
           >
             {plan.btn_text || (isEnterprise ? 'Contact Us' : 'Get Started')}

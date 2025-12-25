@@ -522,7 +522,8 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
                 <a
                   href={toolA.affiliate_link}
                   target="_blank"
-                  rel="noopener noreferrer nofollow"
+                  rel="nofollow noopener noreferrer"
+                  referrerPolicy="no-referrer"
                   className="inline-flex items-center justify-center px-4 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
                 >
                   Visit {toolA.name}
@@ -532,7 +533,8 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
                 <a
                   href={toolB.affiliate_link}
                   target="_blank"
-                  rel="noopener noreferrer nofollow"
+                  rel="nofollow noopener noreferrer"
+                  referrerPolicy="no-referrer"
                   className="inline-flex items-center justify-center px-4 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors"
                 >
                   Visit {toolB.name}
@@ -548,7 +550,8 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
           <a
             href={toolA.affiliate_link}
             target="_blank"
-            rel="noopener noreferrer nofollow"
+            rel="nofollow noopener noreferrer"
+            referrerPolicy="no-referrer"
             className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors active:bg-indigo-800"
           >
             Visit {toolA.name}
@@ -556,7 +559,8 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
           <a
             href={toolB.affiliate_link}
             target="_blank"
-            rel="noopener noreferrer nofollow"
+            rel="nofollow noopener noreferrer"
+            referrerPolicy="no-referrer"
             className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors active:bg-indigo-800"
           >
             Visit {toolB.name}
