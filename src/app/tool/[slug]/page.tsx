@@ -384,10 +384,10 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           </div>
         </div>
 
-        {/* Two Column Layout */}
-        <div className="flex flex-col lg:flex-row gap-8 items-start">
-          {/* Left Column - Main Content (70% on desktop) */}
-          <div className="flex-1 lg:w-[70%] space-y-8">
+        {/* Two Column Layout - Grid for proper sticky positioning */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          {/* Left Column - Main Content (Span 2 columns) */}
+          <div className="lg:col-span-2 space-y-8">
 
             {/* Video Section */}
             {videoId && (
@@ -629,9 +629,9 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
             </section>
           </div>
 
-          {/* Right Column - Sidebar (30% on desktop) */}
-          <aside className="lg:w-[30%]">
-            {/* The Sticky Wrapper */}
+          {/* Right Column - Sidebar (Span 1 column) */}
+          <aside className="lg:col-span-1">
+            {/* The Sticky Wrapper - This is where sticky is applied */}
             <div className="sticky top-24 flex flex-col gap-6">
               {/* Unlock AI Mastery Promo Box */}
               <div className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl p-6 text-white shadow-lg">
