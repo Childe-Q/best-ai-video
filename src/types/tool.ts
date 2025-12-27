@@ -61,6 +61,7 @@ export type Tool = {
   review_count?: number; // e.g., 7
   is_verified?: boolean; // true if verified
   categories?: string[]; // e.g., ['Video Generators', 'Text to Speech']
+  user_sentiment?: string; // User sentiment summary from verified reviews
 };
 
 // Types for Alternatives Page

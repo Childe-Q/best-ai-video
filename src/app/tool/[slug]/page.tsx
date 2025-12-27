@@ -8,18 +8,39 @@ import PricingSnapshot from '@/components/PricingSnapshot';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ToolLogo from '@/components/ToolLogo';
-import YouTubeEmbed from '@/components/YouTubeEmbed';
 import { getSEOCurrentYear, hasFreePlan, getStartingPrice } from '@/lib/utils';
 import { 
   BookmarkIcon, 
   CheckBadgeIcon,
-  LinkIcon
+  LinkIcon,
+  HandThumbUpIcon,
+  HandThumbDownIcon
 } from '@heroicons/react/24/outline';
 
 const tools: Tool[] = toolsData as Tool[];
 
 function getTool(slug: string): Tool | undefined {
   return tools.find((t) => t.slug === slug);
+}
+
+// Extract YouTube video ID from various URL formats
+function getYouTubeVideoId(url: string): string | null {
+  if (!url) return null;
+  
+  // Handle different YouTube URL formats
+  const patterns = [
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/,
+    /^([a-zA-Z0-9_-]{11})$/ // Direct video ID
+  ];
+  
+  for (const pattern of patterns) {
+    const match = url.match(pattern);
+    if (match && match[1]) {
+      return match[1];
+    }
+  }
+  
+  return null;
 }
 
 // Weighted Matching System: Find alternatives based on shared tags
@@ -112,9 +133,12 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
   // Use weighted matching to find top 3 alternatives
   const alternativesWithTags = findBestAlternatives(tool, tools, 3);
   const seoYear = getSEOCurrentYear();
+  
+  // Extract video ID from video_url
+  const videoId = tool.video_url ? getYouTubeVideoId(tool.video_url) : null;
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans">
+    <div className="min-h-screen bg-slate-50 text-gray-900 font-sans">
       <Navbar />
       
       {/* Main Content Container */}
@@ -125,10 +149,11 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         </div>
         
         {/* Two-Column Hero Section with Verdict Card */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8 items-stretch">
           {/* Left Column - Hero Section (Span 2) */}
-          <header className="lg:col-span-2 bg-white rounded-xl border border-gray-200 shadow-sm p-6">
-            <div className="flex flex-row gap-6">
+          <header className="lg:col-span-2 bg-white rounded-xl border border-gray-200 shadow-sm p-6 flex flex-col h-full">
+            {/* Top Content Wrapper */}
+            <div className="flex flex-row gap-6 flex-1">
               {/* Left: Logo (Fixed Size) */}
               <div className="flex-shrink-0">
                 <div className="w-24 h-24 rounded-xl shadow-sm bg-white border border-gray-100 p-4 flex items-center justify-center">
@@ -286,8 +311,27 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 )}
               </div>
 
-              {/* Action Buttons */}
-              <div className="flex items-center gap-3">
+              {/* Key Highlights */}
+              {tool.features && tool.features.length > 0 && (
+                <div className="flex items-start gap-2 mb-6">
+                  <span className="text-gray-500 font-medium min-w-[120px] text-sm">Highlights:</span>
+                  <div className="flex flex-wrap gap-2">
+                    {tool.features.slice(0, 4).map((feature, idx) => (
+                      <span
+                        key={idx}
+                        className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-md"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              </div>
+            </div>
+
+            {/* Action Buttons - Sticky to Bottom */}
+            <div className="flex items-center gap-3 mt-auto">
                 {/* Primary Button */}
                 <a
                   href={tool.affiliate_link}
@@ -307,38 +351,58 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   <BookmarkIcon className="w-4 h-4" />
                   Bookmark
                 </button>
-              </div>
             </div>
-          </div>
           </header>
 
           {/* Right Column - Verdict Card (Span 1) */}
           <div className="lg:col-span-1">
             <div className="bg-indigo-50/50 rounded-xl p-6 border border-indigo-100 h-full flex flex-col">
-              <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <span className="bg-indigo-600 text-white text-xs px-2 py-1 rounded uppercase tracking-wide">Verdict</span>
-                Is {tool.name} worth it?
-              </h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6 flex-1">
-                <strong>Yes, if you are {tool.best_for}.</strong> It offers excellent value with its {tool.starting_price} starting price. 
-                However, if you need more advanced features, you might want to consider alternatives below.
-              </p>
+              {tool.review_content ? (
+                <div className="flex-1 mb-6">
+                  <div className="mb-3 flex items-center gap-2">
+                    <span className="bg-indigo-600 text-white text-[10px] px-1.5 py-0.5 rounded uppercase tracking-wide font-medium">Verdict</span>
+                  </div>
+                  <div 
+                    className="prose prose-lg prose-blue max-w-none text-gray-700 leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: tool.review_content }}
+                  />
+                </div>
+              ) : (
+                <>
+                  <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <span className="bg-indigo-600 text-white text-xs px-2 py-1 rounded uppercase tracking-wide">Verdict</span>
+                    Is {tool.name} worth it?
+                  </h2>
+                  <p className="text-lg text-gray-700 leading-loose mb-6 flex-1">
+                    <strong>Yes, if you are {tool.best_for}.</strong> It offers excellent value with its {tool.starting_price} starting price. 
+                    However, if you need more advanced features, you might want to consider alternatives below.
+                  </p>
+                </>
+              )}
               <CTAButton affiliateLink={tool.affiliate_link} hasFreeTrial={tool.has_free_trial} />
             </div>
           </div>
         </div>
 
         {/* Two Column Layout */}
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-8 items-start">
           {/* Left Column - Main Content (70% on desktop) */}
           <div className="flex-1 lg:w-[70%] space-y-8">
 
             {/* Video Section */}
-            {tool.video_url && (
-              <section className="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
-                <h2 className="text-xl font-bold text-gray-900 mb-4">Watch {tool.name} in Action</h2>
-                <YouTubeEmbed videoUrl={tool.video_url} title={`${tool.name} Demo Video`} />
-              </section>
+            {videoId && (
+              <div className="my-12">
+                <h2 className="text-2xl font-bold mb-6">Watch {tool.name} in Action</h2>
+                <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src={`https://www.youtube.com/embed/${videoId}`}
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
             )}
 
             {/* Tabs Navigation */}
@@ -366,10 +430,10 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
             </div>
 
             {/* Tab Content: What is [Tool]? */}
-            <section id="what-is" className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 md:p-8 space-y-8">
-              {/* Pricing Snapshot */}
-              <div>
-                <h2 className="text-xl font-bold text-gray-900 mb-4">Pricing</h2>
+            <section id="what-is" className="space-y-8 max-w-3xl">
+              {/* Pricing Snapshot - Card Style */}
+              <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing</h2>
                 {tool.pricing_plans && tool.pricing_plans.length > 0 ? (
                   <PricingSnapshot 
                     plans={tool.pricing_plans} 
@@ -396,43 +460,44 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 )}
               </div>
 
-              {/* Pros & Cons */}
-              <div>
-                <h2 className="text-xl font-bold text-gray-900 mb-6">Pros & Cons</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-sm font-bold text-green-700 uppercase mb-3 flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-green-500"></span> Pros
-                    </h3>
-                    <ul className="space-y-3">
-                      {tool.pros.map((pro, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-gray-700 text-sm">
-                          <span className="text-green-500 font-bold shrink-0">✓</span> {pro}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-bold text-red-700 uppercase mb-3 flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-red-500"></span> Cons
-                    </h3>
-                    <ul className="space-y-3">
-                      {tool.cons.map((con, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-gray-700 text-sm">
-                          <span className="text-red-500 font-bold shrink-0">✕</span> {con}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+              {/* Pros & Cons - Card Grid Style */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Pros Column */}
+                <div className="bg-green-50/50 rounded-xl p-6 border border-green-100">
+                  <h3 className="text-lg font-bold text-green-700 mb-4 flex items-center gap-2">
+                    <HandThumbUpIcon className="w-5 h-5" />
+                    Pros
+                  </h3>
+                  <ul className="space-y-3">
+                    {tool.pros.map((pro, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-gray-700 text-sm">
+                        <span className="text-green-500 font-bold shrink-0">✓</span> {pro}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                {/* Cons Column */}
+                <div className="bg-red-50/50 rounded-xl p-6 border border-red-100">
+                  <h3 className="text-lg font-bold text-red-700 mb-4 flex items-center gap-2">
+                    <HandThumbDownIcon className="w-5 h-5" />
+                    Cons
+                  </h3>
+                  <ul className="space-y-3">
+                    {tool.cons.map((con, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-gray-700 text-sm">
+                        <span className="text-red-500 font-bold shrink-0">✕</span> {con}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
 
-              {/* Detailed Review */}
+              {/* Detailed Review - Card Style */}
               {tool.long_review && (
-                <div>
-                  <h2 className="text-xl font-bold text-gray-900 mb-4">In-Depth Review</h2>
+                <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">In-Depth Review</h2>
                   <div 
-                    className="prose prose-sm max-w-none text-gray-700 leading-relaxed"
+                    className="prose prose-lg prose-blue max-w-none text-gray-700 leading-relaxed"
                     dangerouslySetInnerHTML={{ __html: tool.long_review }}
                   />
                 </div>
@@ -440,8 +505,8 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
               {/* Key Features */}
               {tool.features && tool.features.length > 0 && (
-                <div>
-                  <h2 className="text-xl font-bold text-gray-900 mb-4">Key Features</h2>
+                <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {tool.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-gray-700">
@@ -455,8 +520,8 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
               {/* Who is Using (Target Audience) */}
               {tool.target_audience_list && tool.target_audience_list.length > 0 && (
-                <div>
-                  <h2 className="text-xl font-bold text-gray-900 mb-4">Who is Using {tool.name}?</h2>
+                <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">Who is Using {tool.name}?</h2>
                   <div className="flex flex-wrap gap-2">
                     {tool.target_audience_list.map((audience, idx) => (
                       <span 
@@ -472,70 +537,102 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
             </section>
 
             {/* Tab Content: Reviews */}
-            <section id="reviews" className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 md:p-8">
-              <h2 className="text-xl font-bold text-gray-900 mb-6">User Reviews</h2>
-              <div className="space-y-6">
-                {tool.faqs && tool.faqs.length > 0 ? (
-                  tool.faqs.map((faq, idx) => (
-                    <div key={idx} className="border-b border-gray-200 pb-6 last:border-b-0 last:pb-0">
-                      <h3 className="font-bold text-gray-900 mb-2">{faq.question}</h3>
-                      <p className="text-gray-700 text-sm leading-relaxed">{faq.answer}</p>
-                    </div>
-                  ))
-                ) : (
-                  <p className="text-gray-500">No reviews available yet.</p>
-                )}
+            <section id="reviews" className="space-y-8 max-w-3xl prose prose-gray">
+              {/* What Users Are Saying Section */}
+              {tool.user_sentiment && (
+                <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">📢 What Users Are Saying (Sentiment Summary)</h2>
+                  <p className="text-gray-700 leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: tool.user_sentiment.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }}></p>
+                  <p className="text-xs text-gray-500 italic">Summarized from verified reviews on Product Hunt & G2</p>
+                </div>
+              )}
+
+              {/* Frequently Asked Questions Section */}
+              <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+                <div className="space-y-4">
+                  {tool.faqs && tool.faqs.length > 0 ? (
+                    tool.faqs.map((faq, idx) => (
+                      <div key={idx} className="bg-gray-50 rounded-lg p-6 mb-4">
+                        <h3 className="font-bold text-gray-900 mb-2">{faq.question}</h3>
+                        <p className="text-gray-700 text-sm leading-relaxed">{faq.answer}</p>
+                      </div>
+                    ))
+                  ) : (
+                    <p className="text-gray-500">No FAQs available yet.</p>
+                  )}
+                </div>
               </div>
             </section>
 
             {/* Tab Content: Alternatives */}
-            <section id="alternatives" className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 md:p-8">
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-xl font-bold text-gray-900">Top Alternatives</h2>
-                <Link href={`/tool/${tool.slug}/alternatives`} className="text-indigo-600 font-medium hover:underline text-sm">
-                  Compare All →
-                </Link>
-              </div>
-              <div className="space-y-4">
-                {alternativesWithTags.map(({ tool: alt, sharedTags }) => {
-                  const bestTag = sharedTags.length > 0 ? sharedTags[0] : null;
-                  
-                  return (
-                    <div key={alt.id} className="group bg-gray-50 rounded-xl border border-gray-200 p-4 hover:shadow-md transition-shadow">
-                      <div className="flex items-center gap-4">
-                        <div className="h-12 w-12 bg-white rounded-lg flex items-center justify-center text-gray-500 font-bold shrink-0">
-                          {alt.name.charAt(0)}
+            <section id="alternatives" className="max-w-3xl">
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                <div className="flex items-center justify-between mb-6">
+                  <h2 className="text-2xl font-bold text-gray-900">Top Alternatives</h2>
+                  <Link href={`/tool/${tool.slug}/alternatives`} className="text-indigo-600 font-medium hover:underline text-sm">
+                    Compare All →
+                  </Link>
+                </div>
+                <div className="space-y-0">
+                  {alternativesWithTags.map(({ tool: alt, sharedTags }, index) => {
+                    const bestTag = sharedTags.length > 0 ? sharedTags[0] : null;
+                    const isLast = index === alternativesWithTags.length - 1;
+                    
+                    return (
+                      <div 
+                        key={alt.id} 
+                        className={`flex items-center gap-4 py-4 ${!isLast ? 'border-b border-gray-200' : ''}`}
+                      >
+                        {/* Left: Logo */}
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 rounded-lg flex items-center justify-center">
+                            <ToolLogo 
+                              logoUrl={alt.logo_url} 
+                              toolName={alt.name} 
+                              size="md" 
+                              withContainer={false}
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
                         </div>
+                        
+                        {/* Middle: Content */}
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2 mb-1">
-                            <Link href={`/tool/${alt.slug}`} className="font-bold text-gray-900 hover:text-indigo-600">
+                            <Link href={`/tool/${alt.slug}`} className="font-bold text-gray-900 hover:text-gray-700 no-underline">
                               {alt.name}
                             </Link>
                             {bestTag && (
-                              <span className="text-xs bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded font-medium">
+                              <span className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded font-medium">
                                 {bestTag}
                               </span>
                             )}
                           </div>
-                          <p className="text-sm text-gray-600 line-clamp-1">{alt.short_description}</p>
+                          <p className="text-sm text-gray-500 line-clamp-1">{alt.short_description}</p>
                         </div>
-                        <CTAButton 
-                          affiliateLink={alt.affiliate_link} 
-                          hasFreeTrial={alt.has_free_trial} 
-                          size="sm"
-                        />
+                        
+                        {/* Right: Action Button */}
+                        <div className="flex-shrink-0">
+                          <Link
+                            href={`/tool/${alt.slug}`}
+                            className="inline-flex items-center px-4 py-2 bg-white border border-gray-300 hover:bg-gray-50 text-gray-900 text-sm font-medium rounded-lg transition-colors"
+                          >
+                            View
+                          </Link>
+                        </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
               </div>
             </section>
           </div>
 
           {/* Right Column - Sidebar (30% on desktop) */}
-          <aside className="lg:w-[30%] space-y-6">
-            {/* Sticky Newsletter/Course Promo */}
-            <div className="lg:sticky lg:top-8 space-y-6">
+          <aside className="lg:w-[30%]">
+            {/* The Sticky Wrapper */}
+            <div className="sticky top-24 flex flex-col gap-6">
               {/* Unlock AI Mastery Promo Box */}
               <div className="bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl p-6 text-white shadow-lg">
                 <h3 className="text-xl font-bold mb-2">Unlock AI Mastery</h3>
@@ -558,8 +655,14 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                       className="block group"
                     >
                       <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                        <div className="h-10 w-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 font-bold text-sm shrink-0">
-                          {alt.name.charAt(0)}
+                        <div className="h-10 w-10 rounded-lg flex items-center justify-center shrink-0 bg-white border border-gray-100">
+                          <ToolLogo 
+                            logoUrl={alt.logo_url} 
+                            toolName={alt.name} 
+                            size="sm" 
+                            withContainer={false}
+                            className="w-full h-full object-contain"
+                          />
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="font-semibold text-gray-900 group-hover:text-indigo-600 text-sm">

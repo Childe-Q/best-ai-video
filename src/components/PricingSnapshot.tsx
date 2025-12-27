@@ -76,7 +76,7 @@ export default function PricingSnapshot({ plans, affiliateLink, toolSlug }: Pric
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                   referrerPolicy="no-referrer"
-                  className="inline-flex items-center px-4 py-1 rounded-full text-sm font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 transition-colors"
+                  className="inline-flex items-center px-6 py-2 rounded-full text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors"
                 >
                   Visit
                 </a>

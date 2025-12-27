@@ -4,8 +4,8 @@
     "slug": "fliki",
     "name": "Fliki",
     "logo_url": "/logos/fliki.png",
-    "tagline": "Text to Video with AI Voices",
-    "short_description": "Create videos from text using AI voices and stock footage.",
+    "tagline": "Turn Blog Posts into Videos in 2 Minutes with AI Voices.",
+    "short_description": "The fastest way to convert text to video. Ideal for bloggers, marketers, and faceless YouTube channels.",
     "best_for": "Bloggers & Content Marketers",
     "affiliate_link": "https://fliki.ai/?via=jack-shan",
     "pricing_plans": [
@@ -35,7 +35,7 @@
           "No watermark"
         ],
         "btn_text": "Start Free Trial",
-        "badge": "⭐ Best Value"
+        "badge": "🔥 Most Popular"
       },
       {
         "name": "Premium",
@@ -55,27 +55,28 @@
     "has_free_trial": true,
     "pricing_model": "Freemium",
     "starting_price": "$28/mo",
-    "rating": 4.9,
+    "rating": 4.8,
     "features": [
       "Text to Video",
-      "900+ AI Voices",
+      "AI Voice Cloning",
       "Blog to Video",
-      "Auto Subtitles"
+      "Auto Subtitles",
+      "Stock Library"
     ],
     "tags": [
       "Text-to-Video",
       "Repurposing"
     ],
     "pros": [
-      "Excellent AI voice quality",
-      "Blog to video conversion",
-      "Large voice library"
+      "⚡ Fastest Text-to-Video workflow (2 mins/video)",
+      "900+ Ultra-realistic Neural Voices (ElevenLabs quality)",
+      "Direct Blog-URL to Video conversion"
     ],
     "cons": [
-      "Limited video editing features",
-      "Stock footage can be generic"
+      "Stock footage library can feel generic sometimes",
+      "No advanced timeline editing like Premiere Pro"
     ],
-    "review_content": "Fliki specializes in converting text content into engaging videos using AI voices and stock footage. It's particularly powerful for turning blog posts into video content automatically.",
+    "review_content": "<div><p class='mb-3 text-base leading-relaxed'><strong>🚀 Bottom Line:</strong> The <strong>Ultimate Storytelling Machine</strong>. Best for turning scripts into professional videos in minutes.</p><ul class='space-y-2 text-base'><li>✅ <strong>Buy:</strong> For Explainers, Ads & Faceless Channels.</li><li>❌ <strong>Skip:</strong> For cinematic AI generation (Use Runway).</li></ul></div>",
     "long_review": "<p>Fliki excels at <strong>text-to-video conversion</strong>, making it ideal for bloggers and content marketers who want to repurpose written content into video format. The platform offers over 900 AI voices in 75+ languages, with natural-sounding speech that rivals human narration.</p><p>The standout feature is the 'Blog to Video' function, which can automatically convert entire blog posts into video format by extracting key points, matching stock footage, and adding narration. While the video editing capabilities are more limited compared to full-featured editors, Fliki's strength lies in speed and automation for content repurposing.</p>",
     "faqs": [
       {
@@ -85,17 +86,36 @@
       {
         "question": "How many AI voices does Fliki offer?",
         "answer": "Fliki offers over 900 AI voices in 75+ languages, with natural-sounding speech quality."
+      },
+      {
+        "question": "What is Fliki's refund policy?",
+        "answer": "Fliki offers a 14-day money-back guarantee for paid plans. If you're not satisfied with the service, you can request a full refund within 14 days of your purchase."
+      },
+      {
+        "question": "Can I use Fliki videos for commercial purposes?",
+        "answer": "Yes, with paid plans (Standard and Premium), you have full commercial rights to use the videos you create with Fliki for your business, marketing campaigns, and client work without any attribution required."
+      },
+      {
+        "question": "What languages does Fliki support?",
+        "answer": "Fliki supports over 75 languages for AI voice generation, including English, Spanish, French, German, Chinese, Japanese, Hindi, and many more. This makes it ideal for creating multilingual content for global audiences."
       }
     ],
+    "user_sentiment": "Users overwhelmingly praise Fliki for its **speed and ease of use**, calling it a 'game-changer' for turning blog posts into videos quickly. The **AI voices** (especially in multiple languages like French and Tamil) are cited as a standout feature, sounding much more natural than competitors. However, some long-term users have complained about **limited stock video variety** and frustration with **promotional offers** that apply only to new users. The consensus is: it's an indispensable tool for beginners and marketers needing volume, but power users might find the stock library restrictive.",
     "ease_of_use_score": 9.8,
     "speed_score": 9.8,
     "price_score": 9.5,
     "output_quality_score": 9.2,
     "video_url": "https://youtu.be/FRLzYf52GZY",
+    "use_cases": [
+      "YouTube Shorts",
+      "TikTok",
+      "Blog Repurposing",
+      "Social Media Ads"
+    ],
     "target_audience_list": [
-      "Marketing Teams",
-      "Content Creators",
-      "Bloggers"
+      "Bloggers",
+      "Affiliate Marketers",
+      "Faceless YouTubers"
     ],
     "social_links": {
       "twitter": "https://twitter.com/fliki_ai",
