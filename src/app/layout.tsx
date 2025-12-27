@@ -19,13 +19,12 @@ const geistMono = Geist_Mono({
 const seoYear = getSEOCurrentYear();
 
 export const metadata: Metadata = {
-  title: `Best AI Video Tools in ${seoYear} | Reviews & Comparisons`,
-  description: "Compare features, pricing, pros & cons, and alternatives of top AI video software.",
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/favicon.ico',
+  metadataBase: new URL('https://best-ai-video.com'),
+  title: {
+    template: '%s | Best AI Video Tools',
+    default: `Best AI Video Tools in ${seoYear} | Reviews & Comparisons`,
   },
+  description: "Compare features, pricing, pros & cons, and alternatives of top AI video software.",
   verification: {
     google: "q56dscmxkvtyDq85VzA0r0pDrZRl272wuwBbujtiMts",
   },
