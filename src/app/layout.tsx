@@ -40,6 +40,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Impact Site Verification */}
+        <div style={{ display: 'none' }}>Impact-Site-Verification: 85a12125-5860-4b7e-960f-d1d65fe37656</div>
         <GlobalErrorHandler />
         <ErrorBoundary>
         {children}
