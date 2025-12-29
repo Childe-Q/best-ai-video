@@ -355,7 +355,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           </header>
 
           {/* Right Column - Verdict Card (Span 1) */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 flex flex-col">
             <div className="bg-indigo-50/50 rounded-xl p-6 border border-indigo-100 h-full flex flex-col">
               {tool.review_content ? (
                 <div className="flex-1 mb-6">
@@ -379,7 +379,9 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   </p>
                 </>
               )}
-              <CTAButton affiliateLink={tool.affiliate_link} hasFreeTrial={tool.has_free_trial} />
+              <div className="mt-auto">
+                <CTAButton affiliateLink={tool.affiliate_link} hasFreeTrial={tool.has_free_trial} />
+              </div>
             </div>
           </div>
         </div>
