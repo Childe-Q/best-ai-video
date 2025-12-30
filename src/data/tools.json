@@ -11,45 +11,93 @@
     "pricing_plans": [
       {
         "name": "Free",
-        "price": "Free",
+        "price": {
+          "monthly": "$0",
+          "yearly": "$0"
+        },
         "period": "",
-        "description": "For testing",
+        "description": "For beginners trying out AI video creation.",
         "features": [
-          "5 min/mo",
-          "720p export",
-          "Watermark",
-          "Basic features"
+          "5 minutes of credits per month",
+          "300 (limited) voices, 80+ languages",
+          "Create videos from ideas, scripts, blogs",
+          "Thousands of images, video clips, music",
+          "Generate AI Images",
+          "HD - 720p low-res videos",
+          "Create thumbnail designs",
+          "Contains Fliki Watermark"
         ],
-        "btn_text": "Get Started",
-        "badge": "Risk-Free Entry"
+        "btn_text": "Start now",
+        "badge": "Risk-Free"
       },
       {
         "name": "Standard",
-        "price": "$28",
-        "period": "/mo",
-        "description": "For individuals",
+        "price": {
+          "monthly": "$28",
+          "yearly": "$17"
+        },
+        "period": "/month",
+        "description": "For creators venturing into AI video production.",
         "features": [
-          "2160 min/year",
-          "1080p export",
+          "180 minutes of credits per month",
+          "1000 voices including 150 ultra-realistic",
+          "Full HD - 1080p videos",
+          "Videos of length upto 15 minutes",
+          "Millions of premium assets",
+          "Translate content to 80+ languages",
+          "Make and Zapier integration",
+          "Limited AI avatars",
           "Voice cloning",
-          "No watermark"
+          "No watermark",
+          "Commercial rights"
         ],
-        "btn_text": "Start Free Trial",
+        "btn_text": "Start for free",
         "badge": "🔥 Most Popular"
       },
       {
         "name": "Premium",
-        "price": "$88",
-        "period": "/mo",
-        "description": "For professionals",
+        "price": {
+          "monthly": "$88",
+          "yearly": "$53"
+        },
+        "period": "/month",
+        "description": "For emerging & experienced video creators.",
         "features": [
-          "7200 min/year",
-          "40 min/video",
+          "600 minutes of credits per month",
+          "2000+ voices including 1000+ ultra-realistic",
+          "Videos of length upto 40 minutes",
+          "Multiple brand kits",
+          "Multiple voice cloning",
+          "Multiple custom voices",
+          "Generate AI video clips",
+          "Custom fonts",
           "All AI avatars",
           "Priority support"
         ],
-        "btn_text": "Start Free Trial",
-        "badge": "🚀 Power User"
+        "btn_text": "Start for free",
+        "badge": "Power User"
+      },
+      {
+        "name": "Enterprise",
+        "price": {
+          "monthly": "Custom",
+          "yearly": "Custom"
+        },
+        "period": "",
+        "description": "Custom plan tailored to your specific needs.",
+        "features": [
+          "Custom credits",
+          "Bulk discounts",
+          "Higher quotas",
+          "Invoiced billing",
+          "API Access",
+          "Personalized avatars",
+          "State-of-the-art AI models",
+          "Professional voice cloning",
+          "Dedicated account manager"
+        ],
+        "btn_text": "Contact us",
+        "badge": "Custom"
       }
     ],
     "has_free_trial": true,
@@ -76,7 +124,7 @@
       "Stock footage library can feel generic sometimes",
       "No advanced timeline editing like Premiere Pro"
     ],
-    "review_content": "<div><p class='mb-3 text-base leading-relaxed'><strong>🚀 Bottom Line:</strong> The <strong>Ultimate Storytelling Machine</strong>. Best for turning scripts into professional videos in minutes.</p><ul class='space-y-2 text-base'><li>✅ <strong>Buy:</strong> For Explainers, Ads & Faceless Channels.</li><li>❌ <strong>Skip:</strong> For cinematic AI generation (Use Runway).</li></ul></div>",
+    "review_content": "<div><h3 class='text-lg font-bold mb-2'>🚀 The Bottom Line</h3><p class='mb-4 text-gray-700'>Fliki is the <strong>\"Repurposing\" Engine</strong>. It is designed to turn text into revenue-generating videos in record time.</p><div class='bg-green-50 p-3 rounded-lg border border-green-100 mb-4'><p class='text-sm text-green-800'><strong>🎯 Best For:</strong> Faceless YouTubers, Bloggers, and Marketers who need <strong>Volume & Speed</strong> over manual editing.</p></div><h3 class='text-lg font-bold mb-2'>Why it wins?</h3><p class='mb-4 text-gray-600 leading-relaxed'>Fliki isn't just a video generator; it's a <strong>content recycler on steroids</strong>. While other tools make you fiddle with complex timelines, Fliki treats video creation like <strong>writing a Google Doc</strong>.</p><p class='mb-4 text-gray-600 leading-relaxed'>Its superpower is <strong>Text-to-Video</strong>. You paste a blog URL, a tweet, or a loose script, and it pulls relevant stock media, adds a frighteningly human AI voice (the \"Ultra-realistic\" voices are top-tier), and syncs the subtitles automatically.</p><div class='bg-blue-50 p-4 rounded-lg border border-blue-100'><p class='text-sm text-blue-800'><strong>💡 Pro Insight:</strong> Most tools make you build a video scene by scene. Fliki builds it <strong>idea by idea</strong>. If you are a marketer with 50 blog posts collecting dust, Fliki is the fastest way to turn those assets into revenue streams without filming a single frame.</p></div></div>",
     "long_review": "<p>Fliki excels at <strong>text-to-video conversion</strong>, making it ideal for bloggers and content marketers who want to repurpose written content into video format. The platform offers over 900 AI voices in 75+ languages, with natural-sounding speech that rivals human narration.</p><p>The standout feature is the 'Blog to Video' function, which can automatically convert entire blog posts into video format by extracting key points, matching stock footage, and adding narration. While the video editing capabilities are more limited compared to full-featured editors, Fliki's strength lies in speed and automation for content repurposing.</p>",
     "faqs": [
       {

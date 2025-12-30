@@ -5,7 +5,10 @@ export type FAQ = {
 
 export type PricingPlan = {
   name: string; // e.g. "Free", "Creator"
-  price: string; // e.g. "$20", "Free"
+  price: string | { // Support both old string format and new object format
+    monthly: string; // e.g. "$28"
+    yearly: string;  // e.g. "$17" (The effective monthly cost when billed yearly)
+  };
   period: string; // e.g. "/mo", "/yr", or "" for free
   description: string; // Short descriptor like "For beginners"
   highlights: string[]; // Top section: Key highlights like "3 videos/mo", "1080p export"
