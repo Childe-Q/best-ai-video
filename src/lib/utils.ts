@@ -39,9 +39,21 @@ export function getCurrentMonthName(): string {
 /**
  * Helper functions for pricing_plans structure
  */
+
+// Helper function to get price as string (handles both string and object types)
+function getPriceString(price: string | { monthly: string; yearly: string } | undefined): string {
+  if (!price) return '';
+  if (typeof price === 'string') return price;
+  // If it's an object, return monthly price by default
+  return price.monthly || '';
+}
+
 export function hasFreePlan(tool: Tool): boolean {
   if (tool.pricing_plans && tool.pricing_plans.length > 0) {
-    return tool.pricing_plans.some(plan => plan.name.toLowerCase() === 'free' && plan.price.toLowerCase() === 'free');
+    return tool.pricing_plans.some(plan => {
+      const priceStr = getPriceString(plan.price);
+      return plan.name.toLowerCase() === 'free' && priceStr.toLowerCase() === 'free';
+    });
   }
   // Fallback for old structure
   if (tool.pricing?.free_plan?.exists) {
@@ -53,13 +65,15 @@ export function hasFreePlan(tool: Tool): boolean {
 export function getStartingPrice(tool: Tool): string {
   if (tool.pricing_plans && tool.pricing_plans.length > 0) {
     // Find first paid plan
-    const paidPlan = tool.pricing_plans.find(plan => 
-      plan.price.toLowerCase() !== 'free' && 
-      plan.price.toLowerCase() !== 'custom' &&
-      plan.price.toLowerCase() !== 'contact'
-    );
+    const paidPlan = tool.pricing_plans.find(plan => {
+      const priceStr = getPriceString(plan.price);
+      return priceStr.toLowerCase() !== 'free' && 
+             priceStr.toLowerCase() !== 'custom' &&
+             priceStr.toLowerCase() !== 'contact';
+    });
     if (paidPlan) {
-      return `${paidPlan.price}${paidPlan.period}`;
+      const priceStr = getPriceString(paidPlan.price);
+      return `${priceStr}${paidPlan.period}`;
     }
   }
   // Fallback for old structure

@@ -18,8 +18,17 @@ export default function PricingCard({
   hasFreeTrial,
   previousPlanName
 }: PricingCardProps) {
-  const isEnterprise = plan.price.toLowerCase() === 'custom' || plan.price.toLowerCase() === 'contact';
-  const isFree = plan.price.toLowerCase() === 'free';
+  // Helper function to get price as string (handles both string and object types)
+  const getPriceString = (price: string | { monthly: string; yearly: string } | undefined): string => {
+    if (!price) return '';
+    if (typeof price === 'string') return price;
+    // If it's an object, return monthly price by default
+    return price.monthly || '';
+  };
+
+  const priceStr = getPriceString(plan.price);
+  const isEnterprise = priceStr.toLowerCase() === 'custom' || priceStr.toLowerCase() === 'contact';
+  const isFree = priceStr.toLowerCase() === 'free';
   
   // Split features into "What's included" (first 6) and "Key features" (rest)
   // Use features if available, otherwise fallback to detailed_features or empty array
@@ -55,7 +64,7 @@ export default function PricingCard({
             ) : (
               <>
                 <div className="text-5xl font-extrabold text-gray-900 leading-tight">
-                  {plan.price}
+                  {priceStr}
                   {!isFree && <span className="text-2xl font-semibold text-gray-600">{plan.period}</span>}
                 </div>
               </>
