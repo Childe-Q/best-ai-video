@@ -22,6 +22,14 @@ export default function PricingTable({ plans, affiliateLink, hasFreeTrial }: Pri
     ? `/api/visit?url=${encodeURIComponent(affiliateLink)}`
     : affiliateLink;
 
+  // Helper function to get price as string (handles both string and object types)
+  const getPriceString = (price: string | { monthly: string; yearly: string } | undefined): string => {
+    if (!price) return '';
+    if (typeof price === 'string') return price;
+    // If it's an object, return monthly price by default
+    return price.monthly || '';
+  };
+
   // Calculate yearly price (20% discount)
   const getYearlyPrice = (monthlyPrice: string): string => {
     if (!monthlyPrice) return monthlyPrice;
@@ -38,8 +46,9 @@ export default function PricingTable({ plans, affiliateLink, hasFreeTrial }: Pri
       return { price: 'N/A', period: '' };
     }
     
-    const isEnterprise = plan.price.toLowerCase() === 'custom' || plan.price.toLowerCase() === 'contact';
-    const isFree = plan.price.toLowerCase() === 'free';
+    const priceStr = getPriceString(plan.price);
+    const isEnterprise = priceStr.toLowerCase() === 'custom' || priceStr.toLowerCase() === 'contact';
+    const isFree = priceStr.toLowerCase() === 'free';
 
     if (isEnterprise) {
       return { price: "Let's Talk", period: '' };
@@ -50,10 +59,10 @@ export default function PricingTable({ plans, affiliateLink, hasFreeTrial }: Pri
     }
 
     if (isYearly && plan.period === '/mo') {
-      return { price: getYearlyPrice(plan.price), period: '' };
+      return { price: getYearlyPrice(priceStr), period: '' };
     }
 
-    return { price: plan.price || 'N/A', period: plan.period || '' };
+    return { price: priceStr || 'N/A', period: plan.period || '' };
   };
 
   // Get highlights and detailed features
@@ -158,10 +167,11 @@ export default function PricingTable({ plans, affiliateLink, hasFreeTrial }: Pri
   const renderCard = (plan: PricingPlan, index: number, allPlans: PricingPlan[], isStaticEnterprise = false) => {
     if (!plan || !plan.name) return null;
     
+    const priceStr = getPriceString(plan.price);
     const isEnterprise = plan.name.toLowerCase().includes('enterprise') || 
-                         plan.price?.toLowerCase() === 'custom' || 
-                         plan.price?.toLowerCase() === 'contact';
-    const isFree = plan.price?.toLowerCase() === 'free';
+                         priceStr.toLowerCase() === 'custom' || 
+                         priceStr.toLowerCase() === 'contact';
+    const isFree = priceStr.toLowerCase() === 'free';
     const { price, period } = formatPrice(plan);
     const { highlights, detailedFeatures, previousPlanName } = getFeatureSections(plan, index, allPlans);
     

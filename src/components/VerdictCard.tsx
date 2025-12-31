@@ -49,7 +49,7 @@ export default function VerdictCard({
     const buySkipList: string[] = [];
 
     // Find Bottom Line section (h3 with 🚀 or "Bottom Line")
-    const bottomLineMatch = reviewContent.match(/<h3[^>]*>.*?(?:Bottom Line|🚀|The Bottom Line).*?<\/h3>\s*(<p[^>]*>.*?<\/p>)/is);
+    const bottomLineMatch = reviewContent.match(/<h3[^>]*>[\s\S]*?(?:Bottom Line|🚀|The Bottom Line)[\s\S]*?<\/h3>\s*(<p[^>]*>[\s\S]*?<\/p>)/i);
     if (bottomLineMatch && bottomLineMatch[1]) {
       // Extract text from paragraph, removing HTML tags for length check
       const pText = bottomLineMatch[1].replace(/<[^>]+>/g, '');
@@ -72,12 +72,12 @@ export default function VerdictCard({
       bestForText = bestForMatch[1].trim();
     } else {
       // Try to find Best For in a div with bg-green-50 or similar
-      const bestForDivMatch = reviewContent.match(/<div[^>]*>.*?(?:🎯|Best For:).*?<p[^>]*>(.*?)<\/p>.*?<\/div>/is);
+      const bestForDivMatch = reviewContent.match(/<div[^>]*>[\s\S]*?(?:🎯|Best For:)[\s\S]*?<p[^>]*>(.*?)<\/p>[\s\S]*?<\/div>/i);
       if (bestForDivMatch && bestForDivMatch[1]) {
         bestForText = bestForDivMatch[1].replace(/<[^>]+>/g, '').trim();
       } else {
         // Try to find in strong tag after Best For
-        const bestForStrongMatch = reviewContent.match(/Best For:.*?<strong[^>]*>(.*?)<\/strong>/is);
+        const bestForStrongMatch = reviewContent.match(/Best For:[\s\S]*?<strong[^>]*>(.*?)<\/strong>/i);
         if (bestForStrongMatch && bestForStrongMatch[1]) {
           bestForText = bestForStrongMatch[1].replace(/<[^>]+>/g, '').trim();
         } else {
@@ -91,7 +91,7 @@ export default function VerdictCard({
     }
 
     // Find Buy/Skip list items (li with ✅, ❌, Buy, or Skip)
-    const listItemPattern = /<li[^>]*>(.*?(?:✅|❌|Buy|Skip).*?)<\/li>/gis;
+    const listItemPattern = /<li[^>]*>([\s\S]*?(?:✅|❌|Buy|Skip)[\s\S]*?)<\/li>/gi;
     let match;
     listItemPattern.lastIndex = 0;
     while ((match = listItemPattern.exec(reviewContent)) !== null) {
@@ -106,7 +106,7 @@ export default function VerdictCard({
 
     // If no bottom line found, try to extract from first paragraph
     if (!bottomLine) {
-      const firstPMatch = reviewContent.match(/<p[^>]*>(.*?)<\/p>/is);
+      const firstPMatch = reviewContent.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
       if (firstPMatch && firstPMatch[1]) {
         const pText = firstPMatch[1].replace(/<[^>]+>/g, '');
         if (pText.length > 150) {
