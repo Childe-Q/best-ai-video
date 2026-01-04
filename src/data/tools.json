@@ -1,5 +1,227 @@
 [
   {
+    "id": "2",
+    "slug": "heygen",
+    "name": "HeyGen",
+    "logo_url": "/logos/heygen-logo.png",
+    "tagline": "AI Video Generator with Realistic Talking Avatars",
+    "short_description": "Create professional videos with AI avatars and voice cloning.",
+    "best_for": "Sales Outreach & L&D Teams",
+    "affiliate_link": "https://www.heygen.com/?sid=rewardful&via=bingqiang",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "period": "",
+        "description": "For testing",
+        "features": [
+          "3 videos/mo",
+          "3 min/video",
+          "720p",
+          "Watermark"
+        ],
+        "btn_text": "Get Started",
+        "badge": "Risk-Free Entry"
+      },
+      {
+        "name": "Creator",
+        "price": "$29",
+        "period": "/mo",
+        "description": "For individuals",
+        "features": [
+          "3 min/video",
+          "720p",
+          "1 custom avatar",
+          "Voice cloning"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🏆 Top Pick"
+      },
+      {
+        "name": "Team",
+        "price": "$39",
+        "period": "/seat/mo",
+        "description": "For teams (min 2 seats)",
+        "features": [
+          "30 min/video",
+          "4K export",
+          "Unlimited voice cloning",
+          "Brand kit",
+          "Team collaboration"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "💎 Custom Scale"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$29/mo",
+    "rating": 4.9,
+    "features": [
+      "Custom Avatars",
+      "Voice Cloning",
+      "Text to Speech",
+      "40+ Languages"
+    ],
+    "tags": [
+      "Avatar",
+      "Professional"
+    ],
+    "pros": [
+      "Ultra-realistic lip-sync technology",
+      "High quality avatars",
+      "Easy interface, no technical skills needed"
+    ],
+    "cons": [
+      "Expensive for high usage",
+      "Credit system can be confusing"
+    ],
+    "review_content": "HeyGen is a cutting-edge AI video generation platform that specializes in creating realistic talking avatars. It is perfect for training videos, marketing materials, and personalized sales outreach.",
+    "long_review": "<p>HeyGen is leading the pack when it comes to <strong>AI Avatars</strong>. The lip-sync technology is incredibly realistic, and the ability to create a custom avatar of yourself (Instant Avatar) in just a few minutes is mind-blowing. This makes it perfect for scaling personalized sales videos or internal training content.</p><p>The platform supports over 40 languages, allowing you to easily localize your content. You can simply type your script, choose a voice, and the avatar will speak it naturally. The interface is clean and modern, making it accessible even for non-technical users.</p>",
+    "faqs": [
+      {
+        "question": "Does HeyGen support multiple languages?",
+        "answer": "Yes, HeyGen supports over 40 languages with realistic lip-sync, making it ideal for global content creation."
+      },
+      {
+        "question": "Can I upload my own photo to create an avatar?",
+        "answer": "Yes, you can create a talking photo from any uploaded image using HeyGen's Instant Avatar feature."
+      }
+    ],
+    "output_quality_score": 9.6,
+    "price_score": 6.4,
+    "ease_of_use_score": 8,
+    "speed_score": 7.9,
+    "video_url": "https://youtu.be/enXjC1R09dc",
+    "target_audience_list": [
+      "Educators"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "AI Avatars",
+      "Professional Tools"
+    ]
+  },
+  {
+    "id": "11",
+    "slug": "veed-io",
+    "name": "Veed.io",
+    "logo_url": "/logos/VEED-Logo.svg",
+    "tagline": "Online Video Editor with AI Features",
+    "short_description": "Simple video editing with AI-powered tools in your browser.",
+    "best_for": "Social Media Creators & Beginners",
+    "affiliate_link": "/out/veed",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "period": "",
+        "description": "For testing",
+        "features": [
+          "720p export",
+          "Watermark",
+          "Limited subtitles",
+          "Basic editing"
+        ],
+        "btn_text": "Get Started",
+        "badge": "Risk-Free Entry"
+      },
+      {
+        "name": "Lite",
+        "price": "$12",
+        "period": "/mo",
+        "description": "For individuals",
+        "features": [
+          "1080p export",
+          "No watermark",
+          "Brand kit",
+          "Basic features"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🔥 Most Popular"
+      },
+      {
+        "name": "Pro",
+        "price": "$29",
+        "period": "/mo",
+        "description": "For professionals",
+        "features": [
+          "4K export",
+          "Unlimited Gen-AI",
+          "50+ languages",
+          "Advanced features"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🚀 Power User"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$12/mo",
+    "rating": 4.8,
+    "features": [
+      "Auto Subtitles",
+      "Video Editing",
+      "Screen Recording",
+      "AI Background Removal"
+    ],
+    "tags": [
+      "Editor",
+      "Cheap"
+    ],
+    "pros": [
+      "Very easy to use",
+      "Excellent auto-subtitle feature",
+      "No software download needed"
+    ],
+    "cons": [
+      "Watermark on free plan",
+      "Limited advanced editing features"
+    ],
+    "review_content": "Veed.io is a user-friendly online video editor that makes professional video editing accessible to everyone. Its auto-subtitle feature is particularly impressive, automatically generating accurate captions for your videos.",
+    "long_review": "<p>Veed.io has built its reputation on <strong>simplicity and accessibility</strong>. As a web-based video editor, it requires no downloads and works on any device with a browser. The interface is clean and intuitive, making it perfect for beginners who are intimidated by complex editing software like Premiere Pro.</p><p>The standout feature is the auto-subtitle generation, which uses AI to create accurate captions in multiple languages. This is invaluable for social media creators who want to improve accessibility and engagement. While Veed.io may not have all the advanced features of desktop editors, it excels at the core tasks most creators need: trimming, adding text, subtitles, and basic effects.</p>",
+    "faqs": [
+      {
+        "question": "Does Veed.io require software installation?",
+        "answer": "No, Veed.io is completely web-based and works in your browser, requiring no downloads or installations."
+      },
+      {
+        "question": "How accurate are Veed.io's auto-subtitles?",
+        "answer": "Veed.io's AI-powered auto-subtitles are highly accurate and support multiple languages, with the ability to edit and customize them."
+      }
+    ],
+    "ease_of_use_score": 9.8,
+    "speed_score": 9.8,
+    "price_score": 9.5,
+    "output_quality_score": 8.8,
+    "video_url": "https://youtu.be/d0YAOxC8cKo",
+    "target_audience_list": [
+      "Content Creators",
+      "Social Media Managers"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Editors",
+      "Budget-Friendly"
+    ]
+  },
+  {
     "id": "9",
     "slug": "fliki",
     "name": "Fliki",
@@ -215,7 +437,7 @@
           "Limited credits"
         ],
         "btn_text": "Start Free Trial",
-        "badge": "✨ Featured"
+        "badge": "🚀 Best Value"
       },
       {
         "name": "Super Cat",
@@ -323,117 +545,6 @@
       "Social Media",
       "Viral",
       "Fast"
-    ]
-  },
-  {
-    "id": "11",
-    "slug": "veed-io",
-    "name": "Veed.io",
-    "logo_url": "/logos/VEED-Logo.svg",
-    "tagline": "Online Video Editor with AI Features",
-    "short_description": "Simple video editing with AI-powered tools in your browser.",
-    "best_for": "Social Media Creators & Beginners",
-    "affiliate_link": "/out/veed",
-    "pricing_plans": [
-      {
-        "name": "Free",
-        "price": "Free",
-        "period": "",
-        "description": "For testing",
-        "features": [
-          "720p export",
-          "Watermark",
-          "Limited subtitles",
-          "Basic editing"
-        ],
-        "btn_text": "Get Started",
-        "badge": "Risk-Free Entry"
-      },
-      {
-        "name": "Lite",
-        "price": "$12",
-        "period": "/mo",
-        "description": "For individuals",
-        "features": [
-          "1080p export",
-          "No watermark",
-          "Brand kit",
-          "Basic features"
-        ],
-        "btn_text": "Start Free Trial",
-        "badge": "🔥 Most Popular"
-      },
-      {
-        "name": "Pro",
-        "price": "$29",
-        "period": "/mo",
-        "description": "For professionals",
-        "features": [
-          "4K export",
-          "Unlimited Gen-AI",
-          "50+ languages",
-          "Advanced features"
-        ],
-        "btn_text": "Start Free Trial",
-        "badge": "🚀 Power User"
-      }
-    ],
-    "has_free_trial": true,
-    "pricing_model": "Freemium",
-    "starting_price": "$12/mo",
-    "rating": 4.8,
-    "features": [
-      "Auto Subtitles",
-      "Video Editing",
-      "Screen Recording",
-      "AI Background Removal"
-    ],
-    "tags": [
-      "Editor",
-      "Cheap"
-    ],
-    "pros": [
-      "Very easy to use",
-      "Excellent auto-subtitle feature",
-      "No software download needed"
-    ],
-    "cons": [
-      "Watermark on free plan",
-      "Limited advanced editing features"
-    ],
-    "review_content": "Veed.io is a user-friendly online video editor that makes professional video editing accessible to everyone. Its auto-subtitle feature is particularly impressive, automatically generating accurate captions for your videos.",
-    "long_review": "<p>Veed.io has built its reputation on <strong>simplicity and accessibility</strong>. As a web-based video editor, it requires no downloads and works on any device with a browser. The interface is clean and intuitive, making it perfect for beginners who are intimidated by complex editing software like Premiere Pro.</p><p>The standout feature is the auto-subtitle generation, which uses AI to create accurate captions in multiple languages. This is invaluable for social media creators who want to improve accessibility and engagement. While Veed.io may not have all the advanced features of desktop editors, it excels at the core tasks most creators need: trimming, adding text, subtitles, and basic effects.</p>",
-    "faqs": [
-      {
-        "question": "Does Veed.io require software installation?",
-        "answer": "No, Veed.io is completely web-based and works in your browser, requiring no downloads or installations."
-      },
-      {
-        "question": "How accurate are Veed.io's auto-subtitles?",
-        "answer": "Veed.io's AI-powered auto-subtitles are highly accurate and support multiple languages, with the ability to edit and customize them."
-      }
-    ],
-    "ease_of_use_score": 9.8,
-    "speed_score": 9.8,
-    "price_score": 9.5,
-    "output_quality_score": 8.8,
-    "video_url": "https://youtu.be/d0YAOxC8cKo",
-    "target_audience_list": [
-      "Content Creators",
-      "Social Media Managers"
-    ],
-    "social_links": {
-      "twitter": "",
-      "linkedin": "",
-      "youtube": "",
-      "instagram": ""
-    },
-    "deal": null,
-    "review_count": 0,
-    "is_verified": false,
-    "categories": [
-      "Video Editors",
-      "Budget-Friendly"
     ]
   },
   {
@@ -1001,117 +1112,6 @@
       "Video Generators",
       "Video Editors",
       "Budget-Friendly"
-    ]
-  },
-  {
-    "id": "2",
-    "slug": "heygen",
-    "name": "HeyGen",
-    "logo_url": "/logos/heygen-logo.png",
-    "tagline": "AI Video Generator with Realistic Talking Avatars",
-    "short_description": "Create professional videos with AI avatars and voice cloning.",
-    "best_for": "Sales Outreach & L&D Teams",
-    "affiliate_link": "https://heygen.com?ref=demo",
-    "pricing_plans": [
-      {
-        "name": "Free",
-        "price": "Free",
-        "period": "",
-        "description": "For testing",
-        "features": [
-          "3 videos/mo",
-          "3 min/video",
-          "720p",
-          "Watermark"
-        ],
-        "btn_text": "Get Started",
-        "badge": "Risk-Free Entry"
-      },
-      {
-        "name": "Creator",
-        "price": "$29",
-        "period": "/mo",
-        "description": "For individuals",
-        "features": [
-          "3 min/video",
-          "720p",
-          "1 custom avatar",
-          "Voice cloning"
-        ],
-        "btn_text": "Start Free Trial",
-        "badge": "⭐ Best Value"
-      },
-      {
-        "name": "Team",
-        "price": "$39",
-        "period": "/seat/mo",
-        "description": "For teams (min 2 seats)",
-        "features": [
-          "30 min/video",
-          "4K export",
-          "Unlimited voice cloning",
-          "Brand kit",
-          "Team collaboration"
-        ],
-        "btn_text": "Start Free Trial",
-        "badge": "💎 Custom Scale"
-      }
-    ],
-    "has_free_trial": true,
-    "pricing_model": "Freemium",
-    "starting_price": "$29/mo",
-    "rating": 4.9,
-    "features": [
-      "Custom Avatars",
-      "Voice Cloning",
-      "Text to Speech",
-      "40+ Languages"
-    ],
-    "tags": [
-      "Avatar",
-      "Professional"
-    ],
-    "pros": [
-      "Ultra-realistic lip-sync technology",
-      "High quality avatars",
-      "Easy interface, no technical skills needed"
-    ],
-    "cons": [
-      "Expensive for high usage",
-      "Credit system can be confusing"
-    ],
-    "review_content": "HeyGen is a cutting-edge AI video generation platform that specializes in creating realistic talking avatars. It is perfect for training videos, marketing materials, and personalized sales outreach.",
-    "long_review": "<p>HeyGen is leading the pack when it comes to <strong>AI Avatars</strong>. The lip-sync technology is incredibly realistic, and the ability to create a custom avatar of yourself (Instant Avatar) in just a few minutes is mind-blowing. This makes it perfect for scaling personalized sales videos or internal training content.</p><p>The platform supports over 40 languages, allowing you to easily localize your content. You can simply type your script, choose a voice, and the avatar will speak it naturally. The interface is clean and modern, making it accessible even for non-technical users.</p>",
-    "faqs": [
-      {
-        "question": "Does HeyGen support multiple languages?",
-        "answer": "Yes, HeyGen supports over 40 languages with realistic lip-sync, making it ideal for global content creation."
-      },
-      {
-        "question": "Can I upload my own photo to create an avatar?",
-        "answer": "Yes, you can create a talking photo from any uploaded image using HeyGen's Instant Avatar feature."
-      }
-    ],
-    "output_quality_score": 9.6,
-    "price_score": 6.4,
-    "ease_of_use_score": 8,
-    "speed_score": 7.9,
-    "video_url": "",
-    "target_audience_list": [
-      "Educators"
-    ],
-    "social_links": {
-      "twitter": "",
-      "linkedin": "",
-      "youtube": "",
-      "instagram": ""
-    },
-    "deal": null,
-    "review_count": 0,
-    "is_verified": false,
-    "categories": [
-      "AI Avatars",
-      "Professional Tools"
     ]
   },
   {
