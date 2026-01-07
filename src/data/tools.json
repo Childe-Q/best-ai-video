@@ -1,5 +1,215 @@
 [
   {
+    "id": "1",
+    "slug": "invideo",
+    "name": "InVideo",
+    "logo_url": "/logos/InVideo_logo.svg",
+    "tagline": "Turn text into video with AI in minutes",
+    "short_description": "Best for turning text into video for social media and marketing.",
+    "best_for": "Social Media Marketers & YouTubers",
+    "affiliate_link": "https://invideo.sjv.io/c/6767699/883681/12258",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "period": "",
+        "description": "Start your AI video journey completely free",
+        "highlights": [
+          "2 min/week",
+          "Watermarked",
+          "3 Audio/Video Exports",
+          "Videos up to 3 mins",
+          "1 Custom Avatar",
+          "16 Generative Credits"
+        ],
+        "detailed_features": [
+          "720p Video Export",
+          "Standard Video Processing",
+          "AI Video Generation",
+          "AI Video & Image Generator",
+          "AI Dubbing",
+          "Voice Cloning",
+          "2,000+ AI Generated Avatars",
+          "Screen Recording with Avatar",
+          "30+ Languages",
+          "Share & Download Video",
+          "Watermark Included"
+        ],
+        "btn_text": "Get Started",
+        "badge": "Risk-Free Entry"
+      },
+      {
+        "name": "Plus",
+        "price": "$28",
+        "period": "/mo",
+        "description": "For individual creators",
+        "highlights": [
+          "50 min + 10 credits",
+          "1080p export",
+          "Unlimited Video Exports",
+          "Videos up to 30 mins",
+          "3 Custom Avatars",
+          "60 Generative Credits"
+        ],
+        "detailed_features": [
+          "Fast Video Processing",
+          "Unlimited Photo Avatars",
+          "Unlimited Youtube Downloader",
+          "AI Dubbing with SRT/ASS Upload",
+          "Generate Videos from Any Input",
+          "150+ Languages, 1,000+ Voices",
+          "7,000+ Video Templates",
+          "3M+ Premium Shutterstock Media",
+          "Supports Add-ons",
+          "No Watermark"
+        ],
+        "btn_text": "Get Started",
+        "badge": "⭐ Best Value"
+      },
+      {
+        "name": "Max",
+        "price": "$50",
+        "period": "/mo",
+        "description": "For growing teams",
+        "highlights": [
+          "200 min + 40 credits",
+          "Unlimited exports",
+          "Unlimited Video Exports",
+          "Videos up to 30 mins",
+          "5 Custom Avatars",
+          "150 Generative Credits"
+        ],
+        "detailed_features": [
+          "4K Video Export",
+          "Fast Video Processing",
+          "Proofread AI Dubbing Scripts",
+          "Up/Download Subtitle Files",
+          "One-Click Translation",
+          "Premium 125+ AI Avatars",
+          "4K Youtube Downloader",
+          "Avatar Gesture Control",
+          "Multi-Avatar Scenes",
+          "Effect Animation with Timing",
+          "Team Collaboration Workspace",
+          "Custom Brand Kit"
+        ],
+        "btn_text": "Get Started",
+        "badge": "🚀 Power User"
+      },
+      {
+        "name": "Generative",
+        "price": "$100",
+        "period": "/mo",
+        "description": "For advanced users",
+        "highlights": [
+          "300 sec generative video",
+          "Unlimited AI Videos",
+          "Unlimited Video Duration",
+          "Unlimited Custom Avatars",
+          "Flexible Generative Credits",
+          "4K Video Export"
+        ],
+        "detailed_features": [
+          "Priority Video Processing",
+          "Enterprise-grade SAML SSO",
+          "SCORM Export",
+          "Bulk Video Generation",
+          "Voice Cloning with Audio Upload",
+          "Video Production Support",
+          "24/7 Priority Technical Support",
+          "Dedicated Account Manager",
+          "Marketing Link"
+        ],
+        "btn_text": "Get Started",
+        "badge": "✨ Featured"
+      },
+      {
+        "name": "Team",
+        "price": "$899",
+        "period": "/mo",
+        "description": "For large teams",
+        "highlights": [
+          "Custom credits",
+          "Custom pricing",
+          "Dedicated support",
+          "SSO"
+        ],
+        "detailed_features": [
+          "Unlimited everything",
+          "Team collaboration",
+          "Advanced analytics",
+          "Custom integrations",
+          "Priority support",
+          "Dedicated account manager"
+        ],
+        "btn_text": "Contact Sales",
+        "badge": "💎 Custom Scale"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$28/mo",
+    "rating": 4.8,
+    "features": [
+      "Text to Video",
+      "Stock Media Library",
+      "AI Script Generator",
+      "Auto Captions",
+      "AI Twin (Digital Clone)",
+      "Invideo AI v4.0"
+    ],
+    "tags": [
+      "Text-to-Video",
+      "Editor",
+      "Cheap"
+    ],
+    "pros": [
+      "Very easy to use",
+      "Huge stock library with 8M+ assets",
+      "Web-based, no download needed"
+    ],
+    "cons": [
+      "Watermark on free plan",
+      "Rendering can be slow for long videos"
+    ],
+    "review_content": "InVideo is a powerful online video editor that simplifies the process of creating professional-quality videos. Its AI-powered features allow you to convert text scripts into ready-to-publish videos in minutes.",
+    "long_review": "<p>InVideo is a game-changer for content creators who need to produce high-quality videos quickly. Its standout feature is the <strong>Text-to-Video</strong> capability, which allows you to paste a script or a blog post URL, and the AI automatically selects relevant stock footage, adds subtitles, and creates a rough cut for you.</p><p>The platform offers a massive library of over <strong>8 million stock media assets</strong> from iStock, Shutterstock, and Storyblocks, which is a huge value add compared to competitors. The interface is intuitive, making it accessible even for those with zero video editing experience.</p><p>Newly released <strong>v4.0</strong> includes the AI Twin feature, allowing you to clone yourself without a camera. This revolutionary capability enables you to create professional videos with your digital clone, making it perfect for content creators who want to scale their video production without being physically present for every recording.</p>",
+    "faqs": [
+      {
+        "question": "Is InVideo free to use?",
+        "answer": "Yes, InVideo offers a free plan with watermarks and limited export options. Paid plans start at $20/month."
+      },
+      {
+        "question": "Can I use InVideo for YouTube?",
+        "answer": "Absolutely! InVideo is optimized for YouTube, Instagram, and TikTok video creation with templates and aspect ratios for each platform."
+      }
+    ],
+    "ease_of_use_score": 7.6,
+    "speed_score": 7.8,
+    "price_score": 9,
+    "output_quality_score": 8.1,
+    "video_url": "https://youtu.be/Z3985Y6BoD8",
+    "target_audience_list": [
+      "Marketing Teams",
+      "Social Media Managers",
+      "YouTubers"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Generators",
+      "Video Editors",
+      "Budget-Friendly"
+    ]
+  },
+  {
     "id": "2",
     "slug": "heygen",
     "name": "HeyGen",
@@ -108,117 +318,6 @@
     "categories": [
       "AI Avatars",
       "Professional Tools"
-    ]
-  },
-  {
-    "id": "11",
-    "slug": "veed-io",
-    "name": "Veed.io",
-    "logo_url": "/logos/VEED-Logo.svg",
-    "tagline": "Online Video Editor with AI Features",
-    "short_description": "Simple video editing with AI-powered tools in your browser.",
-    "best_for": "Social Media Creators & Beginners",
-    "affiliate_link": "/out/veed",
-    "pricing_plans": [
-      {
-        "name": "Free",
-        "price": "Free",
-        "period": "",
-        "description": "For testing",
-        "features": [
-          "720p export",
-          "Watermark",
-          "Limited subtitles",
-          "Basic editing"
-        ],
-        "btn_text": "Get Started",
-        "badge": "Risk-Free Entry"
-      },
-      {
-        "name": "Lite",
-        "price": "$12",
-        "period": "/mo",
-        "description": "For individuals",
-        "features": [
-          "1080p export",
-          "No watermark",
-          "Brand kit",
-          "Basic features"
-        ],
-        "btn_text": "Start Free Trial",
-        "badge": "🔥 Most Popular"
-      },
-      {
-        "name": "Pro",
-        "price": "$29",
-        "period": "/mo",
-        "description": "For professionals",
-        "features": [
-          "4K export",
-          "Unlimited Gen-AI",
-          "50+ languages",
-          "Advanced features"
-        ],
-        "btn_text": "Start Free Trial",
-        "badge": "🚀 Power User"
-      }
-    ],
-    "has_free_trial": true,
-    "pricing_model": "Freemium",
-    "starting_price": "$12/mo",
-    "rating": 4.8,
-    "features": [
-      "Auto Subtitles",
-      "Video Editing",
-      "Screen Recording",
-      "AI Background Removal"
-    ],
-    "tags": [
-      "Editor",
-      "Cheap"
-    ],
-    "pros": [
-      "Very easy to use",
-      "Excellent auto-subtitle feature",
-      "No software download needed"
-    ],
-    "cons": [
-      "Watermark on free plan",
-      "Limited advanced editing features"
-    ],
-    "review_content": "Veed.io is a user-friendly online video editor that makes professional video editing accessible to everyone. Its auto-subtitle feature is particularly impressive, automatically generating accurate captions for your videos.",
-    "long_review": "<p>Veed.io has built its reputation on <strong>simplicity and accessibility</strong>. As a web-based video editor, it requires no downloads and works on any device with a browser. The interface is clean and intuitive, making it perfect for beginners who are intimidated by complex editing software like Premiere Pro.</p><p>The standout feature is the auto-subtitle generation, which uses AI to create accurate captions in multiple languages. This is invaluable for social media creators who want to improve accessibility and engagement. While Veed.io may not have all the advanced features of desktop editors, it excels at the core tasks most creators need: trimming, adding text, subtitles, and basic effects.</p>",
-    "faqs": [
-      {
-        "question": "Does Veed.io require software installation?",
-        "answer": "No, Veed.io is completely web-based and works in your browser, requiring no downloads or installations."
-      },
-      {
-        "question": "How accurate are Veed.io's auto-subtitles?",
-        "answer": "Veed.io's AI-powered auto-subtitles are highly accurate and support multiple languages, with the ability to edit and customize them."
-      }
-    ],
-    "ease_of_use_score": 9.8,
-    "speed_score": 9.8,
-    "price_score": 9.5,
-    "output_quality_score": 8.8,
-    "video_url": "https://youtu.be/d0YAOxC8cKo",
-    "target_audience_list": [
-      "Content Creators",
-      "Social Media Managers"
-    ],
-    "social_links": {
-      "twitter": "",
-      "linkedin": "",
-      "youtube": "",
-      "instagram": ""
-    },
-    "deal": null,
-    "review_count": 0,
-    "is_verified": false,
-    "categories": [
-      "Video Editors",
-      "Budget-Friendly"
     ]
   },
   {
@@ -399,6 +498,117 @@
     "categories": [
       "Video Generators",
       "Text to Speech"
+    ]
+  },
+  {
+    "id": "11",
+    "slug": "veed-io",
+    "name": "Veed.io",
+    "logo_url": "/logos/VEED-Logo.svg",
+    "tagline": "Online Video Editor with AI Features",
+    "short_description": "Simple video editing with AI-powered tools in your browser.",
+    "best_for": "Social Media Creators & Beginners",
+    "affiliate_link": "/out/veed",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "period": "",
+        "description": "For testing",
+        "features": [
+          "720p export",
+          "Watermark",
+          "Limited subtitles",
+          "Basic editing"
+        ],
+        "btn_text": "Get Started",
+        "badge": "Risk-Free Entry"
+      },
+      {
+        "name": "Lite",
+        "price": "$12",
+        "period": "/mo",
+        "description": "For individuals",
+        "features": [
+          "1080p export",
+          "No watermark",
+          "Brand kit",
+          "Basic features"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🔥 Most Popular"
+      },
+      {
+        "name": "Pro",
+        "price": "$29",
+        "period": "/mo",
+        "description": "For professionals",
+        "features": [
+          "4K export",
+          "Unlimited Gen-AI",
+          "50+ languages",
+          "Advanced features"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🚀 Power User"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$12/mo",
+    "rating": 4.8,
+    "features": [
+      "Auto Subtitles",
+      "Video Editing",
+      "Screen Recording",
+      "AI Background Removal"
+    ],
+    "tags": [
+      "Editor",
+      "Cheap"
+    ],
+    "pros": [
+      "Very easy to use",
+      "Excellent auto-subtitle feature",
+      "No software download needed"
+    ],
+    "cons": [
+      "Watermark on free plan",
+      "Limited advanced editing features"
+    ],
+    "review_content": "Veed.io is a user-friendly online video editor that makes professional video editing accessible to everyone. Its auto-subtitle feature is particularly impressive, automatically generating accurate captions for your videos.",
+    "long_review": "<p>Veed.io has built its reputation on <strong>simplicity and accessibility</strong>. As a web-based video editor, it requires no downloads and works on any device with a browser. The interface is clean and intuitive, making it perfect for beginners who are intimidated by complex editing software like Premiere Pro.</p><p>The standout feature is the auto-subtitle generation, which uses AI to create accurate captions in multiple languages. This is invaluable for social media creators who want to improve accessibility and engagement. While Veed.io may not have all the advanced features of desktop editors, it excels at the core tasks most creators need: trimming, adding text, subtitles, and basic effects.</p>",
+    "faqs": [
+      {
+        "question": "Does Veed.io require software installation?",
+        "answer": "No, Veed.io is completely web-based and works in your browser, requiring no downloads or installations."
+      },
+      {
+        "question": "How accurate are Veed.io's auto-subtitles?",
+        "answer": "Veed.io's AI-powered auto-subtitles are highly accurate and support multiple languages, with the ability to edit and customize them."
+      }
+    ],
+    "ease_of_use_score": 9.8,
+    "speed_score": 9.8,
+    "price_score": 9.5,
+    "output_quality_score": 8.8,
+    "video_url": "https://youtu.be/d0YAOxC8cKo",
+    "target_audience_list": [
+      "Content Creators",
+      "Social Media Managers"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Editors",
+      "Budget-Friendly"
     ]
   },
   {
@@ -903,214 +1113,6 @@
     "is_verified": false,
     "categories": [
       "Video Generators",
-      "Budget-Friendly"
-    ]
-  },
-  {
-    "id": "1",
-    "slug": "invideo",
-    "name": "InVideo",
-    "logo_url": "/logos/InVideo_logo.svg",
-    "tagline": "Turn text into video with AI in minutes",
-    "short_description": "Best for turning text into video for social media and marketing.",
-    "best_for": "Social Media Marketers & YouTubers",
-    "affiliate_link": "https://invideo.io?ref=demo",
-    "pricing_plans": [
-      {
-        "name": "Free",
-        "price": "Free",
-        "period": "",
-        "description": "Start your AI video journey completely free",
-        "highlights": [
-          "2 min/week",
-          "Watermarked",
-          "3 Audio/Video Exports",
-          "Videos up to 3 mins",
-          "1 Custom Avatar",
-          "16 Generative Credits"
-        ],
-        "detailed_features": [
-          "720p Video Export",
-          "Standard Video Processing",
-          "AI Video Generation",
-          "AI Video & Image Generator",
-          "AI Dubbing",
-          "Voice Cloning",
-          "2,000+ AI Generated Avatars",
-          "Screen Recording with Avatar",
-          "30+ Languages",
-          "Share & Download Video",
-          "Watermark Included"
-        ],
-        "btn_text": "Get Started",
-        "badge": "Risk-Free Entry"
-      },
-      {
-        "name": "Plus",
-        "price": "$28",
-        "period": "/mo",
-        "description": "For individual creators",
-        "highlights": [
-          "50 min + 10 credits",
-          "1080p export",
-          "Unlimited Video Exports",
-          "Videos up to 30 mins",
-          "3 Custom Avatars",
-          "60 Generative Credits"
-        ],
-        "detailed_features": [
-          "Fast Video Processing",
-          "Unlimited Photo Avatars",
-          "Unlimited Youtube Downloader",
-          "AI Dubbing with SRT/ASS Upload",
-          "Generate Videos from Any Input",
-          "150+ Languages, 1,000+ Voices",
-          "7,000+ Video Templates",
-          "3M+ Premium Shutterstock Media",
-          "Supports Add-ons",
-          "No Watermark"
-        ],
-        "btn_text": "Get Started",
-        "badge": "⭐ Best Value"
-      },
-      {
-        "name": "Max",
-        "price": "$50",
-        "period": "/mo",
-        "description": "For growing teams",
-        "highlights": [
-          "200 min + 40 credits",
-          "Unlimited exports",
-          "Unlimited Video Exports",
-          "Videos up to 30 mins",
-          "5 Custom Avatars",
-          "150 Generative Credits"
-        ],
-        "detailed_features": [
-          "4K Video Export",
-          "Fast Video Processing",
-          "Proofread AI Dubbing Scripts",
-          "Up/Download Subtitle Files",
-          "One-Click Translation",
-          "Premium 125+ AI Avatars",
-          "4K Youtube Downloader",
-          "Avatar Gesture Control",
-          "Multi-Avatar Scenes",
-          "Effect Animation with Timing",
-          "Team Collaboration Workspace",
-          "Custom Brand Kit"
-        ],
-        "btn_text": "Get Started",
-        "badge": "🚀 Power User"
-      },
-      {
-        "name": "Generative",
-        "price": "$100",
-        "period": "/mo",
-        "description": "For advanced users",
-        "highlights": [
-          "300 sec generative video",
-          "Unlimited AI Videos",
-          "Unlimited Video Duration",
-          "Unlimited Custom Avatars",
-          "Flexible Generative Credits",
-          "4K Video Export"
-        ],
-        "detailed_features": [
-          "Priority Video Processing",
-          "Enterprise-grade SAML SSO",
-          "SCORM Export",
-          "Bulk Video Generation",
-          "Voice Cloning with Audio Upload",
-          "Video Production Support",
-          "24/7 Priority Technical Support",
-          "Dedicated Account Manager",
-          "Marketing Link"
-        ],
-        "btn_text": "Get Started",
-        "badge": "✨ Featured"
-      },
-      {
-        "name": "Team",
-        "price": "$899",
-        "period": "/mo",
-        "description": "For large teams",
-        "highlights": [
-          "Custom credits",
-          "Custom pricing",
-          "Dedicated support",
-          "SSO"
-        ],
-        "detailed_features": [
-          "Unlimited everything",
-          "Team collaboration",
-          "Advanced analytics",
-          "Custom integrations",
-          "Priority support",
-          "Dedicated account manager"
-        ],
-        "btn_text": "Contact Sales",
-        "badge": "💎 Custom Scale"
-      }
-    ],
-    "has_free_trial": true,
-    "pricing_model": "Freemium",
-    "starting_price": "$28/mo",
-    "rating": 4.8,
-    "features": [
-      "Text to Video",
-      "Stock Media Library",
-      "AI Script Generator",
-      "Auto Captions"
-    ],
-    "tags": [
-      "Text-to-Video",
-      "Editor",
-      "Cheap"
-    ],
-    "pros": [
-      "Very easy to use",
-      "Huge stock library with 8M+ assets",
-      "Web-based, no download needed"
-    ],
-    "cons": [
-      "Watermark on free plan",
-      "Rendering can be slow for long videos"
-    ],
-    "review_content": "InVideo is a powerful online video editor that simplifies the process of creating professional-quality videos. Its AI-powered features allow you to convert text scripts into ready-to-publish videos in minutes.",
-    "long_review": "<p>InVideo is a game-changer for content creators who need to produce high-quality videos quickly. Its standout feature is the <strong>Text-to-Video</strong> capability, which allows you to paste a script or a blog post URL, and the AI automatically selects relevant stock footage, adds subtitles, and creates a rough cut for you.</p><p>The platform offers a massive library of over <strong>8 million stock media assets</strong> from iStock, Shutterstock, and Storyblocks, which is a huge value add compared to competitors. The interface is intuitive, making it accessible even for those with zero video editing experience.</p>",
-    "faqs": [
-      {
-        "question": "Is InVideo free to use?",
-        "answer": "Yes, InVideo offers a free plan with watermarks and limited export options. Paid plans start at $20/month."
-      },
-      {
-        "question": "Can I use InVideo for YouTube?",
-        "answer": "Absolutely! InVideo is optimized for YouTube, Instagram, and TikTok video creation with templates and aspect ratios for each platform."
-      }
-    ],
-    "ease_of_use_score": 7.6,
-    "speed_score": 7.8,
-    "price_score": 9,
-    "output_quality_score": 8.1,
-    "video_url": "",
-    "target_audience_list": [
-      "Marketing Teams",
-      "Social Media Managers",
-      "YouTubers"
-    ],
-    "social_links": {
-      "twitter": "",
-      "linkedin": "",
-      "youtube": "",
-      "instagram": ""
-    },
-    "deal": null,
-    "review_count": 0,
-    "is_verified": false,
-    "categories": [
-      "Video Generators",
-      "Video Editors",
       "Budget-Friendly"
     ]
   },
