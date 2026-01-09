@@ -109,7 +109,7 @@ export default function Home() {
         </div>
         </section>
 
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">All AI Video Tools</h2>
+        <h2 id="tools-section" className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 scroll-mt-20">All AI Video Tools</h2>
         <HomeToolGrid tools={tools} />
       </main>
     </div>

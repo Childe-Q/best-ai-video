@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import GlobalErrorHandler from "@/components/GlobalErrorHandler";
@@ -44,7 +45,10 @@ export default function RootLayout({
         <div style={{ display: 'none' }}>Impact-Site-Verification: 85a12125-5860-4b7e-960f-d1d65fe37656</div>
         <GlobalErrorHandler />
         <ErrorBoundary>
-        {children}
+          <Header />
+          <main className="pt-16">
+            {children}
+          </main>
           <Footer />
         </ErrorBoundary>
       </body>

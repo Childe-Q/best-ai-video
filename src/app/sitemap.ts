@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import toolsData from '@/data/tools.json';
 import { Tool } from '@/types/tool';
+import { categories } from '@/data/categories';
 
 const tools: Tool[] = toolsData as Tool[];
 
@@ -42,6 +43,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.8,
+  });
+
+  // 5. Features Hub Page
+  routes.push({
+    url: `${BASE_URL}/features`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.9,
+  });
+
+  // 6. Feature Category Pages (Spoke Pages)
+  categories.forEach((category) => {
+    routes.push({
+      url: `${BASE_URL}/features/${category.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    });
   });
 
   // 3. Programmatic Pages for each tool

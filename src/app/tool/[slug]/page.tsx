@@ -5,7 +5,6 @@ import { Tool } from '@/types/tool';
 import ToolNav from '@/components/ToolNav';
 import CTAButton from '@/components/CTAButton';
 import PricingSnapshot from '@/components/PricingSnapshot';
-import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ToolLogo from '@/components/ToolLogo';
 import VerdictCard from '@/components/VerdictCard';
@@ -178,8 +177,6 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
   return (
     <div className="min-h-screen bg-slate-50 text-gray-900 font-sans">
-      <Navbar />
-      
       {/* Main Content Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* 1. Breadcrumbs Row */}
@@ -411,11 +408,14 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
           </div>
         </div>
         {/* End of Grid Row */}
+      </div>
+      {/* End of Main Content Container */}
 
-        {/* 3. The Video Row (Full Width) */}
-        {videoId && (
-          <div className="mt-12">
-            <div className="relative w-full max-w-5xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl">
+      {/* 3. The Video Row (Full Width) */}
+      {videoId && (
+        <div className="w-full bg-slate-50 py-16">
+          <div className="w-full max-w-[1600px] mx-auto px-4 md:px-12 lg:px-24">
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl">
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
                 src={`https://www.youtube.com/embed/${videoId}`}
@@ -425,15 +425,15 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
               ></iframe>
             </div>
           </div>
-        )}
+        </div>
+      )}
 
-        {/* 4. Sticky Navigation Bar */}
-        <StickySubNav />
+      {/* 4. Sticky Navigation Bar */}
+      <StickySubNav />
 
-        {/* 5. Content Stream */}
-        <div className="max-w-5xl mx-auto space-y-12 py-8">
-          {/* Overview Section */}
-          <section id="overview" className="scroll-mt-24 space-y-8">
+      {/* 5. Overview Section - Full Width */}
+        <section id="overview" className="scroll-mt-24 w-full bg-slate-50 py-16">
+          <div className="w-full max-w-[1600px] mx-auto px-4 md:px-12 lg:px-24 space-y-12">
 
               {/* In-Depth Review */}
               <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
@@ -495,41 +495,45 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   </ul>
                 </div>
               </div>
-            </section>
+          </div>
+        </section>
 
-            {/* Pricing Section */}
-            <section id="pricing" className="scroll-mt-24">
-              <div className="mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing</h2>
-                {tool.pricing_plans && tool.pricing_plans.length > 0 ? (
-                  <PricingSnapshot 
-                    plans={tool.pricing_plans} 
-                    affiliateLink={tool.affiliate_link}
-                    toolSlug={tool.slug}
-                  />
-                ) : (
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <div className="bg-gray-50 p-5 rounded-xl border border-gray-200 text-center">
-                      <div className="text-xs font-bold text-gray-400 uppercase mb-1">Starting Price</div>
-                      <div className="text-2xl font-bold text-gray-900">{getStartingPrice(tool)}</div>
-                    </div>
-                    <div className="bg-gray-50 p-5 rounded-xl border border-gray-200 text-center">
-                      <div className="text-xs font-bold text-gray-400 uppercase mb-1">Free Plan</div>
-                      <div className={`text-xl font-bold ${hasFreePlan(tool) ? 'text-green-600' : 'text-gray-900'}`}>
-                        {hasFreePlan(tool) ? 'Yes' : 'No'}
-                      </div>
-                    </div>
-                    <div className="col-span-2 md:col-span-1 bg-gray-50 p-5 rounded-xl border border-gray-200 text-center">
-                      <div className="text-xs font-bold text-gray-400 uppercase mb-1">Best For</div>
-                      <div className="text-sm font-bold text-gray-900">{tool.best_for}</div>
-                    </div>
+      {/* Full-Width Pricing Section - Breaks out of narrow containers */}
+      <section id="pricing" className="scroll-mt-24 w-full bg-slate-50 py-16">
+        <div className="w-full max-w-[1600px] mx-auto px-4 md:px-12 lg:px-24">
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing</h2>
+            {tool.pricing_plans && tool.pricing_plans.length > 0 ? (
+              <PricingSnapshot 
+                plans={tool.pricing_plans} 
+                affiliateLink={tool.affiliate_link}
+                toolSlug={tool.slug}
+              />
+            ) : (
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                <div className="bg-white p-5 rounded-xl border border-gray-200 text-center shadow-sm">
+                  <div className="text-xs font-bold text-gray-400 uppercase mb-1">Starting Price</div>
+                  <div className="text-2xl font-bold text-gray-900">{getStartingPrice(tool)}</div>
+                </div>
+                <div className="bg-white p-5 rounded-xl border border-gray-200 text-center shadow-sm">
+                  <div className="text-xs font-bold text-gray-400 uppercase mb-1">Free Plan</div>
+                  <div className={`text-xl font-bold ${hasFreePlan(tool) ? 'text-green-600' : 'text-gray-900'}`}>
+                    {hasFreePlan(tool) ? 'Yes' : 'No'}
                   </div>
-                )}
+                </div>
+                <div className="col-span-2 md:col-span-1 bg-white p-5 rounded-xl border border-gray-200 text-center shadow-sm">
+                  <div className="text-xs font-bold text-gray-400 uppercase mb-1">Best For</div>
+                  <div className="text-sm font-bold text-gray-900">{tool.best_for}</div>
+                </div>
               </div>
-            </section>
+            )}
+          </div>
+        </div>
+      </section>
 
-            {/* Features Section */}
-            <section id="features" className="scroll-mt-24 space-y-8">
+      {/* Features Section - Full Width */}
+      <section id="features" className="scroll-mt-24 w-full bg-slate-50 py-16">
+        <div className="w-full max-w-[1600px] mx-auto px-4 md:px-12 lg:px-24 space-y-8">
               {/* Key Features */}
               {tool.features && tool.features.length > 0 && (
                 <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
@@ -561,10 +565,12 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   </div>
                 </div>
               )}
-            </section>
+        </div>
+      </section>
 
-            {/* Reviews Section */}
-            <section id="reviews" className="scroll-mt-24 space-y-8 prose prose-gray">
+      {/* Reviews Section - Full Width */}
+      <section id="reviews" className="scroll-mt-24 w-full bg-slate-50 py-16 prose prose-gray">
+        <div className="w-full max-w-[1600px] mx-auto px-4 md:px-12 lg:px-24 space-y-8">
               {/* What Users Are Saying Section */}
               {tool.user_sentiment && (
                 <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
@@ -590,10 +596,12 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   )}
                 </div>
               </div>
-            </section>
+        </div>
+      </section>
 
-            {/* Alternatives Section */}
-            <section id="alternatives" className="scroll-mt-24">
+      {/* Alternatives Section - Full Width */}
+      <section id="alternatives" className="scroll-mt-24 w-full bg-slate-50 py-16">
+        <div className="w-full max-w-[1600px] mx-auto px-4 md:px-12 lg:px-24">
               <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="text-2xl font-bold text-gray-900">Top Alternatives</h2>
@@ -653,9 +661,8 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   })}
                 </div>
               </div>
-            </section>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

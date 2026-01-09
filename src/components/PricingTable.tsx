@@ -195,22 +195,22 @@ export default function PricingTable({ plans, affiliateLink, hasFreeTrial }: Pri
       buttonClasses = 'bg-white text-blue-900 hover:bg-gray-100 hover:opacity-90';
       checkmarkColor = 'text-white';
     } else {
-      // Standard: Free & Personal
-      cardClasses = 'bg-white border-2 border-blue-100/50 hover:border-blue-500';
-      textClasses = 'text-blue-600';
-      buttonClasses = 'bg-blue-50 text-blue-600 hover:bg-blue-100 border border-blue-200 hover:border-blue-300';
-      checkmarkColor = 'text-blue-600';
+      // Standard: Free & Personal - Clean white background
+      cardClasses = 'bg-white border border-gray-200 hover:border-indigo-300';
+      textClasses = 'text-gray-900';
+      buttonClasses = 'bg-indigo-600 text-white hover:bg-indigo-700 border border-transparent';
+      checkmarkColor = 'text-indigo-600';
     }
 
     return (
       <div
         key={isStaticEnterprise ? 'static-enterprise' : plan.name}
-        className={`relative rounded-3xl ${cardClasses} shadow-lg overflow-hidden flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:z-10`}
+        className={`relative rounded-2xl ${cardClasses} shadow-lg overflow-hidden flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:z-10 border border-gray-200`}
       >
         {/* Badge at the top */}
         {renderBadge(plan.badge)}
 
-        <div className={`p-6 flex flex-col flex-1`}>
+        <div className={`p-8 flex flex-col flex-1`}>
           {/* Header */}
           <div className="text-center mb-6">
             <h3 className={`text-2xl font-bold mb-2 ${isEnterprise ? 'text-white' : textClasses}`}>
@@ -225,12 +225,12 @@ export default function PricingTable({ plans, affiliateLink, hasFreeTrial }: Pri
             {/* Price */}
             <div className="mb-6">
               <div className={`text-5xl font-bold leading-tight ${
-                isEnterprise ? 'text-white' : 'text-slate-900'
+                isEnterprise ? 'text-white' : 'text-gray-900'
               }`}>
                 {price}
                 {period && (
                   <span className={`text-2xl font-semibold ${
-                    isEnterprise ? 'text-slate-200' : 'text-gray-600'
+                    isEnterprise ? 'text-slate-200' : 'text-gray-500'
                   }`}>
                     {period}
                   </span>
@@ -359,8 +359,24 @@ export default function PricingTable({ plans, affiliateLink, hasFreeTrial }: Pri
     );
   };
 
+  // Calculate total visible plans count (including static Enterprise)
+  const totalVisiblePlans = isExpanded 
+    ? filteredPlans.length + 1 // All filtered plans + static Enterprise
+    : visiblePlans.length + 1; // First 3 plans + static Enterprise
+
+  // Determine grid columns based on plan count
+  const getGridCols = () => {
+    if (totalVisiblePlans === 2) {
+      return 'grid-cols-1 md:grid-cols-2';
+    } else if (totalVisiblePlans === 3) {
+      return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
+    } else {
+      return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4';
+    }
+  };
+
   return (
-    <div className="w-full">
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Monthly/Yearly Toggle - Pill Shape */}
       <div className="flex items-center justify-center mb-8">
         <div className="inline-flex rounded-full bg-gray-100 p-1 border border-gray-200">
@@ -392,8 +408,8 @@ export default function PricingTable({ plans, affiliateLink, hasFreeTrial }: Pri
         </div>
       </div>
 
-      {/* Pricing Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-0">
+      {/* Pricing Cards Grid - Full Width with Dynamic Columns */}
+      <div className={`grid ${getGridCols()} gap-8 mt-0`}>
         {/* Step 1: Render first 3 plans (always visible) */}
         {visiblePlans.map((plan, index) => 
           renderCard(plan, index, filteredPlans)

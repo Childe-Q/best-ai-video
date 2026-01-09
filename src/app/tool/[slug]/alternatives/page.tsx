@@ -4,7 +4,6 @@ import toolsData from '@/data/tools.json';
 import { Tool } from '@/types/tool';
 import CTAButton from '@/components/CTAButton';
 import ToolNav from '@/components/ToolNav';
-import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { getSEOCurrentYear } from '@/lib/utils';
 
@@ -106,8 +105,6 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
-      <Navbar />
-      
       {/* Main Content - Centered */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Breadcrumbs */}

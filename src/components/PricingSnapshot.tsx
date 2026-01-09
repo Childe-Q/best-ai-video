@@ -92,8 +92,23 @@ export default function PricingSnapshot({ plans, affiliateLink, toolSlug }: Pric
     return priceStr;
   };
 
+  // Determine grid columns based on plan count
+  const getGridCols = () => {
+    const planCount = plans.length;
+    if (planCount === 3) {
+      return 'grid-cols-1 md:grid-cols-3';
+    } else if (planCount === 4) {
+      return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4';
+    } else if (planCount === 2) {
+      return 'grid-cols-1 md:grid-cols-2';
+    } else {
+      // Default: responsive grid for other counts
+      return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4';
+    }
+  };
+
   return (
-    <div className="max-w-7xl mx-auto px-4 space-y-6">
+    <div className="w-full space-y-6">
       {/* Billing Cycle Toggle - Top Center */}
       {hasYearlyPricing && (
         <div className="flex justify-center">
@@ -124,7 +139,7 @@ export default function PricingSnapshot({ plans, affiliateLink, toolSlug }: Pric
       )}
 
       {/* Pricing Cards Grid - Wide layout, cards float independently */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+      <div className={`grid ${getGridCols()} gap-8 lg:gap-10 w-full`}>
       {plans.map((plan, index) => {
         // Force highlight if it's the 2nd card (Standard) - Index-based fallback
         const isPopular = (plan.badge?.includes('Popular') ?? false) || plan.name.includes('Standard') || index === 1;

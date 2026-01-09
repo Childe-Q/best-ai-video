@@ -5,7 +5,6 @@ import { Tool } from '@/types/tool';
 import ToolNav from '@/components/ToolNav';
 import PricingTable from '@/components/PricingTable';
 import CTAButton from '@/components/CTAButton';
-import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { getSEOCurrentYear, hasFreePlan, getStartingPrice } from '@/lib/utils';
 
@@ -43,8 +42,6 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
-      <Navbar />
-      
       {/* Main Content - Centered */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Breadcrumbs */}
