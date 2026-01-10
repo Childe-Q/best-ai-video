@@ -6,16 +6,37 @@ export type FAQ = {
 export type PricingPlan = {
   name: string; // e.g. "Free", "Creator"
   price: string | { // Support both old string format and new object format
-    monthly: string; // e.g. "$28"
-    yearly: string;  // e.g. "$17" (The effective monthly cost when billed yearly)
+    monthly: {
+      amount: number;
+      currency: string;
+      period: string;
+    };
+    yearly?: {
+      amount: number;
+      currency: string;
+      period: string;
+    };
+  } | {
+    monthly: string; // Legacy format: e.g. "$28"
+    yearly?: string;  // Legacy format: e.g. "$17" (The effective monthly cost when billed yearly)
   };
-  period: string; // e.g. "/mo", "/yr", or "" for free
-  description: string; // Short descriptor like "For beginners"
-  highlights: string[]; // Top section: Key highlights like "3 videos/mo", "1080p export"
-  detailed_features: string[]; // Bottom section: Detailed feature list
+  period?: string; // e.g. "/mo", "/yr", or "" for free
+  description?: string; // Short descriptor like "For beginners"
+  highlights?: string[]; // Top section: Key highlights like "3 videos/mo", "1080p export"
+  detailed_features?: string[]; // Bottom section: Detailed feature list
   features?: string[]; // Legacy field for backward compatibility
-  badge: string | null; // Psychological badge like "🔥 Most Popular", "Risk-Free Entry", etc.
-  btn_text: string; // "Start Free Trial" or "Get Started"
+  badge?: string | null; // Psychological badge like "🔥 Most Popular", "Risk-Free Entry", etc.
+  btn_text?: string; // "Start Free Trial" or "Get Started"
+  tagline?: string;
+  id?: string;
+  unitPriceNote?: string;
+  addonLabel?: string;
+  addons?: Array<{ id: string; label: string } | { text: string; badge?: string }>;
+  ctaText?: string;
+  billingNote?: string;
+  ribbonText?: string;
+  featureItems?: Array<{ icon?: string; text: string; badge?: string }>;
+  isPopular?: boolean;
 };
 
 export type Tool = {
@@ -65,6 +86,11 @@ export type Tool = {
   is_verified?: boolean; // true if verified
   categories?: string[]; // e.g., ['Video Generators', 'Text to Speech']
   user_sentiment?: string; // User sentiment summary from verified reviews
+  featureCards?: Array<{
+    title: string;
+    description: string;
+    icon?: string;
+  }>;
 };
 
 // Types for Alternatives Page

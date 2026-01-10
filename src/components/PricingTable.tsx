@@ -46,7 +46,7 @@ export default function PricingTable({ plans, affiliateLink, hasFreeTrial }: Pri
       return { price: 'N/A', period: '' };
     }
     
-    const priceStr = getPriceString(plan.price);
+    const priceStr = getPriceString(plan.price as any);
     const isEnterprise = priceStr.toLowerCase() === 'custom' || priceStr.toLowerCase() === 'contact';
     const isFree = priceStr.toLowerCase() === 'free';
 
@@ -167,7 +167,7 @@ export default function PricingTable({ plans, affiliateLink, hasFreeTrial }: Pri
   const renderCard = (plan: PricingPlan, index: number, allPlans: PricingPlan[], isStaticEnterprise = false) => {
     if (!plan || !plan.name) return null;
     
-    const priceStr = getPriceString(plan.price);
+    const priceStr = getPriceString(plan.price as any);
     const isEnterprise = plan.name.toLowerCase().includes('enterprise') || 
                          priceStr.toLowerCase() === 'custom' || 
                          priceStr.toLowerCase() === 'contact';

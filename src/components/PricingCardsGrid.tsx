@@ -15,7 +15,12 @@ export default function PricingCardsGrid({ plans, affiliateLink, hasFreeTrial }:
 
   // Debug: Log plan pricing structure
   console.log("Pricing Plans Debug:", plans.map(p => ({ name: p.name, price: p.price })));
-  console.log("hasYearlyPricing:", plans.some(p => !!(p.price?.yearly || p.price?.annual)));
+  console.log("hasYearlyPricing:", plans.some(p => {
+    if (typeof p.price === 'object' && p.price !== null) {
+      return !!(p.price.yearly || (p.price as any).annual);
+    }
+    return false;
+  }));
 
   // Check if any plan has yearly pricing
   const hasYearlyPricing = plans.some(plan => {

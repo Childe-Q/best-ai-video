@@ -20,7 +20,7 @@ interface PricingCardProps {
     unitPriceNote?: string;
     ribbonText?: string;
     addonLabel?: string;
-    addons?: { id: string; label: string }[];
+    addons?: Array<{ id: string; label: string } | { text: string; badge?: string }>;
     featureItems?: { icon?: string; text: string; badge?: string }[];
     ctaText?: string;
     ctaHref?: string;

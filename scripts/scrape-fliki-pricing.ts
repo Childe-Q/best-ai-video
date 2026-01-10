@@ -174,131 +174,132 @@ async function extractPrices(page: any, mode: 'monthly' | 'yearly'): Promise<Arr
     
     for (const planName of planNames) {
       try {
-      // Find element containing plan name (case insensitive, more flexible)
-      let planLocator = page.locator(`text=/^${planName}$/i`).first();
-      let planExists = await planLocator.count();
-      
-      // If not found, try broader search
-      if (planExists === 0) {
-        planLocator = page.locator(`text=/${planName}/i`).first();
-        planExists = await planLocator.count();
-      }
-      
-      if (planExists === 0) {
-        console.warn(`  ⚠️  Plan "${planName}" not found, skipping...`);
-        continue;
-      }
-      
-      // Get the parent container (usually a card or section)
-      // Try to find the pricing card container
-      const container = await planLocator.evaluateHandle((el: any): any => {
-        // Walk up the DOM to find the pricing card container
-        let current = el;
-        for (let i = 0; i < 6 && current; i++) {
-          // Look for common card/container classes
-          const classList = current.classList || [];
-          const className = current.className || '';
-          if (className.includes('card') || className.includes('plan') || 
-              className.includes('pricing') || className.includes('tier') ||
-              current.tagName === 'ARTICLE' || current.tagName === 'SECTION') {
-            return current;
-          }
-          current = current.parentElement;
+        // Find element containing plan name (case insensitive, more flexible)
+        let planLocator = page.locator(`text=/^${planName}$/i`).first();
+        let planExists = await planLocator.count();
+        
+        // If not found, try broader search
+        if (planExists === 0) {
+          planLocator = page.locator(`text=/${planName}/i`).first();
+          planExists = await planLocator.count();
         }
-        const closest = el.closest('[class*="card"], [class*="plan"], [class*="pricing"]');
-        return closest || el.parentElement?.parentElement || el.parentElement || el;
-      });
-      
-      // Extract plan name
-      const nameText = await planLocator.textContent();
-      const name = nameText?.trim() || planName;
-      
-      // Find price - use evaluateHandle for more precise extraction
-      let priceText = '';
-      let periodText = '';
-      
-      try {
-        const priceInfo = await container.asElement()?.evaluateHandle((el: any): string | null => {
-          // Strategy 1: Find large price text elements (usually the main price)
-          const largePriceElements = Array.from(el.querySelectorAll('.text-5xl, .text-4xl, .text-3xl, [class*="price"], [class*="amount"]'))
-            .map((elem: any) => {
-              const text = elem.textContent?.trim() || '';
-              const fontSize = window.getComputedStyle(elem).fontSize;
-              return { text, fontSize: parseFloat(fontSize) || 0, element: elem };
-            })
-            .filter((item: any) => {
-              // Filter for price-like text (contains $ or is a number)
-              return item.text.match(/\$\d+/) || (item.text.match(/^\d+$/) && item.text.length < 4);
-            })
-            .sort((a: any, b: any) => b.fontSize - a.fontSize); // Sort by font size (largest first)
-          
-          if (largePriceElements.length > 0) {
-            return largePriceElements[0].text;
-          }
-          
-          // Strategy 2: Extract from all text content using regex
-          const allText = el.textContent || '';
-          
-          // Look for price patterns (prioritize patterns with "per month" or similar)
-          const patterns = [
-            /\$\s*(\d+)\s*(?:per\s+month|/mo|monthly|billed\s+monthly)/i,
-            /\$\s*(\d+)\s*(?:per\s+year|/yr|yearly|annually|billed\s+yearly)/i,
-            /\$\s*(\d+)/,
-            /(\d+)\s*(?:USD|dollars?)/i
-          ];
-          
-          for (const pattern of patterns) {
-            const match = allText.match(pattern);
-            if (match && match[1]) {
-              return `$${match[1]}`;
+        
+        if (planExists === 0) {
+          console.warn(`  ⚠️  Plan "${planName}" not found, skipping...`);
+          continue;
+        }
+        
+        // Get the parent container (usually a card or section)
+        // Try to find the pricing card container
+        const container = await planLocator.evaluateHandle((el: any): any => {
+          // Walk up the DOM to find the pricing card container
+          let current = el;
+          for (let i = 0; i < 6 && current; i++) {
+            // Look for common card/container classes
+            const classList = current.classList || [];
+            const className = current.className || '';
+            if (className.includes('card') || className.includes('plan') || 
+                className.includes('pricing') || className.includes('tier') ||
+                current.tagName === 'ARTICLE' || current.tagName === 'SECTION') {
+              return current;
             }
+            current = current.parentElement;
           }
-          
-          // Check for Free or Custom
-          if (allText.toLowerCase().includes('free') && !allText.toLowerCase().includes('trial')) {
-            return 'Free';
-          }
-          if (allText.toLowerCase().includes('custom') || allText.toLowerCase().includes('contact sales')) {
-            return 'Custom';
-          }
-          
-          return null;
+          const closest = el.closest('[class*="card"], [class*="plan"], [class*="pricing"]');
+          return closest || el.parentElement?.parentElement || el.parentElement || el;
         });
         
-        if (priceInfo) {
-          const result = await priceInfo.jsonValue();
-          if (result) {
-            priceText = result;
-            // Clean up: extract just the price part if it contains extra text
-            const priceMatch = priceText.match(/\$?\s*(\d+)/);
-            if (priceMatch) {
-              priceText = `$${priceMatch[1]}`;
+        // Extract plan name
+        const nameText = await planLocator.textContent();
+        const name = nameText?.trim() || planName;
+        
+        // Find price - use evaluateHandle for more precise extraction
+        // Declare variables outside try block so they're accessible in fallback code
+        let priceText: string = '';
+        let periodText: string = '';
+        
+        try {
+          const priceInfo = await container.asElement()?.evaluateHandle((el: any): string | null => {
+            // Strategy 1: Find large price text elements (usually the main price)
+            const largePriceElements = Array.from(el.querySelectorAll('.text-5xl, .text-4xl, .text-3xl, [class*="price"], [class*="amount"]'))
+              .map((elem: any) => {
+                const text = elem.textContent?.trim() || '';
+                const fontSize = window.getComputedStyle(elem).fontSize;
+                return { text, fontSize: parseFloat(fontSize) || 0, element: elem };
+              })
+              .filter((item: any) => {
+                // Filter for price-like text (contains $ or is a number)
+                return item.text.match(/\$\d+/) || (item.text.match(/^\d+$/) && item.text.length < 4);
+              })
+              .sort((a: any, b: any) => b.fontSize - a.fontSize); // Sort by font size (largest first)
+            
+            if (largePriceElements.length > 0) {
+              return largePriceElements[0].text;
+            }
+            
+            // Strategy 2: Extract from all text content using regex
+            const allText = el.textContent || '';
+            
+            // Look for price patterns (prioritize patterns with "per month" or similar)
+            const patterns = [
+              /\$\s*(\d+)\s*(?:per\s+month|\/mo|monthly|billed\s+monthly)/i,
+              /\$\s*(\d+)\s*(?:per\s+year|\/yr|yearly|annually|billed\s+yearly)/i,
+              /\$\s*(\d+)/,
+              /(\d+)\s*(?:USD|dollars?)/i
+            ];
+            
+            for (const pattern of patterns) {
+              const match = allText.match(pattern);
+              if (match && match[1]) {
+                return `$${match[1]}`;
+              }
+            }
+            
+            // Check for Free or Custom
+            if (allText.toLowerCase().includes('free') && !allText.toLowerCase().includes('trial')) {
+              return 'Free';
+            }
+            if (allText.toLowerCase().includes('custom') || allText.toLowerCase().includes('contact sales')) {
+              return 'Custom';
+            }
+            
+            return null;
+          });
+          
+          if (priceInfo) {
+            const result = await priceInfo.jsonValue();
+            if (result) {
+              priceText = result;
+              // Clean up: extract just the price part if it contains extra text
+              const priceMatch = priceText.match(/\$?\s*(\d+)/);
+              if (priceMatch) {
+                priceText = `$${priceMatch[1]}`;
+              }
             }
           }
-        }
-      } catch (e) {
-        console.warn(`  ⚠️  Error in price extraction for ${planName}: ${e}`);
-      }
-      
-      // Fallback: Try simple regex on container text
-      if (!priceText) {
-        try {
-          const containerText = await container.asElement()?.textContent() || '';
-          const priceMatch = containerText.match(/\$\s*(\d+)/);
-          if (priceMatch) {
-            priceText = `$${priceMatch[1]}`;
-          } else if (containerText.toLowerCase().includes('free') && !containerText.toLowerCase().includes('trial')) {
-            priceText = 'Free';
-          } else if (containerText.toLowerCase().includes('custom')) {
-            priceText = 'Custom';
-          }
         } catch (e) {
-          // Ignore
+          console.warn(`  ⚠️  Error in price extraction for ${planName}: ${e}`);
         }
-      }
-      
-      // Find period text
-      const periodSelectors = [
+        
+        // Fallback: Try simple regex on container text
+        if (!priceText) {
+          try {
+            const containerText = await container.asElement()?.textContent() || '';
+            const priceMatch = containerText.match(/\$\s*(\d+)/);
+            if (priceMatch) {
+              priceText = `$${priceMatch[1]}`;
+            } else if (containerText.toLowerCase().includes('free') && !containerText.toLowerCase().includes('trial')) {
+              priceText = 'Free';
+            } else if (containerText.toLowerCase().includes('custom')) {
+              priceText = 'Custom';
+            }
+          } catch (e) {
+            // Ignore
+          }
+        }
+        
+        // Find period text
+        const periodSelectors = [
         '[class*="period"]',
         '[class*="billing"]',
         '[class*="month"]',
@@ -307,67 +308,68 @@ async function extractPrices(page: any, mode: 'monthly' | 'yearly'): Promise<Arr
         'text=/monthly/i',
         'text=/annually/i',
         'text=/billed/i'
-      ];
-      
-      for (const selector of periodSelectors) {
-        try {
-          const periodElement = container.locator(selector).first();
-          const count = await periodElement.count();
-          if (count > 0) {
-            periodText = await periodElement.textContent() || '';
-            if (periodText.toLowerCase().includes('month') || periodText.toLowerCase().includes('year') || 
-                periodText.toLowerCase().includes('annually')) {
-              break;
+        ];
+        
+        for (const selector of periodSelectors) {
+          try {
+            const periodElement = container.locator(selector).first();
+            const count = await periodElement.count();
+            if (count > 0) {
+              periodText = await periodElement.textContent() || '';
+              if (periodText.toLowerCase().includes('month') || periodText.toLowerCase().includes('year') || 
+                  periodText.toLowerCase().includes('annually')) {
+                break;
+              }
             }
+          } catch (e) {
+            // Continue to next selector
           }
-        } catch (e) {
-          // Continue to next selector
         }
-      }
-      
-      // Extract amount
-      let amount: number | null = null;
-      
-      if (planName.toLowerCase() === 'free') {
-        amount = 0;
-      } else if (planName.toLowerCase() === 'enterprise') {
-        // Enterprise: Check for Custom pricing
-        if (priceText && (priceText.toLowerCase().includes('custom') || priceText.toLowerCase().includes('contact'))) {
-          amount = 0; // Will be handled with unitPriceNote
+        
+        // Extract amount
+        let amount: number | null = null;
+        
+        if (planName.toLowerCase() === 'free') {
+          amount = 0;
+        } else if (planName.toLowerCase() === 'enterprise') {
+          // Enterprise: Check for Custom pricing
+          if (priceText && (priceText.toLowerCase().includes('custom') || priceText.toLowerCase().includes('contact'))) {
+            amount = 0; // Will be handled with unitPriceNote
+          } else {
+            amount = extractPrice(priceText);
+          }
         } else {
           amount = extractPrice(priceText);
         }
-      } else {
-        amount = extractPrice(priceText);
-      }
-      
-      // Ensure amount is never null
-      if (amount === null) {
-        amount = 0;
-      }
-      
-      const period = extractPeriod(periodText || 'per month');
-      
-      // Ensure amount is never null before pushing
-      const finalAmount = amount !== null ? amount : 0;
-      
-      results.push({
-        name: planName,
-        price: {
-          amount: finalAmount,
-          currency: 'USD',
-          period
+        
+        // Ensure amount is never null
+        if (amount === null) {
+          amount = 0;
         }
-      });
-      
-      console.log(`  ✓ ${planName}: ${priceText || 'N/A'} (${periodText || 'per month'})`);
-    } catch (error: any) {
-      console.warn(`  ⚠️  Error extracting ${planName}: ${error.message}`);
-      // Add fallback
-      if (planName.toLowerCase() === 'free') {
-        results.push({ name: 'Free', price: { amount: 0, currency: 'USD', period: 'month' } });
-      } else if (planName.toLowerCase() === 'enterprise') {
-        results.push({ name: 'Enterprise', price: { amount: 0, currency: 'USD', period: 'month' } });
+        
+        const period = extractPeriod(periodText || 'per month');
+        
+        // Ensure amount is never null before pushing
+        const finalAmount = amount !== null ? amount : 0;
+        
+        results.push({
+          name: planName,
+          price: {
+            amount: finalAmount,
+            currency: 'USD',
+            period
+          }
+        });
+        
+        console.log(`  ✓ ${planName}: ${priceText || 'N/A'} (${periodText || 'per month'})`);
+      } catch (error: any) {
+        console.warn(`  ⚠️  Error extracting ${planName}: ${error.message}`);
+        // Add fallback
+        if (planName.toLowerCase() === 'free') {
+          results.push({ name: 'Free', price: { amount: 0, currency: 'USD', period: 'month' } });
+        } else if (planName.toLowerCase() === 'enterprise') {
+          results.push({ name: 'Enterprise', price: { amount: 0, currency: 'USD', period: 'month' } });
+        }
       }
     }
   } catch (error: any) {
