@@ -190,7 +190,7 @@ async function extractPrices(page: any, mode: 'monthly' | 'yearly'): Promise<Arr
       
       // Get the parent container (usually a card or section)
       // Try to find the pricing card container
-      const container = await planLocator.evaluateHandle((el: any) => {
+      const container = await planLocator.evaluateHandle((el: any): any => {
         // Walk up the DOM to find the pricing card container
         let current = el;
         for (let i = 0; i < 6 && current; i++) {
@@ -204,7 +204,8 @@ async function extractPrices(page: any, mode: 'monthly' | 'yearly'): Promise<Arr
           }
           current = current.parentElement;
         }
-        return el.closest('[class*="card"], [class*="plan"], [class*="pricing"]') || el.parentElement?.parentElement || el.parentElement;
+        const closest = el.closest('[class*="card"], [class*="plan"], [class*="pricing"]');
+        return closest || el.parentElement?.parentElement || el.parentElement || el;
       });
       
       // Extract plan name
@@ -216,7 +217,7 @@ async function extractPrices(page: any, mode: 'monthly' | 'yearly'): Promise<Arr
       let periodText = '';
       
       try {
-        const priceInfo = await container.asElement()?.evaluateHandle((el: any) => {
+        const priceInfo = await container.asElement()?.evaluateHandle((el: any): string | null => {
           // Strategy 1: Find large price text elements (usually the main price)
           const largePriceElements = Array.from(el.querySelectorAll('.text-5xl, .text-4xl, .text-3xl, [class*="price"], [class*="amount"]'))
             .map((elem: any) => {
@@ -330,7 +331,7 @@ async function extractPrices(page: any, mode: 'monthly' | 'yearly'): Promise<Arr
         amount = 0;
       } else if (planName.toLowerCase() === 'enterprise') {
         // Enterprise: Check for Custom pricing
-        if (priceText.toLowerCase().includes('custom') || priceText.toLowerCase().includes('contact')) {
+        if (priceText && (priceText.toLowerCase().includes('custom') || priceText.toLowerCase().includes('contact'))) {
           amount = 0; // Will be handled with unitPriceNote
         } else {
           amount = extractPrice(priceText);
@@ -339,12 +340,20 @@ async function extractPrices(page: any, mode: 'monthly' | 'yearly'): Promise<Arr
         amount = extractPrice(priceText);
       }
       
+      // Ensure amount is never null
+      if (amount === null) {
+        amount = 0;
+      }
+      
       const period = extractPeriod(periodText || 'per month');
+      
+      // Ensure amount is never null before pushing
+      const finalAmount = amount !== null ? amount : 0;
       
       results.push({
         name: planName,
         price: {
-          amount: amount ?? 0,
+          amount: finalAmount,
           currency: 'USD',
           period
         }
@@ -362,6 +371,7 @@ async function extractPrices(page: any, mode: 'monthly' | 'yearly'): Promise<Arr
     }
   }
   
+  // Explicitly return results to satisfy TypeScript
   return results;
 }
 
