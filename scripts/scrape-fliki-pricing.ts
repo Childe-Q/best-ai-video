@@ -369,6 +369,8 @@ async function extractPrices(page: any, mode: 'monthly' | 'yearly'): Promise<Arr
         results.push({ name: 'Enterprise', price: { amount: 0, currency: 'USD', period: 'month' } });
       }
     }
+  } catch (error: any) {
+    console.warn(`  ⚠️  Error in extractPrices: ${error.message}`);
   }
   
   // Explicitly return results to satisfy TypeScript
