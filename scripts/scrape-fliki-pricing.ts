@@ -168,11 +168,12 @@ async function scrapeFlikiPricing(): Promise<PlanPrice[]> {
 async function extractPrices(page: any, mode: 'monthly' | 'yearly'): Promise<Array<{ name: string; price: { amount: number; currency: string; period: string } }>> {
   const results: Array<{ name: string; price: { amount: number; currency: string; period: string } }> = [];
   
-  // Strategy: Find pricing cards by looking for plan names
-  const planNames = ['Free', 'Standard', 'Premium', 'Enterprise'];
-  
-  for (const planName of planNames) {
-    try {
+  try {
+    // Strategy: Find pricing cards by looking for plan names
+    const planNames = ['Free', 'Standard', 'Premium', 'Enterprise'];
+    
+    for (const planName of planNames) {
+      try {
       // Find element containing plan name (case insensitive, more flexible)
       let planLocator = page.locator(`text=/^${planName}$/i`).first();
       let planExists = await planLocator.count();
