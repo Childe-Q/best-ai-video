@@ -1,19 +1,12 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import toolsData from '@/data/tools.json';
-import { Tool } from '@/types/tool';
+import { getTool, getAllTools, findBestAlternatives } from '@/lib/getTool';
 import CTAButton from '@/components/CTAButton';
-import ToolNav from '@/components/ToolNav';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { getSEOCurrentYear } from '@/lib/utils';
 
-const tools: Tool[] = toolsData as Tool[];
-
-function getTool(slug: string): Tool | undefined {
-  return tools.find((t) => t.slug === slug);
-}
-
 export async function generateStaticParams() {
+  const tools = getAllTools();
   return tools.map((tool) => ({ slug: tool.slug }));
 }
 
@@ -30,70 +23,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-// Weighted Matching System: Find alternatives based on shared tags
-// Priority: Always show Fliki, Zebracat, or Veed if they match the category
-function findBestAlternatives(currentTool: Tool, allTools: Tool[], count: number = 3) {
-  // Define affiliate tools (money tools) to prioritize
-  const affiliateTools = ['fliki', 'zebracat', 'veed-io'];
-  
-  // Filter out the current tool
-  const candidates = allTools.filter((t) => t.id !== currentTool.id);
-  
-  // Step 1: Find affiliate tools that match the category (have shared tags)
-  const affiliateMatches: Array<{ tool: Tool; sharedTags: string[]; score: number }> = [];
-  
-  for (const affiliateSlug of affiliateTools) {
-    const affiliateTool = candidates.find((t) => t.slug === affiliateSlug);
-    if (affiliateTool) {
-      const sharedTags = affiliateTool.tags.filter((tag) => currentTool.tags.includes(tag));
-      // Even if they share 0 tags, we still want to show them (force them in)
-      // But prioritize those with shared tags
-      affiliateMatches.push({
-        tool: affiliateTool,
-        sharedTags,
-        score: sharedTags.length + 10, // Add 10 to ensure they rank higher
-      });
-    }
-  }
-  
-  // Sort affiliate matches by score (highest first)
-  affiliateMatches.sort((a, b) => b.score - a.score);
-  
-  // Step 2: Get other candidates (excluding affiliate tools)
-  const otherCandidates = candidates.filter(
-    (t) => !affiliateTools.includes(t.slug.toLowerCase())
-  );
-  
-  // Calculate shared tags for other candidates
-  const otherScored = otherCandidates.map((candidate) => {
-    const sharedTags = candidate.tags.filter((tag) => currentTool.tags.includes(tag));
-    return {
-      tool: candidate,
-      sharedTags,
-      score: sharedTags.length,
-    };
-  });
-  
-  // Sort other candidates by number of shared tags (highest first)
-  otherScored.sort((a, b) => b.score - a.score);
-  
-  // Step 3: Combine results - affiliate tools first, then others
-  // Always prioritize affiliate tools, even if they have 0 shared tags
-  const allAlternatives = [
-    ...affiliateMatches.map((item) => ({
-      tool: item.tool,
-      sharedTags: item.sharedTags,
-    })),
-    ...otherScored.map((item) => ({
-      tool: item.tool,
-      sharedTags: item.sharedTags,
-    })),
-  ];
-  
-  // Return top N alternatives (affiliate tools will be first)
-  return allAlternatives.slice(0, count);
-}
-
 export default async function AlternativesPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const tool = getTool(slug);
@@ -101,18 +30,13 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
   if (!tool) notFound();
 
   // Use weighted matching to find top 3 alternatives
+  const tools = getAllTools();
   const alternativesWithTags = findBestAlternatives(tool, tools, 3);
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
-      {/* Main Content - Centered */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Breadcrumbs */}
-        <Breadcrumbs toolName={tool.name} toolSlug={tool.slug} currentPage="Alternatives" />
-
-        <ToolNav toolSlug={tool.slug} />
-
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+    <section className="w-full bg-slate-50 py-16">
+      <div className="w-full max-w-[1600px] mx-auto px-4 md:px-12 lg:px-24">
+        <main className="max-w-3xl mx-auto space-y-12">
         
         {/* 1. Header */}
         <div className="text-center">
@@ -134,9 +58,25 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
                <div key={alt.id} className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden flex flex-col md:flex-row">
                   <div className="p-6 md:p-8 flex-1">
                      <div className="flex items-center gap-4 mb-4">
-                        <div className="h-14 w-14 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 font-bold text-xl shrink-0">
-                          {alt.name.charAt(0)}
-                        </div>
+                        {(() => {
+                          const logoSrc = alt.logo_url || (alt as any).logoUrl || (alt as any).logo || (alt as any).image_url || (alt as any).imageUrl || (alt as any).icon_url || (alt as any).iconUrl;
+                          return (
+                            <div className="h-12 w-12 shrink-0 rounded-xl bg-slate-100 flex items-center justify-center overflow-hidden ring-1 ring-slate-200">
+                              {logoSrc ? (
+                                <Image
+                                  src={logoSrc}
+                                  alt={`${alt.name} logo`}
+                                  width={48}
+                                  height={48}
+                                  className="h-full w-full object-contain"
+                                  unoptimized
+                                />
+                              ) : (
+                                <span className="text-slate-700 font-semibold">{alt.name?.slice(0, 1) ?? '?'}</span>
+                              )}
+                            </div>
+                          );
+                        })()}
                         <div>
                           <h2 className="text-xl font-bold text-gray-900">{alt.name}</h2>
                           <div className="text-sm text-gray-500">{alt.starting_price}</div>
@@ -173,9 +113,9 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
            </Link>
         </div>
 
-      </main>
+        </main>
       </div>
-    </div>
+    </section>
   );
 }
 

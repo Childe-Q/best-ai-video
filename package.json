@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "fetch:cache": "tsx scripts/fetch-and-cache.ts",
+    "sync:tools": "tsx scripts/sync-tools.ts",
+    "scrape:fliki": "tsx scripts/scrape-fliki-pricing.ts"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -21,9 +24,12 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cheerio": "^1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.10",
+    "playwright": "^1.40.0",
     "tailwindcss": "^4",
+    "tsx": "^4.7.0",
     "typescript": "^5"
   }
 }

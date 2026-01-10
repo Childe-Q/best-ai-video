@@ -1,0 +1,229 @@
+{
+  "pricingPlans": [
+    {
+      "id": "free",
+      "name": "Free",
+      "tagline": "For beginners trying out AI video creation",
+      "price": {
+        "amount": 0,
+        "currency": "USD",
+        "period": "month"
+      },
+      "unitPriceNote": null,
+      "addonLabel": null,
+      "addons": [],
+      "ctaText": "Get Started",
+      "billingNote": "*Billed monthly until cancelled",
+      "ribbonText": null,
+      "featureItems": [
+        {
+          "text": "5 minutes of credits per month"
+        },
+        {
+          "text": "300 voices, 80+ languages & 100+ dialects"
+        },
+        {
+          "text": "720p video resolution"
+        },
+        {
+          "text": "Videos up to 10 minutes"
+        },
+        {
+          "text": "Create videos from ideas, scripts, blog articles, PPTs"
+        },
+        {
+          "text": "Thousands of images, video clips, stickers and music assets"
+        },
+        {
+          "text": "Generate AI Images"
+        },
+        {
+          "text": "Create thumbnail designs, presentations or social carousels"
+        },
+        {
+          "text": "Contains Fliki Watermark"
+        },
+        {
+          "text": "50 scene limits"
+        },
+        {
+          "text": "Limited media library"
+        },
+        {
+          "text": "Email support only"
+        }
+      ]
+    },
+    {
+      "id": "standard",
+      "name": "Standard",
+      "tagline": "For creators venturing into AI video production",
+      "price": {
+        "amount": 28,
+        "currency": "USD",
+        "period": "month"
+      },
+      "unitPriceNote": "$0.013 per minute (annual billing)",
+      "addonLabel": null,
+      "addons": [],
+      "ctaText": "Get Standard",
+      "billingNote": "*Billed monthly until cancelled",
+      "ribbonText": "⭐ Best Value",
+      "featureItems": [
+        {
+          "text": "2160 minutes of credits per year (180 minutes/month)"
+        },
+        {
+          "text": "1000 voices including 150 ultra-realistic & 50 studio-quality"
+        },
+        {
+          "text": "1080p Full HD videos"
+        },
+        {
+          "text": "Videos up to 15 minutes"
+        },
+        {
+          "text": "No watermark"
+        },
+        {
+          "text": "Commercial rights"
+        },
+        {
+          "text": "Make and Zapier integration"
+        },
+        {
+          "text": "Limited AI avatars"
+        },
+        {
+          "text": "Voice cloning"
+        },
+        {
+          "text": "Translate content to 80+ languages"
+        },
+        {
+          "text": "Millions of premium images, video clips, stickers and music assets"
+        },
+        {
+          "text": "100 scene limits"
+        },
+        {
+          "text": "Email & live chat support"
+        }
+      ]
+    },
+    {
+      "id": "premium",
+      "name": "Premium",
+      "tagline": "For emerging & experienced video creators, perfect for teams",
+      "price": {
+        "amount": 88,
+        "currency": "USD",
+        "period": "month"
+      },
+      "unitPriceNote": "$0.012 per minute (annual billing)",
+      "addonLabel": null,
+      "addons": [],
+      "ctaText": "Get Premium",
+      "billingNote": "*Billed monthly until cancelled",
+      "ribbonText": null,
+      "featureItems": [
+        {
+          "text": "7200 minutes of credits per year (600 minutes/month)"
+        },
+        {
+          "text": "2000+ voices including 1000+ ultra-realistic & 350+ studio-quality"
+        },
+        {
+          "text": "1080p Full HD videos"
+        },
+        {
+          "text": "Videos up to 40 minutes"
+        },
+        {
+          "text": "Multiple brand kits"
+        },
+        {
+          "text": "Multiple voice cloning"
+        },
+        {
+          "text": "Multiple custom voices"
+        },
+        {
+          "text": "Generate AI video clips"
+        },
+        {
+          "text": "Custom fonts"
+        },
+        {
+          "text": "All AI avatars"
+        },
+        {
+          "text": "Photo avatars"
+        },
+        {
+          "text": "150 scene limits"
+        },
+        {
+          "text": "Priority support"
+        }
+      ]
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "tagline": "Custom plan tailored to your organization's specific needs",
+      "price": {
+        "amount": 0,
+        "currency": "USD",
+        "period": "year"
+      },
+      "unitPriceNote": "Custom pricing",
+      "addonLabel": "Team Size",
+      "addons": [],
+      "ctaText": "Contact Sales",
+      "billingNote": "*Billed yearly",
+      "ribbonText": null,
+      "featureItems": [
+        {
+          "text": "Custom credits"
+        },
+        {
+          "text": "Bulk discounts"
+        },
+        {
+          "text": "Higher quotas"
+        },
+        {
+          "text": "Invoiced billing"
+        },
+        {
+          "text": "API Access"
+        },
+        {
+          "text": "Personalized avatars"
+        },
+        {
+          "text": "State-of-the-art AI models"
+        },
+        {
+          "text": "Professional voice cloning"
+        },
+        {
+          "text": "Branded custom templates"
+        },
+        {
+          "text": "Dedicated account manager"
+        },
+        {
+          "text": "Team collaboration"
+        },
+        {
+          "text": "1080p and higher video resolution"
+        },
+        {
+          "text": "Videos up to 40 minutes"
+        }
+      ]
+    }
+  ]
+}

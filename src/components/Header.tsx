@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { categories } from '@/data/categories';
@@ -9,11 +9,21 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isFeaturesHovered, setIsFeaturesHovered] = useState(false);
+  const [featuresTimeoutId, setFeaturesTimeoutId] = useState<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
   const router = useRouter();
 
   // Get top 6 categories for the dropdown
   const topCategories = categories.slice(0, 6);
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (featuresTimeoutId) {
+        clearTimeout(featuresTimeoutId);
+      }
+    };
+  }, [featuresTimeoutId]);
 
   // Handle All Tools button click
   const handleAllToolsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -37,7 +47,7 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full z-50 fixed top-0 border-b border-gray-100 bg-white/80 backdrop-blur-md">
+    <header className="w-full z-[100] fixed top-0 border-b border-gray-100 bg-white/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Left: Logo */}
@@ -60,8 +70,21 @@ export default function Header() {
             {/* Features Dropdown */}
             <div
               className="relative"
-              onMouseEnter={() => setIsFeaturesHovered(true)}
-              onMouseLeave={() => setIsFeaturesHovered(false)}
+              onMouseEnter={() => {
+                // 清除任何待执行的关闭定时器
+                if (featuresTimeoutId) {
+                  clearTimeout(featuresTimeoutId);
+                  setFeaturesTimeoutId(null);
+                }
+                setIsFeaturesHovered(true);
+              }}
+              onMouseLeave={() => {
+                // 延迟关闭，给用户时间移动鼠标到下拉菜单
+                const timeoutId = setTimeout(() => {
+                  setIsFeaturesHovered(false);
+                }, 150); // 150ms 延迟
+                setFeaturesTimeoutId(timeoutId);
+              }}
             >
               <button
                 className="text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors flex items-center gap-1"
@@ -84,29 +107,31 @@ export default function Header() {
 
               {/* Dropdown Panel */}
               {isFeaturesHovered && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
-                  <div className="px-2 py-2">
-                    <div className="space-y-0.5">
-                      {topCategories.map((category) => (
+                <div className="absolute top-full left-0 pt-2 w-80 z-[200]">
+                  <div className="bg-white rounded-lg shadow-xl border border-gray-200 py-2">
+                    <div className="px-2 py-2">
+                      <div className="space-y-0.5">
+                        {topCategories.map((category) => (
+                          <Link
+                            key={category.slug}
+                            href={`/features/${category.slug}`}
+                            className="block px-3 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition-colors"
+                            onClick={() => setIsFeaturesHovered(false)}
+                          >
+                            {category.title.replace(' (2026)', '')}
+                          </Link>
+                        ))}
+                      </div>
+                      <div className="border-t border-gray-200 mt-2 pt-2">
                         <Link
-                          key={category.slug}
-                          href={`/features/${category.slug}`}
-                          className="block px-3 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 rounded-md transition-colors"
+                          href="/features"
+                          className="block px-3 py-2 text-sm font-medium text-indigo-600 hover:bg-indigo-50 rounded-md transition-colors flex items-center justify-between"
                           onClick={() => setIsFeaturesHovered(false)}
                         >
-                          {category.title.replace(' (2026)', '')}
+                          View All Categories
+                          <span>→</span>
                         </Link>
-                      ))}
-                    </div>
-                    <div className="border-t border-gray-200 mt-2 pt-2">
-                      <Link
-                        href="/features"
-                        className="block px-3 py-2 text-sm font-medium text-indigo-600 hover:bg-indigo-50 rounded-md transition-colors flex items-center justify-between"
-                        onClick={() => setIsFeaturesHovered(false)}
-                      >
-                        View All Categories
-                        <span>→</span>
-                      </Link>
+                      </div>
                     </div>
                   </div>
                 </div>

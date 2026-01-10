@@ -1,20 +1,11 @@
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import toolsData from '@/data/tools.json';
-import { Tool } from '@/types/tool';
-import ToolNav from '@/components/ToolNav';
-import PricingTable from '@/components/PricingTable';
+import { getTool, getAllTools } from '@/lib/getTool';
+import PricingCardsGrid from '@/components/PricingCardsGrid';
 import CTAButton from '@/components/CTAButton';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import { getSEOCurrentYear, hasFreePlan, getStartingPrice } from '@/lib/utils';
 
-const tools: Tool[] = toolsData as Tool[];
-
-function getTool(slug: string): Tool | undefined {
-  return tools.find((t) => t.slug === slug);
-}
-
 export async function generateStaticParams() {
+  const tools = getAllTools();
   return tools.map((tool) => ({ slug: tool.slug }));
 }
 
@@ -41,14 +32,8 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
   const pricingPlans = tool.pricing_plans || [];
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
-      {/* Main Content - Centered */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Breadcrumbs */}
-        <Breadcrumbs toolName={tool.name} toolSlug={tool.slug} currentPage="Pricing" />
-
-        <ToolNav toolSlug={tool.slug} />
-
+    <section className="w-full bg-slate-50 py-16">
+      <div className="w-full max-w-[1600px] mx-auto px-4 md:px-12 lg:px-24">
         <main className="py-8">
         
         {/* 1. Header */}
@@ -61,10 +46,10 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
           </p>
         </div>
 
-        {/* 2. Pricing Table */}
+        {/* 2. Pricing Cards Grid */}
         <div className="mb-0">
           {pricingPlans.length > 0 ? (
-            <PricingTable 
+            <PricingCardsGrid 
               plans={pricingPlans} 
               affiliateLink={tool.affiliate_link}
               hasFreeTrial={tool.has_free_trial}
@@ -135,7 +120,7 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
 
         </main>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -62,7 +62,7 @@ export default async function FeatureDetailPage({ params }: PageProps) {
 
   // Get 4 random other categories (excluding current)
   const otherCategories = shuffleArray(
-    categories.filter((cat) => cat.slug !== params.slug)
+    categories.filter((cat) => cat.slug !== slug)
   ).slice(0, 4);
 
   return (

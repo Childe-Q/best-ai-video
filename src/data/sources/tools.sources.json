@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "fliki",
+    "official_urls": {
+      "pricing": {
+        "url": "https://fliki.ai/pricing",
+        "mode": "static"
+      },
+      "features": {
+        "url": "https://fliki.ai/features",
+        "mode": "static"
+      },
+      "terms": {
+        "url": "https://fliki.ai/terms",
+        "mode": "static"
+      },
+      "help": {
+        "url": "https://fliki.ai/help",
+        "mode": "static"
+      }
+    }
+  }
+]

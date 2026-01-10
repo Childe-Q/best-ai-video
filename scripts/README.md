@@ -1,83 +1,60 @@
-# Data Generation Script
+# Scripts Documentation
 
-This script generates detailed JSON data for AI video tools using AI API and automatically fetches logos via Clearbit Logo API.
+## Fetch and Cache Tool
 
-## Features
+### Installation
 
-- 🤖 **AI-Powered Content Generation**: Uses OpenAI or DeepSeek API to generate unique, detailed reviews
-- 🎨 **Automatic Logo URLs**: Uses Clearbit Logo API to generate logo URLs automatically (no manual downloads needed)
-- 📋 **Complete Schema**: Generates all required fields including tags, pricing, pros/cons, FAQs, and reviews
-- 🔄 **Batch Processing**: Processes all 20 tools in one run
+Install required dependencies:
 
-## Setup
-
-1. Install dependencies:
 ```bash
-pip install -r scripts/requirements.txt
+pnpm add -D playwright tsx
 ```
 
-2. Set your API key:
-```bash
-# For OpenAI
-export OPENAI_API_KEY='your-openai-key-here'
+Install Playwright browser (first time only):
 
-# OR for DeepSeek (recommended, cheaper)
-export DEEPSEEK_API_KEY='your-deepseek-key-here'
+```bash
+pnpm exec playwright install chromium
 ```
 
-## Usage
+**Note:** Node 18+ includes global `fetch`, so no additional fetch library is needed. If using Node < 18, you may need to add `undici`.
 
-Run the script from the project root:
+### Usage
+
+Fetch and cache HTML content from tool sources:
+
 ```bash
-python scripts/update_data.py
+# Fetch pricing page for fliki
+pnpm run fetch:cache --slug fliki --type pricing
+
+# Fetch features page
+pnpm run fetch:cache --slug fliki --type features
+
+# Force re-fetch (ignore cache)
+pnpm run fetch:cache --slug fliki --type pricing --force
 ```
 
-The script will:
-- Generate detailed data for all 20 tools
-- Automatically create Clearbit Logo API URLs for each tool
-- Normalize slugs (e.g., "Veed.io" → "veed-io")
-- Overwrite `src/data/tools.json` with new data
+### Parameters
 
-## Tool List
+- `--slug` (required): Tool slug from `tools.sources.json`
+- `--type` (required): Page type - one of: `pricing`, `features`, `terms`, `help`
+- `--force` (optional): Ignore cache and re-fetch
 
-The script processes these 20 tools:
-- InVideo, HeyGen, Synthesia, Descript, Opus Clip
-- Runway, Pika, Sora, Fliki, Pictory
-- Veed.io, Colossyan, Elai.io, D-ID, Hour One
-- DeepBrain AI, Synthesys, FlexClip, Lumen5, Steve AI
+### Cache Location
 
-## Logo Generation
+Cached HTML files are stored in:
+```
+scripts/cache/{slug}/{type}-{urlHash}.html
+```
 
-The script automatically generates logo URLs using Clearbit Logo API:
-- Format: `https://logo.clearbit.com/[domain]`
-- Example: InVideo → `https://logo.clearbit.com/invideo.io`
-- No manual image downloads required!
+Where:
+- `{slug}`: Tool slug
+- `{type}`: Page type (pricing, features, etc.)
+- `{urlHash}`: First 12 characters of SHA256 hash of the URL
 
-## Generated Data Schema
+### Features
 
-Each tool includes:
-- Basic info: `id`, `slug`, `name`, `tagline`, `short_description`, `best_for`
-- Logo: `logo_url` (Clearbit API URL)
-- Pricing: `pricing` object, `has_free_trial`, `pricing_model`, `starting_price`
-- Content: `rating`, `features`, `tags`, `pros`, `cons`
-- Reviews: `review_content`, `long_review` (HTML format)
-- FAQs: Array of question/answer pairs
-- Affiliate: `affiliate_link`
-
-## Tags
-
-Generated tags are selected from this list:
-- `Avatar` - For AI avatar/presenter tools
-- `Text-to-Video` - For text-to-video generation tools
-- `Editor` - For video editing tools
-- `Repurposing` - For content repurposing tools
-- `Cheap` - For budget-friendly tools
-- `Professional` - For enterprise/professional tools
-
-## Notes
-
-- The script uses AI to generate unique content for each tool
-- If API key is not set, it will use fallback templates
-- Clearbit Logo API is free and requires no authentication
-- Generated content is SEO-optimized and unique for each tool
-
+- **Static fetching**: Uses native `fetch` API with retry logic (exponential backoff)
+- **Dynamic fetching**: Uses Playwright for JavaScript-rendered content
+- **Caching**: Automatically caches fetched content to avoid redundant requests
+- **Retry logic**: Up to 2 retries with exponential backoff (500ms, 1500ms)
+- **Timeout**: 15s for static, 45s for dynamic content

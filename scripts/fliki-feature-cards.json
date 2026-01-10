@@ -1,0 +1,60 @@
+{
+  "featureCards": [
+    {
+      "title": "Text to video",
+      "description": "Convert text scripts or prompts into ready-to-publish videos for YouTube, Instagram, and TikTok. No video editing skills required.",
+      "icon": "play",
+      "variant": "purple",
+      "href": "https://fliki.ai/features#text-to-video"
+    },
+    {
+      "title": "AI voiceover",
+      "description": "Generate natural-sounding narrations using 2000+ ultra-realistic AI voices across 80+ languages. Perfect for multilingual content creation.",
+      "icon": "audio",
+      "variant": "indigo",
+      "href": "https://fliki.ai/features#ai-voiceover"
+    },
+    {
+      "title": "Idea to video",
+      "description": "Turn simple prompts into polished social media videos in seconds. AI automatically generates visuals, voiceover, and effects.",
+      "icon": "lightbulb",
+      "variant": "blue",
+      "href": "https://fliki.ai/features#idea-to-video"
+    },
+    {
+      "title": "AI avatar",
+      "description": "Create lifelike talking avatars for your videos. No camera or filming needed—generate professional talking-head content instantly.",
+      "icon": "user",
+      "variant": "red",
+      "href": "https://fliki.ai/features#ai-avatar"
+    },
+    {
+      "title": "Text to speech",
+      "description": "Advanced TTS with 2000+ voices in 80+ languages and 100+ accents. Ideal for YouTube videos, podcasts, and audio content.",
+      "icon": "message",
+      "variant": "purple",
+      "href": "https://fliki.ai/features#text-to-speech"
+    },
+    {
+      "title": "Voice cloning",
+      "description": "Clone your voice with a 2-minute sample. Save time on recordings and create authentic voiceovers for your content.",
+      "icon": "mic",
+      "variant": "indigo",
+      "href": "https://fliki.ai/features#voice-cloning"
+    },
+    {
+      "title": "Blog to video",
+      "description": "Convert blog articles into engaging videos to boost SEO and engagement. Automatically extracts key content and adds visuals.",
+      "icon": "file-text",
+      "variant": "blue",
+      "href": "https://fliki.ai/features#blog-to-video"
+    },
+    {
+      "title": "PPT to video",
+      "description": "Transform PowerPoint presentations into videos. Upload your PPT and get AI-generated scripts, avatars, voiceovers, and music.",
+      "icon": "layers",
+      "variant": "red",
+      "href": "https://fliki.ai/features#ppt-to-video"
+    }
+  ]
+}

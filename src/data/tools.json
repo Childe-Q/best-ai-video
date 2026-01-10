@@ -331,94 +331,310 @@
     "affiliate_link": "https://fliki.ai/?via=jack-shan",
     "pricing_plans": [
       {
+        "id": "free",
         "name": "Free",
+        "tagline": "For beginners trying out AI video creation",
         "price": {
-          "monthly": "$0",
-          "yearly": "$0"
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
         },
-        "period": "",
-        "description": "For beginners trying out AI video creation.",
-        "features": [
-          "5 minutes of credits per month",
-          "300 (limited) voices, 80+ languages",
-          "Create videos from ideas, scripts, blogs",
-          "Thousands of images, video clips, music",
-          "Generate AI Images",
-          "HD - 720p low-res videos",
-          "Create thumbnail designs",
-          "Contains Fliki Watermark"
-        ],
-        "btn_text": "Start now",
-        "badge": "Risk-Free"
+        "unitPriceNote": null,
+        "addonLabel": null,
+        "addons": [],
+        "ctaText": "Get Started",
+        "billingNote": "*Billed monthly until cancelled",
+        "ribbonText": null,
+        "featureItems": [
+          {
+            "text": "5 minutes of credits per month"
+          },
+          {
+            "text": "300 voices, 80+ languages & 100+ dialects"
+          },
+          {
+            "text": "720p video resolution"
+          },
+          {
+            "text": "Videos up to 10 minutes"
+          },
+          {
+            "text": "Create videos from ideas, scripts, blog articles, PPTs"
+          },
+          {
+            "text": "Thousands of images, video clips, stickers and music assets"
+          },
+          {
+            "text": "Generate AI Images"
+          },
+          {
+            "text": "Create thumbnail designs, presentations or social carousels"
+          },
+          {
+            "text": "Contains Fliki Watermark"
+          },
+          {
+            "text": "50 scene limits"
+          },
+          {
+            "text": "Limited media library"
+          },
+          {
+            "text": "Email support only"
+          }
+        ]
       },
       {
+        "id": "standard",
         "name": "Standard",
+        "tagline": "For creators venturing into AI video production",
         "price": {
-          "monthly": "$28",
-          "yearly": "$17"
+          "monthly": {
+            "amount": 28,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 17,
+            "currency": "USD",
+            "period": "month"
+          }
         },
-        "period": "/month",
-        "description": "For creators venturing into AI video production.",
-        "features": [
-          "180 minutes of credits per month",
-          "1000 voices including 150 ultra-realistic",
-          "Full HD - 1080p videos",
-          "Videos of length upto 15 minutes",
-          "Millions of premium assets",
-          "Translate content to 80+ languages",
-          "Make and Zapier integration",
-          "Limited AI avatars",
-          "Voice cloning",
-          "No watermark",
-          "Commercial rights"
-        ],
-        "btn_text": "Start for free",
-        "badge": "🔥 Most Popular"
+        "unitPriceNote": "$0.013 per minute (annual billing)",
+        "addonLabel": null,
+        "addons": [],
+        "ctaText": "Get Standard",
+        "billingNote": "*Billed monthly until cancelled",
+        "ribbonText": "⭐ Best Value",
+        "featureItems": [
+          {
+            "text": "2160 minutes of credits per year (180 minutes/month)"
+          },
+          {
+            "text": "1000 voices including 150 ultra-realistic & 50 studio-quality"
+          },
+          {
+            "text": "1080p Full HD videos"
+          },
+          {
+            "text": "Videos up to 15 minutes"
+          },
+          {
+            "text": "No watermark"
+          },
+          {
+            "text": "Commercial rights"
+          },
+          {
+            "text": "Make and Zapier integration"
+          },
+          {
+            "text": "Limited AI avatars"
+          },
+          {
+            "text": "Voice cloning"
+          },
+          {
+            "text": "Translate content to 80+ languages"
+          },
+          {
+            "text": "Millions of premium images, video clips, stickers and music assets"
+          },
+          {
+            "text": "100 scene limits"
+          },
+          {
+            "text": "Email & live chat support"
+          }
+        ]
       },
       {
+        "id": "premium",
         "name": "Premium",
+        "tagline": "For emerging & experienced video creators, perfect for teams",
         "price": {
-          "monthly": "$88",
-          "yearly": "$53"
+          "monthly": {
+            "amount": 88,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 53,
+            "currency": "USD",
+            "period": "month"
+          }
         },
-        "period": "/month",
-        "description": "For emerging & experienced video creators.",
-        "features": [
-          "600 minutes of credits per month",
-          "2000+ voices including 1000+ ultra-realistic",
-          "Videos of length upto 40 minutes",
-          "Multiple brand kits",
-          "Multiple voice cloning",
-          "Multiple custom voices",
-          "Generate AI video clips",
-          "Custom fonts",
-          "All AI avatars",
-          "Priority support"
-        ],
-        "btn_text": "Start for free",
-        "badge": "Power User"
+        "unitPriceNote": "$0.012 per minute (annual billing)",
+        "addonLabel": null,
+        "addons": [],
+        "ctaText": "Get Premium",
+        "billingNote": "*Billed monthly until cancelled",
+        "ribbonText": null,
+        "featureItems": [
+          {
+            "text": "7200 minutes of credits per year (600 minutes/month)"
+          },
+          {
+            "text": "2000+ voices including 1000+ ultra-realistic & 350+ studio-quality"
+          },
+          {
+            "text": "1080p Full HD videos"
+          },
+          {
+            "text": "Videos up to 40 minutes"
+          },
+          {
+            "text": "Multiple brand kits"
+          },
+          {
+            "text": "Multiple voice cloning"
+          },
+          {
+            "text": "Multiple custom voices"
+          },
+          {
+            "text": "Generate AI video clips"
+          },
+          {
+            "text": "Custom fonts"
+          },
+          {
+            "text": "All AI avatars"
+          },
+          {
+            "text": "Photo avatars"
+          },
+          {
+            "text": "150 scene limits"
+          },
+          {
+            "text": "Priority support"
+          }
+        ]
       },
       {
+        "id": "enterprise",
         "name": "Enterprise",
+        "tagline": "Custom plan tailored to your organization's specific needs",
         "price": {
-          "monthly": "Custom",
-          "yearly": "Custom"
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
         },
-        "period": "",
-        "description": "Custom plan tailored to your specific needs.",
-        "features": [
-          "Custom credits",
-          "Bulk discounts",
-          "Higher quotas",
-          "Invoiced billing",
-          "API Access",
-          "Personalized avatars",
-          "State-of-the-art AI models",
-          "Professional voice cloning",
-          "Dedicated account manager"
-        ],
-        "btn_text": "Contact us",
-        "badge": "Custom"
+        "unitPriceNote": "Custom pricing",
+        "addonLabel": "Team Size",
+        "addons": [],
+        "ctaText": "Contact Sales",
+        "billingNote": "*Billed yearly",
+        "ribbonText": null,
+        "featureItems": [
+          {
+            "text": "Custom credits"
+          },
+          {
+            "text": "Bulk discounts"
+          },
+          {
+            "text": "Higher quotas"
+          },
+          {
+            "text": "Invoiced billing"
+          },
+          {
+            "text": "API Access"
+          },
+          {
+            "text": "Personalized avatars"
+          },
+          {
+            "text": "State-of-the-art AI models"
+          },
+          {
+            "text": "Professional voice cloning"
+          },
+          {
+            "text": "Branded custom templates"
+          },
+          {
+            "text": "Dedicated account manager"
+          },
+          {
+            "text": "Team collaboration"
+          },
+          {
+            "text": "1080p and higher video resolution"
+          },
+          {
+            "text": "Videos up to 40 minutes"
+          }
+        ]
+      }
+    ],
+    "featureCards": [
+      {
+        "title": "Text to video",
+        "description": "Convert text scripts or prompts into ready-to-publish videos for YouTube, Instagram, and TikTok. No video editing skills required.",
+        "icon": "play",
+        "variant": "purple",
+        "href": "https://fliki.ai/features#text-to-video"
+      },
+      {
+        "title": "AI voiceover",
+        "description": "Generate natural-sounding narrations using 2000+ ultra-realistic AI voices across 80+ languages. Perfect for multilingual content creation.",
+        "icon": "audio",
+        "variant": "indigo",
+        "href": "https://fliki.ai/features#ai-voiceover"
+      },
+      {
+        "title": "Idea to video",
+        "description": "Turn simple prompts into polished social media videos in seconds. AI automatically generates visuals, voiceover, and effects.",
+        "icon": "lightbulb",
+        "variant": "blue",
+        "href": "https://fliki.ai/features#idea-to-video"
+      },
+      {
+        "title": "AI avatar",
+        "description": "Create lifelike talking avatars for your videos. No camera or filming needed—generate professional talking-head content instantly.",
+        "icon": "user",
+        "variant": "red",
+        "href": "https://fliki.ai/features#ai-avatar"
+      },
+      {
+        "title": "Text to speech",
+        "description": "Advanced TTS with 2000+ voices in 80+ languages and 100+ accents. Ideal for YouTube videos, podcasts, and audio content.",
+        "icon": "message",
+        "variant": "purple",
+        "href": "https://fliki.ai/features#text-to-speech"
+      },
+      {
+        "title": "Voice cloning",
+        "description": "Clone your voice with a 2-minute sample. Save time on recordings and create authentic voiceovers for your content.",
+        "icon": "mic",
+        "variant": "indigo",
+        "href": "https://fliki.ai/features#voice-cloning"
+      },
+      {
+        "title": "Blog to video",
+        "description": "Convert blog articles into engaging videos to boost SEO and engagement. Automatically extracts key content and adds visuals.",
+        "icon": "file-text",
+        "variant": "blue",
+        "href": "https://fliki.ai/features#blog-to-video"
+      },
+      {
+        "title": "PPT to video",
+        "description": "Transform PowerPoint presentations into videos. Upload your PPT and get AI-generated scripts, avatars, voiceovers, and music.",
+        "icon": "layers",
+        "variant": "red",
+        "href": "https://fliki.ai/features#ppt-to-video"
       }
     ],
     "has_free_trial": true,
