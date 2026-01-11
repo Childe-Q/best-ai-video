@@ -1,0 +1,307 @@
+{
+  "tool": "VEED.IO",
+  "page_title": "Pricing",
+  "promo": [
+    "Up to 35% off video creation. Make more videos in 2026.",
+    "Save up to 50% with yearly",
+    "Get 1,800 bonus credits with yearly"
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "badge": null,
+      "pricing": {
+        "type": "free",
+        "amount": 0,
+        "currency": "USD",
+        "period": "month",
+        "unit": "user"
+      },
+      "included_summary": [],
+      "cta": {
+        "label": "Get started"
+      }
+    },
+    {
+      "name": "Lite",
+      "badge": "BEST VALUE",
+      "pricing": {
+        "type": "subscription",
+        "billing_options": ["Monthly", "Yearly"],
+        "unit": "per editor",
+        "price_variants": [
+          {
+            "billing": "monthly",
+            "amount": 24,
+            "currency": "USD",
+            "period": "month",
+            "unit": "editor",
+            "note": "Billed Monthly"
+          },
+          {
+            "billing": "monthly",
+            "amount": 12,
+            "currency": "USD",
+            "period": "month",
+            "unit": "editor",
+            "note": "Billed Yearly",
+            "annual_total": {
+              "amount": 144,
+              "currency": "USD",
+              "period": "year",
+              "note": "billed yearly as $144"
+            }
+          }
+        ]
+      },
+      "included_summary": [
+        "Remove watermark",
+        "Subtitles 12 hr/mo (144 hr/yr with yearly)",
+        "Full stock audio & video library",
+        "Full HD 1080p Exports",
+        "Brand Kit Styled Assets",
+        "5 videos / day in Gen-AI Studio",
+        "Add credits to generate videos using VEED Fabric 1, Google Veo 3, and more"
+      ],
+      "cta": {
+        "label": "Choose Lite"
+      }
+    },
+    {
+      "name": "Pro",
+      "badge": "RECOMMENDED",
+      "pricing": {
+        "type": "subscription",
+        "billing_options": ["Monthly", "Yearly"],
+        "unit": "per editor",
+        "price_variants": [
+          {
+            "billing": "monthly",
+            "amount": 55,
+            "currency": "USD",
+            "period": "month",
+            "unit": "editor",
+            "note": "Billed Monthly"
+          },
+          {
+            "billing": "monthly",
+            "amount": 29,
+            "currency": "USD",
+            "period": "month",
+            "unit": "editor",
+            "note": "Billed Yearly",
+            "annual_total": {
+              "amount": 348,
+              "currency": "USD",
+              "period": "year",
+              "note": "billed yearly as $348"
+            }
+          }
+        ]
+      },
+      "included_summary": [
+        "Everything in Lite",
+        "Unlimited videos in Gen-AI Studio",
+        "15+ AI tools (Clean Audio, Eye contact...)",
+        "Brand assets & templates",
+        "Translate to 50+ Languages",
+        "Clips - get AI highlights from videos",
+        "12 hr/mo Text to Speech (144 hr/yr with yearly)",
+        "Add credits to generate videos using VEED Fabric 1, Google Veo 3, and more"
+      ],
+      "cta": {
+        "label": "Choose Pro"
+      }
+    },
+    {
+      "name": "Enterprise",
+      "badge": null,
+      "pricing": {
+        "type": "custom",
+        "label": "Custom pricing",
+        "description": "Tailored to your needs"
+      },
+      "included_summary": [
+        "Custom Templates",
+        "Centrally manage teams and data",
+        "Review mode for videos",
+        "Custom AI Avatars",
+        "Custom caption/subtitle usage",
+        "Multiple Brand Kits",
+        "Privacy Controls",
+        "Support",
+        "Customer success",
+        "Video Analytics",
+        "Custom credits"
+      ],
+      "cta": {
+        "label": "Contact Sales"
+      }
+    }
+  ],
+  "comparison_table": {
+    "feature_groups": [
+      {
+        "group": "Video Creation",
+        "rows": [
+          {
+            "feature": "Remove watermark",
+            "values_by_plan": {
+              "Free": false,
+              "Lite": true,
+              "Pro": true,
+              "Enterprise": true
+            }
+          },
+          {
+            "feature": "Export quality",
+            "values_by_plan": {
+              "Free": "720p",
+              "Lite": "1080p",
+              "Pro": "4k",
+              "Enterprise": "4k"
+            }
+          },
+          {
+            "feature": "Video export length",
+            "values_by_plan": {
+              "Free": "-",
+              "Lite": "10 minutes",
+              "Pro": "10 minutes",
+              "Enterprise": "10 minutes"
+            }
+          },
+          {
+            "feature": "Gen-AI Studio videos",
+            "values_by_plan": {
+              "Free": "2 video/day",
+              "Lite": "5 video/day",
+              "Pro": "Unlimited",
+              "Enterprise": "Unlimited"
+            }
+          }
+        ]
+      },
+      {
+        "group": "Storage & Upload",
+        "rows": [
+          {
+            "feature": "Storage",
+            "values_by_plan": {
+              "Free": "2GB",
+              "Lite": "5GB",
+              "Pro": "50GB",
+              "Enterprise": "Unlimited"
+            }
+          },
+          {
+            "feature": "Upload file size",
+            "values_by_plan": {
+              "Free": "1GB",
+              "Lite": "Unlimited",
+              "Pro": "Unlimited",
+              "Enterprise": "Unlimited"
+            }
+          }
+        ]
+      },
+      {
+        "group": "Subtitles & Translation",
+        "rows": [
+          {
+            "feature": "Auto subtitles",
+            "note": "Monthly: 12 hr/mo, Yearly: 144 hr/yr",
+            "values_by_plan": {
+              "Free": "2 min/mo",
+              "Lite": "12 hr/mo (144 hr/yr)",
+              "Pro": "12 hr/mo (144 hr/yr)",
+              "Enterprise": "Custom"
+            }
+          },
+          {
+            "feature": "Subtitle translation",
+            "note": "Monthly: 20 min/mo, Yearly: 4 hr/yr",
+            "values_by_plan": {
+              "Free": "-",
+              "Lite": "20 min/mo (4 hr/yr)",
+              "Pro": "20 min/mo (4 hr/yr)",
+              "Enterprise": "Custom"
+            }
+          }
+        ]
+      },
+      {
+        "group": "AI Features",
+        "rows": [
+          {
+            "feature": "Text to Speech",
+            "note": "Monthly: 12 hr/mo, Yearly: 144 hr/yr",
+            "values_by_plan": {
+              "Free": "-",
+              "Lite": "12 hr/mo (144 hr/yr)",
+              "Pro": "12 hr/mo (144 hr/yr)",
+              "Enterprise": "Custom"
+            }
+          },
+          {
+            "feature": "AI Avatars",
+            "note": "Monthly: 20 min/mo, Yearly: 4 hr/yr",
+            "values_by_plan": {
+              "Free": "-",
+              "Lite": "20 min/mo (4 hr/yr)",
+              "Pro": "20 min/mo (4 hr/yr)",
+              "Enterprise": "Custom"
+            }
+          },
+          {
+            "feature": "AI Dubbing",
+            "note": "Monthly: 20 min/mo, Yearly: 4 hr/yr",
+            "values_by_plan": {
+              "Free": "-",
+              "Lite": "20 min/mo (4 hr/yr)",
+              "Pro": "20 min/mo (4 hr/yr)",
+              "Enterprise": "Custom"
+            }
+          }
+        ]
+      },
+      {
+        "group": "Media Library",
+        "rows": [
+          {
+            "feature": "Stock audio & video",
+            "values_by_plan": {
+              "Free": "Limited",
+              "Lite": true,
+              "Pro": true,
+              "Enterprise": true
+            }
+          }
+        ]
+      },
+      {
+        "group": "Team & Collaboration",
+        "rows": [
+          {
+            "feature": "Number of editors",
+            "values_by_plan": {
+              "Free": "1",
+              "Lite": "1-3",
+              "Pro": "1-3",
+              "Enterprise": "3+"
+            }
+          },
+          {
+            "feature": "Number of reviewers",
+            "values_by_plan": {
+              "Free": "0",
+              "Lite": "0",
+              "Pro": "0",
+              "Enterprise": "Unlimited"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

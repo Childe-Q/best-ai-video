@@ -1,0 +1,70 @@
+PricingText tokens
+Prices per 1M tokens.
+BatchModelInputCached inputOutputgpt-5.2$0.875$0.0875$7.00gpt-5.1$0.625$0.0625$5.00gpt-5$0.625$0.0625$5.00gpt-5-mini$0.125$0.0125$1.00gpt-5-nano$0.025$0.0025$0.20gpt-5.2-pro$10.50-$84.00gpt-5-pro$7.50-$60.00gpt-4.1$1.00-$4.00gpt-4.1-mini$0.20-$0.80gpt-4.1-nano$0.05-$0.20gpt-4o$1.25-$5.00gpt-4o-2024-05-13$2.50-$7.50gpt-4o-mini$0.075-$0.30o1$7.50-$30.00o1-pro$75.00-$300.00o3-pro$10.00-$40.00o3$1.00-$4.00o3-deep-research$5.00-$20.00o4-mini$0.55-$2.20o4-mini-deep-research$1.00-$4.00o3-mini$0.55-$2.20o1-mini$0.55-$2.20computer-use-preview$1.50-$6.00FlexModelInputCached inputOutputgpt-5.2$0.875$0.0875$7.00gpt-5.1$0.625$0.0625$5.00gpt-5$0.625$0.0625$5.00gpt-5-mini$0.125$0.0125$1.00gpt-5-nano$0.025$0.0025$0.20o3$1.00$0.25$4.00o4-mini$0.55$0.138$2.20StandardModelInputCached inputOutputgpt-5.2$1.75$0.175$14.00gpt-5.1$1.25$0.125$10.00gpt-5$1.25$0.125$10.00gpt-5-mini$0.25$0.025$2.00gpt-5-nano$0.05$0.005$0.40gpt-5.2-chat-latest$1.75$0.175$14.00gpt-5.1-chat-latest$1.25$0.125$10.00gpt-5-chat-latest$1.25$0.125$10.00gpt-5.1-codex-max$1.25$0.125$10.00gpt-5.1-codex$1.25$0.125$10.00gpt-5-codex$1.25$0.125$10.00gpt-5.2-pro$21.00-$168.00gpt-5-pro$15.00-$120.00gpt-4.1$2.00$0.50$8.00gpt-4.1-mini$0.40$0.10$1.60gpt-4.1-nano$0.10$0.025$0.40gpt-4o$2.50$1.25$10.00gpt-4o-2024-05-13$5.00-$15.00gpt-4o-mini$0.15$0.075$0.60gpt-realtime$4.00$0.40$16.00gpt-realtime-mini$0.60$0.06$2.40gpt-4o-realtime-preview$5.00$2.50$20.00gpt-4o-mini-realtime-preview$0.60$0.30$2.40gpt-audio$2.50-$10.00gpt-audio-mini$0.60-$2.40gpt-4o-audio-preview$2.50-$10.00gpt-4o-mini-audio-preview$0.15-$0.60o1$15.00$7.50$60.00o1-pro$150.00-$600.00o3-pro$20.00-$80.00o3$2.00$0.50$8.00o3-deep-research$10.00$2.50$40.00o4-mini$1.10$0.275$4.40o4-mini-deep-research$2.00$0.50$8.00o3-mini$1.10$0.55$4.40o1-mini$1.10$0.55$4.40gpt-5.1-codex-mini$0.25$0.025$2.00codex-mini-latest$1.50$0.375$6.00gpt-5-search-api$1.25$0.125$10.00gpt-4o-mini-search-preview$0.15-$0.60gpt-4o-search-preview$2.50-$10.00computer-use-preview$3.00-$12.00gpt-image-1.5$5.00$1.25$10.00chatgpt-image-latest$5.00$1.25$10.00gpt-image-1$5.00$1.25-gpt-image-1-mini$2.00$0.20-PriorityModelInputCached inputOutputgpt-5.2$3.50$0.35$28.00gpt-5.1$2.50$0.25$20.00gpt-5$2.50$0.25$20.00gpt-5-mini$0.45$0.045$3.60gpt-5.1-codex-max$2.50$0.25$20.00gpt-5.1-codex$2.50$0.25$20.00gpt-5-codex$2.50$0.25$20.00gpt-4.1$3.50$0.875$14.00gpt-4.1-mini$0.70$0.175$2.80gpt-4.1-nano$0.20$0.05$0.80gpt-4o$4.25$2.125$17.00gpt-4o-2024-05-13$8.75-$26.25gpt-4o-mini$0.25$0.125$1.00o3$3.50$0.875$14.00o4-mini$2.00$0.50$8.00
+For faster processing of API requests, try the priority processing service
+tier. For lower prices with higher latency,
+try the flex processing tier.Large numbers of API requests which are not time-sensitive can use the
+Batch API for additional savings as well.While reasoning tokens are not visible via the API, they still occupy space in
+the model's context window and are billed as output tokens.For gpt-image-1.5, Text output tokens include model reasoning tokens.
+
+Image tokens
+Prices per 1M tokens.
+ModelInputCached InputOutputgpt-image-1.5$8.00$2.00$32.00chatgpt-image-latest$8.00$2.00$32.00gpt-image-1$10.00$2.50$40.00gpt-image-1-mini$2.50$0.25$8.00gpt-realtime$5.00$0.50-gpt-realtime-mini$0.80$0.08-
+
+Audio tokens
+Prices per 1M tokens.
+ModelInputCached InputOutputgpt-realtime$32.00$0.40$64.00gpt-realtime-mini$10.00$0.30$20.00gpt-4o-realtime-preview$40.00$2.50$80.00gpt-4o-mini-realtime-preview$10.00$0.30$20.00gpt-audio$32.00-$64.00gpt-audio-mini$10.00-$20.00gpt-4o-audio-preview$40.00-$80.00gpt-4o-mini-audio-preview$10.00-$20.00
+
+Video
+Prices per second.
+ModelSize: Output resolutionPrice per secondsora-2Portrait: 720x1280
+Landscape: 1280x720$0.10sora-2-proPortrait: 720x1280
+Landscape: 1280x720$0.30sora-2-proPortrait: 1024x1792
+Landscape: 1792x1024$0.50
+
+Fine-tuning
+Prices per 1M tokens.
+
+BatchModelTrainingInputCached InputOutputo4-mini-2025-04-16$100.00 / hour$2.00$0.50$8.00o4-mini-2025-04-16with data sharing$100.00 / hour$1.00$0.25$4.00gpt-4.1-2025-04-14$25.00$1.50$0.50$6.00gpt-4.1-mini-2025-04-14$5.00$0.40$0.10$1.60gpt-4.1-nano-2025-04-14$1.50$0.10$0.025$0.40gpt-4o-2024-08-06$25.00$2.225$0.90$12.50gpt-4o-mini-2024-07-18$3.00$0.15$0.075$0.60gpt-3.5-turbo$8.00$1.50-$3.00davinci-002$6.00$6.00-$6.00babbage-002$0.40$0.80-$0.90StandardModelTrainingInputCached InputOutputo4-mini-2025-04-16$100.00 / hour$4.00$1.00$16.00o4-mini-2025-04-16with data sharing$100.00 / hour$2.00$0.50$8.00gpt-4.1-2025-04-14$25.00$3.00$0.75$12.00gpt-4.1-mini-2025-04-14$5.00$0.80$0.20$3.20gpt-4.1-nano-2025-04-14$1.50$0.20$0.05$0.80gpt-4o-2024-08-06$25.00$3.75$1.875$15.00gpt-4o-mini-2024-07-18$3.00$0.30$0.15$1.20gpt-3.5-turbo$8.00$3.00-$6.00davinci-002$6.00$12.00-$12.00babbage-002$0.40$1.60-$1.60
+Tokens used for model grading in reinforcement fine-tuning are billed at that model's
+per-token rate. Inference discounts are available if you enable data sharing when
+creating the fine-tune job. Learn
+more.
+
+Built-in tools
+ToolCostCode Interpreter1 GB (default): $0.03 / container4 GB: $0.12 / container16 GB: $0.48 / container64 GB: $1.92 / containerFile search storage$0.10 / GB per day (1GB free)File search tool call Responses API only$2.50 / 1k callsWeb search (all models) [1]$10.00 / 1k calls + search content tokens billed at model ratesWeb search preview (reasoning models, including gpt-5, o-series) $10.00 / 1k calls + search content tokens billed at model ratesWeb search preview (non-reasoning models) $25.00 / 1k calls + search content tokens are free
+The tokens used for built-in tools are billed at the chosen model's per-token rates.
+GB refers to binary gigabytes of storage (also known as gibibyte), where 1GB is 2^30 bytes.Web search:
+There are two components that contribute to the cost of using the web search tool:
+(1) tool calls and (2) search content tokens.
+Tool calls are billed per 1000 calls, according to the tool version and model type. The billing dashboard and invoices will report these line items as “web search tool calls.”Search content tokens are tokens retrieved from the search index and fed to the model alongside your prompt to generate an answer. These are billed at the model’s input token rate, unless otherwise specified.[1] For gpt-4o-mini and gpt-4.1-mini with the web search non-preview tool, search content tokens are charged as a fixed block of 8,000 input tokens per call.
+
+AgentKit
+Build, deploy, and optimize production-grade agents with Agent Builder, ChatKit, and Evals. You pay only for the compute and
+data you actually use.
+Usage meterFree tier (per account, per month)Price beyond free tierStorage for ChatKit File / Image Uploads1 GB$0.10 / GB-day
+
+Transcription and speech generation
+Prices per 1M tokens.
+Text tokens
+ModelInputOutputEstimated costgpt-4o-mini-tts$0.60-$0.015 / minutegpt-4o-transcribe$2.50$10.00$0.006 / minutegpt-4o-transcribe-diarize$2.50$10.00$0.006 / minutegpt-4o-mini-transcribe$1.25$5.00$0.003 / minute
+Audio tokens
+ModelInputOutputEstimated costgpt-4o-mini-tts-$12.00$0.015 / minutegpt-4o-transcribe$6.00-$0.006 / minutegpt-4o-transcribe-diarize$6.00-$0.006 / minutegpt-4o-mini-transcribe$3.00-$0.003 / minute
+Other models
+ModelUse caseCostWhisperTranscription$0.006 / minuteTTSSpeech generation$15.00 / 1M charactersTTS HDSpeech generation$30.00 / 1M characters
+
+Image generation
+Prices per image.
+ModelQuality1024 x 10241024 x 15361536 x 1024GPT Image 1.5Low$0.009$0.013$0.013Medium$0.034$0.05$0.05High$0.133$0.2$0.2GPT Image LatestLow$0.009$0.013$0.013Medium$0.034$0.05$0.05High$0.133$0.2$0.2GPT Image 1Low$0.011$0.016$0.016Medium$0.042$0.063$0.063High$0.167$0.25$0.25GPT Image 1 MiniLow$0.005$0.006$0.006Medium$0.011$0.015$0.015High$0.036$0.052$0.052ModelQuality1024 x 10241024 x 17921792 x 1024DALL·E 3Standard$0.04$0.08$0.08HD$0.08$0.12$0.12ModelQuality256 x 256512 x 5121024 x 1024DALL·E 2Standard$0.016$0.018$0.02
+
+Embeddings
+Prices per 1M tokens.
+ModelCostBatch costtext-embedding-3-small$0.02$0.01text-embedding-3-large$0.13$0.065text-embedding-ada-002$0.10$0.05
+
+Moderation
+Our omni-moderation models are made available free of charge ✌️
+
+Legacy models
+Prices per 1M tokens.
+
+BatchModelInputOutputgpt-4-turbo-2024-04-09$5.00$15.00gpt-4-0125-preview$5.00$15.00gpt-4-1106-preview$5.00$15.00gpt-4-1106-vision-preview$5.00$15.00gpt-4-0613$15.00$30.00gpt-4-0314$15.00$30.00gpt-4-32k$30.00$60.00gpt-3.5-turbo-0125$0.25$0.75gpt-3.5-turbo-1106$1.00$2.00gpt-3.5-turbo-0613$1.50$2.00gpt-3.5-0301$1.50$2.00gpt-3.5-turbo-16k-0613$1.50$2.00davinci-002$1.00$1.00babbage-002$0.20$0.20StandardModelInputOutputchatgpt-4o-latest$5.00$15.00gpt-4-turbo-2024-04-09$10.00$30.00gpt-4-0125-preview$10.00$30.00gpt-4-1106-preview$10.00$30.00gpt-4-1106-vision-preview$10.00$30.00gpt-4-0613$30.00$60.00gpt-4-0314$30.00$60.00gpt-4-32k$60.00$120.00gpt-3.5-turbo$0.50$1.50gpt-3.5-turbo-0125$0.50$1.50gpt-3.5-turbo-1106$1.00$2.00gpt-3.5-turbo-0613$1.50$2.00gpt-3.5-0301$1.50$2.00gpt-3.5-turbo-instruct$1.50$2.00gpt-3.5-turbo-16k-0613$3.00$4.00davinci-002$2.00$2.00babbage-002$0.40$0.40

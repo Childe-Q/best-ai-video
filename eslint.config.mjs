@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Ignore scripts directory (offline scripts, not part of the app)
+    "scripts/**",
+    "*.js",
   ]),
 ]);
 

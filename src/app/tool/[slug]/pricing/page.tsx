@@ -2,7 +2,36 @@ import { notFound } from 'next/navigation';
 import { getTool, getAllTools } from '@/lib/getTool';
 import PricingCardsGrid from '@/components/PricingCardsGrid';
 import CTAButton from '@/components/CTAButton';
+import DisclosurePopover from '@/components/DisclosurePopover';
+import DisclosureSection from '@/components/DisclosureSection';
 import { getSEOCurrentYear, hasFreePlan, getStartingPrice } from '@/lib/utils';
+import { ComparisonTable } from '@/types/tool';
+import * as fs from 'fs';
+import * as path from 'path';
+
+// Helper function to get official pricing URL from sources
+function getOfficialPricingUrl(slug: string): string | null {
+  try {
+    const projectRoot = process.cwd();
+    const sourcesPath = path.join(projectRoot, 'src', 'data', 'sources', 'tools.sources.json');
+    if (fs.existsSync(sourcesPath)) {
+      const sourcesData = JSON.parse(fs.readFileSync(sourcesPath, 'utf-8'));
+      const toolSource = sourcesData.find((s: any) => s.slug === slug);
+      if (toolSource?.official_urls?.pricing?.url) {
+        return toolSource.official_urls.pricing.url;
+      }
+    }
+  } catch (error) {
+    // Silently fail
+  }
+  return null;
+}
+
+// Helper function to get last updated date (use current date for now)
+function getLastUpdatedDate(): string {
+  const now = new Date();
+  return now.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
 
 export async function generateStaticParams() {
   const tools = getAllTools();
@@ -30,10 +59,42 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
 
   const seoYear = getSEOCurrentYear();
   const pricingPlans = tool.pricing_plans || [];
+  
+  // Get comparison_table: first from tool, then fallback to pricing JSON file
+  let comparisonTable: ComparisonTable | undefined = tool.comparison_table;
+  
+  // If not in tool, try to load from pricing JSON file
+  if (!comparisonTable) {
+    try {
+      // In Next.js, we need to resolve from the project root
+      const projectRoot = process.cwd();
+      const pricingJsonPath = path.join(projectRoot, 'src', 'data', 'pricing', `${slug}.json`);
+      
+      if (fs.existsSync(pricingJsonPath)) {
+        const pricingData = JSON.parse(fs.readFileSync(pricingJsonPath, 'utf-8'));
+        if (pricingData.comparison_table) {
+          comparisonTable = pricingData.comparison_table;
+        }
+      }
+    } catch (error) {
+      // Silently fail if pricing JSON doesn't exist or is invalid
+      // console.warn(`[PricingPage] Could not load comparison_table from pricing JSON for ${slug}:`, error);
+    }
+  }
+
+  // Layout: invideo uses compact layout, others use default
+  const isInVideo = slug === 'invideo';
+  const containerClass = isInVideo 
+    ? 'w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'
+    : 'w-full max-w-[1600px] mx-auto px-4 md:px-12 lg:px-24';
+
+  // Get official pricing URL and last updated date
+  const officialPricingUrl = getOfficialPricingUrl(slug);
+  const lastUpdated = getLastUpdatedDate();
 
   return (
     <section className="w-full bg-slate-50 py-16">
-      <div className="w-full max-w-[1600px] mx-auto px-4 md:px-12 lg:px-24">
+      <div className={containerClass}>
         <main className="py-8">
         
         {/* 1. Header */}
@@ -44,6 +105,29 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Choose a plan that fits best now and join thousands of happy users who have saved more than 80% on time and costs by creating videos with {tool.name}.
           </p>
+          
+          {/* Trust Bar: Last updated + Source + Disclosure */}
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs text-gray-500">
+            <span>Last updated: {lastUpdated}</span>
+            {officialPricingUrl && (
+              <>
+                <span>•</span>
+                <span>
+                  Source:{' '}
+                  <a 
+                    href={officialPricingUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 underline"
+                  >
+                    Official pricing page
+                  </a>
+                </span>
+              </>
+            )}
+            <span>•</span>
+            <DisclosurePopover />
+          </div>
         </div>
 
         {/* 2. Pricing Cards Grid */}
@@ -53,6 +137,8 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
               plans={pricingPlans} 
               affiliateLink={tool.affiliate_link}
               hasFreeTrial={tool.has_free_trial}
+              toolSlug={slug}
+              comparisonTable={comparisonTable}
             />
           ) : (
             <div className="bg-white rounded-xl p-8 text-center mb-12">
@@ -113,7 +199,10 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
           <CTAButton affiliateLink={tool.affiliate_link} hasFreeTrial={tool.has_free_trial} />
         </section>
 
-        {/* 6. Footer Note */}
+        {/* 6. Disclosure Section */}
+        <DisclosureSection />
+
+        {/* 7. Footer Note */}
         <div className="text-center text-sm text-gray-500 mt-8">
           *Prices subject to change. Check official site for most up-to-date pricing.
         </div>

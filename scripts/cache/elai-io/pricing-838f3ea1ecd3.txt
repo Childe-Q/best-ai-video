@@ -1,0 +1,1 @@
+Transitions add smooth animations between slides (like Fade or Slide Right), helping Elai videos feel more polished and professional.

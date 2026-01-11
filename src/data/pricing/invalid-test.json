@@ -1,0 +1,33 @@
+{
+  "tool": "Test Tool",
+  "plans": [
+    {
+      "name": "Plan Without Pricing",
+      "badge": null,
+      "pricing": {
+        "type": "custom",
+        "label": "Custom pricing",
+        "description": "Pricing information not available"
+      },
+      "included_summary": [],
+      "cta": {
+        "label": "Get started"
+      }
+    },
+    {
+      "name": "Plan Without Name",
+      "badge": null,
+      "pricing": {
+        "type": "subscription",
+        "amount": 10,
+        "currency": "USD",
+        "period": "month",
+        "unit": "account"
+      },
+      "included_summary": [],
+      "cta": {
+        "label": "Get started"
+      }
+    }
+  ]
+}

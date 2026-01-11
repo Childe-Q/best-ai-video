@@ -1,0 +1,128 @@
+{
+  "tool": "HeyGen",
+  "billing_toggle": {
+    "monthly_label": "Pay monthly",
+    "yearly_label": "Pay yearly (Save 22%)"
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "pricing": {
+        "monthly": { "amount": 0, "currency": "USD", "period": "month", "unit": "account" }
+      },
+      "features_included": [
+        "3 videos per month",
+        "Videos up to 3-mins",
+        "720p video export",
+        "Standard video processing",
+        "Access to Avatar IV video generation",
+        "1 Custom Video Avatar",
+        "500+ Stock Video Avatars",
+        "30+ languages",
+        "Share & download videos"
+      ],
+      "limits": [
+        { "label": "Videos", "value": "3", "period": "month", "raw": "3 videos per month" },
+        { "label": "Max duration per video", "value": "3 minutes", "period": null, "raw": "Videos up to 3-mins / Max duration per video 3 minutes" },
+        { "label": "Export resolution", "value": "720P", "period": null, "raw": "720p video export / Export resolution 720P" },
+        { "label": "User seats", "value": "1", "period": null, "raw": "User seats 1" },
+        { "label": "Voice cloning", "value": "1 voice clone", "period": null, "raw": "Voice Cloning 1 voice clone" },
+        { "label": "Photo Avatars", "value": "Up to 3", "period": null, "raw": "Photo Avatars Up to 3" }
+      ],
+      "badges": [],
+      "notes": [
+        "Pay yearly (Save 22%)"
+      ]
+    },
+    {
+      "name": "Creator",
+      "pricing": {
+        "monthly": { "amount": 29, "currency": "USD", "period": "month", "unit": "account" }
+      },
+      "features_included": [
+        "Unlimited videos",
+        "Videos up to 30-mins",
+        "1080p video export",
+        "Fast video processing",
+        "Extended video generation w/ Avatar IV",
+        "Everything in Free, plus:",
+        "1 Custom Video Avatar",
+        "1 Custom Interactive Avatar",
+        "700+ Stock Video Avatars",
+        "Voice cloning",
+        "175+ languages and dialects",
+        "Generate Looks",
+        "Look Packs",
+        "Watermark removal",
+        "Brand Kit"
+      ],
+      "limits": [
+        { "label": "Max duration per video", "value": "30 minutes", "period": null, "raw": "Videos up to 30-mins / Max duration per video 30 minutes" },
+        { "label": "Export resolution", "value": "Up to 1080P", "period": null, "raw": "1080p video export / Export resolution Up to 1080P" },
+        { "label": "Video processing speed", "value": "Fast", "period": null, "raw": "Fast video processing / Video processing speed Fast" },
+        { "label": "User seats", "value": "1", "period": null, "raw": "User seats 1" },
+        { "label": "Photo Avatars", "value": "Unlimited", "period": null, "raw": "Photo Avatars Unlimited" }
+      ],
+      "badges": [],
+      "notes": [
+        "Pay yearly (Save 22%)",
+        "Annual equivalent: $24/month if you pay annually"
+      ],
+      "raw_evidence": {
+        "price": "$29/mo",
+        "annual_note_from_faq": "Creator plan costs $29 per month (or $24/month if you pay annually)."
+      }
+    },
+    {
+      "name": "Team",
+      "pricing": {
+        "monthly": { "amount": 39, "currency": "USD", "period": "month", "unit": "seat" }
+      },
+      "features_included": [
+        "Unlimited videos",
+        "Videos up to 30-mins",
+        "4k video export",
+        "Faster video processing",
+        "Extended video generation with Avatar IV",
+        "Everything in Creator, plus:",
+        "2 seats included",
+        "2 Custom Video Avatars",
+        "2 Custom Interactive Avatars",
+        "Unlimited Photo Avatars",
+        "Edit & proofread translation script",
+        "Workspace collaboration",
+        "Video draft commenting & editing",
+        "Invites & team management"
+      ],
+      "limits": [
+        { "label": "Price per seat", "value": "$39", "period": "month", "raw": "$39/seat/mo" },
+        { "label": "Seats included", "value": "2", "period": null, "raw": "2 seats included" },
+        { "label": "Max duration per video", "value": "30 minutes", "period": null, "raw": "Videos up to 30-mins / Max duration per video 30 minutes" },
+        { "label": "Export resolution", "value": "Up to 4K", "period": null, "raw": "4k video export / Export resolution Up to 4K" },
+        { "label": "Video processing speed", "value": "Fastest", "period": null, "raw": "Faster video processing / Video processing speed Fastest" },
+        { "label": "User seats", "value": "2+", "period": null, "raw": "User seats 2+" }
+      ],
+      "badges": [],
+      "notes": [
+        "Pay yearly (Save 22%)",
+        "Annual equivalent: $30/seat/month if you pay annually",
+        "Team starts at 2 seats"
+      ],
+      "raw_evidence": {
+        "price": "$39/seat/mo",
+        "annual_note_from_faq": "Team plan costs $39/seat/month (or $30/seat/month if you pay annually), and starts at 2 seats."
+      }
+    },
+    {
+      "name": "Enterprise",
+      "pricing": {},
+      "unitPriceNote": "Enterprise pricing",
+      "features_included": [],
+      "limits": [],
+      "badges": [],
+      "notes": [
+        "Only a link/button was present: \"Enterprise pricing →\"; no numbers provided."
+      ]
+    }
+  ]
+}

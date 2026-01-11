@@ -1,0 +1,263 @@
+{
+  "tool": "HeyGen",
+  "page_title": "Pricing",
+  "plans": [
+    {
+      "name": "Free",
+      "badge": null,
+      "pricing": {
+        "type": "free",
+        "amount": 0,
+        "currency": "USD",
+        "period": "month",
+        "unit": "account"
+      },
+      "included_summary": [
+        "3 videos per month",
+        "Videos up to 3-mins",
+        "720p video export",
+        "Standard video processing",
+        "Access to Avatar IV video generation",
+        "1 Custom Video Avatar",
+        "500+ Stock Video Avatars",
+        "30+ languages",
+        "Share & download videos"
+      ]
+    },
+    {
+      "name": "Creator",
+      "badge": null,
+      "pricing": {
+        "type": "subscription",
+        "billing_options": ["Monthly", "Yearly"],
+        "unit": "per account",
+        "price_variants": [
+          {
+            "billing": "monthly",
+            "amount": 29,
+            "currency": "USD",
+            "period": "month",
+            "unit": "account",
+            "note": "Pay monthly"
+          },
+          {
+            "billing": "monthly",
+            "amount": 24,
+            "currency": "USD",
+            "period": "month",
+            "unit": "account",
+            "note": "Pay yearly",
+            "annual_total": {
+              "amount": 288,
+              "currency": "USD",
+              "period": "year",
+              "note": "Billed annually (Save 22%)"
+            }
+          }
+        ]
+      },
+      "included_summary": [
+        "Unlimited videos",
+        "Videos up to 30-mins",
+        "1080p video export",
+        "Fast video processing",
+        "Extended video generation w/ Avatar IV",
+        "Everything in Free, plus:",
+        "1 Custom Video Avatar",
+        "1 Custom Interactive Avatar",
+        "700+ Stock Video Avatars",
+        "Voice cloning",
+        "175+ languages and dialects",
+        "Generate Looks",
+        "Look Packs",
+        "Watermark removal",
+        "Brand Kit"
+      ]
+    },
+    {
+      "name": "Team",
+      "badge": null,
+      "pricing": {
+        "type": "subscription",
+        "billing_options": ["Monthly", "Yearly"],
+        "unit": "per seat",
+        "seats_included": 2,
+        "price_variants": [
+          {
+            "billing": "monthly",
+            "amount": 39,
+            "currency": "USD",
+            "period": "month",
+            "unit": "seat",
+            "note": "Pay monthly",
+            "seats_included": 2
+          },
+          {
+            "billing": "monthly",
+            "amount": 30,
+            "currency": "USD",
+            "period": "month",
+            "unit": "seat",
+            "note": "Pay yearly",
+            "seats_included": 2,
+            "annual_total": {
+              "amount": 360,
+              "currency": "USD",
+              "period": "year",
+              "note": "Billed annually per seat (Save 22%)"
+            }
+          }
+        ]
+      },
+      "included_summary": [
+        "Unlimited videos",
+        "Videos up to 30-mins",
+        "4k video export",
+        "Faster video processing",
+        "Extended video generation with Avatar IV",
+        "Everything in Creator, plus:",
+        "2 seats included",
+        "2 Custom Video Avatars",
+        "2 Custom Interactive Avatars",
+        "Unlimited Photo Avatars",
+        "Edit & proofread translation script",
+        "Workspace collaboration",
+        "Video draft commenting & editing",
+        "Invites & team management"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "badge": null,
+      "pricing": {
+        "type": "custom",
+        "label": "Enterprise pricing",
+        "description": "Contact for custom pricing"
+      },
+      "included_summary": []
+    }
+  ],
+  "comparison_table": {
+    "feature_groups": [
+      {
+        "group": "Video Generation",
+        "rows": [
+          {
+            "feature": "Videos per month",
+            "values_by_plan": {
+              "Free": "3",
+              "Creator": "Unlimited",
+              "Team": "Unlimited",
+              "Enterprise": "Unlimited"
+            }
+          },
+          {
+            "feature": "Max duration per video",
+            "values_by_plan": {
+              "Free": "3 minutes",
+              "Creator": "30 minutes",
+              "Team": "30 minutes",
+              "Enterprise": "-"
+            }
+          },
+          {
+            "feature": "Export resolution",
+            "values_by_plan": {
+              "Free": "720P",
+              "Creator": "Up to 1080P",
+              "Team": "Up to 4K",
+              "Enterprise": "-"
+            }
+          },
+          {
+            "feature": "Video processing speed",
+            "values_by_plan": {
+              "Free": "Standard",
+              "Creator": "Fast",
+              "Team": "Fastest",
+              "Enterprise": "-"
+            }
+          }
+        ]
+      },
+      {
+        "group": "Avatars",
+        "rows": [
+          {
+            "feature": "Custom Video Avatars",
+            "values_by_plan": {
+              "Free": "1",
+              "Creator": "1",
+              "Team": "2",
+              "Enterprise": "-"
+            }
+          },
+          {
+            "feature": "Stock Video Avatars",
+            "values_by_plan": {
+              "Free": "500+",
+              "Creator": "700+",
+              "Team": "700+",
+              "Enterprise": "-"
+            }
+          },
+          {
+            "feature": "Photo Avatars",
+            "values_by_plan": {
+              "Free": "Up to 3",
+              "Creator": "Unlimited",
+              "Team": "Unlimited",
+              "Enterprise": "-"
+            }
+          }
+        ]
+      },
+      {
+        "group": "Voice & Language",
+        "rows": [
+          {
+            "feature": "Voice cloning",
+            "values_by_plan": {
+              "Free": "1 voice clone",
+              "Creator": true,
+              "Team": true,
+              "Enterprise": "-"
+            }
+          },
+          {
+            "feature": "Languages",
+            "values_by_plan": {
+              "Free": "30+",
+              "Creator": "175+ languages and dialects",
+              "Team": "175+ languages and dialects",
+              "Enterprise": "-"
+            }
+          }
+        ]
+      },
+      {
+        "group": "Team & Collaboration",
+        "rows": [
+          {
+            "feature": "User seats",
+            "values_by_plan": {
+              "Free": "1",
+              "Creator": "1",
+              "Team": "2+",
+              "Enterprise": "-"
+            }
+          },
+          {
+            "feature": "Workspace collaboration",
+            "values_by_plan": {
+              "Free": false,
+              "Creator": false,
+              "Team": true,
+              "Enterprise": "-"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,295 @@
+{
+  "tool": "Zebracat",
+  "page_title": "Pricing",
+  "social_proof": {
+    "trusted_by": "50,000+ creators/business owners/marketers",
+    "badges": ["Product Champion 2025", "+1,000 5-star reviews"],
+    "guarantee": "7-day money-back guarantee (if you didn't download any video)"
+  },
+  "plans": [
+    {
+      "name": "Cat Mode",
+      "badge": null,
+      "pricing": {
+        "type": "subscription",
+        "billing_options": ["Monthly", "Yearly"],
+        "price_variants": [
+          {
+            "billing": "monthly",
+            "amount": 39,
+            "currency": "USD",
+            "period": "month"
+          },
+          {
+            "billing": "monthly",
+            "amount": 19,
+            "currency": "USD",
+            "period": "month",
+            "note": "Billed yearly",
+            "annual_total": {
+              "amount": 228,
+              "currency": "USD",
+              "note": "Billed annually (Save 50%)"
+            }
+          }
+        ]
+      },
+      "included_summary": [
+        "15 videos/month",
+        "350 generative AI credits/month",
+        "Generative video enabled",
+        "Limited AI Avatars",
+        "Standard AI voices (175+ languages)",
+        "Basic stock clips & music",
+        "1 Brand Kit"
+      ],
+      "cta": {
+        "label": "Get Started"
+      }
+    },
+    {
+      "name": "Super Cat",
+      "badge": "MOST POPULAR",
+      "pricing": {
+        "type": "subscription",
+        "billing_options": ["Monthly", "Yearly"],
+        "price_variants": [
+          {
+            "billing": "monthly",
+            "amount": 99,
+            "currency": "USD",
+            "period": "month"
+          },
+          {
+            "billing": "monthly",
+            "amount": 49,
+            "currency": "USD",
+            "period": "month",
+            "note": "Billed yearly",
+            "annual_total": {
+              "amount": 588,
+              "currency": "USD",
+              "note": "Billed annually (Save 50%)"
+            }
+          }
+        ]
+      },
+      "included_summary": [
+        "40 videos/month",
+        "1400 generative AI credits/month",
+        "Everything in Cat Mode",
+        "5 custom avatars",
+        "5 voice clones / mo",
+        "120+ premium AI avatars",
+        "Premium AI voices",
+        "Translate videos into 25+ languages",
+        "Full stock & music library",
+        "5 Brand Kits"
+      ],
+      "cta": {
+        "label": "Get Started"
+      }
+    },
+    {
+      "name": "Unlimited Cat",
+      "badge": null,
+      "pricing": {
+        "type": "subscription",
+        "billing_options": ["Monthly", "Yearly"],
+        "price_variants": [
+          {
+            "billing": "monthly",
+            "amount": 199,
+            "currency": "USD",
+            "period": "month"
+          },
+          {
+            "billing": "monthly",
+            "amount": 99,
+            "currency": "USD",
+            "period": "month",
+            "note": "Billed yearly",
+            "annual_total": {
+              "amount": 1188,
+              "currency": "USD",
+              "note": "Billed annually (Save 50%)"
+            }
+          }
+        ]
+      },
+      "included_summary": [
+        "Unlimited videos/month",
+        "3600 generative AI credits/month",
+        "Everything in Super Cat",
+        "10 custom avatars / mo",
+        "10 voice clones / mo",
+        "Unlimited Brand Kits",
+        "Priority support"
+      ],
+      "cta": {
+        "label": "Get started"
+      }
+    },
+    {
+      "name": "Enterprise",
+      "badge": "BEST VALUE",
+      "pricing": {
+        "type": "custom",
+        "label": "$599+/mo",
+        "description": "Custom Pricing",
+        "base_monthly": {
+          "amount": 599,
+          "currency": "USD",
+          "period": "month",
+          "note": "Starting from"
+        }
+      },
+      "included_summary": [
+        "Unlimited videos/month",
+        "Custom generative AI credits",
+        "Everything in Unlimited Cat",
+        "Unlimited custom avatars & voice clones (enterprise quality)",
+        "API access",
+        "Custom AI models",
+        "Advanced team roles / permissions",
+        "Dedicated success manager"
+      ],
+      "cta": {
+        "label": "Talk to Sales"
+      }
+    }
+  ],
+  "comparison_table": {
+    "feature_groups": [
+      {
+        "group": "Video Generation",
+        "rows": [
+          {
+            "feature": "Videos per month",
+            "values_by_plan": {
+              "Cat Mode": "15",
+              "Super Cat": "40",
+              "Unlimited Cat": "Unlimited",
+              "Enterprise": "Unlimited"
+            }
+          },
+          {
+            "feature": "Video length limit",
+            "values_by_plan": {
+              "Cat Mode": "2 min",
+              "Super Cat": "5 min",
+              "Unlimited Cat": "5 min",
+              "Enterprise": "5 min"
+            }
+          },
+          {
+            "feature": "Generative AI credits per month",
+            "values_by_plan": {
+              "Cat Mode": "350",
+              "Super Cat": "1400",
+              "Unlimited Cat": "3600",
+              "Enterprise": "Custom"
+            }
+          },
+          {
+            "feature": "Processing speed",
+            "values_by_plan": {
+              "Cat Mode": "Standard",
+              "Super Cat": "Fast",
+              "Unlimited Cat": "Faster",
+              "Enterprise": "Fastest"
+            }
+          }
+        ]
+      },
+      {
+        "group": "Export & Quality",
+        "rows": [
+          {
+            "feature": "Export resolution",
+            "values_by_plan": {
+              "Cat Mode": "1080p",
+              "Super Cat": "1080p",
+              "Unlimited Cat": "1080p",
+              "Enterprise": "1080p"
+            }
+          },
+          {
+            "feature": "Remove watermark",
+            "values_by_plan": {
+              "Cat Mode": true,
+              "Super Cat": true,
+              "Unlimited Cat": true,
+              "Enterprise": true
+            }
+          }
+        ]
+      },
+      {
+        "group": "Languages & Voices",
+        "rows": [
+          {
+            "feature": "Languages",
+            "values_by_plan": {
+              "Cat Mode": "170+",
+              "Super Cat": "170+",
+              "Unlimited Cat": "170+",
+              "Enterprise": "170+"
+            }
+          },
+          {
+            "feature": "Translate video",
+            "values_by_plan": {
+              "Cat Mode": false,
+              "Super Cat": true,
+              "Unlimited Cat": true,
+              "Enterprise": true
+            }
+          }
+        ]
+      },
+      {
+        "group": "Avatars",
+        "rows": [
+          {
+            "feature": "Custom avatar",
+            "values_by_plan": {
+              "Cat Mode": "Not included",
+              "Super Cat": "5 / mo",
+              "Unlimited Cat": "10 / mo",
+              "Enterprise": "Unlimited"
+            }
+          }
+        ]
+      },
+      {
+        "group": "Media & Assets",
+        "rows": [
+          {
+            "feature": "Stock media assets",
+            "values_by_plan": {
+              "Cat Mode": "Limited",
+              "Super Cat": true,
+              "Unlimited Cat": true,
+              "Enterprise": true
+            }
+          }
+        ]
+      },
+      {
+        "group": "Branding & Collaboration",
+        "rows": [
+          {
+            "feature": "Brand kits",
+            "values_by_plan": {
+              "Cat Mode": "1",
+              "Super Cat": "5",
+              "Unlimited Cat": "Unlimited",
+              "Enterprise": "Unlimited"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -56,7 +56,7 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
       )}
 
       {/* 4. Overview Section - Full Width */}
-      <section className="w-full bg-slate-50 py-16">
+      <section className="w-full bg-slate-50 pt-10 pb-16">
         <div className="w-full max-w-[1600px] mx-auto px-4 md:px-12 lg:px-24 space-y-12">
           {/* In-Depth Review */}
           <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">

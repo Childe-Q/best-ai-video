@@ -1,0 +1,308 @@
+{
+  "tool": "Pika",
+  "page_title": "Subscription Pricing",
+  "billing_toggle": {
+    "yearly": {
+      "label": "Yearly",
+      "discount": "-20% off"
+    },
+    "monthly": {
+      "label": "Monthly"
+    }
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "badge": null,
+      "pricing": {
+        "type": "free",
+        "amount": 0,
+        "currency": "USD",
+        "period": "month",
+        "unit": "account"
+      },
+      "included_summary": [],
+      "cta": {
+        "label": "Get started"
+      }
+    },
+    {
+      "name": "Basic",
+      "badge": null,
+      "pricing": {
+        "type": "subscription",
+        "billing_options": ["Monthly", "Yearly"],
+        "unit": "per account",
+        "price_variants": [
+          {
+            "billing": "monthly",
+            "amount": 10,
+            "currency": "USD",
+            "period": "month",
+            "unit": "account",
+            "note": "Pay monthly"
+          },
+          {
+            "billing": "monthly",
+            "amount": 8,
+            "currency": "USD",
+            "period": "month",
+            "unit": "account",
+            "note": "Billed yearly",
+            "annual_total": {
+              "amount": 96,
+              "currency": "USD",
+              "period": "year",
+              "note": "Billed annually (Save 20%)"
+            }
+          }
+        ]
+      },
+      "included_summary": [
+        "80 monthly video credits",
+        "Access to Pika 2.5 (480p only), Pikadditions, Pikaswaps, and Pikatwists (Turbo), Pikaffects Image-to-Video only",
+        "Download videos with no watermark",
+        "Purchase more roll over video credits",
+        "Commercial use"
+      ],
+      "cta": {
+        "label": "Subscribe to Basic"
+      }
+    },
+    {
+      "name": "Standard",
+      "badge": "Best value",
+      "pricing": {
+        "type": "subscription",
+        "billing_options": ["Monthly", "Yearly"],
+        "unit": "per account",
+        "price_variants": [
+          {
+            "billing": "monthly",
+            "amount": 35,
+            "currency": "USD",
+            "period": "month",
+            "unit": "account",
+            "note": "Original price",
+            "discounted": false
+          },
+          {
+            "billing": "monthly",
+            "amount": 28,
+            "currency": "USD",
+            "period": "month",
+            "unit": "account",
+            "note": "Billed yearly (LIMITED OFFER: $35 → $28)",
+            "discounted": true,
+            "original_amount": 35,
+            "annual_total": {
+              "amount": 336,
+              "currency": "USD",
+              "period": "year",
+              "note": "Billed annually (Save 20%)"
+            }
+          }
+        ]
+      },
+      "included_summary": [
+        "700 monthly video credits",
+        "Access to Pika 2.5, 2.2 (Pikascenes), Turbo and Pro (Pikadditions, Pikaswaps, Pikatwists), all Pikaffects",
+        "Fast generations",
+        "Purchase more roll over video credits",
+        "Download videos with no watermark",
+        "Commercial use"
+      ],
+      "cta": {
+        "label": "Subscribe to Standard"
+      }
+    },
+    {
+      "name": "Pro",
+      "badge": null,
+      "pricing": {
+        "type": "subscription",
+        "billing_options": ["Monthly", "Yearly"],
+        "unit": "per account",
+        "price_variants": [
+          {
+            "billing": "monthly",
+            "amount": 95,
+            "currency": "USD",
+            "period": "month",
+            "unit": "account",
+            "note": "Pay monthly"
+          },
+          {
+            "billing": "monthly",
+            "amount": 76,
+            "currency": "USD",
+            "period": "month",
+            "unit": "account",
+            "note": "Billed yearly",
+            "annual_total": {
+              "amount": 912,
+              "currency": "USD",
+              "period": "year",
+              "note": "Billed annually (Save 20%)"
+            }
+          }
+        ]
+      },
+      "included_summary": [
+        "2300 monthly video credits",
+        "Access to Pika 2.5, 2.2 (Pikascenes), Turbo and Pro (Pikadditions, Pikaswaps, Pikatwists), all Pikaffects",
+        "Faster generations",
+        "Purchase more roll over video credits",
+        "Download videos with no watermark",
+        "Commercial use"
+      ],
+      "cta": {
+        "label": "Subscribe to Pro"
+      }
+    },
+    {
+      "name": "Fancy",
+      "badge": null,
+      "pricing": {
+        "type": "subscription",
+        "label": "Contact for pricing",
+        "description": "Price not visible in provided content"
+      },
+      "included_summary": [
+        "6000 monthly video credits",
+        "Access to Pika 2.5, 2.2 (Pikascenes), Turbo and Pro (Pikadditions, Pikaswaps, Pikatwists), all Pikaffects",
+        "Fastest generations",
+        "Purchase more roll over video credits",
+        "Download videos with no watermark",
+        "Commercial use"
+      ],
+      "cta": {
+        "label": "Subscribe to Fancy"
+      }
+    }
+  ],
+  "comparison_table": {
+    "feature_groups": [
+      {
+        "group": "Video Credits",
+        "rows": [
+          {
+            "feature": "Monthly video credits",
+            "values_by_plan": {
+              "Free": "0",
+              "Basic": "80",
+              "Standard": "700",
+              "Pro": "2300",
+              "Fancy": "6000"
+            }
+          },
+          {
+            "feature": "Roll over credits",
+            "values_by_plan": {
+              "Free": false,
+              "Basic": "Purchase more",
+              "Standard": "Purchase more",
+              "Pro": "Purchase more",
+              "Fancy": "Purchase more"
+            }
+          }
+        ]
+      },
+      {
+        "group": "Model Access",
+        "rows": [
+          {
+            "feature": "Pika 2.5",
+            "values_by_plan": {
+              "Free": false,
+              "Basic": "480p only",
+              "Standard": "Full access",
+              "Pro": "Full access",
+              "Fancy": "Full access"
+            }
+          },
+          {
+            "feature": "Pika 2.2 (Pikascenes)",
+            "values_by_plan": {
+              "Free": false,
+              "Basic": false,
+              "Standard": true,
+              "Pro": true,
+              "Fancy": true
+            }
+          },
+          {
+            "feature": "Turbo models",
+            "values_by_plan": {
+              "Free": false,
+              "Basic": "Pikatwists only",
+              "Standard": "Full access",
+              "Pro": "Full access",
+              "Fancy": "Full access"
+            }
+          },
+          {
+            "feature": "Pro models",
+            "values_by_plan": {
+              "Free": false,
+              "Basic": false,
+              "Standard": true,
+              "Pro": true,
+              "Fancy": true
+            }
+          },
+          {
+            "feature": "Pikaffects",
+            "values_by_plan": {
+              "Free": "Image-to-Video only",
+              "Basic": "Image-to-Video only",
+              "Standard": "All Pikaffects",
+              "Pro": "All Pikaffects",
+              "Fancy": "All Pikaffects"
+            }
+          }
+        ]
+      },
+      {
+        "group": "Generation Speed",
+        "rows": [
+          {
+            "feature": "Processing speed",
+            "values_by_plan": {
+              "Free": "-",
+              "Basic": "Standard",
+              "Standard": "Fast",
+              "Pro": "Faster",
+              "Fancy": "Fastest"
+            }
+          }
+        ]
+      },
+      {
+        "group": "Video Features",
+        "rows": [
+          {
+            "feature": "Remove watermark",
+            "values_by_plan": {
+              "Free": false,
+              "Basic": true,
+              "Standard": true,
+              "Pro": true,
+              "Fancy": true
+            }
+          },
+          {
+            "feature": "Commercial use",
+            "values_by_plan": {
+              "Free": false,
+              "Basic": true,
+              "Standard": true,
+              "Pro": true,
+              "Fancy": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,304 @@
+{
+  "tool": "Elai.io",
+  "page_title": "Choose your pricing plan",
+  "social_proof": {
+    "trusted_by": "2000+ companies around the globe"
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "badge": null,
+      "pricing": {
+        "type": "free",
+        "amount": 0,
+        "currency": "USD",
+        "commitment": "No commitment"
+      },
+      "included_summary": [
+        "1 User",
+        "1 Minute",
+        "80+ Avatars",
+        "75+ Languages",
+        "All Creator Features"
+      ],
+      "cta": {
+        "label": "Get started for free",
+        "alt_labels": ["Go Free", "Get started"]
+      }
+    },
+    {
+      "name": "Creator",
+      "badge": null,
+      "pricing": {
+        "type": "subscription",
+        "billing_options": ["Monthly", "Annually"],
+        "price_variants": [
+          {
+            "billing": "monthly",
+            "amount": 29,
+            "currency": "USD",
+            "period": "month",
+            "derived": {
+              "per_minute": 1.93,
+              "included_minutes_per_month": 15
+            }
+          },
+          {
+            "billing": "monthly",
+            "amount": 23,
+            "currency": "USD",
+            "period": "month",
+            "note": "Shown alongside annual billing option",
+            "derived": {
+              "per_minute": 1.53,
+              "included_minutes_per_month": 15
+            },
+            "annual_total": {
+              "amount": 278,
+              "currency": "USD",
+              "note": "Billed annually"
+            }
+          }
+        ]
+      },
+      "included_summary": [
+        "1 User",
+        "Up to 15 mins/mo",
+        "Full HD video",
+        "Full Avatar, Voice & Language Library"
+      ],
+      "cta": {
+        "label": "Choose Creator",
+        "alt_labels": ["Go Creator"]
+      }
+    },
+    {
+      "name": "Team",
+      "badge": "Recommended",
+      "pricing": {
+        "type": "subscription",
+        "billing_options": ["Monthly", "Annually"],
+        "price_variants": [
+          {
+            "billing": "monthly",
+            "amount": 125,
+            "currency": "USD",
+            "period": "month",
+            "derived": {
+              "per_minute": 2.5,
+              "included_minutes_per_month": 50
+            }
+          },
+          {
+            "billing": "monthly",
+            "amount": 100,
+            "currency": "USD",
+            "period": "month",
+            "note": "Shown alongside annual billing option",
+            "derived": {
+              "per_minute": 2.0,
+              "included_minutes_per_month": 50
+            },
+            "annual_total": {
+              "amount": 1200,
+              "currency": "USD",
+              "note": "Billed annually"
+            }
+          }
+        ]
+      },
+      "included_summary": [
+        "Everything in Creator, plus",
+        "3 Editors & 3 Guests",
+        "Custom Images and Fonts",
+        "Ultra 4K HD Video",
+        "Premium Voices"
+      ],
+      "cta": {
+        "label": "Choose Team",
+        "alt_labels": ["Go Team"]
+      },
+      "footnote": "** 1 Selfie Avatar and 1 Voice Clone included in Team annual subscription."
+    },
+    {
+      "name": "Enterprise",
+      "badge": null,
+      "pricing": {
+        "type": "custom",
+        "label": "Let's Talk",
+        "description": "Tailored to your needs; Custom setup, unlimited options"
+      },
+      "included_summary": [
+        "Unlimited Users",
+        "3 Voice Clones",
+        "3 Selfie Avatars",
+        "Premium Avatars",
+        "Brand Kit",
+        "Workspaces",
+        "SSO",
+        "Premium Support"
+      ],
+      "cta": {
+        "label": "Contact Sales",
+        "alt_labels": ["Contact Sales", "Let's Talk"]
+      }
+    }
+  ],
+  "comparison_table": {
+    "feature_groups": [
+      {
+        "group": "Video Minutes",
+        "rows": [
+          {
+            "feature": "Minutes per month",
+            "description": "Video minutes are deducted upon rendering videos.",
+            "values_by_plan": {
+              "Free": "1",
+              "Creator": "15",
+              "Team": "50/100/150",
+              "Enterprise": "Custom"
+            }
+          }
+        ]
+      },
+      {
+        "group": "Avatars & Seats",
+        "rows": [
+          {
+            "feature": "Avatars",
+            "description": "Choose from a variety of avatars utilising our extensive avatar library.",
+            "values_by_plan": {
+              "Free": "80+",
+              "Creator": "80+",
+              "Team": "80+",
+              "Enterprise": "80+"
+            }
+          },
+          {
+            "feature": "Seats",
+            "description": "The maximum number of seats available in your workspace.",
+            "values_by_plan": {
+              "Free": "1",
+              "Creator": "1",
+              "Team": "3",
+              "Enterprise": "Unlimited"
+            }
+          }
+        ]
+      },
+      {
+        "group": "Video Formats",
+        "rows": [
+          {
+            "feature": "Full HD 1080p",
+            "values_by_plan": {
+              "Free": true,
+              "Creator": true,
+              "Team": true,
+              "Enterprise": true
+            }
+          },
+          {
+            "feature": "Ultra HD 4K",
+            "values_by_plan": {
+              "Free": false,
+              "Creator": false,
+              "Team": true,
+              "Enterprise": true
+            }
+          }
+        ]
+      },
+      {
+        "group": "Media",
+        "rows": [
+          {
+            "feature": "Stock Videos & Images",
+            "values_by_plan": {
+              "Free": "-",
+              "Creator": "-",
+              "Team": true,
+              "Enterprise": true
+            }
+          },
+          {
+            "feature": "AI Image Generation",
+            "values_by_plan": {
+              "Free": "-",
+              "Creator": "-",
+              "Team": true,
+              "Enterprise": true
+            }
+          }
+        ]
+      },
+      {
+        "group": "Workspaces/Collaboration",
+        "rows": [
+          {
+            "feature": "Workspaces/Collaboration",
+            "values_by_plan": {
+              "Free": false,
+              "Creator": false,
+              "Team": true,
+              "Enterprise": true
+            }
+          },
+          {
+            "feature": "Brand Kit",
+            "values_by_plan": {
+              "Free": false,
+              "Creator": false,
+              "Team": true,
+              "Enterprise": true
+            }
+          },
+          {
+            "feature": "Single Sign-On",
+            "values_by_plan": {
+              "Free": false,
+              "Creator": false,
+              "Team": false,
+              "Enterprise": true
+            }
+          }
+        ]
+      },
+      {
+        "group": "Avatars & Voice Add-ons",
+        "rows": [
+          {
+            "feature": "Premium Avatars",
+            "note": "Add-on for lower tiers",
+            "values_by_plan": {
+              "Free": "Add-on",
+              "Creator": "Add-on",
+              "Team": true,
+              "Enterprise": true
+            }
+          },
+          {
+            "feature": "Selfie Avatar",
+            "note": "Add-on; included 1 in Team annual; 3 in Enterprise",
+            "values_by_plan": {
+              "Free": "Add-on",
+              "Creator": "Add-on",
+              "Team": "1 included (annual)",
+              "Enterprise": "3 included"
+            }
+          },
+          {
+            "feature": "Voice Clone",
+            "note": "Add-on; included 1 in Team annual; 3 in Enterprise",
+            "values_by_plan": {
+              "Free": "Add-on",
+              "Creator": "Add-on",
+              "Team": "1 included (annual)",
+              "Enterprise": "3 included"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

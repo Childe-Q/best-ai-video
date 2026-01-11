@@ -39,6 +39,25 @@ export type PricingPlan = {
   isPopular?: boolean;
 };
 
+export type ComparisonTableRow = {
+  feature: string;
+  label?: string; // Alternative to feature
+  values_by_plan?: Record<string, string | boolean | number>;
+  description?: string;
+  note?: string;
+};
+
+export type ComparisonTableFeatureGroup = {
+  group: string;
+  rows: ComparisonTableRow[];
+};
+
+export type ComparisonTable = {
+  feature_groups?: ComparisonTableFeatureGroup[];
+  rows?: ComparisonTableRow[]; // Flat structure without groups
+  headers?: string[]; // Plan names/keys
+};
+
 export type Tool = {
   id: string;
   slug: string;
@@ -91,6 +110,7 @@ export type Tool = {
     description: string;
     icon?: string;
   }>;
+  comparison_table?: ComparisonTable; // Pricing comparison table for extracting plan features
 };
 
 // Types for Alternatives Page

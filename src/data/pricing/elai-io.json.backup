@@ -1,0 +1,57 @@
+{
+  "tool": "Elai.io",
+  "page_title": "Choose your pricing plan",
+  "plans": [
+    {
+      "name": "Free",
+      "badge": null,
+      "pricing": {
+        "type": "free",
+        "amount": 0,
+        "currency": "USD",
+        "period": "month"
+      },
+      "included_summary": [
+        "1 User",
+        "1 Minute",
+        "80+ Avatars",
+        "75+ Languages",
+        "All Creator Features"
+      ]
+    },
+    {
+      "name": "Creator",
+      "badge": null,
+      "pricing": {
+        "type": "subscription",
+        "billing_options": ["Monthly", "Annually"],
+        "price_variants": [
+          {
+            "billing": "monthly",
+            "amount": 29,
+            "currency": "USD",
+            "period": "month"
+          },
+          {
+            "billing": "monthly",
+            "amount": 23,
+            "currency": "USD",
+            "period": "month",
+            "note": "Billed yearly",
+            "annual_total": {
+              "amount": 278,
+              "currency": "USD",
+              "period": "year"
+            }
+          }
+        ]
+      },
+      "included_summary": [
+        "1 User",
+        "Up to 15 mins/mo",
+        "Full HD video",
+        "Full Avatar, Voice & Language Library"
+      ]
+    }
+  ]
+}

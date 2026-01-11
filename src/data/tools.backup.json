@@ -1,0 +1,3190 @@
+[
+  {
+    "id": "1",
+    "slug": "invideo",
+    "name": "InVideo",
+    "logo_url": "/logos/InVideo_logo.svg",
+    "tagline": "Turn text into video with AI in minutes",
+    "short_description": "Automate your YouTube channel with text-to-video. Create viral shorts without filming.",
+    "best_for": "Social Media Marketers & YouTubers",
+    "affiliate_link": "https://invideo.sjv.io/c/6767699/883681/12258",
+    "pricing_plans": [
+      {
+        "name": "Plus",
+        "price": {
+          "monthly": {
+            "amount": 35,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 28,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "ctaText": "Start Free Trial",
+        "featureItems": [
+          {
+            "text": "10 Credits"
+          },
+          {
+            "text": "50 Video mins + 95 iStock"
+          },
+          {
+            "text": "2 UGC product asset ads"
+          },
+          {
+            "text": "30 secs of generative video"
+          },
+          {
+            "text": "2 express clones"
+          },
+          {
+            "text": "3 users, 100GB storage"
+          },
+          {
+            "text": "Unlimited exports"
+          },
+          {
+            "text": "Image generations",
+            "badge": "365 UNLIMITED"
+          },
+          {
+            "text": "40 Credits"
+          },
+          {
+            "text": "200 Video mins + 320 iStock"
+          },
+          {
+            "text": "8 UGC product asset ads"
+          },
+          {
+            "text": "120 secs of generative video"
+          }
+        ],
+        "billingNote": "*Billed yearly"
+      },
+      {
+        "name": "Max",
+        "price": {
+          "monthly": {
+            "amount": 60,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 50,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "ctaText": "Start Free Trial",
+        "featureItems": [
+          {
+            "text": "10 Credits"
+          },
+          {
+            "text": "50 Video mins + 95 iStock"
+          },
+          {
+            "text": "2 UGC product asset ads"
+          },
+          {
+            "text": "30 secs of generative video"
+          },
+          {
+            "text": "2 express clones"
+          },
+          {
+            "text": "3 users, 100GB storage"
+          },
+          {
+            "text": "Unlimited exports"
+          },
+          {
+            "text": "Image generations",
+            "badge": "365 UNLIMITED"
+          },
+          {
+            "text": "40 Credits"
+          },
+          {
+            "text": "200 Video mins + 320 iStock"
+          },
+          {
+            "text": "8 UGC product asset ads"
+          },
+          {
+            "text": "120 secs of generative video"
+          }
+        ],
+        "billingNote": "*Billed yearly",
+        "ribbonText": "Best Value"
+      },
+      {
+        "name": "Generative",
+        "price": {
+          "monthly": {
+            "amount": 120,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 100,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "ctaText": "Start Free Trial",
+        "featureItems": [
+          {
+            "text": "10 Credits"
+          },
+          {
+            "text": "50 Video mins + 95 iStock"
+          },
+          {
+            "text": "2 UGC product asset ads"
+          },
+          {
+            "text": "30 secs of generative video"
+          },
+          {
+            "text": "2 express clones"
+          },
+          {
+            "text": "3 users, 100GB storage"
+          },
+          {
+            "text": "Unlimited exports"
+          },
+          {
+            "text": "Image generations",
+            "badge": "365 UNLIMITED"
+          },
+          {
+            "text": "40 Credits"
+          },
+          {
+            "text": "200 Video mins + 320 iStock"
+          },
+          {
+            "text": "8 UGC product asset ads"
+          },
+          {
+            "text": "120 secs of generative video"
+          }
+        ],
+        "billingNote": "*Billed yearly"
+      },
+      {
+        "name": "Team",
+        "price": {
+          "monthly": {
+            "amount": 999,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 899,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "ctaText": "Start Free Trial",
+        "featureItems": [
+          {
+            "text": "10 Credits"
+          },
+          {
+            "text": "50 Video mins + 95 iStock"
+          },
+          {
+            "text": "2 UGC product asset ads"
+          },
+          {
+            "text": "30 secs of generative video"
+          },
+          {
+            "text": "2 express clones"
+          },
+          {
+            "text": "3 users, 100GB storage"
+          },
+          {
+            "text": "Unlimited exports"
+          },
+          {
+            "text": "Image generations",
+            "badge": "365 UNLIMITED"
+          },
+          {
+            "text": "40 Credits"
+          },
+          {
+            "text": "200 Video mins + 320 iStock"
+          },
+          {
+            "text": "8 UGC product asset ads"
+          },
+          {
+            "text": "120 secs of generative video"
+          }
+        ],
+        "billingNote": "*Billed yearly"
+      },
+      {
+        "name": "Free",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "ctaText": "Get Started",
+        "featureItems": [
+          {
+            "text": "02 Video mins"
+          },
+          {
+            "text": "Video mins and 1 AI credit"
+          },
+          {
+            "text": "No access to generative features"
+          },
+          {
+            "text": "1 Express"
+          },
+          {
+            "text": "4 Exports"
+          },
+          {
+            "text": "02 Video mins and 1 AI credit per week"
+          },
+          {
+            "text": "1 Express avatar"
+          },
+          {
+            "text": "4 Exports per week"
+          }
+        ],
+        "billingNote": "*Billed yearly"
+      },
+      {
+        "name": "Enterprise",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "unitPriceNote": "Custom pricing",
+        "ctaText": "Contact Sales",
+        "billingNote": "*Billed yearly"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$28/mo",
+    "rating": 4.8,
+    "features": [
+      "Text to Video",
+      "Stock Media Library",
+      "AI Script Generator",
+      "Auto Captions",
+      "AI Twin (Digital Clone)",
+      "Invideo AI v4.0"
+    ],
+    "tags": [
+      "Text-to-Video",
+      "Editor",
+      "Cheap"
+    ],
+    "pros": [
+      "Very easy to use",
+      "Huge stock library with 8M+ assets",
+      "Web-based, no download needed"
+    ],
+    "cons": [
+      "Watermark on free plan",
+      "Rendering can be slow for long videos"
+    ],
+    "review_content": "InVideo is a powerful online video editor that simplifies the process of creating professional-quality videos. Its AI-powered features allow you to convert text scripts into ready-to-publish videos in minutes.",
+    "long_review": "<p>InVideo is a game-changer for content creators who need to produce high-quality videos quickly. Its standout feature is the <strong>Text-to-Video</strong> capability, which allows you to paste a script or a blog post URL, and the AI automatically selects relevant stock footage, adds subtitles, and creates a rough cut for you.</p><p>The platform offers a massive library of over <strong>8 million stock media assets</strong> from iStock, Shutterstock, and Storyblocks, which is a huge value add compared to competitors. The interface is intuitive, making it accessible even for those with zero video editing experience.</p><p>Newly released <strong>v4.0</strong> includes the AI Twin feature, allowing you to clone yourself without a camera. This revolutionary capability enables you to create professional videos with your digital clone, making it perfect for content creators who want to scale their video production without being physically present for every recording.</p>",
+    "faqs": [
+      {
+        "question": "Is InVideo free to use?",
+        "answer": "Yes, InVideo offers a free plan with watermarks and limited export options. Paid plans start at $20/month."
+      },
+      {
+        "question": "Can I use InVideo for YouTube?",
+        "answer": "Absolutely! InVideo is optimized for YouTube, Instagram, and TikTok video creation with templates and aspect ratios for each platform."
+      }
+    ],
+    "ease_of_use_score": 7.6,
+    "speed_score": 7.8,
+    "price_score": 9,
+    "output_quality_score": 8.1,
+    "video_url": "https://youtu.be/Z3985Y6BoD8",
+    "target_audience_list": [
+      "Marketing Teams",
+      "Social Media Managers",
+      "YouTubers"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Generators",
+      "Video Editors",
+      "Budget-Friendly"
+    ],
+    "featureCards": [
+      {
+        "title": "Invideo Quick Tools",
+        "description": "Invideo Quick Tools.",
+        "icon": "play"
+      },
+      {
+        "title": "Video Trimmer",
+        "description": "Video Trimmer.",
+        "icon": "video"
+      },
+      {
+        "title": "Screen Recorder",
+        "description": "Screen Recorder.",
+        "icon": "film"
+      },
+      {
+        "title": "Crop Video",
+        "description": "Crop Video.",
+        "icon": "camera"
+      },
+      {
+        "title": "Video Looper",
+        "description": "Video Looper.",
+        "icon": "mic"
+      },
+      {
+        "title": "Rotate Video Online",
+        "description": "Rotate Video Online.",
+        "icon": "image"
+      },
+      {
+        "title": "Video Merger",
+        "description": "Video Merger.",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Speed Up Video",
+        "description": "Speed Up Video.",
+        "icon": "wand"
+      },
+      {
+        "title": "Audio Joiner",
+        "description": "Audio Joiner.",
+        "icon": "zap"
+      },
+      {
+        "title": "Watermark Video Maker",
+        "description": "Watermark Video Maker.",
+        "icon": "star"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "slug": "heygen",
+    "name": "HeyGen",
+    "logo_url": "/logos/heygen-logo.png",
+    "tagline": "AI Video Generator with Realistic Talking Avatars",
+    "short_description": "Create realistic AI avatars that speak. No camera, no studio, just results.",
+    "best_for": "Sales Outreach & L&D Teams",
+    "affiliate_link": "https://www.heygen.com/?sid=rewardful&via=bingqiang",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "ctaText": "Get Started"
+      },
+      {
+        "name": "Enterprise",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "unitPriceNote": "Custom pricing",
+        "ctaText": "Contact Sales"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$29/mo",
+    "rating": 4.9,
+    "features": [
+      "Custom Avatars",
+      "Voice Cloning",
+      "Text to Speech",
+      "40+ Languages"
+    ],
+    "tags": [
+      "Avatar",
+      "Professional"
+    ],
+    "pros": [
+      "Ultra-realistic lip-sync technology",
+      "High quality avatars",
+      "Easy interface, no technical skills needed"
+    ],
+    "cons": [
+      "Expensive for high usage",
+      "Credit system can be confusing"
+    ],
+    "review_content": "HeyGen is a cutting-edge AI video generation platform that specializes in creating realistic talking avatars. It is perfect for training videos, marketing materials, and personalized sales outreach.",
+    "long_review": "<p>HeyGen is leading the pack when it comes to <strong>AI Avatars</strong>. The lip-sync technology is incredibly realistic, and the ability to create a custom avatar of yourself (Instant Avatar) in just a few minutes is mind-blowing. This makes it perfect for scaling personalized sales videos or internal training content.</p><p>The platform supports over 40 languages, allowing you to easily localize your content. You can simply type your script, choose a voice, and the avatar will speak it naturally. The interface is clean and modern, making it accessible even for non-technical users.</p>",
+    "faqs": [
+      {
+        "question": "Does HeyGen support multiple languages?",
+        "answer": "Yes, HeyGen supports over 40 languages with realistic lip-sync, making it ideal for global content creation."
+      },
+      {
+        "question": "Can I upload my own photo to create an avatar?",
+        "answer": "Yes, you can create a talking photo from any uploaded image using HeyGen's Instant Avatar feature."
+      }
+    ],
+    "output_quality_score": 9.6,
+    "price_score": 6.4,
+    "ease_of_use_score": 8,
+    "speed_score": 7.9,
+    "video_url": "https://youtu.be/enXjC1R09dc",
+    "target_audience_list": [
+      "Educators"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "AI Avatars",
+      "Professional Tools"
+    ],
+    "featureCards": [
+      {
+        "title": "Explore Hey",
+        "description": "Explore Hey.",
+        "icon": "play"
+      },
+      {
+        "title": "Video Avatar",
+        "description": "Video Avatar.",
+        "icon": "video"
+      },
+      {
+        "title": "Photo Avatar",
+        "description": "Photo Avatar.",
+        "icon": "film"
+      },
+      {
+        "title": "Stock Avatar",
+        "description": "Stock Avatar.",
+        "icon": "camera"
+      },
+      {
+        "title": "Studio Editor",
+        "description": "Studio Editor.",
+        "icon": "mic"
+      },
+      {
+        "title": "Steve Sowrey",
+        "description": "Steve Sowrey.",
+        "icon": "image"
+      },
+      {
+        "title": "With Hey",
+        "description": "With Hey.",
+        "icon": "sparkles"
+      },
+      {
+        "title": "AI Studio",
+        "description": "AI Studio.",
+        "icon": "wand"
+      },
+      {
+        "title": "AI Video Generator",
+        "description": "AI Video Generator.",
+        "icon": "zap"
+      },
+      {
+        "title": "Video Generator",
+        "description": "Video Generator.",
+        "icon": "star"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "slug": "fliki",
+    "name": "Fliki",
+    "logo_url": "/logos/fliki.png",
+    "tagline": "Turn Blog Posts into Videos in 2 Minutes with AI Voices.",
+    "short_description": "Turn your blog posts into viral videos with lifelike AI voiceovers in minutes.",
+    "best_for": "Bloggers & Content Marketers",
+    "affiliate_link": "https://fliki.ai/?via=jack-shan",
+    "pricing_plans": [
+      {
+        "id": "free",
+        "name": "Free",
+        "tagline": "For beginners trying out AI video creation",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "unitPriceNote": null,
+        "addonLabel": null,
+        "addons": [],
+        "ctaText": "Get Started",
+        "billingNote": "*Billed monthly until cancelled",
+        "ribbonText": null,
+        "featureItems": [
+          {
+            "text": "5 minutes of credits per month"
+          },
+          {
+            "text": "300 voices, 80+ languages & 100+ dialects"
+          },
+          {
+            "text": "720p video resolution"
+          },
+          {
+            "text": "Videos up to 10 minutes"
+          },
+          {
+            "text": "Create videos from ideas, scripts, blog articles, PPTs"
+          },
+          {
+            "text": "Thousands of images, video clips, stickers and music assets"
+          },
+          {
+            "text": "Generate AI Images"
+          },
+          {
+            "text": "Create thumbnail designs, presentations or social carousels"
+          },
+          {
+            "text": "Contains Fliki Watermark"
+          },
+          {
+            "text": "50 scene limits"
+          },
+          {
+            "text": "Limited media library"
+          },
+          {
+            "text": "Email support only"
+          }
+        ]
+      },
+      {
+        "id": "standard",
+        "name": "Standard",
+        "tagline": "For creators venturing into AI video production",
+        "price": {
+          "monthly": {
+            "amount": 28,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 17,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "unitPriceNote": "$0.013 per minute (annual billing)",
+        "addonLabel": null,
+        "addons": [],
+        "ctaText": "Get Standard",
+        "billingNote": "*Billed monthly until cancelled",
+        "ribbonText": "⭐ Best Value",
+        "featureItems": [
+          {
+            "text": "2160 minutes of credits per year (180 minutes/month)"
+          },
+          {
+            "text": "1000 voices including 150 ultra-realistic & 50 studio-quality"
+          },
+          {
+            "text": "1080p Full HD videos"
+          },
+          {
+            "text": "Videos up to 15 minutes"
+          },
+          {
+            "text": "No watermark"
+          },
+          {
+            "text": "Commercial rights"
+          },
+          {
+            "text": "Make and Zapier integration"
+          },
+          {
+            "text": "Limited AI avatars"
+          },
+          {
+            "text": "Voice cloning"
+          },
+          {
+            "text": "Translate content to 80+ languages"
+          },
+          {
+            "text": "Millions of premium images, video clips, stickers and music assets"
+          },
+          {
+            "text": "100 scene limits"
+          },
+          {
+            "text": "Email & live chat support"
+          }
+        ]
+      },
+      {
+        "id": "premium",
+        "name": "Premium",
+        "tagline": "For emerging & experienced video creators, perfect for teams",
+        "price": {
+          "monthly": {
+            "amount": 88,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 53,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "unitPriceNote": "$0.012 per minute (annual billing)",
+        "addonLabel": null,
+        "addons": [],
+        "ctaText": "Get Premium",
+        "billingNote": "*Billed monthly until cancelled",
+        "ribbonText": null,
+        "featureItems": [
+          {
+            "text": "7200 minutes of credits per year (600 minutes/month)"
+          },
+          {
+            "text": "2000+ voices including 1000+ ultra-realistic & 350+ studio-quality"
+          },
+          {
+            "text": "1080p Full HD videos"
+          },
+          {
+            "text": "Videos up to 40 minutes"
+          },
+          {
+            "text": "Multiple brand kits"
+          },
+          {
+            "text": "Multiple voice cloning"
+          },
+          {
+            "text": "Multiple custom voices"
+          },
+          {
+            "text": "Generate AI video clips"
+          },
+          {
+            "text": "Custom fonts"
+          },
+          {
+            "text": "All AI avatars"
+          },
+          {
+            "text": "Photo avatars"
+          },
+          {
+            "text": "150 scene limits"
+          },
+          {
+            "text": "Priority support"
+          }
+        ]
+      },
+      {
+        "id": "enterprise",
+        "name": "Enterprise",
+        "tagline": "Custom plan tailored to your organization's specific needs",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "unitPriceNote": "Custom pricing",
+        "addonLabel": "Team Size",
+        "addons": [],
+        "ctaText": "Contact Sales",
+        "billingNote": "*Billed yearly",
+        "ribbonText": null,
+        "featureItems": [
+          {
+            "text": "Custom credits"
+          },
+          {
+            "text": "Bulk discounts"
+          },
+          {
+            "text": "Higher quotas"
+          },
+          {
+            "text": "Invoiced billing"
+          },
+          {
+            "text": "API Access"
+          },
+          {
+            "text": "Personalized avatars"
+          },
+          {
+            "text": "State-of-the-art AI models"
+          },
+          {
+            "text": "Professional voice cloning"
+          },
+          {
+            "text": "Branded custom templates"
+          },
+          {
+            "text": "Dedicated account manager"
+          },
+          {
+            "text": "Team collaboration"
+          },
+          {
+            "text": "1080p and higher video resolution"
+          },
+          {
+            "text": "Videos up to 40 minutes"
+          }
+        ]
+      }
+    ],
+    "featureCards": [
+      {
+        "title": "Text to video",
+        "description": "Convert text scripts or prompts into ready-to-publish videos for YouTube, Instagram, and TikTok. No video editing skills required.",
+        "icon": "play",
+        "variant": "purple",
+        "href": "https://fliki.ai/features#text-to-video"
+      },
+      {
+        "title": "AI voiceover",
+        "description": "Generate natural-sounding narrations using 2000+ ultra-realistic AI voices across 80+ languages. Perfect for multilingual content creation.",
+        "icon": "audio",
+        "variant": "indigo",
+        "href": "https://fliki.ai/features#ai-voiceover"
+      },
+      {
+        "title": "Idea to video",
+        "description": "Turn simple prompts into polished social media videos in seconds. AI automatically generates visuals, voiceover, and effects.",
+        "icon": "lightbulb",
+        "variant": "blue",
+        "href": "https://fliki.ai/features#idea-to-video"
+      },
+      {
+        "title": "AI avatar",
+        "description": "Create lifelike talking avatars for your videos. No camera or filming needed—generate professional talking-head content instantly.",
+        "icon": "user",
+        "variant": "red",
+        "href": "https://fliki.ai/features#ai-avatar"
+      },
+      {
+        "title": "Text to speech",
+        "description": "Advanced TTS with 2000+ voices in 80+ languages and 100+ accents. Ideal for YouTube videos, podcasts, and audio content.",
+        "icon": "message",
+        "variant": "purple",
+        "href": "https://fliki.ai/features#text-to-speech"
+      },
+      {
+        "title": "Voice cloning",
+        "description": "Clone your voice with a 2-minute sample. Save time on recordings and create authentic voiceovers for your content.",
+        "icon": "mic",
+        "variant": "indigo",
+        "href": "https://fliki.ai/features#voice-cloning"
+      },
+      {
+        "title": "Blog to video",
+        "description": "Convert blog articles into engaging videos to boost SEO and engagement. Automatically extracts key content and adds visuals.",
+        "icon": "file-text",
+        "variant": "blue",
+        "href": "https://fliki.ai/features#blog-to-video"
+      },
+      {
+        "title": "PPT to video",
+        "description": "Transform PowerPoint presentations into videos. Upload your PPT and get AI-generated scripts, avatars, voiceovers, and music.",
+        "icon": "layers",
+        "variant": "red",
+        "href": "https://fliki.ai/features#ppt-to-video"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$28/mo",
+    "rating": 4.8,
+    "features": [
+      "Text to Video",
+      "AI Voice Cloning",
+      "Blog to Video",
+      "Auto Subtitles",
+      "Stock Library"
+    ],
+    "tags": [
+      "Text-to-Video",
+      "Repurposing"
+    ],
+    "pros": [
+      "⚡ Fastest Text-to-Video workflow (2 mins/video)",
+      "900+ Ultra-realistic Neural Voices (ElevenLabs quality)",
+      "Direct Blog-URL to Video conversion"
+    ],
+    "cons": [
+      "Stock footage library can feel generic sometimes",
+      "No advanced timeline editing like Premiere Pro"
+    ],
+    "review_content": "<div><h3 class='text-lg font-bold mb-2'>🚀 The Bottom Line</h3><p class='mb-4 text-gray-700'>Fliki is the <strong>\"Repurposing\" Engine</strong>. It is designed to turn text into revenue-generating videos in record time.</p><div class='bg-green-50 p-3 rounded-lg border border-green-100 mb-4'><p class='text-sm text-green-800'><strong>🎯 Best For:</strong> Faceless YouTubers, Bloggers, and Marketers who need <strong>Volume & Speed</strong> over manual editing.</p></div><h3 class='text-lg font-bold mb-2'>Why it wins?</h3><p class='mb-4 text-gray-600 leading-relaxed'>Fliki isn't just a video generator; it's a <strong>content recycler on steroids</strong>. While other tools make you fiddle with complex timelines, Fliki treats video creation like <strong>writing a Google Doc</strong>.</p><p class='mb-4 text-gray-600 leading-relaxed'>Its superpower is <strong>Text-to-Video</strong>. You paste a blog URL, a tweet, or a loose script, and it pulls relevant stock media, adds a frighteningly human AI voice (the \"Ultra-realistic\" voices are top-tier), and syncs the subtitles automatically.</p><div class='bg-blue-50 p-4 rounded-lg border border-blue-100'><p class='text-sm text-blue-800'><strong>💡 Pro Insight:</strong> Most tools make you build a video scene by scene. Fliki builds it <strong>idea by idea</strong>. If you are a marketer with 50 blog posts collecting dust, Fliki is the fastest way to turn those assets into revenue streams without filming a single frame.</p></div></div>",
+    "long_review": "<p>Fliki excels at <strong>text-to-video conversion</strong>, making it ideal for bloggers and content marketers who want to repurpose written content into video format. The platform offers over 900 AI voices in 75+ languages, with natural-sounding speech that rivals human narration.</p><p>The standout feature is the 'Blog to Video' function, which can automatically convert entire blog posts into video format by extracting key points, matching stock footage, and adding narration. While the video editing capabilities are more limited compared to full-featured editors, Fliki's strength lies in speed and automation for content repurposing.</p>",
+    "faqs": [
+      {
+        "question": "Can Fliki convert my blog posts to video?",
+        "answer": "Yes, Fliki's Blog to Video feature can automatically convert blog posts into video format with AI narration and stock footage."
+      },
+      {
+        "question": "How many AI voices does Fliki offer?",
+        "answer": "Fliki offers over 900 AI voices in 75+ languages, with natural-sounding speech quality."
+      },
+      {
+        "question": "What is Fliki's refund policy?",
+        "answer": "Fliki offers a 14-day money-back guarantee for paid plans. If you're not satisfied with the service, you can request a full refund within 14 days of your purchase."
+      },
+      {
+        "question": "Can I use Fliki videos for commercial purposes?",
+        "answer": "Yes, with paid plans (Standard and Premium), you have full commercial rights to use the videos you create with Fliki for your business, marketing campaigns, and client work without any attribution required."
+      },
+      {
+        "question": "What languages does Fliki support?",
+        "answer": "Fliki supports over 75 languages for AI voice generation, including English, Spanish, French, German, Chinese, Japanese, Hindi, and many more. This makes it ideal for creating multilingual content for global audiences."
+      }
+    ],
+    "user_sentiment": "Users overwhelmingly praise Fliki for its **speed and ease of use**, calling it a 'game-changer' for turning blog posts into videos quickly. The **AI voices** (especially in multiple languages like French and Tamil) are cited as a standout feature, sounding much more natural than competitors. However, some long-term users have complained about **limited stock video variety** and frustration with **promotional offers** that apply only to new users. The consensus is: it's an indispensable tool for beginners and marketers needing volume, but power users might find the stock library restrictive.",
+    "ease_of_use_score": 9.8,
+    "speed_score": 9.8,
+    "price_score": 9.5,
+    "output_quality_score": 9.2,
+    "video_url": "https://youtu.be/FRLzYf52GZY",
+    "use_cases": [
+      "YouTube Shorts",
+      "TikTok",
+      "Blog Repurposing",
+      "Social Media Ads"
+    ],
+    "target_audience_list": [
+      "Bloggers",
+      "Affiliate Marketers",
+      "Faceless YouTubers"
+    ],
+    "social_links": {
+      "twitter": "https://twitter.com/fliki_ai",
+      "linkedin": "https://www.linkedin.com/company/fliki-ai",
+      "youtube": "https://www.youtube.com/@fliki",
+      "instagram": "https://www.instagram.com/fliki.ai"
+    },
+    "deal": "Code FLIKI10 for 10% Off",
+    "review_count": 7,
+    "is_verified": true,
+    "categories": [
+      "Video Generators",
+      "Text to Speech"
+    ]
+  },
+  {
+    "id": "11",
+    "slug": "veed-io",
+    "name": "Veed.io",
+    "logo_url": "/logos/VEED-Logo.svg",
+    "tagline": "Online Video Editor with AI Features",
+    "short_description": "Add auto-subtitles and edit videos for social media. No experience needed.",
+    "best_for": "Social Media Creators & Beginners",
+    "affiliate_link": "https://veed.sjv.io/zxAARO",
+    "pricing_plans": [
+      {
+        "id": "ai-video",
+        "name": "AI Video",
+        "price": {
+          "monthly": {
+            "amount": 12,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 12,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "tagline": "Try VEED with our Free Plan",
+        "ctaText": "Pay monthly",
+        "ribbonText": "Recommended",
+        "billingNote": "*Billed yearly",
+        "featureItems": [
+          {
+            "text": "Remove watermark"
+          },
+          {
+            "text": "Subtitles 144 hr/yr"
+          },
+          {
+            "text": "Full stock audio & video library"
+          },
+          {
+            "text": "Full HD 1080p Exports"
+          },
+          {
+            "text": "Brand Kit Styled Assets"
+          },
+          {
+            "text": "5 videos / day in Gen-AI Studio"
+          },
+          {
+            "text": "Add credits to generate videos using VEED Fabric 1, Google Veo 3, and more"
+          }
+        ]
+      },
+      {
+        "id": "pro",
+        "name": "Pro",
+        "price": {
+          "monthly": {
+            "amount": 29,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 29,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "tagline": "AI tools for pro-quality videos",
+        "ctaText": "Add AI credits to plan",
+        "ribbonText": "Recommended",
+        "billingNote": "*Billed yearly",
+        "featureItems": [
+          {
+            "text": "Everything in Lite"
+          },
+          {
+            "text": "Videos in Gen-AI Studio",
+            "badge": "UNLIMITED"
+          },
+          {
+            "text": "Brand assets & templates"
+          },
+          {
+            "text": "Translate to 50+ Languages"
+          },
+          {
+            "text": "144 hr/yr Text to Speech"
+          },
+          {
+            "text": "Add credits to generate videos using VEED Fabric 1, Google Veo 3, and more"
+          }
+        ]
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$12/mo",
+    "rating": 4.8,
+    "features": [
+      "Auto Subtitles",
+      "Video Editing",
+      "Screen Recording",
+      "AI Background Removal"
+    ],
+    "tags": [
+      "Editor",
+      "Cheap"
+    ],
+    "pros": [
+      "Very easy to use",
+      "Excellent auto-subtitle feature",
+      "No software download needed"
+    ],
+    "cons": [
+      "Watermark on free plan",
+      "Limited advanced editing features"
+    ],
+    "review_content": "Veed.io is a user-friendly online video editor that makes professional video editing accessible to everyone. Its auto-subtitle feature is particularly impressive, automatically generating accurate captions for your videos.",
+    "long_review": "<p>Veed.io has built its reputation on <strong>simplicity and accessibility</strong>. As a web-based video editor, it requires no downloads and works on any device with a browser. The interface is clean and intuitive, making it perfect for beginners who are intimidated by complex editing software like Premiere Pro.</p><p>The standout feature is the auto-subtitle generation, which uses AI to create accurate captions in multiple languages. This is invaluable for social media creators who want to improve accessibility and engagement. While Veed.io may not have all the advanced features of desktop editors, it excels at the core tasks most creators need: trimming, adding text, subtitles, and basic effects.</p>",
+    "faqs": [
+      {
+        "question": "Does Veed.io require software installation?",
+        "answer": "No, Veed.io is completely web-based and works in your browser, requiring no downloads or installations."
+      },
+      {
+        "question": "How accurate are Veed.io's auto-subtitles?",
+        "answer": "Veed.io's AI-powered auto-subtitles are highly accurate and support multiple languages, with the ability to edit and customize them."
+      }
+    ],
+    "ease_of_use_score": 9.8,
+    "speed_score": 9.8,
+    "price_score": 9.5,
+    "output_quality_score": 8.8,
+    "video_url": "https://youtu.be/d0YAOxC8cKo",
+    "target_audience_list": [
+      "Content Creators",
+      "Social Media Managers"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Editors",
+      "Budget-Friendly"
+    ],
+    "featureCards": [
+      {
+        "title": "Voice Cloning",
+        "description": "Voice Cloning.",
+        "icon": "play"
+      },
+      {
+        "title": "Video Transcription",
+        "description": "Video Transcription.",
+        "icon": "video"
+      },
+      {
+        "title": "Audio Cutter",
+        "description": "Audio Cutter.",
+        "icon": "film"
+      },
+      {
+        "title": "Audio Editor",
+        "description": "Audio Editor.",
+        "icon": "camera"
+      },
+      {
+        "title": "Audio Joiner",
+        "description": "Audio Joiner.",
+        "icon": "mic"
+      },
+      {
+        "title": "Audio Looper",
+        "description": "Audio Looper.",
+        "icon": "image"
+      },
+      {
+        "title": "Audio Player",
+        "description": "Audio Player.",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Audio Speed Changer",
+        "description": "Audio Speed Changer.",
+        "icon": "wand"
+      },
+      {
+        "title": "Audio Translator Auto Subtitle Generator Online",
+        "description": "Audio Translator Auto Subtitle Generator Online.",
+        "icon": "zap"
+      },
+      {
+        "title": "Auto Video Editor",
+        "description": "Auto Video Editor.",
+        "icon": "star"
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "slug": "zebracat",
+    "name": "Zebracat",
+    "logo_url": "/logos/zebracat-logo.jpg",
+    "tagline": "AI video generator that turns text into high-impact marketing videos",
+    "short_description": "Generate high-ROI marketing ads that convert. Built for viral social campaigns.",
+    "best_for": "Content Creators & Marketers",
+    "affiliate_link": "https://www.zebracat.ai/?via=jack-shan",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "ctaText": "Get Started"
+      },
+      {
+        "name": "Enterprise",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "unitPriceNote": "Custom pricing",
+        "ctaText": "Contact Sales"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$19/mo",
+    "rating": 4.9,
+    "features": [
+      "Text-to-video",
+      "Auto captions",
+      "Stock library",
+      "Brand kits",
+      "Music sync"
+    ],
+    "tags": [
+      "Text-to-Video",
+      "Marketing",
+      "Social Media",
+      "Viral",
+      "Fast"
+    ],
+    "pros": [
+      "Extremely fast generation",
+      "Optimized for viral social media videos",
+      "Great music & effects sync",
+      "Natural AI voices",
+      "Easy branding"
+    ],
+    "cons": [
+      "Free plan limited to 5 videos/month",
+      "Fewer enterprise features than older tools"
+    ],
+    "review_content": "<div><p class='mb-3 text-sm leading-relaxed'><strong>🚀 Bottom Line:</strong> The <strong>Marketer's Secret Weapon</strong>. Built for turning text into high-converting Viral Video Ads instantly.</p></div>",
+    "long_review": "<p>Zebracat has emerged as one of the most exciting AI video tools for marketers and creators in 2025. What sets it apart is its laser focus on <strong>viral social media content</strong>. Unlike generic video generators, Zebracat is built from the ground up to create videos that perform exceptionally well on platforms like TikTok, Instagram Reels, and YouTube Shorts.</p><p>The platform's <strong>lightning-fast generation</strong> is a game-changer. While competitors take minutes or even hours to render videos, Zebracat delivers high-quality outputs in seconds. This speed advantage is crucial for marketers who need to capitalize on trending topics or create content on tight deadlines.</p><p>One of Zebracat's standout features is its <strong>music and effects synchronization</strong>. The AI automatically matches background music to your video's pacing and mood, creating a cohesive viewing experience that keeps audiences engaged. The natural AI voices sound remarkably human-like, eliminating the robotic tone that plagues many text-to-speech tools.</p><p>For brands, Zebracat's <strong>easy branding tools</strong> make it simple to maintain consistent visual identity across all videos. You can upload logos, brand colors, and fonts that automatically apply to every video you create. The free plan is generous enough for testing, though serious creators will want the paid plan for unlimited videos and advanced features.</p>",
+    "faqs": [
+      {
+        "question": "How fast is Zebracat compared to other AI video tools?",
+        "answer": "Zebracat is significantly faster than most competitors, generating videos in seconds rather than minutes. This makes it ideal for creating content quickly to capitalize on trends or meet tight deadlines."
+      },
+      {
+        "question": "Is Zebracat good for social media marketing?",
+        "answer": "Yes, Zebracat is specifically optimized for viral social media content. It includes templates and features designed to maximize engagement on platforms like TikTok, Instagram Reels, and YouTube Shorts."
+      },
+      {
+        "question": "What is the free plan limit?",
+        "answer": "The free plan allows you to create 5 videos per month with watermarks. Paid plans start at $19/month and remove watermarks while providing unlimited video generation."
+      },
+      {
+        "question": "Can I use my own branding in Zebracat?",
+        "answer": "Yes, Zebracat offers easy branding tools that let you upload logos, brand colors, and fonts. These automatically apply to all your videos, ensuring consistent brand identity across your content."
+      },
+      {
+        "question": "Does Zebracat support multiple languages?",
+        "answer": "Yes, Zebracat supports multiple languages with natural-sounding AI voices. This makes it easy to create localized content for global marketing campaigns."
+      }
+    ],
+    "ease_of_use_score": 9.8,
+    "speed_score": 9.8,
+    "price_score": 9.5,
+    "output_quality_score": 9.2,
+    "video_url": "https://www.youtube.com/watch?v=djRcaAeqymU",
+    "target_audience_list": [
+      "Content Creators",
+      "Marketing Teams"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Generators",
+      "Marketing",
+      "Social Media",
+      "Viral",
+      "Fast"
+    ],
+    "featureCards": [
+      {
+        "title": "Everything Zebracat Can Do",
+        "description": "Everything Zebracat Can Do.",
+        "icon": "play"
+      },
+      {
+        "title": "Voice Cloning",
+        "description": "Voice Cloning.",
+        "icon": "video"
+      },
+      {
+        "title": "Reel Generator",
+        "description": "Reel Generator.",
+        "icon": "film"
+      },
+      {
+        "title": "Tube Shorts Generator",
+        "description": "Tube Shorts Generator.",
+        "icon": "camera"
+      },
+      {
+        "title": "Youtube Video Generator",
+        "description": "Youtube Video Generator.",
+        "icon": "mic"
+      },
+      {
+        "title": "Avatar Generator",
+        "description": "Avatar Generator.",
+        "icon": "image"
+      },
+      {
+        "title": "Blog To Video",
+        "description": "Blog To Video.",
+        "icon": "sparkles"
+      },
+      {
+        "title": "AI Avatar GeneratorAI Scene GeneratorAI Scri",
+        "description": "AI Avatar GeneratorAI Scene GeneratorAI Scri.",
+        "icon": "wand"
+      },
+      {
+        "title": "AI YouTube Shorts GeneratorAI Explainer Vide",
+        "description": "AI YouTube Shorts GeneratorAI Explainer Vide.",
+        "icon": "zap"
+      },
+      {
+        "title": "AI Reel GeneratorAll FeaturesView all featur",
+        "description": "AI Reel GeneratorAll FeaturesView all featur.",
+        "icon": "star"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "slug": "synthesia",
+    "name": "Synthesia",
+    "logo_url": "/logos/synthesia.png",
+    "tagline": "#1 AI Video Generation Platform for Enterprise",
+    "short_description": "Scale corporate training videos with multilingual AI avatars. Enterprise-ready.",
+    "best_for": "Corporate Training & Enterprise",
+    "affiliate_link": "https://www.synthesia.io/?via=bingqiang",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "ctaText": "Get Started"
+      },
+      {
+        "name": "Starter",
+        "price": {
+          "monthly": {
+            "amount": 29,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "ctaText": "Start Free Trial",
+        "featureItems": [
+          {
+            "text": "AI usage-based features - one common pool for everything you create"
+          },
+          {
+            "text": "Pay yearlyGet startedBilled monthly"
+          },
+          {
+            "text": "Includes 1,200 credits/moWhat are Credits"
+          }
+        ]
+      },
+      {
+        "name": "Team",
+        "price": {
+          "monthly": {
+            "amount": 29,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "ctaText": "Start Free Trial",
+        "featureItems": [
+          {
+            "text": "AI usage-based features - one common pool for everything you create"
+          },
+          {
+            "text": "UnmuteLet’s talk"
+          },
+          {
+            "text": "Custom CreditsWhat are Credits"
+          }
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": {
+          "monthly": {
+            "amount": 29,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "ctaText": "Start Free Trial",
+        "featureItems": [
+          {
+            "text": "AI usage-based features - one common pool for everything you create"
+          },
+          {
+            "text": "UnmuteLet’s talk"
+          },
+          {
+            "text": "Custom CreditsWhat are Credits"
+          }
+        ]
+      }
+    ],
+    "has_free_trial": false,
+    "pricing_model": "Subscription",
+    "starting_price": "$29/mo",
+    "rating": 4.9,
+    "features": [
+      "140+ AI Avatars",
+      "120+ Languages",
+      "Screen Recorder",
+      "Enterprise Security"
+    ],
+    "tags": [
+      "Avatar",
+      "Professional"
+    ],
+    "pros": [
+      "Enterprise grade quality and security",
+      "Multilingual support for 120+ languages",
+      "SOC 2 compliant"
+    ],
+    "cons": [
+      "No free plan (only demo)",
+      "Can feel slightly robotic compared to HeyGen"
+    ],
+    "review_content": "Synthesia is the market leader in AI avatar video generation. It offers enterprise-grade security and quality, making it the top choice for corporate training and internal communications.",
+    "long_review": "<p>Synthesia is the go-to choice for <strong>Enterprise</strong> and corporate video creation. It focuses heavily on security (SOC 2 compliant) and high-quality, professional avatars. It is widely used for creating Learning & Development (L&D) content, onboarding videos, and corporate communications.</p><p>With over 140 avatars and 120 languages, it offers immense versatility. The built-in screen recorder and simple slide-based editor make it feel like using PowerPoint for video. Unlike some competitors, Synthesia does not offer a free forever plan, only a free demo video generation.</p>",
+    "faqs": [
+      {
+        "question": "Is there a free trial?",
+        "answer": "Synthesia does not offer a traditional free trial, but you can generate a free demo video to test the platform."
+      },
+      {
+        "question": "Is it good for corporate training?",
+        "answer": "Yes, Synthesia is widely used by Fortune 500 companies for internal training videos due to its enterprise-grade security and quality."
+      }
+    ],
+    "ease_of_use_score": 9.8,
+    "speed_score": 9.8,
+    "price_score": 6.5,
+    "output_quality_score": 9.8,
+    "video_url": "https://www.youtube.com/watch?v=qekrkHtgFv0",
+    "target_audience_list": [
+      "Educators",
+      "Enterprise Teams"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "AI Avatars",
+      "Professional Tools"
+    ],
+    "featureCards": [
+      {
+        "title": "Personal Avatars",
+        "description": "Personal Avatars.",
+        "icon": "play"
+      },
+      {
+        "title": "Voice Cloning",
+        "description": "Voice Cloning.",
+        "icon": "video"
+      },
+      {
+        "title": "Screen Recorder",
+        "description": "Screen Recorder.",
+        "icon": "film"
+      },
+      {
+        "title": "Video Assistant",
+        "description": "Video Assistant.",
+        "icon": "camera"
+      },
+      {
+        "title": "Global Sales Enablement Lead",
+        "description": "Global Sales Enablement Lead.",
+        "icon": "mic"
+      },
+      {
+        "title": "Click Translation",
+        "description": "Click Translation.",
+        "icon": "image"
+      },
+      {
+        "title": "Multilingual Video Player",
+        "description": "Multilingual Video Player.",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Global Solutions Owner",
+        "description": "Global Solutions Owner.",
+        "icon": "wand"
+      },
+      {
+        "title": "Brand Kits",
+        "description": "Brand Kits.",
+        "icon": "zap"
+      },
+      {
+        "title": "Live Collaboration",
+        "description": "Live Collaboration.",
+        "icon": "star"
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "slug": "elai-io",
+    "name": "Elai.io",
+    "logo_url": "/logos/elai-io.png",
+    "tagline": "Create AI Videos with Custom Avatars",
+    "short_description": "Create custom AI presenters from photos. Perfect for branded video content.",
+    "best_for": "Marketing Teams & Content Creators",
+    "affiliate_link": "https://elai.io/?via=bingqiang",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "period": "",
+        "description": "For testing",
+        "features": [
+          "1 min credit",
+          "Watermarked",
+          "Basic avatars",
+          "Limited features"
+        ],
+        "btn_text": "Get Started",
+        "badge": "Risk-Free Entry"
+      },
+      {
+        "name": "Basic",
+        "price": "$29",
+        "period": "/mo",
+        "description": "For individuals",
+        "features": [
+          "15 min/mo",
+          "120+ avatars",
+          "1080p export",
+          "No watermark"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🔥 Most Popular"
+      },
+      {
+        "name": "Advanced",
+        "price": "$99",
+        "period": "/mo",
+        "description": "For professionals",
+        "features": [
+          "100 min/mo",
+          "Custom avatars",
+          "API access",
+          "Priority support"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🚀 Power User"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$29/mo",
+    "rating": 4.8,
+    "features": [
+      "Custom Avatar Creation",
+      "80+ Languages",
+      "PPT to Video",
+      "Template Library"
+    ],
+    "tags": [
+      "Avatar"
+    ],
+    "pros": [
+      "Custom avatar creation from photos",
+      "Good template selection",
+      "Multilingual support"
+    ],
+    "cons": [
+      "Avatar quality varies",
+      "Limited video editing features",
+      "Can be slow to render"
+    ],
+    "review_content": "Elai.io allows you to create professional videos with AI presenters, including the ability to create custom avatars from your own photos. It's great for marketing teams who need consistent video content.",
+    "long_review": "<p>Elai.io stands out for its <strong>custom avatar creation</strong> feature, which allows you to upload a photo and create a personalized AI presenter. This is particularly valuable for brands that want a consistent on-screen presence across all their video content. The platform supports 80+ languages and offers a good selection of templates for different use cases.</p><p>The 'PPT to Video' feature is also useful for converting existing presentations into video format. However, the avatar quality can vary depending on the source photo, and the rendering process can be slower than some competitors. The free plan is limited but allows you to test the core features.</p>",
+    "faqs": [
+      {
+        "question": "Can I create a custom avatar from my photo?",
+        "answer": "Yes, Elai.io allows you to upload a photo and create a custom AI avatar that can be used in your videos."
+      },
+      {
+        "question": "Does Elai.io support PowerPoint to video conversion?",
+        "answer": "Yes, Elai.io can convert PowerPoint presentations into video format with AI narration."
+      }
+    ],
+    "ease_of_use_score": 9.8,
+    "speed_score": 9.8,
+    "price_score": 9.5,
+    "output_quality_score": 8.7,
+    "video_url": "https://www.youtube.com/watch?v=lBv48NvoZR8",
+    "target_audience_list": [
+      "Content Creators",
+      "Marketing Teams"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "AI Avatars"
+    ]
+  },
+  {
+    "id": "7",
+    "slug": "pika",
+    "name": "Pika",
+    "logo_url": "/logos/pika-logo.jpeg",
+    "tagline": "AI Video Generation Made Simple",
+    "short_description": "Generate cinematic videos from text prompts. Professional quality in seconds.",
+    "best_for": "Content Creators & Social Media Managers",
+    "affiliate_link": "https://pika.style/?via=bingqiang",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "period": "",
+        "description": "For testing",
+        "features": [
+          "80 monthly credits",
+          "480p export",
+          "Watermarked",
+          "Basic features"
+        ],
+        "btn_text": "Get Started",
+        "badge": "Risk-Free Entry"
+      },
+      {
+        "name": "Basic",
+        "price": "$8",
+        "period": "/mo",
+        "description": "For beginners",
+        "features": [
+          "80 credits",
+          "Pika 2.5 (480p)",
+          "Basic features",
+          "Watermarked"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🔥 Most Popular"
+      },
+      {
+        "name": "Standard",
+        "price": "$28",
+        "period": "/mo",
+        "description": "For creators",
+        "features": [
+          "700 credits",
+          "Fast generations",
+          "All Pikaffects",
+          "No watermark"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "⭐ Best Value"
+      },
+      {
+        "name": "Pro",
+        "price": "$76",
+        "period": "/mo",
+        "description": "For professionals",
+        "features": [
+          "2300 credits",
+          "Faster generations",
+          "Priority support",
+          "Advanced features"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🚀 Power User"
+      },
+      {
+        "name": "Fancy",
+        "price": "$76",
+        "period": "/mo",
+        "description": "For power users",
+        "features": [
+          "6000 credits",
+          "Fastest generations",
+          "All Pro features",
+          "Premium support"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🚀 Power User"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$8/mo",
+    "rating": 4.9,
+    "features": [
+      "Text to Video",
+      "Image to Video",
+      "Video Extension",
+      "Style Transfer"
+    ],
+    "tags": [
+      "Text-to-Video",
+      "Cheap"
+    ],
+    "pros": [
+      "Very user-friendly interface",
+      "Fast generation times",
+      "Affordable pricing"
+    ],
+    "cons": [
+      "Limited video length",
+      "Fewer advanced features than Runway"
+    ],
+    "review_content": "Pika makes AI video generation accessible to everyone with its simple interface and fast generation times. It's perfect for creators who want to quickly turn ideas into videos without a steep learning curve.",
+    "long_review": "<p>Pika stands out for its <strong>simplicity and speed</strong>. Unlike more complex tools, Pika focuses on making AI video generation accessible to everyone. You can create videos from text prompts or images in just a few clicks, with generation times that are impressively fast.</p><p>The platform is particularly popular among social media creators who need quick, engaging content. While it may not have all the advanced features of professional tools like Runway, Pika excels at what it does: making AI video creation easy and affordable. The free plan is generous, and paid plans start at just $10/month.</p>",
+    "faqs": [
+      {
+        "question": "How long are Pika videos?",
+        "answer": "Pika can generate videos up to 4 seconds long, which is perfect for social media content and short clips."
+      },
+      {
+        "question": "Can I extend existing videos with Pika?",
+        "answer": "Yes, Pika offers video extension features that allow you to continue or extend existing video clips using AI."
+      }
+    ],
+    "ease_of_use_score": 9.8,
+    "speed_score": 9.8,
+    "price_score": 9.5,
+    "output_quality_score": 8.8,
+    "video_url": "https://youtu.be/xSLyQdsBdZY",
+    "target_audience_list": [
+      "Content Creators",
+      "Social Media Managers"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Generators",
+      "Budget-Friendly"
+    ]
+  },
+  {
+    "id": "4",
+    "slug": "descript",
+    "name": "Descript",
+    "logo_url": "/logos/descript-logo.svg",
+    "tagline": "Edit video and audio like a document",
+    "short_description": "Edit videos by editing text. Cut, delete, and rearrange like a document.",
+    "best_for": "Podcasters & Video Editors",
+    "affiliate_link": "https://descript.com?ref=demo",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "period": "",
+        "description": "For beginners",
+        "features": [
+          "1 hr/mo",
+          "720p export",
+          "No watermark",
+          "Basic editing"
+        ],
+        "btn_text": "Get Started",
+        "badge": "Risk-Free Entry"
+      },
+      {
+        "name": "Hobbyist",
+        "price": "$12",
+        "period": "/mo",
+        "description": "For hobbyists",
+        "features": [
+          "10 hr/mo",
+          "1080p export",
+          "Limited AI",
+          "Screen recording"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "✨ Featured"
+      },
+      {
+        "name": "Creator",
+        "price": "$24",
+        "period": "/mo",
+        "description": "For creators",
+        "features": [
+          "30 hr/mo",
+          "4K export",
+          "Full AI tools",
+          "Voice cloning"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "⭐ Best Value"
+      },
+      {
+        "name": "Business",
+        "price": "$50",
+        "period": "/mo",
+        "description": "For businesses",
+        "features": [
+          "40 hr/mo",
+          "Brand studio",
+          "Custom voices",
+          "Team collaboration"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🚀 Power User"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$12/mo",
+    "rating": 4.8,
+    "features": [
+      "Overdub (Voice Cloning)",
+      "Filler Word Removal",
+      "Screen Recording",
+      "Text-Based Editing"
+    ],
+    "tags": [
+      "Editor",
+      "Professional"
+    ],
+    "pros": [
+      "Revolutionary text-based editing workflow",
+      "Studio Sound removes background noise",
+      "Collaborative editing features"
+    ],
+    "cons": [
+      "Desktop app can be heavy on resources",
+      "Learning curve for new workflow"
+    ],
+    "review_content": "Descript is an audio and video editor that works like a word processor. You edit the text, and it edits the media. It is a game-changer for podcasters and video creators who want a fast, text-based workflow.",
+    "long_review": "<p>Descript has completely revolutionized the editing workflow by treating video/audio editing like <strong>editing a Word document</strong>. You simply delete text from the transcript, and the corresponding video/audio is cut. This is incredibly intuitive for podcasters and content creators who are more comfortable with text than timeline editing.</p><p>Key features include <strong>Studio Sound</strong> (which removes echo and background noise instantly), <strong>Overdub</strong> (allowing you to fix voice mistakes by typing), and automatic filler word removal ('ums' and 'ahs'). It is a heavy application, however, and can sometimes be resource-intensive on older computers.</p>",
+    "faqs": [
+      {
+        "question": "Is Descript good for podcasts?",
+        "answer": "It is widely considered one of the best tools for podcast editing due to its text-based editing features and filler word removal."
+      },
+      {
+        "question": "Can I remove filler words automatically?",
+        "answer": "Yes, Descript can remove 'ums' and 'ahs' with a single click, making it perfect for cleaning up podcast recordings."
+      }
+    ],
+    "ease_of_use_score": 7.8,
+    "speed_score": 7.6,
+    "price_score": 9,
+    "output_quality_score": 8.4,
+    "video_url": "",
+    "target_audience_list": [
+      "Podcasters"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Editors",
+      "Professional Tools"
+    ]
+  },
+  {
+    "id": "5",
+    "slug": "opus-clip",
+    "name": "Opus Clip",
+    "logo_url": "/logos/opus-clip.png",
+    "tagline": "AI-Powered Video Clipping for Viral Shorts",
+    "short_description": "Transform long videos into viral shorts automatically. Maximize your content reach.",
+    "best_for": "YouTube Creators & Content Repurposing",
+    "affiliate_link": "https://opusclip.com?ref=demo",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "period": "",
+        "description": "For testing",
+        "features": [
+          "60 credits/mo",
+          "1080p export",
+          "Watermark",
+          "3 day export limit"
+        ],
+        "btn_text": "Get Started",
+        "badge": "Risk-Free Entry"
+      },
+      {
+        "name": "Starter",
+        "price": "$15",
+        "period": "/mo",
+        "description": "For individuals",
+        "features": [
+          "1 brand template",
+          "AI clipping",
+          "Watermark",
+          "Basic features"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🔥 Most Popular"
+      },
+      {
+        "name": "Pro",
+        "price": "$29",
+        "period": "/mo",
+        "description": "For professionals",
+        "features": [
+          "3600 credits/year",
+          "Team workspace",
+          "AI B-roll",
+          "No watermark"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🚀 Power User"
+      },
+      {
+        "name": "Business",
+        "price": "Custom",
+        "period": "",
+        "description": "For businesses",
+        "features": [
+          "Priority processing",
+          "API integrations",
+          "Custom pricing",
+          "Dedicated support"
+        ],
+        "btn_text": "Contact Sales",
+        "badge": "🚀 Power User"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$15/mo",
+    "rating": 4.6,
+    "features": [
+      "Auto Clip Generation",
+      "AI Highlights Detection",
+      "Auto Captions",
+      "Multi-Platform Export"
+    ],
+    "tags": [
+      "Repurposing"
+    ],
+    "pros": [
+      "Saves hours of manual editing",
+      "Intelligent scene detection",
+      "Optimized for TikTok and YouTube Shorts"
+    ],
+    "cons": [
+      "Limited customization options",
+      "Requires good source video quality"
+    ],
+    "review_content": "Opus Clip uses AI to automatically identify the most engaging moments in your long-form videos and turns them into short, viral-ready clips perfect for TikTok, YouTube Shorts, and Instagram Reels.",
+    "long_review": "<p>Opus Clip is a specialist tool for <strong>Content Repurposing</strong>. If you create long-form YouTube videos or podcasts, Opus Clip uses AI to automatically identify the most engaging highlights and turns them into short, social-ready clips. The AI analyzes your video for key moments, interesting quotes, and visual appeal.</p><p>The platform is particularly effective for YouTube creators who want to maximize their content's reach across multiple platforms. It automatically adds captions, selects the best aspect ratios, and even suggests optimal clip lengths for different platforms. The free plan is generous, allowing you to process several videos per month.</p>",
+    "faqs": [
+      {
+        "question": "How does Opus Clip find the best clips?",
+        "answer": "Opus Clip uses AI to analyze your video for engagement factors like visual interest, audio quality, and key moments, then automatically selects the most viral-worthy segments."
+      },
+      {
+        "question": "Can I use Opus Clip for TikTok?",
+        "answer": "Yes, Opus Clip is specifically optimized for TikTok, YouTube Shorts, and Instagram Reels with automatic aspect ratio adjustments."
+      }
+    ],
+    "ease_of_use_score": 7.9,
+    "speed_score": 7.8,
+    "price_score": 9,
+    "output_quality_score": 7.8,
+    "video_url": "",
+    "target_audience_list": [
+      "Content Creators",
+      "YouTubers"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Content Repurposing"
+    ]
+  },
+  {
+    "id": "6",
+    "slug": "runway",
+    "name": "Runway",
+    "logo_url": "/logos/runway.png",
+    "tagline": "Professional AI Video Generation and Editing",
+    "short_description": "Create professional cinematic videos from text. Industry-leading AI quality.",
+    "best_for": "Professional Video Creators & Filmmakers",
+    "affiliate_link": "https://runwayml.com?ref=demo",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "period": "",
+        "description": "For testing",
+        "features": [
+          "125 credits (one-time)",
+          "No Gen-4 video",
+          "Watermarked",
+          "Basic features"
+        ],
+        "btn_text": "Get Started",
+        "badge": "Risk-Free Entry"
+      },
+      {
+        "name": "Standard",
+        "price": "$12",
+        "period": "/mo",
+        "description": "For creators",
+        "features": [
+          "625 credits/mo",
+          "Gen-4 Turbo access",
+          "No watermark",
+          "Priority support"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "⭐ Best Value"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$12/mo",
+    "rating": 4.9,
+    "features": [
+      "Gen-2 Video Generation",
+      "Inpainting & Outpainting",
+      "Motion Tracking",
+      "Green Screen"
+    ],
+    "tags": [
+      "Professional",
+      "Text-to-Video"
+    ],
+    "pros": [
+      "Industry-leading AI video quality",
+      "Professional-grade editing tools",
+      "Active creative community"
+    ],
+    "cons": [
+      "Steep learning curve",
+      "Credit system can be expensive"
+    ],
+    "review_content": "Runway is at the forefront of AI video generation technology, offering professional-grade tools for video creation, editing, and manipulation. It's used by filmmakers, content creators, and creative professionals worldwide.",
+    "long_review": "<p>Runway is pushing the boundaries of <strong>AI video generation</strong> with its Gen-2 model, which can generate high-quality video from text prompts or images. The platform offers a comprehensive suite of AI-powered editing tools, including inpainting (removing objects), outpainting (extending scenes), and motion tracking.</p><p>What sets Runway apart is its focus on professional creators. The quality of generated videos is among the best in the industry, and the editing tools rival traditional video editing software. However, the credit-based pricing model can get expensive for heavy users, and there's a learning curve to master all the features.</p>",
+    "faqs": [
+      {
+        "question": "What is Runway Gen-2?",
+        "answer": "Gen-2 is Runway's advanced AI model that can generate high-quality video from text prompts, images, or video clips with impressive realism."
+      },
+      {
+        "question": "Is Runway suitable for beginners?",
+        "answer": "Runway has a steeper learning curve than simpler tools, but offers extensive tutorials and a supportive community for learning."
+      }
+    ],
+    "output_quality_score": 9.6,
+    "price_score": 6.9,
+    "ease_of_use_score": 8,
+    "speed_score": 8.1,
+    "video_url": "",
+    "target_audience_list": [
+      "Content Creators",
+      "Filmmakers"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Professional Tools",
+      "Video Generators"
+    ]
+  },
+  {
+    "id": "8",
+    "slug": "sora",
+    "name": "Sora",
+    "logo_url": "/logos/sora.png",
+    "tagline": "OpenAI's Revolutionary Text-to-Video Model",
+    "short_description": "Generate ultra-realistic videos up to 60 seconds. Cutting-edge AI technology.",
+    "best_for": "Early Adopters & AI Enthusiasts",
+    "affiliate_link": "https://openai.com/sora?ref=demo",
+    "pricing_plans": [
+      {
+        "name": "ChatGPT Plus",
+        "price": "$20",
+        "period": "/mo",
+        "description": "Access via ChatGPT Plus",
+        "features": [
+          "Unlimited Sora generations (Beta)",
+          "ChatGPT Plus included",
+          "Beta access",
+          "Standard priority"
+        ],
+        "btn_text": "Get Started",
+        "badge": "⭐ Best Value"
+      },
+      {
+        "name": "Pro",
+        "price": "$200",
+        "period": "/mo",
+        "description": "For professionals",
+        "features": [
+          "Faster access",
+          "Higher limits",
+          "Priority support",
+          "Advanced features"
+        ],
+        "btn_text": "Contact Sales",
+        "badge": "🚀 Power User"
+      }
+    ],
+    "has_free_trial": false,
+    "pricing_model": "Subscription",
+    "starting_price": "$20/mo",
+    "rating": 4.8,
+    "features": [
+      "Text to Video",
+      "Long Video Generation",
+      "High Quality Output",
+      "Realistic Physics"
+    ],
+    "tags": [
+      "Text-to-Video",
+      "Professional"
+    ],
+    "pros": [
+      "Cutting-edge AI technology",
+      "Exceptional video quality",
+      "Realistic physics and motion"
+    ],
+    "cons": [
+      "Limited availability",
+      "No free plan",
+      "Requires API access"
+    ],
+    "review_content": "Sora is OpenAI's groundbreaking text-to-video model that can generate high-quality, realistic videos up to 60 seconds long from simple text prompts. It represents the cutting edge of AI video generation technology.",
+    "long_review": "<p>Sora represents the <strong>next generation of AI video generation</strong>. Developed by OpenAI, it can create highly realistic videos up to 60 seconds long from text prompts, with impressive understanding of physics, lighting, and motion. The quality of generated videos is among the best available, with realistic character movements and scene transitions.</p><p>However, Sora is currently in limited access, primarily available through API or select partnerships. It requires technical knowledge to integrate and doesn't offer a simple web interface like consumer-focused tools. For early adopters and developers, Sora offers unparalleled quality, but it's not yet accessible to the average user.</p>",
+    "faqs": [
+      {
+        "question": "Is Sora available to the public?",
+        "answer": "Sora is currently in limited access through OpenAI's API. It's not yet available as a standalone consumer product."
+      },
+      {
+        "question": "How long can Sora videos be?",
+        "answer": "Sora can generate videos up to 60 seconds long, which is significantly longer than most other AI video tools."
+      }
+    ],
+    "output_quality_score": 9.7,
+    "price_score": 6.3,
+    "ease_of_use_score": 8,
+    "speed_score": 8.4,
+    "video_url": "",
+    "target_audience_list": [
+      "Content Creators"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Generators",
+      "Professional Tools"
+    ]
+  },
+  {
+    "id": "10",
+    "slug": "pictory",
+    "name": "Pictory",
+    "logo_url": "/logos/pictory.png",
+    "tagline": "Video Marketing Made Easy with AI",
+    "short_description": "Repurpose webinars and long content into shareable clips. Save hours of editing.",
+    "best_for": "Content Repurposing (Webinars/Zoom)",
+    "affiliate_link": "https://pictory.ai?ref=demo",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "period": "",
+        "description": "For testing",
+        "features": [
+          "15 min total",
+          "720p export",
+          "Watermark",
+          "Basic features"
+        ],
+        "btn_text": "Get Started",
+        "badge": "Risk-Free Entry"
+      },
+      {
+        "name": "Starter",
+        "price": "$19",
+        "period": "/mo",
+        "description": "For individuals",
+        "features": [
+          "200 min/mo",
+          "1080p export",
+          "50 AI credits",
+          "No watermark"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🔥 Most Popular"
+      },
+      {
+        "name": "Pro",
+        "price": "$39",
+        "period": "/mo",
+        "description": "For professionals",
+        "features": [
+          "600 min/mo",
+          "Getty images",
+          "Advanced features",
+          "Priority support"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🚀 Power User"
+      },
+      {
+        "name": "Team",
+        "price": "$99",
+        "period": "/mo",
+        "description": "For teams",
+        "features": [
+          "1800 min/mo",
+          "15,000 music tracks",
+          "Team collaboration",
+          "Dedicated support"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "💎 Custom Scale"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$19/mo",
+    "rating": 4.6,
+    "features": [
+      "Blog to Video",
+      "Edit Video using Text",
+      "Auto Highlight",
+      "Auto Captions"
+    ],
+    "tags": [
+      "Repurposing",
+      "Editor"
+    ],
+    "pros": [
+      "Great for repurposing long-form content",
+      "Auto captioning",
+      "Fast processing"
+    ],
+    "cons": [
+      "AI voice quality varies",
+      "Stock footage can be generic"
+    ],
+    "review_content": "Pictory uses AI to automatically extract 'golden nuggets' from your long-form recordings (like Zoom calls or webinars) and turns them into short, shareable clips for social media.",
+    "long_review": "<p>Pictory is a specialist tool for <strong>Content Repurposing</strong>. If you have long-form content like Zoom recordings, webinars, or podcasts, Pictory uses AI to automatically identify the most engaging highlights and turns them into short, social-ready clips. It also features a 'Blog to Video' mode, where you can paste a URL, and it will summarize the article and create a video with stock footage.</p><p>The 'Edit Video by Text' feature is also a huge time-saver, allowing you to cut video parts by simply deleting text from the transcript. The AI voiceovers are decent but can sound a bit robotic compared to dedicated voice tools. The stock footage selection is good but can sometimes feel generic if not manually curated.</p>",
+    "faqs": [
+      {
+        "question": "Can Pictory edit Zoom recordings?",
+        "answer": "Yes, Pictory is specifically designed to edit webinars and Zoom recordings automatically, extracting the best moments for social media."
+      },
+      {
+        "question": "Is there a watermark on the free trial?",
+        "answer": "Yes, the free trial allows you to create 3 video projects with watermarks. Paid plans remove watermarks."
+      }
+    ],
+    "ease_of_use_score": 8.1,
+    "speed_score": 7.8,
+    "price_score": 9,
+    "output_quality_score": 8.2,
+    "video_url": "",
+    "target_audience_list": [
+      "Content Creators"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Content Repurposing",
+      "Video Editors"
+    ]
+  },
+  {
+    "id": "12",
+    "slug": "colossyan",
+    "name": "Colossyan",
+    "logo_url": "/logos/colossyan.png",
+    "tagline": "AI Video Creator for Learning & Development",
+    "short_description": "Create engaging training videos with AI avatars. Perfect for L&D teams.",
+    "best_for": "L&D Teams & Corporate Training",
+    "affiliate_link": "https://colossyan.com?ref=demo",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "period": "",
+        "description": "Explore free",
+        "features": [
+          "Limited features",
+          "Watermarked",
+          "Basic avatars",
+          "Trial access"
+        ],
+        "btn_text": "Get Started",
+        "badge": "Risk-Free Entry"
+      },
+      {
+        "name": "Starter",
+        "price": "$28",
+        "period": "/mo",
+        "description": "For individuals",
+        "features": [
+          "15 min/mo",
+          "70+ avatars",
+          "5 min max",
+          "1080p export"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🔥 Most Popular"
+      },
+      {
+        "name": "Business",
+        "price": "$96",
+        "period": "/mo",
+        "description": "For businesses",
+        "features": [
+          "Unlimited minutes",
+          "170+ avatars",
+          "10 min max",
+          "4K export"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🚀 Power User"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Subscription",
+    "starting_price": "$28/mo",
+    "rating": 4.6,
+    "features": [
+      "AI Avatars",
+      "70+ Languages",
+      "Screen Recording",
+      "Template Library"
+    ],
+    "tags": [
+      "Avatar",
+      "Professional"
+    ],
+    "pros": [
+      "Focused on L&D use cases",
+      "Good avatar quality",
+      "Multilingual support"
+    ],
+    "cons": [
+      "No free plan",
+      "More expensive than alternatives",
+      "Limited to training content"
+    ],
+    "review_content": "Colossyan specializes in creating training and educational videos with AI avatars. It's designed specifically for Learning & Development teams who need to create engaging training content at scale.",
+    "long_review": "<p>Colossyan has carved out a niche in the <strong>corporate training and L&D space</strong>. Unlike general-purpose AI video tools, Colossyan is specifically designed for creating educational and training content. The platform offers a library of professional avatars optimized for instructional content, with natural gestures and expressions.</p><p>The platform supports 70+ languages, making it ideal for global organizations. The template library includes pre-built structures for common training scenarios, which speeds up content creation. However, Colossyan is more expensive than general-purpose tools and doesn't offer a free plan, which may be a barrier for smaller teams.</p>",
+    "faqs": [
+      {
+        "question": "Is Colossyan only for training videos?",
+        "answer": "While Colossyan is optimized for training and educational content, it can be used for other types of videos as well."
+      },
+      {
+        "question": "Does Colossyan offer a free plan?",
+        "answer": "No, Colossyan does not offer a free plan, but they do provide a free trial to test the platform."
+      }
+    ],
+    "ease_of_use_score": 8,
+    "speed_score": 8.1,
+    "price_score": 8.5,
+    "output_quality_score": 7.9,
+    "video_url": "",
+    "target_audience_list": [
+      "Educators",
+      "Enterprise Teams"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "AI Avatars",
+      "Professional Tools"
+    ]
+  },
+  {
+    "id": "14",
+    "slug": "d-id",
+    "name": "D-ID",
+    "logo_url": "/logos/d-id.png",
+    "tagline": "Bring Still Images to Life with AI",
+    "short_description": "Bring photos to life with talking avatars. Affordable and easy to use.",
+    "best_for": "Creative Projects & Marketing",
+    "affiliate_link": "https://d-id.com?ref=demo",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "period": "",
+        "description": "14 day trial",
+        "features": [
+          "3 min total",
+          "Watermarked",
+          "Basic features",
+          "Trial access"
+        ],
+        "btn_text": "Get Started",
+        "badge": "Risk-Free Entry"
+      },
+      {
+        "name": "Lite",
+        "price": "$16",
+        "period": "/mo",
+        "description": "For individuals",
+        "features": [
+          "15 min/mo",
+          "Premium avatars",
+          "1 voice clone",
+          "No watermark"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🔥 Most Popular"
+      },
+      {
+        "name": "Pro",
+        "price": "$108",
+        "period": "/mo",
+        "description": "For professionals",
+        "features": [
+          "100 min/mo",
+          "5 personal avatars",
+          "3 voice clones",
+          "Priority support"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🚀 Power User"
+      },
+      {
+        "name": "Advanced",
+        "price": "Custom",
+        "period": "",
+        "description": "For businesses",
+        "features": [
+          "Unlimited minutes",
+          "Custom avatars",
+          "Enterprise security",
+          "Custom pricing"
+        ],
+        "btn_text": "Contact Sales",
+        "badge": "🚀 Power User"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$16/mo",
+    "rating": 4.4,
+    "features": [
+      "Photo Animation",
+      "Talking Photos",
+      "Video Cloning",
+      "API Access"
+    ],
+    "tags": [
+      "Avatar",
+      "Cheap"
+    ],
+    "pros": [
+      "Very affordable pricing",
+      "Unique photo animation feature",
+      "API available for developers"
+    ],
+    "cons": [
+      "Limited video length",
+      "Fewer features than competitors",
+      "Basic avatar options"
+    ],
+    "review_content": "D-ID specializes in animating still images and creating talking photos. It's one of the most affordable AI video tools, making it accessible for small creators and developers.",
+    "long_review": "<p>D-ID has a unique focus on <strong>photo animation</strong>, allowing you to bring still images to life by making them talk or move. This creates a distinctive style that's different from traditional AI avatar videos. The platform is one of the most affordable options in the market, with plans starting at just $5/month.</p><p>The API access is a significant advantage for developers who want to integrate AI video capabilities into their own applications. However, D-ID has fewer features compared to more comprehensive platforms, and the video length is limited. It's best suited for short-form content and creative projects rather than long-form video production.</p>",
+    "faqs": [
+      {
+        "question": "What makes D-ID different from other AI video tools?",
+        "answer": "D-ID specializes in animating still photos and creating talking images, which creates a unique visual style compared to traditional avatar videos."
+      },
+      {
+        "question": "Is D-ID suitable for developers?",
+        "answer": "Yes, D-ID offers API access, making it ideal for developers who want to integrate AI video features into their applications."
+      }
+    ],
+    "ease_of_use_score": 8.1,
+    "speed_score": 8.2,
+    "price_score": 9.5,
+    "output_quality_score": 8.1,
+    "video_url": "",
+    "target_audience_list": [
+      "Marketing Teams"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "AI Avatars",
+      "Budget-Friendly"
+    ]
+  },
+  {
+    "id": "16",
+    "slug": "deepbrain-ai",
+    "name": "DeepBrain AI",
+    "logo_url": "/logos/deepbrain-logo.svg",
+    "tagline": "AI Studios - Create Realistic AI Human Videos at Scale",
+    "short_description": "Enterprise-grade AI video platform. Ultra-realistic humans at scale.",
+    "best_for": "Enterprise & Large Teams",
+    "affiliate_link": "https://deepbrain.ai?ref=demo",
+    "pricing_plans": [
+      {
+        "name": "Personal",
+        "price": "$24",
+        "period": "/mo",
+        "description": "For individuals",
+        "features": [
+          "3 min/video",
+          "720p export",
+          "60 credits",
+          "Basic features"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "✨ Featured"
+      },
+      {
+        "name": "Team",
+        "price": "$55",
+        "period": "/mo",
+        "description": "For teams",
+        "features": [
+          "30 min/video",
+          "4K export",
+          "150 credits",
+          "Team collaboration"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "💎 Custom Scale"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Subscription",
+    "starting_price": "$24/mo",
+    "rating": 4.8,
+    "features": [
+      "Ultra-Realistic AI Humans",
+      "100+ Languages",
+      "API Integration",
+      "Enterprise Security",
+      "White-Label Options"
+    ],
+    "tags": [
+      "Avatar",
+      "Professional"
+    ],
+    "pros": [
+      "Industry-leading realistic AI humans with natural expressions",
+      "Comprehensive API for seamless integration",
+      "Enterprise-grade security and compliance",
+      "Supports 100+ languages for global reach",
+      "White-label options for brand consistency"
+    ],
+    "cons": [
+      "No free forever plan (trial available)",
+      "Higher pricing tier for individual creators",
+      "Requires technical knowledge for API integration"
+    ],
+    "review_content": "DeepBrain AI (AI Studios) is a cutting-edge platform that creates incredibly realistic AI human videos using advanced deep learning technology. It's the go-to solution for enterprises and large teams that need scalable, high-quality video production with API integration and extensive customization options.",
+    "long_review": "<p>DeepBrain AI, also known as <strong>AI Studios</strong>, stands out as one of the most advanced AI video generation platforms in the market. The platform specializes in creating ultra-realistic AI human presenters with natural movements, expressions, and lip-sync that rivals real human performance. This level of quality makes it perfect for enterprise use cases where brand image and professionalism are paramount.</p><p>What sets DeepBrain AI apart is its comprehensive <strong>API integration</strong> and enterprise-focused features. Organizations can seamlessly integrate AI video generation into their existing workflows, automate content creation at scale, and maintain brand consistency through white-label options. The platform supports over 100 languages, making it ideal for global enterprises that need to localize content across multiple markets. While the pricing is positioned for enterprise budgets, the quality, scalability, and integration capabilities justify the investment for organizations serious about AI video production.</p>",
+    "faqs": [
+      {
+        "question": "How realistic are DeepBrain AI's avatars compared to competitors?",
+        "answer": "DeepBrain AI's avatars are among the most realistic in the industry, featuring natural facial expressions, body movements, and lip-sync accuracy that rivals real human presenters. The platform uses advanced deep learning technology to achieve this level of quality."
+      },
+      {
+        "question": "Can I integrate DeepBrain AI into my existing systems?",
+        "answer": "Yes, DeepBrain AI offers comprehensive API integration, allowing you to automate video generation, integrate with your CMS or workflow tools, and scale production seamlessly within your existing infrastructure."
+      },
+      {
+        "question": "Does DeepBrain AI support white-label options?",
+        "answer": "Yes, DeepBrain AI offers white-label options, allowing enterprises to maintain brand consistency and customize the platform to match their corporate identity and requirements."
+      }
+    ],
+    "ease_of_use_score": 8,
+    "speed_score": 8.4,
+    "price_score": 8.5,
+    "output_quality_score": 8.4,
+    "video_url": "",
+    "target_audience_list": [
+      "Enterprise Teams"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "AI Avatars",
+      "Professional Tools"
+    ]
+  },
+  {
+    "id": "17",
+    "slug": "synthesys",
+    "name": "Synthesys",
+    "logo_url": "/logos/Synthesys-logo.png",
+    "tagline": "AI Voice and Video Studio",
+    "short_description": "Combine AI video and voice for marketing. Professional quality e-learning content.",
+    "best_for": "Marketing & E-Learning",
+    "affiliate_link": "https://synthesys.io?ref=demo",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "period": "",
+        "description": "For testing",
+        "features": [
+          "10 video credits",
+          "Watermarked",
+          "Basic features",
+          "Limited access"
+        ],
+        "btn_text": "Get Started",
+        "badge": "Risk-Free Entry"
+      },
+      {
+        "name": "Personal",
+        "price": "$20",
+        "period": "/mo",
+        "description": "For individuals",
+        "features": [
+          "100 video credits/mo",
+          "720p export",
+          "Basic avatars",
+          "No watermark"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "✨ Featured"
+      },
+      {
+        "name": "Creator",
+        "price": "$41",
+        "period": "/mo",
+        "description": "For creators",
+        "features": [
+          "250 credits/mo",
+          "1080p export",
+          "Advanced features",
+          "Priority support"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "⭐ Best Value"
+      },
+      {
+        "name": "Business Unlimited",
+        "price": "$69",
+        "period": "/mo",
+        "description": "For businesses",
+        "features": [
+          "Unlimited credits",
+          "4K export",
+          "Unlimited avatars",
+          "API access"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🚀 Power User"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Subscription",
+    "starting_price": "$20/mo",
+    "rating": 4.5,
+    "features": [
+      "AI Avatars",
+      "AI Voices",
+      "Text to Video",
+      "Multilingual Support"
+    ],
+    "tags": [
+      "Avatar",
+      "Professional"
+    ],
+    "pros": [
+      "Combines video and voice AI",
+      "Good for e-learning",
+      "Professional quality"
+    ],
+    "cons": [
+      "No free plan",
+      "Limited customization",
+      "Can be expensive"
+    ],
+    "review_content": "Synthesys combines AI video generation with AI voice synthesis, making it a comprehensive solution for creating marketing and training videos with both visual and audio AI.",
+    "long_review": "<p>Synthesys is unique in combining <strong>AI video and AI voice</strong> in a single platform. This makes it particularly powerful for e-learning and training content, where you need both a visual presenter and high-quality narration. The platform offers a library of AI avatars and voices that can be used together to create cohesive video content.</p><p>The quality is professional-grade, suitable for customer-facing marketing materials and internal training. However, Synthesys doesn't offer a free plan, and the pricing is on the higher side. The customization options are more limited compared to platforms that focus solely on video or voice, but the integrated approach can save time for teams that need both.</p>",
+    "faqs": [
+      {
+        "question": "Does Synthesys include AI voices?",
+        "answer": "Yes, Synthesys combines AI video generation with AI voice synthesis, offering both avatars and voices in one platform."
+      },
+      {
+        "question": "Is Synthesys good for e-learning?",
+        "answer": "Yes, Synthesys is particularly well-suited for e-learning and training content due to its combination of AI avatars and voices."
+      }
+    ],
+    "ease_of_use_score": 8.4,
+    "speed_score": 8,
+    "price_score": 8.5,
+    "output_quality_score": 8.2,
+    "video_url": "",
+    "target_audience_list": [
+      "Marketing Teams"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "AI Avatars",
+      "Professional Tools"
+    ]
+  },
+  {
+    "id": "18",
+    "slug": "flexclip",
+    "name": "FlexClip",
+    "logo_url": "/logos/FlexClip-logo.svg",
+    "tagline": "Simple Online Video Editor",
+    "short_description": "Edit videos easily with templates. Perfect for small businesses and beginners.",
+    "best_for": "Small Businesses & Beginners",
+    "affiliate_link": "https://flexclip.com?ref=demo",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "period": "",
+        "description": "For testing",
+        "features": [
+          "720p export",
+          "10 min max",
+          "Watermark",
+          "Basic editing"
+        ],
+        "btn_text": "Get Started",
+        "badge": "Risk-Free Entry"
+      },
+      {
+        "name": "Plus",
+        "price": "$12",
+        "period": "/mo",
+        "description": "For individuals",
+        "features": [
+          "1080p export",
+          "Unlimited projects",
+          "30GB storage",
+          "No watermark"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "⭐ Best Value"
+      },
+      {
+        "name": "Business",
+        "price": "$20",
+        "period": "/mo",
+        "description": "For businesses",
+        "features": [
+          "4K export",
+          "Unlimited stock",
+          "100GB storage",
+          "Priority support"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🚀 Power User"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$12/mo",
+    "rating": 4.4,
+    "features": [
+      "Video Editing",
+      "Template Library",
+      "Stock Media",
+      "Text to Speech"
+    ],
+    "tags": [
+      "Editor",
+      "Cheap"
+    ],
+    "pros": [
+      "Very affordable",
+      "Easy to use",
+      "Good template selection"
+    ],
+    "cons": [
+      "Limited AI features",
+      "Basic editing tools",
+      "Watermark on free plan"
+    ],
+    "review_content": "FlexClip is an affordable, user-friendly video editor that's perfect for small businesses and beginners. It offers essential editing features with a simple interface and helpful templates.",
+    "long_review": "<p>FlexClip positions itself as an <strong>affordable and accessible</strong> video editing solution. With plans starting at just $9/month, it's one of the most budget-friendly options in the market. The interface is clean and intuitive, making it perfect for users who are new to video editing or don't need advanced features.</p><p>The platform offers a good selection of templates for common use cases like social media posts, presentations, and marketing videos. While FlexClip doesn't have the advanced AI features of specialized tools, it provides essential editing capabilities at an unbeatable price point. The free plan is generous but includes watermarks, which is removed in paid plans.</p>",
+    "faqs": [
+      {
+        "question": "Is FlexClip suitable for beginners?",
+        "answer": "Yes, FlexClip is designed for beginners with an intuitive interface and helpful templates, making video editing accessible to everyone."
+      },
+      {
+        "question": "How much does FlexClip cost?",
+        "answer": "FlexClip offers one of the most affordable pricing plans, starting at just $9/month, making it accessible for small businesses."
+      }
+    ],
+    "ease_of_use_score": 8.1,
+    "speed_score": 8.1,
+    "price_score": 9.5,
+    "output_quality_score": 8.4,
+    "video_url": "",
+    "target_audience_list": [
+      "Enterprise Teams",
+      "Small Businesses"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Editors",
+      "Budget-Friendly"
+    ]
+  },
+  {
+    "id": "19",
+    "slug": "lumen5",
+    "name": "Lumen5",
+    "logo_url": "/logos/Lumen5-Logo.svg",
+    "tagline": "Create Video Content from Articles",
+    "short_description": "Convert articles into engaging video content. Repurpose your blog instantly.",
+    "best_for": "Content Marketers & Bloggers",
+    "affiliate_link": "https://lumen5.com?ref=demo",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "period": "",
+        "description": "For testing",
+        "features": [
+          "Unlimited videos",
+          "720p export",
+          "240 min AI voice",
+          "Watermarked"
+        ],
+        "btn_text": "Get Started",
+        "badge": "Risk-Free Entry"
+      },
+      {
+        "name": "Basic",
+        "price": "Contact",
+        "period": "",
+        "description": "For individuals",
+        "features": [
+          "Unlimited videos",
+          "1080p export",
+          "720 min AI voice",
+          "No watermark"
+        ],
+        "btn_text": "Contact Sales",
+        "badge": "🔥 Most Popular"
+      },
+      {
+        "name": "Starter",
+        "price": "Contact",
+        "period": "",
+        "description": "For creators",
+        "features": [
+          "Unlimited videos",
+          "1080p export",
+          "720 min AI voice",
+          "Advanced features"
+        ],
+        "btn_text": "Contact Sales",
+        "badge": "🔥 Most Popular"
+      },
+      {
+        "name": "Pro",
+        "price": "Contact",
+        "period": "",
+        "description": "For professionals",
+        "features": [
+          "3 workspaces",
+          "2160 min AI voice",
+          "Advanced features",
+          "Priority support"
+        ],
+        "btn_text": "Contact Sales",
+        "badge": "🚀 Power User"
+      },
+      {
+        "name": "Team",
+        "price": "Custom",
+        "period": "",
+        "description": "For teams",
+        "features": [
+          "Custom pricing",
+          "SSO",
+          "Analytics",
+          "Dedicated support"
+        ],
+        "btn_text": "Contact Sales",
+        "badge": "💎 Custom Scale"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$19/mo",
+    "rating": 4.5,
+    "features": [
+      "Article to Video",
+      "Template Library",
+      "Stock Media",
+      "Brand Kit"
+    ],
+    "tags": [
+      "Repurposing",
+      "Editor"
+    ],
+    "pros": [
+      "Excellent for content repurposing",
+      "Fast article-to-video conversion",
+      "Good brand customization"
+    ],
+    "cons": [
+      "Limited video editing features",
+      "Template-based approach",
+      "Can feel repetitive"
+    ],
+    "review_content": "Lumen5 specializes in converting written content into video format. It's perfect for content marketers who want to repurpose blog posts and articles into engaging video content for social media.",
+    "long_review": "<p>Lumen5 has built its reputation on <strong>content repurposing</strong>, specifically converting articles and blog posts into video format. The platform uses AI to analyze your text, extract key points, and automatically match them with relevant stock footage and visuals. This makes it incredibly fast to create video content from existing written material.</p><p>The brand kit feature allows you to maintain consistent branding across all videos, which is valuable for marketing teams. However, Lumen5's template-based approach means videos can start to look similar if not customized. The platform is best for quick content repurposing rather than original video creation, but it excels at that specific use case.</p>",
+    "faqs": [
+      {
+        "question": "Can Lumen5 convert my blog posts to video?",
+        "answer": "Yes, Lumen5's core feature is converting articles and blog posts into video format automatically, making it perfect for content repurposing."
+      },
+      {
+        "question": "Does Lumen5 offer brand customization?",
+        "answer": "Yes, Lumen5 offers a brand kit feature that allows you to maintain consistent branding across all your videos."
+      }
+    ],
+    "ease_of_use_score": 8.4,
+    "speed_score": 8.1,
+    "price_score": 9,
+    "output_quality_score": 8.1,
+    "video_url": "",
+    "target_audience_list": [
+      "Marketing Teams",
+      "Content Creators",
+      "Bloggers"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Content Repurposing",
+      "Video Editors"
+    ]
+  },
+  {
+    "id": "20",
+    "slug": "steve-ai",
+    "name": "Steve AI",
+    "logo_url": "/logos/steve-ai-logo.png",
+    "tagline": "AI Video Creator for Everyone",
+    "short_description": "Create professional videos with AI in minutes. Simple, affordable, effective.",
+    "best_for": "Content Creators & Small Businesses",
+    "affiliate_link": "https://steve.ai?ref=demo",
+    "pricing_plans": [
+      {
+        "name": "Free",
+        "price": "Free",
+        "period": "",
+        "description": "For testing",
+        "features": [
+          "720p export",
+          "Watermark",
+          "Basic features",
+          "Limited access"
+        ],
+        "btn_text": "Get Started",
+        "badge": "Risk-Free Entry"
+      },
+      {
+        "name": "Basic",
+        "price": "$10",
+        "period": "/mo",
+        "description": "For beginners",
+        "features": [
+          "1080p export",
+          "75 min AI avatars",
+          "Basic features",
+          "No watermark"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🔥 Most Popular"
+      },
+      {
+        "name": "Starter",
+        "price": "$19",
+        "period": "/mo",
+        "description": "For creators",
+        "features": [
+          "150 min AI avatars",
+          "No watermark",
+          "Advanced features",
+          "Priority support"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🔥 Most Popular"
+      },
+      {
+        "name": "Pro",
+        "price": "$39",
+        "period": "/mo",
+        "description": "For professionals",
+        "features": [
+          "400 min AI avatars",
+          "95% human voices",
+          "Advanced features",
+          "Brand kit"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "🚀 Power User"
+      },
+      {
+        "name": "Generative AI",
+        "price": "$99",
+        "period": "/mo",
+        "description": "For power users",
+        "features": [
+          "Custom avatars",
+          "15 min generative",
+          "All Pro features",
+          "Premium support"
+        ],
+        "btn_text": "Start Free Trial",
+        "badge": "✨ Featured"
+      }
+    ],
+    "has_free_trial": true,
+    "pricing_model": "Freemium",
+    "starting_price": "$10/mo",
+    "rating": 4.5,
+    "features": [
+      "Text to Video",
+      "AI Avatars",
+      "Template Library",
+      "Auto Subtitles"
+    ],
+    "tags": [
+      "Text-to-Video",
+      "Cheap"
+    ],
+    "pros": [
+      "User-friendly interface",
+      "Affordable pricing",
+      "Good template selection"
+    ],
+    "cons": [
+      "Limited advanced features",
+      "Avatar quality varies",
+      "Can be slow"
+    ],
+    "review_content": "Steve AI makes video creation accessible to everyone with its simple interface and affordable pricing. It's perfect for content creators and small businesses who need professional videos without the complexity.",
+    "long_review": "<p>Steve AI focuses on <strong>accessibility and ease of use</strong>. The platform is designed for users who want to create professional videos without learning complex editing software. The interface is intuitive, with a template-based approach that makes video creation as simple as filling in a form.</p><p>The pricing is competitive, starting at $15/month, making it accessible for small businesses and individual creators. While Steve AI may not have all the advanced features of premium platforms, it provides everything needed for basic to intermediate video creation. The avatar quality is decent, though it may not match the realism of higher-end tools, but for most use cases, it's more than sufficient.</p>",
+    "faqs": [
+      {
+        "question": "Is Steve AI suitable for beginners?",
+        "answer": "Yes, Steve AI is designed for beginners with an intuitive interface and template-based approach, making video creation simple and accessible."
+      },
+      {
+        "question": "How much does Steve AI cost?",
+        "answer": "Steve AI offers affordable pricing starting at $15/month, making it accessible for small businesses and individual creators."
+      }
+    ],
+    "ease_of_use_score": 8.5,
+    "speed_score": 8.4,
+    "price_score": 9,
+    "output_quality_score": 7.6,
+    "video_url": "",
+    "target_audience_list": [
+      "Content Creators",
+      "Enterprise Teams",
+      "Small Businesses"
+    ],
+    "social_links": {
+      "twitter": "",
+      "linkedin": "",
+      "youtube": "",
+      "instagram": ""
+    },
+    "deal": null,
+    "review_count": 0,
+    "is_verified": false,
+    "categories": [
+      "Video Generators",
+      "Budget-Friendly"
+    ]
+  }
+]

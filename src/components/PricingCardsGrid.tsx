@@ -1,26 +1,20 @@
 'use client';
 
 import { useState } from 'react';
-import { PricingPlan } from '@/types/tool';
+import { PricingPlan, ComparisonTable } from '@/types/tool';
 import PricingCard from './PricingCard';
 
 interface PricingCardsGridProps {
   plans: PricingPlan[];
   affiliateLink: string;
   hasFreeTrial: boolean;
+  toolSlug?: string;
+  comparisonTable?: ComparisonTable;
 }
 
-export default function PricingCardsGrid({ plans, affiliateLink, hasFreeTrial }: PricingCardsGridProps) {
+export default function PricingCardsGrid({ plans, affiliateLink, hasFreeTrial, toolSlug, comparisonTable }: PricingCardsGridProps) {
+  const isInVideo = toolSlug === 'invideo';
   const [billing, setBilling] = useState<'monthly' | 'yearly'>('monthly');
-
-  // Debug: Log plan pricing structure
-  console.log("Pricing Plans Debug:", plans.map(p => ({ name: p.name, price: p.price })));
-  console.log("hasYearlyPricing:", plans.some(p => {
-    if (typeof p.price === 'object' && p.price !== null) {
-      return !!(p.price.yearly || (p.price as any).annual);
-    }
-    return false;
-  }));
 
   // Check if any plan has yearly pricing
   const hasYearlyPricing = plans.some(plan => {
@@ -41,14 +35,31 @@ export default function PricingCardsGrid({ plans, affiliateLink, hasFreeTrial }:
            index === 1;
   };
 
-  // Determine grid columns
-  const getGridCols = () => {
-    const planCount = plans.length;
-    if (planCount === 1) return 'grid-cols-1';
-    if (planCount === 2) return 'grid-cols-1 md:grid-cols-2';
-    if (planCount === 3) return 'grid-cols-1 md:grid-cols-3';
-    return 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4';
-  };
+  // Sort plans: Only for invideo, use special order (Plus, Max, Generative, Team, Free, Enterprise)
+  // For other tools, keep original order
+  let sortedPlans = [...plans];
+  let topRowPlans: PricingPlan[] = [];
+  let bottomRowPlans: PricingPlan[] = [];
+  
+  if (isInVideo) {
+    const planOrder = ['Plus', 'Max', 'Generative', 'Team', 'Free', 'Enterprise'];
+    sortedPlans = sortedPlans.sort((a, b) => {
+      const aIndex = planOrder.indexOf(a.name);
+      const bIndex = planOrder.indexOf(b.name);
+      if (aIndex === -1 && bIndex === -1) return 0;
+      if (aIndex === -1) return 1;
+      if (bIndex === -1) return -1;
+      return aIndex - bIndex;
+    });
+    
+    // Split into top row (4 plans) and bottom row (2 plans) for invideo
+    topRowPlans = sortedPlans.filter(p => ['Plus', 'Max', 'Generative', 'Team'].includes(p.name));
+    bottomRowPlans = sortedPlans.filter(p => ['Free', 'Enterprise'].includes(p.name));
+  } else {
+    // For other tools, use all plans in original order
+    topRowPlans = sortedPlans;
+    bottomRowPlans = [];
+  }
 
   if (!plans || plans.length === 0) {
     return (
@@ -63,7 +74,9 @@ export default function PricingCardsGrid({ plans, affiliateLink, hasFreeTrial }:
       {/* Monthly/Yearly Toggle */}
       {hasYearlyPricing && (
         <div className="flex justify-center mb-8">
-          <div className="inline-flex items-center bg-gray-100 rounded-full p-1 gap-1 border border-gray-200">
+          <div className={`inline-flex items-center bg-gray-100 rounded-full p-1 gap-1 border ${
+            isInVideo ? 'border-gray-200' : 'border-gray-200'
+          }`}>
             <button
               type="button"
               onClick={() => setBilling('monthly')}
@@ -91,20 +104,56 @@ export default function PricingCardsGrid({ plans, affiliateLink, hasFreeTrial }:
         </div>
       )}
 
-      {/* Pricing Cards Grid */}
-      <div className={`grid ${getGridCols()} gap-8`}>
-        {plans.map((plan, index) => (
-          <PricingCard
-            key={plan.name || index}
-            plan={plan}
-            isPopular={getIsPopular(plan, index)}
-            affiliateLink={affiliateLink}
-            billing={billing}
-            hasFreeTrial={hasFreeTrial}
-            previousPlanName={index > 0 ? plans[index - 1]?.name : undefined}
-          />
-        ))}
-      </div>
+      {/* Top Row: Plans */}
+      {topRowPlans.length > 0 && (
+        <div className={isInVideo 
+          ? "grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mb-6"
+          : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8"
+        }>
+          {topRowPlans.map((plan, index) => {
+            const originalIndex = plans.findIndex(p => p.name === plan.name);
+            return (
+              <div key={plan.name || index} className={isInVideo ? "min-w-[260px]" : ""}>
+                <PricingCard
+                  plan={plan}
+                  isPopular={getIsPopular(plan, originalIndex)}
+                  affiliateLink={affiliateLink}
+                  billing={billing}
+                  hasFreeTrial={hasFreeTrial}
+                  previousPlanName={index > 0 ? topRowPlans[index - 1]?.name : undefined}
+                  toolSlug={toolSlug}
+                  comparisonTable={comparisonTable}
+                />
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {/* Bottom Row: 2 plans (Free, Enterprise) - Only for invideo */}
+      {isInVideo && bottomRowPlans.length > 0 && (
+        <div className="mt-6 flex justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center max-w-[900px] w-full">
+            {bottomRowPlans.map((plan, index) => {
+              const originalIndex = plans.findIndex(p => p.name === plan.name);
+              return (
+                <div key={plan.name || index} className="min-w-[260px]">
+                  <PricingCard
+                    plan={plan}
+                    isPopular={getIsPopular(plan, originalIndex)}
+                    affiliateLink={affiliateLink}
+                    billing={billing}
+                    hasFreeTrial={hasFreeTrial}
+                    previousPlanName={index > 0 ? bottomRowPlans[index - 1]?.name : undefined}
+                    toolSlug={toolSlug}
+                    comparisonTable={comparisonTable}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

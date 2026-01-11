@@ -19,5 +19,290 @@
         "mode": "static"
       }
     }
+  },
+  {
+    "slug": "invideo",
+    "official_urls": {
+      "pricing": {
+        "url": "https://invideo.io/pricing/",
+        "mode": "dynamic"
+      },
+      "features": {
+        "url": "https://invideo.io/tools/",
+        "mode": "dynamic"
+      },
+      "terms": [],
+      "help": []
+    }
+  },
+  {
+    "slug": "heygen",
+    "official_urls": {
+      "pricing": {
+        "url": "https://www.heygen.com/pricing",
+        "mode": "dynamic"
+      },
+      "features": {
+        "url": "https://www.heygen.com/features",
+        "mode": "dynamic"
+      },
+      "terms": [],
+      "help": []
+    }
+  },
+  {
+    "slug": "veed-io",
+    "official_urls": {
+      "pricing": {
+        "url": "https://www.veed.io/pricing",
+        "mode": "dynamic"
+      },
+      "features": {
+        "url": "https://www.veed.io/tools",
+        "mode": "dynamic"
+      },
+      "terms": [],
+      "help": []
+    }
+  },
+  {
+    "slug": "zebracat",
+    "official_urls": {
+      "pricing": {
+        "url": "https://www.zebracat.ai/pricing",
+        "mode": "dynamic"
+      },
+      "features": {
+        "url": "https://www.zebracat.ai/features",
+        "mode": "dynamic"
+      },
+      "terms": [],
+      "help": []
+    }
+  },
+  {
+    "slug": "synthesia",
+    "official_urls": {
+      "pricing": {
+        "url": "https://www.synthesia.io/pricing",
+        "mode": "dynamic"
+      },
+      "features": {
+        "url": "https://www.synthesia.io/features",
+        "mode": "dynamic"
+      },
+      "terms": [],
+      "help": []
+    }
+  },
+  {
+    "slug": "elai-io",
+    "official_urls": {
+      "pricing": {
+        "url": "https://elai.io/pricing/",
+        "mode": "dynamic"
+      },
+      "features": {
+        "url": "https://elai.io/features",
+        "mode": "dynamic"
+      },
+      "terms": [],
+      "help": []
+    }
+  },
+  {
+    "slug": "pika",
+    "official_urls": {
+      "pricing": {
+        "url": "https://pika.art/pricing",
+        "mode": "dynamic"
+      },
+      "features": {
+        "url": "https://pika.art/features",
+        "mode": "dynamic"
+      },
+      "terms": [],
+      "help": []
+    }
+  },
+  {
+    "slug": "descript",
+    "official_urls": {
+      "pricing": {
+        "url": "https://www.descript.com/pricing",
+        "mode": "dynamic"
+      },
+      "features": {
+        "url": "https://www.descript.com/",
+        "mode": "dynamic"
+      },
+      "terms": [],
+      "help": []
+    }
+  },
+  {
+    "slug": "opus-clip",
+    "official_urls": {
+      "pricing": {
+        "url": "https://www.opus.pro/pricing",
+        "mode": "dynamic"
+      },
+      "features": {
+        "url": "https://www.opus.pro/",
+        "mode": "dynamic"
+      },
+      "terms": [],
+      "help": []
+    }
+  },
+  {
+    "slug": "runway",
+    "official_urls": {
+      "pricing": {
+        "url": "https://runwayml.com/pricing",
+        "mode": "dynamic"
+      },
+      "features": {
+        "url": "https://runwayml.com/",
+        "mode": "dynamic"
+      },
+      "terms": [],
+      "help": []
+    }
+  },
+  {
+    "slug": "sora",
+    "official_urls": {
+      "pricing": {
+        "url": "https://platform.openai.com/docs/pricing",
+        "mode": "static"
+      },
+      "features": {
+        "url": "https://openai.com/sora/",
+        "mode": "static"
+      },
+      "terms": [],
+      "help": []
+    }
+  },
+  {
+    "slug": "pictory",
+    "official_urls": {
+      "pricing": {
+        "url": "https://pictory.ai/pricing",
+        "mode": "dynamic"
+      },
+      "features": {
+        "url": "https://pictory.ai/features",
+        "mode": "dynamic"
+      },
+      "terms": [],
+      "help": []
+    }
+  },
+  {
+    "slug": "colossyan",
+    "official_urls": {
+      "pricing": {
+        "url": "https://www.colossyan.com/pricing",
+        "mode": "dynamic"
+      },
+      "features": {
+        "url": "https://www.colossyan.com/features",
+        "mode": "dynamic"
+      },
+      "terms": [],
+      "help": []
+    }
+  },
+  {
+    "slug": "d-id",
+    "official_urls": {
+      "pricing": {
+        "url": "https://www.d-id.com/pricing/",
+        "mode": "dynamic"
+      },
+      "features": {
+        "url": "https://www.d-id.com/",
+        "mode": "dynamic"
+      },
+      "terms": [],
+      "help": []
+    }
+  },
+  {
+    "slug": "deepbrain-ai",
+    "official_urls": {
+      "pricing": {
+        "url": "https://www.deepbrain.io/pricing",
+        "mode": "dynamic"
+      },
+      "features": {
+        "url": "https://www.deepbrain.io/",
+        "mode": "dynamic"
+      },
+      "terms": [],
+      "help": []
+    }
+  },
+  {
+    "slug": "synthesys",
+    "official_urls": {
+      "pricing": {
+        "url": "https://synthesys.io/pricing",
+        "mode": "dynamic"
+      },
+      "features": {
+        "url": "https://synthesys.io/",
+        "mode": "dynamic"
+      },
+      "terms": [],
+      "help": []
+    }
+  },
+  {
+    "slug": "flexclip",
+    "official_urls": {
+      "pricing": {
+        "url": "https://www.flexclip.com/pricing.html",
+        "mode": "dynamic"
+      },
+      "features": {
+        "url": "https://www.flexclip.com/features/",
+        "mode": "dynamic"
+      },
+      "terms": [],
+      "help": []
+    }
+  },
+  {
+    "slug": "lumen5",
+    "official_urls": {
+      "pricing": {
+        "url": "https://lumen5.com/pricing/",
+        "mode": "dynamic"
+      },
+      "features": {
+        "url": "https://lumen5.com/features/",
+        "mode": "dynamic"
+      },
+      "terms": [],
+      "help": []
+    }
+  },
+  {
+    "slug": "steve-ai",
+    "official_urls": {
+      "pricing": {
+        "url": "https://www.steve.ai/pricing",
+        "mode": "dynamic"
+      },
+      "features": {
+        "url": "https://www.steve.ai/",
+        "mode": "dynamic"
+      },
+      "terms": [],
+      "help": []
+    }
   }
 ]

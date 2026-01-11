@@ -5,6 +5,8 @@
 interface FetchOptions {
   timeout?: number;
   retries?: number;
+  slug?: string;
+  type?: string;
 }
 
 const DEFAULT_TIMEOUT = 15000; // 15 seconds
@@ -70,28 +72,78 @@ export async function fetchStatic(url: string, opts: FetchOptions = {}): Promise
  */
 export async function fetchDynamic(url: string, opts: FetchOptions = {}): Promise<string> {
   const maxRetries = opts.retries || DEFAULT_RETRIES;
+  const { slug, type } = opts;
   let lastError: Error | null = null;
+  let lastHtml: string | null = null;
 
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
     let browser: any = null;
+    let page: any = null;
     
     try {
       // Dynamic import to avoid requiring playwright at build time
       const { chromium } = await import('playwright');
+      const fs = await import('fs');
+      const path = await import('path');
       
       const startTime = Date.now();
       console.log(`  → Fetching dynamic content from ${url}... (attempt ${attempt + 1}/${maxRetries + 1})`);
       
       browser = await chromium.launch({ headless: true });
-      const page = await browser.newPage();
+      page = await browser.newPage();
       
-      await page.goto(url, { 
-        waitUntil: 'networkidle',
-        timeout: 45000,
+      // Performance optimization: block images and fonts
+      await page.route("**/*", (route: any) => {
+        const rt = route.request().resourceType();
+        if (rt === "image" || rt === "font") {
+          return route.abort();
+        }
+        return route.continue();
       });
       
-      // Additional wait for late-loading content
-      await page.waitForTimeout(800);
+      // Use domcontentloaded instead of networkidle
+      await page.goto(url, { 
+        waitUntil: 'domcontentloaded',
+        timeout: 90000,
+      });
+      
+      // Wait for initial content
+      await page.waitForTimeout(3000);
+      
+      // Handle cookie banner (if present)
+      try {
+        const cookieButton = await page.getByRole('button', { name: /accept|agree|got it/i }).first();
+        if (await cookieButton.isVisible({ timeout: 2000 }).catch(() => false)) {
+          await cookieButton.click();
+          await page.waitForTimeout(500);
+          console.log(`  ✓ Cookie banner dismissed`);
+        }
+      } catch (cookieError) {
+        // Cookie banner not found or already dismissed, continue
+      }
+      
+      // Wait for page content with keywords (generic pricing page keywords)
+      try {
+        await page.waitForFunction(() => {
+          const t = document.body?.innerText?.toLowerCase() || "";
+          return t.includes("pricing") || 
+                 t.includes("per month") || 
+                 t.includes("billed") || 
+                 t.includes("starter") || 
+                 t.includes("pro") || 
+                 t.includes("business") || 
+                 t.includes("$");
+        }, { timeout: 30000 });
+      } catch (waitError) {
+        // Continue even if waitForFunction times out
+        console.log(`  ⚠ Keyword wait timeout, continuing...`);
+      }
+      
+      // Scroll to trigger lazy loading
+      await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+      await page.waitForTimeout(1000);
+      await page.evaluate(() => window.scrollTo(0, 0));
+      await page.waitForTimeout(1000);
       
       const html = await page.content();
       const duration = Date.now() - startTime;
@@ -102,6 +154,36 @@ export async function fetchDynamic(url: string, opts: FetchOptions = {}): Promis
     } catch (error: any) {
       lastError = error;
       console.error(`  ✗ Fetch failed: ${error.message}`);
+      
+      // Save debug files even on failure
+      if (page && slug && type) {
+        try {
+          const fs = await import('fs');
+          const path = await import('path');
+          const { hashUrl } = await import('./cache');
+          
+          const urlHash = hashUrl(url);
+          const cacheDir = path.join(__dirname, 'cache', slug);
+          
+          if (!fs.existsSync(cacheDir)) {
+            fs.mkdirSync(cacheDir, { recursive: true });
+          }
+          
+          const html = await page.content();
+          const failHtmlPath = path.join(cacheDir, `${type}-${urlHash}.fail.html`);
+          const screenshotPath = path.join(cacheDir, `${type}-${urlHash}.png`);
+          
+          fs.writeFileSync(failHtmlPath, html, 'utf-8');
+          await page.screenshot({ path: screenshotPath, fullPage: true });
+          
+          console.log(`  📸 Debug files saved: ${failHtmlPath}, ${screenshotPath}`);
+          
+          // Return HTML even on failure
+          lastHtml = html;
+        } catch (saveError: any) {
+          console.error(`  ⚠ Failed to save debug files: ${saveError.message}`);
+        }
+      }
       
       if (attempt < maxRetries) {
         // Exponential backoff: 500ms, 1500ms
@@ -119,6 +201,12 @@ export async function fetchDynamic(url: string, opts: FetchOptions = {}): Promis
         }
       }
     }
+  }
+
+  // Return last HTML if available, even if there was an error
+  if (lastHtml) {
+    console.log(`  ⚠ Returning partial content despite errors`);
+    return lastHtml;
   }
 
   throw lastError || new Error('Failed to fetch dynamic content');

@@ -1,0 +1,13 @@
+{
+  "tool": "Test Tool",
+  "plans": [
+    {
+      "name": "Plan Without Pricing"
+    },
+    {
+      "pricing": {
+        "amount": 10
+      }
+    }
+  ]
+}

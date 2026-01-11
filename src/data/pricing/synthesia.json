@@ -1,0 +1,435 @@
+{
+  "tool": "Synthesia",
+  "page_title": "Pricing",
+  "pricing_headline": "Plans now starting from $18/month - Save 38%",
+  "plans": [
+    {
+      "name": "Basic",
+      "badge": "Free",
+      "pricing": {
+        "type": "free",
+        "amount": 0,
+        "currency": "USD",
+        "period": "month",
+        "unit": "account",
+        "note": "No credit card required"
+      },
+      "included_summary": [
+        "1 editor",
+        "9 AI Avatars",
+        "Includes 360 credits/mo",
+        "Usable for up to 3 minutes of video/month (36 minutes/year)"
+      ],
+      "cta": {
+        "label": "Get started"
+      }
+    },
+    {
+      "name": "Starter",
+      "badge": null,
+      "pricing": {
+        "type": "subscription",
+        "billing_options": ["Monthly", "Yearly"],
+        "unit": "per account",
+        "price_variants": [
+          {
+            "billing": "monthly",
+            "amount": 29,
+            "currency": "USD",
+            "period": "month",
+            "unit": "account",
+            "note": "Pay monthly"
+          },
+          {
+            "billing": "monthly",
+            "amount": 18,
+            "currency": "USD",
+            "period": "month",
+            "unit": "account",
+            "note": "Billed yearly",
+            "annual_total": {
+              "amount": 216,
+              "currency": "USD",
+              "period": "year",
+              "note": "Billed annually (Save 38%)"
+            }
+          }
+        ]
+      },
+      "included_summary": [
+        "Download your videos",
+        "AI Video Assistant",
+        "AI Dubbing",
+        "Remove Synthesia logo",
+        "1 editor & 3 guests",
+        "125+ Synthesia AI Avatars",
+        "Chat/email support",
+        "Includes 14,500 credits/y",
+        "Usable for up to 120 minutes of video or AI Dubbing/year"
+      ],
+      "cta": {
+        "label": "Choose Starter"
+      }
+    },
+    {
+      "name": "Creator",
+      "badge": "Most popular",
+      "pricing": {
+        "type": "subscription",
+        "billing_options": ["Monthly", "Yearly"],
+        "unit": "per account",
+        "price_variants": [
+          {
+            "billing": "monthly",
+            "amount": 89,
+            "currency": "USD",
+            "period": "month",
+            "unit": "account",
+            "note": "Pay monthly"
+          },
+          {
+            "billing": "monthly",
+            "amount": 64,
+            "currency": "USD",
+            "period": "month",
+            "unit": "account",
+            "note": "Billed yearly",
+            "annual_total": {
+              "amount": 768,
+              "currency": "USD",
+              "period": "year",
+              "note": "Billed annually (Save 28%)"
+            }
+          }
+        ]
+      },
+      "included_summary": [
+        "5 Personal Avatars",
+        "AI Dubbing",
+        "Branded video pages",
+        "API access",
+        "Multiple avatars per scene",
+        "Interactive videos",
+        "1 editor & 5 guests",
+        "180+ Synthesia AI Avatars",
+        "Priority chat/email support",
+        "Includes 44,000 credits/y",
+        "Usable for up to 360 minutes of video or AI Dubbing/year"
+      ],
+      "cta": {
+        "label": "Choose Creator"
+      }
+    },
+    {
+      "name": "Enterprise",
+      "badge": "For teams",
+      "pricing": {
+        "type": "custom",
+        "label": "Let's Talk",
+        "description": "Custom pricing"
+      },
+      "included_summary": [
+        "Unlimited video minutes",
+        "1-Click Translations into 80+ languages",
+        "230+ stock AI Avatars",
+        "Unlimited Personal Avatars",
+        "SAML/SSO",
+        "Live team collaboration",
+        "Brand Kits",
+        "SCORM export",
+        "AI Dubbing (paid add-on)",
+        "Tailored onboarding",
+        "Implementation services",
+        "Dedicated CSM",
+        "Enterprise community",
+        "Access to live events",
+        "Academy & certifications",
+        "Custom Credits"
+      ],
+      "cta": {
+        "label": "Book demo",
+        "alt_labels": ["Let's talk"]
+      }
+    }
+  ],
+  "comparison_table": {
+    "feature_groups": [
+      {
+        "group": "Pricing & Seats",
+        "rows": [
+          {
+            "feature": "Price",
+            "values_by_plan": {
+              "Basic": "$0/mo",
+              "Starter": "$18/mo billed yearly ($29/mo pay monthly)",
+              "Creator": "$64/mo billed yearly ($89/mo pay monthly)",
+              "Enterprise": "Custom pricing"
+            }
+          },
+          {
+            "feature": "Seats",
+            "values_by_plan": {
+              "Basic": "1 editor",
+              "Starter": "1 editor & 3 guests",
+              "Creator": "1 editor & 5 guests",
+              "Enterprise": "Custom # of editors & guests"
+            }
+          }
+        ]
+      },
+      {
+        "group": "AI Avatars",
+        "rows": [
+          {
+            "feature": "Synthesia AI Avatars",
+            "values_by_plan": {
+              "Basic": "9",
+              "Starter": "125+",
+              "Creator": "180+",
+              "Enterprise": "230+"
+            }
+          },
+          {
+            "feature": "Personal Avatars",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": false,
+              "Creator": "5",
+              "Enterprise": "Unlimited"
+            }
+          },
+          {
+            "feature": "Multiple avatars per scene",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": false,
+              "Creator": true,
+              "Enterprise": true
+            }
+          }
+        ]
+      },
+      {
+        "group": "Credits & Usage",
+        "rows": [
+          {
+            "feature": "Credits",
+            "values_by_plan": {
+              "Basic": "360/mo",
+              "Starter": "14,500/y",
+              "Creator": "44,000/y",
+              "Enterprise": "Custom"
+            }
+          },
+          {
+            "feature": "Usage limits (video minutes)",
+            "values_by_plan": {
+              "Basic": "36 minutes/year (3 minutes/month)",
+              "Starter": "120 minutes/year",
+              "Creator": "360 minutes/year",
+              "Enterprise": "Unlimited"
+            }
+          }
+        ]
+      },
+      {
+        "group": "Video Features",
+        "rows": [
+          {
+            "feature": "Download videos",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": true,
+              "Creator": true,
+              "Enterprise": true
+            }
+          },
+          {
+            "feature": "Remove Synthesia logo",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": true,
+              "Creator": true,
+              "Enterprise": true
+            }
+          },
+          {
+            "feature": "Branded video pages",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": false,
+              "Creator": true,
+              "Enterprise": true
+            }
+          },
+          {
+            "feature": "Interactive videos",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": false,
+              "Creator": true,
+              "Enterprise": true
+            }
+          }
+        ]
+      },
+      {
+        "group": "AI Features",
+        "rows": [
+          {
+            "feature": "AI Video Assistant",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": true,
+              "Creator": true,
+              "Enterprise": true
+            }
+          },
+          {
+            "feature": "AI Dubbing",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": true,
+              "Creator": true,
+              "Enterprise": "Paid add-on"
+            }
+          },
+          {
+            "feature": "AI Dubbing with Lip Sync",
+            "note": "Paid add-on. Contact sales for Creator",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": false,
+              "Creator": "Paid add-on",
+              "Enterprise": true
+            }
+          },
+          {
+            "feature": "1-Click Translations",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": false,
+              "Creator": false,
+              "Enterprise": "80+ languages"
+            }
+          }
+        ]
+      },
+      {
+        "group": "API & Integration",
+        "rows": [
+          {
+            "feature": "API access",
+            "note": "Synthesia API includes 360 minutes/year included with additional paid add-on",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": false,
+              "Creator": true,
+              "Enterprise": true
+            }
+          },
+          {
+            "feature": "SCORM export",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": false,
+              "Creator": false,
+              "Enterprise": true
+            }
+          },
+          {
+            "feature": "SAML/SSO",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": false,
+              "Creator": false,
+              "Enterprise": true
+            }
+          }
+        ]
+      },
+      {
+        "group": "Collaboration & Branding",
+        "rows": [
+          {
+            "feature": "Live team collaboration",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": false,
+              "Creator": false,
+              "Enterprise": true
+            }
+          },
+          {
+            "feature": "Brand Kits",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": false,
+              "Creator": false,
+              "Enterprise": true
+            }
+          }
+        ]
+      },
+      {
+        "group": "Support & Services",
+        "rows": [
+          {
+            "feature": "Support",
+            "values_by_plan": {
+              "Basic": "-",
+              "Starter": "Chat/email support",
+              "Creator": "Priority chat/email support",
+              "Enterprise": "Dedicated CSM"
+            }
+          },
+          {
+            "feature": "Onboarding",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": false,
+              "Creator": false,
+              "Enterprise": "Tailored onboarding"
+            }
+          },
+          {
+            "feature": "Implementation services",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": false,
+              "Creator": false,
+              "Enterprise": true
+            }
+          },
+          {
+            "feature": "Enterprise community",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": false,
+              "Creator": false,
+              "Enterprise": true
+            }
+          },
+          {
+            "feature": "Access to live events",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": false,
+              "Creator": false,
+              "Enterprise": true
+            }
+          },
+          {
+            "feature": "Academy & certifications",
+            "values_by_plan": {
+              "Basic": false,
+              "Starter": false,
+              "Creator": false,
+              "Enterprise": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

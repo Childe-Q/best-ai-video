@@ -6,10 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
+    "lint": "eslint \"src/**/*.{ts,tsx,js,jsx}\"",
     "fetch:cache": "tsx scripts/fetch-and-cache.ts",
     "sync:tools": "tsx scripts/sync-tools.ts",
-    "scrape:fliki": "tsx scripts/scrape-fliki-pricing.ts"
+    "scrape:fliki": "tsx scripts/scrape-fliki-pricing.ts",
+    "extract:tools": "tsx scripts/extract-tools-from-cache.ts",
+    "validate:tools": "tsx scripts/validate-tools.ts",
+    "validate:pricing": "tsx scripts/validate-pricing-json.ts"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",

@@ -10,140 +10,285 @@
     "affiliate_link": "https://invideo.sjv.io/c/6767699/883681/12258",
     "pricing_plans": [
       {
-        "name": "Free",
-        "price": "Free",
-        "period": "",
-        "description": "Start your AI video journey completely free",
-        "highlights": [
-          "2 min/week",
-          "Watermarked",
-          "3 Audio/Video Exports",
-          "Videos up to 3 mins",
-          "1 Custom Avatar",
-          "16 Generative Credits"
-        ],
-        "detailed_features": [
-          "720p Video Export",
-          "Standard Video Processing",
-          "AI Video Generation",
-          "AI Video & Image Generator",
-          "AI Dubbing",
-          "Voice Cloning",
-          "2,000+ AI Generated Avatars",
-          "Screen Recording with Avatar",
-          "30+ Languages",
-          "Share & Download Video",
-          "Watermark Included"
-        ],
-        "btn_text": "Get Started",
-        "badge": "Risk-Free Entry"
-      },
-      {
         "name": "Plus",
-        "price": "$28",
-        "period": "/mo",
-        "description": "For individual creators",
-        "highlights": [
-          "50 min + 10 credits",
-          "1080p export",
-          "Unlimited Video Exports",
-          "Videos up to 30 mins",
-          "3 Custom Avatars",
-          "60 Generative Credits"
+        "price": {
+          "monthly": {
+            "amount": 35,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 28,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "ctaText": "Start Free Trial",
+        "featureItems": [
+          {
+            "text": "10 Credits"
+          },
+          {
+            "text": "50 Video mins + 95 iStock"
+          },
+          {
+            "text": "2 UGC product asset ads"
+          },
+          {
+            "text": "30 secs of generative video"
+          },
+          {
+            "text": "2 express clones"
+          },
+          {
+            "text": "3 users, 100GB storage"
+          },
+          {
+            "text": "Unlimited exports"
+          },
+          {
+            "text": "Image generations",
+            "badge": "365 UNLIMITED"
+          },
+          {
+            "text": "40 Credits"
+          },
+          {
+            "text": "200 Video mins + 320 iStock"
+          },
+          {
+            "text": "8 UGC product asset ads"
+          },
+          {
+            "text": "120 secs of generative video"
+          }
         ],
-        "detailed_features": [
-          "Fast Video Processing",
-          "Unlimited Photo Avatars",
-          "Unlimited Youtube Downloader",
-          "AI Dubbing with SRT/ASS Upload",
-          "Generate Videos from Any Input",
-          "150+ Languages, 1,000+ Voices",
-          "7,000+ Video Templates",
-          "3M+ Premium Shutterstock Media",
-          "Supports Add-ons",
-          "No Watermark"
-        ],
-        "btn_text": "Get Started",
-        "badge": "⭐ Best Value"
+        "billingNote": "*Billed yearly"
       },
       {
         "name": "Max",
-        "price": "$50",
-        "period": "/mo",
-        "description": "For growing teams",
-        "highlights": [
-          "200 min + 40 credits",
-          "Unlimited exports",
-          "Unlimited Video Exports",
-          "Videos up to 30 mins",
-          "5 Custom Avatars",
-          "150 Generative Credits"
+        "price": {
+          "monthly": {
+            "amount": 60,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 50,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "ctaText": "Start Free Trial",
+        "featureItems": [
+          {
+            "text": "10 Credits"
+          },
+          {
+            "text": "50 Video mins + 95 iStock"
+          },
+          {
+            "text": "2 UGC product asset ads"
+          },
+          {
+            "text": "30 secs of generative video"
+          },
+          {
+            "text": "2 express clones"
+          },
+          {
+            "text": "3 users, 100GB storage"
+          },
+          {
+            "text": "Unlimited exports"
+          },
+          {
+            "text": "Image generations",
+            "badge": "365 UNLIMITED"
+          },
+          {
+            "text": "40 Credits"
+          },
+          {
+            "text": "200 Video mins + 320 iStock"
+          },
+          {
+            "text": "8 UGC product asset ads"
+          },
+          {
+            "text": "120 secs of generative video"
+          }
         ],
-        "detailed_features": [
-          "4K Video Export",
-          "Fast Video Processing",
-          "Proofread AI Dubbing Scripts",
-          "Up/Download Subtitle Files",
-          "One-Click Translation",
-          "Premium 125+ AI Avatars",
-          "4K Youtube Downloader",
-          "Avatar Gesture Control",
-          "Multi-Avatar Scenes",
-          "Effect Animation with Timing",
-          "Team Collaboration Workspace",
-          "Custom Brand Kit"
-        ],
-        "btn_text": "Get Started",
-        "badge": "🚀 Power User"
+        "billingNote": "*Billed yearly",
+        "ribbonText": "Best Value"
       },
       {
         "name": "Generative",
-        "price": "$100",
-        "period": "/mo",
-        "description": "For advanced users",
-        "highlights": [
-          "300 sec generative video",
-          "Unlimited AI Videos",
-          "Unlimited Video Duration",
-          "Unlimited Custom Avatars",
-          "Flexible Generative Credits",
-          "4K Video Export"
+        "price": {
+          "monthly": {
+            "amount": 120,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 100,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "ctaText": "Start Free Trial",
+        "featureItems": [
+          {
+            "text": "10 Credits"
+          },
+          {
+            "text": "50 Video mins + 95 iStock"
+          },
+          {
+            "text": "2 UGC product asset ads"
+          },
+          {
+            "text": "30 secs of generative video"
+          },
+          {
+            "text": "2 express clones"
+          },
+          {
+            "text": "3 users, 100GB storage"
+          },
+          {
+            "text": "Unlimited exports"
+          },
+          {
+            "text": "Image generations",
+            "badge": "365 UNLIMITED"
+          },
+          {
+            "text": "40 Credits"
+          },
+          {
+            "text": "200 Video mins + 320 iStock"
+          },
+          {
+            "text": "8 UGC product asset ads"
+          },
+          {
+            "text": "120 secs of generative video"
+          }
         ],
-        "detailed_features": [
-          "Priority Video Processing",
-          "Enterprise-grade SAML SSO",
-          "SCORM Export",
-          "Bulk Video Generation",
-          "Voice Cloning with Audio Upload",
-          "Video Production Support",
-          "24/7 Priority Technical Support",
-          "Dedicated Account Manager",
-          "Marketing Link"
-        ],
-        "btn_text": "Get Started",
-        "badge": "✨ Featured"
+        "billingNote": "*Billed yearly"
       },
       {
         "name": "Team",
-        "price": "$899",
-        "period": "/mo",
-        "description": "For large teams",
-        "highlights": [
-          "Custom credits",
-          "Custom pricing",
-          "Dedicated support",
-          "SSO"
+        "price": {
+          "monthly": {
+            "amount": 999,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 899,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "ctaText": "Start Free Trial",
+        "featureItems": [
+          {
+            "text": "10 Credits"
+          },
+          {
+            "text": "50 Video mins + 95 iStock"
+          },
+          {
+            "text": "2 UGC product asset ads"
+          },
+          {
+            "text": "30 secs of generative video"
+          },
+          {
+            "text": "2 express clones"
+          },
+          {
+            "text": "3 users, 100GB storage"
+          },
+          {
+            "text": "Unlimited exports"
+          },
+          {
+            "text": "Image generations",
+            "badge": "365 UNLIMITED"
+          },
+          {
+            "text": "40 Credits"
+          },
+          {
+            "text": "200 Video mins + 320 iStock"
+          },
+          {
+            "text": "8 UGC product asset ads"
+          },
+          {
+            "text": "120 secs of generative video"
+          }
         ],
-        "detailed_features": [
-          "Unlimited everything",
-          "Team collaboration",
-          "Advanced analytics",
-          "Custom integrations",
-          "Priority support",
-          "Dedicated account manager"
+        "billingNote": "*Billed yearly"
+      },
+      {
+        "name": "Free",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "ctaText": "Get Started",
+        "featureItems": [
+          {
+            "text": "02 Video mins"
+          },
+          {
+            "text": "Video mins and 1 AI credit"
+          },
+          {
+            "text": "No access to generative features"
+          },
+          {
+            "text": "1 Express"
+          },
+          {
+            "text": "4 Exports"
+          },
+          {
+            "text": "02 Video mins and 1 AI credit per week"
+          },
+          {
+            "text": "1 Express avatar"
+          },
+          {
+            "text": "4 Exports per week"
+          }
         ],
-        "btn_text": "Contact Sales",
-        "badge": "💎 Custom Scale"
+        "billingNote": "*Billed yearly"
+      },
+      {
+        "name": "Enterprise",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "unitPriceNote": "Custom pricing",
+        "ctaText": "Contact Sales",
+        "billingNote": "*Billed yearly"
       }
     ],
     "has_free_trial": true,
@@ -207,6 +352,58 @@
       "Video Generators",
       "Video Editors",
       "Budget-Friendly"
+    ],
+    "featureCards": [
+      {
+        "title": "Invideo Quick Tools",
+        "description": "Invideo Quick Tools.",
+        "icon": "play"
+      },
+      {
+        "title": "Video Trimmer",
+        "description": "Video Trimmer.",
+        "icon": "video"
+      },
+      {
+        "title": "Screen Recorder",
+        "description": "Screen Recorder.",
+        "icon": "film"
+      },
+      {
+        "title": "Crop Video",
+        "description": "Crop Video.",
+        "icon": "camera"
+      },
+      {
+        "title": "Video Looper",
+        "description": "Video Looper.",
+        "icon": "mic"
+      },
+      {
+        "title": "Rotate Video Online",
+        "description": "Rotate Video Online.",
+        "icon": "image"
+      },
+      {
+        "title": "Video Merger",
+        "description": "Video Merger.",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Speed Up Video",
+        "description": "Speed Up Video.",
+        "icon": "wand"
+      },
+      {
+        "title": "Audio Joiner",
+        "description": "Audio Joiner.",
+        "icon": "zap"
+      },
+      {
+        "title": "Watermark Video Maker",
+        "description": "Watermark Video Maker.",
+        "icon": "star"
+      }
     ]
   },
   {
@@ -221,46 +418,234 @@
     "pricing_plans": [
       {
         "name": "Free",
-        "price": "Free",
-        "period": "",
-        "description": "For testing",
-        "features": [
-          "3 videos/mo",
-          "3 min/video",
-          "720p",
-          "Watermark"
+        "id": "free",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "3 videos per month",
+            "icon": "check"
+          },
+          {
+            "text": "Videos up to 3-mins",
+            "icon": "check"
+          },
+          {
+            "text": "720p video export",
+            "icon": "check"
+          },
+          {
+            "text": "Standard video processing",
+            "icon": "check"
+          },
+          {
+            "text": "Access to Avatar IV video generation",
+            "icon": "check"
+          },
+          {
+            "text": "1 Custom Video Avatar",
+            "icon": "check"
+          },
+          {
+            "text": "500+ Stock Video Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "30+ languages",
+            "icon": "check"
+          },
+          {
+            "text": "Share & download videos",
+            "icon": "check"
+          },
+          {
+            "text": "Videos up to 3-mins / Max duration per video 3 minutes",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Get Started",
-        "badge": "Risk-Free Entry"
+        "ctaText": "Get Started"
       },
       {
         "name": "Creator",
-        "price": "$29",
-        "period": "/mo",
-        "description": "For individuals",
-        "features": [
-          "3 min/video",
-          "720p",
-          "1 custom avatar",
-          "Voice cloning"
+        "id": "creator",
+        "price": {
+          "monthly": {
+            "amount": 29,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 24,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "Unlimited videos",
+            "icon": "check"
+          },
+          {
+            "text": "Videos up to 30-mins",
+            "icon": "check"
+          },
+          {
+            "text": "1080p video export",
+            "icon": "check"
+          },
+          {
+            "text": "Fast video processing",
+            "icon": "check"
+          },
+          {
+            "text": "Extended video generation w/ Avatar IV",
+            "icon": "check"
+          },
+          {
+            "text": "1 Custom Video Avatar",
+            "icon": "check"
+          },
+          {
+            "text": "1 Custom Interactive Avatar",
+            "icon": "check"
+          },
+          {
+            "text": "700+ Stock Video Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "Voice cloning",
+            "icon": "check"
+          },
+          {
+            "text": "175+ languages and dialects",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Start Free Trial",
-        "badge": "🏆 Top Pick"
+        "ctaText": "Get Started",
+        "billingNote": "Billed annually ($288/yr, save 22%)",
+        "ribbonText": "Best Value"
       },
       {
         "name": "Team",
-        "price": "$39",
-        "period": "/seat/mo",
-        "description": "For teams (min 2 seats)",
-        "features": [
-          "30 min/video",
-          "4K export",
-          "Unlimited voice cloning",
-          "Brand kit",
-          "Team collaboration"
+        "id": "team",
+        "price": {
+          "monthly": {
+            "amount": 39,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 30,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "Unlimited videos",
+            "icon": "check"
+          },
+          {
+            "text": "Videos up to 30-mins",
+            "icon": "check"
+          },
+          {
+            "text": "4k video export",
+            "icon": "check"
+          },
+          {
+            "text": "Faster video processing",
+            "icon": "check"
+          },
+          {
+            "text": "Extended video generation with Avatar IV",
+            "icon": "check"
+          },
+          {
+            "text": "2 seats included",
+            "icon": "check"
+          },
+          {
+            "text": "2 Custom Video Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "2 Custom Interactive Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "Unlimited Photo Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "Edit & proofread translation script",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Start Free Trial",
-        "badge": "💎 Custom Scale"
+        "ctaText": "Get Started",
+        "billingNote": "Billed annually ($360/yr, save 22%)"
+      },
+      {
+        "name": "Enterprise",
+        "id": "enterprise",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "Unlimited videos",
+            "icon": "check"
+          },
+          {
+            "text": "Custom video minutes",
+            "icon": "check"
+          },
+          {
+            "text": "Unlimited Custom Video Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "Unlimited Custom Interactive Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "Unlimited Photo Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "Unlimited voice clones",
+            "icon": "check"
+          },
+          {
+            "text": "4K video export",
+            "icon": "check"
+          },
+          {
+            "text": "Fastest video processing",
+            "icon": "check"
+          },
+          {
+            "text": "Workspace collaboration",
+            "icon": "check"
+          },
+          {
+            "text": "Dedicated support",
+            "icon": "check"
+          }
+        ],
+        "ctaText": "Contact Sales",
+        "unitPriceNote": "Enterprise pricing",
+        "billingNote": "Custom pricing"
       }
     ],
     "has_free_trial": true,
@@ -318,6 +703,58 @@
     "categories": [
       "AI Avatars",
       "Professional Tools"
+    ],
+    "featureCards": [
+      {
+        "title": "Explore Hey",
+        "description": "Explore Hey.",
+        "icon": "play"
+      },
+      {
+        "title": "Video Avatar",
+        "description": "Video Avatar.",
+        "icon": "video"
+      },
+      {
+        "title": "Photo Avatar",
+        "description": "Photo Avatar.",
+        "icon": "film"
+      },
+      {
+        "title": "Stock Avatar",
+        "description": "Stock Avatar.",
+        "icon": "camera"
+      },
+      {
+        "title": "Studio Editor",
+        "description": "Studio Editor.",
+        "icon": "mic"
+      },
+      {
+        "title": "Steve Sowrey",
+        "description": "Steve Sowrey.",
+        "icon": "image"
+      },
+      {
+        "title": "With Hey",
+        "description": "With Hey.",
+        "icon": "sparkles"
+      },
+      {
+        "title": "AI Studio",
+        "description": "AI Studio.",
+        "icon": "wand"
+      },
+      {
+        "title": "AI Video Generator",
+        "description": "AI Video Generator.",
+        "icon": "zap"
+      },
+      {
+        "title": "Video Generator",
+        "description": "Video Generator.",
+        "icon": "star"
+      }
     ]
   },
   {
@@ -728,45 +1165,235 @@
     "pricing_plans": [
       {
         "name": "Free",
-        "price": "Free",
-        "period": "",
-        "description": "For testing",
-        "features": [
-          "720p export",
-          "Watermark",
-          "Limited subtitles",
-          "Basic editing"
+        "id": "free",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "2GB storage",
+            "icon": "check"
+          },
+          {
+            "text": "1GB upload file size",
+            "icon": "check"
+          },
+          {
+            "text": "720p export quality",
+            "icon": "check"
+          },
+          {
+            "text": "2 video/day in Gen-AI Studio",
+            "icon": "check"
+          },
+          {
+            "text": "2 min/mo auto subtitles",
+            "icon": "check"
+          },
+          {
+            "text": "Limited stock audio & video",
+            "icon": "check"
+          },
+          {
+            "text": "Export quality: 720p",
+            "icon": "check"
+          },
+          {
+            "text": "Auto subtitles: 2 min/mo",
+            "icon": "check"
+          },
+          {
+            "text": "Stock audio & video: Limited",
+            "icon": "check"
+          },
+          {
+            "text": "Number of editors: 1",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Get Started",
-        "badge": "Risk-Free Entry"
+        "ctaText": "Get started"
       },
       {
         "name": "Lite",
-        "price": "$12",
-        "period": "/mo",
-        "description": "For individuals",
-        "features": [
-          "1080p export",
-          "No watermark",
-          "Brand kit",
-          "Basic features"
+        "id": "lite",
+        "price": {
+          "monthly": {
+            "amount": 24,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 12,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "Remove watermark",
+            "icon": "check"
+          },
+          {
+            "text": "Subtitles 12 hr/mo (144 hr/yr with yearly)",
+            "icon": "check"
+          },
+          {
+            "text": "Full stock audio & video library",
+            "icon": "check"
+          },
+          {
+            "text": "Full HD 1080p Exports",
+            "icon": "check"
+          },
+          {
+            "text": "Brand Kit Styled Assets",
+            "icon": "check"
+          },
+          {
+            "text": "5 videos / day in Gen-AI Studio",
+            "icon": "check"
+          },
+          {
+            "text": "Add credits to generate videos using VEED Fabric 1, Google Veo 3, and more",
+            "icon": "check"
+          },
+          {
+            "text": "Video export length: 10 minutes",
+            "icon": "check"
+          },
+          {
+            "text": "Storage: 5GB",
+            "icon": "check"
+          },
+          {
+            "text": "Upload file size: Unlimited",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Start Free Trial",
-        "badge": "🔥 Most Popular"
+        "ctaText": "Choose Lite",
+        "billingNote": "Billed annually ($144/yr)",
+        "ribbonText": "BEST VALUE"
       },
       {
         "name": "Pro",
-        "price": "$29",
-        "period": "/mo",
-        "description": "For professionals",
-        "features": [
-          "4K export",
-          "Unlimited Gen-AI",
-          "50+ languages",
-          "Advanced features"
+        "id": "pro",
+        "price": {
+          "monthly": {
+            "amount": 55,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 29,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "Everything in Lite",
+            "icon": "check"
+          },
+          {
+            "text": "Unlimited videos in Gen-AI Studio",
+            "icon": "check"
+          },
+          {
+            "text": "15+ AI tools (Clean Audio, Eye contact...)",
+            "icon": "check"
+          },
+          {
+            "text": "Brand assets & templates",
+            "icon": "check"
+          },
+          {
+            "text": "Translate to 50+ Languages",
+            "icon": "check"
+          },
+          {
+            "text": "Clips - get AI highlights from videos",
+            "icon": "check"
+          },
+          {
+            "text": "12 hr/mo Text to Speech (144 hr/yr with yearly)",
+            "icon": "check"
+          },
+          {
+            "text": "Add credits to generate videos using VEED Fabric 1, Google Veo 3, and more",
+            "icon": "check"
+          },
+          {
+            "text": "Remove watermark",
+            "icon": "check"
+          },
+          {
+            "text": "Export quality: 4k",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Start Free Trial",
-        "badge": "🚀 Power User"
+        "ctaText": "Choose Pro",
+        "billingNote": "Billed annually ($348/yr)",
+        "ribbonText": "RECOMMENDED"
+      },
+      {
+        "name": "Enterprise",
+        "id": "enterprise",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "Custom Templates",
+            "icon": "check"
+          },
+          {
+            "text": "Centrally manage teams and data",
+            "icon": "check"
+          },
+          {
+            "text": "Review mode for videos",
+            "icon": "check"
+          },
+          {
+            "text": "Custom AI Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "Custom caption/subtitle usage",
+            "icon": "check"
+          },
+          {
+            "text": "Multiple Brand Kits",
+            "icon": "check"
+          },
+          {
+            "text": "Privacy Controls",
+            "icon": "check"
+          },
+          {
+            "text": "Support",
+            "icon": "check"
+          },
+          {
+            "text": "Customer success",
+            "icon": "check"
+          },
+          {
+            "text": "Video Analytics",
+            "icon": "check"
+          }
+        ],
+        "ctaText": "Contact Sales",
+        "unitPriceNote": "Custom pricing",
+        "billingNote": "Tailored to your needs"
       }
     ],
     "has_free_trial": true,
@@ -825,6 +1452,58 @@
     "categories": [
       "Video Editors",
       "Budget-Friendly"
+    ],
+    "featureCards": [
+      {
+        "title": "Voice Cloning",
+        "description": "Voice Cloning.",
+        "icon": "play"
+      },
+      {
+        "title": "Video Transcription",
+        "description": "Video Transcription.",
+        "icon": "video"
+      },
+      {
+        "title": "Audio Cutter",
+        "description": "Audio Cutter.",
+        "icon": "film"
+      },
+      {
+        "title": "Audio Editor",
+        "description": "Audio Editor.",
+        "icon": "camera"
+      },
+      {
+        "title": "Audio Joiner",
+        "description": "Audio Joiner.",
+        "icon": "mic"
+      },
+      {
+        "title": "Audio Looper",
+        "description": "Audio Looper.",
+        "icon": "image"
+      },
+      {
+        "title": "Audio Player",
+        "description": "Audio Player.",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Audio Speed Changer",
+        "description": "Audio Speed Changer.",
+        "icon": "wand"
+      },
+      {
+        "title": "Audio Translator Auto Subtitle Generator Online",
+        "description": "Audio Translator Auto Subtitle Generator Online.",
+        "icon": "zap"
+      },
+      {
+        "title": "Auto Video Editor",
+        "description": "Auto Video Editor.",
+        "icon": "star"
+      }
     ]
   },
   {
@@ -838,60 +1517,242 @@
     "affiliate_link": "https://www.zebracat.ai/?via=jack-shan",
     "pricing_plans": [
       {
-        "name": "Free",
-        "price": "Free",
-        "period": "",
-        "description": "For testing",
-        "features": [
-          "5 videos total",
-          "2 min max",
-          "Watermark",
-          "Basic features"
-        ],
-        "btn_text": "Get Started",
-        "badge": "🏆 Editor's Choice"
-      },
-      {
         "name": "Cat Mode",
-        "price": "$19",
-        "period": "/mo",
-        "description": "For individuals",
-        "features": [
-          "Basic features",
-          "No watermark",
-          "Standard support",
-          "Limited credits"
+        "id": "cat-mode",
+        "price": {
+          "monthly": {
+            "amount": 39,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 19,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "15 videos/month",
+            "icon": "check"
+          },
+          {
+            "text": "350 generative AI credits/month",
+            "icon": "check"
+          },
+          {
+            "text": "Generative video enabled",
+            "icon": "check"
+          },
+          {
+            "text": "Limited AI Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "Standard AI voices (175+ languages)",
+            "icon": "check"
+          },
+          {
+            "text": "Basic stock clips & music",
+            "icon": "check"
+          },
+          {
+            "text": "1 Brand Kit",
+            "icon": "check"
+          },
+          {
+            "text": "Video length limit: 2 min",
+            "icon": "check"
+          },
+          {
+            "text": "Processing speed: Standard",
+            "icon": "check"
+          },
+          {
+            "text": "Export resolution: 1080p",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Start Free Trial",
-        "badge": "🚀 Best Value"
+        "ctaText": "Get Started",
+        "billingNote": "Billed annually ($228/yr, save 50%)"
       },
       {
         "name": "Super Cat",
-        "price": "$49",
-        "period": "/mo",
-        "description": "For creators",
-        "features": [
-          "More credits",
-          "Advanced features",
-          "Priority support",
-          "Brand kit"
+        "id": "super-cat",
+        "price": {
+          "monthly": {
+            "amount": 99,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 49,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "40 videos/month",
+            "icon": "check"
+          },
+          {
+            "text": "1400 generative AI credits/month",
+            "icon": "check"
+          },
+          {
+            "text": "Everything in Cat Mode",
+            "icon": "check"
+          },
+          {
+            "text": "5 custom avatars",
+            "icon": "check"
+          },
+          {
+            "text": "5 voice clones / mo",
+            "icon": "check"
+          },
+          {
+            "text": "120+ premium AI avatars",
+            "icon": "check"
+          },
+          {
+            "text": "Premium AI voices",
+            "icon": "check"
+          },
+          {
+            "text": "Translate videos into 25+ languages",
+            "icon": "check"
+          },
+          {
+            "text": "Full stock & music library",
+            "icon": "check"
+          },
+          {
+            "text": "5 Brand Kits",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Start Free Trial",
-        "badge": "✨ Featured"
+        "ctaText": "Get Started",
+        "billingNote": "Billed annually ($588/yr, save 50%)",
+        "ribbonText": "MOST POPULAR"
       },
       {
         "name": "Unlimited Cat",
-        "price": "$199",
-        "period": "/mo",
-        "description": "For professionals",
-        "features": [
-          "Unlimited credits",
-          "All features",
-          "Premium support",
-          "API access"
+        "id": "unlimited-cat",
+        "price": {
+          "monthly": {
+            "amount": 199,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 99,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "Unlimited videos/month",
+            "icon": "check"
+          },
+          {
+            "text": "3600 generative AI credits/month",
+            "icon": "check"
+          },
+          {
+            "text": "Everything in Super Cat",
+            "icon": "check"
+          },
+          {
+            "text": "10 custom avatars / mo",
+            "icon": "check"
+          },
+          {
+            "text": "10 voice clones / mo",
+            "icon": "check"
+          },
+          {
+            "text": "Unlimited Brand Kits",
+            "icon": "check"
+          },
+          {
+            "text": "Priority support",
+            "icon": "check"
+          },
+          {
+            "text": "Video length limit: 5 min",
+            "icon": "check"
+          },
+          {
+            "text": "Processing speed: Faster",
+            "icon": "check"
+          },
+          {
+            "text": "Export resolution: 1080p",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Start Free Trial",
-        "badge": "✨ Featured"
+        "ctaText": "Get started",
+        "billingNote": "Billed annually ($1188/yr, save 50%)"
+      },
+      {
+        "name": "Enterprise",
+        "id": "enterprise",
+        "price": {
+          "monthly": {
+            "amount": 599,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "Unlimited videos/month",
+            "icon": "check"
+          },
+          {
+            "text": "Custom generative AI credits",
+            "icon": "check"
+          },
+          {
+            "text": "Everything in Unlimited Cat",
+            "icon": "check"
+          },
+          {
+            "text": "Unlimited custom avatars & voice clones (enterprise quality)",
+            "icon": "check"
+          },
+          {
+            "text": "API access",
+            "icon": "check"
+          },
+          {
+            "text": "Custom AI models",
+            "icon": "check"
+          },
+          {
+            "text": "Advanced team roles / permissions",
+            "icon": "check"
+          },
+          {
+            "text": "Dedicated success manager",
+            "icon": "check"
+          },
+          {
+            "text": "Video length limit: 5 min",
+            "icon": "check"
+          },
+          {
+            "text": "Processing speed: Fastest",
+            "icon": "check"
+          }
+        ],
+        "ctaText": "Talk to Sales",
+        "unitPriceNote": "$599+/mo",
+        "billingNote": "Custom Pricing",
+        "ribbonText": "BEST VALUE"
       }
     ],
     "has_free_trial": true,
@@ -971,6 +1832,58 @@
       "Social Media",
       "Viral",
       "Fast"
+    ],
+    "featureCards": [
+      {
+        "title": "Everything Zebracat Can Do",
+        "description": "Everything Zebracat Can Do.",
+        "icon": "play"
+      },
+      {
+        "title": "Voice Cloning",
+        "description": "Voice Cloning.",
+        "icon": "video"
+      },
+      {
+        "title": "Reel Generator",
+        "description": "Reel Generator.",
+        "icon": "film"
+      },
+      {
+        "title": "Tube Shorts Generator",
+        "description": "Tube Shorts Generator.",
+        "icon": "camera"
+      },
+      {
+        "title": "Youtube Video Generator",
+        "description": "Youtube Video Generator.",
+        "icon": "mic"
+      },
+      {
+        "title": "Avatar Generator",
+        "description": "Avatar Generator.",
+        "icon": "image"
+      },
+      {
+        "title": "Blog To Video",
+        "description": "Blog To Video.",
+        "icon": "sparkles"
+      },
+      {
+        "title": "AI Avatar GeneratorAI Scene GeneratorAI Scri",
+        "description": "AI Avatar GeneratorAI Scene GeneratorAI Scri.",
+        "icon": "wand"
+      },
+      {
+        "title": "AI YouTube Shorts GeneratorAI Explainer Vide",
+        "description": "AI YouTube Shorts GeneratorAI Explainer Vide.",
+        "icon": "zap"
+      },
+      {
+        "title": "AI Reel GeneratorAll FeaturesView all featur",
+        "description": "AI Reel GeneratorAll FeaturesView all featur.",
+        "icon": "star"
+      }
     ]
   },
   {
@@ -984,45 +1897,213 @@
     "affiliate_link": "https://www.synthesia.io/?via=bingqiang",
     "pricing_plans": [
       {
-        "name": "Free",
-        "price": "Free",
-        "period": "",
-        "description": "For testing",
-        "features": [
-          "3 min/mo",
-          "No download",
-          "Logo watermark"
+        "name": "Basic",
+        "id": "basic",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "1 editor",
+            "icon": "check"
+          },
+          {
+            "text": "9 AI Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "Includes 360 credits/mo",
+            "icon": "check"
+          },
+          {
+            "text": "Usable for up to 3 minutes of video/month (36 minutes/year)",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Get Started",
-        "badge": "Risk-Free Entry"
+        "ctaText": "Get started",
+        "ribbonText": "Free"
       },
       {
         "name": "Starter",
-        "price": "$29",
-        "period": "/mo",
-        "description": "For individuals",
-        "features": [
-          "120 min/year",
-          "1080p export",
-          "No logo",
-          "140+ languages"
+        "id": "starter",
+        "price": {
+          "monthly": {
+            "amount": 29,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 18,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "Download your videos",
+            "icon": "check"
+          },
+          {
+            "text": "AI Video Assistant",
+            "icon": "check"
+          },
+          {
+            "text": "AI Dubbing",
+            "icon": "check"
+          },
+          {
+            "text": "Remove Synthesia logo",
+            "icon": "check"
+          },
+          {
+            "text": "1 editor & 3 guests",
+            "icon": "check"
+          },
+          {
+            "text": "125+ Synthesia AI Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "Chat/email support",
+            "icon": "check"
+          },
+          {
+            "text": "Includes 14,500 credits/y",
+            "icon": "check"
+          },
+          {
+            "text": "Usable for up to 120 minutes of video or AI Dubbing/year",
+            "icon": "check"
+          },
+          {
+            "text": "Download videos",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Start Free Trial",
-        "badge": "🔥 Most Popular"
+        "ctaText": "Choose Starter",
+        "billingNote": "Billed annually ($216/yr, save 38%)"
       },
       {
         "name": "Creator",
-        "price": "$89",
-        "period": "/mo",
-        "description": "For professionals",
-        "features": [
-          "360 min/year",
-          "Personal avatars",
-          "API access",
-          "Priority support"
+        "id": "creator",
+        "price": {
+          "monthly": {
+            "amount": 89,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 64,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "5 Personal Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "AI Dubbing",
+            "icon": "check"
+          },
+          {
+            "text": "Branded video pages",
+            "icon": "check"
+          },
+          {
+            "text": "API access",
+            "icon": "check"
+          },
+          {
+            "text": "Multiple avatars per scene",
+            "icon": "check"
+          },
+          {
+            "text": "Interactive videos",
+            "icon": "check"
+          },
+          {
+            "text": "1 editor & 5 guests",
+            "icon": "check"
+          },
+          {
+            "text": "180+ Synthesia AI Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "Priority chat/email support",
+            "icon": "check"
+          },
+          {
+            "text": "Includes 44,000 credits/y",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Start Free Trial",
-        "badge": "⭐ Best Value"
+        "ctaText": "Choose Creator",
+        "billingNote": "Billed annually ($768/yr, save 28%)",
+        "ribbonText": "Most popular"
+      },
+      {
+        "name": "Enterprise",
+        "id": "enterprise",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "Unlimited video minutes",
+            "icon": "check"
+          },
+          {
+            "text": "1-Click Translations into 80+ languages",
+            "icon": "check"
+          },
+          {
+            "text": "230+ stock AI Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "Unlimited Personal Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "SAML/SSO",
+            "icon": "check"
+          },
+          {
+            "text": "Live team collaboration",
+            "icon": "check"
+          },
+          {
+            "text": "Brand Kits",
+            "icon": "check"
+          },
+          {
+            "text": "SCORM export",
+            "icon": "check"
+          },
+          {
+            "text": "AI Dubbing (paid add-on)",
+            "icon": "check"
+          },
+          {
+            "text": "Tailored onboarding",
+            "icon": "check"
+          }
+        ],
+        "ctaText": "Book demo",
+        "unitPriceNote": "Custom pricing",
+        "billingNote": "Let's Talk",
+        "ribbonText": "For teams"
       }
     ],
     "has_free_trial": false,
@@ -1081,6 +2162,58 @@
     "categories": [
       "AI Avatars",
       "Professional Tools"
+    ],
+    "featureCards": [
+      {
+        "title": "Personal Avatars",
+        "description": "Personal Avatars.",
+        "icon": "play"
+      },
+      {
+        "title": "Voice Cloning",
+        "description": "Voice Cloning.",
+        "icon": "video"
+      },
+      {
+        "title": "Screen Recorder",
+        "description": "Screen Recorder.",
+        "icon": "film"
+      },
+      {
+        "title": "Video Assistant",
+        "description": "Video Assistant.",
+        "icon": "camera"
+      },
+      {
+        "title": "Global Sales Enablement Lead",
+        "description": "Global Sales Enablement Lead.",
+        "icon": "mic"
+      },
+      {
+        "title": "Click Translation",
+        "description": "Click Translation.",
+        "icon": "image"
+      },
+      {
+        "title": "Multilingual Video Player",
+        "description": "Multilingual Video Player.",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Global Solutions Owner",
+        "description": "Global Solutions Owner.",
+        "icon": "wand"
+      },
+      {
+        "title": "Brand Kits",
+        "description": "Brand Kits.",
+        "icon": "zap"
+      },
+      {
+        "title": "Live Collaboration",
+        "description": "Live Collaboration.",
+        "icon": "star"
+      }
     ]
   },
   {
@@ -1095,45 +2228,206 @@
     "pricing_plans": [
       {
         "name": "Free",
-        "price": "Free",
-        "period": "",
-        "description": "For testing",
-        "features": [
-          "1 min credit",
-          "Watermarked",
-          "Basic avatars",
-          "Limited features"
+        "id": "free",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "1 User",
+            "icon": "check"
+          },
+          {
+            "text": "1 Minute",
+            "icon": "check"
+          },
+          {
+            "text": "80+ Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "75+ Languages",
+            "icon": "check"
+          },
+          {
+            "text": "All Creator Features",
+            "icon": "check"
+          },
+          {
+            "text": "Full HD 1080p",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Get Started",
-        "badge": "Risk-Free Entry"
+        "ctaText": "Get started for free"
       },
       {
-        "name": "Basic",
-        "price": "$29",
-        "period": "/mo",
-        "description": "For individuals",
-        "features": [
-          "15 min/mo",
-          "120+ avatars",
-          "1080p export",
-          "No watermark"
+        "name": "Creator",
+        "id": "creator",
+        "price": {
+          "monthly": {
+            "amount": 29,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 23,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "1 User",
+            "icon": "check"
+          },
+          {
+            "text": "Up to 15 mins/mo",
+            "icon": "check"
+          },
+          {
+            "text": "Full HD video",
+            "icon": "check"
+          },
+          {
+            "text": "Full Avatar, Voice & Language Library",
+            "icon": "check"
+          },
+          {
+            "text": "Minutes per month: 15",
+            "icon": "check"
+          },
+          {
+            "text": "Avatars: 80+",
+            "icon": "check"
+          },
+          {
+            "text": "Full HD 1080p",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Start Free Trial",
-        "badge": "🔥 Most Popular"
+        "ctaText": "Choose Creator",
+        "billingNote": "Billed annually ($278/yr)"
       },
       {
-        "name": "Advanced",
-        "price": "$99",
-        "period": "/mo",
-        "description": "For professionals",
-        "features": [
-          "100 min/mo",
-          "Custom avatars",
-          "API access",
-          "Priority support"
+        "name": "Team",
+        "id": "team",
+        "price": {
+          "monthly": {
+            "amount": 125,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 100,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "Everything in Creator, plus",
+            "icon": "check"
+          },
+          {
+            "text": "3 Editors & 3 Guests",
+            "icon": "check"
+          },
+          {
+            "text": "Custom Images and Fonts",
+            "icon": "check"
+          },
+          {
+            "text": "Ultra 4K HD Video",
+            "icon": "check"
+          },
+          {
+            "text": "Premium Voices",
+            "icon": "check"
+          },
+          {
+            "text": "Minutes per month: 50/100/150",
+            "icon": "check"
+          },
+          {
+            "text": "Avatars: 80+",
+            "icon": "check"
+          },
+          {
+            "text": "Seats: 3",
+            "icon": "check"
+          },
+          {
+            "text": "Full HD 1080p",
+            "icon": "check"
+          },
+          {
+            "text": "Ultra HD 4K",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Start Free Trial",
-        "badge": "🚀 Power User"
+        "ctaText": "Choose Team",
+        "billingNote": "Billed annually ($1200/yr)",
+        "ribbonText": "Recommended"
+      },
+      {
+        "name": "Enterprise",
+        "id": "enterprise",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "Unlimited Users",
+            "icon": "check"
+          },
+          {
+            "text": "3 Voice Clones",
+            "icon": "check"
+          },
+          {
+            "text": "3 Selfie Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "Premium Avatars",
+            "icon": "check"
+          },
+          {
+            "text": "Brand Kit",
+            "icon": "check"
+          },
+          {
+            "text": "Workspaces",
+            "icon": "check"
+          },
+          {
+            "text": "SSO",
+            "icon": "check"
+          },
+          {
+            "text": "Premium Support",
+            "icon": "check"
+          },
+          {
+            "text": "Avatars: 80+",
+            "icon": "check"
+          },
+          {
+            "text": "Full HD 1080p",
+            "icon": "check"
+          }
+        ],
+        "ctaText": "Contact Sales",
+        "unitPriceNote": "Custom pricing",
+        "billingNote": "Let's Talk"
       }
     ],
     "has_free_trial": true,
@@ -1191,6 +2485,58 @@
     "is_verified": false,
     "categories": [
       "AI Avatars"
+    ],
+    "featureCards": [
+      {
+        "title": "Explore Elai features",
+        "description": "Explore Elai features.",
+        "icon": "play"
+      },
+      {
+        "title": "Try Elai for Free",
+        "description": "Try Elai for Free.",
+        "icon": "video"
+      },
+      {
+        "title": "Get started",
+        "description": "Get started.",
+        "icon": "film"
+      },
+      {
+        "title": "Main Elai features",
+        "description": "Main Elai features.",
+        "icon": "camera"
+      },
+      {
+        "title": "Read more",
+        "description": "Read more.",
+        "icon": "mic"
+      },
+      {
+        "title": "Generating a video from a prompt",
+        "description": "Generating a video from a prompt.",
+        "icon": "image"
+      },
+      {
+        "title": "Voice cloning",
+        "description": "Voice cloning.",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Transforming a presentation into a video",
+        "description": "Transforming a presentation into a video.",
+        "icon": "wand"
+      },
+      {
+        "title": "Generating videos from URL",
+        "description": "Generating videos from URL.",
+        "icon": "zap"
+      },
+      {
+        "title": "Custom avatars",
+        "description": "Custom avatars.",
+        "icon": "star"
+      }
     ]
   },
   {
@@ -1205,73 +2551,218 @@
     "pricing_plans": [
       {
         "name": "Free",
-        "price": "Free",
-        "period": "",
-        "description": "For testing",
-        "features": [
-          "80 monthly credits",
-          "480p export",
-          "Watermarked",
-          "Basic features"
+        "id": "free",
+        "price": {
+          "monthly": {
+            "amount": 0,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "0 monthly video credits",
+            "icon": "check"
+          },
+          {
+            "text": "Limited model access",
+            "icon": "check"
+          },
+          {
+            "text": "Watermarked videos",
+            "icon": "check"
+          },
+          {
+            "text": "Standard processing speed",
+            "icon": "check"
+          },
+          {
+            "text": "Pikaffects: Image-to-Video only",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Get Started",
-        "badge": "Risk-Free Entry"
+        "ctaText": "Get started"
       },
       {
         "name": "Basic",
-        "price": "$8",
-        "period": "/mo",
-        "description": "For beginners",
-        "features": [
-          "80 credits",
-          "Pika 2.5 (480p)",
-          "Basic features",
-          "Watermarked"
+        "id": "basic",
+        "price": {
+          "monthly": {
+            "amount": 10,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 8,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "80 monthly video credits",
+            "icon": "check"
+          },
+          {
+            "text": "Access to Pika 2.5 (480p only), Pikadditions, Pikaswaps, and Pikatwists (Turbo), Pikaffects Image-to-Video only",
+            "icon": "check"
+          },
+          {
+            "text": "Download videos with no watermark",
+            "icon": "check"
+          },
+          {
+            "text": "Purchase more roll over video credits",
+            "icon": "check"
+          },
+          {
+            "text": "Commercial use",
+            "icon": "check"
+          },
+          {
+            "text": "Monthly video credits: 80",
+            "icon": "check"
+          },
+          {
+            "text": "Roll over credits: Purchase more",
+            "icon": "check"
+          },
+          {
+            "text": "Pika 2.5: 480p only",
+            "icon": "check"
+          },
+          {
+            "text": "Turbo models: Pikatwists only",
+            "icon": "check"
+          },
+          {
+            "text": "Pikaffects: Image-to-Video only",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Start Free Trial",
-        "badge": "🔥 Most Popular"
+        "ctaText": "Subscribe to Basic",
+        "billingNote": "Billed annually ($96/yr, save 20%)"
       },
       {
         "name": "Standard",
-        "price": "$28",
-        "period": "/mo",
-        "description": "For creators",
-        "features": [
-          "700 credits",
-          "Fast generations",
-          "All Pikaffects",
-          "No watermark"
+        "id": "standard",
+        "price": {
+          "monthly": {
+            "amount": 35,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 28,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "700 monthly video credits",
+            "icon": "check"
+          },
+          {
+            "text": "Access to Pika 2.5, 2.2 (Pikascenes), Turbo and Pro (Pikadditions, Pikaswaps, Pikatwists), all Pikaffects",
+            "icon": "check"
+          },
+          {
+            "text": "Fast generations",
+            "icon": "check"
+          },
+          {
+            "text": "Purchase more roll over video credits",
+            "icon": "check"
+          },
+          {
+            "text": "Download videos with no watermark",
+            "icon": "check"
+          },
+          {
+            "text": "Commercial use",
+            "icon": "check"
+          },
+          {
+            "text": "Monthly video credits: 700",
+            "icon": "check"
+          },
+          {
+            "text": "Roll over credits: Purchase more",
+            "icon": "check"
+          },
+          {
+            "text": "Pika 2.5: Full access",
+            "icon": "check"
+          },
+          {
+            "text": "Pika 2.2 (Pikascenes)",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Start Free Trial",
-        "badge": "⭐ Best Value"
+        "ctaText": "Subscribe to Standard",
+        "billingNote": "Limited offer: $35 → $28 (billed yearly, $336/yr)",
+        "ribbonText": "Best value"
       },
       {
         "name": "Pro",
-        "price": "$76",
-        "period": "/mo",
-        "description": "For professionals",
-        "features": [
-          "2300 credits",
-          "Faster generations",
-          "Priority support",
-          "Advanced features"
+        "id": "pro",
+        "price": {
+          "monthly": {
+            "amount": 95,
+            "currency": "USD",
+            "period": "month"
+          },
+          "yearly": {
+            "amount": 76,
+            "currency": "USD",
+            "period": "month"
+          }
+        },
+        "featureItems": [
+          {
+            "text": "2300 monthly video credits",
+            "icon": "check"
+          },
+          {
+            "text": "Access to Pika 2.5, 2.2 (Pikascenes), Turbo and Pro (Pikadditions, Pikaswaps, Pikatwists), all Pikaffects",
+            "icon": "check"
+          },
+          {
+            "text": "Faster generations",
+            "icon": "check"
+          },
+          {
+            "text": "Purchase more roll over video credits",
+            "icon": "check"
+          },
+          {
+            "text": "Download videos with no watermark",
+            "icon": "check"
+          },
+          {
+            "text": "Commercial use",
+            "icon": "check"
+          },
+          {
+            "text": "Monthly video credits: 2300",
+            "icon": "check"
+          },
+          {
+            "text": "Roll over credits: Purchase more",
+            "icon": "check"
+          },
+          {
+            "text": "Pika 2.5: Full access",
+            "icon": "check"
+          },
+          {
+            "text": "Pika 2.2 (Pikascenes)",
+            "icon": "check"
+          }
         ],
-        "btn_text": "Start Free Trial",
-        "badge": "🚀 Power User"
-      },
-      {
-        "name": "Fancy",
-        "price": "$76",
-        "period": "/mo",
-        "description": "For power users",
-        "features": [
-          "6000 credits",
-          "Fastest generations",
-          "All Pro features",
-          "Premium support"
-        ],
-        "btn_text": "Start Free Trial",
-        "badge": "🚀 Power User"
+        "ctaText": "Subscribe to Pro",
+        "billingNote": "Billed annually ($912/yr, save 20%)"
       }
     ],
     "has_free_trial": true,

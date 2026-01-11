@@ -1,0 +1,21 @@
+{
+  "tool": "Zebracat",
+  "plans": [
+    {
+      "name": "Cat Mode",
+      "pricing": {
+        "monthly": {
+          "amount": 39,
+          "currency": "USD",
+          "period": "month"
+        },
+        "yearly_effective_monthly": {
+          "amount": 19,
+          "currency": "USD",
+          "period": "month",
+          "note": "Billed yearly"
+        }
+      }
+    }
+  ]
+}
