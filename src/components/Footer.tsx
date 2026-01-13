@@ -62,6 +62,10 @@ export default function Footer() {
           </p>
         </div>
       </div>
+      {/* Impact.com Site Verification - Remove after verification */}
+      <p className="text-[10px] text-gray-300 text-center pb-2 opacity-30">
+        Impact-Site-Verification: f2b1392d-0b6c-43d6-a68e-c04b76b70c77
+      </p>
     </footer>
   );
 }
