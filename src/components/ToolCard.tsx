@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Tool } from '@/types/tool';
 import { categories } from '@/data/categories';
 import ToolLogo from './ToolLogo';
+import CTAButton from './CTAButton';
 
 interface ToolCardProps {
   tool: Tool;
@@ -43,8 +44,8 @@ export default function ToolCard({ tool }: ToolCardProps) {
           
           {/* Logo and Name Row */}
           <div className="flex flex-row items-start gap-3 pr-20">
-            {/* Logo Container */}
-            <div className="w-16 h-16 flex items-center justify-center bg-white rounded-xl border border-gray-100 shadow-sm shrink-0">
+            {/* Logo Container - Removed shadow-sm to fix black block overlay */}
+            <div className="w-16 h-16 flex items-center justify-center bg-white rounded-xl border border-gray-100 shrink-0">
               <img 
                 src={tool.logo_url} 
                 alt={tool.name}
@@ -122,15 +123,11 @@ export default function ToolCard({ tool }: ToolCardProps) {
         >
           View Review →
         </Link>
-        <a
-          href={tool.affiliate_link}
-          target="_blank"
-          rel="nofollow noopener noreferrer"
-          referrerPolicy="no-referrer"
-          className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors shadow-sm"
-        >
-          Visit Website
-        </a>
+        <CTAButton 
+          affiliateLink={tool.affiliate_link} 
+          text="Visit Website" 
+          size="sm" 
+        />
       </div>
     </div>
   );

@@ -12,7 +12,8 @@
     "scrape:fliki": "tsx scripts/scrape-fliki-pricing.ts",
     "extract:tools": "tsx scripts/extract-tools-from-cache.ts",
     "validate:tools": "tsx scripts/validate-tools.ts",
-    "validate:pricing": "tsx scripts/validate-pricing-json.ts"
+    "validate:pricing": "tsx scripts/validate-pricing-json.ts",
+    "export:dossiers": "tsx scripts/export_tool_dossiers.ts"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",

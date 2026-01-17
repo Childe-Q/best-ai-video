@@ -30,10 +30,10 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
           <Breadcrumbs toolName={tool.name} toolSlug={tool.slug} />
         </div>
 
-        {/* 2. THE GRID ROW - Both cards MUST be direct children of this grid div */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch w-full mb-8">
-          {/* Left Column: Hero (Takes 2/3 space) */}
-          <div className="md:col-span-2 flex flex-col h-full bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+        {/* 2. THE GRID ROW - Left card, Key facts, and Verdict card in CSS Grid */}
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_420px] lg:grid-rows-[auto_1fr] lg:items-stretch mb-8">
+          {/* Left Column: Hero (Row 1, Col 1) */}
+          <div className="lg:col-start-1 lg:row-start-1 flex flex-col h-full bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
             <div className="p-4 flex-1">
               <div className="flex flex-col md:flex-row gap-3 items-start">
                 {/* Logo */}
@@ -61,20 +61,39 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
                     <div className="flex flex-wrap items-center gap-2 mb-2">
                       {tool.rating && (
                         <div className="flex items-center gap-1">
-                          {[...Array(5)].map((_, i) => (
-                            <span 
-                              key={i}
-                              className={`text-lg ${i < Math.floor(tool.rating) ? 'text-orange-500' : 'text-gray-300'}`}
-                            >
-                              ★
-                            </span>
-                          ))}
+                          {[...Array(5)].map((_, i) => {
+                            const filled = tool.rating! - i;
+                            const fillPercentage = Math.max(0, Math.min(100, filled * 100));
+                            return (
+                              <span key={i} className="relative inline-block text-lg" style={{ width: '1em', height: '1em' }}>
+                                {/* Empty star background */}
+                                <span className="absolute inset-0 text-gray-300">★</span>
+                                {/* Filled star overlay */}
+                                {fillPercentage > 0 && (
+                                  <span 
+                                    className="absolute inset-0 text-orange-500"
+                                    style={{ 
+                                      clipPath: `inset(0 ${100 - fillPercentage}% 0 0)`,
+                                      WebkitClipPath: `inset(0 ${100 - fillPercentage}% 0 0)`
+                                    }}
+                                  >
+                                    ★
+                                  </span>
+                                )}
+                              </span>
+                            );
+                          })}
                           <span className="ml-1 text-sm text-gray-600">{tool.rating.toFixed(1)}</span>
                         </div>
                       )}
-                      {tool.review_count && tool.review_count > 0 && (
+                      {tool.review_count && tool.review_count > 0 ? (
                         <span className="text-sm text-gray-600">{tool.review_count} user reviews</span>
-                      )}
+                      ) : tool.rating ? (
+                        <div className="flex flex-col">
+                          <span className="text-xs text-gray-500">Our score</span>
+                          <span className="text-[10px] text-gray-400 leading-tight mt-0.5">Based on public docs + user feedback. Some limits vary by account.</span>
+                        </div>
+                      ) : null}
                       {tool.is_verified && (
                         <div className="flex items-center gap-1 px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs font-medium">
                           <CheckBadgeIcon className="w-4 h-4" />
@@ -194,35 +213,35 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
                     )}
 
                     {/* Highlights */}
-                    {tool.features && tool.features.length > 0 && (
+                    {(tool.highlights && tool.highlights.length > 0) || (tool.features && tool.features.length > 0) ? (
                       <div className="mb-2">
                         <div className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1.5">Highlights</div>
                         <div className="flex flex-wrap gap-2">
-                          {tool.features.slice(0, 4).map((feature, idx) => (
+                          {(tool.highlights && tool.highlights.length > 0
+                            ? tool.highlights
+                            : tool.features!.slice(0, 4)
+                          ).map((item, idx) => (
                             <span
                               key={idx}
                               className="bg-gray-50 text-gray-700 text-xs px-2.5 py-1 rounded-md border border-gray-100"
                             >
-                              {feature}
+                              {item}
                             </span>
                           ))}
                         </div>
                       </div>
-                    )}
+                    ) : null}
                 </div>
               </div>
             </div>
             {/* Footer Buttons (Pinned to bottom) */}
             <div className="p-4 pt-0 mt-auto flex gap-3">
-              <a
-                href={tool.affiliate_link}
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2.5 rounded-lg transition-colors flex items-center gap-2"
-              >
-                {tool.deal ? 'Get the deal' : 'Visit Website'}
-                <LinkIcon className="w-4 h-4" />
-              </a>
+              <CTAButton 
+                affiliateLink={tool.affiliate_link}
+                text={tool.deal ? 'Get the deal' : 'Visit Website'}
+                size="md"
+                className="flex-1"
+              />
               <button
                 className="border border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-900 font-medium px-4 py-2.5 rounded-lg transition-colors flex items-center gap-2"
                 aria-label="Bookmark"
@@ -233,8 +252,26 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
             </div>
           </div>
 
-          {/* Right Column: Verdict (Takes 1/3 space) */}
-          <div className="md:col-span-1 flex flex-col h-full bg-slate-50 border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+          {/* Key Facts Block (Row 2, Col 1) */}
+          {tool.key_facts && tool.key_facts.length > 0 && (
+            <div className="lg:col-start-1 lg:row-start-2 h-full">
+              <div className="bg-gray-50/30 border border-gray-200/60 rounded-md shadow-sm p-2.5 h-full flex flex-col">
+                <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1.5">Key Facts</h3>
+                <ul className="space-y-1">
+                  {tool.key_facts.map((fact, idx) => (
+                    <li key={idx} className="flex items-start gap-1.5 text-xs text-gray-600 leading-tight">
+                      <span className="text-indigo-500 font-bold shrink-0 mt-0.5">•</span>
+                      <span>{fact}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          )}
+
+          {/* Right Column: Verdict (Col 2, Spans both rows) */}
+          {/* Removed shadow-sm and overflow-hidden to prevent shadow clipping/overlay issues */}
+          <div className="lg:col-start-2 lg:row-span-2 flex flex-col h-full bg-slate-50 border border-slate-200 rounded-xl">
             <div className="p-4 flex-1">
               <VerdictCard
                 reviewContent={tool.review_content || ''}
@@ -245,6 +282,7 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
                 bestFor={tool.best_for}
                 startingPrice={tool.starting_price}
                 embedded={true}
+                verdictData={tool.content?.reviews?.verdict}
               />
             </div>
             {/* Footer CTA (Pinned to bottom) */}
@@ -256,7 +294,7 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
         {/* End of Grid Row */}
 
         {/* Tabs Navigation */}
-        <ToolTabs toolSlug={tool.slug} />
+        <ToolTabs slug={tool.slug} />
 
         {/* Page Content */}
         {children}

@@ -118,7 +118,7 @@ export default function PricingCardsGrid({ plans, affiliateLink, hasFreeTrial, t
                   plan={plan}
                   isPopular={getIsPopular(plan, originalIndex)}
                   affiliateLink={affiliateLink}
-                  billing={billing}
+                  isAnnual={billing === 'yearly'}
                   hasFreeTrial={hasFreeTrial}
                   previousPlanName={index > 0 ? topRowPlans[index - 1]?.name : undefined}
                   toolSlug={toolSlug}
@@ -142,7 +142,7 @@ export default function PricingCardsGrid({ plans, affiliateLink, hasFreeTrial, t
                     plan={plan}
                     isPopular={getIsPopular(plan, originalIndex)}
                     affiliateLink={affiliateLink}
-                    billing={billing}
+                    isAnnual={billing === 'yearly'}
                     hasFreeTrial={hasFreeTrial}
                     previousPlanName={index > 0 ? bottomRowPlans[index - 1]?.name : undefined}
                     toolSlug={toolSlug}

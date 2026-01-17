@@ -103,7 +103,7 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
             {tool.name} Plans & Pricing
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Choose a plan that fits best now and join thousands of happy users who have saved more than 80% on time and costs by creating videos with {tool.name}.
+            Compare plans, understand credit usage, and find the right tier for your production volume.
           </p>
           
           {/* Trust Bar: Last updated + Source + Disclosure */}
@@ -130,7 +130,85 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
 
-        {/* 2. Pricing Cards Grid */}
+        {/* 2. Pricing Snapshot */}
+        {tool.content?.pricing?.snapshot ? (
+          <div className="mb-8 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Pricing Snapshot</h2>
+            <div className={`grid grid-cols-1 ${tool.content.pricing.snapshot.plans.length === 2 ? 'md:grid-cols-2' : tool.content.pricing.snapshot.plans.length === 3 ? 'md:grid-cols-3' : 'md:grid-cols-4'} gap-4 mb-4`}>
+              {tool.content.pricing.snapshot.plans.map((plan, idx) => (
+                <div 
+                  key={idx} 
+                  className={`border ${idx === 1 ? 'border-indigo-200 bg-indigo-50/30' : 'border-gray-200'} rounded-lg p-4`}
+                >
+                  <h3 className="font-semibold text-gray-900 mb-2">{plan.name}</h3>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    {plan.bullets.map((bullet, bulletIdx) => (
+                      <li key={bulletIdx} className="list-disc list-inside">{bullet}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            {tool.content.pricing.snapshot.note && (
+              <p className="text-xs text-gray-500 text-center">
+                {tool.content.pricing.snapshot.note}
+              </p>
+            )}
+          </div>
+        ) : pricingPlans.length > 0 && (
+          <div className="mb-8 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Pricing Snapshot</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+              <div className="border border-gray-200 rounded-lg p-4">
+                <h3 className="font-semibold text-gray-900 mb-2">Free</h3>
+                <p className="text-sm text-gray-600">Limited video minutes and exports with watermark</p>
+              </div>
+              <div className="border border-indigo-200 rounded-lg p-4 bg-indigo-50/30">
+                <h3 className="font-semibold text-gray-900 mb-2">Starter</h3>
+                <p className="text-sm text-gray-600">Higher limits, no watermark, basic AI features</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-4">
+                <h3 className="font-semibold text-gray-900 mb-2">Pro</h3>
+                <p className="text-sm text-gray-600">Advanced features, more credits, priority support</p>
+              </div>
+            </div>
+            <p className="text-xs text-gray-500 text-center">
+              Check official pricing for most up-to-date plans and features
+            </p>
+          </div>
+        )}
+
+        {/* 2a. How credits/minutes get used */}
+        {tool.content?.pricing?.creditUsage && (
+          <div className="mb-8 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">{tool.content.pricing.creditUsage.title}</h2>
+            <ul className="text-sm text-gray-700 space-y-2">
+              {tool.content.pricing.creditUsage.bullets.map((bullet: string, idx: number) => (
+                <li key={idx} className="flex items-start gap-2">
+                  <span className="text-gray-400 mt-1">•</span>
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* 2b. Plan picker */}
+        {tool.content?.pricing?.planPicker && (
+          <div className="mb-8 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">{tool.content.pricing.planPicker.title}</h2>
+            <ul className="text-sm text-gray-700 space-y-2">
+              {tool.content.pricing.planPicker.bullets.map((bullet: string, idx: number) => (
+                <li key={idx} className="flex items-start gap-2">
+                  <span className="text-gray-400 mt-1">•</span>
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* 3. Pricing Cards Grid */}
         <div className="mb-0">
           {pricingPlans.length > 0 ? (
             <PricingCardsGrid 
@@ -173,13 +251,13 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
                   </tr>
                   <tr>
                     <td className="p-6 text-sm text-gray-700 font-medium">Export Quality</td>
-                    <td className="p-6 text-sm text-gray-900 font-medium border-l border-gray-100">720p</td>
+                    <td className="p-6 text-sm text-gray-900 font-medium border-l border-gray-100">Up to 1080p, watermarked (varies by account; older docs mention 720p)</td>
                     <td className="p-6 text-sm text-indigo-600 font-bold border-l border-gray-100 bg-indigo-50/10">1080p / 4K</td>
                   </tr>
                   <tr>
-                    <td className="p-6 text-sm text-gray-700 font-medium">Storage</td>
-                    <td className="p-6 text-sm text-gray-900 font-medium border-l border-gray-100">Limited</td>
-                    <td className="p-6 text-sm text-indigo-600 font-bold border-l border-gray-100 bg-indigo-50/10">High / Unlimited</td>
+                    <td className="p-6 text-sm text-gray-700 font-medium">Weekly Limits</td>
+                    <td className="p-6 text-sm text-gray-900 font-medium border-l border-gray-100">Up to 10 mins/week and 4 exports/week (limits can vary by account/region)</td>
+                    <td className="p-6 text-sm text-indigo-600 font-bold border-l border-gray-100 bg-indigo-50/10">Higher limits based on plan</td>
                   </tr>
                 </tbody>
               </table>
@@ -190,11 +268,10 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
         {/* 5. Verdict / Recommendation */}
         <section className="bg-indigo-50 rounded-xl p-8 border border-indigo-100 text-center max-w-4xl mx-auto">
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
-            Is {tool.name} worth {getStartingPrice(tool)}?
+            {tool.content?.pricing?.verdict?.title?.replace('{price}', getStartingPrice(tool)) || `Is ${tool.name} worth ${getStartingPrice(tool)}?`}
           </h2>
           <p className="text-gray-700 mb-6 leading-relaxed text-base md:text-lg">
-            If you are serious about {tool.best_for.toLowerCase()}, then <strong>yes</strong>. The time saved by its AI features justifies the monthly cost. 
-            {hasFreePlan(tool) ? ' Plus, you can start for free to test it out.' : ' Plus, the free trial lets you test it risk-free.'}
+            {tool.content?.pricing?.verdict?.text || `If you need to produce videos regularly and want to avoid manual asset sourcing, the time savings can justify the cost. The Free plan works for testing, but watermarks and limits make it unsuitable for publishing. Start with monthly billing to test your actual usage before committing to annual plans.`}
           </p>
           <CTAButton affiliateLink={tool.affiliate_link} hasFreeTrial={tool.has_free_trial} />
         </section>

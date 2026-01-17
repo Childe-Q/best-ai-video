@@ -49,24 +49,24 @@ export default function Breadcrumbs({
 
   return (
     <nav className="mb-6" aria-label="Breadcrumb">
-      <ol className="flex flex-wrap items-center gap-1.5 text-sm text-gray-600">
+      <ol className="flex flex-wrap items-center gap-1.5 text-sm font-bold text-black/60">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
           
           return (
             <li key={index} className="flex items-center">
               {index > 0 && (
-                <ChevronRightIcon className="w-4 h-4 text-gray-400 mx-1.5 flex-shrink-0" />
+                <ChevronRightIcon className="w-4 h-4 text-black/40 mx-1.5 flex-shrink-0" />
               )}
               {item.href && !isLast ? (
                 <Link
                   href={item.href}
-                  className="hover:text-gray-900 hover:underline transition-colors"
+                  className="hover:text-black hover:underline transition-colors"
                 >
                   {item.label}
                 </Link>
               ) : (
-                <span className={isLast ? 'text-gray-900 font-medium' : ''}>
+                <span className={isLast ? 'text-black font-extrabold' : ''}>
                   {item.label}
                 </span>
               )}

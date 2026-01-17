@@ -309,16 +309,20 @@
       "Cheap"
     ],
     "pros": [
-      "Very easy to use",
-      "Huge stock library with 8M+ assets",
-      "Web-based, no download needed"
+      "All-in-one prompt-to-video workflow: generates script, scenes, subtitles, voiceover, and stock footage in one pass. Works well for high-volume production.",
+      "Integrated premium stock sources: includes access to iStock, Storyblocks, and Shutterstock libraries. Reduces need for separate subscriptions and time spent finding footage.",
+      "Suited for faceless content: combines stock footage, subtitles, and AI voiceover to create Shorts and explainer videos without on-camera presence.",
+      "Quick to learn: more accessible for users who don't want to learn traditional editing. Functions more like a generator than an editor."
     ],
     "cons": [
-      "Watermark on free plan",
-      "Rendering can be slow for long videos"
+      "Credits burn fast: user reports note that minor edits and scene swaps also consume credits/minutes. High iteration costs.",
+      "Poor refund/cancellation experience: multiple platform reviews mention difficulty getting refunds after accidental annual charges. Terms state fees may be non-refundable.",
+      "Generic stock footage: common complaint is that stock clips feel off-topic or slideshow-like. Manual replacement needed to make videos feel more natural.",
+      "Export/render failures: users report exports getting stuck at 99% for long videos. This issue is mentioned frequently.",
+      "Browser compatibility: playback issues on Firefox. Chrome is recommended for reliable use."
     ],
-    "review_content": "InVideo is a powerful online video editor that simplifies the process of creating professional-quality videos. Its AI-powered features allow you to convert text scripts into ready-to-publish videos in minutes.",
-    "long_review": "<p>InVideo is a game-changer for content creators who need to produce high-quality videos quickly. Its standout feature is the <strong>Text-to-Video</strong> capability, which allows you to paste a script or a blog post URL, and the AI automatically selects relevant stock footage, adds subtitles, and creates a rough cut for you.</p><p>The platform offers a massive library of over <strong>8 million stock media assets</strong> from iStock, Shutterstock, and Storyblocks, which is a huge value add compared to competitors. The interface is intuitive, making it accessible even for those with zero video editing experience.</p><p>Newly released <strong>v4.0</strong> includes the AI Twin feature, allowing you to clone yourself without a camera. This revolutionary capability enables you to create professional videos with your digital clone, making it perfect for content creators who want to scale their video production without being physically present for every recording.</p>",
+    "review_content": "InVideo is an online video editor that converts text scripts into videos. Its AI features select stock footage, add subtitles, and create a rough cut automatically.",
+    "long_review": "<p>InVideo works well for content creators who need to produce videos quickly. Its main feature is <strong>Text-to-Video</strong>: paste a script or blog post URL, and the AI selects stock footage, adds subtitles, and creates a rough cut.</p><p>The platform includes access to over <strong>8 million stock media assets</strong> from iStock, Shutterstock, and Storyblocks. The interface is straightforward, which helps users with limited video editing experience.</p><p><strong>v4.0</strong> includes the AI Twin feature, which creates a digital clone of yourself without a camera. This can help content creators produce videos without being physically present for each recording.</p>",
     "faqs": [
       {
         "question": "Is InVideo free to use?",
@@ -326,7 +330,7 @@
       },
       {
         "question": "Can I use InVideo for YouTube?",
-        "answer": "Absolutely! InVideo is optimized for YouTube, Instagram, and TikTok video creation with templates and aspect ratios for each platform."
+        "answer": "Yes. InVideo includes templates and aspect ratios for YouTube, Instagram, and TikTok. You can export videos in formats that work for each platform."
       }
     ],
     "ease_of_use_score": 7.6,
@@ -348,6 +352,18 @@
     "deal": null,
     "review_count": 0,
     "is_verified": false,
+    "highlights": [
+      "Prompt-to-video workflow",
+      "Premium stock (tiered)",
+      "Watermarks + export limits",
+      "No-refund policy"
+    ],
+    "key_facts": [
+      "Free plan includes watermarks; weekly limits apply (typically 10 mins/week, 4 exports/week; limits may vary by account).",
+      "Credits/minutes are consumed on edits and regenerations, not just initial generation (user reports confirm this behavior).",
+      "Commercial/resale rights depend on plan tier; review Terms for your specific use case.",
+      "Some users report export failures at 99% completion for longer videos; Chrome is recommended over Firefox for reliability."
+    ],
     "categories": [
       "Video Generators",
       "Video Editors",
@@ -404,7 +420,250 @@
         "description": "Watermark Video Maker.",
         "icon": "star"
       }
-    ]
+    ],
+    "feature_groups": [
+      {
+        "title": "Workflow (Prompt → Video)",
+        "summary": "One run generates script, scenes, captions, voice, and stock visuals.",
+        "bullets": [
+          "Best for fast drafts and faceless Shorts-style videos.",
+          "You can edit scenes after generation, but iteration may consume credits/minutes. [NEED VERIFICATION]"
+        ]
+      },
+      {
+        "title": "Stock assets & licensing",
+        "summary": "Built-in stock sources reduce time spent hunting footage.",
+        "bullets": [
+          "Uses premium sources like iStock/Storyblocks/Shutterstock (plan limits apply).",
+          "Free plan typically includes visible watermarks; paid plans remove them. [NEED VERIFICATION]"
+        ]
+      },
+      {
+        "title": "Editing & iteration costs",
+        "summary": "Good for quick edits, but heavy iteration can get expensive.",
+        "bullets": [
+          "User reports mention edits can burn credits/minutes quickly.",
+          "If you revise drafts frequently, track usage and finalize scripts before regenerating."
+        ]
+      },
+      {
+        "title": "Captions, formats, and exports",
+        "summary": "Designed for social formats with captions and common export settings.",
+        "bullets": [
+          "Auto captions are built-in; styling options vary by template/workflow. [NEED VERIFICATION]",
+          "Export resolution and watermark depend on plan."
+        ]
+      }
+    ],
+    "content": {
+      "overview": {
+        "tldr": {
+          "bestFor": "Content creators who want to quickly produce faceless YouTube videos, Shorts, and social media marketing content using prompt-to-video generation. Best for high-volume output without manual asset sourcing.",
+          "notFor": "Users who need granular editing control (shot-by-shot, transitions, frame-level adjustments) or who iterate frequently. Community feedback shows edits consume credits/minutes, which can deplete your quota quickly.",
+          "why": "Main advantage is integrating script generation with stock media libraries (iStock, Storyblocks, Shutterstock) directly into the workflow. This addresses the time-consuming bottleneck of finding footage—time savings outweigh cost savings."
+        },
+        "miniTest": {
+          "prompt": "Create a 30-second vertical video about the health benefits of drinking green tea, energetic tone, with subtitles.",
+          "generationTime": "",
+          "footageMatch": "",
+          "subtitleAccuracy": "",
+          "verdict": ""
+        },
+        "useCases": [
+          {
+            "title": "Faceless YouTube / Shorts",
+            "why": "Generate scripts from prompts and automatically match stock footage with subtitles. Works well for creators who publish Shorts daily.",
+            "linkHref": "/vs/invideo-vs-pictory",
+            "linkText": "Compare with alternatives →"
+          },
+          {
+            "title": "Marketing Ads / Social Media",
+            "why": "Quick explainer videos and product highlight reels. Consider manually replacing key shots to avoid generic stock footage feel.",
+            "linkHref": "/vs/invideo-vs-zebracat",
+            "linkText": "Compare with alternatives →"
+          },
+          {
+            "title": "Blog-to-Video",
+            "why": "Convert articles and key points into video summaries. Suited for SEO content teams doing content repurposing.",
+            "linkHref": "/vs/invideo-vs-fliki",
+            "linkText": "Compare with alternatives →"
+          }
+        ]
+      },
+      "pricing": {
+        "snapshot": {
+          "plans": [
+            {
+              "name": "Free",
+              "bullets": [
+                "Visible watermarks (brand watermark plus stock media watermarks)",
+                "Up to 10 mins/week and 4 exports/week (limits can vary by account/region)",
+                "Export quality: Up to 1080p, watermarked (varies by account; older docs mention 720p)",
+                "Not recommended for commercial publishing"
+              ]
+            },
+            {
+              "name": "Plus",
+              "bullets": [
+                "Watermark removal",
+                "Suited for high-volume short video production (note: repeated edits can accelerate credit consumption)",
+                "More complete commercial licensing (especially for resale and client projects)"
+              ]
+            },
+            {
+              "name": "Max",
+              "bullets": [
+                "Higher credit limits and better suited for team use",
+                "Better for daily production with fewer limitations",
+                "If you frequently revise drafts, consider higher tiers to avoid credit anxiety"
+              ]
+            }
+          ],
+          "note": "Repeated edits also consume credits. Consider finalizing your script before generating."
+        },
+        "creditUsage": {
+          "title": "How credits/minutes get used (what surprises people)",
+          "bullets": [
+            "Generating a video consumes credits or minutes from your quota",
+            "Re-generating or regenerating after edits also consumes credits/minutes",
+            "Heavy iteration (multiple revisions, scene swaps) can burn through usage quickly",
+            "Minor edits like script tweaks may still consume credits depending on regeneration [NEED VERIFICATION]",
+            "Exporting itself typically doesn't consume credits, but the generation process does"
+          ]
+        },
+        "planPicker": {
+          "title": "Which plan should I choose?",
+          "bullets": [
+            "Free: Test workflows and learn the interface. Not for commercial use due to watermarks and limits.",
+            "Plus: Start here if you plan to publish regularly. Removes watermarks and provides enough credits for moderate use.",
+            "Max (or Generative): Better for daily production or teams. Higher credit limits reduce quota anxiety.",
+            "Team: For agencies or multiple users. Custom pricing and enterprise features."
+          ]
+        },
+        "verdict": {
+          "title": "Is InVideo worth {price}?",
+          "text": "If you need to produce videos regularly and want to avoid manual asset sourcing, the time savings can justify the cost. The Free plan works for testing, but watermarks and limits make it unsuitable for publishing. Start with monthly billing to test your actual usage before committing to annual plans."
+        }
+      },
+      "reviews": {
+        "reviewHighlights": {
+          "likes": [
+            "Users appreciate the all-in-one workflow that handles script generation and asset sourcing",
+            "Access to premium stock libraries is seen as a time-saver compared to managing separate subscriptions",
+            "The learning curve is gentle for those new to video creation"
+          ],
+          "complaints": [
+            "Users find that making changes or regenerating videos consumes their quota faster than expected",
+            "The cancellation and refund process is frustrating, particularly for annual subscriptions",
+            "Stock footage selection often feels disconnected from the intended message, requiring manual curation"
+          ],
+          "commonIssues": [
+            {
+              "claim": "Edits and regenerations may burn minutes/credits faster than expected",
+              "impact": "Affects users who iterate frequently or make multiple revisions to their videos",
+              "whatToDo": "Finalize your script and plan edits before generating to minimize credit usage"
+            },
+            {
+              "claim": "Export can stall on longer videos or have browser reliability issues",
+              "impact": "Affects creators producing videos over 5 minutes, especially on Firefox",
+              "whatToDo": "Use Chrome for exports and consider breaking long videos into shorter segments"
+            },
+            {
+              "claim": "Refund and cancellation process can be frustrating, especially for annual subscriptions",
+              "impact": "Affects users who want to cancel or get refunds after annual billing",
+              "whatToDo": "Start with monthly billing to test usage before committing to annual plans"
+            },
+            {
+              "claim": "Stock footage relevance can be generic or off-topic and require manual swaps",
+              "impact": "Affects users who need precise visual matches for their content",
+              "whatToDo": "Plan to manually review and replace stock clips that don't match your message"
+            }
+          ]
+        },
+        "faqs": [
+          {
+            "question": "Is InVideo AI completely free to use?",
+            "answer": "Yes—you can try it on the free plan, but exports are watermarked and usage is capped. Treat it as a workflow trial, not a plan for publishing consistently."
+          },
+          {
+            "question": "Do edits consume credits in InVideo?",
+            "answer": "Often, yes—users report that regenerating scenes or making certain changes can deduct minutes/credits, not just the first generation. If you iterate heavily, track usage closely and finalize your script before regenerating. [NEED VERIFICATION]"
+          },
+          {
+            "question": "Can I monetize InVideo AI videos on YouTube?",
+            "answer": "Usually, monetization is safest on paid tiers where commercial terms are clearer. For client work or resale, double-check your plan's licensing and the stock asset terms before publishing."
+          },
+          {
+            "question": "Can I use InVideo stock footage commercially?",
+            "answer": "It depends on your plan and the asset source (premium libraries are typically tiered and capped). If you're publishing ads or client work, confirm the plan's commercial/resale coverage in the official terms/help docs."
+          },
+          {
+            "question": "How to remove InVideo watermark without paying?",
+            "answer": "You can't remove the watermark on the free plan—watermark removal is a paid feature. If you need publishable exports, you'll need a paid tier or a tool with a no-watermark free policy."
+          },
+          {
+            "question": "What browsers work best with InVideo?",
+            "answer": "Chrome tends to be the safest choice for editing and exports. Some users report playback/export issues on Firefox, especially on longer projects."
+          },
+          {
+            "question": "Why do my exports fail at 99% completion?",
+            "answer": "This is commonly reported with longer timelines or heavy assets. Try exporting in Chrome, splitting long videos into shorter segments, and reducing effects/overlays before re-exporting."
+          },
+          {
+            "question": "What happens if I cancel?",
+            "answer": "Exported videos generally remain usable, but your editing access and monthly credits can change after cancellation. If you're mid-project, export final versions before your billing period ends."
+          },
+          {
+            "question": "InVideo AI vs. InVideo Studio: Which one do I need?",
+            "answer": "InVideo AI is prompt-to-video (fast drafts with automated scenes and assets). Studio is more template/manual editing—better if you want hands-on control."
+          },
+          {
+            "question": "Is InVideo legit or a scam?",
+            "answer": "The product is widely used, but complaints often focus on unclear credit burn and frustrating cancellation/refund experiences. If you're unsure, start monthly first and keep an eye on usage and renewal settings."
+          }
+        ],
+        "verdict": {
+          "bottomLine": "InVideo AI is best for creators who want a fast prompt-to-video workflow for Shorts and simple social ads. The trade-off is cost control: heavy iteration can burn minutes/credits quickly, and commercial/resale rights depend on your plan. If you need frame-level editing, you'll likely be happier with a traditional editor.",
+          "bestFor": [
+            "Faceless Shorts production",
+            "Quick ad drafts",
+            "Stock-first workflows"
+          ]
+        }
+      },
+      "sources": {
+        "OFFICIAL_PRICING": {
+          "type": "OFFICIAL_PRICING",
+          "howToVerify": "Visit invideo.io/pricing and screenshot the pricing table",
+          "suggestedQuery": "InVideo pricing commercial rights help center"
+        },
+        "HELP_CENTER": {
+          "type": "HELP_CENTER",
+          "howToVerify": "Search help.invideo.io for 'Commercial rights' or 'Refund policy'",
+          "suggestedQuery": "InVideo help center commercial license"
+        },
+        "TERMS": {
+          "type": "TERMS",
+          "howToVerify": "Read invideo.io/terms-and-conditions, search for 'License' section",
+          "suggestedQuery": "InVideo terms and conditions license"
+        },
+        "UI_EXPORT_POPUP": {
+          "type": "UI_EXPORT_POPUP",
+          "howToVerify": "Register free account, click Export button, screenshot the watermark removal prompt",
+          "suggestedQuery": null
+        },
+        "REDDIT": {
+          "type": "REDDIT",
+          "howToVerify": "Search Reddit for user complaints about credit limits or watermark",
+          "suggestedQuery": "site:reddit.com InVideo AI complaint OR issue OR slow"
+        },
+        "OFFICIAL_FEATURES": {
+          "type": "OFFICIAL_FEATURES",
+          "howToVerify": "Check invideo.io/blog or help center for stock media library details",
+          "suggestedQuery": "InVideo iStock Shutterstock stock library"
+        }
+      }
+    }
   },
   {
     "id": "2",

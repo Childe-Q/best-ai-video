@@ -1,0 +1,235 @@
+[
+  {
+    "tool": "veed-io",
+    "bestFor": ["Manual timeline editing", "Social media repurposing", "Subtitle correction"],
+    "whySwitch": [
+      {
+        "claim": "Veed is a timeline-first editor, which makes it easier to do precise trims, splits, and layers than InVideo AI's prompt-first 'regenerate' workflow.",
+        "sources": [
+          {
+            "url": "/tool/veed-io",
+            "facts": [
+              "[NEED VERIFICATION: confirm timeline / multi-track editing is explicitly stated on this page or in your stored features]",
+              "You can manually cut/split clips instead of regenerating scenes."
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Veed is a stronger pick when captions need hands-on control (timing fixes, layout, brand styling) rather than mostly auto-generated subtitles.",
+        "sources": [
+          {
+            "url": "/tool/veed-io",
+            "facts": [
+              "[NEED VERIFICATION: confirm subtitle editor capabilities are explicitly stated in your stored features/reviews]",
+              "InVideo AI subtitles are generated as part of its workflow and may be less flexible to tweak."
+            ]
+          }
+        ]
+      }
+    ],
+    "tradeoffs": [
+      {
+        "claim": "Some advanced AI tools are tier-gated, so the best AI features may require higher plans. [NEED VERIFICATION: exact feature list and plan price]",
+        "sources": [
+          {
+            "url": "/tool/veed-io/pricing",
+            "facts": [
+              "[NEED VERIFICATION: confirm which AI features are paywalled and at what tier/price]",
+              "Lower tiers don't include every advanced AI feature."
+            ]
+          }
+        ]
+      }
+    ],
+    "pricingSignals": {
+      "freePlan": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [{ "url": "/tool/veed-io/pricing", "facts": ["[NEED VERIFICATION]"] }]
+      },
+      "watermark": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [{ "url": "/tool/veed-io/pricing", "facts": ["[NEED VERIFICATION]"] }]
+      },
+      "exportQuality": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [{ "url": "/tool/veed-io/pricing", "facts": ["[NEED VERIFICATION]"] }]
+      },
+      "refundCancel": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [{ "url": "/tool/veed-io/pricing", "facts": ["[NEED VERIFICATION]"] }]
+      }
+    }
+  },
+  {
+    "tool": "heygen",
+    "bestFor": ["Custom avatars", "Sales outreach", "Video translation"],
+    "whySwitch": [
+      {
+        "claim": "If you want avatar-first videos (a talking presenter), HeyGen is a better fit than InVideo's stock-first workflow.",
+        "sources": [
+          {
+            "url": "/tool/heygen",
+            "facts": [
+              "HeyGen focuses on avatar-driven video creation.",
+              "[NEED VERIFICATION: confirm the exact avatar creation method and wording on your page]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "HeyGen is a clearer choice for translation + lip-sync workflows than a standard dubbing workflow. [NEED VERIFICATION: confirm InVideo's exact translation behavior]",
+        "sources": [
+          {
+            "url": "/tool/heygen",
+            "facts": [
+              "[NEED VERIFICATION: confirm native video translation + lip-sync is explicitly stated on your page]",
+              "[NEED VERIFICATION: only claim contrast vs InVideo if you have it stored as a fact]"
+            ]
+          }
+        ]
+      }
+    ],
+    "tradeoffs": [
+      {
+        "claim": "Higher-end avatar modes can be expensive in credits compared to standard generation. [NEED VERIFICATION: exact credit multiplier]",
+        "sources": [
+          {
+            "url": "/tool/heygen/pricing",
+            "facts": ["[NEED VERIFICATION: confirm credit consumption for premium avatar modes vs standard]"]
+          }
+        ]
+      }
+    ],
+    "pricingSignals": {
+      "freePlan": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [{ "url": "/tool/heygen/pricing", "facts": ["[NEED VERIFICATION]"] }]
+      },
+      "watermark": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [{ "url": "/tool/heygen/pricing", "facts": ["[NEED VERIFICATION]"] }]
+      },
+      "exportQuality": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [{ "url": "/tool/heygen/pricing", "facts": ["[NEED VERIFICATION]"] }]
+      },
+      "refundCancel": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [{ "url": "/tool/heygen/pricing", "facts": ["[NEED VERIFICATION]"] }]
+      }
+    }
+  },
+  {
+    "tool": "synthesia",
+    "bestFor": ["L&D / training", "Avatar presentations", "Multilingual content"],
+    "whySwitch": [
+      {
+        "claim": "Synthesia is a stronger alternative when your goal is training-style avatar presentations (scripted presenter videos) rather than stock-footage Shorts.",
+        "sources": [
+          {
+            "url": "/tool/synthesia",
+            "facts": [
+              "Synthesia is positioned around avatar-based training/presenter videos.",
+              "[NEED VERIFICATION: confirm any gesture/micro-expression controls before stating specifics]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "If you need review/workspace workflows for teams, Synthesia is often built more for collaboration than creator-first generators. [NEED VERIFICATION]",
+        "sources": [
+          {
+            "url": "/tool/synthesia/pricing",
+            "facts": ["[NEED VERIFICATION: confirm collaboration/workspace features exist and at what tier]"]
+          }
+        ]
+      }
+    ],
+    "tradeoffs": [
+      {
+        "claim": "Some users still describe avatar output as slightly robotic in certain contexts (the 'uncanny valley' problem).",
+        "sources": [
+          {
+            "url": "/tool/synthesia/reviews",
+            "facts": ["User reports mention avatars can feel robotic or stiff in longer videos."]
+          }
+        ]
+      }
+    ],
+    "pricingSignals": {
+      "freePlan": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [{ "url": "/tool/synthesia/pricing", "facts": ["[NEED VERIFICATION]"] }]
+      },
+      "watermark": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [{ "url": "/tool/synthesia/pricing", "facts": ["[NEED VERIFICATION]"] }]
+      },
+      "exportQuality": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [{ "url": "/tool/synthesia/pricing", "facts": ["[NEED VERIFICATION]"] }]
+      },
+      "refundCancel": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [{ "url": "/tool/synthesia/pricing", "facts": ["[NEED VERIFICATION]"] }]
+      }
+    }
+  },
+  {
+    "tool": "pictory",
+    "bestFor": ["Blog-to-video", "Long-form repurposing", "Webinar/podcast clipping"],
+    "whySwitch": [
+      {
+        "claim": "Pictory is often a better alternative when you start from existing content (blog posts, webinars) and want repurposing workflows more than prompt-to-video generation.",
+        "sources": [
+          {
+            "url": "/tool/pictory",
+            "facts": [
+              "Pictory supports blog/article-to-video style workflows. [NEED VERIFICATION: confirm exact inputs like URL import in your stored features]",
+              "InVideo AI is more prompt/script-first for generating new drafts."
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "If you prefer text-based editing of long recordings (edit the transcript to cut video), Pictory is a closer match than a generator-first tool. [NEED VERIFICATION]",
+        "sources": [
+          {
+            "url": "/tool/pictory",
+            "facts": ["[NEED VERIFICATION: confirm transcript-based editing is stated in your stored features]"]
+          }
+        ]
+      }
+    ],
+    "tradeoffs": [
+      {
+        "claim": "Some users describe output as 'slideshow-like' with simpler motion than video-first template tools.",
+        "sources": [
+          {
+            "url": "/tool/pictory/reviews",
+            "facts": ["User reports describe the visuals as static/slideshow-like."]
+          }
+        ]
+      }
+    ],
+    "pricingSignals": {
+      "freePlan": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [{ "url": "/tool/pictory/pricing", "facts": ["[NEED VERIFICATION]"] }]
+      },
+      "watermark": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [{ "url": "/tool/pictory/pricing", "facts": ["[NEED VERIFICATION]"] }]
+      },
+      "exportQuality": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [{ "url": "/tool/pictory/pricing", "facts": ["[NEED VERIFICATION]"] }]
+      },
+      "refundCancel": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [{ "url": "/tool/pictory/pricing", "facts": ["[NEED VERIFICATION]"] }]
+      }
+    }
+  }
+]

@@ -35,7 +35,7 @@ export type PricingPlan = {
   ctaText?: string;
   billingNote?: string;
   ribbonText?: string;
-  featureItems?: Array<{ icon?: string; text: string; badge?: string }>;
+  featureItems?: Array<{ icon?: string; text: string; badge?: string; available?: boolean }>;
   isPopular?: boolean;
 };
 
@@ -103,6 +103,8 @@ export type Tool = {
   deal?: string | null; // e.g., 'Code FLIKI10 for 10% Off'
   review_count?: number; // e.g., 7
   is_verified?: boolean; // true if verified
+  highlights?: string[]; // Evidence-based decision highlights (e.g., ["Prompt-to-video workflow", "Premium stock (tiered)"])
+  key_facts?: string[]; // Key facts for quick reference (evidence-safe, clearly labeled)
   categories?: string[]; // e.g., ['Video Generators', 'Text to Speech']
   user_sentiment?: string; // User sentiment summary from verified reviews
   featureCards?: Array<{
@@ -110,7 +112,94 @@ export type Tool = {
     description: string;
     icon?: string;
   }>;
+  feature_groups?: Array<{
+    title: string;
+    summary: string;
+    bullets: string[];
+  }>;
   comparison_table?: ComparisonTable; // Pricing comparison table for extracting plan features
+  // Structured content fields for Overview/Pricing/Features/Reviews/Alternatives pages
+  content?: {
+    overview?: {
+      tldr?: {
+        bestFor: string;
+        notFor: string;
+        why: string;
+      };
+      miniTest?: {
+        prompt: string;
+        generationTime?: string; // e.g., "2 mins 15 secs" or "[NEED_TEST]"
+        footageMatch?: string; // e.g., "8/10 clips were relevant" or "[NEED_TEST]"
+        subtitleAccuracy?: string; // e.g., "100% accurate" or "[NEED_TEST]"
+        verdict?: string; // e.g., "Ideally suited for [User Type], but expect to spend [Time] minutes refining"
+      };
+      useCases?: Array<{
+        title: string;
+        why: string;
+        linkHref: string;
+        linkText?: string; // Optional, defaults to "Compare with alternatives →"
+      }>;
+    };
+    pricing?: {
+      snapshot?: {
+        plans: Array<{
+          name: string; // e.g., "Free", "Plus", "Max"
+          bullets: string[]; // 3-5 restriction summary sentences with placeholders
+        }>;
+        note?: string; // e.g., "Check official pricing for most up-to-date plans and features"
+      };
+      creditUsage?: {
+        title: string;
+        bullets: string[];
+      };
+      planPicker?: {
+        title: string;
+        bullets: string[];
+      };
+      verdict?: {
+        title: string; // May contain {price} placeholder
+        text: string;
+      };
+    };
+    features?: {
+      keyFeatures?: string[]; // Already exists in tool.features, but can override
+      detailedFeatures?: Array<{
+        title: string;
+        description: string;
+        icon?: string;
+        href?: string;
+      }>;
+    };
+    reviews?: {
+      userSentiment?: string; // Already exists in tool.user_sentiment, but can override
+      faqs?: FAQ[]; // Already exists in tool.faqs, but can override for Reviews page
+      verdict?: {
+        bottomLine: string; // Main verdict text
+        bestFor: string | string[]; // Single string or array of chips
+      };
+      reviewHighlights?: {
+        likes: string[];
+        complaints: string[];
+        commonIssues?: Array<{
+          claim: string;
+          impact: string;
+          whatToDo: string;
+        }>;
+      };
+    };
+    alternatives?: {
+      topAlternatives?: Array<{
+        toolSlug: string;
+        why: string; // One sentence explaining why this alternative
+        linkHref?: string; // Optional VS link or tool page
+      }>;
+    };
+    sources?: Record<string, {
+      type: string; // e.g., "OFFICIAL_PRICING", "HELP_CENTER", "TERMS", "UI_EXPORT_POPUP", "REDDIT"
+      howToVerify: string; // Instructions for verification
+      suggestedQuery?: string; // Google search query suggestion
+    }>;
+  };
 };
 
 // Types for Alternatives Page

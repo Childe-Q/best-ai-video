@@ -2,89 +2,117 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Neo-Brutal Palette */
+  --neo-bg: #FAF7F0;
+  --neo-white: #FFFFFF;
+  --neo-black: #111111;
+  --neo-yellow: #F6D200;
+  --neo-lime: #B8F500;
+  --neo-gray: #6B7280;
+  
+  --background: var(--neo-bg);
+  --foreground: var(--neo-black);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  
+  /* Color Remapping for Neo-Brutal Look */
+  /* Map standard grays to Neo-Brutal values */
+  --color-gray-50: var(--neo-bg);  /* Blend with bg */
+  --color-gray-100: var(--neo-black); /* Borders are black now */
+  --color-gray-200: var(--neo-black); /* Borders are black now */
+  --color-gray-300: var(--neo-black);
+  --color-gray-900: var(--neo-black);
+  
+  --color-slate-50: var(--neo-bg);
+  --color-slate-200: var(--neo-black);
+  
+  /* Map Brand Colors (Indigo/Blue) to Black or Accent */
+  --color-indigo-50: var(--neo-yellow); /* Background highlights -> Yellow */
+  --color-indigo-100: var(--neo-lime);
+  --color-indigo-600: var(--neo-black); /* Primary text/links -> Black */
+  --color-indigo-700: var(--neo-black);
+  
+  --color-blue-600: var(--neo-black);
+  
+  /* Typography */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
+  /* Shapes */
+  --radius-lg: 14px;
+  --radius-xl: 14px;
+  --radius-2xl: 14px;
 }
 
 @media (prefers-color-scheme: dark) {
+  /* Enforce Light Mode for Neo-Brutal Style as requested (Paper feel) */
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #FAF7F0;
+    --foreground: #111111;
   }
 }
 
 html {
   scroll-behavior: smooth;
-  overflow-x: clip; /* Allow sticky positioning to work */
+  overflow-x: clip;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  overflow-x: clip; /* Allow sticky positioning to work */
+  font-family: var(--font-sans);
+  overflow-x: clip;
 }
 
-/* Pricing Card Animations */
-@keyframes breathing-subtle {
-  0%, 100% {
-    opacity: 1;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+/* Force Hard Shadows Globally */
+*, ::before, ::after {
+  border-color: var(--neo-black); /* Default border color if applied */
+}
+
+/* Override Utility Classes for Hard Shadows */
+.shadow-sm, .shadow-md, .shadow-lg, .shadow-xl, .shadow-2xl {
+  box-shadow: 6px 6px 0 0 var(--neo-black) !important;
+  border: 2px solid var(--neo-black);
   }
-  50% {
-    opacity: 0.95;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+
+.hover\:shadow-md:hover {
+  box-shadow: 8px 8px 0 0 var(--neo-black) !important;
+  transform: translate(-2px, -2px);
   }
+
+/* Link Styles */
+a {
+  color: var(--neo-black);
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
-@keyframes price-fade-slide {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+a:hover {
+  background-color: var(--neo-yellow);
+  color: var(--neo-black);
 }
 
-.animate-breathing-subtle {
-  animation: breathing-subtle 3s ease-in-out infinite;
+/* Button & Card Resets */
+button {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
-.price-transition-wrapper {
-  animation: price-fade-slide 200ms ease-out;
+/* Gradient Kill Switch - Brutalism hates gradients */
+.bg-gradient-to-r, .bg-gradient-to-b, .bg-gradient-to-tr {
+  background-image: none !important;
+  background-color: var(--neo-yellow) !important; /* Fallback accent */
 }
 
-/* Disable animations for users who prefer reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .animate-breathing-subtle,
-  .price-transition-wrapper {
-    animation: none;
-  }
-  
-  .group:hover {
-    transform: none !important;
-  }
+.text-transparent {
+  color: var(--neo-black) !important;
+  -webkit-text-fill-color: var(--neo-black) !important;
 }
 
-/* Dialog styles */
-dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-dialog {
-  border: none;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-dialog:not([open]) {
-  display: none;
-}
+/* Animation overrides */
+.animate-breathing-subtle { animation: none; }
+.price-transition-wrapper { animation: none; }

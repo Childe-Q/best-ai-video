@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import { getTool, getYouTubeVideoId, extractDetailedReview } from '@/lib/getTool';
 import { HandThumbUpIcon, HandThumbDownIcon, ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline';
 import { getSEOCurrentYear } from '@/lib/utils';
@@ -58,6 +59,191 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
       {/* 4. Overview Section - Full Width */}
       <section className="w-full bg-slate-50 pt-10 pb-16">
         <div className="w-full max-w-[1600px] mx-auto px-4 md:px-12 lg:px-24 space-y-12">
+          {/* TL;DR Section */}
+          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl shadow-sm border border-indigo-200 p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">TL;DR</h2>
+            <div className="space-y-3 text-gray-700">
+              {tool.content?.overview?.tldr ? (
+                <>
+                  <p className="leading-relaxed">
+                    <strong>Best for:</strong> {tool.content.overview.tldr.bestFor}
+                  </p>
+                  <p className="leading-relaxed">
+                    <strong>Not ideal for:</strong> {tool.content.overview.tldr.notFor}
+                  </p>
+                  <p className="leading-relaxed">
+                    <strong>Why we recommend it:</strong> {tool.content.overview.tldr.why}
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p className="leading-relaxed">
+                    <strong>Best for:</strong> {tool.best_for || 'Content creators who need quick video production'} - {tool.tagline || tool.short_description}
+                  </p>
+                  <p className="leading-relaxed">
+                    <strong>Not ideal for:</strong> {tool.cons && tool.cons.length > 0 ? `Users who need ${tool.cons[0].toLowerCase()}` : 'Professional video editors requiring advanced features'}
+                  </p>
+                  <p className="leading-relaxed">
+                    <strong>Why we recommend it:</strong> {tool.pros && tool.pros.length > 0 ? tool.pros[0] : `Strong value proposition with ${tool.starting_price || 'competitive pricing'} and ${tool.features && tool.features.length > 0 ? tool.features[0] : 'key features'} that streamline video creation workflow`}
+                  </p>
+                </>
+              )}
+            </div>
+          </div>
+
+          {/* Mini Test Section */}
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Mini Test</h2>
+            {tool.content?.overview?.miniTest ? (
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-4">
+                <p className="text-sm font-semibold text-yellow-800 mb-2">
+                  {(!tool.content.overview.miniTest.generationTime || 
+                    tool.content.overview.miniTest.generationTime.includes('[NEED_TEST') ||
+                    tool.content.overview.miniTest.footageMatch?.includes('[NEED_TEST')) ? 
+                   'Test pending' : 'Test Results'}
+                </p>
+                <p className="text-sm text-gray-700 mb-4">
+                  <strong>Test prompt:</strong> &quot;{tool.content.overview.miniTest.prompt}&quot;
+                </p>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
+                  <div className="text-xs">
+                    <span className="font-semibold text-gray-600">Generation Time:</span>
+                    <span className="ml-2 text-gray-500">
+                      {tool.content.overview.miniTest.generationTime || 'Not tested yet'}
+                    </span>
+                  </div>
+                  <div className="text-xs">
+                    <span className="font-semibold text-gray-600">Footage Match:</span>
+                    <span className="ml-2 text-gray-500">
+                      {tool.content.overview.miniTest.footageMatch || 'Not tested yet'}
+                    </span>
+                  </div>
+                  <div className="text-xs">
+                    <span className="font-semibold text-gray-600">Subtitle Accuracy:</span>
+                    <span className="ml-2 text-gray-500">
+                      {tool.content.overview.miniTest.subtitleAccuracy || 'Not tested yet'}
+                    </span>
+                  </div>
+                  <div className="text-xs">
+                    <span className="font-semibold text-gray-600">Verdict:</span>
+                    <span className="ml-2 text-gray-500">
+                      {tool.content.overview.miniTest.verdict || 'Pending'}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-4">
+                <p className="text-sm font-semibold text-yellow-800 mb-2">Test pending</p>
+                <p className="text-sm text-gray-700 mb-4">
+                  <strong>Test prompt:</strong> &quot;Create a 10-second marketing video for a tech product launch with upbeat music and text overlays&quot;
+                </p>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
+                  <div className="text-xs">
+                    <span className="font-semibold text-gray-600">Speed:</span>
+                    <span className="ml-2 text-gray-500">Not tested yet</span>
+                  </div>
+                  <div className="text-xs">
+                    <span className="font-semibold text-gray-600">Quality:</span>
+                    <span className="ml-2 text-gray-500">Not tested yet</span>
+                  </div>
+                  <div className="text-xs">
+                    <span className="font-semibold text-gray-600">Subtitles:</span>
+                    <span className="ml-2 text-gray-500">Not tested yet</span>
+                  </div>
+                  <div className="text-xs">
+                    <span className="font-semibold text-gray-600">Stock match:</span>
+                    <span className="ml-2 text-gray-500">Not tested yet</span>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Output Section */}
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Output</h2>
+            {videoId ? (
+              <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
+                <p className="text-sm text-gray-600 mb-2">Official demo</p>
+                <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src={`https://www.youtube.com/embed/${videoId}`}
+                    title="Official demo"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            ) : (
+              <div className="bg-slate-50 rounded-lg p-8 border border-slate-200 text-center">
+                <p className="text-gray-500">Sample output coming soon</p>
+              </div>
+            )}
+          </div>
+
+          {/* Use Cases Section */}
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Use Cases</h2>
+            <div className="space-y-4">
+              {tool.content?.overview?.useCases && tool.content.overview.useCases.length > 0 ? (
+                tool.content.overview.useCases.map((useCase, idx) => (
+                  <div key={idx} className="flex items-start gap-3">
+                    <span className="text-indigo-600 font-bold shrink-0 mt-1">•</span>
+                    <div>
+                      <p className="text-gray-700 leading-relaxed">
+                        <strong>{useCase.title}:</strong> {useCase.why}
+                      </p>
+                      <Link 
+                        href={useCase.linkHref} 
+                        className="text-sm text-indigo-600 hover:text-indigo-700 mt-1 inline-block"
+                      >
+                        {useCase.linkText || 'Learn more →'}
+                      </Link>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <>
+                  <div className="flex items-start gap-3">
+                    <span className="text-indigo-600 font-bold shrink-0 mt-1">•</span>
+                    <div>
+                      <p className="text-gray-700 leading-relaxed">
+                        <strong>YouTube Shorts:</strong> Quickly turn blog posts or scripts into engaging short-form videos with auto-subtitles and stock footage.
+                      </p>
+                      <Link href={`/vs/${slug}-vs-pictory`} className="text-sm text-indigo-600 hover:text-indigo-700 mt-1 inline-block">
+                        Compare with alternatives →
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-indigo-600 font-bold shrink-0 mt-1">•</span>
+                    <div>
+                      <p className="text-gray-700 leading-relaxed">
+                        <strong>Marketing Ads:</strong> Create product promotion videos using the 8M+ stock library and AI script generator for consistent brand messaging.
+                      </p>
+                      <Link href={`/tool/${slug}/features`} className="text-sm text-indigo-600 hover:text-indigo-700 mt-1 inline-block">
+                        Explore features →
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-indigo-600 font-bold shrink-0 mt-1">•</span>
+                    <div>
+                      <p className="text-gray-700 leading-relaxed">
+                        <strong>Blog-to-video:</strong> Automatically convert blog articles into video content with AI-selected visuals and voiceover for content repurposing.
+                      </p>
+                      <Link href={`/vs/${slug}-vs-fliki`} className="text-sm text-indigo-600 hover:text-indigo-700 mt-1 inline-block">
+                        See comparison →
+                      </Link>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+
           {/* In-Depth Review */}
           <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">In-Depth Review</h2>

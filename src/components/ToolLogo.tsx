@@ -52,8 +52,8 @@ export default function ToolLogo({ logoUrl, toolName, size = 'lg', className = '
   // For card style, use fixed h-14 w-14 (56px) container
   const cardContainerSize = 'h-14 w-14'; // Fixed 56px for cards
   const containerClasses = containerStyle === 'card' 
-    ? `bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center shrink-0 ${cardContainerSize} p-1` // Card style - fixed size, reduced padding for wide logos
-    : 'bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center justify-center p-4'; // Detail page style
+    ? `bg-white rounded-xl border border-gray-100 flex items-center justify-center shrink-0 ${cardContainerSize} p-1` // Card style - fixed size, reduced padding for wide logos, removed shadow-sm
+    : 'bg-white rounded-2xl border border-gray-100 flex items-center justify-center p-4'; // Detail page style, removed shadow-sm
 
   // If no logo URL or error occurred, show fallback
   if (!logoUrl || hasError) {
@@ -116,4 +116,3 @@ export default function ToolLogo({ logoUrl, toolName, size = 'lg', className = '
 
   return logoContent;
 }
-

@@ -5,13 +5,13 @@ export default function Footer() {
   const siteName = 'Best AI Video Tools';
 
   return (
-    <footer className="bg-gray-900 text-gray-300 border-t border-gray-800">
+    <footer className="bg-[#111111] text-white border-t-2 border-black">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-white font-bold text-lg mb-4">{siteName}</h3>
-            <p className="text-sm text-gray-400 leading-relaxed max-w-md">
+            <h3 className="text-white font-black text-xl mb-4 uppercase tracking-tight">{siteName}</h3>
+            <p className="text-sm text-[#CCCCCC] leading-relaxed max-w-md font-medium">
               Your trusted source for AI video tool reviews, comparisons, and recommendations. 
               We help you find the perfect video creation software for your needs.
             </p>
@@ -19,15 +19,15 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold text-sm mb-4 uppercase tracking-wider">Quick Links</h4>
+            <h4 className="text-[#F6D200] font-bold text-sm mb-4 uppercase tracking-wider border-b-2 border-[#F6D200] inline-block pb-1">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-sm hover:text-white transition-colors">
+                <Link href="/" className="text-sm !text-[#E5E5E5] hover:!text-[#F6D200] transition-colors !no-underline font-medium">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-sm hover:text-white transition-colors">
+                <Link href="/about" className="text-sm !text-[#E5E5E5] hover:!text-[#F6D200] transition-colors !no-underline font-medium">
                   About
                 </Link>
               </li>
@@ -36,15 +36,15 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="text-white font-semibold text-sm mb-4 uppercase tracking-wider">Legal</h4>
+            <h4 className="text-[#F6D200] font-bold text-sm mb-4 uppercase tracking-wider border-b-2 border-[#F6D200] inline-block pb-1">Legal</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/privacy" className="text-sm hover:text-white transition-colors">
+                <Link href="/privacy" className="text-sm !text-[#E5E5E5] hover:!text-[#F6D200] transition-colors !no-underline font-medium">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-sm hover:text-white transition-colors">
+                <Link href="/terms" className="text-sm !text-[#E5E5E5] hover:!text-[#F6D200] transition-colors !no-underline font-medium">
                   Terms of Service
                 </Link>
               </li>
@@ -54,10 +54,10 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-[#999999]">
             © {currentYear} {siteName}. All rights reserved.
           </p>
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-[#999999]">
             Disclosure: Some links are affiliate links. We may earn a commission at no extra cost to you.
           </p>
         </div>
@@ -65,4 +65,3 @@ export default function Footer() {
     </footer>
   );
 }
-

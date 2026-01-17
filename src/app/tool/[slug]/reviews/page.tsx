@@ -28,6 +28,9 @@ export default async function ReviewsPage({ params }: { params: Promise<{ slug: 
 
   if (!tool) notFound();
 
+  const reviewHighlights = tool.content?.reviews?.reviewHighlights;
+  const faqs = tool.content?.reviews?.faqs || tool.faqs || [];
+
   return (
     <section className="w-full bg-slate-50 py-16">
       <div className="w-full max-w-[1600px] mx-auto px-4 md:px-12 lg:px-24 space-y-8">
@@ -57,9 +60,76 @@ export default async function ReviewsPage({ params }: { params: Promise<{ slug: 
           </div>
         )}
 
+        {/* User Feedback Snapshot */}
+        {reviewHighlights && (reviewHighlights.likes || reviewHighlights.complaints) && (
+          <div className="w-full bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">User feedback snapshot</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* What users like */}
+              {reviewHighlights.likes && reviewHighlights.likes.length > 0 && (
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">What users like</h3>
+                  <ul className="space-y-2">
+                    {reviewHighlights.likes.map((like, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-gray-700">
+                        <span className="text-green-500 font-bold shrink-0 mt-0.5">✓</span>
+                        <span>{like}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {/* Common complaints */}
+              {reviewHighlights.complaints && reviewHighlights.complaints.length > 0 && (
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Common complaints</h3>
+                  <ul className="space-y-2">
+                    {reviewHighlights.complaints.map((complaint, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-gray-700">
+                        <span className="text-red-500 font-bold shrink-0 mt-0.5">✕</span>
+                        <span>{complaint}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* Common issues to know before you pay */}
+        {reviewHighlights?.commonIssues && reviewHighlights.commonIssues.length > 0 && (
+          <div className="w-full">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Common issues to know before you pay</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {reviewHighlights.commonIssues.map((issue, idx) => (
+                <div key={idx} className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+                  <p className="text-sm font-medium text-gray-900 mb-2">{issue.claim}</p>
+                  <p className="text-xs text-gray-600 mb-3">
+                    <span className="font-medium">Impact: </span>{issue.impact}
+                  </p>
+                  <p className="text-xs text-gray-700">
+                    <span className="font-medium">What to do: </span>{issue.whatToDo}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Frequently Asked Questions Section */}
         <div className="w-full">
-          <FAQAccordion faqs={tool.faqs || []} />
+          <div className="w-full bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently asked questions</h2>
+            <FAQAccordion faqs={faqs} />
+          </div>
+        </div>
+
+        {/* Sources */}
+        <div className="w-full text-center">
+          <p className="text-xs text-gray-500">
+            Based on public docs + aggregated user feedback. Limits may vary by account.
+          </p>
         </div>
       </div>
     </section>

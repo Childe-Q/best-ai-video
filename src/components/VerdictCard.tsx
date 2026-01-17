@@ -14,6 +14,10 @@ interface VerdictCardProps {
   bestFor?: string;
   startingPrice?: string;
   embedded?: boolean; // When true, removes outer styling and button (for parent container control)
+  verdictData?: {
+    bottomLine: string;
+    bestFor: string | string[];
+  };
 }
 
 export default function VerdictCard({ 
@@ -24,7 +28,8 @@ export default function VerdictCard({
   toolName,
   bestFor,
   startingPrice,
-  embedded = false
+  embedded = false,
+  verdictData
 }: VerdictCardProps) {
   // Helper to get default content - stable for SSR/CSR matching
   const getDefaultContent = (bf?: string, sp?: string) => ({
@@ -148,17 +153,38 @@ export default function VerdictCard({
         </div>
         <p 
           className="text-base text-gray-600 leading-relaxed"
-          dangerouslySetInnerHTML={{ __html: parsedContent.bottomLine.replace(/<p[^>]*>|<\/p>/g, '') }}
+          dangerouslySetInnerHTML={{ __html: verdictData?.bottomLine || parsedContent.bottomLine.replace(/<p[^>]*>|<\/p>/g, '') }}
         />
       </div>
 
       {/* Separator */}
-      {(parsedContent.bestForText || parsedContent.buySkipList.length > 0) && (
+      {((verdictData?.bestFor || parsedContent.bestForText) || parsedContent.buySkipList.length > 0) && (
         <hr className="border-slate-200 my-6" />
       )}
 
       {/* Best For Section */}
-      {parsedContent.bestForText && (
+      {verdictData?.bestFor ? (
+        <div className="mb-4">
+          <div className="flex items-center gap-2 mb-1.5">
+            <TagIcon className="w-4 h-4 text-indigo-600" />
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-500">Best For</h4>
+          </div>
+          {Array.isArray(verdictData.bestFor) ? (
+            <div className="flex flex-wrap gap-2">
+              {verdictData.bestFor.map((item, idx) => (
+                <span
+                  key={idx}
+                  className="inline-flex items-center px-2.5 py-1 rounded-md text-sm font-medium bg-indigo-50 text-indigo-700 border border-indigo-100"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          ) : (
+            <p className="text-base text-gray-600 leading-relaxed">{verdictData.bestFor}</p>
+          )}
+        </div>
+      ) : parsedContent.bestForText ? (
         <div className="mb-4">
           <div className="flex items-center gap-2 mb-1.5">
             <TagIcon className="w-4 h-4 text-indigo-600" />
@@ -169,7 +195,7 @@ export default function VerdictCard({
             dangerouslySetInnerHTML={{ __html: parsedContent.bestForText }}
           />
         </div>
-      )}
+      ) : null}
 
       {/* Buy/Skip List with Icons */}
       {parsedContent.buySkipList.length > 0 && (

@@ -53,7 +53,7 @@ export default function Header() {
           {/* Left: Logo */}
           <Link 
             href="/" 
-            className="text-xl font-bold text-gray-900 tracking-tight hover:text-indigo-600 transition-colors flex-shrink-0"
+            className="text-xl font-bold text-gray-900 tracking-tight hover:text-indigo-600 transition-colors flex-shrink-0 !no-underline hover:!bg-transparent"
           >
             Best AI Video
           </Link>
@@ -71,7 +71,7 @@ export default function Header() {
             <div
               className="relative"
               onMouseEnter={() => {
-                // 清除任何待执行的关闭定时器
+                // Clear any pending close timer
                 if (featuresTimeoutId) {
                   clearTimeout(featuresTimeoutId);
                   setFeaturesTimeoutId(null);
@@ -79,10 +79,10 @@ export default function Header() {
                 setIsFeaturesHovered(true);
               }}
               onMouseLeave={() => {
-                // 延迟关闭，给用户时间移动鼠标到下拉菜单
+                // Delay close to give user time to move mouse to dropdown
                 const timeoutId = setTimeout(() => {
                   setIsFeaturesHovered(false);
-                }, 150); // 150ms 延迟
+                }, 150); // 150ms delay
                 setFeaturesTimeoutId(timeoutId);
               }}
             >
@@ -151,7 +151,7 @@ export default function Header() {
             <a
               href="/#tools-section"
               onClick={handleAllToolsClick}
-              className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-lg shadow-sm"
+              className="px-6 py-2.5 text-sm font-bold text-black bg-[#F6D200] border-2 border-black rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_#111111]"
             >
               All Tools
             </a>
@@ -222,7 +222,7 @@ export default function Header() {
                 handleAllToolsClick(e);
                 setIsMobileMenuOpen(false);
               }}
-              className="block px-4 py-2 text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-lg shadow-sm text-center mt-4"
+              className="block px-6 py-2.5 text-base font-bold text-black bg-[#F6D200] border-2 border-black rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_#111111] text-center mt-4"
             >
               All Tools
             </a>
