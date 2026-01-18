@@ -1,0 +1,148 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "Creators and small teams who want quick avatar-led videos with predictable export resolution limits",
+      "notFor": "Light users who dislike monthly credit expiry or anyone expecting unlimited avatar generation",
+      "why": "Free outputs are watermarked, credits expire after 30 days, and refunds are discretionary"
+    },
+    "miniTest": {
+      "prompt": "Create a 20-30 second talking-head video explaining a topic for an audience. Tone: professional. Include 1 hook, 3 key points, and a 1-sentence CTA",
+      "checklist": [
+        {
+          "label": "Goal",
+          "value": "Education / conversion"
+        },
+        {
+          "label": "Target platform",
+          "value": "Shorts / Reels / TikTok"
+        },
+        {
+          "label": "Lip-sync / voice naturalness",
+          "value": "Needs verification for chosen avatar/voice setup"
+        },
+        {
+          "label": "Watermark present",
+          "value": "Yes - expected on Free plan"
+        },
+        {
+          "label": "Export resolution",
+          "value": "720p / 1080p / 4K based on plan"
+        },
+        {
+          "label": "Credits consumed",
+          "value": "Needs verification"
+        }
+      ],
+      "verdict": "Result: partial. Quality was strongest in avatar realism and weakest in credit expiry policy. If credits/watermark/resolution or verification friction is a dealbreaker, choose a different plan/tool"
+    },
+    "useCases": [
+      {
+        "title": "YouTube Shorts",
+        "why": "Fast avatar explainers where 720p-4K export depends on plan",
+        "linkHref": "/vs/heygen-vs-synthesia",
+        "linkText": "Compare with alternatives →"
+      },
+      {
+        "title": "Marketing Ads",
+        "why": "Quick iterations, but watch credit expiry and refund expectations",
+        "linkHref": "/tool/heygen/pricing",
+        "linkText": "Check pricing →"
+      },
+      {
+        "title": "Blog-to-video",
+        "why": "Turn posts into scripts plus avatar narration, verify export format first",
+        "linkHref": "/vs/heygen-vs-elai-io",
+        "linkText": "See comparison →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "Free plan outputs include a watermark",
+      "Export resolution depends on plan tier (Free/Creator/Team)",
+      "Credits expire 30 days after issuance",
+      "Subscription cancellation takes effect end of billing cycle",
+      "Refunds are granted only in specific cases, at discretion",
+      "Free plan use is non-commercial per FAQ",
+      "No plan offers unlimited AvatarIV usage and credits",
+      "Export file format: Needs verification",
+      "System/browser requirements: Needs verification"
+    ]
+  },
+  "pros": [
+    "Clear plan-based export resolution limits",
+    "Officially documented credit expiry window",
+    "Cancellation timing is explicitly stated",
+    "Free tier available for basic testing",
+    "Discloses no unlimited AvatarIV credits"
+  ],
+  "cons": [
+    "Credits expiring monthly can waste spend for light users",
+    "Free outputs are watermarked",
+    "Refund policy is discretionary, not guaranteed",
+    "Unlimited marketing can confuse versus feature credit limits",
+    "User reports: consent verification can fail and block progress",
+    "Export format and system requirements need verification"
+  ],
+  "reviews": {
+    "verdict": {
+      "bottomLine": "HeyGen is best for teams who need avatar-led videos for sales outreach, training, and localization. The trade-off is cost control: credits expire after 30 days, and refunds are discretionary. Free outputs are watermarked; higher export resolutions and commercial rights depend on your plan tier.",
+      "bestFor": [
+        "Sales outreach videos",
+        "Training presentations",
+        "Multilingual localization"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Do free users get a watermark on exports?",
+        "answer": "Yes—Free users get watermarked output on generated content. This is stated in official help documentation."
+      },
+      {
+        "question": "What export resolution do plans support?",
+        "answer": "Official pricing states Free exports at 720p, Creator up to 1080p, and Team up to 4K. Higher resolution availability depends on your subscribed plan."
+      },
+      {
+        "question": "Do credits roll over to the next month?",
+        "answer": "Credits expire 30 days after they are issued, so rollover beyond that window is not supported. Plan billing and issuance timing can still matter for how long you can use them."
+      },
+      {
+        "question": "Is there any plan with unlimited AvatarIV usage?",
+        "answer": "No—official guidance says there is no plan, including enterprise, with unlimited AvatarIV usage and credits. You should expect feature usage to be credit-limited."
+      },
+      {
+        "question": "When does cancellation take effect after I cancel?",
+        "answer": "Cancellation takes effect at the end of the current billing cycle. You typically keep access through the remainder of that cycle."
+      },
+      {
+        "question": "Can I get a refund if I forgot to cancel?",
+        "answer": "Refunds are evaluated only under specific circumstances and at the company's discretion. User reports: this can clash with expectations when renewals happen."
+      },
+      {
+        "question": "Can I use Free plan videos commercially?",
+        "answer": "The FAQ indicates Free plan usage is non-commercial. Commercial rights for paid plans: Needs verification from official terms or help."
+      },
+      {
+        "question": "What file format do exports download as (MP4, etc.)?",
+        "answer": "Export/download documentation needs verification for explicit file format wording. Treat any assumed format as unconfirmed until verified."
+      }
+    ]
+  },
+  "sources": {
+    "help.heygen.com": {
+      "type": "HELP_CENTER",
+      "howToVerify": "Check official help documentation",
+      "suggestedQuery": "site:help.heygen.com credits expiry"
+    },
+    "heygen.com": {
+      "type": "OFFICIAL_PRICING",
+      "howToVerify": "Visit official pricing page",
+      "suggestedQuery": "heygen.com pricing plans"
+    },
+    "trustpilot.com": {
+      "type": "USER_REVIEWS",
+      "howToVerify": "Check user reviews on Trustpilot",
+      "suggestedQuery": "heygen trustpilot reviews"
+    }
+  }
+}

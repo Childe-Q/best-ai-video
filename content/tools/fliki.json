@@ -1,0 +1,177 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "Turning scripts or blog posts into simple narrated videos with quick exports and subtitles",
+      "notFor": "Creators who need highly context-accurate auto-selected stock footage without manual swaps",
+      "why": "Free exports are watermarked at 720p, commercial rights are paid-only, and refunds are discretionary"
+    },
+    "miniTest": {
+      "prompt": "Turn this text into a 30-45 second video for [platform] with a clear hook, 3 key points, and a CTA. Use a natural voice in [language/accent], add readable captions, and pick stock visuals that match each sentence closely",
+      "checklist": [
+        {
+          "label": "Input type",
+          "value": "Script / blog excerpt / bullet outline"
+        },
+        {
+          "label": "Target platform",
+          "value": "YouTube Shorts / Reels / TikTok / Ads"
+        },
+        {
+          "label": "Voice quality",
+          "value": "1-5 rating"
+        },
+        {
+          "label": "Caption timing & readability",
+          "value": "1-5 rating"
+        },
+        {
+          "label": "Visual relevance to script",
+          "value": "User reports: may miss context"
+        },
+        {
+          "label": "Watermark present",
+          "value": "Yes - expected on Free plan"
+        },
+        {
+          "label": "Export resolution",
+          "value": "720p / 1080p based on plan"
+        },
+        {
+          "label": "Export format",
+          "value": "MP4/MOV/MP3/WAV/SRT/VTT"
+        },
+        {
+          "label": "Browser used",
+          "value": "Chrome recommended"
+        }
+      ],
+      "verdict": "Result: partial. Biggest time sink was visual replacement. If you need commercial use or 1080p, you'll likely need a paid plan"
+    },
+    "useCases": [
+      {
+        "title": "YouTube Shorts",
+        "why": "Convert a short script into a captioned, narrated vertical video fast",
+        "linkHref": "/tool/fliki/pricing",
+        "linkText": "Check pricing →"
+      },
+      {
+        "title": "Marketing Ads",
+        "why": "Draft multiple voiceover variants, then manually tighten visuals for relevance",
+        "linkHref": "/tool/fliki/features",
+        "linkText": "See features →"
+      },
+      {
+        "title": "Blog-to-video",
+        "why": "Turn an article into a narrated slideshow and export subtitles separately",
+        "linkHref": "/vs/fliki-vs-invideo",
+        "linkText": "Compare alternatives →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "Free plan exports include visible watermark",
+      "Free exports are 720p; paid plans support 1080p",
+      "Free includes 5 minutes monthly; paid offers higher allowances",
+      "Credits deducted based on total video length",
+      "Paid plans include commercial rights",
+      "Exports: MP4, MOV, MP3, WAV supported",
+      "Subtitle downloads in SRT and VTT formats",
+      "Stock library includes millions of royalty-free media assets",
+      "Web-based; Chrome is the recommended browser",
+      "Cancel anytime via account billing dashboard"
+    ]
+  },
+  "pros": [
+    "Straightforward export format options, including audio-only",
+    "Separate subtitle downloads in SRT and VTT",
+    "Clear plan split: 720p free, 1080p paid",
+    "Commercial rights available on paid plans",
+    "Works in browser; Chrome recommended",
+    "Large royalty-free media library included"
+  ],
+  "cons": [
+    "Free plan watermark limits professional publishing",
+    "Commercial use requires a paid plan",
+    "Refunds are case-by-case at sole discretion",
+    "User reports: stock footage often mismatches script context",
+    "User reports: monthly minutes can feel pricey or limited"
+  ],
+  "reviews": {
+    "verdict": {
+      "bottomLine": "Fliki is best for creators who need fast blog-to-video repurposing and voiceover-first workflows. The main trade-off is visual accuracy: auto-selected stock footage often misses context and requires manual replacement. Free plan exports are watermarked at 720p; commercial rights and 1080p exports require a paid plan.",
+      "bestFor": [
+        "Blog-to-video repurposing",
+        "Faceless voiceover videos",
+        "Fast drafts"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Can I use Fliki for free?",
+        "answer": "Yes, Fliki offers a Free plan to try the product. Free plan exports include a visible watermark."
+      },
+      {
+        "question": "Does the Free plan include a watermark?",
+        "answer": "Yes—videos generated on the Free plan contain a Fliki watermark. If you need clean exports, you'll likely need a paid plan."
+      },
+      {
+        "question": "What export resolution do I get on Free vs paid plans?",
+        "answer": "Free users export HD 720p videos. Paid plans support Full HD 1080p exports."
+      },
+      {
+        "question": "How do minutes/credits work?",
+        "answer": "Credits are deducted based on the total length of the video. Free includes 5 minutes monthly, while paid plans provide more minutes."
+      },
+      {
+        "question": "Do paid plans include commercial rights?",
+        "answer": "Yes—commercial rights are listed on paid subscription plans. Free plan commercial rights are not granted."
+      },
+      {
+        "question": "What formats can I export?",
+        "answer": "Fliki supports exporting in MP4, MOV, MP3, and WAV formats. This lets you export video or audio-only versions."
+      },
+      {
+        "question": "Can I download subtitles separately?",
+        "answer": "Yes, you can download subtitles in both SRT and VTT formats. This is useful for publishing captions outside the editor."
+      },
+      {
+        "question": "What browser should I use?",
+        "answer": "It's a web-based app and Chrome is the recommended browser. Other browsers may work, but performance can vary."
+      },
+      {
+        "question": "How do I cancel my subscription?",
+        "answer": "You can cancel anytime by going to Account and selecting Manage billing. This is handled from your billing dashboard."
+      },
+      {
+        "question": "What's the refund policy?",
+        "answer": "Refund requests may be considered case-by-case and granted at the company's sole discretion. Don't assume refunds are guaranteed if you forget to cancel."
+      },
+      {
+        "question": "Will the AI automatically pick relevant stock footage?",
+        "answer": "User reports: auto-selected stock visuals can miss the script's intended context. Plan time to replace clips manually for best results."
+      },
+      {
+        "question": "What are the minimum hardware/RAM requirements?",
+        "answer": "No specific hardware/RAM thresholds are confirmed. If you see lag, try Chrome and a faster connection first."
+      }
+    ]
+  },
+  "sources": {
+    "fliki.ai": {
+      "type": "OFFICIAL_WEBSITE",
+      "howToVerify": "Check official Fliki website and documentation",
+      "suggestedQuery": "site:fliki.ai pricing features"
+    },
+    "trustpilot.com": {
+      "type": "USER_REVIEWS",
+      "howToVerify": "Check user reviews on Trustpilot",
+      "suggestedQuery": "fliki trustpilot reviews"
+    },
+    "reddit.com": {
+      "type": "USER_DISCUSSIONS",
+      "howToVerify": "Check Reddit discussions about Fliki",
+      "suggestedQuery": "fliki reddit user experience"
+    }
+  }
+}

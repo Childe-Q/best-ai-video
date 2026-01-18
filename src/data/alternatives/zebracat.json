@@ -1,0 +1,317 @@
+{
+  "tool": "Zebracat",
+  "collectedAt": "2026-01-18",
+  "switchReasonGroups": [
+    {
+      "reasonTag": "Cost control",
+      "reasonTitle": "Avoiding Credit Volatility and Strict Refund Windows",
+      "reasonSummary": "Users switch due to sudden reductions in monthly video limits and a narrow 24-hour refund window for digital purchases.",
+      "alternatives": [
+        {
+          "toolName": "InVideo AI",
+          "bestFor": ["Marketing agencies", "High-volume social teams"],
+          "whySwitch": [
+            {
+              "claim": "Provides consistent access to 16 million+ licensed stock clips without the volatility of Zebracat's changing credit models.",
+              "sources": [
+                {
+                  "url": "https://creatorflow.so/blog/best-ai-reel-generators/",
+                  "type": "review_site",
+                  "quote": "InVideo AI generates professional videos... with access to 16 million+ licensed stock clips."
+                },
+                {
+                  "url": "https://appsumo.com/products/zebracat/reviews/",
+                  "type": "capterra",
+                  "quote": "Zebracat has done a bait-and-switch... changed their credit system, from 750 credits each month to just 30 videos."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Usage scales with a credit-based system that may feel limited for ultra-high-volume agency creators.",
+              "sources": [
+                {
+                  "url": "https://creatorflow.so/blog/best-ai-reel-generators/",
+                  "type": "review_site",
+                  "quote": "Plus plan may feel limiting for high-volume creators... credit system scales with usage."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "toolName": "Canva",
+          "bestFor": ["Small business owners", "Social media beginners"],
+          "whySwitch": [
+            {
+              "claim": "Offers a completely free AI reel maker and an affordable Pro tier with a vast 100M+ stock library.",
+              "sources": [
+                {
+                  "url": "https://creatorflow.so/blog/best-ai-reel-generators/",
+                  "type": "review_site",
+                  "quote": "Canva's AI reel maker lets anyone create professional reels... completely free... Pro: 100M+ stock media."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Lacks the advanced AI-driven transitions or cinematic text-to-video effects found in specialized tools.",
+              "sources": [
+                {
+                  "url": "https://creatorflow.so/blog/best-ai-reel-generators/",
+                  "type": "review_site",
+                  "quote": "Less suitable for advanced transitions or cinematic effects. Full AI features require Pro plan."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reasonTag": "Quality issues",
+      "reasonTitle": "Escaping Distorted AI Faces and Sync Errors",
+      "reasonSummary": "Persistent issues with distorted visuals and audio desync drive creators toward platforms with higher avatar realism.",
+      "alternatives": [
+        {
+          "toolName": "Synthesia",
+          "bestFor": ["Corporate training", "Professional presenters"],
+          "whySwitch": [
+            {
+              "claim": "Synthesia is considered the market leader for professional-grade avatar realism and consistent face dynamics.",
+              "sources": [
+                {
+                  "url": "https://www.g2.com/products/zebracat/competitors/alternatives",
+                  "type": "g2",
+                  "quote": "Make engaging videos with human presenters — directly from your browser. The best overall Zebracat alternative is Synthesia."
+                },
+                {
+                  "url": "https://appsumo.com/products/zebracat/reviews/",
+                  "type": "capterra",
+                  "quote": "Poor video quality & sync. Images out of sync with audio; AI faces distorted; stock clips often don't match."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Requires manual design for slides and backgrounds, lacking the one-click 'visual variety' automation of Zebracat.",
+              "sources": [
+                {
+                  "url": "https://www.zebracat.ai/post/best-alternatives-synthesia",
+                  "type": "official_docs",
+                  "quote": "Synthesia is basically a one-trick pony... You still need to write everything yourself and design your slides."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "toolName": "DeepBrain AI",
+          "bestFor": ["Enterprise scaling", "Broadcast quality"],
+          "whySwitch": [
+            {
+              "claim": "Provides studio-quality AI Humans that eliminate the need for physical actors and expensive studio setups.",
+              "sources": [
+                {
+                  "url": "https://www.g2.com/products/zebracat/competitors/alternatives",
+                  "type": "g2",
+                  "quote": "All you need is a computer... revolutionary video editing tool featuring AI Humans... 4.3/5 G2 rating."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "The platform focuses on realistic presenters rather than automated marketing B-roll generation.",
+              "sources": [
+                {
+                  "url": "https://www.g2.com/products/zebracat/competitors/alternatives",
+                  "type": "g2",
+                  "quote": "No More Actors. Just AI Studios... Experience the easiest way to create videos with AI Humans."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reasonTag": "Editing control",
+      "reasonTitle": "Gaining Post-Generation Control and Manual Editing",
+      "reasonSummary": "Users switch because Zebracat forces a full re-render for minor text or voice fixes, wasting generation credits.",
+      "alternatives": [
+        {
+          "toolName": "Pictory",
+          "bestFor": ["B2B content", "Bloggers"],
+          "whySwitch": [
+            {
+              "claim": "Enables granular scene-based editing, allowing users to replace footage or edit text after the initial AI generation.",
+              "sources": [
+                {
+                  "url": "https://www.zebracat.ai/post/i-tested-pictory",
+                  "type": "official_docs",
+                  "quote": "Pictory intelligently adds smooth transitions... users can replace AI-selected footage with stock media or uploaded content."
+                },
+                {
+                  "url": "https://appsumo.com/products/zebracat/reviews/",
+                  "type": "capterra",
+                  "quote": "No post-generation edits. You can't change text, captions, TTS voice, or music after generating — fixes force you to recreate."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "The editor is scene-based and lacks a traditional multi-layer timeline for complex video overlay effects.",
+              "sources": [
+                {
+                  "url": "https://www.zebracat.ai/post/i-tested-pictory",
+                  "type": "official_docs",
+                  "quote": "No timelines or complicated tools; just straightforward drag-and-drop editing. Even beginners can create professional videos."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "toolName": "CapCut",
+          "bestFor": ["Social media reels", "Mobile editing"],
+          "whySwitch": [
+            {
+              "claim": "Provides a full professional timeline for manual control over specific elements like visual effects and pacing.",
+              "sources": [
+                {
+                  "url": "https://www.producthunt.com/products/zebracat-ai/reviews",
+                  "type": "reddit",
+                  "quote": "Users may desire more control over specific elements... such as visual effects or pacing."
+                },
+                {
+                  "url": "https://www.reddit.com/r/VideoEditing/comments/zp6h3b/audiovideo_syncing_issues/",
+                  "type": "reddit",
+                  "quote": "Keep audio and video in sync when cutting... iMovie or Lightworks... or CapCut."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Requires more manual effort to source and sync media compared to Zebracat's fully automated generation.",
+              "sources": [
+                {
+                  "url": "https://www.zebracat.ai/post/i-tested-pictory",
+                  "type": "official_docs",
+                  "quote": "Zebracat streamlines the video creation process, saving time and effort... accessible to users of all skill levels."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reasonTag": "Workflow speed",
+      "reasonTitle": "Accelerated Ad Creation and Platform Stability",
+      "reasonSummary": "Creators switch to avoid interface lag and export failures, favoring tools optimized for rapid e-commerce ad production.",
+      "alternatives": [
+        {
+          "toolName": "Creatify",
+          "bestFor": ["E-commerce", "TikTok ads"],
+          "whySwitch": [
+            {
+              "claim": "Specializes in instantly creating video ads from any product link with automated multi-format output.",
+              "sources": [
+                {
+                  "url": "https://creatify.ai/compare/zebracat",
+                  "type": "official_docs",
+                  "quote": "Instantly create UGC-style video ads from any product link... paste a URL—Creatify automatically generates 5–10 ads."
+                }
+              ]
+            },
+            {
+              "claim": "Faster rendering and better stability during peak traffic compared to reported glitches in Zebracat.",
+              "sources": [
+                {
+                  "url": "https://workfeed.ai/tools/compare/heygen-vs-zebracat",
+                  "type": "review_site",
+                  "quote": "Zebracat Limitations: Occasional glitches... Slow customer service... Data privacy concerns."
+                },
+                {
+                  "url": "https://appsumo.com/products/zebracat/reviews/",
+                  "type": "capterra",
+                  "quote": "Stability and export failures. Crashes, slow loading, failed exports, and capacity problems during peaks."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Avatars may still feel stiff in some cases and may require occasional cleanup for natural movement.",
+              "sources": [
+                {
+                  "url": "https://www.reddit.com/r/digital_marketing/comments/1ojfutf/creatify_vs_joggai/",
+                  "type": "reddit",
+                  "quote": "I've tried both and they're decent, but the avatars still feel a bit stiff in a lot of cases."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqMining": {
+    "paaQueriesUsed": [
+      "Zebracat credit system vs competitors",
+      "Zebracat refund policy for annual plans",
+      "Zebracat credit rollover monthly",
+      "Zebracat vs InVideo for YouTube Shorts"
+    ],
+    "questions": [
+      {
+        "q": "What is Zebracat's refund policy?",
+        "sources": [
+          {
+            "url": "https://www.zebracat.ai/pricing",
+            "type": "official_docs",
+            "quote": "7-day money-back guarantee. Didn't download any video? Get a full refund within 7 days."
+          }
+        ]
+      },
+      {
+        "q": "Do Zebracat credits roll over to the next month?",
+        "sources": [
+          {
+            "url": "https://www.reddit.com/r/AugmentCodeAI/comments/1o9rie5/question_about_the_new_credit_pricing_will_unused/",
+            "type": "reddit",
+            "quote": "Monthly credits do not rollover. Top-up credits do rollover, and expire after 12 months."
+          }
+        ]
+      },
+      {
+        "q": "Does Zebracat support 4K video exports?",
+        "sources": [
+          {
+            "url": "https://www.revoyant.com/compare/elai-vs-zebracat",
+            "type": "review_site",
+            "quote": "[NEED VERIFICATION] Ultra HD 4k video avatars... Suitable for various use-cases."
+          }
+        ]
+      }
+    ]
+  },
+  "missingInfo": [
+    {
+      "need": "Confirmation on 4K export availability for standard paid plans (Cat Mode vs Super Cat).",
+      "whereToFind": "Official pricing or features matrix on zebracat.ai/pricing.",
+      "searchQuery": "Zebracat 4k export resolution support official"
+    },
+    {
+      "need": "Verification if ZebraLearn's 24-hour refund policy strictly applies to Zebracat.ai SaaS subscriptions.",
+      "whereToFind": "Zebracat.ai Terms of Service or Refund page.",
+      "searchQuery": "Zebracat.ai official refund policy subscription window"
+    }
+  ]
+}

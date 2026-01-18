@@ -1,0 +1,183 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "Quick social videos when you're okay working within monthly credit budgets",
+      "notFor": "Users who want precise manual edits, low credit burn, or flexible refunds",
+      "why": "Free plan has branding watermarks, cancellations can end access immediately, and refunds are stated as not provided"
+    },
+    "miniTest": {
+      "prompt": "Create a 30-45 second video from this text about [topic] for [platform]. Keep claims factual, add on-screen captions, and use stock visuals that match each sentence. Produce a version optimized for social sharing",
+      "checklist": [
+        {
+          "label": "Input type",
+          "value": "Script / blog excerpt / bullets"
+        },
+        {
+          "label": "Target platform",
+          "value": "Shorts / Reels / TikTok"
+        },
+        {
+          "label": "Watermark present",
+          "value": "Yes - expected on Free plan"
+        },
+        {
+          "label": "Credits used for this video",
+          "value": "Track usage"
+        },
+        {
+          "label": "Estimated videos per month",
+          "value": "Based on current burn rate"
+        },
+        {
+          "label": "Visual relevance to script",
+          "value": "1-5 rating"
+        },
+        {
+          "label": "Customization depth",
+          "value": "User reports: limited tweaks"
+        },
+        {
+          "label": "Stability",
+          "value": "User reports: occasional bugs"
+        },
+        {
+          "label": "Export resolution",
+          "value": "HD (verify exact resolution)"
+        },
+        {
+          "label": "Device/browser",
+          "value": "Desktop + Chrome suggested"
+        }
+      ],
+      "verdict": "Result: partial. Biggest constraint was credits/customization/bugs/watermark. If you need predictable HD specs or refund flexibility, verify plan terms before committing"
+    },
+    "useCases": [
+      {
+        "title": "YouTube Shorts",
+        "why": "Generate quick captioned clips, but watch credit burn per video",
+        "linkHref": "/tool/zebracat/pricing",
+        "linkText": "Check pricing →"
+      },
+      {
+        "title": "Marketing Ads",
+        "why": "Rapid iterations are possible; manual fine-tuning may be limited",
+        "linkHref": "/tool/zebracat/features",
+        "linkText": "See features →"
+      },
+      {
+        "title": "Blog-to-video",
+        "why": "Can draft a video script from blog text, then generate a short cut",
+        "linkHref": "/vs/zebracat-vs-fliki",
+        "linkText": "Compare alternatives →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "Free plan includes branding watermarks; paid plans remove them",
+      "Free plan includes 25 credits monthly (about 5 minutes)",
+      "Access to royalty-free stock clips, images, and music",
+      "Supports common formats like MP4 and MOV for sharing",
+      "Web-based workflow; desktop mode recommended by users",
+      "Blog-to-video style generation using NLP",
+      "Higher tiers may include advanced features like voice cloning"
+    ]
+  },
+  "pros": [
+    "Free tier exists for basic testing",
+    "Watermarks removed on paid tiers",
+    "Stock library included",
+    "Common sharing formats supported (MP4/MOV)",
+    "Can support blog-to-video workflows"
+  ],
+  "cons": [
+    "User reports: videos can consume too many credits",
+    "User reports: fewer outputs than some competitors",
+    "User reports: bugs or hiccups can occur",
+    "User reports: limited manual customization and tweaks",
+    "No refunds for paid periods already paid",
+    "Cancellation may end access immediately, without refund"
+  ],
+  "reviews": {
+    "verdict": {
+      "bottomLine": "Zebracat is best for creators who need quick social video generation and can work within monthly credit budgets. The trade-off is control: manual customization is limited, credits can burn faster than expected, and cancellation ends access immediately with no refunds. Free plan includes watermarks; paid tiers remove them but verify exact export specs before committing.",
+      "bestFor": [
+        "Quick social videos",
+        "Credit-based workflows",
+        "Blog-to-video drafts"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Does the Free plan include a watermark?",
+        "answer": "Yes—Free plan outputs include branding watermarks, and paid tiers remove them. Watermark behavior should be verified on official pricing if you need certainty."
+      },
+      {
+        "question": "How many credits does the Free plan include?",
+        "answer": "The Free plan includes 25 credits monthly, roughly equal to about 5 minutes of video. Treat this as plan guidance rather than a precise production guarantee."
+      },
+      {
+        "question": "Is export resolution 1080p or 4K available?",
+        "answer": "Available evidence only mentions HD output in user reviews. Confirm exact resolution options in official plan documentation before buying."
+      },
+      {
+        "question": "What file formats can I export?",
+        "answer": "MP4 and MOV are referenced as correct formats for video files. Verify the complete export format list and whether audio-only exports exist."
+      },
+      {
+        "question": "Can I cancel anytime, and what happens when I do?",
+        "answer": "Once cancellation is initiated, the subscription ends immediately. Remaining paid time is not refunded."
+      },
+      {
+        "question": "Do they offer refunds?",
+        "answer": "No refunds are provided for subscription periods already paid. If refunds matter, confirm directly in official terms before subscribing."
+      },
+      {
+        "question": "Are commercial rights included?",
+        "answer": "Many platforms grant commercial licenses on paid tiers. Check Zebracat's official terms for the exact license scope."
+      },
+      {
+        "question": "Does it include royalty-free stock media?",
+        "answer": "Reviews describe access to millions of premium stock clips, images, and music tracks. Verify the exact providers, licensing terms, and any plan limits."
+      },
+      {
+        "question": "Can it convert blog posts to video?",
+        "answer": "An NLP workflow analyzes text and generates a script for video creation. The quality of results may still require manual edits."
+      },
+      {
+        "question": "What features are exclusive to higher-tier plans?",
+        "answer": "Voice cloning may be available only on higher tiers. Verify which plan includes it and any usage limits."
+      },
+      {
+        "question": "Why do some users say it's expensive in credits?",
+        "answer": "User reports: creating videos can take too many credits and may yield fewer outputs than competitors. Your mileage will depend on video length and generation settings."
+      },
+      {
+        "question": "Is it stable and easy to customize?",
+        "answer": "User reports: you may run into bugs or hiccups, and customization options can feel limited. If your workflow needs frame-level control, test thoroughly before upgrading."
+      }
+    ]
+  },
+  "sources": {
+    "subscribed.fyi": {
+      "type": "POLICY_SUMMARY",
+      "howToVerify": "Check subscription policy summary",
+      "suggestedQuery": "zebracat subscribed.fyi cancellation refund"
+    },
+    "trustpilot.com": {
+      "type": "USER_REVIEWS",
+      "howToVerify": "Check user reviews on Trustpilot",
+      "suggestedQuery": "zebracat trustpilot reviews"
+    },
+    "g2.com": {
+      "type": "USER_REVIEWS",
+      "howToVerify": "Check user reviews on G2",
+      "suggestedQuery": "zebracat g2 reviews"
+    },
+    "zebracat.ai": {
+      "type": "OFFICIAL_WEBSITE",
+      "howToVerify": "Visit official Zebracat website",
+      "suggestedQuery": "zebracat.ai pricing features"
+    }
+  }
+}

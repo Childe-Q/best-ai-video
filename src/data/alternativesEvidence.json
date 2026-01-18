@@ -1,7 +1,591 @@
 [
   {
+    "tool": "colossyan",
+    "bestFor": [
+      "Learning and Development",
+      "Interactive training scenarios"
+    ],
+    "whySwitch": [
+      {
+        "claim": "Unique side-view avatars enable engaging dialogue between characters, ideal for scenario-based learning.",
+        "sources": [
+          {
+            "url": "/tool/colossyan/reviews",
+            "facts": [
+              "Their \"side-view\" avatars (two AI characters chatting) made my onboarding videos 40% more engaging.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Unique side-view avatars enable engaging dialogue between characters, ideal for scenario-based learning.",
+        "sources": [
+          {
+            "url": "/tool/colossyan/reviews",
+            "facts": [
+              "Their \"side-view\" avatars (two AI characters chatting) made my onboarding videos 40% more engaging.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      }
+    ],
+    "tradeoffs": [
+      {
+        "claim": "Has a smaller selection of stock avatars compared to HeyGen's library.",
+        "sources": [
+          {
+            "url": "/tool/colossyan/reviews",
+            "facts": [
+              "Cons of Colossyan: Fewer avatars compared to HeyGen.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Has a smaller selection of stock avatars compared to HeyGen's library.",
+        "sources": [
+          {
+            "url": "/tool/colossyan/reviews",
+            "facts": [
+              "Cons of Colossyan: Fewer avatars compared to HeyGen.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      }
+    ],
+    "pricingSignals": {}
+  },
+  {
+    "tool": "deepbrain-ai",
+    "bestFor": [
+      "Enterprise scalability",
+      "Broadcast-quality realism"
+    ],
+    "whySwitch": [
+      {
+        "claim": "Offers a massive library of over 2,000 hyper-realistic avatars, far exceeding HeyGen's ~100.",
+        "sources": [
+          {
+            "url": "/tool/deepbrain-ai/reviews",
+            "facts": [
+              "DeepBrain AI: 2,000+ hyper-realistic avatars. HeyGen: ~100 avatars.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Offers a massive library of over 2,000 hyper-realistic avatars, far exceeding HeyGen's ~100.",
+        "sources": [
+          {
+            "url": "/tool/deepbrain-ai/reviews",
+            "facts": [
+              "DeepBrain AI: 2,000+ hyper-realistic avatars. HeyGen: ~100 avatars.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      }
+    ],
+    "tradeoffs": [
+      {
+        "claim": "The platform is aimed at professional studio-grade quality, which may involve higher pricing tiers.",
+        "sources": [
+          {
+            "url": "/tool/deepbrain-ai/reviews",
+            "facts": [
+              "AI Studios (DeepBrain AI) Best for realism... Enterprise Plan: Custom corporate solutions.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "The platform is aimed at professional studio-grade quality, which may involve higher pricing tiers.",
+        "sources": [
+          {
+            "url": "/tool/deepbrain-ai/reviews",
+            "facts": [
+              "AI Studios (DeepBrain AI) Best for realism... Enterprise Plan: Custom corporate solutions.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      }
+    ],
+    "pricingSignals": {}
+  },
+  {
+    "tool": "elai-io",
+    "bestFor": [
+      "Small businesses",
+      "Budget-conscious corporate teams"
+    ],
+    "whySwitch": [
+      {
+        "claim": "Favored by smaller organizations for its lower entry-level pricing and ease of use.",
+        "sources": [
+          {
+            "url": "/tool/elai-io/reviews",
+            "facts": [
+              "Elai.io is particularly favored by small businesses for its affordability and ease of use.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          },
+          {
+            "url": "/tool/elai-io/reviews",
+            "facts": [
+              "Elai's pricing is very competitive, making it accessible to creators with any budget.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Favored by smaller organizations for its lower entry-level pricing and ease of use.",
+        "sources": [
+          {
+            "url": "/tool/elai-io/reviews",
+            "facts": [
+              "Elai.io is particularly favored by small businesses for its affordability and ease of use.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          },
+          {
+            "url": "/tool/elai-io/reviews",
+            "facts": [
+              "Elai's pricing is very competitive, making it accessible to creators with any budget.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      }
+    ],
+    "tradeoffs": [
+      {
+        "claim": "Lip-sync accuracy in certain languages like Japanese may lag behind HeyGen.",
+        "sources": [
+          {
+            "url": "/tool/elai-io/reviews",
+            "facts": [
+              "However, lip-sync accuracy lags slightly behind HeyGen in languages like Japanese.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Lip-sync accuracy in certain languages like Japanese may lag behind HeyGen.",
+        "sources": [
+          {
+            "url": "/tool/elai-io/reviews",
+            "facts": [
+              "However, lip-sync accuracy lags slightly behind HeyGen in languages like Japanese.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      }
+    ],
+    "pricingSignals": {}
+  },
+  {
+    "tool": "pictory",
+    "bestFor": [
+      "Blog-to-video",
+      "Long-form repurposing",
+      "Webinar/podcast clipping"
+    ],
+    "whySwitch": [
+      {
+        "claim": "Pictory is often a better alternative when you start from existing content (blog posts, webinars) and want repurposing workflows more than prompt-to-video generation.",
+        "sources": [
+          {
+            "url": "/tool/pictory",
+            "facts": [
+              "Pictory supports blog/article-to-video style workflows. [NEED VERIFICATION: confirm exact inputs like URL import in your stored features]",
+              "InVideo AI is more prompt/script-first for generating new drafts."
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "If you prefer text-based editing of long recordings (edit the transcript to cut video), Pictory is a closer match than a generator-first tool. [NEED VERIFICATION]",
+        "sources": [
+          {
+            "url": "/tool/pictory",
+            "facts": [
+              "[NEED VERIFICATION: confirm transcript-based editing is stated in your stored features]"
+            ]
+          }
+        ]
+      }
+    ],
+    "tradeoffs": [
+      {
+        "claim": "Some users describe output as 'slideshow-like' with simpler motion than video-first template tools.",
+        "sources": [
+          {
+            "url": "/tool/pictory/reviews",
+            "facts": [
+              "User reports describe the visuals as static/slideshow-like."
+            ]
+          }
+        ]
+      }
+    ],
+    "pricingSignals": {
+      "freePlan": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [
+          {
+            "url": "/tool/pictory/pricing",
+            "facts": [
+              "[NEED VERIFICATION]"
+            ]
+          }
+        ]
+      },
+      "watermark": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [
+          {
+            "url": "/tool/pictory/pricing",
+            "facts": [
+              "[NEED VERIFICATION]"
+            ]
+          }
+        ]
+      },
+      "exportQuality": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [
+          {
+            "url": "/tool/pictory/pricing",
+            "facts": [
+              "[NEED VERIFICATION]"
+            ]
+          }
+        ]
+      },
+      "refundCancel": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [
+          {
+            "url": "/tool/pictory/pricing",
+            "facts": [
+              "[NEED VERIFICATION]"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "tool": "synthesia",
+    "bestFor": [
+      "L&D / training",
+      "Avatar presentations",
+      "Multilingual content",
+      "Enterprise-grade realism",
+      "Instructional training",
+      "Fast batch production",
+      "PowerPoint workflows"
+    ],
+    "whySwitch": [
+      {
+        "claim": "Synthesia is a stronger alternative when your goal is training-style avatar presentations (scripted presenter videos) rather than stock-footage Shorts.",
+        "sources": [
+          {
+            "url": "/tool/synthesia",
+            "facts": [
+              "Synthesia is positioned around avatar-based training/presenter videos.",
+              "[NEED VERIFICATION: confirm any gesture/micro-expression controls before stating specifics]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "If you need review/workspace workflows for teams, Synthesia is often built more for collaboration than creator-first generators. [NEED VERIFICATION]",
+        "sources": [
+          {
+            "url": "/tool/synthesia/pricing",
+            "facts": [
+              "[NEED VERIFICATION: confirm collaboration/workspace features exist and at what tier]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Superior face dynamics including natural blink cadence and better cheek activation during speech.",
+        "sources": [
+          {
+            "url": "/tool/synthesia/reviews",
+            "facts": [
+              "Synthesia currently edges ahead on face dynamics (blink cadence, cheek activation with vowels).",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Provides more consistent facial alignment during complex head movements and jump cuts.",
+        "sources": [
+          {
+            "url": "/tool/synthesia/reviews",
+            "facts": [
+              "During off-axis head poses or jump cuts, Synthesia held alignment more consistently.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Demonstrated rendering speeds 30–40% faster than HeyGen in consistent benchmarking tests.",
+        "sources": [
+          {
+            "url": "/tool/synthesia/reviews",
+            "facts": [
+              "Across a handful of runs, Synthesia stayed consistently faster by about 30–40%.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Direct PowerPoint integration converts slide notes to scripts and assets into editable elements automatically.",
+        "sources": [
+          {
+            "url": "/tool/synthesia/reviews",
+            "facts": [
+              "Text elements, shapes, images, and videos from your slides become editable in Synthesia."
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Superior face dynamics including natural blink cadence and better cheek activation during speech.",
+        "sources": [
+          {
+            "url": "/tool/synthesia/reviews",
+            "facts": [
+              "Synthesia currently edges ahead on face dynamics (blink cadence, cheek activation with vowels).",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Provides more consistent facial alignment during complex head movements and jump cuts.",
+        "sources": [
+          {
+            "url": "/tool/synthesia/reviews",
+            "facts": [
+              "During off-axis head poses or jump cuts, Synthesia held alignment more consistently.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Demonstrated rendering speeds 30–40% faster than HeyGen in consistent benchmarking tests.",
+        "sources": [
+          {
+            "url": "/tool/synthesia/reviews",
+            "facts": [
+              "Across a handful of runs, Synthesia stayed consistently faster by about 30–40%.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Direct PowerPoint integration converts slide notes to scripts and assets into editable elements automatically.",
+        "sources": [
+          {
+            "url": "/tool/synthesia/reviews",
+            "facts": [
+              "Text elements, shapes, images, and videos from your slides become editable in Synthesia."
+            ]
+          }
+        ]
+      }
+    ],
+    "tradeoffs": [
+      {
+        "claim": "Some users still describe avatar output as slightly robotic in certain contexts (the 'uncanny valley' problem).",
+        "sources": [
+          {
+            "url": "/tool/synthesia/reviews",
+            "facts": [
+              "User reports mention avatars can feel robotic or stiff in longer videos."
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Requires a higher price point and lacks the interactive/conversational avatars found in competitors.",
+        "sources": [
+          {
+            "url": "/tool/synthesia/reviews",
+            "facts": [
+              "Higher price point... Synthesia currently doesn't offer interactive avatars."
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Strict avatar usage policies prevent stock avatars from being used in paid advertising campaigns.",
+        "sources": [
+          {
+            "url": "/tool/synthesia/reviews",
+            "facts": [
+              "You can not use stock avatars in any paid aids campaign.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Requires a higher price point and lacks the interactive/conversational avatars found in competitors.",
+        "sources": [
+          {
+            "url": "/tool/synthesia/reviews",
+            "facts": [
+              "Higher price point... Synthesia currently doesn't offer interactive avatars."
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Strict avatar usage policies prevent stock avatars from being used in paid advertising campaigns.",
+        "sources": [
+          {
+            "url": "/tool/synthesia/reviews",
+            "facts": [
+              "You can not use stock avatars in any paid aids campaign.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      }
+    ],
+    "pricingSignals": {
+      "freePlan": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [
+          {
+            "url": "/tool/synthesia/pricing",
+            "facts": [
+              "[NEED VERIFICATION]"
+            ]
+          }
+        ]
+      },
+      "watermark": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [
+          {
+            "url": "/tool/synthesia/pricing",
+            "facts": [
+              "[NEED VERIFICATION]"
+            ]
+          }
+        ]
+      },
+      "exportQuality": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [
+          {
+            "url": "/tool/synthesia/pricing",
+            "facts": [
+              "[NEED VERIFICATION]"
+            ]
+          }
+        ]
+      },
+      "refundCancel": {
+        "claim": "[NEED VERIFICATION]",
+        "sources": [
+          {
+            "url": "/tool/synthesia/pricing",
+            "facts": [
+              "[NEED VERIFICATION]"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "tool": "tavus",
+    "bestFor": [
+      "Personalized marketing at scale",
+      "Developer-focused APIs"
+    ],
+    "whySwitch": [
+      {
+        "claim": "Optimized for creating thousands of individualized videos from a single source recording via API.",
+        "sources": [
+          {
+            "url": "/tool/tavus",
+            "facts": [
+              "Tavus combines personalized lip-syncing... to create thousands of individualized videos from a single recording."
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Optimized for creating thousands of individualized videos from a single source recording via API.",
+        "sources": [
+          {
+            "url": "/tool/tavus",
+            "facts": [
+              "Tavus combines personalized lip-syncing... to create thousands of individualized videos from a single recording."
+            ]
+          }
+        ]
+      }
+    ],
+    "tradeoffs": [
+      {
+        "claim": "Lacks transparent pricing and is generally perceived as much more expensive than marketing tools.",
+        "sources": [
+          {
+            "url": "/tool/tavus/reviews",
+            "facts": [
+              "Tavus is considered very expensive and lacks transparent pricing.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Lacks transparent pricing and is generally perceived as much more expensive than marketing tools.",
+        "sources": [
+          {
+            "url": "/tool/tavus/reviews",
+            "facts": [
+              "Tavus is considered very expensive and lacks transparent pricing.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      }
+    ],
+    "pricingSignals": {}
+  },
+  {
     "tool": "veed-io",
-    "bestFor": ["Manual timeline editing", "Social media repurposing", "Subtitle correction"],
+    "bestFor": [
+      "Manual timeline editing",
+      "Social media repurposing",
+      "Subtitle correction"
+    ],
     "whySwitch": [
       {
         "claim": "Veed is a timeline-first editor, which makes it easier to do precise trims, splits, and layers than InVideo AI's prompt-first 'regenerate' workflow.",
@@ -45,46 +629,77 @@
     "pricingSignals": {
       "freePlan": {
         "claim": "[NEED VERIFICATION]",
-        "sources": [{ "url": "/tool/veed-io/pricing", "facts": ["[NEED VERIFICATION]"] }]
+        "sources": [
+          {
+            "url": "/tool/veed-io/pricing",
+            "facts": [
+              "[NEED VERIFICATION]"
+            ]
+          }
+        ]
       },
       "watermark": {
         "claim": "[NEED VERIFICATION]",
-        "sources": [{ "url": "/tool/veed-io/pricing", "facts": ["[NEED VERIFICATION]"] }]
+        "sources": [
+          {
+            "url": "/tool/veed-io/pricing",
+            "facts": [
+              "[NEED VERIFICATION]"
+            ]
+          }
+        ]
       },
       "exportQuality": {
         "claim": "[NEED VERIFICATION]",
-        "sources": [{ "url": "/tool/veed-io/pricing", "facts": ["[NEED VERIFICATION]"] }]
+        "sources": [
+          {
+            "url": "/tool/veed-io/pricing",
+            "facts": [
+              "[NEED VERIFICATION]"
+            ]
+          }
+        ]
       },
       "refundCancel": {
         "claim": "[NEED VERIFICATION]",
-        "sources": [{ "url": "/tool/veed-io/pricing", "facts": ["[NEED VERIFICATION]"] }]
+        "sources": [
+          {
+            "url": "/tool/veed-io/pricing",
+            "facts": [
+              "[NEED VERIFICATION]"
+            ]
+          }
+        ]
       }
     }
   },
   {
-    "tool": "heygen",
-    "bestFor": ["Custom avatars", "Sales outreach", "Video translation"],
+    "tool": "vidboard",
+    "bestFor": [
+      "High-volume creators",
+      "LTD seekers"
+    ],
     "whySwitch": [
       {
-        "claim": "If you want avatar-first videos (a talking presenter), HeyGen is a better fit than InVideo's stock-first workflow.",
+        "claim": "Allows for high-volume production with plans supporting up to 800 avatar videos monthly.",
         "sources": [
           {
-            "url": "/tool/heygen",
+            "url": "/tool/vidboard/reviews",
             "facts": [
-              "HeyGen focuses on avatar-driven video creation.",
-              "[NEED VERIFICATION: confirm the exact avatar creation method and wording on your page]"
+              "All features above included... 800 AI avatar led total videos per month.",
+              "[NEED VERIFICATION: external source, verify on official site]"
             ]
           }
         ]
       },
       {
-        "claim": "HeyGen is a clearer choice for translation + lip-sync workflows than a standard dubbing workflow. [NEED VERIFICATION: confirm InVideo's exact translation behavior]",
+        "claim": "Allows for high-volume production with plans supporting up to 800 avatar videos monthly.",
         "sources": [
           {
-            "url": "/tool/heygen",
+            "url": "/tool/vidboard/reviews",
             "facts": [
-              "[NEED VERIFICATION: confirm native video translation + lip-sync is explicitly stated on your page]",
-              "[NEED VERIFICATION: only claim contrast vs InVideo if you have it stored as a fact]"
+              "All features above included... 800 AI avatar led total videos per month.",
+              "[NEED VERIFICATION: external source, verify on official site]"
             ]
           }
         ]
@@ -92,144 +707,114 @@
     ],
     "tradeoffs": [
       {
-        "claim": "Higher-end avatar modes can be expensive in credits compared to standard generation. [NEED VERIFICATION: exact credit multiplier]",
+        "claim": "Advanced features like brand kits and collaborative creation are still being rolled out.",
         "sources": [
           {
-            "url": "/tool/heygen/pricing",
-            "facts": ["[NEED VERIFICATION: confirm credit consumption for premium avatar modes vs standard]"]
-          }
-        ]
-      }
-    ],
-    "pricingSignals": {
-      "freePlan": {
-        "claim": "[NEED VERIFICATION]",
-        "sources": [{ "url": "/tool/heygen/pricing", "facts": ["[NEED VERIFICATION]"] }]
-      },
-      "watermark": {
-        "claim": "[NEED VERIFICATION]",
-        "sources": [{ "url": "/tool/heygen/pricing", "facts": ["[NEED VERIFICATION]"] }]
-      },
-      "exportQuality": {
-        "claim": "[NEED VERIFICATION]",
-        "sources": [{ "url": "/tool/heygen/pricing", "facts": ["[NEED VERIFICATION]"] }]
-      },
-      "refundCancel": {
-        "claim": "[NEED VERIFICATION]",
-        "sources": [{ "url": "/tool/heygen/pricing", "facts": ["[NEED VERIFICATION]"] }]
-      }
-    }
-  },
-  {
-    "tool": "synthesia",
-    "bestFor": ["L&D / training", "Avatar presentations", "Multilingual content"],
-    "whySwitch": [
-      {
-        "claim": "Synthesia is a stronger alternative when your goal is training-style avatar presentations (scripted presenter videos) rather than stock-footage Shorts.",
-        "sources": [
-          {
-            "url": "/tool/synthesia",
+            "url": "/tool/vidboard/reviews",
             "facts": [
-              "Synthesia is positioned around avatar-based training/presenter videos.",
-              "[NEED VERIFICATION: confirm any gesture/micro-expression controls before stating specifics]"
+              "Coming soon in 2025: 1. AI Background Removal. 2. Brand Kits & Templates.",
+              "[NEED VERIFICATION: external source, verify on official site]"
             ]
           }
         ]
       },
       {
-        "claim": "If you need review/workspace workflows for teams, Synthesia is often built more for collaboration than creator-first generators. [NEED VERIFICATION]",
+        "claim": "Advanced features like brand kits and collaborative creation are still being rolled out.",
         "sources": [
           {
-            "url": "/tool/synthesia/pricing",
-            "facts": ["[NEED VERIFICATION: confirm collaboration/workspace features exist and at what tier]"]
+            "url": "/tool/vidboard/reviews",
+            "facts": [
+              "Coming soon in 2025: 1. AI Background Removal. 2. Brand Kits & Templates.",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      }
+    ],
+    "pricingSignals": {}
+  },
+  {
+    "tool": "vidnoz",
+    "bestFor": [
+      "Free users",
+      "High-volume social content"
+    ],
+    "whySwitch": [
+      {
+        "claim": "Offers a highly generous free plan providing two minutes of daily video creation.",
+        "sources": [
+          {
+            "url": "/tool/vidnoz/reviews",
+            "facts": [
+              "Vidnoz: Most Generous Free Plan. Free: 2 min/day (60 min/month).",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Provides an extensive library of over 1,800 avatars even on the free tier.",
+        "sources": [
+          {
+            "url": "/tool/vidnoz/reviews",
+            "facts": [
+              "Free Plan: 2 minutes daily creation, 1800+ avatars, 720p resolution (with watermark).",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Offers a highly generous free plan providing two minutes of daily video creation.",
+        "sources": [
+          {
+            "url": "/tool/vidnoz/reviews",
+            "facts": [
+              "Vidnoz: Most Generous Free Plan. Free: 2 min/day (60 min/month).",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Provides an extensive library of over 1,800 avatars even on the free tier.",
+        "sources": [
+          {
+            "url": "/tool/vidnoz/reviews",
+            "facts": [
+              "Free Plan: 2 minutes daily creation, 1800+ avatars, 720p resolution (with watermark).",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
           }
         ]
       }
     ],
     "tradeoffs": [
       {
-        "claim": "Some users still describe avatar output as slightly robotic in certain contexts (the 'uncanny valley' problem).",
+        "claim": "Free plan exports are limited to 720p resolution and include a watermark.",
         "sources": [
           {
-            "url": "/tool/synthesia/reviews",
-            "facts": ["User reports mention avatars can feel robotic or stiff in longer videos."]
-          }
-        ]
-      }
-    ],
-    "pricingSignals": {
-      "freePlan": {
-        "claim": "[NEED VERIFICATION]",
-        "sources": [{ "url": "/tool/synthesia/pricing", "facts": ["[NEED VERIFICATION]"] }]
-      },
-      "watermark": {
-        "claim": "[NEED VERIFICATION]",
-        "sources": [{ "url": "/tool/synthesia/pricing", "facts": ["[NEED VERIFICATION]"] }]
-      },
-      "exportQuality": {
-        "claim": "[NEED VERIFICATION]",
-        "sources": [{ "url": "/tool/synthesia/pricing", "facts": ["[NEED VERIFICATION]"] }]
-      },
-      "refundCancel": {
-        "claim": "[NEED VERIFICATION]",
-        "sources": [{ "url": "/tool/synthesia/pricing", "facts": ["[NEED VERIFICATION]"] }]
-      }
-    }
-  },
-  {
-    "tool": "pictory",
-    "bestFor": ["Blog-to-video", "Long-form repurposing", "Webinar/podcast clipping"],
-    "whySwitch": [
-      {
-        "claim": "Pictory is often a better alternative when you start from existing content (blog posts, webinars) and want repurposing workflows more than prompt-to-video generation.",
-        "sources": [
-          {
-            "url": "/tool/pictory",
+            "url": "/tool/vidnoz/reviews",
             "facts": [
-              "Pictory supports blog/article-to-video style workflows. [NEED VERIFICATION: confirm exact inputs like URL import in your stored features]",
-              "InVideo AI is more prompt/script-first for generating new drafts."
+              "Free Plan: 2 minutes daily creation... 720p resolution (with watermark).",
+              "[NEED VERIFICATION: external source, verify on official site]"
             ]
           }
         ]
       },
       {
-        "claim": "If you prefer text-based editing of long recordings (edit the transcript to cut video), Pictory is a closer match than a generator-first tool. [NEED VERIFICATION]",
+        "claim": "Free plan exports are limited to 720p resolution and include a watermark.",
         "sources": [
           {
-            "url": "/tool/pictory",
-            "facts": ["[NEED VERIFICATION: confirm transcript-based editing is stated in your stored features]"]
+            "url": "/tool/vidnoz/reviews",
+            "facts": [
+              "Free Plan: 2 minutes daily creation... 720p resolution (with watermark).",
+              "[NEED VERIFICATION: external source, verify on official site]"
+            ]
           }
         ]
       }
     ],
-    "tradeoffs": [
-      {
-        "claim": "Some users describe output as 'slideshow-like' with simpler motion than video-first template tools.",
-        "sources": [
-          {
-            "url": "/tool/pictory/reviews",
-            "facts": ["User reports describe the visuals as static/slideshow-like."]
-          }
-        ]
-      }
-    ],
-    "pricingSignals": {
-      "freePlan": {
-        "claim": "[NEED VERIFICATION]",
-        "sources": [{ "url": "/tool/pictory/pricing", "facts": ["[NEED VERIFICATION]"] }]
-      },
-      "watermark": {
-        "claim": "[NEED VERIFICATION]",
-        "sources": [{ "url": "/tool/pictory/pricing", "facts": ["[NEED VERIFICATION]"] }]
-      },
-      "exportQuality": {
-        "claim": "[NEED VERIFICATION]",
-        "sources": [{ "url": "/tool/pictory/pricing", "facts": ["[NEED VERIFICATION]"] }]
-      },
-      "refundCancel": {
-        "claim": "[NEED VERIFICATION]",
-        "sources": [{ "url": "/tool/pictory/pricing", "facts": ["[NEED VERIFICATION]"] }]
-      }
-    }
+    "pricingSignals": {}
   }
 ]

@@ -1,0 +1,187 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "Training, internal comms, and product explainers needing reliable 1080p MP4 exports",
+      "notFor": "Paid ads using stock avatars, or teams expecting flexible refunds",
+      "why": "Freemium videos are watermarked, licensing restricts paid promotion with stock avatars, and refunds can be limited by customer type"
+    },
+    "miniTest": {
+      "prompt": "Create a 45-60 second presenter-style video about [topic] for [audience]. Use a clear hook, 3 key points, and a short closing line. Add captions, keep language policy-safe, and export a standard downloadable MP4",
+      "checklist": [
+        {
+          "label": "Use case",
+          "value": "Training / onboarding / update / explainer"
+        },
+        {
+          "label": "Script acceptance",
+          "value": "User reports: moderation can reject scripts"
+        },
+        {
+          "label": "Generation reliability",
+          "value": "User reports: can stall near 99%"
+        },
+        {
+          "label": "Watermark present",
+          "value": "Yes - expected on Freemium plan"
+        },
+        {
+          "label": "Downloaded successfully",
+          "value": "Yes/No"
+        },
+        {
+          "label": "Interactive elements used",
+          "value": "May block download"
+        },
+        {
+          "label": "Export resolution",
+          "value": "1080p confirmed for MP4 downloads"
+        },
+        {
+          "label": "Export formats needed",
+          "value": "MP4 / WAV / XLIFF / SRT / VTT"
+        },
+        {
+          "label": "Browser + version",
+          "value": "Chrome / Edge (meets minimum requirements)"
+        },
+        {
+          "label": "OS",
+          "value": "Windows 10+ / macOS Catalina+"
+        },
+        {
+          "label": "Intended usage: paid promotion",
+          "value": "Stock avatar ads restricted"
+        }
+      ],
+      "verdict": "Result: partial. Primary blocker was moderation/download/processing/browser. If you need paid ads or guaranteed refunds, validate licensing and refund terms before scaling"
+    },
+    "useCases": [
+      {
+        "title": "YouTube Shorts",
+        "why": "Create short presenter explainers, then export MP4 with captions",
+        "linkHref": "/tool/synthesia/pricing",
+        "linkText": "Check pricing →"
+      },
+      {
+        "title": "Marketing Ads",
+        "why": "Needs caution—stock avatars are restricted for paid promotion uses",
+        "linkHref": "/tool/synthesia/features",
+        "linkText": "See features →"
+      },
+      {
+        "title": "Blog-to-video",
+        "why": "Convert blog sections into a script, then export MP4 plus SRT/VTT captions",
+        "linkHref": "/vs/synthesia-vs-heygen",
+        "linkText": "Compare alternatives →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "Freemium videos include Synthesia logo watermark",
+      "Remove watermark by upgrading and re-generating the video",
+      "Standard MP4 downloads export in Full HD 1080p (1920×1080)",
+      "Export options include MP4, WAV, XLIFF, SRT, and VTT",
+      "Interactive videos may not be downloadable as MP4",
+      "Licensing allows commercial use with restrictions on paid promotion stock avatars",
+      "Perpetual license granted for integrated Synthesia content in created videos",
+      "Requirements specify modern browsers and minimum OS versions"
+    ]
+  },
+  "pros": [
+    "Consistent 1080p MP4 download specification",
+    "Multiple export formats including captions and localization (XLIFF)",
+    "Clear watermark removal process (upgrade + re-generate)",
+    "Explicit browser and OS requirements reduce guesswork",
+    "Licensing guidance is documented in help articles"
+  ],
+  "cons": [
+    "Freemium watermark requires re-generation after upgrading",
+    "Stock avatars restricted for paid promotion use",
+    "Refund policy can be strict depending on customer type",
+    "User reports: scripts can be rejected by moderation",
+    "User reports: generation can get stuck near completion"
+  ],
+  "reviews": {
+    "verdict": {
+      "bottomLine": "Synthesia is best for training, internal comms, and product explainers needing reliable 1080p MP4 exports. The trade-off is restrictions: freemium videos are watermarked and require re-generation after upgrading, stock avatars cannot be used for paid promotion, and refund policies vary by customer type. User reports suggest moderation can be strict and generation may stall.",
+      "bestFor": [
+        "Training videos",
+        "Internal communications",
+        "Product explainers"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Do Freemium videos have a watermark?",
+        "answer": "Yes—the Synthesia logo watermark appears on all videos created with a Freemium account. To publish without it, you'll need a paid plan and re-generate the video."
+      },
+      {
+        "question": "Can I remove the watermark without paying?",
+        "answer": "No—removal requires upgrading and re-generating the video. Exporting the same Freemium video again will still include the watermark."
+      },
+      {
+        "question": "What resolution are standard MP4 downloads?",
+        "answer": "Standard MP4 downloads export in Full HD 1080p (1920×1080). This is explicitly stated in Synthesia's download instructions."
+      },
+      {
+        "question": "What file formats can I export?",
+        "answer": "Synthesia supports MP4, WAV, XLIFF, and captions in SRT and VTT formats. Pick the format based on whether you need video, audio, or localization/captions."
+      },
+      {
+        "question": "Can I download videos that include interactive elements?",
+        "answer": "No—videos with interactive elements cannot be downloaded as MP4. If downloading is required, avoid interactive features in that project."
+      },
+      {
+        "question": "Is commercial use allowed?",
+        "answer": "Commercial use is allowed with restrictions, especially around paid promotion when using stock avatars. Paid TV/social ads using stock avatars are listed as not allowed."
+      },
+      {
+        "question": "Do I get a license to use Synthesia's built-in content?",
+        "answer": "Yes—Synthesia states it grants a perpetual license for integrated content used within created videos. This applies to content you include through the platform into your outputs."
+      },
+      {
+        "question": "What are the system requirements?",
+        "answer": "Synthesia requires modern browsers (e.g., Chrome 133+ and Edge 134+) and supported OS versions (Windows 10+ or macOS Catalina 10.15+). If you see issues, confirm your browser version first."
+      },
+      {
+        "question": "How do refunds work?",
+        "answer": "Refund rules differ by customer type: terms mention consumers can request a pro-rated refund within 15 days, while help text states purchases are non-cancelable and non-refundable for customers. If refunds matter, confirm whether you're treated as a consumer or business customer."
+      },
+      {
+        "question": "How do I cancel a subscription?",
+        "answer": "Terms describe renewal notice timing (at least 5 days prior for automatic renewal). If you're on annual billing, don't wait until the last day to review renewal status. Check current account UI for exact cancellation steps."
+      },
+      {
+        "question": "Why do some scripts get rejected?",
+        "answer": "User reports: moderation can be strict and sometimes unclear, leading to rejected scripts. Keep wording neutral, avoid harassment/bullying framing, and remove risky phrasing if blocked."
+      },
+      {
+        "question": "Why does rendering sometimes get stuck at 99%?",
+        "answer": "User reports: generation can stall near completion and may require retrying. If it repeats, check browser requirements and simplify the project."
+      }
+    ]
+  },
+  "sources": {
+    "help.synthesia.io": {
+      "type": "HELP_CENTER",
+      "howToVerify": "Check official Synthesia help documentation",
+      "suggestedQuery": "site:help.synthesia.io watermark export download"
+    },
+    "synthesia.io": {
+      "type": "OFFICIAL_WEBSITE",
+      "howToVerify": "Visit official Synthesia website and terms",
+      "suggestedQuery": "synthesia.io licensing commercial use"
+    },
+    "docs.synthesia.io": {
+      "type": "DOCUMENTATION",
+      "howToVerify": "Check Synthesia documentation",
+      "suggestedQuery": "site:docs.synthesia.io system requirements browser"
+    },
+    "trustpilot.com": {
+      "type": "USER_REVIEWS",
+      "howToVerify": "Check user reviews on Trustpilot",
+      "suggestedQuery": "synthesia trustpilot reviews"
+    }
+  }
+}

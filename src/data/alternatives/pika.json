@@ -1,0 +1,328 @@
+{
+  "tool": "Pika",
+  "collectedAt": "2026-01-18",
+  "switchReasonGroups": [
+    {
+      "reasonTag": "Cost control",
+      "reasonTitle": "Avoiding Expiring Credits and Complex Cancellations",
+      "reasonSummary": "Users often switch due to Pika's strict 24-hour refund window and the loss of monthly credits upon billing cycle resets.",
+      "alternatives": [
+        {
+          "toolName": "Leonardo AI",
+          "bestFor": [
+            "Unified asset budgeting",
+            "Hobbyist creators"
+          ],
+          "whySwitch": [
+            {
+              "claim": "Offers a unified credit system across image and video, providing better value for multi-format creative projects.",
+              "sources": [
+                {
+                  "url": "https://aloa.co/ai/comparisons/ai-video-comparison/runway-vs-pika-labs",
+                  "type": "review_site",
+                  "quote": "Pika Labs for content creators prioritizing accessibility... Leonardo AI for video motion."
+                }
+              ]
+            },
+            {
+              "claim": "Provides a consistent pricing strategy that some users find more attractive than Pika's credit-heavy model.",
+              "sources": [
+                {
+                  "url": "https://www.oreateai.com/blog/understanding-pika-labs-ai-pricing-a-comprehensive-breakdown/f6d9e9f507c3346fd2d353f17145fea7",
+                  "type": "review_site",
+                  "quote": "In contrast, the Standard plan offers significantly more flexibility with 1,050 points each month for generating high-definition videos."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Video is a secondary feature; it may lack Pika's specific physics-bending effects.",
+              "sources": [
+                {
+                  "url": "https://aloa.co/ai/comparisons/ai-video-comparison/runway-vs-pika-labs",
+                  "type": "review_site",
+                  "quote": "Leonardo AI for video motion... Pika Labs for content creators requiring artistic effects."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "toolName": "Runway",
+          "bestFor": [
+            "High-volume professional work",
+            "Unlimited generation"
+          ],
+          "whySwitch": [
+            {
+              "claim": "The Unlimited plan eliminates the stress of credit management and 'dud' generations found in Pika's tiers.",
+              "sources": [
+                {
+                  "url": "https://crepal.ai/blog/aivideo/runway-gen-4-vs-pika-2-benchmark/",
+                  "type": "review_site",
+                  "quote": "Runway Gen-4's Unlimited plan or Pika's Pro plan both eliminate most waiting."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Runway's entry-level plan is slightly more expensive per video compared to Pika's Standard plan.",
+              "sources": [
+                {
+                  "url": "https://crepal.ai/blog/aivideo/runway-gen-4-vs-pika-2-benchmark/",
+                  "type": "review_site",
+                  "quote": "Runway Gen-4 (Standard Plan): $12/month = $0.24 per video. Pika 2.0 (Standard Plan): $10/month = $0.20 per video."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reasonTag": "Quality issues",
+      "reasonTitle": "Escaping 'Melting' Physics and Visual Distortion",
+      "reasonSummary": "Persistent issues with 'melting' faces and inconsistent physical interactions drive users toward tools with superior temporal coherence.",
+      "alternatives": [
+        {
+          "toolName": "Runway Gen-4",
+          "bestFor": [
+            "Photorealism",
+            "Consistent textures"
+          ],
+          "whySwitch": [
+            {
+              "claim": "Gen-4 significantly leads in photorealism, capturing skin textures and eye reflections that Pika often blurs or 'filters'.",
+              "sources": [
+                {
+                  "url": "https://crepal.ai/blog/aivideo/runway-gen-4-vs-pika-2-benchmark/",
+                  "type": "review_site",
+                  "quote": "Gen-4 excels at photorealism... Pika eyes lacked depth and catchlight detail... skin appeared slightly smoother (more \"filtered\")."
+                }
+              ]
+            },
+            {
+              "claim": "Maintains logo placement and object shapes during rotation, whereas Pika often distorts details mid-motion.",
+              "sources": [
+                {
+                  "url": "https://crepal.ai/blog/aivideo/runway-gen-4-vs-pika-2-benchmark/",
+                  "type": "review_site",
+                  "quote": "Gen-4 maintained the logo placement throughout, while Gen-3 would blur or distort it halfway through."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Rendering is roughly 30% slower than Pika's optimized Turbo models.",
+              "sources": [
+                {
+                  "url": "https://crepal.ai/blog/aivideo/runway-gen-4-vs-pika-2-benchmark/",
+                  "type": "review_site",
+                  "quote": "Winner: Pika 2.0 (consistently 30% faster)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "toolName": "Luma Dream Machine",
+          "bestFor": [
+            "Realistic physics",
+            "Smooth camera motion"
+          ],
+          "whySwitch": [
+            {
+              "claim": "Camera movements in Luma Ray are physically grounded, avoiding the jitter and perspective warping seen in Pika.",
+              "sources": [
+                {
+                  "url": "https://aiappgenie.com/post/pika-labs-vs-luma-ai",
+                  "type": "review_site",
+                  "quote": "Camera movements (dolly, pan, tilt) are incredibly smooth and feel physically grounded in the scene."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Costs can be double per second compared to more budget-friendly narrative generators.",
+              "sources": [
+                {
+                  "url": "https://www.aifire.co/p/ai-video-creation-best-generators-of-2026-ranked-reviewed",
+                  "type": "review_site",
+                  "quote": "At $1 per 5-second video, Luma costs double per second compared to Kling."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reasonTag": "Output limits",
+      "reasonTitle": "Bypassing Native 5-Second Generation Limits",
+      "reasonSummary": "Switching allows for native long-form video creation and high-frame-rate exports that exceed Pika's social-first clip lengths.",
+      "alternatives": [
+        {
+          "toolName": "Kling AI",
+          "bestFor": [
+            "3-minute long-form videos",
+            "Cinematic narrative"
+          ],
+          "whySwitch": [
+            {
+              "claim": "The Video Extender tool can expand initial clips into three-minute narrative sequences with high stability.",
+              "sources": [
+                {
+                  "url": "https://pollo.ai/hub/kling-ai-vs-pika-vs-pollo-ai",
+                  "type": "review_site",
+                  "quote": "You can extend a video up to a maximum of three times and it can be as long as three minutes."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Processing complex 3-minute clips is significantly slower than Pika's 5-second iterations.",
+              "sources": [
+                {
+                  "url": "https://www.fahimai.com/pika-vs-kling",
+                  "type": "review_site",
+                  "quote": "Kling: Generation times are generally slower than Pika's... as it prioritizes visual fidelity over speed."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "toolName": "Google Veo 3.1",
+          "bestFor": [
+            "Native audio sync",
+            "Multi-shot continuity"
+          ],
+          "whySwitch": [
+            {
+              "claim": "Supports native audio and multi-shot sequencing, reducing the need for external stitching or sound design tools.",
+              "sources": [
+                {
+                  "url": "https://skywork.ai/blog/veo-3-1-vs-runway-vs-pika-vs-luma-2025-comparison/",
+                  "type": "review_site",
+                  "quote": "Google's Veo 3.1 adds native audio and multi-shot sequencing... rare among peers."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Requires invisible SynthID watermarking, which may not be ideal for all enterprise workflows.",
+              "sources": [
+                {
+                  "url": "https://skywork.ai/blog/veo-3-1-vs-runway-vs-pika-vs-luma-2025-comparison/",
+                  "type": "review_site",
+                  "quote": "Google applies invisible SynthID to generated media; see the 2025 guidance."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reasonTag": "Licensing/commercial",
+      "reasonTitle": "Securing Clear Agency-Grade Commercial Rights",
+      "reasonSummary": "While Pika offers commercial use on paid tiers, agencies move to competitors for clearer multi-user licensing and photorealistic deliverables.",
+      "alternatives": [
+        {
+          "toolName": "InVideo AI",
+          "bestFor": [
+            "YouTube ads",
+            "Faceless channels"
+          ],
+          "whySwitch": [
+            {
+              "claim": "Specifically tailored for automated content creation with a clear license for commercial use on social platforms.",
+              "sources": [
+                {
+                  "url": "https://aloa.co/ai/comparisons/ai-video-comparison/runway-vs-pika-labs",
+                  "type": "review_site",
+                  "quote": "Pika Art license for faceless YouTube channels... Pika vs InVideo AI for automated content."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Focused on automation/marketing rather than the 'creative physics' and stylization Pika offers.",
+              "sources": [
+                {
+                  "url": "https://www.fahimai.com/pika-vs-kling",
+                  "type": "review_site",
+                  "quote": "Pika: Targeted at social media creators... who prioritize simple interfaces and fast, dynamic content creation."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqMining": {
+    "paaQueriesUsed": [
+      "how to cancel Pika subscription reddit",
+      "Pika Art refund policy failed generations",
+      "Pika Art credit rollover policy 2026",
+      "does Pika Standard plan allow commercial use"
+    ],
+    "questions": [
+      {
+        "q": "What is the Pika Art refund policy?",
+        "sources": [
+          {
+            "url": "https://pika.style/refund-cancellation",
+            "type": "official_terms",
+            "quote": "You can get a refund for your new subscription within 1 day of your subscription."
+          }
+        ]
+      },
+      {
+        "q": "Do Pika credits roll over monthly?",
+        "sources": [
+          {
+            "url": "https://www.oreateai.com/blog/understanding-pika-labs-ai-pricing-a-comprehensive-breakdown/f6d9e9f507c3346fd2d353f17145fea7",
+            "type": "review_site",
+            "quote": "Importantly, any unused credits do not expire in this tier; they roll over indefinitely [referring to purchased extra credits]."
+          },
+          {
+            "url": "https://domoai.app/blog/pika-labs-pricing",
+            "type": "review_site",
+            "quote": "Monthly base credits do not roll over; only purchased extra credits carry forward."
+          }
+        ]
+      },
+      {
+        "q": "Can Pika Standard plan videos be used commercially?",
+        "sources": [
+          {
+            "url": "https://pika.art/pricing",
+            "type": "official_docs",
+            "quote": "Standard: ...Commercial use. Pro: ...Commercial use."
+          }
+        ]
+      }
+    ]
+  },
+  "missingInfo": [
+    {
+      "need": "Confirmed 2026 update on the 'missing cancel button' issue reported in early UI versions.",
+      "whereToFind": "Recent 2026 Reddit community feedback or Pika official 'Settings' screenshots.",
+      "searchQuery": "Pika.art cancel button missing Reddit 2026"
+    },
+    {
+      "need": "Verification of current 4K export limitations for Standard vs Pro tiers in the 2.5 model.",
+      "whereToFind": "Official Pika 2.5 model technical specs or Pricing page features list.",
+      "searchQuery": "Pika 2.5 standard plan 4k export support"
+    }
+  ]
+}

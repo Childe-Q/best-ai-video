@@ -18,7 +18,16 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
     this.state = { hasError: false, error: null };
   }
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+  static getDerivedStateFromError(error: Error & { digest?: string }): ErrorBoundaryState {
+    // Check for Next.js redirect/not-found errors - rethrow them to let Next.js handle it
+    if (
+      error.digest === 'NEXT_REDIRECT' || 
+      error.digest === 'NEXT_NOT_FOUND' ||
+      error.message === 'NEXT_REDIRECT'
+    ) {
+      throw error;
+    }
+
     // Check if error is from browser extension (obfuscated code)
     const isExtensionError = 
       error.message?.includes('_0x') ||
@@ -39,7 +48,16 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  componentDidCatch(error: Error & { digest?: string }, errorInfo: React.ErrorInfo) {
+    // Ignore Next.js internal errors
+    if (
+      error.digest === 'NEXT_REDIRECT' || 
+      error.digest === 'NEXT_NOT_FOUND' ||
+      error.message === 'NEXT_REDIRECT'
+    ) {
+      return;
+    }
+
     // Check if error is from browser extension
     const isExtensionError = 
       error.message?.includes('_0x') ||

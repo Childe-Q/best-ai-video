@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
 import { getTool } from '@/lib/getTool';
+import { loadToolContent } from '@/lib/loadToolContent';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ToolLogo from '@/components/ToolLogo';
 import VerdictCard from '@/components/VerdictCard';
@@ -20,6 +21,18 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
   const tool = getTool(slug);
 
   if (!tool) notFound();
+
+  // Load content JSON and merge with tool.content
+  const contentJson = loadToolContent(slug);
+  const mergedContent = contentJson ? {
+    ...tool.content,
+    ...contentJson,
+    reviews: {
+      ...tool.content?.reviews,
+      ...contentJson.reviews,
+      verdict: contentJson.reviews?.verdict || tool.content?.reviews?.verdict,
+    },
+  } : tool.content;
 
   return (
     <div className="min-h-screen bg-slate-50 text-gray-900 font-sans">
@@ -282,7 +295,7 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
                 bestFor={tool.best_for}
                 startingPrice={tool.starting_price}
                 embedded={true}
-                verdictData={tool.content?.reviews?.verdict}
+                verdictData={mergedContent?.reviews?.verdict}
               />
             </div>
             {/* Footer CTA (Pinned to bottom) */}

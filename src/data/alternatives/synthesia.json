@@ -1,0 +1,335 @@
+{
+  "tool": "Synthesia",
+  "collectedAt": "2026-01-18",
+  "switchReasonGroups": [
+    {
+      "reasonTag": "Cost control",
+      "reasonTitle": "Avoiding Expiring Credits and High Personalization Fees",
+      "reasonSummary": "Users often switch because Synthesia's credits expire at the end of contract periods and premium 'Studio Avatars' cost an additional $1,000 per year.",
+      "alternatives": [
+        {
+          "toolName": "HeyGen",
+          "bestFor": ["Social media", "Cost-effective custom avatars"],
+          "whySwitch": [
+            {
+              "claim": "Offers a more competitive balance of features for small groups and creators compared to Synthesia's rigid enterprise-focused tiers.",
+              "sources": [
+                {
+                  "url": "https://getalternative.photo.blog/2025/10/24/synthesia-io-alternatives-and-competitors/",
+                  "type": "review_site",
+                  "quote": "HeyGen is a moderately good balance of usability and functionality and can be a highly plausible replacement of Synthesia by creators."
+                }
+              ]
+            },
+            {
+              "claim": "Synthesia's custom 'Studio Avatars' are a separate add-on costing $1,000 annually, whereas competitors offer more accessible personalized options.",
+              "sources": [
+                {
+                  "url": "https://www.eesel.ai/blog/synthesia-pricing",
+                  "type": "review_site",
+                  "quote": "Studio Avatar that looks polished and professional, that's a separate add-on. And it's not cheap, it costs $1,000 per year."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "May lack some of the advanced enterprise-grade security and localization features native to Synthesia.",
+              "sources": [
+                {
+                  "url": "https://getalternative.photo.blog/2025/10/24/synthesia-io-alternatives-and-competitors/",
+                  "type": "review_site",
+                  "quote": "Not as solid as they are in the enterprise grade, can be missing some of the localisation capabilities."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "toolName": "D-ID",
+          "bestFor": ["Social media ads", "Budget creators"],
+          "whySwitch": [
+            {
+              "claim": "Provides a significantly lower entry price point for creators who only need simple talking-head videos.",
+              "sources": [
+                {
+                  "url": "https://www.synthesia.io/post/heygen-alternatives-competitors",
+                  "type": "official_docs",
+                  "quote": "Free, $5.9 (Lite), $29 (Pro), $196 (Advanced), Enterprise."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Lacks extensive templates and focuses primarily on basic facial animation rather than full-scene editing.",
+              "sources": [
+                {
+                  "url": "https://www.synthesia.io/post/heygen-alternatives-competitors",
+                  "type": "official_docs",
+                  "quote": "Watermarked videos in free and some paid plans, lacks extensive templates/media."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reasonTag": "Feature gap",
+      "reasonTitle": "Accessing Interactive Quizzes and Branching Scenarios",
+      "reasonSummary": "Switching allows L&D professionals to access interactive learning features like branching paths and quizzes that Synthesia lacks.",
+      "alternatives": [
+        {
+          "toolName": "Colossyan",
+          "bestFor": ["L&D teams", "Instructional design"],
+          "whySwitch": [
+            {
+              "claim": "Features native multiple-choice quizzes and branching scenarios where learner choices lead to different video outcomes.",
+              "sources": [
+                {
+                  "url": "https://www.colossyan.com/colossyan-vs-synthesia",
+                  "type": "official_docs",
+                  "quote": "Colossyan stands out with a stronger focus on interactivity... Branching scenarios. Multiple-choice quizzes. Analytics and SCORM export."
+                },
+                {
+                  "url": "https://www.reddit.com/r/instructionaldesign/comments/1qb9oq7/what_are_your_experiences_using_synthesia/",
+                  "type": "reddit",
+                  "quote": "They lack native quiz capabilities, retrieval prompts, or learning analytics."
+                }
+              ]
+            },
+            {
+              "claim": "Includes 'Side View' avatars that enable natural conversational-style training videos, unlike Synthesia's strictly front-facing library.",
+              "sources": [
+                {
+                  "url": "https://www.colossyan.com/colossyan-vs-synthesia",
+                  "type": "official_docs",
+                  "quote": "Synthesia... its avatars are front-facing only, limiting conversation-style videos."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Initial rendering speed can be slower compared to the rapid processing of Synthesia.",
+              "sources": [
+                {
+                  "url": "https://getalternative.photo.blog/2025/10/24/synthesia-io-alternatives-and-competitors/",
+                  "type": "review_site",
+                  "quote": "Rendering workflow steps or times can be more so than more basic tools."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "toolName": "Elai.io",
+          "bestFor": ["Corporate training", "Small agencies"],
+          "whySwitch": [
+            {
+              "claim": "Offers an e-learning specific focus with automated translation and SCORM export at more flexible pricing tiers.",
+              "sources": [
+                {
+                  "url": "https://www.synthesia.io/post/heygen-alternatives-competitors",
+                  "type": "official_docs",
+                  "quote": "Elai.io provides multilingual video generation... Automated translation, flexible pricing, customizable avatars."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Currently features a smaller library of stock templates compared to major competitors.",
+              "sources": [
+                {
+                  "url": "https://www.synthesia.io/post/heygen-alternatives-competitors",
+                  "type": "official_docs",
+                  "quote": "Limited advanced features, smaller template selection, longer rendering time."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reasonTag": "Quality issues",
+      "reasonTitle": "Reducing Uncanny Valley and Accented Robotic Voices",
+      "reasonSummary": "Users move to platforms that offer higher emotional resonance and more natural voice modulation in non-English languages.",
+      "alternatives": [
+        {
+          "toolName": "Hour One",
+          "bestFor": ["News-style video", "Expressive avatars"],
+          "whySwitch": [
+            {
+              "claim": "Provides precise control over avatar expressions and camera angles, helping to mitigate the 'stiff' look of standard AI.",
+              "sources": [
+                {
+                  "url": "https://www.synthesia.io/post/heygen-alternatives-competitors",
+                  "type": "official_docs",
+                  "quote": "Affordable, lifelike avatars, control over expressions/camera angles."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Lacks the advanced micro-gesture technology found in the latest expressive avatar models.",
+              "sources": [
+                {
+                  "url": "https://www.synthesia.io/post/heygen-alternatives-competitors",
+                  "type": "official_docs",
+                  "quote": "Limited micro-gesture tech, lacks screen recording and SCORM support."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "toolName": "DeepBrain AI",
+          "bestFor": ["Enterprise scaling", "Professional broadcasting"],
+          "whySwitch": [
+            {
+              "claim": "Offers a massive library of over 2,000 hyper-realistic AI avatars, providing significantly more diversity than Synthesia.",
+              "sources": [
+                {
+                  "url": "https://www.aistudios.com/best/best-synthesia-alternatives-2026-edition",
+                  "type": "official_docs",
+                  "quote": "2,000+ lifelike AI avatars. 150+ supported languages & accents."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Advanced features are best suited for enterprise users and can be complex for individual creators.",
+              "sources": [
+                {
+                  "url": "https://www.aistudios.com/best/best-synthesia-alternatives-2026-edition",
+                  "type": "official_docs",
+                  "quote": "Best For: Creators and companies seeking a realistic, multilingual AI video platform that scales."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "reasonTag": "Enterprise/security",
+      "reasonTitle": "Unlocking Essential Corporate Features Without Paywalls",
+      "reasonSummary": "Mid-sized companies switch to avoid the high cost of the Enterprise tier required for SSO, 1-click translation, and SCORM.",
+      "alternatives": [
+        {
+          "toolName": "Vyond",
+          "bestFor": ["Animated business training", "HR departments"],
+          "whySwitch": [
+            {
+              "claim": "Preferred by L&D teams when avatar videos feel 'distracting' or 'uncanny' for technology training courses.",
+              "sources": [
+                {
+                  "url": "https://www.reddit.com/r/instructionaldesign/comments/1qb9oq7/what_are_your_experiences_using_synthesia/",
+                  "type": "reddit",
+                  "quote": "I dropped my team's subscription... couldn't justify the cost when we use Wellsaid and Vyond was expanding."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Focuses on animation rather than realistic video avatars, which may not suit every brand's aesthetic.",
+              "sources": [
+                {
+                  "url": "https://zapier.com/blog/best-ai-video-generator/",
+                  "type": "review_site",
+                  "quote": "Vyond Go auto-generates full scenes with animation from prompts."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "toolName": "Descript",
+          "bestFor": ["Script-based editing", "Multilingual dubbing"],
+          "whySwitch": [
+            {
+              "claim": "Enables professional video editing by editing text, allowing for faster iterations and easier dubbing management.",
+              "sources": [
+                {
+                  "url": "https://zapier.com/blog/best-ai-video-generator/",
+                  "type": "review_site",
+                  "quote": "Edit video by editing text; add B-roll directly from stock library."
+                }
+              ]
+            }
+          ],
+          "tradeoffs": [
+            {
+              "claim": "Lacks the full-body digital human presence that defines the Synthesia user experience.",
+              "sources": [
+                {
+                  "url": "https://zapier.com/blog/best-ai-video-generator/",
+                  "type": "review_site",
+                  "quote": "Edit video by editing text... Yes, with 1 hour of transcription and watermark."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faqMining": {
+    "paaQueriesUsed": [
+      "Synthesia credits roll over or expire monthly",
+      "Synthesia refund policy for unused video minutes",
+      "Synthesia studio avatar cost vs HeyGen",
+      "Synthesia SSO pricing for enterprise"
+    ],
+    "questions": [
+      {
+        "q": "Do unused Synthesia credits roll over to the next month?",
+        "sources": [
+          {
+            "url": "https://help.synthesia.io/en/articles/11825466-what-are-credits-and-how-do-they-work-for-enterprise-customers-in-synthesia",
+            "type": "official_help",
+            "quote": "Credits are valid until your contract end date. Any unused credits will expire when your contract ends."
+          }
+        ]
+      },
+      {
+        "q": "Can I get a refund for unused Synthesia video minutes?",
+        "sources": [
+          {
+            "url": "https://help.synthesia.io/en/articles/9460241-can-i-get-a-refund-from-synthesia",
+            "type": "official_help",
+            "quote": "Under Synthesia Customer Terms of Service, Synthesia's Customers agree that their purchases are non-cancelable and non-refundable."
+          }
+        ]
+      },
+      {
+        "q": "What is the cost of a custom high-quality Studio Avatar in Synthesia?",
+        "sources": [
+          {
+            "url": "https://www.eesel.ai/blog/synthesia-pricing",
+            "type": "review_site",
+            "quote": "really high-quality 'Studio Avatar' that looks polished and professional... it costs $1,000 per year."
+          }
+        ]
+      }
+    ]
+  },
+  "missingInfo": [
+    {
+      "need": "Confirmed 2026 pricing for Synthesia's SSO feature as a standalone add-on (if available).",
+      "whereToFind": "official terms/pricing for mid-market enterprise",
+      "searchQuery": "Synthesia SSO pricing add-on 2026"
+    },
+    {
+      "need": "Verification of current month-to-month credit rollover policy for Starter and Creator plans (non-Enterprise).",
+      "whereToFind": "official help/billing docs",
+      "searchQuery": "Synthesia starter plan credit rollover policy 2026"
+    }
+  ]
+}

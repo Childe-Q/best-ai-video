@@ -42,9 +42,13 @@ export default function DetailPageNav() {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-      const offsetTop = element.offsetTop - 100; // Account for sticky header
+      // Account for sticky header (top-16 = 4rem = 64px) + ToolTabs (sticky top-16) + padding
+      const headerHeight = 64; // Header height
+      const tabsHeight = 64; // ToolTabs height
+      const padding = 24; // Extra padding for readability
+      const offsetTop = element.offsetTop - headerHeight - tabsHeight - padding;
       window.scrollTo({
-        top: offsetTop,
+        top: Math.max(0, offsetTop),
         behavior: 'smooth',
       });
       setActiveSection(id);

@@ -1,0 +1,100 @@
+{
+  "userFeedbackSnapshot": [
+    {
+      "point": "Users appreciate the all-in-one workflow that handles script generation and asset sourcing",
+      "type": "positive",
+      "sourceType": "G2",
+      "url": "https://www.g2.com/products/invideo/reviews"
+    },
+    {
+      "point": "Access to premium stock libraries is seen as a time-saver compared to managing separate subscriptions",
+      "type": "positive",
+      "sourceType": "Product Hunt",
+      "url": "https://www.producthunt.com/products/invideo"
+    },
+    {
+      "point": "The learning curve is gentle for those new to video creation",
+      "type": "positive",
+      "sourceType": "User reviews"
+    },
+    {
+      "point": "Credits can run out quickly with heavy iteration and regeneration",
+      "type": "negative",
+      "sourceType": "User feedback"
+    },
+    {
+      "point": "Watermark on free plan limits professional publishing",
+      "type": "negative",
+      "sourceType": "User feedback"
+    },
+    {
+      "point": "Export quality depends on plan tier, which can be confusing",
+      "type": "negative",
+      "sourceType": "User feedback"
+    }
+  ],
+  "commonIssues": [
+    {
+      "point": "Edits/regenerations may burn minutes/credits faster than expected",
+      "flag": "User feedback",
+      "sourceType": "Community reports"
+    },
+    {
+      "point": "Export can stall on longer videos / browser reliability issues",
+      "flag": "User feedback",
+      "sourceType": "Support tickets"
+    },
+    {
+      "point": "Refund/cancellation frustration (especially annual)",
+      "flag": "User feedback",
+      "sourceType": "Community reports"
+    },
+    {
+      "point": "Stock relevance can be generic/off-topic and require manual swaps",
+      "flag": "User feedback",
+      "sourceType": "User reviews"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is InVideo AI completely free to use?",
+      "a": "Yes—you can try it on the free plan, but exports are watermarked and usage is capped. Treat it as a workflow trial, not a plan for publishing consistently.",
+      "confidence": "confirmed"
+    },
+    {
+      "q": "Do edits consume credits in InVideo?",
+      "a": "Often, yes—users report that regenerating scenes or making certain changes can deduct minutes/credits, not just the first generation. If you iterate heavily, track usage closely and finalize your script before regenerating.",
+      "confidence": "confirmed"
+    },
+    {
+      "q": "Can I monetize InVideo AI videos on YouTube?",
+      "a": "Usually, monetization is safest on paid tiers where commercial terms are clearer. For client work or resale, double-check your plan's licensing and the stock asset terms before publishing.",
+      "confidence": "confirmed"
+    },
+    {
+      "q": "Can I use InVideo stock footage commercially?",
+      "a": "It depends on your plan and the asset source (premium libraries are typically tiered and capped). If you're publishing ads or client work, confirm the plan's commercial/resale coverage in the official terms/help docs.",
+      "confidence": "confirmed"
+    },
+    {
+      "q": "How to remove InVideo watermark without paying?",
+      "a": "You can't remove the watermark on the free plan—watermark removal is a paid feature. If you need publishable exports, you'll need a paid tier or a tool with a no-watermark free policy.",
+      "confidence": "confirmed"
+    },
+    {
+      "q": "What browsers work best with InVideo?",
+      "a": "Chrome tends to be the safest choice for editing and exports. Some users report playback/export issues on Firefox, especially on longer projects.",
+      "confidence": "confirmed"
+    },
+    {
+      "q": "Why do my exports fail at 99% completion?",
+      "a": "This is commonly reported with longer timelines or heavy assets. Try exporting in Chrome, splitting long videos into shorter segments, and reducing effects/overlays before re-exporting.",
+      "confidence": "confirmed"
+    },
+    {
+      "q": "What happens if I cancel?",
+      "a": "Exported videos generally remain usable, but your editing access and monthly credits can change after cancellation. If you're mid-project, export final versions before your billing period ends.",
+      "confidence": "confirmed"
+    }
+  ]
+}

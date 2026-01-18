@@ -10,6 +10,12 @@ export default function GlobalErrorHandler() {
       const errorString = String(error);
       const errorName = error?.name || '';
       const errorMessage = error?.message || '';
+      
+      // Ignore Next.js internal errors
+      if (error?.digest === 'NEXT_REDIRECT' || error?.digest === 'NEXT_NOT_FOUND') {
+        return false;
+      }
+
       const filename = event.filename || '';
       const target = event.target as HTMLElement;
       
@@ -68,6 +74,17 @@ export default function GlobalErrorHandler() {
     // Handle unhandled promise rejections
     const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
       const error = event.reason || '';
+      
+      // Ignore Next.js internal errors
+      if (
+        error?.digest === 'NEXT_REDIRECT' || 
+        error?.digest === 'NEXT_NOT_FOUND' ||
+        String(error).includes('NEXT_REDIRECT')
+      ) {
+        event.preventDefault();
+        return false;
+      }
+
       const errorString = String(error);
       const errorName = error?.name || '';
       const errorMessage = error?.message || '';

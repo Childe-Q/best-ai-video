@@ -1,0 +1,186 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "Quick browser-based editing and simple exports when 720p is enough",
+      "notFor": "Anyone who needs watermark-free output without paying, or expects easy refunds",
+      "why": "Free exports are watermarked and capped at 720p, and refund terms are case-by-case"
+    },
+    "miniTest": {
+      "prompt": "Create a 30-45 second video about [topic] for [audience]. Include a 1-sentence hook, 3 key points, and a CTA. Add captions, keep pacing tight, and export in the highest available resolution for my plan",
+      "checklist": [
+        {
+          "label": "Goal",
+          "value": "Shorts / ad / explainer / internal"
+        },
+        {
+          "label": "Input type",
+          "value": "Script / blog / bullets"
+        },
+        {
+          "label": "Edit responsiveness",
+          "value": "User reports: can lag on longer projects"
+        },
+        {
+          "label": "Captions accuracy",
+          "value": "1-5 rating"
+        },
+        {
+          "label": "Audio export needed",
+          "value": "MP3 (Yes/No)"
+        },
+        {
+          "label": "Output format",
+          "value": "MP4 / MP3 / GIF"
+        },
+        {
+          "label": "Watermark present",
+          "value": "Yes - expected on Free plan"
+        },
+        {
+          "label": "Export resolution",
+          "value": "720p / 1080p / 4K based on plan"
+        },
+        {
+          "label": "AI video generation used",
+          "value": "Yes/No"
+        },
+        {
+          "label": "Billing clarity",
+          "value": "User reports: confusing renewals/cancellations"
+        },
+        {
+          "label": "If upgrading later",
+          "value": "Re-export required to remove watermark"
+        }
+      ],
+      "verdict": "Result: partial. Biggest friction was lag/billing/watermark. If you need clean 1080p/4K and no watermark, plan on upgrading and re-exporting"
+    },
+    "useCases": [
+      {
+        "title": "YouTube Shorts",
+        "why": "Fast captions + MP4 export, but Free adds a watermark",
+        "linkHref": "/tool/veed-io/pricing",
+        "linkText": "Check pricing →"
+      },
+      {
+        "title": "Marketing Ads",
+        "why": "Quick edits and 1080p+ exports require a paid plan",
+        "linkHref": "/tool/veed-io/features",
+        "linkText": "See features →"
+      },
+      {
+        "title": "Blog-to-video",
+        "why": "Assemble clips and captions, then export MP4 plus optional MP3",
+        "linkHref": "/vs/veed-io-vs-invideo",
+        "linkText": "Compare alternatives →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "Free exports always include visible VEED.IO watermark",
+      "Export resolution depends on plan: 720p/1080p/up to 4K",
+      "Export formats include MP4, MP3, and GIF",
+      "Upgrading later requires re-exporting the original project",
+      "Refunds are considered case-by-case; pro-rata if VEED ends contract",
+      "Browser-based editor; Chrome recommended",
+      "Timeline-based editing interface",
+      "Auto-subtitle generation with manual editing support"
+    ]
+  },
+  "pros": [
+    "Official help clearly confirms watermark behavior on Free exports",
+    "Clear resolution tiers across Free, Lite, Pro/Enterprise",
+    "Multiple export formats: MP4, MP3, and GIF",
+    "Re-export guidance after upgrading is explicitly documented",
+    "Refund terms exist in official terms of sale"
+  ],
+  "cons": [
+    "Free exports are watermarked, no exceptions",
+    "User reports: billing transparency and refunds can be painful",
+    "User reports: editor may lag or break on longer videos",
+    "Upgrading requires re-exporting to remove watermark from existing projects"
+  ],
+  "reviews": {
+    "verdict": {
+      "bottomLine": "Veed.io is best for creators who need quick browser-based editing with timeline control and caption tools. The trade-off is cost: free exports are watermarked at 720p, and removing watermarks or accessing higher resolutions requires a paid plan plus re-exporting. User reports suggest billing and cancellation processes can be frustrating.",
+      "bestFor": [
+        "Timeline-based editing",
+        "Caption-heavy videos",
+        "Quick social media exports"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Do free exports include a watermark?",
+        "answer": "Yes—exports made on a free account have a visible VEED.IO watermark. If you need no watermark, you must export again on a paid plan."
+      },
+      {
+        "question": "What export resolution do plans support?",
+        "answer": "Official help states Free exports in 720p only, Lite up to 1080p, and Pro/Enterprise up to 4K. Your available export options depend on your plan tier."
+      },
+      {
+        "question": "What formats can I export?",
+        "answer": "You can export projects as MP4, MP3 (audio-only), or GIF. Choose the format at download time."
+      },
+      {
+        "question": "If I upgrade, can I remove the watermark from an old video?",
+        "answer": "You can remove it only by exporting the original project again after upgrading. Upgrading does not retroactively change already-exported files."
+      },
+      {
+        "question": "How does the refund policy work?",
+        "answer": "Refunds are considered case-by-case under the terms of sale. Pro-rata refunds are referenced specifically if VEED ends the contract."
+      },
+      {
+        "question": "Is VEED usable for commercial projects?",
+        "answer": "Commercial rights typically come with paid subscriptions. Check official VEED terms for definitive coverage for your use case."
+      },
+      {
+        "question": "Is there a maximum video length on the Free plan?",
+        "answer": "Export limits may apply on the Free plan. Check official VEED documentation for current limits."
+      },
+      {
+        "question": "How do AI video generation credits work?",
+        "answer": "AI features may consume credits based on usage. Check your plan's documentation for specific credit allocations and per-video costs."
+      },
+      {
+        "question": "Does VEED include stock audio/video?",
+        "answer": "Paid plans may include access to stock media libraries. Verify current plan features on the official pricing page."
+      },
+      {
+        "question": "What browser or system is recommended?",
+        "answer": "VEED is browser-based. Modern browsers like Chrome are recommended for best performance and feature compatibility."
+      },
+      {
+        "question": "How do I cancel to stop future renewals?",
+        "answer": "Manage auto-renewal settings in your workspace billing dashboard. Check official help docs for exact steps and timing."
+      },
+      {
+        "question": "Why do some users complain about lag or broken features?",
+        "answer": "User reports: projects can become unstable or features may stop working without warning. Longer videos may increase stability issues. Try Chrome and ensure a stable internet connection."
+      }
+    ]
+  },
+  "sources": {
+    "support.veed.io": {
+      "type": "HELP_CENTER",
+      "howToVerify": "Check official VEED support documentation",
+      "suggestedQuery": "site:support.veed.io watermark export resolution"
+    },
+    "veed.io": {
+      "type": "OFFICIAL_WEBSITE",
+      "howToVerify": "Visit official VEED website and pricing page",
+      "suggestedQuery": "veed.io pricing plans features"
+    },
+    "trustpilot.com": {
+      "type": "USER_REVIEWS",
+      "howToVerify": "Check user reviews on Trustpilot",
+      "suggestedQuery": "veed.io trustpilot reviews"
+    },
+    "reddit.com": {
+      "type": "USER_DISCUSSIONS",
+      "howToVerify": "Check Reddit discussions about VEED",
+      "suggestedQuery": "veed.io reddit user experience"
+    }
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "Creators who want quick text-to-video experiments and occasional commercial use on higher tiers",
+      "notFor": "Anyone who needs guaranteed refunds, flawless reliability, or easy cancellation UX",
+      "why": "Most tiers are watermarked/personal-use, refunds are non-refundable per terms, and users report cancellation/generation issues"
+    },
+    "miniTest": {
+      "prompt": "Generate a 6-10 second video of [subject] in [style] with a clear action and stable camera. Keep it safe for work, no logos, no copyrighted characters, and no text overlays. Output in a share-ready format and match [aspect ratio]",
+      "checklist": [
+        {
+          "label": "Goal",
+          "value": "Social clip / concept art / product visual / meme"
+        },
+        {
+          "label": "Plan tier",
+          "value": "Free / Basic / Standard / Pro / Fancy"
+        },
+        {
+          "label": "Watermark present",
+          "value": "Yes - expected on Free/Basic/Standard"
+        },
+        {
+          "label": "Commercial use needed",
+          "value": "Only Pro/Fancy per FAQ"
+        },
+        {
+          "label": "Privacy needed",
+          "value": "Public-by-default unless Pro/Fancy"
+        },
+        {
+          "label": "Generation success rate",
+          "value": "Track attempts to get 1 usable clip"
+        },
+        {
+          "label": "Generation failed errors",
+          "value": "User reports: errors encountered"
+        },
+        {
+          "label": "Resolution achieved",
+          "value": "Verify exact resolution (1080p mentioned in reviews)"
+        },
+        {
+          "label": "Aspect ratio used",
+          "value": "Verify available ratios"
+        },
+        {
+          "label": "Credits spent per usable clip",
+          "value": "Track usage"
+        },
+        {
+          "label": "Cancellation path",
+          "value": "User reports: confusion finding cancel option"
+        }
+      ],
+      "verdict": "Result: partial. Biggest blocker was watermark/credits/failures/cancellation/privacy. If you need commercial use or privacy, compare Pro vs Fancy and verify export specs first"
+    },
+    "useCases": [
+      {
+        "title": "YouTube Shorts",
+        "why": "Generate short stylized clips, then edit and caption externally",
+        "linkHref": "/tool/pika/pricing",
+        "linkText": "Check pricing →"
+      },
+      {
+        "title": "Marketing Ads",
+        "why": "Use only if you're on Pro/Fancy and license requirements fit",
+        "linkHref": "/tool/pika/features",
+        "linkText": "See features →"
+      },
+      {
+        "title": "Blog-to-video",
+        "why": "Turn a paragraph into a short visual scene, then stitch multiple clips",
+        "linkHref": "/vs/pika-vs-runway",
+        "linkText": "Compare alternatives →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "Free and lower tiers include watermarked videos for personal use only",
+      "Pro and Fancy allow unwatermarked video and commercial use",
+      "Videos are public by default unless Pro or Fancy",
+      "Usable on the web without Discord (website access supported)",
+      "Refunds: subscription payments are non-refundable per terms",
+      "You retain ownership rights in your user-generated content",
+      "Web-based interface; no software download required"
+    ]
+  },
+  "pros": [
+    "Clear separation: personal-use tiers vs commercial tiers",
+    "Pro/Fancy support unwatermarked outputs",
+    "Public/private behavior is explicitly stated in FAQ",
+    "Works via website (no Discord required)",
+    "Terms state you keep ownership of your user content"
+  ],
+  "cons": [
+    "No refunds for subscription periods (per terms)",
+    "User reports: cancellation flow is confusing or hard to find",
+    "User reports: frequent generation failed errors even after paying",
+    "Credit rollover rules are unclear and need verification",
+    "Export specs (resolution/bitrate) are unclear and need verification"
+  ],
+  "reviews": {
+    "verdict": {
+      "bottomLine": "Pika is best for creators who want quick text-to-video experiments and occasional commercial use on higher tiers. The trade-off is reliability and UX: most tiers are watermarked/personal-use only, refunds are non-refundable per terms, and users report cancellation/generation issues. Pro and Fancy unlock unwatermarked outputs and commercial rights, but verify export specs before committing.",
+      "bestFor": [
+        "Quick text-to-video experiments",
+        "Commercial use (Pro/Fancy)",
+        "Short stylized clips"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Do Free plan videos have a watermark?",
+        "answer": "Yes—Pika's FAQ indicates videos are still watermarked on lower tiers and for personal use. Unwatermarked video is tied to Pro (and Fancy) subscriptions."
+      },
+      {
+        "question": "Which plans allow commercial use?",
+        "answer": "Commercial rights are stated as available to Pro or Fancy subscribers. Lower tiers are described as personal use only."
+      },
+      {
+        "question": "Are my videos private by default?",
+        "answer": "No—videos are public by default according to the FAQ. Privacy is tied to Pro or Fancy subscriptions."
+      },
+      {
+        "question": "Can I use Pika without Discord?",
+        "answer": "Yes—the FAQ states you can use Pika on the website. Discord and the website are described as operating independently."
+      },
+      {
+        "question": "What is the export resolution (1080p or 4K)?",
+        "answer": "1080p claims appear in non-official reviews, and 4K availability is not confirmed in official sources. Verify current plan export specs before upgrading."
+      },
+      {
+        "question": "Do credits roll over month to month?",
+        "answer": "Rollover behavior may vary by plan and credit type. If rollover matters, confirm inside the product or official pricing docs."
+      },
+      {
+        "question": "What's the refund policy?",
+        "answer": "The terms state subscription payments are non-refundable, with no refunds for partially used periods. This means you should assume refunds are not available for normal cancellations."
+      },
+      {
+        "question": "Can I cancel anytime, and when does it take effect?",
+        "answer": "Timing (immediate vs next billing cycle) is not confirmed by official sources. User reports suggest the cancellation path can be hard to find."
+      },
+      {
+        "question": "Why do some users say cancellation is difficult?",
+        "answer": "User reports: the cancel button is unclear or missing, and some users say you must switch plans to effectively stop renewal. If you subscribe, locate the billing page immediately and document the steps."
+      },
+      {
+        "question": "Why do generations fail or error out?",
+        "answer": "User reports: users see repeated generation failed errors even after paying. Complex scenes may require multiple attempts."
+      },
+      {
+        "question": "What file formats can I export (MP4, etc.)?",
+        "answer": "Export formats are not clearly confirmed in official sources. Treat MP4 export as unconfirmed until verified in current documentation."
+      },
+      {
+        "question": "Do I own what I create?",
+        "answer": "The terms state you retain ownership rights in your user content. Separate licensing details for any built-in stock libraries are not clearly confirmed."
+      }
+    ]
+  },
+  "sources": {
+    "pika.art": {
+      "type": "OFFICIAL_WEBSITE",
+      "howToVerify": "Visit official Pika website and FAQ",
+      "suggestedQuery": "pika.art pricing commercial use watermark"
+    },
+    "trustpilot.com": {
+      "type": "USER_REVIEWS",
+      "howToVerify": "Check user reviews on Trustpilot",
+      "suggestedQuery": "pika trustpilot reviews cancellation"
+    },
+    "lovart.ai": {
+      "type": "USER_REVIEWS",
+      "howToVerify": "Check user reviews and tutorials",
+      "suggestedQuery": "pika lovart review credits"
+    }
+  }
+}

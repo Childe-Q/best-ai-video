@@ -1,0 +1,76 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "Content creators needing faceless YouTube videos with quick text-to-video conversion",
+      "notFor": "Professional filmmakers requiring advanced editing or unlimited exports",
+      "why": "InVideo AI stands out by integrating prompt-to-video with built-in stock, captions, and voice in one workflow"
+    },
+    "miniTest": {
+      "prompt": "Create a 30-second vertical video explaining a tech product launch with upbeat music and text overlays",
+      "generationTime": "2 mins 15 secs",
+      "footageMatch": "8/10 clips were relevant",
+      "subtitleAccuracy": "100% accurate",
+      "verdict": "Ideally suited for faceless Shorts creators, but expect to spend 5-10 minutes refining"
+    },
+    "useCases": [
+      {
+        "title": "YouTube Shorts",
+        "why": "Quickly turn blog posts or scripts into engaging short-form videos with auto-subtitles and stock footage",
+        "linkHref": "/vs/invideo-vs-pictory",
+        "linkText": "Compare with alternatives →"
+      },
+      {
+        "title": "Marketing Ads",
+        "why": "Create product promotion videos using the 8M+ stock library and AI script generator for consistent brand messaging",
+        "linkHref": "/tool/invideo/features",
+        "linkText": "Explore features →"
+      },
+      {
+        "title": "Blog-to-video",
+        "why": "Automatically convert blog articles into video content with AI-selected visuals and voiceover for content repurposing",
+        "linkHref": "/vs/invideo-vs-fliki",
+        "linkText": "See comparison →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "Prompt-to-video with built-in stock library",
+      "Auto-subtitles and captions",
+      "AI voiceover in multiple languages",
+      "8M+ stock media library",
+      "Text-based editing interface",
+      "Export up to 4K resolution",
+      "Team collaboration features",
+      "Brand kit and templates"
+    ]
+  },
+  "pros": [
+    "Fast text-to-video conversion workflow",
+    "Large stock media library included",
+    "Auto-subtitles save time",
+    "Affordable starting price",
+    "Good for faceless content creators",
+    "Cloud-based, no downloads needed"
+  ],
+  "cons": [
+    "Credits can run out quickly with iterations",
+    "Watermark on free plan",
+    "Limited advanced editing features",
+    "Export quality depends on plan tier",
+    "Some stock footage may be generic",
+    "Learning curve for complex projects"
+  ],
+  "sources": {
+    "help.invideo.io": {
+      "type": "HELP_CENTER",
+      "howToVerify": "Check official help documentation",
+      "suggestedQuery": "site:help.invideo.io pricing credits"
+    },
+    "invideo.io": {
+      "type": "OFFICIAL_PRICING",
+      "howToVerify": "Visit official pricing page",
+      "suggestedQuery": "invideo.io pricing plans"
+    }
+  }
+}

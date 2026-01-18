@@ -10,11 +10,15 @@ interface PricingCardsGridProps {
   hasFreeTrial: boolean;
   toolSlug?: string;
   comparisonTable?: ComparisonTable;
+  externalBilling?: 'monthly' | 'yearly'; // External billing state from parent
 }
 
-export default function PricingCardsGrid({ plans, affiliateLink, hasFreeTrial, toolSlug, comparisonTable }: PricingCardsGridProps) {
+export default function PricingCardsGrid({ plans, affiliateLink, hasFreeTrial, toolSlug, comparisonTable, externalBilling }: PricingCardsGridProps) {
   const isInVideo = toolSlug === 'invideo';
-  const [billing, setBilling] = useState<'monthly' | 'yearly'>('monthly');
+  const [internalBilling, setInternalBilling] = useState<'monthly' | 'yearly'>('monthly');
+  
+  // Use external billing if provided, otherwise use internal state
+  const billing = externalBilling !== undefined ? externalBilling : internalBilling;
 
   // Check if any plan has yearly pricing
   const hasYearlyPricing = plans.some(plan => {
@@ -71,15 +75,15 @@ export default function PricingCardsGrid({ plans, affiliateLink, hasFreeTrial, t
 
   return (
     <div className="w-full">
-      {/* Monthly/Yearly Toggle */}
-      {hasYearlyPricing && (
+      {/* Monthly/Yearly Toggle - Only show if externalBilling is not provided (for backward compatibility) */}
+      {hasYearlyPricing && externalBilling === undefined && (
         <div className="flex justify-center mb-8">
           <div className={`inline-flex items-center bg-gray-100 rounded-full p-1 gap-1 border ${
             isInVideo ? 'border-gray-200' : 'border-gray-200'
           }`}>
             <button
               type="button"
-              onClick={() => setBilling('monthly')}
+              onClick={() => setInternalBilling('monthly')}
               className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
                 billing === 'monthly'
                   ? 'bg-white text-gray-900 shadow-sm'
@@ -90,7 +94,7 @@ export default function PricingCardsGrid({ plans, affiliateLink, hasFreeTrial, t
             </button>
             <button
               type="button"
-              onClick={() => setBilling('yearly')}
+              onClick={() => setInternalBilling('yearly')}
               className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-200 relative ${
                 billing === 'yearly'
                   ? 'bg-white text-gray-900 shadow-sm'

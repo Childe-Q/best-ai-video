@@ -1,0 +1,468 @@
+ALL TOOLS FAQ QUESTIONS AND ANSWERS
+================================================================================
+
+INVIDEO (invideo)
+--------------------------------------------------------------------------------
+Total FAQs: 10
+Source: tools.json content.reviews.faqs
+
+1. Q: Is InVideo AI completely free to use?
+   A: Yes—you can try it on the free plan, but exports are watermarked and usage is capped. Treat it as a workflow trial, not a plan for publishing consistently.
+
+2. Q: Do edits consume credits in InVideo?
+   A: Often, yes—users report that regenerating scenes or making certain changes can deduct minutes/credits, not just the first generation. If you iterate heavily, track usage closely and finalize your script before regenerating. [NEED VERIFICATION]
+
+3. Q: Can I monetize InVideo AI videos on YouTube?
+   A: Usually, monetization is safest on paid tiers where commercial terms are clearer. For client work or resale, double-check your plan's licensing and the stock asset terms before publishing.
+
+4. Q: Can I use InVideo stock footage commercially?
+   A: It depends on your plan and the asset source (premium libraries are typically tiered and capped). If you're publishing ads or client work, confirm the plan's commercial/resale coverage in the official terms/help docs.
+
+5. Q: How to remove InVideo watermark without paying?
+   A: You can't remove the watermark on the free plan—watermark removal is a paid feature. If you need publishable exports, you'll need a paid tier or a tool with a no-watermark free policy.
+
+6. Q: What browsers work best with InVideo?
+   A: Chrome tends to be the safest choice for editing and exports. Some users report playback/export issues on Firefox, especially on longer projects.
+
+7. Q: Why do my exports fail at 99% completion?
+   A: This is commonly reported with longer timelines or heavy assets. Try exporting in Chrome, splitting long videos into shorter segments, and reducing effects/overlays before re-exporting.
+
+8. Q: What happens if I cancel?
+   A: Exported videos generally remain usable, but your editing access and monthly credits can change after cancellation. If you're mid-project, export final versions before your billing period ends.
+
+9. Q: InVideo AI vs. InVideo Studio: Which one do I need?
+   A: InVideo AI is prompt-to-video (fast drafts with automated scenes and assets). Studio is more template/manual editing—better if you want hands-on control.
+
+10. Q: Is InVideo legit or a scam?
+   A: The product is widely used, but complaints often focus on unclear credit burn and frustrating cancellation/refund experiences. If you're unsure, start monthly first and keep an eye on usage and renewal settings.
+
+
+HEYGEN (heygen)
+--------------------------------------------------------------------------------
+Total FAQs: 8
+Source: content/tools/heygen.json
+
+1. Q: Do free users get a watermark on exports?
+   A: Yes—Free users get watermarked output on generated content. This is stated in official help documentation.
+
+2. Q: What export resolution do plans support?
+   A: Official pricing states Free exports at 720p, Creator up to 1080p, and Team up to 4K. Higher resolution availability depends on your subscribed plan.
+
+3. Q: Do credits roll over to the next month?
+   A: Credits expire 30 days after they are issued, so rollover beyond that window is not supported. Plan billing and issuance timing can still matter for how long you can use them.
+
+4. Q: Is there any plan with unlimited AvatarIV usage?
+   A: No—official guidance says there is no plan, including enterprise, with unlimited AvatarIV usage and credits. You should expect feature usage to be credit-limited.
+
+5. Q: When does cancellation take effect after I cancel?
+   A: Cancellation takes effect at the end of the current billing cycle. You typically keep access through the remainder of that cycle.
+
+6. Q: Can I get a refund if I forgot to cancel?
+   A: Refunds are evaluated only under specific circumstances and at the company's discretion. User reports: this can clash with expectations when renewals happen.
+
+7. Q: Can I use Free plan videos commercially?
+   A: The FAQ indicates Free plan usage is non-commercial. Commercial rights for paid plans: Needs verification from official terms or help.
+
+8. Q: What file format do exports download as (MP4, etc.)?
+   A: Export/download documentation needs verification for explicit file format wording. Treat any assumed format as unconfirmed until verified.
+
+
+FLIKI (fliki)
+--------------------------------------------------------------------------------
+Total FAQs: 12
+Source: content/tools/fliki.json
+
+1. Q: Can I use Fliki for free?
+   A: Yes, Fliki offers a Free plan to try the product. Free plan exports include a visible watermark.
+
+2. Q: Does the Free plan include a watermark?
+   A: Yes—videos generated on the Free plan contain a Fliki watermark. If you need clean exports, you'll likely need a paid plan.
+
+3. Q: What export resolution do I get on Free vs paid plans?
+   A: Free users export HD 720p videos. Paid plans support Full HD 1080p exports.
+
+4. Q: How do minutes/credits work?
+   A: Credits are deducted based on the total length of the video. Free includes 5 minutes monthly, while paid plans provide more minutes.
+
+5. Q: Do paid plans include commercial rights?
+   A: Yes—commercial rights are listed on paid subscription plans. Free plan commercial rights are not granted.
+
+6. Q: What formats can I export?
+   A: Fliki supports exporting in MP4, MOV, MP3, and WAV formats. This lets you export video or audio-only versions.
+
+7. Q: Can I download subtitles separately?
+   A: Yes, you can download subtitles in both SRT and VTT formats. This is useful for publishing captions outside the editor.
+
+8. Q: What browser should I use?
+   A: It's a web-based app and Chrome is the recommended browser. Other browsers may work, but performance can vary.
+
+9. Q: How do I cancel my subscription?
+   A: You can cancel anytime by going to Account and selecting Manage billing. This is handled from your billing dashboard.
+
+10. Q: What's the refund policy?
+   A: Refund requests may be considered case-by-case and granted at the company's sole discretion. Don't assume refunds are guaranteed if you forget to cancel.
+
+11. Q: Will the AI automatically pick relevant stock footage?
+   A: User reports: auto-selected stock visuals can miss the script's intended context. Plan time to replace clips manually for best results.
+
+12. Q: What are the minimum hardware/RAM requirements?
+   A: No specific hardware/RAM thresholds are confirmed. If you see lag, try Chrome and a faster connection first.
+
+
+VEED.IO (veed-io)
+--------------------------------------------------------------------------------
+Total FAQs: 12
+Source: content/tools/veed-io.json
+
+1. Q: Do free exports include a watermark?
+   A: Yes—exports made on a free account have a visible VEED.IO watermark. If you need no watermark, you must export again on a paid plan.
+
+2. Q: What export resolution do plans support?
+   A: Official help states Free exports in 720p only, Lite up to 1080p, and Pro/Enterprise up to 4K. Your available export options depend on your plan tier.
+
+3. Q: What formats can I export?
+   A: You can export projects as MP4, MP3 (audio-only), or GIF. Choose the format at download time.
+
+4. Q: If I upgrade, can I remove the watermark from an old video?
+   A: You can remove it only by exporting the original project again after upgrading. Upgrading does not retroactively change already-exported files.
+
+5. Q: How does the refund policy work?
+   A: Refunds are considered case-by-case under the terms of sale. Pro-rata refunds are referenced specifically if VEED ends the contract.
+
+6. Q: Is VEED usable for commercial projects?
+   A: Commercial rights typically come with paid subscriptions. Check official VEED terms for definitive coverage for your use case.
+
+7. Q: Is there a maximum video length on the Free plan?
+   A: Export limits may apply on the Free plan. Check official VEED documentation for current limits.
+
+8. Q: How do AI video generation credits work?
+   A: AI features may consume credits based on usage. Check your plan's documentation for specific credit allocations and per-video costs.
+
+9. Q: Does VEED include stock audio/video?
+   A: Paid plans may include access to stock media libraries. Verify current plan features on the official pricing page.
+
+10. Q: What browser or system is recommended?
+   A: VEED is browser-based. Modern browsers like Chrome are recommended for best performance and feature compatibility.
+
+11. Q: How do I cancel to stop future renewals?
+   A: Manage auto-renewal settings in your workspace billing dashboard. Check official help docs for exact steps and timing.
+
+12. Q: Why do some users complain about lag or broken features?
+   A: User reports: projects can become unstable or features may stop working without warning. Longer videos may increase stability issues. Try Chrome and ensure a stable internet connection.
+
+
+ZEBRACAT (zebracat)
+--------------------------------------------------------------------------------
+Total FAQs: 12
+Source: content/tools/zebracat.json
+
+1. Q: Does the Free plan include a watermark?
+   A: Yes—Free plan outputs include branding watermarks, and paid tiers remove them. Watermark behavior should be verified on official pricing if you need certainty.
+
+2. Q: How many credits does the Free plan include?
+   A: The Free plan includes 25 credits monthly, roughly equal to about 5 minutes of video. Treat this as plan guidance rather than a precise production guarantee.
+
+3. Q: Is export resolution 1080p or 4K available?
+   A: Available evidence only mentions HD output in user reviews. Confirm exact resolution options in official plan documentation before buying.
+
+4. Q: What file formats can I export?
+   A: MP4 and MOV are referenced as correct formats for video files. Verify the complete export format list and whether audio-only exports exist.
+
+5. Q: Can I cancel anytime, and what happens when I do?
+   A: Once cancellation is initiated, the subscription ends immediately. Remaining paid time is not refunded.
+
+6. Q: Do they offer refunds?
+   A: No refunds are provided for subscription periods already paid. If refunds matter, confirm directly in official terms before subscribing.
+
+7. Q: Are commercial rights included?
+   A: Many platforms grant commercial licenses on paid tiers. Check Zebracat's official terms for the exact license scope.
+
+8. Q: Does it include royalty-free stock media?
+   A: Reviews describe access to millions of premium stock clips, images, and music tracks. Verify the exact providers, licensing terms, and any plan limits.
+
+9. Q: Can it convert blog posts to video?
+   A: An NLP workflow analyzes text and generates a script for video creation. The quality of results may still require manual edits.
+
+10. Q: What features are exclusive to higher-tier plans?
+   A: Voice cloning may be available only on higher tiers. Verify which plan includes it and any usage limits.
+
+11. Q: Why do some users say it's expensive in credits?
+   A: User reports: creating videos can take too many credits and may yield fewer outputs than competitors. Your mileage will depend on video length and generation settings.
+
+12. Q: Is it stable and easy to customize?
+   A: User reports: you may run into bugs or hiccups, and customization options can feel limited. If your workflow needs frame-level control, test thoroughly before upgrading.
+
+
+SYNTHESIA (synthesia)
+--------------------------------------------------------------------------------
+Total FAQs: 12
+Source: content/tools/synthesia.json
+
+1. Q: Do Freemium videos have a watermark?
+   A: Yes—the Synthesia logo watermark appears on all videos created with a Freemium account. To publish without it, you'll need a paid plan and re-generate the video.
+
+2. Q: Can I remove the watermark without paying?
+   A: No—removal requires upgrading and re-generating the video. Exporting the same Freemium video again will still include the watermark.
+
+3. Q: What resolution are standard MP4 downloads?
+   A: Standard MP4 downloads export in Full HD 1080p (1920×1080). This is explicitly stated in Synthesia's download instructions.
+
+4. Q: What file formats can I export?
+   A: Synthesia supports MP4, WAV, XLIFF, and captions in SRT and VTT formats. Pick the format based on whether you need video, audio, or localization/captions.
+
+5. Q: Can I download videos that include interactive elements?
+   A: No—videos with interactive elements cannot be downloaded as MP4. If downloading is required, avoid interactive features in that project.
+
+6. Q: Is commercial use allowed?
+   A: Commercial use is allowed with restrictions, especially around paid promotion when using stock avatars. Paid TV/social ads using stock avatars are listed as not allowed.
+
+7. Q: Do I get a license to use Synthesia's built-in content?
+   A: Yes—Synthesia states it grants a perpetual license for integrated content used within created videos. This applies to content you include through the platform into your outputs.
+
+8. Q: What are the system requirements?
+   A: Synthesia requires modern browsers (e.g., Chrome 133+ and Edge 134+) and supported OS versions (Windows 10+ or macOS Catalina 10.15+). If you see issues, confirm your browser version first.
+
+9. Q: How do refunds work?
+   A: Refund rules differ by customer type: terms mention consumers can request a pro-rated refund within 15 days, while help text states purchases are non-cancelable and non-refundable for customers. If refunds matter, confirm whether you're treated as a consumer or business customer.
+
+10. Q: How do I cancel a subscription?
+   A: Terms describe renewal notice timing (at least 5 days prior for automatic renewal). If you're on annual billing, don't wait until the last day to review renewal status. Check current account UI for exact cancellation steps.
+
+11. Q: Why do some scripts get rejected?
+   A: User reports: moderation can be strict and sometimes unclear, leading to rejected scripts. Keep wording neutral, avoid harassment/bullying framing, and remove risky phrasing if blocked.
+
+12. Q: Why does rendering sometimes get stuck at 99%?
+   A: User reports: generation can stall near completion and may require retrying. If it repeats, check browser requirements and simplify the project.
+
+
+ELAI.IO (elai-io)
+--------------------------------------------------------------------------------
+Total FAQs: 12
+Source: content/tools/elai-io.json
+
+1. Q: Do Free plan videos have a watermark?
+   A: Yes—watermark-free videos are stated as available for paid accounts. That implies Free plan outputs include a visible watermark.
+
+2. Q: What export resolution does Elai support?
+   A: Pricing states Creator exports 1080p Full HD and Team supports 4K Ultra HD. Free/Creator 1080p vs Team/Enterprise 4K is plan-dependent.
+
+3. Q: Do unused minutes roll over month to month?
+   A: No—official plan documentation says unused minutes expire at the end of the billing cycle. If rollover matters, monthly subscriptions may feel wasteful.
+
+4. Q: How do annual plans handle minutes?
+   A: Official documentation says annual subscriptions receive all minutes upfront. That can fit users who need bursts of production rather than steady monthly use.
+
+5. Q: Can I cancel my subscription anytime?
+   A: Yes—help docs describe canceling via profile settings under Manage Subscriptions. Effects timing (immediate vs end-of-term) needs verification.
+
+6. Q: What's the refund policy?
+   A: Terms do state paid services can be cancelled without refund in specific misuse cases. Clear consumer-friendly refund window needs verification from official terms.
+
+7. Q: Is Elai allowed for commercial use?
+   A: The terms excerpt provided grants a license for personal, non-commercial use. Whether paid plans grant commercial rights needs verification from official Elai documentation.
+
+8. Q: What stock media is included?
+   A: Pricing indicates access to a variety of royalty-free images, videos, icons, and shapes. Specific providers need verification from official docs.
+
+9. Q: What format do exported videos download as?
+   A: MP4 downloads are reported by third-party sources. Official Elai confirmation for MP4 export wording needs verification.
+
+10. Q: Do I need a powerful computer to use Elai?
+   A: Elai is presented as web-based and only requires a computer and internet connection. Specific hardware/RAM recommendations are not confirmed.
+
+11. Q: Why do some users complain about slow rendering?
+   A: User reports: even short videos can take several minutes to render in some tests. Expect variability and plan buffer time for deadlines.
+
+12. Q: How expressive are the avatars (gestures/movement)?
+   A: User reports: avatars may have limited gestures and mostly neck-up movement. If you need body language, test your target style before committing.
+
+
+PIKA (pika)
+--------------------------------------------------------------------------------
+Total FAQs: 12
+Source: content/tools/pika.json
+
+1. Q: Do Free plan videos have a watermark?
+   A: Yes—Pika's FAQ indicates videos are still watermarked on lower tiers and for personal use. Unwatermarked video is tied to Pro (and Fancy) subscriptions.
+
+2. Q: Which plans allow commercial use?
+   A: Commercial rights are stated as available to Pro or Fancy subscribers. Lower tiers are described as personal use only.
+
+3. Q: Are my videos private by default?
+   A: No—videos are public by default according to the FAQ. Privacy is tied to Pro or Fancy subscriptions.
+
+4. Q: Can I use Pika without Discord?
+   A: Yes—the FAQ states you can use Pika on the website. Discord and the website are described as operating independently.
+
+5. Q: What is the export resolution (1080p or 4K)?
+   A: 1080p claims appear in non-official reviews, and 4K availability is not confirmed in official sources. Verify current plan export specs before upgrading.
+
+6. Q: Do credits roll over month to month?
+   A: Rollover behavior may vary by plan and credit type. If rollover matters, confirm inside the product or official pricing docs.
+
+7. Q: What's the refund policy?
+   A: The terms state subscription payments are non-refundable, with no refunds for partially used periods. This means you should assume refunds are not available for normal cancellations.
+
+8. Q: Can I cancel anytime, and when does it take effect?
+   A: Timing (immediate vs next billing cycle) is not confirmed by official sources. User reports suggest the cancellation path can be hard to find.
+
+9. Q: Why do some users say cancellation is difficult?
+   A: User reports: the cancel button is unclear or missing, and some users say you must switch plans to effectively stop renewal. If you subscribe, locate the billing page immediately and document the steps.
+
+10. Q: Why do generations fail or error out?
+   A: User reports: users see repeated generation failed errors even after paying. Complex scenes may require multiple attempts.
+
+11. Q: What file formats can I export (MP4, etc.)?
+   A: Export formats are not clearly confirmed in official sources. Treat MP4 export as unconfirmed until verified in current documentation.
+
+12. Q: Do I own what I create?
+   A: The terms state you retain ownership rights in your user content. Separate licensing details for any built-in stock libraries are not clearly confirmed.
+
+
+DESCRIPT (descript)
+--------------------------------------------------------------------------------
+Total FAQs: 2
+Source: tools.json root faqs
+
+1. Q: Is Descript good for podcasts?
+   A: It is widely considered one of the best tools for podcast editing due to its text-based editing features and filler word removal.
+
+2. Q: Can I remove filler words automatically?
+   A: Yes, Descript can remove 'ums' and 'ahs' with a single click, making it perfect for cleaning up podcast recordings.
+
+
+OPUS CLIP (opus-clip)
+--------------------------------------------------------------------------------
+Total FAQs: 2
+Source: tools.json root faqs
+
+1. Q: How does Opus Clip find the best clips?
+   A: Opus Clip uses AI to analyze your video for engagement factors like visual interest, audio quality, and key moments, then automatically selects the most viral-worthy segments.
+
+2. Q: Can I use Opus Clip for TikTok?
+   A: Yes, Opus Clip is specifically optimized for TikTok, YouTube Shorts, and Instagram Reels with automatic aspect ratio adjustments.
+
+
+RUNWAY (runway)
+--------------------------------------------------------------------------------
+Total FAQs: 2
+Source: tools.json root faqs
+
+1. Q: What is Runway Gen-2?
+   A: Gen-2 is Runway's advanced AI model that can generate high-quality video from text prompts, images, or video clips with impressive realism.
+
+2. Q: Is Runway suitable for beginners?
+   A: Runway has a steeper learning curve than simpler tools, but offers extensive tutorials and a supportive community for learning.
+
+
+SORA (sora)
+--------------------------------------------------------------------------------
+Total FAQs: 2
+Source: tools.json root faqs
+
+1. Q: Is Sora available to the public?
+   A: Sora is currently in limited access through OpenAI's API. It's not yet available as a standalone consumer product.
+
+2. Q: How long can Sora videos be?
+   A: Sora can generate videos up to 60 seconds long, which is significantly longer than most other AI video tools.
+
+
+PICTORY (pictory)
+--------------------------------------------------------------------------------
+Total FAQs: 2
+Source: tools.json root faqs
+
+1. Q: Can Pictory edit Zoom recordings?
+   A: Yes, Pictory is specifically designed to edit webinars and Zoom recordings automatically, extracting the best moments for social media.
+
+2. Q: Is there a watermark on the free trial?
+   A: Yes, the free trial allows you to create 3 video projects with watermarks. Paid plans remove watermarks.
+
+
+COLOSSYAN (colossyan)
+--------------------------------------------------------------------------------
+Total FAQs: 2
+Source: tools.json root faqs
+
+1. Q: Is Colossyan only for training videos?
+   A: While Colossyan is optimized for training and educational content, it can be used for other types of videos as well.
+
+2. Q: Does Colossyan offer a free plan?
+   A: No, Colossyan does not offer a free plan, but they do provide a free trial to test the platform.
+
+
+D-ID (d-id)
+--------------------------------------------------------------------------------
+Total FAQs: 2
+Source: tools.json root faqs
+
+1. Q: What makes D-ID different from other AI video tools?
+   A: D-ID specializes in animating still photos and creating talking images, which creates a unique visual style compared to traditional avatar videos.
+
+2. Q: Is D-ID suitable for developers?
+   A: Yes, D-ID offers API access, making it ideal for developers who want to integrate AI video features into their applications.
+
+
+DEEPBRAIN AI (deepbrain-ai)
+--------------------------------------------------------------------------------
+Total FAQs: 3
+Source: tools.json root faqs
+
+1. Q: How realistic are DeepBrain AI's avatars compared to competitors?
+   A: DeepBrain AI's avatars are among the most realistic in the industry, featuring natural facial expressions, body movements, and lip-sync accuracy that rivals real human presenters. The platform uses advanced deep learning technology to achieve this level of quality.
+
+2. Q: Can I integrate DeepBrain AI into my existing systems?
+   A: Yes, DeepBrain AI offers comprehensive API integration, allowing you to automate video generation, integrate with your CMS or workflow tools, and scale production seamlessly within your existing infrastructure.
+
+3. Q: Does DeepBrain AI support white-label options?
+   A: Yes, DeepBrain AI offers white-label options, allowing enterprises to maintain brand consistency and customize the platform to match their corporate identity and requirements.
+
+
+SYNTHESYS (synthesys)
+--------------------------------------------------------------------------------
+Total FAQs: 2
+Source: tools.json root faqs
+
+1. Q: Does Synthesys include AI voices?
+   A: Yes, Synthesys combines AI video generation with AI voice synthesis, offering both avatars and voices in one platform.
+
+2. Q: Is Synthesys good for e-learning?
+   A: Yes, Synthesys is particularly well-suited for e-learning and training content due to its combination of AI avatars and voices.
+
+
+FLEXCLIP (flexclip)
+--------------------------------------------------------------------------------
+Total FAQs: 2
+Source: tools.json root faqs
+
+1. Q: Is FlexClip suitable for beginners?
+   A: Yes, FlexClip is designed for beginners with an intuitive interface and helpful templates, making video editing accessible to everyone.
+
+2. Q: How much does FlexClip cost?
+   A: FlexClip offers one of the most affordable pricing plans, starting at just $9/month, making it accessible for small businesses.
+
+
+LUMEN5 (lumen5)
+--------------------------------------------------------------------------------
+Total FAQs: 2
+Source: tools.json root faqs
+
+1. Q: Can Lumen5 convert my blog posts to video?
+   A: Yes, Lumen5's core feature is converting articles and blog posts into video format automatically, making it perfect for content repurposing.
+
+2. Q: Does Lumen5 offer brand customization?
+   A: Yes, Lumen5 offers a brand kit feature that allows you to maintain consistent branding across all your videos.
+
+
+STEVE AI (steve-ai)
+--------------------------------------------------------------------------------
+Total FAQs: 2
+Source: tools.json root faqs
+
+1. Q: Is Steve AI suitable for beginners?
+   A: Yes, Steve AI is designed for beginners with an intuitive interface and template-based approach, making video creation simple and accessible.
+
+2. Q: How much does Steve AI cost?
+   A: Steve AI offers affordable pricing starting at $15/month, making it accessible for small businesses and individual creators.
+
+

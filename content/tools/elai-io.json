@@ -1,0 +1,192 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "Teams that want 1080p avatar videos with a simple web workflow",
+      "notFor": "Light monthly users who want unused minutes to roll over",
+      "why": "Free exports are watermarked, monthly minutes expire, and commercial/refund terms need careful review"
+    },
+    "miniTest": {
+      "prompt": "Create a 45-60 second avatar video explaining [topic] for [audience]. Use a neutral, factual tone, add on-screen headings for each point, and include captions. Export the final video and note minutes used",
+      "checklist": [
+        {
+          "label": "Goal",
+          "value": "Training / onboarding / product demo / internal update"
+        },
+        {
+          "label": "Watermark present",
+          "value": "Yes - expected on Free plan"
+        },
+        {
+          "label": "Export resolution",
+          "value": "1080p / 4K based on plan"
+        },
+        {
+          "label": "Export format",
+          "value": "MP4"
+        },
+        {
+          "label": "Render time for 60 seconds",
+          "value": "User reports: can be slow"
+        },
+        {
+          "label": "Template availability",
+          "value": "User reports: limited templates"
+        },
+        {
+          "label": "Avatar expressiveness",
+          "value": "User reports: limited gestures"
+        },
+        {
+          "label": "Minutes used this run",
+          "value": "Track usage"
+        },
+        {
+          "label": "Rollover expectation",
+          "value": "Monthly unused minutes expire"
+        },
+        {
+          "label": "Annual vs monthly fit",
+          "value": "Monthly / annual upfront minutes"
+        },
+        {
+          "label": "Intended usage is commercial",
+          "value": "Licensing/commercial rights need verification"
+        },
+        {
+          "label": "Cancellation path",
+          "value": "Confirmed in account settings"
+        }
+      ],
+      "verdict": "Result: partial. Biggest constraint was watermark/minutes expiry/render time/templates/avatar motion. If commercial usage or refunds matter, verify the exact terms before scaling"
+    },
+    "useCases": [
+      {
+        "title": "YouTube Shorts",
+        "why": "Produce quick 1080p explainers, then swap in your own b-roll",
+        "linkHref": "/tool/elai-io/pricing",
+        "linkText": "Check pricing →"
+      },
+      {
+        "title": "Marketing Ads",
+        "why": "Needs caution—commercial rights and ad usage terms need verification",
+        "linkHref": "/tool/elai-io/features",
+        "linkText": "See features →"
+      },
+      {
+        "title": "Blog-to-video",
+        "why": "Turn a post into a short script and export an MP4 summary cut",
+        "linkHref": "/vs/elai-io-vs-synthesia",
+        "linkText": "Compare alternatives →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "Free plan videos include visible watermark",
+      "Creator plan supports 1080p Full HD exports",
+      "Team and Enterprise plans support up to 4K exports",
+      "Monthly minutes do not roll over; unused minutes expire",
+      "Annual plans receive all minutes upfront",
+      "Web-based; requires computer and stable internet connection",
+      "Royalty-free media library access included (images/videos/icons)",
+      "Selfie Avatar option available on pricing"
+    ]
+  },
+  "pros": [
+    "1080p exports available on Creator plan",
+    "Clear rule: monthly minutes expire, no rollover",
+    "Annual plan minutes provided upfront",
+    "Simple web-based setup, minimal requirements",
+    "Straightforward cancellation steps in help docs",
+    "Built-in royalty-free media options available"
+  ],
+  "cons": [
+    "Free plan watermark limits professional publishing",
+    "User reports: rendering can be slow for short videos",
+    "User reports: fewer templates than major competitors",
+    "User reports: limited avatar gestures and expressiveness",
+    "Commercial rights wording is unclear and needs verification"
+  ],
+  "reviews": {
+    "verdict": {
+      "bottomLine": "Elai.io is best for teams that want 1080p avatar videos with a simple web workflow. The trade-off is usage limits: free exports are watermarked, monthly minutes expire without rollover, and commercial/refund terms need careful review. User reports suggest rendering can be slow and avatar expressiveness is limited compared to competitors.",
+      "bestFor": [
+        "1080p avatar videos",
+        "Simple web workflow",
+        "Team training content"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Do Free plan videos have a watermark?",
+        "answer": "Yes—watermark-free videos are stated as available for paid accounts. That implies Free plan outputs include a visible watermark."
+      },
+      {
+        "question": "What export resolution does Elai support?",
+        "answer": "Pricing states Creator exports 1080p Full HD and Team supports 4K Ultra HD. Free/Creator 1080p vs Team/Enterprise 4K is plan-dependent."
+      },
+      {
+        "question": "Do unused minutes roll over month to month?",
+        "answer": "No—official plan documentation says unused minutes expire at the end of the billing cycle. If rollover matters, monthly subscriptions may feel wasteful."
+      },
+      {
+        "question": "How do annual plans handle minutes?",
+        "answer": "Official documentation says annual subscriptions receive all minutes upfront. That can fit users who need bursts of production rather than steady monthly use."
+      },
+      {
+        "question": "Can I cancel my subscription anytime?",
+        "answer": "Yes—help docs describe canceling via profile settings under Manage Subscriptions. Effects timing (immediate vs end-of-term) needs verification."
+      },
+      {
+        "question": "What's the refund policy?",
+        "answer": "Terms do state paid services can be cancelled without refund in specific misuse cases. Clear consumer-friendly refund window needs verification from official terms."
+      },
+      {
+        "question": "Is Elai allowed for commercial use?",
+        "answer": "The terms excerpt provided grants a license for personal, non-commercial use. Whether paid plans grant commercial rights needs verification from official Elai documentation."
+      },
+      {
+        "question": "What stock media is included?",
+        "answer": "Pricing indicates access to a variety of royalty-free images, videos, icons, and shapes. Specific providers need verification from official docs."
+      },
+      {
+        "question": "What format do exported videos download as?",
+        "answer": "MP4 downloads are reported by third-party sources. Official Elai confirmation for MP4 export wording needs verification."
+      },
+      {
+        "question": "Do I need a powerful computer to use Elai?",
+        "answer": "Elai is presented as web-based and only requires a computer and internet connection. Specific hardware/RAM recommendations are not confirmed."
+      },
+      {
+        "question": "Why do some users complain about slow rendering?",
+        "answer": "User reports: even short videos can take several minutes to render in some tests. Expect variability and plan buffer time for deadlines."
+      },
+      {
+        "question": "How expressive are the avatars (gestures/movement)?",
+        "answer": "User reports: avatars may have limited gestures and mostly neck-up movement. If you need body language, test your target style before committing."
+      }
+    ]
+  },
+  "sources": {
+    "elai.io": {
+      "type": "OFFICIAL_WEBSITE",
+      "howToVerify": "Visit official Elai website and pricing page",
+      "suggestedQuery": "elai.io pricing features commercial use"
+    },
+    "elai.freshdesk.com": {
+      "type": "HELP_CENTER",
+      "howToVerify": "Check official Elai help documentation",
+      "suggestedQuery": "site:elai.freshdesk.com minutes rollover cancellation"
+    },
+    "vidmetoo.com": {
+      "type": "USER_REVIEWS",
+      "howToVerify": "Check user reviews and tutorials",
+      "suggestedQuery": "elai.io vidmetoo review"
+    },
+    "tekpon.com": {
+      "type": "USER_REVIEWS",
+      "howToVerify": "Check user reviews on Tekpon",
+      "suggestedQuery": "elai.io tekpon review"
+    }
+  }
+}
