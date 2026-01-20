@@ -6,9 +6,10 @@ import { generateSmartFAQs } from '@/lib/generateSmartFAQs';
 import { loadToolContent } from '@/lib/loadToolContent';
 import AlternativesClient from './AlternativesClient';
 import { canonicalAlternativesConfigs } from '@/data/alternatives/canonical';
-import { alternativesEvidence } from '@/data/alternatives/evidence';
+import { alternativesEvidence, ToolAlternativeEvidence } from '@/data/evidence/alternatives';
 import { mergeCanonicalAndEvidence } from '@/lib/alternatives/mergeCanonicalAndEvidence';
 import { AlternativeGroupWithEvidence } from '@/types/alternatives';
+import AlternativesErrorBoundary from '@/components/alternatives/AlternativesErrorBoundary';
 
 export async function generateStaticParams() {
   const { getAllTools } = await import('@/lib/getTool');
@@ -49,11 +50,19 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
   if (canonicalConfig) {
     // Use canonical + evidence merge
     const evidenceMap = new Map<string, any>();
-    Object.entries(alternativesEvidence).forEach(([toolSlug, evidence]) => {
-      evidenceMap.set(toolSlug, evidence);
+    Object.entries(alternativesEvidence).forEach(([toolSlug, rawEvidence]: [string, ToolAlternativeEvidence]) => {
+      // Convert ToolAlternativeEvidence to ToolEvidence (no evidenceLinks extraction)
+      evidenceMap.set(toolSlug, {
+        toolSlug,
+        pickThisIf: rawEvidence.whySwitch?.[0]?.claim,
+        extraReason: rawEvidence.whySwitch?.[1]?.claim,
+        limitations: rawEvidence.tradeoffs?.[0]?.claim,
+        bestFor: rawEvidence.bestFor
+      });
     });
     
     groups = mergeCanonicalAndEvidence(canonicalConfig, evidenceMap, allTools);
+    
   } else {
     // Fallback to old buildAlternativeGroups (for tools without canonical config)
     const { buildAlternativeGroups } = await import('@/lib/buildAlternativesData');
@@ -77,7 +86,6 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
         pickThisIf: t.whySwitch[0],
         extraReason: t.whySwitch[1],
         limitations: t.tradeOff || undefined,
-        evidenceLinks: t.evidenceLinks,
         pricingSignals: t.pricingSignals,
         bestFor: t.bestFor
       }))
@@ -106,14 +114,16 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
 
   // Render within the tool layout (provided by layout.tsx)
   return (
-    <Suspense fallback={<div className="p-8 text-center">Loading alternatives...</div>}>
-      <AlternativesClient 
-        groups={groups} 
-        toolName={tool.name} 
-        faqs={faqs}
-        currentSlug={slug}
-        allTools={allTools}
-      />
-    </Suspense>
+    <AlternativesErrorBoundary>
+      <Suspense fallback={<div className="p-8 text-center">Loading alternatives...</div>}>
+        <AlternativesClient 
+          groups={groups} 
+          toolName={tool.name} 
+          faqs={faqs}
+          currentSlug={slug}
+          allTools={allTools}
+        />
+      </Suspense>
+    </AlternativesErrorBoundary>
   );
 }

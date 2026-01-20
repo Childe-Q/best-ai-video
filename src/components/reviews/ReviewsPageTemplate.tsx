@@ -45,23 +45,38 @@ export default function ReviewsPageTemplate({ toolSlug, data }: ReviewsPageTempl
     .map(item => item.point) || [];
 
   // Transform commonIssues to the format expected by the UI
-  // The commonIssues format from JSON is: { point, flag, sourceType?, url? }
-  // We need to transform it to: { claim, impact, whatToDo }
+  // The commonIssues format from JSON is: { point, flag, sourceType?, url?, _action? }
+  // We transform it to: { title, evidenceType, action }
+  const cleanActionText = (text: string): string => {
+    return text
+      .replace(/\s*use\s+case\s*$/i, '') // Remove trailing "use case"
+      .replace(/\s*\{useCase\}\s*/gi, '') // Remove {useCase} variable
+      .replace(/\s*\$?\{use_case\}\s*/gi, '') // Remove ${use_case} variable
+      .replace(/\s*useCase\s*/gi, '') // Remove useCase variable
+      .trim();
+  };
+  
+  const getDefaultAction = (evidenceType: 'user' | 'official'): string => {
+    if (evidenceType === 'official') {
+      return 'Check official docs or terms of service for details.';
+    }
+    return 'Check official docs or ask support before upgrading.';
+  };
+  
   const commonIssues = data.commonIssues?.slice(0, 8).map(issue => {
-    // Determine impact based on flag
-    const impact = issue.flag === 'Official' 
-      ? 'Official policy or documented limitation' 
-      : 'Reported by users';
+    // Determine evidenceType based on flag
+    const evidenceType = issue.flag === 'Official' ? 'official' : 'user';
     
-    // Generate whatToDo based on flag
-    const whatToDo = issue.flag === 'Official'
-      ? 'Check the official documentation or terms of service for details'
-      : 'Verify with official sources or contact support if this affects your use case';
+    // Get action from _action property if available, otherwise use default
+    const rawAction = (issue as any)._action;
+    const action = rawAction 
+      ? cleanActionText(rawAction) 
+      : getDefaultAction(evidenceType);
     
     return {
-      claim: issue.point,
-      impact,
-      whatToDo
+      title: issue.point,
+      evidenceType: evidenceType as 'user' | 'official' | 'mixed',
+      action: action || getDefaultAction(evidenceType)
     };
   }) || [];
 
@@ -75,90 +90,143 @@ export default function ReviewsPageTemplate({ toolSlug, data }: ReviewsPageTempl
     <section className="w-full bg-slate-50 py-16">
       <div className="w-full max-w-[1600px] mx-auto px-4 md:px-12 lg:px-24 space-y-8">
         
-        {/* 1. User feedback snapshot */}
-        {(likes.length > 0 || complaints.length > 0) && (
-          <div className="w-full bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">User feedback snapshot</h2>
+        {/* 1. User feedback snapshot - Only show if >= 2 items */}
+        {(likes.length + complaints.length >= 2) && (
+          <div className="w-full bg-white rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000] transition-all duration-200 p-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">User feedback snapshot</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* What users like */}
+              {/* What users like - Only show if we have likes */}
               {likes.length > 0 && (
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">What users like</h3>
-                  <ul className="space-y-2">
+                  <h3 className="text-xl font-bold text-gray-900 mb-5">What users like</h3>
+                  <ul className="space-y-3">
                     {likes.map((like, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-gray-700">
+                      <li key={idx} className="flex items-start gap-3 text-gray-700 text-base leading-[1.65]">
                         <span className="text-green-500 font-bold shrink-0 mt-0.5">✓</span>
-                        <span>{like}</span>
+                        <span className="font-semibold">{like}</span>
                       </li>
                     ))}
-                    {/* Add neutral items to likes if there's space */}
-                    {neutral.length > 0 && likes.length < 6 && (
-                      <>
-                        {neutral.slice(0, 6 - likes.length).map((item, idx) => (
-                          <li key={`neutral-${idx}`} className="flex items-start gap-2 text-gray-700">
-                            <span className="text-gray-400 font-bold shrink-0 mt-0.5">•</span>
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </>
-                    )}
                   </ul>
                 </div>
               )}
-              {/* Common complaints */}
+              {/* Common complaints - Use ⚠️ if no likes, otherwise use neutral styling */}
               {complaints.length > 0 && (
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Common complaints</h3>
-                  <ul className="space-y-2">
+                  <h3 className="text-xl font-bold text-gray-900 mb-5">Common complaints</h3>
+                  <ul className="space-y-3">
                     {complaints.map((complaint, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-gray-700">
-                        <span className="text-red-500 font-bold shrink-0 mt-0.5">✕</span>
-                        <span>{complaint}</span>
+                      <li key={idx} className="flex items-start gap-3 text-gray-700 text-base leading-[1.65]">
+                        {/* Use ⚠️ if no likes (neutral tone), otherwise use ✕ */}
+                        <span className={`${likes.length === 0 ? 'text-orange-500' : 'text-red-500'} font-bold shrink-0 mt-0.5`}>
+                          {likes.length === 0 ? '⚠️' : '✕'}
+                        </span>
+                        <span className="font-semibold">{complaint}</span>
                       </li>
                     ))}
-                    {/* Add neutral items to complaints if likes column is empty and there's space */}
-                    {neutral.length > 0 && likes.length === 0 && complaints.length < 6 && (
-                      <>
-                        {neutral.slice(0, 6 - complaints.length).map((item, idx) => (
-                          <li key={`neutral-${idx}`} className="flex items-start gap-2 text-gray-700">
-                            <span className="text-gray-400 font-bold shrink-0 mt-0.5">•</span>
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </>
-                    )}
                   </ul>
+                  {/* Add source note only once at the bottom */}
+                  {complaints.length > 0 && (
+                    <p className="text-base text-gray-500 mt-5 italic leading-[1.65]">
+                      Based on user reports; details vary by plan/account.
+                    </p>
+                  )}
                 </div>
               )}
             </div>
           </div>
         )}
 
-        {/* 2. Common issues to know before you pay */}
-        {commonIssues.length > 0 && (
+        {/* 2. Common issues to know before you pay - Only show if >= 2 items */}
+        {commonIssues.length >= 2 && (
           <div className="w-full">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Common issues to know before you pay</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {commonIssues.map((issue, idx) => (
-                <div key={idx} className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-                  <p className="text-sm font-medium text-gray-900 mb-2">{issue.claim}</p>
-                  <p className="text-xs text-gray-600 mb-3">
-                    <span className="font-medium">Impact: </span>{issue.impact}
-                  </p>
-                  <p className="text-xs text-gray-700">
-                    <span className="font-medium">What to do: </span>{issue.whatToDo}
-                  </p>
-                </div>
-              ))}
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Common issues to know before you pay</h2>
+            
+            {/* Legend: Show source types once at the top */}
+            <div className="mb-6 flex flex-wrap items-center gap-4 text-base text-gray-600">
+              <span>Reported by users</span>
+              {commonIssues.some(issue => issue.evidenceType === 'official' || issue.evidenceType === 'mixed') && (
+                <span>From docs</span>
+              )}
             </div>
+            
+            {/* Adaptive grid layout based on issue count */}
+            {(() => {
+              const count = commonIssues.length;
+              
+              // Helper function to render a single card
+              const renderCard = (issue: typeof commonIssues[0], idx: number) => {
+                const showBadge = issue.evidenceType !== 'user';
+                const badgeText = issue.evidenceType === 'official' 
+                  ? 'From docs' 
+                  : issue.evidenceType === 'mixed' 
+                  ? 'Mixed' 
+                  : '';
+                
+                return (
+                  <div key={idx} className="relative bg-white rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#000] transition-all duration-200 p-6">
+                    {/* Optional badge in top-right corner (only for non-user sources) */}
+                    {showBadge && badgeText && (
+                      <div className="absolute top-3 right-3">
+                        <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-neutral-100 text-neutral-700 border border-neutral-200 dark:bg-neutral-800 dark:text-neutral-200 dark:border-neutral-700">
+                          {badgeText}
+                        </span>
+                      </div>
+                    )}
+                    
+                    {/* Title: Problem statement (12-16 words max) */}
+                    <p className={`text-base font-semibold text-gray-900 ${showBadge ? 'pr-20' : ''} mb-3 leading-[1.65]`}>
+                      {issue.title}
+                    </p>
+                    
+                    {/* Action: One sentence recommendation (max 18 words) */}
+                    <p className="text-base text-gray-700 leading-[1.65]">
+                      <span className="font-semibold">Action: </span>
+                      {issue.action || 'Check official docs or ask support before upgrading.'}
+                    </p>
+                  </div>
+                );
+              };
+              
+              if (count <= 4) {
+                // 2x2 grid for 2-4 items
+                return (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {commonIssues.map((issue, idx) => renderCard(issue, idx))}
+                  </div>
+                );
+              } else if (count === 5) {
+                // 3 + 2 layout: first row 3 cards, second row 2 cards centered
+                return (
+                  <div className="space-y-4">
+                    {/* First row: 3 cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      {commonIssues.slice(0, 3).map((issue, idx) => renderCard(issue, idx))}
+                    </div>
+                    {/* Second row: 2 cards centered */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <div className="hidden md:block"></div> {/* Empty spacer */}
+                      {commonIssues.slice(3, 5).map((issue, idx) => renderCard(issue, idx + 3))}
+                      <div className="hidden md:block"></div> {/* Empty spacer */}
+                    </div>
+                  </div>
+                );
+              } else {
+                // 3 columns for 6+ items
+                return (
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {commonIssues.map((issue, idx) => renderCard(issue, idx))}
+                  </div>
+                );
+              }
+            })()}
           </div>
         )}
 
-        {/* 3. Frequently asked questions */}
-        {faqs.length > 0 && (
+        {/* 3. Frequently asked questions - Always show if >= 3 items */}
+        {faqs.length >= 3 && (
           <div className="w-full">
-            <div className="w-full bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently asked questions</h2>
+            <div className="w-full bg-white rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000] transition-all duration-200 p-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently asked questions</h2>
               <FAQAccordion faqs={faqs} />
             </div>
           </div>
@@ -166,7 +234,7 @@ export default function ReviewsPageTemplate({ toolSlug, data }: ReviewsPageTempl
 
         {/* Sources */}
         <div className="w-full text-center">
-          <p className="text-xs text-gray-500">
+          <p className="text-base text-gray-500 leading-[1.65]">
             Based on public docs + aggregated user feedback. Limits may vary by account.
           </p>
         </div>

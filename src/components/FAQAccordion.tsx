@@ -33,10 +33,10 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
             {/* Question Row - Clickable */}
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full flex items-center justify-between py-4 text-left hover:bg-gray-50 transition-colors rounded-lg px-2 -mx-2"
+              className="w-full flex items-center justify-between py-4 text-left bg-transparent hover:bg-black/5 transition-colors rounded-lg px-2 -mx-2"
               aria-expanded={isOpen}
             >
-              <span className="font-medium text-gray-900 pr-4">
+              <span className="text-base font-semibold text-gray-900 pr-4 leading-[1.65]">
                 {faq.question}
               </span>
               <div className="flex-shrink-0">
@@ -55,7 +55,7 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
               }`}
             >
               <div className="pb-4 pt-0 px-2">
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-base text-gray-600 leading-[1.65]">
                   {faq.answer}
                 </p>
               </div>

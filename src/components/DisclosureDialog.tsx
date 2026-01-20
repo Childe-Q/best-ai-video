@@ -36,7 +36,7 @@ export default function DisclosureDialog({
       <button
         type="button"
         onClick={openDialog}
-        className={`text-blue-600 underline underline-offset-4 hover:text-blue-700 ${triggerClassName}`}
+        className={`text-blue-600 hover:text-blue-700 hover:opacity-80 transition-colors ${triggerClassName}`}
       >
         Disclosure
       </button>

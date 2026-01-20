@@ -6,10 +6,15 @@ import { CanonicalAlternativesConfig } from '@/types/alternatives';
  * 
  * Rules:
  * - Groups define the tabs/sections shown (id, title, description)
- * - toolSlugs is now OPTIONAL and DEPRECATED - tools are dynamically selected
- *   using getAlternativesShortlist based on similarity scoring
+ * - toolSlugs is now DEPRECATED and IGNORED - tools are dynamically selected
+ *   based on relevance scoring (use case match), NOT hardcoded lists
  * - Evidence can only provide copy (pickThisIf, limitations, etc.)
- * - Non-affiliate tools (runway, sora) are allowed if similarity is high enough
+ * - Non-affiliate tools (runway, sora, veo) are included if relevance is high
+ * - Tools are selected from ALL tools in tools.json, sorted by relevance
+ * 
+ * ⚠️ IMPORTANT: toolSlugs arrays below are kept for reference only.
+ * They are NO LONGER USED in the selection logic - tools are selected
+ * dynamically based on relevance scoring and group intent matching.
  */
 export const canonicalAlternativesConfigs: Record<string, CanonicalAlternativesConfig> = {
   'invideo': {

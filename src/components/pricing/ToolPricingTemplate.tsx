@@ -127,7 +127,7 @@ export default function ToolPricingTemplate({
   const verdictText = verdict?.text || `If you need to produce videos regularly and want to avoid manual asset sourcing, the time savings can justify the cost. The Free plan works for testing, but watermarks and limits make it unsuitable for publishing. Start with monthly billing to test your actual usage before committing to annual plans.`;
 
   return (
-    <section className="w-full bg-slate-50 py-16">
+    <section id="pricing" className="w-full bg-slate-50 py-16 scroll-mt-32">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <main className="py-8">
           {/* 1. Header */}
@@ -151,7 +151,7 @@ export default function ToolPricingTemplate({
                       href={officialPricingUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 underline"
+                      className="text-blue-600 hover:text-blue-800 hover:opacity-80 transition-colors"
                     >
                       Official pricing page
                     </a>

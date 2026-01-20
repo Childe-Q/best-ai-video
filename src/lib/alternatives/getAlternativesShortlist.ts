@@ -119,10 +119,11 @@ export function getAlternativesShortlist(
       breakdown.categoriesOverlap = categoriesOverlap * 2;
       score += breakdown.categoriesOverlap;
 
-      // Is in whitelist (Try now): +2
+      // Is in whitelist (Try now): Tracked but NOT added to score
+      // Affiliate status is for UI labeling only, not for ranking
       if (isTryNowTool(tool)) {
-        breakdown.hasAffiliate = 2;
-        score += 2;
+        breakdown.hasAffiliate = 1; // Track for UI, but don't add to score
+        // score += 0; // ❌ REMOVED: No longer giving affiliate bonus
       }
 
       // Has evidence: tracked for UI badge, but NOT added to score
@@ -187,12 +188,16 @@ export function getAlternativesShortlist(
     }
     topTools = topTools.slice(0, targetCount);
   } else {
-    // Default: whitelist + others, alwaysInclude only if we're short
-    topTools = [...whitelistTools, ...otherTools].slice(0, targetCount);
-    if (topTools.length < targetCount && alwaysIncludeInResults.length > 0) {
-      const needed = Math.min(targetCount - topTools.length, alwaysIncludeInResults.length);
-      topTools.push(...alwaysIncludeInResults.slice(0, needed));
-    }
+    // Default: Sort by score (relevance), NOT by affiliate status
+    // Combine all tools and sort by score descending
+    const allScored = [...whitelistTools, ...otherTools, ...alwaysIncludeInResults]
+      .map(slug => {
+        const scoreData = scores.find(s => s.slug === slug);
+        return { slug, score: scoreData?.score || 0 };
+      })
+      .sort((a, b) => b.score - a.score); // Sort by score, not affiliate status
+    
+    topTools = allScored.slice(0, targetCount).map(item => item.slug);
   }
 
   // Debug output in development

@@ -69,7 +69,7 @@ export default function DisclosurePopover({
         ref={triggerRef}
         type="button"
         onClick={togglePopover}
-        className={`text-blue-600 underline underline-offset-4 hover:text-blue-700 ${triggerClassName}`}
+        className={`text-blue-600 hover:text-blue-700 hover:opacity-80 transition-colors ${triggerClassName}`}
         aria-expanded={isOpen}
         aria-haspopup="true"
       >

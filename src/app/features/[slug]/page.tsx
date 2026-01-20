@@ -74,7 +74,7 @@ export default async function FeatureDetailPage({ params }: PageProps) {
             <li className="flex items-center">
               <Link
                 href="/"
-                className="hover:text-gray-900 hover:underline transition-colors"
+                className="hover:text-gray-900 hover:opacity-80 transition-colors"
               >
                 Home
               </Link>
@@ -83,7 +83,7 @@ export default async function FeatureDetailPage({ params }: PageProps) {
               <span className="mx-1.5">→</span>
               <Link
                 href="/features"
-                className="hover:text-gray-900 hover:underline transition-colors"
+                className="hover:text-gray-900 hover:opacity-80 transition-colors"
               >
                 Features
               </Link>

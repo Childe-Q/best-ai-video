@@ -26,27 +26,7 @@ export function cleanClaim(text: string): string {
   return text.replace(/\[NEED VERIFICATION.*?\]/g, '').trim();
 }
 
-// Helper to filter and map evidence links (only internal, max 3, deduplicated)
-export function filterEvidenceLinks(sources: { url: string }[]): string[] {
-  const links = new Set<string>();
-  for (const s of sources) {
-    let url = s.url;
-    // Map external URLs to internal paths if possible
-    if (url && !url.startsWith('/')) {
-      // Try to map common external patterns to internal paths
-      if (url.includes('pricing')) {
-        // Extract tool slug from URL if possible, otherwise skip
-        continue;
-      }
-      // Skip external URLs
-      continue;
-    }
-    if (url && url.startsWith('/') && url !== '' && url !== '#') {
-      links.add(url);
-    }
-  }
-  return Array.from(links).slice(0, 3);
-}
+// Proof feature removed - filterEvidenceLinks function no longer needed
 
 // Truncate text to max words
 export function truncateText(text: string, maxWords: number = 18): string {
@@ -79,7 +59,7 @@ export function buildAlternativeTool(
     whySwitch: [],
     tradeOff: null,
     pricingSignals: {},
-    evidenceLinks: []
+    // Proof feature removed - no evidenceLinks needed
   };
 
   // Get compare link
@@ -201,7 +181,7 @@ export function buildAlternativeTool(
         });
       }
     });
-    cardData.evidenceLinks = filterEvidenceLinks(allSources).slice(0, 3); // Max 3 links
+    // Proof feature removed - no evidenceLinks needed
   } else {
     // Fallback content if no evidence found (use tool data)
     cardData.bestFor = tool.best_for?.split(/[,&]/).map((s: string) => s.trim()) || [];

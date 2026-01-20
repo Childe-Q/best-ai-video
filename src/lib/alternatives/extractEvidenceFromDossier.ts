@@ -74,24 +74,13 @@ function extractToolEvidence(
     // Skip if has verification tag
   }
 
-  // Extract evidence links (dedupe URLs from all sources)
-  const evidenceLinks = new Set<string>();
-  [...(alt.whySwitch || []), ...(alt.tradeoffs || [])].forEach(item => {
-    item.sources?.forEach(source => {
-      if (source.url) {
-        // Only include internal links (starting with /) or keep external for now
-        // In production, you might want to filter to only internal
-        evidenceLinks.add(source.url);
-      }
-    });
-  });
+  // Proof feature removed - no evidenceLinks extraction needed
 
   return {
     toolSlug,
     pickThisIf: pickThisIf && !pickThisIf.includes('[NEED VERIFICATION]') ? pickThisIf : undefined,
     extraReason: extraReason && !extraReason.includes('[NEED VERIFICATION]') ? extraReason : undefined,
-    limitations: limitations && !limitations.includes('[NEED VERIFICATION]') ? limitations : undefined,
-    evidenceLinks: Array.from(evidenceLinks).slice(0, 3) // Max 3 links
+    limitations: limitations && !limitations.includes('[NEED VERIFICATION]') ? limitations : undefined
   };
 }
 
@@ -123,7 +112,7 @@ export function extractEvidenceFromDossier(
             pickThisIf: evidence.pickThisIf || existing.pickThisIf,
             extraReason: evidence.extraReason || existing.extraReason,
             limitations: evidence.limitations || existing.limitations,
-            evidenceLinks: [...new Set([...(existing.evidenceLinks || []), ...(evidence.evidenceLinks || [])])].slice(0, 3)
+            // Proof feature removed - no evidenceLinks needed
           });
         } else {
           evidenceMap.set(evidence.toolSlug, evidence);

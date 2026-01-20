@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
-import { getTool } from '@/lib/getTool';
+import { getTool, getAllTools } from '@/lib/getTool';
 import { loadToolContent } from '@/lib/loadToolContent';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ToolLogo from '@/components/ToolLogo';
@@ -10,6 +10,10 @@ import ToolTabs from '@/components/ToolTabs';
 import { CheckBadgeIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { LinkIcon, BookmarkIcon } from '@heroicons/react/24/outline';
+import DoubleLayerChips from '@/components/tool/DoubleLayerChips';
+import { getUseCaseChips, getCapabilityChips } from '@/lib/toolChips';
+import EditorialScore from '@/components/tool/EditorialScore';
+import { getCurrentMonthYear } from '@/lib/utils';
 
 interface ToolLayoutProps {
   children: ReactNode;
@@ -22,6 +26,13 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
 
   if (!tool) notFound();
 
+  // 防串页断言：确保 tool.slug 与 URL slug 一致
+  if (process.env.NODE_ENV === 'development' && tool.slug !== slug) {
+    console.warn(
+      `[ToolLayout] 数据串页警告: URL slug="${slug}" 但 tool.slug="${tool.slug}"。请检查 getTool() 是否正确返回了对应 slug 的工具数据。`
+    );
+  }
+
   // Load content JSON and merge with tool.content
   const contentJson = loadToolContent(slug);
   const mergedContent = contentJson ? {
@@ -33,6 +44,10 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
       verdict: contentJson.reviews?.verdict || tool.content?.reviews?.verdict,
     },
   } : tool.content;
+
+  // Get all tools for differentiators calculation
+  const allTools = getAllTools();
+  const { core, differentiators } = getCapabilityChips(tool, mergedContent, allTools);
 
   return (
     <div className="min-h-screen bg-slate-50 text-gray-900 font-sans">
@@ -70,55 +85,26 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
                       </h1>
                     </div>
 
-                    {/* Rating and Reviews */}
-                    <div className="flex flex-wrap items-center gap-2 mb-2">
-                      {tool.rating && (
-                        <div className="flex items-center gap-1">
-                          {[...Array(5)].map((_, i) => {
-                            const filled = tool.rating! - i;
-                            const fillPercentage = Math.max(0, Math.min(100, filled * 100));
-                            return (
-                              <span key={i} className="relative inline-block text-lg" style={{ width: '1em', height: '1em' }}>
-                                {/* Empty star background */}
-                                <span className="absolute inset-0 text-gray-300">★</span>
-                                {/* Filled star overlay */}
-                                {fillPercentage > 0 && (
-                                  <span 
-                                    className="absolute inset-0 text-orange-500"
-                                    style={{ 
-                                      clipPath: `inset(0 ${100 - fillPercentage}% 0 0)`,
-                                      WebkitClipPath: `inset(0 ${100 - fillPercentage}% 0 0)`
-                                    }}
-                                  >
-                                    ★
-                                  </span>
-                                )}
-                              </span>
-                            );
-                          })}
-                          <span className="ml-1 text-sm text-gray-600">{tool.rating.toFixed(1)}</span>
-                        </div>
-                      )}
-                      {tool.review_count && tool.review_count > 0 ? (
-                        <span className="text-sm text-gray-600">{tool.review_count} user reviews</span>
-                      ) : tool.rating ? (
-                        <div className="flex flex-col">
-                          <span className="text-xs text-gray-500">Our score</span>
-                          <span className="text-[10px] text-gray-400 leading-tight mt-0.5">Based on public docs + user feedback. Some limits vary by account.</span>
-                        </div>
-                      ) : null}
-                      {tool.is_verified && (
-                        <div className="flex items-center gap-1 px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs font-medium">
-                          <CheckBadgeIcon className="w-4 h-4" />
-                          Verified
-                        </div>
-                      )}
+                    {/* Editorial Score */}
+                    <div className="relative mb-2">
+                      <EditorialScore 
+                        rating={tool.rating} 
+                        lastUpdated={getCurrentMonthYear()}
+                        metricsCount={5}
+                      />
                     </div>
 
                     {/* Main Headline / Tagline */}
                     <p className="text-base text-gray-600 mb-2">
                       {tool.tagline}
                     </p>
+
+                    {/* Double Layer Chips */}
+                    <DoubleLayerChips
+                      useCases={getUseCaseChips(tool, mergedContent)}
+                      coreCapabilities={core}
+                      differentiators={differentiators}
+                    />
 
                     {/* AI Categories */}
                     {tool.categories && tool.categories.length > 0 && (
@@ -128,7 +114,7 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
                             <Link
                               key={idx}
                               href={`/?category=${encodeURIComponent(category)}`}
-                              className="text-blue-600 hover:text-blue-800 hover:underline text-sm font-medium"
+                              className="text-blue-600 hover:text-blue-800 hover:opacity-80 transition-colors text-sm font-medium"
                             >
                               {category}
                             </Link>
@@ -268,11 +254,15 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
           {/* Key Facts Block (Row 2, Col 1) */}
           {tool.key_facts && tool.key_facts.length > 0 && (
             <div className="lg:col-start-1 lg:row-start-2 h-full">
-              <div className="bg-gray-50/30 border border-gray-200/60 rounded-md shadow-sm p-2.5 h-full flex flex-col">
+              <div id="key-facts" className="bg-gray-50/30 border border-gray-200/60 rounded-md shadow-sm p-2.5 h-full flex flex-col">
                 <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1.5">Key Facts</h3>
                 <ul className="space-y-1">
                   {tool.key_facts.map((fact, idx) => (
-                    <li key={idx} className="flex items-start gap-1.5 text-xs text-gray-600 leading-tight">
+                    <li 
+                      key={idx} 
+                      id={`key-fact-${idx}`}
+                      className="flex items-start gap-1.5 text-xs text-gray-600 leading-tight transition-colors duration-200"
+                    >
                       <span className="text-indigo-500 font-bold shrink-0 mt-0.5">•</span>
                       <span>{fact}</span>
                     </li>

@@ -2,9 +2,11 @@
 
 import Link from 'next/link';
 import { Tool } from '@/types/tool';
-import { categories } from '@/data/categories';
 import ToolLogo from './ToolLogo';
 import CTAButton from './CTAButton';
+import EditorialScoreSimple from './EditorialScoreSimple';
+import { EXTERNAL_TOOL_TAGS } from '@/data/externalToolTags';
+import { getEditorialHomeTags } from '@/data/home/editorialTags';
 
 interface ToolCardProps {
   tool: Tool;
@@ -29,8 +31,53 @@ function getPricingTag(tool: Tool): { label: string; color: string } {
 }
 
 
+// 获取首页标签（优先外部标签，不足 3 个时用编辑标签补足到 3 个）
+function getHomeTags(tool: Tool): string[] {
+  // 优先使用外部标签
+  const ext = EXTERNAL_TOOL_TAGS[tool.slug] ?? [];
+  const extClean = ext.map(t => t.trim()).filter(Boolean);
+  
+  // 如果外部标签 >= 3，直接返回前 3 个
+  if (extClean.length >= 3) {
+    return extClean.slice(0, 3);
+  }
+  
+  // 如果外部标签 < 3，用编辑标签补足到 3 个
+  const editorialTags = getEditorialHomeTags(tool.slug);
+  const editorialLabels = editorialTags.map(t => t.label);
+  
+  // 合并外部标签和编辑标签，去重，取前 3 个
+  const combined = [...extClean];
+  for (const label of editorialLabels) {
+    if (combined.length >= 3) break;
+    if (!combined.includes(label)) {
+      combined.push(label);
+    }
+  }
+  
+  // 如果完全没有标签，返回 3 个兜底标签
+  if (combined.length === 0) {
+    return ['AI Video Tool', 'AI Video Tool', 'AI Video Tool'];
+  }
+  
+  // 如果仍不足 3 个，用最后一个标签补足（确保始终显示 3 个）
+  const lastTag = combined[combined.length - 1];
+  while (combined.length < 3) {
+    combined.push(lastTag);
+  }
+  
+  return combined.slice(0, 3);
+}
+
+// 判断标签是否为"核心标签"（用于样式区分）
+function isCoreTag(label: string): boolean {
+  const coreKeywords = ['Avatar', 'Editor', 'Generator'];
+  return coreKeywords.some(keyword => label.includes(keyword));
+}
+
 export default function ToolCard({ tool }: ToolCardProps) {
   const pricingTag = getPricingTag(tool);
+  const homeTags = getHomeTags(tool);
 
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-indigo-500/50 flex flex-col h-full">
@@ -60,18 +107,8 @@ export default function ToolCard({ tool }: ToolCardProps) {
                   {tool.name}
                 </h3>
               </Link>
-              {/* Rating */}
-              {tool.rating && tool.rating > 0 ? (
-                <div className="flex items-center gap-1 text-sm text-gray-600">
-                  <span className="text-yellow-400">⭐⭐⭐⭐⭐</span>
-                  <span className="font-medium">({tool.rating.toFixed(1)})</span>
-                </div>
-              ) : (
-                <div className="flex items-center gap-1 text-sm text-gray-400">
-                  <span>⭐⭐⭐⭐⭐</span>
-                  <span className="text-xs">(4.5)</span>
-                </div>
-              )}
+              {/* Editorial Score */}
+              <EditorialScoreSimple score={tool.rating} />
             </div>
           </div>
         </div>
@@ -81,31 +118,25 @@ export default function ToolCard({ tool }: ToolCardProps) {
           {tool.short_description}
         </p>
         
-        {/* Tags - Minimalist Text Links */}
-        {tool.tags && tool.tags.length > 0 && (
-          <div className="flex flex-wrap gap-x-2 mb-3">
-            {tool.tags.slice(0, 4).map((tag) => {
-              // Find the category that matches this tag
-              const matchingCategory = categories.find(cat => cat.tag === tag);
-              const tagHref = matchingCategory 
-                ? `/features/${matchingCategory.slug}`
-                : `/features`;
+        {/* Tags - External Tags (Non-clickable) */}
+        {homeTags.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-3">
+            {homeTags.map((tag, idx) => {
+              const isCore = isCoreTag(tag);
+              const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-medium transition';
+              const coreClasses = isCore 
+                ? 'border-black/10 bg-black/[0.05] text-black/80 hover:bg-black/[0.08] hover:border-black/20 hover:text-black/90'
+                : 'border-black/10 bg-black/[0.03] text-black/70 hover:bg-black/[0.06] hover:border-black/20 hover:text-black/80';
               
               return (
-                <Link
-                  key={tag}
-                  href={tagHref}
-                  className="text-sm text-blue-500 hover:text-blue-600 hover:underline transition-colors"
+                <span
+                  key={`${tag}-${idx}`}
+                  className={`${baseClasses} ${coreClasses}`}
                 >
-                  #{tag}
-                </Link>
+                  {tag}
+                </span>
               );
             })}
-            {tool.tags.length > 4 && (
-              <span className="text-sm text-gray-500">
-                +{tool.tags.length - 4} more
-              </span>
-            )}
           </div>
         )}
         

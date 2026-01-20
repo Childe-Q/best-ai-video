@@ -5,9 +5,27 @@ const tools: Tool[] = toolsData as Tool[];
 
 /**
  * Get a tool by its slug
+ * 确保每次调用都基于传入的 slug 参数查找，避免缓存或默认值问题
  */
 export function getTool(slug: string): Tool | undefined {
-  return tools.find((t) => t.slug === slug);
+  if (!slug || typeof slug !== 'string') {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('[getTool] 无效的 slug 参数:', slug);
+    }
+    return undefined;
+  }
+  
+  const normalizedSlug = slug.toLowerCase().trim();
+  const tool = tools.find((t) => t.slug.toLowerCase() === normalizedSlug);
+  
+  // 开发环境下的验证
+  if (process.env.NODE_ENV === 'development' && tool && tool.slug !== normalizedSlug) {
+    console.warn(
+      `[getTool] slug 不匹配警告: 查找 "${normalizedSlug}" 但找到 tool.slug="${tool.slug}"`
+    );
+  }
+  
+  return tool;
 }
 
 /**

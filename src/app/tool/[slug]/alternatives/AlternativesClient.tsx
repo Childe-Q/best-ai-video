@@ -1,25 +1,16 @@
 'use client';
 
-import { useState, useEffect, useMemo, useRef } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { DocumentTextIcon, XMarkIcon, MagnifyingGlassIcon } from '@heroicons/react/24/solid';
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
+import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { Tool } from '@/types/tool';
 import { AlternativeGroup, AlternativeGroupWithEvidence } from '@/components/alternatives/types';
 import AlternativesReasonGroup from '@/components/alternatives/AlternativesReasonGroup';
 import FAQAccordion from '@/components/FAQAccordion';
+import ComingSoonToolCard from '@/components/alternatives/ComingSoonToolCard';
 import { getAlternativesShortlist } from '@/lib/alternatives/getAlternativesShortlist';
 import { buildAlternativeGroups } from '@/lib/buildAlternativesData';
-
-type FilterState = {
-  showAvailableOnly: boolean;
-  hasAffiliate: boolean;
-  hasFreeTrial: boolean;
-  hasFreePlan: boolean;
-  noWatermark: boolean;
-  has4KExport: boolean;
-};
+import { COMING_SOON_TOOL_DATA, isComingSoonTool } from '@/lib/alternatives/getComingSoonTools';
+import { getTool } from '@/lib/getTool';
 
 interface AlternativesClientProps {
   groups: AlternativeGroup[] | AlternativeGroupWithEvidence[];
@@ -30,26 +21,10 @@ interface AlternativesClientProps {
 }
 
 export default function AlternativesClient({ groups: initialGroups, toolName, faqs = [], currentSlug, allTools }: AlternativesClientProps) {
-  const searchParams = useSearchParams();
-  const isDebugMode = searchParams.get('debug') === '1';
-  const searchBarRef = useRef<HTMLDivElement>(null);
-  const [navTop, setNavTop] = useState('4rem');
-
   const [activeTab, setActiveTab] = useState(initialGroups[0]?.id);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [onlyShowAffiliate, setOnlyShowAffiliate] = useState(false);
-  const [filters, setFilters] = useState<FilterState>({
-    showAvailableOnly: false, // Changed default to false
-    hasAffiliate: false, // Changed default to false
-    hasFreeTrial: false,
-    hasFreePlan: false,
-    noWatermark: false,
-    has4KExport: false,
-  });
   const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
-  const [evidenceModal, setEvidenceModal] = useState<{ isOpen: boolean; links: string[]; toolName: string } | null>(null);
 
-  // Recalculate groups when onlyShowAffiliate changes
+  // Groups are static since we removed filters
   const groups = useMemo(() => {
     const currentTool = allTools.find(t => t.slug === currentSlug);
     if (!currentTool) return initialGroups;
@@ -57,28 +32,22 @@ export default function AlternativesClient({ groups: initialGroups, toolName, fa
     const shortlist = getAlternativesShortlist(
       currentSlug,
       allTools,
-      12, // Increase to ensure diversity
+      12, 
       {
-        onlyAffiliate: onlyShowAffiliate,
+        onlyAffiliate: false, // Default to false as toggle is removed
         alwaysInclude: ['runway', 'sora']
       }
     );
 
     return buildAlternativeGroups(currentTool, allTools, shortlist);
-  }, [currentSlug, allTools, onlyShowAffiliate]);
+  }, [currentSlug, allTools, initialGroups]);
 
-  // Calculate nav top position (no longer needed since tabs are in the same container)
+  // Ensure activeTab is valid when groups change
   useEffect(() => {
-    const updateNavTop = () => {
-      if (searchBarRef.current) {
-        const height = searchBarRef.current.getBoundingClientRect().height;
-        setNavTop(`${height + 16}px`);
-      }
-    };
-    updateNavTop();
-    window.addEventListener('resize', updateNavTop);
-    return () => window.removeEventListener('resize', updateNavTop);
-  }, [filters, searchQuery]);
+    if (groups.length > 0 && !groups.find(g => g.id === activeTab)) {
+      setActiveTab(groups[0].id);
+    }
+  }, [groups, activeTab]);
 
   const toggleCard = (cardId: string) => {
     setExpandedCards(prev => {
@@ -92,255 +61,112 @@ export default function AlternativesClient({ groups: initialGroups, toolName, fa
     });
   };
 
-  const filterTool = (tool: any): boolean => {
-    if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase();
-      const matchesName = tool.name.toLowerCase().includes(query);
-      const matchesTags = tool.bestFor.some((tag: string) => tag.toLowerCase().includes(query));
-      if (!matchesName && !matchesTags) return false;
-    }
+  // Filter out empty groups if any (though usually groups are built with tools)
+  const validGroups = groups.filter(g => g.tools && g.tools.length > 0);
 
-    // Note: onlyShowAffiliate filtering is handled at shortlist level, not here
-    if (isDebugMode && filters.hasAffiliate && !tool.affiliateLink) return false;
-    if (filters.hasFreeTrial && !tool.hasFreeTrial) return false;
-    if (filters.hasFreePlan && !tool.pricingSignals.freePlan) return false;
-
-    if (filters.noWatermark) {
-      const watermark = tool.pricingSignals.watermark?.toLowerCase() || '';
-      const hasNoWatermark = watermark.includes('no watermark') ||
-        watermark.includes('remove watermark') ||
-        watermark.includes('watermark removal') ||
-        watermark.includes('paid removes watermark');
-      if (!hasNoWatermark) return false;
-    }
-
-    if (filters.has4KExport) {
-      const exportQuality = tool.pricingSignals.exportQuality?.toLowerCase() || '';
-      if (!exportQuality.includes('4k')) return false;
-    }
-
-    return true;
-  };
-
-  const filteredGroups = useMemo(() => {
-    return groups.map(group => ({
-      ...group,
-      tools: group.tools.filter(filterTool)
-    })).filter(group => group.tools.length > 0);
-  }, [groups, searchQuery, filters]);
-
-  // Scroll spy
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveTab(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.3, rootMargin: '-100px 0px -50% 0px' }
-    );
-
-    filteredGroups.forEach((g) => {
-      const el = document.getElementById(g.id);
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
-  }, [filteredGroups]);
-
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    const searchBar = searchBarRef.current;
-    if (el && searchBar) {
-      const searchBarHeight = searchBar.getBoundingClientRect().height;
-      const totalOffset = searchBarHeight + 20;
-
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = el.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - totalOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-      setActiveTab(id);
-    }
-  };
+  // Get active group data
+  const activeGroupData = validGroups.find(g => g.id === activeTab);
 
   return (
     <div className="relative">
-      {/* Hero Section */}
-      <div className="bg-[#FAF7F0] border-b-2 border-black py-12">
-        <div className="max-w-6xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-black text-black uppercase tracking-tight mb-4">
-            {toolName} Alternatives (2026): Best Replacements by Use Case
-          </h1>
-          <p className="text-lg text-gray-700 font-medium leading-relaxed max-w-3xl">
-            Based on testing and user feedback. Different account limits may vary. We compare alternatives by cost control, output quality, workflow speed, and control features.
-          </p>
-        </div>
-      </div>
-
-      {/* Filter Bar Card - Unified Container */}
-      <div ref={searchBarRef} className="sticky top-4 z-50">
-        <div className="max-w-6xl mx-auto bg-[#FAF7F0] border-2 border-black rounded-xl shadow-[4px_4px_0px_0px_#000] p-4 space-y-4">
-          {/* Row 1: Search Input (Full Width) */}
-          <div className="relative">
-            <MagnifyingGlassIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search by tool name or tags..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 border-2 border-black rounded-full bg-white font-medium text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F6D200]"
-            />
-          </div>
-
-          {/* Row 2: Checkboxes (Left) + Disclosure (Right) */}
-          <div className="flex flex-wrap items-start justify-between gap-4">
-            <div className="flex flex-wrap gap-3">
-              <label className="flex items-center gap-2 cursor-pointer h-9">
-                <input
-                  type="checkbox"
-                  checked={onlyShowAffiliate}
-                  onChange={(e) => setOnlyShowAffiliate(e.target.checked)}
-                  className="w-4 h-4 border-2 border-black rounded accent-[#F6D200]"
-                />
-                <span className="text-sm font-bold text-black">Only show tools I can try now</span>
-              </label>
-
-              {isDebugMode && (
-                <label className="flex items-center gap-2 cursor-pointer opacity-60 h-9">
-                  <input
-                    type="checkbox"
-                    checked={filters.hasAffiliate}
-                    onChange={(e) => setFilters(prev => ({ ...prev, hasAffiliate: e.target.checked }))}
-                    className="w-4 h-4 border-2 border-black rounded accent-[#F6D200]"
-                  />
-                  <span className="text-sm font-bold text-black">[DEBUG] Has affiliate link</span>
-                </label>
-              )}
-
-              <label className="flex items-center gap-2 cursor-pointer h-9">
-                <input
-                  type="checkbox"
-                  checked={filters.hasFreeTrial}
-                  onChange={(e) => setFilters(prev => ({ ...prev, hasFreeTrial: e.target.checked }))}
-                  className="w-4 h-4 border-2 border-black rounded accent-[#F6D200]"
-                />
-                <span className="text-sm font-bold text-black">Has free trial</span>
-              </label>
-              <label className="flex items-center gap-2 cursor-pointer h-9">
-                <input
-                  type="checkbox"
-                  checked={filters.hasFreePlan}
-                  onChange={(e) => setFilters(prev => ({ ...prev, hasFreePlan: e.target.checked }))}
-                  className="w-4 h-4 border-2 border-black rounded accent-[#F6D200]"
-                />
-                <span className="text-sm font-bold text-black">Free plan</span>
-              </label>
-              <label className="flex items-center gap-2 cursor-pointer h-9">
-                <input
-                  type="checkbox"
-                  checked={filters.noWatermark}
-                  onChange={(e) => setFilters(prev => ({ ...prev, noWatermark: e.target.checked }))}
-                  className="w-4 h-4 border-2 border-black rounded accent-[#F6D200]"
-                />
-                <span className="text-sm font-bold text-black">No watermark</span>
-              </label>
-              <label className="flex items-center gap-2 cursor-pointer h-9">
-                <input
-                  type="checkbox"
-                  checked={filters.has4KExport}
-                  onChange={(e) => setFilters(prev => ({ ...prev, has4KExport: e.target.checked }))}
-                  className="w-4 h-4 border-2 border-black rounded accent-[#F6D200]"
-                />
-                <span className="text-sm font-bold text-black">4K export</span>
-              </label>
+      {/* Hero Section: Product-grade header with segmented control */}
+      <section className="max-w-5xl mx-auto px-4 md:px-6 pt-12 pb-8">
+        <div className="rounded-2xl border border-black/5 bg-white/60 backdrop-blur px-6 py-6 md:px-8 md:py-8">
+          {/* Hero Top: Title + Meta + Subtitle */}
+          <div className="heroTop">
+            <div className="flex items-start justify-between gap-4 mb-3">
+              <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-[1.05] text-black flex-1">
+                {toolName} Alternatives (2026): Best Replacements by Use Case
+              </h1>
+              <span className="ml-3 inline-flex items-center rounded-full border border-black/10 bg-white px-3 py-1 text-xs font-semibold text-black/60 whitespace-nowrap shrink-0">
+                Updated Jan 2026
+              </span>
             </div>
-            
-            {/* Disclosure (Right) */}
-            <p className="text-xs text-gray-600 leading-relaxed max-w-[320px]">
-              Some links are affiliate links. They don't increase your cost and help support the site. Toggle filters to see all tools.
+            <p className="mt-3 text-base md:text-lg text-black/60 max-w-[72ch]">
+              Ranked alternatives by cost control, output quality, and workflow speed.
             </p>
           </div>
 
-          {/* Row 3: Tabs (Pill Style) */}
-          <div id="sticky-nav" className="flex flex-wrap gap-2.5 overflow-x-auto pb-1 scrollbar-hide">
-            {filteredGroups.map((group) => (
-              <button
-                key={group.id}
-                onClick={() => scrollToSection(group.id)}
-                className={`whitespace-nowrap px-4 py-2 h-9 rounded-full font-bold text-sm border-2 transition-all duration-200 ${
-                  activeTab === group.id
-                    ? 'bg-[#F6D200] border-black text-black shadow-[2px_2px_0px_0px_#000]'
-                    : 'bg-white border-black/20 text-gray-500 hover:border-black hover:text-black'
-                }`}
-              >
-                {group.title}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
+          {/* Tab Row: Segmented pills control */}
+          {validGroups.length > 0 && (
+            <div className="tabRow mt-6 inline-flex w-full md:w-auto gap-1 rounded-full border border-black/10 bg-white/50 p-1 overflow-x-auto md:overflow-visible">
+              {validGroups.map((group) => (
+                <button
+                  key={group.id}
+                  onClick={() => setActiveTab(group.id)}
+                  className={`relative flex-1 md:flex-none px-4 py-2 rounded-full text-sm font-semibold tracking-wide transition whitespace-nowrap ${
+                    activeTab === group.id
+                      ? 'bg-white text-black shadow-[0_1px_0_rgba(0,0,0,0.04)]'
+                      : 'text-black/45 hover:text-black'
+                  }`}
+                >
+                  {group.title}
+                  {activeTab === group.id && (
+                    <span className="absolute -bottom-1 left-1/2 h-1 w-10 -translate-x-1/2 rounded-full bg-yellow-400" />
+                  )}
+                </button>
+              ))}
+            </div>
+          )}
 
-      <div className="max-w-6xl mx-auto px-4 pt-4 pb-8 space-y-16">
-        {filteredGroups.map((group) => (
+          {/* Tab Hint: Info callout for current tab description */}
+          {activeGroupData?.description && (
+            <div className="tabHint mt-4 flex items-start gap-2 rounded-xl border border-black/5 bg-white/60 px-4 py-3 text-sm text-black/60">
+              <span className="shrink-0">ℹ︎</span>
+              <p className="flex-1">{activeGroupData.description}</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Content Section */}
+      <div className="max-w-5xl mx-auto px-6 md:px-8 pt-8 pb-20 space-y-12">
+        {/* Tools Grid */}
+        {activeGroupData && (
           <AlternativesReasonGroup
-            key={group.id}
-            group={group}
+            key={activeGroupData.id}
+            group={activeGroupData}
             expandedCards={expandedCards}
             onToggleCard={toggleCard}
-            onShowEvidence={(links, toolName) => setEvidenceModal({ isOpen: true, links, toolName })}
+            currentSlug={currentSlug}
           />
-        ))}
+        )}
+
+        {/* Coming Soon Tools Section */}
+        {(() => {
+          const comingSoonTools = Object.values(COMING_SOON_TOOL_DATA).filter(
+            (tool) => !getTool(tool.slug) && isComingSoonTool(tool.slug)
+          );
+          
+          if (comingSoonTools.length === 0) return null;
+          
+          return (
+            <section className="mt-12">
+              <h2 className="text-xl font-semibold text-gray-900 mb-3">
+                Coming Soon
+              </h2>
+              <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+                These top-tier tools are not yet in our database. Request them to be added.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {comingSoonTools.map((tool) => (
+                  <ComingSoonToolCard key={tool.slug} tool={tool} />
+                ))}
+              </div>
+            </section>
+          );
+        })()}
 
         {/* FAQ Section */}
         {faqs.length > 0 && (
-          <section className="bg-white rounded-2xl shadow-sm border-2 border-black p-8">
-            <h2 className="text-2xl font-black text-black uppercase tracking-tight mb-6">
+          <section className="mt-12">
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
             <FAQAccordion faqs={faqs.slice(0, 8)} />
           </section>
         )}
       </div>
-
-      {/* Evidence Modal */}
-      {evidenceModal && evidenceModal.isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" onClick={() => setEvidenceModal(null)}>
-          <div className="bg-white border-2 border-black rounded-xl p-6 max-w-md w-full shadow-[8px_8px_0px_0px_#000] relative" onClick={(e) => e.stopPropagation()}>
-            <button
-              onClick={() => setEvidenceModal(null)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-black"
-            >
-              <XMarkIcon className="w-6 h-6" />
-            </button>
-            <h3 className="text-xl font-black text-black mb-4 flex items-center gap-2">
-              <DocumentTextIcon className="w-6 h-6" />
-              Evidence for {evidenceModal.toolName}
-            </h3>
-            <p className="text-sm text-gray-600 mb-4">
-              Claims are verified against these internal pages:
-            </p>
-            <div className="space-y-2">
-              {evidenceModal.links.map((link, i) => (
-                <Link
-                  key={i}
-                  href={link}
-                  className="block p-3 rounded-lg border border-gray-200 hover:border-black hover:bg-gray-50 transition-all text-sm font-bold text-indigo-600 flex items-center justify-between group"
-                >
-                  <span className="truncate">{link}</span>
-                  <ArrowTopRightOnSquareIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

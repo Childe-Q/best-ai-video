@@ -4,6 +4,7 @@ import toolsData from '@/data/tools.json';
 import { Tool } from '@/types/tool';
 import { getSEOCurrentYear, getCurrentMonthYear } from '@/lib/utils';
 import HomeToolGrid from '@/components/HomeToolGrid';
+import GlobalScoringRubric from '@/components/GlobalScoringRubric';
 
 // Force cast to Tool[] to ensure type safety if JSON import inference is loose
 const tools: Tool[] = toolsData as Tool[];
@@ -149,7 +150,16 @@ export default function Home() {
         </details>
         </section>
 
-        <h2 id="tools-section" className="text-3xl md:text-5xl font-black text-gray-900 mb-10 scroll-mt-20 uppercase tracking-tight">All AI Video Tools</h2>
+        <div className="mb-10 scroll-mt-20">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-3">
+            <h2 id="tools-section" className="text-3xl md:text-5xl font-black text-gray-900 uppercase tracking-tight">All AI Video Tools</h2>
+            <GlobalScoringRubric />
+          </div>
+          <div className="flex items-center justify-between text-xs text-black/50">
+            <span>Updated {currentMonthYear}</span>
+            <span>Methodology applies across tools</span>
+          </div>
+        </div>
         <HomeToolGrid tools={tools} />
       </main>
     </div>

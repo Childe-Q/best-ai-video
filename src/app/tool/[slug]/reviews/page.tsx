@@ -5,6 +5,7 @@ import ReviewsPageTemplate, { ReviewsPageData } from '@/components/reviews/Revie
 import { loadReviewsData } from '@/lib/loadReviewsData';
 import { loadToolContent } from '@/lib/loadToolContent';
 import { generateSmartFAQs } from '@/lib/generateSmartFAQs';
+import { buildReviewsData } from '@/lib/reviews/buildReviewsData';
 
 export async function generateStaticParams() {
   const tools = getAllTools();
@@ -52,36 +53,45 @@ export default async function ReviewsPage({ params }: { params: Promise<{ slug: 
     slug
   });
 
-  // Build ReviewsPageData from available sources
-  const pageData: ReviewsPageData = reviewsData || {
-    // Transform reviewHighlights to userFeedbackSnapshot format
-    userFeedbackSnapshot: reviewHighlights ? [
-      ...(reviewHighlights.likes || []).map(like => ({
-        point: like,
-        type: 'positive' as const
-      })),
-      ...(reviewHighlights.complaints || []).map(complaint => ({
-        point: complaint,
-        type: 'negative' as const
-      }))
-    ].slice(0, 6) : undefined,
-    
-    // Transform commonIssues format
-    commonIssues: reviewHighlights?.commonIssues && reviewHighlights.commonIssues.length > 0
-      ? reviewHighlights.commonIssues.slice(0, 8).map(issue => ({
-          point: issue.claim,
-          flag: 'User feedback' as const
-        }))
-      : undefined,
-    
-    // Use smart FAQs (already sorted and limited to 8)
-    faqs: smartFAQs.length > 0
-      ? smartFAQs.map(faq => ({
-          q: faq.question,
-          a: faq.answer
-        }))
-      : undefined
-  };
+  // Clean "use case" from reviewsData if it exists (before passing to builder)
+  if (reviewsData?.commonIssues) {
+    reviewsData.commonIssues = reviewsData.commonIssues.map(issue => {
+      // Clean any "use case" suffix from point text
+      const cleanPoint = issue.point
+        .replace(/\s*use\s+case\s*$/i, '')
+        .replace(/\s*\{useCase\}\s*/gi, '')
+        .replace(/\s*\$?\{use_case\}\s*/gi, '')
+        .trim();
+      
+      return {
+        ...issue,
+        point: cleanPoint
+      };
+    });
+  }
+  
+  // Build ReviewsPageData using unified builder (handles all fallbacks and deduplication)
+  const pageData = buildReviewsData(tool, content, reviewsData, smartFAQs);
+
+  // A. Dev console logging for data structure inspection
+  if (process.env.NODE_ENV !== 'production') {
+    console.log(`[Reviews Page Data] ${slug}:`, {
+      hasReviewsData: !!reviewsData,
+      hasReviewHighlights: !!reviewHighlights,
+      userFeedbackSnapshot: pageData.userFeedbackSnapshot?.length || 0,
+      commonIssues: pageData.commonIssues?.length || 0,
+      faqs: pageData.faqs?.length || 0,
+      rawFaqsCount: rawFaqs.length,
+      smartFAQsCount: smartFAQs.length,
+      toolCons: tool.cons?.length || 0,
+      contentCons: content?.cons?.length || 0,
+      finalData: {
+        userFeedbackSnapshot: pageData.userFeedbackSnapshot,
+        commonIssues: pageData.commonIssues,
+        faqs: pageData.faqs
+      }
+    });
+  }
 
   return <ReviewsPageTemplate toolSlug={slug} data={pageData} />;
 }

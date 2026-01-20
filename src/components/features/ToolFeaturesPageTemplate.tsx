@@ -91,8 +91,8 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
         
         {/* 1. Who it's best for */}
         {featuresData.bestForTags.length > 0 && (
-          <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-8 sm:p-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Who it's best for</h2>
+          <section className="bg-white rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000] transition-all duration-200 p-8 sm:p-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Who it's best for</h2>
             <div className="flex flex-wrap justify-center gap-3">
               {featuresData.bestForTags.map((tag, idx) => (
                 <span 
@@ -110,20 +110,20 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
         {featuresData.keyCapabilities.length > 0 && (
           <section>
             <div className="flex items-center gap-3 mb-6">
-              <h2 className="text-2xl font-bold text-gray-900">Key Capabilities</h2>
+              <h2 className="text-3xl font-bold text-gray-900">Key Capabilities</h2>
               <div className="h-px bg-gray-200 flex-1"></div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {featuresData.keyCapabilities.map((capability, idx) => (
                 <div 
                   key={idx} 
-                  className="flex items-start p-4 bg-white rounded-xl border border-gray-200 shadow-sm hover:border-indigo-200 transition-colors group"
+                  className="flex items-start p-4 bg-white rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#000] transition-all duration-200 group"
                 >
                   <div className="flex-shrink-0 h-2 w-2 rounded-full bg-indigo-500 mr-3 mt-1.5 group-hover:scale-125 transition-transform"></div>
                   <div className="flex-1 min-w-0">
-                    <span className="text-sm font-medium text-gray-700 block">{capability.title}</span>
+                    <span className="text-base font-semibold text-gray-700 block leading-[1.65]">{capability.title}</span>
                     {capability.desc && (
-                      <span className="text-xs text-gray-500 mt-1 block">{capability.desc}</span>
+                      <span className="text-base text-gray-600 mt-2 block leading-[1.65]">{capability.desc}</span>
                     )}
                   </div>
                 </div>
@@ -136,7 +136,7 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
         {featuresData.deepDives && featuresData.deepDives.length > 0 && (
           <section id="feature-deep-dives">
             <div className="flex items-center gap-3 mb-6">
-              <h2 className="text-2xl font-bold text-gray-900">Feature Deep Dives</h2>
+              <h2 className="text-3xl font-bold text-gray-900">Feature Deep Dives</h2>
               <div className="h-px bg-gray-200 flex-1"></div>
             </div>
             
@@ -144,11 +144,11 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
               {featuresData.deepDives.map((dive, idx) => (
                 <div 
                   key={idx} 
-                  className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 md:p-8 flex flex-col h-full hover:shadow-md transition-shadow duration-200"
+                  className="bg-white rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000] transition-all duration-200 p-6 md:p-8 flex flex-col h-full"
                 >
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{dive.title}</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{dive.title}</h3>
                   {dive.summary && (
-                    <p className="text-sm text-gray-500 mb-6 leading-relaxed border-b border-gray-100 pb-4">
+                    <p className="text-base text-gray-600 mb-6 leading-[1.65] border-b border-gray-100 pb-4">
                       {dive.summary}
                     </p>
                   )}
@@ -158,12 +158,12 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
                       const cleanBullet = bullet.replace('[NEED VERIFICATION]', '').trim();
                       
                       return (
-                        <li key={bIdx} className="text-sm text-gray-700 leading-relaxed flex items-start gap-2.5">
-                          <span className="text-indigo-500 mt-1.5 font-bold text-[10px]">●</span>
-                          <span>
+                        <li key={bIdx} className="text-base text-gray-700 leading-[1.65] flex items-start gap-2.5">
+                          <span className="text-indigo-500 mt-1.5 font-bold text-sm">●</span>
+                          <span className="font-semibold">
                             {cleanBullet}
                             {isVerificationNeeded && (
-                              <span className="inline-flex items-center ml-2 px-1.5 py-0.5 rounded text-[10px] font-medium bg-amber-50 text-amber-700 border border-amber-100 uppercase tracking-wide">
+                              <span className="inline-flex items-center ml-2 px-2 py-0.5 rounded text-xs font-medium bg-amber-50 text-amber-700 border border-amber-100 uppercase tracking-wide">
                                 Verification needed
                               </span>
                             )}
@@ -181,9 +181,9 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
         {/* 4. Additional Utilities */}
         {featuresData.additionalUtilities && featuresData.additionalUtilities.length > 0 && (
           <section>
-            <details className="group bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+            <details className="group bg-white rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000] transition-all duration-200 overflow-hidden">
               <summary className="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-gray-50 transition-colors">
-                <span className="text-lg font-bold text-gray-900">Additional Utilities</span>
+                <span className="text-xl font-bold text-gray-900">Additional Utilities</span>
                 <span className="text-sm text-gray-500 group-open:rotate-180 transition-transform">
                   ▼
                 </span>
@@ -191,9 +191,9 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
               <div className="px-6 pb-6 pt-0 border-t border-gray-100 mt-0">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-6">
                   {featuresData.additionalUtilities.map((util, idx) => (
-                    <div key={idx} className="p-4 bg-gray-50 rounded-lg border border-gray-100">
-                      <h4 className="font-semibold text-gray-900 text-sm mb-1">{util.title}</h4>
-                      <p className="text-xs text-gray-500 line-clamp-2">{util.description}</p>
+                    <div key={idx} className="p-4 bg-gray-50 rounded-lg border-2 border-black shadow-[3px_3px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_#000] transition-all duration-200">
+                      <h4 className="font-semibold text-gray-900 text-base mb-2 leading-[1.65]">{util.title}</h4>
+                      <p className="text-base text-gray-600 line-clamp-2 leading-[1.65]">{util.description}</p>
                     </div>
                   ))}
                 </div>
@@ -270,7 +270,7 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
         {/* 6. Sources / Methodology */}
         {featuresData.sources && featuresData.sources.length > 0 && (
           <section>
-            <details className="group bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+            <details className="group bg-white rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000] transition-all duration-200 overflow-hidden">
               <summary className="flex items-center justify-between p-6 cursor-pointer list-none hover:bg-gray-50 transition-colors">
                 <span className="text-lg font-bold text-gray-900">Sources / Methodology</span>
                 <span className="text-sm text-gray-500 group-open:rotate-180 transition-transform">
@@ -285,7 +285,7 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
                         href={source.url} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="text-indigo-600 hover:text-indigo-700 hover:underline"
+                        className="text-indigo-600 hover:text-indigo-700 hover:opacity-80 transition-colors"
                       >
                         {source.label}
                       </a>

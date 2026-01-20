@@ -66,15 +66,15 @@ body {
   overflow-x: clip;
 }
 
-/* Force Hard Shadows Globally */
-*, ::before, ::after {
-  border-color: var(--neo-black); /* Default border color if applied */
-}
+/* Force Hard Shadows Globally - Removed global border-color to prevent unwanted borders */
+/* *, ::before, ::after {
+  border-color: var(--neo-black);
+} */
 
-/* Override Utility Classes for Hard Shadows */
+/* Override Utility Classes for Hard Shadows - Removed forced borders */
 .shadow-sm, .shadow-md, .shadow-lg, .shadow-xl, .shadow-2xl {
   box-shadow: 6px 6px 0 0 var(--neo-black) !important;
-  border: 2px solid var(--neo-black);
+  /* Removed: border: 2px solid var(--neo-black); - This was causing unwanted borders on all elements */
   }
 
 .hover\:shadow-md:hover {
@@ -82,17 +82,55 @@ body {
   transform: translate(-2px, -2px);
   }
 
-/* Link Styles */
+/* Link Styles - No underlines, modern hover effects */
 a {
   color: var(--neo-black);
-  text-decoration-line: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
+  text-decoration: none !important;
+  transition: color 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
 }
 
-a:hover {
-  background-color: var(--neo-yellow);
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  text-decoration-thickness: 0 !important;
+  text-underline-offset: 0 !important;
+}
+
+/* Link Hover Standards - Prevent black backgrounds */
+/* Standard text links: subtle color change only */
+a:not(button):not([class*="bg-"]):not([class*="border-"]):not([class*="rounded"]) {
   color: var(--neo-black);
+}
+
+a:not(button):not([class*="bg-"]):not([class*="border-"]):not([class*="rounded"]):hover {
+  color: var(--neo-gray);
+  opacity: 0.85;
+  background-color: transparent !important;
+}
+
+/* Links with background: subtle opacity change only */
+a[class*="bg-"]:hover {
+  opacity: 0.9;
+  background-color: inherit !important;
+}
+
+/* Links with border (buttons): subtle border/shadow effect */
+a[class*="border-"]:hover {
+  border-color: var(--neo-gray) !important;
+  background-color: transparent !important;
+}
+
+/* Card/Button hover - prevent black backgrounds */
+button:hover,
+[class*="hover:bg-"]:hover {
+  background-color: var(--background) !important;
+}
+
+button[class*="bg-"]:hover {
+  opacity: 0.9;
+  background-color: inherit !important;
 }
 
 /* Button & Card Resets */

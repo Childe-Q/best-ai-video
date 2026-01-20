@@ -26,8 +26,8 @@ export type ToolEvidence = {
   pickThisIf?: string; // whySwitch[0].claim
   extraReason?: string; // whySwitch[1].claim (optional)
   limitations?: string; // tradeoffs[0].claim
-  evidenceLinks?: string[]; // Deduplicated URLs from sources
   bestFor?: string[]; // Optional: can enhance tool.best_for but not replace structure
+  evidenceLinks?: string[]; // Optional: evidence source URLs
   // Pricing details are NEVER in evidence - always from internal pricing data
 };
 
@@ -48,7 +48,6 @@ export type AlternativeToolWithEvidence = {
   pickThisIf?: string;
   extraReason?: string;
   limitations?: string;
-  evidenceLinks: string[];
   // From internal pricing data (never from evidence)
   pricingSignals: {
     freePlan?: string;
@@ -58,11 +57,21 @@ export type AlternativeToolWithEvidence = {
   };
   // Best for tags (from tool.best_for or evidence, but not structure)
   bestFor: string[];
+  // Matching factors (for "Matched on" display)
+  matchedOn?: {
+    tags?: string[]; // Matching tags
+    categories?: string[]; // Matching categories
+    rating?: number; // Rating bonus
+  };
 };
 
 export type AlternativeGroupWithEvidence = {
   id: string;
   title: string;
   description: string;
-  tools: AlternativeToolWithEvidence[];
+  tools: AlternativeToolWithEvidence[]; // Legacy: combined list for backward compatibility
+  hasInsufficientCandidates?: boolean; // True if group has fewer tools than target
+  // New: Trusted recommendation structure
+  bestMatch?: AlternativeToolWithEvidence[]; // Editorial recommendations (non-affiliate)
+  deals?: AlternativeToolWithEvidence[]; // Sponsored/affiliate recommendations
 };

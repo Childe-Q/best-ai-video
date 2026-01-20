@@ -310,10 +310,10 @@ export default function PlanChooserCards({ pricingPlans, planPicker }: PlanChoos
             {finalCards.map((card, idx) => (
               <div
                 key={idx}
-                className={`bg-white rounded-2xl shadow-sm border-2 p-6 ${
+                className={`bg-white rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000] transition-all duration-200 p-6 ${
                   card.type === 'recommended' 
-                    ? 'border-indigo-200 bg-indigo-50/30' 
-                    : 'border-gray-200'
+                    ? 'bg-indigo-50/30' 
+                    : ''
                 }`}
               >
                 <h3 className="font-semibold text-gray-900 mb-3">{card.title}</h3>
@@ -369,10 +369,10 @@ export default function PlanChooserCards({ pricingPlans, planPicker }: PlanChoos
         {cards.map((card, idx) => (
           <div
             key={idx}
-            className={`bg-white rounded-2xl shadow-sm border-2 p-6 ${
+            className={`bg-white rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000] transition-all duration-200 p-6 ${
               card.type === 'recommended' 
-                ? 'border-indigo-200 bg-indigo-50/30' 
-                : 'border-gray-200'
+                ? 'bg-indigo-50/30' 
+                : ''
             }`}
           >
             <h3 className="font-semibold text-gray-900 mb-3">{card.title}</h3>

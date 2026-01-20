@@ -58,7 +58,7 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
     <>
       {/* 3. The Video Row (Full Width) */}
       {videoId && (
-        <div className="w-full bg-slate-50 py-16">
+        <div id="mini-test" className="w-full bg-slate-50 py-16 scroll-mt-32">
           <div className="w-full max-w-[1600px] mx-auto px-4 md:px-12 lg:px-24">
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl">
               <iframe
@@ -93,18 +93,22 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
 
           {/* Mini Test Section */}
           {content?.overview?.miniTest ? (
-            <MiniTestBlock
-              prompt={content.overview.miniTest.prompt}
-              generationTime={content.overview.miniTest.generationTime}
-              footageMatch={content.overview.miniTest.footageMatch}
-              subtitleAccuracy={content.overview.miniTest.subtitleAccuracy}
-              verdict={content.overview.miniTest.verdict}
-              checklist={'checklist' in content.overview.miniTest ? content.overview.miniTest.checklist : undefined}
-            />
+            <div id={videoId ? undefined : 'mini-test'}>
+              <MiniTestBlock
+                prompt={content.overview.miniTest.prompt}
+                generationTime={content.overview.miniTest.generationTime}
+                footageMatch={content.overview.miniTest.footageMatch}
+                subtitleAccuracy={content.overview.miniTest.subtitleAccuracy}
+                verdict={content.overview.miniTest.verdict}
+                checklist={'checklist' in content.overview.miniTest ? content.overview.miniTest.checklist : undefined}
+              />
+            </div>
           ) : (
-            <MiniTestBlock
-              prompt="Create a 10-second marketing video for a tech product launch with upbeat music and text overlays"
-            />
+            <div id={videoId ? undefined : 'mini-test'}>
+              <MiniTestBlock
+                prompt="Create a 10-second marketing video for a tech product launch with upbeat music and text overlays"
+              />
+            </div>
           )}
 
           {/* Use Cases Section */}
@@ -113,13 +117,14 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
           ) : null}
 
           {/* In-Depth Review */}
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">In-Depth Review</h2>
+          <div className="bg-white rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000] transition-all duration-200 p-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">In-Depth Review</h2>
             
             {/* Long Review */}
             {tool.long_review && (
               <div 
-                className="prose prose-lg prose-blue max-w-none text-gray-700 leading-relaxed mb-6"
+                className="prose prose-lg prose-blue max-w-none text-gray-700 mb-6"
+                style={{ fontSize: '16px', lineHeight: '1.65' }}
                 dangerouslySetInnerHTML={{ __html: tool.long_review }}
               />
             )}
@@ -127,10 +132,11 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
             {/* Detailed Review Content - Extract and clean "Why it wins?" section */}
             {detailedReview && (
               <div 
-                className="prose prose-lg prose-blue max-w-none text-gray-700 leading-relaxed"
+                className="prose prose-lg prose-blue max-w-none text-gray-700"
+                style={{ fontSize: '16px', lineHeight: '1.65' }}
                 dangerouslySetInnerHTML={{ 
                   __html: detailedReview
-                    .replace(/<h3[^>]*>[\s\S]*?Why it wins\?[\s\S]*?<\/h3>/gi, '<h3 class="text-xl font-bold text-gray-900 mt-6 mb-4">What it does best</h3>')
+                    .replace(/<h3[^>]*>[\s\S]*?Why it wins\?[\s\S]*?<\/h3>/gi, '<h3 class="text-2xl font-bold text-gray-900 mt-8 mb-5">What it does best</h3>')
                     .replace(/content recycler on steroids/gi, 'content recycler')
                     .replace(/frighteningly human/gi, 'natural-sounding')
                 }}
@@ -139,8 +145,8 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
 
             {/* Fallback if no review content */}
             {!tool.long_review && !detailedReview && (
-              <p className="text-gray-700 leading-relaxed">
-                <strong>Yes, if you are {tool.best_for || 'looking for this tool'}.</strong> It offers excellent value with its {tool.starting_price || 'competitive'} starting price. 
+              <p className="text-gray-700 text-base leading-[1.65]">
+                <strong className="font-semibold">Yes, if you are {tool.best_for || 'looking for this tool'}.</strong> It offers excellent value with its {tool.starting_price || 'competitive'} starting price. 
                 However, if you need more advanced features, you might want to consider alternatives below.
               </p>
             )}
@@ -158,17 +164,17 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
           {/* Related Comparisons & Alternatives */}
           {(relatedComparisons.length > 0 || alternativesLink) && (
             <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Related Comparisons & Alternatives</h2>
-              <div className="space-y-4">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Related Comparisons & Alternatives</h2>
+              <div className="space-y-5">
                 {relatedComparisons.length > 0 && (
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Comparisons</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">Comparisons</h3>
                     <ul className="space-y-2">
                       {relatedComparisons.map((comp) => (
                         <li key={comp.slug}>
                           <Link
                             href={`/vs/${comp.slug}`}
-                            className="text-indigo-600 hover:text-indigo-700 text-sm"
+                            className="text-base text-indigo-600 hover:text-indigo-700 font-medium leading-[1.65]"
                           >
                             {comp.title} →
                           </Link>
@@ -179,10 +185,10 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
                 )}
                 {alternativesLink && (
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Alternatives</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">Alternatives</h3>
                     <Link
                       href={alternativesLink.slug}
-                      className="text-indigo-600 hover:text-indigo-700 text-sm"
+                      className="text-base text-indigo-600 hover:text-indigo-700 font-medium leading-[1.65]"
                     >
                       {alternativesLink.title} →
                     </Link>

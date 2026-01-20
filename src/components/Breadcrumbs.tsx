@@ -61,7 +61,7 @@ export default function Breadcrumbs({
               {item.href && !isLast ? (
                 <Link
                   href={item.href}
-                  className="hover:text-black hover:underline transition-colors"
+                  className="hover:text-black hover:opacity-80 transition-colors"
                 >
                   {item.label}
                 </Link>

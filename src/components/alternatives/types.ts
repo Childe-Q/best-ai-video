@@ -18,7 +18,7 @@ export type AlternativeTool = {
     exportQuality?: string;
     refundCancel?: string;
   };
-  evidenceLinks: string[]; // Internal links only
+  evidenceLinks?: string[]; // Optional: evidence source URLs
 };
 
 // Legacy type (kept for backward compatibility)
