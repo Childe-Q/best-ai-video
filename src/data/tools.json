@@ -45,22 +45,6 @@
           },
           {
             "text": "Unlimited exports"
-          },
-          {
-            "text": "Image generations",
-            "badge": "365 UNLIMITED"
-          },
-          {
-            "text": "40 Credits"
-          },
-          {
-            "text": "200 Video mins + 320 iStock"
-          },
-          {
-            "text": "8 UGC product asset ads"
-          },
-          {
-            "text": "120 secs of generative video"
           }
         ],
         "billingNote": "*Billed yearly"
@@ -82,32 +66,7 @@
         "ctaText": "Start Free Trial",
         "featureItems": [
           {
-            "text": "10 Credits"
-          },
-          {
-            "text": "50 Video mins + 95 iStock"
-          },
-          {
-            "text": "2 UGC product asset ads"
-          },
-          {
-            "text": "30 secs of generative video"
-          },
-          {
-            "text": "2 express clones"
-          },
-          {
-            "text": "3 users, 100GB storage"
-          },
-          {
-            "text": "Unlimited exports"
-          },
-          {
-            "text": "Image generations",
-            "badge": "365 UNLIMITED"
-          },
-          {
-            "text": "40 Credits"
+            "text": "40 Credits (includes 1x Boost)"
           },
           {
             "text": "200 Video mins + 320 iStock"
@@ -117,6 +76,15 @@
           },
           {
             "text": "120 secs of generative video"
+          },
+          {
+            "text": "5 express clones"
+          },
+          {
+            "text": "3 users, 400GB storage"
+          },
+          {
+            "text": "Unlimited exports"
           }
         ],
         "billingNote": "*Billed yearly",
@@ -139,41 +107,25 @@
         "ctaText": "Start Free Trial",
         "featureItems": [
           {
-            "text": "10 Credits"
-          },
-          {
-            "text": "50 Video mins + 95 iStock"
-          },
-          {
-            "text": "2 UGC product asset ads"
-          },
-          {
-            "text": "30 secs of generative video"
-          },
-          {
-            "text": "2 express clones"
-          },
-          {
-            "text": "3 users, 100GB storage"
-          },
-          {
-            "text": "Unlimited exports"
-          },
-          {
-            "text": "Image generations",
-            "badge": "365 UNLIMITED"
-          },
-          {
-            "text": "40 Credits"
+            "text": "100 Credits (includes 1x Boost)"
           },
           {
             "text": "200 Video mins + 320 iStock"
           },
           {
-            "text": "8 UGC product asset ads"
+            "text": "5 generative UGC ads"
           },
           {
-            "text": "120 secs of generative video"
+            "text": "300 secs of generative video"
+          },
+          {
+            "text": "8 express clones"
+          },
+          {
+            "text": "3 users, 400GB storage"
+          },
+          {
+            "text": "Unlimited exports"
           }
         ],
         "billingNote": "*Billed yearly"
@@ -195,41 +147,25 @@
         "ctaText": "Start Free Trial",
         "featureItems": [
           {
-            "text": "10 Credits"
+            "text": "1000 Credits (1 Seat)"
           },
           {
-            "text": "50 Video mins + 95 iStock"
+            "text": "2000 Video mins + 3200 iStock"
           },
           {
-            "text": "2 UGC product asset ads"
+            "text": "50 generative UGC ads"
           },
           {
-            "text": "30 secs of generative video"
+            "text": "50 mins of generative videos"
           },
           {
-            "text": "2 express clones"
+            "text": "40 express clones"
           },
           {
-            "text": "3 users, 100GB storage"
+            "text": "1 seat, 4TB storage"
           },
           {
             "text": "Unlimited exports"
-          },
-          {
-            "text": "Image generations",
-            "badge": "365 UNLIMITED"
-          },
-          {
-            "text": "40 Credits"
-          },
-          {
-            "text": "200 Video mins + 320 iStock"
-          },
-          {
-            "text": "8 UGC product asset ads"
-          },
-          {
-            "text": "120 secs of generative video"
           }
         ],
         "billingNote": "*Billed yearly"
@@ -275,19 +211,6 @@
             "text": "4 Exports per week"
           }
         ],
-        "billingNote": "*Billed yearly"
-      },
-      {
-        "name": "Enterprise",
-        "price": {
-          "monthly": {
-            "amount": 0,
-            "currency": "USD",
-            "period": "month"
-          }
-        },
-        "unitPriceNote": "Custom pricing",
-        "ctaText": "Contact Sales",
         "billingNote": "*Billed yearly"
       }
     ],
@@ -721,10 +644,6 @@
           {
             "text": "Share & download videos",
             "icon": "check"
-          },
-          {
-            "text": "Videos up to 3-mins / Max duration per video 3 minutes",
-            "icon": "check"
           }
         ],
         "ctaText": "Get Started"
@@ -770,10 +689,6 @@
             "icon": "check"
           },
           {
-            "text": "1 Custom Interactive Avatar",
-            "icon": "check"
-          },
-          {
             "text": "700+ Stock Video Avatars",
             "icon": "check"
           },
@@ -784,6 +699,22 @@
           {
             "text": "175+ languages and dialects",
             "icon": "check"
+          },
+          {
+            "text": "Generate Looks",
+            "icon": "check"
+          },
+          {
+            "text": "Look Packs",
+            "icon": "check"
+          },
+          {
+            "text": "Watermark removal",
+            "icon": "check"
+          },
+          {
+            "text": "Brand Kit",
+            "icon": "check"
           }
         ],
         "ctaText": "Get Started",
@@ -791,16 +722,16 @@
         "ribbonText": "Best Value"
       },
       {
-        "name": "Team",
-        "id": "team",
+        "name": "Business",
+        "id": "business",
         "price": {
           "monthly": {
-            "amount": 39,
+            "amount": 149,
             "currency": "USD",
             "period": "month"
           },
           "yearly": {
-            "amount": 30,
+            "amount": 119,
             "currency": "USD",
             "period": "month"
           }
@@ -811,7 +742,7 @@
             "icon": "check"
           },
           {
-            "text": "Videos up to 30-mins",
+            "text": "Videos up to 60-mins",
             "icon": "check"
           },
           {
@@ -823,32 +754,73 @@
             "icon": "check"
           },
           {
-            "text": "Extended video generation with Avatar IV",
+            "text": "5x more Generative Usage",
             "icon": "check"
           },
           {
-            "text": "2 seats included",
+            "text": "5 Custom Video Avatars",
             "icon": "check"
           },
           {
-            "text": "2 Custom Video Avatars",
-            "icon": "check"
-          },
-          {
-            "text": "2 Custom Interactive Avatars",
-            "icon": "check"
-          },
-          {
-            "text": "Unlimited Photo Avatars",
+            "text": "Scale your brand and centralize assets",
             "icon": "check"
           },
           {
             "text": "Edit & proofread translation script",
             "icon": "check"
+          },
+          {
+            "text": "SAML/SSO",
+            "icon": "check"
+          },
+          {
+            "text": "Centralized billing",
+            "icon": "check"
+          },
+          {
+            "text": "Auto-reload credits",
+            "icon": "check"
+          },
+          {
+            "text": "Add team members for $20/seat/mo",
+            "icon": "check"
+          },
+          {
+            "text": "Workspace collaboration",
+            "icon": "check"
+          },
+          {
+            "text": "Video draft commenting & editing",
+            "icon": "check"
+          },
+          {
+            "text": "Invites & team management",
+            "icon": "check"
+          },
+          {
+            "text": "Interactive Video (Quizzes, Links, & Branching)",
+            "icon": "check"
+          },
+          {
+            "text": "Screen Recorder",
+            "icon": "check"
+          },
+          {
+            "text": "SCORM Export",
+            "icon": "check"
+          },
+          {
+            "text": "LMS Integrations",
+            "icon": "check"
+          },
+          {
+            "text": "Integrations with n8n, Make, Hubspot & Zapier",
+            "icon": "check"
           }
         ],
         "ctaText": "Get Started",
-        "billingNote": "Billed annually ($360/yr, save 22%)"
+        "billingNote": "Billed annually ($1428/yr, save 20%)",
+        "unitPriceNote": "Additional Seats: $20/seat"
       },
       {
         "name": "Enterprise",
@@ -866,27 +838,11 @@
             "icon": "check"
           },
           {
-            "text": "Custom video minutes",
+            "text": "No video duration max",
             "icon": "check"
           },
           {
-            "text": "Unlimited Custom Video Avatars",
-            "icon": "check"
-          },
-          {
-            "text": "Unlimited Custom Interactive Avatars",
-            "icon": "check"
-          },
-          {
-            "text": "Unlimited Photo Avatars",
-            "icon": "check"
-          },
-          {
-            "text": "Unlimited voice clones",
-            "icon": "check"
-          },
-          {
-            "text": "4K video export",
+            "text": "4k video export",
             "icon": "check"
           },
           {
@@ -894,17 +850,61 @@
             "icon": "check"
           },
           {
-            "text": "Workspace collaboration",
+            "text": "Extended video generation with Avatar IV",
             "icon": "check"
           },
           {
-            "text": "Dedicated support",
+            "text": "Multi-workspace control",
+            "icon": "check"
+          },
+          {
+            "text": "Proofreader seats for video translation",
+            "icon": "check"
+          },
+          {
+            "text": "Centrally manage roles and access",
+            "icon": "check"
+          },
+          {
+            "text": "Enterprise-grade security & privacy",
+            "icon": "check"
+          },
+          {
+            "text": "SCIM User Provisioning",
+            "icon": "check"
+          },
+          {
+            "text": "Team Member MFA",
+            "icon": "check"
+          },
+          {
+            "text": "Commercial terms",
+            "icon": "check"
+          },
+          {
+            "text": "Priority customer support",
+            "icon": "check"
+          },
+          {
+            "text": "Dedicated customer success manager",
+            "icon": "check"
+          },
+          {
+            "text": "Tailored onboarding",
+            "icon": "check"
+          },
+          {
+            "text": "Enterprise Community access",
+            "icon": "check"
+          },
+          {
+            "text": "Invoice billing",
             "icon": "check"
           }
         ],
         "ctaText": "Contact Sales",
-        "unitPriceNote": "Enterprise pricing",
-        "billingNote": "Custom pricing"
+        "unitPriceNote": "Custom pricing",
+        "billingNote": "Contact Sales"
       }
     ],
     "has_free_trial": true,

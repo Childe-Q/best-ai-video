@@ -1,4 +1,5 @@
 import { PricingPlan } from '@/types/tool';
+import { filterPaidPlans } from './pricing/filterPaidPlans';
 
 interface SnapshotPlan {
   name: string;
@@ -7,7 +8,7 @@ interface SnapshotPlan {
 
 /**
  * Generate pricing snapshot from actual pricing plans data
- * Similar to how InVideo's snapshot is structured
+ * Only shows paid plans (Free is excluded)
  */
 export function generatePricingSnapshot(
   pricingPlans: PricingPlan[],
@@ -17,31 +18,18 @@ export function generatePricingSnapshot(
     return { plans: [] };
   }
 
-  // Select plans to show (prioritize Free, then first few paid plans)
-  const freePlan = pricingPlans.find(p => {
-    const name = (p.name || '').toLowerCase();
-    if (name.includes('free')) return true;
-    if (p.price && typeof p.price === 'object' && 'monthly' in p.price) {
-      const monthly = (p.price.monthly as any)?.amount;
-      return monthly === 0 || monthly === null;
-    }
-    return false;
-  });
-
-  const paidPlans = pricingPlans.filter(p => {
-    if (p === freePlan) return false;
-    const name = (p.name || '').toLowerCase();
-    if (name.includes('enterprise') || name.includes('custom')) return false;
-    return true;
-  });
-
-  // Select plans to display
-  const plansToShow: PricingPlan[] = [];
-  if (freePlan) plansToShow.push(freePlan);
+  // Filter out Free plans
+  const paidPlans = filterPaidPlans(pricingPlans);
   
-  // Add paid plans (limit to maxPlans - 1 if free exists, or maxPlans if no free)
-  const maxPaidPlans = freePlan ? maxPlans - 1 : maxPlans;
-  plansToShow.push(...paidPlans.slice(0, maxPaidPlans));
+  // Filter out Enterprise/Custom (optional, but keep if total <= 4)
+  const regularPaidPlans = paidPlans.filter(p => {
+    const name = (p.name || '').toLowerCase();
+    return !name.includes('enterprise') && !name.includes('custom');
+  });
+
+  // Select plans to display (3-4 paid plans)
+  // If we have <= 4 regular paid plans, show all; otherwise show first 4
+  const plansToShow: PricingPlan[] = regularPaidPlans.slice(0, Math.min(maxPlans + 1, 4));
 
   // Generate snapshot for each plan
   const snapshotPlans: SnapshotPlan[] = plansToShow.map(plan => {
@@ -64,9 +52,8 @@ export function generatePricingSnapshot(
 function extractPlanBullets(plan: PricingPlan, allPlans: PricingPlan[]): string[] {
   const bullets: string[] = [];
   const name = (plan.name || '').toLowerCase();
-  const isFree = name.includes('free') || 
-    (plan.price && typeof plan.price === 'object' && 'monthly' in plan.price &&
-     ((plan.price.monthly as any)?.amount === 0));
+  // Note: This function is now only called for paid plans, so isFree should always be false
+  const isFree = false; // Paid plans only
 
   // Collect all feature text
   const featureTexts: string[] = [];

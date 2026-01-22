@@ -1,63 +1,41 @@
+'use client';
+
+interface UsageNotes {
+  bullets: string[];
+  tip: string;
+}
+
 interface PricingUsageExplainerProps {
   title?: string;
-  bullets?: string[];
-  // Fallback: generate from plans if no bullets provided
-  pricingPlans?: Array<{
-    name: string;
-    featureItems?: Array<{ text: string }>;
-  }>;
+  toolName?: string;
+  usageNotes: UsageNotes; // Pre-computed on server to avoid hydration mismatch (required)
 }
 
 export default function PricingUsageExplainer({ 
   title, 
-  bullets,
-  pricingPlans 
+  toolName,
+  usageNotes
 }: PricingUsageExplainerProps) {
-  // If no data provided, show placeholder
-  if (!bullets || bullets.length === 0) {
-    // Try to generate generic bullets from plans
-    const hasCredits = pricingPlans?.some(p => 
-      p.featureItems?.some(f => f.text.toLowerCase().includes('credit'))
-    );
-    const hasMinutes = pricingPlans?.some(p => 
-      p.featureItems?.some(f => f.text.toLowerCase().includes('minute'))
-    );
-    
-    const defaultBullets = [
-      hasCredits 
-        ? "Generating a video consumes credits from your quota"
-        : hasMinutes
-        ? "Generating a video consumes minutes from your quota"
-        : "Generating a video consumes credits or minutes from your quota",
-      "Re-generating or regenerating after edits also consumes credits/minutes",
-      "Heavy iteration (multiple revisions, scene swaps) can burn through usage quickly",
-      "Exporting itself typically doesn't consume credits, but the generation process does"
-    ];
-    
-    bullets = defaultBullets;
-  }
-
-  // Filter out [NEED VERIFICATION] bullets or replace with placeholder
-  const processedBullets = bullets.map(bullet => {
-    if (bullet.includes('[NEED VERIFICATION]')) {
-      return bullet.replace('[NEED VERIFICATION]', 'Needs verification');
-    }
-    return bullet;
-  });
-
+  
   return (
-    <div className="mb-8 bg-white rounded-2xl shadow-sm border-2 border-gray-200 p-6">
+    <div id="usage" className="mb-16 bg-white rounded-2xl border-2 border-gray-200 p-6 md:p-8 scroll-mt-32">
       <h2 className="text-xl font-bold text-gray-900 mb-4">
-        {title || "How credits/minutes get used (what surprises people)"}
+        {title || "How usage works"}
       </h2>
-      <ul className="text-sm text-gray-700 space-y-2">
-        {processedBullets.map((bullet, idx) => (
+      <ul className="text-sm text-gray-700 space-y-3 mb-6">
+        {usageNotes.bullets.map((bullet, idx) => (
           <li key={idx} className="flex items-start gap-2">
-            <span className="text-gray-400 mt-1">•</span>
+            <span className="text-gray-400 font-bold mt-0.5">•</span>
             <span>{bullet}</span>
           </li>
         ))}
       </ul>
+      
+      <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r">
+        <p className="text-sm font-medium text-gray-900">
+          <span className="font-bold text-blue-700">Tip:</span> {usageNotes.tip}
+        </p>
+      </div>
     </div>
   );
 }

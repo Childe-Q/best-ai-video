@@ -3,6 +3,9 @@ import { getTool, getAllTools } from '@/lib/getTool';
 import ToolPricingTemplate from '@/components/pricing/ToolPricingTemplate';
 import { getSEOCurrentYear, getStartingPrice } from '@/lib/utils';
 import { ComparisonTable } from '@/types/tool';
+import { deriveUsageNotes } from '@/lib/pricing/deriveUsageNotes';
+import { generatePricingSnapshot } from '@/lib/generatePricingSnapshot';
+import { generateVerdictText } from '@/lib/pricing/generateVerdictText';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -56,17 +59,17 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
 
   const seoYear = getSEOCurrentYear();
   const pricingPlans = tool.pricing_plans || [];
-  
+
   // Get comparison_table: first from tool, then fallback to pricing JSON file
   let comparisonTable: ComparisonTable | undefined = tool.comparison_table;
-  
+
   // If not in tool, try to load from pricing JSON file
   if (!comparisonTable) {
     try {
       // In Next.js, we need to resolve from the project root
       const projectRoot = process.cwd();
       const pricingJsonPath = path.join(projectRoot, 'src', 'data', 'pricing', `${slug}.json`);
-      
+
       if (fs.existsSync(pricingJsonPath)) {
         const pricingData = JSON.parse(fs.readFileSync(pricingJsonPath, 'utf-8'));
         if (pricingData.comparison_table) {
@@ -83,6 +86,41 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
   const officialPricingUrl = getOfficialPricingUrl(slug);
   const lastUpdated = getLastUpdatedDate();
 
+  // Generate pricing snapshot (for snapshot text used in usage notes)
+  const snapshotData = generatePricingSnapshot(pricingPlans);
+  const snapshotText = snapshotData.plans.map(p => p.bullets.join(' ')).join(' ');
+
+  // Pre-compute usage notes on server side to avoid hydration mismatch
+  // This ensures SSR and CSR render the same content
+  // IMPORTANT: All logic must be deterministic (no random, no Date, no window checks)
+  const usageNotes = deriveUsageNotes(
+    {
+      key_facts: tool.key_facts,
+      highlights: tool.highlights,
+      category: undefined, // TODO: get from tool if available
+      stand_out_metrics: undefined // TODO: get from tool if available
+    },
+    pricingPlans,
+    snapshotText,
+    tool.name,
+    undefined // No dedupeMap needed on server side (we do local deduplication)
+  );
+
+  // Pre-compute verdict text on server side to avoid hydration mismatch
+  // Generate from toolData, plans, snapshot, and comparable attributes
+  const generatedVerdictText = generateVerdictText(
+    {
+      key_facts: tool.key_facts,
+      highlights: tool.highlights,
+      best_for: tool.best_for
+    },
+    pricingPlans,
+    tool.name,
+    slug, // Pass slug for deterministic style selection
+    snapshotData.plans.map(p => p.bullets).flat(), // Pass snapshot bullets
+    comparisonTable // Pass comparison table for contrast features
+  );
+
   // Use the new template for all tools (including InVideo for consistency)
   return (
     <ToolPricingTemplate
@@ -94,6 +132,13 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
       creditUsage={tool.content?.pricing?.creditUsage}
       planPicker={tool.content?.pricing?.planPicker}
       verdict={tool.content?.pricing?.verdict}
+      toolData={{
+        key_facts: tool.key_facts,
+        highlights: tool.highlights,
+        best_for: tool.best_for
+      }}
+      usageNotes={usageNotes} // Pre-computed on server
+      verdictText={generatedVerdictText} // Pre-computed on server
       lastUpdated={lastUpdated}
       officialPricingUrl={officialPricingUrl}
       affiliateLink={tool.affiliate_link}

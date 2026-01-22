@@ -27,25 +27,25 @@ interface FeaturesPageData {
 
 export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPageTemplateProps) {
   const seoYear = getSEOCurrentYear();
-  
+
   // Load content JSON if available
   const content = loadToolContent(slug);
-  
+
   // Generate H1 title
   const h1Title = `${tool.name} Features (${seoYear})`;
-  
+
   // Generate subtitle
-  const subtitle = tool.tagline || 
-    (tool.categories && tool.categories.length > 0 
+  const subtitle = tool.tagline ||
+    (tool.categories && tool.categories.length > 0
       ? `${tool.categories[0]} tool for ${tool.best_for?.toLowerCase() || 'content creators'}`
       : `Everything you need to know about ${tool.name}'s capabilities.`);
-  
+
   // Generate highlights chips (3-5 items)
   const highlights = generateHighlights(tool, content);
-  
+
   // Build structured features page data
   const featuresData = buildFeaturesPageData(tool, content, slug);
-  
+
   // Get related links
   const relatedLinks = getRelatedLinks(slug);
 
@@ -60,12 +60,12 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6 leading-relaxed">
             {subtitle}
           </p>
-          
+
           {/* Highlights Chips */}
           {highlights.length > 0 && (
             <div className="flex flex-wrap justify-center gap-2 mb-4">
               {highlights.map((highlight, idx) => (
-                <span 
+                <span
                   key={idx}
                   className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-50 text-indigo-700 border border-indigo-100"
                 >
@@ -74,11 +74,11 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
               ))}
             </div>
           )}
-          
+
           {/* Anchor link to deep dives */}
           {featuresData.deepDives && featuresData.deepDives.length > 0 && (
-            <a 
-              href="#feature-deep-dives" 
+            <a
+              href="#feature-deep-dives"
               className="inline-flex items-center text-sm text-gray-500 hover:text-indigo-600 transition-colors"
             >
               Jump to deep dives ↓
@@ -88,15 +88,15 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
       </header>
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
-        
+
         {/* 1. Who it's best for */}
         {featuresData.bestForTags.length > 0 && (
           <section className="bg-white rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000] transition-all duration-200 p-8 sm:p-10">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Who it's best for</h2>
             <div className="flex flex-wrap justify-center gap-3">
               {featuresData.bestForTags.map((tag, idx) => (
-                <span 
-                  key={idx} 
+                <span
+                  key={idx}
                   className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white text-slate-900 border border-gray-300 shadow-sm hover:bg-indigo-50 hover:border-indigo-300 hover:text-slate-900 transition-colors duration-200"
                 >
                   {tag}
@@ -115,8 +115,8 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {featuresData.keyCapabilities.map((capability, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="flex items-start p-4 bg-white rounded-xl border-2 border-black shadow-[4px_4px_0px_0px_#000] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[3px_3px_0px_0px_#000] transition-all duration-200 group"
                 >
                   <div className="flex-shrink-0 h-2 w-2 rounded-full bg-indigo-500 mr-3 mt-1.5 group-hover:scale-125 transition-transform"></div>
@@ -139,11 +139,11 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
               <h2 className="text-3xl font-bold text-gray-900">Feature Deep Dives</h2>
               <div className="h-px bg-gray-200 flex-1"></div>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {featuresData.deepDives.map((dive, idx) => (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="bg-white rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_#000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000] transition-all duration-200 p-6 md:p-8 flex flex-col h-full"
                 >
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{dive.title}</h3>
@@ -156,7 +156,7 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
                     {dive.bullets.map((bullet, bIdx) => {
                       const isVerificationNeeded = bullet.includes('[NEED VERIFICATION]');
                       const cleanBullet = bullet.replace('[NEED VERIFICATION]', '').trim();
-                      
+
                       return (
                         <li key={bIdx} className="text-base text-gray-700 leading-[1.65] flex items-start gap-2.5">
                           <span className="text-indigo-500 mt-1.5 font-bold text-sm">●</span>
@@ -205,9 +205,9 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
         {/* 5. Additional Details */}
         {featuresData.additionalDetails && (
           ((featuresData.additionalDetails.exportFormats && featuresData.additionalDetails.exportFormats.length > 0) ||
-           featuresData.additionalDetails.languages ||
-           (featuresData.additionalDetails.integrations && featuresData.additionalDetails.integrations.length > 0) ||
-           (featuresData.additionalDetails.teamFeatures && featuresData.additionalDetails.teamFeatures.length > 0)) && (
+            featuresData.additionalDetails.languages ||
+            (featuresData.additionalDetails.integrations && featuresData.additionalDetails.integrations.length > 0) ||
+            (featuresData.additionalDetails.teamFeatures && featuresData.additionalDetails.teamFeatures.length > 0)) && (
             <section>
               <div className="flex items-center gap-3 mb-6">
                 <h2 className="text-2xl font-bold text-gray-900">Additional Details</h2>
@@ -226,7 +226,7 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
                     </div>
                   </div>
                 )}
-                
+
                 {featuresData.additionalDetails.languages && (
                   <div className="bg-white rounded-xl border border-gray-200 p-6">
                     <h3 className="text-lg font-bold text-gray-900 mb-3">Languages</h3>
@@ -235,7 +235,7 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
                     </p>
                   </div>
                 )}
-                
+
                 {featuresData.additionalDetails.integrations && featuresData.additionalDetails.integrations.length > 0 && (
                   <div className="bg-white rounded-xl border border-gray-200 p-6">
                     <h3 className="text-lg font-bold text-gray-900 mb-3">Integrations</h3>
@@ -248,7 +248,7 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
                     </div>
                   </div>
                 )}
-                
+
                 {featuresData.additionalDetails.teamFeatures && featuresData.additionalDetails.teamFeatures.length > 0 && (
                   <div className="bg-white rounded-xl border border-gray-200 p-6">
                     <h3 className="text-lg font-bold text-gray-900 mb-3">Team Features</h3>
@@ -281,9 +281,9 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
                 <ul className="space-y-2 pt-6">
                   {featuresData.sources.map((source, idx) => (
                     <li key={idx} className="text-sm text-gray-600">
-                      <a 
-                        href={source.url} 
-                        target="_blank" 
+                      <a
+                        href={source.url}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="text-indigo-600 hover:text-indigo-700 hover:opacity-80 transition-colors"
                       >
@@ -301,13 +301,13 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
         <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Learn More</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
+            <Link
               href={`/tool/${slug}/pricing`}
               className="inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50 border border-indigo-200 transition-colors"
             >
               Pricing →
             </Link>
-            <Link 
+            <Link
               href={`/tool/${slug}/reviews`}
               className="inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50 border border-indigo-200 transition-colors"
             >
@@ -331,8 +331,8 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
 
         {/* CTA */}
         <section className="text-center">
-          <CTAButton 
-            affiliateLink={tool.affiliate_link} 
+          <CTAButton
+            affiliateLink={tool.affiliate_link}
             hasFreeTrial={tool.has_free_trial}
             text="Get Started"
             size="lg"
@@ -345,11 +345,13 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
 
 // Helper functions
 
+import { generateFeatureDeepDives } from '@/lib/features/generateFeatureDeepDives';
+
 function buildFeaturesPageData(tool: Tool, content: ToolContent | null, slug: string): FeaturesPageData {
   return {
     bestForTags: generateBestForTags(tool, content, slug),
     keyCapabilities: generateKeyCapabilities(tool, content),
-    deepDives: generateDeepDives(tool, content),
+    deepDives: generateFeatureDeepDives(tool, content, slug),
     additionalUtilities: generateAdditionalUtilities(tool, content),
     additionalDetails: generateAdditionalDetails(tool, content),
     sources: generateSources(tool, content)
@@ -365,7 +367,7 @@ function generateBestForTags(tool: Tool, content: ToolContent | null, slug: stri
       'Small marketing teams (ads & promos)'
     ];
   }
-  
+
   // Priority 2: content.reviews.verdict.bestFor (array of tags)
   if (content?.reviews?.verdict?.bestFor) {
     if (Array.isArray(content.reviews.verdict.bestFor)) {
@@ -374,7 +376,7 @@ function generateBestForTags(tool: Tool, content: ToolContent | null, slug: stri
       return [content.reviews.verdict.bestFor];
     }
   }
-  
+
   // Priority 3: content.overview.tldr.bestFor (single string, extract tags if possible)
   if (content?.overview?.tldr?.bestFor) {
     // Try to extract tags from the string (e.g., "creators, teams, marketers")
@@ -386,75 +388,75 @@ function generateBestForTags(tool: Tool, content: ToolContent | null, slug: stri
       return tags;
     }
   }
-  
+
   // Priority 4: tool.categories (as tags)
   if (tool.categories && tool.categories.length > 0) {
     return tool.categories.slice(0, 3);
   }
-  
+
   // Priority 5: tool.tags (filter out generic/descriptive ones)
   if (tool.tags && tool.tags.length > 0) {
     const validTags = tool.tags.filter(tag => {
       const lower = tag.toLowerCase();
       // Exclude generic/descriptive tags - must be short, no "&", no descriptive words
-      return !lower.includes('&') && 
-             !lower.includes('outreach') &&
-             !lower.includes('l&d') &&
-             tag.length < 30 &&
-             tag.length > 0;
+      return !lower.includes('&') &&
+        !lower.includes('outreach') &&
+        !lower.includes('l&d') &&
+        tag.length < 30 &&
+        tag.length > 0;
     });
     if (validTags.length > 0) {
       return validTags.slice(0, 3);
     }
   }
-  
+
   // Priority 6: tool.target_audience_list (only if it's tags, not sentences)
   if (tool.target_audience_list && tool.target_audience_list.length > 0) {
     // Check if they look like tags (short, no "&", no long descriptions, no descriptive words)
     const tagLike = tool.target_audience_list.filter(aud => {
       const lower = aud.toLowerCase();
-      return aud.length < 30 && 
-             aud.length > 0 &&
-             !aud.includes('&') && 
-             !lower.includes('outreach') &&
-             !lower.includes('l&d') &&
-             !lower.includes('teams') &&
-             !lower.includes('and');
+      return aud.length < 30 &&
+        aud.length > 0 &&
+        !aud.includes('&') &&
+        !lower.includes('outreach') &&
+        !lower.includes('l&d') &&
+        !lower.includes('teams') &&
+        !lower.includes('and');
     });
     if (tagLike.length > 0) {
       return tagLike.slice(0, 3);
     }
   }
-  
+
   // Priority 7: tool.best_for (ONLY if it's a short tag, not a descriptive sentence)
   // Reject if contains "&", "and", "outreach", "L&D", or is too long
   if (tool.best_for) {
     const lower = tool.best_for.toLowerCase();
-    const isDescriptive = tool.best_for.includes('&') || 
-                         lower.includes('outreach') ||
-                         lower.includes('l&d') ||
-                         lower.includes(' and ') ||
-                         tool.best_for.length >= 30;
-    
+    const isDescriptive = tool.best_for.includes('&') ||
+      lower.includes('outreach') ||
+      lower.includes('l&d') ||
+      lower.includes(' and ') ||
+      tool.best_for.length >= 30;
+
     if (!isDescriptive && tool.best_for.length > 0) {
       return [tool.best_for];
     }
   }
-  
+
   // If nothing found, return empty array (don't show the section)
   return [];
 }
 
 function generateKeyCapabilities(tool: Tool, content: ToolContent | null): Array<{ title: string; desc?: string }> {
   const capabilities: Array<{ title: string; desc?: string }> = [];
-  
+
   // Priority 1: content.features.keyFeatures
   if (content?.features?.keyFeatures && content.features.keyFeatures.length > 0) {
     content.features.keyFeatures.forEach(feature => {
       capabilities.push({ title: feature });
     });
   }
-  
+
   // Priority 2: content.features.detailedFeatures (map to keyCapabilities)
   if (capabilities.length < 6 && content?.features?.detailedFeatures && content.features.detailedFeatures.length > 0) {
     content.features.detailedFeatures.forEach(feature => {
@@ -466,7 +468,7 @@ function generateKeyCapabilities(tool: Tool, content: ToolContent | null): Array
       }
     });
   }
-  
+
   // Priority 3: tool.features
   if (capabilities.length < 6 && tool.features && tool.features.length > 0) {
     tool.features.forEach(feature => {
@@ -475,7 +477,7 @@ function generateKeyCapabilities(tool: Tool, content: ToolContent | null): Array
       }
     });
   }
-  
+
   // Priority 4: tool.featureCards (map to keyCapabilities)
   if (capabilities.length < 6 && tool.featureCards && tool.featureCards.length > 0) {
     tool.featureCards.forEach(card => {
@@ -487,21 +489,11 @@ function generateKeyCapabilities(tool: Tool, content: ToolContent | null): Array
       }
     });
   }
-  
+
   return capabilities.slice(0, 10);
 }
 
-function generateDeepDives(tool: Tool, content: ToolContent | null): Array<{ title: string; summary?: string; bullets: string[] }> | undefined {
-  if (tool.feature_groups && tool.feature_groups.length > 0) {
-    return tool.feature_groups.map(group => ({
-      title: group.title,
-      summary: group.summary,
-      bullets: group.bullets || []
-    }));
-  }
-  
-  return undefined;
-}
+
 
 function generateAdditionalUtilities(tool: Tool, content: ToolContent | null): Array<{ title: string; description: string }> | undefined {
   // Only show if feature_groups exists (to avoid duplication)
@@ -511,7 +503,7 @@ function generateAdditionalUtilities(tool: Tool, content: ToolContent | null): A
       description: card.description || ''
     }));
   }
-  
+
   return undefined;
 }
 
@@ -525,7 +517,7 @@ function generateAdditionalDetails(tool: Tool, content: ToolContent | null): {
   const languages = extractLanguages(tool, content);
   const integrations = extractIntegrations(tool, content);
   const teamFeatures = extractTeamFeatures(tool, content);
-  
+
   // Only return if at least one field has data
   if (exportFormats.length > 0 || languages || integrations.length > 0 || teamFeatures.length > 0) {
     return {
@@ -535,7 +527,7 @@ function generateAdditionalDetails(tool: Tool, content: ToolContent | null): {
       teamFeatures: teamFeatures.length > 0 ? teamFeatures : undefined
     };
   }
-  
+
   return undefined;
 }
 
@@ -546,18 +538,18 @@ function generateSources(tool: Tool, content: ToolContent | null): Array<{ label
       url: `https://${key}` // Construct URL from source key
     }));
   }
-  
+
   return undefined;
 }
 
 function generateHighlights(tool: Tool, content: ToolContent | null): string[] {
   const highlights: string[] = [];
-  
+
   // Priority 1: Use tool.highlights if available
   if (tool.highlights && tool.highlights.length > 0) {
     highlights.push(...tool.highlights.slice(0, 5));
   }
-  
+
   // Priority 2: Use content.features.keyFeatures if available
   if (highlights.length < 5 && content?.features?.keyFeatures && content.features.keyFeatures.length > 0) {
     const contentHighlights = content.features.keyFeatures
@@ -566,7 +558,7 @@ function generateHighlights(tool: Tool, content: ToolContent | null): string[] {
       .map((f: string) => f.length > 30 ? f.substring(0, 30) + '...' : f);
     highlights.push(...contentHighlights);
   }
-  
+
   // Priority 3: Extract from tool.features if needed
   if (highlights.length < 3 && tool.features && tool.features.length > 0) {
     const featureHighlights = tool.features
@@ -575,7 +567,7 @@ function generateHighlights(tool: Tool, content: ToolContent | null): string[] {
       .map(f => f.length > 30 ? f.substring(0, 30) + '...' : f);
     highlights.push(...featureHighlights);
   }
-  
+
   // Priority 4: Extract from tags if still needed
   if (highlights.length < 3 && tool.tags && tool.tags.length > 0) {
     const tagHighlights = tool.tags
@@ -583,12 +575,12 @@ function generateHighlights(tool: Tool, content: ToolContent | null): string[] {
       .slice(0, 3 - highlights.length);
     highlights.push(...tagHighlights);
   }
-  
+
   // Ensure at least 3 items (use generic if needed)
   while (highlights.length < 3) {
     highlights.push(`Feature ${highlights.length + 1}`);
   }
-  
+
   return highlights.slice(0, 5);
 }
 
@@ -600,12 +592,12 @@ function extractExportFormats(tool: Tool, content: ToolContent | null): string[]
     ...(tool.feature_groups || []).flatMap(g => g.bullets || []),
     ...(content?.features?.keyFeatures || [])
   ].join(' ').toLowerCase();
-  
+
   const formatMatches = allText.match(/(mp4|mov|avi|webm|gif|wav|mp3|srt|vtt|xliff)/gi);
   if (formatMatches) {
     formats.push(...Array.from(new Set(formatMatches.map(f => f.toUpperCase()))));
   }
-  
+
   return formats;
 }
 
@@ -616,12 +608,12 @@ function extractLanguages(tool: Tool, content: ToolContent | null): string | und
     ...(tool.feature_groups || []).flatMap(g => g.bullets || []),
     ...(content?.features?.keyFeatures || [])
   ].join(' ').toLowerCase();
-  
+
   const langMatch = allText.match(/(\d+)\s*(languages?|lang)/i);
   if (langMatch) {
     return langMatch[1];
   }
-  
+
   return undefined;
 }
 
@@ -633,7 +625,7 @@ function extractIntegrations(tool: Tool, content: ToolContent | null): string[] 
     ...(tool.feature_groups || []).flatMap(g => g.bullets || []),
     ...(content?.features?.keyFeatures || [])
   ].join(' ').toLowerCase();
-  
+
   // Common integrations
   const commonIntegrations = ['api', 'zapier', 'slack', 'google drive', 'dropbox', 'youtube', 'vimeo'];
   commonIntegrations.forEach(integration => {
@@ -641,7 +633,7 @@ function extractIntegrations(tool: Tool, content: ToolContent | null): string[] 
       integrations.push(integration.charAt(0).toUpperCase() + integration.slice(1));
     }
   });
-  
+
   return integrations;
 }
 
@@ -653,7 +645,7 @@ function extractTeamFeatures(tool: Tool, content: ToolContent | null): string[] 
     ...(tool.feature_groups || []).flatMap(g => g.bullets || []),
     ...(content?.features?.keyFeatures || [])
   ].join(' ').toLowerCase();
-  
+
   if (allText.includes('team') || allText.includes('collaboration') || allText.includes('users')) {
     if (allText.includes('multiple users') || allText.includes('team members')) {
       features.push('Multiple users/team members');
@@ -665,6 +657,6 @@ function extractTeamFeatures(tool: Tool, content: ToolContent | null): string[] 
       features.push('Workspace management');
     }
   }
-  
+
   return features;
 }
