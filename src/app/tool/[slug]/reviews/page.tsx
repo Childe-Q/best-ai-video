@@ -22,6 +22,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${tool.name} Reviews & User Feedback (${seoYear})`,
     description: `Read real user reviews and feedback about ${tool.name}. See what users love and what could be improved.`,
+    alternates: {
+      canonical: `/tool/${slug}/reviews`,
+    },
   };
 }
 

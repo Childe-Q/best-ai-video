@@ -12,6 +12,7 @@ import ProsCons from '@/components/tool/ProsCons';
 // import FeaturesList from '@/components/tool/FeaturesList';
 // EvidenceNotes hidden for now, but data preserved for future "Methodology & sources" feature
 // import EvidenceNotes from '@/components/tool/EvidenceNotes';
+import EvidenceNuggets from '@/components/tool/EvidenceNuggets';
 
 export async function generateStaticParams() {
   const { getAllTools } = await import('@/lib/getTool');
@@ -31,6 +32,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${tool.name} Review, Pricing & Best Alternatives (${seoYear})`,
     description: `Is ${tool.name} worth it? In-depth review of pricing, features, pros & cons, and top competitors like ${tools.find(t => t.id !== tool.id)?.name}.`,
+    alternates: {
+      canonical: `/tool/${slug}`,
+    },
   };
 }
 
@@ -157,6 +161,9 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
             pros={('pros' in (content || {})) ? (content as any).pros : (tool.pros || [])}
             cons={('cons' in (content || {})) ? (content as any).cons : (tool.cons || [])}
           />
+
+          {/* Evidence Nuggets - Verified facts from official pages */}
+          <EvidenceNuggets slug={slug} limit={6} />
 
           {/* Evidence Notes - Hidden for now, but data preserved for future "Methodology & sources" feature */}
           {/* {content?.sources && <EvidenceNotes sources={content.sources} />} */}

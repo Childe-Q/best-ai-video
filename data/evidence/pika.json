@@ -1,0 +1,878 @@
+{
+  "slug": "pika",
+  "lastUpdated": "2026-01-30T21:05:00-08:00",
+  "sources": {
+    "login": "https://pika.art/login",
+    "pricing": "https://pika.art/pricing",
+    "terms": "https://pika.art/terms-of-service",
+    "privacy": "https://pika.art/privacy-policy",
+    "acceptable_use": "https://pika.art/acceptable-use-policy",
+    "faq": "https://pika.art/faq",
+    "api": "https://pika.art/api",
+    "blog": "https://pika.art/blog",
+    "contact": "https://pika.art/contact-us",
+    "careers": "https://pika.art/careers",
+    "signup": "https://pika.art/signup",
+    "web": [
+      {
+        "url": "https://pika.art/pricing",
+        "capturedAt": "2026-01-31T00:00:00Z"
+      },
+      {
+        "url": "https://pika.art/faq",
+        "capturedAt": "2026-01-31T00:00:00Z"
+      },
+      {
+        "url": "https://pika.art/",
+        "capturedAt": "2026-01-31T00:00:00Z"
+      }
+    ],
+    "youtube": []
+  },
+  "nuggets": [
+    {
+      "text": "The page states the \"Pikaformance\" model is available on web and is \"synced to any sound.\"",
+      "theme": "other",
+      "sourceUrl": "https://pika.art/login",
+      "sourceType": "home",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The sign-in page offers sign-in with Google, Facebook, Discord, or email.",
+      "theme": "usage",
+      "sourceUrl": "https://pika.art/login",
+      "sourceType": "home",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states that by signing in, you agree to the Terms of Service, Acceptable Use Policy, and Privacy Policy.",
+      "theme": "terms",
+      "sourceUrl": "https://pika.art/login",
+      "sourceType": "home",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The pricing page states Pika has four plans.",
+      "theme": "other",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Basic plan section states \"80 monthly video credits.\"",
+      "theme": "limits",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Standard plan section states \"700 monthly video credits.\"",
+      "theme": "limits",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Pro plan section states \"2300 monthly video credits.\"",
+      "theme": "limits",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Fancy plan section states \"6000 monthly video credits.\"",
+      "theme": "limits",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Basic plan section access includes \"Pika 2.5 (480p only)\" and features including Pikascenes, Pikadditions, Pikaswaps, and Pikatwists.",
+      "theme": "formats",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Standard plan section access includes \"Pika 2.5 (all resolutions)\" and includes Pikaframes plus \"all Pikaffects.\"",
+      "theme": "formats",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The pricing page states paid-plan features include \"Download videos with no watermark.\"",
+      "theme": "watermark",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The pricing page states paid-plan features include \"Purchase more roll over video credits.\"",
+      "theme": "usage",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The pricing page lists \"Commercial use\" in plan feature sections.",
+      "theme": "commercial",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "In the \"Pikaffects\" table, duration is listed as 5 seconds, and credits are listed as 15 (Free) and 18 (Paid).",
+      "theme": "limits",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "In the \"Pikascenes\" table, quality options are listed as 480p, 720p, and 1080p with 5-second duration; credits are listed as 20 (Free), 35 (Paid), and 65 (Paid).",
+      "theme": "formats",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "In the \"Pikatwists\" table, models listed are Turbo and Pro, quality options are 720p and 1080p, duration is 5 seconds, and credits are listed as 60 (Free) and 80 (Paid).",
+      "theme": "formats",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Terms of Service page includes a section titled \"Arbitration and Class Action Waiver.\"",
+      "theme": "terms",
+      "sourceUrl": "https://pika.art/terms-of-service",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Terms of Service page includes a section titled \"Inputs and Outputs.\"",
+      "theme": "terms",
+      "sourceUrl": "https://pika.art/terms-of-service",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Privacy Policy page includes a section titled \"Children Under the Age of 13.\"",
+      "theme": "security",
+      "sourceUrl": "https://pika.art/privacy-policy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Privacy Policy page includes a section titled \"Data Retention.\"",
+      "theme": "security",
+      "sourceUrl": "https://pika.art/privacy-policy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Acceptable Use Policy page includes a section titled \"Use of Photographs or Portraits.\"",
+      "theme": "terms",
+      "sourceUrl": "https://pika.art/acceptable-use-policy",
+      "sourceType": "acceptable_use",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Acceptable Use Policy page includes a section titled \"Monitoring and Enforcement.\"",
+      "theme": "terms",
+      "sourceUrl": "https://pika.art/acceptable-use-policy",
+      "sourceType": "acceptable_use",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The FAQ page lists a section titled \"Creating & Editing.\"",
+      "theme": "usage",
+      "sourceUrl": "https://pika.art/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The FAQ page lists a section titled \"Subscriptions & Billing.\"",
+      "theme": "usage",
+      "sourceUrl": "https://pika.art/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The API page states Pika's video models can be accessed \"on Fal AI,\" and links users to Fal.ai.",
+      "theme": "usage",
+      "sourceUrl": "https://pika.art/api",
+      "sourceType": "api",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The blog lists a post titled \"Pika raises $80M, so anyone can make video on command\" dated Jun 5, 2024.",
+      "theme": "other",
+      "sourceUrl": "https://pika.art/blog",
+      "sourceType": "blog",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Contact Us page states the form is not intended for support and directs product support, subscription, and payment inquiries to the FAQ after signing into a Pika account.",
+      "theme": "other",
+      "sourceUrl": "https://pika.art/contact-us",
+      "sourceType": "contact",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Careers page states Pika's headquarters are located in Palo Alto, CA.",
+      "theme": "other",
+      "sourceUrl": "https://pika.art/careers",
+      "sourceType": "about",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Sign up page includes fields for Display Name, Email, and Password.",
+      "theme": "usage",
+      "sourceUrl": "https://pika.art/signup",
+      "sourceType": "signup",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Sign up page states that by signing in, you agree to the Terms of Service and Privacy Policy.",
+      "theme": "terms",
+      "sourceUrl": "https://pika.art/signup",
+      "sourceType": "signup",
+      "capturedAt": "2026-01-30T21:05:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Pika 2.5 is the latest model, supporting all resolutions (480p, 720p, 1080p)",
+      "theme": "features",
+      "confidence": "high",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceContext": "Pricing table row 'Standard': 'Access to Pika 2.5 (all resolutions)'",
+      "capturedAt": "2026-01-31T00:00:00Z"
+    },
+    {
+      "text": "Pikaformance model generates hyper-real expressions synced to audio (sing, speak, rap, bark)",
+      "theme": "features",
+      "confidence": "high",
+      "sourceUrl": "https://pika.art/",
+      "sourceContext": "Homepage banner: 'Our Pikaformance model is now available on web: hyper-real expressions, synced to any sound.'",
+      "capturedAt": "2026-01-31T00:00:00Z"
+    },
+    {
+      "text": "Free 'Basic' plan includes 80 monthly video credits",
+      "theme": "limits",
+      "confidence": "high",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceContext": "Pricing column 'Basic': '80 monthly video credits'",
+      "capturedAt": "2026-01-31T00:00:00Z"
+    },
+    {
+      "text": "Free plan users are limited to Pika 2.5 at 480p resolution",
+      "theme": "limits",
+      "confidence": "high",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceContext": "Pricing column 'Basic': 'Access to Pika 2.5 (480p only)'",
+      "capturedAt": "2026-01-31T00:00:00Z"
+    },
+    {
+      "text": "Standard, Pro, and Fancy plans allow commercial use of generated content",
+      "theme": "commercial",
+      "confidence": "high",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceContext": "Pricing columns 'Standard', 'Pro', 'Fancy': Listed feature 'Commercial use'",
+      "capturedAt": "2026-01-31T00:00:00Z"
+    },
+    {
+      "text": "Free plan exports contain a Pika logo watermark",
+      "theme": "export",
+      "confidence": "high",
+      "sourceUrl": "https://pika.art/faq",
+      "sourceContext": "FAQ 'How can I get rid of the Pika watermark?': 'If you share a video directly from Pika, videos have a watermark for users of all tiers.' (Context implies free users cannot download watermark-free)",
+      "capturedAt": "2026-01-31T00:00:00Z"
+    },
+    {
+      "text": "Pikaformance model costs 3 credits per second of generation",
+      "theme": "usage",
+      "confidence": "high",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceContext": "Pricing details 'Pikaformance': '3 credits/second'",
+      "capturedAt": "2026-01-31T00:00:00Z"
+    },
+    {
+      "text": "Pika 2.5 text-to-video generation costs 12 credits for 5 seconds on Free plan",
+      "theme": "usage",
+      "confidence": "high",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceContext": "Pricing table 'Text-to-Video & Image-to-Video': 'Model 2.5 | 12 credits | Free'",
+      "capturedAt": "2026-01-31T00:00:00Z"
+    },
+    {
+      "text": "Pikaframes feature supports video duration up to 25 seconds",
+      "theme": "features",
+      "confidence": "high",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceContext": "Pricing table 'Pikaframes': Duration listed as '5s, 10s, 10-15s, 15-20s, 20-25s'",
+      "capturedAt": "2026-01-31T00:00:00Z"
+    },
+    {
+      "text": "Paid plans (Standard/Pro/Fancy) allow downloading videos without watermark",
+      "theme": "export",
+      "confidence": "high",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceContext": "Pricing columns 'Standard', 'Pro', 'Fancy': 'Download videos with no watermark'",
+      "capturedAt": "2026-01-31T00:00:00Z"
+    },
+    {
+      "text": "Pikaffects allow users to apply effects like melt, crush, and cake-ify to images",
+      "theme": "features",
+      "confidence": "high",
+      "sourceUrl": "https://pika.art/faq",
+      "sourceContext": "FAQ 'What are the signatures...?': 'Pika 1.5 is the proud parent of Pikaffects... melt it... crush it... cake-ify it.'",
+      "capturedAt": "2026-01-31T00:00:00Z"
+    },
+    {
+      "text": "Pika 2.5 supports 1080p resolution on paid plans",
+      "theme": "features",
+      "confidence": "high",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceContext": "Pricing table 'Text-to-Video': 'Quality 1080p ... 40 credits Paid'",
+      "capturedAt": "2026-01-31T00:00:00Z"
+    },
+    {
+      "text": "Pikaformance model supports audio duration up to 30 seconds",
+      "theme": "features",
+      "confidence": "high",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceContext": "Pricing table 'Pikaformance': 'Audio Duration Up to 30s'",
+      "capturedAt": "2026-01-31T00:00:00Z"
+    },
+    {
+      "text": "Standard plan includes 700 monthly credits",
+      "theme": "limits",
+      "confidence": "high",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceContext": "Pricing column 'Standard': '700 monthly video credits'",
+      "capturedAt": "2026-01-31T00:00:00Z"
+    },
+    {
+      "text": "Pro plan includes 2300 monthly credits",
+      "theme": "limits",
+      "confidence": "high",
+      "sourceUrl": "https://pika.art/pricing",
+      "sourceContext": "Pricing column 'Pro': '2300 monthly video credits'",
+      "capturedAt": "2026-01-31T00:00:00Z"
+    }
+  ],
+  "examples": [],
+  "metadata": {
+    "totalNuggets": 45,
+    "themesCovered": [
+      "commercial",
+      "export",
+      "features",
+      "formats",
+      "limits",
+      "other",
+      "security",
+      "terms",
+      "usage",
+      "watermark"
+    ],
+    "conflicts": [],
+    "totalSources": 3,
+    "modelVersionsIdentified": [
+      "Pika 2.5",
+      "Pika 2.2",
+      "Pika 2.1",
+      "Pika 1.5",
+      "Pikaformance",
+      "Turbo"
+    ]
+  },
+  "linkIndex": {
+    "slug": "pika",
+    "sourceType": "sources_index",
+    "pageUrl": "https://pika.art/",
+    "capturedAt": "2026-01-31T12:00:00Z",
+    "sourceUrls": [
+      "https://pika.art/",
+      "https://pika.art/pricing",
+      "https://pika.art/faq",
+      "https://pika.art/blog",
+      "https://pika.art/blog/announcement",
+      "https://pika.art/api",
+      "https://pika.art/terms-of-service",
+      "https://pika.art/privacy-policy",
+      "https://www.youtube.com/@Pika_Labs",
+      "https://www.youtube.com/watch?v=6b10jGNNbXQ"
+    ]
+  },
+  "pageEvidence": [
+    {
+      "slug": "pika",
+      "sourceType": "official",
+      "pageUrl": "https://pika.art/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The login page states the Pikaformance model is available on web.",
+          "theme": "features",
+          "sourceUrl": "https://pika.art/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The login page states Pikaformance supports hyper-real expressions.",
+          "theme": "features",
+          "sourceUrl": "https://pika.art/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The login page states Pikaformance is synced to any sound.",
+          "theme": "features",
+          "sourceUrl": "https://pika.art/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The login page states you can make your images sing, speak, rap, bark, and more.",
+          "theme": "features",
+          "sourceUrl": "https://pika.art/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The login page states Pikaformance has near real time generation speed.",
+          "theme": "usage",
+          "sourceUrl": "https://pika.art/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The login page lists sign-in options via Google, Facebook, Discord, or email.",
+          "theme": "usage",
+          "sourceUrl": "https://pika.art/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "pika",
+      "sourceType": "official",
+      "pageUrl": "https://pika.art/api",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The API page states the Pika API is available through Fal AI.",
+          "theme": "features",
+          "sourceUrl": "https://pika.art/api",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The API page states you can get the power of Pika's video models in your own product on Fal AI.",
+          "theme": "features",
+          "sourceUrl": "https://pika.art/api",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "pika",
+      "sourceType": "official",
+      "pageUrl": "https://pika.art/pricing",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The pricing page lists plan names Basic, Standard, Pro, and Fancy.",
+          "theme": "usage",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states the Basic plan includes 80 monthly video credits.",
+          "theme": "limits",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states the Standard plan includes 700 monthly video credits.",
+          "theme": "limits",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states the Pro plan includes 2300 monthly video credits.",
+          "theme": "limits",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states the Fancy plan includes 6000 monthly video credits.",
+          "theme": "limits",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states the Basic plan includes access to Pika 2.5 (480p only).",
+          "theme": "limits",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states the Standard plan includes access to Pika 2.5 (all resolutions).",
+          "theme": "limits",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page lists product features named Pikascenes, Pikadditions, Pikaswaps, Pikatwists, Pikaffects, and Pikaframes.",
+          "theme": "features",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states Pikaffects supports Image-to-Video and Video-to-Video.",
+          "theme": "features",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states Pikaffects has a duration of 5s.",
+          "theme": "limits",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states Pikascenes supports quality levels 480p, 720p, and 1080p.",
+          "theme": "formats",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states Pikascenes has a duration of 5s.",
+          "theme": "limits",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states Pikatwists has model options Turbo and Pro.",
+          "theme": "features",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states Pikatwists supports quality levels 720p and 1080p.",
+          "theme": "formats",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states Pikadditions & Pikaswaps support quality levels 480p, 720p, and 1080p.",
+          "theme": "formats",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states Pikadditions & Pikaswaps has a duration of 5s.",
+          "theme": "limits",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page includes a section labeled Text-to-Video & Image-to-Video with model 2.5.",
+          "theme": "features",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states Text-to-Video & Image-to-Video supports duration options 5s and 10s.",
+          "theme": "limits",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states Pikaframes supports 480p quality and duration options 5s, 10s, 10-15s, 15-20s, and 20-25s.",
+          "theme": "limits",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states Standard includes fast generations and Pro includes faster generations.",
+          "theme": "usage",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states Basic, Standard, Pro, and Fancy include downloading videos with no watermark.",
+          "theme": "export",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states Basic, Standard, Pro, and Fancy include commercial use.",
+          "theme": "commercial",
+          "sourceUrl": "https://pika.art/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "pika",
+      "sourceType": "official",
+      "pageUrl": "https://pika.art/blog",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The blog page headline says \"For creators, by creators.\"",
+          "theme": "other",
+          "sourceUrl": "https://pika.art/blog",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The blog page description says it shares stories, experiments, and insights from the Pika community.",
+          "theme": "other",
+          "sourceUrl": "https://pika.art/blog",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "pika",
+      "sourceType": "official",
+      "pageUrl": "https://pika.art/blog/announcement",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The blog post titled \"Pika raises $80M, so anyone can make video on command\" is dated June 5th, 2024.",
+          "theme": "other",
+          "sourceUrl": "https://pika.art/blog/announcement",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The blog post states Pika raised an $80M series B and total funding became $135M.",
+          "theme": "other",
+          "sourceUrl": "https://pika.art/blog/announcement",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The blog post states the series B was led by Spark Capital.",
+          "theme": "other",
+          "sourceUrl": "https://pika.art/blog/announcement",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The blog post states Pika did a stealth launch on Discord.",
+          "theme": "other",
+          "sourceUrl": "https://pika.art/blog/announcement",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The blog post states Pika released its 1.0 model and web app.",
+          "theme": "features",
+          "sourceUrl": "https://pika.art/blog/announcement",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The blog post states the team grew from three to thirteen.",
+          "theme": "other",
+          "sourceUrl": "https://pika.art/blog/announcement",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "pika",
+      "sourceType": "official",
+      "pageUrl": "https://pika.art/terms-of-service",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The Terms of Service page includes a section titled \"Inputs and Outputs.\"",
+          "theme": "usage",
+          "sourceUrl": "https://pika.art/terms-of-service",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The Terms of Service page includes a section titled \"Use of Content for Model Development.\"",
+          "theme": "usage",
+          "sourceUrl": "https://pika.art/terms-of-service",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The Terms of Service page includes a section titled \"Arbitration and Class Action Waiver.\"",
+          "theme": "usage",
+          "sourceUrl": "https://pika.art/terms-of-service",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "pika",
+      "sourceType": "official",
+      "pageUrl": "https://pika.art/privacy-policy",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The Privacy Policy page includes a section titled \"Children Under the Age of 13.\"",
+          "theme": "security",
+          "sourceUrl": "https://pika.art/privacy-policy",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The Privacy Policy page includes a section titled \"Data Security.\"",
+          "theme": "security",
+          "sourceUrl": "https://pika.art/privacy-policy",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The Privacy Policy page includes a section titled \"Data Retention.\"",
+          "theme": "security",
+          "sourceUrl": "https://pika.art/privacy-policy",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The Privacy Policy page includes a section titled \"Consent to Personal Information Transfer.\"",
+          "theme": "security",
+          "sourceUrl": "https://pika.art/privacy-policy",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "pika",
+      "sourceType": "official",
+      "pageUrl": "https://pika.art/faq",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The FAQ page contains sections labeled About Pika, Creating & Editing, Subscriptions & Billing, and Tech Issues.",
+          "theme": "usage",
+          "sourceUrl": "https://pika.art/faq",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The FAQ page has limited extractable facts in the visible page text.",
+          "theme": "other",
+          "sourceUrl": "https://pika.art/faq",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "note": "Page has limited extractable facts"
+        }
+      ]
+    },
+    {
+      "slug": "pika",
+      "sourceType": "youtube",
+      "pageUrl": "https://www.youtube.com/@Pika_Labs",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "A YouTube snippet for Pika Labs says \"Try new hair goals at Pika.art, or on the iOS app.\"",
+          "theme": "usage",
+          "sourceUrl": "https://www.youtube.com/@Pika_Labs",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "A YouTube snippet for Pika Labs says \"Pikaffect your videos at Pika dot art, or on the iOS app.\"",
+          "theme": "features",
+          "sourceUrl": "https://www.youtube.com/@Pika_Labs",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "pika",
+      "sourceType": "youtube",
+      "pageUrl": "https://www.youtube.com/watch?v=6b10jGNNbXQ",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The video title says \"Introducing Pika 1.0, An Idea-to-Video Platform.\"",
+          "theme": "features",
+          "sourceUrl": "https://www.youtube.com/watch?v=6b10jGNNbXQ",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "A YouTube snippet for the video says Pika 1.0 is an idea-to-video platform that lets you create and edit videos with AI.",
+          "theme": "features",
+          "sourceUrl": "https://www.youtube.com/watch?v=6b10jGNNbXQ",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

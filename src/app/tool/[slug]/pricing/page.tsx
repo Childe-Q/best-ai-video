@@ -48,6 +48,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${tool.name} Plans & Pricing ${seoYear}`,
     description: `Choose a plan that fits best for ${tool.name}. Compare pricing, features, and find the perfect plan for your needs.`,
+    alternates: {
+      canonical: `/tool/${slug}/pricing`,
+    },
   };
 }
 
@@ -147,4 +150,3 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
     />
   );
 }
-

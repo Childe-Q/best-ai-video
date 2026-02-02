@@ -1,0 +1,1369 @@
+{
+  "slug": "elai",
+  "lastUpdated": "2026-01-31T12:00:00Z",
+  "sources": {
+    "guide": "https://elai.io/api/",
+    "faq": "https://elai.io/pricing/",
+    "use_cases": "https://elai.io/text-to-video/",
+    "privacy": "https://elai.io/privacy-policy/",
+    "terms": "https://elai.io/terms-of-service/",
+    "about": "https://elai.io/security-policy/",
+    "featuresIndex": "https://elai.io/",
+    "featurePages": [
+      "https://elai.io/text-to-video/",
+      "https://elai.io/avatars/",
+      "https://elai.io/avatars-library/",
+      "https://elai.io/voice-cloning/",
+      "https://elai.io/custom-avatar/",
+      "https://elai.io/video-templates/",
+      "https://elai.io/how-it-works/",
+      "https://elai.io/getting-started-with-api/",
+      "https://elai.io/integrations/",
+      "https://elai.io/security-policy/",
+      "https://elai.io/terms-of-service/",
+      "https://elai.io/acceptable-use-policy/"
+    ]
+  },
+  "nuggets": [
+    {
+      "text": "free plan includes 1 minute of video generation credit",
+      "theme": "limits",
+      "sourceUrl": "https://elai.io/pricing/",
+      "sourceType": "features_index",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "free_plan_limits"
+    },
+    {
+      "text": "creator plan includes 15 minutes of video generation per month",
+      "theme": "limits",
+      "sourceUrl": "https://elai.io/pricing/",
+      "sourceType": "features_index",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "creator_plan_limits"
+    },
+    {
+      "text": "team plan includes 50 minutes of video generation per month",
+      "theme": "limits",
+      "sourceUrl": "https://elai.io/pricing/",
+      "sourceType": "features_index",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "team_plan_limits"
+    },
+    {
+      "text": "creator plan exports are in 1080p full hd",
+      "theme": "export",
+      "sourceUrl": "https://elai.io/pricing/",
+      "sourceType": "features_index",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "export_resolution"
+    },
+    {
+      "text": "team plan exports are in 4k ultra hd",
+      "theme": "export",
+      "sourceUrl": "https://elai.io/pricing/",
+      "sourceType": "features_index",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "export_resolution"
+    },
+    {
+      "text": "unused minutes do not roll over to the next month on monthly plans",
+      "theme": "usage",
+      "sourceUrl": "https://elai.io/pricing/",
+      "sourceType": "features_index",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "rollover_policy"
+    },
+    {
+      "text": "video minutes are deducted upon rendering even if it is the same video edited",
+      "theme": "usage",
+      "sourceUrl": "https://elai.io/pricing/",
+      "sourceType": "features_index",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "credit_deduction"
+    },
+    {
+      "text": "cancelled subscriptions retain access to rendered projects for one year",
+      "theme": "usage",
+      "sourceUrl": "https://elai.io/pricing/",
+      "sourceType": "features_index",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "data_retention"
+    },
+    {
+      "text": "users can delete their account which permanently removes all user data",
+      "theme": "security",
+      "sourceUrl": "https://elai.io/privacy-policy/",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "data_deletion"
+    },
+    {
+      "text": "users can download their data from their profile",
+      "theme": "security",
+      "sourceUrl": "https://elai.io/privacy-policy/",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "data_access"
+    },
+    {
+      "text": "data is stored in usa based data centers",
+      "theme": "security",
+      "sourceUrl": "https://elai.io/security-policy/",
+      "sourceType": "about",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "data_location"
+    },
+    {
+      "text": "infrastructure uses amazon web services and digitalocean",
+      "theme": "security",
+      "sourceUrl": "https://elai.io/security-policy/",
+      "sourceType": "about",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "infrastructure_provider"
+    },
+    {
+      "text": "data is encrypted in transit using tls/ssl",
+      "theme": "security",
+      "sourceUrl": "https://elai.io/security-policy/",
+      "sourceType": "about",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "encryption"
+    },
+    {
+      "text": "platform complies with gdpr and cppa regulations",
+      "theme": "security",
+      "sourceUrl": "https://elai.io/security-policy/",
+      "sourceType": "about",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "compliance"
+    },
+    {
+      "text": "supports over 75 languages for text-to-video conversion",
+      "theme": "formats",
+      "sourceUrl": "https://elai.io/text-to-video/",
+      "sourceType": "features_index",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "languages_count"
+    },
+    {
+      "text": "offers library of 80+ ai avatars",
+      "theme": "other",
+      "sourceUrl": "https://elai.io/text-to-video/",
+      "sourceType": "features_index",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "avatar_count"
+    },
+    {
+      "text": "api allows integration with external crms and email marketing software",
+      "theme": "usage",
+      "sourceUrl": "https://elai.io/api/",
+      "sourceType": "guide",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "medium",
+      "conflictGroup": "api_integration"
+    },
+    {
+      "text": "voice cloning supports 32 different languages including english and japanese",
+      "theme": "formats",
+      "sourceUrl": "https://elai.io/voice-cloning/",
+      "sourceType": "features_index",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "voice_cloning_languages"
+    },
+    {
+      "text": "requires 1 to 5 minutes of voice recording for cloning",
+      "theme": "limits",
+      "sourceUrl": "https://elai.io/voice-cloning/",
+      "sourceType": "features_index",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "voice_cloning_requirements"
+    },
+    {
+      "text": "voice cloning process takes approximately 3 business days",
+      "theme": "limits",
+      "sourceUrl": "https://elai.io/voice-cloning/",
+      "sourceType": "features_index",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "voice_cloning_time"
+    },
+    {
+      "text": "Elai.io lets you create videos 20 times faster compared to traditional video production.",
+      "theme": "usage",
+      "sourceUrl": "https://elai.io/text-to-video/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states there is no more need for a studio, filming equipment, or a crew.",
+      "theme": "features",
+      "sourceUrl": "https://elai.io/text-to-video/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states talking avatars are based on video footage of real actors processed with an AI solution.",
+      "theme": "features",
+      "sourceUrl": "https://elai.io/avatars/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states there are currently 80+ video avatars in the library.",
+      "theme": "limits",
+      "sourceUrl": "https://elai.io/avatars/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page lists controls to position an avatar anywhere on the slide and change its size.",
+      "theme": "features",
+      "sourceUrl": "https://elai.io/avatars/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states you can add a unique avatar for each slide.",
+      "theme": "features",
+      "sourceUrl": "https://elai.io/avatars/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states a Selfie Avatar can be created using a smartphone or web camera.",
+      "theme": "features",
+      "sourceUrl": "https://elai.io/avatars/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states a Photo Avatar can be created from a single photo as a cartoon talking head.",
+      "theme": "features",
+      "sourceUrl": "https://elai.io/avatars/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The avatars library page states it shows AI talking avatars currently available on Elai.",
+      "theme": "features",
+      "sourceUrl": "https://elai.io/avatars-library/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page instructs users to watch avatar video introductions and pick one for their next video.",
+      "theme": "usage",
+      "sourceUrl": "https://elai.io/avatars-library/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The voice cloning page states you can clone your voice in 32 different languages.",
+      "theme": "limits",
+      "sourceUrl": "https://elai.io/voice-cloning/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states the required voice recording length is 1-5 minutes of a well-prepared recording with no extra noise.",
+      "theme": "limits",
+      "sourceUrl": "https://elai.io/voice-cloning/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states a voice recording can be emotional or calm and the intonations will be kept the same after cloning.",
+      "theme": "features",
+      "sourceUrl": "https://elai.io/voice-cloning/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The custom avatar guide lists a recording duration requirement of 5 minutes.",
+      "theme": "limits",
+      "sourceUrl": "https://elai.io/custom-avatar/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The guide states for Studio Avatars you should use a plain background, typically green.",
+      "theme": "usage",
+      "sourceUrl": "https://elai.io/custom-avatar/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The guide states only the mouth area will be modified and all other movements remain unchanged.",
+      "theme": "features",
+      "sourceUrl": "https://elai.io/custom-avatar/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The video templates page states you can create template-based videos from text or a link.",
+      "theme": "features",
+      "sourceUrl": "https://elai.io/video-templates/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The video templates page states you can choose a horizontal or vertical format for template-based videos.",
+      "theme": "formats",
+      "sourceUrl": "https://elai.io/video-templates/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The how-it-works guide states users can include text, photos, and shapes, and add Lottie animations to a video.",
+      "theme": "features",
+      "sourceUrl": "https://elai.io/how-it-works/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The how-it-works guide states users click the Render button and the video is ready after an email confirmation, then it can be downloaded or shared.",
+      "theme": "export",
+      "sourceUrl": "https://elai.io/how-it-works/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The API getting-started page states Elai.io lets you generate videos with a digital presenter just from text.",
+      "theme": "features",
+      "sourceUrl": "https://elai.io/getting-started-with-api/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states there are 75+ languages available.",
+      "theme": "limits",
+      "sourceUrl": "https://elai.io/getting-started-with-api/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states pre-arranged educational materials can be automatically turned into e-learning videos via API access.",
+      "theme": "features",
+      "sourceUrl": "https://elai.io/getting-started-with-api/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The integrations page states Elai is integrated with Zapier, Thinkific, uQualio, and more.",
+      "theme": "features",
+      "sourceUrl": "https://elai.io/integrations/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The security policy states all communication is encrypted in transit using TLS/SSL.",
+      "theme": "security",
+      "sourceUrl": "https://elai.io/security-policy/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The security policy states all data, including backups, is stored in data centers based in the USA using multiple availability zones.",
+      "theme": "security",
+      "sourceUrl": "https://elai.io/security-policy/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The terms state Elai is not obligated to backup any User Content and users are responsible for maintaining their own backup copies.",
+      "theme": "usage",
+      "sourceUrl": "https://elai.io/terms-of-service/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The acceptable use policy states it applies to avatars, videos, audio, and other content submitted to or created using the Elai Services.",
+      "theme": "usage",
+      "sourceUrl": "https://elai.io/acceptable-use-policy/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Credit Deduction",
+      "scenario": "Re-rendering an edited video",
+      "sourceUrl": "https://elai.io/pricing/",
+      "snippet": "Our system uses the minutes from your billing cycle every time you click 'Render' even if this is the same video.",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "title": "Text to Video Process",
+      "scenario": "Converting a script to video",
+      "sourceUrl": "https://elai.io/text-to-video/",
+      "snippet": "Choose a template, paste your script into the magic box, and Elai.io's AI crafts a video with visuals, animations, and voiceover.",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    }
+  ],
+  "metadata": {
+    "totalNuggets": 48,
+    "themesCovered": [
+      "export",
+      "features",
+      "formats",
+      "limits",
+      "other",
+      "security",
+      "usage"
+    ],
+    "conflicts": [
+      {
+        "conflictGroup": "languages_count",
+        "items": 2
+      },
+      {
+        "conflictGroup": "export_resolution",
+        "items": 2
+      }
+    ],
+    "totalFeaturePages": 12
+  },
+  "linkIndex": {
+    "slug": "elai",
+    "sourceType": "features_index",
+    "pageUrl": "https://elai.io/",
+    "capturedAt": "2026-01-31T12:00:00Z",
+    "featureUrls": [
+      "https://elai.io/text-to-video/",
+      "https://elai.io/avatars/",
+      "https://elai.io/avatars-library/",
+      "https://elai.io/voice-cloning/",
+      "https://elai.io/custom-avatar/",
+      "https://elai.io/video-templates/",
+      "https://elai.io/how-it-works/",
+      "https://elai.io/getting-started-with-api/",
+      "https://elai.io/integrations/",
+      "https://elai.io/security-policy/",
+      "https://elai.io/terms-of-service/",
+      "https://elai.io/acceptable-use-policy/"
+    ]
+  },
+  "pageEvidence": [
+    {
+      "slug": "elai",
+      "sourceType": "features",
+      "pageUrl": "https://elai.io/text-to-video/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "Elai.io lets you create videos 20 times faster compared to traditional video production.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/text-to-video/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Elai.io states there is no more need for a studio, filming equipment, or a crew.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/text-to-video/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states there are 80+ avatars available for your videos.",
+          "theme": "limits",
+          "sourceUrl": "https://elai.io/text-to-video/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page defines a text-to-video AI generator as technology that converts written text into video content.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/text-to-video/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states Elai.io converts text to video with a digital avatar to create engaging videos out of text.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/text-to-video/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page describes converting text-to-video in just a few minutes.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/text-to-video/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "slug": "elai",
+      "sourceType": "features",
+      "pageUrl": "https://elai.io/avatars/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The page states you can choose any presenter from the library and use it in your videos.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/avatars/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states talking avatars are based on video footage of real actors processed with an AI solution.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/avatars/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states there are currently 80+ video avatars in the library.",
+          "theme": "limits",
+          "sourceUrl": "https://elai.io/avatars/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page lists controls to position an avatar anywhere on the slide and change its size.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/avatars/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states you can add a unique avatar for each slide.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/avatars/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states a Selfie Avatar can be created using a smartphone or web camera.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/avatars/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states a Photo Avatar can be created from a single photo as a cartoon talking head.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/avatars/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "elai",
+      "sourceType": "features",
+      "pageUrl": "https://elai.io/avatars-library/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The avatars library page states it shows AI talking avatars currently available on Elai.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/avatars-library/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page instructs users to watch avatar video introductions and pick one for their next video.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/avatars-library/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page lists avatar names including Gia, Max, Kamal, Kira, Jade, and Amber.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/avatars-library/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page lists additional avatar names including Cody, Kevin, Megan, Noah, and Aniqa.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/avatars-library/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page lists additional avatar names including Tyler, Margaret, Olivia, and Alma.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/avatars-library/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page lists additional avatar names including Ethan, Amanda, Enzo, Nelson, and Jameson.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/avatars-library/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "elai",
+      "sourceType": "features",
+      "pageUrl": "https://elai.io/voice-cloning/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The voice cloning page states you can clone your voice in 32 different languages.",
+          "theme": "limits",
+          "sourceUrl": "https://elai.io/voice-cloning/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states you can type your speech text and the system will narrate it using your own voice across multiple languages.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/voice-cloning/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states the required voice recording length is 1-5 minutes of a well-prepared recording with no extra noise.",
+          "theme": "limits",
+          "sourceUrl": "https://elai.io/voice-cloning/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states a voice recording can be emotional or calm and the intonations will be kept the same after cloning.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/voice-cloning/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states you can record your voice in any language and narrate videos in English, Japanese, Chinese, German, Hindi, French, Korean, Portuguese, Italian, Spanish, Indonesian, Dutch, Turkish, Filipino, Polish, Swedish, Bulgarian, Romanian, Arabic, Czech, Greek, Finnish, Croatian, Malay, Slovak, Danish, Tamil, Ukrainian, Norwegian, Vietnamese, Russian, and Hungarian.",
+          "theme": "limits",
+          "sourceUrl": "https://elai.io/voice-cloning/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page describes voice cloning as generating videos with your own voice.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/voice-cloning/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "slug": "elai",
+      "sourceType": "features",
+      "pageUrl": "https://elai.io/custom-avatar/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The custom avatar guide states the quality of your avatar will 100% depend on footage made in accordance with the instructions.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/custom-avatar/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The custom avatar guide lists a recording duration requirement of 5 minutes.",
+          "theme": "limits",
+          "sourceUrl": "https://elai.io/custom-avatar/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The guide states for Selfie/Scenario Avatars you can use any background.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/custom-avatar/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The guide states for Studio Avatars you should use a plain background, typically green.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/custom-avatar/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The guide instructs users to move their head mostly horizontally and minimize vertical head movements.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/custom-avatar/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The guide instructs users to move smoothly with no sharp movements.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/custom-avatar/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The guide states only the mouth area will be modified and all other movements remain unchanged.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/custom-avatar/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "elai",
+      "sourceType": "features",
+      "pageUrl": "https://elai.io/video-templates/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The video templates page states you can generate narrated videos using Elai.io video templates.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/video-templates/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states you can create template-based videos from text or a link.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/video-templates/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states you can choose a horizontal or vertical format for template-based videos.",
+          "theme": "formats",
+          "sourceUrl": "https://elai.io/video-templates/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page shows Business templates including Internal communications plan, Pitch deck, and Business report.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/video-templates/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page shows Real Estate templates including Real Estate Property Video, Real Estate Overview, and Real Estate Agency.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/video-templates/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page includes sections labeled Corporate, eCommerce, and Text-to-Video templates.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/video-templates/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "elai",
+      "sourceType": "features",
+      "pageUrl": "https://elai.io/how-it-works/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The how-it-works guide states users can add as many slides as needed to a presentation.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/how-it-works/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The guide states slides are fully customizable, including crop, animation, and transitions.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/how-it-works/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The guide states users type the text that an avatar will voice-over during the presentation.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/how-it-works/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The guide states each slide needs its own text related to that particular slide.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/how-it-works/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The guide states users can include text, photos, and shapes, and add Lottie animations to a video.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/how-it-works/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The guide states users click the Render button and the video is ready after an email confirmation, then it can be downloaded or shared.",
+          "theme": "export",
+          "sourceUrl": "https://elai.io/how-it-works/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "elai",
+      "sourceType": "features",
+      "pageUrl": "https://elai.io/getting-started-with-api/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The API getting-started page states Elai.io lets you generate videos with a digital presenter just from text.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/getting-started-with-api/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states Elai has a library of digital avatars.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/getting-started-with-api/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states there are 75+ languages available.",
+          "theme": "limits",
+          "sourceUrl": "https://elai.io/getting-started-with-api/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states users can fully customize the video.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/getting-started-with-api/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page offers a request form for early access to a real-time rendering API solution.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/getting-started-with-api/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states pre-arranged educational materials can be automatically turned into e-learning videos via API access.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/getting-started-with-api/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "elai",
+      "sourceType": "features",
+      "pageUrl": "https://elai.io/integrations/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The integrations page states Elai is integrated with Zapier, Thinkific, uQualio, and more.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/integrations/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states integrations can automate and customize the video creation workflow.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/integrations/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page lists a PowerPoint integration to make presentations more engaging.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/integrations/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page lists an integration to include videos into Medium posts.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/integrations/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page lists a Pexels integration for stock photos and footage in AI videos.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/integrations/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page lists a GIPHY integration to input GIF files into video presentations.",
+          "theme": "features",
+          "sourceUrl": "https://elai.io/integrations/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "elai",
+      "sourceType": "features",
+      "pageUrl": "https://elai.io/security-policy/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The security policy states scripts and texts added by the user in the editor or using the API are collected data.",
+          "theme": "security",
+          "sourceUrl": "https://elai.io/security-policy/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The security policy states photos, videos, and music uploaded by the user are collected data.",
+          "theme": "security",
+          "sourceUrl": "https://elai.io/security-policy/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The security policy states all communication is encrypted in transit using TLS/SSL.",
+          "theme": "security",
+          "sourceUrl": "https://elai.io/security-policy/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The security policy states data at rest is stored on protected data servers from AWS.",
+          "theme": "security",
+          "sourceUrl": "https://elai.io/security-policy/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The security policy states all data, including backups, is stored in data centers based in the USA using multiple availability zones.",
+          "theme": "security",
+          "sourceUrl": "https://elai.io/security-policy/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The security policy states Elai uses a global CDN to prevent network attacks and keep services available.",
+          "theme": "security",
+          "sourceUrl": "https://elai.io/security-policy/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The security policy states users can delete or download their data in their profile.",
+          "theme": "security",
+          "sourceUrl": "https://elai.io/security-policy/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The security policy states when an account is deleted all user's data is deleted.",
+          "theme": "security",
+          "sourceUrl": "https://elai.io/security-policy/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "elai",
+      "sourceType": "features",
+      "pageUrl": "https://elai.io/terms-of-service/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The terms state Elai grants a non-transferable, non-exclusive, revocable, limited license to access and use the Website and Services for personal, non-commercial use.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/terms-of-service/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The terms state users shall not reverse engineer any part of the Website or Services.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/terms-of-service/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The terms state users shall not access the Website or Services in order to build a similar or competitive product or service.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/terms-of-service/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The terms state Elai owns all intellectual property rights in the Website and Services and their content, excluding any User Content provided by users.",
+          "theme": "commercial",
+          "sourceUrl": "https://elai.io/terms-of-service/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The terms state Elai may modify, suspend, or discontinue the Website or Services with or without notice.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/terms-of-service/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The terms state Elai is not obligated to review User Content and reserves the right to remove, delete, or edit User Content at any time without prior notice.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/terms-of-service/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The terms state Elai is not obligated to backup any User Content and users are responsible for maintaining their own backup copies.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/terms-of-service/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The terms state users grant Elai an irrevocable, non-exclusive, royalty-free, fully paid, worldwide license to use User Content for the sole purpose of including it on the Website or Services.",
+          "theme": "commercial",
+          "sourceUrl": "https://elai.io/terms-of-service/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "elai",
+      "sourceType": "features",
+      "pageUrl": "https://elai.io/acceptable-use-policy/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The acceptable use policy states it applies to avatars, videos, audio, and other content submitted to or created using the Elai Services.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/acceptable-use-policy/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The policy instructs users to obtain necessary permissions and consents relating to creation, use, and dissemination of User Content.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/acceptable-use-policy/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The policy prohibits permitting any third party that is not an Authorized User to access or use the Elai Services.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/acceptable-use-policy/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The policy prohibits submitting User Content that infringes intellectual property rights such as trademarks, patents, copyrights, or trade secrets.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/acceptable-use-policy/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The policy prohibits sending spam or other types of unsolicited communications.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/acceptable-use-policy/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The policy prohibits impersonating any person or entity without their express consent.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/acceptable-use-policy/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The policy prohibits using automated systems such as robots, spiders, or offline readers to access the Elai Services.",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/acceptable-use-policy/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "elai",
+      "pageUrl": "https://elai.io/pricing/",
+      "sourceType": "features_index",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "free plan includes 1 minute of video generation credit",
+          "theme": "limits",
+          "sourceUrl": "https://elai.io/pricing/",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "free_plan_limits"
+        },
+        {
+          "text": "creator plan includes 15 minutes of video generation per month",
+          "theme": "limits",
+          "sourceUrl": "https://elai.io/pricing/",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "creator_plan_limits"
+        },
+        {
+          "text": "team plan includes 50 minutes of video generation per month",
+          "theme": "limits",
+          "sourceUrl": "https://elai.io/pricing/",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "team_plan_limits"
+        },
+        {
+          "text": "creator plan exports are in 1080p full hd",
+          "theme": "export",
+          "sourceUrl": "https://elai.io/pricing/",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "export_resolution"
+        },
+        {
+          "text": "team plan exports are in 4k ultra hd",
+          "theme": "export",
+          "sourceUrl": "https://elai.io/pricing/",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "export_resolution"
+        },
+        {
+          "text": "unused minutes do not roll over to the next month on monthly plans",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/pricing/",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "rollover_policy"
+        },
+        {
+          "text": "video minutes are deducted upon rendering even if it is the same video edited",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/pricing/",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "credit_deduction"
+        },
+        {
+          "text": "cancelled subscriptions retain access to rendered projects for one year",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/pricing/",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "data_retention"
+        }
+      ],
+      "examples": [
+        {
+          "title": "Credit Deduction",
+          "scenario": "Re-rendering an edited video",
+          "sourceUrl": "https://elai.io/pricing/",
+          "snippet": "Our system uses the minutes from your billing cycle every time you click 'Render' even if this is the same video.",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "elai",
+      "pageUrl": "https://elai.io/privacy-policy/",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "users can delete their account which permanently removes all user data",
+          "theme": "security",
+          "sourceUrl": "https://elai.io/privacy-policy/",
+          "sourceType": "privacy",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "data_deletion"
+        },
+        {
+          "text": "users can download their data from their profile",
+          "theme": "security",
+          "sourceUrl": "https://elai.io/privacy-policy/",
+          "sourceType": "privacy",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "data_access"
+        }
+      ],
+      "examples": []
+    },
+    {
+      "slug": "elai",
+      "pageUrl": "https://elai.io/security-policy/",
+      "sourceType": "about",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "data is stored in usa based data centers",
+          "theme": "security",
+          "sourceUrl": "https://elai.io/security-policy/",
+          "sourceType": "about",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "data_location"
+        },
+        {
+          "text": "infrastructure uses amazon web services and digitalocean",
+          "theme": "security",
+          "sourceUrl": "https://elai.io/security-policy/",
+          "sourceType": "about",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "infrastructure_provider"
+        },
+        {
+          "text": "data is encrypted in transit using tls/ssl",
+          "theme": "security",
+          "sourceUrl": "https://elai.io/security-policy/",
+          "sourceType": "about",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "encryption"
+        },
+        {
+          "text": "platform complies with gdpr and cppa regulations",
+          "theme": "security",
+          "sourceUrl": "https://elai.io/security-policy/",
+          "sourceType": "about",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "compliance"
+        }
+      ],
+      "examples": []
+    },
+    {
+      "slug": "elai",
+      "pageUrl": "https://elai.io/text-to-video/",
+      "sourceType": "features_index",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "supports over 75 languages for text-to-video conversion",
+          "theme": "formats",
+          "sourceUrl": "https://elai.io/text-to-video/",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "languages_count"
+        },
+        {
+          "text": "offers library of 80+ ai avatars",
+          "theme": "other",
+          "sourceUrl": "https://elai.io/text-to-video/",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "avatar_count"
+        }
+      ],
+      "examples": [
+        {
+          "title": "Text to Video Process",
+          "scenario": "Converting a script to video",
+          "sourceUrl": "https://elai.io/text-to-video/",
+          "snippet": "Choose a template, paste your script into the magic box, and Elai.io's AI crafts a video with visuals, animations, and voiceover.",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "elai",
+      "pageUrl": "https://elai.io/api/",
+      "sourceType": "guide",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "api allows integration with external crms and email marketing software",
+          "theme": "usage",
+          "sourceUrl": "https://elai.io/api/",
+          "sourceType": "guide",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "medium",
+          "conflictGroup": "api_integration"
+        }
+      ],
+      "examples": []
+    },
+    {
+      "slug": "elai",
+      "pageUrl": "https://elai.io/voice-cloning/",
+      "sourceType": "features_index",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "voice cloning supports 32 different languages including english and japanese",
+          "theme": "formats",
+          "sourceUrl": "https://elai.io/voice-cloning/",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "voice_cloning_languages"
+        },
+        {
+          "text": "requires 1 to 5 minutes of voice recording for cloning",
+          "theme": "limits",
+          "sourceUrl": "https://elai.io/voice-cloning/",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "voice_cloning_requirements"
+        },
+        {
+          "text": "voice cloning process takes approximately 3 business days",
+          "theme": "limits",
+          "sourceUrl": "https://elai.io/voice-cloning/",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "voice_cloning_time"
+        }
+      ],
+      "examples": []
+    }
+  ]
+}

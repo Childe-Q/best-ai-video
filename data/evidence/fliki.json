@@ -1,0 +1,2183 @@
+{
+  "slug": "fliki",
+  "lastUpdated": "2026-01-28T15:00:00-08:00",
+  "sources": {
+    "pricing": [
+      "https://fliki.ai/pricing"
+    ],
+    "faq": [
+      "https://fliki.ai/frequently-asked-questions"
+    ],
+    "help": [
+      "https://fliki.ai/guide"
+    ],
+    "featuresIndex": [
+      "https://fliki.ai/features"
+    ],
+    "featurePages": [
+      "https://fliki.ai/features/text-to-video",
+      "https://fliki.ai/features/text-to-speech",
+      "https://fliki.ai/features/voice-cloning",
+      "https://fliki.ai/features/blog-to-video",
+      "https://fliki.ai/features/ppt-to-video",
+      "https://fliki.ai/features/ai-avatar",
+      "https://fliki.ai/features/translator",
+      "https://fliki.ai/features/templates",
+      "https://fliki.ai/features/bulk-video-creator",
+      "https://fliki.ai/features/video-editor",
+      "https://fliki.ai/features/ai-image-animator"
+    ],
+    "terms": [
+      "https://fliki.ai/terms"
+    ],
+    "privacy": [
+      "https://fliki.ai/privacy"
+    ],
+    "about": [
+      "https://fliki.ai/about"
+    ],
+    "useCases": [
+      "https://fliki.ai/use-cases/content-creation"
+    ],
+    "other": []
+  },
+  "nuggets": [
+    {
+      "text": "Deleted files in Trash are permanently removed after 30 days.",
+      "theme": "privacy",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "data_retention_scope",
+      "note": "Guide specifies a 30-day deletion window for items in Trash."
+    },
+    {
+      "text": "Each scene can have a maximum of 15 layers.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "note": "Includes voiceover, media, and text layers."
+    },
+    {
+      "text": "Video export supports 1080p resolution.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Video export supports 720p resolution.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Video export supports 360p resolution.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Video export formats include MP4.",
+      "theme": "formats",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Video export formats include MOV.",
+      "theme": "formats",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Audio export formats include MP3.",
+      "theme": "formats",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Audio export formats include WAV.",
+      "theme": "formats",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Design export formats include JPG.",
+      "theme": "formats",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Design export formats include PNG.",
+      "theme": "formats",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Design export formats include WEBP.",
+      "theme": "formats",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Design export formats include PDF.",
+      "theme": "formats",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Video aspect ratio can be set to Square.",
+      "theme": "formats",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "note": "Described under file settings."
+    },
+    {
+      "text": "Video aspect ratio can be set to Portrait.",
+      "theme": "formats",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "note": "Described under file settings."
+    },
+    {
+      "text": "Video aspect ratio can be set to Landscape.",
+      "theme": "formats",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "note": "Described under file settings."
+    },
+    {
+      "text": "Fliki offers 2000+ voices.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Fliki offers voices in 80+ different languages.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Fliki uses Stripe for processing payments.",
+      "theme": "security",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Fliki does not store your card details.",
+      "theme": "security",
+      "sourceUrl": "https://fliki.ai/guide",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "note": "Also described in the privacy policy payment section."
+    },
+    {
+      "text": "Free plan includes 5 minutes of credits every month.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Free credits reset automatically every month based on the plan cycle.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "note": "FAQ notes the free plan cycle is usually the registration date."
+    },
+    {
+      "text": "Free plan has a per-file limit of 10 scenes.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "note": "Stated as a scene limit per file."
+    },
+    {
+      "text": "Standard plan has a per-file limit of 50 scenes.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "note": "Stated as a scene limit per file."
+    },
+    {
+      "text": "Premium plan has a per-file limit of 100 scenes.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "note": "Stated as a scene limit per file."
+    },
+    {
+      "text": "Publishing rights are owned by the user.",
+      "theme": "commercial",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Fliki does not own user content.",
+      "theme": "commercial",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "note": "Stated in the publishing rights section."
+    },
+    {
+      "text": "Media provided in Fliki is either licensed or royalty-free.",
+      "theme": "commercial",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users of any paid plan have commercial rights to provided media.",
+      "theme": "commercial",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users retain the commercial license for videos created during the paid subscription period after the subscription ends.",
+      "theme": "commercial",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Usage is calculated based on the text that has been converted to audio.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Usage is calculated based on exported video.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Quota and usage are shown under Account \u2192 Credits.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Credits represent the duration in minutes of audio or video content generated within a month.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Credits are updated based on your billing cycle, which begins one month after the date you sign up.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Credits cannot be carried over or accumulated to the next month\u2019s quota.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "note": "Also stated on: https://fliki.ai/guide"
+    },
+    {
+      "text": "Fliki automatically adds a watermark to content for users on the free plan.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "After upgrading to a paid plan, newly exported videos are watermark-free.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Videos exported during the free plan retain the watermark until re-exported.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Audio downloads are supported in MP3 format.",
+      "theme": "formats",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "note": "Guide and feature pages also mention WAV exports."
+    },
+    {
+      "text": "Refunds are not issued once you have subscribed to the paid plans.",
+      "theme": "terms",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "refund_policy",
+      "note": "FAQ states no refunds after subscribing to paid plans; Terms describe discretionary case-by-case refunds."
+    },
+    {
+      "text": "Canceling subscription auto-renewal does not provide a refund for the current subscription period.",
+      "theme": "terms",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "After canceling subscription auto-renewal, access continues until the end of the current subscription period.",
+      "theme": "terms",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Idea to Video feature limit is 15 minutes on all paid plans.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "On the premium plan, longer videos up to 30 minutes can be created by manually adding more scenes and content.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "max_video_length_premium",
+      "note": "FAQ describes up to 30 minutes via manual scene additions; pricing compare table lists Premium export length as 40 minutes."
+    },
+    {
+      "text": "PPT to Video accepts PPT files with the .ppt extension.",
+      "theme": "formats",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "PPT to Video requires the file to be less than 100 MB.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Standard Voice preview uses 0.5 credit per minute.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Ultra-Realistic, Studio, or Cloned Voice preview uses 1 credit per minute.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Editing text in one scene only uses credits for that scene\u2019s duration.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Using recorded (non-AI) voiceover uses no credits.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Exporting a final video uses 1 credit per minute.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Stock images and stock videos use no credits.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "AI-generated images (Standard AI) use 0.05 credits.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "AI-generated images (Pro AI) use 0.1 credits.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "AI video clips use about 2 credits per AI-generated clip.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "AI avatars use 0.25 credits per second of avatar footage.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/frequently-asked-questions",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Personal Data is retained only as long as necessary for the purposes described in the Privacy Policy.",
+      "theme": "privacy",
+      "sourceUrl": "https://fliki.ai/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "data_retention_scope",
+      "note": "Privacy policy states a general retention standard; Guide specifies Trash deletion after 30 days."
+    },
+    {
+      "text": "Security measures include firewalls, encryption technologies, and intrusion detection systems.",
+      "theme": "security",
+      "sourceUrl": "https://fliki.ai/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Access to personal data is restricted to employees, agents, contractors, and third parties who need it for business purposes.",
+      "theme": "security",
+      "sourceUrl": "https://fliki.ai/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "People with access to personal data are bound by confidentiality obligations.",
+      "theme": "security",
+      "sourceUrl": "https://fliki.ai/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Data may be transferred, stored, or processed in the United States.",
+      "theme": "privacy",
+      "sourceUrl": "https://fliki.ai/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "note": "Described as the location of servers or central databases."
+    },
+    {
+      "text": "The Company states it will not store or collect payment card details.",
+      "theme": "privacy",
+      "sourceUrl": "https://fliki.ai/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Payment card details are provided directly to third-party payment processors such as Stripe.",
+      "theme": "privacy",
+      "sourceUrl": "https://fliki.ai/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The privacy policy states payment processors such as Stripe adhere to PCI-DSS standards.",
+      "theme": "security",
+      "sourceUrl": "https://fliki.ai/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Procedures exist to handle suspected data breaches.",
+      "theme": "security",
+      "sourceUrl": "https://fliki.ai/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users and relevant authorities will be notified of suspected data breaches if legally required.",
+      "theme": "security",
+      "sourceUrl": "https://fliki.ai/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Refund requests for subscriptions may be considered on a case-by-case basis and granted at the sole discretion of the Company.",
+      "theme": "terms",
+      "sourceUrl": "https://fliki.ai/terms",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "conflictGroup": "refund_policy",
+      "note": "Terms describe discretionary case-by-case refunds; FAQ states no refunds once subscribed to paid plans."
+    },
+    {
+      "text": "Only one account per user is permitted.",
+      "theme": "terms",
+      "sourceUrl": "https://fliki.ai/terms",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Attempting multiple accounts or violating fair usage may lead to data removal and banning or restricting access.",
+      "theme": "terms",
+      "sourceUrl": "https://fliki.ai/terms",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users grant the Company rights to access, use, host, store, cache, modify, reproduce, transmit, display, publish, and distribute content to operate and improve the services.",
+      "theme": "terms",
+      "sourceUrl": "https://fliki.ai/terms",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high",
+      "note": "Described as applying when users generate and post content."
+    },
+    {
+      "text": "Users retain rights to their content.",
+      "theme": "terms",
+      "sourceUrl": "https://fliki.ai/terms",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The Company performs regular content backups.",
+      "theme": "security",
+      "sourceUrl": "https://fliki.ai/terms",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The Company does not guarantee there will be no loss or corruption of data.",
+      "theme": "security",
+      "sourceUrl": "https://fliki.ai/terms",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users should maintain copies independent of the service.",
+      "theme": "security",
+      "sourceUrl": "https://fliki.ai/terms",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Terms prohibit impersonating individuals without their consent.",
+      "theme": "terms",
+      "sourceUrl": "https://fliki.ai/terms",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Terms prohibit sharing copyrighted or licensed material in violation of its terms of use.",
+      "theme": "terms",
+      "sourceUrl": "https://fliki.ai/terms",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Fliki is described as a text-to-video and text-to-speech creator for creating audio and video content.",
+      "theme": "other",
+      "sourceUrl": "https://fliki.ai/about",
+      "sourceType": "about",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Fliki lists co-founders Atul Yadav and Sabir Ahmed.",
+      "theme": "other",
+      "sourceUrl": "https://fliki.ai/about",
+      "sourceType": "about",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Support contact email is support@fliki.ai.",
+      "theme": "support",
+      "sourceUrl": "https://fliki.ai/about",
+      "sourceType": "about",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The content creation page states credit card is not required to start for free.",
+      "theme": "other",
+      "sourceUrl": "https://fliki.ai/use-cases/content-creation",
+      "sourceType": "use_cases",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The content creation page claims Fliki is trusted by over 50,000 companies of all sizes.",
+      "theme": "other",
+      "sourceUrl": "https://fliki.ai/use-cases/content-creation",
+      "sourceType": "use_cases",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "medium"
+    },
+    {
+      "text": "The content creation page claims 10,000,000+ people are creating videos for social media, training, courses, and more.",
+      "theme": "other",
+      "sourceUrl": "https://fliki.ai/use-cases/content-creation",
+      "sourceType": "use_cases",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "medium"
+    },
+    {
+      "text": "The content creation page claims 4.8/5 satisfaction from 5,500+ reviews from G2 and Capterra.",
+      "theme": "other",
+      "sourceUrl": "https://fliki.ai/use-cases/content-creation",
+      "sourceType": "use_cases",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "medium"
+    },
+    {
+      "text": "Free plan exports HD 720p videos.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Free plan exports contain a Fliki watermark.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high",
+      "note": "Also stated on: https://fliki.ai/frequently-asked-questions"
+    },
+    {
+      "text": "Standard plan offers Full HD 1080p videos.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Standard plan exports are watermark-free.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Premium plan offers 1080p video resolution.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Enterprise plan offers 1080p and higher video resolution.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Free plan provides 300 limited voices.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Free plan provides voices across 80+ languages and 100+ dialects.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high",
+      "note": "Guide also states 80+ different languages."
+    },
+    {
+      "text": "Standard plan provides 1000 voices including 150 ultra-realistic and 50 studio-quality voices.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Premium plan provides 2000+ voices including 1000+ ultra-realistic and 350+ studio-quality voices.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Free plan export length is 10 minutes.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Standard plan export length is 15 minutes.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Premium plan export length is 40 minutes.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high",
+      "conflictGroup": "max_video_length_premium",
+      "note": "Pricing compare table lists Premium export length as 40 minutes; FAQ describes up to 30 minutes via manual scene additions."
+    },
+    {
+      "text": "Enterprise plan export length is 40 minutes.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Credits are deducted based on the duration of audio generated from text.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high",
+      "note": "Also described in the FAQ usage section."
+    },
+    {
+      "text": "Credits are deducted based on the duration of exported video.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high",
+      "note": "Also described in the FAQ usage section."
+    },
+    {
+      "text": "Modifying text or adjusting settings like voice or pauses reprocesses audio and charges credits.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Fliki supports voice cloning.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high",
+      "note": "Feature details are described on the voice cloning feature page."
+    },
+    {
+      "text": "Subscription plans grant a commercial license to content you create.",
+      "theme": "commercial",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Created content can be published and monetized on YouTube or other social media if the text content is original and has no copyright conflict.",
+      "theme": "commercial",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Fliki provides media from royalty-free media sources.",
+      "theme": "commercial",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high",
+      "note": "FAQ also describes provided media as licensed or royalty-free."
+    },
+    {
+      "text": "Fliki has licenses to premium media that can be used with commercial rights on social media platforms.",
+      "theme": "commercial",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "A subscription can be canceled at any time by navigating to Account and selecting Manage billing.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Fliki accepts major debit and credit cards.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Fliki accepts Google Pay and Apple Pay.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Fliki accepts local payment wallets in supported countries.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Free plan support is email only.",
+      "theme": "support",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Standard plan support includes email and live chat.",
+      "theme": "support",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Premium plan support includes email and priority live chat.",
+      "theme": "support",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Enterprise plan support includes a dedicated account manager.",
+      "theme": "support",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Text to Speech is described as converting text into natural-sounding speech using AI voices.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/text-to-speech",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Text to Speech describes a 3-step workflow: input text, select voice, then preview and export audio.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/text-to-speech",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Text to Speech states a free text-to-speech limit of 200 characters.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/features/text-to-speech",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Text to Speech states generated speech can be up to 30 minutes from text with a premium subscription plan.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/features/text-to-speech",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Text to Speech states AI voices are available in 80+ languages and 100+ dialects.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/features/text-to-speech",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Text to Speech states you can choose from 2000+ realistic voices.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/features/text-to-speech",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Voice Cloning states you can create a cloned voice from a 2-minute recording sample.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/voice-cloning",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Voice Cloning states you must have explicit consent from the voice owner before cloning a voice.",
+      "theme": "security",
+      "sourceUrl": "https://fliki.ai/features/voice-cloning",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Voice Cloning states cloned voices typically take up to 6 hours for approval and are often approved within an hour.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/features/voice-cloning",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Voice Cloning states Fliki supports emotions on certain voices marked with a \u26a1\ufe0f icon.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/voice-cloning",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Voice Cloning lists emotion examples including anger, cheerfulness, and hopefulness.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/voice-cloning",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Voice Cloning is described as usable for promotional content and educational materials.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/voice-cloning",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Blog to Video Step 1 is providing the link to your blog article URL.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/blog-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Blog to Video states it automatically summarizes a blog post into different sizes suitable for video formats.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/blog-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Blog to Video states it scours millions of stock libraries to find relevant images and video clips.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/features/blog-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Blog to Video states it adds a professional voiceover and background music to the video.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/blog-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Blog to Video states you can choose short (1 min), medium (2 min), or full video duration options.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/features/blog-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Blog to Video exports videos in MP4 with aspect ratios like Landscape, Portrait, or Square.",
+      "theme": "formats",
+      "sourceUrl": "https://fliki.ai/features/blog-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "PPT to Video states you upload a PPT and Fliki auto-generates scripts and adds AI avatars, voiceovers, and music.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/ppt-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "PPT to Video describes script-based editing for transforming PPTs into videos.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/ppt-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "PPT to Video Step 1 is uploading your presentation file.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/ppt-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "PPT to Video states it converts presentations using individual slides and creates a script based on your slides.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/ppt-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "PPT to Video states you can add text overlays, insert images and videos, and incorporate background music.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/ppt-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "PPT to Video states you can add your own voiceover to videos created from presentations.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/ppt-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Avatar promotes starting creation with 70+ avatars.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/features/ai-avatar",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Avatar states avatars can lip-sync to the voiceover.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/ai-avatar",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Avatar states you can position the avatar on the left, right, or center of the screen.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/ai-avatar",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Avatar states you can create a custom avatar by uploading your photo.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/ai-avatar",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Avatar states it supports 2000+ realistic voices in 80+ languages and 100+ dialects.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/features/ai-avatar",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Avatar states you can use AI avatars for YouTube videos and social media videos.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/ai-avatar",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Translator is titled as translating videos to 80+ languages.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/features/translator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Translator describes translating video content online with a few clicks.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/translator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Translator Step 1 is creating or uploading content in your source language.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/translator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Translator Step 2 is selecting \u201cTranslate\u201d and choosing your language and dialect.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/translator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Translator Step 2 includes choosing an appropriate AI voice for the translated content.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/translator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Page has limited extractable facts (Step 3 details were not visible in the captured text).",
+      "theme": "other",
+      "sourceUrl": "https://fliki.ai/features/translator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Templates are described as editable video templates for creating on-brand videos.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/templates",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Templates are described as professionally designed video templates to simplify creation for any purpose.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/templates",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Templates page lists a ready-made template named \u201cCase Study \u00b7 Corporate\u201d.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/templates",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Templates page lists a ready-made template named \u201cMyHealth Mobile App \u00b7 Product Demo\u201d.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/templates",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Templates page lists a ready-made template named \u201cThailand travel guide \u00b7 Travel & Tourism\u201d.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/templates",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Page has limited extractable facts (only template examples and general template description were visible).",
+      "theme": "other",
+      "sourceUrl": "https://fliki.ai/features/templates",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Idea to Video states you can create videos for social media by entering a prompt.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/idea-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Idea to Video Step 1 is describing your idea in a few words and selecting the tone of the video.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/idea-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Idea to Video Step 2 is choosing and personalizing your AI voice after the script and media are generated.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/idea-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Idea to Video Step 3 is customizing the video by selecting fonts, colors, and elements.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/idea-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Idea to Video Step 4 is previewing and exporting the video.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/features/idea-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Idea to Video describes AI turning prompts into videos with AI voices.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/idea-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Video Generator states it transforms text prompts into videos in seconds.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/ai-video-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Video Generator states it automatically generates video clips, script, voiceover, subtitles, effects, and music.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/ai-video-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Video Generator Step 1 includes inputting an idea prompt, blog article, product URL, or pasting a script.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/ai-video-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Video Generator Step 2 is selecting AI Media to generate unique visuals based on content context.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/ai-video-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Video Generator claims it is trusted by over 50,000 companies of all sizes.",
+      "theme": "other",
+      "sourceUrl": "https://fliki.ai/features/ai-video-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Page has limited extractable facts (Steps after Step 2 were not visible in the captured text).",
+      "theme": "other",
+      "sourceUrl": "https://fliki.ai/features/ai-video-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Script to Video describes turning scripts into dynamic videos with AI-powered workflow.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/script-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Script to Video states voiceovers are available in over 79 languages.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/features/script-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Script to Video Step 1 is writing or pasting your script into Fliki.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/script-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Script to Video Step 2 includes choosing video elements like media, templates, avatars, and headings.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/script-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Script to Video Step 3 includes customizing AI voice, AI avatar, and brand fonts and colors.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/script-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Script to Video Step 4 is previewing, exporting, and sharing the video.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/features/script-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Image to Video states it creates videos from images with voiceovers, sound effects, music, and animations.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/image-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Image to Video Step 1 starts with text input such as a script, idea, or blog post.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/image-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Image to Video Step 3 includes uploading photos to each scene or using a stock library with millions of media assets.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/features/image-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Image to Video Step 4 is previewing and exporting the video.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/features/image-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Image to Video FAQ describes converting pictures into videos by uploading images, choosing an AI voice, and adding a script.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/image-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Image to Video FAQ describes adding voiceover via script-method editing and selecting an AI voice.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/image-to-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Product to Video Step 1 is pasting a link to an Amazon or Airbnb product page.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/product-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Product to Video Step 2 is choosing and personalizing an AI voice after script and media are generated.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/product-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Product to Video Step 3 includes editing photos in each scene or using a stock library with millions of media assets.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/features/product-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Product to Video Step 4 is previewing and exporting the video.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/features/product-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Product to Video Step 4 mentions sharing the exported video to improve conversions and boost sales.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/product-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Product to Video is described as creating videos from product pages by entering a product link.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/product-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Bulk Video Creator Step 1 is preparing a CSV file with content details including templates, voices, and prompts.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/bulk-video-creator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Bulk Video Creator Step 2 includes clicking Bulk create from the Files page and uploading a spreadsheet with scripts and preferences.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/bulk-video-creator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Bulk Video Creator Step 3 includes previewing any file and tweaking it if needed before exporting.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/bulk-video-creator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Bulk Video Creator exports entire videos in MP4 and MOV or exports individual audio tracks.",
+      "theme": "formats",
+      "sourceUrl": "https://fliki.ai/features/bulk-video-creator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Bulk Video Creator describes its process as creating bulk videos with AI in 4 easy steps.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/bulk-video-creator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Page has limited extractable facts (a Step 4 title or details were not visible in the captured text).",
+      "theme": "other",
+      "sourceUrl": "https://fliki.ai/features/bulk-video-creator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Embed Video states it turns a Fliki video into an ad-free embed with a single line of code.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/embed-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Embed Video states it requires no hosting setup or bandwidth worries.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/embed-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Embed Video Step 1 is creating or uploading a video and optionally adding AI voices, images, and dynamic media.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/embed-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Embed Video Step 2 is exporting by hitting Download and then Start export to generate a share-ready version.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/features/embed-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Embed Video describes a 3-step embedding workflow including create or upload and export steps.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/embed-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Page has limited extractable facts (Step 3 details were not visible in the captured text).",
+      "theme": "other",
+      "sourceUrl": "https://fliki.ai/features/embed-video",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Video Editor states you can upload raw video or audio into the online video editor.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/video-editor",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Video Editor Step 2 includes selecting premium stock media or letting the AI video generator choose media.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/video-editor",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Video Editor Step 3 includes customizing layout, subtitle styles, and brand fonts and colors.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/video-editor",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Video Editor Step 4 exports in Full HD with subtitles included.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/features/video-editor",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Video Editor states it can transform text into speech or animated avatars in minutes.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/video-editor",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Video Editor Step 4 includes sharing instantly on a website or social media channels.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/video-editor",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Screen Recorder is described as capturing, editing, and sharing high-quality screen recordings.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/screen-recorder",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Screen Recorder Step 1 includes choosing whether to record screen, camera, or both.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/screen-recorder",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Screen Recorder Step 2 includes selecting premium stock media or letting the AI video generator choose media.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/screen-recorder",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Screen Recorder states you can record your screen for business presentations, explainer videos, or gaming walkthroughs.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/screen-recorder",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Screen Recorder states you can capture high-quality video footage from webcam or other video sources.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/screen-recorder",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Screen Recorder states you can record your voice directly from Fliki's interface.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/screen-recorder",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Thumbnail Maker is described as creating attention-grabbing thumbnails in a few seconds.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/ai-thumbnail-maker",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Thumbnail Maker Step 1 includes entering the text you want on your YouTube thumbnail.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/ai-thumbnail-maker",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Thumbnail Maker Step 1 includes choosing a stock visual or letting AI generate a unique image.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/ai-thumbnail-maker",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Thumbnail Maker includes previewing the design and downloading it when satisfied.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/features/ai-thumbnail-maker",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Thumbnail Maker describes a 3-step workflow for creating thumbnails.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/ai-thumbnail-maker",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Page has limited extractable facts (Step 2 details were not visible in the captured text).",
+      "theme": "other",
+      "sourceUrl": "https://fliki.ai/features/ai-thumbnail-maker",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Video Ad Generator Step 1 is entering a marketing message or product description.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/ai-video-ad-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Video Ad Generator Step 2 is choosing an ad template from professionally designed templates tailored to platforms.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/ai-video-ad-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Video Ad Generator Step 3 includes customizing AI voice, AI avatar, brand fonts and colors, and adding logos.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/ai-video-ad-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Video Ad Generator Step 4 is previewing, exporting, and sharing the ad once satisfied with the preview.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/features/ai-video-ad-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Video Ad Generator describes creating video ads with AI in 4 steps.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/ai-video-ad-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Video Ad Generator Step 4 mentions sharing on websites, social media, or advertising platforms.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/ai-video-ad-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Talking Avatar Generator states access to over 2,000 realistic AI voices across 80+ languages.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/features/ai-taking-avatar-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Talking Avatar Generator states you can start creating with 70+ avatars.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/features/ai-taking-avatar-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Talking Avatar Generator Step 1 includes entering text, blog posts, or training materials for conversion into visuals and speech.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/ai-taking-avatar-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Talking Avatar Generator Step 2 includes choosing from thousands of AI voices and adjusting pace, tone, and style.",
+      "theme": "features",
+      "sourceUrl": "https://fliki.ai/features/ai-taking-avatar-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Talking Avatar Generator Step 3 includes selecting an AI avatar that resonates with your brand or audience.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/features/ai-taking-avatar-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Talking Avatar Generator Step 4 includes previewing, exporting, and sharing or embedding the talking avatar video.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/features/ai-taking-avatar-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Talking Avatar Generator states Fliki\u2019s AI voiceover offers 2500+ ultra-realistic voices.",
+      "theme": "limits",
+      "sourceUrl": "https://fliki.ai/features/ai-taking-avatar-generator",
+      "capturedAt": "2026-01-30T22:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Export resolution: 1080p",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.408Z",
+      "hasNumber": true,
+      "keywords": [
+        "resolution",
+        "1080p"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "Export resolution: 720p",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.407Z",
+      "hasNumber": true,
+      "keywords": [
+        "resolution",
+        "720p"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "Compare plans: $21 per month",
+      "theme": "pricing",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.406Z",
+      "hasNumber": true,
+      "keywords": [
+        "price",
+        "monthly"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "Plan: 15 credits/minutes",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.408Z",
+      "hasNumber": true,
+      "keywords": [
+        "credits",
+        "minutes"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "Plan: 2160 credits/minutes",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.407Z",
+      "hasNumber": true,
+      "keywords": [
+        "credits",
+        "minutes"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "Plan: 40 credits/minutes",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.408Z",
+      "hasNumber": true,
+      "keywords": [
+        "credits",
+        "minutes"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "Plan: 5 credits/minutes",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.407Z",
+      "hasNumber": true,
+      "keywords": [
+        "credits",
+        "minutes"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "Plan: 7200 credits/minutes",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.408Z",
+      "hasNumber": true,
+      "keywords": [
+        "credits",
+        "minutes"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "No watermark",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.408Z",
+      "hasNumber": false,
+      "keywords": [
+        "watermark"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "Watermark on free plan",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.407Z",
+      "hasNumber": false,
+      "keywords": [
+        "watermark"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "1000 voices",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.408Z",
+      "hasNumber": true,
+      "keywords": [
+        "voices"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "Yes, Fliki allows you to export the videos you create. You can export your videos in formats like MP4.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "high"
+    },
+    {
+      "text": "/5 \u00a9 2025 Nine Thirty Five Privacy Policy Terms of Use About Media kit Cookie settings Features Text to video AI voiceover Idea to video AI avatar Text to",
+      "theme": "security",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.367Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "high"
+    },
+    {
+      "text": "Easily clone yourself, your voice, and your personality to create videos that feel authentic with Fliki&#x27;s professional AI avatar and voice cloning features",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "high"
+    },
+    {
+      "text": "Fliki supports over 80 languages in over 100 dialects.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "high"
+    },
+    {
+      "text": "The AI speech generator offers 1300+ ultra-realistic voices across 80+ languages, ensuring that you can create voice overs in your desired language with ease.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "high"
+    },
+    {
+      "text": "The AI speech generator offers 1300+ ultra-realistic voices, ensuring that you can create videos with voice overs in your desired language with ease.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "high"
+    },
+    {
+      "text": "The paid subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Yes, Fliki allows you to export the videos you create",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.360Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Create an account for free credit card not required Make videos in minutes with AI Idea to video Transform your ideas into stunning videos with AI voices,",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Easily clone yourself, your voice, and your personality to create videos that feel authentic with Fliki's professional AI avatar and voice cloning features.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.354Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Easy to use Text to Video editor featuring lifelike voiceovers, dynamic AI video clips, and a wide range of AI-powered features",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Fliki Features Use cases Explore Pricing Login Signup Get started Turn text into videos with AI voices Transform your ideas into stunning videos with our AI",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Fliki supports a vast array of languages for text-to-speech conversion using its voice AI generator.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Fliki supports voice cloning, allowing you to replicate your own voice or create unique voices for different characters",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.367Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Fliki supports voice cloning, allowing you to replicate your own voice or create unique voices for different characters. This feature saves time on recording",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Transform your ideas into stunning videos with AI voices, using our Idea to Video feature",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Yes, Fliki offers a tier that allows users to explore text to voice and text to video features without any cost.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "You can cancel your subscription at anytime by navigating to Account and selecting \"Manage billing\"",
+      "theme": "pricing",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "You can cancel your subscription at anytime by navigating to Account and selecting \"Manage billing\" How do I pay",
+      "theme": "pricing",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.367Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Idea to video (prompt-based) flow",
+      "scenario": "Describe a video idea with a short prompt and have the system generate script and media.",
+      "sourceUrl": "https://fliki.ai/use-cases/content-creation",
+      "snippet": "The page describes entering a few words for a video idea, style, and tone; Fliki generates a script and fetches relevant media to match it.",
+      "capturedAt": "2026-01-28T00:00:00Z",
+      "confidence": "medium"
+    },
+    {
+      "title": "Credits deduction behavior",
+      "scenario": "Understanding what consumes credits",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "snippet": "Credits are deducted based on the duration of the audio generated from text or video exported. If you modify the text or adjust settings like the voice or pauses, Fliki reprocesses the text to generate new audio and charges credits.",
+      "capturedAt": "2026-01-28T20:00:00-08:00",
+      "confidence": "medium"
+    }
+  ],
+  "metadata": {
+    "totalInputBlocks": 9,
+    "totalNuggets": 259,
+    "themesCovered": [
+      "commercial",
+      "export",
+      "features",
+      "formats",
+      "limits",
+      "other",
+      "pricing",
+      "privacy",
+      "security",
+      "support",
+      "terms",
+      "usage",
+      "voice"
+    ],
+    "conflicts": [
+      {
+        "conflictGroup": "refund_policy",
+        "items": 2,
+        "note": "FAQ states no refunds once subscribed; Terms allow discretionary case-by-case refunds."
+      },
+      {
+        "conflictGroup": "data_retention_scope",
+        "items": 2,
+        "note": "Guide specifies Trash deletion after 30 days; Privacy policy states retention as long as necessary for stated purposes."
+      },
+      {
+        "conflictGroup": "max_video_length_premium",
+        "items": 2,
+        "note": "Pricing compare table lists Premium export length as 40 minutes; FAQ describes creating up to 30 minutes by adding scenes."
+      },
+      {
+        "conflictGroup": "voices_count",
+        "items": 2
+      }
+    ]
+  }
+}

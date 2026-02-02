@@ -1,0 +1,1596 @@
+{
+  "linkIndex": {
+    "slug": "zebracat",
+    "sourceType": "features_index",
+    "pageUrl": "https://www.zebracat.ai/",
+    "capturedAt": "2026-01-31T12:00:00Z",
+    "featureUrls": [
+      "https://www.zebracat.ai/pricing",
+      "https://www.zebracat.ai/post/what-is-google-veo",
+      "https://help.zebracat.ai/",
+      "https://help.zebracat.ai/64c2de6bfc724eba9ad93e3e55c9f5a4-legal\u2013licensing",
+      "https://help.zebracat.ai/article/c1e2fb263dea498cbde0ce6a8b102355-how-do-you-handle-data-privacy-and-compliance-especially-under-regulations-like-gdpr-and-ccpa-",
+      "https://help.zebracat.ai/article/466c192aad4646b9920b1d8ea4a1664b-how-secure-is-my-data-and-content-on-zebracat",
+      "https://help.zebracat.ai/article/dbab01aa903e435bbe4cc2e9dd602666\u2013is-zebracat-free-to-use",
+      "https://help.zebracat.ai/article/de26d58fc7804e8f817653e8518c1660-can-i-use-zebracats-videos-for-commercial-purposes",
+      "https://help.zebracat.ai/article/00fc1091dbe745d58a53266e227312fa-who-owns-the-content-made-with-zebracat",
+      "https://help.zebracat.ai/article/78a7c4a1793f490fbc778c0f8c7873e2-is-zebracats-music-copyright-free-and-safe-to-use-on-social-media-platforms",
+      "https://help.zebracat.ai/article/cc2521ad34724d00851bd7f80e6a526e-what-type-of-ai-technology-does-zebracat-use",
+      "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial"
+    ]
+  },
+  "pageEvidence": [
+    {
+      "slug": "zebracat",
+      "sourceType": "features",
+      "pageUrl": "https://www.zebracat.ai/",
+      "capturedAt": "2026-01-30T10:00:00Z",
+      "nuggets": [
+        {
+          "text": "Integrates cutting-edge AI video models including VEO3, Kling, Nano Banana, Seedance, and Pixverse.",
+          "theme": "features",
+          "sourceUrl": "https://www.zebracat.ai/",
+          "capturedAt": "2026-01-30T10:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Generates videos from prompts, scripts, URLs, or audio files.",
+          "theme": "inputs",
+          "sourceUrl": "https://www.zebracat.ai/",
+          "capturedAt": "2026-01-30T10:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Offers 'Unlimited Cat' plan with 3,600 generative AI credits per month.",
+          "theme": "limits",
+          "sourceUrl": "https://www.zebracat.ai/",
+          "capturedAt": "2026-01-30T10:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Allows creating up to 10 new custom avatars per month on the Unlimited plan.",
+          "theme": "limits",
+          "sourceUrl": "https://www.zebracat.ai/",
+          "capturedAt": "2026-01-30T10:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Supports translation of videos into over 25 languages with automatic voice and lip-sync adaptation.",
+          "theme": "features",
+          "sourceUrl": "https://www.zebracat.ai/",
+          "capturedAt": "2026-01-30T10:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Generative video feature allows creating fully AI-generated videos without stock footage or uploads.",
+          "theme": "features",
+          "sourceUrl": "https://www.zebracat.ai/",
+          "capturedAt": "2026-01-30T10:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Provides 'Brand Kits' to store logos, colors, and fonts (up to Unlimited on top tier).",
+          "theme": "controls",
+          "sourceUrl": "https://www.zebracat.ai/",
+          "capturedAt": "2026-01-30T10:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Supports export resolutions up to 1080p on paid plans.",
+          "theme": "export",
+          "sourceUrl": "https://www.zebracat.ai/",
+          "capturedAt": "2026-01-30T10:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Users can clone their own voice to use across videos forever.",
+          "theme": "features",
+          "sourceUrl": "https://www.zebracat.ai/",
+          "capturedAt": "2026-01-30T10:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Includes access to millions of stock video clips and music assets.",
+          "theme": "limits",
+          "sourceUrl": "https://www.zebracat.ai/",
+          "capturedAt": "2026-01-30T10:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Free plan is limited to approximately 1 minute of video per week with watermark.",
+          "theme": "limits",
+          "sourceUrl": "https://www.zebracat.ai/",
+          "capturedAt": "2026-01-30T10:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Supports converting blog posts into viral videos.",
+          "theme": "features",
+          "sourceUrl": "https://www.zebracat.ai/",
+          "capturedAt": "2026-01-30T10:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "zebracat",
+      "sourceType": "features",
+      "pageUrl": "https://help.zebracat.ai/article/cc2521ad34724d00851bd7f80e6a526e-what-type-of-ai-technology-does-zebracat-use",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "Zebracat uses a combination of open-source and proprietary AI technologies.",
+          "theme": "features",
+          "sourceUrl": "https://help.zebracat.ai/article/cc2521ad34724d00851bd7f80e6a526e-what-type-of-ai-technology-does-zebracat-use",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says its AI technologies are developed by an in-house team of AI scientists and engineers.",
+          "theme": "features",
+          "sourceUrl": "https://help.zebracat.ai/article/cc2521ad34724d00851bd7f80e6a526e-what-type-of-ai-technology-does-zebracat-use",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says it includes advanced models for text-to-speech.",
+          "theme": "features",
+          "sourceUrl": "https://help.zebracat.ai/article/cc2521ad34724d00851bd7f80e6a526e-what-type-of-ai-technology-does-zebracat-use",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says it includes advanced models for AI visuals.",
+          "theme": "features",
+          "sourceUrl": "https://help.zebracat.ai/article/cc2521ad34724d00851bd7f80e6a526e-what-type-of-ai-technology-does-zebracat-use",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says it includes advanced models for video generation.",
+          "theme": "features",
+          "sourceUrl": "https://help.zebracat.ai/article/cc2521ad34724d00851bd7f80e6a526e-what-type-of-ai-technology-does-zebracat-use",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says its models are optimized to deliver fast, high-quality results for creators and marketers.",
+          "theme": "features",
+          "sourceUrl": "https://help.zebracat.ai/article/cc2521ad34724d00851bd7f80e6a526e-what-type-of-ai-technology-does-zebracat-use",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "zebracat",
+      "sourceType": "features",
+      "pageUrl": "https://help.zebracat.ai/article/00fc1091dbe745d58a53266e227312fa-who-owns-the-content-made-with-zebracat",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "Zebracat says you own the publishing rights to the content you create with Zebracat.",
+          "theme": "commercial",
+          "sourceUrl": "https://help.zebracat.ai/article/00fc1091dbe745d58a53266e227312fa-who-owns-the-content-made-with-zebracat",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says it does not claim ownership of your videos.",
+          "theme": "commercial",
+          "sourceUrl": "https://help.zebracat.ai/article/00fc1091dbe745d58a53266e227312fa-who-owns-the-content-made-with-zebracat",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says media assets available in Zebracat include visuals, music, and voiceovers.",
+          "theme": "features",
+          "sourceUrl": "https://help.zebracat.ai/article/00fc1091dbe745d58a53266e227312fa-who-owns-the-content-made-with-zebracat",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says its media assets are either licensed or royalty-free.",
+          "theme": "commercial",
+          "sourceUrl": "https://help.zebracat.ai/article/00fc1091dbe745d58a53266e227312fa-who-owns-the-content-made-with-zebracat",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says users with a paid plan have full commercial rights to use their content.",
+          "theme": "commercial",
+          "sourceUrl": "https://help.zebracat.ai/article/00fc1091dbe745d58a53266e227312fa-who-owns-the-content-made-with-zebracat",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says you are free to publish, share, or monetize your videos without restrictions.",
+          "theme": "commercial",
+          "sourceUrl": "https://help.zebracat.ai/article/00fc1091dbe745d58a53266e227312fa-who-owns-the-content-made-with-zebracat",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "zebracat",
+      "sourceType": "features",
+      "pageUrl": "https://help.zebracat.ai/article/de26d58fc7804e8f817653e8518c1660-can-i-use-zebracats-videos-for-commercial-purposes",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "Zebracat says commercial use is allowed with any premium subscription on Zebracat.",
+          "theme": "commercial",
+          "sourceUrl": "https://help.zebracat.ai/article/de26d58fc7804e8f817653e8518c1660-can-i-use-zebracats-videos-for-commercial-purposes",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says marketing, paid ads, and business promotions require being on a paid plan for full commercial usage.",
+          "theme": "commercial",
+          "sourceUrl": "https://help.zebracat.ai/article/de26d58fc7804e8f817653e8518c1660-can-i-use-zebracats-videos-for-commercial-purposes",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says free plans are for personal or testing use only.",
+          "theme": "usage",
+          "sourceUrl": "https://help.zebracat.ai/article/de26d58fc7804e8f817653e8518c1660-can-i-use-zebracats-videos-for-commercial-purposes",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says free plans do not include commercial rights.",
+          "theme": "commercial",
+          "sourceUrl": "https://help.zebracat.ai/article/de26d58fc7804e8f817653e8518c1660-can-i-use-zebracats-videos-for-commercial-purposes",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says being on a paid plan ensures you have the proper rights and licensing for full commercial usage.",
+          "theme": "commercial",
+          "sourceUrl": "https://help.zebracat.ai/article/de26d58fc7804e8f817653e8518c1660-can-i-use-zebracats-videos-for-commercial-purposes",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Page has limited extractable facts about commercial usage beyond plan eligibility.",
+          "theme": "other",
+          "sourceUrl": "https://help.zebracat.ai/article/de26d58fc7804e8f817653e8518c1660-can-i-use-zebracats-videos-for-commercial-purposes",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "note": "Page has limited extractable facts"
+        }
+      ]
+    },
+    {
+      "slug": "zebracat",
+      "sourceType": "features",
+      "pageUrl": "https://help.zebracat.ai/article/466c192aad4646b9920b1d8ea4a1664b-how-secure-is-my-data-and-content-on-zebracat",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "Zebracat says it employs robust security measures to protect your information.",
+          "theme": "security",
+          "sourceUrl": "https://help.zebracat.ai/article/466c192aad4646b9920b1d8ea4a1664b-how-secure-is-my-data-and-content-on-zebracat",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says it encrypts data in transit.",
+          "theme": "security",
+          "sourceUrl": "https://help.zebracat.ai/article/466c192aad4646b9920b1d8ea4a1664b-how-secure-is-my-data-and-content-on-zebracat",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says it encrypts data at rest.",
+          "theme": "security",
+          "sourceUrl": "https://help.zebracat.ai/article/466c192aad4646b9920b1d8ea4a1664b-how-secure-is-my-data-and-content-on-zebracat",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says its platform adheres to industry-standard best practices and regulations to keep data private and secure.",
+          "theme": "security",
+          "sourceUrl": "https://help.zebracat.ai/article/466c192aad4646b9920b1d8ea4a1664b-how-secure-is-my-data-and-content-on-zebracat",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says it performs regular security audits.",
+          "theme": "security",
+          "sourceUrl": "https://help.zebracat.ai/article/466c192aad4646b9920b1d8ea4a1664b-how-secure-is-my-data-and-content-on-zebracat",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says it uses continuous monitoring to help safeguard content from unauthorized access or breaches.",
+          "theme": "security",
+          "sourceUrl": "https://help.zebracat.ai/article/466c192aad4646b9920b1d8ea4a1664b-how-secure-is-my-data-and-content-on-zebracat",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "zebracat",
+      "sourceType": "features",
+      "pageUrl": "https://help.zebracat.ai/article/c1e2fb263dea498cbde0ce6a8b102355-how-do-you-handle-data-privacy-and-compliance-especially-under-regulations-like-gdpr-and-ccpa-",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "Zebracat says it adheres strictly to regulations such as GDPR and CCPA.",
+          "theme": "security",
+          "sourceUrl": "https://help.zebracat.ai/article/c1e2fb263dea498cbde0ce6a8b102355-how-do-you-handle-data-privacy-and-compliance-especially-under-regulations-like-gdpr-and-ccpa-",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says it implements robust security measures to protect user data.",
+          "theme": "security",
+          "sourceUrl": "https://help.zebracat.ai/article/c1e2fb263dea498cbde0ce6a8b102355-how-do-you-handle-data-privacy-and-compliance-especially-under-regulations-like-gdpr-and-ccpa-",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says it uses encryption of data in transit and at rest.",
+          "theme": "security",
+          "sourceUrl": "https://help.zebracat.ai/article/c1e2fb263dea498cbde0ce6a8b102355-how-do-you-handle-data-privacy-and-compliance-especially-under-regulations-like-gdpr-and-ccpa-",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says it is committed to transparency about data usage.",
+          "theme": "security",
+          "sourceUrl": "https://help.zebracat.ai/article/c1e2fb263dea498cbde0ce6a8b102355-how-do-you-handle-data-privacy-and-compliance-especially-under-regulations-like-gdpr-and-ccpa-",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says it provides users with control over their personal information.",
+          "theme": "security",
+          "sourceUrl": "https://help.zebracat.ai/article/c1e2fb263dea498cbde0ce6a8b102355-how-do-you-handle-data-privacy-and-compliance-especially-under-regulations-like-gdpr-and-ccpa-",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says it performs regular audits and updates to maintain high standards of data protection and compliance.",
+          "theme": "security",
+          "sourceUrl": "https://help.zebracat.ai/article/c1e2fb263dea498cbde0ce6a8b102355-how-do-you-handle-data-privacy-and-compliance-especially-under-regulations-like-gdpr-and-ccpa-",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "zebracat",
+      "sourceType": "features",
+      "pageUrl": "https://help.zebracat.ai/article/78a7c4a1793f490fbc778c0f8c7873e2-is-zebracats-music-copyright-free-and-safe-to-use-on-social-media-platforms",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "Zebracat says all the music available on Zebracat is fully copyrighted and cleared for use across all social media platforms.",
+          "theme": "commercial",
+          "sourceUrl": "https://help.zebracat.ai/article/78a7c4a1793f490fbc778c0f8c7873e2-is-zebracats-music-copyright-free-and-safe-to-use-on-social-media-platforms",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says its licensing agreements ensure you have legal rights to use its music without issues.",
+          "theme": "commercial",
+          "sourceUrl": "https://help.zebracat.ai/article/78a7c4a1793f490fbc778c0f8c7873e2-is-zebracats-music-copyright-free-and-safe-to-use-on-social-media-platforms",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says you can download a license for the specific music track used if you encounter a copyright claim.",
+          "theme": "usage",
+          "sourceUrl": "https://help.zebracat.ai/article/78a7c4a1793f490fbc778c0f8c7873e2-is-zebracats-music-copyright-free-and-safe-to-use-on-social-media-platforms",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says submitting the track license to the platform where the claim occurred can resolve the issue and lift restrictions.",
+          "theme": "usage",
+          "sourceUrl": "https://help.zebracat.ai/article/78a7c4a1793f490fbc778c0f8c7873e2-is-zebracats-music-copyright-free-and-safe-to-use-on-social-media-platforms",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Page has limited extractable facts beyond music licensing and claim resolution steps.",
+          "theme": "other",
+          "sourceUrl": "https://help.zebracat.ai/article/78a7c4a1793f490fbc778c0f8c7873e2-is-zebracats-music-copyright-free-and-safe-to-use-on-social-media-platforms",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "note": "Page has limited extractable facts"
+        }
+      ]
+    },
+    {
+      "slug": "zebracat",
+      "sourceType": "features",
+      "pageUrl": "https://help.zebracat.ai/article/dbab01aa903e435bbe4cc2e9dd602666\u2013is-zebracat-free-to-use",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "Zebracat says it offers a free plan that gives you monthly credits to create AI-generated videos.",
+          "theme": "usage",
+          "sourceUrl": "https://help.zebracat.ai/article/dbab01aa903e435bbe4cc2e9dd602666\u2013is-zebracat-free-to-use",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says you do not need a credit card to sign up.",
+          "theme": "usage",
+          "sourceUrl": "https://help.zebracat.ai/article/dbab01aa903e435bbe4cc2e9dd602666\u2013is-zebracat-free-to-use",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says the free plan lets you start creating using basic voiceovers, visual templates, and standard video exports.",
+          "theme": "features",
+          "sourceUrl": "https://help.zebracat.ai/article/dbab01aa903e435bbe4cc2e9dd602666\u2013is-zebracat-free-to-use",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says free credits reset every month.",
+          "theme": "usage",
+          "sourceUrl": "https://help.zebracat.ai/article/dbab01aa903e435bbe4cc2e9dd602666\u2013is-zebracat-free-to-use",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says free credits do not roll over.",
+          "theme": "usage",
+          "sourceUrl": "https://help.zebracat.ai/article/dbab01aa903e435bbe4cc2e9dd602666\u2013is-zebracat-free-to-use",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says you can preview certain premium features on the free plan, but full access requires a subscription.",
+          "theme": "usage",
+          "sourceUrl": "https://help.zebracat.ai/article/dbab01aa903e435bbe4cc2e9dd602666\u2013is-zebracat-free-to-use",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "zebracat",
+      "sourceType": "features",
+      "pageUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "Zebracat lists four workflows: Prompt to Video, URL to Video, Script to Video, and Audio to Video.",
+          "theme": "features",
+          "sourceUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says the Prompt to Video workflow can generate a video from a simple prompt or short text.",
+          "theme": "features",
+          "sourceUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says the URL to Video workflow can turn a URL into a video by automatically pulling content from the webpage.",
+          "theme": "features",
+          "sourceUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says the Script to Video workflow uses an uploaded or pasted script as the foundation and matches it with AI visuals, voiceovers, and effects.",
+          "theme": "features",
+          "sourceUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says the Audio to Video workflow pairs an uploaded audio file with relevant visuals and subtitles.",
+          "theme": "features",
+          "sourceUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says it offers three aspect ratios: 9:16, 1:1, and 16:9.",
+          "theme": "formats",
+          "sourceUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says the AI Image visual type can generate a single AI-created image in one of 78 different visual styles.",
+          "theme": "limits",
+          "sourceUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says enabling Character Consistency keeps the avatar visually consistent across all scenes.",
+          "theme": "features",
+          "sourceUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says you can set video duration with a slider and recommends 60 seconds for short videos.",
+          "theme": "usage",
+          "sourceUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says you can choose a voice and language for narration, including options for standard and ultra-realistic AI voices.",
+          "theme": "features",
+          "sourceUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says captions can be toggled on or off and edited later in the video editor.",
+          "theme": "features",
+          "sourceUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says selecting a music mood lets the AI automatically pick a suitable track, or you can turn music Off.",
+          "theme": "features",
+          "sourceUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Zebracat says Brand Assets can include your logo, color palette, and business name.",
+          "theme": "features",
+          "sourceUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "zebracat",
+      "sourceType": "features",
+      "pageUrl": "https://www.zebracat.ai/pricing",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The pricing page states Zebracat provides access to cutting-edge AI models such as VEO3, Kling, Nano Banana, Seedance, and Pixverse.",
+          "theme": "features",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states Zebracat includes generative video creation that can create fully AI-generated videos without stock or uploads.",
+          "theme": "features",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states Zebracat offers limited AI avatars that use avatars from a public library.",
+          "theme": "features",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states creating your own digital twin and product presenters are not included in limited AI avatars.",
+          "theme": "limits",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states Zebracat offers standard AI voices in 175+ languages.",
+          "theme": "limits",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states Zebracat can translate videos into 25+ languages.",
+          "theme": "limits",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states video translation adapts voice and lip-sync automatically.",
+          "theme": "features",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states custom avatars can be created from prompts, by cloning yourself as a digital twin, or by using an avatar to present a product.",
+          "theme": "features",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states once created, avatars are yours forever and usable in all your videos.",
+          "theme": "commercial",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page states voice clones can be used in unlimited videos once created.",
+          "theme": "usage",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The pricing page lists enterprise features including API access, custom AI models, and advanced team roles and permissions.",
+          "theme": "features",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "zebracat",
+      "sourceType": "features",
+      "pageUrl": "https://www.zebracat.ai/post/what-is-google-veo",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The article states Google Veo is a video generation model from Google DeepMind that generates raw video footage.",
+          "theme": "features",
+          "sourceUrl": "https://www.zebracat.ai/post/what-is-google-veo",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The article states Google Veo can produce 1080p videos.",
+          "theme": "formats",
+          "sourceUrl": "https://www.zebracat.ai/post/what-is-google-veo",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The article states Google Veo can understand text prompts and generate video from those prompts.",
+          "theme": "features",
+          "sourceUrl": "https://www.zebracat.ai/post/what-is-google-veo",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The article states Google Veo has watermarks and safety filters for responsible use.",
+          "theme": "usage",
+          "sourceUrl": "https://www.zebracat.ai/post/what-is-google-veo",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The article states Google Veo maintains consistency across frames.",
+          "theme": "features",
+          "sourceUrl": "https://www.zebracat.ai/post/what-is-google-veo",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The article states Google Veo supports image conditioning and filmmaking controls.",
+          "theme": "features",
+          "sourceUrl": "https://www.zebracat.ai/post/what-is-google-veo",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "zebracat",
+      "sourceType": "features",
+      "pageUrl": "https://help.zebracat.ai/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The Help Center page is branded as \"Help Center\" and is hosted at help.zebracat.ai.",
+          "theme": "other",
+          "sourceUrl": "https://help.zebracat.ai/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Page has limited extractable product facts because it is primarily a navigation hub.",
+          "theme": "other",
+          "sourceUrl": "https://help.zebracat.ai/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "note": "Page has limited extractable facts"
+        }
+      ]
+    },
+    {
+      "slug": "zebracat",
+      "sourceType": "features",
+      "pageUrl": "https://help.zebracat.ai/64c2de6bfc724eba9ad93e3e55c9f5a4-legal\u2013licensing",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The Help Center includes a category labeled \"Legal & Licensing.\"",
+          "theme": "other",
+          "sourceUrl": "https://help.zebracat.ai/64c2de6bfc724eba9ad93e3e55c9f5a4-legal\u2013licensing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Page has limited extractable facts because it is a category listing rather than a detailed policy page.",
+          "theme": "other",
+          "sourceUrl": "https://help.zebracat.ai/64c2de6bfc724eba9ad93e3e55c9f5a4-legal\u2013licensing",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "note": "Page has limited extractable facts"
+        }
+      ]
+    },
+    {
+      "slug": "zebracat",
+      "pageUrl": "https://www.zebracat.ai/pricing",
+      "sourceType": "features_index",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "Export resolution is up to 1080p for paid plans",
+          "theme": "export",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "export_resolution"
+        },
+        {
+          "text": "Free plan exports contain a prominent watermark",
+          "theme": "watermark",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "watermark_policy"
+        },
+        {
+          "text": "Paid plans (Cat Mode, Super Cat) remove watermarks from videos",
+          "theme": "watermark",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "watermark_policy"
+        },
+        {
+          "text": "Cat plan is limited to 15 videos per month",
+          "theme": "limits",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "medium",
+          "conflictGroup": "plan_limits_cat"
+        },
+        {
+          "text": "Super Cat plan includes 40 videos per month",
+          "theme": "limits",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "medium",
+          "conflictGroup": "plan_limits_super"
+        },
+        {
+          "text": "Unlimited Cat plan offers unlimited video generation",
+          "theme": "limits",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "plan_limits_unlimited"
+        },
+        {
+          "text": "7-day money-back guarantee available if no video has been downloaded",
+          "theme": "refund",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "refund_policy"
+        },
+        {
+          "text": "Offers 15% discount coupon for some plans (e.g., via partner codes)",
+          "theme": "other",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "sourceType": "features_index",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "low",
+          "note": "Mentioned in reviews, subject to change"
+        }
+      ],
+      "examples": [
+        {
+          "title": "Refund Eligibility",
+          "scenario": "User requests refund after 5 days",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "snippet": "If a user has subscribed but has not downloaded any video, they can request a full refund within 7 days of purchase.",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "zebracat",
+      "pageUrl": "https://www.zebracat.ai/post/what-is-google-veo",
+      "sourceType": "about",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "Integrates advanced AI video models to generate content from text prompts",
+          "theme": "other",
+          "sourceUrl": "https://www.zebracat.ai/post/what-is-google-veo",
+          "sourceType": "about",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "medium",
+          "conflictGroup": "ai_models"
+        },
+        {
+          "text": "Uses timeline-based editing for precise control over scenes",
+          "theme": "other",
+          "sourceUrl": "https://www.zebracat.ai/post/what-is-google-veo",
+          "sourceType": "about",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "medium",
+          "note": "Feature description"
+        }
+      ],
+      "examples": []
+    },
+    {
+      "slug": "zebracat",
+      "pageUrl": "https://help.zebracat.ai/",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "Supports converting blog post URLs directly into video content",
+          "theme": "formats",
+          "sourceUrl": "https://help.zebracat.ai/",
+          "sourceType": "faq",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "input_methods"
+        },
+        {
+          "text": "Supports uploading audio files for video generation",
+          "theme": "formats",
+          "sourceUrl": "https://help.zebracat.ai/",
+          "sourceType": "faq",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "input_methods"
+        },
+        {
+          "text": "Includes stock library with millions of clips and music tracks",
+          "theme": "commercial",
+          "sourceUrl": "https://help.zebracat.ai/",
+          "sourceType": "faq",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "note": "Stock assets availability"
+        }
+      ],
+      "examples": []
+    },
+    {
+      "slug": "zebracat",
+      "pageUrl": "https://help.zebracat.ai/64c2de6bfc724eba9ad93e3e55c9f5a4-legal--licensing",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "Refunds are not provided for subscription periods that have already been paid if videos were downloaded",
+          "theme": "refund",
+          "sourceUrl": "https://help.zebracat.ai/64c2de6bfc724eba9ad93e3e55c9f5a4-legal--licensing",
+          "sourceType": "terms",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "refund_conditions"
+        },
+        {
+          "text": "Subscription cancellation is immediate but access may continue until end of billing cycle",
+          "theme": "usage",
+          "sourceUrl": "https://help.zebracat.ai/64c2de6bfc724eba9ad93e3e55c9f5a4-legal--licensing",
+          "sourceType": "terms",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "medium",
+          "conflictGroup": "cancellation_policy"
+        }
+      ],
+      "examples": []
+    },
+    {
+      "slug": "zebracat",
+      "pageUrl": "https://help.zebracat.ai/article/de26d58fc7804e8f817653e8518c1660-can-i-use-zebracats-videos-for-commercial-purposes",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "Paid plans grant rights for commercial use of generated videos",
+          "theme": "commercial",
+          "sourceUrl": "https://help.zebracat.ai/article/de26d58fc7804e8f817653e8518c1660-can-i-use-zebracats-videos-for-commercial-purposes",
+          "sourceType": "faq",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high",
+          "conflictGroup": "commercial_rights"
+        },
+        {
+          "text": "Free plan videos are intended for personal use or evaluation due to watermarks",
+          "theme": "commercial",
+          "sourceUrl": "https://help.zebracat.ai/article/de26d58fc7804e8f817653e8518c1660-can-i-use-zebracats-videos-for-commercial-purposes",
+          "sourceType": "faq",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "medium",
+          "conflictGroup": "free_plan_usage"
+        }
+      ],
+      "examples": []
+    }
+  ],
+  "finalEvidence": {
+    "slug": "zebracat",
+    "lastUpdated": "2026-01-30T10:00:00Z",
+    "sources": {
+      "featuresIndex": "https://www.zebracat.ai/",
+      "featurePages": [
+        "https://www.zebracat.ai/features/text-to-video",
+        "https://www.zebracat.ai/features/blog-to-video",
+        "https://www.zebracat.ai/features/ai-avatar-generator",
+        "https://www.zebracat.ai/features/ai-voice-cloning",
+        "https://www.zebracat.ai/features/text-to-speech",
+        "https://www.zebracat.ai/features/ai-scene-generator",
+        "https://www.zebracat.ai/features/ai-automated-video-editing",
+        "https://www.zebracat.ai/pricing",
+        "https://www.zebracat.ai/post/what-is-google-veo",
+        "https://help.zebracat.ai/",
+        "https://help.zebracat.ai/64c2de6bfc724eba9ad93e3e55c9f5a4-legal\u2013licensing",
+        "https://help.zebracat.ai/article/c1e2fb263dea498cbde0ce6a8b102355-how-do-you-handle-data-privacy-and-compliance-especially-under-regulations-like-gdpr-and-ccpa-",
+        "https://help.zebracat.ai/article/466c192aad4646b9920b1d8ea4a1664b-how-secure-is-my-data-and-content-on-zebracat",
+        "https://help.zebracat.ai/article/dbab01aa903e435bbe4cc2e9dd602666\u2013is-zebracat-free-to-use",
+        "https://help.zebracat.ai/article/de26d58fc7804e8f817653e8518c1660-can-i-use-zebracats-videos-for-commercial-purposes",
+        "https://help.zebracat.ai/article/00fc1091dbe745d58a53266e227312fa-who-owns-the-content-made-with-zebracat",
+        "https://help.zebracat.ai/article/78a7c4a1793f490fbc778c0f8c7873e2-is-zebracats-music-copyright-free-and-safe-to-use-on-social-media-platforms",
+        "https://help.zebracat.ai/article/cc2521ad34724d00851bd7f80e6a526e-what-type-of-ai-technology-does-zebracat-use",
+        "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial"
+      ]
+    },
+    "nuggets": [
+      {
+        "text": "Integrates cutting-edge AI video models including VEO3, Kling, Nano Banana, Seedance, and Pixverse.",
+        "theme": "features",
+        "sourceUrl": "https://www.zebracat.ai/",
+        "capturedAt": "2026-01-30T10:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Generates videos from prompts, scripts, URLs, or audio files.",
+        "theme": "inputs",
+        "sourceUrl": "https://www.zebracat.ai/",
+        "capturedAt": "2026-01-30T10:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Offers 'Unlimited Cat' plan with 3,600 generative AI credits per month.",
+        "theme": "limits",
+        "sourceUrl": "https://www.zebracat.ai/",
+        "capturedAt": "2026-01-30T10:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Allows creating up to 10 new custom avatars per month on the Unlimited plan.",
+        "theme": "limits",
+        "sourceUrl": "https://www.zebracat.ai/",
+        "capturedAt": "2026-01-30T10:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Supports translation of videos into over 25 languages with automatic voice and lip-sync adaptation.",
+        "theme": "features",
+        "sourceUrl": "https://www.zebracat.ai/",
+        "capturedAt": "2026-01-30T10:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Generative video feature allows creating fully AI-generated videos without stock footage or uploads.",
+        "theme": "features",
+        "sourceUrl": "https://www.zebracat.ai/",
+        "capturedAt": "2026-01-30T10:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Provides 'Brand Kits' to store logos, colors, and fonts (up to Unlimited on top tier).",
+        "theme": "controls",
+        "sourceUrl": "https://www.zebracat.ai/",
+        "capturedAt": "2026-01-30T10:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Supports export resolutions up to 1080p on paid plans.",
+        "theme": "export",
+        "sourceUrl": "https://www.zebracat.ai/",
+        "capturedAt": "2026-01-30T10:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Users can clone their own voice to use across videos forever.",
+        "theme": "features",
+        "sourceUrl": "https://www.zebracat.ai/",
+        "capturedAt": "2026-01-30T10:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Includes access to millions of stock video clips and music assets.",
+        "theme": "limits",
+        "sourceUrl": "https://www.zebracat.ai/",
+        "capturedAt": "2026-01-30T10:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Free plan is limited to approximately 1 minute of video per week with watermark.",
+        "theme": "limits",
+        "sourceUrl": "https://www.zebracat.ai/",
+        "capturedAt": "2026-01-30T10:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Supports converting blog posts into viral videos.",
+        "theme": "features",
+        "sourceUrl": "https://www.zebracat.ai/",
+        "capturedAt": "2026-01-30T10:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat uses a combination of open-source and proprietary AI technologies.",
+        "theme": "features",
+        "sourceUrl": "https://help.zebracat.ai/article/cc2521ad34724d00851bd7f80e6a526e-what-type-of-ai-technology-does-zebracat-use",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says its AI technologies are developed by an in-house team of AI scientists and engineers.",
+        "theme": "features",
+        "sourceUrl": "https://help.zebracat.ai/article/cc2521ad34724d00851bd7f80e6a526e-what-type-of-ai-technology-does-zebracat-use",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says it includes advanced models for text-to-speech.",
+        "theme": "features",
+        "sourceUrl": "https://help.zebracat.ai/article/cc2521ad34724d00851bd7f80e6a526e-what-type-of-ai-technology-does-zebracat-use",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says it includes advanced models for AI visuals.",
+        "theme": "features",
+        "sourceUrl": "https://help.zebracat.ai/article/cc2521ad34724d00851bd7f80e6a526e-what-type-of-ai-technology-does-zebracat-use",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says it includes advanced models for video generation.",
+        "theme": "features",
+        "sourceUrl": "https://help.zebracat.ai/article/cc2521ad34724d00851bd7f80e6a526e-what-type-of-ai-technology-does-zebracat-use",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says its models are optimized to deliver fast, high-quality results for creators and marketers.",
+        "theme": "features",
+        "sourceUrl": "https://help.zebracat.ai/article/cc2521ad34724d00851bd7f80e6a526e-what-type-of-ai-technology-does-zebracat-use",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says you own the publishing rights to the content you create with Zebracat.",
+        "theme": "commercial",
+        "sourceUrl": "https://help.zebracat.ai/article/00fc1091dbe745d58a53266e227312fa-who-owns-the-content-made-with-zebracat",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says it does not claim ownership of your videos.",
+        "theme": "commercial",
+        "sourceUrl": "https://help.zebracat.ai/article/00fc1091dbe745d58a53266e227312fa-who-owns-the-content-made-with-zebracat",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says its media assets are either licensed or royalty-free.",
+        "theme": "commercial",
+        "sourceUrl": "https://help.zebracat.ai/article/00fc1091dbe745d58a53266e227312fa-who-owns-the-content-made-with-zebracat",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says you are free to publish, share, or monetize your videos without restrictions.",
+        "theme": "commercial",
+        "sourceUrl": "https://help.zebracat.ai/article/00fc1091dbe745d58a53266e227312fa-who-owns-the-content-made-with-zebracat",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says commercial use is allowed with any premium subscription on Zebracat.",
+        "theme": "commercial",
+        "sourceUrl": "https://help.zebracat.ai/article/de26d58fc7804e8f817653e8518c1660-can-i-use-zebracats-videos-for-commercial-purposes",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says free plans are for personal or testing use only.",
+        "theme": "usage",
+        "sourceUrl": "https://help.zebracat.ai/article/de26d58fc7804e8f817653e8518c1660-can-i-use-zebracats-videos-for-commercial-purposes",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says it encrypts data in transit.",
+        "theme": "security",
+        "sourceUrl": "https://help.zebracat.ai/article/466c192aad4646b9920b1d8ea4a1664b-how-secure-is-my-data-and-content-on-zebracat",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says it encrypts data at rest.",
+        "theme": "security",
+        "sourceUrl": "https://help.zebracat.ai/article/466c192aad4646b9920b1d8ea4a1664b-how-secure-is-my-data-and-content-on-zebracat",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says it performs regular security audits.",
+        "theme": "security",
+        "sourceUrl": "https://help.zebracat.ai/article/466c192aad4646b9920b1d8ea4a1664b-how-secure-is-my-data-and-content-on-zebracat",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says it adheres strictly to regulations such as GDPR and CCPA.",
+        "theme": "security",
+        "sourceUrl": "https://help.zebracat.ai/article/c1e2fb263dea498cbde0ce6a8b102355-how-do-you-handle-data-privacy-and-compliance-especially-under-regulations-like-gdpr-and-ccpa-",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says it provides users with control over their personal information.",
+        "theme": "security",
+        "sourceUrl": "https://help.zebracat.ai/article/c1e2fb263dea498cbde0ce6a8b102355-how-do-you-handle-data-privacy-and-compliance-especially-under-regulations-like-gdpr-and-ccpa-",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says all the music available on Zebracat is fully copyrighted and cleared for use across all social media platforms.",
+        "theme": "commercial",
+        "sourceUrl": "https://help.zebracat.ai/article/78a7c4a1793f490fbc778c0f8c7873e2-is-zebracats-music-copyright-free-and-safe-to-use-on-social-media-platforms",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says you can download a license for the specific music track used if you encounter a copyright claim.",
+        "theme": "usage",
+        "sourceUrl": "https://help.zebracat.ai/article/78a7c4a1793f490fbc778c0f8c7873e2-is-zebracats-music-copyright-free-and-safe-to-use-on-social-media-platforms",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says it offers a free plan that gives you monthly credits to create AI-generated videos.",
+        "theme": "usage",
+        "sourceUrl": "https://help.zebracat.ai/article/dbab01aa903e435bbe4cc2e9dd602666\u2013is-zebracat-free-to-use",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat lists four workflows: Prompt to Video, URL to Video, Script to Video, and Audio to Video.",
+        "theme": "features",
+        "sourceUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Zebracat says it offers three aspect ratios: 9:16, 1:1, and 16:9.",
+        "theme": "formats",
+        "sourceUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "The pricing page states Zebracat provides access to cutting-edge AI models such as VEO3, Kling, Nano Banana, Seedance, and Pixverse.",
+        "theme": "features",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "The pricing page states Zebracat offers standard AI voices in 175+ languages.",
+        "theme": "limits",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "The pricing page states video translation adapts voice and lip-sync automatically.",
+        "theme": "features",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "The article states Google Veo can produce 1080p videos.",
+        "theme": "formats",
+        "sourceUrl": "https://www.zebracat.ai/post/what-is-google-veo",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "text": "Export resolution is up to 1080p for paid plans",
+        "theme": "export",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "sourceType": "features_index",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "conflictGroup": "export_resolution"
+      },
+      {
+        "text": "Free plan exports contain a prominent watermark",
+        "theme": "watermark",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "sourceType": "features_index",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "conflictGroup": "watermark_policy"
+      },
+      {
+        "text": "Paid plans (Cat Mode, Super Cat) remove watermarks from videos",
+        "theme": "watermark",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "sourceType": "features_index",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "conflictGroup": "watermark_policy"
+      },
+      {
+        "text": "Cat plan is limited to 15 videos per month",
+        "theme": "limits",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "sourceType": "features_index",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "medium",
+        "conflictGroup": "plan_limits_cat"
+      },
+      {
+        "text": "Super Cat plan includes 40 videos per month",
+        "theme": "limits",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "sourceType": "features_index",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "medium",
+        "conflictGroup": "plan_limits_super"
+      },
+      {
+        "text": "Unlimited Cat plan offers unlimited video generation",
+        "theme": "limits",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "sourceType": "features_index",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "conflictGroup": "plan_limits_unlimited"
+      },
+      {
+        "text": "7-day money-back guarantee available if no video has been downloaded",
+        "theme": "refund",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "sourceType": "features_index",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "conflictGroup": "refund_policy"
+      },
+      {
+        "text": "Offers 15% discount coupon for some plans (e.g., via partner codes)",
+        "theme": "other",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "sourceType": "features_index",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "low",
+        "note": "Mentioned in reviews, subject to change"
+      },
+      {
+        "text": "Integrates advanced AI video models to generate content from text prompts",
+        "theme": "other",
+        "sourceUrl": "https://www.zebracat.ai/post/what-is-google-veo",
+        "sourceType": "about",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "medium",
+        "conflictGroup": "ai_models"
+      },
+      {
+        "text": "Uses timeline-based editing for precise control over scenes",
+        "theme": "other",
+        "sourceUrl": "https://www.zebracat.ai/post/what-is-google-veo",
+        "sourceType": "about",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "medium",
+        "note": "Feature description"
+      },
+      {
+        "text": "Supports converting blog post URLs directly into video content",
+        "theme": "formats",
+        "sourceUrl": "https://help.zebracat.ai/",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "conflictGroup": "input_methods"
+      },
+      {
+        "text": "Supports uploading audio files for video generation",
+        "theme": "formats",
+        "sourceUrl": "https://help.zebracat.ai/",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "conflictGroup": "input_methods"
+      },
+      {
+        "text": "Includes stock library with millions of clips and music tracks",
+        "theme": "commercial",
+        "sourceUrl": "https://help.zebracat.ai/",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "note": "Stock assets availability"
+      },
+      {
+        "text": "Refunds are not provided for subscription periods that have already been paid if videos were downloaded",
+        "theme": "refund",
+        "sourceUrl": "https://help.zebracat.ai/64c2de6bfc724eba9ad93e3e55c9f5a4-legal--licensing",
+        "sourceType": "terms",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "conflictGroup": "refund_conditions"
+      },
+      {
+        "text": "Subscription cancellation is immediate but access may continue until end of billing cycle",
+        "theme": "usage",
+        "sourceUrl": "https://help.zebracat.ai/64c2de6bfc724eba9ad93e3e55c9f5a4-legal--licensing",
+        "sourceType": "terms",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "medium",
+        "conflictGroup": "cancellation_policy"
+      },
+      {
+        "text": "Paid plans grant rights for commercial use of generated videos",
+        "theme": "commercial",
+        "sourceUrl": "https://help.zebracat.ai/article/de26d58fc7804e8f817653e8518c1660-can-i-use-zebracats-videos-for-commercial-purposes",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "conflictGroup": "commercial_rights"
+      },
+      {
+        "text": "Free plan videos are intended for personal use or evaluation due to watermarks",
+        "theme": "commercial",
+        "sourceUrl": "https://help.zebracat.ai/article/de26d58fc7804e8f817653e8518c1660-can-i-use-zebracats-videos-for-commercial-purposes",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "medium",
+        "conflictGroup": "free_plan_usage"
+      },
+      {
+        "text": "export resolution is up to 1080p for paid plans",
+        "theme": "export",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "sourceType": "features_index",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "conflictGroup": "export_resolution"
+      },
+      {
+        "text": "free plan exports contain a prominent watermark",
+        "theme": "watermark",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "sourceType": "features_index",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "conflictGroup": "watermark_policy"
+      },
+      {
+        "text": "paid plans (cat mode, super cat) remove watermarks from videos",
+        "theme": "watermark",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "sourceType": "features_index",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "conflictGroup": "watermark_policy"
+      },
+      {
+        "text": "cat plan is limited to 15 videos per month",
+        "theme": "limits",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "sourceType": "features_index",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "medium",
+        "conflictGroup": "plan_limits_cat"
+      },
+      {
+        "text": "super cat plan includes 40 videos per month",
+        "theme": "limits",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "sourceType": "features_index",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "medium",
+        "conflictGroup": "plan_limits_super"
+      },
+      {
+        "text": "unlimited cat plan offers unlimited video generation",
+        "theme": "limits",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "sourceType": "features_index",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "conflictGroup": "plan_limits_unlimited"
+      },
+      {
+        "text": "offers 15% discount coupon for some plans (e.g., via partner codes)",
+        "theme": "other",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "sourceType": "features_index",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "low",
+        "note": "Mentioned in reviews, subject to change"
+      },
+      {
+        "text": "integrates advanced ai video models to generate content from text prompts",
+        "theme": "other",
+        "sourceUrl": "https://www.zebracat.ai/post/what-is-google-veo",
+        "sourceType": "about",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "medium",
+        "conflictGroup": "ai_models"
+      },
+      {
+        "text": "uses timeline-based editing for precise control over scenes",
+        "theme": "other",
+        "sourceUrl": "https://www.zebracat.ai/post/what-is-google-veo",
+        "sourceType": "about",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "medium",
+        "note": "Feature description"
+      },
+      {
+        "text": "supports converting blog post urls directly into video content",
+        "theme": "formats",
+        "sourceUrl": "https://help.zebracat.ai/",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "conflictGroup": "input_methods"
+      },
+      {
+        "text": "supports uploading audio files for video generation",
+        "theme": "formats",
+        "sourceUrl": "https://help.zebracat.ai/",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "conflictGroup": "input_methods"
+      },
+      {
+        "text": "includes stock library with millions of clips and music tracks",
+        "theme": "commercial",
+        "sourceUrl": "https://help.zebracat.ai/",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "note": "Stock assets availability"
+      },
+      {
+        "text": "refunds are not provided for subscription periods that have already been paid if videos were downloaded",
+        "theme": "refund",
+        "sourceUrl": "https://help.zebracat.ai/64c2de6bfc724eba9ad93e3e55c9f5a4-legal--licensing",
+        "sourceType": "terms",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "conflictGroup": "refund_conditions"
+      },
+      {
+        "text": "subscription cancellation is immediate but access may continue until end of billing cycle",
+        "theme": "usage",
+        "sourceUrl": "https://help.zebracat.ai/64c2de6bfc724eba9ad93e3e55c9f5a4-legal--licensing",
+        "sourceType": "terms",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "medium",
+        "conflictGroup": "cancellation_policy"
+      },
+      {
+        "text": "paid plans grant rights for commercial use of generated videos",
+        "theme": "commercial",
+        "sourceUrl": "https://help.zebracat.ai/article/de26d58fc7804e8f817653e8518c1660-can-i-use-zebracats-videos-for-commercial-purposes",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "conflictGroup": "commercial_rights"
+      },
+      {
+        "text": "free plan videos are intended for personal use or evaluation due to watermarks",
+        "theme": "commercial",
+        "sourceUrl": "https://help.zebracat.ai/article/de26d58fc7804e8f817653e8518c1660-can-i-use-zebracats-videos-for-commercial-purposes",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "medium",
+        "conflictGroup": "free_plan_usage"
+      },
+      {
+        "text": "video aspect ratios include 16:9 (landscape) and 9:16 (portrait/shorts)",
+        "theme": "formats",
+        "sourceUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+        "sourceType": "guide",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "conflictGroup": "aspect_ratios"
+      },
+      {
+        "text": "users can edit individual scenes, add music, and customize captions before export",
+        "theme": "usage",
+        "sourceUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+        "sourceType": "guide",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high",
+        "note": "Editing capabilities"
+      }
+    ],
+    "metadata": {
+      "totalFeaturePages": 1,
+      "totalNuggets": 73,
+      "themesCovered": [
+        "commercial",
+        "controls",
+        "export",
+        "features",
+        "formats",
+        "inputs",
+        "limits",
+        "other",
+        "refund",
+        "security",
+        "usage",
+        "watermark"
+      ],
+      "conflicts": []
+    },
+    "examples": [
+      {
+        "title": "Refund Eligibility",
+        "scenario": "User requests refund after 5 days",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "snippet": "If a user has subscribed but has not downloaded any video, they can request a full refund within 7 days of purchase.",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      },
+      {
+        "title": "YouTube Shorts Creation",
+        "scenario": "Creating a vertical video for social media",
+        "sourceUrl": "https://help.zebracat.ai/article/930ed02bf73848769e67211451efe020-how-can-i-use-zebracat-a-complete-tutorial",
+        "snippet": "Select 'text-to-video', write a detailed prompt, choose a visual style (e.g., Realistic), configure aspect ratio to 9:16 for Shorts, and export the final video.",
+        "capturedAt": "2026-01-31T12:00:00Z",
+        "confidence": "high"
+      }
+    ]
+  }
+}

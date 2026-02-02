@@ -1,0 +1,2197 @@
+{
+  "slug": "veed-io",
+  "lastUpdated": "2026-01-30T21:00:00-08:00",
+  "sources": {
+    "home": "https://www.veed.io/",
+    "pricing": "https://www.veed.io/pricing",
+    "tools": "https://www.veed.io/tools",
+    "support": "https://support.veed.io/en/",
+    "help": "https://help.veed.io/",
+    "help_articles": [
+      "https://support.veed.io/en/articles/7056370-will-the-videos-created-here-have-a-veed-watermark-on-them",
+      "https://support.veed.io/en/articles/7060527-watermark-still-showing-for-paid-customers",
+      "https://support.veed.io/en/articles/11433566-subscribe-and-manage-your-subscription",
+      "https://support.veed.io/en/articles/11784097-how-to-contact-veed-support",
+      "https://support.veed.io/en/articles/7034307-how-to-report-a-bug",
+      "https://support.veed.io/en/articles/10406942-veed-security-faqs",
+      "https://support.veed.io/en/articles/10406977-veed-privacy-policy"
+    ],
+    "help_collections": [
+      "https://support.veed.io/en/collections/3812811-issues-and-feedback",
+      "https://support.veed.io/en/collections/11392017-legal-security-and-t-cs",
+      "https://support.veed.io/en/collections/3812810-account-and-subscription",
+      "https://support.veed.io/en/collections/3812806-how-to-use-veed-features",
+      "https://support.veed.io/en/collections/3885716-faq"
+    ],
+    "terms": "https://www.veed.io/terms-of-use",
+    "privacy": "https://www.veed.io/privacy",
+    "policy": "https://www.veed.io/terms-of-use/video-downloaders-fair-use-policy",
+    "trust": "https://trust.veed.io/",
+    "featuresIndex": "https://www.veed.io/tools",
+    "featurePages": [
+      "https://www.veed.io/tools/video-editor",
+      "https://www.veed.io/tools/auto-subtitle-generator-online",
+      "https://www.veed.io/tools/text-to-speech-video",
+      "https://www.veed.io/tools/ai-video",
+      "https://www.veed.io/tools/screen-recorder",
+      "https://www.veed.io/tools/resize-video",
+      "https://www.veed.io/tools/image-to-video-ai",
+      "https://www.veed.io/tools/voice-over-generator",
+      "https://www.veed.io/tools/video-translator",
+      "https://www.veed.io/tools/ai-voice-cloning",
+      "https://www.veed.io/tools/remove-background-noise-from-video",
+      "https://www.veed.io/tools/video-compressor",
+      "https://www.veed.io/tools/audio-to-text",
+      "https://www.veed.io/tools/audio-translator"
+    ]
+  },
+  "nuggets": [
+    {
+      "text": "VEED.IO homepage states \"No credit card required\" for sign up.",
+      "theme": "other",
+      "sourceUrl": "https://www.veed.io/",
+      "sourceType": "home",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "VEED.IO homepage shows \"Rated 4.6 out of 5 on G2.\"",
+      "theme": "other",
+      "sourceUrl": "https://www.veed.io/",
+      "sourceType": "home",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "VEED.IO homepage claims \"2M+ video & audio assets.\"",
+      "theme": "other",
+      "sourceUrl": "https://www.veed.io/",
+      "sourceType": "home",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "VEED.IO homepage shows \"4.9/5 \u2014 based on 6.7k reviews.\"",
+      "theme": "other",
+      "sourceUrl": "https://www.veed.io/",
+      "sourceType": "home",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "VEED.IO homepage claims \"Trusted by 4M+ creators and teams.\"",
+      "theme": "other",
+      "sourceUrl": "https://www.veed.io/",
+      "sourceType": "home",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "VEED terms state the provider will implement appropriate technical and organisational measures to protect Personal Data against accidental, unauthorised or unlawful processing and against loss or damage.",
+      "theme": "security",
+      "sourceUrl": "https://www.veed.io/terms-of-use",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "VEED terms list example security measures including pseudonymisation and encryption of personal data and a process for regularly testing and evaluating security effectiveness.",
+      "theme": "security",
+      "sourceUrl": "https://www.veed.io/terms-of-use",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "VEED terms state the provider will notify the customer in writing as soon as reasonably practicable if it becomes aware of a Personal Data Breach or certain loss/unauthorised processing events.",
+      "theme": "security",
+      "sourceUrl": "https://www.veed.io/terms-of-use",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "VEED terms state VEED uses subcontractors to provide infrastructure and services; by using the apps, users agree to subcontractors\u2019 sub-processing of data.",
+      "theme": "security",
+      "sourceUrl": "https://www.veed.io/terms-of-use",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "VEED privacy policy states it does not sell personal data to third parties.",
+      "theme": "security",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "VEED privacy policy states it generally does not rely on consent as a legal basis, except for Special Categories of Personal Data (where applicable) and automated decisions (where applicable).",
+      "theme": "security",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "VEED privacy policy states it will only retain personal data for as long as reasonably necessary to fulfil purposes collected for, and may retain longer in the event of a complaint or prospect of litigation.",
+      "theme": "security",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "VEED privacy policy states UUIDs used for analytics/preferences persist between launches and updates but are lost when the programme is deleted; a new UUID is generated on reinstall.",
+      "theme": "security",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "VEED privacy policy states it may anonymise personal data for research/statistical purposes and may use that anonymised information indefinitely without further notice.",
+      "theme": "security",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "VEED privacy policy states that for free-tier users who request erasure of personal data used for development and improvement processing, VEED will delete that personal data when there is no other valid reason to retain it.",
+      "theme": "security",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "VEED privacy policy states it may continue to use information derived through development and improvement processing if it is deidentified, anonymised, and/or aggregated so it no longer identifies the user or content.",
+      "theme": "security",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Projects exported while not logged in or using a free account will have a VEED.IO watermark.",
+      "theme": "watermark",
+      "sourceUrl": "https://support.veed.io/en/articles/7056370-will-the-videos-created-here-have-a-veed-watermark-on-them",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article states the only way to export a project without the watermark is to have a paid subscription.",
+      "theme": "watermark",
+      "sourceUrl": "https://support.veed.io/en/articles/7056370-will-the-videos-created-here-have-a-veed-watermark-on-them",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The watermark cannot be edited or moved and is described as always being on the top-right side of the video.",
+      "theme": "watermark",
+      "sourceUrl": "https://support.veed.io/en/articles/7056370-will-the-videos-created-here-have-a-veed-watermark-on-them",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Embedded videos will have a watermark on a Free subscription; embedding without a watermark requires a Pro or Enterprise subscription.",
+      "theme": "watermark",
+      "sourceUrl": "https://support.veed.io/en/articles/7056370-will-the-videos-created-here-have-a-veed-watermark-on-them",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "If you are in the wrong account/workspace (e.g., workspace shows \"Free\"), exports may still include a watermark.",
+      "theme": "watermark",
+      "sourceUrl": "https://support.veed.io/en/articles/7060527-watermark-still-showing-for-paid-customers",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Projects exported before subscribing will still have a watermark; you must re-export the original project after subscribing.",
+      "theme": "watermark",
+      "sourceUrl": "https://support.veed.io/en/articles/7060527-watermark-still-showing-for-paid-customers",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The watermark is described as hardcoded into the video file during export and cannot be removed from an already-downloaded watermarked file by subscribing later.",
+      "theme": "watermark",
+      "sourceUrl": "https://support.veed.io/en/articles/7060527-watermark-still-showing-for-paid-customers",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "If the last subscription payment failed, the subscription can be put on hold and the workspace can be temporarily on the Free plan.",
+      "theme": "usage",
+      "sourceUrl": "https://support.veed.io/en/articles/7060527-watermark-still-showing-for-paid-customers",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article states monthly billing is not available in India due to Reserve Bank of India regulations and only annual plans are offered for Indian users.",
+      "theme": "limits",
+      "sourceUrl": "https://support.veed.io/en/articles/11433566-subscribe-and-manage-your-subscription",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Canceling auto-renewal stops renewal at the end of the billing period and you retain access to premium features until the current billing cycle ends.",
+      "theme": "usage",
+      "sourceUrl": "https://support.veed.io/en/articles/11433566-subscribe-and-manage-your-subscription",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Subscriptions auto-renew by default unless canceled.",
+      "theme": "usage",
+      "sourceUrl": "https://support.veed.io/en/articles/11433566-subscribe-and-manage-your-subscription",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Each workspace has its own subscription; users in multiple workspaces must manage each subscription individually.",
+      "theme": "usage",
+      "sourceUrl": "https://support.veed.io/en/articles/11433566-subscribe-and-manage-your-subscription",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Upgrading to a higher plan resets the billing period and charges a full subscription cycle starting from the new billing date; unused time is described as prorated and deducted from the total.",
+      "theme": "usage",
+      "sourceUrl": "https://support.veed.io/en/articles/11433566-subscribe-and-manage-your-subscription",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Support hours are stated as Monday to Friday during business hours, with no support offered on weekends.",
+      "theme": "support",
+      "sourceUrl": "https://support.veed.io/en/articles/11784097-how-to-contact-veed-support",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Typical reply times listed: Live Chat (Paid plans) 4\u20138 business hours; Live Chat (Enterprise) under 20 minutes; Email (All users) within 3 business days.",
+      "theme": "support",
+      "sourceUrl": "https://support.veed.io/en/articles/11784097-how-to-contact-veed-support",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article states Free users have email support available but live chat is not available.",
+      "theme": "support",
+      "sourceUrl": "https://support.veed.io/en/articles/11784097-how-to-contact-veed-support",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article states paid users have live chat and email support available; Enterprise has priority support for live chat and email.",
+      "theme": "support",
+      "sourceUrl": "https://support.veed.io/en/articles/11784097-how-to-contact-veed-support",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article recommends using Google Chrome because the editor runs best there.",
+      "theme": "usage",
+      "sourceUrl": "https://support.veed.io/en/articles/7034307-how-to-report-a-bug",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article recommends keeping the browser up to date and having VPN disabled to avoid most issues.",
+      "theme": "usage",
+      "sourceUrl": "https://support.veed.io/en/articles/7034307-how-to-report-a-bug",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "To report project/exporting issues, the article asks for the project link (URL) plus details of the issue, steps before it appeared, and how results differ from expected.",
+      "theme": "usage",
+      "sourceUrl": "https://support.veed.io/en/articles/7034307-how-to-report-a-bug",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The support article directs users to VEED\u2019s privacy policy at https://www.veed.io/privacy.",
+      "theme": "security",
+      "sourceUrl": "https://support.veed.io/en/articles/10406977-veed-privacy-policy",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "help.veed.io displays a \"We\u2019re here to help\" section linking to categories including Getting Started, How to use VEED, VEED for Teams, Account and Subscription, Issues and Feedback, and FAQ.",
+      "theme": "support",
+      "sourceUrl": "https://help.veed.io/",
+      "sourceType": "help",
+      "capturedAt": "2026-01-30T21:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Trim, crop, and add text with drag-and-drop simplicity directly in the browser.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/video-editor",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Supports adding subtitles, removing background noise, and cleaning audio.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/video-editor",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Exports videos in up to 4K resolution.",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/tools/video-editor",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Free users can export videos in 720p with a watermark.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/tools/video-editor",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Works on Chrome, Safari, Microsoft Edge, and Firefox browsers.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/video-editor",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Includes AI tools like Magic Cut to remove silences and filler words.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/video-editor",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Generates videos from text prompts including visuals and narration.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/ai-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Access to AI video models like Veo 3, Kling, and Hailuo AI.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/ai-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Fabric 1.0 model supports talking head videos up to 60 seconds long.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/tools/ai-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can generate initial videos and customize scenes with AI-generated media.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/ai-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Supports generating videos for YouTube, Instagram, and TikTok.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/ai-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Commercial use of generated videos is permitted.",
+      "theme": "commercial",
+      "sourceUrl": "https://www.veed.io/tools/ai-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Records screen, webcam, and audio directly from the browser.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/screen-recorder",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Allows choosing layouts like screen only, webcam only, or both.",
+      "theme": "controls",
+      "sourceUrl": "https://www.veed.io/tools/screen-recorder",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Offers unlimited retakes for recordings.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/tools/screen-recorder",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Includes AI eye contact correction tool.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/screen-recorder",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Recordings can be edited immediately in the built-in video editor.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/screen-recorder",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Compatible with Windows, Mac, and Linux.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/screen-recorder",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Automatically generates subtitles for video and audio files.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Exports subtitles as SRT, VTT, or TXT files.",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Supports translation of subtitles into multiple languages.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Allows burning or hardcoding subtitles directly into the video.",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can customize subtitle font, size, style, and colors.",
+      "theme": "controls",
+      "sourceUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Generating and adding subtitles is free for everyone.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Converts written text into narrations in 50+ languages.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/text-to-speech-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Supports converting up to 5,000 characters to speech per video project.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/tools/text-to-speech-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can select from male and female AI voice profiles.",
+      "theme": "controls",
+      "sourceUrl": "https://www.veed.io/tools/text-to-speech-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Allows previewing the speech before adding it to the project.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/text-to-speech-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Can download the project as an MP3 audio file.",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/tools/text-to-speech-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Supports adding AI avatars to read the written content.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/text-to-speech-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Resizes videos for platforms like YouTube (16:9), Instagram Story (9:16), and TikTok (9:16).",
+      "theme": "formats",
+      "sourceUrl": "https://www.veed.io/tools/resize-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Supports exporting in 480p, 720p, 1080p, and 4K resolutions.",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/tools/resize-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Compatible with MP4, AVI, MOV, and other video formats.",
+      "theme": "formats",
+      "sourceUrl": "https://www.veed.io/tools/resize-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Allows cropping video to fit dimensions.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/resize-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Works on Mac, Windows, iPhone, iPad, and Android devices.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/resize-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Resizing functionality is free to use.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/tools/resize-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Turns static images into video clips based on text prompts.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/image-to-video-ai",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Supports uploading JPG, PNG, and WebP image formats.",
+      "theme": "inputs",
+      "sourceUrl": "https://www.veed.io/tools/image-to-video-ai",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can describe desired movements like walking, panning, or zooming.",
+      "theme": "controls",
+      "sourceUrl": "https://www.veed.io/tools/image-to-video-ai",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Free version includes a watermark on the generated video.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/tools/image-to-video-ai",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Generated video appears as a scene in the editor.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/image-to-video-ai",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Allows adding animated stickers and music to the generated video.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/image-to-video-ai",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Converts text to speech instantly with realistic AI voice profiles.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/voice-over-generator",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Supports adding up to 1,000 characters per conversion for free users.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/tools/voice-over-generator",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can preview the selected voice before adding to the project.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/voice-over-generator",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Allows downloading projects as audio files.",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/tools/voice-over-generator",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Can be used as a voice changer for Discord and gaming.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/voice-over-generator",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Offers both male and female voice options.",
+      "theme": "controls",
+      "sourceUrl": "https://www.veed.io/tools/voice-over-generator",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Translates videos into 29 languages with voice preservation.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/video-translator",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Supports lipsync enabling for realistic video translation.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/video-translator",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Generates subtitles in over 125 languages.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/tools/video-translator",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Claims 99.9% accuracy in translations.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/video-translator",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Allows downloading translated subtitles as TXT, VTT, or SRT files.",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/tools/video-translator",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Can retain background audio during translation.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/video-translator",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Requires recording a short script to create a voice clone.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/ai-voice-cloning",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Voice clones can be used with text-to-speech to read any text.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/ai-voice-cloning",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Exports voice clone audio as MP3 files.",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/tools/ai-voice-cloning",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Prohibits impersonation of others; users can only clone their own voice.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/ai-voice-cloning",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Free users can try the tool, but full access requires a Pro plan.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/tools/ai-voice-cloning",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Supports creating custom voiceovers for global content scaling.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/ai-voice-cloning",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Automatically removes wind noise, AC hums, and background chatter.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/remove-background-noise-from-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Supports MP4, MOV, AVI, MKV, FLV, and MPEG video formats.",
+      "theme": "inputs",
+      "sourceUrl": "https://www.veed.io/tools/remove-background-noise-from-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Powered by Dolby technology.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/remove-background-noise-from-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Free to try, but continued use requires a Pro upgrade.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/tools/remove-background-noise-from-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Can remove filler words like 'um' and 'er' with Magic Cut.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/remove-background-noise-from-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can toggle 'Clean audio' off to compare results.",
+      "theme": "controls",
+      "sourceUrl": "https://www.veed.io/tools/remove-background-noise-from-video",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Compresses videos up to 1GB for free.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/tools/video-compressor",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Supports MP4, MOV, AVI, MKV, WEBM, WMV, and GIF formats.",
+      "theme": "inputs",
+      "sourceUrl": "https://www.veed.io/tools/video-compressor",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Allows adjusting compression via a slider for size vs quality balance.",
+      "theme": "controls",
+      "sourceUrl": "https://www.veed.io/tools/video-compressor",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Can downscale 4K videos to 1080p or 720p.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/video-compressor",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Advanced settings allow changing bitrate, FPS, and CRF.",
+      "theme": "controls",
+      "sourceUrl": "https://www.veed.io/tools/video-compressor",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Shows real-time file size estimates during adjustment.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/video-compressor",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Supports uploading MP3, WAV, M4A, AAC, and OGG formats.",
+      "theme": "inputs",
+      "sourceUrl": "https://www.veed.io/tools/audio-to-text",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Transcribes audio with up to 99.9% accuracy.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/audio-to-text",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Supports transcription in over 125 languages.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/tools/audio-to-text",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Paid users can export transcripts as TXT, SRT, or VTT files.",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/tools/audio-to-text",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Allows editing transcript text directly in the editor.",
+      "theme": "controls",
+      "sourceUrl": "https://www.veed.io/tools/audio-to-text",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Can translate transcripts instantly to other languages.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/audio-to-text",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Dubs audio with voice preservation in over 25 languages.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/audio-translator",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Generates subtitles across 125+ languages.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/tools/audio-translator",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Supports input formats like MP3, WAV, M4A, and MP4.",
+      "theme": "inputs",
+      "sourceUrl": "https://www.veed.io/tools/audio-translator",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Allows exporting translation as subtitled video, dubbed audio, or text transcript.",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/tools/audio-translator",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Pro users can download transcripts as TXT, SRT, or VTT files.",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/tools/audio-translator",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Free to try, but higher translation limits require a Pro plan.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/tools/audio-translator",
+      "sourceType": "features",
+      "capturedAt": "2026-01-29T00:00:00-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "VEED groups its workflow into Create, Edit, and Publish sections.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Recorder tools listed include Screen Recorder, Teleprompter, Voice Recorder, Webcam Recorder, and Slides to Video Converter.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Captions & Translations tools listed include Auto Subtitle Generator, Audio to Text, Video to Text, and Video Translator.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Under 'Text To Video', VEED lists AI Avatars, AI Reel Generator, Text to Video AI, VEO3, and Seedance.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Under 'AI Video Models', VEED lists models including Kling O1, VEO 3.1, Sora 2, Hailuo 02, and Wan 2.2.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Under 'AI Video APIs', VEED lists Fabric 1.0 API, AI Lip Sync API, Green Screen API, Background Removal API, and Background Removal Fast API.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The VEED Tools page lists tool categories including Recorder, Video Editor, Captions & Translations, and Publish.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The VEED Tools page includes a Create section with Recorder, Script Generator, Video GPT, and AI Avatars.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The VEED Tools page includes an Edit section with Video Editor, Translations, and Subtitles.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "In the AI section, VEED groups tools into Avatars & AI Voices, AI Editing, and AI Generation.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "In the AI section, VEED lists Text To Video tools including AI Avatars, AI Reel Generator, Text to Video AI, VEO3, and Seedance.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "In the AI Video Models list, VEED includes entries such as Fabric 1.0, Kling O1, VEO 3.1, and Sora 2 Pro.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "You can describe the video you want to create, click a pre-made prompt, or paste a script or article.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/ai-video/text-to-video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "For direct text-to-video conversion, the tool lets you tell the AI to use your text verbatim.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/ai-video/text-to-video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Step 2 lets you choose the format, avatar or voiceover, music, and caption style.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/ai-video/text-to-video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The workflow mentions replacing footage with your own media, stock videos, or generative AI clips.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/ai-video/text-to-video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Step 3 says clicking 'Done' exports your video or you can open the video editor to keep editing.",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/tools/ai-video/text-to-video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page says you can create a custom avatar or voice clone to personalize your content further.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/ai-video/text-to-video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The AI video maker says it can create videos with clips, music, voiceovers, captions, and animations without your own footage.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/ai-video/ai-video-maker",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page says you can describe the video, select a style, and generate it using VEED's AI video generator.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/ai-video/ai-video-maker",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states you can add an AI avatar to your AI-generated video.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/ai-video/ai-video-maker",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "It says you can generate voiceovers from text and choose from diverse AI voices.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/ai-video/ai-video-maker",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "It says you can clone your voice for a more personal touch.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/ai-video/ai-video-maker",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page describes refining videos using an intuitive timeline and drag-and-drop interface.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/ai-video/ai-video-maker",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The AI auto-subtitle tool automatically generates subtitles for your video and audio files.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page says you can burn or hardcode subtitles into the video.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page says you can download subtitle files in SRT, VTT, and TXT formats.",
+      "theme": "formats",
+      "sourceUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page describes dynamic subtitles that emphasize key phrases in sync with the spoken audio.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page says you can select subtitle fonts, sizes, styles, and colors.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page says the tool can transcribe videos to text.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The subtitle editor says you can edit, reword, translate, or create new subtitles.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/subtitle-editor",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page says you can add regular expressions when editing subtitles.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/subtitle-editor",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page says you can change letter spacing, style, and fonts for subtitles.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/subtitle-editor",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page says you can animate subtitles or highlight them to stress important information.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/subtitle-editor",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page says you can download subtitles as separate files including SRT, VTT, and TXT.",
+      "theme": "formats",
+      "sourceUrl": "https://www.veed.io/tools/subtitle-editor",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page describes the subtitle generator as powered by AI speech-recognition software.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/subtitle-editor",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page says you can change video dimensions and aspect ratio with a single click.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/resize-video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page lists social presets including YouTube (16:9) and Instagram Story (9:16).",
+      "theme": "formats",
+      "sourceUrl": "https://www.veed.io/tools/resize-video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Step 1 says you can upload your video files by dragging and dropping.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/resize-video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Step 2 says click 'Settings' then choose the size and crop to fit the frame's dimensions.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/resize-video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states VEED works with video formats including MP4, AVI, and MOV.",
+      "theme": "formats",
+      "sourceUrl": "https://www.veed.io/tools/resize-video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page says you can select export resolution such as 4K, 1080p, and 720p.",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/tools/resize-video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The image-to-video AI generator lets you upload an image, describe the movement, and generate a video.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/image-to-video-ai",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page says no video editing skills are required to use the image-to-video generator.",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/tools/image-to-video-ai",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page mentions transforming product photos, digital art, and photographs into videos.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/image-to-video-ai",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page suggests creating product teasers and logo animations from photos.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/image-to-video-ai",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page says you can add animated stickers to videos using the editor.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/image-to-video-ai",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page suggests exploring other AI tools like an image generator and talking avatars.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/tools/image-to-video-ai",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page says it lets you compare AI video models in one place.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/ai-models/video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page describes this as a video models directory for generating AI videos from text.",
+      "theme": "features",
+      "sourceUrl": "https://www.veed.io/ai-models/video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The directory lists openai/sora-2 and openai/sora-2-pro.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/ai-models/video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The directory lists google/veo-3.1 and google/veo-3.1-fast.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/ai-models/video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The directory lists minimax/hailuo-2.3 and minimax/hailuo-2.3-fast.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/ai-models/video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The directory lists kwaivgi/kling-v2.6-pro and bytedance/seedance-1-lite.",
+      "theme": "limits",
+      "sourceUrl": "https://www.veed.io/ai-models/video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Video APisFabric 1.0 APIFabric 1.0 APIFabric 1.0 APIAI Lip Sync APIAI Lip Sync APIAI Lip Sync APIGreen Screen APIGreen Screen APIGreen Screen APIBackground",
+      "theme": "models",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.706Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "APIsResourcesAI Video APisFabric 1.0 APIFabric 1.0 APIFabric 1.0 APIAI Lip Sync APIAI Lip Sync APIAI Lip Sync APIGreen Screen APIGreen Screen APIGreen Screen",
+      "theme": "models",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.706Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Fabric 1.0 APIFabric 1.0 APIFabric 1.0 API",
+      "theme": "models",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.706Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Background Removal APIBackground Removal APIBackground Removal API",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.706Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Background Removal Fast APIBackground Removal Fast APIBackground Removal Fast API",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.706Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Contact Data includes billing address, email address and telephone numbers.",
+      "theme": "pricing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.700Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Time limit to respond We try to respond to all legitimate requests within one month",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "AI EditingAI ClipsEye Contact AIVideo EnhancerRemove Background Noise from Audio",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.706Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "It does not include data where the identity has been removed (anonymous data)",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.707Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "This enables you to ask us to suspend the processing of your personal data in the following scenarios: If you want us to establish the data&#x27;s accuracy",
+      "theme": "general",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Where you are subject to automated decision-making processes, you are entitled to exercise specific rights aimed at preventing or otherwise limiting the",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.704Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "You can also revoke access via Google\u2019s security settings page",
+      "theme": "security",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "VEO 3 Fast Image to Video",
+      "theme": "models",
+      "sourceUrl": "https://www.veed.io/templates",
+      "sourceType": "examples",
+      "capturedAt": "2026-01-28T08:37:01.623Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "high"
+    },
+    {
+      "text": "VEO 3 Image to Video",
+      "theme": "models",
+      "sourceUrl": "https://www.veed.io/templates",
+      "sourceType": "examples",
+      "capturedAt": "2026-01-28T08:37:01.623Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "high"
+    },
+    {
+      "text": "AI EditingAI EditingAI EditingAI EditingClipsAI AgentEdit with ScriptAI Noise ReductionEye Contact CorrectorAI Video Background Remover",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.706Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "AI EditingClipsAI AgentEdit with ScriptAI Noise ReductionEye Contact CorrectorAI Video Background Remover",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.706Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Request erasure of your personal data. This enables you to ask us to delete or remove personal data where there is no good reason for us continuing to process",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.704Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "This enables you to ask us to delete or remove personal data where there is no good reason for us continuing to process it",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "You also have the right to ask us to delete or remove your personal data where you have successfully exercised your right to object to processing (see below),",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "In some cases, we may demonstrate that we have compelling legitimate grounds to process your information which override your rights and freedoms",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "In some circumstances you can ask us to delete your data; see \u201cyour legal rights\u201d section below for further information",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "No fee usually required You will not have to pay a fee to access your personal data (or to exercise any of the other rights)",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Under certain circumstances, you have rights under data protection laws in relation to your personal data.\u200dBroadly, you have the right to:",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.704Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "We make sure we consider and balance any potential impact on you (both positive and negative) and your rights before we process your personal data for our",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.700Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "You will not have to pay a fee to access your personal data (or to exercise any of the other rights). However, we may charge a reasonable fee if your request",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.704Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Your legal rights Under certain circumstances, you have rights under data protection laws in relation to your personal data",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Your rights as a result of automated decision-making Where you are subject to automated decision-making processes, you are entitled to exercise specific rights",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.707Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "In this case, we may have to cancel a service you have with us but we will notify you if this is the case at the time",
+      "theme": "pricing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.707Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "(a) Necessary for our legitimate interests (for running our business, provision of administration and IT services, network security, to prevent fraud and in",
+      "theme": "security",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.703Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    }
+  ],
+  "examples": [],
+  "metadata": {
+    "totalNuggets": 206,
+    "themesCovered": [
+      "commercial",
+      "controls",
+      "export",
+      "features",
+      "formats",
+      "general",
+      "inputs",
+      "licensing",
+      "limits",
+      "models",
+      "other",
+      "pricing",
+      "security",
+      "support",
+      "usage",
+      "watermark"
+    ],
+    "conflicts": [],
+    "totalFeaturePages": 9
+  },
+  "linkIndex": {
+    "slug": "veed",
+    "sourceType": "features_index",
+    "pageUrl": "https://www.veed.io/tools",
+    "capturedAt": "2026-01-31T12:00:00Z",
+    "featureUrls": [
+      "https://www.veed.io/",
+      "https://www.veed.io/tools",
+      "https://www.veed.io/tools/ai-video/text-to-video",
+      "https://www.veed.io/tools/ai-video/ai-video-maker",
+      "https://www.veed.io/tools/auto-subtitle-generator-online",
+      "https://www.veed.io/tools/subtitle-editor",
+      "https://www.veed.io/tools/resize-video",
+      "https://www.veed.io/tools/image-to-video-ai",
+      "https://www.veed.io/ai-models/video"
+    ]
+  },
+  "pageEvidence": [
+    {
+      "slug": "veed",
+      "sourceType": "features",
+      "pageUrl": "https://www.veed.io/",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "VEED groups its workflow into Create, Edit, and Publish sections.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Recorder tools listed include Screen Recorder, Teleprompter, Voice Recorder, Webcam Recorder, and Slides to Video Converter.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Captions & Translations tools listed include Auto Subtitle Generator, Audio to Text, Video to Text, and Video Translator.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Under 'Text To Video', VEED lists AI Avatars, AI Reel Generator, Text to Video AI, VEO3, and Seedance.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Under 'AI Video Models', VEED lists models including Kling O1, VEO 3.1, Sora 2, Hailuo 02, and Wan 2.2.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Under 'AI Video APIs', VEED lists Fabric 1.0 API, AI Lip Sync API, Green Screen API, Background Removal API, and Background Removal Fast API.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "veed",
+      "sourceType": "features",
+      "pageUrl": "https://www.veed.io/tools",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The VEED Tools page lists tool categories including Recorder, Video Editor, Captions & Translations, and Publish.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The VEED Tools page includes a Create section with Recorder, Script Generator, Video GPT, and AI Avatars.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The VEED Tools page includes an Edit section with Video Editor, Translations, and Subtitles.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "In the AI section, VEED groups tools into Avatars & AI Voices, AI Editing, and AI Generation.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "In the AI section, VEED lists Text To Video tools including AI Avatars, AI Reel Generator, Text to Video AI, VEO3, and Seedance.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "In the AI Video Models list, VEED includes entries such as Fabric 1.0, Kling O1, VEO 3.1, and Sora 2 Pro.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "veed",
+      "sourceType": "features",
+      "pageUrl": "https://www.veed.io/tools/ai-video/text-to-video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "You can describe the video you want to create, click a pre-made prompt, or paste a script or article.",
+          "theme": "usage",
+          "sourceUrl": "https://www.veed.io/tools/ai-video/text-to-video",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "For direct text-to-video conversion, the tool lets you tell the AI to use your text verbatim.",
+          "theme": "usage",
+          "sourceUrl": "https://www.veed.io/tools/ai-video/text-to-video",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Step 2 lets you choose the format, avatar or voiceover, music, and caption style.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/ai-video/text-to-video",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The workflow mentions replacing footage with your own media, stock videos, or generative AI clips.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/ai-video/text-to-video",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Step 3 says clicking 'Done' exports your video or you can open the video editor to keep editing.",
+          "theme": "export",
+          "sourceUrl": "https://www.veed.io/tools/ai-video/text-to-video",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page says you can create a custom avatar or voice clone to personalize your content further.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/ai-video/text-to-video",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "veed",
+      "sourceType": "features",
+      "pageUrl": "https://www.veed.io/tools/ai-video/ai-video-maker",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The AI video maker says it can create videos with clips, music, voiceovers, captions, and animations without your own footage.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/ai-video/ai-video-maker",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page says you can describe the video, select a style, and generate it using VEED's AI video generator.",
+          "theme": "usage",
+          "sourceUrl": "https://www.veed.io/tools/ai-video/ai-video-maker",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states you can add an AI avatar to your AI-generated video.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/ai-video/ai-video-maker",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "It says you can generate voiceovers from text and choose from diverse AI voices.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/ai-video/ai-video-maker",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "It says you can clone your voice for a more personal touch.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/ai-video/ai-video-maker",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page describes refining videos using an intuitive timeline and drag-and-drop interface.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/ai-video/ai-video-maker",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "veed",
+      "sourceType": "features",
+      "pageUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The AI auto-subtitle tool automatically generates subtitles for your video and audio files.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page says you can burn or hardcode subtitles into the video.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page says you can download subtitle files in SRT, VTT, and TXT formats.",
+          "theme": "formats",
+          "sourceUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page describes dynamic subtitles that emphasize key phrases in sync with the spoken audio.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page says you can select subtitle fonts, sizes, styles, and colors.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page says the tool can transcribe videos to text.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/auto-subtitle-generator-online",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "veed",
+      "sourceType": "features",
+      "pageUrl": "https://www.veed.io/tools/subtitle-editor",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The subtitle editor says you can edit, reword, translate, or create new subtitles.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/subtitle-editor",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page says you can add regular expressions when editing subtitles.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/subtitle-editor",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page says you can change letter spacing, style, and fonts for subtitles.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/subtitle-editor",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page says you can animate subtitles or highlight them to stress important information.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/subtitle-editor",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page says you can download subtitles as separate files including SRT, VTT, and TXT.",
+          "theme": "formats",
+          "sourceUrl": "https://www.veed.io/tools/subtitle-editor",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page describes the subtitle generator as powered by AI speech-recognition software.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/subtitle-editor",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "veed",
+      "sourceType": "features",
+      "pageUrl": "https://www.veed.io/tools/resize-video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The page says you can change video dimensions and aspect ratio with a single click.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/resize-video",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page lists social presets including YouTube (16:9) and Instagram Story (9:16).",
+          "theme": "formats",
+          "sourceUrl": "https://www.veed.io/tools/resize-video",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Step 1 says you can upload your video files by dragging and dropping.",
+          "theme": "usage",
+          "sourceUrl": "https://www.veed.io/tools/resize-video",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Step 2 says click 'Settings' then choose the size and crop to fit the frame's dimensions.",
+          "theme": "usage",
+          "sourceUrl": "https://www.veed.io/tools/resize-video",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states VEED works with video formats including MP4, AVI, and MOV.",
+          "theme": "formats",
+          "sourceUrl": "https://www.veed.io/tools/resize-video",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page says you can select export resolution such as 4K, 1080p, and 720p.",
+          "theme": "export",
+          "sourceUrl": "https://www.veed.io/tools/resize-video",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "veed",
+      "sourceType": "features",
+      "pageUrl": "https://www.veed.io/tools/image-to-video-ai",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The image-to-video AI generator lets you upload an image, describe the movement, and generate a video.",
+          "theme": "usage",
+          "sourceUrl": "https://www.veed.io/tools/image-to-video-ai",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page says no video editing skills are required to use the image-to-video generator.",
+          "theme": "usage",
+          "sourceUrl": "https://www.veed.io/tools/image-to-video-ai",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page mentions transforming product photos, digital art, and photographs into videos.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/image-to-video-ai",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page suggests creating product teasers and logo animations from photos.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/image-to-video-ai",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page says you can add animated stickers to videos using the editor.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/image-to-video-ai",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page suggests exploring other AI tools like an image generator and talking avatars.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/tools/image-to-video-ai",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "veed",
+      "sourceType": "features",
+      "pageUrl": "https://www.veed.io/ai-models/video",
+      "capturedAt": "2026-01-31T12:00:00Z",
+      "nuggets": [
+        {
+          "text": "The page says it lets you compare AI video models in one place.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/ai-models/video",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page describes this as a video models directory for generating AI videos from text.",
+          "theme": "features",
+          "sourceUrl": "https://www.veed.io/ai-models/video",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The directory lists openai/sora-2 and openai/sora-2-pro.",
+          "theme": "limits",
+          "sourceUrl": "https://www.veed.io/ai-models/video",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The directory lists google/veo-3.1 and google/veo-3.1-fast.",
+          "theme": "limits",
+          "sourceUrl": "https://www.veed.io/ai-models/video",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The directory lists minimax/hailuo-2.3 and minimax/hailuo-2.3-fast.",
+          "theme": "limits",
+          "sourceUrl": "https://www.veed.io/ai-models/video",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The directory lists kwaivgi/kling-v2.6-pro and bytedance/seedance-1-lite.",
+          "theme": "limits",
+          "sourceUrl": "https://www.veed.io/ai-models/video",
+          "capturedAt": "2026-01-31T12:00:00Z",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1694 @@
+{
+  "tool": "heygen",
+  "collectedAt": "2026-01-29",
+  "sources": {
+    "faq": "https://www.heygen.com/faq",
+    "pricing": "https://www.heygen.com/pricing?nb=02",
+    "security": "https://security.heygen.com/",
+    "terms": "https://www.heygen.com/terms",
+    "privacy": "https://www.heygen.com/privacy",
+    "community": "https://community.heygen.com/public/content",
+    "business": "https://www.heygen.com/business",
+    "featuresIndex": "https://www.heygen.com/tool",
+    "featurePages": [
+      "https://www.heygen.com/tool/url-to-video",
+      "https://www.heygen.com/tool/ai-captions",
+      "https://www.heygen.com/translate/ai-dubbing",
+      "https://www.heygen.com/tool/ai-clone-yourself",
+      "https://www.heygen.com/tool/text-to-speech-avatar",
+      "https://www.heygen.com/ai-podcast-generator",
+      "https://www.heygen.com/tool/ai-movie-maker",
+      "https://www.heygen.com/tool/ai-actors-generator",
+      "https://www.heygen.com/tool/audio-speed-changer",
+      "https://www.heygen.com/tool/ai-gif-creator"
+    ]
+  },
+  "hardFacts": [
+    {
+      "field": "scene_character_limit",
+      "value": "Each scene allows for one character; multiple avatars require using different avatars across scenes.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/faq",
+          "type": "faq",
+          "quote": "Each scene allows for one character; to use multiple avatars, place different avatars in different scenes."
+        }
+      ]
+    },
+    {
+      "field": "edit_after_submit_rule",
+      "value": "After successful submission, editing requires duplicating (cloning) the video from the 'My Video' tab.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/faq",
+          "type": "faq",
+          "quote": "After a video is successfully submitted, editing requires duplicating it (creating a clone) from the \u2018My Video\u2019 tab."
+        }
+      ]
+    },
+    {
+      "field": "processing_priority_paid",
+      "value": "Paid plans have priority processing; processing time depends on concurrent workload.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/faq",
+          "type": "faq",
+          "quote": "Paid-plan users have priority processing time; processing time depends on how many videos are being processed at the same time."
+        }
+      ]
+    },
+    {
+      "field": "custom_avatar_turnaround",
+      "value": "Custom Avatars are generated in minutes; Studio Avatar can take up to 7 days end-to-end.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/faq",
+          "type": "faq",
+          "quote": "Custom Avatars are automatically generated in a few minutes; a Studio Avatar can take up to 7 days from beginning to end."
+        }
+      ]
+    },
+    {
+      "field": "gesture_control_limit",
+      "value": "Users currently cannot control avatars\u2019 gestures and movements.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/faq",
+          "type": "faq",
+          "quote": "Currently, users are not able to control avatars\u2019 gestures and movements."
+        }
+      ]
+    },
+    {
+      "field": "export_resolution_options",
+      "value": "Export resolution options include 720p, up to 1080p, and up to 4K depending on plan.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/pricing?nb=02",
+          "type": "pricing",
+          "quote": "Export resolution options listed include 720P, up to 1080P, and up to 4K (depending on plan)."
+        }
+      ]
+    },
+    {
+      "field": "ai_studio_max_duration_per_video",
+      "value": "AI studio editor max duration per video is listed as 3 minutes for one plan and 30 minutes for multiple plans.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/pricing?nb=02",
+          "type": "pricing",
+          "quote": "Max duration per video (AI studio editor) is listed as 3 minutes for one plan and 30 minutes for multiple plans."
+        }
+      ]
+    },
+    {
+      "field": "video_translation_max_duration_per_video",
+      "value": "Video translation max duration per video varies by plan: 3 minutes, 30 minutes, 60 minutes, or no max.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/pricing?nb=02",
+          "type": "pricing",
+          "quote": "Video translation max duration per video is listed as 3 minutes, 30 minutes, 60 minutes, and \u2018No video duration max\u2019 (depending on plan)."
+        }
+      ]
+    },
+    {
+      "field": "avatar_iv_max_duration_per_video",
+      "value": "Avatar IV max duration per video is listed as 30 seconds for one plan and 3 minutes for multiple plans.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/pricing?nb=02",
+          "type": "pricing",
+          "quote": "Avatar IV max duration per video is listed as 30 seconds for one plan and 3 minutes for multiple plans."
+        }
+      ]
+    },
+    {
+      "field": "templates_count_signal",
+      "value": "Pricing page lists 75+ video templates.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/pricing?nb=02",
+          "type": "pricing",
+          "quote": "Video templates are listed as 75+."
+        }
+      ]
+    },
+    {
+      "field": "stock_video_avatars_count_signal",
+      "value": "Pricing page lists 500+ stock video avatars for one plan and 700+ for multiple plans.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/pricing?nb=02",
+          "type": "pricing",
+          "quote": "Stock Video Avatars are listed as 500+ for one plan and 700+ for multiple plans."
+        }
+      ]
+    },
+    {
+      "field": "voice_cloning_limit_signal",
+      "value": "Pricing page lists '1 voice clone' for one plan and 'Unlimited' for multiple plans.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/pricing?nb=02",
+          "type": "pricing",
+          "quote": "Voice Cloning is listed as \u20181 voice clone\u2019 for one plan and \u2018Unlimited\u2019 for multiple plans."
+        }
+      ]
+    },
+    {
+      "field": "photo_avatars_limit_signal",
+      "value": "Pricing page lists 'Up to 3' photo avatars for one plan and 'Unlimited' for multiple plans.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/pricing?nb=02",
+          "type": "pricing",
+          "quote": "Photo Avatars are listed as \u2018Up to 3\u2019 for one plan and \u2018Unlimited\u2019 for multiple plans."
+        }
+      ]
+    },
+    {
+      "field": "language_suite_signal",
+      "value": "Pricing page lists '30+ languages' for one plan and '175 languages & dialects' for multiple plans.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/pricing?nb=02",
+          "type": "pricing",
+          "quote": "Global Language Suite is listed as \u201830+ languages\u2019 for one plan and \u2018175 languages & dialects\u2019 for multiple plans."
+        }
+      ]
+    },
+    {
+      "field": "privacy_security_features_signal",
+      "value": "Pricing page lists security features including MFA, SAML/SSO, SCIM, password protected URLs, and audit log (vary by plan).",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/pricing?nb=02",
+          "type": "pricing",
+          "quote": "Privacy & Security features listed include Multi-factor authentication (MFA), SAML/SSO, SCIM, password protected URLs, and audit log (availability varies by plan)."
+        }
+      ]
+    },
+    {
+      "field": "watermark_removal_feature",
+      "value": "Pricing page includes a 'Watermark removal' feature (availability varies by plan).",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/pricing?nb=02",
+          "type": "pricing",
+          "quote": "The pricing page includes a feature labeled \u2018Watermark removal\u2019 (availability varies by plan)."
+        }
+      ]
+    },
+    {
+      "field": "trust_center_platform",
+      "value": "Security portal indicates 'Trust Center | Powered by Drata' in the page title (limited visibility in capture).",
+      "sources": [
+        {
+          "url": "https://security.heygen.com/",
+          "type": "security",
+          "quote": "The security portal page title indicates \u2018Trust Center | Powered by Drata\u2019."
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "field": "terms_output_ownership_general",
+      "value": "Terms state you own all rights in User Input or User Output and may use User Output commercially (except in termination context).",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/terms",
+          "type": "terms",
+          "quote": "Terms: As between HeyGen and you, you own all rights in your User Input or User Output and may use User Output (including for commercial purposes), except in the case of termination."
+        }
+      ],
+      "conflictGroup": "output_ownership_free_paid"
+    },
+    {
+      "field": "faq_output_ownership_free_vs_paid",
+      "value": "FAQ states paying subscribers own generated videos; free-version videos are owned by HeyGen but may be used for non-commercial purposes.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/faq",
+          "type": "faq",
+          "quote": "FAQ: Paying subscribers own generated videos; free-version users\u2019 videos are owned by HeyGen but may be used for non-commercial purposes."
+        }
+      ],
+      "conflictGroup": "output_ownership_free_paid"
+    },
+    {
+      "field": "terms_ai_disclosure_requirement",
+      "value": "Terms require proactive disclosure that User Output was created using AI where required by applicable law.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/terms",
+          "type": "terms",
+          "quote": "Terms: You must proactively disclose that User Output was created using artificial intelligence technologies where required by applicable law to avoid misleading others of its origin."
+        }
+      ]
+    },
+    {
+      "field": "terms_content_license_and_training",
+      "value": "Terms grant HeyGen a license to use/host/modify your content to operate/improve/promote the service, including to train or improve AI/ML models.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/terms",
+          "type": "terms",
+          "quote": "Terms: You grant HeyGen a license to access, use, host, store, reproduce, distribute, and modify Your Content to operate/improve/promote/provide the Services and to develop products, including to train or improve AI/ML models."
+        }
+      ]
+    },
+    {
+      "field": "terms_refund_policy",
+      "value": "Terms: cancel anytime, access continues through period end, and payments are non-refundable except where required by law.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/terms",
+          "type": "terms",
+          "quote": "Terms: You may cancel a recurring subscription through your account at any time, but charges already paid are not refunded if you cancel before the end of the current subscription period."
+        },
+        {
+          "url": "https://www.heygen.com/terms",
+          "type": "terms",
+          "quote": "Terms: Following cancellation, you continue to have access to the applicable Services through the end of the current subscription period."
+        },
+        {
+          "url": "https://www.heygen.com/terms",
+          "type": "terms",
+          "quote": "Terms: Payments are non-refundable, except where required by law."
+        }
+      ]
+    },
+    {
+      "field": "privacy_effective_date",
+      "value": "Privacy Policy effective date is listed as 22 October 2024.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/privacy",
+          "type": "privacy",
+          "quote": "Privacy Policy effective date is listed as 22nd of October 2024."
+        }
+      ]
+    },
+    {
+      "field": "privacy_company_and_address",
+      "value": "Privacy policy states HeyGen is a domestic U.S. corporation and lists an address in Los Angeles, CA 90094.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/privacy",
+          "type": "privacy",
+          "quote": "HeyGen states it is a domestic corporation established in the United States and lists an address in Los Angeles, CA 90094."
+        }
+      ]
+    },
+    {
+      "field": "privacy_data_privacy_frameworks",
+      "value": "Privacy policy states compliance/certification with EU-U.S. DPF, UK Extension, and Swiss-U.S. DPF.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/privacy",
+          "type": "privacy",
+          "quote": "HeyGen states it complies with the EU-U.S. Data Privacy Framework, the UK Extension, and the Swiss-U.S. Data Privacy Framework and has certified adherence to those principles."
+        }
+      ]
+    },
+    {
+      "field": "privacy_no_sale_statement",
+      "value": "Privacy policy states it will never sell personal information for monetary consideration unless otherwise described.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/privacy",
+          "type": "privacy",
+          "quote": "HeyGen states it will never sell your personal information to anyone for monetary consideration unless otherwise described in the policy."
+        }
+      ]
+    },
+    {
+      "field": "privacy_training_opt_out",
+      "value": "Privacy policy says users may object to their information being used to train HeyGen\u2019s models by contacting an email in the policy.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/privacy",
+          "type": "privacy",
+          "quote": "HeyGen states users may object to their information being used to train HeyGen\u2019s models by contacting an email address provided in the Privacy Policy."
+        }
+      ]
+    },
+    {
+      "field": "privacy_age_restrictions",
+      "value": "Privacy policy states services are not intended for minors under 18 and it does not knowingly collect personal information from children under 13.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/privacy",
+          "type": "privacy",
+          "quote": "HeyGen states its Services are not intended for minors under 18 and it does not knowingly collect personal information from children under 13."
+        }
+      ]
+    },
+    {
+      "field": "privacy_subprocessors_pointer",
+      "value": "Privacy policy says users can access a list of subprocessors via a link to security.heygen.com.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/privacy",
+          "type": "privacy",
+          "quote": "HeyGen states users can access a list of subprocessors via a link to security.heygen.com."
+        }
+      ]
+    },
+    {
+      "field": "business_security_claims",
+      "value": "Business page states 'SOC 2 Type II + GDPR compliant' and includes self-serve SAML SSO.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/business",
+          "type": "business",
+          "quote": "HeyGen for Business page states \u2018SOC 2 Type II + GDPR compliant\u2019."
+        },
+        {
+          "url": "https://www.heygen.com/business",
+          "type": "business",
+          "quote": "HeyGen for Business page lists \u2018Self-serve SAML SSO\u2019."
+        }
+      ]
+    },
+    {
+      "field": "business_limits_translation_and_avatar_iv",
+      "value": "Business page lists 'Translation up to 60 min' and states Avatar IV can create photo avatars up to 5 minutes.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/business",
+          "type": "business",
+          "quote": "HeyGen for Business page lists \u2018Translation up to 60 min\u2019."
+        },
+        {
+          "url": "https://www.heygen.com/business",
+          "type": "business",
+          "quote": "HeyGen for Business page states \u2018Avatar IV\u2019 can create photo avatars up to 5 minutes."
+        }
+      ]
+    },
+    {
+      "field": "business_commercial_use_rights_claim",
+      "value": "Business page states 'Commercial use rights'.",
+      "sources": [
+        {
+          "url": "https://www.heygen.com/business",
+          "type": "business",
+          "quote": "HeyGen for Business page states \u2018Commercial use rights\u2019."
+        }
+      ]
+    },
+    {
+      "field": "community_learning_resources_counts",
+      "value": "HeyGen Hub content page lists 'Tutorials by Use Case (46 items)', 'Tutorials by Feature (42 items)', and 'AI Video Jumpstart Guides' (5 items).",
+      "sources": [
+        {
+          "url": "https://community.heygen.com/public/content",
+          "type": "community",
+          "quote": "HeyGen Hub \u2018Content\u2019 page lists categories including \u2018Tutorials by Use Case (46 items)\u2019 and \u2018Tutorials by Feature (42 items)\u2019."
+        },
+        {
+          "url": "https://community.heygen.com/public/content",
+          "type": "community",
+          "quote": "HeyGen Hub \u2018Content\u2019 page lists \u2018AI Video Jumpstart Guides\u2019 as 5 items."
+        }
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "conflictGroup": "output_ownership_free_paid",
+      "items": [
+        {
+          "field": "terms_output_ownership_general",
+          "sourceUrl": "https://www.heygen.com/terms",
+          "note": "Terms say you own User Output and may use it commercially (except termination context)."
+        },
+        {
+          "field": "faq_output_ownership_free_vs_paid",
+          "sourceUrl": "https://www.heygen.com/faq",
+          "note": "FAQ distinguishes free vs paid ownership and commercial permissions."
+        }
+      ]
+    }
+  ],
+  "nuggets": [
+    {
+      "text": "You paste a webpage URL and choose a template, aspect ratio, and visual tone to start a video.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/url-to-video",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "HeyGen prepares an initial storyboard automatically after you enter the web link.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/url-to-video",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "HeyGen extracts headlines and copy from the URL and lets you edit or paste a custom script.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/url-to-video",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "You can control voiceover, captions, and scene emphasis by editing the script.",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/tool/url-to-video",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "You can adjust imagery, transitions, background music, and voiceover options, and toggle captions.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/url-to-video",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Rendering handles lip sync, encoding, and creating video files, and you can download files or use the API for batch delivery.",
+      "theme": "export",
+      "sourceUrl": "https://www.heygen.com/tool/url-to-video",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "You upload an MP4, MOV, or WebM file to generate captions in HeyGen.",
+      "theme": "formats",
+      "sourceUrl": "https://www.heygen.com/tool/ai-captions",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "HeyGen analyzes your audio and creates accurate, timestamped captions automatically.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/ai-captions",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "You can edit captions directly in the editor for names, technical terms, or timing adjustments.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/ai-captions",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Captions can be exported as SRT or VTT files.",
+      "theme": "formats",
+      "sourceUrl": "https://www.heygen.com/tool/ai-captions",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "You can export a video with burned-in captions for TikTok, Instagram, or Reels.",
+      "theme": "export",
+      "sourceUrl": "https://www.heygen.com/tool/ai-captions",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Caption styling controls include adjusting font, color, size, and placement.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/ai-captions",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The AI dubbing tool converts speech and syncs lip movements in real time for video localization.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/translate/ai-dubbing",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states support for 175+ languages and dialects.",
+      "theme": "limits",
+      "sourceUrl": "https://www.heygen.com/translate/ai-dubbing",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "You can upload a video file or paste a YouTube link to translate.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/translate/ai-dubbing",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The workflow includes selecting a video, choosing a target language, and clicking translate video.",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/translate/ai-dubbing",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page describes customizable localization with editable scripts, tone controls, and regional accents plus captions and subtitles.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/translate/ai-dubbing",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page describes uploading a video for hyper-realistic translation with natural lip-sync.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/translate/ai-dubbing",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "To create your clone, you provide a short visual and voice reference and HeyGen builds an AI avatar that represents you.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/ai-clone-yourself",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "You can type or paste the text you want delivered as the script.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/ai-clone-yourself",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "You can choose style and language, including visual layout and tone, while keeping identity consistent.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/ai-clone-yourself",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "You can generate and export the video, then update the script anytime to generate a new version.",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/tool/ai-clone-yourself",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states one clone can speak multiple languages while maintaining the same appearance and voice characteristics.",
+      "theme": "limits",
+      "sourceUrl": "https://www.heygen.com/tool/ai-clone-yourself",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states the process is text-driven and designed for non-technical users without editing skills.",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/tool/ai-clone-yourself",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page describes creating a text-to-speech avatar in four steps: choose avatar style, input text, select a voice, then generate and download.",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/tool/text-to-speech-avatar",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Avatar styles listed include 2D, 3D, or animated avatars.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/text-to-speech-avatar",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "You input the script text you want the avatar to read, including short messages or long narration.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/text-to-speech-avatar",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Voice selection includes choosing tone, accent, and pace, and you can adjust pitch and speed.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/text-to-speech-avatar",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states clicking Generate creates a lifelike avatar video within minutes and you can download it.",
+      "theme": "export",
+      "sourceUrl": "https://www.heygen.com/tool/text-to-speech-avatar",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states avatars can be added to websites, virtual assistants, and marketing content for both developers and non-technical users.",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/tool/text-to-speech-avatar",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states you can create podcasts instantly by writing or uploading your script, with no microphone needed.",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/ai-podcast-generator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states the AI turns text into clear and realistic voices ready for broadcast.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/ai-podcast-generator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Step 1 lists supported photo formats as PNG, JPG, HEIC, or WebP up to 200MB.",
+      "theme": "limits",
+      "sourceUrl": "https://www.heygen.com/ai-podcast-generator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Step 2 states the text input can be a script, blog post, article, meeting notes, or a PDF.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/ai-podcast-generator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Step 4 states you can pair the audio with a realistic AI avatar for a video version and export in video or audio format.",
+      "theme": "export",
+      "sourceUrl": "https://www.heygen.com/ai-podcast-generator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states you can guide transitions with text commands like \"slow pan\" or \"zoom on subject\".",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/ai-podcast-generator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Step 1 starts a movie by entering your concept and adding notes about characters, style, and story flow.",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/tool/ai-movie-maker",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Step 2 lets you choose scene styles and character visuals to match your story.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/ai-movie-maker",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Step 3 lets you preview and refine each scene by changing timing, performance, or environments.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/ai-movie-maker",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The FAQ states you can refine camera angles, pacing, character movement, and scene lighting.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/ai-movie-maker",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The FAQ states you can upload custom audio tracks, sound design, or voiceover recordings.",
+      "theme": "formats",
+      "sourceUrl": "https://www.heygen.com/tool/ai-movie-maker",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The FAQ states you can share, publish, or monetize content made with HeyGen if rights for uploaded media are cleared.",
+      "theme": "commercial",
+      "sourceUrl": "https://www.heygen.com/tool/ai-movie-maker",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states there are 250+ ready-to-use actors and you can create a private clone by recording a short consented sample.",
+      "theme": "limits",
+      "sourceUrl": "https://www.heygen.com/tool/ai-actors-generator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states it supports 100+ languages and regional accents for voiceovers and captions.",
+      "theme": "limits",
+      "sourceUrl": "https://www.heygen.com/tool/ai-actors-generator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states you can paste a script or product URL and it auto-generates scene layouts, voiceover, captions, and b-roll suggestions.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/ai-actors-generator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states exports include MP4, SRT/VTT captions, thumbnails, and mobile presets for Reels, Stories, Feed, and web players.",
+      "theme": "formats",
+      "sourceUrl": "https://www.heygen.com/tool/ai-actors-generator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Step 3 includes customizing voice, emotion, and style by adjusting energy and facial expressiveness and adding on-screen callouts.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/ai-actors-generator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The FAQ states custom clones are private by default, can be locked to your account, and uploaded files are encrypted with enterprise controls for access.",
+      "theme": "security",
+      "sourceUrl": "https://www.heygen.com/tool/ai-actors-generator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states the tool is compatible with MP3, WAV, and M4A files.",
+      "theme": "formats",
+      "sourceUrl": "https://www.heygen.com/tool/audio-speed-changer",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states the AI preserves pitch and tone when you speed up or slow down audio.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/audio-speed-changer",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Step 3 states you can preview edits in real time while maintaining pitch and clarity.",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/tool/audio-speed-changer",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Step 4 states you can export enhanced audio in high quality and download instantly.",
+      "theme": "export",
+      "sourceUrl": "https://www.heygen.com/tool/audio-speed-changer",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The FAQ states the tool works in any mobile browser on iOS or Android without installing software.",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/tool/audio-speed-changer",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The FAQ states uploaded files are encrypted during processing and automatically deleted afterward.",
+      "theme": "security",
+      "sourceUrl": "https://www.heygen.com/tool/audio-speed-changer",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states you can create animated GIFs from text using HeyGen's AI GIF creator.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/ai-gif-creator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Step 1 states you enter a text prompt describing the action, mood, or scene you want to animate.",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/tool/ai-gif-creator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Step 2 states you refine your prompt to influence visual tone, pacing, or aesthetic direction.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/ai-gif-creator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states the animation is generated with seamless looping so it flows from the last frame back to the first.",
+      "theme": "features",
+      "sourceUrl": "https://www.heygen.com/tool/ai-gif-creator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states GIF output is optimized for common sharing use cases by balancing quality and file size.",
+      "theme": "formats",
+      "sourceUrl": "https://www.heygen.com/tool/ai-gif-creator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Step 4 states you export the GIF and use it across social platforms, chats, emails, or web pages.",
+      "theme": "export",
+      "sourceUrl": "https://www.heygen.com/tool/ai-gif-creator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Custom avatars are generated in minutes, while studio avatars may take up to 7 days",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "\u200d We do not \u201csell\u201d or \u201cshare\u201d (as those terms are defined in the CCPA) personal information, nor have we done so in the preceding 12 months",
+      "theme": "security",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.626Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "We do not \u201csell\u201d or \u201cshare\u201d (as those terms are defined in the CCPA) personal information, nor have we done so in the preceding 12 months. Further, we do not",
+      "theme": "security",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.622Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Custom Avatars are automatically generated and take only a few minutes! A Studio Avatar, which is professionally curated by our team, can take up to 7 days",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.567Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Custom avatars are generated in minutes, while studio avatars may take up to 7 days. Begin customizing now here.",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.567Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "California residents under the age of 18 who have registered to use the Services and posted UGC to the Services can request that their UGC be removed by",
+      "theme": "export",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.622Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "If we become aware that we have unknowingly collected personal information from a child under age 13, we take steps to remove that information from our servers",
+      "theme": "export",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.626Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "As described in section 1 \u201cIntroduction\u201d, HeyGen, Inc. is usually the processor of your personal data. We are the controller only if we process data for our",
+      "theme": "security",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.622Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "To request to limit the use and disclosure of your personal information, please submit a written request to [email&#160;protected]",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.626Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "To the extent such rights cannot be assigned under applicable law, you hereby waive any moral and author&#x27;s rights (including attribution and integrity)",
+      "theme": "licensing",
+      "sourceUrl": "https://www.heygen.com/terms",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-28T08:37:00.764Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Tell me more about your service HeyGen is an online video tool with built-in talking AI-avatars that unleash people&#x27;s creativity by removing the costly",
+      "theme": "export",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.567Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Choose an avatar, type the script you want, and click &#x27;submit&#x27; to create a perfect spokesperson video in minutes",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.567Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Exporting videos Click the &#x27;\u2611\ufe0f Submit&#x27; button in the upper right corner, the video will be submitted for generation",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Once the video is generated, you can export the video by clicking the &#x27;download&#x27; button on &#x27;My Video&#x27; tab Editing Your Videos If you",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Children&#x27;s Privacy Our Services are not intended for minors under the age of 18, and we do not knowingly collect personal information from children under",
+      "theme": "security",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.626Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "You also agree that you are 18 years or older and legally able to enter into a binding contract",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/terms",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-28T08:37:00.763Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "\u200d As described in section 1 \u201cIntroduction\u201d, HeyGen, Inc",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.626Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "\u201d and section 4 \u201cHow Do We Use Your Information\u201d above",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.626Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "You can withdraw your consent by contacting [email&#160;protected]",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.626Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "\u200d Jonathan Bailey Copyright &amp; Plagiarism Consultant, CopyByte 3157 Gentilly Blvd",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/terms",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-28T08:37:00.764Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "&#x27; button in the upper right corner of the scene, and you can adjust effects",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "&#x27; button on the desired video, and then click&#x27;Duplicate&#x27;",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "A Studio Avatar, which is professionally curated by our team, can take up to 7 days from beginning to end",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "From the &#x27;My Video&#x27; tab, choose the &#x27;",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Long delays or errors should be reported via the &#x27;help&#x27; button",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "You can check its progress in the &#x27;Video&#x27; tab",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Browse our library of video templates, find one that suits your needs, and click on the &#x27;+ Use this Template&#x27; button",
+      "theme": "workflow",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Option 2: From a template. Browse our library of video templates, find one that suits your needs, and click on the '+ Use this Template' button.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.566Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "\u200d If you submit a request to delete your information, we strive to take steps to delete that information within 72 hours of your request, unless we are",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.625Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Further, we do not have actual knowledge that we sell or share personal information about California residents under 16 years of age",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.626Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "low"
+    }
+  ],
+  "metadata": {
+    "totalNuggets": 90,
+    "themesCovered": [
+      "commercial",
+      "export",
+      "features",
+      "formats",
+      "general",
+      "licensing",
+      "limits",
+      "security",
+      "usage",
+      "workflow"
+    ],
+    "totalFeaturePages": 10
+  },
+  "linkIndex": {
+    "slug": "heygen",
+    "sourceType": "features_index",
+    "pageUrl": "https://www.heygen.com/tool/",
+    "capturedAt": "2026-01-31T05:27:14Z",
+    "featureUrls": [
+      "https://www.heygen.com/tool/url-to-video",
+      "https://www.heygen.com/tool/ai-captions",
+      "https://www.heygen.com/translate/ai-dubbing",
+      "https://www.heygen.com/tool/ai-clone-yourself",
+      "https://www.heygen.com/tool/text-to-speech-avatar",
+      "https://www.heygen.com/ai-podcast-generator",
+      "https://www.heygen.com/tool/ai-movie-maker",
+      "https://www.heygen.com/tool/ai-actors-generator",
+      "https://www.heygen.com/tool/audio-speed-changer",
+      "https://www.heygen.com/tool/ai-gif-creator"
+    ]
+  },
+  "pageEvidence": [
+    {
+      "slug": "heygen",
+      "sourceType": "features",
+      "pageUrl": "https://www.heygen.com/tool/url-to-video",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "nuggets": [
+        {
+          "text": "You paste a webpage URL and choose a template, aspect ratio, and visual tone to start a video.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/url-to-video",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "HeyGen prepares an initial storyboard automatically after you enter the web link.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/url-to-video",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "HeyGen extracts headlines and copy from the URL and lets you edit or paste a custom script.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/url-to-video",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "You can control voiceover, captions, and scene emphasis by editing the script.",
+          "theme": "usage",
+          "sourceUrl": "https://www.heygen.com/tool/url-to-video",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "You can adjust imagery, transitions, background music, and voiceover options, and toggle captions.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/url-to-video",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Rendering handles lip sync, encoding, and creating video files, and you can download files or use the API for batch delivery.",
+          "theme": "export",
+          "sourceUrl": "https://www.heygen.com/tool/url-to-video",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "heygen",
+      "sourceType": "features",
+      "pageUrl": "https://www.heygen.com/tool/ai-captions",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "nuggets": [
+        {
+          "text": "You upload an MP4, MOV, or WebM file to generate captions in HeyGen.",
+          "theme": "formats",
+          "sourceUrl": "https://www.heygen.com/tool/ai-captions",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "HeyGen analyzes your audio and creates accurate, timestamped captions automatically.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/ai-captions",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "You can edit captions directly in the editor for names, technical terms, or timing adjustments.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/ai-captions",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Captions can be exported as SRT or VTT files.",
+          "theme": "formats",
+          "sourceUrl": "https://www.heygen.com/tool/ai-captions",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "You can export a video with burned-in captions for TikTok, Instagram, or Reels.",
+          "theme": "export",
+          "sourceUrl": "https://www.heygen.com/tool/ai-captions",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Caption styling controls include adjusting font, color, size, and placement.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/ai-captions",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "heygen",
+      "sourceType": "features",
+      "pageUrl": "https://www.heygen.com/translate/ai-dubbing",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "nuggets": [
+        {
+          "text": "The AI dubbing tool converts speech and syncs lip movements in real time for video localization.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/translate/ai-dubbing",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states support for 175+ languages and dialects.",
+          "theme": "limits",
+          "sourceUrl": "https://www.heygen.com/translate/ai-dubbing",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "You can upload a video file or paste a YouTube link to translate.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/translate/ai-dubbing",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The workflow includes selecting a video, choosing a target language, and clicking translate video.",
+          "theme": "usage",
+          "sourceUrl": "https://www.heygen.com/translate/ai-dubbing",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page describes customizable localization with editable scripts, tone controls, and regional accents plus captions and subtitles.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/translate/ai-dubbing",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page describes uploading a video for hyper-realistic translation with natural lip-sync.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/translate/ai-dubbing",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "heygen",
+      "sourceType": "features",
+      "pageUrl": "https://www.heygen.com/tool/ai-clone-yourself",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "nuggets": [
+        {
+          "text": "To create your clone, you provide a short visual and voice reference and HeyGen builds an AI avatar that represents you.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/ai-clone-yourself",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "You can type or paste the text you want delivered as the script.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/ai-clone-yourself",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "You can choose style and language, including visual layout and tone, while keeping identity consistent.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/ai-clone-yourself",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "You can generate and export the video, then update the script anytime to generate a new version.",
+          "theme": "usage",
+          "sourceUrl": "https://www.heygen.com/tool/ai-clone-yourself",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states one clone can speak multiple languages while maintaining the same appearance and voice characteristics.",
+          "theme": "limits",
+          "sourceUrl": "https://www.heygen.com/tool/ai-clone-yourself",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states the process is text-driven and designed for non-technical users without editing skills.",
+          "theme": "usage",
+          "sourceUrl": "https://www.heygen.com/tool/ai-clone-yourself",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "heygen",
+      "sourceType": "features",
+      "pageUrl": "https://www.heygen.com/tool/text-to-speech-avatar",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "nuggets": [
+        {
+          "text": "The page describes creating a text-to-speech avatar in four steps: choose avatar style, input text, select a voice, then generate and download.",
+          "theme": "usage",
+          "sourceUrl": "https://www.heygen.com/tool/text-to-speech-avatar",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Avatar styles listed include 2D, 3D, or animated avatars.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/text-to-speech-avatar",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "You input the script text you want the avatar to read, including short messages or long narration.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/text-to-speech-avatar",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Voice selection includes choosing tone, accent, and pace, and you can adjust pitch and speed.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/text-to-speech-avatar",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states clicking Generate creates a lifelike avatar video within minutes and you can download it.",
+          "theme": "export",
+          "sourceUrl": "https://www.heygen.com/tool/text-to-speech-avatar",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states avatars can be added to websites, virtual assistants, and marketing content for both developers and non-technical users.",
+          "theme": "usage",
+          "sourceUrl": "https://www.heygen.com/tool/text-to-speech-avatar",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "heygen",
+      "sourceType": "features",
+      "pageUrl": "https://www.heygen.com/ai-podcast-generator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "nuggets": [
+        {
+          "text": "The page states you can create podcasts instantly by writing or uploading your script, with no microphone needed.",
+          "theme": "usage",
+          "sourceUrl": "https://www.heygen.com/ai-podcast-generator",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states the AI turns text into clear and realistic voices ready for broadcast.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/ai-podcast-generator",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Step 1 lists supported photo formats as PNG, JPG, HEIC, or WebP up to 200MB.",
+          "theme": "limits",
+          "sourceUrl": "https://www.heygen.com/ai-podcast-generator",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Step 2 states the text input can be a script, blog post, article, meeting notes, or a PDF.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/ai-podcast-generator",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Step 4 states you can pair the audio with a realistic AI avatar for a video version and export in video or audio format.",
+          "theme": "export",
+          "sourceUrl": "https://www.heygen.com/ai-podcast-generator",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states you can guide transitions with text commands like \"slow pan\" or \"zoom on subject\".",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/ai-podcast-generator",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "heygen",
+      "sourceType": "features",
+      "pageUrl": "https://www.heygen.com/tool/ai-movie-maker",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "nuggets": [
+        {
+          "text": "Step 1 starts a movie by entering your concept and adding notes about characters, style, and story flow.",
+          "theme": "usage",
+          "sourceUrl": "https://www.heygen.com/tool/ai-movie-maker",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Step 2 lets you choose scene styles and character visuals to match your story.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/ai-movie-maker",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Step 3 lets you preview and refine each scene by changing timing, performance, or environments.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/ai-movie-maker",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The FAQ states you can refine camera angles, pacing, character movement, and scene lighting.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/ai-movie-maker",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The FAQ states you can upload custom audio tracks, sound design, or voiceover recordings.",
+          "theme": "formats",
+          "sourceUrl": "https://www.heygen.com/tool/ai-movie-maker",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The FAQ states you can share, publish, or monetize content made with HeyGen if rights for uploaded media are cleared.",
+          "theme": "commercial",
+          "sourceUrl": "https://www.heygen.com/tool/ai-movie-maker",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "heygen",
+      "sourceType": "features",
+      "pageUrl": "https://www.heygen.com/tool/ai-actors-generator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "nuggets": [
+        {
+          "text": "The page states there are 250+ ready-to-use actors and you can create a private clone by recording a short consented sample.",
+          "theme": "limits",
+          "sourceUrl": "https://www.heygen.com/tool/ai-actors-generator",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states it supports 100+ languages and regional accents for voiceovers and captions.",
+          "theme": "limits",
+          "sourceUrl": "https://www.heygen.com/tool/ai-actors-generator",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states you can paste a script or product URL and it auto-generates scene layouts, voiceover, captions, and b-roll suggestions.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/ai-actors-generator",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states exports include MP4, SRT/VTT captions, thumbnails, and mobile presets for Reels, Stories, Feed, and web players.",
+          "theme": "formats",
+          "sourceUrl": "https://www.heygen.com/tool/ai-actors-generator",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Step 3 includes customizing voice, emotion, and style by adjusting energy and facial expressiveness and adding on-screen callouts.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/ai-actors-generator",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The FAQ states custom clones are private by default, can be locked to your account, and uploaded files are encrypted with enterprise controls for access.",
+          "theme": "security",
+          "sourceUrl": "https://www.heygen.com/tool/ai-actors-generator",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "heygen",
+      "sourceType": "features",
+      "pageUrl": "https://www.heygen.com/tool/audio-speed-changer",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "nuggets": [
+        {
+          "text": "The page states the tool is compatible with MP3, WAV, and M4A files.",
+          "theme": "formats",
+          "sourceUrl": "https://www.heygen.com/tool/audio-speed-changer",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states the AI preserves pitch and tone when you speed up or slow down audio.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/audio-speed-changer",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Step 3 states you can preview edits in real time while maintaining pitch and clarity.",
+          "theme": "usage",
+          "sourceUrl": "https://www.heygen.com/tool/audio-speed-changer",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Step 4 states you can export enhanced audio in high quality and download instantly.",
+          "theme": "export",
+          "sourceUrl": "https://www.heygen.com/tool/audio-speed-changer",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The FAQ states the tool works in any mobile browser on iOS or Android without installing software.",
+          "theme": "usage",
+          "sourceUrl": "https://www.heygen.com/tool/audio-speed-changer",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The FAQ states uploaded files are encrypted during processing and automatically deleted afterward.",
+          "theme": "security",
+          "sourceUrl": "https://www.heygen.com/tool/audio-speed-changer",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "heygen",
+      "sourceType": "features",
+      "pageUrl": "https://www.heygen.com/tool/ai-gif-creator",
+      "capturedAt": "2026-01-31T05:27:14Z",
+      "nuggets": [
+        {
+          "text": "The page states you can create animated GIFs from text using HeyGen's AI GIF creator.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/ai-gif-creator",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Step 1 states you enter a text prompt describing the action, mood, or scene you want to animate.",
+          "theme": "usage",
+          "sourceUrl": "https://www.heygen.com/tool/ai-gif-creator",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Step 2 states you refine your prompt to influence visual tone, pacing, or aesthetic direction.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/ai-gif-creator",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states the animation is generated with seamless looping so it flows from the last frame back to the first.",
+          "theme": "features",
+          "sourceUrl": "https://www.heygen.com/tool/ai-gif-creator",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "The page states GIF output is optimized for common sharing use cases by balancing quality and file size.",
+          "theme": "formats",
+          "sourceUrl": "https://www.heygen.com/tool/ai-gif-creator",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Step 4 states you export the GIF and use it across social platforms, chats, emails, or web pages.",
+          "theme": "export",
+          "sourceUrl": "https://www.heygen.com/tool/ai-gif-creator",
+          "capturedAt": "2026-01-31T05:27:14Z",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

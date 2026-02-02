@@ -1,28 +1,148 @@
 [
   {
     "slug": "fliki",
-    "official_urls": {
+    "sources": {
       "pricing": {
         "url": "https://fliki.ai/pricing",
-        "mode": "static"
+        "mode": "static",
+        "description": "Pricing plans and billing"
       },
       "features": {
-        "url": "https://fliki.ai/features",
-        "mode": "static"
-      },
-      "terms": {
-        "url": "https://fliki.ai/terms",
-        "mode": "static"
+        "url": "https://fliki.ai/ai-video-generator",
+        "mode": "static",
+        "description": "AI video generator features"
       },
       "help": {
         "url": "https://fliki.ai/help",
-        "mode": "static"
-      }
+        "mode": "static",
+        "description": "Help center"
+      },
+      "faq": {
+        "url": "https://fliki.ai/faq",
+        "mode": "static",
+        "description": "Frequently asked questions"
+      },
+      "terms": {
+        "url": "https://fliki.ai/terms",
+        "mode": "static",
+        "description": "Terms of service"
+      },
+      "privacy": {
+        "url": "https://fliki.ai/privacy",
+        "mode": "static",
+        "description": "Privacy policy"
+      },
+      "examples": [
+        {
+          "url": "https://fliki.ai/templates",
+          "mode": "static",
+          "description": "Video templates gallery"
+        },
+        {
+          "url": "https://fliki.ai/use-cases",
+          "mode": "static",
+          "description": "Use cases and examples"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "heygen",
+    "sources": {
+      "pricing": {
+        "url": "https://www.heygen.com/pricing",
+        "mode": "dynamic",
+        "description": "Pricing plans and billing"
+      },
+      "features": {
+        "url": "https://www.heygen.com/features",
+        "mode": "dynamic",
+        "description": "AI avatar and video features"
+      },
+      "help": {
+        "url": "https://www.heygen.com/help-center",
+        "mode": "dynamic",
+        "description": "Help center and guides"
+      },
+      "faq": {
+        "url": "https://www.heygen.com/faq",
+        "mode": "dynamic",
+        "description": "Frequently asked questions"
+      },
+      "terms": {
+        "url": "https://www.heygen.com/terms",
+        "mode": "dynamic",
+        "description": "Terms of service"
+      },
+      "privacy": {
+        "url": "https://www.heygen.com/privacy",
+        "mode": "dynamic",
+        "description": "Privacy policy"
+      },
+      "examples": [
+        {
+          "url": "https://www.heygen.com/showcase",
+          "mode": "dynamic",
+          "description": "AI avatar video showcase"
+        },
+        {
+          "url": "https://www.heygen.com/avatars",
+          "mode": "dynamic",
+          "description": "AI avatars gallery"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "veed-io",
+    "sources": {
+      "pricing": {
+        "url": "https://www.veed.io/pricing",
+        "mode": "dynamic",
+        "description": "Pricing plans and billing"
+      },
+      "features": {
+        "url": "https://www.veed.io/tools",
+        "mode": "dynamic",
+        "description": "Video editing tools and features"
+      },
+      "help": {
+        "url": "https://www.veed.io/help",
+        "mode": "dynamic",
+        "description": "Help center and guides"
+      },
+      "faq": {
+        "url": "https://www.veed.io/faq",
+        "mode": "dynamic",
+        "description": "Frequently asked questions"
+      },
+      "terms": {
+        "url": "https://www.veed.io/terms",
+        "mode": "dynamic",
+        "description": "Terms of service"
+      },
+      "privacy": {
+        "url": "https://www.veed.io/privacy",
+        "mode": "dynamic",
+        "description": "Privacy policy"
+      },
+      "examples": [
+        {
+          "url": "https://www.veed.io/templates",
+          "mode": "dynamic",
+          "description": "Video templates"
+        },
+        {
+          "url": "https://www.veed.io/video-showcase",
+          "mode": "dynamic",
+          "description": "Video examples gallery"
+        }
+      ]
     }
   },
   {
     "slug": "invideo",
-    "official_urls": {
+    "sources": {
       "pricing": {
         "url": "https://invideo.io/pricing/",
         "mode": "dynamic"
@@ -31,43 +151,33 @@
         "url": "https://invideo.io/tools/",
         "mode": "dynamic"
       },
-      "terms": [],
-      "help": []
-    }
-  },
-  {
-    "slug": "heygen",
-    "official_urls": {
-      "pricing": {
-        "url": "https://www.heygen.com/pricing",
+      "help": {
+        "url": "https://invideo.io/help/",
         "mode": "dynamic"
       },
-      "features": {
-        "url": "https://www.heygen.com/features",
+      "faq": {
+        "url": "https://invideo.io/faq/",
         "mode": "dynamic"
       },
-      "terms": [],
-      "help": []
-    }
-  },
-  {
-    "slug": "veed-io",
-    "official_urls": {
-      "pricing": {
-        "url": "https://www.veed.io/pricing",
+      "terms": {
+        "url": "https://invideo.io/terms/",
         "mode": "dynamic"
       },
-      "features": {
-        "url": "https://www.veed.io/tools",
-        "mode": "dynamic"
-      },
-      "terms": [],
-      "help": []
+      "examples": [
+        {
+          "url": "https://invideo.io/templates/",
+          "mode": "dynamic"
+        },
+        {
+          "url": "https://invideo.io/video-showcase/",
+          "mode": "dynamic"
+        }
+      ]
     }
   },
   {
     "slug": "zebracat",
-    "official_urls": {
+    "sources": {
       "pricing": {
         "url": "https://www.zebracat.ai/pricing",
         "mode": "dynamic"
@@ -76,13 +186,29 @@
         "url": "https://www.zebracat.ai/features",
         "mode": "dynamic"
       },
-      "terms": [],
-      "help": []
+      "help": {
+        "url": "https://www.zebracat.ai/help",
+        "mode": "dynamic"
+      },
+      "faq": {
+        "url": "https://www.zebracat.ai/faq",
+        "mode": "dynamic"
+      },
+      "terms": {
+        "url": "https://www.zebracat.ai/terms",
+        "mode": "dynamic"
+      },
+      "examples": [
+        {
+          "url": "https://www.zebracat.ai/showcase",
+          "mode": "dynamic"
+        }
+      ]
     }
   },
   {
     "slug": "synthesia",
-    "official_urls": {
+    "sources": {
       "pricing": {
         "url": "https://www.synthesia.io/pricing",
         "mode": "dynamic"
@@ -91,13 +217,33 @@
         "url": "https://www.synthesia.io/features",
         "mode": "dynamic"
       },
-      "terms": [],
-      "help": []
+      "help": {
+        "url": "https://www.synthesia.io/help",
+        "mode": "dynamic"
+      },
+      "faq": {
+        "url": "https://www.synthesia.io/faq",
+        "mode": "dynamic"
+      },
+      "terms": {
+        "url": "https://www.synthesia.io/terms",
+        "mode": "dynamic"
+      },
+      "examples": [
+        {
+          "url": "https://www.synthesia.io/showcase",
+          "mode": "dynamic"
+        },
+        {
+          "url": "https://www.synthesia.io/resources/templates",
+          "mode": "dynamic"
+        }
+      ]
     }
   },
   {
     "slug": "elai-io",
-    "official_urls": {
+    "sources": {
       "pricing": {
         "url": "https://elai.io/pricing/",
         "mode": "dynamic"
@@ -106,13 +252,33 @@
         "url": "https://elai.io/features",
         "mode": "dynamic"
       },
-      "terms": [],
-      "help": []
+      "help": {
+        "url": "https://elai.io/help",
+        "mode": "dynamic"
+      },
+      "faq": {
+        "url": "https://elai.io/faq",
+        "mode": "dynamic"
+      },
+      "terms": {
+        "url": "https://elai.io/terms",
+        "mode": "dynamic"
+      },
+      "examples": [
+        {
+          "url": "https://elai.io/templates",
+          "mode": "dynamic"
+        },
+        {
+          "url": "https://elai.io/examples",
+          "mode": "dynamic"
+        }
+      ]
     }
   },
   {
     "slug": "pika",
-    "official_urls": {
+    "sources": {
       "pricing": {
         "url": "https://pika.art/pricing",
         "mode": "dynamic"
@@ -121,58 +287,134 @@
         "url": "https://pika.art/features",
         "mode": "dynamic"
       },
-      "terms": [],
-      "help": []
+      "faq": {
+        "url": "https://pika.art/faq",
+        "mode": "dynamic"
+      },
+      "terms": {
+        "url": "https://pika.art/terms",
+        "mode": "dynamic"
+      },
+      "examples": [
+        {
+          "url": "https://pika.art/showcase",
+          "mode": "dynamic"
+        },
+        {
+          "url": "https://pika.art/explore",
+          "mode": "dynamic"
+        }
+      ]
     }
   },
   {
     "slug": "descript",
-    "official_urls": {
+    "sources": {
       "pricing": {
         "url": "https://www.descript.com/pricing",
         "mode": "dynamic"
       },
       "features": {
-        "url": "https://www.descript.com/",
+        "url": "https://www.descript.com/features",
         "mode": "dynamic"
       },
-      "terms": [],
-      "help": []
+      "help": {
+        "url": "https://www.descript.com/help",
+        "mode": "dynamic"
+      },
+      "faq": {
+        "url": "https://www.descript.com/faq",
+        "mode": "dynamic"
+      },
+      "terms": {
+        "url": "https://www.descript.com/terms",
+        "mode": "dynamic"
+      },
+      "licensing": {
+        "url": "https://www.descript.com/licensing",
+        "mode": "dynamic"
+      },
+      "examples": [
+        {
+          "url": "https://www.descript.com/templates",
+          "mode": "dynamic"
+        },
+        {
+          "url": "https://www.descript.com/showcase",
+          "mode": "dynamic"
+        }
+      ]
     }
   },
   {
     "slug": "opus-clip",
-    "official_urls": {
+    "sources": {
       "pricing": {
         "url": "https://www.opus.pro/pricing",
         "mode": "dynamic"
       },
       "features": {
-        "url": "https://www.opus.pro/",
+        "url": "https://www.opus.pro/features",
         "mode": "dynamic"
       },
-      "terms": [],
-      "help": []
+      "help": {
+        "url": "https://www.opus.pro/help",
+        "mode": "dynamic"
+      },
+      "faq": {
+        "url": "https://www.opus.pro/faq",
+        "mode": "dynamic"
+      },
+      "terms": {
+        "url": "https://www.opus.pro/terms",
+        "mode": "dynamic"
+      },
+      "examples": [
+        {
+          "url": "https://www.opus.pro/showcase",
+          "mode": "dynamic"
+        }
+      ]
     }
   },
   {
     "slug": "runway",
-    "official_urls": {
+    "sources": {
       "pricing": {
         "url": "https://runwayml.com/pricing",
         "mode": "dynamic"
       },
       "features": {
-        "url": "https://runwayml.com/",
+        "url": "https://runwayml.com/features",
         "mode": "dynamic"
       },
-      "terms": [],
-      "help": []
+      "help": {
+        "url": "https://runwayml.com/help",
+        "mode": "dynamic"
+      },
+      "faq": {
+        "url": "https://runwayml.com/faq",
+        "mode": "dynamic"
+      },
+      "terms": {
+        "url": "https://runwayml.com/terms",
+        "mode": "dynamic"
+      },
+      "examples": [
+        {
+          "url": "https://runwayml.com/gen2",
+          "mode": "dynamic"
+        },
+        {
+          "url": "https://runwayml.com/enterprise",
+          "mode": "dynamic"
+        }
+      ]
     }
   },
   {
     "slug": "sora",
-    "official_urls": {
+    "sources": {
       "pricing": {
         "url": "https://platform.openai.com/docs/pricing",
         "mode": "static"
@@ -181,13 +423,25 @@
         "url": "https://openai.com/sora/",
         "mode": "static"
       },
-      "terms": [],
-      "help": []
+      "help": {
+        "url": "https://platform.openai.com/docs/sora",
+        "mode": "static"
+      },
+      "terms": {
+        "url": "https://openai.com/terms",
+        "mode": "static"
+      },
+      "examples": [
+        {
+          "url": "https://openai.com/sora/",
+          "mode": "static"
+        }
+      ]
     }
   },
   {
     "slug": "pictory",
-    "official_urls": {
+    "sources": {
       "pricing": {
         "url": "https://pictory.ai/pricing",
         "mode": "dynamic"
@@ -196,13 +450,33 @@
         "url": "https://pictory.ai/features",
         "mode": "dynamic"
       },
-      "terms": [],
-      "help": []
+      "help": {
+        "url": "https://pictory.ai/help",
+        "mode": "dynamic"
+      },
+      "faq": {
+        "url": "https://pictory.ai/faq",
+        "mode": "dynamic"
+      },
+      "terms": {
+        "url": "https://pictory.ai/terms",
+        "mode": "dynamic"
+      },
+      "examples": [
+        {
+          "url": "https://pictory.ai/templates",
+          "mode": "dynamic"
+        },
+        {
+          "url": "https://pictory.ai/examples",
+          "mode": "dynamic"
+        }
+      ]
     }
   },
   {
     "slug": "colossyan",
-    "official_urls": {
+    "sources": {
       "pricing": {
         "url": "https://www.colossyan.com/pricing",
         "mode": "dynamic"
@@ -211,58 +485,138 @@
         "url": "https://www.colossyan.com/features",
         "mode": "dynamic"
       },
-      "terms": [],
-      "help": []
+      "help": {
+        "url": "https://www.colossyan.com/help",
+        "mode": "dynamic"
+      },
+      "faq": {
+        "url": "https://www.colossyan.com/faq",
+        "mode": "dynamic"
+      },
+      "terms": {
+        "url": "https://www.colossyan.com/terms",
+        "mode": "dynamic"
+      },
+      "examples": [
+        {
+          "url": "https://www.colossyan.com/showcase",
+          "mode": "dynamic"
+        },
+        {
+          "url": "https://www.colossyan.com/templates",
+          "mode": "dynamic"
+        }
+      ]
     }
   },
   {
     "slug": "d-id",
-    "official_urls": {
+    "sources": {
       "pricing": {
         "url": "https://www.d-id.com/pricing/",
         "mode": "dynamic"
       },
       "features": {
-        "url": "https://www.d-id.com/",
+        "url": "https://www.d-id.com/features",
         "mode": "dynamic"
       },
-      "terms": [],
-      "help": []
+      "help": {
+        "url": "https://www.d-id.com/help",
+        "mode": "dynamic"
+      },
+      "faq": {
+        "url": "https://www.d-id.com/faq",
+        "mode": "dynamic"
+      },
+      "terms": {
+        "url": "https://www.d-id.com/terms",
+        "mode": "dynamic"
+      },
+      "examples": [
+        {
+          "url": "https://www.d-id.com/gallery",
+          "mode": "dynamic"
+        },
+        {
+          "url": "https://www.d-id.com/templates",
+          "mode": "dynamic"
+        }
+      ]
     }
   },
   {
     "slug": "deepbrain-ai",
-    "official_urls": {
+    "sources": {
       "pricing": {
         "url": "https://www.deepbrain.io/pricing",
         "mode": "dynamic"
       },
       "features": {
-        "url": "https://www.deepbrain.io/",
+        "url": "https://www.deepbrain.io/ai-avatars",
         "mode": "dynamic"
       },
-      "terms": [],
-      "help": []
+      "help": {
+        "url": "https://www.deepbrain.io/help",
+        "mode": "dynamic"
+      },
+      "faq": {
+        "url": "https://www.deepbrain.io/faq",
+        "mode": "dynamic"
+      },
+      "terms": {
+        "url": "https://www.deepbrain.io/terms",
+        "mode": "dynamic"
+      },
+      "examples": [
+        {
+          "url": "https://www.deepbrain.io/showcase",
+          "mode": "dynamic"
+        },
+        {
+          "url": "https://www.deepbrain.io/templates",
+          "mode": "dynamic"
+        }
+      ]
     }
   },
   {
     "slug": "synthesys",
-    "official_urls": {
+    "sources": {
       "pricing": {
         "url": "https://synthesys.io/pricing",
         "mode": "dynamic"
       },
       "features": {
-        "url": "https://synthesys.io/",
+        "url": "https://synthesys.io/features",
         "mode": "dynamic"
       },
-      "terms": [],
-      "help": []
+      "help": {
+        "url": "https://synthesys.io/help",
+        "mode": "dynamic"
+      },
+      "faq": {
+        "url": "https://synthesys.io/faq",
+        "mode": "dynamic"
+      },
+      "terms": {
+        "url": "https://synthesys.io/terms",
+        "mode": "dynamic"
+      },
+      "examples": [
+        {
+          "url": "https://synthesys.io/showcase",
+          "mode": "dynamic"
+        },
+        {
+          "url": "https://synthesys.io/templates",
+          "mode": "dynamic"
+        }
+      ]
     }
   },
   {
     "slug": "flexclip",
-    "official_urls": {
+    "sources": {
       "pricing": {
         "url": "https://www.flexclip.com/pricing.html",
         "mode": "dynamic"
@@ -271,13 +625,33 @@
         "url": "https://www.flexclip.com/features/",
         "mode": "dynamic"
       },
-      "terms": [],
-      "help": []
+      "help": {
+        "url": "https://www.flexclip.com/help/",
+        "mode": "dynamic"
+      },
+      "faq": {
+        "url": "https://www.flexclip.com/faq/",
+        "mode": "dynamic"
+      },
+      "terms": {
+        "url": "https://www.flexclip.com/terms/",
+        "mode": "dynamic"
+      },
+      "examples": [
+        {
+          "url": "https://www.flexclip.com/templates/",
+          "mode": "dynamic"
+        },
+        {
+          "url": "https://www.flexclip.com/editor/",
+          "mode": "dynamic"
+        }
+      ]
     }
   },
   {
     "slug": "lumen5",
-    "official_urls": {
+    "sources": {
       "pricing": {
         "url": "https://lumen5.com/pricing/",
         "mode": "dynamic"
@@ -286,23 +660,63 @@
         "url": "https://lumen5.com/features/",
         "mode": "dynamic"
       },
-      "terms": [],
-      "help": []
+      "help": {
+        "url": "https://lumen5.com/help/",
+        "mode": "dynamic"
+      },
+      "faq": {
+        "url": "https://lumen5.com/faq/",
+        "mode": "dynamic"
+      },
+      "terms": {
+        "url": "https://lumen5.com/terms/",
+        "mode": "dynamic"
+      },
+      "examples": [
+        {
+          "url": "https://lumen5.com/video-templates/",
+          "mode": "dynamic"
+        },
+        {
+          "url": "https://lumen5.com/showcase/",
+          "mode": "dynamic"
+        }
+      ]
     }
   },
   {
     "slug": "steve-ai",
-    "official_urls": {
+    "sources": {
       "pricing": {
         "url": "https://www.steve.ai/pricing",
         "mode": "dynamic"
       },
       "features": {
-        "url": "https://www.steve.ai/",
+        "url": "https://www.steve.ai/features",
         "mode": "dynamic"
       },
-      "terms": [],
-      "help": []
+      "help": {
+        "url": "https://www.steve.ai/help",
+        "mode": "dynamic"
+      },
+      "faq": {
+        "url": "https://www.steve.ai/faq",
+        "mode": "dynamic"
+      },
+      "terms": {
+        "url": "https://www.steve.ai/terms",
+        "mode": "dynamic"
+      },
+      "examples": [
+        {
+          "url": "https://www.steve.ai/templates",
+          "mode": "dynamic"
+        },
+        {
+          "url": "https://www.steve.ai/examples",
+          "mode": "dynamic"
+        }
+      ]
     }
   }
 ]

@@ -18,9 +18,10 @@ interface AlternativesClientProps {
   faqs?: Array<{ question: string; answer: string }>;
   currentSlug: string;
   allTools: Tool[];
+  evidenceLinks?: string[]; // Evidence sources for proof functionality
 }
 
-export default function AlternativesClient({ groups: initialGroups, toolName, faqs = [], currentSlug, allTools }: AlternativesClientProps) {
+export default function AlternativesClient({ groups: initialGroups, toolName, faqs = [], currentSlug, allTools, evidenceLinks = [] }: AlternativesClientProps) {
   const [activeTab, setActiveTab] = useState(initialGroups[0]?.id);
   const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
 
@@ -156,6 +157,42 @@ export default function AlternativesClient({ groups: initialGroups, toolName, fa
             </section>
           );
         })()}
+
+        {/* Evidence Sources Section - For proof functionality */}
+        {evidenceLinks.length > 0 && (
+          <section className="mt-12">
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+              Evidence Sources
+            </h2>
+            <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+              Facts and claims on this page are backed by evidence from the following sources:
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {evidenceLinks.map((link, idx) => {
+                // Extract domain from URL for cleaner display
+                let label = link;
+                try {
+                  const urlObj = new URL(link);
+                  label = urlObj.hostname.replace('www.', '');
+                } catch {
+                  // Use as-is if not a valid URL
+                }
+
+                return (
+                  <a
+                    key={idx}
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-3 py-1.5 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm text-gray-700 transition-colors"
+                  >
+                    {label}
+                  </a>
+                );
+              })}
+            </div>
+          </section>
+        )}
 
         {/* FAQ Section */}
         {faqs.length > 0 && (

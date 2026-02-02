@@ -1,0 +1,672 @@
+{
+  "slug": "veed-io",
+  "lastUpdated": "2026-01-28T08:37:01.829Z",
+  "nuggets": [
+    {
+      "text": "AI Video APisFabric 1.0 APIFabric 1.0 APIFabric 1.0 APIAI Lip Sync APIAI Lip Sync APIAI Lip Sync APIGreen Screen APIGreen Screen APIGreen Screen APIBackground",
+      "theme": "models",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.706Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "APIsResourcesAI Video APisFabric 1.0 APIFabric 1.0 APIFabric 1.0 APIAI Lip Sync APIAI Lip Sync APIAI Lip Sync APIGreen Screen APIGreen Screen APIGreen Screen",
+      "theme": "models",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.706Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Fabric 1.0 APIFabric 1.0 APIFabric 1.0 API",
+      "theme": "models",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.706Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Background Removal APIBackground Removal APIBackground Removal API",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.706Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Background Removal Fast APIBackground Removal Fast APIBackground Removal Fast API",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.706Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Contact Data includes billing address, email address and telephone numbers.",
+      "theme": "pricing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.700Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Time limit to respond We try to respond to all legitimate requests within one month",
+      "theme": "usage",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "AI EditingAI ClipsEye Contact AIVideo EnhancerRemove Background Noise from Audio",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.706Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "It does not include data where the identity has been removed (anonymous data)",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.707Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "This enables you to ask us to suspend the processing of your personal data in the following scenarios: If you want us to establish the data&#x27;s accuracy",
+      "theme": "general",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Where you are subject to automated decision-making processes, you are entitled to exercise specific rights aimed at preventing or otherwise limiting the",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.704Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "You can also revoke access via Google’s security settings page",
+      "theme": "security",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "VEO 3 Fast Image to Video",
+      "theme": "models",
+      "sourceUrl": "https://www.veed.io/templates",
+      "sourceType": "examples",
+      "capturedAt": "2026-01-28T08:37:01.623Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "high"
+    },
+    {
+      "text": "VEO 3 Image to Video",
+      "theme": "models",
+      "sourceUrl": "https://www.veed.io/templates",
+      "sourceType": "examples",
+      "capturedAt": "2026-01-28T08:37:01.623Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "high"
+    },
+    {
+      "text": "AI EditingAI EditingAI EditingAI EditingClipsAI AgentEdit with ScriptAI Noise ReductionEye Contact CorrectorAI Video Background Remover",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.706Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "AI EditingClipsAI AgentEdit with ScriptAI Noise ReductionEye Contact CorrectorAI Video Background Remover",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.706Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Request erasure of your personal data. This enables you to ask us to delete or remove personal data where there is no good reason for us continuing to process",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.704Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "This enables you to ask us to delete or remove personal data where there is no good reason for us continuing to process it",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "You also have the right to ask us to delete or remove your personal data where you have successfully exercised your right to object to processing (see below),",
+      "theme": "export",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "In some cases, we may demonstrate that we have compelling legitimate grounds to process your information which override your rights and freedoms",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "In some circumstances you can ask us to delete your data; see “your legal rights” section below for further information",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "No fee usually required You will not have to pay a fee to access your personal data (or to exercise any of the other rights)",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Under certain circumstances, you have rights under data protection laws in relation to your personal data.‍Broadly, you have the right to:",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.704Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "We make sure we consider and balance any potential impact on you (both positive and negative) and your rights before we process your personal data for our",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.700Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "You will not have to pay a fee to access your personal data (or to exercise any of the other rights). However, we may charge a reasonable fee if your request",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.704Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Your legal rights Under certain circumstances, you have rights under data protection laws in relation to your personal data",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.708Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Your rights as a result of automated decision-making Where you are subject to automated decision-making processes, you are entitled to exercise specific rights",
+      "theme": "licensing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.707Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "In this case, we may have to cancel a service you have with us but we will notify you if this is the case at the time",
+      "theme": "pricing",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.707Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "(a) Necessary for our legitimate interests (for running our business, provision of administration and IT services, network security, to prevent fraud and in",
+      "theme": "security",
+      "sourceUrl": "https://www.veed.io/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:01.703Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Find out why these teams use VEED",
+      "scenario": "Find out why these teams use VEED(And why you should too…)",
+      "output": {
+        "asset": {
+          "imageUrl": "https://cdn-site-assets.veed.io/cdn-cgi/image/width=1280,quality=75,format=auto/Testimonial_Sebastian_6937539a79/Testimonial_Sebastian_6937539a79.png"
+        }
+      },
+      "notes": [
+        "30 minutes",
+        "3 hours"
+      ],
+      "sourceUrl": "https://www.veed.io/templates",
+      "snippet": "Find out why these teams use VEED(And why you should too…)Play story“I found VEED at the right time: if you're making UGC ads and not using Eye Contact Correction and Noise Reduction on VEED you're missing out on ROI.Sebastian SchurgersHead of Growth Marketing, GrondaPlay story“You can go beyond cho",
+      "capturedAt": "2026-01-28T08:37:01.661Z",
+      "confidence": "high"
+    },
+    {
+      "title": "Research - we don't just use AI, we build it",
+      "scenario": "Research - we don't just use AI, we build itFabric 1.0 is a generative text-to-image-to-video model designed to produce high-fidelity video outputs from natural-language prompts.Find out more",
+      "output": {
+        "asset": {
+          "imageUrl": "https://cdn-site-assets.veed.io/cdn-cgi/image/width=1536,quality=75,format=auto/Reserach_banner_desktop_99d5594878/Reserach_banner_desktop_99d5594878.png"
+        }
+      },
+      "sourceUrl": "https://www.veed.io/templates",
+      "snippet": "Research - we don't just use AI, we build itFabric 1.0 is a generative text-to-image-to-video model designed to produce high-fidelity video outputs from natural-language prompts.Find out moreFabric 1.0 is a generative text-to-image-to-video model designed to produce high-fidelity video outputs from ",
+      "capturedAt": "2026-01-28T08:37:01.661Z",
+      "confidence": "high"
+    },
+    {
+      "title": "Start with a prompt, script, or asset and make video in minutes.",
+      "scenario": "Create video again and again — with a workflow built for it.",
+      "sourceUrl": "https://www.veed.io/templates",
+      "snippet": "Create video again and again — with a workflow built for it.Start with a prompt, script, or asset and make video in minutes.Start with an ideaChoose an AI video modelGenerate your videoPerfect your creationAdd audio and subtitlesRepurpose",
+      "capturedAt": "2026-01-28T08:37:01.655Z",
+      "confidence": "medium"
+    }
+  ],
+  "modelClaims": {
+    "models_supported": [
+      "Veo 3",
+      "Veo 2",
+      "Sora",
+      "Kling",
+      "Hailuo"
+    ],
+    "sources": [
+      {
+        "url": "https://www.veed.io/templates",
+        "facts": [
+          "deo AI Avatars AI Reel Generator Text to Video AI VEO3 Seedance Voice &amp; Dubbing AI Voice Generator T",
+          "EO 3.1 VEO 3.1 Fast VEO 3 VEO 3 Fast Seedance 1.0 VEO 2 PixVerse AI MiniMax Video 01 LTX Video Kling AI P",
+          "o Models Fabric 1.0 Kling O1 VEO 3.1 VEO 3.1 Fast Sora 2 Sora 2 Pro MiniMax 2.3 VEO 3 VEO 3 Fast LTX Vid",
+          "round Noise from Audio AI Video Models Fabric 1.0 Kling O1 VEO 3.1 VEO 3.1 Fast Sora 2 Sora 2 Pro MiniMax",
+          "PixVerse MiniMax AI Seedance 1.0 Luma AI Kling AI Hailuo 02 Wan 2.2 Image to Video Models Image to Video M"
+        ]
+      }
+    ]
+  },
+  "specsLimits": {
+    "nuggets": [
+      {
+        "text": "AI Video APisFabric 1.0 APIFabric 1.0 APIFabric 1.0 APIAI Lip Sync APIAI Lip Sync APIAI Lip Sync APIGreen Screen APIGreen Screen APIGreen Screen APIBackground",
+        "theme": "models",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.706Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "APIsResourcesAI Video APisFabric 1.0 APIFabric 1.0 APIFabric 1.0 APIAI Lip Sync APIAI Lip Sync APIAI Lip Sync APIGreen Screen APIGreen Screen APIGreen Screen",
+        "theme": "models",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.706Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Fabric 1.0 APIFabric 1.0 APIFabric 1.0 API",
+        "theme": "models",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.706Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Background Removal APIBackground Removal APIBackground Removal API",
+        "theme": "export",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.706Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "Background Removal Fast APIBackground Removal Fast APIBackground Removal Fast API",
+        "theme": "export",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.706Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "Contact Data includes billing address, email address and telephone numbers.",
+        "theme": "pricing",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.700Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "Time limit to respond We try to respond to all legitimate requests within one month",
+        "theme": "usage",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.708Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "AI EditingAI ClipsEye Contact AIVideo EnhancerRemove Background Noise from Audio",
+        "theme": "export",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.706Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "It does not include data where the identity has been removed (anonymous data)",
+        "theme": "export",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.707Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "This enables you to ask us to suspend the processing of your personal data in the following scenarios: If you want us to establish the data&#x27;s accuracy",
+        "theme": "general",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.708Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "Where you are subject to automated decision-making processes, you are entitled to exercise specific rights aimed at preventing or otherwise limiting the",
+        "theme": "licensing",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.704Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "You can also revoke access via Google’s security settings page",
+        "theme": "security",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.708Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "AI EditingAI EditingAI EditingAI EditingClipsAI AgentEdit with ScriptAI Noise ReductionEye Contact CorrectorAI Video Background Remover",
+        "theme": "export",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.706Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "AI EditingClipsAI AgentEdit with ScriptAI Noise ReductionEye Contact CorrectorAI Video Background Remover",
+        "theme": "export",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.706Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "Request erasure of your personal data. This enables you to ask us to delete or remove personal data where there is no good reason for us continuing to process",
+        "theme": "export",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.704Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "This enables you to ask us to delete or remove personal data where there is no good reason for us continuing to process it",
+        "theme": "export",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.708Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "You also have the right to ask us to delete or remove your personal data where you have successfully exercised your right to object to processing (see below),",
+        "theme": "export",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.708Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "In some cases, we may demonstrate that we have compelling legitimate grounds to process your information which override your rights and freedoms",
+        "theme": "licensing",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.708Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "In some circumstances you can ask us to delete your data; see “your legal rights” section below for further information",
+        "theme": "licensing",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.708Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "No fee usually required You will not have to pay a fee to access your personal data (or to exercise any of the other rights)",
+        "theme": "licensing",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.708Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "Under certain circumstances, you have rights under data protection laws in relation to your personal data.‍Broadly, you have the right to:",
+        "theme": "licensing",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.704Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "We make sure we consider and balance any potential impact on you (both positive and negative) and your rights before we process your personal data for our",
+        "theme": "licensing",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.708Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.",
+        "theme": "licensing",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.700Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "You will not have to pay a fee to access your personal data (or to exercise any of the other rights). However, we may charge a reasonable fee if your request",
+        "theme": "licensing",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.704Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "Your legal rights Under certain circumstances, you have rights under data protection laws in relation to your personal data",
+        "theme": "licensing",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.708Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "Your rights as a result of automated decision-making Where you are subject to automated decision-making processes, you are entitled to exercise specific rights",
+        "theme": "licensing",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.707Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "In this case, we may have to cancel a service you have with us but we will notify you if this is the case at the time",
+        "theme": "pricing",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.707Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "(a) Necessary for our legitimate interests (for running our business, provision of administration and IT services, network security, to prevent fraud and in",
+        "theme": "security",
+        "sourceUrl": "https://www.veed.io/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:01.703Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "low"
+      }
+    ]
+  },
+  "sources": {
+    "examples": [
+      "https://www.veed.io/templates"
+    ],
+    "privacy": "https://www.veed.io/privacy"
+  },
+  "metadata": {
+    "totalNuggets": 30,
+    "themesCovered": [
+      "models",
+      "export",
+      "pricing",
+      "usage",
+      "general",
+      "licensing",
+      "security"
+    ],
+    "hasModelClaims": true,
+    "hasExamples": true,
+    "minConfidence": "low"
+  }
+}

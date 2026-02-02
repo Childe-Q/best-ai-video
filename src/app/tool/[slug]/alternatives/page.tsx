@@ -8,6 +8,7 @@ import AlternativesClient from './AlternativesClient';
 import { canonicalAlternativesConfigs } from '@/data/alternatives/canonical';
 import { alternativesEvidence, ToolAlternativeEvidence } from '@/data/evidence/alternatives';
 import { mergeCanonicalAndEvidence } from '@/lib/alternatives/mergeCanonicalAndEvidence';
+import { getEvidenceSourcesForTool } from '@/lib/alternatives/getEvidenceForAlternatives';
 import { AlternativeGroupWithEvidence } from '@/types/alternatives';
 import AlternativesErrorBoundary from '@/components/alternatives/AlternativesErrorBoundary';
 
@@ -26,6 +27,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
       title: `${tool.name} Alternatives (${seoYear}): Best Replacements by Use Case`,
       description: `Looking for better than ${tool.name}? Compare top alternatives based on cost control, output quality, workflow speed, and control features.`,
+      alternates: {
+        canonical: `/tool/${slug}/alternatives`,
+      },
     };
   }
 
@@ -112,16 +116,20 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
     answer: faq.answer
   }));
 
+  // Get evidence links for the current tool (for proof functionality)
+  const evidenceLinks = getEvidenceSourcesForTool(slug);
+
   // Render within the tool layout (provided by layout.tsx)
   return (
     <AlternativesErrorBoundary>
       <Suspense fallback={<div className="p-8 text-center">Loading alternatives...</div>}>
-        <AlternativesClient 
-          groups={groups} 
-          toolName={tool.name} 
+        <AlternativesClient
+          groups={groups}
+          toolName={tool.name}
           faqs={faqs}
           currentSlug={slug}
           allTools={allTools}
+          evidenceLinks={evidenceLinks}
         />
       </Suspense>
     </AlternativesErrorBoundary>

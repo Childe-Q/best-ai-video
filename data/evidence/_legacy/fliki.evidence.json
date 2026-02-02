@@ -1,0 +1,703 @@
+{
+  "slug": "fliki",
+  "lastUpdated": "2026-01-28T09:05:17.539Z",
+  "nuggets": [
+    {
+      "text": "Export resolution: 1080p",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.408Z",
+      "hasNumber": true,
+      "keywords": [
+        "resolution",
+        "1080p"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "Export resolution: 720p",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.407Z",
+      "hasNumber": true,
+      "keywords": [
+        "resolution",
+        "720p"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "Compare plans: $21 per month",
+      "theme": "pricing",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.406Z",
+      "hasNumber": true,
+      "keywords": [
+        "price",
+        "monthly"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "Plan: 15 credits/minutes",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.408Z",
+      "hasNumber": true,
+      "keywords": [
+        "credits",
+        "minutes"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "Plan: 2160 credits/minutes",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.407Z",
+      "hasNumber": true,
+      "keywords": [
+        "credits",
+        "minutes"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "Plan: 40 credits/minutes",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.408Z",
+      "hasNumber": true,
+      "keywords": [
+        "credits",
+        "minutes"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "Plan: 5 credits/minutes",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.407Z",
+      "hasNumber": true,
+      "keywords": [
+        "credits",
+        "minutes"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "Plan: 7200 credits/minutes",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.408Z",
+      "hasNumber": true,
+      "keywords": [
+        "credits",
+        "minutes"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "No watermark",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.408Z",
+      "hasNumber": false,
+      "keywords": [
+        "watermark"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "Watermark on free plan",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.407Z",
+      "hasNumber": false,
+      "keywords": [
+        "watermark"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "1000 voices",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-28T09:05:17.408Z",
+      "hasNumber": true,
+      "keywords": [
+        "voices"
+      ],
+      "confidence": "high"
+    },
+    {
+      "text": "Yes, Fliki allows you to export the videos you create. You can export your videos in formats like MP4.",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "high"
+    },
+    {
+      "text": "/5 © 2025 Nine Thirty Five Privacy Policy Terms of Use About Media kit Cookie settings Features Text to video AI voiceover Idea to video AI avatar Text to",
+      "theme": "security",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.367Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "high"
+    },
+    {
+      "text": "Easily clone yourself, your voice, and your personality to create videos that feel authentic with Fliki&#x27;s professional AI avatar and voice cloning features",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "high"
+    },
+    {
+      "text": "Fliki supports over 80 languages in over 100 dialects.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "high"
+    },
+    {
+      "text": "The AI speech generator offers 1300+ ultra-realistic voices across 80+ languages, ensuring that you can create voice overs in your desired language with ease.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "high"
+    },
+    {
+      "text": "The AI speech generator offers 1300+ ultra-realistic voices, ensuring that you can create videos with voice overs in your desired language with ease.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "high"
+    },
+    {
+      "text": "The paid subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Yes, Fliki allows you to export the videos you create",
+      "theme": "export",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.360Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Create an account for free credit card not required Make videos in minutes with AI Idea to video Transform your ideas into stunning videos with AI voices,",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Easily clone yourself, your voice, and your personality to create videos that feel authentic with Fliki's professional AI avatar and voice cloning features.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.354Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Easy to use Text to Video editor featuring lifelike voiceovers, dynamic AI video clips, and a wide range of AI-powered features",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Fliki Features Use cases Explore Pricing Login Signup Get started Turn text into videos with AI voices Transform your ideas into stunning videos with our AI",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Fliki supports a vast array of languages for text-to-speech conversion using its voice AI generator.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Fliki supports voice cloning, allowing you to replicate your own voice or create unique voices for different characters",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.367Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Fliki supports voice cloning, allowing you to replicate your own voice or create unique voices for different characters. This feature saves time on recording",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Transform your ideas into stunning videos with AI voices, using our Idea to Video feature",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Yes, Fliki offers a tier that allows users to explore text to voice and text to video features without any cost.",
+      "theme": "voice",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "You can cancel your subscription at anytime by navigating to Account and selecting \"Manage billing\"",
+      "theme": "pricing",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.355Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "You can cancel your subscription at anytime by navigating to Account and selecting \"Manage billing\" How do I pay",
+      "theme": "pricing",
+      "sourceUrl": "https://fliki.ai/help",
+      "sourceType": "help",
+      "capturedAt": "2026-01-28T09:05:17.367Z",
+      "hasNumber": false,
+      "keywords": [],
+      "confidence": "low"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Fliki's text to video AI tool, allows you to generate a wide range of videos to s",
+      "scenario": "uit various purposes. You can generate educational videos, explainers, product demos, social media content, YouTube videos, Tiktok Reels & video ads.",
+      "sourceUrl": "https://fliki.ai/templates",
+      "snippet": "Fliki's text to video AI tool, allows you to generate a wide range of videos to suit various purposes. You can generate educational videos, explainers, product demos, social media content, YouTube videos, Tiktok Reels & video ads.",
+      "capturedAt": "2026-01-28T09:05:16.828Z",
+      "confidence": "medium"
+    },
+    {
+      "title": "Our Voice Cloning AI, Text to Speech AI, and Text to Video AI, combined with our",
+      "scenario": "ready to use templates and 10 million+ rich stock media, allow you to create high-quality videos without any design or video editing expertise.",
+      "sourceUrl": "https://fliki.ai/templates",
+      "snippet": "Our Voice Cloning AI, Text to Speech AI, and Text to Video AI, combined with our ready to use templates and 10 million+ rich stock media, allow you to create high-quality videos without any design or video editing expertise.",
+      "capturedAt": "2026-01-28T09:05:16.828Z",
+      "confidence": "medium"
+    },
+    {
+      "title": "Use-cases",
+      "scenario": "Create Stunning Content with AI",
+      "sourceUrl": "https://fliki.ai/use-cases",
+      "snippet": "Use-casesCheck out all the text-to-video and text-to-speech use-cases offered by Fliki.Content CreationCreate Stunning Content with AIStep into the future of content creation with Fliki. From producing engaging YouTube videos to catchy Insta Reels, creating viral TikTok content, and creating compell",
+      "capturedAt": "2026-01-28T09:05:16.870Z",
+      "confidence": "medium"
+    }
+  ],
+  "modelClaims": {
+    "sources": []
+  },
+  "specsLimits": {
+    "nuggets": [
+      {
+        "text": "Export resolution: 1080p",
+        "theme": "export",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "sourceType": "pricing",
+        "capturedAt": "2026-01-28T09:05:17.408Z",
+        "hasNumber": true,
+        "keywords": [
+          "resolution",
+          "1080p"
+        ],
+        "confidence": "high"
+      },
+      {
+        "text": "Export resolution: 720p",
+        "theme": "export",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "sourceType": "pricing",
+        "capturedAt": "2026-01-28T09:05:17.407Z",
+        "hasNumber": true,
+        "keywords": [
+          "resolution",
+          "720p"
+        ],
+        "confidence": "high"
+      },
+      {
+        "text": "Compare plans: $21 per month",
+        "theme": "pricing",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "sourceType": "pricing",
+        "capturedAt": "2026-01-28T09:05:17.406Z",
+        "hasNumber": true,
+        "keywords": [
+          "price",
+          "monthly"
+        ],
+        "confidence": "high"
+      },
+      {
+        "text": "Plan: 15 credits/minutes",
+        "theme": "usage",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "sourceType": "pricing",
+        "capturedAt": "2026-01-28T09:05:17.408Z",
+        "hasNumber": true,
+        "keywords": [
+          "credits",
+          "minutes"
+        ],
+        "confidence": "high"
+      },
+      {
+        "text": "Plan: 2160 credits/minutes",
+        "theme": "usage",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "sourceType": "pricing",
+        "capturedAt": "2026-01-28T09:05:17.407Z",
+        "hasNumber": true,
+        "keywords": [
+          "credits",
+          "minutes"
+        ],
+        "confidence": "high"
+      },
+      {
+        "text": "Plan: 40 credits/minutes",
+        "theme": "usage",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "sourceType": "pricing",
+        "capturedAt": "2026-01-28T09:05:17.408Z",
+        "hasNumber": true,
+        "keywords": [
+          "credits",
+          "minutes"
+        ],
+        "confidence": "high"
+      },
+      {
+        "text": "Plan: 5 credits/minutes",
+        "theme": "usage",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "sourceType": "pricing",
+        "capturedAt": "2026-01-28T09:05:17.407Z",
+        "hasNumber": true,
+        "keywords": [
+          "credits",
+          "minutes"
+        ],
+        "confidence": "high"
+      },
+      {
+        "text": "Plan: 7200 credits/minutes",
+        "theme": "usage",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "sourceType": "pricing",
+        "capturedAt": "2026-01-28T09:05:17.408Z",
+        "hasNumber": true,
+        "keywords": [
+          "credits",
+          "minutes"
+        ],
+        "confidence": "high"
+      },
+      {
+        "text": "No watermark",
+        "theme": "export",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "sourceType": "pricing",
+        "capturedAt": "2026-01-28T09:05:17.408Z",
+        "hasNumber": false,
+        "keywords": [
+          "watermark"
+        ],
+        "confidence": "high"
+      },
+      {
+        "text": "Watermark on free plan",
+        "theme": "export",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "sourceType": "pricing",
+        "capturedAt": "2026-01-28T09:05:17.407Z",
+        "hasNumber": false,
+        "keywords": [
+          "watermark"
+        ],
+        "confidence": "high"
+      },
+      {
+        "text": "1000 voices",
+        "theme": "voice",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "sourceType": "pricing",
+        "capturedAt": "2026-01-28T09:05:17.408Z",
+        "hasNumber": true,
+        "keywords": [
+          "voices"
+        ],
+        "confidence": "high"
+      },
+      {
+        "text": "Yes, Fliki allows you to export the videos you create. You can export your videos in formats like MP4.",
+        "theme": "export",
+        "sourceUrl": "https://fliki.ai/help",
+        "sourceType": "help",
+        "capturedAt": "2026-01-28T09:05:17.355Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "high"
+      },
+      {
+        "text": "/5 © 2025 Nine Thirty Five Privacy Policy Terms of Use About Media kit Cookie settings Features Text to video AI voiceover Idea to video AI avatar Text to",
+        "theme": "security",
+        "sourceUrl": "https://fliki.ai/help",
+        "sourceType": "help",
+        "capturedAt": "2026-01-28T09:05:17.367Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "high"
+      },
+      {
+        "text": "Easily clone yourself, your voice, and your personality to create videos that feel authentic with Fliki&#x27;s professional AI avatar and voice cloning features",
+        "theme": "voice",
+        "sourceUrl": "https://fliki.ai/help",
+        "sourceType": "help",
+        "capturedAt": "2026-01-28T09:05:17.355Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "high"
+      },
+      {
+        "text": "Fliki supports over 80 languages in over 100 dialects.",
+        "theme": "voice",
+        "sourceUrl": "https://fliki.ai/help",
+        "sourceType": "help",
+        "capturedAt": "2026-01-28T09:05:17.355Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "high"
+      },
+      {
+        "text": "The AI speech generator offers 1300+ ultra-realistic voices across 80+ languages, ensuring that you can create voice overs in your desired language with ease.",
+        "theme": "voice",
+        "sourceUrl": "https://fliki.ai/help",
+        "sourceType": "help",
+        "capturedAt": "2026-01-28T09:05:17.355Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "high"
+      },
+      {
+        "text": "The AI speech generator offers 1300+ ultra-realistic voices, ensuring that you can create videos with voice overs in your desired language with ease.",
+        "theme": "voice",
+        "sourceUrl": "https://fliki.ai/help",
+        "sourceType": "help",
+        "capturedAt": "2026-01-28T09:05:17.355Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "high"
+      },
+      {
+        "text": "The paid subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority",
+        "theme": "export",
+        "sourceUrl": "https://fliki.ai/help",
+        "sourceType": "help",
+        "capturedAt": "2026-01-28T09:05:17.355Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Yes, Fliki allows you to export the videos you create",
+        "theme": "export",
+        "sourceUrl": "https://fliki.ai/help",
+        "sourceType": "help",
+        "capturedAt": "2026-01-28T09:05:17.360Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Create an account for free credit card not required Make videos in minutes with AI Idea to video Transform your ideas into stunning videos with AI voices,",
+        "theme": "usage",
+        "sourceUrl": "https://fliki.ai/help",
+        "sourceType": "help",
+        "capturedAt": "2026-01-28T09:05:17.355Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Easily clone yourself, your voice, and your personality to create videos that feel authentic with Fliki's professional AI avatar and voice cloning features.",
+        "theme": "voice",
+        "sourceUrl": "https://fliki.ai/help",
+        "sourceType": "help",
+        "capturedAt": "2026-01-28T09:05:17.354Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Easy to use Text to Video editor featuring lifelike voiceovers, dynamic AI video clips, and a wide range of AI-powered features",
+        "theme": "voice",
+        "sourceUrl": "https://fliki.ai/help",
+        "sourceType": "help",
+        "capturedAt": "2026-01-28T09:05:17.355Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Fliki Features Use cases Explore Pricing Login Signup Get started Turn text into videos with AI voices Transform your ideas into stunning videos with our AI",
+        "theme": "voice",
+        "sourceUrl": "https://fliki.ai/help",
+        "sourceType": "help",
+        "capturedAt": "2026-01-28T09:05:17.355Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Fliki supports a vast array of languages for text-to-speech conversion using its voice AI generator.",
+        "theme": "voice",
+        "sourceUrl": "https://fliki.ai/help",
+        "sourceType": "help",
+        "capturedAt": "2026-01-28T09:05:17.355Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Fliki supports voice cloning, allowing you to replicate your own voice or create unique voices for different characters",
+        "theme": "voice",
+        "sourceUrl": "https://fliki.ai/help",
+        "sourceType": "help",
+        "capturedAt": "2026-01-28T09:05:17.367Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Fliki supports voice cloning, allowing you to replicate your own voice or create unique voices for different characters. This feature saves time on recording",
+        "theme": "voice",
+        "sourceUrl": "https://fliki.ai/help",
+        "sourceType": "help",
+        "capturedAt": "2026-01-28T09:05:17.355Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Transform your ideas into stunning videos with AI voices, using our Idea to Video feature",
+        "theme": "voice",
+        "sourceUrl": "https://fliki.ai/help",
+        "sourceType": "help",
+        "capturedAt": "2026-01-28T09:05:17.355Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Yes, Fliki offers a tier that allows users to explore text to voice and text to video features without any cost.",
+        "theme": "voice",
+        "sourceUrl": "https://fliki.ai/help",
+        "sourceType": "help",
+        "capturedAt": "2026-01-28T09:05:17.355Z",
+        "hasNumber": false,
+        "keywords": [],
+        "confidence": "medium"
+      }
+    ]
+  },
+  "sources": {
+    "examples": [
+      "https://fliki.ai/templates",
+      "https://fliki.ai/use-cases"
+    ],
+    "faq": "https://fliki.ai/faq",
+    "features": "https://fliki.ai/ai-video-generator",
+    "help": "https://fliki.ai/help",
+    "pricing": "https://fliki.ai/pricing",
+    "terms": "https://fliki.ai/terms"
+  },
+  "metadata": {
+    "totalNuggets": 30,
+    "themesCovered": [
+      "export",
+      "pricing",
+      "usage",
+      "voice",
+      "security"
+    ],
+    "hasModelClaims": false,
+    "hasExamples": true,
+    "minConfidence": "low"
+  }
+}

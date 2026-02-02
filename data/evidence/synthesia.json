@@ -1,0 +1,1283 @@
+{
+  "slug": "synthesia",
+  "lastUpdated": "2026-01-30T05:38:18-08:00",
+  "sources": {
+    "pricing": "https://www.synthesia.io/pricing",
+    "help_home": "https://help.synthesia.io/en/",
+    "help_articles": [
+      "https://help.synthesia.io/en/articles/9994493-what-is-synthesia",
+      "https://help.synthesia.io/en/articles/9240517-what-are-expressive-avatars-in-synthesia",
+      "https://help.synthesia.io/en/articles/13047273-understanding-synthesia-s-avatar-types-stock-custom-and-customizable",
+      "https://help.synthesia.io/en/articles/12131797-content-moderation-policies",
+      "https://help.synthesia.io/en/articles/11831910-ai-dubbing-content-best-practices",
+      "https://help.synthesia.io/en/articles/11179378-avatar-retirement-faqs",
+      "https://help.synthesia.io/en/articles/6609258-synthesia-status"
+    ],
+    "help_collections": [
+      "https://help.synthesia.io/en/collections/15670373-localization-translation",
+      "https://help.synthesia.io/en/collections/12931749-support",
+      "https://help.synthesia.io/en/collections/16741209-where-to-get-help",
+      "https://help.synthesia.io/en/collections/16646579-templates-themes-branding",
+      "https://help.synthesia.io/en/collections/12931752-troubleshooting"
+    ],
+    "legal": {
+      "terms": "https://www.synthesia.io/legal/customer-terms-of-service",
+      "privacy": "https://www.synthesia.io/legal/privacy-policy",
+      "security_practices": "https://www.synthesia.io/legal/security-practices",
+      "ai_governance": "https://www.synthesia.io/legal/ai-governance-practices",
+      "content_integrity": "https://www.synthesia.io/legal/content-integrity-policy",
+      "acceptable_use": "https://www.synthesia.io/legal/acceptable-use-policy",
+      "dpa": "https://www.synthesia.io/legal/data-processing-agreement"
+    },
+    "docs": [
+      "https://docs.synthesia.io/",
+      "https://docs.synthesia.io/docs/synthesia-avatars",
+      "https://docs.synthesia.io/docs/video-creation",
+      "https://docs.synthesia.io/docs/media",
+      "https://docs.synthesia.io/docs/custom-voices",
+      "https://docs.synthesia.io/docs/video-dubbing",
+      "https://docs.synthesia.io/reference/avatars"
+    ],
+    "blog": [
+      "https://www.synthesia.io/post/introducing-veo-3-powered-generative-assets-in-synthesia",
+      "https://www.synthesia.io/post/expressive-avatars-powered-by-synthesias-new-express1-model-are-here"
+    ],
+    "research": "https://synthesiaresearch.github.io/express-video/",
+    "case_study": "https://ai.google.dev/showcase/synthesia",
+    "featuresIndex": "https://www.synthesia.io/features",
+    "featurePages": [
+      "https://www.synthesia.io/features/text-to-video",
+      "https://www.synthesia.io/features/ai-voice-cloning",
+      "https://www.synthesia.io/features/ai-dubbing",
+      "https://www.synthesia.io/features/avatars",
+      "https://www.synthesia.io/features/languages"
+    ]
+  },
+  "nuggets": [
+    {
+      "text": "A video\u2019s minute usage is calculated in seconds; e.g., a 59-second video uses 59 seconds, leaving 9:01 from a 10:00 balance.",
+      "theme": "usage",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia describes credits as a shared currency used to create videos, generate AI voiceovers, and translate/dub content.",
+      "theme": "usage",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The pricing page states a plan includes 1,200 credits per month and up to 10 minutes of video per month.",
+      "theme": "limits",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia is described as an AI video creation platform that turns text into professional videos without cameras, microphones, or editing experience.",
+      "theme": "other",
+      "sourceUrl": "https://help.synthesia.io/en/articles/9994493-what-is-synthesia",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article says Synthesia is designed for the best experience on desktop and recommends using a desktop or laptop for optimal performance.",
+      "theme": "usage",
+      "sourceUrl": "https://help.synthesia.io/en/articles/9994493-what-is-synthesia",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article states Synthesia supports multilingual videos in 140+ languages and accents.",
+      "theme": "formats",
+      "sourceUrl": "https://help.synthesia.io/en/articles/9994493-what-is-synthesia",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article says expressive avatars match the sentiment of text using tone of voice, facial expressions, gestures, and accurate lip-syncing.",
+      "theme": "other",
+      "sourceUrl": "https://help.synthesia.io/en/articles/9240517-what-are-expressive-avatars-in-synthesia",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Each expressive avatar is paired with an expressive voice and is available in 28 languages.",
+      "theme": "formats",
+      "sourceUrl": "https://help.synthesia.io/en/articles/9240517-what-are-expressive-avatars-in-synthesia",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article says you can find Expressive Avatars by looking for a purple star icon in the avatar or voice selection menus.",
+      "theme": "usage",
+      "sourceUrl": "https://help.synthesia.io/en/articles/9240517-what-are-expressive-avatars-in-synthesia",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article states stock avatars are pre-recorded by real actors and are designed for brand-safe, neutral, educational content.",
+      "theme": "commercial",
+      "sourceUrl": "https://help.synthesia.io/en/articles/13047273-understanding-synthesia-s-avatar-types-stock-custom-and-customizable",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article distinguishes Express 1 (facial expressions adjust based on script) and Express 2 (body language matches the script) for expressive avatars.",
+      "theme": "other",
+      "sourceUrl": "https://help.synthesia.io/en/articles/13047273-understanding-synthesia-s-avatar-types-stock-custom-and-customizable",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article says Personal Avatars are typically ready within 1 business day, while Studio Avatars processing typically takes 1\u201310 business days.",
+      "theme": "limits",
+      "sourceUrl": "https://help.synthesia.io/en/articles/13047273-understanding-synthesia-s-avatar-types-stock-custom-and-customizable",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article says Selfie Avatars (Beta) are created from a few high-quality photos and a short consent video, and may not perfectly match appearance due to technical limitations.",
+      "theme": "limits",
+      "sourceUrl": "https://help.synthesia.io/en/articles/13047273-understanding-synthesia-s-avatar-types-stock-custom-and-customizable",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article says customizable avatars are AI-generated (not based on real people) and can be styled via text prompts with custom environments and short B-roll generation.",
+      "theme": "usage",
+      "sourceUrl": "https://help.synthesia.io/en/articles/13047273-understanding-synthesia-s-avatar-types-stock-custom-and-customizable",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article says all content on Synthesia must follow its policies; rejected content means it violated one of the listed categories and should be adjusted before resubmission.",
+      "theme": "commercial",
+      "sourceUrl": "https://help.synthesia.io/en/articles/12131797-content-moderation-policies",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The moderation policy page lists categories that include Animal Exploitation & Abuse, Bullying/Harassment/Stalking, Child Endangerment & Safety, Disinformation & Misinformation, and Explicit Adult Material.",
+      "theme": "commercial",
+      "sourceUrl": "https://help.synthesia.io/en/articles/12131797-content-moderation-policies",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The AI dubbing FAQ says you may dub videos created by others only if you have appropriate rights and permissions.",
+      "theme": "commercial",
+      "sourceUrl": "https://help.synthesia.io/en/articles/11831910-ai-dubbing-content-best-practices",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The AI dubbing FAQ says translated edits are checked to ensure they do not change the original meaning, and notes these editing capabilities are currently only available for Enterprise users.",
+      "theme": "limits",
+      "sourceUrl": "https://help.synthesia.io/en/articles/11831910-ai-dubbing-content-best-practices",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The AI dubbing FAQ says specific consent for dubbing is not required, but you must ensure you have appropriate rights to the original video content.",
+      "theme": "commercial",
+      "sourceUrl": "https://help.synthesia.io/en/articles/11831910-ai-dubbing-content-best-practices",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article says existing videos created with a retired avatar remain accessible and functional, but future updates to those videos require selecting a new avatar.",
+      "theme": "usage",
+      "sourceUrl": "https://help.synthesia.io/en/articles/11179378-avatar-retirement-faqs",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article says you can continue creating new videos with an avatar until it is retired, and recommends planning ahead for consistency.",
+      "theme": "limits",
+      "sourceUrl": "https://help.synthesia.io/en/articles/11179378-avatar-retirement-faqs",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article recommends creating and using a custom avatar to ensure long-term consistency, stating custom avatars are owned and managed by you and give you full control over availability.",
+      "theme": "commercial",
+      "sourceUrl": "https://help.synthesia.io/en/articles/11179378-avatar-retirement-faqs",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article instructs users to use status.synthesia.io for the latest information on outages, incidents, and the overall operational status of the platform.",
+      "theme": "other",
+      "sourceUrl": "https://help.synthesia.io/en/articles/6609258-synthesia-status",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The article says users can subscribe to status updates via email, text message, Slack, or Teams from the status page.",
+      "theme": "other",
+      "sourceUrl": "https://help.synthesia.io/en/articles/6609258-synthesia-status",
+      "sourceType": "help_article",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Customer Terms say material changes to the contract will be notified with reasonable notice via email or in-product messaging, and continued use after the effective date constitutes acceptance.",
+      "theme": "other",
+      "sourceUrl": "https://www.synthesia.io/legal/customer-terms-of-service",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Customer Terms state that if the contract is terminated due to a purported assignment in breach, Synthesia will refund any prepaid fees covering the remainder of subscription terms after termination.",
+      "theme": "refund",
+      "sourceUrl": "https://www.synthesia.io/legal/customer-terms-of-service",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Privacy Policy says Synthesia may apply automated processing to technical data to scan for malicious signs (e.g., too many password failures or seeking exploits) to promote safety, integrity, and security.",
+      "theme": "security",
+      "sourceUrl": "https://www.synthesia.io/legal/privacy-policy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Privacy Policy includes a section on avatar submissions and states avatar creation features require processing facial geometry and/or a voiceprint from sample and verification recordings, referring to this as Biometric Data.",
+      "theme": "security",
+      "sourceUrl": "https://www.synthesia.io/legal/privacy-policy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Security Practices page states Synthesia is SOC 2 Type II compliant.",
+      "theme": "security",
+      "sourceUrl": "https://www.synthesia.io/legal/security-practices",
+      "sourceType": "security",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Security Practices page states Synthesia\u2019s information security management system is ISO 27001 certified and ISO 42001 certified.",
+      "theme": "security",
+      "sourceUrl": "https://www.synthesia.io/legal/security-practices",
+      "sourceType": "security",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Security Practices page states data is encrypted at rest and in transit, and exported videos can be downloaded as MP4 files.",
+      "theme": "security",
+      "sourceUrl": "https://www.synthesia.io/legal/security-practices",
+      "sourceType": "security",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The AI Governance Practices page states Synthesia requires consent from each person who wants their likeness or voice cloned before processing, and this applies to Stock and Custom Avatars.",
+      "theme": "security",
+      "sourceUrl": "https://www.synthesia.io/legal/ai-governance-practices",
+      "sourceType": "ai_governance",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Content Integrity Policy states Synthesia will remove content if properly notified that the content infringes a third party\u2019s intellectual property rights, in accordance with its Terms of Service.",
+      "theme": "commercial",
+      "sourceUrl": "https://www.synthesia.io/legal/content-integrity-policy",
+      "sourceType": "policy",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Acceptable Use Policy states Synthesia may suspend or terminate access if a violation is believed to be deliberate, repeated, or presents undue burden or credible risk of harm.",
+      "theme": "terms",
+      "sourceUrl": "https://www.synthesia.io/legal/acceptable-use-policy",
+      "sourceType": "policy",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The policy prohibits using a Stock Avatar in a TV program, news broadcast, fundraiser, or political campaign without written consent from Synthesia.",
+      "theme": "commercial",
+      "sourceUrl": "https://www.synthesia.io/legal/acceptable-use-policy",
+      "sourceType": "policy",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The policy prohibits using stock audio clips in international TV advertising campaigns if by/on behalf of an entity with annual revenues over US$1,000,000,000.",
+      "theme": "commercial",
+      "sourceUrl": "https://www.synthesia.io/legal/acceptable-use-policy",
+      "sourceType": "policy",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Data Processing Agreement page states it was last updated on January 13, 2026.",
+      "theme": "other",
+      "sourceUrl": "https://www.synthesia.io/legal/data-processing-agreement",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The page states Synthesia offers a Data Processing Addendum that supplements the Customer Terms of Service or a main online subscription agreement and reflects requirements as a processor of Customer Data.",
+      "theme": "security",
+      "sourceUrl": "https://www.synthesia.io/legal/data-processing-agreement",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The docs state a Synthesia video can contain a maximum of 150 scenes, each up to 5 minutes long, and total video duration cannot exceed 4 hours.",
+      "theme": "limits",
+      "sourceUrl": "https://docs.synthesia.io/docs/video-creation",
+      "sourceType": "docs",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The docs state PowerPoint import supports only .pptx files, with a maximum upload size of 1GB, and fonts must be embedded to display correctly.",
+      "theme": "formats",
+      "sourceUrl": "https://docs.synthesia.io/docs/video-creation",
+      "sourceType": "docs",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The media docs list current integrations as Veo 3 and Sora 2.",
+      "theme": "other",
+      "sourceUrl": "https://docs.synthesia.io/docs/media",
+      "sourceType": "docs",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The media docs state the credit cost of each asset is displayed on its thumbnail, and credit cost may change depending on model selection.",
+      "theme": "usage",
+      "sourceUrl": "https://docs.synthesia.io/docs/media",
+      "sourceType": "docs",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The media docs state stock content is sourced from Getty Images and Icons8.",
+      "theme": "commercial",
+      "sourceUrl": "https://docs.synthesia.io/docs/media",
+      "sourceType": "docs",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The custom voices docs state uploaded audio files must be between 1\u20135 minutes long and under 64MB.",
+      "theme": "limits",
+      "sourceUrl": "https://docs.synthesia.io/docs/custom-voices",
+      "sourceType": "docs",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The docs state voice cloning is an Enterprise Plan feature.",
+      "theme": "limits",
+      "sourceUrl": "https://docs.synthesia.io/docs/custom-voices",
+      "sourceType": "docs",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The video dubbing docs state dubbing can translate video into 139 languages and supports 4K video dubbing.",
+      "theme": "formats",
+      "sourceUrl": "https://docs.synthesia.io/docs/video-dubbing",
+      "sourceType": "docs",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The video dubbing docs state lip sync is supported for a number of languages and those languages are marked with an icon in the UI.",
+      "theme": "formats",
+      "sourceUrl": "https://docs.synthesia.io/docs/video-dubbing",
+      "sourceType": "docs",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Synthesia APIs documentation includes resources for Dubbing, Templates, Assets, Videos, Webhooks, and Audit Logs, and a resource titled \"List of stock avatars\" with associated IDs.",
+      "theme": "other",
+      "sourceUrl": "https://docs.synthesia.io/reference/avatars",
+      "sourceType": "docs_reference",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "A Synthesia blog post dated July 29, 2025 announces \"Veo 3-powered generative assets\" in Synthesia.",
+      "theme": "other",
+      "sourceUrl": "https://www.synthesia.io/post/introducing-veo-3-powered-generative-assets-in-synthesia",
+      "sourceType": "blog",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "A Synthesia blog post dated April 22, 2024 says Expressive Avatars are powered by the EXPRESS-1 model for realistic voice-avatar performance.",
+      "theme": "other",
+      "sourceUrl": "https://www.synthesia.io/post/expressive-avatars-powered-by-synthesias-new-express1-model-are-here",
+      "sourceType": "blog",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The post states Expressive Avatars can perform scripts with tone of voice, body language, and lip sync like a real actor would.",
+      "theme": "other",
+      "sourceUrl": "https://www.synthesia.io/post/expressive-avatars-powered-by-synthesias-new-express1-model-are-here",
+      "sourceType": "blog",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Express-Video research page states EXPRESS-2 includes three models: Express-Animate, Express-Eval, and Express-Quality.",
+      "theme": "other",
+      "sourceUrl": "https://synthesiaresearch.github.io/express-video/",
+      "sourceType": "research",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Express-Video research page states the system can generate videos of arbitrary length.",
+      "theme": "limits",
+      "sourceUrl": "https://synthesiaresearch.github.io/express-video/",
+      "sourceType": "research",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Google AI Dev \"showcase\" page lists Synthesia as a case and discusses Synthesia in the context of Google\u2019s Veo integration.",
+      "theme": "other",
+      "sourceUrl": "https://ai.google.dev/showcase/synthesia",
+      "sourceType": "case_study",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "Turn text into professional videos in minutes.",
+      "theme": "features",
+      "sourceUrl": "https://www.synthesia.io/features/text-to-video",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Supports over 140 languages and accents.",
+      "theme": "limits",
+      "sourceUrl": "https://www.synthesia.io/features/text-to-video",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Access a library of 160+ diverse AI avatars.",
+      "theme": "limits",
+      "sourceUrl": "https://www.synthesia.io/features/text-to-video",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "No video editing skills or equipment required.",
+      "theme": "usage",
+      "sourceUrl": "https://www.synthesia.io/features/text-to-video",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Updates videos by simply editing the text script.",
+      "theme": "features",
+      "sourceUrl": "https://www.synthesia.io/features/text-to-video",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Exports videos in MP4 format.",
+      "theme": "export",
+      "sourceUrl": "https://www.synthesia.io/features/text-to-video",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Create a high-quality AI clone of your own voice.",
+      "theme": "features",
+      "sourceUrl": "https://www.synthesia.io/features/ai-voice-cloning",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Requires a short audio recording sample to generate the clone.",
+      "theme": "inputs",
+      "sourceUrl": "https://www.synthesia.io/features/ai-voice-cloning",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Voice cloning is currently available in 29 languages.",
+      "theme": "limits",
+      "sourceUrl": "https://www.synthesia.io/features/ai-voice-cloning",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Requires explicit consent from the voice owner.",
+      "theme": "security",
+      "sourceUrl": "https://www.synthesia.io/features/ai-voice-cloning",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Pair the voice clone with a custom AI avatar for a complete digital twin.",
+      "theme": "features",
+      "sourceUrl": "https://www.synthesia.io/features/ai-voice-cloning",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Allows consistent voiceovers without re-recording audio.",
+      "theme": "usage",
+      "sourceUrl": "https://www.synthesia.io/features/ai-voice-cloning",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Translate videos into multiple languages in one click.",
+      "theme": "features",
+      "sourceUrl": "https://www.synthesia.io/features/ai-dubbing",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Supports translation into over 140 languages.",
+      "theme": "limits",
+      "sourceUrl": "https://www.synthesia.io/features/ai-dubbing",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Synchronizes the avatar\u2019s lip movements to the new language.",
+      "theme": "features",
+      "sourceUrl": "https://www.synthesia.io/features/ai-dubbing",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Translates both the audio and the on-screen text.",
+      "theme": "features",
+      "sourceUrl": "https://www.synthesia.io/features/ai-dubbing",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Allows users to edit the translated script for accuracy.",
+      "theme": "controls",
+      "sourceUrl": "https://www.synthesia.io/features/ai-dubbing",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Eliminates the need for external translation agencies.",
+      "theme": "commercial",
+      "sourceUrl": "https://www.synthesia.io/features/ai-dubbing",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "medium"
+    },
+    {
+      "text": "Choose from over 160 ethnically diverse stock AI avatars.",
+      "theme": "limits",
+      "sourceUrl": "https://www.synthesia.io/features/avatars",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Create a custom AI avatar (digital twin) using a webcam or studio footage.",
+      "theme": "features",
+      "sourceUrl": "https://www.synthesia.io/features/avatars",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Webcam avatars can be created in as little as 15 minutes.",
+      "theme": "limits",
+      "sourceUrl": "https://www.synthesia.io/features/avatars",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Avatars are based on real actors.",
+      "theme": "features",
+      "sourceUrl": "https://www.synthesia.io/features/avatars",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Offers avatars suitable for various use cases like training or marketing.",
+      "theme": "usage",
+      "sourceUrl": "https://www.synthesia.io/features/avatars",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Strict moderation policy prevents avatar misuse.",
+      "theme": "security",
+      "sourceUrl": "https://www.synthesia.io/features/avatars",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Supports text-to-speech in 140+ languages and dialects.",
+      "theme": "limits",
+      "sourceUrl": "https://www.synthesia.io/features/languages",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Includes hundreds of voice options with different tones and accents.",
+      "theme": "limits",
+      "sourceUrl": "https://www.synthesia.io/features/languages",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Offers auto-translation features for scaling content globally.",
+      "theme": "features",
+      "sourceUrl": "https://www.synthesia.io/features/languages",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Allows previewing different voices before generating video.",
+      "theme": "controls",
+      "sourceUrl": "https://www.synthesia.io/features/languages",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can type text in one language and have it spoken in another.",
+      "theme": "usage",
+      "sourceUrl": "https://www.synthesia.io/features/languages",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "medium"
+    },
+    {
+      "text": "Supports regional dialects for major languages like English and Spanish.",
+      "theme": "features",
+      "sourceUrl": "https://www.synthesia.io/features/languages",
+      "sourceType": "features",
+      "capturedAt": "2025-01-30T10:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia lists an AI Video Assistant that transforms decks, PDFs, and websites into videos with AI.",
+      "theme": "features",
+      "sourceUrl": "https://www.synthesia.io/features",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia lists 1-click translation that automatically translates videos into 80+ languages.",
+      "theme": "features",
+      "sourceUrl": "https://www.synthesia.io/features",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia states AI dubbing translates videos into 130+ languages and accents instantly.",
+      "theme": "limits",
+      "sourceUrl": "https://www.synthesia.io/features/ai-dubbing",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia states you can upload an MP4 file for dubbing.",
+      "theme": "formats",
+      "sourceUrl": "https://www.synthesia.io/features/ai-dubbing",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia states content over 4500 words is not supported for link-to-video generation.",
+      "theme": "limits",
+      "sourceUrl": "https://www.synthesia.io/features/text-to-video",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia states the maximum upload file size for this workflow is 50MB.",
+      "theme": "limits",
+      "sourceUrl": "https://www.synthesia.io/features/text-to-video",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia states voice cloning can clone your voice in 10\u201315 minutes.",
+      "theme": "limits",
+      "sourceUrl": "https://www.synthesia.io/features/ai-voice-cloning",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia states a cloned voice can speak in 32 languages.",
+      "theme": "limits",
+      "sourceUrl": "https://www.synthesia.io/features/ai-voice-cloning",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia states it offers 240+ ready-made AI avatars.",
+      "theme": "limits",
+      "sourceUrl": "https://www.synthesia.io/features/avatars",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia states you can search and select from 140+ languages.",
+      "theme": "limits",
+      "sourceUrl": "https://www.synthesia.io/features/languages",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia announces a Generative Assets feature that lets enterprise users create AI-generated videos with Veo 3 inside Synthesia.",
+      "theme": "features",
+      "sourceUrl": "https://www.synthesia.io/post/introducing-veo-3-powered-generative-assets-in-synthesia",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia Research states EXPRESS-2 generates avatar videos at 1080p resolution and 30fps.",
+      "theme": "export",
+      "sourceUrl": "https://synthesiaresearch.github.io/express-video/",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia Research states it will not clone a real person in a video without the person's consent.",
+      "theme": "security",
+      "sourceUrl": "https://synthesiaresearch.github.io/express-video/",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia states Expressive Avatars are powered by Synthesia's EXPRESS-1 model.",
+      "theme": "features",
+      "sourceUrl": "https://www.synthesia.io/post/expressive-avatars-powered-by-synthesias-new-express1-model-are-here",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia states all stored Customer Data is encrypted using AES-256 and keys are managed in Amazon KMS with periodic rotation.",
+      "theme": "security",
+      "sourceUrl": "https://www.synthesia.io/legal/security-practices",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia prohibits scraping content or data from the services for the creation or training of AI models or tools.",
+      "theme": "security",
+      "sourceUrl": "https://www.synthesia.io/legal/acceptable-use-policy",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "confidence": "high"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Seconds-based minute calculation example",
+      "scenario": "How video minutes are deducted for a sub-1-minute export",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "snippet": "The page gives an example that a 59-second video uses 59 seconds (not 1 minute) and leaves 9:01 from a 10:00 balance.",
+      "capturedAt": "2026-01-30T05:38:18-08:00",
+      "confidence": "high"
+    }
+  ],
+  "metadata": {
+    "totalNuggets": 100,
+    "themesCovered": [
+      "commercial",
+      "controls",
+      "export",
+      "features",
+      "formats",
+      "inputs",
+      "limits",
+      "other",
+      "refund",
+      "security",
+      "terms",
+      "usage"
+    ],
+    "conflicts": [],
+    "totalFeaturePages": 17
+  },
+  "linkIndex": {
+    "slug": "synthesia",
+    "sourceType": "sources_index",
+    "pageUrl": "https://www.synthesia.io/features",
+    "capturedAt": "2026-01-31T06:37:07Z",
+    "featureUrls": [
+      "https://www.synthesia.io/features",
+      "https://www.synthesia.io/features/text-to-video",
+      "https://www.synthesia.io/features/ai-voice-cloning",
+      "https://www.synthesia.io/features/ai-dubbing",
+      "https://www.synthesia.io/features/avatars",
+      "https://www.synthesia.io/features/languages",
+      "https://www.synthesia.io/post/introducing-veo-3-powered-generative-assets-in-synthesia",
+      "https://synthesiaresearch.github.io/express-video/",
+      "https://www.synthesia.io/post/expressive-avatars-powered-by-synthesias-new-express1-model-are-here",
+      "https://ai.google.dev/showcase/synthesia",
+      "https://www.synthesia.io/legal/customer-terms-of-service",
+      "https://www.synthesia.io/legal/privacy-policy",
+      "https://www.synthesia.io/legal/security-practices",
+      "https://www.synthesia.io/legal/ai-governance-practices",
+      "https://www.synthesia.io/legal/content-integrity-policy",
+      "https://www.synthesia.io/legal/acceptable-use-policy",
+      "https://www.synthesia.io/legal/data-processing-agreement"
+    ]
+  },
+  "pageEvidence": [
+    {
+      "slug": "synthesia",
+      "sourceType": "features",
+      "pageUrl": "https://www.synthesia.io/features",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "nuggets": [
+        {
+          "text": "Synthesia lists an AI Video Assistant that transforms decks, PDFs, and websites into videos with AI.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia lists 1-click translation that automatically translates videos into 80+ languages.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia lists AI dubbing that translates videos into 130+ languages and accents while preserving the speaker's natural voice and lip-sync.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia lists a Multilingual Player that auto-plays videos in the viewer's preferred language with pre-generated captions.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia lists Brand Kits that automatically apply brand colors, fonts, and logos.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia lists Live Collaboration to invite colleagues to share feedback and edit videos together.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia lists a Public Video Page that supports password protection for shared videos.",
+          "theme": "security",
+          "sourceUrl": "https://www.synthesia.io/features",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia lists an SSO Video Page that requires SSO for access.",
+          "theme": "security",
+          "sourceUrl": "https://www.synthesia.io/features",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia lists SCORM export to integrate videos into an LMS.",
+          "theme": "export",
+          "sourceUrl": "https://www.synthesia.io/features",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states its AI Playground uses the latest AI models including Sora 2, Veo 3.1, FLUX.2, and Nano Banana Pro.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "synthesia",
+      "sourceType": "features",
+      "pageUrl": "https://www.synthesia.io/features/text-to-video",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "nuggets": [
+        {
+          "text": "Synthesia states you can transform a public article or blog post link into a video by entering the URL.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/text-to-video",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states you must have permission to use and reproduce any content from a link you add.",
+          "theme": "commercial",
+          "sourceUrl": "https://www.synthesia.io/features/text-to-video",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states content over 4500 words is not supported for link-to-video generation.",
+          "theme": "limits",
+          "sourceUrl": "https://www.synthesia.io/features/text-to-video",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states you can upload a file to generate a video from PPTX, PDF, DOCX, TXT, and similar formats.",
+          "theme": "formats",
+          "sourceUrl": "https://www.synthesia.io/features/text-to-video",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high",
+          "note": "The page lists PPTX, PDF, DOCX, and TXT explicitly and indicates additional supported formats."
+        },
+        {
+          "text": "Synthesia states the maximum upload file size for this workflow is 50MB.",
+          "theme": "limits",
+          "sourceUrl": "https://www.synthesia.io/features/text-to-video",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia shows an optional 'Speaker' field to specify who is talking in the video.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/text-to-video",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia shows an optional 'Audience' field to specify who the video is for.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/text-to-video",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "synthesia",
+      "sourceType": "features",
+      "pageUrl": "https://www.synthesia.io/features/ai-voice-cloning",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "nuggets": [
+        {
+          "text": "Synthesia states voice cloning can clone your voice in 10\u201315 minutes.",
+          "theme": "limits",
+          "sourceUrl": "https://www.synthesia.io/features/ai-voice-cloning",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states you can record voiceovers in 32 languages using voice cloning.",
+          "theme": "limits",
+          "sourceUrl": "https://www.synthesia.io/features/ai-voice-cloning",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states a cloned voice can speak in 32 languages.",
+          "theme": "limits",
+          "sourceUrl": "https://www.synthesia.io/features/ai-voice-cloning",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states cloned voices keep natural intonation, accent, and speaking style.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/ai-voice-cloning",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states you can pair a cloned voice with a personal avatar to create videos that look and sound like you.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/ai-voice-cloning",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia describes a workflow that starts from the Voices tab with a 'New voice' action.",
+          "theme": "usage",
+          "sourceUrl": "https://www.synthesia.io/features/ai-voice-cloning",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states it sends an email when your voice cloning is ready.",
+          "theme": "usage",
+          "sourceUrl": "https://www.synthesia.io/features/ai-voice-cloning",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "synthesia",
+      "sourceType": "features",
+      "pageUrl": "https://www.synthesia.io/features/ai-dubbing",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "nuggets": [
+        {
+          "text": "Synthesia states AI dubbing translates videos into 130+ languages and accents instantly.",
+          "theme": "limits",
+          "sourceUrl": "https://www.synthesia.io/features/ai-dubbing",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states AI dubbing preserves the speaker's natural voice and delivers lip-sync.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/ai-dubbing",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states you can upload an MP4 file for dubbing.",
+          "theme": "formats",
+          "sourceUrl": "https://www.synthesia.io/features/ai-dubbing",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states you can paste a YouTube link to a video featuring one or more people speaking for dubbing.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/ai-dubbing",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states the source video must be at least 5 seconds long.",
+          "theme": "limits",
+          "sourceUrl": "https://www.synthesia.io/features/ai-dubbing",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states AI dubbing can preserve each voice when multiple speakers are present.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/ai-dubbing",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states users can choose between 'Adaptive' and 'Original' duration options for dubbed output.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/ai-dubbing",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states the 'Adaptive' option may adjust speed to match each language's natural cadence and fit the original timing.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/ai-dubbing",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states the 'Original' option prioritizes audio that feels natural and can extend or shorten the video.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/ai-dubbing",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states you can download subtitles for the translated versions and toggle them on or off in the Multilingual Player.",
+          "theme": "export",
+          "sourceUrl": "https://www.synthesia.io/features/ai-dubbing",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "synthesia",
+      "sourceType": "features",
+      "pageUrl": "https://www.synthesia.io/features/avatars",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "nuggets": [
+        {
+          "text": "Synthesia states you can create AI avatar videos from text without microphones, cameras, actors, or studios.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/avatars",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states it offers 240+ ready-made AI avatars.",
+          "theme": "limits",
+          "sourceUrl": "https://www.synthesia.io/features/avatars",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states its AI avatars are realistic and full-body.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/avatars",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states AI avatars can move and gesture like professional speakers.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/avatars",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states AI avatars provide accurate lip-sync with AI voices and can convey emotion.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/avatars",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states customizable avatars can be fully customized with outfits and backgrounds including your brand assets.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/avatars",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states you can prompt a customizable avatar to move and act in AI-generated scenes powered by Veo 3.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/avatars",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states personal avatars can have full-body visibility and are synced with your script.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/avatars",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "slug": "synthesia",
+      "sourceType": "features",
+      "pageUrl": "https://www.synthesia.io/features/languages",
+      "capturedAt": "2026-01-31T06:37:07Z",
+      "nuggets": [
+        {
+          "text": "Synthesia states it has 2000+ AI voices that are frequently updated.",
+          "theme": "limits",
+          "sourceUrl": "https://www.synthesia.io/features/languages",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states you can search and select from 140+ languages.",
+          "theme": "limits",
+          "sourceUrl": "https://www.synthesia.io/features/languages",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states you can create videos without microphones, cameras, actors, or studios.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/languages",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states voice cloning can create a voice clone and pair it with a personal avatar.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/languages",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states you can select from over 230+ stock avatars for video creation.",
+          "theme": "limits",
+          "sourceUrl": "https://www.synthesia.io/features/languages",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        },
+        {
+          "text": "Synthesia states the Multilingual Player auto-plays videos in the viewer's preferred language.",
+          "theme": "features",
+          "sourceUrl": "https://www.synthesia.io/features/languages",
+          "capturedAt": "2026-01-31T06:37:07Z",
+          "confidence": "high"
+        }
+      ]
+    }
+  ]
+}

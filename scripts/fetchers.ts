@@ -9,8 +9,14 @@ interface FetchOptions {
   type?: string;
 }
 
+interface AutoRenderResult {
+  html: string;
+  renderMode: 'fetch' | 'playwright';
+}
+
 const DEFAULT_TIMEOUT = 15000; // 15 seconds
 const DEFAULT_RETRIES = 2;
+const MIN_TEXT_LENGTH_THRESHOLD = 1000; // Minimum text length to consider page as non-empty
 
 /**
  * Sleep utility for retry delays
@@ -210,4 +216,81 @@ export async function fetchDynamic(url: string, opts: FetchOptions = {}): Promis
   }
 
   throw lastError || new Error('Failed to fetch dynamic content');
+}
+
+/**
+ * Extract text content from HTML (used for shell detection)
+ */
+function extractTextFromHtml(html: string): string {
+  const withoutScripts = html.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '');
+  const withoutStyles = withoutScripts.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '');
+  const withoutTags = withoutStyles.replace(/<[^>]+>/g, ' ');
+  const normalizeSpaces = withoutTags.replace(/\s+/g, ' ').trim();
+  return normalizeSpaces;
+}
+
+/**
+ * Check if page appears to be a JS shell (minimal content after fetch)
+ */
+function isJsShell(text: string, html: string): boolean {
+  // Very short text content
+  if (text.length < MIN_TEXT_LENGTH_THRESHOLD) {
+    return true;
+  }
+
+  // Check for common JS shell indicators
+  const jsShellPatterns = [
+    /react-root/i,
+    /loading\.\.\./i,
+    /spinner/i,
+    /\[data-reactroot\]/i,
+    /window\.__INITIAL_STATE__/i,
+    /<div id="root">/i,
+  ];
+
+  for (const pattern of jsShellPatterns) {
+    if (pattern.test(html)) {
+      return true;
+    }
+  }
+
+  // Check if main content area is essentially empty
+  const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+  if (bodyMatch) {
+    const bodyText = bodyMatch[1].replace(/<[^>]+>/g, '').trim();
+    if (bodyText.length < 200) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+/**
+ * Auto-render fetch: try fetch first, if empty shell detected, use playwright
+ */
+export async function fetchWithAutoRender(url: string, opts: FetchOptions = {}): Promise<AutoRenderResult> {
+  console.log(`  → Attempting fetch (auto mode)...`);
+
+  try {
+    const html = await fetchStatic(url, { ...opts, retries: 1 });
+    const text = extractTextFromHtml(html);
+
+    if (!isJsShell(text, html)) {
+      console.log(`  ✓ Fetch successful, text length: ${text.length} chars`);
+      return { html, renderMode: 'fetch' };
+    }
+
+    console.log(`  ⚠ Detected JS shell (text: ${text.length} chars), falling back to Playwright`);
+  } catch (fetchError: any) {
+    console.log(`  ⚠ Fetch failed: ${fetchError.message}, trying Playwright`);
+  }
+
+  // Fallback to playwright
+  console.log(`  → Fetching with Playwright...`);
+  const html = await fetchDynamic(url, opts);
+  const text = extractTextFromHtml(html);
+  console.log(`  ✓ Playwright successful, text length: ${text.length} chars`);
+
+  return { html, renderMode: 'playwright' };
 }

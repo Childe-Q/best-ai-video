@@ -1,0 +1,650 @@
+{
+  "slug": "heygen",
+  "lastUpdated": "2026-01-28T08:37:00.895Z",
+  "nuggets": [
+    {
+      "text": "Custom avatars are generated in minutes, while studio avatars may take up to 7 days",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "‍ We do not “sell” or “share” (as those terms are defined in the CCPA) personal information, nor have we done so in the preceding 12 months",
+      "theme": "security",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.626Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "We do not “sell” or “share” (as those terms are defined in the CCPA) personal information, nor have we done so in the preceding 12 months. Further, we do not",
+      "theme": "security",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.622Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Custom Avatars are automatically generated and take only a few minutes! A Studio Avatar, which is professionally curated by our team, can take up to 7 days",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.567Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Custom avatars are generated in minutes, while studio avatars may take up to 7 days. Begin customizing now here.",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.567Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "California residents under the age of 18 who have registered to use the Services and posted UGC to the Services can request that their UGC be removed by",
+      "theme": "export",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.622Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "If we become aware that we have unknowingly collected personal information from a child under age 13, we take steps to remove that information from our servers",
+      "theme": "export",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.626Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "As described in section 1 “Introduction”, HeyGen, Inc. is usually the processor of your personal data. We are the controller only if we process data for our",
+      "theme": "security",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.622Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "To request to limit the use and disclosure of your personal information, please submit a written request to [email&#160;protected]",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.626Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "To the extent such rights cannot be assigned under applicable law, you hereby waive any moral and author&#x27;s rights (including attribution and integrity)",
+      "theme": "licensing",
+      "sourceUrl": "https://www.heygen.com/terms",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-28T08:37:00.764Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Tell me more about your service HeyGen is an online video tool with built-in talking AI-avatars that unleash people&#x27;s creativity by removing the costly",
+      "theme": "export",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.567Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Choose an avatar, type the script you want, and click &#x27;submit&#x27; to create a perfect spokesperson video in minutes",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.567Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Exporting videos Click the &#x27;☑️ Submit&#x27; button in the upper right corner, the video will be submitted for generation",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Once the video is generated, you can export the video by clicking the &#x27;download&#x27; button on &#x27;My Video&#x27; tab Editing Your Videos If you",
+      "theme": "usage",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Children&#x27;s Privacy Our Services are not intended for minors under the age of 18, and we do not knowingly collect personal information from children under",
+      "theme": "security",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.626Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "You also agree that you are 18 years or older and legally able to enter into a binding contract",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/terms",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-28T08:37:00.763Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "‍ As described in section 1 “Introduction”, HeyGen, Inc",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.626Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "” and section 4 “How Do We Use Your Information” above",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.626Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "You can withdraw your consent by contacting [email&#160;protected]",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.626Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "‍ Jonathan Bailey Copyright &amp; Plagiarism Consultant, CopyByte 3157 Gentilly Blvd",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/terms",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-28T08:37:00.764Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "&#x27; button in the upper right corner of the scene, and you can adjust effects",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "&#x27; button on the desired video, and then click&#x27;Duplicate&#x27;",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "A Studio Avatar, which is professionally curated by our team, can take up to 7 days from beginning to end",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "From the &#x27;My Video&#x27; tab, choose the &#x27;",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Long delays or errors should be reported via the &#x27;help&#x27; button",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "You can check its progress in the &#x27;Video&#x27; tab",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Browse our library of video templates, find one that suits your needs, and click on the &#x27;+ Use this Template&#x27; button",
+      "theme": "workflow",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.568Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "Option 2: From a template. Browse our library of video templates, find one that suits your needs, and click on the '+ Use this Template' button.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "sourceType": "faq",
+      "capturedAt": "2026-01-28T08:37:00.566Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "medium"
+    },
+    {
+      "text": "‍ If you submit a request to delete your information, we strive to take steps to delete that information within 72 hours of your request, unless we are",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.625Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "low"
+    },
+    {
+      "text": "Further, we do not have actual knowledge that we sell or share personal information about California residents under 16 years of age",
+      "theme": "general",
+      "sourceUrl": "https://www.heygen.com/privacy",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-28T08:37:00.626Z",
+      "hasNumber": true,
+      "keywords": [],
+      "confidence": "low"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Watch What the Future of Video Looks Like",
+      "scenario": "Powered by Real CreatorsWatch What the Future of Video Looks LikeSee how creators, brands, and teams are using HeyGen to break creative boundaries—tur",
+      "output": {
+        "asset": {
+          "imageUrl": "https://www.heygen.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fpdhqcmb1%2Fproduction%2F6e9368bd2c55eb99d67ad4c19c163cff1e74e701-2880x1529.png&w=1536&q=75"
+        }
+      },
+      "sourceUrl": "https://www.heygen.com/showcase",
+      "snippet": "Powered by Real CreatorsWatch What the Future of Video Looks LikeSee how creators, brands, and teams are using HeyGen to break creative boundaries—turning ideas into scroll-stopping, multilingual AI videos that convert.Get Started For FreeRatavaAvatar-MeMilei's 2024 Davos talk (EN)Channel 1Trusted b",
+      "capturedAt": "2026-01-28T08:37:00.516Z",
+      "confidence": "medium"
+    }
+  ],
+  "modelClaims": {
+    "sources": []
+  },
+  "specsLimits": {
+    "nuggets": [
+      {
+        "text": "Custom avatars are generated in minutes, while studio avatars may take up to 7 days",
+        "theme": "usage",
+        "sourceUrl": "https://www.heygen.com/faq",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-28T08:37:00.568Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "‍ We do not “sell” or “share” (as those terms are defined in the CCPA) personal information, nor have we done so in the preceding 12 months",
+        "theme": "security",
+        "sourceUrl": "https://www.heygen.com/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:00.626Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "We do not “sell” or “share” (as those terms are defined in the CCPA) personal information, nor have we done so in the preceding 12 months. Further, we do not",
+        "theme": "security",
+        "sourceUrl": "https://www.heygen.com/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:00.622Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Custom Avatars are automatically generated and take only a few minutes! A Studio Avatar, which is professionally curated by our team, can take up to 7 days",
+        "theme": "usage",
+        "sourceUrl": "https://www.heygen.com/faq",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-28T08:37:00.567Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Custom avatars are generated in minutes, while studio avatars may take up to 7 days. Begin customizing now here.",
+        "theme": "usage",
+        "sourceUrl": "https://www.heygen.com/faq",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-28T08:37:00.567Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "California residents under the age of 18 who have registered to use the Services and posted UGC to the Services can request that their UGC be removed by",
+        "theme": "export",
+        "sourceUrl": "https://www.heygen.com/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:00.622Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "If we become aware that we have unknowingly collected personal information from a child under age 13, we take steps to remove that information from our servers",
+        "theme": "export",
+        "sourceUrl": "https://www.heygen.com/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:00.626Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "As described in section 1 “Introduction”, HeyGen, Inc. is usually the processor of your personal data. We are the controller only if we process data for our",
+        "theme": "security",
+        "sourceUrl": "https://www.heygen.com/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:00.622Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "To request to limit the use and disclosure of your personal information, please submit a written request to [email&#160;protected]",
+        "theme": "usage",
+        "sourceUrl": "https://www.heygen.com/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:00.626Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "To the extent such rights cannot be assigned under applicable law, you hereby waive any moral and author&#x27;s rights (including attribution and integrity)",
+        "theme": "licensing",
+        "sourceUrl": "https://www.heygen.com/terms",
+        "sourceType": "terms",
+        "capturedAt": "2026-01-28T08:37:00.764Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Tell me more about your service HeyGen is an online video tool with built-in talking AI-avatars that unleash people&#x27;s creativity by removing the costly",
+        "theme": "export",
+        "sourceUrl": "https://www.heygen.com/faq",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-28T08:37:00.567Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Choose an avatar, type the script you want, and click &#x27;submit&#x27; to create a perfect spokesperson video in minutes",
+        "theme": "usage",
+        "sourceUrl": "https://www.heygen.com/faq",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-28T08:37:00.567Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Exporting videos Click the &#x27;☑️ Submit&#x27; button in the upper right corner, the video will be submitted for generation",
+        "theme": "usage",
+        "sourceUrl": "https://www.heygen.com/faq",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-28T08:37:00.568Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Once the video is generated, you can export the video by clicking the &#x27;download&#x27; button on &#x27;My Video&#x27; tab Editing Your Videos If you",
+        "theme": "usage",
+        "sourceUrl": "https://www.heygen.com/faq",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-28T08:37:00.568Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Children&#x27;s Privacy Our Services are not intended for minors under the age of 18, and we do not knowingly collect personal information from children under",
+        "theme": "security",
+        "sourceUrl": "https://www.heygen.com/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:00.626Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "You also agree that you are 18 years or older and legally able to enter into a binding contract",
+        "theme": "general",
+        "sourceUrl": "https://www.heygen.com/terms",
+        "sourceType": "terms",
+        "capturedAt": "2026-01-28T08:37:00.763Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "‍ As described in section 1 “Introduction”, HeyGen, Inc",
+        "theme": "general",
+        "sourceUrl": "https://www.heygen.com/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:00.626Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "” and section 4 “How Do We Use Your Information” above",
+        "theme": "general",
+        "sourceUrl": "https://www.heygen.com/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:00.626Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "You can withdraw your consent by contacting [email&#160;protected]",
+        "theme": "general",
+        "sourceUrl": "https://www.heygen.com/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:00.626Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "‍ Jonathan Bailey Copyright &amp; Plagiarism Consultant, CopyByte 3157 Gentilly Blvd",
+        "theme": "general",
+        "sourceUrl": "https://www.heygen.com/terms",
+        "sourceType": "terms",
+        "capturedAt": "2026-01-28T08:37:00.764Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "&#x27; button in the upper right corner of the scene, and you can adjust effects",
+        "theme": "general",
+        "sourceUrl": "https://www.heygen.com/faq",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-28T08:37:00.568Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "&#x27; button on the desired video, and then click&#x27;Duplicate&#x27;",
+        "theme": "general",
+        "sourceUrl": "https://www.heygen.com/faq",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-28T08:37:00.568Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "A Studio Avatar, which is professionally curated by our team, can take up to 7 days from beginning to end",
+        "theme": "general",
+        "sourceUrl": "https://www.heygen.com/faq",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-28T08:37:00.568Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "From the &#x27;My Video&#x27; tab, choose the &#x27;",
+        "theme": "general",
+        "sourceUrl": "https://www.heygen.com/faq",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-28T08:37:00.568Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Long delays or errors should be reported via the &#x27;help&#x27; button",
+        "theme": "general",
+        "sourceUrl": "https://www.heygen.com/faq",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-28T08:37:00.568Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "You can check its progress in the &#x27;Video&#x27; tab",
+        "theme": "general",
+        "sourceUrl": "https://www.heygen.com/faq",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-28T08:37:00.568Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Browse our library of video templates, find one that suits your needs, and click on the &#x27;+ Use this Template&#x27; button",
+        "theme": "workflow",
+        "sourceUrl": "https://www.heygen.com/faq",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-28T08:37:00.568Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "Option 2: From a template. Browse our library of video templates, find one that suits your needs, and click on the '+ Use this Template' button.",
+        "theme": "workflow",
+        "sourceUrl": "https://www.heygen.com/faq",
+        "sourceType": "faq",
+        "capturedAt": "2026-01-28T08:37:00.566Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "medium"
+      },
+      {
+        "text": "‍ If you submit a request to delete your information, we strive to take steps to delete that information within 72 hours of your request, unless we are",
+        "theme": "general",
+        "sourceUrl": "https://www.heygen.com/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:00.625Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "low"
+      },
+      {
+        "text": "Further, we do not have actual knowledge that we sell or share personal information about California residents under 16 years of age",
+        "theme": "general",
+        "sourceUrl": "https://www.heygen.com/privacy",
+        "sourceType": "privacy",
+        "capturedAt": "2026-01-28T08:37:00.626Z",
+        "hasNumber": true,
+        "keywords": [],
+        "confidence": "low"
+      }
+    ]
+  },
+  "sources": {
+    "examples": [
+      "https://www.heygen.com/showcase"
+    ],
+    "faq": "https://www.heygen.com/faq",
+    "privacy": "https://www.heygen.com/privacy",
+    "terms": "https://www.heygen.com/terms"
+  },
+  "metadata": {
+    "totalNuggets": 30,
+    "themesCovered": [
+      "usage",
+      "security",
+      "export",
+      "licensing",
+      "general",
+      "workflow"
+    ],
+    "hasModelClaims": false,
+    "hasExamples": true,
+    "minConfidence": "low"
+  }
+}

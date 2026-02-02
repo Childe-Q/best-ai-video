@@ -1,0 +1,2174 @@
+{
+  "slug": "invideo",
+  "lastUpdated": "2026-01-29T00:00:00-08:00",
+  "sources": {
+    "pricing": [
+      "https://invideo.io/pricing/"
+    ],
+    "faq": [],
+    "help": [
+      "https://help.invideo.io/en/articles/10066874-where-can-i-see-the-credits-calculated-for-my-video-before-creating-it",
+      "https://help.invideo.io/en/articles/10741590-if-the-video-is-created-on-the-paid-plan-can-i-still-edit-and-download-it-once-i-am-on-the-free-plan",
+      "https://help.invideo.io/en/articles/11502727-how-are-the-credits-and-video-minutes-calculated-on-version-4",
+      "https://help.invideo.io/en/articles/11528140-what-plans-does-invideo-offer-and-what-s-included-in-each",
+      "https://help.invideo.io/en/articles/11537168-understanding-credit-changes-what-s-different-and-why",
+      "https://help.invideo.io/en/articles/9380226-can-i-use-invideo-ai-for-free",
+      "https://help.invideo.io/en/articles/9380227-how-can-i-cancel-my-invideo-ai-subscription",
+      "https://help.invideo.io/en/articles/9380456-what-are-the-differences-between-the-plus-max-generative-and-team-plans",
+      "https://help.invideo.io/en/articles/9380465-how-to-apply-your-invideo-ai-credits",
+      "https://help.invideo.io/en/articles/9380485-how-can-i-change-the-video-quality-of-my-preview",
+      "https://help.invideo.io/en/articles/9380486-how-can-i-change-the-aspect-ratio-of-my-video",
+      "https://help.invideo.io/en/articles/9382139-what-are-video-minutes-and-how-do-we-count-them",
+      "https://help.invideo.io/en/articles/9382156-what-does-export-visibility-mean",
+      "https://help.invideo.io/en/articles/9387707-where-do-we-source-our-media-files-from",
+      "https://help.invideo.io/en/articles/9387712-can-i-upload-and-monetize-my-video-with-watermarks-on-social-media",
+      "https://help.invideo.io/en/articles/9387948-why-are-there-still-watermarks-on-my-video-if-i-m-on-a-paid-plan",
+      "https://help.invideo.io/en/articles/9556835-how-to-adjust-fit-the-media-in-the-video",
+      "https://help.invideo.io/en/articles/9974482-can-ai-generated-videos-be-monetised",
+      "https://help.invideo.io/en/articles/9974526-can-i-download-and-use-the-ai-generated-media",
+      "https://help.invideo.io/en/collections/11968902-plan-changes-cancellations",
+      "https://help.invideo.io/en/collections/9486043-pricing-plans",
+      "https://help.invideo.io/en/collections/9486770-troubleshooting",
+      "https://help.invideo.io/en/collections/9739251-copyrights",
+      "https://help.invideo.io/en/collections/9759528-others"
+    ],
+    "featuresIndex": [
+      "https://invideo.io/make/ai-video-generator/"
+    ],
+    "featurePages": [
+      "https://invideo.io/make/ai-video-generator/",
+      "https://invideo.io/make/ai-subtitle-generator/",
+      "https://invideo.io/make/online-video-editor/",
+      "https://invideo.io/make/video-maker/",
+      "https://invideo.io/make/sora/",
+      "https://invideo.io/make/ai-cartoon-video-generator/",
+      "https://invideo.io/make/educational-video-maker/",
+      "https://invideo.io/make/ai-face-swap/",
+      "https://invideo.io/make/youtube-video-editor/",
+      "https://invideo.io/make/logo-reveal/",
+      "https://invideo.io/make/ai-avatar-generator/",
+      "https://invideo.io/make/video-translator/",
+      "https://invideo.io/make/link-to-video/"
+    ],
+    "terms": [
+      "https://invideo.io/terms-and-conditions/"
+    ],
+    "privacy": [
+      "https://invideo.io/privacy-policy/"
+    ],
+    "about": [],
+    "useCases": [],
+    "other": []
+  },
+  "nuggets": [
+    {
+      "text": "You can download and use AI-generated media, and media generated for your projects remains accessible even after cancelling your subscription.",
+      "theme": "commercial",
+      "sourceUrl": "https://help.invideo.io/en/articles/9974526-can-i-download-and-use-the-ai-generated-media",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI-generated videos can be monetised depending on the platform and specific content; users should check platform monetisation policies.",
+      "theme": "commercial",
+      "sourceUrl": "https://help.invideo.io/en/articles/9974482-can-ai-generated-videos-be-monetised",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "AI-generated videos can be used for commercial purposes as customers see fit (subject to platform policies).",
+      "theme": "commercial",
+      "sourceUrl": "https://help.invideo.io/en/articles/9974482-can-ai-generated-videos-be-monetised",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "All music offered on invideo AI is royalty-free production music sourced from YouTube and Storyblocks.",
+      "theme": "commercial",
+      "sourceUrl": "https://help.invideo.io/en/articles/9387707-where-do-we-source-our-media-files-from",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Invideo AI offers millions of royalty-free media assets from libraries like Storyblocks, Shutterstock, and iStock.",
+      "theme": "commercial",
+      "sourceUrl": "https://help.invideo.io/en/articles/9387707-where-do-we-source-our-media-files-from",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The \"Copyrights\" collection contains 5 articles including media sourcing, monetisation, monetising with watermarks, and YouTube claim dispute topics.",
+      "theme": "commercial",
+      "sourceUrl": "https://help.invideo.io/en/collections/9739251-copyrights",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "You can upload and share videos created using invideo AI even if they have watermarks, and there will be no problem monetizing them on social media platforms.",
+      "theme": "commercial",
+      "sourceUrl": "https://help.invideo.io/en/articles/9387712-can-i-upload-and-monetize-my-video-with-watermarks-on-social-media",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Videos created in your account are not visible to others by default.",
+      "theme": "security",
+      "sourceUrl": "https://help.invideo.io/en/articles/9382156-what-does-export-visibility-mean",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Shared videos can be set to private, unlisted, or public.",
+      "theme": "security",
+      "sourceUrl": "https://help.invideo.io/en/articles/9382156-what-does-export-visibility-mean",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "By default, shared videos are set to public; you can change the default for all videos via \"Default export visibility\" in settings.",
+      "theme": "security",
+      "sourceUrl": "https://help.invideo.io/en/articles/9382156-what-does-export-visibility-mean",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Private visibility allows only you or workspace members to preview a shared video.",
+      "theme": "security",
+      "sourceUrl": "https://help.invideo.io/en/articles/9382156-what-does-export-visibility-mean",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Unlisted visibility allows only logged-in InVideo AI users to preview a shared video.",
+      "theme": "security",
+      "sourceUrl": "https://help.invideo.io/en/articles/9382156-what-does-export-visibility-mean",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Public visibility allows anyone with the shared link to preview a shared video.",
+      "theme": "security",
+      "sourceUrl": "https://help.invideo.io/en/articles/9382156-what-does-export-visibility-mean",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Credits are valid for one year from the date they are added to your account.",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380465-how-to-apply-your-invideo-ai-credits",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "After you enter a prompt and click \"generate a video,\" the UI shows the number of credits that will be deducted before creation.",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/10066874-where-can-i-see-the-credits-calculated-for-my-video-before-creating-it",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Clicking the dropdown and choosing \"Learn more\" shows a detailed breakdown and model description for the selected option.",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/10066874-where-can-i-see-the-credits-calculated-for-my-video-before-creating-it",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "On v4 with the PRO model, generative video costs 20 credits per minute (e.g., 30 seconds = 10 credits; 3 minutes 30 seconds = 70 credits).",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/11502727-how-are-the-credits-and-video-minutes-calculated-on-version-4",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "On v4 with the ULTRA model, generative video costs 40 credits per minute (e.g., 30 seconds = 20 credits; 3 minutes 30 seconds = 140 credits).",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/11502727-how-are-the-credits-and-video-minutes-calculated-on-version-4",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Creating videos with actors adds 5 credits per video minute (e.g., 2 minutes or less = +10 credits; 5 minutes or less = +25 credits).",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/11502727-how-are-the-credits-and-video-minutes-calculated-on-version-4",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "For stock/basic media with a human or virtual pro actor on v4, video duration is rounded up to the next whole minute.",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/11502727-how-are-the-credits-and-video-minutes-calculated-on-version-4",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high",
+      "conflictGroup": "video_minutes_rounding_v3_vs_v4",
+      "note": "This v4 rounding rule differs from the v3 rounding table in the v3 video minutes article."
+    },
+    {
+      "text": "For stock/basic media with a human or virtual pro actor on v4, video duration has a minimum charge of 1 minute.",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/11502727-how-are-the-credits-and-video-minutes-calculated-on-version-4",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high",
+      "conflictGroup": "video_minutes_rounding_v3_vs_v4",
+      "note": "This v4 rounding rule differs from the v3 rounding table in the v3 video minutes article."
+    },
+    {
+      "text": "On v3, video minutes are used when creating videos using ‘stock’ and ‘generative’ media; a 1-minute video uses 1 video minute and 7 credits if it also uses generative media.",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/9382139-what-are-video-minutes-and-how-do-we-count-them",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high",
+      "conflictGroup": "video_minutes_scope_v3_vs_new_system",
+      "note": "This v3 statement differs from the credit-changes article describing video minutes being counted only for certain stock-media cases."
+    },
+    {
+      "text": "On v3, video minutes are rounded as: 0:01–1:29 => 1 minute; 1:30–2:29 => 2 minutes; 2:30–3:29 => 3 minutes; 3:30–4:29 => 4 minutes; 4:30–5:29 => 5 minutes.",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/9382139-what-are-video-minutes-and-how-do-we-count-them",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high",
+      "conflictGroup": "video_minutes_rounding_v3_vs_v4",
+      "note": "This v3 rounding table differs from the v4 rule that rounds up to the next whole minute with a minimum of 1 minute."
+    },
+    {
+      "text": "Under the newer system, video minutes are counted only when creating videos using stock media with your own avatar or for faceless videos.",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/11537168-understanding-credit-changes-what-s-different-and-why",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high",
+      "conflictGroup": "video_minutes_scope_v3_vs_new_system",
+      "note": "This statement differs from the v3 video-minutes article stating video minutes are used for stock and generative media."
+    },
+    {
+      "text": "Under the newer system, credits are used for videos that include generative media (with or without an actor) or for stock media with an actor.",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/11537168-understanding-credit-changes-what-s-different-and-why",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The new system has been in effect for new users since June 13, 2025; for v4 videos the new credit system applies, while v3 usage remains tracked in the older system.",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/11537168-understanding-credit-changes-what-s-different-and-why",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "To change a video’s aspect ratio, you enter a command in the Magic Box after clicking \"Edit & Download\" to exit Theatre mode.",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380486-how-can-i-change-the-aspect-ratio-of-my-video",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Magic Box commands can set the aspect ratio to landscape or portrait and can use terms like 16:9/9:16 and vertical/horizontal.",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380486-how-can-i-change-the-aspect-ratio-of-my-video",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "In invideo AI, you can adjust media using x and y centre points from Edit > Media > Media properties.",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/9556835-how-to-adjust-fit-the-media-in-the-video",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "X-Axis moves media side-to-side when the video is 9:16 (vertical), and Y-Axis moves media up/down when the video is 16:9 (wide).",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/9556835-how-to-adjust-fit-the-media-in-the-video",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "For 16:9 videos, moving media up/down is only possible if there is space around the media to move it.",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/9556835-how-to-adjust-fit-the-media-in-the-video",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "For website subscriptions, cancellation is initiated from the profile menu by selecting \"Subscription\" and then clicking \"Cancel,\" followed by confirming \"Yes, cancel.\"",
+      "theme": "support",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380227-how-can-i-cancel-my-invideo-ai-subscription",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "After cancelling an active subscription, the plan remains active until the end of the current period, then the account is downgraded to the free version.",
+      "theme": "support",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380227-how-can-i-cancel-my-invideo-ai-subscription",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The card is removed automatically from the account once you’re on the free plan.",
+      "theme": "support",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380227-how-can-i-cancel-my-invideo-ai-subscription",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The \"Plan Changes & Cancellations\" collection contains 3 articles: downgrade to a lower plan, cancel subscription, and refund policy.",
+      "theme": "support",
+      "sourceUrl": "https://help.invideo.io/en/collections/11968902-plan-changes-cancellations",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The \"Pricing & Plans\" collection contains 20 articles, including plan comparisons, free plan usage, cancellations, and credit changes.",
+      "theme": "other",
+      "sourceUrl": "https://help.invideo.io/en/collections/9486043-pricing-plans",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The \"Troubleshooting\" collection contains 1 article: \"Optimal settings we recommend for using invideo with the smoothest experience.\"",
+      "theme": "other",
+      "sourceUrl": "https://help.invideo.io/en/collections/9486770-troubleshooting",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The \"Others\" collection contains 6 articles including preview quality, undo/redo edits, downloading AI-generated media, and model context protocol server.",
+      "theme": "other",
+      "sourceUrl": "https://help.invideo.io/en/collections/9759528-others",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Generated videos preview in 720p resolution by default.",
+      "theme": "export",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380485-how-can-i-change-the-video-quality-of-my-preview",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Preview quality can be changed via the gear icon on the bottom right of the preview by choosing another resolution.",
+      "theme": "export",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380485-how-can-i-change-the-video-quality-of-my-preview",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Watermarks are visible on the preview page by default.",
+      "theme": "export",
+      "sourceUrl": "https://help.invideo.io/en/articles/9387948-why-are-there-still-watermarks-on-my-video-if-i-m-on-a-paid-plan",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high",
+      "conflictGroup": "watermark_preview_vs_export",
+      "note": "This article distinguishes preview watermarks vs exported output."
+    },
+    {
+      "text": "Watermarks are removed when you export the video.",
+      "theme": "export",
+      "sourceUrl": "https://help.invideo.io/en/articles/9387948-why-are-there-still-watermarks-on-my-video-if-i-m-on-a-paid-plan",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high",
+      "conflictGroup": "watermark_preview_vs_export",
+      "note": "This article distinguishes preview watermarks vs exported output."
+    },
+    {
+      "text": "Projects exported before subscribing to a paid plan will still contain watermarks.",
+      "theme": "export",
+      "sourceUrl": "https://help.invideo.io/en/articles/9387948-why-are-there-still-watermarks-on-my-video-if-i-m-on-a-paid-plan",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "To remove watermarks from a project exported before subscribing, re-export the original project after subscribing and selecting appropriate options.",
+      "theme": "export",
+      "sourceUrl": "https://help.invideo.io/en/articles/9387948-why-are-there-still-watermarks-on-my-video-if-i-m-on-a-paid-plan",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "A video created on a paid plan can be edited and downloaded without a watermark while the plan is active.",
+      "theme": "export",
+      "sourceUrl": "https://help.invideo.io/en/articles/10741590-if-the-video-is-created-on-the-paid-plan-can-i-still-edit-and-download-it-once-i-am-on-the-free-plan",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "After the plan expires and the account moves to the Free plan, edits to the video require a paid plan to download without a watermark.",
+      "theme": "export",
+      "sourceUrl": "https://help.invideo.io/en/articles/10741590-if-the-video-is-created-on-the-paid-plan-can-i-still-edit-and-download-it-once-i-am-on-the-free-plan",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "On the free plan, exported videos have an InVideo watermark.",
+      "theme": "export",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380226-can-i-use-invideo-ai-for-free",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "On the free plan, exported videos have stock media watermarks.",
+      "theme": "export",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380226-can-i-use-invideo-ai-for-free",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Upgrading to a paid plan can remove watermarks.",
+      "theme": "export",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380226-can-i-use-invideo-ai-for-free",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Free plan exports include an InVideo logo watermark.",
+      "theme": "export",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380226-can-i-use-invideo-ai-for-free",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Invideo AI plans include unlimited high-definition (HD) video exports.",
+      "theme": "export",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380456-what-are-the-differences-between-the-plus-max-generative-and-team-plans",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Invideo AI plans include access to royalty-free premium media from iStock, Storyblocks and Shutterstock.",
+      "theme": "commercial",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380456-what-are-the-differences-between-the-plus-max-generative-and-team-plans",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Free plan includes 2 video minutes per week.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high",
+      "note": "Also stated on: https://help.invideo.io/en/articles/9380226-can-i-use-invideo-ai-for-free"
+    },
+    {
+      "text": "Free plan includes 1 AI credit per week.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Free plan includes 1 Express avatar.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Free plan includes 4 exports per week.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high",
+      "note": "Also stated on: https://help.invideo.io/en/articles/9380226-can-i-use-invideo-ai-for-free"
+    },
+    {
+      "text": "Weekly quota on the Free plan resets weekly on Monday at 12 a.m. UTC.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high",
+      "note": "Also stated on: https://help.invideo.io/en/articles/9380226-can-i-use-invideo-ai-for-free"
+    },
+    {
+      "text": "Free plan includes 10 GB storage.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "Any quota does not roll over into the next billing cycle; if unused, it expires at the end of your billing cycle.",
+      "theme": "usage",
+      "sourceUrl": "https://invideo.io/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Free plan exports include an InVideo watermark.",
+      "theme": "export",
+      "sourceUrl": "https://invideo.io/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "You can use invideo AI for free without entering card details.",
+      "theme": "other",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380226-can-i-use-invideo-ai-for-free",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Free plan includes 10 GB storage.",
+      "theme": "limits",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380226-can-i-use-invideo-ai-for-free",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Free plan includes 1 AI credit.",
+      "theme": "limits",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380226-can-i-use-invideo-ai-for-free",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Free plan includes access to 2.5M+ standard media assets.",
+      "theme": "limits",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380226-can-i-use-invideo-ai-for-free",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Each plan provides a monthly allocation of video minutes, credits and iStock assets, along with storage and cloning capabilities.",
+      "theme": "limits",
+      "sourceUrl": "https://help.invideo.io/en/articles/11528140-what-plans-does-invideo-offer-and-what-s-included-in-each",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Team plan supports up to 50 seats, with usage scaling based on the number of seats selected.",
+      "theme": "limits",
+      "sourceUrl": "https://help.invideo.io/en/articles/11528140-what-plans-does-invideo-offer-and-what-s-included-in-each",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Plus, Max and Generative plans can be boosted up to 5x for higher monthly limits.",
+      "theme": "limits",
+      "sourceUrl": "https://help.invideo.io/en/articles/11528140-what-plans-does-invideo-offer-and-what-s-included-in-each",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Plan comparison lists credits quotas as 10, 40, 100, and 1000.",
+      "theme": "limits",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380456-what-are-the-differences-between-the-plus-max-generative-and-team-plans",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Plan comparison lists video minutes quotas as 50, 200, 200, and 1000.",
+      "theme": "limits",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380456-what-are-the-differences-between-the-plus-max-generative-and-team-plans",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Plan comparison lists iStock asset quotas as 95, 320, 320, and 3200.",
+      "theme": "limits",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380456-what-are-the-differences-between-the-plus-max-generative-and-team-plans",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Plan comparison lists Express clones quotas as 2, 5, 8, and 40.",
+      "theme": "limits",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380456-what-are-the-differences-between-the-plus-max-generative-and-team-plans",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Plan comparison lists storage quotas as 100 GB, 400 GB, 400 GB, and 4 TB.",
+      "theme": "limits",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380456-what-are-the-differences-between-the-plus-max-generative-and-team-plans",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Monthly quota resets each month.",
+      "theme": "limits",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380456-what-are-the-differences-between-the-plus-max-generative-and-team-plans",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "Additional quota can be shared with team members or used entirely by one user.",
+      "theme": "usage",
+      "sourceUrl": "https://help.invideo.io/en/articles/9380456-what-are-the-differences-between-the-plus-max-generative-and-team-plans",
+      "sourceType": "help",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "The privacy policy describes collection and use of information such as account and usage data for providing and improving the services.",
+      "theme": "security",
+      "sourceUrl": "https://invideo.io/privacy-policy/",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "The privacy policy describes sharing information with service providers to operate the services.",
+      "theme": "security",
+      "sourceUrl": "https://invideo.io/privacy-policy/",
+      "sourceType": "privacy",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "Invideo does not guarantee that AI-generated content is unique, original, or non-infringing, and it may not be protectable by intellectual property rights.",
+      "theme": "commercial",
+      "sourceUrl": "https://invideo.io/terms-and-conditions/",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "You retain ownership of your Customer Content.",
+      "theme": "terms",
+      "sourceUrl": "https://invideo.io/terms-and-conditions/",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "You grant InVideo a license to use your Customer Content to provide and improve the services (as described in the terms).",
+      "theme": "terms",
+      "sourceUrl": "https://invideo.io/terms-and-conditions/",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "Invideo may delete or remove content at its discretion and is not obligated to store or maintain copies of user content.",
+      "theme": "security",
+      "sourceUrl": "https://invideo.io/terms-and-conditions/",
+      "sourceType": "terms",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "Users can access a library of over 7000 customizable marketing video templates.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The platform provides access to over 16 million stock media assets including content from iStock.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users on the Business plan are limited to 60 HD video exports per month.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The Unlimited plan allows for unlimited HD video exports.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Background removal is limited to 20 images per month on the Business plan.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can collaborate with team members on video projects.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The Magic Box feature allows users to edit video clips using simple text commands like delete scenes.",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/youtube-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Videos can be automatically translated into over 50 global languages.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/youtube-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The tool supports creating content specifically for YouTube Shorts.",
+      "theme": "formats",
+      "sourceUrl": "https://invideo.io/make/youtube-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Integrated AI models for video generation include Sora 2 and Google Veo 3.1.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/youtube-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can clone their own voice for use in video narration.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/youtube-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The platform includes non-negotiable topic blocks to protect AI actor likenesses.",
+      "theme": "security",
+      "sourceUrl": "https://invideo.io/make/youtube-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The recommended video format for Instagram export is MP4.",
+      "theme": "formats",
+      "sourceUrl": "https://invideo.io/make/instagram-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Supported resolutions include 1080x1080 for feed videos and 1080x1920 for Stories.",
+      "theme": "formats",
+      "sourceUrl": "https://invideo.io/make/instagram-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The editor provides over 6000 pre-designed templates specifically for Instagram.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/instagram-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can add transitions like lens flare and bokeh blur between scenes.",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/instagram-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The tool allows creation of diverse content types including video bios and Reels.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/instagram-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can keep Instagram feed videos under 60 seconds to ensure optimal performance.",
+      "theme": "usage",
+      "sourceUrl": "https://invideo.io/make/instagram-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The Plus plan allows for 30 seconds of generative video creation per month.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/promo-video-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The Max plan includes 120 seconds of generative video creation per month.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/promo-video-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Free users are limited to 2 video minutes and 1 AI credit per week.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/promo-video-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Paid plans include unlimited image generations using the Nano Banana Pro model.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/promo-video-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can define the audience and platform before generating a promo video.",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/promo-video-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The tool supports over 50 different promo video styles via workflows.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/promo-video-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can drag and drop their own photos and videos to replace default stock media.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/video-collage-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Collage templates are available in aspect ratios of 16:9, 9:16, and 1:1.",
+      "theme": "formats",
+      "sourceUrl": "https://invideo.io/make/video-collage-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can trim audio tracks to sync with specific images in the collage.",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/video-collage-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The tool supports adding loop effects to soundtracks.",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/video-collage-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Exports on the free plan include a watermark.",
+      "theme": "usage",
+      "sourceUrl": "https://invideo.io/make/video-collage-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Templates are pre-cut to match background music beats.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/video-collage-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "A recording of at least 30 seconds is required to create a voice clone.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/tools/ai-voice-cloning/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users must verify permission before cloning another person's voice.",
+      "theme": "security",
+      "sourceUrl": "https://invideo.io/tools/ai-voice-cloning/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can generate voiceovers in over 50 languages including diverse accents.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/tools/ai-text-to-speech/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Voice options include male, female, young, and old vocal types.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/tools/ai-text-to-speech/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can access a library of over 7000 customizable marketing video templates",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the platform provides access to over 16 million stock media assets including content from istock",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users on the business plan are limited to 60 hd video exports per month",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the unlimited plan allows for unlimited hd video exports",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "background removal is limited to 20 images per month on the business plan",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can collaborate with team members on video projects",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the magic box feature allows users to edit video clips using simple text commands like delete scenes",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/youtube-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "videos can be automatically translated into over 50 global languages",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/youtube-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the tool supports creating content specifically for youtube shorts",
+      "theme": "formats",
+      "sourceUrl": "https://invideo.io/make/youtube-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "integrated ai models for video generation include sora 2 and google veo 3.1",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/youtube-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can clone their own voice for use in video narration",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/youtube-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the platform includes non-negotiable topic blocks to protect ai actor likenesses",
+      "theme": "security",
+      "sourceUrl": "https://invideo.io/make/youtube-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the recommended video format for instagram export is mp4",
+      "theme": "formats",
+      "sourceUrl": "https://invideo.io/make/instagram-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "supported resolutions include 1080x1080 for feed videos and 1080x1920 for stories",
+      "theme": "formats",
+      "sourceUrl": "https://invideo.io/make/instagram-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the editor provides over 6000 pre-designed templates specifically for instagram",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/instagram-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can add transitions like lens flare and bokeh blur between scenes",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/instagram-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the tool allows creation of diverse content types including video bios and reels",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/instagram-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can keep instagram feed videos under 60 seconds to ensure optimal performance",
+      "theme": "usage",
+      "sourceUrl": "https://invideo.io/make/instagram-video-editor/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the plus plan allows for 30 seconds of generative video creation per month",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/promo-video-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the max plan includes 120 seconds of generative video creation per month",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/promo-video-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "free users are limited to 2 video minutes and 1 ai credit per week",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/promo-video-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "paid plans include unlimited image generations using the nano banana pro model",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/promo-video-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can define the audience and platform before generating a promo video",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/promo-video-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the tool supports over 50 different promo video styles via workflows",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/promo-video-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can drag and drop their own photos and videos to replace default stock media",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/video-collage-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "collage templates are available in aspect ratios of 16:9, 9:16, and 1:1",
+      "theme": "formats",
+      "sourceUrl": "https://invideo.io/make/video-collage-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can trim audio tracks to sync with specific images in the collage",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/video-collage-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the tool supports adding loop effects to soundtracks",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/video-collage-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "exports on the free plan include a watermark",
+      "theme": "usage",
+      "sourceUrl": "https://invideo.io/make/video-collage-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "templates are pre-cut to match background music beats",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/video-collage-maker/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "a recording of at least 30 seconds is required to create a voice clone",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/tools/ai-voice-cloning/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users must verify permission before cloning another person's voice",
+      "theme": "security",
+      "sourceUrl": "https://invideo.io/tools/ai-voice-cloning/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can generate voiceovers in over 50 languages including diverse accents",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/tools/ai-text-to-speech/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "voice options include male, female, young, and old vocal types",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/tools/ai-text-to-speech/",
+      "capturedAt": "2026-01-30T21:40:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The platform provides quick utility tools including Video Trimmer, Video Compressor, and MP4 Compressor.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can access specialized tools for Face Swap and Face Swap Video.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The editor includes a Screen Recorder utility for capturing content.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can use Magic Box text commands to delete scenes or mute audio.",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Qwen Edit tools include Edit Skin, Face Portrait, and Group Photo adjustments.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/qwen/",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can place products naturally into images with correct lighting and depth using the Add Product tool.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/qwen/",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The Multi-Angle tool creates new camera angles while keeping the subject consistent.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/qwen/",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can remove harsh light spots and unwanted objects using the Remove Light & Elements tool.",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/qwen/",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The Next Scene tool builds the logical next moment of an image for scene continuity.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/qwen/",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The VFX House suite includes specific tools for Relight, Inpaint and Cleanup, and AI Colorist.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ideas/?section=vfx-house",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can use Prop Swap and Key Lab tools for object manipulation.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ideas/?section=vfx-house",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Advanced VFX capabilities include Virtual Production, 3D Texturizer, and Continuity Engine.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ideas/?section=vfx-house",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Refraction and Re-frame tools are available for video adjustment.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ideas/?section=vfx-house",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the platform provides quick utility tools including video trimmer, video compressor, and mp4 compressor",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can access specialized tools for face swap and face swap video",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the editor includes a screen recorder utility for capturing content",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can use magic box text commands to delete scenes or mute audio",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/online-video-editor/",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "qwen edit tools include edit skin, face portrait, and group photo adjustments",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/qwen/",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can place products naturally into images with correct lighting and depth using the add product tool",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/qwen/",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the multi-angle tool creates new camera angles while keeping the subject consistent",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/qwen/",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can remove harsh light spots and unwanted objects using the remove light & elements tool",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/qwen/",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the next scene tool builds the logical next moment of an image for scene continuity",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/qwen/",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the vfx house suite includes specific tools for relight, inpaint and cleanup, and ai colorist",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ideas/?section=vfx-house",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can use prop swap and key lab tools for object manipulation",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ideas/?section=vfx-house",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "advanced vfx capabilities include virtual production, 3d texturizer, and continuity engine",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ideas/?section=vfx-house",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "refraction and re-frame tools are available for video adjustment",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ideas/?section=vfx-house",
+      "capturedAt": "2026-01-31T12:05:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can generate videos from simple text prompts or full scripts.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/add-text-to-video-online/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The platform supports video resolution up to 4K with selected models.",
+      "theme": "formats",
+      "sourceUrl": "https://invideo.io/make/add-text-to-video-online/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can edit videos using text commands in the Magic Box like delete scene or change voiceover.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/add-text-to-video-online/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The tool supports creating content in over 50 languages.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/add-text-to-video-online/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Integrated AI models include Sora 2 and Google Veo 3.1.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/add-text-to-video-online/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can access over 16 million licensed stock media clips.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/add-text-to-video-online/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The text-to-speech tool generates human-like voiceovers in male and female voices.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/tools/ai-text-to-speech/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Supported languages for voice generation include over 50 global languages.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/tools/ai-text-to-speech/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can export the final output as a video and convert it to MP3 using an internal converter.",
+      "theme": "export",
+      "sourceUrl": "https://invideo.io/tools/ai-text-to-speech/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Free account users are limited to exporting up to 4 videos per week.",
+      "theme": "usage",
+      "sourceUrl": "https://invideo.io/tools/ai-text-to-speech/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Exports on the free plan include an InVideo watermark.",
+      "theme": "usage",
+      "sourceUrl": "https://invideo.io/tools/ai-text-to-speech/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The tool allows users to choose from diverse accents including young and old voice types.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/tools/ai-text-to-speech/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users must upload a recording of at least 30 seconds to clone their voice.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/tools/ai-voice-cloning/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The tool creates a digital clone of a voice within seconds.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/tools/ai-voice-cloning/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can clone another person's voice only with explicit permission.",
+      "theme": "usage",
+      "sourceUrl": "https://invideo.io/tools/ai-voice-cloning/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Verification processes are in place to prevent unauthorized voice cloning.",
+      "theme": "security",
+      "sourceUrl": "https://invideo.io/tools/ai-voice-cloning/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Cloned voices can be used to generate voiceovers in multiple languages.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/tools/ai-voice-cloning/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "YouTube monetization is allowed for videos using AI-generated voices if guidelines are followed.",
+      "theme": "commercial",
+      "sourceUrl": "https://invideo.io/tools/ai-voice-cloning/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can paste a blog article URL to generate a video.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/ai-blog-to-video/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The tool automatically adds visuals, background music, and voiceovers to the generated video.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/ai-blog-to-video/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can select video length and platform settings before generation.",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/ai-blog-to-video/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Content moderation systems use both human and AI review to safeguard users.",
+      "theme": "security",
+      "sourceUrl": "https://invideo.io/make/ai-blog-to-video/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Face-matching technology is used to block unauthorized use of likenesses.",
+      "theme": "security",
+      "sourceUrl": "https://invideo.io/make/ai-blog-to-video/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Generated videos can include realistic AI voices in over 50 global languages.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/ai-blog-to-video/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Express avatars can be created in under 5 minutes using a webcam recording or YouTube link.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/ai-avatar-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Pro Avatars require recordings of 30 minutes or more to achieve studio quality.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/ai-avatar-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users must provide a 60-second video of themselves for custom avatar creation.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/ai-avatar-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "New footage is required to generate an AI avatar in different physical setups.",
+      "theme": "usage",
+      "sourceUrl": "https://invideo.io/make/ai-avatar-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The tool supports lip sync video creation using digital avatars.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/ai-avatar-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users must record consent following on-screen instructions to create an AI twin.",
+      "theme": "security",
+      "sourceUrl": "https://invideo.io/make/ai-avatar-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can upload JPG, PNG, or WebP images to convert them into video.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/image-to-videos/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The generation process takes approximately 60 seconds.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/image-to-videos/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Video output can be up to 4K quality.",
+      "theme": "formats",
+      "sourceUrl": "https://invideo.io/make/image-to-videos/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Supported aspect ratios include 16:9, 9:16, and others fitting social platforms.",
+      "theme": "formats",
+      "sourceUrl": "https://invideo.io/make/image-to-videos/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can control motion with text prompts like 'Zoom in slowly' or 'Pan across'.",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/image-to-videos/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The maximum video duration for image-to-video generation is 8 seconds.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/image-to-videos/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The tool can automatically generate subtitles in over 50 global languages.",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/ai-subtitle-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Available subtitle styles include Hormozi, comic, clean, and karaoke word-by-word effects.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/ai-subtitle-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can change subtitle styles and languages using text commands in the Magic Box.",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/ai-subtitle-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Supported fonts include Montserrat, Roboto, Arial, and Comic Sans.",
+      "theme": "formats",
+      "sourceUrl": "https://invideo.io/make/ai-subtitle-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can position subtitles at the top, center, or bottom, or specify exact percentage positions.",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/ai-subtitle-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The free version generates videos with subtitles but includes a watermark.",
+      "theme": "usage",
+      "sourceUrl": "https://invideo.io/make/ai-subtitle-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can create faceless videos on any topic using a single text prompt.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/ai-faceless-video-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The tool automatically writes scripts and adds relevant media, voiceovers, and sound effects.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/ai-faceless-video-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Workflows are available to structure prompts for over 50 video styles.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/ai-faceless-video-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "AI Actors control how their likeness is used with non-negotiable topic blocks.",
+      "theme": "security",
+      "sourceUrl": "https://invideo.io/make/ai-faceless-video-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Users can clone product catalogs into polished ads and demos.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/ai-faceless-video-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The tool supports creating content without any recording equipment.",
+      "theme": "usage",
+      "sourceUrl": "https://invideo.io/make/ai-faceless-video-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can generate videos from simple text prompts or full scripts",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/add-text-to-video-online/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the platform supports video resolution up to 4k with selected models",
+      "theme": "formats",
+      "sourceUrl": "https://invideo.io/make/add-text-to-video-online/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can edit videos using text commands in the magic box like delete scene or change voiceover",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/add-text-to-video-online/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the tool supports creating content in over 50 languages",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/add-text-to-video-online/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "integrated ai models include sora 2 and google veo 3.1",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/add-text-to-video-online/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can access over 16 million licensed stock media clips",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/add-text-to-video-online/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the text-to-speech tool generates human-like voiceovers in male and female voices",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/tools/ai-text-to-speech/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can export the final output as a video and convert it to mp3 using an internal converter",
+      "theme": "export",
+      "sourceUrl": "https://invideo.io/tools/ai-text-to-speech/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "free account users are limited to exporting up to 4 videos per week",
+      "theme": "usage",
+      "sourceUrl": "https://invideo.io/tools/ai-text-to-speech/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "exports on the free plan include an invideo watermark",
+      "theme": "usage",
+      "sourceUrl": "https://invideo.io/tools/ai-text-to-speech/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users must upload a recording of at least 30 seconds to clone their voice",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/tools/ai-voice-cloning/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the tool creates a digital clone of a voice within seconds",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/tools/ai-voice-cloning/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can clone another person's voice only with explicit permission",
+      "theme": "usage",
+      "sourceUrl": "https://invideo.io/tools/ai-voice-cloning/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "verification processes are in place to prevent unauthorized voice cloning",
+      "theme": "security",
+      "sourceUrl": "https://invideo.io/tools/ai-voice-cloning/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "youtube monetization is allowed for videos using ai-generated voices if guidelines are followed",
+      "theme": "commercial",
+      "sourceUrl": "https://invideo.io/tools/ai-voice-cloning/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can paste a blog article url to generate a video",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/ai-blog-to-video/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can select video length and platform settings before generation",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/ai-blog-to-video/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "content moderation systems use both human and ai review to safeguard users",
+      "theme": "security",
+      "sourceUrl": "https://invideo.io/make/ai-blog-to-video/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "face-matching technology is used to block unauthorized use of likenesses",
+      "theme": "security",
+      "sourceUrl": "https://invideo.io/make/ai-blog-to-video/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "express avatars can be created in under 5 minutes using a webcam recording or youtube link",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/ai-avatar-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "pro avatars require recordings of 30 minutes or more to achieve studio quality",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/ai-avatar-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users must provide a 60-second video of themselves for custom avatar creation",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/ai-avatar-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "new footage is required to generate an ai avatar in different physical setups",
+      "theme": "usage",
+      "sourceUrl": "https://invideo.io/make/ai-avatar-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users must record consent following on-screen instructions to create an ai twin",
+      "theme": "security",
+      "sourceUrl": "https://invideo.io/make/ai-avatar-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can upload jpg, png, or webp images to convert them into video",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/image-to-videos/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the generation process for image-to-video takes approximately 60 seconds",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/image-to-videos/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "supported aspect ratios include 16:9, 9:16, and others fitting social platforms",
+      "theme": "formats",
+      "sourceUrl": "https://invideo.io/make/image-to-videos/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can control motion with text prompts like 'zoom in slowly' or 'pan across'",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/image-to-videos/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the maximum video duration for image-to-video generation is 8 seconds",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/image-to-videos/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the tool can automatically generate subtitles in over 50 global languages",
+      "theme": "limits",
+      "sourceUrl": "https://invideo.io/make/ai-subtitle-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "available subtitle styles include hormozi, comic, clean, and karaoke word-by-word effects",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/ai-subtitle-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can change subtitle styles and languages using text commands in the magic box",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/ai-subtitle-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "supported fonts include montserrat, roboto, arial, and comic sans",
+      "theme": "formats",
+      "sourceUrl": "https://invideo.io/make/ai-subtitle-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can position subtitles at the top, center, or bottom, or specify exact percentage positions",
+      "theme": "controls",
+      "sourceUrl": "https://invideo.io/make/ai-subtitle-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "workflows are available to structure prompts for over 50 video styles",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/ai-faceless-video-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "ai actors control how their likeness is used with non-negotiable topic blocks",
+      "theme": "security",
+      "sourceUrl": "https://invideo.io/make/ai-faceless-video-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "users can clone product catalogs into polished ads and demos",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/make/ai-faceless-video-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the tool supports creating content without any recording equipment",
+      "theme": "usage",
+      "sourceUrl": "https://invideo.io/make/ai-faceless-video-generator/",
+      "capturedAt": "2026-01-30T21:32:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The platform supports a wide range of video generation models including Google Veo (3.1/3/2), Sora 2 (Pro), Kling (2.6/Video O1), LTX-2 Pro, Pixverse (5.5/5), Wan (2.6/2.5), and Minimax Hailuo (2.3/02).",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Specialized video motion and animation models include Kling 2.6 Motion Control, Wan 2.2 Animate Move, Wan 2.2 Animate Replace, and Seedance (Pro/1.5 Pro).",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Video upscaling is provided by Crystal Upscaler, FlashVSR, SeedVR, Bytedance Video Upscaler, Topaz Video Upscaler, Runway Upscaler v1, and Gen-4 Aleph.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Lip sync capabilities are supported by Pixverse Lipsync, Kling Lipsync, Rapid Lipsync, and Pipio Lipsync models.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Image generation models include Midjourney V7, GPT Image 1.5, Seedream (4.5/4), Flux 2 (Pro/Flex/Max), Ideogram v3, and Nano Banana Pro.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "The Qwen Edit suite provides specific tools for Skin, Relight, Multiple Angles, Shirt Design, Product Integration, and Scene Extension.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Advanced image editing models include Reve (Remix/Edit), Bria BG Remove, BiRefNet BG Remove, Clarity Upscaler, and Magnific Upscaler (Creative/Precision/Skin).",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Audio generation models include ElevenLabs Voice Design, ElevenLabs Text to Speech, Maya 1, VibeVoice 7B, Minimax Speech 2.6, and Sonic 3.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Music generation utilizes ElevenLabs Music V1 (Song/Instrumental), Sonauto V2 (Song/Instrumental), Google Lyria-002, Minimax Music 2.0, and Mureka 7.5.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Additional creative models listed include Grok Imagine (Video/Image), Higgsfield (Dop/Soul), and Kling Effects.",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the platform supports a wide range of video generation models including google veo (3.1/3/2), sora 2 (pro), kling (2.6/video o1), ltx-2 pro, pixverse (5.5/5), wan (2.6/2.5), and minimax hailuo (2.3/02)",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "specialized video motion and animation models include kling 2.6 motion control, wan 2.2 animate move, wan 2.2 animate replace, and seedance (pro/1.5 pro)",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "video upscaling is provided by crystal upscaler, flashvsr, seedvr, bytedance video upscaler, topaz video upscaler, runway upscaler v1, and gen-4 aleph",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "lip sync capabilities are supported by pixverse lipsync, kling lipsync, rapid lipsync, and pipio lipsync models",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "image generation models include midjourney v7, gpt image 1.5, seedream (4.5/4), flux 2 (pro/flex/max), ideogram v3, and nano banana pro",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "the qwen edit suite provides specific tools for skin, relight, multiple angles, shirt design, product integration, and scene extension",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "advanced image editing models include reve (remix/edit), bria bg remove, birefnet bg remove, clarity upscaler, and magnific upscaler (creative/precision/skin)",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "audio generation models include elevenlabs voice design, elevenlabs text to speech, maya 1, vibevoice 7b, minimax speech 2.6, and sonic 3",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "music generation utilizes elevenlabs music v1 (song/instrumental), sonauto v2 (song/instrumental), google lyria-002, minimax music 2.0, and mureka 7.5",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "additional creative models listed include grok imagine (video/image), higgsfield (dop/soul), and kling effects",
+      "theme": "features",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "capturedAt": "2026-01-31T12:20:00Z",
+      "confidence": "high"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Credit table example (PRO model)",
+      "scenario": "Estimating credits for different video durations on v4 PRO model",
+      "sourceUrl": "https://help.invideo.io/en/articles/11502727-how-are-the-credits-and-video-minutes-calculated-on-version-4",
+      "snippet": "PRO model cost is 20 credits per minute; the table shows 30 seconds = 10 credits, 1 minute = 20 credits, 3 minutes 30 seconds = 70 credits.",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    },
+    {
+      "title": "3-minute example (v3)",
+      "scenario": "Estimating remaining video minutes after making a 3-minute video on v3",
+      "sourceUrl": "https://help.invideo.io/en/articles/9382139-what-are-video-minutes-and-how-do-we-count-them",
+      "snippet": "Example: creating a 3-minute video reduces a 200 video-minute balance to 197, and a 50 video-minute balance to 47.",
+      "capturedAt": "2026-01-29T05:24:36-08:00",
+      "confidence": "high"
+    }
+  ],
+  "metadata": {
+    "totalInputBlocks": 29,
+    "totalNuggets": 280,
+    "themesCovered": [
+      "commercial",
+      "controls",
+      "export",
+      "features",
+      "formats",
+      "limits",
+      "other",
+      "security",
+      "support",
+      "terms",
+      "usage"
+    ],
+    "conflicts": [
+      {
+        "conflictGroup": "video_minutes_rounding_v3_vs_v4",
+        "items": 3,
+        "note": "This v4 rounding rule differs from the v3 rounding table in the v3 video minutes article."
+      },
+      {
+        "conflictGroup": "video_minutes_scope_v3_vs_new_system",
+        "items": 2,
+        "note": "This v3 statement differs from the credit-changes article describing video minutes being counted only for certain stock-media cases."
+      },
+      {
+        "conflictGroup": "watermark_preview_vs_export",
+        "items": 2,
+        "note": "This article distinguishes preview watermarks vs exported output."
+      }
+    ]
+  }
+}
