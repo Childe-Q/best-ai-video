@@ -22,25 +22,34 @@ export default function AlternativeToolCardV2({
   onToggle,
   currentSlug
 }: AlternativeToolCardV2Props) {
-  // Normalize tool data
-  const normalizedTool = 'whySwitch' in tool ? {
-    ...tool,
-    pickThisIf: tool.whySwitch[0],
-    limitations: tool.tradeOff || ('limitations' in tool ? (tool as any).limitations : undefined) as string | undefined
-  } : {
-    ...tool,
-    limitations: ('limitations' in tool ? (tool as any).limitations : undefined) as string | undefined
+  const getSafeText = (value?: string) => {
+    if (!value) return undefined;
+    if (value.includes('[NEED VERIFICATION]')) return undefined;
+    return value.trim() || undefined;
   };
 
-  const hasTradeOff = !!normalizedTool.limitations;
-  const bestForTags = normalizedTool.bestFor?.slice(0, 4) || []; // Limit to 3-4 tags
+  // Normalize tool data (no template copy; only evidence/field-backed)
+  const normalizedTool = 'whySwitch' in tool ? {
+    ...tool,
+    affiliateUrl: (tool as any).affiliateUrl || tool.affiliateLink,
+    bestFor: (tool.bestFor || []).filter((t) => getSafeText(t)),
+    limitations: getSafeText(tool.tradeOff || ('limitations' in tool ? (tool as any).limitations : undefined) as string | undefined)
+  } : {
+    ...tool,
+    affiliateUrl: (tool as any).affiliateUrl || tool.affiliateLink,
+    bestFor: (tool.bestFor || []).filter((t) => getSafeText(t)),
+    limitations: getSafeText(('limitations' in tool ? (tool as any).limitations : undefined) as string | undefined)
+  };
+
+  const bestForLine = getSafeText(normalizedTool.bestFor?.[0]);
+  const tradeOffLine = getSafeText(normalizedTool.limitations);
 
   const handleCardClick = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
     if (target.closest('a, button')) {
       return;
     }
-    window.location.href = `/tool/${normalizedTool.slug}`;
+    window.location.href = normalizedTool.affiliateUrl || normalizedTool.affiliateLink || `/tool/${normalizedTool.slug}`;
   };
 
   return (
@@ -85,35 +94,22 @@ export default function AlternativeToolCardV2({
         </div>
       </div>
 
-      {/* Best for tags (3-4 chips) */}
-      {bestForTags.length > 0 && (
-        <div className="mb-4">
-          <div className="flex flex-wrap gap-2">
-            {bestForTags.map((tag, i) => (
-              <span key={i} className="px-2.5 py-1 bg-gray-50 border border-gray-200 text-gray-700 rounded-md text-xs font-medium">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Pick this if */}
-      {normalizedTool.pickThisIf && (
-        <div className="mb-4 bg-blue-50 border-l-2 border-blue-400 pl-3 py-2 rounded-r-sm">
+      {/* Best for (single line) */}
+      {bestForLine && (
+        <div className="mb-3">
           <p className="text-sm text-gray-800 leading-relaxed">
-            <span className="font-semibold text-gray-900">Pick this if:</span> {normalizedTool.pickThisIf}
+            <span className="font-semibold text-gray-900">Best for:</span> {bestForLine}
           </p>
         </div>
       )}
 
-      {/* Trade-off */}
-      {hasTradeOff && (
+      {/* Trade-off (single line) */}
+      {tradeOffLine && (
         <div className="mb-4 flex-shrink-0">
           <div className="flex items-start gap-2">
             <ExclamationTriangleIcon className="w-4 h-4 text-orange-500 shrink-0 mt-0.5" />
             <p className="text-sm text-gray-700 leading-relaxed">
-              <span className="font-semibold text-gray-900">Trade-off:</span> {normalizedTool.limitations}
+              <span className="font-semibold text-gray-900">Trade-off:</span> {tradeOffLine}
             </p>
           </div>
         </div>
@@ -121,9 +117,9 @@ export default function AlternativeToolCardV2({
 
       {/* CTA Area - Fixed at bottom */}
       <div className="mt-auto pt-4 flex-shrink-0" onClick={(e) => e.stopPropagation()}>
-        {normalizedTool.affiliateLink ? (
+        {normalizedTool.affiliateUrl || normalizedTool.affiliateLink ? (
           <CTAButton
-            affiliateLink={normalizedTool.affiliateLink}
+            affiliateLink={normalizedTool.affiliateUrl || normalizedTool.affiliateLink}
             hasFreeTrial={normalizedTool.hasFreeTrial}
             text={normalizedTool.hasFreeTrial ? "Try now" : "Visit website"}
             className="w-full"

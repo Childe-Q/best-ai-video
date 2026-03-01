@@ -3,6 +3,7 @@ import AlternativeToolCardV2 from './AlternativeToolCardV2';
 
 interface AlternativesReasonGroupProps {
   group: AlternativeGroup | AlternativeGroupWithEvidence;
+  displayTools: Array<AlternativeGroup['tools'][number] | AlternativeGroupWithEvidence['tools'][number]>;
   expandedCards: Set<string>;
   onToggleCard: (cardId: string) => void;
   currentSlug?: string;
@@ -10,19 +11,21 @@ interface AlternativesReasonGroupProps {
 
 export default function AlternativesReasonGroup({
   group,
+  displayTools,
   expandedCards,
   onToggleCard,
   currentSlug
 }: AlternativesReasonGroupProps) {
-  // Only show Editorial tools (bestMatch), filter out Sponsored/Deals
-  const hasStructuredRecommendations = 'bestMatch' in group && group.bestMatch !== undefined;
-  
-  const editorialTools = hasStructuredRecommendations 
-    ? (group.bestMatch || [])
-    : (group.tools || []).slice(0, 10); // Limit to 10 tools max
+  const editorialTools = displayTools;
 
   return (
     <div>
+      <h2 className="text-xl font-semibold text-gray-900 mb-1">
+        {group.title}
+      </h2>
+      <p className="text-sm text-gray-600 mb-4">
+        Use this group to narrow your choice based on this scenario.
+      </p>
       {/* Editorial Tools Grid */}
       {editorialTools.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

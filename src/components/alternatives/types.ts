@@ -7,6 +7,7 @@ export type AlternativeTool = {
   startingPrice: string;
   rating?: number;
   affiliateLink: string;
+  affiliateUrl?: string;
   compareLink?: string;
   hasFreeTrial: boolean;
   bestFor: string[];

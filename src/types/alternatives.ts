@@ -43,6 +43,7 @@ export type AlternativeToolWithEvidence = {
   startingPrice: string;
   rating?: number;
   affiliateLink: string;
+  affiliateUrl?: string;
   hasFreeTrial: boolean;
   // From evidence (copy only)
   pickThisIf?: string;

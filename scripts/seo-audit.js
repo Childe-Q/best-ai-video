@@ -272,13 +272,14 @@ function buildVsComparisons(tools) {
   return allComparisons.slice(0, 50);
 }
 
-function buildRoutes({ tools, categories, comparisons }) {
+function buildRoutes({ tools, categories, comparisons, topics }) {
   const routes = [];
   routes.push({ url: '/', type: 'home', file: 'src/app/page.tsx' });
   routes.push({ url: '/about', type: 'about', file: 'src/app/about/page.tsx' });
   routes.push({ url: '/terms', type: 'terms', file: 'src/app/terms/page.tsx' });
   routes.push({ url: '/privacy', type: 'privacy', file: 'src/app/privacy/page.tsx' });
   routes.push({ url: '/features', type: 'features-hub', file: 'src/app/features/page.tsx' });
+  routes.push({ url: '/alternatives', type: 'alternatives-hub', file: 'src/app/alternatives/page.tsx' });
   routes.push({ url: '/vs', type: 'vs-index', file: 'src/app/vs/page.tsx' });
   routes.push({ url: '/out/veed', type: 'out-veed', file: 'src/app/out/veed/page.tsx' });
 
@@ -304,6 +305,15 @@ function buildRoutes({ tools, categories, comparisons }) {
     routes.push({ url: `/vs/${comparison.slug}`, type: 'vs-detail', file: 'src/app/vs/[slug]/page.tsx', comparison });
   });
 
+  topics.forEach((topic) => {
+    routes.push({
+      url: `/alternatives/topic/${topic.slug}`,
+      type: 'alternatives-topic',
+      file: 'src/app/alternatives/topic/[slug]/page.tsx',
+      topic,
+    });
+  });
+
   routes.sort((a, b) => a.url.localeCompare(b.url));
   return routes;
 }
@@ -327,6 +337,11 @@ function buildTitleAndDescription(route, context) {
       return {
         title: `Explore AI Video Tools by Use Case ${seoYear}`,
         description: 'Discover AI video tools organized by use case. Find the perfect tool for text-to-video, avatars, editing, social media, and more.',
+      };
+    case 'alternatives-hub':
+      return {
+        title: `Alternatives Hub (${seoYear}): Find by Tool or Topic`,
+        description: 'Search alternatives by exact tool or by workflow topic. Compare options with one consistent long-form evaluation template.',
       };
     case 'vs-index':
       return {
@@ -371,6 +386,11 @@ function buildTitleAndDescription(route, context) {
       };
     case 'alternatives-redirect':
       return { title: null, description: null };
+    case 'alternatives-topic':
+      return {
+        title: `${route.topic.title} Alternatives (${seoYear}): Best Picks by Workflow`,
+        description: route.topic.intro || `Compare ${route.topic.title} alternatives by pricing, output quality, and workflow speed.`,
+      };
     case 'vs-detail':
       if (!route.comparison || !route.comparison.toolA || !route.comparison.toolB) {
         return { title: 'Comparison Not Found', description: 'The requested comparison could not be found.' };
@@ -454,6 +474,16 @@ function buildContentText(route, context) {
     }
   }
 
+  if (route.type === 'alternatives-hub') {
+    pieces.push(...context.tools.map((tool) => tool.name));
+    pieces.push(...context.topics.map((topic) => topic.title));
+    pieces.push(...context.topics.map((topic) => topic.intro || ''));
+  }
+
+  if (route.type === 'alternatives-topic' && route.topic) {
+    flattenStrings(route.topic, pieces);
+  }
+
   if (route.type === 'home') {
     pieces.push(...context.tools.map((tool) => tool.name));
   }
@@ -470,6 +500,22 @@ function buildAudit() {
   const tools = readJson(path.join(srcRoot, 'data', 'tools.json'));
   const categories = parseCategories(path.join(srcRoot, 'data', 'categories.ts'));
   const canonicalAlternatives = parseCanonicalAlternatives(path.join(srcRoot, 'data', 'alternatives', 'canonical.ts'));
+  const topicDir = path.join(projectRoot, 'data', 'topics');
+  const topics = fileExists(topicDir)
+    ? fs.readdirSync(topicDir)
+      .filter((file) => file.endsWith('.json'))
+      .map((file) => {
+        const data = safeReadJson(path.join(topicDir, file));
+        if (!data) return null;
+        return {
+          slug: file.replace(/\.json$/, ''),
+          title: data.title || file.replace(/\.json$/, ''),
+          intro: data.intro || '',
+          raw: data,
+        };
+      })
+      .filter(Boolean)
+    : [];
 
   const toolContent = new Map();
   const contentDir = path.join(projectRoot, 'content', 'tools');
@@ -508,12 +554,13 @@ function buildAudit() {
   }
 
   const comparisons = buildVsComparisons(tools);
-  const routes = buildRoutes({ tools, categories, comparisons });
+  const routes = buildRoutes({ tools, categories, comparisons, topics });
   const seoYear = getSEOYear();
 
   const context = {
     tools,
     categories,
+    topics,
     seoYear,
     canonicalAlternatives,
     toolContent,
@@ -525,6 +572,7 @@ function buildAudit() {
   const knownPaths = new Set(routes.map((route) => route.url));
   const toolSlugs = new Set(tools.map((tool) => tool.slug));
   const categorySlugs = new Set(categories.map((category) => category.slug));
+  const topicSlugs = new Set(topics.map((topic) => topic.slug));
 
   function isKnownInternalRoute(href) {
     if (knownPaths.has(href)) return true;
@@ -535,6 +583,9 @@ function buildAudit() {
 
     const alternativesMatch = href.match(/^\/alternatives\/([^/]+)$/);
     if (alternativesMatch && toolSlugs.has(alternativesMatch[1])) return true;
+
+    const topicMatch = href.match(/^\/alternatives\/topic\/([^/]+)$/);
+    if (topicMatch && topicSlugs.has(topicMatch[1])) return true;
 
     const featuresMatch = href.match(/^\/features\/([^/]+)$/);
     if (featuresMatch && categorySlugs.has(featuresMatch[1])) return true;

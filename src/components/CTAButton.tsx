@@ -18,7 +18,7 @@ export default function CTAButton({ affiliateLink, hasFreeTrial, className = '',
 
   const baseClasses = `
     inline-flex items-center justify-center 
-    font-bold text-black uppercase tracking-wide
+    font-bold text-black hover:text-black uppercase tracking-wide
     bg-[#F6D200] 
     border-2 border-black 
     rounded-lg 

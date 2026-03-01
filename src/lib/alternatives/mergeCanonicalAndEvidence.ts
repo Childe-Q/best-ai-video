@@ -149,11 +149,6 @@ function generateFallbackCopy(tool: Tool, groupIntent: string, currentTool: Tool
     limitations = `No free trial available`;
   }
   
-  // Add [NEED VERIFICATION] if no specific evidence
-  if (!pickThisIf.includes('[NEED VERIFICATION]')) {
-    pickThisIf += ' [NEED VERIFICATION]';
-  }
-  
   return { pickThisIf, extraReason, limitations };
 }
 
@@ -211,25 +206,18 @@ function buildToolWithEvidence(
     pricingSignals.refundCancel = pricingBullets[3] || undefined;
   }
 
-  // Generate fallback copy if no evidence (tool-specific, not template)
-  const fallbackCopy = !evidence ? generateFallbackCopy(tool, groupIntent, currentTool) : {};
+  const sanitizeEvidenceText = (value?: string) => {
+    if (!value) return undefined;
+    if (value.includes('[NEED VERIFICATION]')) return undefined;
+    return value.trim() || undefined;
+  };
 
-  // Normalize evidence text to replace hardcoded tool names with currentTool.name
-  const normalizedPickThisIf = normalizeEvidenceText(
-    evidence?.pickThisIf || fallbackCopy.pickThisIf,
-    currentTool,
-    allTools
+  const normalizedLimitations = sanitizeEvidenceText(
+    normalizeEvidenceText(evidence?.limitations, currentTool, allTools)
   );
-  const normalizedExtraReason = normalizeEvidenceText(
-    evidence?.extraReason || fallbackCopy.extraReason,
-    currentTool,
-    allTools
-  );
-  const normalizedLimitations = normalizeEvidenceText(
-    evidence?.limitations || fallbackCopy.limitations,
-    currentTool,
-    allTools
-  );
+  const normalizedBestFor = (evidence?.bestFor || [])
+    .map((item) => sanitizeEvidenceText(item))
+    .filter((item): item is string => Boolean(item));
 
   // Calculate matching factors
   const matchedOn = calculateMatchingFactors(tool, currentTool);
@@ -243,16 +231,17 @@ function buildToolWithEvidence(
     startingPrice: tool.starting_price || 'Free Trial',
     rating: tool.rating,
     affiliateLink: tool.affiliate_link || '',
+    affiliateUrl: tool.affiliate_link || undefined,
     hasFreeTrial: tool.has_free_trial || false,
     // From evidence (copy only), normalized to replace hardcoded tool names
-    pickThisIf: normalizedPickThisIf,
-    extraReason: normalizedExtraReason,
+    pickThisIf: undefined,
+    extraReason: undefined,
     limitations: normalizedLimitations,
     // From internal pricing data (never from evidence)
     pricingSignals,
     // Best for tags (from tool.best_for, can be enhanced by evidence but not structure)
-    bestFor: evidence?.bestFor && evidence.bestFor.length > 0
-      ? evidence.bestFor
+    bestFor: normalizedBestFor.length > 0
+      ? normalizedBestFor
       : tool.best_for?.split(/[,&]/).map((s: string) => s.trim()) || [],
     // Matching factors for "Matched on" display
     matchedOn
@@ -368,7 +357,7 @@ function shouldAllowDescript(
  * - Global deduplication: Each tool appears at most ONCE across all groups on a page
  * - Descript filtering: Descript only appears in editing_control groups (or if current tool is editor)
  * - Non-affiliate tools allowed: Runway, Sora can appear if similarity is high
- * - Tools without evidence allowed: Fallback copy with [NEED VERIFICATION]
+ * - Tools without evidence allowed: Fallback copy without unverified markers
  */
 export function mergeCanonicalAndEvidence(
   config: CanonicalAlternativesConfig,

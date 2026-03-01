@@ -1,54 +1,77 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
-import Link from 'next/link';
-import { Tool } from '@/types/tool';
+import { useState, useEffect } from 'react';
 import { AlternativeGroup, AlternativeGroupWithEvidence } from '@/components/alternatives/types';
 import AlternativesReasonGroup from '@/components/alternatives/AlternativesReasonGroup';
 import FAQAccordion from '@/components/FAQAccordion';
-import ComingSoonToolCard from '@/components/alternatives/ComingSoonToolCard';
-import { getAlternativesShortlist } from '@/lib/alternatives/getAlternativesShortlist';
-import { buildAlternativeGroups } from '@/lib/buildAlternativesData';
-import { COMING_SOON_TOOL_DATA, isComingSoonTool } from '@/lib/alternatives/getComingSoonTools';
-import { getTool } from '@/lib/getTool';
 
 interface AlternativesClientProps {
   groups: AlternativeGroup[] | AlternativeGroupWithEvidence[];
   toolName: string;
   faqs?: Array<{ question: string; answer: string }>;
   currentSlug: string;
-  allTools: Tool[];
   evidenceLinks?: string[]; // Evidence sources for proof functionality
 }
 
-export default function AlternativesClient({ groups: initialGroups, toolName, faqs = [], currentSlug, allTools, evidenceLinks = [] }: AlternativesClientProps) {
+export default function AlternativesClient({ groups: initialGroups, toolName, faqs = [], currentSlug, evidenceLinks = [] }: AlternativesClientProps) {
   const [activeTab, setActiveTab] = useState(initialGroups[0]?.id);
   const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set());
 
-  // Groups are static since we removed filters
-  const groups = useMemo(() => {
-    const currentTool = allTools.find(t => t.slug === currentSlug);
-    if (!currentTool) return initialGroups;
+  const groups = initialGroups;
 
-    const shortlist = getAlternativesShortlist(
-      currentSlug,
-      allTools,
-      12, 
-      {
-        onlyAffiliate: false, // Default to false as toggle is removed
-        alwaysInclude: ['runway', 'sora']
-      }
-    );
+  const getDisplayTools = (group: AlternativeGroup | AlternativeGroupWithEvidence) => {
+    const orderedTools = ('bestMatch' in group && group.bestMatch !== undefined)
+      ? [...(group.deals || []), ...(group.bestMatch || [])]
+      : (group.tools || []);
 
-    return buildAlternativeGroups(currentTool, allTools, shortlist);
-  }, [currentSlug, allTools, initialGroups]);
+    const getSafeText = (value?: string | null) => {
+      if (!value) return undefined;
+      if (value.includes('[NEED VERIFICATION]')) return undefined;
+      return value.trim() || undefined;
+    };
+
+    const getTradeOff = (tool: AlternativeGroup['tools'][number] | AlternativeGroupWithEvidence['tools'][number]) => {
+      if ('tradeOff' in tool) return getSafeText(tool.tradeOff || undefined);
+      return getSafeText((tool as any).limitations);
+    };
+
+    const getBestFor = (tool: AlternativeGroup['tools'][number] | AlternativeGroupWithEvidence['tools'][number]) =>
+      getSafeText(tool.bestFor?.[0]);
+
+    const getContentScore = (tool: AlternativeGroup['tools'][number] | AlternativeGroupWithEvidence['tools'][number]) => {
+      const bestFor = getBestFor(tool);
+      const tradeOff = getTradeOff(tool);
+      return (bestFor ? 1 : 0) + (tradeOff ? 1 : 0);
+    };
+
+    const isAffiliate = (tool: AlternativeGroup['tools'][number] | AlternativeGroupWithEvidence['tools'][number]) =>
+      Boolean((tool as any).affiliateUrl || tool.affiliateLink);
+
+    const scored = orderedTools
+      .map((tool, index) => ({ tool, index, contentScore: getContentScore(tool) }))
+      .filter(({ contentScore }) => contentScore >= 1);
+
+    scored.sort((a, b) => {
+      if (b.contentScore !== a.contentScore) return b.contentScore - a.contentScore;
+      const aAffiliate = isAffiliate(a.tool);
+      const bAffiliate = isAffiliate(b.tool);
+      if (aAffiliate !== bAffiliate) return aAffiliate ? -1 : 1;
+      return a.index - b.index;
+    });
+
+    return scored.map(({ tool }) => tool).slice(0, 4);
+  };
+
+  const preparedGroups = groups
+    .map(group => ({ group, displayTools: getDisplayTools(group) }))
+    .filter(({ displayTools }) => displayTools.length >= 2);
 
   // Ensure activeTab is valid when groups change
   useEffect(() => {
-    if (groups.length > 0 && !groups.find(g => g.id === activeTab)) {
-      setActiveTab(groups[0].id);
+    if (preparedGroups.length > 0 && !preparedGroups.find(({ group }) => group.id === activeTab)) {
+      setActiveTab(preparedGroups[0].group.id);
     }
-  }, [groups, activeTab]);
+  }, [preparedGroups, activeTab]);
 
   const toggleCard = (cardId: string) => {
     setExpandedCards(prev => {
@@ -62,11 +85,11 @@ export default function AlternativesClient({ groups: initialGroups, toolName, fa
     });
   };
 
-  // Filter out empty groups if any (though usually groups are built with tools)
-  const validGroups = groups.filter(g => g.tools && g.tools.length > 0);
+  // Filter out groups with insufficient displayable tools
+  const validGroups = preparedGroups;
 
   // Get active group data
-  const activeGroupData = validGroups.find(g => g.id === activeTab);
+  const activeGroupData = validGroups.find(({ group }) => group.id === activeTab);
 
   return (
     <div className="relative">
@@ -91,7 +114,7 @@ export default function AlternativesClient({ groups: initialGroups, toolName, fa
           {/* Tab Row: Segmented pills control */}
           {validGroups.length > 0 && (
             <div className="tabRow mt-6 inline-flex w-full md:w-auto gap-1 rounded-full border border-black/10 bg-white/50 p-1 overflow-x-auto md:overflow-visible">
-              {validGroups.map((group) => (
+              {validGroups.map(({ group }) => (
                 <button
                   key={group.id}
                   onClick={() => setActiveTab(group.id)}
@@ -111,10 +134,10 @@ export default function AlternativesClient({ groups: initialGroups, toolName, fa
           )}
 
           {/* Tab Hint: Info callout for current tab description */}
-          {activeGroupData?.description && (
+          {activeGroupData?.group.description && (
             <div className="tabHint mt-4 flex items-start gap-2 rounded-xl border border-black/5 bg-white/60 px-4 py-3 text-sm text-black/60">
               <span className="shrink-0">ℹ︎</span>
-              <p className="flex-1">{activeGroupData.description}</p>
+              <p className="flex-1">{activeGroupData.group.description}</p>
             </div>
           )}
         </div>
@@ -125,38 +148,20 @@ export default function AlternativesClient({ groups: initialGroups, toolName, fa
         {/* Tools Grid */}
         {activeGroupData && (
           <AlternativesReasonGroup
-            key={activeGroupData.id}
-            group={activeGroupData}
+            key={activeGroupData.group.id}
+            group={activeGroupData.group}
+            displayTools={activeGroupData.displayTools}
             expandedCards={expandedCards}
             onToggleCard={toggleCard}
             currentSlug={currentSlug}
           />
         )}
 
-        {/* Coming Soon Tools Section */}
-        {(() => {
-          const comingSoonTools = Object.values(COMING_SOON_TOOL_DATA).filter(
-            (tool) => !getTool(tool.slug) && isComingSoonTool(tool.slug)
-          );
-          
-          if (comingSoonTools.length === 0) return null;
-          
-          return (
-            <section className="mt-12">
-              <h2 className="text-xl font-semibold text-gray-900 mb-3">
-                Coming Soon
-              </h2>
-              <p className="text-sm text-gray-600 mb-6 leading-relaxed">
-                These top-tier tools are not yet in our database. Request them to be added.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {comingSoonTools.map((tool) => (
-                  <ComingSoonToolCard key={tool.slug} tool={tool} />
-                ))}
-              </div>
-            </section>
-          );
-        })()}
+        {!activeGroupData && (
+          <section className="rounded-xl border border-black/5 bg-white/70 px-5 py-4 text-sm text-black/60">
+            No curated alternatives yet.
+          </section>
+        )}
 
         {/* Evidence Sources Section - For proof functionality */}
         {evidenceLinks.length > 0 && (

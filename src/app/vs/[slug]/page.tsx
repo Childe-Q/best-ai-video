@@ -32,11 +32,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const seoYear = getSEOCurrentYear();
   
   return {
-    title: `${toolA.name} vs ${toolB.name} ${seoYear}: Detailed Comparison & Test Results`,
-    description: `Side-by-side test of ${toolA.name} vs ${toolB.name} AI video generators: pricing, features, real prompt outputs, and winner verdict based on data.`,
+    title: `${toolA.name} vs ${toolB.name} ${seoYear}: Detailed Comparison & Verdict`,
+    description: `Side-by-side comparison of ${toolA.name} vs ${toolB.name} AI video generators: pricing, features, example prompts, and a winner verdict based on available info.`,
     openGraph: {
       title: `${toolA.name} vs ${toolB.name} ${seoYear} Comparison`,
-      description: `Data-driven comparison of ${toolA.name} and ${toolB.name} AI video tools.`,
+      description: `Structured comparison of ${toolA.name} and ${toolB.name} AI video tools.`,
     },
   };
 }
@@ -204,10 +204,10 @@ export default async function ComparisonPage({ params }: PageProps) {
             {toolA.name} vs {toolB.name}: {seoYear} AI Video Generator Comparison Report
           </h1>
           <p className="text-center text-gray-600 max-w-3xl mx-auto">
-            We tested both tools with the same prompt (e.g., &quot;Create a 10s marketing video for a tech product&quot;). Here&apos;s the data-driven breakdown.
+            This guide compares both tools using a consistent prompt framing (e.g., &quot;Create a short marketing video for a tech product&quot;) and a structured breakdown.
           </p>
           <p className="text-center text-xs text-gray-500 mt-2">
-            Based on our {currentMonthName} {seoYear} tests; results may vary.
+            Updated {currentMonthName} {seoYear}.
           </p>
         </div>
       </header>
@@ -221,10 +221,10 @@ export default async function ComparisonPage({ params }: PageProps) {
               <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                 <div className="flex-1 text-center md:text-left">
                   <p className="text-base md:text-lg font-medium text-gray-900 mb-1">
-                    💡 Pro Tip: Need a tool that is faster than {toolA.name} and cheaper than {toolB.name}?
+                    💡 Pro Tip: Looking for a tool that balances speed and price between {toolA.name} and {toolB.name}?
                   </p>
                   <p className="text-sm text-gray-600">
-                    {recommendedToolName} combines the best of both worlds with lightning-fast generation and competitive pricing.
+                    Some users choose {recommendedToolName} for quicker iteration and competitive pricing.
                   </p>
                 </div>
                 <div className="flex-shrink-0">
@@ -253,21 +253,13 @@ export default async function ComparisonPage({ params }: PageProps) {
 
         {/* Test Results Section */}
         <section className="mb-12 bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Test Results & Output Analysis</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Output Analysis & Notes</h2>
           
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             {/* Tool A Output */}
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-4">{toolA.name} Output</h3>
-              <div className="bg-gray-100 rounded-lg aspect-video flex items-center justify-center mb-4">
-                <div className="text-center text-gray-500">
-                  <svg className="h-12 w-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                  </svg>
-                  <p className="text-sm">Sample Output Placeholder</p>
-                  <p className="text-xs mt-1">Video demo would appear here</p>
-                </div>
-              </div>
+              <p className="text-sm text-gray-600 mb-4">Example outputs coming soon.</p>
               <div className="space-y-2">
                 <p className="text-sm text-gray-700">
                   <strong>Strengths:</strong> {toolA.pros.slice(0, 2).join(', ')}
@@ -286,15 +278,7 @@ export default async function ComparisonPage({ params }: PageProps) {
             {/* Tool B Output */}
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-4">{toolB.name} Output</h3>
-              <div className="bg-gray-100 rounded-lg aspect-video flex items-center justify-center mb-4">
-                <div className="text-center text-gray-500">
-                  <svg className="h-12 w-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                  </svg>
-                  <p className="text-sm">Sample Output Placeholder</p>
-                  <p className="text-xs mt-1">Video demo would appear here</p>
-                </div>
-              </div>
+              <p className="text-sm text-gray-600 mb-4">Example outputs coming soon.</p>
               <div className="space-y-2">
                 <p className="text-sm text-gray-700">
                   <strong>Strengths:</strong> {toolB.pros.slice(0, 2).join(', ')}
@@ -313,20 +297,17 @@ export default async function ComparisonPage({ params }: PageProps) {
 
           {/* Unique Insights */}
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">🔍 Unique Test Insights</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">🔍 Comparison Insights</h3>
             <ul className="space-y-2 text-sm text-gray-700">
               <li>
-                • In our test, {toolA.name} handled complex prompts{' '}
-                {getSpeedScore(toolA) > getSpeedScore(toolB) ? '20% faster' : 'slightly slower'} but with{' '}
-                {getOutputQualityScore(toolA) < getOutputQualityScore(toolB) ? '15% more inconsistencies' : 'better consistency'}.
+                • Some users report {toolA.name} feels faster for short iterations, but may show occasional inconsistencies compared with {toolB.name}.
               </li>
               <li>
-                • {toolB.name} showed superior {toolB.tags[0] || 'performance'} capabilities, making it ideal for{' '}
-                {toolB.best_for.toLowerCase()}.
+                • {toolB.name} is geared toward {toolB.tags[0] || 'performance'} workflows and {toolB.best_for.toLowerCase()}.
               </li>
               <li>
-                • Both tools excelled in {sharedTags.length > 0 ? sharedTags.join(' and ') : 'their respective areas'}, 
-                but {winnerQuality.name} delivered higher overall quality.
+                • Both tools cover {sharedTags.length > 0 ? sharedTags.join(' and ') : 'their respective areas'}, 
+                but {winnerQuality.name} scores higher on overall quality in our dataset.
               </li>
             </ul>
           </div>
@@ -334,7 +315,7 @@ export default async function ComparisonPage({ params }: PageProps) {
 
         {/* Verdict Section */}
         <section className="mb-12 bg-white rounded-xl shadow-sm border border-gray-200 p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Data-Driven Verdict</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Verdict</h2>
           
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">
@@ -382,7 +363,7 @@ export default async function ComparisonPage({ params }: PageProps) {
               <div>
                 <p className="text-2xl font-bold text-gray-900 mb-2">{winnerSpeed.name}</p>
                 <p className="text-sm text-gray-600">
-                  {getSpeedScore(winnerSpeed) >= 8 ? '45s' : getSpeedScore(winnerSpeed) >= 7 ? '1min' : '1.5min'} average generation time
+                  Speed score: {getSpeedScore(winnerSpeed).toFixed(1)}/10
                 </p>
               </div>
             </div>
@@ -430,7 +411,7 @@ export default async function ComparisonPage({ params }: PageProps) {
                   }
                 })()}
               </p>
-              <p className="text-xs text-gray-500 mt-2">Tested {currentMonthName} {seoYear} by Jack Shan.</p>
+              <p className="text-xs text-gray-500 mt-2">Updated {currentMonthName} {seoYear}.</p>
             </div>
           </div>
         </section>

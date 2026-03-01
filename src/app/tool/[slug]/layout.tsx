@@ -59,7 +59,10 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
         </div>
 
         {/* 2. THE GRID ROW - Left card, Key facts, and Verdict card in CSS Grid */}
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_420px] lg:grid-rows-[auto_1fr] lg:items-stretch mb-8">
+        <div
+          id="tool-layout-summary-grid"
+          className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_420px] lg:grid-rows-[auto_1fr] lg:items-stretch mb-8"
+        >
           {/* Left Column: Hero (Row 1, Col 1) */}
           <div className="lg:col-start-1 lg:row-start-1 flex flex-col h-full bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
             <div className="p-4 flex-1">

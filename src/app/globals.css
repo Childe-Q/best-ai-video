@@ -82,55 +82,26 @@ body {
   transform: translate(-2px, -2px);
   }
 
-/* Link Styles - No underlines, modern hover effects */
+/* Base link styles */
 a {
-  color: var(--neo-black);
-  text-decoration: none !important;
+  color: inherit;
+  text-decoration: none;
   transition: color 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
 }
 
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none !important;
-  text-decoration-line: none !important;
-  text-decoration-thickness: 0 !important;
-  text-underline-offset: 0 !important;
-}
-
-/* Link Hover Standards - Prevent black backgrounds */
-/* Standard text links: subtle color change only */
-a:not(button):not([class*="bg-"]):not([class*="border-"]):not([class*="rounded"]) {
+/* Text-link styling only (narrow scope) */
+.prose a,
+a[data-link="text"] {
   color: var(--neo-black);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, var(--neo-black) 35%, transparent);
 }
 
-a:not(button):not([class*="bg-"]):not([class*="border-"]):not([class*="rounded"]):hover {
+.prose a:hover,
+a[data-link="text"]:hover {
   color: var(--neo-gray);
-  opacity: 0.85;
-  background-color: transparent !important;
-}
-
-/* Links with background: subtle opacity change only */
-a[class*="bg-"]:hover {
-  opacity: 0.9;
-  background-color: inherit !important;
-}
-
-/* Links with border (buttons): subtle border/shadow effect */
-a[class*="border-"]:hover {
-  border-color: var(--neo-gray) !important;
-  background-color: transparent !important;
-}
-
-/* Card/Button hover - prevent black backgrounds */
-button:hover,
-[class*="hover:bg-"]:hover {
-  background-color: var(--background) !important;
-}
-
-button[class*="bg-"]:hover {
-  opacity: 0.9;
-  background-color: inherit !important;
+  text-decoration-color: currentColor;
 }
 
 /* Button & Card Resets */

@@ -54,6 +54,7 @@ export function buildAlternativeTool(
     startingPrice: tool.starting_price || 'Free Trial',
     rating: tool.rating,
     affiliateLink: tool.affiliate_link || '',
+    affiliateUrl: tool.affiliate_link || undefined,
     hasFreeTrial: tool.has_free_trial,
     bestFor: [],
     whySwitch: [],
@@ -73,7 +74,7 @@ export function buildAlternativeTool(
 
   // Merge evidence if available
   if (evidence) {
-    // Best For - Show all available tags (no limit)
+    // Best For - Use evidence-backed tags only
     cardData.bestFor = (evidence.bestFor || evidence.best_for || [])
       .filter((tag: string) => isValidClaim(tag))
       .map((tag: string) => cleanClaim(tag));
@@ -82,30 +83,6 @@ export function buildAlternativeTool(
     if (cardData.bestFor.length === 0 && tool.best_for) {
       cardData.bestFor = tool.best_for.split(/[,&]/).map((s: string) => s.trim());
     }
-
-    // Why Switch (filter, clean, truncate) - take up to 2 claims for "Pick this if" + highlight
-    const validWhySwitch = (evidence.whySwitch || evidence.why_switch || [])
-      .filter((item: any) => {
-        // Check claim itself
-        if (!item.claim || !isValidClaim(item.claim)) return false;
-        // Check all facts in sources - if any fact has [NEED VERIFICATION], skip this claim
-        if (item.sources && Array.isArray(item.sources)) {
-          for (const source of item.sources) {
-            if (source.facts && Array.isArray(source.facts)) {
-              for (const fact of source.facts) {
-                if (typeof fact === 'string' && fact.includes('[NEED VERIFICATION]')) {
-                  return false;
-                }
-              }
-            }
-          }
-        }
-        return true;
-      })
-      .map((item: any) => cleanClaim(item.claim)) // Don't truncate - need full comparison sentences
-      .slice(0, 2); // Take up to 2 claims: first for "Pick this if", second for highlight
-
-    cardData.whySwitch = validWhySwitch;
 
     // Trade-off (filter, clean, truncate) - only take the strongest 1 claim
     const validTradeOffs = (evidence.tradeoffs || evidence.trade_offs || [])
@@ -183,10 +160,10 @@ export function buildAlternativeTool(
     });
     // Proof feature removed - no evidenceLinks needed
   } else {
-    // Fallback content if no evidence found (use tool data)
+    // Fallback content if no evidence found (use tool data best_for only)
     cardData.bestFor = tool.best_for?.split(/[,&]/).map((s: string) => s.trim()) || [];
-    cardData.whySwitch = (tool.pros || []).slice(0, 2).map(p => truncateText(p, 18));
-    cardData.tradeOff = tool.cons?.[0] ? truncateText(tool.cons[0], 18) : null;
+    cardData.whySwitch = [];
+    cardData.tradeOff = null;
   }
 
   // Enhance card data with copy mapper to ensure high information density
@@ -229,16 +206,11 @@ export function buildAlternativeGroups(
     })
     .filter((t): t is AlternativeTool => {
       if (!t) return false;
-      // If tool has evidence, must have valid content (no [NEED VERIFICATION])
-      // If tool has no evidence, allow fallback content (from tool.pros/cons)
+      // If tool has evidence, must have at least one bestFor tag
+      // If tool has no evidence, allow only if best_for exists
       const hasEvidence = evidenceMap.has(t.slug);
-      if (hasEvidence) {
-        // Must have at least one whySwitch claim and bestFor tags
-        return t.whySwitch.length > 0 && t.bestFor.length > 0;
-      } else {
-        // Fallback: allow if has any content (pros/cons/bestFor)
-        return t.bestFor.length > 0 || t.whySwitch.length > 0;
-      }
+      if (hasEvidence) return t.bestFor.length > 0;
+      return t.bestFor.length > 0;
     });
 
   // Cross-group deduplication: track used tools
