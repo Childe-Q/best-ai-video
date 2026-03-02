@@ -52,16 +52,21 @@ const ARCADE_INVIDEO_ALIAS_RULES: Record<string, string> = {
   'veed.io': 'veed-io',
 };
 
-const FEATURED_POOL_CANONICAL = ['invideo', 'heygen', 'fliki'];
+const FEATURED_POOL_CANONICAL = ['fliki', 'heygen', 'invideo', 'veed-io', 'zebracat', 'synthesia'];
 const FEATURED_POOL_ALIAS_TO_CANONICAL: Record<string, string> = {
   'in-video': 'invideo',
   'invideo ai': 'invideo',
   'hey-gen': 'heygen',
   'fliki ai': 'fliki',
+  veed: 'veed-io',
+  'veed.io': 'veed-io',
+  veedio: 'veed-io',
+  'zebra-cat': 'zebracat',
 };
 
 const INVIDEO_TOP_DENYLIST = new Set(['pictory']);
-const INVIDEO_TOP_PICKS_FEATURED_POOL = ['heygen', 'fliki'];
+const FEATURED_MIN_PER_PAGE = 1;
+const FEATURED_MAX_PER_PAGE = 2;
 
 const LOCAL_IMAGE_EXTENSIONS = ['webp', 'png', 'jpg', 'jpeg', 'svg'];
 
@@ -136,6 +141,11 @@ function toFeaturedCanonicalSlug(slug: string): string {
   return FEATURED_POOL_ALIAS_TO_CANONICAL[normalized] || normalized;
 }
 
+function isFeaturedSlug(slug?: string): boolean {
+  if (!slug) return false;
+  return FEATURED_POOL_CANONICAL.includes(toFeaturedCanonicalSlug(slug));
+}
+
 function uniqueDeepDiveKey(item: AlternativesDeepDive): string {
   if (item.toolSlug) return `slug:${item.toolSlug}`;
   return `name:${item.toolName.toLowerCase()}`;
@@ -153,127 +163,247 @@ function formatToolNameList(names: string[]): string {
   return `${names.slice(0, -1).join(', ')}, and ${names[names.length - 1]}`;
 }
 
-function ensureFeaturedPresenceInTopPicks({
-  baseToolSlug,
-  topCandidates,
-  toolsBySlug,
-  featuredPool = ['heygen', 'fliki'],
-  k = 4,
-  mustHave = 1,
-}: {
-  baseToolSlug: string;
-  topCandidates: AlternativesDeepDive[];
-  toolsBySlug: Map<string, Tool>;
-  featuredPool?: string[];
-  k?: number;
-  mustHave?: number;
-}): TopPickItem[] {
+function getFeaturedPreferenceOrder(baseToolSlug: string, candidates: AlternativesDeepDive[]): string[] {
   const normalizedBase = toFeaturedCanonicalSlug(baseToolSlug);
-  const normalizedFeaturedPool = featuredPool.map((slug) => toFeaturedCanonicalSlug(slug));
+  const candidateText = candidates
+    .slice(0, 6)
+    .flatMap((item) => [item.bestFor, ...item.strengths])
+    .join(' ')
+    .toLowerCase();
 
-  const candidateItems = topCandidates
-    .filter((item) => item.toolSlug !== normalizedBase)
-    .map((item) => ({
-      toolName: item.toolName,
-      toolSlug: item.toolSlug,
-      href: item.toolSlug ? `/tool/${item.toolSlug}` : item.ctaHref,
-    }));
+  let preferred = [...FEATURED_POOL_CANONICAL];
 
-  const topPicks: TopPickItem[] = [];
-  const seen = new Set<string>();
-  candidateItems.forEach((item) => {
-    if (topPicks.length >= k) return;
-    const key = uniqueTopPickKey(item);
-    if (seen.has(key)) return;
-    seen.add(key);
-    topPicks.push(item);
-  });
-
-  const countFeaturedInFirstThree = () =>
-    topPicks.slice(0, 3).filter((item) => {
-      if (!item.toolSlug) return false;
-      return normalizedFeaturedPool.includes(toFeaturedCanonicalSlug(item.toolSlug));
-    }).length;
-
-  if (normalizedBase !== 'invideo' || countFeaturedInFirstThree() >= mustHave) {
-    return topPicks.slice(0, k);
+  if (/avatar|presenter|talking|spokesperson|lip-sync/.test(candidateText)) {
+    preferred = ['heygen', 'synthesia', 'fliki', 'veed-io', 'zebracat', 'invideo'];
+  } else if (/editor|editing|timeline|trim|caption|subtitle|cut|control/.test(candidateText)) {
+    preferred = ['veed-io', 'invideo', 'fliki', 'zebracat', 'heygen', 'synthesia'];
+  } else if (/text|script|blog|tts|voiceover|narration/.test(candidateText)) {
+    preferred = ['fliki', 'invideo', 'zebracat', 'veed-io', 'heygen', 'synthesia'];
+  } else if (/repurpose|short|social|clip|viral/.test(candidateText)) {
+    preferred = ['zebracat', 'veed-io', 'fliki', 'invideo', 'heygen', 'synthesia'];
   }
 
-  for (const featuredSlug of normalizedFeaturedPool) {
-    if (featuredSlug === normalizedBase) continue;
-    const featuredTool = toolsBySlug.get(featuredSlug);
-    if (!featuredTool) continue;
-
-    const existingIndex = topPicks.findIndex((item) => item.toolSlug === featuredSlug);
-    const insertIndex = Math.min(1, topPicks.length);
-
-    if (existingIndex >= 0) {
-      const [picked] = topPicks.splice(existingIndex, 1);
-      topPicks.splice(insertIndex, 0, picked);
-    } else {
-      const injected: TopPickItem = {
-        toolName: featuredTool.name,
-        toolSlug: featuredTool.slug,
-        href: `/tool/${featuredTool.slug}`,
-      };
-      topPicks.splice(insertIndex, 0, injected);
-    }
-
-    const deduped: TopPickItem[] = [];
-    const dedupeSeen = new Set<string>();
-    topPicks.forEach((item) => {
-      const key = uniqueTopPickKey(item);
-      if (dedupeSeen.has(key)) return;
-      dedupeSeen.add(key);
-      deduped.push(item);
-    });
-
-    topPicks.splice(0, topPicks.length, ...deduped.slice(0, k));
-
-    if (countFeaturedInFirstThree() >= mustHave) {
-      break;
-    }
-  }
-
-  return topPicks.slice(0, k);
+  return preferred.filter((slug) => slug !== normalizedBase);
 }
 
-function prioritizeDeepDivesWithFeaturedPool(
-  candidates: AlternativesDeepDive[],
-  limit: number
-): AlternativesDeepDive[] {
-  if (limit <= 0) return [];
+function countFeaturedSlugs(slugs: string[], featuredSet: Set<string>): number {
+  return slugs.filter((slug) => featuredSet.has(slug)).length;
+}
 
-  const featuredSet = new Set(FEATURED_POOL_CANONICAL);
-  const featuredCandidates = candidates.filter((item) => {
-    if (!item.toolSlug) return false;
-    return featuredSet.has(toFeaturedCanonicalSlug(item.toolSlug));
-  });
+function uniqueSlugSequence(slugs: string[]): string[] {
+  const seen = new Set<string>();
+  const result: string[] = [];
+  for (const raw of slugs) {
+    const slug = normalizeSlugKey(raw);
+    if (!slug || seen.has(slug)) continue;
+    seen.add(slug);
+    result.push(slug);
+  }
+  return result;
+}
 
-  if (featuredCandidates.length === 0) {
-    return candidates.slice(0, limit);
+function capFeaturedInSlugList(slugs: string[], featuredSet: Set<string>, maxFeatured: number): string[] {
+  const result: string[] = [];
+  let featuredCount = 0;
+  for (const slug of slugs) {
+    if (featuredSet.has(slug)) {
+      if (featuredCount >= maxFeatured) continue;
+      featuredCount += 1;
+    }
+    result.push(slug);
+  }
+  return result;
+}
+
+function trimSlugListToLimit({
+  slugs,
+  limit,
+  featuredSet,
+  minFeatured,
+}: {
+  slugs: string[];
+  limit: number;
+  featuredSet: Set<string>;
+  minFeatured: number;
+}): string[] {
+  if (slugs.length <= limit) return slugs;
+
+  const result = [...slugs];
+  while (result.length > limit) {
+    const currentFeatured = countFeaturedSlugs(result, featuredSet);
+    let removeIndex = -1;
+
+    for (let i = result.length - 1; i >= 0; i -= 1) {
+      const isFeatured = featuredSet.has(result[i]);
+      if (!isFeatured || currentFeatured > minFeatured) {
+        removeIndex = i;
+        break;
+      }
+    }
+
+    if (removeIndex < 0) {
+      removeIndex = result.length - 1;
+    }
+    result.splice(removeIndex, 1);
   }
 
-  const topList: AlternativesDeepDive[] = [];
-  const seen = new Set<string>();
+  return result;
+}
 
-  featuredCandidates.slice(0, 3).forEach((item) => {
-    if (topList.length >= limit) return;
-    const key = uniqueDeepDiveKey(item);
-    if (seen.has(key)) return;
-    seen.add(key);
-    topList.push(item);
+function insertSlugAtPreferredSlot(slugs: string[], slug: string, preferredSlot: number): string[] {
+  const next = [...slugs];
+  const existingIndex = next.indexOf(slug);
+  if (existingIndex >= 0) return next;
+  const insertAt = Math.min(preferredSlot, next.length);
+  next.splice(insertAt, 0, slug);
+  return next;
+}
+
+function createFallbackFeaturedDeepDive(featuredSlug: string, toolsBySlug: Map<string, Tool>): AlternativesDeepDive | null {
+  const tool = toolsBySlug.get(featuredSlug);
+  if (!tool) return null;
+
+  const sourceUrls = uniqueStrings([
+    ...getEvidenceSources(tool.slug),
+    `/tool/${tool.slug}/pricing`,
+    `/tool/${tool.slug}/reviews`,
+  ]).slice(0, 4);
+
+  const fallbackStrengths = uniqueStrings([
+    ...(tool.highlights || []),
+    ...(tool.features || []).slice(0, 2),
+  ]).slice(0, 3);
+  const fallbackTradeoffs = uniqueStrings(tool.cons || []).slice(0, 2);
+  const image = resolveLocalDeepDiveImage(tool.slug);
+  const imageSourceUrl = pickImageSourceUrl(sourceUrls, `/tool/${tool.slug}`);
+
+  return {
+    toolName: tool.name,
+    toolSlug: tool.slug,
+    logoUrl: tool.logo_url,
+    image,
+    imageSourceUrl,
+    bestFor: cleanText(tool.best_for) || 'General AI video workflows',
+    strengths: fallbackStrengths.length > 0 ? fallbackStrengths : ['Need verification from latest docs and reviews.'],
+    tradeoffs: fallbackTradeoffs.length > 0 ? fallbackTradeoffs : ['Need verification from latest docs and reviews.'],
+    pricingStarting: cleanText(tool.starting_price) || 'Need verification',
+    ctaHref: tool.affiliate_link || `/tool/${tool.slug}`,
+    ctaLabel: 'Try now',
+    sourceUrls: sourceUrls.length > 0 ? sourceUrls : [`/tool/${tool.slug}/pricing`],
+  };
+}
+
+function ensureFeaturedCountForPage({
+  baseSlug,
+  topPickSlugs,
+  deepDiveSlugs,
+  allToolIndexOrAllToolsList,
+  featuredPool,
+  preferenceOrderFn,
+  targetFeaturedMax = 2,
+}: {
+  baseSlug: string;
+  topPickSlugs: string[];
+  deepDiveSlugs: string[];
+  allToolIndexOrAllToolsList: Map<string, Tool> | Tool[];
+  featuredPool: string[];
+  preferenceOrderFn: (baseSlug: string) => string[];
+  targetFeaturedMax?: number;
+}): { topPickSlugs: string[]; deepDiveSlugs: string[]; injectedDeepDiveItems: AlternativesDeepDive[] } {
+  const toolIndex = Array.isArray(allToolIndexOrAllToolsList)
+    ? new Map(allToolIndexOrAllToolsList.map((tool) => [tool.slug, tool]))
+    : allToolIndexOrAllToolsList;
+  const normalizedBase = toFeaturedCanonicalSlug(baseSlug);
+
+  const availableFeatured = uniqueSlugSequence(
+    featuredPool
+      .map((slug) => toFeaturedCanonicalSlug(slug))
+      .filter((slug) => slug !== normalizedBase && toolIndex.has(slug))
+  );
+  const targetFeaturedMin = Math.min(targetFeaturedMax, availableFeatured.length);
+
+  const preferredFeaturedOrder = uniqueSlugSequence([
+    ...preferenceOrderFn(baseSlug).map((slug) => toFeaturedCanonicalSlug(slug)),
+    ...availableFeatured,
+  ]).filter((slug) => availableFeatured.includes(slug));
+  const featuredSet = new Set(availableFeatured);
+  const preferredSlots = [2, 4];
+
+  const topLimit = Math.max(1, topPickSlugs.length);
+  let nextTopPickSlugs = uniqueSlugSequence(topPickSlugs).filter((slug) => slug !== normalizedBase);
+  nextTopPickSlugs = capFeaturedInSlugList(nextTopPickSlugs, featuredSet, targetFeaturedMax);
+
+  if (targetFeaturedMin > 0) {
+    let slotCursor = 0;
+    for (const featuredSlug of preferredFeaturedOrder) {
+      if (countFeaturedSlugs(nextTopPickSlugs, featuredSet) >= targetFeaturedMin) break;
+      if (nextTopPickSlugs.includes(featuredSlug)) continue;
+      const preferredSlot = preferredSlots[Math.min(slotCursor, preferredSlots.length - 1)];
+      nextTopPickSlugs = insertSlugAtPreferredSlot(nextTopPickSlugs, featuredSlug, preferredSlot);
+      slotCursor += 1;
+    }
+  }
+
+  nextTopPickSlugs = trimSlugListToLimit({
+    slugs: capFeaturedInSlugList(nextTopPickSlugs, featuredSet, targetFeaturedMax),
+    limit: topLimit,
+    featuredSet,
+    minFeatured: targetFeaturedMin,
   });
 
-  candidates.forEach((item) => {
-    if (topList.length >= limit) return;
-    const key = uniqueDeepDiveKey(item);
-    if (seen.has(key)) return;
-    seen.add(key);
-    topList.push(item);
+  const deepLimit = Math.max(1, deepDiveSlugs.length);
+  const originalDeepDiveSet = new Set(uniqueSlugSequence(deepDiveSlugs));
+  let nextDeepDiveSlugs = uniqueSlugSequence(deepDiveSlugs).filter((slug) => slug !== normalizedBase);
+  nextDeepDiveSlugs = capFeaturedInSlugList(nextDeepDiveSlugs, featuredSet, targetFeaturedMax);
+
+  const injectedDeepDiveItems: AlternativesDeepDive[] = [];
+  const injectedSeen = new Set<string>();
+
+  const ensureInDeepDives = (featuredSlug: string, slotCursor: number): number => {
+    if (countFeaturedSlugs(nextDeepDiveSlugs, featuredSet) >= targetFeaturedMin) return slotCursor;
+    if (!nextDeepDiveSlugs.includes(featuredSlug)) {
+      const preferredSlot = preferredSlots[Math.min(slotCursor, preferredSlots.length - 1)];
+      nextDeepDiveSlugs = insertSlugAtPreferredSlot(nextDeepDiveSlugs, featuredSlug, preferredSlot);
+      if (!originalDeepDiveSet.has(featuredSlug) && !injectedSeen.has(featuredSlug)) {
+        const fallback = createFallbackFeaturedDeepDive(featuredSlug, toolIndex);
+        if (fallback) {
+          injectedDeepDiveItems.push(fallback);
+          injectedSeen.add(featuredSlug);
+        }
+      }
+      return slotCursor + 1;
+    }
+    return slotCursor;
+  };
+
+  if (targetFeaturedMin > 0) {
+    let deepSlotCursor = 0;
+    const topFeaturedPriority = nextTopPickSlugs
+      .filter((slug) => featuredSet.has(slug))
+      .slice(0, targetFeaturedMax);
+
+    for (const featuredSlug of topFeaturedPriority) {
+      deepSlotCursor = ensureInDeepDives(featuredSlug, deepSlotCursor);
+    }
+
+    for (const featuredSlug of preferredFeaturedOrder) {
+      if (countFeaturedSlugs(nextDeepDiveSlugs, featuredSet) >= targetFeaturedMin) break;
+      deepSlotCursor = ensureInDeepDives(featuredSlug, deepSlotCursor);
+    }
+  }
+
+  nextDeepDiveSlugs = trimSlugListToLimit({
+    slugs: capFeaturedInSlugList(nextDeepDiveSlugs, featuredSet, targetFeaturedMax),
+    limit: deepLimit,
+    featuredSet,
+    minFeatured: targetFeaturedMin,
   });
 
-  return topList;
+  return {
+    topPickSlugs: nextTopPickSlugs,
+    deepDiveSlugs: nextDeepDiveSlugs,
+    injectedDeepDiveItems,
+  };
 }
 
 function getArcadeInVideoIntersection(): ArcadeIntersectionResult {
@@ -702,19 +832,69 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
     ? candidateDeepDives.filter((item) => !item.toolSlug || !INVIDEO_TOP_DENYLIST.has(item.toolSlug))
     : candidateDeepDives;
   const toolsBySlug = new Map(getAllTools().map((item) => [item.slug, item]));
-  const topPicks = ensureFeaturedPresenceInTopPicks({
-    baseToolSlug: slug,
-    topCandidates: topCandidateDeepDives,
-    toolsBySlug,
-    featuredPool: INVIDEO_TOP_PICKS_FEATURED_POOL,
-    k: 5,
-    mustHave: 1,
-  });
-  const baseLimit = Math.min(6, topCandidateDeepDives.length);
-  const deepDives = prioritizeDeepDivesWithFeaturedPool(topCandidateDeepDives, baseLimit);
-  const topDeepDiveKeys = new Set(deepDives.map((item) => uniqueDeepDiveKey(item)));
+  const topPicksLimit = 5;
+  const baseTopPickSlugs = uniqueSlugSequence(
+    topCandidateDeepDives
+      .map((item) => item.toolSlug || '')
+      .filter((toolSlug) => toolSlug && toolSlug !== slug)
+  ).slice(0, topPicksLimit);
+  const baseLimit = Math.min(6, Math.max(topCandidateDeepDives.length, topPicksLimit));
+  const baseDeepDiveSlugs = uniqueSlugSequence(
+    topCandidateDeepDives
+      .map((item) => item.toolSlug || '')
+      .filter((toolSlug) => Boolean(toolSlug))
+  ).slice(0, baseLimit);
 
-  const remainingCandidateDeepDives = topCandidateDeepDives.filter((item) => !topDeepDiveKeys.has(uniqueDeepDiveKey(item)));
+  const featuredAdjusted = ensureFeaturedCountForPage({
+    baseSlug: slug,
+    topPickSlugs: baseTopPickSlugs,
+    deepDiveSlugs: baseDeepDiveSlugs,
+    allToolIndexOrAllToolsList: toolsBySlug,
+    featuredPool: FEATURED_POOL_CANONICAL,
+    preferenceOrderFn: (currentBaseSlug) => getFeaturedPreferenceOrder(currentBaseSlug, topCandidateDeepDives),
+    targetFeaturedMax: FEATURED_MAX_PER_PAGE,
+  });
+
+  const deepDiveBySlug = new Map(allDeepDives.map((item) => [item.toolSlug || '', item]));
+  featuredAdjusted.injectedDeepDiveItems.forEach((item) => {
+    if (!item.toolSlug) return;
+    deepDiveBySlug.set(item.toolSlug, item);
+  });
+
+  const topPicks: TopPickItem[] = featuredAdjusted.topPickSlugs
+    .map((featuredSlug) => {
+      const deepDive = deepDiveBySlug.get(featuredSlug);
+      const toolItem = toolsBySlug.get(featuredSlug);
+      if (!deepDive && !toolItem) return null;
+      return {
+        toolName: deepDive?.toolName || toolItem?.name || featuredSlug,
+        toolSlug: featuredSlug,
+        href: `/tool/${featuredSlug}`,
+      };
+    })
+    .filter((item): item is TopPickItem => Boolean(item))
+    .slice(0, topPicksLimit);
+
+  const topOrderedDeepDives = featuredAdjusted.deepDiveSlugs
+    .map((toolSlug) => deepDiveBySlug.get(toolSlug))
+    .filter((item): item is AlternativesDeepDive => Boolean(item));
+  const topOrderedKeys = new Set(topOrderedDeepDives.map((item) => uniqueDeepDiveKey(item)));
+
+  const fillerDeepDives: AlternativesDeepDive[] = [];
+  const fillerLimit = Math.max(0, baseLimit - topOrderedDeepDives.length);
+  let featuredInDeepDiveCount = topOrderedDeepDives.filter((item) => isFeaturedSlug(item.toolSlug)).length;
+  for (const item of topCandidateDeepDives) {
+    if (fillerDeepDives.length >= fillerLimit) break;
+    if (topOrderedKeys.has(uniqueDeepDiveKey(item))) continue;
+    if (item.toolSlug === slug) continue;
+    if (isFeaturedSlug(item.toolSlug) && featuredInDeepDiveCount >= FEATURED_MAX_PER_PAGE) continue;
+    if (isFeaturedSlug(item.toolSlug)) featuredInDeepDiveCount += 1;
+    fillerDeepDives.push(item);
+  }
+  const finalDeepDives = [...topOrderedDeepDives, ...fillerDeepDives].slice(0, baseLimit);
+  const finalDeepDiveKeys = new Set(finalDeepDives.map((item) => uniqueDeepDiveKey(item)));
+
+  const remainingCandidateDeepDives = topCandidateDeepDives.filter((item) => !finalDeepDiveKeys.has(uniqueDeepDiveKey(item)));
   const nonIntersectionDeepDives = arcadeIntersection
     ? allDeepDives.filter((item) => !item.toolSlug || !arcadeIntersection.keepSlugs.has(item.toolSlug))
     : [];
@@ -723,12 +903,6 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
   )
     .map((key) => [...remainingCandidateDeepDives, ...deniedTopCandidates, ...nonIntersectionDeepDives].find((item) => uniqueDeepDiveKey(item) === key))
     .filter((item): item is AlternativesDeepDive => Boolean(item));
-  const deepDiveBySlug = new Map(allDeepDives.map((item) => [item.toolSlug || '', item]));
-  const topOrderedDeepDives = topPicks
-    .map((item) => (item.toolSlug ? deepDiveBySlug.get(item.toolSlug) : undefined))
-    .filter((item): item is AlternativesDeepDive => Boolean(item));
-  const finalDeepDives = topOrderedDeepDives.length > 0 ? topOrderedDeepDives : deepDives;
-  const finalDeepDiveKeys = new Set(finalDeepDives.map((item) => uniqueDeepDiveKey(item)));
   const finalMoreAlternatives = moreAlternatives.filter((item) => !finalDeepDiveKeys.has(uniqueDeepDiveKey(item)));
 
   const cardsBySlug = new Map(uniqueCards.map((card) => [card.slug, card]));
@@ -760,7 +934,7 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
   const heroConclusion = heroToolNames.length > 0
     ? `Top options in this guide include ${formatToolNameList(heroToolNames)}, compared for cost control, output quality, and workflow speed.`
     : `Use this guide to evaluate ${tool.name} alternatives by cost control, output quality, and workflow speed.`;
-  const topPicksLimit = Math.min(6, finalDeepDives.length);
+  const finalTopPicksLimit = Math.min(6, finalDeepDives.length);
 
   return {
     pageKind: 'tool',
@@ -778,7 +952,7 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
     deepDives: finalDeepDives,
     topPicks,
     moreAlternatives: finalMoreAlternatives,
-    topPicksLimit,
+    topPicksLimit: finalTopPicksLimit,
     atAGlanceRows: finalDeepDives.map((item) => ({
       toolName: item.toolName,
       toolSlug: item.toolSlug,
