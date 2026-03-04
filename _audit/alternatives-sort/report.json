@@ -1,0 +1,1416 @@
+[
+  {
+    "slug": "invideo",
+    "baseIntent": "text_to_video",
+    "preferenceLabel": "avatar",
+    "topPicks": [
+      "pictory",
+      "runway",
+      "sora",
+      "synthesia",
+      "veed-io"
+    ],
+    "deepDives": [
+      "pictory",
+      "runway",
+      "sora",
+      "synthesia",
+      "veed-io"
+    ],
+    "rawCandidateSlugs": [
+      "pictory",
+      "veed-io",
+      "runway",
+      "sora",
+      "synthesia"
+    ],
+    "intentGatedSlugs": [
+      "pictory",
+      "runway",
+      "sora",
+      "synthesia",
+      "veed-io"
+    ],
+    "diversifiedCandidateSlugs": [
+      "pictory",
+      "runway",
+      "sora",
+      "synthesia",
+      "veed-io"
+    ],
+    "featuredPreferenceOrder": [
+      "heygen",
+      "synthesia",
+      "fliki",
+      "veed-io",
+      "zebracat"
+    ],
+    "featuredAdjustedTopPicks": [
+      "pictory",
+      "runway",
+      "sora",
+      "synthesia",
+      "veed-io"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": false,
+      "capFeaturedTrimmed": false,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": 0,
+      "pictoryRankInDiversified": 0,
+      "pictoryRankInFinal": 0
+    }
+  },
+  {
+    "slug": "heygen",
+    "baseIntent": "avatar",
+    "preferenceLabel": "avatar",
+    "topPicks": [
+      "pictory",
+      "synthesia",
+      "deepbrain-ai",
+      "colossyan",
+      "d-id"
+    ],
+    "deepDives": [
+      "pictory",
+      "synthesia",
+      "deepbrain-ai",
+      "colossyan",
+      "d-id",
+      "synthesys"
+    ],
+    "rawCandidateSlugs": [
+      "pictory",
+      "synthesia",
+      "descript",
+      "deepbrain-ai",
+      "colossyan",
+      "synthesys",
+      "d-id",
+      "runway",
+      "sora"
+    ],
+    "intentGatedSlugs": [
+      "pictory",
+      "synthesia",
+      "deepbrain-ai",
+      "colossyan",
+      "synthesys",
+      "d-id",
+      "runway",
+      "sora",
+      "descript"
+    ],
+    "diversifiedCandidateSlugs": [
+      "pictory",
+      "synthesia",
+      "deepbrain-ai",
+      "colossyan",
+      "d-id",
+      "synthesys"
+    ],
+    "featuredPreferenceOrder": [
+      "synthesia",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "invideo"
+    ],
+    "featuredAdjustedTopPicks": [
+      "pictory",
+      "synthesia",
+      "deepbrain-ai",
+      "colossyan",
+      "d-id"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": false,
+      "capFeaturedTrimmed": false,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": 0,
+      "pictoryRankInDiversified": 0,
+      "pictoryRankInFinal": 0
+    }
+  },
+  {
+    "slug": "fliki",
+    "baseIntent": "text_to_video",
+    "preferenceLabel": "general",
+    "topPicks": [
+      "lumen5",
+      "pictory",
+      "invideo",
+      "runway",
+      "sora"
+    ],
+    "deepDives": [
+      "lumen5",
+      "pictory",
+      "invideo",
+      "runway",
+      "sora",
+      "steve-ai"
+    ],
+    "rawCandidateSlugs": [
+      "pictory",
+      "lumen5",
+      "descript",
+      "opus-clip",
+      "runway",
+      "sora",
+      "veed-io",
+      "steve-ai",
+      "invideo"
+    ],
+    "intentGatedSlugs": [
+      "pictory",
+      "lumen5",
+      "runway",
+      "sora",
+      "steve-ai",
+      "invideo",
+      "opus-clip",
+      "descript",
+      "veed-io"
+    ],
+    "diversifiedCandidateSlugs": [
+      "lumen5",
+      "pictory",
+      "runway",
+      "sora",
+      "steve-ai",
+      "opus-clip"
+    ],
+    "featuredPreferenceOrder": [
+      "heygen",
+      "invideo",
+      "veed-io",
+      "zebracat",
+      "synthesia"
+    ],
+    "featuredAdjustedTopPicks": [
+      "lumen5",
+      "pictory",
+      "invideo",
+      "runway",
+      "sora"
+    ],
+    "injectedDeepDiveSlugs": [
+      "invideo"
+    ],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": true,
+      "capFeaturedTrimmed": false,
+      "fallbackTriggered": true,
+      "pictoryRankInGated": 0,
+      "pictoryRankInDiversified": 1,
+      "pictoryRankInFinal": 1
+    }
+  },
+  {
+    "slug": "veed-io",
+    "baseIntent": "editor",
+    "preferenceLabel": "general",
+    "topPicks": [
+      "pictory",
+      "descript",
+      "opus-clip",
+      "flexclip",
+      "lumen5"
+    ],
+    "deepDives": [
+      "pictory",
+      "descript",
+      "opus-clip",
+      "flexclip",
+      "lumen5",
+      "steve-ai"
+    ],
+    "rawCandidateSlugs": [
+      "pictory",
+      "flexclip",
+      "descript",
+      "lumen5",
+      "opus-clip",
+      "steve-ai",
+      "d-id"
+    ],
+    "intentGatedSlugs": [
+      "pictory",
+      "flexclip",
+      "descript",
+      "lumen5",
+      "steve-ai",
+      "opus-clip",
+      "d-id"
+    ],
+    "diversifiedCandidateSlugs": [
+      "pictory",
+      "descript",
+      "flexclip",
+      "opus-clip",
+      "lumen5",
+      "steve-ai"
+    ],
+    "featuredPreferenceOrder": [
+      "fliki",
+      "heygen",
+      "invideo",
+      "zebracat",
+      "synthesia"
+    ],
+    "featuredAdjustedTopPicks": [
+      "pictory",
+      "descript",
+      "flexclip",
+      "opus-clip",
+      "lumen5"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": false,
+      "capFeaturedTrimmed": false,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": 0,
+      "pictoryRankInDiversified": 0,
+      "pictoryRankInFinal": 0
+    }
+  },
+  {
+    "slug": "zebracat",
+    "baseIntent": "text_to_video",
+    "preferenceLabel": "general",
+    "topPicks": [
+      "lumen5",
+      "pictory",
+      "fliki",
+      "runway",
+      "sora"
+    ],
+    "deepDives": [
+      "lumen5",
+      "pictory",
+      "runway",
+      "sora",
+      "steve-ai",
+      "fliki"
+    ],
+    "rawCandidateSlugs": [
+      "pictory",
+      "descript",
+      "lumen5",
+      "opus-clip",
+      "runway",
+      "sora",
+      "veed-io",
+      "steve-ai",
+      "flexclip",
+      "fliki"
+    ],
+    "intentGatedSlugs": [
+      "pictory",
+      "lumen5",
+      "runway",
+      "sora",
+      "steve-ai",
+      "flexclip",
+      "fliki",
+      "opus-clip",
+      "descript",
+      "veed-io"
+    ],
+    "diversifiedCandidateSlugs": [
+      "lumen5",
+      "pictory",
+      "runway",
+      "sora",
+      "steve-ai",
+      "fliki"
+    ],
+    "featuredPreferenceOrder": [
+      "fliki",
+      "heygen",
+      "invideo",
+      "veed-io",
+      "synthesia"
+    ],
+    "featuredAdjustedTopPicks": [
+      "lumen5",
+      "pictory",
+      "fliki",
+      "runway",
+      "sora"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": true,
+      "capFeaturedTrimmed": false,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": 0,
+      "pictoryRankInDiversified": 1,
+      "pictoryRankInFinal": 1
+    }
+  },
+  {
+    "slug": "synthesia",
+    "baseIntent": "avatar",
+    "preferenceLabel": "general",
+    "topPicks": [
+      "heygen",
+      "pictory",
+      "deepbrain-ai",
+      "colossyan",
+      "opus-clip"
+    ],
+    "deepDives": [
+      "heygen",
+      "pictory",
+      "deepbrain-ai",
+      "opus-clip",
+      "colossyan",
+      "synthesys"
+    ],
+    "rawCandidateSlugs": [
+      "pictory",
+      "heygen",
+      "descript",
+      "deepbrain-ai",
+      "colossyan",
+      "synthesys",
+      "opus-clip",
+      "runway",
+      "sora",
+      "d-id"
+    ],
+    "intentGatedSlugs": [
+      "pictory",
+      "heygen",
+      "deepbrain-ai",
+      "colossyan",
+      "synthesys",
+      "d-id",
+      "opus-clip",
+      "runway",
+      "sora",
+      "descript"
+    ],
+    "diversifiedCandidateSlugs": [
+      "heygen",
+      "pictory",
+      "deepbrain-ai",
+      "colossyan",
+      "opus-clip",
+      "synthesys"
+    ],
+    "featuredPreferenceOrder": [
+      "fliki",
+      "heygen",
+      "invideo",
+      "veed-io",
+      "zebracat"
+    ],
+    "featuredAdjustedTopPicks": [
+      "heygen",
+      "pictory",
+      "deepbrain-ai",
+      "colossyan",
+      "opus-clip"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": false,
+      "capFeaturedTrimmed": false,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": 0,
+      "pictoryRankInDiversified": 1,
+      "pictoryRankInFinal": 1
+    }
+  },
+  {
+    "slug": "elai-io",
+    "baseIntent": "avatar",
+    "preferenceLabel": "avatar",
+    "topPicks": [
+      "heygen",
+      "pictory",
+      "synthesia",
+      "deepbrain-ai",
+      "colossyan"
+    ],
+    "deepDives": [
+      "heygen",
+      "pictory",
+      "synthesia",
+      "deepbrain-ai",
+      "colossyan",
+      "synthesys"
+    ],
+    "rawCandidateSlugs": [
+      "pictory",
+      "heygen",
+      "synthesia",
+      "deepbrain-ai",
+      "colossyan",
+      "synthesys",
+      "d-id"
+    ],
+    "intentGatedSlugs": [
+      "pictory",
+      "heygen",
+      "synthesia",
+      "deepbrain-ai",
+      "colossyan",
+      "synthesys",
+      "d-id"
+    ],
+    "diversifiedCandidateSlugs": [
+      "heygen",
+      "pictory",
+      "synthesia",
+      "deepbrain-ai",
+      "colossyan",
+      "synthesys"
+    ],
+    "featuredPreferenceOrder": [
+      "heygen",
+      "synthesia",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "invideo"
+    ],
+    "featuredAdjustedTopPicks": [
+      "heygen",
+      "pictory",
+      "synthesia",
+      "deepbrain-ai",
+      "colossyan"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": false,
+      "capFeaturedTrimmed": false,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": 0,
+      "pictoryRankInDiversified": 1,
+      "pictoryRankInFinal": 1
+    }
+  },
+  {
+    "slug": "pika",
+    "baseIntent": "text_to_video",
+    "preferenceLabel": "general",
+    "topPicks": [
+      "flexclip",
+      "pictory",
+      "fliki",
+      "runway",
+      "steve-ai"
+    ],
+    "deepDives": [
+      "flexclip",
+      "pictory",
+      "runway",
+      "steve-ai",
+      "sora",
+      "fliki"
+    ],
+    "rawCandidateSlugs": [
+      "pictory",
+      "flexclip",
+      "descript",
+      "steve-ai",
+      "opus-clip",
+      "runway",
+      "sora",
+      "d-id",
+      "fliki",
+      "veed-io"
+    ],
+    "intentGatedSlugs": [
+      "pictory",
+      "flexclip",
+      "steve-ai",
+      "runway",
+      "sora",
+      "fliki",
+      "opus-clip",
+      "d-id",
+      "descript",
+      "veed-io"
+    ],
+    "diversifiedCandidateSlugs": [
+      "flexclip",
+      "pictory",
+      "runway",
+      "steve-ai",
+      "sora",
+      "fliki"
+    ],
+    "featuredPreferenceOrder": [
+      "fliki",
+      "heygen",
+      "invideo",
+      "veed-io",
+      "zebracat",
+      "synthesia"
+    ],
+    "featuredAdjustedTopPicks": [
+      "flexclip",
+      "pictory",
+      "fliki",
+      "runway",
+      "steve-ai"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": true,
+      "capFeaturedTrimmed": false,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": 0,
+      "pictoryRankInDiversified": 1,
+      "pictoryRankInFinal": 1
+    }
+  },
+  {
+    "slug": "descript",
+    "baseIntent": "editor",
+    "preferenceLabel": "avatar",
+    "topPicks": [
+      "veed-io",
+      "invideo",
+      "sora",
+      "runway"
+    ],
+    "deepDives": [
+      "veed-io",
+      "invideo",
+      "sora",
+      "runway",
+      "pictory"
+    ],
+    "rawCandidateSlugs": [
+      "invideo",
+      "heygen",
+      "veed-io",
+      "synthesia",
+      "runway",
+      "sora",
+      "pictory",
+      "colossyan"
+    ],
+    "intentGatedSlugs": [
+      "invideo",
+      "veed-io",
+      "sora",
+      "pictory",
+      "runway",
+      "heygen",
+      "synthesia",
+      "colossyan"
+    ],
+    "diversifiedCandidateSlugs": [
+      "veed-io",
+      "invideo",
+      "sora",
+      "runway",
+      "heygen",
+      "pictory"
+    ],
+    "featuredPreferenceOrder": [
+      "heygen",
+      "synthesia",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "invideo"
+    ],
+    "featuredAdjustedTopPicks": [
+      "veed-io",
+      "invideo",
+      "sora",
+      "runway"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": false,
+      "capFeaturedTrimmed": true,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": 3,
+      "pictoryRankInDiversified": 5,
+      "pictoryRankInFinal": -1
+    }
+  },
+  {
+    "slug": "opus-clip",
+    "baseIntent": "repurpose",
+    "preferenceLabel": "avatar",
+    "topPicks": [
+      "zebracat",
+      "invideo"
+    ],
+    "deepDives": [
+      "zebracat",
+      "invideo"
+    ],
+    "rawCandidateSlugs": [
+      "invideo",
+      "heygen",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "synthesia",
+      "pika",
+      "runway"
+    ],
+    "intentGatedSlugs": [
+      "invideo",
+      "zebracat",
+      "heygen",
+      "fliki",
+      "veed-io",
+      "synthesia",
+      "pika",
+      "runway"
+    ],
+    "diversifiedCandidateSlugs": [
+      "zebracat",
+      "invideo",
+      "heygen",
+      "veed-io",
+      "fliki",
+      "synthesia"
+    ],
+    "featuredPreferenceOrder": [
+      "heygen",
+      "synthesia",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "invideo"
+    ],
+    "featuredAdjustedTopPicks": [
+      "zebracat",
+      "invideo"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": false,
+      "capFeaturedTrimmed": true,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": -1,
+      "pictoryRankInDiversified": -1,
+      "pictoryRankInFinal": -1
+    }
+  },
+  {
+    "slug": "runway",
+    "baseIntent": "cinematic",
+    "preferenceLabel": "avatar",
+    "topPicks": [
+      "sora",
+      "zebracat",
+      "descript",
+      "invideo"
+    ],
+    "deepDives": [
+      "sora",
+      "zebracat",
+      "descript",
+      "invideo"
+    ],
+    "rawCandidateSlugs": [
+      "invideo",
+      "heygen",
+      "fliki",
+      "zebracat",
+      "synthesia",
+      "pika",
+      "descript",
+      "sora"
+    ],
+    "intentGatedSlugs": [
+      "invideo",
+      "sora",
+      "fliki",
+      "zebracat",
+      "pika",
+      "descript",
+      "heygen",
+      "synthesia"
+    ],
+    "diversifiedCandidateSlugs": [
+      "sora",
+      "invideo",
+      "zebracat",
+      "descript",
+      "fliki",
+      "heygen"
+    ],
+    "featuredPreferenceOrder": [
+      "heygen",
+      "synthesia",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "invideo"
+    ],
+    "featuredAdjustedTopPicks": [
+      "sora",
+      "invideo",
+      "zebracat",
+      "descript"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": false,
+      "capFeaturedTrimmed": true,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": -1,
+      "pictoryRankInDiversified": -1,
+      "pictoryRankInFinal": -1
+    }
+  },
+  {
+    "slug": "sora",
+    "baseIntent": "text_to_video",
+    "preferenceLabel": "avatar",
+    "topPicks": [
+      "invideo",
+      "fliki",
+      "pika",
+      "runway"
+    ],
+    "deepDives": [
+      "invideo",
+      "fliki",
+      "pika",
+      "runway"
+    ],
+    "rawCandidateSlugs": [
+      "invideo",
+      "heygen",
+      "fliki",
+      "zebracat",
+      "synthesia",
+      "pika",
+      "descript",
+      "runway"
+    ],
+    "intentGatedSlugs": [
+      "invideo",
+      "fliki",
+      "zebracat",
+      "pika",
+      "runway",
+      "heygen",
+      "synthesia",
+      "descript"
+    ],
+    "diversifiedCandidateSlugs": [
+      "invideo",
+      "fliki",
+      "zebracat",
+      "pika",
+      "runway",
+      "heygen"
+    ],
+    "featuredPreferenceOrder": [
+      "heygen",
+      "synthesia",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "invideo"
+    ],
+    "featuredAdjustedTopPicks": [
+      "invideo",
+      "fliki",
+      "pika",
+      "runway"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": false,
+      "capFeaturedTrimmed": true,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": -1,
+      "pictoryRankInDiversified": -1,
+      "pictoryRankInFinal": -1
+    }
+  },
+  {
+    "slug": "pictory",
+    "baseIntent": "editor",
+    "preferenceLabel": "avatar",
+    "topPicks": [
+      "veed-io",
+      "invideo",
+      "descript"
+    ],
+    "deepDives": [
+      "veed-io",
+      "invideo",
+      "descript",
+      "opus-clip"
+    ],
+    "rawCandidateSlugs": [
+      "invideo",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "synthesia",
+      "pika",
+      "descript",
+      "opus-clip"
+    ],
+    "intentGatedSlugs": [
+      "invideo",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "descript",
+      "pika",
+      "opus-clip",
+      "synthesia"
+    ],
+    "diversifiedCandidateSlugs": [
+      "veed-io",
+      "invideo",
+      "fliki",
+      "zebracat",
+      "descript",
+      "opus-clip"
+    ],
+    "featuredPreferenceOrder": [
+      "heygen",
+      "synthesia",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "invideo"
+    ],
+    "featuredAdjustedTopPicks": [
+      "veed-io",
+      "invideo",
+      "descript"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": false,
+      "capFeaturedTrimmed": true,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": -1,
+      "pictoryRankInDiversified": -1,
+      "pictoryRankInFinal": -1
+    }
+  },
+  {
+    "slug": "colossyan",
+    "baseIntent": "avatar",
+    "preferenceLabel": "avatar",
+    "topPicks": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "d-id",
+      "pika"
+    ],
+    "deepDives": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "d-id",
+      "pika",
+      "runway"
+    ],
+    "rawCandidateSlugs": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "pika",
+      "descript",
+      "runway",
+      "sora",
+      "d-id"
+    ],
+    "intentGatedSlugs": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "d-id",
+      "pika",
+      "runway",
+      "sora",
+      "descript"
+    ],
+    "diversifiedCandidateSlugs": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "d-id",
+      "pika",
+      "runway"
+    ],
+    "featuredPreferenceOrder": [
+      "heygen",
+      "synthesia",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "invideo"
+    ],
+    "featuredAdjustedTopPicks": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "d-id",
+      "pika"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": false,
+      "capFeaturedTrimmed": false,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": -1,
+      "pictoryRankInDiversified": -1,
+      "pictoryRankInFinal": -1
+    }
+  },
+  {
+    "slug": "d-id",
+    "baseIntent": "avatar",
+    "preferenceLabel": "avatar",
+    "topPicks": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "colossyan",
+      "deepbrain-ai"
+    ],
+    "deepDives": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "colossyan",
+      "deepbrain-ai"
+    ],
+    "rawCandidateSlugs": [
+      "invideo",
+      "heygen",
+      "veed-io",
+      "synthesia",
+      "elai-io",
+      "pika",
+      "colossyan",
+      "deepbrain-ai"
+    ],
+    "intentGatedSlugs": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "colossyan",
+      "deepbrain-ai",
+      "invideo",
+      "pika",
+      "veed-io"
+    ],
+    "diversifiedCandidateSlugs": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "colossyan",
+      "deepbrain-ai",
+      "invideo"
+    ],
+    "featuredPreferenceOrder": [
+      "heygen",
+      "synthesia",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "invideo"
+    ],
+    "featuredAdjustedTopPicks": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "colossyan",
+      "deepbrain-ai"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": false,
+      "capFeaturedTrimmed": true,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": -1,
+      "pictoryRankInDiversified": -1,
+      "pictoryRankInFinal": -1
+    }
+  },
+  {
+    "slug": "deepbrain-ai",
+    "baseIntent": "avatar",
+    "preferenceLabel": "avatar",
+    "topPicks": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "colossyan"
+    ],
+    "deepDives": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "colossyan",
+      "runway"
+    ],
+    "rawCandidateSlugs": [
+      "heygen",
+      "zebracat",
+      "synthesia",
+      "elai-io",
+      "descript",
+      "runway",
+      "sora",
+      "colossyan"
+    ],
+    "intentGatedSlugs": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "colossyan",
+      "zebracat",
+      "runway",
+      "sora",
+      "descript"
+    ],
+    "diversifiedCandidateSlugs": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "zebracat",
+      "colossyan",
+      "runway"
+    ],
+    "featuredPreferenceOrder": [
+      "heygen",
+      "synthesia",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "invideo"
+    ],
+    "featuredAdjustedTopPicks": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "colossyan"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": false,
+      "capFeaturedTrimmed": true,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": -1,
+      "pictoryRankInDiversified": -1,
+      "pictoryRankInFinal": -1
+    }
+  },
+  {
+    "slug": "synthesys",
+    "baseIntent": "avatar",
+    "preferenceLabel": "avatar",
+    "topPicks": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "colossyan"
+    ],
+    "deepDives": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "colossyan",
+      "runway"
+    ],
+    "rawCandidateSlugs": [
+      "heygen",
+      "zebracat",
+      "synthesia",
+      "elai-io",
+      "descript",
+      "runway",
+      "sora",
+      "colossyan"
+    ],
+    "intentGatedSlugs": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "colossyan",
+      "zebracat",
+      "runway",
+      "sora",
+      "descript"
+    ],
+    "diversifiedCandidateSlugs": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "zebracat",
+      "colossyan",
+      "runway"
+    ],
+    "featuredPreferenceOrder": [
+      "heygen",
+      "synthesia",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "invideo"
+    ],
+    "featuredAdjustedTopPicks": [
+      "heygen",
+      "synthesia",
+      "elai-io",
+      "colossyan"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": false,
+      "capFeaturedTrimmed": true,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": -1,
+      "pictoryRankInDiversified": -1,
+      "pictoryRankInFinal": -1
+    }
+  },
+  {
+    "slug": "flexclip",
+    "baseIntent": "editor",
+    "preferenceLabel": "avatar",
+    "topPicks": [
+      "veed-io",
+      "zebracat",
+      "descript",
+      "pika"
+    ],
+    "deepDives": [
+      "veed-io",
+      "zebracat",
+      "descript",
+      "pika",
+      "pictory"
+    ],
+    "rawCandidateSlugs": [
+      "invideo",
+      "veed-io",
+      "zebracat",
+      "synthesia",
+      "pika",
+      "descript",
+      "pictory",
+      "d-id"
+    ],
+    "intentGatedSlugs": [
+      "invideo",
+      "veed-io",
+      "zebracat",
+      "descript",
+      "pictory",
+      "pika",
+      "synthesia",
+      "d-id"
+    ],
+    "diversifiedCandidateSlugs": [
+      "veed-io",
+      "zebracat",
+      "invideo",
+      "descript",
+      "pika",
+      "pictory"
+    ],
+    "featuredPreferenceOrder": [
+      "heygen",
+      "synthesia",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "invideo"
+    ],
+    "featuredAdjustedTopPicks": [
+      "veed-io",
+      "zebracat",
+      "descript",
+      "pika"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": false,
+      "capFeaturedTrimmed": true,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": 4,
+      "pictoryRankInDiversified": 5,
+      "pictoryRankInFinal": -1
+    }
+  },
+  {
+    "slug": "lumen5",
+    "baseIntent": "text_to_video",
+    "preferenceLabel": "avatar",
+    "topPicks": [
+      "invideo",
+      "fliki",
+      "pika"
+    ],
+    "deepDives": [
+      "invideo",
+      "fliki",
+      "pika",
+      "opus-clip"
+    ],
+    "rawCandidateSlugs": [
+      "invideo",
+      "heygen",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "pika",
+      "descript",
+      "opus-clip"
+    ],
+    "intentGatedSlugs": [
+      "invideo",
+      "fliki",
+      "zebracat",
+      "pika",
+      "heygen",
+      "opus-clip",
+      "veed-io",
+      "descript"
+    ],
+    "diversifiedCandidateSlugs": [
+      "invideo",
+      "fliki",
+      "zebracat",
+      "pika",
+      "heygen",
+      "opus-clip"
+    ],
+    "featuredPreferenceOrder": [
+      "heygen",
+      "synthesia",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "invideo"
+    ],
+    "featuredAdjustedTopPicks": [
+      "invideo",
+      "fliki",
+      "pika"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": false,
+      "capFeaturedTrimmed": true,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": -1,
+      "pictoryRankInDiversified": -1,
+      "pictoryRankInFinal": -1
+    }
+  },
+  {
+    "slug": "steve-ai",
+    "baseIntent": "text_to_video",
+    "preferenceLabel": "avatar",
+    "topPicks": [
+      "invideo",
+      "fliki",
+      "pika",
+      "runway"
+    ],
+    "deepDives": [
+      "invideo",
+      "fliki",
+      "pika",
+      "runway",
+      "sora"
+    ],
+    "rawCandidateSlugs": [
+      "invideo",
+      "heygen",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "pika",
+      "runway",
+      "sora"
+    ],
+    "intentGatedSlugs": [
+      "invideo",
+      "fliki",
+      "zebracat",
+      "pika",
+      "runway",
+      "sora",
+      "heygen",
+      "veed-io"
+    ],
+    "diversifiedCandidateSlugs": [
+      "invideo",
+      "fliki",
+      "zebracat",
+      "pika",
+      "runway",
+      "sora"
+    ],
+    "featuredPreferenceOrder": [
+      "heygen",
+      "synthesia",
+      "fliki",
+      "veed-io",
+      "zebracat",
+      "invideo"
+    ],
+    "featuredAdjustedTopPicks": [
+      "invideo",
+      "fliki",
+      "pika",
+      "runway"
+    ],
+    "injectedDeepDiveSlugs": [],
+    "fillerDeepDiveSlugs": [],
+    "metrics": {
+      "ensureFeaturedTriggered": false,
+      "capFeaturedTrimmed": true,
+      "fallbackTriggered": false,
+      "pictoryRankInGated": -1,
+      "pictoryRankInDiversified": -1,
+      "pictoryRankInFinal": -1
+    }
+  }
+]

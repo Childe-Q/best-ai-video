@@ -9,6 +9,7 @@ import { alternativesEvidence, ToolAlternativeEvidence } from '@/data/evidence/a
 import { mergeCanonicalAndEvidence } from '@/lib/alternatives/mergeCanonicalAndEvidence';
 import { getEvidenceSources } from '@/lib/evidence/readEvidence';
 import { mapToolNameToSlug } from '@/lib/alternatives/mapToolNameToSlug';
+import { fillLongformFromScraped } from '@/lib/alternatives/fillLongformFromScraped';
 import { AlternativeGroup } from '@/components/alternatives/types';
 import { AlternativeGroupWithEvidence } from '@/types/alternatives';
 import {
@@ -64,9 +65,51 @@ const FEATURED_POOL_ALIAS_TO_CANONICAL: Record<string, string> = {
   'zebra-cat': 'zebracat',
 };
 
-const INVIDEO_TOP_DENYLIST = new Set(['pictory']);
 const FEATURED_MIN_PER_PAGE = 1;
 const FEATURED_MAX_PER_PAGE = 2;
+// First pass: diversify the raw candidate queue while still respecting upstream relevance order.
+const DIVERSITY_WEIGHT = 0.42;
+// Second pass: only a light re-order after featured injection, to keep injected picks natural.
+const POST_FEATURED_DIVERSITY_WEIGHT = 0.28;
+// Soft penalty reduces repeated "same top pick everywhere" behavior without banning tools.
+const POPULARITY_PENALTY_BY_SLUG: Record<string, number> = {
+  pictory: 0.1,
+  canva: 0.05,
+};
+const DIVERSITY_TOKEN_STOPWORDS = new Set([
+  'and',
+  'the',
+  'for',
+  'with',
+  'from',
+  'into',
+  'this',
+  'that',
+  'best',
+  'video',
+  'videos',
+  'tool',
+  'tools',
+  'ai',
+]);
+const INTENT_ORDER = ['avatar', 'editor', 'text_to_video', 'repurpose', 'cinematic', 'general'] as const;
+type Intent = typeof INTENT_ORDER[number];
+const INTENT_KEYWORDS: Record<Intent, string[]> = {
+  avatar: ['avatar', 'presenter', 'talking', 'spokesperson', 'lip', 'voice', 'dubbing', 'localization', 'translation'],
+  editor: ['editor', 'editing', 'timeline', 'trim', 'subtitle', 'caption', 'cut', 'post', 'compose'],
+  text_to_video: ['text', 'prompt', 'script', 'blog', 'tts', 'narration', 'text-to-video', 'storyboard'],
+  repurpose: ['repurpose', 'social', 'short', 'clip', 'viral', 'snippet', 'reel', 'youtube shorts'],
+  cinematic: ['cinematic', 'scene', 'film', 'camera', 'motion', 'shot', 'gen-3', 'gen-4', 'realism'],
+  general: [],
+};
+const INTENT_ADJACENCY: Record<Intent, Intent[]> = {
+  avatar: ['text_to_video', 'repurpose'],
+  editor: ['repurpose', 'text_to_video', 'cinematic'],
+  text_to_video: ['repurpose', 'cinematic', 'avatar'],
+  repurpose: ['editor', 'text_to_video', 'avatar'],
+  cinematic: ['text_to_video', 'editor'],
+  general: ['text_to_video', 'repurpose', 'editor', 'avatar', 'cinematic'],
+};
 
 const LOCAL_IMAGE_EXTENSIONS = ['webp', 'png', 'jpg', 'jpeg', 'svg'];
 
@@ -161,6 +204,490 @@ function formatToolNameList(names: string[]): string {
   if (names.length === 1) return names[0];
   if (names.length === 2) return `${names[0]} and ${names[1]}`;
   return `${names.slice(0, -1).join(', ')}, and ${names[names.length - 1]}`;
+}
+
+function countOverlap(a: string[], b: string[]): number {
+  const bSet = new Set(b.map((item) => item.toLowerCase()));
+  return a.filter((item) => bSet.has(item.toLowerCase())).length;
+}
+
+function stableHash(value: string): number {
+  let hash = 2166136261;
+  for (let i = 0; i < value.length; i += 1) {
+    hash ^= value.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+function tieBreakScore(baseToolSlug: string, candidateSlug: string): number {
+  // Deterministic per-page tie-break avoids cross-page identical ordering without randomness.
+  return stableHash(`${baseToolSlug}:${candidateSlug}`) / 4294967295;
+}
+
+function tokenizeForDiversity(values: string[]): string[] {
+  const rawTokens = values
+    .join(' ')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .split(/\s+/)
+    .map((token) => token.trim())
+    .filter((token) => token.length >= 3 && !DIVERSITY_TOKEN_STOPWORDS.has(token));
+
+  return uniqueStrings(rawTokens);
+}
+
+function getIntentScores(values: string[]): Map<Intent, number> {
+  const scores = new Map<Intent, number>(INTENT_ORDER.map((intent) => [intent, 0]));
+  const normalized = values.join(' ').toLowerCase();
+
+  for (const intent of INTENT_ORDER) {
+    if (intent === 'general') continue;
+    const keywords = INTENT_KEYWORDS[intent];
+    for (const keyword of keywords) {
+      if (normalized.includes(keyword)) {
+        scores.set(intent, (scores.get(intent) || 0) + 1);
+      }
+    }
+  }
+
+  return scores;
+}
+
+function getIntentProfile({
+  tool,
+  deepDive,
+  baseToolSlugForTieBreak,
+}: {
+  tool?: Tool;
+  deepDive?: AlternativesDeepDive;
+  baseToolSlugForTieBreak: string;
+}): { primary: Intent; intents: Set<Intent> } {
+  const values = [
+    tool?.best_for || '',
+    tool?.tagline || '',
+    tool?.short_description || '',
+    ...(tool?.tags || []),
+    ...(tool?.categories || []),
+    ...(tool?.features || []),
+    deepDive?.bestFor || '',
+    ...(deepDive?.strengths || []),
+    ...(deepDive?.tradeoffs || []),
+  ];
+  const scores = getIntentScores(values);
+  const maxScore = Math.max(...INTENT_ORDER.filter((intent) => intent !== 'general').map((intent) => scores.get(intent) || 0));
+
+  if (maxScore <= 0) {
+    return { primary: 'general', intents: new Set<Intent>(['general']) };
+  }
+
+  const ranked = INTENT_ORDER
+    .filter((intent) => intent !== 'general')
+    .map((intent) => ({
+      intent,
+      score: scores.get(intent) || 0,
+      tieBreak: tieBreakScore(baseToolSlugForTieBreak, `${tool?.slug || deepDive?.toolSlug || 'unknown'}:${intent}`),
+    }))
+    .filter((item) => item.score > 0)
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return b.tieBreak - a.tieBreak;
+    });
+
+  const primary = (ranked[0]?.intent || 'general') as Intent;
+  const intents = new Set<Intent>(
+    ranked
+      .filter((item) => item.score >= Math.max(1, maxScore - 1))
+      .map((item) => item.intent as Intent)
+  );
+
+  if (intents.size === 0) intents.add(primary);
+  return { primary, intents };
+}
+
+function getPrimaryIntent(baseTool: Tool): Intent {
+  return getIntentProfile({ tool: baseTool, baseToolSlugForTieBreak: baseTool.slug }).primary;
+}
+
+function buildIntentBuckets({
+  candidates,
+  baseIntent,
+  deepDiveBySlug,
+  toolsBySlug,
+  baseToolSlug,
+}: {
+  candidates: string[];
+  baseIntent: Intent;
+  deepDiveBySlug: Map<string, AlternativesDeepDive>;
+  toolsBySlug: Map<string, Tool>;
+  baseToolSlug: string;
+}): { sameIntent: string[]; adjacentIntent: string[]; other: string[] } {
+  const adjacentSet = new Set(INTENT_ADJACENCY[baseIntent] || []);
+  const sameIntent: string[] = [];
+  const adjacentIntent: string[] = [];
+  const other: string[] = [];
+
+  uniqueSlugSequence(candidates)
+    .filter((slug) => slug !== normalizeSlugKey(baseToolSlug))
+    .forEach((slug) => {
+      const deepDive = deepDiveBySlug.get(slug);
+      const tool = toolsBySlug.get(slug);
+      const profile = getIntentProfile({
+        tool,
+        deepDive,
+        baseToolSlugForTieBreak: baseToolSlug,
+      });
+
+      if (profile.intents.has(baseIntent)) {
+        sameIntent.push(slug);
+        return;
+      }
+
+      if ([...profile.intents].some((intent) => adjacentSet.has(intent))) {
+        adjacentIntent.push(slug);
+        return;
+      }
+
+      other.push(slug);
+    });
+
+  return { sameIntent, adjacentIntent, other };
+}
+
+function applyIntentGating({
+  candidates,
+  baseIntent,
+  deepDiveBySlug,
+  toolsBySlug,
+  baseToolSlug,
+}: {
+  candidates: string[];
+  baseIntent: Intent;
+  deepDiveBySlug: Map<string, AlternativesDeepDive>;
+  toolsBySlug: Map<string, Tool>;
+  baseToolSlug: string;
+}): string[] {
+  const buckets = buildIntentBuckets({
+    candidates,
+    baseIntent,
+    deepDiveBySlug,
+    toolsBySlug,
+    baseToolSlug,
+  });
+
+  const sameSet = new Set(buckets.sameIntent);
+  const adjacentSet = new Set(buckets.adjacentIntent);
+  const gated = [...buckets.sameIntent, ...buckets.adjacentIntent, ...buckets.other];
+
+  if (buckets.sameIntent.length > 0) {
+    for (let slot = 0; slot < Math.min(3, buckets.sameIntent.length); slot += 1) {
+      if (sameSet.has(gated[slot])) continue;
+      const sameIndex = gated.findIndex((slug, index) => index > slot && sameSet.has(slug));
+      if (sameIndex >= 0) {
+        const [moved] = gated.splice(sameIndex, 1);
+        gated.splice(slot, 0, moved);
+      }
+    }
+  } else if (buckets.adjacentIntent.length > 0 && !adjacentSet.has(gated[0])) {
+    const adjacentIndex = gated.findIndex((slug) => adjacentSet.has(slug));
+    if (adjacentIndex >= 0) {
+      const [moved] = gated.splice(adjacentIndex, 1);
+      gated.unshift(moved);
+    }
+  }
+
+  return gated;
+}
+
+type DiversityLandscapeStats = {
+  totalPages: number;
+  pagesByIntent: Map<Intent, number>;
+  exposureBySlug: Map<string, { appearances: number; rank1: number }>;
+  positionFrequencyByIntent: Map<Intent, Map<number, Map<string, number>>>;
+  signaturesByIntent: Map<Intent, string[][]>;
+};
+
+let cachedDiversityLandscapeStats: DiversityLandscapeStats | null = null;
+
+function getDiversityLandscapeStats(): DiversityLandscapeStats {
+  if (cachedDiversityLandscapeStats) return cachedDiversityLandscapeStats;
+
+  const tools = getAllTools();
+  const pagesByIntent = new Map<Intent, number>();
+  const exposureBySlug = new Map<string, { appearances: number; rank1: number }>();
+  const positionFrequencyByIntent = new Map<Intent, Map<number, Map<string, number>>>();
+  const signaturesByIntent = new Map<Intent, string[][]>();
+
+  for (const baseTool of tools) {
+    const baseIntent = getPrimaryIntent(baseTool);
+    pagesByIntent.set(baseIntent, (pagesByIntent.get(baseIntent) || 0) + 1);
+    if (!signaturesByIntent.has(baseIntent)) signaturesByIntent.set(baseIntent, []);
+    if (!positionFrequencyByIntent.has(baseIntent)) positionFrequencyByIntent.set(baseIntent, new Map());
+
+    const baseTags = baseTool.tags || [];
+    const baseCategories = baseTool.categories || [];
+    const candidateScores = tools
+      .filter((candidate) => candidate.slug !== baseTool.slug)
+      .map((candidate) => {
+        const profile = getIntentProfile({
+          tool: candidate,
+          baseToolSlugForTieBreak: baseTool.slug,
+        });
+        const intentScore = profile.intents.has(baseIntent)
+          ? 1
+          : ([...profile.intents].some((intent) => (INTENT_ADJACENCY[baseIntent] || []).includes(intent)) ? 0.65 : 0.2);
+        const overlapScore = (countOverlap(baseTags, candidate.tags || []) * 0.1) + (countOverlap(baseCategories, candidate.categories || []) * 0.08);
+        const score = intentScore + overlapScore + (tieBreakScore(baseTool.slug, candidate.slug) * 0.05);
+        return { slug: candidate.slug, score };
+      })
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 6)
+      .map((item) => item.slug);
+
+    signaturesByIntent.get(baseIntent)!.push(candidateScores);
+    candidateScores.forEach((slug, index) => {
+      const exposure = exposureBySlug.get(slug) || { appearances: 0, rank1: 0 };
+      exposure.appearances += 1;
+      if (index === 0) exposure.rank1 += 1;
+      exposureBySlug.set(slug, exposure);
+
+      const intentPositionMap = positionFrequencyByIntent.get(baseIntent)!;
+      if (!intentPositionMap.has(index)) intentPositionMap.set(index, new Map());
+      const positionMap = intentPositionMap.get(index)!;
+      positionMap.set(slug, (positionMap.get(slug) || 0) + 1);
+    });
+  }
+
+  cachedDiversityLandscapeStats = {
+    totalPages: tools.length,
+    pagesByIntent,
+    exposureBySlug,
+    positionFrequencyByIntent,
+    signaturesByIntent,
+  };
+  return cachedDiversityLandscapeStats;
+}
+
+function jaccardSimilarity(a: Set<string>, b: Set<string>): number {
+  if (a.size === 0 || b.size === 0) return 0;
+  let intersection = 0;
+  for (const token of a) {
+    if (b.has(token)) intersection += 1;
+  }
+  const union = a.size + b.size - intersection;
+  if (union === 0) return 0;
+  return intersection / union;
+}
+
+type DiversityCandidateProfile = {
+  slug: string;
+  baseScore: number;
+  overlapScore: number;
+  indexScore: number;
+  overlapTrace: 'tags' | 'categories' | 'missing';
+  tokens: Set<string>;
+  overexposurePenalty: number;
+  tieBreak: number;
+};
+
+function buildDiversityCandidateProfiles({
+  orderedSlugs,
+  deepDiveBySlug,
+  toolsBySlug,
+  baseToolSlug,
+  baseIntent,
+  landscapeStats,
+}: {
+  orderedSlugs: string[];
+  deepDiveBySlug: Map<string, AlternativesDeepDive>;
+  toolsBySlug: Map<string, Tool>;
+  baseToolSlug: string;
+  baseIntent: Intent;
+  landscapeStats: DiversityLandscapeStats;
+}): DiversityCandidateProfile[] {
+  const normalizedBase = normalizeSlugKey(baseToolSlug);
+  const uniqueSlugs = uniqueSlugSequence(orderedSlugs).filter((slug) => slug !== normalizedBase);
+  const denominator = Math.max(1, uniqueSlugs.length - 1);
+  const intentPageCount = Math.max(1, landscapeStats.pagesByIntent.get(baseIntent) || landscapeStats.totalPages);
+  const baseTool = toolsBySlug.get(normalizedBase);
+  const baseTags = (baseTool?.tags || []).map((tag) => normalizeToolKey(tag));
+  const baseCategories = (baseTool?.categories || []).map((category) => normalizeToolKey(category));
+  const baseTagSet = new Set(baseTags);
+  const baseCategorySet = new Set(baseCategories);
+
+  return uniqueSlugs
+    .map((slug, index) => {
+      const deepDive = deepDiveBySlug.get(slug);
+      const tool = toolsBySlug.get(slug);
+      if (!deepDive && !tool) return null;
+
+      const candidateTags = (tool?.tags || []).map((tag) => normalizeToolKey(tag));
+      const candidateCategories = (tool?.categories || []).map((category) => normalizeToolKey(category));
+      const candidateTagSet = new Set(candidateTags);
+      const candidateCategorySet = new Set(candidateCategories);
+
+      const jaccard = (a: Set<string>, b: Set<string>) => {
+        if (a.size === 0 || b.size === 0) return 0;
+        let intersection = 0;
+        for (const token of a) {
+          if (b.has(token)) intersection += 1;
+        }
+        const union = a.size + b.size - intersection;
+        return union > 0 ? intersection / union : 0;
+      };
+
+      const useTagOverlap = baseTagSet.size > 0 && candidateTagSet.size > 0;
+      const useCategoryOverlap = !useTagOverlap && baseCategorySet.size > 0 && candidateCategorySet.size > 0;
+      const overlapScore = useTagOverlap
+        ? jaccard(baseTagSet, candidateTagSet)
+        : (useCategoryOverlap ? jaccard(baseCategorySet, candidateCategorySet) : 0);
+      const indexScore = 1 - index / denominator;
+      // Weaken "raw index lock-in": relevance to base tool intent via overlap dominates.
+      let baseScore = (0.65 * overlapScore) + (0.35 * indexScore);
+      baseScore += tieBreakScore(baseToolSlug, slug) * 0.05;
+
+      const tokenSource = tokenizeForDiversity([
+        deepDive?.bestFor || '',
+        ...(deepDive?.strengths || []),
+        ...(deepDive?.tradeoffs || []),
+        tool?.best_for || '',
+        ...(tool?.tags || []),
+        ...(tool?.categories || []),
+        ...(tool?.features || []),
+      ]);
+
+      return {
+        slug,
+        baseScore,
+        overlapScore,
+        indexScore,
+        overlapTrace: useTagOverlap ? 'tags' : (useCategoryOverlap ? 'categories' : 'missing'),
+        tokens: new Set(tokenSource),
+        overexposurePenalty: (() => {
+          const globalExposure = landscapeStats.exposureBySlug.get(slug) || { appearances: 0, rank1: 0 };
+          const exposurePenalty = (globalExposure.appearances / intentPageCount) * 0.08;
+          const rank1Penalty = (globalExposure.rank1 / intentPageCount) * 0.12;
+          return exposurePenalty + rank1Penalty + (POPULARITY_PENALTY_BY_SLUG[slug] || 0);
+        })(),
+        tieBreak: tieBreakScore(baseToolSlug, slug),
+      };
+    })
+    .filter((item): item is DiversityCandidateProfile => Boolean(item));
+}
+
+function rerankTopPicksWithDiversity({
+  orderedSlugs,
+  deepDiveBySlug,
+  toolsBySlug,
+  baseToolSlug,
+  baseIntent,
+  limit,
+  diversityWeight,
+  keepFirst = false,
+  sameIntentSet,
+  requiredSameIntentInTop = 0,
+  auditTraceBySlug,
+}: {
+  orderedSlugs: string[];
+  deepDiveBySlug: Map<string, AlternativesDeepDive>;
+  toolsBySlug: Map<string, Tool>;
+  baseToolSlug: string;
+  baseIntent: Intent;
+  limit: number;
+  diversityWeight: number;
+  keepFirst?: boolean;
+  sameIntentSet?: Set<string>;
+  requiredSameIntentInTop?: number;
+  auditTraceBySlug?: Record<string, { overlapScore: number; indexScore: number; overlapTrace: string; baseScore: number }>;
+}): string[] {
+  const landscapeStats = getDiversityLandscapeStats();
+  const profiles = buildDiversityCandidateProfiles({
+    orderedSlugs,
+    deepDiveBySlug,
+    toolsBySlug,
+    baseToolSlug,
+    baseIntent,
+    landscapeStats,
+  });
+  if (profiles.length <= 1) {
+    return profiles.slice(0, limit).map((item) => item.slug);
+  }
+  if (auditTraceBySlug) {
+    profiles.forEach((profile) => {
+      auditTraceBySlug[profile.slug] = {
+        overlapScore: profile.overlapScore,
+        indexScore: profile.indexScore,
+        overlapTrace: profile.overlapTrace,
+        baseScore: profile.baseScore,
+      };
+    });
+  }
+
+  const selected: DiversityCandidateProfile[] = [];
+  const remaining = [...profiles];
+
+  if (keepFirst) {
+    selected.push(remaining.shift() as DiversityCandidateProfile);
+  }
+
+  while (selected.length < limit && remaining.length > 0) {
+    let bestIndex = 0;
+    let bestScore = Number.NEGATIVE_INFINITY;
+    const selectedSameCount = sameIntentSet
+      ? selected.filter((item) => sameIntentSet.has(item.slug)).length
+      : 0;
+    const requiresSameIntent = Boolean(
+      sameIntentSet
+      && selected.length < requiredSameIntentInTop
+      && selectedSameCount < requiredSameIntentInTop
+    );
+    const evaluationIndexes = requiresSameIntent
+      ? remaining
+          .map((item, index) => ({ item, index }))
+          .filter(({ item }) => sameIntentSet!.has(item.slug))
+          .map(({ index }) => index)
+      : remaining.map((_, index) => index);
+    const candidateIndexes = evaluationIndexes.length > 0 ? evaluationIndexes : remaining.map((_, index) => index);
+
+    for (const i of candidateIndexes) {
+      const candidate = remaining[i];
+      // MMR-style objective: keep high relevance but penalize similarity to already selected tools.
+      const maxSimilarity = selected.length
+        ? Math.max(...selected.map((selectedItem) => jaccardSimilarity(candidate.tokens, selectedItem.tokens)))
+        : 0;
+      const positionPenalty = (() => {
+        const positionMap = landscapeStats.positionFrequencyByIntent.get(baseIntent)?.get(selected.length);
+        if (!positionMap) return 0;
+        const frequency = positionMap.get(candidate.slug) || 0;
+        const denom = Math.max(1, landscapeStats.pagesByIntent.get(baseIntent) || landscapeStats.totalPages);
+        return (frequency / denom) * 0.08;
+      })();
+      const duplicateOrderPenalty = (() => {
+        const signatures = landscapeStats.signaturesByIntent.get(baseIntent) || [];
+        const prospective = [...selected.map((item) => item.slug), candidate.slug];
+        if (prospective.length < 5) return 0;
+        const hasNearDuplicate = signatures.some(
+          (signature) => signature.length >= prospective.length
+            && prospective.every((slugAtIndex, idx) => signature[idx] === slugAtIndex)
+        );
+        return hasNearDuplicate ? 0.12 : 0;
+      })();
+      const combinedScore = ((1 - diversityWeight) * candidate.baseScore)
+        - (diversityWeight * maxSimilarity)
+        - candidate.overexposurePenalty
+        - positionPenalty
+        - duplicateOrderPenalty;
+
+      if (combinedScore > bestScore) {
+        bestScore = combinedScore;
+        bestIndex = i;
+      }
+    }
+
+    selected.push(remaining.splice(bestIndex, 1)[0]);
+  }
+
+  return selected.map((item) => item.slug).slice(0, limit);
 }
 
 function getFeaturedPreferenceOrder(baseToolSlug: string, candidates: AlternativesDeepDive[]): string[] {
@@ -299,6 +826,7 @@ function ensureFeaturedCountForPage({
   deepDiveSlugs,
   allToolIndexOrAllToolsList,
   featuredPool,
+  featuredCapPool,
   preferenceOrderFn,
   targetFeaturedMax = 2,
 }: {
@@ -307,6 +835,7 @@ function ensureFeaturedCountForPage({
   deepDiveSlugs: string[];
   allToolIndexOrAllToolsList: Map<string, Tool> | Tool[];
   featuredPool: string[];
+  featuredCapPool?: string[];
   preferenceOrderFn: (baseSlug: string) => string[];
   targetFeaturedMax?: number;
 }): { topPickSlugs: string[]; deepDiveSlugs: string[]; injectedDeepDiveItems: AlternativesDeepDive[] } {
@@ -320,14 +849,26 @@ function ensureFeaturedCountForPage({
       .map((slug) => toFeaturedCanonicalSlug(slug))
       .filter((slug) => slug !== normalizedBase && toolIndex.has(slug))
   );
-  const targetFeaturedMin = Math.min(targetFeaturedMax, availableFeatured.length);
+  const capFeatured = uniqueSlugSequence(
+    (featuredCapPool && featuredCapPool.length > 0 ? featuredCapPool : featuredPool)
+      .map((slug) => toFeaturedCanonicalSlug(slug))
+      .filter((slug) => slug !== normalizedBase && toolIndex.has(slug))
+  );
+  const availableForMin = availableFeatured.length > 0 ? availableFeatured : capFeatured;
+  const targetFeaturedMin = availableForMin.length > 0
+    ? Math.max(FEATURED_MIN_PER_PAGE, Math.min(targetFeaturedMax, availableForMin.length))
+    : 0;
 
   const preferredFeaturedOrder = uniqueSlugSequence([
     ...preferenceOrderFn(baseSlug).map((slug) => toFeaturedCanonicalSlug(slug)),
-    ...availableFeatured,
-  ]).filter((slug) => availableFeatured.includes(slug));
-  const featuredSet = new Set(availableFeatured);
-  const preferredSlots = [2, 4];
+    ...availableForMin,
+  ]).filter((slug) => availableForMin.includes(slug));
+  const featuredSet = new Set(capFeatured.length > 0 ? capFeatured : availableFeatured);
+  const seed = stableHash(normalizedBase || baseSlug);
+  const dynamicSlot1 = 1 + (seed % 2);
+  const dynamicSlot2 = 3 + (seed % 2);
+  const preferredSlots = Array.from(new Set([dynamicSlot1, dynamicSlot2]))
+    .map((slot) => Math.max(1, Math.min(4, slot)));
 
   const topLimit = Math.max(1, topPickSlugs.length);
   let nextTopPickSlugs = uniqueSlugSequence(topPickSlugs).filter((slug) => slug !== normalizedBase);
@@ -825,32 +1366,79 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
   const candidateDeepDives = arcadeIntersection
     ? (intersectedDeepDives.length > 0 ? intersectedDeepDives : allDeepDives)
     : allDeepDives;
-  const deniedTopCandidates = slug === 'invideo'
-    ? candidateDeepDives.filter((item) => item.toolSlug && INVIDEO_TOP_DENYLIST.has(item.toolSlug))
-    : [];
-  const topCandidateDeepDives = slug === 'invideo'
-    ? candidateDeepDives.filter((item) => !item.toolSlug || !INVIDEO_TOP_DENYLIST.has(item.toolSlug))
-    : candidateDeepDives;
+  const topCandidateDeepDives = candidateDeepDives;
   const toolsBySlug = new Map(getAllTools().map((item) => [item.slug, item]));
+  const baseIntent = getPrimaryIntent(tool);
   const topPicksLimit = 5;
-  const baseTopPickSlugs = uniqueSlugSequence(
-    topCandidateDeepDives
-      .map((item) => item.toolSlug || '')
-      .filter((toolSlug) => toolSlug && toolSlug !== slug)
-  ).slice(0, topPicksLimit);
   const baseLimit = Math.min(6, Math.max(topCandidateDeepDives.length, topPicksLimit));
-  const baseDeepDiveSlugs = uniqueSlugSequence(
+  const topCandidateBySlug = new Map(
+    topCandidateDeepDives
+      .filter((item) => item.toolSlug)
+      .map((item) => [item.toolSlug as string, item])
+  );
+  const rawCandidateSlugs = uniqueSlugSequence(
     topCandidateDeepDives
       .map((item) => item.toolSlug || '')
       .filter((toolSlug) => Boolean(toolSlug))
-  ).slice(0, baseLimit);
+  );
+  const intentBuckets = buildIntentBuckets({
+    candidates: rawCandidateSlugs,
+    baseIntent,
+    deepDiveBySlug: topCandidateBySlug,
+    toolsBySlug,
+    baseToolSlug: slug,
+  });
+  const intentGatedSlugs = applyIntentGating({
+    candidates: rawCandidateSlugs,
+    baseIntent,
+    deepDiveBySlug: topCandidateBySlug,
+    toolsBySlug,
+    baseToolSlug: slug,
+  });
+  const topConstraintSet = intentBuckets.sameIntent.length > 0
+    ? new Set(intentBuckets.sameIntent)
+    : new Set(intentBuckets.adjacentIntent);
+  const requiredTopConstraint = intentBuckets.sameIntent.length > 0
+    ? Math.min(3, intentBuckets.sameIntent.length)
+    : Math.min(1, intentBuckets.adjacentIntent.length);
+  const diversityAuditTraceBySlug = process.env.ALT_AUDIT === '1'
+    ? {} as Record<string, { overlapScore: number; indexScore: number; overlapTrace: string; baseScore: number }>
+    : undefined;
+  const diversifiedCandidateSlugs = rerankTopPicksWithDiversity({
+    orderedSlugs: intentGatedSlugs,
+    deepDiveBySlug: topCandidateBySlug,
+    toolsBySlug,
+    baseToolSlug: slug,
+    baseIntent,
+    limit: Math.max(baseLimit, topPicksLimit),
+    diversityWeight: DIVERSITY_WEIGHT,
+    sameIntentSet: topConstraintSet,
+    requiredSameIntentInTop: requiredTopConstraint,
+    auditTraceBySlug: diversityAuditTraceBySlug,
+  });
+  const baseTopPickSlugs = diversifiedCandidateSlugs
+    .filter((toolSlug) => toolSlug && toolSlug !== slug)
+    .slice(0, topPicksLimit);
+  const baseDeepDiveSlugs = diversifiedCandidateSlugs.slice(0, baseLimit);
 
+  const featuredPoolForPage = uniqueSlugSequence([
+    ...intentBuckets.sameIntent,
+    ...intentBuckets.adjacentIntent,
+  ]).filter((toolSlug) => FEATURED_POOL_CANONICAL.includes(toFeaturedCanonicalSlug(toolSlug)));
+  const effectiveFeaturedPool = featuredPoolForPage.length > 0
+    ? featuredPoolForPage
+    : FEATURED_POOL_CANONICAL.filter((toolSlug) => toFeaturedCanonicalSlug(toolSlug) !== toFeaturedCanonicalSlug(slug));
+  const featuredCapPoolForPage = uniqueSlugSequence(
+    intentGatedSlugs.filter((toolSlug) => FEATURED_POOL_CANONICAL.includes(toFeaturedCanonicalSlug(toolSlug)))
+  );
+  const effectiveFeaturedCapPool = featuredCapPoolForPage.length > 0 ? featuredCapPoolForPage : effectiveFeaturedPool;
   const featuredAdjusted = ensureFeaturedCountForPage({
     baseSlug: slug,
     topPickSlugs: baseTopPickSlugs,
     deepDiveSlugs: baseDeepDiveSlugs,
     allToolIndexOrAllToolsList: toolsBySlug,
-    featuredPool: FEATURED_POOL_CANONICAL,
+    featuredPool: effectiveFeaturedPool,
+    featuredCapPool: effectiveFeaturedCapPool,
     preferenceOrderFn: (currentBaseSlug) => getFeaturedPreferenceOrder(currentBaseSlug, topCandidateDeepDives),
     targetFeaturedMax: FEATURED_MAX_PER_PAGE,
   });
@@ -861,7 +1449,43 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
     deepDiveBySlug.set(item.toolSlug, item);
   });
 
-  const topPicks: TopPickItem[] = featuredAdjusted.topPickSlugs
+  // Second pass keeps featured injection results while removing within-list lookalikes.
+  const postFeaturedTopPickSlugs = rerankTopPicksWithDiversity({
+    orderedSlugs: featuredAdjusted.topPickSlugs,
+    deepDiveBySlug,
+    toolsBySlug,
+    baseToolSlug: slug,
+    baseIntent,
+    limit: topPicksLimit,
+    diversityWeight: POST_FEATURED_DIVERSITY_WEIGHT,
+    keepFirst: true,
+  });
+  const postFeaturedDeepDiveSlugs = rerankTopPicksWithDiversity({
+    orderedSlugs: featuredAdjusted.deepDiveSlugs,
+    deepDiveBySlug,
+    toolsBySlug,
+    baseToolSlug: slug,
+    baseIntent,
+    limit: baseLimit,
+    diversityWeight: POST_FEATURED_DIVERSITY_WEIGHT,
+    keepFirst: true,
+  });
+  const guardedAfterPostRerank = ensureFeaturedCountForPage({
+    baseSlug: slug,
+    topPickSlugs: postFeaturedTopPickSlugs,
+    deepDiveSlugs: postFeaturedDeepDiveSlugs,
+    allToolIndexOrAllToolsList: toolsBySlug,
+    featuredPool: effectiveFeaturedPool,
+    featuredCapPool: effectiveFeaturedCapPool,
+    preferenceOrderFn: (currentBaseSlug) => getFeaturedPreferenceOrder(currentBaseSlug, topCandidateDeepDives),
+    targetFeaturedMax: FEATURED_MAX_PER_PAGE,
+  });
+  guardedAfterPostRerank.injectedDeepDiveItems.forEach((item) => {
+    if (!item.toolSlug) return;
+    deepDiveBySlug.set(item.toolSlug, item);
+  });
+
+  const topPicks: TopPickItem[] = guardedAfterPostRerank.topPickSlugs
     .map((featuredSlug) => {
       const deepDive = deepDiveBySlug.get(featuredSlug);
       const toolItem = toolsBySlug.get(featuredSlug);
@@ -875,7 +1499,7 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
     .filter((item): item is TopPickItem => Boolean(item))
     .slice(0, topPicksLimit);
 
-  const topOrderedDeepDives = featuredAdjusted.deepDiveSlugs
+  const topOrderedDeepDives = guardedAfterPostRerank.deepDiveSlugs
     .map((toolSlug) => deepDiveBySlug.get(toolSlug))
     .filter((item): item is AlternativesDeepDive => Boolean(item));
   const topOrderedKeys = new Set(topOrderedDeepDives.map((item) => uniqueDeepDiveKey(item)));
@@ -883,7 +1507,13 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
   const fillerDeepDives: AlternativesDeepDive[] = [];
   const fillerLimit = Math.max(0, baseLimit - topOrderedDeepDives.length);
   let featuredInDeepDiveCount = topOrderedDeepDives.filter((item) => isFeaturedSlug(item.toolSlug)).length;
-  for (const item of topCandidateDeepDives) {
+  const fillerCandidateSlugs = uniqueSlugSequence([
+    ...postFeaturedDeepDiveSlugs,
+    ...diversifiedCandidateSlugs,
+  ]);
+  for (const fillerSlug of fillerCandidateSlugs) {
+    const item = deepDiveBySlug.get(fillerSlug);
+    if (!item) continue;
     if (fillerDeepDives.length >= fillerLimit) break;
     if (topOrderedKeys.has(uniqueDeepDiveKey(item))) continue;
     if (item.toolSlug === slug) continue;
@@ -899,14 +1529,11 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
     ? allDeepDives.filter((item) => !item.toolSlug || !arcadeIntersection.keepSlugs.has(item.toolSlug))
     : [];
   const moreAlternatives = uniqueStrings(
-    [...remainingCandidateDeepDives, ...deniedTopCandidates, ...nonIntersectionDeepDives].map((item) => uniqueDeepDiveKey(item))
+    [...remainingCandidateDeepDives, ...nonIntersectionDeepDives].map((item) => uniqueDeepDiveKey(item))
   )
-    .map((key) => [...remainingCandidateDeepDives, ...deniedTopCandidates, ...nonIntersectionDeepDives].find((item) => uniqueDeepDiveKey(item) === key))
+    .map((key) => [...remainingCandidateDeepDives, ...nonIntersectionDeepDives].find((item) => uniqueDeepDiveKey(item) === key))
     .filter((item): item is AlternativesDeepDive => Boolean(item));
   const finalMoreAlternatives = moreAlternatives.filter((item) => !finalDeepDiveKeys.has(uniqueDeepDiveKey(item)));
-
-  const cardsBySlug = new Map(uniqueCards.map((card) => [card.slug, card]));
-  const comparisonRows = mapToolComparisonRows(finalDeepDives, cardsBySlug);
 
   const content = loadToolContent(slug);
   const rawFaqs = [
@@ -921,12 +1548,23 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
   }));
 
   const finalFaqs = ensureFaqFloor(smartFaqs, `${tool.name} alternatives`);
+  const filledLongform = fillLongformFromScraped({
+    baseSlug: slug,
+    deepDives: finalDeepDives,
+    moreAlternatives: finalMoreAlternatives,
+    faqs: finalFaqs,
+  });
+  const enrichedDeepDives = filledLongform.deepDives;
+  const enrichedMoreAlternatives = filledLongform.moreAlternatives;
+  const enrichedFaqs = ensureFaqFloor(filledLongform.faqs, `${tool.name} alternatives`);
+  const cardsBySlug = new Map(uniqueCards.map((card) => [card.slug, card]));
+  const comparisonRows = mapToolComparisonRows(enrichedDeepDives, cardsBySlug);
   const readiness = evaluateContentReady({
     tldrBuckets,
     decisionCriteria: DEFAULT_DECISION_CRITERIA,
     comparisonRows,
-    deepDives: finalDeepDives,
-    faqs: finalFaqs,
+    deepDives: enrichedDeepDives,
+    faqs: enrichedFaqs,
   });
 
   const seoYear = getSEOCurrentYear();
@@ -934,7 +1572,23 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
   const heroConclusion = heroToolNames.length > 0
     ? `Top options in this guide include ${formatToolNameList(heroToolNames)}, compared for cost control, output quality, and workflow speed.`
     : `Use this guide to evaluate ${tool.name} alternatives by cost control, output quality, and workflow speed.`;
-  const finalTopPicksLimit = Math.min(6, finalDeepDives.length);
+  const finalTopPicksLimit = Math.min(6, enrichedDeepDives.length);
+
+  const auditDebugPayload = process.env.ALT_AUDIT === '1' ? {
+    baseIntent,
+    intentBuckets,
+    intentGatedSlugs,
+    diversifiedCandidateSlugs,
+    featuredPreferenceOrder: getFeaturedPreferenceOrder(slug, topCandidateDeepDives),
+    featuredAdjusted,
+    postFeaturedTopPickSlugs,
+    postFeaturedDeepDiveSlugs,
+    fillerDeepDiveSlugs: fillerDeepDives.map((d) => d.toolSlug),
+    injectedDeepDiveSlugs: featuredAdjusted.injectedDeepDiveItems.map((d) => d.toolSlug),
+    topCandidateDeepDives: topCandidateDeepDives.map((d) => ({ slug: d.toolSlug, bestFor: d.bestFor, strengths: d.strengths })),
+    rawCandidateSlugs,
+    diversityAuditTraceBySlug,
+  } : undefined;
 
   return {
     pageKind: 'tool',
@@ -949,11 +1603,11 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
     tldrBuckets,
     decisionCriteria: DEFAULT_DECISION_CRITERIA,
     comparisonRows,
-    deepDives: finalDeepDives,
+    deepDives: enrichedDeepDives,
     topPicks,
-    moreAlternatives: finalMoreAlternatives,
+    moreAlternatives: enrichedMoreAlternatives,
     topPicksLimit: finalTopPicksLimit,
-    atAGlanceRows: finalDeepDives.map((item) => ({
+    atAGlanceRows: enrichedDeepDives.map((item) => ({
       toolName: item.toolName,
       toolSlug: item.toolSlug,
       bestFor: item.bestFor,
@@ -966,7 +1620,7 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
           aliasRules: arcadeIntersection.aliasRules,
         }
       : undefined,
-    faqs: finalFaqs,
+    faqs: enrichedFaqs,
     tocSections: [
       { id: 'hero', label: 'Hero' },
       { id: 'tldr', label: 'TL;DR' },
@@ -979,6 +1633,7 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
     contentReady: readiness.ready,
     contentGapReason: readiness.reason,
     notSureHref: '/alternatives',
+    ...(auditDebugPayload ? { _debugTrace: auditDebugPayload } : {}),
     toolSummary: {
       toolName: tool.name,
       rating: tool.rating,

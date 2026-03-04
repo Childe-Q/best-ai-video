@@ -570,7 +570,7 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
       {/* Trust Element */}
       <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
         <p className="text-xs text-gray-500 text-center">
-          Data accurate as of December 2025. Based on hands-on testing by Jack Shan.
+          For source policy and update rules, see /methodology.
         </p>
       </div>
     </div>

@@ -40,7 +40,7 @@ export const alternativesEvidence: Record<string, ToolAlternativeEvidence> = {
           {
             url: "/tool/fliki/pricing",
             facts: [
-              "900+ AI voices in 75+ languages with ultra-realistic quality",
+              "Multilingual AI voice options with broad language coverage",
               "Blog-to-video feature automatically converts entire blog posts",
               "Faster workflow: text-based editing like a Google Doc"
             ]

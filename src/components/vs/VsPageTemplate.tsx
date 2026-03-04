@@ -1,0 +1,952 @@
+import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import CTAButton from '@/components/CTAButton';
+import ToolLogo from '@/components/ToolLogo';
+import DecisionPanel from '@/components/vs/DecisionPanel';
+import PromptBox from '@/components/vs/PromptBox';
+import SourceTooltip from './SourceTooltip';
+import VsDecisionTable from '@/components/vs/VsDecisionTable';
+import VsScoreChart from '@/components/vs/VsScoreChart';
+import { listVsSlugs, parseVsSlug, toVsSlug, VsLoadResult } from '@/data/vs';
+import { getAllTools, getTool } from '@/lib/getTool';
+import { getSEOCurrentYear } from '@/lib/utils';
+import { Tool } from '@/types/tool';
+import { VsComparison, VsSide } from '@/types/vs';
+
+interface VsPageTemplateProps {
+  load: VsLoadResult;
+  resolved: {
+    slug: string;
+  };
+  showDebug?: boolean;
+}
+
+type ToolMeta = {
+  slug: string;
+  name: string;
+  logoUrl: string | null | undefined;
+  affiliateLink: string | undefined;
+  hasFreeTrial: boolean;
+  data?: Tool;
+};
+
+type ScenarioConfig = {
+  id: string;
+  label: string;
+  keywords: string[];
+  tieBreaker: VsSide;
+};
+
+type UseCaseCandidate = {
+  label: string;
+  keywords: string[];
+};
+
+const REQUIRED_MATRIX_ROWS = [
+  'Best for',
+  'Output type',
+  'Workflow speed',
+  'Languages & dubbing',
+  'Templates',
+  'API',
+  'Pricing starting point',
+  'Free plan',
+];
+
+const GENERIC_BEST_FOR = ['quick drafts', 'simple edits', 'solo creators'];
+const GENERIC_NOT_FOR = ['highly regulated enterprise workflows', 'frame-level editing control needs', 'complex multi-step production pipelines'];
+const EMOJI_REGEX = /[\p{Extended_Pictographic}\uFE0F\u200D]/gu;
+
+type SuggestionSignals = {
+  angle: string;
+  scenario: string;
+  audience: string;
+  job: string;
+  outcome: string;
+  constraint: string;
+  useCase: string;
+  antiCase: string;
+  tradeoff: string;
+};
+
+function toTitleCase(value: string): string {
+  return value
+    .split('-')
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
+}
+
+function formatIsoDate(isoDate: string): string {
+  return new Date(`${isoDate}T00:00:00.000Z`).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+}
+
+function todayIso(): string {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function dedupe(values: string[]): string[] {
+  return Array.from(new Set(values.filter(Boolean)));
+}
+
+export function sanitizeTextForUi(text: string): string {
+  return text
+    .replace(EMOJI_REGEX, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function countKeywordMatches(text: string, keywords: string[]): number {
+  const normalized = text.toLowerCase();
+  return keywords.reduce((total, keyword) => {
+    return normalized.includes(keyword.toLowerCase()) ? total + 1 : total;
+  }, 0);
+}
+
+function pickWinnerForScenario(comparison: VsComparison, scenario: ScenarioConfig): VsSide {
+  const textA = [...comparison.bestFor.a, ...comparison.matrixRows.map((row) => row.a)].join(' ').toLowerCase();
+  const textB = [...comparison.bestFor.b, ...comparison.matrixRows.map((row) => row.b)].join(' ').toLowerCase();
+  const aScore = countKeywordMatches(textA, scenario.keywords);
+  const bScore = countKeywordMatches(textB, scenario.keywords);
+
+  if (aScore === bScore) {
+    return scenario.tieBreaker;
+  }
+
+  return aScore > bScore ? 'a' : 'b';
+}
+
+function extractReason(comparison: VsComparison, side: VsSide, keywords: string[]): string {
+  const source = comparison.bestFor[side].find((item) => countKeywordMatches(item, keywords) > 0);
+  return sanitizeTextForUi(source ?? comparison.bestFor[side][0] ?? 'faster publishing');
+}
+
+function normalizeStringArray(values: string[] | undefined, fallbackItems: string[]): string[] {
+  const cleaned = (values ?? []).map((item) => sanitizeTextForUi(item)).filter(Boolean);
+  if (cleaned.length >= 3) {
+    return cleaned.slice(0, 3);
+  }
+  return dedupe([...cleaned, ...fallbackItems.map((item) => sanitizeTextForUi(item))]).slice(0, 3);
+}
+
+function buildToolMeta(slug: string | undefined, fallbackLabel: string): ToolMeta {
+  if (!slug) {
+    return {
+      slug: fallbackLabel.toLowerCase().replace(/\s+/g, '-'),
+      name: fallbackLabel,
+      logoUrl: null,
+      affiliateLink: undefined,
+      hasFreeTrial: false,
+      data: undefined,
+    };
+  }
+
+  const tool = getTool(slug);
+  return {
+    slug,
+    name: tool?.name ?? toTitleCase(slug),
+    logoUrl: tool?.logo_url,
+    affiliateLink: tool?.affiliate_link,
+    hasFreeTrial: tool?.has_free_trial ?? false,
+    data: tool,
+  };
+}
+
+function cleanFragment(value: string | undefined): string {
+  if (!value) return '';
+  return sanitizeTextForUi(value)
+    .trim()
+    .replace(/\s+/g, ' ')
+    .replace(/[.?!;:,]+$/g, '')
+    .toLowerCase();
+}
+
+function stableHash(input: string): number {
+  let hash = 2166136261;
+  for (let index = 0; index < input.length; index += 1) {
+    hash ^= input.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+const CARD_TEMPLATES: Array<(signals: SuggestionSignals) => string> = [
+  (signals) => `Best if you need ${signals.angle}.`,
+  (signals) => `Pick this when ${signals.scenario} matters most.`,
+  (signals) => `Designed for ${signals.audience} who want ${signals.job}.`,
+  (signals) => `Fastest path to ${signals.outcome}, especially when ${signals.constraint}.`,
+  (signals) => `Works best for ${signals.useCase}; less ideal for ${signals.antiCase}.`,
+  (signals) => `Strong choice when you care about ${signals.tradeoff}.`,
+];
+
+function inferSuggestionSignals(
+  comparison: VsComparison,
+  side: VsSide,
+  tool: ToolMeta,
+): SuggestionSignals {
+  const bestForValues = comparison.bestFor[side] ?? [];
+  const notForValues = comparison.notFor[side] ?? [];
+  const primaryBestFor = cleanFragment(bestForValues[0]);
+  const primaryNotFor = cleanFragment(notForValues[0]);
+
+  const toolData = tool.data;
+  const audience =
+    cleanFragment(toolData?.target_audience_list?.[0]) ||
+    cleanFragment(toolData?.best_for) ||
+    cleanFragment(toolData?.categories?.[0] ? `${toolData?.categories?.[0]} teams` : '') ||
+    'solo creators';
+
+  const useCase =
+    cleanFragment(toolData?.content?.overview?.useCases?.[0]?.title) ||
+    cleanFragment(toolData?.tags?.[0]) ||
+    primaryBestFor ||
+    'quick drafts';
+
+  const primaryOutcome = primaryBestFor || cleanFragment(toolData?.best_for) || 'publish-ready videos quickly';
+  const constraint =
+    primaryNotFor ||
+    cleanFragment(toolData?.cons?.[0]) ||
+    'you need fast turnaround with lighter manual setup';
+  const antiCase = primaryNotFor || 'deep frame-by-frame customization';
+  const tradeoff = `${primaryOutcome} over deep manual editing`;
+
+  return {
+    angle: primaryOutcome,
+    scenario: useCase,
+    audience,
+    job: primaryOutcome,
+    outcome: primaryOutcome,
+    constraint,
+    useCase,
+    antiCase,
+    tradeoff,
+  };
+}
+
+function buildSuggestionCardText(
+  comparison: VsComparison,
+  side: VsSide,
+  tool: ToolMeta,
+  slugSeed: string,
+): string {
+  const signals = inferSuggestionSignals(comparison, side, tool);
+  const templateIndex = stableHash(`${slugSeed}:${side}:${tool.slug}`) % CARD_TEMPLATES.length;
+  return sanitizeTextForUi(CARD_TEMPLATES[templateIndex](signals));
+}
+
+const USE_CASE_CANDIDATES: UseCaseCandidate[] = [
+  { label: 'Avatar spokesperson', keywords: ['avatar', 'spokesperson', 'presenter', 'digital human', 'talking'] },
+  { label: 'Editing & captions', keywords: ['editing', 'editor', 'caption', 'subtitles', 'trim'] },
+  { label: 'Shorts & social ads', keywords: ['social', 'shorts', 'reels', 'ads', 'template', 'marketing'] },
+  { label: 'Script/blog → video', keywords: ['blog', 'script', 'text-to-video', 'article', 'text'] },
+  { label: 'Localization & dubbing', keywords: ['dubbing', 'localization', 'translate', 'language', 'voiceover'] },
+  { label: 'Team workflows', keywords: ['team', 'workspace', 'approval', 'collaboration', 'review'] },
+];
+
+function inferKeywordsFromLabel(label: string): string[] {
+  const normalized = cleanFragment(label);
+  const tokens = normalized
+    .split(/[^a-z0-9]+/)
+    .map((token) => token.trim())
+    .filter((token) => token.length > 2);
+
+  const mapped = USE_CASE_CANDIDATES.find((candidate) => normalized.includes(cleanFragment(candidate.label)));
+  if (mapped) {
+    return dedupe([...mapped.keywords, ...tokens]);
+  }
+
+  return dedupe(tokens);
+}
+
+function getToolSignalText(tool: ToolMeta): string {
+  const data = tool.data;
+  const parts: string[] = [
+    tool.name,
+    data?.tagline ?? '',
+    data?.short_description ?? '',
+    data?.best_for ?? '',
+    ...(data?.tags ?? []),
+    ...(data?.categories ?? []),
+    ...(data?.features ?? []),
+    ...(data?.target_audience_list ?? []),
+    ...(data?.content?.overview?.useCases?.map((item) => item.title) ?? []),
+  ];
+
+  return cleanFragment(parts.join(' '));
+}
+
+function buildUseCases(toolA: ToolMeta, toolB: ToolMeta, comparison: VsComparison, slugSeed: string): ScenarioConfig[] {
+  const tieBreakers: VsSide[] = [comparison.verdict.winnerQuality, comparison.verdict.winnerSpeed, comparison.verdict.winnerPrice];
+
+  const fromComparisonRaw = [
+    ...((comparison.decisionCases ?? []).map((item) => ({
+      label: sanitizeTextForUi(item.label),
+      keywords: dedupe((item.keywords ?? []).map((keyword) => cleanFragment(keyword)).filter(Boolean)),
+    })) ?? []),
+    ...((comparison.useCases ?? []).map((label) => ({
+      label: sanitizeTextForUi(label),
+      keywords: inferKeywordsFromLabel(label),
+    })) ?? []),
+  ].filter((item) => item.label);
+
+  const directUseCases = dedupe(fromComparisonRaw.map((item) => item.label)).map((label) => {
+    const found = fromComparisonRaw.find((item) => item.label === label);
+    return {
+      label,
+      keywords: found?.keywords?.length ? found.keywords : inferKeywordsFromLabel(label),
+    };
+  });
+
+  const toolSignals = `${getToolSignalText(toolA)} ${getToolSignalText(toolB)}`.toLowerCase();
+  const matrixSignal = cleanFragment(
+    [...comparison.matrixRows.map((row) => `${row.label} ${row.a} ${row.b}`), ...comparison.bestFor.a, ...comparison.bestFor.b].join(
+      ' ',
+    ),
+  );
+
+  const scoredCandidates = USE_CASE_CANDIDATES.map((candidate) => {
+    const score = candidate.keywords.reduce((total, keyword) => {
+      let points = 0;
+      if (toolSignals.includes(keyword)) points += 2;
+      if (matrixSignal.includes(keyword)) points += 1;
+      return total + points;
+    }, 0);
+    const tieBreaker = stableHash(`${slugSeed}:${candidate.label}`);
+    return { ...candidate, score, tieBreaker };
+  })
+    .filter((candidate) => candidate.score > 0)
+    .sort((left, right) => {
+      if (left.score !== right.score) return right.score - left.score;
+      return left.tieBreaker - right.tieBreaker;
+    });
+
+  const fallbackUseCases: UseCaseCandidate[] = [
+    { label: 'Fast content drafts', keywords: ['fast', 'draft', 'batch', 'output'] },
+    { label: 'Polished marketing videos', keywords: ['marketing', 'brand', 'campaign', 'quality'] },
+    { label: 'Repeatable publishing workflow', keywords: ['workflow', 'repeatable', 'team', 'process'] },
+  ];
+
+  const combined = [
+    ...directUseCases,
+    ...scoredCandidates.map((item) => ({ label: item.label, keywords: item.keywords })),
+    ...fallbackUseCases,
+  ];
+
+  const unique: Array<{ label: string; keywords: string[] }> = [];
+  for (const item of combined) {
+    if (!item.label) continue;
+    const exists = unique.some((existing) => existing.label.toLowerCase() === item.label.toLowerCase());
+    if (exists) continue;
+    unique.push({
+      label: sanitizeTextForUi(item.label),
+      keywords: item.keywords.length > 0 ? item.keywords : inferKeywordsFromLabel(item.label),
+    });
+    if (unique.length === 3) break;
+  }
+
+  return unique.map((item, index) => ({
+    id: `scenario-use-case-${index + 1}`,
+    label: item.label,
+    keywords: item.keywords,
+    tieBreaker: tieBreakers[index % tieBreakers.length] ?? 'a',
+  }));
+}
+
+function getFallbackComparisonLinks(currentSlug: string, slugA: string, slugB: string): string[] {
+  const existing = listVsSlugs();
+  const related = existing.filter(
+    (slug) =>
+      slug !== currentSlug &&
+      (slug.startsWith(`${slugA}-vs-`) ||
+        slug.endsWith(`-vs-${slugA}`) ||
+        slug.startsWith(`${slugB}-vs-`) ||
+        slug.endsWith(`-vs-${slugB}`)),
+  );
+
+  if (related.length >= 4) {
+    return related.slice(0, 4).map((slug) => `/vs/${slug}`);
+  }
+
+  const fallback: string[] = [...related];
+  const toolSlugs = getAllTools().map((tool) => tool.slug).filter((slug) => slug !== slugA && slug !== slugB);
+
+  for (const candidate of toolSlugs.slice(0, 8)) {
+    fallback.push(toVsSlug(slugA, candidate));
+    fallback.push(toVsSlug(slugB, candidate));
+    if (fallback.length >= 10) break;
+  }
+
+  return dedupe(fallback)
+    .filter((slug) => slug !== currentSlug)
+    .slice(0, 4)
+    .map((slug) => `/vs/${slug}`);
+}
+
+function buildBestForFallback(slug: string): string[] {
+  const tool = getTool(slug);
+  const fromTool = dedupe([tool?.best_for ?? '', ...(tool?.pros ?? []).slice(0, 2)]);
+  return normalizeStringArray(fromTool, GENERIC_BEST_FOR);
+}
+
+function buildNotForFallback(slug: string): string[] {
+  const tool = getTool(slug);
+  const fromTool = dedupe([...(tool?.cons ?? []).slice(0, 3)]);
+  return normalizeStringArray(fromTool, GENERIC_NOT_FOR);
+}
+
+function getVerificationSources(comparison: VsComparison): string[] {
+  const urls = dedupe(
+    [...comparison.keyDiffs, ...comparison.matrixRows]
+      .map((item) => item.sourceUrl ?? '')
+      .filter(Boolean),
+  );
+
+  return urls;
+}
+
+function getSourceDomain(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
+}
+
+function normalizeDomainForMatch(domain: string): string {
+  return domain.toLowerCase().replace(/^www\./, '');
+}
+
+function extractSourceDomainItems(comparison: VsComparison): Array<{ domain: string; url: string }> {
+  const domainToUrl = new Map<string, string>();
+  for (const url of getVerificationSources(comparison)) {
+    const domain = getSourceDomain(url);
+    if (!domainToUrl.has(domain)) {
+      domainToUrl.set(domain, url);
+    }
+  }
+
+  return Array.from(domainToUrl.entries()).map(([domain, url]) => ({ domain, url }));
+}
+
+function getToolDomainCandidates(tool: ToolMeta): string[] {
+  const candidates = new Set<string>();
+  const normalizedSlug = tool.slug.toLowerCase();
+  const slugNoHyphen = normalizedSlug.replace(/-/g, '');
+  const nameNoSpace = tool.name.toLowerCase().replace(/\s+/g, '');
+
+  candidates.add(normalizedSlug);
+  candidates.add(slugNoHyphen);
+  candidates.add(nameNoSpace);
+
+  if (tool.affiliateLink) {
+    try {
+      const host = new URL(tool.affiliateLink).hostname.replace(/^www\./, '');
+      candidates.add(host);
+    } catch {
+      // Ignore malformed URLs from dataset.
+    }
+  }
+
+  return Array.from(candidates).filter(Boolean);
+}
+
+function rankDomainAgainstTool(domain: string, tool: ToolMeta): number {
+  const normalizedDomain = normalizeDomainForMatch(domain);
+  const candidates = getToolDomainCandidates(tool);
+
+  for (const candidate of candidates) {
+    const normalizedCandidate = normalizeDomainForMatch(candidate);
+    if (!normalizedCandidate) continue;
+    if (normalizedDomain === normalizedCandidate) return 3;
+    if (normalizedDomain.includes(normalizedCandidate) || normalizedCandidate.includes(normalizedDomain)) return 2;
+  }
+
+  const slugToken = tool.slug.toLowerCase().replace(/-/g, '');
+  if (slugToken && normalizedDomain.replace(/[-.]/g, '').includes(slugToken)) return 1;
+  return 0;
+}
+
+function sortSourceDomainsByRelevance(
+  sourceItems: Array<{ domain: string; url: string }>,
+  toolA: ToolMeta,
+  toolB: ToolMeta,
+): Array<{ domain: string; url: string }> {
+  return [...sourceItems].sort((left, right) => {
+    const leftA = rankDomainAgainstTool(left.domain, toolA);
+    const leftB = rankDomainAgainstTool(left.domain, toolB);
+    const rightA = rankDomainAgainstTool(right.domain, toolA);
+    const rightB = rankDomainAgainstTool(right.domain, toolB);
+
+    const leftScore = leftA * 10 + leftB;
+    const rightScore = rightA * 10 + rightB;
+
+    if (leftScore !== rightScore) return rightScore - leftScore;
+    return left.domain.localeCompare(right.domain);
+  });
+}
+
+function ensureTemplateComparison(base: VsComparison | null, currentSlug: string, toolA: ToolMeta, toolB: ToolMeta): VsComparison {
+  const parsed = parseVsSlug(currentSlug);
+  const slugA = base?.slugA ?? parsed?.slugA ?? toolA.slug;
+  const slugB = base?.slugB ?? parsed?.slugB ?? toolB.slug;
+  const sameSlug = toVsSlug(slugA, slugB);
+
+  const baseRows = base?.matrixRows ?? [];
+  const rowMap = new Map(baseRows.map((row) => [row.label.toLowerCase(), row]));
+  const filledRows = REQUIRED_MATRIX_ROWS.map((label) => {
+    return (
+      rowMap.get(label.toLowerCase()) ?? {
+        label,
+        a: `Pending verification for ${toolA.name}`,
+        b: `Pending verification for ${toolB.name}`,
+      }
+    );
+  });
+
+  const keyDiffs = base?.keyDiffs?.length
+    ? base.keyDiffs
+    : [
+        { label: 'Positioning', a: `${toolA.name} positioning pending`, b: `${toolB.name} positioning pending` },
+        { label: 'Pricing', a: 'Pending verification', b: 'Pending verification' },
+        { label: 'Workflow', a: 'Pending verification', b: 'Pending verification' },
+        { label: 'Output style', a: 'Pending verification', b: 'Pending verification' },
+      ];
+
+  return {
+    slugA,
+    slugB,
+    updatedAt: base?.updatedAt ?? todayIso(),
+    pricingCheckedAt: base?.pricingCheckedAt ?? todayIso(),
+    shortAnswer: {
+      a: base?.shortAnswer?.a ?? `${toolA.name} is suited to fast-moving content teams and creators.`,
+      b: base?.shortAnswer?.b ?? `${toolB.name} is suited to teams prioritizing repeatable video workflows.`,
+    },
+    bestFor: {
+      a: normalizeStringArray(base?.bestFor?.a, buildBestForFallback(slugA)),
+      b: normalizeStringArray(base?.bestFor?.b, buildBestForFallback(slugB)),
+    },
+    notFor: {
+      a: normalizeStringArray(base?.notFor?.a, buildNotForFallback(slugA)),
+      b: normalizeStringArray(base?.notFor?.b, buildNotForFallback(slugB)),
+    },
+    keyDiffs,
+    matrixRows: [...filledRows, ...baseRows.filter((row) => !REQUIRED_MATRIX_ROWS.map((label) => label.toLowerCase()).includes(row.label.toLowerCase()))].slice(0, 10),
+    score: {
+      methodNote:
+        base?.score?.methodNote ??
+        'Score computed from pricing value (25%), ease (20%), speed (20%), output quality (20%), and customization (15%).',
+      weights: base?.score?.weights ?? {
+        pricingValue: 25,
+        ease: 20,
+        speed: 20,
+        output: 20,
+        customization: 15,
+      },
+      a: base?.score?.a ?? {
+        pricingValue: 6.5,
+        ease: 6.5,
+        speed: 6.5,
+        output: 6.5,
+        customization: 6.5,
+      },
+      b: base?.score?.b ?? {
+        pricingValue: 6.5,
+        ease: 6.5,
+        speed: 6.5,
+        output: 6.5,
+        customization: 6.5,
+      },
+    },
+    promptBox: {
+      prompt:
+        base?.promptBox?.prompt ??
+        `Create a 45-second product update video comparing ${toolA.name} and ${toolB.name}. Include one hook, three benefits, and one CTA.`,
+      settings: base?.promptBox?.settings?.length
+        ? base.promptBox.settings
+        : ['Duration: 45s', 'Format: 16:9', 'Language: English', 'Output: MP4 1080p', 'Tone: professional'],
+    },
+    verdict: {
+      winnerPrice: base?.verdict?.winnerPrice ?? 'a',
+      winnerQuality: base?.verdict?.winnerQuality ?? 'b',
+      winnerSpeed: base?.verdict?.winnerSpeed ?? 'a',
+      recommendation:
+        base?.verdict?.recommendation ??
+        `Use ${toolA.name} if you prioritize its strengths in this table, and choose ${toolB.name} when those workflow tradeoffs fit your team better.`,
+    },
+    related: {
+      toolPages: base?.related?.toolPages?.length
+        ? base.related.toolPages.slice(0, 2)
+        : [`/tool/${slugA}`, `/tool/${slugB}`],
+      alternatives: base?.related?.alternatives?.length
+        ? base.related.alternatives.slice(0, 2)
+        : [`/tool/${slugA}/alternatives`, `/tool/${slugB}/alternatives`],
+      comparisons:
+        base?.related?.comparisons?.length && base.related.comparisons.length >= 4
+          ? base.related.comparisons.slice(0, 6)
+          : getFallbackComparisonLinks(sameSlug, slugA, slugB),
+    },
+    disclosure:
+      base?.disclosure ??
+      'This comparison is generated from structured product data and updated on a rolling basis as source-backed details are attached.',
+  };
+}
+
+function labelForPath(path: string): string {
+  if (path.startsWith('/tool/')) {
+    const [, , slug, subPath] = path.split('/');
+    const tool = getTool(slug);
+    if (subPath === 'alternatives') {
+      return `${tool?.name ?? toTitleCase(slug)} Alternatives`;
+    }
+    return `${tool?.name ?? toTitleCase(slug)} Full Review`;
+  }
+
+  if (path.startsWith('/vs/')) {
+    const slug = path.replace('/vs/', '');
+    const parsed = parseVsSlug(slug);
+    if (!parsed) return toTitleCase(slug);
+    const toolA = getTool(parsed.slugA);
+    const toolB = getTool(parsed.slugB);
+    return `${toolA?.name ?? toTitleCase(parsed.slugA)} vs ${toolB?.name ?? toTitleCase(parsed.slugB)}`;
+  }
+
+  return path;
+}
+
+export default function VsPageTemplate({ load, resolved, showDebug = false }: VsPageTemplateProps) {
+  const parsed = load.parsed ?? parseVsSlug(resolved.slug);
+  const toolA = buildToolMeta(parsed?.slugA, 'Tool A');
+  const toolB = buildToolMeta(parsed?.slugB, 'Tool B');
+  const comparison = ensureTemplateComparison(load.comparison, resolved.slug, toolA, toolB);
+  const isFull = load.status === 'FULL';
+  const seoYear = getSEOCurrentYear();
+  const updated = formatIsoDate(comparison.updatedAt);
+  const pricingChecked = formatIsoDate(comparison.pricingCheckedAt);
+  const verificationDomains = sortSourceDomainsByRelevance(extractSourceDomainItems(comparison), toolA, toolB);
+  const slugSeed = toVsSlug(comparison.slugA, comparison.slugB);
+  const cardTextA = sanitizeTextForUi(
+    isFull && comparison.shortAnswer.a ? comparison.shortAnswer.a : buildSuggestionCardText(comparison, 'a', toolA, slugSeed),
+  );
+  const cardTextB = sanitizeTextForUi(
+    isFull && comparison.shortAnswer.b ? comparison.shortAnswer.b : buildSuggestionCardText(comparison, 'b', toolB, slugSeed),
+  );
+
+  const scenarios = buildUseCases(toolA, toolB, comparison, slugSeed);
+
+  const scenarioConclusions = scenarios.map((scenario) => {
+    const winner = pickWinnerForScenario(comparison, scenario);
+    const winnerName = winner === 'a' ? toolA.name : toolB.name;
+    const reason = extractReason(comparison, winner, scenario.keywords);
+
+    return {
+      ...scenario,
+      winnerName,
+      sentence: sanitizeTextForUi(
+        `${winnerName} is the stronger fit here because it is better aligned with ${reason.toLowerCase()}.`,
+      ),
+    };
+  });
+
+  const winnerName = (side: VsSide) => (side === 'a' ? toolA.name : toolB.name);
+  const faqItems = [
+    {
+      question: `Which is better for beginners: ${toolA.name} or ${toolB.name}?`,
+      answer: `${winnerName(
+        comparison.verdict.winnerSpeed,
+      )} is generally easier to start with when time-to-first-output is your priority, but check the decision table rows for templates and workflow fit.`,
+    },
+    {
+      question: `Which one gives better value for money?`,
+      answer: `${winnerName(
+        comparison.verdict.winnerPrice,
+      )} leads on price-value in this comparison. Confirm current plan limits before purchasing.`,
+    },
+    {
+      question: `Can I use both tools in one workflow?`,
+      answer: `Yes. Many teams use one tool for ideation/batch output and another for avatar or presentation-focused delivery.`,
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <header className="border-b border-gray-200 bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+          <Breadcrumbs toolA={toolA.name} toolB={toolB.name} />
+          <div className="mb-6 flex items-center justify-center gap-8">
+            <ToolLogo logoUrl={toolA.logoUrl} toolName={toolA.name} size="xl" />
+            <div className="text-3xl font-bold text-gray-400">VS</div>
+            <ToolLogo logoUrl={toolB.logoUrl} toolName={toolB.name} size="xl" />
+          </div>
+          <h1 className="text-center text-3xl font-extrabold text-gray-900 md:text-4xl">
+            {toolA.name} vs {toolB.name}: {seoYear} AI Video Generator Comparison Report
+          </h1>
+          <DecisionPanel scenarios={scenarios.map(({ id, label }) => ({ id, label }))} />
+          <div className="mx-auto mt-6 grid max-w-4xl gap-3 md:grid-cols-2">
+            <p className="rounded-lg border border-gray-200 bg-white p-4 text-sm text-gray-700">
+              <strong>{toolA.name}:</strong> {cardTextA}
+            </p>
+            <p className="rounded-lg border border-gray-200 bg-white p-4 text-sm text-gray-700">
+              <strong>{toolB.name}:</strong> {cardTextB}
+            </p>
+          </div>
+          <p className="mt-4 text-center text-xs text-gray-500">
+            Updated {updated}. Pricing checked {pricingChecked}.
+          </p>
+        </div>
+      </header>
+
+      <main className="mx-auto max-w-7xl space-y-10 px-4 py-10 sm:px-6 lg:px-8">
+        <VsDecisionTable comparison={comparison} toolAName={toolA.name} toolBName={toolB.name} />
+
+        <section className="rounded-xl border border-gray-200 bg-white p-6">
+          <h2 className="text-2xl font-bold text-gray-900">Key Differences</h2>
+          <div className="mt-4 grid gap-3 md:grid-cols-2">
+            {comparison.keyDiffs.map((diff) => (
+              <article key={diff.label} className="rounded-lg border border-gray-200 p-4">
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="text-sm font-semibold text-gray-900">{diff.label}</h3>
+                  {diff.sourceUrl ? (
+                    <SourceTooltip sourceUrl={diff.sourceUrl} pricingCheckedAt={comparison.pricingCheckedAt} />
+                  ) : null}
+                </div>
+                <p className="mt-2 text-sm text-gray-700">
+                  <strong>{toolA.name}:</strong> {diff.a}
+                </p>
+                <p className="mt-1 text-sm text-gray-700">
+                  <strong>{toolB.name}:</strong> {diff.b}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-gray-200 bg-white p-6">
+          <h2 className="text-2xl font-bold text-gray-900">Best For / Not For</h2>
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
+            <article className="rounded-lg border border-gray-200 p-4">
+              <h3 className="text-lg font-semibold text-gray-900">{toolA.name}</h3>
+              <p className="mt-3 text-sm font-medium text-gray-800">Best for</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
+                {comparison.bestFor.a.map((item) => (
+                  <li key={item}>{sanitizeTextForUi(item)}</li>
+                ))}
+              </ul>
+              <p className="mt-4 text-sm font-medium text-gray-800">Not for</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
+                {comparison.notFor.a.map((item) => (
+                  <li key={item}>{sanitizeTextForUi(item)}</li>
+                ))}
+              </ul>
+            </article>
+            <article className="rounded-lg border border-gray-200 p-4">
+              <h3 className="text-lg font-semibold text-gray-900">{toolB.name}</h3>
+              <p className="mt-3 text-sm font-medium text-gray-800">Best for</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
+                {comparison.bestFor.b.map((item) => (
+                  <li key={item}>{sanitizeTextForUi(item)}</li>
+                ))}
+              </ul>
+              <p className="mt-4 text-sm font-medium text-gray-800">Not for</p>
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
+                {comparison.notFor.b.map((item) => (
+                  <li key={item}>{sanitizeTextForUi(item)}</li>
+                ))}
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section className="grid gap-4 md:grid-cols-3">
+          {scenarioConclusions.map((scenario) => (
+            <article key={scenario.id} id={scenario.id} className="rounded-xl border border-gray-200 bg-white p-5 transition-all">
+              <p className="text-xs font-semibold tracking-wide text-gray-500">{sanitizeTextForUi(scenario.label)}</p>
+              <p className="mt-2 text-lg font-semibold text-gray-900">Winner: {scenario.winnerName}</p>
+              <p data-conclusion="true" className="mt-2 rounded-md px-1 py-1 text-sm text-gray-700 transition-all">
+                {scenario.sentence}
+              </p>
+            </article>
+          ))}
+        </section>
+
+        <VsScoreChart toolAName={toolA.name} toolBName={toolB.name} score={comparison.score} />
+
+        <PromptBox prompt={comparison.promptBox.prompt} settings={comparison.promptBox.settings} />
+
+        <section className="rounded-xl border border-gray-200 bg-white p-6">
+          <h2 className="text-2xl font-bold text-gray-900">Verdict</h2>
+          <div className="mt-4 grid gap-4 md:grid-cols-3">
+            <div className="rounded-lg border border-green-200 bg-green-50 p-4">
+              <p className="text-sm font-semibold text-gray-900">Winner for Price</p>
+              <p className="mt-1 text-lg font-bold text-gray-900">{winnerName(comparison.verdict.winnerPrice)}</p>
+            </div>
+            <div className="rounded-lg border border-blue-200 bg-blue-50 p-4">
+              <p className="text-sm font-semibold text-gray-900">Winner for Quality</p>
+              <p className="mt-1 text-lg font-bold text-gray-900">{winnerName(comparison.verdict.winnerQuality)}</p>
+            </div>
+            <div className="rounded-lg border border-amber-200 bg-amber-50 p-4">
+              <p className="text-sm font-semibold text-gray-900">Winner for Speed</p>
+              <p className="mt-1 text-lg font-bold text-gray-900">{winnerName(comparison.verdict.winnerSpeed)}</p>
+            </div>
+          </div>
+          <p className="mt-4 text-sm text-gray-700">{comparison.verdict.recommendation}</p>
+        </section>
+
+        <section className="rounded-xl border border-gray-200 bg-white p-6">
+          <h2 className="text-2xl font-bold text-gray-900">FAQ</h2>
+          <div className="mt-4 space-y-4">
+            {faqItems.map((item) => (
+              <article key={item.question} className="rounded-lg border border-gray-200 p-4">
+                <h3 className="text-base font-semibold text-gray-900">{item.question}</h3>
+                <p className="mt-2 text-sm text-gray-700">{item.answer}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-gray-200 bg-white p-6">
+          <details>
+            <summary className="cursor-pointer text-base font-semibold text-gray-900">Sources &amp; verification</summary>
+            <div className="mt-3 space-y-3 text-sm text-gray-700">
+              <p>Pricing checked {pricingChecked}.</p>
+              {!isFull ? (
+                <p className="text-gray-600">
+                  Some rows are inferred from structured tool data. Primary sources are attached row by row.
+                </p>
+              ) : null}
+              {verificationDomains.length > 0 ? (
+                <ul className="grid gap-1 sm:grid-cols-2">
+                  {verificationDomains.map((item) => (
+                    <li key={item.domain} className="truncate">
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        className="text-indigo-600 hover:text-indigo-700"
+                      >
+                        {item.domain}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-gray-600">Primary source links are being attached row by row.</p>
+              )}
+              <Link href="/methodology" className="inline-block font-medium text-indigo-600 hover:text-indigo-700">
+                Read methodology →
+              </Link>
+            </div>
+          </details>
+        </section>
+
+        {showDebug ? (
+          <section className="rounded-xl border border-slate-300 bg-slate-50 p-4">
+            <details>
+              <summary className="cursor-pointer text-sm font-semibold text-slate-900">Debug</summary>
+              <div className="mt-3 space-y-1 text-xs text-slate-700">
+                <p>
+                  <strong>status:</strong> {load.status}
+                </p>
+                <p>
+                  <strong>source:</strong> {load.source ?? 'none'}
+                </p>
+                <p>
+                  <strong>reason:</strong> {load.reason ?? 'none'}
+                </p>
+                <p>
+                  <strong>normalizedSlug:</strong> {load.normalizedSlug ?? 'none'}
+                </p>
+                <p>
+                  <strong>indexHit:</strong> {String(load.indexHit ?? false)}
+                </p>
+                <p>
+                  <strong>hitSource:</strong> {load.hitSource ?? 'none'}
+                </p>
+                <p>
+                  <strong>schemaErrorsCount:</strong> {load.errors?.length ?? 0}
+                </p>
+                {(load.schemaErrorSummary ?? []).length > 0 ? (
+                  <ul className="list-disc pl-5">
+                    {(load.schemaErrorSummary ?? []).map((error) => (
+                      <li key={error}>{error}</li>
+                    ))}
+                  </ul>
+                ) : null}
+              </div>
+            </details>
+          </section>
+        ) : null}
+
+        <section className="rounded-xl border border-gray-200 bg-white p-6">
+          <h2 className="text-2xl font-bold text-gray-900">Related Pages</h2>
+          <div className="mt-4 grid gap-6 md:grid-cols-3">
+            <div>
+              <p className="text-sm font-semibold text-gray-800">Tool pages</p>
+              <ul className="mt-2 space-y-1">
+                {comparison.related.toolPages.slice(0, 2).map((path) => (
+                  <li key={path}>
+                    <Link href={path} className="text-sm text-indigo-600 hover:text-indigo-700">
+                      {labelForPath(path)} →
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-gray-800">Alternatives</p>
+              <ul className="mt-2 space-y-1">
+                {comparison.related.alternatives.slice(0, 2).map((path) => (
+                  <li key={path}>
+                    <Link href={path} className="text-sm text-indigo-600 hover:text-indigo-700">
+                      {labelForPath(path)} →
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-gray-800">Comparisons</p>
+              <ul className="mt-2 space-y-1">
+                {comparison.related.comparisons.slice(0, 6).map((path) => (
+                  <li key={path}>
+                    <Link href={path} className="text-sm text-indigo-600 hover:text-indigo-700">
+                      {labelForPath(path)} →
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-gray-200 bg-white p-6">
+          <h2 className="text-lg font-semibold text-gray-900">Disclosure</h2>
+          <p className="mt-2 text-sm text-gray-700">{comparison.disclosure}</p>
+          <Link href="/methodology" className="mt-3 inline-block text-sm font-medium text-indigo-600 hover:text-indigo-700">
+            Read our methodology →
+          </Link>
+        </section>
+
+        <section className="rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 p-8 text-center text-white">
+          <h2 className="text-2xl font-bold">Ready to Choose?</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-indigo-100">
+            Test each tool directly with your own prompt and workflow constraints.
+          </p>
+          <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row">
+            <div className="flex flex-col items-center gap-2">
+              <ToolLogo logoUrl={toolA.logoUrl} toolName={toolA.name} size="sm" />
+              <CTAButton affiliateLink={toolA.affiliateLink} hasFreeTrial={toolA.hasFreeTrial} text={`Try ${toolA.name}`} />
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <ToolLogo logoUrl={toolB.logoUrl} toolName={toolB.name} size="sm" />
+              <CTAButton affiliateLink={toolB.affiliateLink} hasFreeTrial={toolB.hasFreeTrial} text={`Try ${toolB.name}`} />
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}
