@@ -53,10 +53,13 @@ function normalizeSlug(slug: string): string {
 }
 
 function extractTop6(data: any): string[] {
-  const deepDiveTop = (data?.deepDives || [])
-    .slice(0, 6)
-    .map((item: any) => normalizeSlug(item?.toolSlug || item?.toolName || ''))
-    .filter(Boolean);
+  const deepDiveTop: string[] = Array.isArray(data?.deepDives)
+    ? data.deepDives
+        .slice(0, 6)
+        .map((item: any) => normalizeSlug(String(item?.toolSlug || item?.toolName || '')))
+        .filter((slug: string): slug is string => Boolean(slug))
+    : [];
+
   return Array.from(new Set(deepDiveTop)).slice(0, 6);
 }
 
@@ -122,8 +125,11 @@ function readBeforeReport(outDir: string): AuditReport | null {
       if (Array.isArray(parsed)) {
         const pages: PageAudit[] = parsed
           .map((item: any) => {
-            const top6 = Array.isArray(item.topPicks)
-              ? item.topPicks.slice(0, 6).map((slug: string) => normalizeSlug(slug)).filter(Boolean)
+            const top6: string[] = Array.isArray(item.topPicks)
+              ? item.topPicks
+                  .slice(0, 6)
+                  .map((slug: unknown) => normalizeSlug(String(slug || '')))
+                  .filter((slug: string): slug is string => Boolean(slug))
               : [];
             return {
               slug: normalizeSlug(item.slug || ''),

@@ -1485,7 +1485,7 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
     deepDiveBySlug.set(item.toolSlug, item);
   });
 
-  const topPicks: TopPickItem[] = guardedAfterPostRerank.topPickSlugs
+  const topPickCandidates: Array<{ toolName: string; toolSlug: string; href: string } | null> = guardedAfterPostRerank.topPickSlugs
     .map((featuredSlug) => {
       const deepDive = deepDiveBySlug.get(featuredSlug);
       const toolItem = toolsBySlug.get(featuredSlug);
@@ -1495,8 +1495,9 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
         toolSlug: featuredSlug,
         href: `/tool/${featuredSlug}`,
       };
-    })
-    .filter((item): item is TopPickItem => Boolean(item))
+    });
+  const topPicks: TopPickItem[] = topPickCandidates
+    .filter((item): item is NonNullable<typeof item> => Boolean(item))
     .slice(0, topPicksLimit);
 
   const topOrderedDeepDives = guardedAfterPostRerank.deepDiveSlugs
