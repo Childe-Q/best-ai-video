@@ -1,0 +1,216 @@
+{
+  "pageTopic": "ai-video-for-social-media",
+  "generatedAt": "2026-03-07T23:15:00Z",
+  "featurePageUrl": "/features/ai-video-for-social-media",
+  "topicDefinition": {
+    "oneLiner": "Create viral content for TikTok, Instagram, YouTube Shorts, and more. Optimized for social media success.",
+    "boundaries": [
+      "Must support vertical (9:16) video formats natively.",
+      "Must include features aimed at social engagement (e.g., dynamic captions, hook generation, fast pacing).",
+      "Excludes slow-rendering cinematic models or complex desktop timeline editors not suited for quick social workflows."
+    ]
+  },
+  "howToChoose": [
+    {
+      "title": "Look for Native 9:16 and Auto-Reframing",
+      "desc": "Ensure the tool doesn't just crop horizontally, but uses AI to actively track the speaker and keep them centered in a vertical frame."
+    },
+    {
+      "title": "Check Dynamic Caption Styles",
+      "desc": "TikTok and Reels rely heavily on fast, animated captions (often called 'Hormozi style'). Make sure the platform includes these templates out of the box."
+    },
+    {
+      "title": "Evaluate Long-to-Short Workflows",
+      "desc": "If you have podcasts or webinars, prioritize clipping tools like Opus Clip over from-scratch generators."
+    },
+    {
+      "title": "Assess Commercial Music Rights",
+      "desc": "If you are running paid ads, verify that the AI tool's integrated music library is commercially cleared for social media platforms."
+    }
+  ],
+  "sources": [
+    {
+      "sourceUrl": "https://www.capcut.com/resource/6-best-AI-video-tools-for-social-media",
+      "fetchedAt": "2026-03-07T23:10:00Z",
+      "title": "6 Best AI Video Tools for Social Media in 2026",
+      "excerpt": "A listicle focused on the best AI tools specifically for TikTok creators.",
+      "publishedAt": null,
+      "sections": [
+        {
+          "heading": "Top-Ranked Tools",
+          "type": "tool_list",
+          "content": "CapCut stands out as the most beginner-friendly option, combining AI video generation, automated captioning, and extensive effects in one platform. It's particularly popular for TikTok creators."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "CapCut",
+          "toolSlugGuess": "capcut",
+          "bestFor": "All-in-one TikTok and Reels creation",
+          "keyClaims": [
+            "Combines AI video generation, automated captioning, and extensive effects",
+            "Popular for TikTok creators due to its simplicity and AI-powered auto-editing"
+          ],
+          "pricingClaims": [
+            "Offers free plans to test before upgrading"
+          ],
+          "watermarkRules": [],
+          "exportRules": [
+            "Native vertical format export (9:16 aspect ratio)"
+          ],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "CapCut stands out as the most beginner-friendly option, combining AI video generation, automated captioning, and extensive effects in one platform."
+          ],
+          "confidence": 0.95
+        }
+      ],
+      "confidence": 0.9,
+      "notes": [
+        "Official CapCut resource, highly relevant for social media."
+      ]
+    },
+    {
+      "sourceUrl": "https://reelbase.io/blog/best-ai-video-generators-for-tiktok-reels-2024",
+      "fetchedAt": "2026-03-07T23:11:00Z",
+      "title": "I Tested 7 AI Video Generators for TikTok",
+      "excerpt": "A deep dive testing AI generators based on viral hook generation and TikTok readiness.",
+      "publishedAt": "2026-01-05T00:00:00Z",
+      "sections": [
+        {
+          "heading": "Top-Ranked Tools",
+          "type": "tool_list",
+          "content": "Reelbase specializes in TikTok-first content with viral hook generation, direct TikTok publishing, and faceless video creation starting at $19/month."
+        },
+        {
+          "heading": "Key Features to Look For",
+          "type": "how_to_choose",
+          "content": "Vertical format export (9:16 aspect ratio), Viral hook generation, Trending audio integration, Speed (under 5 minutes to finished video)."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Reelbase",
+          "toolSlugGuess": "reelbase",
+          "bestFor": "Faceless TikTok videos with viral hooks",
+          "keyClaims": [
+            "Specializes in TikTok-first content",
+            "Viral hook generation",
+            "Direct TikTok publishing"
+          ],
+          "pricingClaims": [
+            "Starting at $19/month"
+          ],
+          "watermarkRules": [],
+          "exportRules": [
+            "Vertical format export (9:16 aspect ratio)"
+          ],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Reelbase specializes in TikTok-first content with viral hook generation, direct TikTok publishing, and faceless video creation starting at $19/month."
+          ],
+          "confidence": 0.9
+        }
+      ],
+      "confidence": 0.85,
+      "notes": [
+        "Good perspective on what actually makes a tool 'for social media' (hooks, trending audio)."
+      ]
+    },
+    {
+      "sourceUrl": "https://invideo.io/pricing",
+      "fetchedAt": "2026-03-07T23:13:00Z",
+      "title": "InVideo AI Official Pricing",
+      "excerpt": "Official details on InVideo AI pricing, limits, and export capabilities.",
+      "publishedAt": null,
+      "sections": [
+        {
+          "heading": "Free Plan Limits",
+          "type": "limitations",
+          "content": "Free plan includes 2 video minutes and 1 AI credit per week, with 4 exports per week."
+        },
+        {
+          "heading": "Export Watermark",
+          "type": "limitations",
+          "content": "The free plan exports come with an InVideo watermark applied."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "InVideo AI",
+          "toolSlugGuess": "invideo",
+          "bestFor": "Faceless YouTube Shorts and Text-to-Video",
+          "keyClaims": [
+            "Generative AI video creation from text prompts"
+          ],
+          "pricingClaims": [
+            "Tiered paid plans (Plus, Max, and Generative)",
+            "Generative plan includes 900 generative credits"
+          ],
+          "watermarkRules": [
+            "Free plan exports come with an InVideo watermark applied"
+          ],
+          "exportRules": [
+            "Free plan limited to 4 exports per week"
+          ],
+          "refundRules": [
+            "Refund policy available via help center request"
+          ],
+          "limitations": [
+            "Free plan strictly limited to 2 video minutes and 1 AI credit per week"
+          ],
+          "proofSnippets": [
+            "InVideo AI's free plan includes 2 video minutes and 1 AI credit per week, with 4 exports per week that include an InVideo watermark."
+          ],
+          "confidence": 0.99
+        }
+      ],
+      "confidence": 0.99,
+      "notes": [
+        "Official InVideo constraints for social media creators."
+      ]
+    },
+    {
+      "sourceUrl": "https://www.aistudios.com/best/top-tiktok-ai-video-generators-of-2026-ultimate-guide",
+      "fetchedAt": "2026-03-07T23:12:00Z",
+      "title": "Top TikTok AI Video Generators of 2026",
+      "excerpt": "A guide looking at Avatar and script-based AI video generation for TikTok.",
+      "publishedAt": "2026-01-20T00:00:00Z",
+      "sections": [
+        {
+          "heading": "Top-Ranked Tools",
+          "type": "tool_list",
+          "content": "AI Studios (DeepBrain AI) ranks as the best overall for professional-grade creation, offering 2,000+ AI avatars, 150+ languages, and 7,000+ templates optimized for TikTok."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "DeepBrain AI Studios",
+          "toolSlugGuess": "deepbrain-ai",
+          "bestFor": "Professional Avatar-driven TikToks",
+          "keyClaims": [
+            "2,000+ AI avatars and 150+ languages",
+            "7,000+ templates optimized for TikTok"
+          ],
+          "pricingClaims": [
+            "Pricing ranges from free to $24/month for individual creators"
+          ],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "AI Studios (DeepBrain AI) ranks as the best overall for professional-grade creation, offering 2,000+ AI avatars, 150+ languages, and 7,000+ templates optimized for TikTok."
+          ],
+          "confidence": 0.9
+        }
+      ],
+      "confidence": 0.85,
+      "notes": [
+        "Useful for the Avatar angle in short-form content."
+      ]
+    }
+  ]
+}

@@ -1,8 +1,10 @@
 import { Metadata } from 'next';
+import { redirect } from 'next/navigation';
 import VsPageTemplate from '@/components/vs/VsPageTemplate';
-import { getVsComparisonWithStatus, listVsSlugs, parseVsSlug } from '@/data/vs';
+import { getCanonicalVsSlug, getVsComparisonWithStatus, listVsSlugs, parseVsSlug } from '@/data/vs';
 import { getTool } from '@/lib/getTool';
 import { getSEOCurrentYear } from '@/lib/utils';
+import { buildDecisionTableRows } from '@/lib/vsDecisionTable';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -21,6 +23,32 @@ function getDisplayToolName(slug?: string): string {
   if (!slug) return 'AI Video Tool';
   const tool = getTool(slug);
   return tool?.name ?? toTitleCase(slug);
+}
+
+function isPlaceholderText(value: string): boolean {
+  const normalized = value.toLowerCase().trim();
+  return (
+    !normalized ||
+    normalized.includes('pending verification') ||
+    normalized === 'see product docs' ||
+    normalized === 'check current pricing' ||
+    normalized === 'check plan limits' ||
+    normalized === 'not explicitly listed' ||
+    normalized === 'see product positioning'
+  );
+}
+
+function isComparisonReady(comparison: ReturnType<typeof getVsComparisonWithStatus>['comparison']): boolean {
+  if (!comparison) return false;
+  const decisionRows = buildDecisionTableRows(comparison.matrixRows, comparison.slugA, comparison.slugB);
+  const tableReady =
+    decisionRows.length >= 6 &&
+    decisionRows.length <= 8 &&
+    decisionRows.every((row) => !isPlaceholderText(row.aText) && !isPlaceholderText(row.bText));
+  const hasKeyDiffs = comparison.keyDiffs.length >= 3;
+  const hasScore = Boolean(comparison.score && Object.keys(comparison.score.a ?? {}).length > 0 && Object.keys(comparison.score.b ?? {}).length > 0);
+  const hasVerdict = Boolean(comparison.verdict?.recommendation);
+  return tableReady && hasKeyDiffs && hasScore && hasVerdict;
 }
 
 export const dynamicParams = true;
@@ -44,8 +72,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const toolAName = getDisplayToolName(parsed.slugA);
   const toolBName = getDisplayToolName(parsed.slugB);
   const seoYear = getSEOCurrentYear();
+  const ready = isComparisonReady(load.comparison);
 
-  if (load.status !== 'FULL') {
+  if (!ready) {
     return {
       title: `${toolAName} vs ${toolBName} ${seoYear}: Comparison in Progress`,
       description: `This ${toolAName} vs ${toolBName} comparison is shown in template mode while we finalize the full verified dataset.`,
@@ -67,10 +96,14 @@ export const revalidate = 86400;
 export default async function ComparisonPage({ params, searchParams }: PageProps) {
   const resolved = await params;
   const resolvedSearchParams = searchParams ? await searchParams : {};
+  const canonicalSlug = getCanonicalVsSlug(resolved.slug);
+  if (canonicalSlug && canonicalSlug !== resolved.slug) {
+    redirect(`/vs/${canonicalSlug}`);
+  }
   const load = getVsComparisonWithStatus(resolved.slug);
   const debugParam = resolvedSearchParams?.debug;
   const debugFlag = Array.isArray(debugParam) ? debugParam[0] : debugParam;
-  const showDebug = process.env.NODE_ENV === 'development' || debugFlag === '1';
+  const showDebug = process.env.NODE_ENV === 'development' && debugFlag === '1';
 
   if (process.env.NODE_ENV === 'development') {
     console.info('[vs-page] render status', {

@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "slug": "ai-video-for-social-media",
+  "title": "Best AI Video Tools for Social Media (2026)",
+  "summarySeed": {
+    "oneLiner": "This page compares AI video tools built for social-first content — TikTok, Instagram Reels, YouTube Shorts, and similar vertical-format platforms. Tools are grouped by social publishing workflow: template-based clip generation and text-to-video, or avatar-led presenter content. Only platforms with native 9:16 support, engagement-focused features (dynamic captions, hook generation, fast pacing), and quick turnaround are included. Slow cinematic models and complex desktop timeline editors are excluded.",
+    "boundaries": [
+      "Must support vertical (9:16) video formats natively.",
+      "Must include social engagement features: dynamic captions, viral hooks, or fast pacing.",
+      "Excludes slow cinematic models and complex desktop editors not suited for quick social workflows."
+    ],
+    "primaryClassificationRule": "Group by social publishing workflow.",
+    "comparisonAxes": [
+      "commercial rights",
+      "workflow fit and automation",
+      "generation speed"
+    ]
+  },
+  "howToChooseSeeds": [
+    {
+      "title": "Confirm native 9:16 and intelligent reframing.",
+      "desc": "Ensure the tool does not simply crop horizontal footage. Look for AI that actively tracks subjects and keeps them centered in a vertical frame. Both CapCut and Reelbase report native 9:16 export support."
+    },
+    {
+      "title": "Check for dynamic caption templates.",
+      "desc": "TikTok and Reels performance depends heavily on fast, animated captions. Verify that the tool includes these styles out of the box. CapCut is reported to combine automated captioning with extensive effects templates."
+    },
+    {
+      "title": "Decide between from-scratch generation and long-to-short repurposing.",
+      "desc": "If you have existing podcasts or webinars, prioritize clipping tools. If you need original content from text prompts, InVideo and Reelbase are oriented toward that workflow. These are fundamentally different pipelines."
+    },
+    {
+      "title": "Verify commercial music rights if running paid ads.",
+      "desc": "If you are using generated videos for paid social campaigns, ensure the tool's integrated music library is commercially cleared. Not all free-tier assets carry commercial licenses."
+    }
+  ],
+  "groups": [
+    {
+      "id": "template-and-clip-workflows",
+      "title": "Template and clip workflows",
+      "rule": "These tools are built for repeatable social output — generating videos from text prompts, applying templates, or clipping existing content into short-form posts. They suit creators who need a high volume of vertical content with minimal manual editing, whether from scratch or repurposed from longer material.",
+      "toolSlugs": [
+        "capcut",
+        "reelbase",
+        "invideo"
+      ]
+    },
+    {
+      "id": "avatar-and-presentation-social",
+      "title": "Avatar and presentation social",
+      "rule": "This group covers tools where an AI avatar presenter is the content format — producing talking-head TikToks or Reels without the creator appearing on camera. It suits creators and brands who want a consistent on-screen presence without filming themselves.",
+      "toolSlugs": [
+        "deepbrain-ai"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "CapCut",
+      "slug": "capcut",
+      "verdictSeed": "All-in-one social editor combining AI video generation, automated captioning, and extensive effects. Particularly popular with TikTok creators.",
+      "pricingSeed": "Free plan available; paid plans to upgrade",
+      "policySeed": null,
+      "bestForSeed": "All-in-one TikTok and Reels creation",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://www.capcut.com/",
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://www.capcut.com/resource/6-best-AI-video-tools-for-social-media"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-limitation-seed",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    },
+    {
+      "name": "Reelbase",
+      "slug": "reelbase",
+      "verdictSeed": "TikTok-first platform with viral hook generation, faceless video creation, and direct TikTok publishing.",
+      "pricingSeed": "From $19/mo",
+      "policySeed": null,
+      "bestForSeed": "Faceless TikTok videos with viral hooks",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://reelbase.io/",
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://reelbase.io/blog/best-ai-video-generators-for-tiktok-reels-2024"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-limitation-seed",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    },
+    {
+      "name": "InVideo",
+      "slug": "invideo",
+      "verdictSeed": "Generative AI video from text prompts. Supports faceless YouTube Shorts and social content. Paid tiers include Plus, Max, and Generative plans.",
+      "pricingSeed": "Plus, Max, and Generative tiers (Generative: 900 credits)",
+      "policySeed": "Free plan exports come with an InVideo watermark applied",
+      "bestForSeed": "Faceless YouTube Shorts and text-to-video social content",
+      "mainLimitationSeed": "Free plan limited to 2 video minutes and 1 AI credit per week; all free exports carry watermark",
+      "officialUrl": "https://invideo.io/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/invideo",
+      "logoUrl": "/logos/InVideo_logo.svg",
+      "sourceUrls": [
+        "https://invideo.io/pricing"
+      ],
+      "flags": []
+    },
+    {
+      "name": "DeepBrain AI",
+      "slug": "deepbrain-ai",
+      "verdictSeed": "Professional avatar-driven TikToks with 2,000+ AI avatars, 150+ languages, and 7,000+ TikTok-optimized templates.",
+      "pricingSeed": "Free tier available; up to $24/mo for individual creators",
+      "policySeed": null,
+      "bestForSeed": "Professional avatar-driven TikToks and Reels",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://deepbrain.ai/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/deepbrain-ai",
+      "logoUrl": "/logos/deepbrain-logo.svg",
+      "sourceUrls": [
+        "https://www.aistudios.com/best/top-tiktok-ai-video-generators-of-2026-ultimate-guide"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-limitation-seed"
+      ]
+    }
+  ],
+  "relatedLinks": {
+    "reviewSlugs": [
+      "invideo",
+      "deepbrain-ai"
+    ],
+    "alternativesSlugs": [
+      "invideo",
+      "deepbrain-ai"
+    ],
+    "vsSlugs": [],
+    "guideSlugs": []
+  },
+  "faqSeeds": [
+    {
+      "question": "What qualifies a tool for Best AI Video Tools for Social Media (2026)?",
+      "answerSeed": "Group by social publishing workflow. Must support vertical (9:16) video formats natively. Must include features aimed at social engagement (e.g., dynamic captions, hook generation, fast pacing). Excludes slow-rendering cinematic models or complex desktop timeline editors not suited for quick social workflows.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "What should readers compare first on this page?",
+      "answerSeed": "Look for Native 9:16 and Auto-Reframing: Ensure the tool doesn't just crop horizontally, but uses AI to actively track the speaker and keep them centered in a vertical frame. Check Dynamic Caption Styles: TikTok and Reels rely heavily on fast, animated captions (often called 'Hormozi style'). Make sure the platform includes these templates out of the box.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "Which tools already have internal review coverage?",
+      "answerSeed": "Current internal review coverage in this normalized dataset: invideo, deepbrain-ai.",
+      "sourceToolSlugs": [
+        "invideo",
+        "deepbrain-ai"
+      ]
+    }
+  ],
+  "lastReviewed": "2026-03-07T23:15:00Z",
+  "reviewMetadata": {
+    "generatedFrom": "research-raw",
+    "sourceFile": "src/data/research/features/ai-video-for-social-media.raw.json",
+    "sourceCount": 4,
+    "uniqueToolCount": 4,
+    "needsManualReview": true,
+    "reviewNotes": [
+      "One or more tools still need verified logoUrl coverage.",
+      "One or more tools are missing internal review coverage."
+    ]
+  }
+}

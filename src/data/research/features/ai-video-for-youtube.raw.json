@@ -1,0 +1,185 @@
+{
+  "pageTopic": "ai-video-for-youtube",
+  "generatedAt": "2026-03-08T00:25:00Z",
+  "featurePageUrl": "/features/ai-video-for-youtube",
+  "topicDefinition": {
+    "oneLiner": "Automate your YouTube channel with AI. Create faceless videos, automate editing, and scale your content production.",
+    "boundaries": [
+      "Must focus on long-form (16:9) YouTube workflows, or YouTube Shorts automation.",
+      "Must include text-to-video, voice cloning, or faceless avatar capabilities.",
+      "Excludes generic short-form editors that do not help with script-to-video automation."
+    ]
+  },
+  "howToChoose": [
+    {
+      "title": "Evaluate the Content Style",
+      "desc": "Are you creating documentary-style B-roll videos (InVideo AI), talking-head avatar videos (HeyGen), or high-end cinematic shorts (Runway)?"
+    },
+    {
+      "title": "Check Voice and Audio Capabilities",
+      "desc": "A faceless channel lives and dies by its voiceover. Ensure the tool either integrates directly with high-quality TTS like ElevenLabs or allows custom voice cloning."
+    },
+    {
+      "title": "Calculate Cost per Minute",
+      "desc": "YouTube requires high-volume, long-form content. A platform charging $1 per generated minute will quickly become unprofitable for a daily 10-minute channel."
+    }
+  ],
+  "sources": [
+    {
+      "sourceUrl": "https://trendyri.com/article/best-ai-video-generators-faceless-youtube-channels-2026",
+      "fetchedAt": "2026-03-08T00:20:00Z",
+      "title": "Best AI Video Generators for Faceless YouTube Channels 2026",
+      "excerpt": "A comprehensive guide on the top tools for automating YouTube channels without showing your face.",
+      "publishedAt": "2026-01-10T00:00:00Z",
+      "sections": [
+        {
+          "heading": "Top Platforms",
+          "type": "tool_list",
+          "content": "InVideo AI is highlighted as the all-in-one 'Prompt-to-Video' engine. HeyGen specializes in creating hyper-realistic digital avatars. Runway Gen-3 excels at generating original, high-end cinematic visuals."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "InVideo AI",
+          "toolSlugGuess": "invideo",
+          "bestFor": "All-in-one prompt-to-video documentary style",
+          "keyClaims": [
+            "All-in-one Prompt-to-Video engine",
+            "Handles script writing, B-roll footage, subtitles, and voiceover generation from a single prompt"
+          ],
+          "pricingClaims": [],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "InVideo AI is highlighted as the all-in-one 'Prompt-to-Video' engine, handling script writing, B-roll footage, subtitles, and voiceover generation from a single prompt."
+          ],
+          "confidence": 0.95
+        },
+        {
+          "toolName": "HeyGen",
+          "toolSlugGuess": "heygen",
+          "bestFor": "Avatar-hosted faceless channels",
+          "keyClaims": [
+            "Creates hyper-realistic digital avatars that can serve as video hosts"
+          ],
+          "pricingClaims": [],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "HeyGen specializes in creating hyper-realistic digital avatars that can serve as video hosts without requiring you to appear on camera."
+          ],
+          "confidence": 0.95
+        }
+      ],
+      "confidence": 0.9,
+      "notes": [
+        "Focuses directly on the 'Faceless YouTube' niche."
+      ]
+    },
+    {
+      "sourceUrl": "https://syllaby.io/blog/best-faceless-video-ai-generators-youtube-automation/",
+      "fetchedAt": "2026-03-08T00:21:00Z",
+      "title": "Best Faceless Video AI Generators in 2026: Automate YouTube",
+      "excerpt": "A guide focused strictly on YouTube automation workflows and scripting.",
+      "publishedAt": "2026-02-05T00:00:00Z",
+      "sections": [
+        {
+          "heading": "Top Platforms",
+          "type": "tool_list",
+          "content": "Syllaby offers end-to-end faceless video generation with AI-driven scripting, voice cloning, and automated visuals optimized for YouTube automation."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Syllaby",
+          "toolSlugGuess": "syllaby",
+          "bestFor": "End-to-end YouTube automation",
+          "keyClaims": [
+            "AI-driven scripting and automated visuals",
+            "Voice cloning optimized for YouTube automation"
+          ],
+          "pricingClaims": [
+            "Basic: $29/month (500 credits)",
+            "Lifetime Deal for $799"
+          ],
+          "watermarkRules": [
+            "Lifetime Deal ($799) explicitly removes watermarks"
+          ],
+          "exportRules": [],
+          "refundRules": [
+            "Offers a 7-day money-back guarantee if no credits have been used"
+          ],
+          "limitations": [
+            "Storage limited to 5GB-20GB depending on tier",
+            "Voice clones limited to 1-5 depending on tier"
+          ],
+          "proofSnippets": [
+            "Syllaby offers end-to-end faceless video generation with AI-driven scripting, voice cloning, and automated visuals optimized for YouTube automation.",
+            "7-day money-back guarantee: If you're not satisfied within the first 7 days of purchase and have not used any credits..."
+          ],
+          "confidence": 0.9
+        }
+      ],
+      "confidence": 0.9,
+      "notes": [
+        "Provides context for a tool specifically built for the YouTube automation space."
+      ]
+    },
+    {
+      "sourceUrl": "https://help-ai.invideo.io/en/collections/9486043-pricing-plans",
+      "fetchedAt": "2026-03-08T00:23:00Z",
+      "title": "InVideo AI Official Limits for Automation",
+      "excerpt": "Official constraints and watermark policies for InVideo's automation engine.",
+      "publishedAt": null,
+      "sections": [
+        {
+          "heading": "Free Plan Limits",
+          "type": "limitations",
+          "content": "2 video minutes per week. 1 AI credit per week. 4 exports per week."
+        },
+        {
+          "heading": "Watermark Policy",
+          "type": "limitations",
+          "content": "All exports on the free plan include an InVideo watermark."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "InVideo AI",
+          "toolSlugGuess": "invideo",
+          "bestFor": "All-in-one prompt-to-video documentary style",
+          "keyClaims": [
+            "16 million+ stock media library",
+            "Automated voiceovers with multiple voice and accent options"
+          ],
+          "pricingClaims": [
+            "Basic, Pro, and Ultra paid tiers with up to 20% annual discount"
+          ],
+          "watermarkRules": [
+            "Free plan exports come with an InVideo watermark"
+          ],
+          "exportRules": [
+            "Free plan allows only 4 exports per week"
+          ],
+          "refundRules": [],
+          "limitations": [
+            "Free plan severely restricted to 2 video minutes and 1 AI credit per week"
+          ],
+          "proofSnippets": [
+            "Free tier limitations: 2 video minutes per week, 1 AI credit per week, 4 exports per week.",
+            "All exports include an InVideo watermark on the free plan."
+          ],
+          "confidence": 0.99
+        }
+      ],
+      "confidence": 0.99,
+      "notes": [
+        "Confirms exact constraints on the most popular YouTube automation tool."
+      ]
+    }
+  ]
+}

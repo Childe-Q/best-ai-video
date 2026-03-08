@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "slug": "best-ai-video-generators",
+  "title": "Best AI Video Generators (2026)",
+  "summarySeed": {
+    "oneLiner": "This page compares AI video generators with native generation capabilities — text-to-video, image-to-video, and avatar-based creation. Tools are grouped by primary workflow: cinematic scene generation, avatar-driven presentations, or short-form social effects. Traditional editors that only use AI for peripheral tasks like auto-captions are excluded.",
+    "boundaries": [
+      "Native AI generation required: text-to-video, image-to-video, or avatar creation.",
+      "Excludes editors that only add AI-powered captions or filters without generating the core video.",
+      "Compared across pricing, credit limits, watermark policies, export quality, and commercial rights."
+    ],
+    "primaryClassificationRule": "Group by primary generation workflow.",
+    "comparisonAxes": [
+      "pricing and credit limits",
+      "watermark policy",
+      "export quality",
+      "commercial rights",
+      "team and governance requirements"
+    ]
+  },
+  "howToChooseSeeds": [
+    {
+      "title": "Match the tool to your core use case.",
+      "desc": "Cinematic B-roll and scene generation (Sora, Runway) require a fundamentally different tool than talking-head avatars (Synthesia, HeyGen) or effects-driven social clips (Pika). Start by narrowing which workflow you actually need."
+    },
+    {
+      "title": "Verify how many minutes your credits actually buy.",
+      "desc": "Most platforms use a credit system. A \"$20/mo\" plan may only generate 15–25 seconds of video per credit spend. Check the actual minutes-per-month on the tier you plan to buy, not just the headline price."
+    },
+    {
+      "title": "Confirm commercial licensing before publishing.",
+      "desc": "Free tiers on several tools — including Pika and Sora — either restrict commercial use or add watermarks to outputs. If you are publishing for a client or brand, ensure your plan explicitly grants commercial rights."
+    },
+    {
+      "title": "Check watermark and resolution requirements upfront.",
+      "desc": "Watermark removal and 1080p+ exports often require upgrading to a mid-tier or higher plan. Synthesia and HeyGen both remove watermarks starting at $29/mo; Sora's free outputs include watermarks."
+    }
+  ],
+  "groups": [
+    {
+      "id": "cinematic-generation",
+      "title": "Cinematic generation",
+      "rule": "These tools produce photorealistic or visually controlled scene-level video from text or image prompts. They are built for creators who need cinematic B-roll, product shots, or high-fidelity short clips — not template-based editing.",
+      "toolSlugs": [
+        "sora",
+        "runway"
+      ]
+    },
+    {
+      "id": "avatar-workflows",
+      "title": "Avatar workflows",
+      "rule": "Platforms in this group center on AI presenter avatars and talking-head output. They suit corporate training, multilingual presentations, and any workflow where a human-like speaker is the primary content format.",
+      "toolSlugs": [
+        "heygen",
+        "synthesia"
+      ]
+    },
+    {
+      "id": "short-form-effects",
+      "title": "Short-form effects",
+      "rule": "This group covers generators optimized for fast creative effects and social-first clips — the kind of content made for TikTok, Reels, and rapid iteration rather than polished long-form video.",
+      "toolSlugs": [
+        "pika"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Sora",
+      "slug": "sora",
+      "verdictSeed": "Photorealistic text-to-video generation. Produces 15-second clips (up to 25s in Pro storyboard mode) with strong audio-visual quality.",
+      "pricingSeed": "From $20/mo",
+      "policySeed": "Free outputs include watermarks",
+      "bestForSeed": "Photorealistic cinematic clips and B-roll",
+      "mainLimitationSeed": "Commercial use typically requires a paid subscription",
+      "officialUrl": "https://openai.com/sora",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/sora",
+      "logoUrl": "/logos/sora.png",
+      "sourceUrls": [
+        "https://www.toolworthy.ai/blog/best-ai-video-generator"
+      ],
+      "flags": []
+    },
+    {
+      "name": "Synthesia",
+      "slug": "synthesia",
+      "verdictSeed": "Avatar-based video for corporate training and multilingual presentations. Uses a seat-based model with predictable per-minute costs.",
+      "pricingSeed": "Basic: Free (1,200 credits/mo); Starter: $29/mo",
+      "policySeed": "Watermark removal is included in the Starter plan ($29/mo) and higher",
+      "bestForSeed": "Corporate training, L&D, and presentations",
+      "mainLimitationSeed": "Starter plan capped at 10 minutes/month; SCORM export requires Enterprise",
+      "officialUrl": "https://www.synthesia.io/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/synthesia",
+      "logoUrl": "/logos/synthesia.png",
+      "sourceUrls": [
+        "https://www.toolworthy.ai/blog/best-ai-video-generator",
+        "https://vidwave.ai/heygen-vs-synthesia-pricing-2025-full-cost-breakdown"
+      ],
+      "flags": [
+        "duplicate-raw-mentions-merged"
+      ]
+    },
+    {
+      "name": "Pika",
+      "slug": "pika",
+      "verdictSeed": "Ultra-fast effects-driven content for TikTok and Reels via the Model 2.2 engine.",
+      "pricingSeed": "From $8/mo",
+      "policySeed": null,
+      "bestForSeed": "TikTok and Reels effects",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://pika.style/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/pika",
+      "logoUrl": "/logos/pika-logo.jpeg",
+      "sourceUrls": [
+        "https://www.toolworthy.ai/blog/best-ai-video-generator"
+      ],
+      "flags": [
+        "missing-pricing-seed",
+        "missing-policy-seed",
+        "missing-limitation-seed"
+      ]
+    },
+    {
+      "name": "HeyGen",
+      "slug": "heygen",
+      "verdictSeed": "Flexible avatar creation with 175+ language support and voice cloning. Consumption-based model with credit add-ons.",
+      "pricingSeed": "Free: $0/mo; Creator: $29/mo",
+      "policySeed": "Creator plan ($29/mo) includes watermark removal",
+      "bestForSeed": "Multilingual avatar videos and personalization",
+      "mainLimitationSeed": "Free plan limited to 3 videos/month at 720p; Creator plan caps Avatar IV to ~10 min/mo",
+      "officialUrl": "https://www.heygen.com/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/heygen",
+      "logoUrl": "/logos/heygen-logo.png",
+      "sourceUrls": [
+        "https://vidwave.ai/heygen-vs-synthesia-pricing-2025-full-cost-breakdown"
+      ],
+      "flags": []
+    },
+    {
+      "name": "Runway",
+      "slug": "runway",
+      "verdictSeed": "Creative control for effects-driven and cinematic short clips. Supports professional controls including color grading.",
+      "pricingSeed": "From $15/mo (625 credits)",
+      "policySeed": null,
+      "bestForSeed": "Creative effects and short cinematic clips",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://runwayml.com/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/runway",
+      "logoUrl": "/logos/runway.png",
+      "sourceUrls": [
+        "https://vidwave.ai/heygen-vs-synthesia-pricing-2025-full-cost-breakdown"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-limitation-seed"
+      ]
+    }
+  ],
+  "relatedLinks": {
+    "reviewSlugs": [
+      "sora",
+      "synthesia",
+      "pika",
+      "heygen",
+      "runway"
+    ],
+    "alternativesSlugs": [
+      "sora",
+      "synthesia",
+      "pika"
+    ],
+    "vsSlugs": [],
+    "guideSlugs": []
+  },
+  "faqSeeds": [
+    {
+      "question": "What qualifies a tool for Best AI Video Generators (2026)?",
+      "answerSeed": "Group by primary generation workflow. Must have native AI video generation (text-to-video, image-to-video, or avatar generation). Excludes traditional video editors that only use AI for peripheral tasks (like auto-captions) without generating the core video.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "What should readers compare first on this page?",
+      "answerSeed": "Evaluate Your Core Use Case: Are you creating cinematic B-roll (Sora, Veo, Runway), talking-head presentations (Synthesia, HeyGen), or viral social media clips (Pika, Luma)? Check Cost and Credit Limits: Most platforms use a credit system. Verify how many seconds or minutes of video you actually get per month on standard paid tiers.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "Which tools already have internal review coverage?",
+      "answerSeed": "Current internal review coverage in this normalized dataset: sora, synthesia, pika, heygen, runway.",
+      "sourceToolSlugs": [
+        "sora",
+        "synthesia",
+        "pika",
+        "heygen",
+        "runway"
+      ]
+    }
+  ],
+  "lastReviewed": "2026-03-07T22:30:00Z",
+  "reviewMetadata": {
+    "generatedFrom": "research-raw",
+    "sourceFile": "src/data/research/features/best-ai-video-generators.raw.json",
+    "sourceCount": 2,
+    "uniqueToolCount": 5,
+    "needsManualReview": true,
+    "reviewNotes": [
+      "Duplicate raw tool mentions merged: synthesia"
+    ]
+  }
+}

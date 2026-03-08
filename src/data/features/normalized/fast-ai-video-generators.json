@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "slug": "fast-ai-video-generators",
+  "title": "Fastest AI Video Generators (2026)",
+  "summarySeed": {
+    "oneLiner": "This page compares AI video generators specifically on generation speed — tools that render video in seconds or low minutes rather than queuing for extended periods. Only platforms with rapid render times or near real-time generation are included. Traditional editors and tools that only process existing footage are excluded.",
+    "boundaries": [
+      "Must feature rapid render times or near real-time generation.",
+      "Must generate actual video content, not just edit existing footage.",
+      "Compared on generation queue times, priority modes, and API rate limits."
+    ],
+    "primaryClassificationRule": "Group by rapid generation workflow.",
+    "comparisonAxes": [
+      "workflow fit and automation",
+      "generation speed"
+    ]
+  },
+  "howToChooseSeeds": [
+    {
+      "title": "Understand the speed-quality tradeoff.",
+      "desc": "The fastest generators (Luma Dream Machine, Pika) may sacrifice some of the cinematic fidelity found in slower models like Sora. If visual polish matters more than turnaround, a speed-first tool may not be the right fit."
+    },
+    {
+      "title": "Check what \"fast\" actually means on your plan tier.",
+      "desc": "Free tiers on most platforms place you in slower queues during peak hours. Luma Dream Machine uses a waitlist system for free users; upgrading to a paid plan lets you skip the queue. Pika's Standard and Pro plans explicitly offer faster generations."
+    },
+    {
+      "title": "Verify API concurrency if generating programmatically.",
+      "desc": "For batch or API-driven workflows, check concurrent request limits. Luma's API allows 10 concurrent video generations but caps requests at 20/minute. These limits matter at production volume."
+    }
+  ],
+  "groups": [
+    {
+      "id": "rapid-prototyping",
+      "title": "Rapid prototyping",
+      "rule": "These generators are built for fast prompt-to-video turnaround — producing usable clips in seconds to low minutes. They suit creators who need to test concepts, iterate on social content, or generate high volumes of short clips without waiting in long render queues.",
+      "toolSlugs": [
+        "luma-dream-machine",
+        "hailuo-ai",
+        "pika"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Luma Dream Machine",
+      "slug": "luma-dream-machine",
+      "verdictSeed": "Reported as the fastest AI video generator — renders clips in seconds rather than minutes. API supports 10 concurrent generations.",
+      "pricingSeed": "Lite: $9.99/mo; Plus: $29.99/mo; Unlimited: $94.99/mo",
+      "policySeed": null,
+      "bestForSeed": "Rapid prototyping and high-volume fast generation",
+      "mainLimitationSeed": "API rate-limited to 20 requests/minute; free users placed in waitlist queue during peak",
+      "officialUrl": "https://lumalabs.ai/",
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://www.comparegen.ai/blog/best-ai-video-generator-2026",
+        "https://lumalabs.ai/learning-hub/dream-machine-support-pricing-information"
+      ],
+      "flags": [
+        "duplicate-raw-mentions-merged",
+        "missing-policy-seed",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    },
+    {
+      "name": "Minimax Hailuo",
+      "slug": "hailuo-ai",
+      "verdictSeed": "Renders 10-second video sequences in under two minutes. Reported to offer the lowest cost per second among speed-focused generators.",
+      "pricingSeed": null,
+      "policySeed": null,
+      "bestForSeed": "Quick social content concept testing",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://hailuoai.com/",
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://www.comparegen.ai/blog/best-ai-video-generator-2026"
+      ],
+      "flags": [
+        "missing-pricing-seed",
+        "missing-policy-seed",
+        "missing-limitation-seed",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    },
+    {
+      "name": "Pika",
+      "slug": "pika",
+      "verdictSeed": "Near real-time generation via the Pikaformance model. Standard and Pro plans offer faster queues and commercial use.",
+      "pricingSeed": "Free (80 credits); Standard: $8/mo; Pro: $28/mo",
+      "policySeed": null,
+      "bestForSeed": "Near real-time social media effects",
+      "mainLimitationSeed": "Free plan restricted to 480p and strictly prohibits commercial use",
+      "officialUrl": "https://pika.style/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/pika",
+      "logoUrl": "/logos/pika-logo.jpeg",
+      "sourceUrls": [
+        "https://pika.art/pricing"
+      ],
+      "flags": [
+        "missing-policy-seed"
+      ]
+    }
+  ],
+  "relatedLinks": {
+    "reviewSlugs": [
+      "pika"
+    ],
+    "alternativesSlugs": [
+      "pika"
+    ],
+    "vsSlugs": [],
+    "guideSlugs": []
+  },
+  "faqSeeds": [
+    {
+      "question": "What qualifies a tool for Fastest AI Video Generators (2026)?",
+      "answerSeed": "Group by rapid generation workflow. Must feature rapid render times or near real-time generation. Must generate actual video content (not just edit existing footage). Focuses on generation queue times and API rate limits as key features.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "What should readers compare first on this page?",
+      "answerSeed": "Speed vs. Quality Tradeoff: The absolute fastest generators (like Luma or Pika) may sometimes sacrifice the strict cinematic fidelity seen in slower models (like Sora). Evaluate Priority Queues: Free tiers often place you in slow queues during peak hours. Check if upgrading to a paid tier guarantees 'Fast Mode' generations.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "Which tools already have internal review coverage?",
+      "answerSeed": "Current internal review coverage in this normalized dataset: pika.",
+      "sourceToolSlugs": [
+        "pika"
+      ]
+    }
+  ],
+  "lastReviewed": "2026-03-07T23:05:00Z",
+  "reviewMetadata": {
+    "generatedFrom": "research-raw",
+    "sourceFile": "src/data/research/features/fast-ai-video-generators.raw.json",
+    "sourceCount": 3,
+    "uniqueToolCount": 3,
+    "needsManualReview": true,
+    "reviewNotes": [
+      "Duplicate raw tool mentions merged: luma-dream-machine",
+      "One or more tools still need verified logoUrl coverage.",
+      "One or more tools are missing internal review coverage."
+    ]
+  }
+}

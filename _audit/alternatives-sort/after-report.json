@@ -5,272 +5,436 @@
     "pictoryTop1Ratio": 0.15,
     "jaccardMean": 0.1597138680033416,
     "jaccardMax": 1,
-    "exactSameOrderPairCount": 2
+    "exactSameOrderPairCount": 2,
+    "constraint_missed_core_pages": [
+      "invideo",
+      "heygen",
+      "veed-io",
+      "flexclip"
+    ],
+    "constraint_missed_featured_pages": [
+      "veed-io"
+    ],
+    "constraint_featured_not_all_in_top3_pages": [
+      "invideo",
+      "runway"
+    ],
+    "baseline_featured_fill_fail_pages": [
+      "heygen",
+      "fliki",
+      "zebracat",
+      "synthesia",
+      "pika"
+    ],
+    "content_quality_warnings_count": 0,
+    "content_quality_top_offending_pages": []
   },
-  "after": {
-    "generatedAt": "2026-03-04T09:22:11.441Z",
+  "beforeData": {
+    "generatedAt": "2026-03-08T05:15:12.700Z",
     "pages": [
       {
         "slug": "invideo",
-        "title": "InVideo Alternatives (2026): Best Replacements by Use Case",
+        "title": "invideo",
         "top6": [
-          "runway",
-          "veed-io",
           "pictory",
+          "runway",
           "sora",
-          "synthesia"
+          "synthesia",
+          "veed-io"
         ],
+        "top6_has_core_anchor": false,
+        "top6_core_anchor_slug": null,
+        "top6_featured_count": 2,
+        "top6_featured_slug": "synthesia",
+        "featured_in_top3_count": 0,
+        "featured_total_count": 2,
+        "featured_all_in_top3": false,
+        "baseline_featured_count": 2,
         "featuredCountTop6": 2,
-        "pictoryIsTop1": false
+        "pictoryIsTop1": true
       },
       {
         "slug": "heygen",
-        "title": "HeyGen Alternatives (2026): Best Replacements by Use Case",
+        "title": "heygen",
         "top6": [
+          "pictory",
           "synthesia",
           "deepbrain-ai",
           "colossyan",
-          "synthesys",
-          "d-id",
-          "pictory"
+          "d-id"
         ],
+        "top6_has_core_anchor": false,
+        "top6_core_anchor_slug": null,
+        "top6_featured_count": 1,
+        "top6_featured_slug": "synthesia",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 1,
         "featuredCountTop6": 1,
-        "pictoryIsTop1": false
+        "pictoryIsTop1": true
       },
       {
         "slug": "fliki",
-        "title": "Fliki Alternatives (2026): Best Replacements by Use Case",
+        "title": "fliki",
         "top6": [
           "lumen5",
-          "opus-clip",
-          "runway",
-          "invideo",
           "pictory",
+          "invideo",
+          "runway",
           "sora"
         ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "invideo",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "invideo",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 1,
         "featuredCountTop6": 1,
         "pictoryIsTop1": false
       },
       {
         "slug": "veed-io",
-        "title": "Veed.io Alternatives (2026): Best Replacements by Use Case",
+        "title": "veed-io",
         "top6": [
-          "flexclip",
+          "pictory",
           "descript",
-          "fliki",
-          "heygen",
           "opus-clip",
-          "pictory"
+          "flexclip",
+          "lumen5"
         ],
-        "featuredCountTop6": 2,
-        "pictoryIsTop1": false
+        "top6_has_core_anchor": false,
+        "top6_core_anchor_slug": null,
+        "top6_featured_count": 0,
+        "top6_featured_slug": null,
+        "featured_in_top3_count": 0,
+        "featured_total_count": 0,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 0,
+        "featuredCountTop6": 0,
+        "pictoryIsTop1": true
       },
       {
         "slug": "zebracat",
-        "title": "Zebracat Alternatives (2026): Best Replacements by Use Case",
+        "title": "zebracat",
         "top6": [
-          "runway",
-          "fliki",
           "lumen5",
-          "sora",
-          "opus-clip",
-          "pictory"
+          "pictory",
+          "fliki",
+          "runway",
+          "sora"
         ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "fliki",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "fliki",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 1,
         "featuredCountTop6": 1,
         "pictoryIsTop1": false
       },
       {
         "slug": "synthesia",
-        "title": "Synthesia Alternatives (2026): Best Replacements by Use Case",
+        "title": "synthesia",
         "top6": [
           "heygen",
+          "pictory",
           "deepbrain-ai",
           "colossyan",
-          "synthesys",
-          "d-id",
-          "pictory"
+          "opus-clip"
         ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "heygen",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "heygen",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 1,
         "featuredCountTop6": 1,
         "pictoryIsTop1": false
       },
       {
         "slug": "elai-io",
-        "title": "Elai.io Alternatives (2026): Best Replacements by Use Case",
+        "title": "elai-io",
         "top6": [
           "heygen",
-          "deepbrain-ai",
+          "pictory",
           "synthesia",
-          "d-id",
-          "colossyan",
-          "pictory"
+          "deepbrain-ai",
+          "colossyan"
         ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "heygen",
+        "top6_featured_count": 2,
+        "top6_featured_slug": "heygen",
+        "featured_in_top3_count": 2,
+        "featured_total_count": 2,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
         "featuredCountTop6": 2,
         "pictoryIsTop1": false
       },
       {
         "slug": "pika",
-        "title": "Pika Alternatives (2026): Best Replacements by Use Case",
+        "title": "pika",
         "top6": [
-          "steve-ai",
+          "flexclip",
+          "pictory",
           "fliki",
-          "veed-io",
           "runway",
-          "sora",
-          "pictory"
+          "steve-ai"
         ],
-        "featuredCountTop6": 2,
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "fliki",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "fliki",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 1,
+        "featuredCountTop6": 1,
         "pictoryIsTop1": false
       },
       {
         "slug": "descript",
-        "title": "Descript Alternatives (2026): Best Replacements by Use Case",
+        "title": "descript",
         "top6": [
           "veed-io",
+          "invideo",
           "sora",
-          "runway",
-          "colossyan",
-          "invideo"
+          "runway"
         ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "invideo",
+        "top6_featured_count": 2,
+        "top6_featured_slug": "veed-io",
+        "featured_in_top3_count": 2,
+        "featured_total_count": 2,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
         "featuredCountTop6": 2,
         "pictoryIsTop1": false
       },
       {
         "slug": "opus-clip",
-        "title": "Opus Clip Alternatives (2026): Best Replacements by Use Case",
+        "title": "opus-clip",
         "top6": [
           "zebracat",
-          "runway",
           "invideo"
         ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "invideo",
+        "top6_featured_count": 2,
+        "top6_featured_slug": "zebracat",
+        "featured_in_top3_count": 2,
+        "featured_total_count": 2,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
         "featuredCountTop6": 2,
         "pictoryIsTop1": false
       },
       {
         "slug": "runway",
-        "title": "Runway Alternatives (2026): Best Replacements by Use Case",
+        "title": "runway",
         "top6": [
           "sora",
-          "descript",
           "zebracat",
+          "descript",
           "invideo"
         ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "invideo",
+        "top6_featured_count": 2,
+        "top6_featured_slug": "zebracat",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 2,
+        "featured_all_in_top3": false,
+        "baseline_featured_count": 2,
         "featuredCountTop6": 2,
         "pictoryIsTop1": false
       },
       {
         "slug": "sora",
-        "title": "Sora Alternatives (2026): Best Replacements by Use Case",
+        "title": "sora",
         "top6": [
-          "runway",
+          "invideo",
           "fliki",
-          "descript",
-          "invideo"
+          "pika",
+          "runway"
         ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "invideo",
+        "top6_featured_count": 2,
+        "top6_featured_slug": "invideo",
+        "featured_in_top3_count": 2,
+        "featured_total_count": 2,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
         "featuredCountTop6": 2,
         "pictoryIsTop1": false
       },
       {
         "slug": "pictory",
-        "title": "Pictory Alternatives (2026): Best Replacements by Use Case",
+        "title": "pictory",
         "top6": [
           "veed-io",
-          "opus-clip",
-          "descript",
-          "fliki"
+          "invideo",
+          "descript"
         ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "invideo",
+        "top6_featured_count": 2,
+        "top6_featured_slug": "veed-io",
+        "featured_in_top3_count": 2,
+        "featured_total_count": 2,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
         "featuredCountTop6": 2,
         "pictoryIsTop1": false
       },
       {
         "slug": "colossyan",
-        "title": "Colossyan Alternatives (2026): Best Replacements by Use Case",
+        "title": "colossyan",
         "top6": [
           "heygen",
           "synthesia",
           "elai-io",
           "d-id",
-          "descript",
-          "sora"
+          "pika"
         ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "heygen",
+        "top6_featured_count": 2,
+        "top6_featured_slug": "heygen",
+        "featured_in_top3_count": 2,
+        "featured_total_count": 2,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
         "featuredCountTop6": 2,
         "pictoryIsTop1": false
       },
       {
         "slug": "d-id",
-        "title": "D-ID Alternatives (2026): Best Replacements by Use Case",
+        "title": "d-id",
         "top6": [
-          "elai-io",
           "heygen",
           "synthesia",
-          "deepbrain-ai",
-          "colossyan"
+          "elai-io",
+          "colossyan",
+          "deepbrain-ai"
         ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "heygen",
+        "top6_featured_count": 2,
+        "top6_featured_slug": "heygen",
+        "featured_in_top3_count": 2,
+        "featured_total_count": 2,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
         "featuredCountTop6": 2,
         "pictoryIsTop1": false
       },
       {
         "slug": "deepbrain-ai",
-        "title": "DeepBrain AI Alternatives (2026): Best Replacements by Use Case",
+        "title": "deepbrain-ai",
         "top6": [
           "heygen",
           "synthesia",
-          "colossyan",
           "elai-io",
-          "runway",
-          "descript"
+          "colossyan"
         ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "heygen",
+        "top6_featured_count": 2,
+        "top6_featured_slug": "heygen",
+        "featured_in_top3_count": 2,
+        "featured_total_count": 2,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
         "featuredCountTop6": 2,
         "pictoryIsTop1": false
       },
       {
         "slug": "synthesys",
-        "title": "Synthesys Alternatives (2026): Best Replacements by Use Case",
+        "title": "synthesys",
         "top6": [
           "heygen",
           "synthesia",
-          "colossyan",
           "elai-io",
-          "runway",
-          "descript"
+          "colossyan"
         ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "heygen",
+        "top6_featured_count": 2,
+        "top6_featured_slug": "heygen",
+        "featured_in_top3_count": 2,
+        "featured_total_count": 2,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
         "featuredCountTop6": 2,
         "pictoryIsTop1": false
       },
       {
         "slug": "flexclip",
-        "title": "FlexClip Alternatives (2026): Best Replacements by Use Case",
+        "title": "flexclip",
         "top6": [
           "veed-io",
-          "invideo",
+          "zebracat",
           "descript",
-          "d-id",
           "pika"
         ],
+        "top6_has_core_anchor": false,
+        "top6_core_anchor_slug": null,
+        "top6_featured_count": 2,
+        "top6_featured_slug": "veed-io",
+        "featured_in_top3_count": 2,
+        "featured_total_count": 2,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
         "featuredCountTop6": 2,
         "pictoryIsTop1": false
       },
       {
         "slug": "lumen5",
-        "title": "Lumen5 Alternatives (2026): Best Replacements by Use Case",
+        "title": "lumen5",
         "top6": [
-          "fliki",
-          "opus-clip",
           "invideo",
-          "descript"
+          "fliki",
+          "pika"
         ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "invideo",
+        "top6_featured_count": 2,
+        "top6_featured_slug": "invideo",
+        "featured_in_top3_count": 2,
+        "featured_total_count": 2,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
         "featuredCountTop6": 2,
         "pictoryIsTop1": false
       },
       {
         "slug": "steve-ai",
-        "title": "Steve AI Alternatives (2026): Best Replacements by Use Case",
+        "title": "steve-ai",
         "top6": [
-          "pika",
           "invideo",
           "fliki",
-          "runway",
-          "sora"
+          "pika",
+          "runway"
         ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "invideo",
+        "top6_featured_count": 2,
+        "top6_featured_slug": "invideo",
+        "featured_in_top3_count": 2,
+        "featured_total_count": 2,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
         "featuredCountTop6": 2,
         "pictoryIsTop1": false
       }
@@ -279,475 +443,475 @@
       {
         "a": "invideo",
         "b": "heygen",
-        "jaccard": 0.2222222222222222,
+        "jaccard": 0.25,
         "exactSameOrder": false
       },
       {
         "a": "invideo",
         "b": "fliki",
-        "jaccard": 0.375,
-        "exactSameOrder": false
-      },
-      {
-        "a": "invideo",
-        "b": "veed-io",
-        "jaccard": 0.1,
-        "exactSameOrder": false
-      },
-      {
-        "a": "invideo",
-        "b": "zebracat",
-        "jaccard": 0.375,
-        "exactSameOrder": false
-      },
-      {
-        "a": "invideo",
-        "b": "synthesia",
-        "jaccard": 0.1,
-        "exactSameOrder": false
-      },
-      {
-        "a": "invideo",
-        "b": "elai-io",
-        "jaccard": 0.2222222222222222,
-        "exactSameOrder": false
-      },
-      {
-        "a": "invideo",
-        "b": "pika",
-        "jaccard": 0.5714285714285714,
-        "exactSameOrder": false
-      },
-      {
-        "a": "invideo",
-        "b": "descript",
         "jaccard": 0.42857142857142855,
         "exactSameOrder": false
       },
       {
         "a": "invideo",
-        "b": "opus-clip",
-        "jaccard": 0.14285714285714285,
-        "exactSameOrder": false
-      },
-      {
-        "a": "invideo",
-        "b": "runway",
-        "jaccard": 0.125,
-        "exactSameOrder": false
-      },
-      {
-        "a": "invideo",
-        "b": "sora",
-        "jaccard": 0.125,
-        "exactSameOrder": false
-      },
-      {
-        "a": "invideo",
-        "b": "pictory",
-        "jaccard": 0.125,
-        "exactSameOrder": false
-      },
-      {
-        "a": "invideo",
-        "b": "colossyan",
-        "jaccard": 0.2222222222222222,
-        "exactSameOrder": false
-      },
-      {
-        "a": "invideo",
-        "b": "d-id",
-        "jaccard": 0.1111111111111111,
-        "exactSameOrder": false
-      },
-      {
-        "a": "invideo",
-        "b": "deepbrain-ai",
-        "jaccard": 0.2222222222222222,
-        "exactSameOrder": false
-      },
-      {
-        "a": "invideo",
-        "b": "synthesys",
-        "jaccard": 0.2222222222222222,
-        "exactSameOrder": false
-      },
-      {
-        "a": "invideo",
-        "b": "flexclip",
-        "jaccard": 0.1111111111111111,
-        "exactSameOrder": false
-      },
-      {
-        "a": "invideo",
-        "b": "lumen5",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "invideo",
-        "b": "steve-ai",
-        "jaccard": 0.25,
-        "exactSameOrder": false
-      },
-      {
-        "a": "heygen",
-        "b": "fliki",
-        "jaccard": 0.09090909090909091,
-        "exactSameOrder": false
-      },
-      {
-        "a": "heygen",
         "b": "veed-io",
-        "jaccard": 0.09090909090909091,
-        "exactSameOrder": false
-      },
-      {
-        "a": "heygen",
-        "b": "zebracat",
-        "jaccard": 0.09090909090909091,
-        "exactSameOrder": false
-      },
-      {
-        "a": "heygen",
-        "b": "synthesia",
-        "jaccard": 0.7142857142857143,
-        "exactSameOrder": false
-      },
-      {
-        "a": "heygen",
-        "b": "elai-io",
-        "jaccard": 0.7142857142857143,
-        "exactSameOrder": false
-      },
-      {
-        "a": "heygen",
-        "b": "pika",
-        "jaccard": 0.09090909090909091,
-        "exactSameOrder": false
-      },
-      {
-        "a": "heygen",
-        "b": "descript",
-        "jaccard": 0.1,
-        "exactSameOrder": false
-      },
-      {
-        "a": "heygen",
-        "b": "opus-clip",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "heygen",
-        "b": "runway",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "heygen",
-        "b": "sora",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "heygen",
-        "b": "pictory",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "heygen",
-        "b": "colossyan",
-        "jaccard": 0.2,
-        "exactSameOrder": false
-      },
-      {
-        "a": "heygen",
-        "b": "d-id",
-        "jaccard": 0.375,
-        "exactSameOrder": false
-      },
-      {
-        "a": "heygen",
-        "b": "deepbrain-ai",
-        "jaccard": 0.2,
-        "exactSameOrder": false
-      },
-      {
-        "a": "heygen",
-        "b": "synthesys",
-        "jaccard": 0.2,
-        "exactSameOrder": false
-      },
-      {
-        "a": "heygen",
-        "b": "flexclip",
-        "jaccard": 0.1,
-        "exactSameOrder": false
-      },
-      {
-        "a": "heygen",
-        "b": "lumen5",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "heygen",
-        "b": "steve-ai",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "fliki",
-        "b": "veed-io",
-        "jaccard": 0.2,
-        "exactSameOrder": false
-      },
-      {
-        "a": "fliki",
-        "b": "zebracat",
-        "jaccard": 0.7142857142857143,
-        "exactSameOrder": false
-      },
-      {
-        "a": "fliki",
-        "b": "synthesia",
-        "jaccard": 0.09090909090909091,
-        "exactSameOrder": false
-      },
-      {
-        "a": "fliki",
-        "b": "elai-io",
-        "jaccard": 0.09090909090909091,
-        "exactSameOrder": false
-      },
-      {
-        "a": "fliki",
-        "b": "pika",
-        "jaccard": 0.3333333333333333,
-        "exactSameOrder": false
-      },
-      {
-        "a": "fliki",
-        "b": "descript",
-        "jaccard": 0.375,
-        "exactSameOrder": false
-      },
-      {
-        "a": "fliki",
-        "b": "opus-clip",
-        "jaccard": 0.2857142857142857,
-        "exactSameOrder": false
-      },
-      {
-        "a": "fliki",
-        "b": "runway",
-        "jaccard": 0.25,
-        "exactSameOrder": false
-      },
-      {
-        "a": "fliki",
-        "b": "sora",
-        "jaccard": 0.25,
-        "exactSameOrder": false
-      },
-      {
-        "a": "fliki",
-        "b": "pictory",
         "jaccard": 0.1111111111111111,
         "exactSameOrder": false
       },
       {
-        "a": "fliki",
-        "b": "colossyan",
-        "jaccard": 0.09090909090909091,
-        "exactSameOrder": false
-      },
-      {
-        "a": "fliki",
-        "b": "d-id",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "fliki",
-        "b": "deepbrain-ai",
-        "jaccard": 0.09090909090909091,
-        "exactSameOrder": false
-      },
-      {
-        "a": "fliki",
-        "b": "synthesys",
-        "jaccard": 0.09090909090909091,
-        "exactSameOrder": false
-      },
-      {
-        "a": "fliki",
-        "b": "flexclip",
-        "jaccard": 0.1,
-        "exactSameOrder": false
-      },
-      {
-        "a": "fliki",
-        "b": "lumen5",
-        "jaccard": 0.25,
-        "exactSameOrder": false
-      },
-      {
-        "a": "fliki",
-        "b": "steve-ai",
-        "jaccard": 0.375,
-        "exactSameOrder": false
-      },
-      {
-        "a": "veed-io",
+        "a": "invideo",
         "b": "zebracat",
-        "jaccard": 0.3333333333333333,
-        "exactSameOrder": false
-      },
-      {
-        "a": "veed-io",
-        "b": "synthesia",
-        "jaccard": 0.2,
-        "exactSameOrder": false
-      },
-      {
-        "a": "veed-io",
-        "b": "elai-io",
-        "jaccard": 0.2,
-        "exactSameOrder": false
-      },
-      {
-        "a": "veed-io",
-        "b": "pika",
-        "jaccard": 0.2,
-        "exactSameOrder": false
-      },
-      {
-        "a": "veed-io",
-        "b": "descript",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "veed-io",
-        "b": "opus-clip",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "veed-io",
-        "b": "runway",
-        "jaccard": 0.1111111111111111,
-        "exactSameOrder": false
-      },
-      {
-        "a": "veed-io",
-        "b": "sora",
-        "jaccard": 0.25,
-        "exactSameOrder": false
-      },
-      {
-        "a": "veed-io",
-        "b": "pictory",
         "jaccard": 0.42857142857142855,
         "exactSameOrder": false
       },
       {
-        "a": "veed-io",
-        "b": "colossyan",
-        "jaccard": 0.2,
-        "exactSameOrder": false
-      },
-      {
-        "a": "veed-io",
-        "b": "d-id",
-        "jaccard": 0.1,
-        "exactSameOrder": false
-      },
-      {
-        "a": "veed-io",
-        "b": "deepbrain-ai",
-        "jaccard": 0.2,
-        "exactSameOrder": false
-      },
-      {
-        "a": "veed-io",
-        "b": "synthesys",
-        "jaccard": 0.2,
-        "exactSameOrder": false
-      },
-      {
-        "a": "veed-io",
-        "b": "flexclip",
-        "jaccard": 0.1,
-        "exactSameOrder": false
-      },
-      {
-        "a": "veed-io",
-        "b": "lumen5",
-        "jaccard": 0.42857142857142855,
-        "exactSameOrder": false
-      },
-      {
-        "a": "veed-io",
-        "b": "steve-ai",
-        "jaccard": 0.1,
-        "exactSameOrder": false
-      },
-      {
-        "a": "zebracat",
+        "a": "invideo",
         "b": "synthesia",
-        "jaccard": 0.09090909090909091,
+        "jaccard": 0.1111111111111111,
         "exactSameOrder": false
       },
       {
-        "a": "zebracat",
+        "a": "invideo",
         "b": "elai-io",
-        "jaccard": 0.09090909090909091,
+        "jaccard": 0.25,
         "exactSameOrder": false
       },
       {
-        "a": "zebracat",
+        "a": "invideo",
         "b": "pika",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "descript",
         "jaccard": 0.5,
         "exactSameOrder": false
       },
       {
-        "a": "zebracat",
-        "b": "descript",
-        "jaccard": 0.2222222222222222,
+        "a": "invideo",
+        "b": "opus-clip",
+        "jaccard": 0,
         "exactSameOrder": false
       },
       {
-        "a": "zebracat",
-        "b": "opus-clip",
+        "a": "invideo",
+        "b": "runway",
         "jaccard": 0.125,
         "exactSameOrder": false
       },
       {
-        "a": "zebracat",
+        "a": "invideo",
+        "b": "sora",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "pictory",
+        "jaccard": 0.14285714285714285,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "colossyan",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "d-id",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "deepbrain-ai",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "synthesys",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "flexclip",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "lumen5",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "steve-ai",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "fliki",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "veed-io",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "zebracat",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "synthesia",
+        "jaccard": 0.42857142857142855,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "elai-io",
+        "jaccard": 0.6666666666666666,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "pika",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "descript",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "opus-clip",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
         "b": "runway",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "sora",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "pictory",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "colossyan",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "d-id",
+        "jaccard": 0.42857142857142855,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "deepbrain-ai",
+        "jaccard": 0.2857142857142857,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "synthesys",
+        "jaccard": 0.2857142857142857,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "flexclip",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "lumen5",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "steve-ai",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "veed-io",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "zebracat",
+        "jaccard": 0.6666666666666666,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "synthesia",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "elai-io",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "pika",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "descript",
+        "jaccard": 0.5,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "opus-clip",
+        "jaccard": 0.16666666666666666,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "runway",
+        "jaccard": 0.2857142857142857,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "sora",
+        "jaccard": 0.2857142857142857,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "pictory",
+        "jaccard": 0.14285714285714285,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "colossyan",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "d-id",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "deepbrain-ai",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "synthesys",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "flexclip",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "lumen5",
+        "jaccard": 0.14285714285714285,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "steve-ai",
+        "jaccard": 0.2857142857142857,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "zebracat",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "synthesia",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "elai-io",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "pika",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "descript",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "opus-clip",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "runway",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "sora",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "pictory",
+        "jaccard": 0.14285714285714285,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "colossyan",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "d-id",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "deepbrain-ai",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "synthesys",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "flexclip",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "lumen5",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "steve-ai",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "synthesia",
         "jaccard": 0.1111111111111111,
         "exactSameOrder": false
       },
       {
         "a": "zebracat",
+        "b": "elai-io",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "pika",
+        "jaccard": 0.42857142857142855,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "descript",
+        "jaccard": 0.2857142857142857,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "opus-clip",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "runway",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
         "b": "sora",
-        "jaccard": 0.25,
+        "jaccard": 0.2857142857142857,
         "exactSameOrder": false
       },
       {
         "a": "zebracat",
         "b": "pictory",
-        "jaccard": 0.25,
+        "jaccard": 0,
         "exactSameOrder": false
       },
       {
         "a": "zebracat",
         "b": "colossyan",
-        "jaccard": 0.09090909090909091,
+        "jaccard": 0,
         "exactSameOrder": false
       },
       {
@@ -759,13 +923,13 @@
       {
         "a": "zebracat",
         "b": "deepbrain-ai",
-        "jaccard": 0.09090909090909091,
+        "jaccard": 0,
         "exactSameOrder": false
       },
       {
         "a": "zebracat",
         "b": "synthesys",
-        "jaccard": 0.09090909090909091,
+        "jaccard": 0,
         "exactSameOrder": false
       },
       {
@@ -777,31 +941,31 @@
       {
         "a": "zebracat",
         "b": "lumen5",
-        "jaccard": 0.25,
+        "jaccard": 0.14285714285714285,
         "exactSameOrder": false
       },
       {
         "a": "zebracat",
         "b": "steve-ai",
-        "jaccard": 0.375,
+        "jaccard": 0.2857142857142857,
         "exactSameOrder": false
       },
       {
         "a": "synthesia",
         "b": "elai-io",
-        "jaccard": 0.7142857142857143,
+        "jaccard": 0.6666666666666666,
         "exactSameOrder": false
       },
       {
         "a": "synthesia",
         "b": "pika",
-        "jaccard": 0.09090909090909091,
+        "jaccard": 0.1111111111111111,
         "exactSameOrder": false
       },
       {
         "a": "synthesia",
         "b": "descript",
-        "jaccard": 0.1,
+        "jaccard": 0,
         "exactSameOrder": false
       },
       {
@@ -831,337 +995,337 @@
       {
         "a": "synthesia",
         "b": "colossyan",
-        "jaccard": 0.2,
-        "exactSameOrder": false
-      },
-      {
-        "a": "synthesia",
-        "b": "d-id",
-        "jaccard": 0.375,
-        "exactSameOrder": false
-      },
-      {
-        "a": "synthesia",
-        "b": "deepbrain-ai",
-        "jaccard": 0.2,
-        "exactSameOrder": false
-      },
-      {
-        "a": "synthesia",
-        "b": "synthesys",
-        "jaccard": 0.2,
-        "exactSameOrder": false
-      },
-      {
-        "a": "synthesia",
-        "b": "flexclip",
-        "jaccard": 0.1,
-        "exactSameOrder": false
-      },
-      {
-        "a": "synthesia",
-        "b": "lumen5",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "synthesia",
-        "b": "steve-ai",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "elai-io",
-        "b": "pika",
-        "jaccard": 0.09090909090909091,
-        "exactSameOrder": false
-      },
-      {
-        "a": "elai-io",
-        "b": "descript",
-        "jaccard": 0.1,
-        "exactSameOrder": false
-      },
-      {
-        "a": "elai-io",
-        "b": "opus-clip",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "elai-io",
-        "b": "runway",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "elai-io",
-        "b": "sora",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "elai-io",
-        "b": "pictory",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "elai-io",
-        "b": "colossyan",
-        "jaccard": 0.3333333333333333,
-        "exactSameOrder": false
-      },
-      {
-        "a": "elai-io",
-        "b": "d-id",
-        "jaccard": 0.5714285714285714,
-        "exactSameOrder": false
-      },
-      {
-        "a": "elai-io",
-        "b": "deepbrain-ai",
-        "jaccard": 0.3333333333333333,
-        "exactSameOrder": false
-      },
-      {
-        "a": "elai-io",
-        "b": "synthesys",
-        "jaccard": 0.3333333333333333,
-        "exactSameOrder": false
-      },
-      {
-        "a": "elai-io",
-        "b": "flexclip",
-        "jaccard": 0.1,
-        "exactSameOrder": false
-      },
-      {
-        "a": "elai-io",
-        "b": "lumen5",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "elai-io",
-        "b": "steve-ai",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "pika",
-        "b": "descript",
-        "jaccard": 0.375,
-        "exactSameOrder": false
-      },
-      {
-        "a": "pika",
-        "b": "opus-clip",
-        "jaccard": 0.125,
-        "exactSameOrder": false
-      },
-      {
-        "a": "pika",
-        "b": "runway",
         "jaccard": 0.1111111111111111,
         "exactSameOrder": false
       },
       {
-        "a": "pika",
-        "b": "sora",
-        "jaccard": 0.25,
-        "exactSameOrder": false
-      },
-      {
-        "a": "pika",
-        "b": "pictory",
-        "jaccard": 0.25,
-        "exactSameOrder": false
-      },
-      {
-        "a": "pika",
-        "b": "colossyan",
-        "jaccard": 0.09090909090909091,
-        "exactSameOrder": false
-      },
-      {
-        "a": "pika",
+        "a": "synthesia",
         "b": "d-id",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "pika",
-        "b": "deepbrain-ai",
-        "jaccard": 0.09090909090909091,
-        "exactSameOrder": false
-      },
-      {
-        "a": "pika",
-        "b": "synthesys",
-        "jaccard": 0.09090909090909091,
-        "exactSameOrder": false
-      },
-      {
-        "a": "pika",
-        "b": "flexclip",
-        "jaccard": 0.1,
-        "exactSameOrder": false
-      },
-      {
-        "a": "pika",
-        "b": "lumen5",
-        "jaccard": 0.1111111111111111,
-        "exactSameOrder": false
-      },
-      {
-        "a": "pika",
-        "b": "steve-ai",
-        "jaccard": 0.375,
-        "exactSameOrder": false
-      },
-      {
-        "a": "descript",
-        "b": "opus-clip",
-        "jaccard": 0.3333333333333333,
-        "exactSameOrder": false
-      },
-      {
-        "a": "descript",
-        "b": "runway",
-        "jaccard": 0.2857142857142857,
-        "exactSameOrder": false
-      },
-      {
-        "a": "descript",
-        "b": "sora",
-        "jaccard": 0.2857142857142857,
-        "exactSameOrder": false
-      },
-      {
-        "a": "descript",
-        "b": "pictory",
-        "jaccard": 0.125,
-        "exactSameOrder": false
-      },
-      {
-        "a": "descript",
-        "b": "colossyan",
-        "jaccard": 0.1,
-        "exactSameOrder": false
-      },
-      {
-        "a": "descript",
-        "b": "d-id",
-        "jaccard": 0.1111111111111111,
-        "exactSameOrder": false
-      },
-      {
-        "a": "descript",
-        "b": "deepbrain-ai",
-        "jaccard": 0.2222222222222222,
-        "exactSameOrder": false
-      },
-      {
-        "a": "descript",
-        "b": "synthesys",
-        "jaccard": 0.2222222222222222,
-        "exactSameOrder": false
-      },
-      {
-        "a": "descript",
-        "b": "flexclip",
-        "jaccard": 0.25,
-        "exactSameOrder": false
-      },
-      {
-        "a": "descript",
-        "b": "lumen5",
-        "jaccard": 0.125,
-        "exactSameOrder": false
-      },
-      {
-        "a": "descript",
-        "b": "steve-ai",
         "jaccard": 0.42857142857142855,
         "exactSameOrder": false
       },
       {
-        "a": "opus-clip",
+        "a": "synthesia",
+        "b": "deepbrain-ai",
+        "jaccard": 0.2857142857142857,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesia",
+        "b": "synthesys",
+        "jaccard": 0.2857142857142857,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesia",
+        "b": "flexclip",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesia",
+        "b": "lumen5",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesia",
+        "b": "steve-ai",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "pika",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "descript",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "opus-clip",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
         "b": "runway",
-        "jaccard": 0.4,
+        "jaccard": 0,
         "exactSameOrder": false
       },
       {
-        "a": "opus-clip",
+        "a": "elai-io",
         "b": "sora",
-        "jaccard": 0.4,
+        "jaccard": 0,
         "exactSameOrder": false
       },
       {
-        "a": "opus-clip",
+        "a": "elai-io",
         "b": "pictory",
         "jaccard": 0,
         "exactSameOrder": false
       },
       {
-        "a": "opus-clip",
+        "a": "elai-io",
+        "b": "colossyan",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "d-id",
+        "jaccard": 0.6666666666666666,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "deepbrain-ai",
+        "jaccard": 0.5,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "synthesys",
+        "jaccard": 0.5,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "flexclip",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "lumen5",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "steve-ai",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "descript",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "opus-clip",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "runway",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "sora",
+        "jaccard": 0.2857142857142857,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "pictory",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
         "b": "colossyan",
         "jaccard": 0,
         "exactSameOrder": false
       },
       {
-        "a": "opus-clip",
+        "a": "pika",
         "b": "d-id",
         "jaccard": 0,
         "exactSameOrder": false
       },
       {
-        "a": "opus-clip",
+        "a": "pika",
         "b": "deepbrain-ai",
-        "jaccard": 0.125,
+        "jaccard": 0,
         "exactSameOrder": false
       },
       {
-        "a": "opus-clip",
+        "a": "pika",
         "b": "synthesys",
-        "jaccard": 0.125,
+        "jaccard": 0,
         "exactSameOrder": false
       },
       {
-        "a": "opus-clip",
+        "a": "pika",
+        "b": "flexclip",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "lumen5",
+        "jaccard": 0.14285714285714285,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "steve-ai",
+        "jaccard": 0.2857142857142857,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "opus-clip",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "runway",
+        "jaccard": 0.3333333333333333,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "sora",
+        "jaccard": 0.3333333333333333,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "pictory",
+        "jaccard": 0.4,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "colossyan",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "d-id",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "deepbrain-ai",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "synthesys",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
         "b": "flexclip",
         "jaccard": 0.14285714285714285,
         "exactSameOrder": false
       },
       {
-        "a": "opus-clip",
+        "a": "descript",
         "b": "lumen5",
         "jaccard": 0.16666666666666666,
         "exactSameOrder": false
       },
       {
-        "a": "opus-clip",
+        "a": "descript",
         "b": "steve-ai",
         "jaccard": 0.3333333333333333,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "runway",
+        "jaccard": 0.5,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "sora",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "pictory",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "colossyan",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "d-id",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "deepbrain-ai",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "synthesys",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "flexclip",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "lumen5",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "steve-ai",
+        "jaccard": 0.2,
         "exactSameOrder": false
       },
       {
         "a": "runway",
         "b": "sora",
-        "jaccard": 0.3333333333333333,
-        "exactSameOrder": false
-      },
-      {
-        "a": "runway",
-        "b": "pictory",
         "jaccard": 0.14285714285714285,
         "exactSameOrder": false
       },
       {
         "a": "runway",
+        "b": "pictory",
+        "jaccard": 0.4,
+        "exactSameOrder": false
+      },
+      {
+        "a": "runway",
         "b": "colossyan",
-        "jaccard": 0.25,
+        "jaccard": 0,
         "exactSameOrder": false
       },
       {
@@ -1173,43 +1337,43 @@
       {
         "a": "runway",
         "b": "deepbrain-ai",
-        "jaccard": 0.1111111111111111,
+        "jaccard": 0,
         "exactSameOrder": false
       },
       {
         "a": "runway",
         "b": "synthesys",
-        "jaccard": 0.1111111111111111,
+        "jaccard": 0,
         "exactSameOrder": false
       },
       {
         "a": "runway",
         "b": "flexclip",
-        "jaccard": 0.2857142857142857,
-        "exactSameOrder": false
-      },
-      {
-        "a": "runway",
-        "b": "lumen5",
         "jaccard": 0.3333333333333333,
         "exactSameOrder": false
       },
       {
         "a": "runway",
+        "b": "lumen5",
+        "jaccard": 0.16666666666666666,
+        "exactSameOrder": false
+      },
+      {
+        "a": "runway",
         "b": "steve-ai",
-        "jaccard": 0.2857142857142857,
+        "jaccard": 0.14285714285714285,
         "exactSameOrder": false
       },
       {
         "a": "sora",
         "b": "pictory",
-        "jaccard": 0.3333333333333333,
+        "jaccard": 0.16666666666666666,
         "exactSameOrder": false
       },
       {
         "a": "sora",
         "b": "colossyan",
-        "jaccard": 0.1111111111111111,
+        "jaccard": 0.125,
         "exactSameOrder": false
       },
       {
@@ -1221,121 +1385,121 @@
       {
         "a": "sora",
         "b": "deepbrain-ai",
-        "jaccard": 0.25,
+        "jaccard": 0,
         "exactSameOrder": false
       },
       {
         "a": "sora",
         "b": "synthesys",
-        "jaccard": 0.25,
+        "jaccard": 0,
         "exactSameOrder": false
       },
       {
         "a": "sora",
         "b": "flexclip",
-        "jaccard": 0.2857142857142857,
+        "jaccard": 0.14285714285714285,
         "exactSameOrder": false
       },
       {
         "a": "sora",
         "b": "lumen5",
-        "jaccard": 0.6,
+        "jaccard": 0.75,
         "exactSameOrder": false
       },
       {
         "a": "sora",
         "b": "steve-ai",
+        "jaccard": 1,
+        "exactSameOrder": true
+      },
+      {
+        "a": "pictory",
+        "b": "colossyan",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pictory",
+        "b": "d-id",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pictory",
+        "b": "deepbrain-ai",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pictory",
+        "b": "synthesys",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pictory",
+        "b": "flexclip",
+        "jaccard": 0.4,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pictory",
+        "b": "lumen5",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pictory",
+        "b": "steve-ai",
+        "jaccard": 0.16666666666666666,
+        "exactSameOrder": false
+      },
+      {
+        "a": "colossyan",
+        "b": "d-id",
+        "jaccard": 0.42857142857142855,
+        "exactSameOrder": false
+      },
+      {
+        "a": "colossyan",
+        "b": "deepbrain-ai",
         "jaccard": 0.5,
         "exactSameOrder": false
       },
       {
-        "a": "pictory",
-        "b": "colossyan",
-        "jaccard": 0.1111111111111111,
-        "exactSameOrder": false
-      },
-      {
-        "a": "pictory",
-        "b": "d-id",
-        "jaccard": 0,
-        "exactSameOrder": false
-      },
-      {
-        "a": "pictory",
-        "b": "deepbrain-ai",
-        "jaccard": 0.1111111111111111,
-        "exactSameOrder": false
-      },
-      {
-        "a": "pictory",
+        "a": "colossyan",
         "b": "synthesys",
-        "jaccard": 0.1111111111111111,
+        "jaccard": 0.5,
         "exactSameOrder": false
       },
       {
-        "a": "pictory",
+        "a": "colossyan",
         "b": "flexclip",
-        "jaccard": 0.2857142857142857,
-        "exactSameOrder": false
-      },
-      {
-        "a": "pictory",
-        "b": "lumen5",
-        "jaccard": 0.6,
-        "exactSameOrder": false
-      },
-      {
-        "a": "pictory",
-        "b": "steve-ai",
         "jaccard": 0.125,
         "exactSameOrder": false
       },
       {
         "a": "colossyan",
-        "b": "d-id",
-        "jaccard": 0.375,
-        "exactSameOrder": false
-      },
-      {
-        "a": "colossyan",
-        "b": "deepbrain-ai",
-        "jaccard": 0.5,
-        "exactSameOrder": false
-      },
-      {
-        "a": "colossyan",
-        "b": "synthesys",
-        "jaccard": 0.5,
-        "exactSameOrder": false
-      },
-      {
-        "a": "colossyan",
-        "b": "flexclip",
-        "jaccard": 0.2222222222222222,
-        "exactSameOrder": false
-      },
-      {
-        "a": "colossyan",
         "b": "lumen5",
-        "jaccard": 0.1111111111111111,
+        "jaccard": 0.14285714285714285,
         "exactSameOrder": false
       },
       {
         "a": "colossyan",
         "b": "steve-ai",
-        "jaccard": 0.1,
+        "jaccard": 0.125,
         "exactSameOrder": false
       },
       {
         "a": "d-id",
         "b": "deepbrain-ai",
-        "jaccard": 0.5714285714285714,
+        "jaccard": 0.8,
         "exactSameOrder": false
       },
       {
         "a": "d-id",
         "b": "synthesys",
-        "jaccard": 0.5714285714285714,
+        "jaccard": 0.8,
         "exactSameOrder": false
       },
       {
@@ -1365,6 +1529,1605 @@
       {
         "a": "deepbrain-ai",
         "b": "flexclip",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "deepbrain-ai",
+        "b": "lumen5",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "deepbrain-ai",
+        "b": "steve-ai",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesys",
+        "b": "flexclip",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesys",
+        "b": "lumen5",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesys",
+        "b": "steve-ai",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "flexclip",
+        "b": "lumen5",
+        "jaccard": 0.16666666666666666,
+        "exactSameOrder": false
+      },
+      {
+        "a": "flexclip",
+        "b": "steve-ai",
+        "jaccard": 0.14285714285714285,
+        "exactSameOrder": false
+      },
+      {
+        "a": "lumen5",
+        "b": "steve-ai",
+        "jaccard": 0.75,
+        "exactSameOrder": false
+      }
+    ],
+    "summary": {
+      "pageCount": 20,
+      "pictoryTop1Count": 3,
+      "pictoryTop1Ratio": 0.15,
+      "jaccardMean": 0.1597138680033416,
+      "jaccardMax": 1,
+      "exactSameOrderPairCount": 2,
+      "constraint_missed_core_pages": [
+        "invideo",
+        "heygen",
+        "veed-io",
+        "flexclip"
+      ],
+      "constraint_missed_featured_pages": [
+        "veed-io"
+      ],
+      "constraint_featured_not_all_in_top3_pages": [
+        "invideo",
+        "runway"
+      ],
+      "baseline_featured_fill_fail_pages": [
+        "heygen",
+        "fliki",
+        "zebracat",
+        "synthesia",
+        "pika"
+      ],
+      "content_quality_warnings_count": 0,
+      "content_quality_top_offending_pages": []
+    }
+  },
+  "after": {
+    "generatedAt": "2026-03-08T05:15:12.862Z",
+    "pages": [
+      {
+        "slug": "invideo",
+        "title": "InVideo Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "fliki",
+          "runway",
+          "pictory",
+          "sora"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "fliki",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "fliki",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
+        "featuredCountTop6": 1,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "heygen",
+        "title": "HeyGen Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "synthesia",
+          "invideo",
+          "deepbrain-ai",
+          "colossyan",
+          "synthesys",
+          "d-id"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "invideo",
+        "top6_featured_count": 2,
+        "top6_featured_slug": "synthesia",
+        "featured_in_top3_count": 2,
+        "featured_total_count": 2,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 1,
+        "featuredCountTop6": 2,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "fliki",
+        "title": "Fliki Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "invideo",
+          "veed-io",
+          "lumen5",
+          "opus-clip",
+          "runway",
+          "pictory"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "invideo",
+        "top6_featured_count": 2,
+        "top6_featured_slug": "invideo",
+        "featured_in_top3_count": 2,
+        "featured_total_count": 2,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 1,
+        "featuredCountTop6": 2,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "veed-io",
+        "title": "Veed.io Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "fliki",
+          "flexclip",
+          "descript",
+          "opus-clip",
+          "pictory",
+          "d-id"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "fliki",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "fliki",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 0,
+        "featuredCountTop6": 1,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "zebracat",
+        "title": "Zebracat Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "fliki",
+          "veed-io",
+          "runway",
+          "lumen5",
+          "sora",
+          "opus-clip"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "fliki",
+        "top6_featured_count": 2,
+        "top6_featured_slug": "fliki",
+        "featured_in_top3_count": 2,
+        "featured_total_count": 2,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 1,
+        "featuredCountTop6": 2,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "synthesia",
+        "title": "Synthesia Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "heygen",
+          "zebracat",
+          "deepbrain-ai",
+          "colossyan",
+          "synthesys",
+          "d-id"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "heygen",
+        "top6_featured_count": 2,
+        "top6_featured_slug": "heygen",
+        "featured_in_top3_count": 2,
+        "featured_total_count": 2,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 1,
+        "featuredCountTop6": 2,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "elai-io",
+        "title": "Elai.io Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "heygen",
+          "deepbrain-ai",
+          "d-id",
+          "colossyan",
+          "pictory",
+          "synthesys"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "heygen",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "heygen",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
+        "featuredCountTop6": 1,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "pika",
+        "title": "Pika Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "fliki",
+          "veed-io",
+          "steve-ai",
+          "runway",
+          "sora",
+          "pictory"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "fliki",
+        "top6_featured_count": 2,
+        "top6_featured_slug": "fliki",
+        "featured_in_top3_count": 2,
+        "featured_total_count": 2,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 1,
+        "featuredCountTop6": 2,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "descript",
+        "title": "Descript Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "invideo",
+          "sora",
+          "runway",
+          "colossyan",
+          "pictory"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "invideo",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "invideo",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
+        "featuredCountTop6": 1,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "opus-clip",
+        "title": "Opus Clip Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "invideo",
+          "runway",
+          "pika"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "invideo",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "invideo",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
+        "featuredCountTop6": 1,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "runway",
+        "title": "Runway Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "invideo",
+          "sora",
+          "descript",
+          "pika"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "invideo",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "invideo",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
+        "featuredCountTop6": 1,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "sora",
+        "title": "Sora Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "fliki",
+          "runway",
+          "descript",
+          "pika"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "fliki",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "fliki",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
+        "featuredCountTop6": 1,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "pictory",
+        "title": "Pictory Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "fliki",
+          "opus-clip",
+          "descript",
+          "pika"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "fliki",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "fliki",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
+        "featuredCountTop6": 1,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "colossyan",
+        "title": "Colossyan Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "heygen",
+          "elai-io",
+          "d-id",
+          "descript",
+          "sora",
+          "pika"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "heygen",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "heygen",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
+        "featuredCountTop6": 1,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "d-id",
+        "title": "D-ID Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "heygen",
+          "elai-io",
+          "deepbrain-ai",
+          "colossyan",
+          "pika"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "heygen",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "heygen",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
+        "featuredCountTop6": 1,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "deepbrain-ai",
+        "title": "DeepBrain AI Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "heygen",
+          "colossyan",
+          "elai-io",
+          "runway",
+          "descript",
+          "sora"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "heygen",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "heygen",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
+        "featuredCountTop6": 1,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "synthesys",
+        "title": "Synthesys Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "heygen",
+          "colossyan",
+          "elai-io",
+          "runway",
+          "descript",
+          "sora"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "heygen",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "heygen",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
+        "featuredCountTop6": 1,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "flexclip",
+        "title": "FlexClip Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "invideo",
+          "descript",
+          "d-id",
+          "pika",
+          "pictory"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "invideo",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "invideo",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
+        "featuredCountTop6": 1,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "lumen5",
+        "title": "Lumen5 Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "fliki",
+          "opus-clip",
+          "descript",
+          "pika"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "fliki",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "fliki",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
+        "featuredCountTop6": 1,
+        "pictoryIsTop1": false
+      },
+      {
+        "slug": "steve-ai",
+        "title": "Steve AI Alternatives (2026): Best Replacements by Use Case",
+        "top6": [
+          "invideo",
+          "pika",
+          "runway",
+          "sora"
+        ],
+        "top6_has_core_anchor": true,
+        "top6_core_anchor_slug": "invideo",
+        "top6_featured_count": 1,
+        "top6_featured_slug": "invideo",
+        "featured_in_top3_count": 1,
+        "featured_total_count": 1,
+        "featured_all_in_top3": true,
+        "baseline_featured_count": 2,
+        "featuredCountTop6": 1,
+        "pictoryIsTop1": false
+      }
+    ],
+    "pairwise": [
+      {
+        "a": "invideo",
+        "b": "heygen",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "fliki",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "veed-io",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "zebracat",
+        "jaccard": 0.42857142857142855,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "synthesia",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "elai-io",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "pika",
+        "jaccard": 0.6666666666666666,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "descript",
+        "jaccard": 0.5,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "opus-clip",
+        "jaccard": 0.16666666666666666,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "runway",
+        "jaccard": 0.14285714285714285,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "sora",
+        "jaccard": 0.3333333333333333,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "pictory",
+        "jaccard": 0.14285714285714285,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "colossyan",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "d-id",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "deepbrain-ai",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "synthesys",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "flexclip",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "lumen5",
+        "jaccard": 0.14285714285714285,
+        "exactSameOrder": false
+      },
+      {
+        "a": "invideo",
+        "b": "steve-ai",
+        "jaccard": 0.3333333333333333,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "fliki",
+        "jaccard": 0.09090909090909091,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "veed-io",
+        "jaccard": 0.09090909090909091,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "zebracat",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "synthesia",
+        "jaccard": 0.5,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "elai-io",
+        "jaccard": 0.5,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "pika",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "descript",
+        "jaccard": 0.2222222222222222,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "opus-clip",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "runway",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "sora",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "pictory",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "colossyan",
+        "jaccard": 0.09090909090909091,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "d-id",
+        "jaccard": 0.2222222222222222,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "deepbrain-ai",
+        "jaccard": 0.09090909090909091,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "synthesys",
+        "jaccard": 0.09090909090909091,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "flexclip",
+        "jaccard": 0.2222222222222222,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "lumen5",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "heygen",
+        "b": "steve-ai",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "veed-io",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "zebracat",
+        "jaccard": 0.5,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "synthesia",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "elai-io",
+        "jaccard": 0.09090909090909091,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "pika",
+        "jaccard": 0.3333333333333333,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "descript",
+        "jaccard": 0.375,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "opus-clip",
+        "jaccard": 0.2857142857142857,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "runway",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "sora",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "pictory",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "colossyan",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "d-id",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "deepbrain-ai",
+        "jaccard": 0.09090909090909091,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "synthesys",
+        "jaccard": 0.09090909090909091,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "flexclip",
+        "jaccard": 0.2222222222222222,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "lumen5",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "fliki",
+        "b": "steve-ai",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "zebracat",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "synthesia",
+        "jaccard": 0.09090909090909091,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "elai-io",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "pika",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "descript",
+        "jaccard": 0.1,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "opus-clip",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "runway",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "sora",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "pictory",
+        "jaccard": 0.42857142857142855,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "colossyan",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "d-id",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "deepbrain-ai",
+        "jaccard": 0.09090909090909091,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "synthesys",
+        "jaccard": 0.09090909090909091,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "flexclip",
+        "jaccard": 0.375,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "lumen5",
+        "jaccard": 0.42857142857142855,
+        "exactSameOrder": false
+      },
+      {
+        "a": "veed-io",
+        "b": "steve-ai",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "synthesia",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "elai-io",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "pika",
+        "jaccard": 0.5,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "descript",
+        "jaccard": 0.2222222222222222,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "opus-clip",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "runway",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "sora",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "pictory",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "colossyan",
+        "jaccard": 0.09090909090909091,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "d-id",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "deepbrain-ai",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "synthesys",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "flexclip",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "lumen5",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "zebracat",
+        "b": "steve-ai",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesia",
+        "b": "elai-io",
+        "jaccard": 0.7142857142857143,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesia",
+        "b": "pika",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesia",
+        "b": "descript",
+        "jaccard": 0.1,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesia",
+        "b": "opus-clip",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesia",
+        "b": "runway",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesia",
+        "b": "sora",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesia",
+        "b": "pictory",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesia",
+        "b": "colossyan",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesia",
+        "b": "d-id",
+        "jaccard": 0.375,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesia",
+        "b": "deepbrain-ai",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesia",
+        "b": "synthesys",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesia",
+        "b": "flexclip",
+        "jaccard": 0.1,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesia",
+        "b": "lumen5",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "synthesia",
+        "b": "steve-ai",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "pika",
+        "jaccard": 0.09090909090909091,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "descript",
+        "jaccard": 0.2222222222222222,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "opus-clip",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "runway",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "sora",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "pictory",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "colossyan",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "d-id",
+        "jaccard": 0.375,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "deepbrain-ai",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "synthesys",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "flexclip",
+        "jaccard": 0.2222222222222222,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "lumen5",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "elai-io",
+        "b": "steve-ai",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "descript",
+        "jaccard": 0.375,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "opus-clip",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "runway",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "sora",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "pictory",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "colossyan",
+        "jaccard": 0.09090909090909091,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "d-id",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "deepbrain-ai",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "synthesys",
+        "jaccard": 0.2,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "flexclip",
+        "jaccard": 0.1,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "lumen5",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pika",
+        "b": "steve-ai",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "opus-clip",
+        "jaccard": 0.3333333333333333,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "runway",
+        "jaccard": 0.2857142857142857,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "sora",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "pictory",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "colossyan",
+        "jaccard": 0.1,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "d-id",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "deepbrain-ai",
+        "jaccard": 0.375,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "synthesys",
+        "jaccard": 0.375,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "flexclip",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "lumen5",
+        "jaccard": 0,
+        "exactSameOrder": false
+      },
+      {
+        "a": "descript",
+        "b": "steve-ai",
+        "jaccard": 0.5,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "runway",
+        "jaccard": 0.4,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "sora",
+        "jaccard": 0.4,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "pictory",
+        "jaccard": 0.16666666666666666,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "colossyan",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "d-id",
+        "jaccard": 0.14285714285714285,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "deepbrain-ai",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "synthesys",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "flexclip",
+        "jaccard": 0.3333333333333333,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "lumen5",
+        "jaccard": 0.16666666666666666,
+        "exactSameOrder": false
+      },
+      {
+        "a": "opus-clip",
+        "b": "steve-ai",
+        "jaccard": 0.75,
+        "exactSameOrder": false
+      },
+      {
+        "a": "runway",
+        "b": "sora",
+        "jaccard": 0.3333333333333333,
+        "exactSameOrder": false
+      },
+      {
+        "a": "runway",
+        "b": "pictory",
+        "jaccard": 0.3333333333333333,
+        "exactSameOrder": false
+      },
+      {
+        "a": "runway",
+        "b": "colossyan",
+        "jaccard": 0.42857142857142855,
+        "exactSameOrder": false
+      },
+      {
+        "a": "runway",
+        "b": "d-id",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "runway",
+        "b": "deepbrain-ai",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "runway",
+        "b": "synthesys",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "runway",
+        "b": "flexclip",
+        "jaccard": 0.5,
+        "exactSameOrder": false
+      },
+      {
+        "a": "runway",
+        "b": "lumen5",
+        "jaccard": 0.3333333333333333,
+        "exactSameOrder": false
+      },
+      {
+        "a": "runway",
+        "b": "steve-ai",
+        "jaccard": 0.6,
+        "exactSameOrder": false
+      },
+      {
+        "a": "sora",
+        "b": "pictory",
+        "jaccard": 0.6,
+        "exactSameOrder": false
+      },
+      {
+        "a": "sora",
+        "b": "colossyan",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "sora",
+        "b": "d-id",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "sora",
+        "b": "deepbrain-ai",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "sora",
+        "b": "synthesys",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "sora",
+        "b": "flexclip",
+        "jaccard": 0.2857142857142857,
+        "exactSameOrder": false
+      },
+      {
+        "a": "sora",
+        "b": "lumen5",
+        "jaccard": 0.6,
+        "exactSameOrder": false
+      },
+      {
+        "a": "sora",
+        "b": "steve-ai",
+        "jaccard": 0.3333333333333333,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pictory",
+        "b": "colossyan",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pictory",
+        "b": "d-id",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pictory",
+        "b": "deepbrain-ai",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pictory",
+        "b": "synthesys",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pictory",
+        "b": "flexclip",
+        "jaccard": 0.2857142857142857,
+        "exactSameOrder": false
+      },
+      {
+        "a": "pictory",
+        "b": "lumen5",
+        "jaccard": 1,
+        "exactSameOrder": true
+      },
+      {
+        "a": "pictory",
+        "b": "steve-ai",
+        "jaccard": 0.14285714285714285,
+        "exactSameOrder": false
+      },
+      {
+        "a": "colossyan",
+        "b": "d-id",
+        "jaccard": 0.375,
+        "exactSameOrder": false
+      },
+      {
+        "a": "colossyan",
+        "b": "deepbrain-ai",
+        "jaccard": 0.5,
+        "exactSameOrder": false
+      },
+      {
+        "a": "colossyan",
+        "b": "synthesys",
+        "jaccard": 0.5,
+        "exactSameOrder": false
+      },
+      {
+        "a": "colossyan",
+        "b": "flexclip",
+        "jaccard": 0.375,
+        "exactSameOrder": false
+      },
+      {
+        "a": "colossyan",
+        "b": "lumen5",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "colossyan",
+        "b": "steve-ai",
+        "jaccard": 0.25,
+        "exactSameOrder": false
+      },
+      {
+        "a": "d-id",
+        "b": "deepbrain-ai",
+        "jaccard": 0.375,
+        "exactSameOrder": false
+      },
+      {
+        "a": "d-id",
+        "b": "synthesys",
+        "jaccard": 0.375,
+        "exactSameOrder": false
+      },
+      {
+        "a": "d-id",
+        "b": "flexclip",
+        "jaccard": 0.1111111111111111,
+        "exactSameOrder": false
+      },
+      {
+        "a": "d-id",
+        "b": "lumen5",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "d-id",
+        "b": "steve-ai",
+        "jaccard": 0.125,
+        "exactSameOrder": false
+      },
+      {
+        "a": "deepbrain-ai",
+        "b": "synthesys",
+        "jaccard": 1,
+        "exactSameOrder": true
+      },
+      {
+        "a": "deepbrain-ai",
+        "b": "flexclip",
         "jaccard": 0.1,
         "exactSameOrder": false
       },
@@ -1377,7 +3140,7 @@
       {
         "a": "deepbrain-ai",
         "b": "steve-ai",
-        "jaccard": 0.1,
+        "jaccard": 0.25,
         "exactSameOrder": false
       },
       {
@@ -1395,7 +3158,7 @@
       {
         "a": "synthesys",
         "b": "steve-ai",
-        "jaccard": 0.1,
+        "jaccard": 0.25,
         "exactSameOrder": false
       },
       {
@@ -1407,23 +3170,30 @@
       {
         "a": "flexclip",
         "b": "steve-ai",
-        "jaccard": 0.25,
+        "jaccard": 0.2857142857142857,
         "exactSameOrder": false
       },
       {
         "a": "lumen5",
         "b": "steve-ai",
-        "jaccard": 0.2857142857142857,
+        "jaccard": 0.14285714285714285,
         "exactSameOrder": false
       }
     ],
+    "dataQualityWarnings": [],
     "summary": {
       "pageCount": 20,
       "pictoryTop1Count": 0,
       "pictoryTop1Ratio": 0,
-      "jaccardMean": 0.19591212880686562,
+      "jaccardMean": 0.20608452950558215,
       "jaccardMax": 1,
-      "exactSameOrderPairCount": 1
+      "exactSameOrderPairCount": 2,
+      "constraint_missed_core_pages": [],
+      "constraint_missed_featured_pages": [],
+      "constraint_featured_not_all_in_top3_pages": [],
+      "baseline_featured_fill_fail_pages": [],
+      "content_quality_warnings_count": 0,
+      "content_quality_top_offending_pages": []
     }
   }
 }

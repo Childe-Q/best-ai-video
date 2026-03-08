@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "slug": "ai-video-for-marketing",
+  "title": "Best AI Video Tools for Marketing (2026)",
+  "summarySeed": {
+    "oneLiner": "This page compares AI video tools suited for external-facing marketing assets — product demos, brand ads, social campaigns, and localized content. Tools are grouped by marketing production workflow: campaign personalization and variant generation, or generative brand storytelling. Only platforms with brand governance, commercial-grade output, or custom branding capabilities are included.",
+    "boundaries": [
+      "Must support brand governance: custom fonts, colors, logos, or locked-down brand kits.",
+      "Suited for external-facing assets — B2B demos, B2C social ads, and campaign content.",
+      "Excludes low-quality, heavily watermarked tools unsuitable for professional brand reputation."
+    ],
+    "primaryClassificationRule": "Group by marketing production workflow.",
+    "comparisonAxes": [
+      "workflow fit and automation",
+      "team and governance requirements"
+    ]
+  },
+  "howToChooseSeeds": [
+    {
+      "title": "Check whether the tool enforces brand consistency.",
+      "desc": "Marketing teams need locked-down brand kits — custom fonts, colors, and logo placement that teammates cannot accidentally override. This is table-stakes for tools in this category."
+    },
+    {
+      "title": "Evaluate multilingual localization depth.",
+      "desc": "If you run global campaigns, check whether the tool offers native 1-click translation and voice dubbing. HeyGen reports support for this via its Precision Translation mode at $0.1/sec (pay-as-you-go)."
+    },
+    {
+      "title": "Assess batch variant capabilities.",
+      "desc": "For A/B testing or personalized campaigns, look for tools that generate many video variants from a single template. Abyssale, for instance, is reported to produce hundreds of variants from one template."
+    },
+    {
+      "title": "Clarify watermark and resolution on your target plan.",
+      "desc": "Mootion removes watermarks starting at $15/mo (Standard plan). HeyGen supports up to 4,096px resolution. Confirm these details match your export requirements before committing."
+    }
+  ],
+  "groups": [
+    {
+      "id": "personalization-and-variants",
+      "title": "Personalization and variants",
+      "rule": "These tools are built for campaign-level output — generating dozens or hundreds of video variants from a single template, or localizing content across languages with AI avatars. They suit marketing teams running A/B tests, regional campaigns, or personalized outreach at scale.",
+      "toolSlugs": [
+        "abyssale",
+        "heygen"
+      ]
+    },
+    {
+      "id": "generative-brand-storytelling",
+      "title": "Generative brand storytelling",
+      "rule": "This group covers tools focused on creating cinematic or prompt-driven marketing assets. They prioritize visual fidelity and professional controls over template-based automation, making them a better fit for hero ads and brand narrative content.",
+      "toolSlugs": [
+        "runway",
+        "mootion"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Abyssale",
+      "slug": "abyssale",
+      "verdictSeed": "Template-to-variant engine for marketing teams. Reported to produce hundreds of video variants from a single template for A/B testing.",
+      "pricingSeed": null,
+      "policySeed": null,
+      "bestForSeed": "Batch video variants and A/B testing at scale",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://www.abyssale.com/",
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://www.abyssale.com/blog/ai-video-editor"
+      ],
+      "flags": [
+        "missing-pricing-seed",
+        "missing-policy-seed",
+        "missing-limitation-seed",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    },
+    {
+      "name": "HeyGen",
+      "slug": "heygen",
+      "verdictSeed": "Multilingual AI avatars for marketing personalization. Pay-as-you-go API at $0.1/sec for Avatar IV or Precision Translation.",
+      "pricingSeed": "Pay-as-you-go: $0.1/sec (Avatar IV / Precision Translation)",
+      "policySeed": null,
+      "bestForSeed": "Multilingual marketing avatars and localized campaigns",
+      "mainLimitationSeed": "Max 50 video scenes per generated video; input text capped at 5,000 characters",
+      "officialUrl": "https://www.heygen.com/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/heygen",
+      "logoUrl": "/logos/heygen-logo.png",
+      "sourceUrls": [
+        "https://www.abyssale.com/blog/ai-video-editor",
+        "https://docs.heygen.com/reference/limits"
+      ],
+      "flags": [
+        "duplicate-raw-mentions-merged",
+        "missing-policy-seed"
+      ]
+    },
+    {
+      "name": "Runway",
+      "slug": "runway",
+      "verdictSeed": "Cinematic-grade generative video with professional controls including color grading. Suited for hero ads and brand narrative content.",
+      "pricingSeed": "From $12/mo",
+      "policySeed": null,
+      "bestForSeed": "High-end cinematic brand storytelling",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://runwayml.com/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/runway",
+      "logoUrl": "/logos/runway.png",
+      "sourceUrls": [
+        "https://www.mootion.com/use-cases/en/the-best-AI-marketing-video-generators"
+      ],
+      "flags": [
+        "missing-pricing-seed",
+        "missing-policy-seed",
+        "missing-limitation-seed"
+      ]
+    },
+    {
+      "name": "Mootion",
+      "slug": "mootion",
+      "verdictSeed": "Prompt-to-video engine that generates full-length videos from text. Reports producing 3-minute videos in under 2 minutes.",
+      "pricingSeed": "Free (200 credits); Standard from $15/mo",
+      "policySeed": "Watermark-free available on Standard plan ($15/mo) and above",
+      "bestForSeed": "Rapid full-length marketing video from text prompts",
+      "mainLimitationSeed": "Free plan limited to 16 scenes/project, 1080p max, and includes watermark",
+      "officialUrl": "https://www.mootion.com/",
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://www.mootion.com/use-cases/en/the-best-AI-marketing-video-generators"
+      ],
+      "flags": [
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    }
+  ],
+  "relatedLinks": {
+    "reviewSlugs": [
+      "heygen",
+      "runway"
+    ],
+    "alternativesSlugs": [
+      "heygen",
+      "runway"
+    ],
+    "vsSlugs": [],
+    "guideSlugs": []
+  },
+  "faqSeeds": [
+    {
+      "question": "What qualifies a tool for Best AI Video Tools for Marketing (2026)?",
+      "answerSeed": "Group by marketing production workflow. Must offer brand governance, custom color/font support, or high-fidelity commercial outputs. Must be suitable for external-facing marketing assets (B2B demos, B2C social ads). Excludes low-quality, heavily watermarked tools unsuitable for professional brand reputation.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "What should readers compare first on this page?",
+      "answerSeed": "Evaluate Brand Kit Governance: For marketing teams, the tool must enforce brand consistency across team members by locking down custom fonts, colors, and logos. Check Multilingual Localization: If running global ad campaigns, tools with native 1-click translation and voice dubbing (like HeyGen) save thousands in local agency fees.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "Which tools already have internal review coverage?",
+      "answerSeed": "Current internal review coverage in this normalized dataset: heygen, runway.",
+      "sourceToolSlugs": [
+        "heygen",
+        "runway"
+      ]
+    }
+  ],
+  "lastReviewed": "2026-03-08T00:05:00Z",
+  "reviewMetadata": {
+    "generatedFrom": "research-raw",
+    "sourceFile": "src/data/research/features/ai-video-for-marketing.raw.json",
+    "sourceCount": 3,
+    "uniqueToolCount": 4,
+    "needsManualReview": true,
+    "reviewNotes": [
+      "Duplicate raw tool mentions merged: heygen",
+      "One or more tools still need verified logoUrl coverage.",
+      "One or more tools are missing internal review coverage."
+    ]
+  }
+}

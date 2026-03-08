@@ -1,0 +1,184 @@
+{
+  "pageTopic": "budget-friendly-ai-video-tools",
+  "generatedAt": "2026-03-07T23:55:00Z",
+  "featurePageUrl": "/features/budget-friendly-ai-video-tools",
+  "topicDefinition": {
+    "oneLiner": "Affordable AI video generators that deliver professional results without breaking the bank.",
+    "boundaries": [
+      "Must offer robust paid plans that cost less than $20 per month.",
+      "Must allow watermark-free video exports on these affordable tiers.",
+      "Excludes platforms where the base plan is cheap but crucial features (like 1080p export) are locked behind $30+ tiers."
+    ]
+  },
+  "howToChoose": [
+    {
+      "title": "Evaluate the Credit System",
+      "desc": "A $10/month plan might seem cheap, but if a single 5-second generation costs 20% of your monthly credits, it's not truly affordable. Always calculate the cost per video minute."
+    },
+    {
+      "title": "Check Watermark Policies",
+      "desc": "Some tools advertise cheap plans but force you to retain their watermark unless you upgrade to the 'Pro' tier. Ensure the sub-$20 plan includes watermark removal."
+    },
+    {
+      "title": "Consider Pay-Per-Use (API) Alternatives",
+      "desc": "If you don't generate videos daily, skipping subscriptions altogether and using API-driven platforms on a pay-per-render basis can be significantly cheaper."
+    }
+  ],
+  "sources": [
+    {
+      "sourceUrl": "https://blog.republiclabs.ai/2026/01/best-ai-video-generators-under-20-month.html",
+      "fetchedAt": "2026-03-07T23:50:00Z",
+      "title": "Best AI video generators under $20 a month",
+      "excerpt": "A deep dive comparing the credit economics of the cheapest paid tiers across major AI video platforms.",
+      "publishedAt": "2026-01-15T00:00:00Z",
+      "sections": [
+        {
+          "heading": "Top Affordable Options",
+          "type": "tool_list",
+          "content": "Kling AI (~$10/month) offers the best quality-to-price ratio for regular use. The Standard plan provides 660 credits. Pika Labs ($8-10/month) is beginner-friendly. Runway Gen-4 (~$15/month) Standard plan unlocks 625 credits."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Kling AI",
+          "toolSlugGuess": "kling-ai",
+          "bestFor": "High-quality motion and physics on a budget",
+          "keyClaims": [
+            "Offers the best quality-to-price ratio for regular use",
+            "Excellent motion coherence, physics simulation, and lip-sync"
+          ],
+          "pricingClaims": [
+            "~$10/month for the Standard plan",
+            "Provides 660 credits for several 5-10 second 1080p videos"
+          ],
+          "watermarkRules": [],
+          "exportRules": [
+            "Supports 1080p output on the $10 tier"
+          ],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Kling AI (~$10/month) - Offers the best quality-to-price ratio for regular use. The Standard plan provides 660 credits for several 5-10 second 1080p videos."
+          ],
+          "confidence": 0.95
+        },
+        {
+          "toolName": "Pika Labs",
+          "toolSlugGuess": "pika",
+          "bestFor": "Social media content with fast generations",
+          "keyClaims": [
+            "Beginner-friendly option with generous credits",
+            "Features Pikaffects (dramatic transformations, melts, explosions)"
+          ],
+          "pricingClaims": [
+            "$8-10/month"
+          ],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Pika Labs ($8-10/month) - Beginner-friendly option with generous credits for punchy, creative clips."
+          ],
+          "confidence": 0.95
+        }
+      ],
+      "confidence": 0.9,
+      "notes": [
+        "Highly relevant article specifically focused on the sub-$20 price point."
+      ]
+    },
+    {
+      "sourceUrl": "https://runwayml.com/pricing",
+      "fetchedAt": "2026-03-07T23:52:00Z",
+      "title": "Runway AI Official Pricing",
+      "excerpt": "Official pricing and watermark policies for Runway's entry-level subscriptions.",
+      "publishedAt": null,
+      "sections": [
+        {
+          "heading": "Standard Plan",
+          "type": "pricing",
+          "content": "Runway's Standard plan costs $12/month per user (billed annually) and includes 625 monthly credits."
+        },
+        {
+          "heading": "Watermark Removal",
+          "type": "limitations",
+          "content": "Watermark removal is available on the Standard plan and higher tiers."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Runway",
+          "toolSlugGuess": "runway",
+          "bestFor": "Advanced editing flexibility and Director Mode",
+          "keyClaims": [
+            "Access to all video generation models including Gen-4.5, Gen-4, and Gen-4 Turbo",
+            "Supports up to 5 users per workspace"
+          ],
+          "pricingClaims": [
+            "Standard plan costs $12/month per user (billed annually at $144)",
+            "Includes 625 monthly credits"
+          ],
+          "watermarkRules": [
+            "Standard plan ($12/mo) removes watermarks from generated videos"
+          ],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [
+            "Monthly credit cap applies (625 credits); requires $76/mo Unlimited tier for infinite generations"
+          ],
+          "proofSnippets": [
+            "Runway's Standard plan costs $12/month per user (billed annually at $144) and includes 625 monthly credits. This plan removes watermarks from generated videos."
+          ],
+          "confidence": 0.99
+        }
+      ],
+      "confidence": 0.99,
+      "notes": [
+        "Verified that Runway fits the under-$20 constraint if billed annually."
+      ]
+    },
+    {
+      "sourceUrl": "https://magichour.ai/blog/best-ai-video-tools-for-daily-content-creators-on-a-budget",
+      "fetchedAt": "2026-03-07T23:51:00Z",
+      "title": "6 Best AI Video Tools for Daily Content Creators on a Budget",
+      "excerpt": "An evaluation of fast, affordable AI video platforms for daily uploaders.",
+      "publishedAt": "2026-02-01T00:00:00Z",
+      "sections": [
+        {
+          "heading": "Top Affordable Options",
+          "type": "tool_list",
+          "content": "Magic Hour (~$12/month) - Built for daily short-form video creation with fast text-to-video and image-to-video generation."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Magic Hour",
+          "toolSlugGuess": "magic-hour",
+          "bestFor": "Daily short-form video creation without complex panels",
+          "keyClaims": [
+            "Built for daily short-form video creation",
+            "Fast text-to-video and image-to-video generation"
+          ],
+          "pricingClaims": [
+            "~$12/month"
+          ],
+          "watermarkRules": [],
+          "exportRules": [
+            "Strong output quality for TikTok, Instagram Reels, and YouTube Shorts"
+          ],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Magic Hour (~$12/month) - Built for daily short-form video creation with fast text-to-video and image-to-video generation."
+          ],
+          "confidence": 0.9
+        }
+      ],
+      "confidence": 0.9,
+      "notes": [
+        "Provides a lesser-known but highly targeted tool for the budget social media demographic."
+      ]
+    }
+  ]
+}

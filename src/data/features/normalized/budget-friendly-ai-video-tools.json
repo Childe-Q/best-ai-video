@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "slug": "budget-friendly-ai-video-tools",
+  "title": "Budget-Friendly AI Video Tools (Under $20/month)",
+  "summarySeed": {
+    "oneLiner": "This page compares AI video generators that offer robust paid plans under $20 per month with watermark-free exports. Tools are grouped by low-cost output style: generative models for creating new video, and daily-workflow tools built for repeatable short-form content. Platforms where the base plan appears cheap but locks essential features (like 1080p export or watermark removal) behind $30+ tiers are excluded.",
+    "boundaries": [
+      "Paid plans must cost less than $20/month with meaningful capabilities.",
+      "Must allow watermark-free video exports on these affordable tiers.",
+      "Excludes tools where key features (1080p, watermark removal) require $30+ upgrades."
+    ],
+    "primaryClassificationRule": "Group by low-cost output style.",
+    "comparisonAxes": [
+      "pricing and credit limits",
+      "watermark policy",
+      "workflow fit and automation"
+    ]
+  },
+  "howToChooseSeeds": [
+    {
+      "title": "Calculate the actual cost per video minute, not just monthly price.",
+      "desc": "A $10/month plan sounds affordable, but if each 5-second generation consumes 20% of your monthly credits, the effective cost per minute is high. Kling AI's Standard plan ($10/mo) provides 660 credits for several 5–10 second 1080p clips. Runway's Standard ($12/mo) includes 625 credits. Compare these allocations directly."
+    },
+    {
+      "title": "Verify watermark removal is included at the sub-$20 tier.",
+      "desc": "Some platforms advertise a low entry price but retain their watermark unless you upgrade further. Runway confirms watermark removal on the Standard plan ($12/mo). Check each tool's policy before assuming clean exports."
+    },
+    {
+      "title": "Consider pay-per-use API pricing if you generate infrequently.",
+      "desc": "If you do not produce video daily, subscription models waste budget on unused credits. Runway's API charges $0.01/credit on a consumption basis, which may be cheaper than a monthly plan for occasional use."
+    }
+  ],
+  "groups": [
+    {
+      "id": "budget-generators",
+      "title": "Budget generators",
+      "rule": "These are generative AI video models that offer entry-level paid plans under $20/month. They suit creators who need to produce new video content — cinematic clips, social effects, or creative experiments — without a high monthly commitment. The trade-off is typically a credit cap that limits total output volume.",
+      "toolSlugs": [
+        "kling-ai",
+        "pika",
+        "runway"
+      ]
+    },
+    {
+      "id": "daily-creator-workflows",
+      "title": "Daily creator workflows",
+      "rule": "This group covers tools built specifically for creators who generate short-form content every day. They prioritize fast turnaround and simple interfaces over advanced editing or cinematic fidelity, and price accordingly for high-frequency use.",
+      "toolSlugs": [
+        "magic-hour"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Kling AI",
+      "slug": "kling-ai",
+      "verdictSeed": "Reported as the best quality-to-price ratio for regular AI video generation. Strong motion coherence and physics simulation at the ~$10/mo price point.",
+      "pricingSeed": "~$10/mo Standard (660 credits; 1080p output)",
+      "policySeed": null,
+      "bestForSeed": "High-quality motion and physics on a budget",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://klingai.com/",
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://blog.republiclabs.ai/2026/01/best-ai-video-generators-under-20-month.html"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-limitation-seed",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    },
+    {
+      "name": "Pika",
+      "slug": "pika",
+      "verdictSeed": "Beginner-friendly generator with fast generation and creative effects (Pikaffects). Generous credits at the entry tier.",
+      "pricingSeed": "$8–10/mo",
+      "policySeed": null,
+      "bestForSeed": "Social media content with fast generations",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://pika.style/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/pika",
+      "logoUrl": "/logos/pika-logo.jpeg",
+      "sourceUrls": [
+        "https://blog.republiclabs.ai/2026/01/best-ai-video-generators-under-20-month.html"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-limitation-seed"
+      ]
+    },
+    {
+      "name": "Runway",
+      "slug": "runway",
+      "verdictSeed": "Full access to Gen-4.5, Gen-4, and Gen-4 Turbo on the Standard plan. Watermark removal included. Supports up to 5 users per workspace.",
+      "pricingSeed": "Standard: $12/mo (annual); 625 monthly credits",
+      "policySeed": "Standard plan ($12/mo) removes watermarks from generated videos",
+      "bestForSeed": "Advanced editing flexibility and Director Mode",
+      "mainLimitationSeed": "625 monthly credit cap; unlimited generations require $76/mo Unlimited tier",
+      "officialUrl": "https://runwayml.com/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/runway",
+      "logoUrl": "/logos/runway.png",
+      "sourceUrls": [
+        "https://runwayml.com/pricing"
+      ],
+      "flags": []
+    },
+    {
+      "name": "Magic Hour",
+      "slug": "magic-hour",
+      "verdictSeed": "Built for daily short-form video creation with fast text-to-video and image-to-video. Suited for TikTok, Reels, and YouTube Shorts output.",
+      "pricingSeed": "~$12/mo",
+      "policySeed": null,
+      "bestForSeed": "Daily short-form video without complex editing panels",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://magichour.ai/",
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://magichour.ai/blog/best-ai-video-tools-for-daily-content-creators-on-a-budget"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-limitation-seed",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    }
+  ],
+  "relatedLinks": {
+    "reviewSlugs": [
+      "pika",
+      "runway"
+    ],
+    "alternativesSlugs": [
+      "pika",
+      "runway"
+    ],
+    "vsSlugs": [],
+    "guideSlugs": []
+  },
+  "faqSeeds": [
+    {
+      "question": "What qualifies a tool for Budget-Friendly AI Video Tools (Under $20/month)?",
+      "answerSeed": "Group by low-cost output style. Must offer robust paid plans that cost less than $20 per month. Must allow watermark-free video exports on these affordable tiers. Excludes platforms where the base plan is cheap but crucial features (like 1080p export) are locked behind $30+ tiers.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "What should readers compare first on this page?",
+      "answerSeed": "Evaluate the Credit System: A $10/month plan might seem cheap, but if a single 5-second generation costs 20% of your monthly credits, it's not truly affordable. Always calculate the cost per video minute. Check Watermark Policies: Some tools advertise cheap plans but force you to retain their watermark unless you upgrade to the 'Pro' tier. Ensure the sub-$20 plan includes watermark removal.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "Which tools already have internal review coverage?",
+      "answerSeed": "Current internal review coverage in this normalized dataset: pika, runway.",
+      "sourceToolSlugs": [
+        "pika",
+        "runway"
+      ]
+    }
+  ],
+  "lastReviewed": "2026-03-07T23:55:00Z",
+  "reviewMetadata": {
+    "generatedFrom": "research-raw",
+    "sourceFile": "src/data/research/features/budget-friendly-ai-video-tools.raw.json",
+    "sourceCount": 3,
+    "uniqueToolCount": 4,
+    "needsManualReview": true,
+    "reviewNotes": [
+      "One or more tools still need verified logoUrl coverage.",
+      "One or more tools are missing internal review coverage."
+    ]
+  }
+}

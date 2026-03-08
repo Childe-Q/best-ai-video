@@ -117,7 +117,7 @@ export const flikiVsHeygen: VsComparison = {
   ],
   score: {
     methodNote:
-      'Score computed from pricingValue (25%), ease (20%), speed (20%), output (20%), customization (15%). Inputs come from official product/pricing pages and feature documentation checked on 2026-03-03.',
+      'Internal score computed from pricingValue (25%), ease (20%), speed (20%), output (20%), customization (15%). Inputs come from verified product/pricing documentation checked on 2026-03-03.',
     weights: {
       pricingValue: 25,
       ease: 20,
@@ -138,6 +138,30 @@ export const flikiVsHeygen: VsComparison = {
       speed: 7.8,
       output: 9.1,
       customization: 8.6,
+    },
+    provenance: {
+      mode: 'verified',
+      coverage: {
+        pricingValue: 'verified',
+        ease: 'verified',
+        speed: 'verified',
+        output: 'verified',
+        customization: 'verified',
+      },
+      rationale: {
+        pricingValue: 'From official pricing pages and plan-positioning statements for both tools.',
+        ease: 'From documented workflow complexity, template setup, and onboarding-related product documentation.',
+        speed: 'From documented production flow and speed-related workflow claims on official pages.',
+        output: 'From official product descriptions of output formats and delivery style capabilities.',
+        customization: 'From feature docs covering templates, scene controls, API scope, and editing flexibility.',
+      },
+      sources: {
+        pricingValue: ['https://fliki.ai/pricing', 'https://www.heygen.com/pricing'],
+        ease: ['https://fliki.ai/', 'https://www.heygen.com/'],
+        speed: ['https://fliki.ai/', 'https://www.heygen.com/'],
+        output: ['https://fliki.ai/', 'https://www.heygen.com/'],
+        customization: ['https://fliki.ai/', 'https://www.heygen.com/pricing'],
+      },
     },
   },
   promptBox: {

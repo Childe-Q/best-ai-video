@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "normalizedFiles": [
+    "src/data/features/normalized/best-ai-video-generators.json",
+    "src/data/features/normalized/free-ai-video-no-watermark.json",
+    "src/data/features/normalized/ai-avatar-video-generators.json",
+    "src/data/features/normalized/ai-video-editors.json",
+    "src/data/features/normalized/fast-ai-video-generators.json",
+    "src/data/features/normalized/ai-video-for-social-media.json",
+    "src/data/features/normalized/viral-ai-video-generators.json",
+    "src/data/features/normalized/professional-ai-video-tools.json",
+    "src/data/features/normalized/content-repurposing-ai-tools.json",
+    "src/data/features/normalized/budget-friendly-ai-video-tools.json",
+    "src/data/features/normalized/ai-video-for-marketing.json",
+    "src/data/features/normalized/text-to-video-ai-tools.json",
+    "src/data/features/normalized/ai-video-for-youtube.json",
+    "src/data/features/normalized/ai-video-generators-comparison.json",
+    "src/data/features/normalized/enterprise-ai-video-solutions.json"
+  ],
+  "sourceAudit": {
+    "missingRawFiles": [
+      "free-ai-video-no-watermark"
+    ],
+    "duplicateMentionsByPage": {
+      "best-ai-video-generators": [
+        "synthesia"
+      ],
+      "ai-avatar-video-generators": [
+        "synthesia"
+      ],
+      "ai-video-editors": [],
+      "fast-ai-video-generators": [
+        "luma-dream-machine"
+      ],
+      "ai-video-for-social-media": [],
+      "viral-ai-video-generators": [
+        "vizard"
+      ],
+      "professional-ai-video-tools": [
+        "pictory",
+        "synthesia",
+        "visla"
+      ],
+      "content-repurposing-ai-tools": [
+        "lumen5"
+      ],
+      "budget-friendly-ai-video-tools": [],
+      "ai-video-for-marketing": [
+        "heygen"
+      ],
+      "text-to-video-ai-tools": [
+        "runway"
+      ],
+      "ai-video-for-youtube": [
+        "invideo"
+      ],
+      "ai-video-generators-comparison": [],
+      "enterprise-ai-video-solutions": []
+    },
+    "pagesNeedingManualReview": {
+      "best-ai-video-generators": [
+        "Duplicate raw tool mentions merged: synthesia"
+      ],
+      "free-ai-video-no-watermark": [
+        "No raw research file exists for this slug; normalized from existing frontend JSON.",
+        "One or more tools still need verified officialUrl coverage.",
+        "One or more tools still need verified logoUrl coverage.",
+        "One or more tools are missing internal review coverage."
+      ],
+      "ai-avatar-video-generators": [
+        "Duplicate raw tool mentions merged: synthesia"
+      ],
+      "ai-video-editors": [
+        "One or more tools still need verified logoUrl coverage.",
+        "One or more tools are missing internal review coverage."
+      ],
+      "fast-ai-video-generators": [
+        "Duplicate raw tool mentions merged: luma-dream-machine",
+        "One or more tools still need verified logoUrl coverage.",
+        "One or more tools are missing internal review coverage."
+      ],
+      "ai-video-for-social-media": [
+        "One or more tools still need verified logoUrl coverage.",
+        "One or more tools are missing internal review coverage."
+      ],
+      "viral-ai-video-generators": [
+        "Duplicate raw tool mentions merged: vizard",
+        "One or more tools still need verified officialUrl coverage.",
+        "One or more tools still need verified logoUrl coverage.",
+        "One or more tools are missing internal review coverage."
+      ],
+      "professional-ai-video-tools": [
+        "Duplicate raw tool mentions merged: pictory, synthesia, visla",
+        "One or more tools still need verified logoUrl coverage.",
+        "One or more tools are missing internal review coverage."
+      ],
+      "content-repurposing-ai-tools": [
+        "Duplicate raw tool mentions merged: lumen5",
+        "One or more tools still need verified officialUrl coverage.",
+        "One or more tools still need verified logoUrl coverage.",
+        "One or more tools are missing internal review coverage."
+      ],
+      "budget-friendly-ai-video-tools": [
+        "One or more tools still need verified logoUrl coverage.",
+        "One or more tools are missing internal review coverage."
+      ],
+      "ai-video-for-marketing": [
+        "Duplicate raw tool mentions merged: heygen",
+        "One or more tools still need verified logoUrl coverage.",
+        "One or more tools are missing internal review coverage."
+      ],
+      "text-to-video-ai-tools": [
+        "Duplicate raw tool mentions merged: runway",
+        "One or more tools still need verified logoUrl coverage.",
+        "One or more tools are missing internal review coverage."
+      ],
+      "ai-video-for-youtube": [
+        "Duplicate raw tool mentions merged: invideo",
+        "One or more tools still need verified logoUrl coverage.",
+        "One or more tools are missing internal review coverage."
+      ],
+      "ai-video-generators-comparison": [
+        "One or more tools still need verified officialUrl coverage.",
+        "One or more tools still need verified logoUrl coverage.",
+        "One or more tools are missing internal review coverage."
+      ]
+    },
+    "toolsMissingOfficialUrl": [
+      "clipclip",
+      "gen-pro",
+      "hooked",
+      "munch",
+      "seedance"
+    ],
+    "toolsMissingLogoUrl": [
+      "abyssale",
+      "adobe-premiere-pro",
+      "capcut",
+      "clipclip",
+      "gen-pro",
+      "hailuo-ai",
+      "hooked",
+      "jogg-ai",
+      "kapwing",
+      "kling-ai",
+      "leonardo-ai",
+      "luma-dream-machine",
+      "magic-hour",
+      "mootion",
+      "munch",
+      "reelbase",
+      "seedance",
+      "syllaby",
+      "veo",
+      "visla",
+      "vizard"
+    ],
+    "toolsMissingReviewCoverage": [
+      "abyssale",
+      "adobe-premiere-pro",
+      "capcut",
+      "clipclip",
+      "gen-pro",
+      "hailuo-ai",
+      "hooked",
+      "jogg-ai",
+      "kapwing",
+      "kling-ai",
+      "leonardo-ai",
+      "luma-dream-machine",
+      "magic-hour",
+      "mootion",
+      "munch",
+      "reelbase",
+      "seedance",
+      "syllaby",
+      "veo",
+      "visla",
+      "vizard"
+    ]
+  }
+}

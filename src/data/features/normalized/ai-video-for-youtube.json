@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "slug": "ai-video-for-youtube",
+  "title": "Best AI Video Tools for YouTube Creators (2026)",
+  "summarySeed": {
+    "oneLiner": "This page compares AI video tools built for YouTube workflows — faceless channel automation, script-to-video generation, and avatar-hosted content. Tools must support long-form (16:9) YouTube output or Shorts automation, and include text-to-video, voice cloning, or faceless avatar capabilities. Generic short-form editors without script-to-video automation are excluded.",
+    "boundaries": [
+      "Focused on long-form (16:9) YouTube workflows and YouTube Shorts automation.",
+      "Must include text-to-video, voice cloning, or faceless avatar capabilities.",
+      "Excludes generic short-form editors that do not support script-to-video pipelines."
+    ],
+    "primaryClassificationRule": "Group by YouTube production workflow.",
+    "comparisonAxes": [
+      "pricing and credit limits"
+    ]
+  },
+  "howToChooseSeeds": [
+    {
+      "title": "Decide whether you need full pipeline automation or just an avatar.",
+      "desc": "InVideo AI and Syllaby handle scripting, visuals, voiceover, and export from a single prompt. HeyGen focuses specifically on creating a realistic avatar host. These are different tools for different workflow gaps."
+    },
+    {
+      "title": "Check voiceover quality and voice cloning options.",
+      "desc": "A faceless channel depends entirely on audio quality. Ensure the tool either integrates with a high-quality TTS provider or offers built-in voice cloning. Syllaby reports voice cloning capability, though the number of clones varies by tier (1–5)."
+    },
+    {
+      "title": "Calculate cost per minute at your publishing cadence.",
+      "desc": "YouTube demands volume. InVideo's free plan allows only 2 video minutes and 1 AI credit per week — far below what a daily channel requires. At $29/mo, both Syllaby (500 credits) and HeyGen (Creator tier) open up more capacity, but check whether their limits match your posting schedule."
+    },
+    {
+      "title": "Understand watermark removal requirements.",
+      "desc": "InVideo's free exports include a watermark. Syllaby's watermark removal is only confirmed on the Lifetime Deal ($799). HeyGen's watermark policy on the Creator plan for this use case is not confirmed in our current data."
+    }
+  ],
+  "groups": [
+    {
+      "id": "channel-automation",
+      "title": "Channel automation",
+      "rule": "These platforms handle the full script-to-publish pipeline — generating video from a text prompt or script, adding voiceover, B-roll, subtitles, and sometimes even scheduling output. They are built for creators who want to run a faceless YouTube channel with minimal manual editing.",
+      "toolSlugs": [
+        "invideo",
+        "syllaby"
+      ]
+    },
+    {
+      "id": "avatar-support",
+      "title": "Avatar support",
+      "rule": "This group covers tools where a faceless or AI avatar-led host is part of the YouTube workflow. Rather than automating the entire pipeline, they focus on producing a realistic on-screen presenter without requiring the creator to appear on camera.",
+      "toolSlugs": [
+        "heygen"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "InVideo",
+      "slug": "invideo",
+      "verdictSeed": "All-in-one prompt-to-video engine for faceless YouTube channels. Handles scripting, B-roll, subtitles, and voiceover from a single prompt.",
+      "pricingSeed": "Basic, Pro, and Ultra paid tiers with up to 20% annual discount",
+      "policySeed": "Free plan exports come with an InVideo watermark",
+      "bestForSeed": "Documentary-style faceless YouTube content",
+      "mainLimitationSeed": "Free plan restricted to 2 video minutes and 1 AI credit per week; all free exports include watermark",
+      "officialUrl": "https://invideo.io/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/invideo",
+      "logoUrl": "/logos/InVideo_logo.svg",
+      "sourceUrls": [
+        "https://trendyri.com/article/best-ai-video-generators-faceless-youtube-channels-2026",
+        "https://help-ai.invideo.io/en/collections/9486043-pricing-plans"
+      ],
+      "flags": [
+        "duplicate-raw-mentions-merged"
+      ]
+    },
+    {
+      "name": "HeyGen",
+      "slug": "heygen",
+      "verdictSeed": "Creates hyper-realistic AI avatar hosts for faceless YouTube channels. Suited for creators who want an on-screen presenter without appearing on camera.",
+      "pricingSeed": "From $29/mo (Creator)",
+      "policySeed": null,
+      "bestForSeed": "Avatar-hosted faceless YouTube channels",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://www.heygen.com/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/heygen",
+      "logoUrl": "/logos/heygen-logo.png",
+      "sourceUrls": [
+        "https://trendyri.com/article/best-ai-video-generators-faceless-youtube-channels-2026"
+      ],
+      "flags": [
+        "missing-pricing-seed",
+        "missing-policy-seed",
+        "missing-limitation-seed"
+      ]
+    },
+    {
+      "name": "Syllaby",
+      "slug": "syllaby",
+      "verdictSeed": "End-to-end YouTube automation with AI-driven scripting, voice cloning, and automated visuals. Offers a Lifetime Deal as an alternative to monthly billing.",
+      "pricingSeed": "Basic: $29/month (500 credits); Lifetime Deal for $799",
+      "policySeed": "Lifetime Deal ($799) explicitly removes watermarks",
+      "bestForSeed": "Full-pipeline YouTube automation with voice cloning",
+      "mainLimitationSeed": "Storage limited to 5–20 GB depending on tier; voice clones limited to 1–5 per tier",
+      "officialUrl": "https://syllaby.io/",
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://syllaby.io/blog/best-faceless-video-ai-generators-youtube-automation/"
+      ],
+      "flags": [
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    }
+  ],
+  "relatedLinks": {
+    "reviewSlugs": [
+      "invideo",
+      "heygen"
+    ],
+    "alternativesSlugs": [
+      "invideo",
+      "heygen"
+    ],
+    "vsSlugs": [],
+    "guideSlugs": []
+  },
+  "faqSeeds": [
+    {
+      "question": "What qualifies a tool for Best AI Video Tools for YouTube Creators (2026)?",
+      "answerSeed": "Group by YouTube production workflow. Must focus on long-form (16:9) YouTube workflows, or YouTube Shorts automation. Must include text-to-video, voice cloning, or faceless avatar capabilities. Excludes generic short-form editors that do not help with script-to-video automation.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "What should readers compare first on this page?",
+      "answerSeed": "Evaluate the Content Style: Are you creating documentary-style B-roll videos (InVideo AI), talking-head avatar videos (HeyGen), or high-end cinematic shorts (Runway)? Check Voice and Audio Capabilities: A faceless channel lives and dies by its voiceover. Ensure the tool either integrates directly with high-quality TTS like ElevenLabs or allows custom voice cloning.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "Which tools already have internal review coverage?",
+      "answerSeed": "Current internal review coverage in this normalized dataset: invideo, heygen.",
+      "sourceToolSlugs": [
+        "invideo",
+        "heygen"
+      ]
+    }
+  ],
+  "lastReviewed": "2026-03-08T00:25:00Z",
+  "reviewMetadata": {
+    "generatedFrom": "research-raw",
+    "sourceFile": "src/data/research/features/ai-video-for-youtube.raw.json",
+    "sourceCount": 3,
+    "uniqueToolCount": 3,
+    "needsManualReview": true,
+    "reviewNotes": [
+      "Duplicate raw tool mentions merged: invideo",
+      "One or more tools still need verified logoUrl coverage.",
+      "One or more tools are missing internal review coverage."
+    ]
+  }
+}

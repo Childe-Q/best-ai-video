@@ -1,0 +1,150 @@
+{
+  "pageTopic": "enterprise-ai-video-solutions",
+  "generatedAt": "2026-03-08T00:45:00Z",
+  "featurePageUrl": "/features/enterprise-ai-video-solutions",
+  "topicDefinition": {
+    "oneLiner": "Scalable AI video platforms for large teams. Enterprise security, API access, and white-label options.",
+    "boundaries": [
+      "Must offer custom API access for programmatic generation.",
+      "Must include strict security protocols (SOC 2, ISO 42001, SSO/SAML).",
+      "Focuses on multi-seat administration, collaboration, and high-volume output rather than consumer features."
+    ]
+  },
+  "howToChoose": [
+    {
+      "title": "Verify Security Certifications",
+      "desc": "Before procurement, ensure the platform holds SOC 2 Type II and GDPR compliance, which are standard for enterprise vendors like Synthesia."
+    },
+    {
+      "title": "Evaluate API Rate Limits",
+      "desc": "If you are integrating video generation directly into your CRM or internal tools, request their developer documentation to check concurrent processing limits."
+    },
+    {
+      "title": "Assess Multi-Seat Collaboration",
+      "desc": "Look for role-based access control (RBAC) and shared brand kits so your global marketing team stays aligned on brand guidelines."
+    }
+  ],
+  "sources": [
+    {
+      "sourceUrl": "https://www.genmedialab.com/reviews/synthesia-review/",
+      "fetchedAt": "2026-03-08T00:40:00Z",
+      "title": "Synthesia Review 2026: Is This AI Video Generator Worth It?",
+      "excerpt": "A detailed look at Synthesia's security posture and its dominance in the Fortune 500.",
+      "publishedAt": "2026-01-15T00:00:00Z",
+      "sections": [
+        {
+          "heading": "Enterprise Security and Adoption",
+          "type": "how_to_choose",
+          "content": "Synthesia is the most-used by Fortune 500 companies. It features Enterprise security: SOC 2 Type II, ISO 42001, GDPR compliant."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Synthesia",
+          "toolSlugGuess": "synthesia",
+          "bestFor": "Enterprise HR, L&D, and corporate training",
+          "keyClaims": [
+            "Used by 60% of Fortune 100 companies",
+            "Enterprise security: SOC 2 Type II, ISO 42001, GDPR compliant",
+            "160+ AI avatars with photorealistic presenters"
+          ],
+          "pricingClaims": [
+            "Enterprise tier offers custom pricing with unlimited minutes"
+          ],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Synthesia leads in enterprise security and Fortune 500 adoption."
+          ],
+          "confidence": 0.98
+        }
+      ],
+      "confidence": 0.95,
+      "notes": [
+        "Confirms the specific security compliance certificates which are critical for this topic."
+      ]
+    },
+    {
+      "sourceUrl": "https://pictory.ai/api-enterprise-2",
+      "fetchedAt": "2026-03-08T00:41:00Z",
+      "title": "Pictory Enterprise Official Page",
+      "excerpt": "Official enterprise features including programmatic API creation and SSO.",
+      "publishedAt": null,
+      "sections": [
+        {
+          "heading": "Enterprise Features",
+          "type": "tool_list",
+          "content": "Offers prompt-based AI video generation with a robust API for programmatic creation. Features include SSO authentication and comprehensive brand kits."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Pictory",
+          "toolSlugGuess": "pictory",
+          "bestFor": "Programmatic content repurposing via API",
+          "keyClaims": [
+            "Robust API for programmatic creation",
+            "SSO authentication and comprehensive brand kits",
+            "Trusted by over 20,000 companies for learning, sales enablement, and marketing"
+          ],
+          "pricingClaims": [],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Offers prompt-based AI video generation with AI avatars, custom visuals, and a robust API for programmatic creation."
+          ],
+          "confidence": 0.99
+        }
+      ],
+      "confidence": 0.95,
+      "notes": [
+        "Provides official confirmation of API and SSO capabilities for enterprise."
+      ]
+    },
+    {
+      "sourceUrl": "https://www.aistudios.com/tech-and-ai-explained/synthesia-vs-ai-studios-which-ai-video-generator-is-right-for-you-2026-edition",
+      "fetchedAt": "2026-03-08T00:42:00Z",
+      "title": "Synthesia vs AI Studios: Which is Right for You (2026 Edition)",
+      "excerpt": "A comparison focusing on DeepBrain AI's enterprise avatar capabilities at scale.",
+      "publishedAt": "2026-02-10T00:00:00Z",
+      "sections": [
+        {
+          "heading": "DeepBrain AI Studios Features",
+          "type": "tool_list",
+          "content": "Excels in avatar realism and multilingual scaling with 2,000+ hyper-realistic AI avatars and 150+ languages."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "DeepBrain AI Studios",
+          "toolSlugGuess": "deepbrain-ai",
+          "bestFor": "Marketing and multilingual content at scale",
+          "keyClaims": [
+            "2,000+ hyper-realistic AI avatars",
+            "150+ languages with automatic dubbing and translation",
+            "7,000+ video templates"
+          ],
+          "pricingClaims": [
+            "Enterprise tier available with custom pricing"
+          ],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "DeepBrain excels in avatar realism and multilingual scaling."
+          ],
+          "confidence": 0.95
+        }
+      ],
+      "confidence": 0.9,
+      "notes": [
+        "Highlights the global scaling aspect of enterprise tools."
+      ]
+    }
+  ]
+}

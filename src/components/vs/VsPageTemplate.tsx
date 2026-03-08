@@ -7,11 +7,17 @@ import PromptBox from '@/components/vs/PromptBox';
 import SourceTooltip from './SourceTooltip';
 import VsDecisionTable from '@/components/vs/VsDecisionTable';
 import VsScoreChart from '@/components/vs/VsScoreChart';
-import { listVsSlugs, parseVsSlug, toVsSlug, VsLoadResult } from '@/data/vs';
+import { listVsSlugs, parseVsSlug, toCanonicalVsSlug, VsLoadResult } from '@/data/vs';
 import { getAllTools, getTool } from '@/lib/getTool';
+import { applyIntentProfileOverride, buildIntentProfile, getKeyDiffLead, getPreferredUseCaseLabels, orderKeyDiffsForIntent } from '@/lib/vsIntent';
+import { buildPromptVariants, inferUseCaseKey, UseCaseKey } from '@/lib/promptLibrary';
+import { collectComparisonSourceUrls, getSourceDomain } from '@/lib/vsSources';
+import { resolveRowSourcesForTools } from '@/lib/vsToolSources';
 import { getSEOCurrentYear } from '@/lib/utils';
+import { buildDecisionTableRows, DECISION_TABLE_ROWS, toVsDiffRows } from '@/lib/vsDecisionTable';
+import { applyFeaturedCalibration, computeInternalScoreVerdict, derivePriceWinnerFromDecisionTable, formatInternalScore, normalizeInternalScore, ScoreWinner } from '@/lib/vsScore';
 import { Tool } from '@/types/tool';
-import { VsComparison, VsSide } from '@/types/vs';
+import { VsComparison, VsPromptVariant, VsSide } from '@/types/vs';
 
 interface VsPageTemplateProps {
   load: VsLoadResult;
@@ -35,23 +41,13 @@ type ScenarioConfig = {
   label: string;
   keywords: string[];
   tieBreaker: VsSide;
+  promptKey?: UseCaseKey | null;
 };
 
 type UseCaseCandidate = {
   label: string;
   keywords: string[];
 };
-
-const REQUIRED_MATRIX_ROWS = [
-  'Best for',
-  'Output type',
-  'Workflow speed',
-  'Languages & dubbing',
-  'Templates',
-  'API',
-  'Pricing starting point',
-  'Free plan',
-];
 
 const GENERIC_BEST_FOR = ['quick drafts', 'simple edits', 'solo creators'];
 const GENERIC_NOT_FOR = ['highly regulated enterprise workflows', 'frame-level editing control needs', 'complex multi-step production pipelines'];
@@ -98,6 +94,20 @@ export function sanitizeTextForUi(text: string): string {
     .replace(EMOJI_REGEX, '')
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+function sanitizeSentence(text: string): string {
+  const cleaned = sanitizeTextForUi(text)
+    .replace(/^[\s:;.,-]+/g, '')
+    .replace(/\s*([.?!,:;])\s*/g, '$1 ')
+    .replace(/([.?!,:;]){2,}/g, '$1')
+    .replace(/\.\s*\./g, '.')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  if (!cleaned) return '';
+  const sentence = cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+  return /[.?!]$/.test(sentence) ? sentence : `${sentence}.`;
 }
 
 function countKeywordMatches(text: string, keywords: string[]): number {
@@ -235,7 +245,19 @@ function buildSuggestionCardText(
 ): string {
   const signals = inferSuggestionSignals(comparison, side, tool);
   const templateIndex = stableHash(`${slugSeed}:${side}:${tool.slug}`) % CARD_TEMPLATES.length;
-  return sanitizeTextForUi(CARD_TEMPLATES[templateIndex](signals));
+  return sanitizeSentence(CARD_TEMPLATES[templateIndex](signals));
+}
+
+function buildPickCardCopy(tool: ToolMeta, bestForList: string[], positioning?: string): string {
+  const bestFor = cleanFragment(bestForList[0]);
+  const positioningText = cleanFragment(positioning);
+  const focus = bestFor || positioningText || 'repeatable video production';
+
+  if (positioningText && positioningText !== focus) {
+    return sanitizeSentence(`${tool.name} is a strong fit for ${focus} with a workflow shaped around ${positioningText}`);
+  }
+
+  return sanitizeSentence(`${tool.name} is a strong fit for ${focus}`);
 }
 
 const USE_CASE_CANDIDATES: UseCaseCandidate[] = [
@@ -243,6 +265,7 @@ const USE_CASE_CANDIDATES: UseCaseCandidate[] = [
   { label: 'Editing & captions', keywords: ['editing', 'editor', 'caption', 'subtitles', 'trim'] },
   { label: 'Shorts & social ads', keywords: ['social', 'shorts', 'reels', 'ads', 'template', 'marketing'] },
   { label: 'Script/blog → video', keywords: ['blog', 'script', 'text-to-video', 'article', 'text'] },
+  { label: 'Repurpose long-form', keywords: ['repurpose', 'repurposing', 'webinar', 'podcast', 'long-form', 'transcript', 'clips'] },
   { label: 'Localization & dubbing', keywords: ['dubbing', 'localization', 'translate', 'language', 'voiceover'] },
   { label: 'Team workflows', keywords: ['team', 'workspace', 'approval', 'collaboration', 'review'] },
 ];
@@ -279,8 +302,14 @@ function getToolSignalText(tool: ToolMeta): string {
   return cleanFragment(parts.join(' '));
 }
 
-function buildUseCases(toolA: ToolMeta, toolB: ToolMeta, comparison: VsComparison, slugSeed: string): ScenarioConfig[] {
-  const tieBreakers: VsSide[] = [comparison.verdict.winnerQuality, comparison.verdict.winnerSpeed, comparison.verdict.winnerPrice];
+function buildUseCases(
+  toolA: ToolMeta,
+  toolB: ToolMeta,
+  comparison: VsComparison,
+  slugSeed: string,
+  tieBreakers: VsSide[],
+): ScenarioConfig[] {
+  const preferredLabels = getPreferredUseCaseLabels(comparison.intentProfile);
 
   const fromComparisonRaw = [
     ...((comparison.decisionCases ?? []).map((item) => ({
@@ -330,8 +359,13 @@ function buildUseCases(toolA: ToolMeta, toolB: ToolMeta, comparison: VsCompariso
     { label: 'Repeatable publishing workflow', keywords: ['workflow', 'repeatable', 'team', 'process'] },
   ];
 
+  const prioritizedCandidates = preferredLabels
+    .map((label) => USE_CASE_CANDIDATES.find((candidate) => candidate.label === label))
+    .filter((candidate): candidate is UseCaseCandidate => Boolean(candidate));
+
   const combined = [
     ...directUseCases,
+    ...prioritizedCandidates,
     ...scoredCandidates.map((item) => ({ label: item.label, keywords: item.keywords })),
     ...fallbackUseCases,
   ];
@@ -353,7 +387,38 @@ function buildUseCases(toolA: ToolMeta, toolB: ToolMeta, comparison: VsCompariso
     label: item.label,
     keywords: item.keywords,
     tieBreaker: tieBreakers[index % tieBreakers.length] ?? 'a',
+    promptKey: inferUseCaseKey(item.label, item.keywords, `${toolSignals} ${matrixSignal}`),
   }));
+}
+
+function normalizePromptVariants(
+  variants: VsPromptVariant[] | undefined,
+  slugSeed: string,
+  toolA: ToolMeta,
+  toolB: ToolMeta,
+  scenarios: ScenarioConfig[],
+): VsPromptVariant[] {
+  const fromData = (variants ?? [])
+    .map((variant) => ({
+      key: sanitizeTextForUi(variant.key),
+      title: sanitizeTextForUi(variant.title),
+      prompt: sanitizeTextForUi(variant.prompt),
+      settings: variant.settings.map((setting) => sanitizeTextForUi(setting)).filter(Boolean),
+    }))
+    .filter((variant) => variant.key && variant.title && variant.prompt);
+
+  if (fromData.length >= 2) {
+    return fromData.slice(0, 3);
+  }
+
+  return buildPromptVariants({
+    slugSeed,
+    toolAName: toolA.name,
+    toolBName: toolB.name,
+    toolA: toolA.data,
+    toolB: toolB.data,
+    scenarios,
+  });
 }
 
 function getFallbackComparisonLinks(currentSlug: string, slugA: string, slugB: string): string[] {
@@ -375,8 +440,8 @@ function getFallbackComparisonLinks(currentSlug: string, slugA: string, slugB: s
   const toolSlugs = getAllTools().map((tool) => tool.slug).filter((slug) => slug !== slugA && slug !== slugB);
 
   for (const candidate of toolSlugs.slice(0, 8)) {
-    fallback.push(toVsSlug(slugA, candidate));
-    fallback.push(toVsSlug(slugB, candidate));
+    fallback.push(toCanonicalVsSlug(slugA, candidate));
+    fallback.push(toCanonicalVsSlug(slugB, candidate));
     if (fallback.length >= 10) break;
   }
 
@@ -398,31 +463,13 @@ function buildNotForFallback(slug: string): string[] {
   return normalizeStringArray(fromTool, GENERIC_NOT_FOR);
 }
 
-function getVerificationSources(comparison: VsComparison): string[] {
-  const urls = dedupe(
-    [...comparison.keyDiffs, ...comparison.matrixRows]
-      .map((item) => item.sourceUrl ?? '')
-      .filter(Boolean),
-  );
-
-  return urls;
-}
-
-function getSourceDomain(url: string): string {
-  try {
-    return new URL(url).hostname.replace(/^www\./, '');
-  } catch {
-    return url;
-  }
-}
-
 function normalizeDomainForMatch(domain: string): string {
   return domain.toLowerCase().replace(/^www\./, '');
 }
 
 function extractSourceDomainItems(comparison: VsComparison): Array<{ domain: string; url: string }> {
   const domainToUrl = new Map<string, string>();
-  for (const url of getVerificationSources(comparison)) {
+  for (const url of collectComparisonSourceUrls(comparison)) {
     const domain = getSourceDomain(url);
     if (!domainToUrl.has(domain)) {
       domainToUrl.set(domain, url);
@@ -493,19 +540,20 @@ function ensureTemplateComparison(base: VsComparison | null, currentSlug: string
   const parsed = parseVsSlug(currentSlug);
   const slugA = base?.slugA ?? parsed?.slugA ?? toolA.slug;
   const slugB = base?.slugB ?? parsed?.slugB ?? toolB.slug;
-  const sameSlug = toVsSlug(slugA, slugB);
+  const sameSlug = toCanonicalVsSlug(slugA, slugB);
 
   const baseRows = base?.matrixRows ?? [];
   const rowMap = new Map(baseRows.map((row) => [row.label.toLowerCase(), row]));
-  const filledRows = REQUIRED_MATRIX_ROWS.map((label) => {
+  const filledRows = DECISION_TABLE_ROWS.map((label) => {
     return (
       rowMap.get(label.toLowerCase()) ?? {
         label,
-        a: `Pending verification for ${toolA.name}`,
-        b: `Pending verification for ${toolB.name}`,
+        a: `See ${toolA.name} docs`,
+        b: `See ${toolB.name} docs`,
       }
     );
   });
+  const matrixRows = toVsDiffRows(buildDecisionTableRows(filledRows, slugA, slugB));
 
   const keyDiffs = base?.keyDiffs?.length
     ? base.keyDiffs
@@ -516,11 +564,37 @@ function ensureTemplateComparison(base: VsComparison | null, currentSlug: string
         { label: 'Output style', a: 'Pending verification', b: 'Pending verification' },
       ];
 
+  const normalizedScore = normalizeInternalScore(
+    {
+      methodNote:
+        base?.score?.methodNote ??
+        'Internal score computed from pricing value (25%), ease (20%), speed (20%), output quality (20%), and customization (15%).',
+      weights: base?.score?.weights ?? {},
+      a: base?.score?.a ?? {},
+      b: base?.score?.b ?? {},
+      provenance: base?.score?.provenance ?? {
+        mode: 'estimated',
+        coverage: {},
+        rationale: {},
+        sources: {},
+      },
+    },
+    [...matrixRows, ...keyDiffs],
+    slugA,
+    slugB,
+  );
+  const calibratedScore = applyFeaturedCalibration(normalizedScore, slugA, slugB);
+
   return {
     slugA,
     slugB,
     updatedAt: base?.updatedAt ?? todayIso(),
     pricingCheckedAt: base?.pricingCheckedAt ?? todayIso(),
+    intentProfile: applyIntentProfileOverride(
+      base?.intentProfile ?? buildIntentProfile(toolA.data, toolB.data, base),
+      slugA,
+      slugB,
+    ),
     shortAnswer: {
       a: base?.shortAnswer?.a ?? `${toolA.name} is suited to fast-moving content teams and creators.`,
       b: base?.shortAnswer?.b ?? `${toolB.name} is suited to teams prioritizing repeatable video workflows.`,
@@ -534,33 +608,8 @@ function ensureTemplateComparison(base: VsComparison | null, currentSlug: string
       b: normalizeStringArray(base?.notFor?.b, buildNotForFallback(slugB)),
     },
     keyDiffs,
-    matrixRows: [...filledRows, ...baseRows.filter((row) => !REQUIRED_MATRIX_ROWS.map((label) => label.toLowerCase()).includes(row.label.toLowerCase()))].slice(0, 10),
-    score: {
-      methodNote:
-        base?.score?.methodNote ??
-        'Score computed from pricing value (25%), ease (20%), speed (20%), output quality (20%), and customization (15%).',
-      weights: base?.score?.weights ?? {
-        pricingValue: 25,
-        ease: 20,
-        speed: 20,
-        output: 20,
-        customization: 15,
-      },
-      a: base?.score?.a ?? {
-        pricingValue: 6.5,
-        ease: 6.5,
-        speed: 6.5,
-        output: 6.5,
-        customization: 6.5,
-      },
-      b: base?.score?.b ?? {
-        pricingValue: 6.5,
-        ease: 6.5,
-        speed: 6.5,
-        output: 6.5,
-        customization: 6.5,
-      },
-    },
+    matrixRows,
+    score: calibratedScore,
     promptBox: {
       prompt:
         base?.promptBox?.prompt ??
@@ -568,6 +617,7 @@ function ensureTemplateComparison(base: VsComparison | null, currentSlug: string
       settings: base?.promptBox?.settings?.length
         ? base.promptBox.settings
         : ['Duration: 45s', 'Format: 16:9', 'Language: English', 'Output: MP4 1080p', 'Tone: professional'],
+      variants: base?.promptBox?.variants ?? [],
     },
     verdict: {
       winnerPrice: base?.verdict?.winnerPrice ?? 'a',
@@ -627,15 +677,30 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
   const updated = formatIsoDate(comparison.updatedAt);
   const pricingChecked = formatIsoDate(comparison.pricingCheckedAt);
   const verificationDomains = sortSourceDomainsByRelevance(extractSourceDomainItems(comparison), toolA, toolB);
-  const slugSeed = toVsSlug(comparison.slugA, comparison.slugB);
-  const cardTextA = sanitizeTextForUi(
-    isFull && comparison.shortAnswer.a ? comparison.shortAnswer.a : buildSuggestionCardText(comparison, 'a', toolA, slugSeed),
+  const slugSeed = toCanonicalVsSlug(comparison.slugA, comparison.slugB);
+  const keyDiffLead = getKeyDiffLead(comparison.intentProfile, toolA.name, toolB.name);
+  const orderedKeyDiffs = orderKeyDiffsForIntent(comparison.keyDiffs, comparison.intentProfile);
+  const cardTextA = sanitizeSentence(
+    isFull && comparison.shortAnswer.a
+      ? comparison.shortAnswer.a
+      : buildPickCardCopy(toolA, comparison.bestFor.a, toolA.data?.best_for),
   );
-  const cardTextB = sanitizeTextForUi(
-    isFull && comparison.shortAnswer.b ? comparison.shortAnswer.b : buildSuggestionCardText(comparison, 'b', toolB, slugSeed),
+  const cardTextB = sanitizeSentence(
+    isFull && comparison.shortAnswer.b
+      ? comparison.shortAnswer.b
+      : buildPickCardCopy(toolB, comparison.bestFor.b, toolB.data?.best_for),
   );
 
-  const scenarios = buildUseCases(toolA, toolB, comparison, slugSeed);
+  const priceWinner = derivePriceWinnerFromDecisionTable(comparison.matrixRows, comparison.score);
+  const scoreVerdict = computeInternalScoreVerdict(comparison.score, undefined, priceWinner);
+  const tieBreakers: VsSide[] = [
+    scoreVerdict.winnerQuality === 'tie' ? 'a' : scoreVerdict.winnerQuality,
+    scoreVerdict.winnerSpeed === 'tie' ? 'a' : scoreVerdict.winnerSpeed,
+    priceWinner === 'tie' ? 'a' : priceWinner,
+  ];
+  const scenarios = buildUseCases(toolA, toolB, comparison, slugSeed, tieBreakers);
+  const promptVariants = normalizePromptVariants(comparison.promptBox.variants, slugSeed, toolA, toolB, scenarios);
+  const defaultPromptKey = scenarios[0]?.promptKey ?? promptVariants[0]?.key ?? null;
 
   const scenarioConclusions = scenarios.map((scenario) => {
     const winner = pickWinnerForScenario(comparison, scenario);
@@ -651,25 +716,43 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
     };
   });
 
-  const winnerName = (side: VsSide) => (side === 'a' ? toolA.name : toolB.name);
-  const faqItems = [
+  const winnerLabel = (winner: ScoreWinner) => {
+    if (winner === 'tie') return 'Both';
+    return winner === 'a' ? toolA.name : toolB.name;
+  };
+  const recommendationText =
+    scoreVerdict.overallWinner === 'close'
+      ? `Close call on weighted internal score (${formatInternalScore(scoreVerdict.weightedTotalA)} vs ${formatInternalScore(scoreVerdict.weightedTotalB)}). Choose ${toolA.name} when ${sanitizeTextForUi(
+          comparison.shortAnswer.a.toLowerCase(),
+        )}. Choose ${toolB.name} when ${sanitizeTextForUi(comparison.shortAnswer.b.toLowerCase())}.`
+      : `Our recommendation: ${
+          scoreVerdict.overallWinner === 'a' ? toolA.name : toolB.name
+        } based on weighted internal score (${formatInternalScore(scoreVerdict.weightedTotalA)} vs ${formatInternalScore(
+          scoreVerdict.weightedTotalB,
+        )}).`;
+  const fallbackFaqItems = [
     {
       question: `Which is better for beginners: ${toolA.name} or ${toolB.name}?`,
-      answer: `${winnerName(
-        comparison.verdict.winnerSpeed,
+      answer: `${winnerLabel(
+        scoreVerdict.winnerSpeed,
       )} is generally easier to start with when time-to-first-output is your priority, but check the decision table rows for templates and workflow fit.`,
     },
     {
       question: `Which one gives better value for money?`,
-      answer: `${winnerName(
-        comparison.verdict.winnerPrice,
-      )} leads on price-value in this comparison. Confirm current plan limits before purchasing.`,
+      answer: `${winnerLabel(priceWinner)} currently has the lower visible starting price in this comparison. Confirm current plan limits before purchasing.`,
     },
     {
       question: `Can I use both tools in one workflow?`,
       answer: `Yes. Many teams use one tool for ideation/batch output and another for avatar or presentation-focused delivery.`,
     },
   ];
+  const faqItems =
+    comparison.faq && comparison.faq.length >= 3
+      ? comparison.faq.slice(0, 6).map((item) => ({
+          question: sanitizeTextForUi(item.question),
+          answer: sanitizeTextForUi(item.answer),
+        }))
+      : fallbackFaqItems;
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -684,7 +767,7 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
           <h1 className="text-center text-3xl font-extrabold text-gray-900 md:text-4xl">
             {toolA.name} vs {toolB.name}: {seoYear} AI Video Generator Comparison Report
           </h1>
-          <DecisionPanel scenarios={scenarios.map(({ id, label }) => ({ id, label }))} />
+          <DecisionPanel scenarios={scenarios.map(({ id, label, promptKey }) => ({ id, label, promptKey }))} />
           <div className="mx-auto mt-6 grid max-w-4xl gap-3 md:grid-cols-2">
             <p className="rounded-lg border border-gray-200 bg-white p-4 text-sm text-gray-700">
               <strong>{toolA.name}:</strong> {cardTextA}
@@ -704,21 +787,34 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
 
         <section className="rounded-xl border border-gray-200 bg-white p-6">
           <h2 className="text-2xl font-bold text-gray-900">Key Differences</h2>
-          <div className="mt-4 grid gap-3 md:grid-cols-2">
-            {comparison.keyDiffs.map((diff) => (
-              <article key={diff.label} className="rounded-lg border border-gray-200 p-4">
+          <p className="mt-2 text-sm text-gray-600">{keyDiffLead}</p>
+          <div className="mt-5 space-y-4">
+            {orderedKeyDiffs.map((diff) => (
+              <article key={diff.label} className="rounded-xl border border-gray-200 bg-gray-50/70 p-4">
                 <div className="flex items-start justify-between gap-3">
-                  <h3 className="text-sm font-semibold text-gray-900">{diff.label}</h3>
-                  {diff.sourceUrl ? (
-                    <SourceTooltip sourceUrl={diff.sourceUrl} pricingCheckedAt={comparison.pricingCheckedAt} />
-                  ) : null}
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-500">Difference</p>
+                    <h3 className="mt-1 text-base font-semibold text-gray-900">{diff.label}</h3>
+                  </div>
+                  <SourceTooltip
+                    id={`keydiff-${diff.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                    label={diff.label}
+                    toolAName={toolA.name}
+                    toolBName={toolB.name}
+                    sources={resolveRowSourcesForTools(diff, comparison.slugA, comparison.slugB)}
+                    pricingCheckedAt={comparison.pricingCheckedAt}
+                  />
                 </div>
-                <p className="mt-2 text-sm text-gray-700">
-                  <strong>{toolA.name}:</strong> {diff.a}
-                </p>
-                <p className="mt-1 text-sm text-gray-700">
-                  <strong>{toolB.name}:</strong> {diff.b}
-                </p>
+                <div className="mt-4 grid gap-3 md:grid-cols-2">
+                  <div className="rounded-lg border border-gray-200 bg-white p-3">
+                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">{toolA.name}</p>
+                    <p className="mt-2 text-sm leading-6 text-gray-700">{diff.a}</p>
+                  </div>
+                  <div className="rounded-lg border border-gray-200 bg-white p-3">
+                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">{toolB.name}</p>
+                    <p className="mt-2 text-sm leading-6 text-gray-700">{diff.b}</p>
+                  </div>
+                </div>
               </article>
             ))}
           </div>
@@ -727,35 +823,59 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
         <section className="rounded-xl border border-gray-200 bg-white p-6">
           <h2 className="text-2xl font-bold text-gray-900">Best For / Not For</h2>
           <div className="mt-4 grid gap-4 md:grid-cols-2">
-            <article className="rounded-lg border border-gray-200 p-4">
+            <article className="rounded-xl border border-gray-200 p-4">
               <h3 className="text-lg font-semibold text-gray-900">{toolA.name}</h3>
-              <p className="mt-3 text-sm font-medium text-gray-800">Best for</p>
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
-                {comparison.bestFor.a.map((item) => (
-                  <li key={item}>{sanitizeTextForUi(item)}</li>
-                ))}
-              </ul>
-              <p className="mt-4 text-sm font-medium text-gray-800">Not for</p>
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
-                {comparison.notFor.a.map((item) => (
-                  <li key={item}>{sanitizeTextForUi(item)}</li>
-                ))}
-              </ul>
+              <div className="mt-4 grid gap-3">
+                <div className="rounded-lg border border-gray-200 bg-gray-50/70 p-3">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Best for</p>
+                  <ul className="mt-3 space-y-2 text-sm leading-6 text-gray-700">
+                    {comparison.bestFor.a.map((item) => (
+                      <li key={item} className="flex gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-400" />
+                        <span>{sanitizeTextForUi(item)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="rounded-lg border border-gray-200 bg-white p-3">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Not for</p>
+                  <ul className="mt-3 space-y-2 text-sm leading-6 text-gray-700">
+                    {comparison.notFor.a.map((item) => (
+                      <li key={item} className="flex gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-300" />
+                        <span>{sanitizeTextForUi(item)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </article>
-            <article className="rounded-lg border border-gray-200 p-4">
+            <article className="rounded-xl border border-gray-200 p-4">
               <h3 className="text-lg font-semibold text-gray-900">{toolB.name}</h3>
-              <p className="mt-3 text-sm font-medium text-gray-800">Best for</p>
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
-                {comparison.bestFor.b.map((item) => (
-                  <li key={item}>{sanitizeTextForUi(item)}</li>
-                ))}
-              </ul>
-              <p className="mt-4 text-sm font-medium text-gray-800">Not for</p>
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
-                {comparison.notFor.b.map((item) => (
-                  <li key={item}>{sanitizeTextForUi(item)}</li>
-                ))}
-              </ul>
+              <div className="mt-4 grid gap-3">
+                <div className="rounded-lg border border-gray-200 bg-gray-50/70 p-3">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Best for</p>
+                  <ul className="mt-3 space-y-2 text-sm leading-6 text-gray-700">
+                    {comparison.bestFor.b.map((item) => (
+                      <li key={item} className="flex gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-400" />
+                        <span>{sanitizeTextForUi(item)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="rounded-lg border border-gray-200 bg-white p-3">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Not for</p>
+                  <ul className="mt-3 space-y-2 text-sm leading-6 text-gray-700">
+                    {comparison.notFor.b.map((item) => (
+                      <li key={item} className="flex gap-3">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-300" />
+                        <span>{sanitizeTextForUi(item)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </article>
           </div>
         </section>
@@ -774,25 +894,35 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
 
         <VsScoreChart toolAName={toolA.name} toolBName={toolB.name} score={comparison.score} />
 
-        <PromptBox prompt={comparison.promptBox.prompt} settings={comparison.promptBox.settings} />
+        <PromptBox variants={promptVariants} defaultVariantKey={defaultPromptKey} />
 
         <section className="rounded-xl border border-gray-200 bg-white p-6">
-          <h2 className="text-2xl font-bold text-gray-900">Verdict</h2>
+          <div className="flex flex-wrap items-center gap-3">
+            <h2 className="text-2xl font-bold text-gray-900">Verdict</h2>
+            {comparison.score.provenance.mode !== 'verified' ? (
+              <Link
+                href="/methodology#scoring"
+                className="inline-flex items-center rounded-full border border-slate-300 bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 hover:bg-slate-200"
+              >
+                Estimated
+              </Link>
+            ) : null}
+          </div>
           <div className="mt-4 grid gap-4 md:grid-cols-3">
             <div className="rounded-lg border border-green-200 bg-green-50 p-4">
               <p className="text-sm font-semibold text-gray-900">Winner for Price</p>
-              <p className="mt-1 text-lg font-bold text-gray-900">{winnerName(comparison.verdict.winnerPrice)}</p>
+              <p className="mt-1 text-lg font-bold text-gray-900">{winnerLabel(priceWinner)}</p>
             </div>
             <div className="rounded-lg border border-blue-200 bg-blue-50 p-4">
               <p className="text-sm font-semibold text-gray-900">Winner for Quality</p>
-              <p className="mt-1 text-lg font-bold text-gray-900">{winnerName(comparison.verdict.winnerQuality)}</p>
+              <p className="mt-1 text-lg font-bold text-gray-900">{winnerLabel(scoreVerdict.winnerQuality)}</p>
             </div>
             <div className="rounded-lg border border-amber-200 bg-amber-50 p-4">
               <p className="text-sm font-semibold text-gray-900">Winner for Speed</p>
-              <p className="mt-1 text-lg font-bold text-gray-900">{winnerName(comparison.verdict.winnerSpeed)}</p>
+              <p className="mt-1 text-lg font-bold text-gray-900">{winnerLabel(scoreVerdict.winnerSpeed)}</p>
             </div>
           </div>
-          <p className="mt-4 text-sm text-gray-700">{comparison.verdict.recommendation}</p>
+          <p className="mt-4 text-sm text-gray-700">{recommendationText}</p>
         </section>
 
         <section className="rounded-xl border border-gray-200 bg-white p-6">
@@ -820,7 +950,7 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
               {verificationDomains.length > 0 ? (
                 <ul className="grid gap-1 sm:grid-cols-2">
                   {verificationDomains.map((item) => (
-                    <li key={item.domain} className="truncate">
+                    <li key={`${item.domain}-${item.url}`} className="truncate">
                       <a
                         href={item.url}
                         target="_blank"
@@ -833,7 +963,7 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
                   ))}
                 </ul>
               ) : (
-                <p className="text-gray-600">Primary source links are being attached row by row.</p>
+                <p className="text-gray-600">No verified source yet.</p>
               )}
               <Link href="/methodology" className="inline-block font-medium text-indigo-600 hover:text-indigo-700">
                 Read methodology →

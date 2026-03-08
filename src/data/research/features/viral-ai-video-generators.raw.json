@@ -1,0 +1,241 @@
+{
+  "pageTopic": "viral-ai-video-generators",
+  "generatedAt": "2026-03-07T23:25:00Z",
+  "featurePageUrl": "/features/viral-ai-video-generators",
+  "topicDefinition": {
+    "oneLiner": "Create viral-worthy videos that get millions of views. Optimized for maximum engagement and shares.",
+    "boundaries": [
+      "Must focus on features that drive virality (hooks, B-roll, pacing, trendy captions, Virality Scores).",
+      "Must support fast social formats (TikTok, Reels, Shorts).",
+      "Excludes generic video editors that lack algorithmic/viral optimization features."
+    ]
+  },
+  "howToChoose": [
+    {
+      "title": "Look for Virality Scoring",
+      "desc": "Top tools analyze your long-form video and score clips based on hook strength, pacing, and trend potential to predict social performance."
+    },
+    {
+      "title": "Check Auto-Captioning Styles",
+      "desc": "Viral content relies heavily on dynamic, animated 'Hormozi-style' captions. Ensure the tool offers high-accuracy text with customizable, trendy fonts."
+    },
+    {
+      "title": "Evaluate B-roll and Reframing Features",
+      "desc": "The tool should automatically insert relevant B-roll to maintain viewer retention and smartly reframe horizontal speakers into a vertical 9:16 aspect ratio."
+    }
+  ],
+  "sources": [
+    {
+      "sourceUrl": "https://www.tryhooked.ai/blog/best-ai-video-creation-tools",
+      "fetchedAt": "2026-03-07T23:18:00Z",
+      "title": "The 12 Best AI Video Creation Tools for Viral Content in 2026",
+      "excerpt": "A list of tools specifically optimized for short-form platforms like TikTok, Instagram Reels, and YouTube Shorts.",
+      "publishedAt": "2026-01-10T00:00:00Z",
+      "sections": [
+        {
+          "heading": "Top Platforms for Short-Form Viral Content",
+          "type": "tool_list",
+          "content": "Hooked stands out specifically for short-form platforms, offering trend-driven workflows with real-time trend intelligence. GEN.pro functions as an all-in-one influence engine with a Large Social Model for predictive trend analysis."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Hooked",
+          "toolSlugGuess": "hooked",
+          "bestFor": "Trend-driven short-form workflows",
+          "keyClaims": [
+            "Real-time trend intelligence",
+            "30-day strategy roadmap to guide viral content creation"
+          ],
+          "pricingClaims": [],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Hooked stands out specifically for short-form platforms like TikTok, Instagram Reels, and YouTube Shorts, offering trend-driven workflows with real-time trend intelligence."
+          ],
+          "confidence": 0.9
+        },
+        {
+          "toolName": "GEN.pro",
+          "toolSlugGuess": "gen-pro",
+          "bestFor": "Creators and agencies building at scale",
+          "keyClaims": [
+            "Large Social Model for predictive trend analysis",
+            "Automated engagement via AURA engine"
+          ],
+          "pricingClaims": [
+            "Starts at $99/month"
+          ],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "GEN.pro functions as an all-in-one influence engine with a Large Social Model for predictive trend analysis... starts at $99/month."
+          ],
+          "confidence": 0.9
+        }
+      ],
+      "confidence": 0.85,
+      "notes": [
+        "Focuses heavily on predictive virality and social AI features."
+      ]
+    },
+    {
+      "sourceUrl": "https://vizard.ai/blog/the-12-best-video-editing-tools-in-2025-turn-long-demos-into-viral-ugc-clips-vizard-vs-opus-clip-more",
+      "fetchedAt": "2026-03-07T23:20:00Z",
+      "title": "Best Video Editing Tools 2025: AI Clippers & Repurposing Suites",
+      "excerpt": "A deep dive into tools that turn long-form content into viral clips with automated captions and virality scores.",
+      "publishedAt": "2025-11-01T00:00:00Z",
+      "sections": [
+        {
+          "heading": "Top Contenders",
+          "type": "tool_list",
+          "content": "OpusClip is one of the most popular tools for converting long-form videos into viral short-form clips. It automatically identifies engaging moments and generates a Virality Score. Vizard focuses on highlight discovery, vertical video reframing, and text-based editing."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Opus Clip",
+          "toolSlugGuess": "opus-clip",
+          "bestFor": "Repurposing long videos into viral shorts",
+          "keyClaims": [
+            "Automatically identifies engaging moments",
+            "Generates fully captioned clips with a Virality Score to predict performance"
+          ],
+          "pricingClaims": [
+            "Pricing starts at $15/month for individual creators"
+          ],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [
+            "Works best with talking-head videos, not action-heavy content"
+          ],
+          "proofSnippets": [
+            "OpusClip is one of the most popular tools for converting long-form videos into viral short-form clips."
+          ],
+          "confidence": 0.95
+        },
+        {
+          "toolName": "Vizard",
+          "toolSlugGuess": "vizard",
+          "bestFor": "Highlight discovery and vertical reframing",
+          "keyClaims": [
+            "Focuses on highlight discovery and vertical video reframing",
+            "Handles auto-subtitles and translation for global publishing"
+          ],
+          "pricingClaims": [
+            "Offers both free and paid tiers"
+          ],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Vizard focuses on highlight discovery, vertical video reframing, and text-based editing that works like editing a document."
+          ],
+          "confidence": 0.95
+        }
+      ],
+      "confidence": 0.95,
+      "notes": [
+        "Vizard and Opus Clip are the core heavyweights in the 'viral clipper' space."
+      ]
+    },
+    {
+      "sourceUrl": "https://vizard.ai/pricing",
+      "fetchedAt": "2026-03-07T23:22:00Z",
+      "title": "Vizard.ai Official Pricing",
+      "excerpt": "Official details on Vizard's limits, watermarks, and pricing.",
+      "publishedAt": null,
+      "sections": [
+        {
+          "heading": "Pricing Plans",
+          "type": "pricing",
+          "content": "Free: $0/month (60 credits/month). Creator: Paid tier with 600+ credits/month. Business: Paid tier for teams."
+        },
+        {
+          "heading": "Export Quality and Watermarks",
+          "type": "limitations",
+          "content": "Free plan includes watermark and 720p maximum export. Paid plans offer 4K export and no watermark."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Vizard",
+          "toolSlugGuess": "vizard",
+          "bestFor": "Text-based video clipping",
+          "keyClaims": [
+            "1 credit = 1 minute of uploaded video"
+          ],
+          "pricingClaims": [
+            "Free: 60 credits/month",
+            "Creator plan offers 600+ credits"
+          ],
+          "watermarkRules": [
+            "Free plan includes watermark",
+            "Creator & Business plans include no watermark"
+          ],
+          "exportRules": [
+            "Free plan limited to 720p and 10-minute maximum length",
+            "Paid plans support 4K exports"
+          ],
+          "refundRules": [],
+          "limitations": [
+            "Maximum file size is 10GB",
+            "API rate limits: 3 requests per minute, 20 requests per hour"
+          ],
+          "proofSnippets": [
+            "Free: $0/month (60 credits/month, 720p export). Free plan includes watermark."
+          ],
+          "confidence": 0.99
+        }
+      ],
+      "confidence": 0.99,
+      "notes": [
+        "Official pricing page details."
+      ]
+    },
+    {
+      "sourceUrl": "https://go.getmunch.com/payment-and-cancellation-policy",
+      "fetchedAt": "2026-03-07T23:23:00Z",
+      "title": "Munch Payment and Cancellation Policy",
+      "excerpt": "Official terms regarding Munch's refund and cancellation policies.",
+      "publishedAt": null,
+      "sections": [
+        {
+          "heading": "Refund Policy",
+          "type": "limitations",
+          "content": "You will not receive a refund for the month of your cancellation; however, your subscription access will continue for the remainder of the current monthly billing period."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "GetMunch",
+          "toolSlugGuess": "munch",
+          "bestFor": "All-in-one clip generation",
+          "keyClaims": [],
+          "pricingClaims": [],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [
+            "No refunds for the month of cancellation; access continues until the end of the billing cycle",
+            "Must notify customer service at least 3 business days before billing period ends to prevent renewal"
+          ],
+          "limitations": [],
+          "proofSnippets": [
+            "You will not receive a refund for the month of your cancellation; however, your subscription access will continue for the remainder of the current monthly billing period."
+          ],
+          "confidence": 0.99
+        }
+      ],
+      "confidence": 0.99,
+      "notes": [
+        "Official policy terms for Munch."
+      ]
+    }
+  ]
+}

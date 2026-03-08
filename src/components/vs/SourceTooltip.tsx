@@ -2,9 +2,16 @@
 
 import { useCallback, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
+import { buildSourceEvidenceItems, normalizeSourceUrlList, normalizeRowSources, VsRowSources } from '@/lib/vsSources';
 
 interface SourceTooltipProps {
-  sourceUrl: string;
+  id?: string;
+  label?: string;
+  toolAName: string;
+  toolBName: string;
+  sources?: Partial<VsRowSources>;
+  sourceUrl?: string;
+  domain?: string;
   pricingCheckedAt: string;
 }
 
@@ -18,14 +25,6 @@ const VIEWPORT_MARGIN = 8;
 const OFFSET = 8;
 const MOBILE_BREAKPOINT = 768;
 
-function getDomain(sourceUrl: string): string {
-  try {
-    return new URL(sourceUrl).hostname.replace(/^www\./, '');
-  } catch {
-    return sourceUrl;
-  }
-}
-
 function parseCheckedDate(value: string): string {
   if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
     return value;
@@ -35,12 +34,56 @@ function parseCheckedDate(value: string): string {
   return date.toISOString().slice(0, 10);
 }
 
-export default function SourceTooltip({ sourceUrl, pricingCheckedAt }: SourceTooltipProps) {
-  const domain = useMemo(() => getDomain(sourceUrl), [sourceUrl]);
+function warnIfLegacySourceShape(props: SourceTooltipProps): boolean {
+  const { sourceUrl, domain, sources } = props;
+  if (typeof sourceUrl === 'string' && sourceUrl.trim()) return true;
+  if (typeof domain === 'string' && domain.trim()) return true;
+  if (!sources || typeof sources !== 'object' || Array.isArray(sources)) return true;
+  if ('a' in sources && sources.a !== undefined && !Array.isArray(sources.a)) return true;
+  if ('b' in sources && sources.b !== undefined && !Array.isArray(sources.b)) return true;
+
+  const hasA = Array.isArray(sources.a);
+  const hasB = Array.isArray(sources.b);
+  if ((!hasA || !hasB) && typeof sourceUrl === 'string' && sourceUrl.trim()) return true;
+
+  return false;
+}
+
+function normalizeToolToken(name: string): string {
+  return name.toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+function looksCrossBound(toolAName: string, toolBName: string, sources: { a: Array<{ domain: string }>; b: Array<{ domain: string }> }): boolean {
+  const tokenA = normalizeToolToken(toolAName);
+  const tokenB = normalizeToolToken(toolBName);
+  const aDomains = sources.a.map((item) => item.domain.toLowerCase());
+  const bDomains = sources.b.map((item) => item.domain.toLowerCase());
+
+  const aLooksLikeB = aDomains.length > 0 && aDomains.every((domain) => domain.includes(tokenB)) && !aDomains.some((domain) => domain.includes(tokenA));
+  const bLooksLikeA = bDomains.length > 0 && bDomains.every((domain) => domain.includes(tokenA)) && !bDomains.some((domain) => domain.includes(tokenB));
+
+  return aLooksLikeB || bLooksLikeA;
+}
+
+export default function SourceTooltip({ id, label, toolAName, toolBName, sources, sourceUrl, domain, pricingCheckedAt }: SourceTooltipProps) {
+  const rowLabel = label ?? 'Comparison row';
+  const normalizedSources = useMemo(
+    () =>
+      sources
+        ? {
+            a: normalizeSourceUrlList(sources.a).slice(0, 2),
+            b: normalizeSourceUrlList(sources.b).slice(0, 2),
+          }
+        : normalizeRowSources({ sourceUrl }),
+    [sourceUrl, sources],
+  );
+  const aSources = useMemo(() => buildSourceEvidenceItems(normalizedSources.a, rowLabel), [normalizedSources.a, rowLabel]);
+  const bSources = useMemo(() => buildSourceEvidenceItems(normalizedSources.b, rowLabel), [normalizedSources.b, rowLabel]);
   const tooltipId = useId();
   const anchorRef = useRef<HTMLButtonElement | null>(null);
   const tooltipRef = useRef<HTMLDivElement | null>(null);
   const closeTimerRef = useRef<number | null>(null);
+  const warnedRef = useRef(false);
   const [open, setOpen] = useState(false);
   const [position, setPosition] = useState<TooltipPosition>({
     top: 0,
@@ -155,13 +198,46 @@ export default function SourceTooltip({ sourceUrl, pricingCheckedAt }: SourceToo
 
   const canUseDOM = typeof document !== 'undefined';
 
+  if (process.env.NODE_ENV === 'development' && !warnedRef.current && warnIfLegacySourceShape({ id, label, toolAName, toolBName, sources, sourceUrl, domain, pricingCheckedAt })) {
+    warnedRef.current = true;
+    console.warn('[vs][sources] legacy source shape detected', {
+      tooltipId: id ?? label ?? tooltipId,
+      rowLabel: rowLabel ?? null,
+      toolAName,
+      toolBName,
+      received: {
+        sourceUrl: sourceUrl ?? null,
+        domain: domain ?? null,
+        sources: sources ?? null,
+      },
+      hint: 'Pass sources as { a: string[], b: string[] } and avoid sourceUrl/domain.',
+    });
+  }
+
+  if (process.env.NODE_ENV === 'development' && !warnedRef.current && looksCrossBound(toolAName, toolBName, { a: aSources, b: bSources })) {
+    warnedRef.current = true;
+    console.warn('[vs][sources] suspicious cross-bound domains detected', {
+      tooltipId: id ?? label ?? tooltipId,
+      rowLabel: rowLabel ?? null,
+      toolAName,
+      toolBName,
+      received: {
+        sources: {
+          a: aSources.map((item) => item.domain),
+          b: bSources.map((item) => item.domain),
+        },
+      },
+      hint: 'Check that sources.a only contains Tool A primary domains and sources.b only contains Tool B primary domains.',
+    });
+  }
+
   return (
     <>
       <button
         ref={anchorRef}
         type="button"
         className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-gray-300 text-xs text-gray-500 hover:border-gray-400 hover:text-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-1"
-        aria-label={`Source details for ${domain}`}
+        aria-label={`Source details for ${toolAName} and ${toolBName}`}
         aria-describedby={open ? tooltipId : undefined}
         aria-expanded={open}
         onMouseEnter={openTooltip}
@@ -196,16 +272,58 @@ export default function SourceTooltip({ sourceUrl, pricingCheckedAt }: SourceToo
               onMouseEnter={openTooltip}
               onMouseLeave={scheduleClose}
             >
-              <p className="font-semibold text-gray-900">Source: {domain}</p>
+              <p className="font-semibold text-gray-900">Sources</p>
               <p className="mt-1 text-gray-600">checked {checkedDate}</p>
-              <a
-                href={sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="mt-2 inline-block text-indigo-600 hover:text-indigo-700"
-              >
-                Open source →
-              </a>
+              <div className="mt-3 space-y-3">
+                <div>
+                  <p className="font-medium text-gray-900">{toolAName} sources</p>
+                  {aSources.length > 0 ? (
+                    <div className="mt-1 space-y-1">
+                      {aSources.map((item) => (
+                        <div key={`${toolAName}-${item.url}`} className="rounded-md border border-gray-200 bg-gray-50 px-2 py-1.5">
+                          <a
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer nofollow"
+                            className="block text-indigo-600 hover:text-indigo-700"
+                          >
+                            {item.domain}
+                          </a>
+                          <p className="mt-1 text-[10px] font-medium uppercase tracking-wide text-gray-500">{item.sourceType}</p>
+                          <p className="mt-1 break-all font-mono text-[10px] text-gray-500">{item.url}</p>
+                          <p className="mt-1 text-[11px] text-gray-600">{item.summary}</p>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="mt-1 text-gray-500">No verified source yet.</p>
+                  )}
+                </div>
+                <div>
+                  <p className="font-medium text-gray-900">{toolBName} sources</p>
+                  {bSources.length > 0 ? (
+                    <div className="mt-1 space-y-1">
+                      {bSources.map((item) => (
+                        <div key={`${toolBName}-${item.url}`} className="rounded-md border border-gray-200 bg-gray-50 px-2 py-1.5">
+                          <a
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener noreferrer nofollow"
+                            className="block text-indigo-600 hover:text-indigo-700"
+                          >
+                            {item.domain}
+                          </a>
+                          <p className="mt-1 text-[10px] font-medium uppercase tracking-wide text-gray-500">{item.sourceType}</p>
+                          <p className="mt-1 break-all font-mono text-[10px] text-gray-500">{item.url}</p>
+                          <p className="mt-1 text-[11px] text-gray-600">{item.summary}</p>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="mt-1 text-gray-500">No verified source yet.</p>
+                  )}
+                </div>
+              </div>
             </div>,
             document.body,
           )

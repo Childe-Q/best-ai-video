@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "slug": "ai-video-generators-comparison",
+  "title": "AI Video Generators Comparison (2026)",
+  "summarySeed": {
+    "oneLiner": "This page directly compares tier-1 AI video generation models across speed, resolution, realism, pricing, and input flexibility. Tools are grouped by market position: frontier models pushing the boundaries of fidelity and capabilities, and creator-access tools that are more accessible to working creators and smaller teams. Single-product reviews are excluded — this page focuses entirely on head-to-head model comparison.",
+    "boundaries": [
+      "Contrasts multiple tier-1 models directly against each other.",
+      "Evaluates across speed, resolution, realism, API cost, and input support.",
+      "Excludes single-product reviews; focuses on cross-model market comparison."
+    ],
+    "primaryClassificationRule": "Group by market position and access model.",
+    "comparisonAxes": [
+      "pricing and credit limits",
+      "export quality",
+      "workflow fit and automation",
+      "generation speed"
+    ]
+  },
+  "howToChooseSeeds": [
+    {
+      "title": "Start with your production goal: social speed or cinematic fidelity.",
+      "desc": "If you need fast social clips at volume, prioritize Kling 3.0 (native 4K at 60fps with the cheapest API cost) or Pika (beginner-friendly with a free tier). If you need photorealistic, physics-aware B-roll, prioritize Sora (longest native clip at 25 seconds) or Runway (exceptional motion quality)."
+    },
+    {
+      "title": "Check native resolution before committing.",
+      "desc": "Not all models generate in 4K. Kling 3.0 offers native 4K (3840×2160) at 60fps. Veo 3.1 supports 1080p to 4K. Sora and Seedance max out at 1080p / 2K for base generations. Resolution requirements should narrow your shortlist early."
+    },
+    {
+      "title": "Compare multimodal input support if character consistency matters.",
+      "desc": "Most models accept only text prompts or single images. Seedance 2.0 is reported to support up to 12-file multimodal input (images, video, audio) in a single request — relevant for workflows that require strict character or style consistency across scenes."
+    },
+    {
+      "title": "Evaluate API cost per second if building an integration.",
+      "desc": "API pricing varies dramatically. Kling is currently the cheapest at roughly $0.029/sec. Veo costs $0.15/sec (fast mode). Sora ranges from $0.10–0.50/sec. For app builders generating at volume, this difference compounds quickly."
+    }
+  ],
+  "groups": [
+    {
+      "id": "frontier-models",
+      "title": "Frontier models",
+      "rule": "These are higher-end or closed model systems positioned around maximum fidelity, novel input modes, or cutting-edge capabilities. They represent the current technical frontier of AI video generation — physics-aware rendering, multimodal input, and native audio sync — though they may have limited access or higher cost.",
+      "toolSlugs": [
+        "sora",
+        "veo",
+        "seedance"
+      ]
+    },
+    {
+      "id": "creator-access-tools",
+      "title": "Creator-access tools",
+      "rule": "This group covers generation models that are more accessible to working creators and smaller teams. They typically offer lower entry prices, free tiers, and more intuitive interfaces — trading some raw technical ceiling for practical usability and faster onboarding.",
+      "toolSlugs": [
+        "runway",
+        "pika",
+        "kling-ai"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Kling 3.0",
+      "slug": "kling-ai",
+      "verdictSeed": "Native 4K at 60fps — reported as the first model to reach this resolution. Cheapest API cost at $0.029/sec. 6-cut multi-shot storyboarding support.",
+      "pricingSeed": "API: ~$0.029/sec; free tier: 66 daily credits",
+      "policySeed": null,
+      "bestForSeed": "High-resolution volume and social media speed",
+      "mainLimitationSeed": "No native audio generation",
+      "officialUrl": "https://klingai.com/",
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://www.aifreeapi.com/en/posts/seedance-2-vs-kling-3-vs-sora-2-vs-veo-3"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    },
+    {
+      "name": "Sora",
+      "slug": "sora",
+      "verdictSeed": "Photorealistic text-to-video with physics-aware generation. Longest native clip duration at 25 seconds. Includes a storyboard timeline editor.",
+      "pricingSeed": "Requires ChatGPT Plus ($20/mo); API: ~$0.10–0.50/sec",
+      "policySeed": null,
+      "bestForSeed": "Cinematic realism and physics simulation",
+      "mainLimitationSeed": "No native audio generation; no free tier",
+      "officialUrl": "https://openai.com/sora",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/sora",
+      "logoUrl": "/logos/sora.png",
+      "sourceUrls": [
+        "https://www.aifreeapi.com/en/posts/seedance-2-vs-kling-3-vs-sora-2-vs-veo-3"
+      ],
+      "flags": [
+        "missing-policy-seed"
+      ]
+    },
+    {
+      "name": "Veo 3.1",
+      "slug": "veo",
+      "verdictSeed": "Google's generation model with native audio sync and official API access for developers. Supports up to 4K output.",
+      "pricingSeed": "API: $0.15/sec (fast mode)",
+      "policySeed": null,
+      "bestForSeed": "Developer API integration with native audio sync",
+      "mainLimitationSeed": "Limited preview access for UI-based users; max clip duration is 8 seconds",
+      "officialUrl": "https://deepmind.google/models/veo/",
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://www.aifreeapi.com/en/posts/seedance-2-vs-kling-3-vs-sora-2-vs-veo-3"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    },
+    {
+      "name": "Seedance 2.0",
+      "slug": "seedance",
+      "verdictSeed": "Supports up to 12-file multimodal input (images, video, audio) in a single generation request. Native audio-video sync.",
+      "pricingSeed": "260 free credits on signup; API: $0.10–0.80/min (third-party only)",
+      "policySeed": null,
+      "bestForSeed": "Maximum creative control via multimodal input",
+      "mainLimitationSeed": "Frame rate locked to 24fps; API available only through third-party providers",
+      "officialUrl": null,
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://www.aifreeapi.com/en/posts/seedance-2-vs-kling-3-vs-sora-2-vs-veo-3"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-official-url",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    },
+    {
+      "name": "Runway",
+      "slug": "runway",
+      "verdictSeed": "Exceptional motion quality with consistent character coherence. Offers a broader creative suite with professional editing integration and team workflows.",
+      "pricingSeed": "Standard: $12/mo; Pro: $28/mo",
+      "policySeed": null,
+      "bestForSeed": "Creative teams needing a broader editing suite alongside generation",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://runwayml.com/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/runway",
+      "logoUrl": "/logos/runway.png",
+      "sourceUrls": [
+        "https://tooltester24.com/best-ai-video-generators-2026-complete-comparison-reviews/"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-limitation-seed"
+      ]
+    },
+    {
+      "name": "Pika",
+      "slug": "pika",
+      "verdictSeed": "Intuitive interface ideal for beginners and social media creators. Free tier available for experimentation.",
+      "pricingSeed": "Free tier; Pro from $10/mo",
+      "policySeed": null,
+      "bestForSeed": "Beginners and social media creators",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://pika.style/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/pika",
+      "logoUrl": "/logos/pika-logo.jpeg",
+      "sourceUrls": [
+        "https://tooltester24.com/best-ai-video-generators-2026-complete-comparison-reviews/"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-limitation-seed"
+      ]
+    }
+  ],
+  "relatedLinks": {
+    "reviewSlugs": [
+      "sora",
+      "runway",
+      "pika"
+    ],
+    "alternativesSlugs": [
+      "sora",
+      "runway",
+      "pika"
+    ],
+    "vsSlugs": [],
+    "guideSlugs": []
+  },
+  "faqSeeds": [
+    {
+      "question": "What qualifies a tool for AI Video Generators Comparison (2026)?",
+      "answerSeed": "Group by market position and access model. Must contrast multiple tier-1 models directly against each other. Must evaluate models across different dimensions (speed, resolution, realism, price). Excludes single-product reviews; focuses entirely on market comparisons.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "What should readers compare first on this page?",
+      "answerSeed": "Define Your Production Needs: Are you creating fast social clips (prioritize Kling or Luma) or cinematic, story-driven B-roll (prioritize Sora or Runway)? Check Native Resolutions: Not all models generate in 4K. Kling 3.0 offers native 4K at 60fps, while Sora and Veo generally max out at 1080p for base generations.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "Which tools already have internal review coverage?",
+      "answerSeed": "Current internal review coverage in this normalized dataset: sora, runway, pika.",
+      "sourceToolSlugs": [
+        "sora",
+        "runway",
+        "pika"
+      ]
+    }
+  ],
+  "lastReviewed": "2026-03-08T00:35:00Z",
+  "reviewMetadata": {
+    "generatedFrom": "research-raw",
+    "sourceFile": "src/data/research/features/ai-video-generators-comparison.raw.json",
+    "sourceCount": 2,
+    "uniqueToolCount": 6,
+    "needsManualReview": true,
+    "reviewNotes": [
+      "One or more tools still need verified officialUrl coverage.",
+      "One or more tools still need verified logoUrl coverage.",
+      "One or more tools are missing internal review coverage."
+    ]
+  }
+}

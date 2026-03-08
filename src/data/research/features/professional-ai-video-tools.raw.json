@@ -1,0 +1,259 @@
+{
+  "pageTopic": "professional-ai-video-tools",
+  "generatedAt": "2026-03-07T23:35:00Z",
+  "featurePageUrl": "/features/professional-ai-video-tools",
+  "topicDefinition": {
+    "oneLiner": "Enterprise-grade AI video solutions for corporate training, marketing, and professional content creation.",
+    "boundaries": [
+      "Must offer business or enterprise-tier features like team collaboration, SSO/SAML, or brand kit governance.",
+      "Must support high-quality commercial export (1080p/4K) and integrations (LMS/SCORM, APIs).",
+      "Excludes consumer-focused apps with strict commercial use limits or no team administration capabilities."
+    ]
+  },
+  "howToChoose": [
+    {
+      "title": "Check Governance and Compliance",
+      "desc": "If you are deploying across a large organization, verify if the tool supports Single Sign-On (SSO) and role-based access control (RBAC)."
+    },
+    {
+      "title": "Evaluate Localization Capabilities",
+      "desc": "For global teams, look for platforms that offer 1-click translation and dubbing natively, rather than requiring third-party tools."
+    },
+    {
+      "title": "Review Export Workflows",
+      "desc": "If building training materials, prioritize tools that export to SCORM formats directly to your Learning Management System (LMS)."
+    },
+    {
+      "title": "Assess Brand Management",
+      "desc": "A good enterprise tool must allow you to lock down fonts, colors, and logos across the entire team to maintain brand consistency."
+    }
+  ],
+  "sources": [
+    {
+      "sourceUrl": "https://www.visla.us/blog/listicles/best-ai-video-generators-for-business-in-2026/",
+      "fetchedAt": "2026-03-07T23:30:00Z",
+      "title": "Best AI Video Generators for Business in 2026",
+      "excerpt": "A breakdown of top AI video platforms focusing on enterprise production, corporate training, and team collaboration.",
+      "publishedAt": "2026-01-20T00:00:00Z",
+      "sections": [
+        {
+          "heading": "Top Enterprise Platforms",
+          "type": "tool_list",
+          "content": "Visla stands out for full-stack enterprise production, offering creation, editing, collaboration, and brand management. Synthesia specializes in corporate training and internal communications with highly realistic AI avatars. Pictory excels at repurposing existing content into video with SSO/SAML."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Visla",
+          "toolSlugGuess": "visla",
+          "bestFor": "Full-stack enterprise video production",
+          "keyClaims": [
+            "Offers creation, editing, collaboration, and brand management in one platform",
+            "Includes AI avatars, voice cloning, and screen recording"
+          ],
+          "pricingClaims": [
+            "Plans starting at $18/mo"
+          ],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Visla stands out for full-stack enterprise production, offering creation, editing, collaboration, and brand management in one platform with plans starting at $18/mo."
+          ],
+          "confidence": 0.9
+        },
+        {
+          "toolName": "Synthesia",
+          "toolSlugGuess": "synthesia",
+          "bestFor": "Corporate training and internal communications",
+          "keyClaims": [
+            "Highly realistic AI avatars in 160+ languages",
+            "Supports real-time collaboration and LMS exports"
+          ],
+          "pricingClaims": [
+            "Starting at $29/mo"
+          ],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Synthesia specializes in corporate training and internal communications with highly realistic AI avatars in 160+ languages, starting at $29/mo."
+          ],
+          "confidence": 0.95
+        },
+        {
+          "toolName": "Pictory",
+          "toolSlugGuess": "pictory",
+          "bestFor": "Repurposing content at enterprise scale",
+          "keyClaims": [
+            "Enterprise features including SSO/SAML, comprehensive brand kits, and AI avatars",
+            "Robust API for automation"
+          ],
+          "pricingClaims": [
+            "Starting at $29/mo"
+          ],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Pictory excels at repurposing existing content into video, with enterprise features including SSO/SAML, comprehensive brand kits, AI avatars, and a robust API for automation at $29/mo."
+          ],
+          "confidence": 0.95
+        }
+      ],
+      "confidence": 0.9,
+      "notes": [
+        "Focuses directly on business value and enterprise scalability features."
+      ]
+    },
+    {
+      "sourceUrl": "https://synthesia.io/pricing",
+      "fetchedAt": "2026-03-07T23:32:00Z",
+      "title": "Synthesia Official Pricing and Enterprise Features",
+      "excerpt": "Official details on Synthesia's enterprise tier, SSO, and SCORM support.",
+      "publishedAt": null,
+      "sections": [
+        {
+          "heading": "Enterprise Pricing",
+          "type": "pricing",
+          "content": "Custom enterprise pricing with unlimited video minutes and custom credit allocation."
+        },
+        {
+          "heading": "Enterprise Features",
+          "type": "how_to_choose",
+          "content": "SAML/SSO is exclusively available on the Enterprise plan. Includes SCORM export capability on the Enterprise plan only."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Synthesia",
+          "toolSlugGuess": "synthesia",
+          "bestFor": "Secure corporate training workflows",
+          "keyClaims": [
+            "Unlimited video minutes on custom Enterprise plans"
+          ],
+          "pricingClaims": [
+            "Custom enterprise pricing required for full suite"
+          ],
+          "watermarkRules": [],
+          "exportRules": [
+            "SCORM export capability is strictly locked to the Enterprise plan",
+            "Video downloads restricted on lower plans; unlocked at Creator tier ($89/month)"
+          ],
+          "refundRules": [],
+          "limitations": [
+            "SAML/SSO is completely unavailable on Free, Starter, or Creator tiers"
+          ],
+          "proofSnippets": [
+            "SAML/SSO is exclusively available on the Enterprise plan; it's not included in Free, Starter, or Creator tiers.",
+            "Synthesia includes SCORM export capability on the Enterprise plan only."
+          ],
+          "confidence": 0.99
+        }
+      ],
+      "confidence": 0.99,
+      "notes": [
+        "Highly accurate limitation data pulled directly from pricing comparisons."
+      ]
+    },
+    {
+      "sourceUrl": "https://www.visla.us/pricing",
+      "fetchedAt": "2026-03-07T23:33:00Z",
+      "title": "Visla Official Pricing and Enterprise Guidelines",
+      "excerpt": "Official documentation on Visla credits, SSO, and export resolutions.",
+      "publishedAt": null,
+      "sections": [
+        {
+          "heading": "Pricing Logic",
+          "type": "pricing",
+          "content": "Enterprise plans start from 20,000 monthly credits. Text-based projects use 1 credit per second; voice-based uses 1.5x."
+        },
+        {
+          "heading": "Enterprise Features",
+          "type": "limitations",
+          "content": "Single sign-on (SSO) is available on Business and Enterprise plans. Supports resolutions up to 4K."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Visla",
+          "toolSlugGuess": "visla",
+          "bestFor": "API-driven corporate video generation",
+          "keyClaims": [
+            "Enterprise API access for workflow integration",
+            "Task-based credit system based on video generation types"
+          ],
+          "pricingClaims": [
+            "Enterprise plans start from 20,000 monthly credits"
+          ],
+          "watermarkRules": [],
+          "exportRules": [
+            "Supports resolutions up to 4K on Business and Enterprise plans"
+          ],
+          "refundRules": [],
+          "limitations": [
+            "Voice-based projects consume 1.5x more credits than text-based ones",
+            "Single sign-on (SSO) is restricted to Business and Enterprise plans"
+          ],
+          "proofSnippets": [
+            "Single sign-on (SSO) is available on Visla's Business and Enterprise plans, but not on lower tiers.",
+            "Visla supports multiple video export options and resolutions up to 4K on Business and Enterprise plans."
+          ],
+          "confidence": 0.99
+        }
+      ],
+      "confidence": 0.99,
+      "notes": [
+        "Accurate reflection of B2B credit consumption mechanics."
+      ]
+    },
+    {
+      "sourceUrl": "https://pictory.ai/pricing",
+      "fetchedAt": "2026-03-07T23:34:00Z",
+      "title": "Pictory Enterprise Capabilities",
+      "excerpt": "Details regarding Pictory's minimum seat requirements and SCORM support.",
+      "publishedAt": null,
+      "sections": [
+        {
+          "heading": "Enterprise Requirements",
+          "type": "limitations",
+          "content": "Custom pricing requires a 10+ users minimum. Includes custom storage, video minutes, and AI credits."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Pictory",
+          "toolSlugGuess": "pictory",
+          "bestFor": "Team-based video repurposing",
+          "keyClaims": [
+            "Interactive video hosting with clickable CTAs and quizzes (Pictory Central)",
+            "Unlimited brand kits and custom AI voices"
+          ],
+          "pricingClaims": [
+            "Custom pricing available for 10+ seats"
+          ],
+          "watermarkRules": [],
+          "exportRules": [
+            "SCORM export (LMS Ready) is included as an Enterprise feature"
+          ],
+          "refundRules": [],
+          "limitations": [
+            "Enterprise tier enforces a strict 10+ users minimum seat count"
+          ],
+          "proofSnippets": [
+            "SCORM export (LMS Ready) is included as an Enterprise feature, enabling videos to be exported as SCORM packages for learning management systems.",
+            "10+ users minimum."
+          ],
+          "confidence": 0.99
+        }
+      ],
+      "confidence": 0.99,
+      "notes": [
+        "Clear boundaries on team size minimums."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "pageTopic": "text-to-video-ai-tools",
+  "generatedAt": "2026-03-08T00:15:00Z",
+  "featurePageUrl": "/features/text-to-video-ai-tools",
+  "topicDefinition": {
+    "oneLiner": "Transform your text into professional videos instantly. Perfect for bloggers, marketers, and content creators.",
+    "boundaries": [
+      "Must generate net-new video content directly from text prompts (not just editing existing clips).",
+      "Must handle text-to-video as a primary workflow, ranging from short cinematic clips to full blog conversions.",
+      "Excludes purely audio-driven or image-only generators without motion."
+    ]
+  },
+  "howToChoose": [
+    {
+      "title": "Evaluate Prompt Adherence",
+      "desc": "Check if the tool strictly follows your text instructions (camera angles, lighting, motion) or if it frequently hallucinates details."
+    },
+    {
+      "title": "Check Maximum Video Length",
+      "desc": "Cinematic tools like Sora or Veo generate 10-25 second clips per prompt, while tools like Pictory can convert an entire 1,500-word blog post into a 3-minute video."
+    },
+    {
+      "title": "Verify Commercial Use Rights",
+      "desc": "Ensure the plan you select allows for unrestricted commercial use, especially if you plan to monetize on YouTube or use the video in paid advertising."
+    }
+  ],
+  "sources": [
+    {
+      "sourceUrl": "https://nerdbot.com/2026/02/27/best-ai-video-generators-in-2026-a-practical-comparison-for-creators/",
+      "fetchedAt": "2026-03-08T00:10:00Z",
+      "title": "Best AI Video Generators in 2026: A Practical Comparison",
+      "excerpt": "A deep dive comparing top cinematic text-to-video models based on motion quality and adherence.",
+      "publishedAt": "2026-02-27T00:00:00Z",
+      "sections": [
+        {
+          "heading": "Top Performers for Production Work",
+          "type": "tool_list",
+          "content": "Runway (Gen-series) is praised for its polished user experience, broad creative ecosystem, and control over outputs. Kling 3.0 is known for cinematic motion, high-energy scenes, and eye-catching output."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Runway",
+          "toolSlugGuess": "runway",
+          "bestFor": "Controlled cinematic generation",
+          "keyClaims": [
+            "Polished user experience and broad creative ecosystem",
+            "Mature workflow with stable collaboration patterns"
+          ],
+          "pricingClaims": [],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [
+            "Some users report variability in scene logic locking"
+          ],
+          "proofSnippets": [
+            "Runway (Gen-series): Praised for polished user experience, broad creative ecosystem, and control over outputs."
+          ],
+          "confidence": 0.9
+        },
+        {
+          "toolName": "Kling AI",
+          "toolSlugGuess": "kling-ai",
+          "bestFor": "High-energy social media clips",
+          "keyClaims": [
+            "Cinematic motion and high-energy scenes",
+            "Native 9:16 vertical support"
+          ],
+          "pricingClaims": [],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Kling 3.0: Known for cinematic motion, high-energy scenes, and eye-catching output. Faster generation for social media."
+          ],
+          "confidence": 0.9
+        }
+      ],
+      "confidence": 0.9,
+      "notes": [
+        "Focuses on cinematic fidelity and production control."
+      ]
+    },
+    {
+      "sourceUrl": "https://help.openai.com/en/articles/9957612",
+      "fetchedAt": "2026-03-08T00:12:00Z",
+      "title": "Generating videos on Sora | OpenAI",
+      "excerpt": "Official details and limits for OpenAI's Sora text-to-video generator.",
+      "publishedAt": null,
+      "sections": [
+        {
+          "heading": "Pricing and Usage Limits",
+          "type": "limitations",
+          "content": "Included with ChatGPT Plus. Generate up to 50 videos at 480p resolution or fewer at 720p each month. Pro plan includes 10x more usage."
+        },
+        {
+          "heading": "Watermarking",
+          "type": "limitations",
+          "content": "All Sora-generated videos come with C2PA metadata. Visible watermarks are applied by default."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "OpenAI Sora",
+          "toolSlugGuess": "sora",
+          "bestFor": "Photorealistic text-to-video generation",
+          "keyClaims": [
+            "Leads for photorealistic output",
+            "Supports up to 25 seconds in Pro mode"
+          ],
+          "pricingClaims": [
+            "Included with ChatGPT Plus at no additional cost",
+            "Pro plan includes 10x more usage"
+          ],
+          "watermarkRules": [
+            "Visible watermarks are applied by default",
+            "Includes C2PA metadata for transparency"
+          ],
+          "exportRules": [
+            "Outputs up to 1080p resolution",
+            "Maximum 20-25 seconds in length"
+          ],
+          "refundRules": [],
+          "limitations": [
+            "ChatGPT Plus limited to 50 videos at 480p per month",
+            "Strict safety restrictions blocking specific content"
+          ],
+          "proofSnippets": [
+            "Sora is included with ChatGPT Plus at no additional cost, allowing users to generate up to 50 videos at 480p resolution.",
+            "Users can generate videos up to 1080p resolution and 20 seconds in length across various aspect ratios."
+          ],
+          "confidence": 0.99
+        }
+      ],
+      "confidence": 0.99,
+      "notes": [
+        "Official constraints on resolution, duration, and watermarks for the most popular generator."
+      ]
+    },
+    {
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights",
+      "fetchedAt": "2026-03-08T00:13:00Z",
+      "title": "Runway Official Usage Rights and Pricing",
+      "excerpt": "Official policy on Runway's commercial licensing and API costs.",
+      "publishedAt": null,
+      "sections": [
+        {
+          "heading": "Commercial Use Rights",
+          "type": "how_to_choose",
+          "content": "You can use content created in Runway for commercial purposes without restrictions. You retain full ownership across any plan."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Runway",
+          "toolSlugGuess": "runway",
+          "bestFor": "Commercial video production",
+          "keyClaims": [
+            "Full ownership and rights to all generated content",
+            "No attribution required for commercial use"
+          ],
+          "pricingClaims": [
+            "API charges are credit-based at $0.01 per credit"
+          ],
+          "watermarkRules": [],
+          "exportRules": [
+            "Standard plan handles 1-2 minutes per generation",
+            "Pro plan handles 3-7.5 minutes per generation"
+          ],
+          "refundRules": [],
+          "limitations": [
+            "Video API generation costs 5-40 credits per second depending on model"
+          ],
+          "proofSnippets": [
+            "Yes, you can use content created in Runway for commercial purposes without restrictions.",
+            "You retain full ownership and rights to all content you generate across any Runway plan (Free, Standard, Pro, or Unlimited)."
+          ],
+          "confidence": 0.99
+        }
+      ],
+      "confidence": 0.99,
+      "notes": [
+        "Provides official confirmation of unlimited commercial usage rights, a crucial decision factor."
+      ]
+    }
+  ]
+}

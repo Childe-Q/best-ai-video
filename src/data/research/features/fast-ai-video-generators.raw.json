@@ -1,0 +1,183 @@
+{
+  "pageTopic": "fast-ai-video-generators",
+  "generatedAt": "2026-03-07T23:05:00Z",
+  "featurePageUrl": "/features/fast-ai-video-generators",
+  "topicDefinition": {
+    "oneLiner": "Generate videos in seconds, not hours. Perfect for social media creators who need quick turnaround.",
+    "boundaries": [
+      "Must feature rapid render times or near real-time generation.",
+      "Must generate actual video content (not just edit existing footage).",
+      "Focuses on generation queue times and API rate limits as key features."
+    ]
+  },
+  "howToChoose": [
+    {
+      "title": "Speed vs. Quality Tradeoff",
+      "desc": "The absolute fastest generators (like Luma or Pika) may sometimes sacrifice the strict cinematic fidelity seen in slower models (like Sora)."
+    },
+    {
+      "title": "Evaluate Priority Queues",
+      "desc": "Free tiers often place you in slow queues during peak hours. Check if upgrading to a paid tier guarantees 'Fast Mode' generations."
+    },
+    {
+      "title": "Check API and Batch Constraints",
+      "desc": "If you are generating videos programmatically, check the concurrent request limits (e.g., Luma allows 10 concurrent generations)."
+    }
+  ],
+  "sources": [
+    {
+      "sourceUrl": "https://www.comparegen.ai/blog/best-ai-video-generator-2026",
+      "fetchedAt": "2026-03-07T23:01:00Z",
+      "title": "Best AI Video Generators in 2026: Complete Comparison Guide",
+      "excerpt": "A deep dive into generation speeds, showing the fastest models vs the highest quality models.",
+      "publishedAt": "2026-01-20T00:00:00Z",
+      "sections": [
+        {
+          "heading": "Top Speed Leaders",
+          "type": "tool_list",
+          "content": "Luma Dream Machine is recognized as the fastest option, generating videos in seconds rather than minutes. Minimax Hailuo renders 10-second sequences in under two minutes."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Luma Dream Machine",
+          "toolSlugGuess": "luma-dream-machine",
+          "bestFor": "Rapid prototyping and fast generation",
+          "keyClaims": [
+            "Generating videos in seconds rather than minutes",
+            "Recognized as the fastest option"
+          ],
+          "pricingClaims": [],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Luma Dream Machine is recognized as the fastest option, generating videos in seconds rather than minutes."
+          ],
+          "confidence": 0.95
+        },
+        {
+          "toolName": "Minimax Hailuo",
+          "toolSlugGuess": "minimax-hailuo",
+          "bestFor": "Social content concept testing",
+          "keyClaims": [
+            "Renders 10-second sequences in under two minutes",
+            "Offers the lowest cost per second"
+          ],
+          "pricingClaims": [],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Minimax Hailuo renders 10-second sequences in under two minutes and offers the lowest cost per second."
+          ],
+          "confidence": 0.95
+        }
+      ],
+      "confidence": 0.9,
+      "notes": [
+        "Focuses explicitly on the speed tradeoff in 2026 generation models."
+      ]
+    },
+    {
+      "sourceUrl": "https://lumalabs.ai/learning-hub/dream-machine-support-pricing-information",
+      "fetchedAt": "2026-03-07T23:03:00Z",
+      "title": "Dream Machine Plans: Pricing and Credits",
+      "excerpt": "Official pricing and limits for Luma Dream Machine.",
+      "publishedAt": null,
+      "sections": [
+        {
+          "heading": "Pricing Plans",
+          "type": "pricing",
+          "content": "Lite: $9.99/month (3,200 monthly credits). Plus: $29.99/month. Unlimited: $94.99/month."
+        },
+        {
+          "heading": "Generation Speed Limits",
+          "type": "limitations",
+          "content": "API limits: Ray (Video) allows 10 concurrent generations, 20 API requests/minute."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Luma Dream Machine",
+          "toolSlugGuess": "luma-dream-machine",
+          "bestFor": "High-volume programmatic video generation",
+          "keyClaims": [
+            "API allows 10 concurrent video generations"
+          ],
+          "pricingClaims": [
+            "Lite: $9.99/month",
+            "Plus: $29.99/month",
+            "Unlimited: $94.99/month (10,000 fast mode credits + unlimited relaxed mode)"
+          ],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [
+            "API rate limits strictly set to 20 API requests/minute",
+            "Waitlist system forces free users into queues during peak times"
+          ],
+          "proofSnippets": [
+            "Unlimited: $94.99/month (10,000 fast mode credits + unlimited relaxed mode)",
+            "Waitlist system exists to manage high demand. Users can immediately skip the waitlist by upgrading to a paid plan."
+          ],
+          "confidence": 0.99
+        }
+      ],
+      "confidence": 0.99,
+      "notes": [
+        "Official Luma AI documentation detailing fast vs relaxed mode queues."
+      ]
+    },
+    {
+      "sourceUrl": "https://pika.art/pricing",
+      "fetchedAt": "2026-03-07T23:04:00Z",
+      "title": "Pika Official Pricing and Limits",
+      "excerpt": "Official details on Pika's pricing tiers and generation speeds.",
+      "publishedAt": null,
+      "sections": [
+        {
+          "heading": "Pricing and Features",
+          "type": "pricing",
+          "content": "Free Plan - 80 monthly video credits. Standard Plan - $8/month (yearly billing) - 700 monthly video credits. Pro Plan - $28/month (yearly billing)."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Pika",
+          "toolSlugGuess": "pika",
+          "bestFor": "Near real-time social media effects",
+          "keyClaims": [
+            "Near real time generation speed with the Pikaformance model",
+            "Standard and Pro plans offer faster generations"
+          ],
+          "pricingClaims": [
+            "Free Plan: 80 credits",
+            "Standard: $8/month",
+            "Pro: $28/month"
+          ],
+          "watermarkRules": [],
+          "exportRules": [
+            "Free plan restricted to 480p",
+            "Paid plans unlock all resolutions"
+          ],
+          "refundRules": [],
+          "limitations": [
+            "Free plan strictly prohibits commercial use"
+          ],
+          "proofSnippets": [
+            "Free Plan - Access to Pika 2.5 (480p only) - No commercial use.",
+            "Standard Plan - Fast generations - Commercial use allowed."
+          ],
+          "confidence": 0.99
+        }
+      ],
+      "confidence": 0.99,
+      "notes": [
+        "Official Pika documentation showing exact 2026 speeds and commercial constraints."
+      ]
+    }
+  ]
+}

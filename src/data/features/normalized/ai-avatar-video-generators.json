@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "slug": "ai-avatar-video-generators",
+  "title": "Best AI Avatar Video Generators (2026)",
+  "summarySeed": {
+    "oneLiner": "This page compares AI platforms that specialize in talking-head avatar video — tools with native AI presenters, automated lip-syncing, and text-to-speech generation. They are grouped by deployment context: marketing and social use, enterprise training and compliance, or image-animation and API-driven delivery. General text-to-video generators that do not focus on human-like presenters are excluded.",
+    "boundaries": [
+      "Must feature native AI talking-head or presenter avatars with automated lip-syncing.",
+      "Must support text-to-speech — not just video overlays on existing recordings.",
+      "Compared across cost-per-minute, use-case specialization, and custom avatar availability."
+    ],
+    "primaryClassificationRule": "Group by avatar workflow and deployment context.",
+    "comparisonAxes": [
+      "pricing and credit limits",
+      "workflow fit and automation",
+      "team and governance requirements"
+    ]
+  },
+  "howToChooseSeeds": [
+    {
+      "title": "Calculate cost-per-minute, not just monthly price.",
+      "desc": "Avatar platforms use different credit systems. A $29/mo plan on HeyGen or Synthesia typically yields only about 10–15 minutes of generated video. The headline price is not the real cost — the minutes-per-dollar ratio is."
+    },
+    {
+      "title": "Match the tool to your specific use case.",
+      "desc": "Corporate compliance and governance workflows suit Synthesia. Marketing personalization and multilingual social content suit HeyGen. E-learning with branching scenarios and quizzes suits Colossyan. Real-time API delivery or photo animation suits D-ID."
+    },
+    {
+      "title": "Check custom avatar requirements before committing.",
+      "desc": "If you need to clone your own likeness as an avatar, verify whether custom avatar creation is included in your tier. On Synthesia, custom avatars require enterprise-level custom pricing. Other platforms may include it at lower tiers."
+    }
+  ],
+  "groups": [
+    {
+      "id": "marketing-and-social",
+      "title": "Marketing and social avatars",
+      "rule": "This group covers avatar platforms tailored for multilingual marketing, social content personalization, and campaign-scale output. The emphasis is on lip-sync quality, language breadth, and fast turnaround for external-facing content rather than internal training material.",
+      "toolSlugs": [
+        "heygen"
+      ]
+    },
+    {
+      "id": "training-and-enterprise",
+      "title": "Training and enterprise avatars",
+      "rule": "These platforms focus on structured learning, corporate compliance, and governance-first workflows. They suit L&D teams, HR departments, and organizations that need controlled brand output, seat-based access, and — in some cases — branching e-learning scenarios.",
+      "toolSlugs": [
+        "synthesia",
+        "colossyan",
+        "deepbrain-ai"
+      ]
+    },
+    {
+      "id": "image-and-api-avatar",
+      "title": "Image and API avatar tools",
+      "rule": "This group covers tools oriented toward animating still images into talking avatars, or delivering avatar video via real-time API. They suit developers building avatar capabilities into their own products, or creators who need to animate a photo rather than use a stock presenter.",
+      "toolSlugs": [
+        "d-id"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "HeyGen",
+      "slug": "heygen",
+      "verdictSeed": "Leading avatar platform for marketing and multilingual social content. Reported to excel in lip-sync quality with 175+ languages and voice cloning. 1,100+ stock avatars.",
+      "pricingSeed": "From $24–29/mo (15 credits ≈ 5 min video)",
+      "policySeed": null,
+      "bestForSeed": "Marketing, social content, and multilingual personalization",
+      "mainLimitationSeed": "Credit-based billing can cause budget volatility at higher volumes",
+      "officialUrl": "https://www.heygen.com/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/heygen",
+      "logoUrl": "/logos/heygen-logo.png",
+      "sourceUrls": [
+        "https://ventureharbour.com/best-ai-avatar-software/"
+      ],
+      "flags": [
+        "missing-policy-seed"
+      ]
+    },
+    {
+      "name": "Synthesia",
+      "slug": "synthesia",
+      "verdictSeed": "Governance-first avatar platform for enterprise training and compliance. Reports 120+ language support and a seat-based model with predictable costs.",
+      "pricingSeed": "From $18–29/mo (10–120 min video annually, varies by plan)",
+      "policySeed": null,
+      "bestForSeed": "Enterprise compliance, corporate training, and L&D",
+      "mainLimitationSeed": "Custom avatar creation requires enterprise-tier custom pricing",
+      "officialUrl": "https://www.synthesia.io/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/synthesia",
+      "logoUrl": "/logos/synthesia.png",
+      "sourceUrls": [
+        "https://ventureharbour.com/best-ai-avatar-software/",
+        "https://www.deckoholic.ai/guides/compare-pricing-leading-ai-avatar-services"
+      ],
+      "flags": [
+        "duplicate-raw-mentions-merged",
+        "missing-policy-seed"
+      ]
+    },
+    {
+      "name": "Colossyan",
+      "slug": "colossyan",
+      "verdictSeed": "E-learning specialist with branching scenarios and built-in quizzes. Suited for instructional designers building interactive training.",
+      "pricingSeed": "$27/month",
+      "policySeed": null,
+      "bestForSeed": "E-learning with branching scenarios and quizzes",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://colossyan.com/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/colossyan",
+      "logoUrl": "/logos/colossyan.png",
+      "sourceUrls": [
+        "https://ventureharbour.com/best-ai-avatar-software/"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-limitation-seed"
+      ]
+    },
+    {
+      "name": "D-ID",
+      "slug": "d-id",
+      "verdictSeed": "Animates still images into talking avatars. Reports an 8.5 realism score and offers a real-time API for developer integration.",
+      "pricingSeed": "Free tier available; paid from $5.99/mo",
+      "policySeed": null,
+      "bestForSeed": "Photo-to-avatar animation and API-driven delivery",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://d-id.com/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/d-id",
+      "logoUrl": "/logos/d-id.png",
+      "sourceUrls": [
+        "https://ventureharbour.com/best-ai-avatar-software/"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-limitation-seed"
+      ]
+    },
+    {
+      "name": "DeepBrain AI",
+      "slug": "deepbrain-ai",
+      "verdictSeed": "Broadcast-quality avatar output suited for news-style, formal, or presentation content.",
+      "pricingSeed": "$24–30/mo",
+      "policySeed": null,
+      "bestForSeed": "News-style or formal presenter content",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://deepbrain.ai/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/deepbrain-ai",
+      "logoUrl": "/logos/deepbrain-logo.svg",
+      "sourceUrls": [
+        "https://ventureharbour.com/best-ai-avatar-software/"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-limitation-seed"
+      ]
+    }
+  ],
+  "relatedLinks": {
+    "reviewSlugs": [
+      "heygen",
+      "synthesia",
+      "colossyan",
+      "d-id"
+    ],
+    "alternativesSlugs": [
+      "heygen",
+      "synthesia",
+      "colossyan"
+    ],
+    "vsSlugs": [],
+    "guideSlugs": []
+  },
+  "faqSeeds": [
+    {
+      "question": "What qualifies a tool for Best AI Avatar Video Generators (2026)?",
+      "answerSeed": "Group by avatar workflow and deployment context. Must have native AI talking-head or presenter avatar features. Must support text-to-speech with automated lip-syncing. Excludes general text-to-video platforms that do not specialize in human-like presenters.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "What should readers compare first on this page?",
+      "answerSeed": "Evaluate Cost-Per-Minute, Not Just Monthly Fees: Platforms use different credit systems. A $29/month plan on HeyGen or Synthesia typically only yields about 10-15 minutes of generated video. Match the Use Case Specialization: Are you doing corporate compliance (Synthesia), marketing and social media (HeyGen), e-learning with branching scenarios (Colossyan), or building real-time APIs (D-ID)?",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "Which tools already have internal review coverage?",
+      "answerSeed": "Current internal review coverage in this normalized dataset: heygen, synthesia, colossyan, d-id, deepbrain-ai.",
+      "sourceToolSlugs": [
+        "heygen",
+        "synthesia",
+        "colossyan",
+        "d-id",
+        "deepbrain-ai"
+      ]
+    }
+  ],
+  "lastReviewed": "2026-03-07T22:45:00Z",
+  "reviewMetadata": {
+    "generatedFrom": "research-raw",
+    "sourceFile": "src/data/research/features/ai-avatar-video-generators.raw.json",
+    "sourceCount": 2,
+    "uniqueToolCount": 5,
+    "needsManualReview": true,
+    "reviewNotes": [
+      "Duplicate raw tool mentions merged: synthesia"
+    ]
+  }
+}

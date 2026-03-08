@@ -1,0 +1,151 @@
+{
+  "slug": "free-ai-video-no-watermark",
+  "hero": {
+    "h1": "Free AI Video Generators with No Watermark",
+    "subheadline": "This page compares AI video tools by their free-tier watermark policy. Tools are grouped into three categories: truly free (watermark-free exports by default), conditional free (watermark-free only within stated limits), and low-cost removal (free tier adds branding, but a cheap upgrade removes it). Each listing notes the free resolution, duration caps, credit allowances, and commercial-use constraints so you can judge the real value of \"free.\"",
+    "definitionBullets": [
+      "Truly Free: Free exports stay watermark-free without requiring an upgrade.",
+      "Conditional Free: Watermark-free only if you stay within specific duration, export-count, or usage limits.",
+      "Low-Cost Removal: The free tier adds branding, but a low-priced plan removes it."
+    ]
+  },
+  "howToChoose": {
+    "criteria": [
+      {
+        "title": "Will the free export actually be watermark-free?",
+        "desc": "FlexClip, Leonardo AI, Hailuo AI, and Jogg.ai all list their free exports without a watermark. Kapwing removes the watermark only on exports under 4 minutes, with a cap of 3 per month. The distinction matters for consistent output."
+      },
+      {
+        "title": "Count how many free videos you can realistically produce.",
+        "desc": "Hailuo AI limits free generations to 5-second 720p clips. Jogg.ai caps the free tier at 10 lifetime credits. Leonardo AI runs on a daily token budget that depletes quickly. \"Watermark-free\" means little if you can only produce a handful of clips."
+      },
+      {
+        "title": "Verify the free export resolution.",
+        "desc": "Most tools in the \"Truly Free\" group cap free output at 720p. If you need 1080p or higher, you will likely need a paid plan regardless of watermark policy."
+      },
+      {
+        "title": "Review commercial-use terms before publishing.",
+        "desc": "Free tiers often carry commercial-use restrictions that are separate from watermark policy. Check the terms for each tool, especially if using stock assets, templates, or generated media in commercial content."
+      }
+    ]
+  },
+  "groups": [
+    {
+      "groupTitle": "Truly Free",
+      "groupSummary": "These tools produce watermark-free exports on the free plan by default. The trade-off is typically lower resolution (720p), daily credit limits, or short clip duration — not forced branding. If clean output matters more than high resolution, these are the tools to start with.",
+      "tools": [
+        {
+          "toolSlug": "flexclip",
+          "name": "FlexClip",
+          "reasonLine1": "Browser-based editor with watermark-free exports on the free plan. Practical for quick edits with templates.",
+          "reasonLine2": null,
+          "pricingStartAt": "Free plan; Plus from $9.99/mo",
+          "watermarkPolicy": "Free exports listed without watermark",
+          "bestFor": "Quick browser edits with templates",
+          "mainTradeoff": "Free plan limits access to stock assets and advanced libraries",
+          "hasReviewPage": true,
+          "reviewUrl": "/tool/flexclip"
+        },
+        {
+          "toolSlug": "leonardo-ai",
+          "name": "Leonardo AI",
+          "logoUrl": "/logos/tools/leonardo-ai.png",
+          "reasonLine1": "Watermark-free AI motion clips on the free tier, limited by a daily token budget.",
+          "reasonLine2": null,
+          "pricingStartAt": "Free",
+          "watermarkPolicy": "Free generated clips presented without watermark",
+          "bestFor": "Short image-to-video experiments",
+          "mainTradeoff": "Free outputs capped at 720p; daily token budget depletes quickly",
+          "hasReviewPage": false,
+          "officialUrl": "https://leonardo.ai/ai-video-generator"
+        },
+        {
+          "toolSlug": "hailuo-ai",
+          "name": "Hailuo AI",
+          "logoUrl": "/logos/tools/hailuo-ai.svg",
+          "reasonLine1": "Watermark-free text-to-video clips with camera controls. Free generations are extremely short.",
+          "reasonLine2": null,
+          "pricingStartAt": "Free",
+          "watermarkPolicy": "Free generated clips presented without watermark",
+          "bestFor": "Short text-to-video prompts with camera motion",
+          "mainTradeoff": "Free generations limited to 5-second 720p clips",
+          "hasReviewPage": false,
+          "officialUrl": "https://hailuoai.com/"
+        },
+        {
+          "toolSlug": "jogg-ai",
+          "name": "Jogg.ai",
+          "logoUrl": "/logos/tools/jogg-ai.png",
+          "reasonLine1": "Free HD avatar exports without watermark, but the lifetime allowance is very small.",
+          "reasonLine2": null,
+          "pricingStartAt": "Free (10 lifetime credits); Pro from $15/mo",
+          "watermarkPolicy": "Free HD exports presented without watermark",
+          "bestFor": "Testing AI avatar videos before committing to a paid plan",
+          "mainTradeoff": "Free tier capped at 10 lifetime credits total",
+          "hasReviewPage": false,
+          "officialUrl": "https://www.jogg.ai/"
+        }
+      ]
+    },
+    {
+      "groupTitle": "Conditional Free",
+      "groupSummary": "These tools can export without a watermark on the free tier, but only if you stay within strict limits — export count, video duration, or specific template constraints. Exceed those limits and the watermark appears or you lose export access entirely.",
+      "tools": [
+        {
+          "toolSlug": "kapwing",
+          "name": "Kapwing",
+          "logoUrl": "/logos/tools/kapwing.jpg",
+          "reasonLine1": "Watermark-free exports only on videos under 4 minutes, limited to 3 per month.",
+          "reasonLine2": null,
+          "pricingStartAt": "Free (3 no-watermark exports/mo); Pro from $16/mo",
+          "watermarkPolicy": "No watermark only on exports under 4 minutes",
+          "bestFor": "Quick social clips and light edits",
+          "mainTradeoff": "Longer exports add branding; free allowance is very small",
+          "hasReviewPage": false,
+          "officialUrl": "https://www.kapwing.com/"
+        }
+      ]
+    },
+    {
+      "groupTitle": "Low-Cost Removal",
+      "groupSummary": "These tools keep a watermark on all free-tier exports. You need to upgrade to a paid plan — typically $10–29/mo — if clean exports are the goal. They suit users who want to test the tool's capabilities for free before committing to a subscription.",
+      "tools": [
+        {
+          "toolSlug": "clipclip",
+          "name": "Clipclip",
+          "logoUrl": "/logos/tools/clipclip.png",
+          "reasonLine1": "Free tier includes a watermark on all exports. Upgrade required for clean output.",
+          "reasonLine2": null,
+          "pricingStartAt": "Watermark removal from $10/mo",
+          "watermarkPolicy": "Free exports include a watermark",
+          "bestFor": "Budget text-to-video workflows",
+          "mainTradeoff": "Must upgrade for clean exports and better output quality",
+          "hasReviewPage": false
+        },
+        {
+          "toolSlug": "lumen5",
+          "name": "Lumen5",
+          "reasonLine1": "Free blog-to-video exports carry Lumen5 branding. Paid plans remove it.",
+          "reasonLine2": null,
+          "pricingStartAt": "Free plan; Basic from $29/mo",
+          "watermarkPolicy": "The free plan adds a watermark",
+          "bestFor": "Turning blog posts into simple social videos",
+          "mainTradeoff": "Removing branding requires a paid subscription",
+          "hasReviewPage": true,
+          "reviewUrl": "/tool/lumen5"
+        }
+      ]
+    }
+  ],
+  "recommendedReading": {
+    "tools": [
+      "flexclip",
+      "lumen5"
+    ],
+    "alternativesPages": [
+      "lumen5/alternatives"
+    ],
+    "vsPages": [],
+    "guides": []
+  }
+}

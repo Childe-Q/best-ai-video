@@ -1,12 +1,15 @@
 'use client';
 
 import { useState } from 'react';
+import { UseCaseKey } from '@/lib/promptLibrary';
 
 const HIGHLIGHT_CLASSES = ['bg-amber-50', 'ring-2', 'ring-amber-300', 'animate-pulse'];
+const VS_USE_CASE_EVENT = 'vs:use-case-change';
 
 type Scenario = {
   id: string;
   label: string;
+  promptKey?: UseCaseKey | null;
 };
 
 interface DecisionPanelProps {
@@ -41,6 +44,14 @@ export default function DecisionPanel({ scenarios }: DecisionPanelProps) {
             type="button"
             onClick={() => {
               setActiveScenarioId(scenario.id);
+              window.dispatchEvent(
+                new CustomEvent(VS_USE_CASE_EVENT, {
+                  detail: {
+                    scenarioId: scenario.id,
+                    promptKey: scenario.promptKey ?? null,
+                  },
+                }),
+              );
               focusScenario(scenario.id);
             }}
             className={`rounded-full border px-3 py-1.5 text-sm font-medium transition ${

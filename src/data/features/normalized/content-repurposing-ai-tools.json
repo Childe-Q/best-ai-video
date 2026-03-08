@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "slug": "content-repurposing-ai-tools",
+  "title": "Best AI Tools for Content Repurposing (2026)",
+  "summarySeed": {
+    "oneLiner": "This page compares AI tools that convert existing content — blog posts, podcasts, webinars, and long-form video — into new video formats. Tools are grouped by source content type: article and script conversion, or long-form video clipping. Only platforms with explicit import capabilities (URLs, audio files, long video) and automated format conversion are included. Basic text-to-video generators that cannot ingest existing long-form content are excluded.",
+    "boundaries": [
+      "Must import existing assets: URLs, long videos, podcasts, or scripts.",
+      "Must automate conversion from one format to another (text to video, long video to shorts).",
+      "Excludes basic text-to-video tools that cannot ingest long-form URLs or podcast audio."
+    ],
+    "primaryClassificationRule": "Group by source content type.",
+    "comparisonAxes": [
+      "pricing and credit limits"
+    ]
+  },
+  "howToChooseSeeds": [
+    {
+      "title": "Start with your source format: text or video.",
+      "desc": "If you are converting blog posts and articles, Lumen5 (paste a URL and the AI builds scenes) or Pictory (transcript-based editing) are designed for that. If you are clipping highlights from existing long-form recordings, Opus Clip and Munch are built for that pipeline. These are fundamentally different workflows."
+    },
+    {
+      "title": "Check transcript editing quality for audio/video sources.",
+      "desc": "For podcast or webinar repurposing, transcript-based editing — where deleting a sentence from the transcript cuts the corresponding video — saves significant time. Pictory is reported to feature this capability."
+    },
+    {
+      "title": "Evaluate stock media libraries for blog-to-video tools.",
+      "desc": "Blog conversion tools rely heavily on B-roll and stock media to illustrate text content. Verify that the platform includes access to high-quality stock libraries (e.g., Storyblocks, Getty) in the plan price, rather than charging separately."
+    }
+  ],
+  "groups": [
+    {
+      "id": "article-and-script-conversion",
+      "title": "Article and script conversion",
+      "rule": "These tools turn written content — blog posts, articles, scripts, and documents — into video. They typically work by pasting a URL or text, then the AI builds scenes with stock media, text animations, and voiceover. They suit marketing teams and publishers who need to extract video from an existing content library.",
+      "toolSlugs": [
+        "pictory",
+        "lumen5"
+      ]
+    },
+    {
+      "id": "long-form-video-clipping",
+      "title": "Long-form video clipping",
+      "rule": "This group covers tools that take existing long-form recordings — podcasts, webinars, live streams — and automatically extract the best moments as short-form clips. They suit creators who already have long-form content and need to repurpose it for TikTok, Reels, or YouTube Shorts without manual editing.",
+      "toolSlugs": [
+        "munch",
+        "opus-clip"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Pictory",
+      "slug": "pictory",
+      "verdictSeed": "Converts scripts, articles, and long-form recordings into platform-ready clips. Features transcript-based editing where editing text edits the video. Integrates ElevenLabs voices.",
+      "pricingSeed": "From $19/mo",
+      "policySeed": null,
+      "bestForSeed": "Podcasts, webinars, and long-form script conversion",
+      "mainLimitationSeed": "Complex credit system; occasional export issues reported",
+      "officialUrl": "https://pictory.ai/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/pictory",
+      "logoUrl": "/logos/pictory.png",
+      "sourceUrls": [
+        "https://www.mootion.com/use-cases/en/compare/pictory-vs-lumen5"
+      ],
+      "flags": [
+        "missing-pricing-seed",
+        "missing-policy-seed"
+      ]
+    },
+    {
+      "name": "Lumen5",
+      "slug": "lumen5",
+      "verdictSeed": "Paste a blog URL and the AI builds scenes with stock media and text animations. No monthly limit on video creation at any plan level.",
+      "pricingSeed": "Free Community Plan available; paid plans remove branding",
+      "policySeed": null,
+      "bestForSeed": "Fast blog-to-video conversion for social media",
+      "mainLimitationSeed": "Limited granular editing; free plan includes Lumen5 branding",
+      "officialUrl": "https://lumen5.com/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/lumen5",
+      "logoUrl": "/logos/Lumen5-Logo.svg",
+      "sourceUrls": [
+        "https://www.mootion.com/use-cases/en/compare/pictory-vs-lumen5",
+        "https://help.lumen5.com/en/article/how-much-does-lumen5-cost-one87/"
+      ],
+      "flags": [
+        "duplicate-raw-mentions-merged"
+      ]
+    },
+    {
+      "name": "Munch",
+      "slug": "munch",
+      "verdictSeed": "Automatically extracts engaging moments from long-form videos, optimized for current trends. No technical skills required.",
+      "pricingSeed": null,
+      "policySeed": null,
+      "bestForSeed": "Trend-optimized clipping from long-form video",
+      "mainLimitationSeed": null,
+      "officialUrl": null,
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://meetsona.ai/blog/ai-content-repurposing-tools/"
+      ],
+      "flags": [
+        "missing-pricing-seed",
+        "missing-policy-seed",
+        "missing-limitation-seed",
+        "missing-official-url",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    },
+    {
+      "name": "Opus Clip",
+      "slug": "opus-clip",
+      "verdictSeed": "Turns long videos into short-form clips with a virality score that ranks each clip's predicted performance.",
+      "pricingSeed": "From $15/mo",
+      "policySeed": null,
+      "bestForSeed": "Long-form video to viral shorts",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://opusclip.com/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/opus-clip",
+      "logoUrl": "/logos/opus-clip.png",
+      "sourceUrls": [
+        "https://meetsona.ai/blog/ai-content-repurposing-tools/"
+      ],
+      "flags": [
+        "missing-pricing-seed",
+        "missing-policy-seed",
+        "missing-limitation-seed"
+      ]
+    }
+  ],
+  "relatedLinks": {
+    "reviewSlugs": [
+      "pictory",
+      "lumen5",
+      "opus-clip"
+    ],
+    "alternativesSlugs": [
+      "pictory",
+      "lumen5",
+      "opus-clip"
+    ],
+    "vsSlugs": [],
+    "guideSlugs": []
+  },
+  "faqSeeds": [
+    {
+      "question": "What qualifies a tool for Best AI Tools for Content Repurposing (2026)?",
+      "answerSeed": "Group by source content type. Must have explicit features for importing existing assets (URLs, long videos, podcasts, text). Must automate the conversion of one format to another (e.g., text to video, long video to shorts). Excludes basic text-to-video generators that cannot ingest long-form URLs or podcast audio files.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "What should readers compare first on this page?",
+      "answerSeed": "Match Input to Output: If you are starting with text (blogs/articles), you need tools like Lumen5 or Pictory. If starting with long video/audio, look at Opus Clip or Munch. Check Transcript Editing Quality: For audio/video repurposing, ensure the tool offers transcript-based editing where deleting text automatically cuts the corresponding media.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "Which tools already have internal review coverage?",
+      "answerSeed": "Current internal review coverage in this normalized dataset: pictory, lumen5, opus-clip.",
+      "sourceToolSlugs": [
+        "pictory",
+        "lumen5",
+        "opus-clip"
+      ]
+    }
+  ],
+  "lastReviewed": "2026-03-07T23:45:00Z",
+  "reviewMetadata": {
+    "generatedFrom": "research-raw",
+    "sourceFile": "src/data/research/features/content-repurposing-ai-tools.raw.json",
+    "sourceCount": 3,
+    "uniqueToolCount": 4,
+    "needsManualReview": true,
+    "reviewNotes": [
+      "Duplicate raw tool mentions merged: lumen5",
+      "One or more tools still need verified officialUrl coverage.",
+      "One or more tools still need verified logoUrl coverage.",
+      "One or more tools are missing internal review coverage."
+    ]
+  }
+}

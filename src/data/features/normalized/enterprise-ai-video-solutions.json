@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "slug": "enterprise-ai-video-solutions",
+  "title": "Enterprise AI Video Solutions (2026)",
+  "summarySeed": {
+    "oneLiner": "This page compares AI video platforms built for enterprise deployment — tools that offer programmatic API access, strict security certifications (SOC 2, ISO 42001, SSO/SAML), and multi-seat collaboration for large teams. Tools are grouped by primary enterprise use case: internal training and communications, or scalable content repurposing. Each listing reflects reported capabilities and published claims, not vendor marketing.",
+    "boundaries": [
+      "Custom API access for programmatic video generation at scale.",
+      "Security protocols including SOC 2, ISO 42001, SSO/SAML, and GDPR compliance.",
+      "Multi-seat administration, role-based access, and high-volume output over consumer-grade features."
+    ],
+    "primaryClassificationRule": "Group by enterprise deployment use case.",
+    "comparisonAxes": [
+      "workflow fit and automation",
+      "team and governance requirements"
+    ]
+  },
+  "howToChooseSeeds": [
+    {
+      "title": "Verify security certifications before procurement.",
+      "desc": "Confirm that the platform holds SOC 2 Type II and GDPR compliance at minimum. For regulated industries, check whether ISO 42001 (AI management) certification is also in place. Synthesia, for example, reports holding all three."
+    },
+    {
+      "title": "Test API rate limits against your actual volume.",
+      "desc": "If you plan to integrate video generation into CRM, LMS, or internal tools, request developer documentation upfront. Check concurrent processing limits, webhook support, and whether the enterprise tier includes dedicated infrastructure."
+    },
+    {
+      "title": "Evaluate multi-seat governance and brand controls.",
+      "desc": "Look for role-based access control (RBAC) and shared brand kits. For global teams, these features determine whether distributed contributors can produce on-brand output without bottlenecks."
+    },
+    {
+      "title": "Clarify pricing structure before committing.",
+      "desc": "Enterprise tiers typically involve custom quotes. Ask whether pricing is per-seat, per-minute, or per-render — and whether unused capacity rolls over. Some tools list consumer entry prices that do not reflect enterprise cost."
+    }
+  ],
+  "groups": [
+    {
+      "id": "training-and-communications",
+      "title": "Training and communications",
+      "rule": "These platforms focus on internal enablement — corporate training, L&D, HR communications, and multilingual global messaging. They prioritize AI avatar presenters, language coverage, and the kind of compliance posture that enterprise procurement teams expect.",
+      "toolSlugs": [
+        "synthesia",
+        "deepbrain-ai"
+      ]
+    },
+    {
+      "id": "repurposing-and-knowledge-ops",
+      "title": "Repurposing and knowledge ops",
+      "rule": "This group covers tools designed for programmatic content transformation: turning existing assets (articles, documents, recordings) into video at scale via API, rather than through a manual editor. The emphasis is on developer integration and automated pipelines within larger organizations.",
+      "toolSlugs": [
+        "pictory"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Synthesia",
+      "slug": "synthesia",
+      "verdictSeed": "Leading enterprise video platform for HR, L&D, and corporate training. Reports adoption by 60% of Fortune 100 companies.",
+      "pricingSeed": "Enterprise: custom pricing, unlimited minutes",
+      "policySeed": null,
+      "bestForSeed": "Corporate training, L&D, and internal communications",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://www.synthesia.io/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/synthesia",
+      "logoUrl": "/logos/synthesia.png",
+      "sourceUrls": [
+        "https://www.genmedialab.com/reviews/synthesia-review/"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-limitation-seed"
+      ]
+    },
+    {
+      "name": "Pictory",
+      "slug": "pictory",
+      "verdictSeed": "API-first platform for programmatic content repurposing. Offers SSO and brand kits for enterprise teams.",
+      "pricingSeed": "From $19/mo (enterprise API tier may differ)",
+      "policySeed": null,
+      "bestForSeed": "Programmatic content repurposing via API",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://pictory.ai/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/pictory",
+      "logoUrl": "/logos/pictory.png",
+      "sourceUrls": [
+        "https://pictory.ai/api-enterprise-2"
+      ],
+      "flags": [
+        "missing-pricing-seed",
+        "missing-policy-seed",
+        "missing-limitation-seed"
+      ]
+    },
+    {
+      "name": "DeepBrain AI",
+      "slug": "deepbrain-ai",
+      "verdictSeed": "Enterprise-tier avatar platform with 2,000+ AI presenters and support for 150+ languages. Strongest fit for multilingual marketing at scale.",
+      "pricingSeed": "Enterprise: custom pricing",
+      "policySeed": null,
+      "bestForSeed": "Multilingual marketing and global content at scale",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://deepbrain.ai/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/deepbrain-ai",
+      "logoUrl": "/logos/deepbrain-logo.svg",
+      "sourceUrls": [
+        "https://www.aistudios.com/tech-and-ai-explained/synthesia-vs-ai-studios-which-ai-video-generator-is-right-for-you-2026-edition"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-limitation-seed"
+      ]
+    }
+  ],
+  "relatedLinks": {
+    "reviewSlugs": [
+      "synthesia",
+      "pictory",
+      "deepbrain-ai"
+    ],
+    "alternativesSlugs": [
+      "synthesia",
+      "pictory",
+      "deepbrain-ai"
+    ],
+    "vsSlugs": [],
+    "guideSlugs": []
+  },
+  "faqSeeds": [
+    {
+      "question": "What qualifies a tool for Enterprise AI Video Solutions (2026)?",
+      "answerSeed": "Group by enterprise deployment use case. Must offer custom API access for programmatic generation. Must include strict security protocols (SOC 2, ISO 42001, SSO/SAML). Focuses on multi-seat administration, collaboration, and high-volume output rather than consumer features.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "What should readers compare first on this page?",
+      "answerSeed": "Verify Security Certifications: Before procurement, ensure the platform holds SOC 2 Type II and GDPR compliance, which are standard for enterprise vendors like Synthesia. Evaluate API Rate Limits: If you are integrating video generation directly into your CRM or internal tools, request their developer documentation to check concurrent processing limits.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "Which tools already have internal review coverage?",
+      "answerSeed": "Current internal review coverage in this normalized dataset: synthesia, pictory, deepbrain-ai.",
+      "sourceToolSlugs": [
+        "synthesia",
+        "pictory",
+        "deepbrain-ai"
+      ]
+    }
+  ],
+  "lastReviewed": "2026-03-08T00:45:00Z",
+  "reviewMetadata": {
+    "generatedFrom": "research-raw",
+    "sourceFile": "src/data/research/features/enterprise-ai-video-solutions.raw.json",
+    "sourceCount": 3,
+    "uniqueToolCount": 3,
+    "needsManualReview": false,
+    "reviewNotes": []
+  }
+}

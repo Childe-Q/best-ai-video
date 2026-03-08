@@ -1,7 +1,6 @@
 import Link from 'next/link';
-import { getVsComparison, listVsSlugs } from '@/data/vs';
-import { getTool } from '@/lib/getTool';
 import { getSEOCurrentYear } from '@/lib/utils';
+import { getFeaturedVsCards, getGroupedVsCards, listVsIndexCards } from '@/lib/vsIndex';
 
 const seoYear = getSEOCurrentYear();
 
@@ -10,35 +9,10 @@ export const metadata = {
   description: 'Source-backed AI video comparison pages with structured decision tables and explainable scoring.',
 };
 
-function toTitleCase(value: string): string {
-  return value
-    .split('-')
-    .filter(Boolean)
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join(' ');
-}
-
 export default function VSIndexPage() {
-  const comparisons = listVsSlugs()
-    .map((slug) => {
-      const comparison = getVsComparison(slug);
-      if (!comparison) {
-        return null;
-      }
-
-      const toolA = getTool(comparison.slugA);
-      const toolB = getTool(comparison.slugB);
-
-      return {
-        slug,
-        toolAName: toolA?.name ?? toTitleCase(comparison.slugA),
-        toolBName: toolB?.name ?? toTitleCase(comparison.slugB),
-        shortA: comparison.shortAnswer.a,
-        shortB: comparison.shortAnswer.b,
-        updatedAt: comparison.updatedAt,
-      };
-    })
-    .filter((item): item is NonNullable<typeof item> => Boolean(item));
+  const comparisons = listVsIndexCards();
+  const featured = getFeaturedVsCards(comparisons);
+  const grouped = getGroupedVsCards(comparisons);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -54,20 +28,50 @@ export default function VSIndexPage() {
       </header>
 
       <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-6 md:grid-cols-2">
-          {comparisons.map((comparison) => (
-            <Link
-              key={comparison.slug}
-              href={`/vs/${comparison.slug}`}
-              className="rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-indigo-500 hover:shadow-md"
-            >
-              <h2 className="text-xl font-bold text-gray-900">
-                {comparison.toolAName} vs {comparison.toolBName}
-              </h2>
-              <p className="mt-3 text-sm text-gray-700">{comparison.shortA}</p>
-              <p className="mt-1 text-sm text-gray-700">{comparison.shortB}</p>
-              <p className="mt-4 text-xs text-gray-500">Updated {comparison.updatedAt}</p>
-            </Link>
+        <div className="space-y-10">
+          <section>
+            <h2 className="text-2xl font-bold text-gray-900">Featured comparisons</h2>
+            <p className="mt-2 text-sm text-gray-600">
+              Highest-priority head-to-head pages. This block stays visible even when a pair would be pushed out of an intent group.
+            </p>
+            <div className="mt-5 grid gap-6 md:grid-cols-2">
+              {featured.map((comparison) => (
+                <Link
+                  key={comparison.slug}
+                  href={`/vs/${comparison.slug}`}
+                  className="rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-indigo-500 hover:shadow-md"
+                >
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {comparison.toolAName} vs {comparison.toolBName}
+                  </h3>
+                  <p className="mt-3 text-sm text-gray-700">{comparison.shortA}</p>
+                  <p className="mt-1 text-sm text-gray-700">{comparison.shortB}</p>
+                  <p className="mt-4 text-xs text-gray-500">Updated {comparison.updatedAt}</p>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          {grouped.map((group) => (
+            <section key={group.intent}>
+              <h2 className="text-2xl font-bold text-gray-900">{group.title}</h2>
+              <div className="mt-5 grid gap-6 md:grid-cols-2">
+                {group.items.map((comparison) => (
+                  <Link
+                    key={comparison.slug}
+                    href={`/vs/${comparison.slug}`}
+                    className="rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-indigo-500 hover:shadow-md"
+                  >
+                    <h3 className="text-xl font-bold text-gray-900">
+                      {comparison.toolAName} vs {comparison.toolBName}
+                    </h3>
+                    <p className="mt-3 text-sm text-gray-700">{comparison.shortA}</p>
+                    <p className="mt-1 text-sm text-gray-700">{comparison.shortB}</p>
+                    <p className="mt-4 text-xs text-gray-500">Updated {comparison.updatedAt}</p>
+                  </Link>
+                ))}
+              </div>
+            </section>
           ))}
         </div>
       </main>

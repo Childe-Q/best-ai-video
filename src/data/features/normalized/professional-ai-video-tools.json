@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "slug": "professional-ai-video-tools",
+  "title": "Professional AI Video Tools for Business (2026)",
+  "summarySeed": {
+    "oneLiner": "This page compares AI video platforms built for business and enterprise teams — tools with team collaboration, SSO/SAML, brand kit governance, and high-quality commercial export (1080p/4K). They are grouped by team and governance needs: governed training platforms for corporate L&D, and repurposing tools for structured content reuse across teams. Consumer-focused apps without team administration or with strict commercial use limits are excluded.",
+    "boundaries": [
+      "Must offer business or enterprise features: team collaboration, SSO/SAML, or brand kit governance.",
+      "Must support high-quality commercial export (1080p/4K) and integrations (LMS/SCORM, APIs).",
+      "Excludes consumer-focused apps with commercial use limits or no team admin."
+    ],
+    "primaryClassificationRule": "Group by team and governance needs.",
+    "comparisonAxes": [
+      "export quality",
+      "workflow fit and automation",
+      "team and governance requirements"
+    ]
+  },
+  "howToChooseSeeds": [
+    {
+      "title": "Verify SSO/SAML availability on your target plan.",
+      "desc": "SSO is not available on all tiers. Synthesia restricts SAML/SSO to the Enterprise plan only — it is unavailable on Free, Starter, or Creator. Visla offers SSO on Business and Enterprise plans. If SSO is a procurement requirement, check the exact tier before engaging sales."
+    },
+    {
+      "title": "Evaluate localization depth for global teams.",
+      "desc": "Synthesia reports 160+ language support with realistic AI avatars. If your organization operates across markets and needs native-language training or communications, this capability eliminates the need for third-party dubbing."
+    },
+    {
+      "title": "Check SCORM export for L&D workflows.",
+      "desc": "If you are building training content for a Learning Management System, SCORM export matters. Synthesia locks SCORM to the Enterprise plan. Pictory includes SCORM export (LMS Ready) as an Enterprise feature. Visla does not confirm SCORM in our current data."
+    },
+    {
+      "title": "Assess brand management controls.",
+      "desc": "Look for locked-down brand kits — custom fonts, colors, logos — that team members cannot override. Pictory offers unlimited brand kits and custom AI voices on its Enterprise tier. Visla includes brand management as part of its full-stack platform."
+    }
+  ],
+  "groups": [
+    {
+      "id": "governed-training-platforms",
+      "title": "Governed training platforms",
+      "rule": "These tools focus on controlled team workflows, governance, and corporate training. They suit L&D departments and large organizations that need locked-down brand kits, role-based access, AI avatars in dozens of languages, and — at the enterprise tier — SCORM export to learning management systems.",
+      "toolSlugs": [
+        "synthesia",
+        "visla"
+      ]
+    },
+    {
+      "id": "repurposing-for-teams",
+      "title": "Repurposing for teams",
+      "rule": "This group covers tools suited to structured content reuse across teams — taking existing articles, scripts, and recordings and converting them into video at scale with enterprise-grade controls. The emphasis is on SSO, brand kits, and API access rather than from-scratch generation.",
+      "toolSlugs": [
+        "pictory"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Visla",
+      "slug": "visla",
+      "verdictSeed": "Full-stack enterprise video production: creation, editing, collaboration, and brand management in one platform. Includes AI avatars, voice cloning, and screen recording.",
+      "pricingSeed": "From $18/mo; Enterprise from 20,000 monthly credits",
+      "policySeed": null,
+      "bestForSeed": "Full-stack enterprise video production",
+      "mainLimitationSeed": "Voice-based projects consume 1.5x more credits than text-based; SSO restricted to Business/Enterprise",
+      "officialUrl": "https://www.visla.us/",
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://www.visla.us/blog/listicles/best-ai-video-generators-for-business-in-2026/",
+        "https://www.visla.us/pricing"
+      ],
+      "flags": [
+        "duplicate-raw-mentions-merged",
+        "missing-policy-seed",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    },
+    {
+      "name": "Synthesia",
+      "slug": "synthesia",
+      "verdictSeed": "Corporate training and internal communications with 160+ language AI avatars. Supports real-time collaboration and LMS exports at the Enterprise tier.",
+      "pricingSeed": "From $29/mo; Enterprise: custom pricing for full suite",
+      "policySeed": null,
+      "bestForSeed": "Corporate training, L&D, and internal communications",
+      "mainLimitationSeed": "SAML/SSO unavailable on Free, Starter, or Creator; SCORM locked to Enterprise",
+      "officialUrl": "https://www.synthesia.io/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/synthesia",
+      "logoUrl": "/logos/synthesia.png",
+      "sourceUrls": [
+        "https://www.visla.us/blog/listicles/best-ai-video-generators-for-business-in-2026/",
+        "https://synthesia.io/pricing"
+      ],
+      "flags": [
+        "duplicate-raw-mentions-merged",
+        "missing-policy-seed"
+      ]
+    },
+    {
+      "name": "Pictory",
+      "slug": "pictory",
+      "verdictSeed": "Enterprise-scale content repurposing with SSO/SAML, unlimited brand kits, custom AI voices, and a robust automation API. SCORM export (LMS Ready) included at Enterprise.",
+      "pricingSeed": "From $29/mo; custom pricing for 10+ seats",
+      "policySeed": null,
+      "bestForSeed": "Repurposing content at enterprise scale",
+      "mainLimitationSeed": "Enterprise tier enforces a strict 10+ user minimum seat count",
+      "officialUrl": "https://pictory.ai/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/pictory",
+      "logoUrl": "/logos/pictory.png",
+      "sourceUrls": [
+        "https://www.visla.us/blog/listicles/best-ai-video-generators-for-business-in-2026/",
+        "https://pictory.ai/pricing"
+      ],
+      "flags": [
+        "duplicate-raw-mentions-merged",
+        "missing-policy-seed"
+      ]
+    }
+  ],
+  "relatedLinks": {
+    "reviewSlugs": [
+      "synthesia",
+      "pictory"
+    ],
+    "alternativesSlugs": [
+      "synthesia",
+      "pictory"
+    ],
+    "vsSlugs": [],
+    "guideSlugs": []
+  },
+  "faqSeeds": [
+    {
+      "question": "What qualifies a tool for Professional AI Video Tools for Business (2026)?",
+      "answerSeed": "Group by team and governance needs. Must offer business or enterprise-tier features like team collaboration, SSO/SAML, or brand kit governance. Must support high-quality commercial export (1080p/4K) and integrations (LMS/SCORM, APIs). Excludes consumer-focused apps with strict commercial use limits or no team administration capabilities.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "What should readers compare first on this page?",
+      "answerSeed": "Check Governance and Compliance: If you are deploying across a large organization, verify if the tool supports Single Sign-On (SSO) and role-based access control (RBAC). Evaluate Localization Capabilities: For global teams, look for platforms that offer 1-click translation and dubbing natively, rather than requiring third-party tools.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "Which tools already have internal review coverage?",
+      "answerSeed": "Current internal review coverage in this normalized dataset: synthesia, pictory.",
+      "sourceToolSlugs": [
+        "synthesia",
+        "pictory"
+      ]
+    }
+  ],
+  "lastReviewed": "2026-03-07T23:35:00Z",
+  "reviewMetadata": {
+    "generatedFrom": "research-raw",
+    "sourceFile": "src/data/research/features/professional-ai-video-tools.raw.json",
+    "sourceCount": 4,
+    "uniqueToolCount": 3,
+    "needsManualReview": true,
+    "reviewNotes": [
+      "Duplicate raw tool mentions merged: pictory, synthesia, visla",
+      "One or more tools still need verified logoUrl coverage.",
+      "One or more tools are missing internal review coverage."
+    ]
+  }
+}

@@ -64,9 +64,11 @@ const FEATURED_POOL_ALIAS_TO_CANONICAL: Record<string, string> = {
   veedio: 'veed-io',
   'zebra-cat': 'zebracat',
 };
+const CORE_ANCHOR_SLUGS = ['fliki', 'heygen', 'invideo'];
 
 const FEATURED_MIN_PER_PAGE = 1;
 const FEATURED_MAX_PER_PAGE = 2;
+const TOP6_FEATURED_MAX = 1;
 // First pass: diversify the raw candidate queue while still respecting upstream relevance order.
 const DIVERSITY_WEIGHT = 0.42;
 // Second pass: only a light re-order after featured injection, to keep injected picks natural.
@@ -112,6 +114,14 @@ const INTENT_ADJACENCY: Record<Intent, Intent[]> = {
 };
 
 const LOCAL_IMAGE_EXTENSIONS = ['webp', 'png', 'jpg', 'jpeg', 'svg'];
+const BASELINE_REPORT_PATH = path.join(process.cwd(), '_audit', 'alternatives-sort', 'report.json');
+let baselineFeaturedCountCache: Map<string, number> | null | undefined;
+const PLACEHOLDER_PATTERNS = [
+  /\btbd\b/i,
+  /\bverify\b/i,
+  /\bneed(?:s)? verification\b/i,
+  /export\/download documentation needs verification/i,
+];
 
 type DossierSourceMap = Map<string, string[]>;
 
@@ -153,6 +163,144 @@ function cleanText(value?: string | null): string | null {
   if (!value) return null;
   const normalized = value.replace(/\[NEED VERIFICATION.*?\]/gi, '').trim();
   return normalized.length > 0 ? normalized : null;
+}
+
+function containsPlaceholderText(value?: string | null): boolean {
+  const cleaned = cleanText(value);
+  if (!cleaned) return false;
+  return PLACEHOLDER_PATTERNS.some((pattern) => pattern.test(cleaned));
+}
+
+function sanitizeSentence(value?: string | null): string | null {
+  const cleaned = cleanText(value);
+  if (!cleaned) return null;
+  if (containsPlaceholderText(cleaned)) return null;
+
+  const repeatedLabel = cleaned.match(/^([^:]{2,40}):\s*(.+?)\.?$/);
+  if (repeatedLabel) {
+    const label = repeatedLabel[1].trim().toLowerCase();
+    const body = repeatedLabel[2].trim().toLowerCase();
+    if (label === body) return null;
+  }
+
+  return cleaned;
+}
+
+function sanitizeSentenceList(values: Array<string | null | undefined>): string[] {
+  return uniqueStrings(
+    values
+      .map((value) => sanitizeSentence(value))
+      .filter((value): value is string => Boolean(value))
+  );
+}
+
+function hasLearningContext(values: Array<string | null | undefined>): boolean {
+  const text = values
+    .map((item) => cleanText(item || '') || '')
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
+  return /\bl\s*&\s*d\b|learning|training|instructional|onboarding|enablement|corporate training|internal comms/.test(text);
+}
+
+function sanitizeLabel(text?: string | null, contextHints: Array<string | null | undefined> = []): string | null {
+  const cleaned = cleanText(text);
+  if (!cleaned) return null;
+
+  const normalized = cleaned.replace(/\s+/g, ' ').trim();
+  if (!normalized) return null;
+
+  const hasLndContext = hasLearningContext([normalized, ...contextHints]);
+  if (/^l$/i.test(normalized) && hasLndContext) return 'L&D Teams';
+  if (/^d$/i.test(normalized) && hasLndContext) return 'L&D Teams';
+  if (/^d\s*teams?$/i.test(normalized) && hasLndContext) return 'L&D Teams';
+  if (/^l\s*&\s*d(?:\s+teams?)?$/i.test(normalized)) return 'L&D Teams';
+
+  if (/^[a-z]$/i.test(normalized)) return null;
+  if (normalized.length < 3) return null;
+  if (/^[^a-z0-9]+$/i.test(normalized)) return null;
+
+  return normalized;
+}
+
+function sanitizeLabelList(values: Array<string | null | undefined>, contextHints: Array<string | null | undefined> = []): string[] {
+  return uniqueStrings(
+    values
+      .map((value) => sanitizeLabel(value, contextHints))
+      .filter((value): value is string => Boolean(value))
+  );
+}
+
+function inferBestForFromTool(tool?: Tool): string {
+  if (!tool) return 'General AI video workflows';
+  const direct = sanitizeLabel(tool.best_for, [
+    ...(tool.tags || []),
+    ...(tool.categories || []),
+    ...(tool.features || []),
+    ...(tool.pros || []),
+  ]);
+  if (direct) return direct;
+
+  const hint = [
+    ...(tool.tags || []),
+    ...(tool.categories || []),
+    ...(tool.features || []),
+  ].join(' ').toLowerCase();
+  if (/training|learning|l&d|onboarding|internal/.test(hint)) return 'Training & Internal Comms';
+  if (/avatar|presenter|talking|lip/.test(hint)) return 'AI Avatars';
+  if (/editor|editing|timeline|subtitle|caption/.test(hint)) return 'Video editing control';
+  if (/repurpose|social|short|clip/.test(hint)) return 'Content repurposing';
+  return 'General AI video workflows';
+}
+
+function sanitizeDeepDiveLabels(item: AlternativesDeepDive, tool?: Tool): AlternativesDeepDive {
+  const baseHints = [
+    item.toolName,
+    item.bestFor,
+    ...(item.strengths || []),
+    ...(item.tradeoffs || []),
+    tool?.best_for || '',
+    ...(tool?.tags || []),
+    ...(tool?.categories || []),
+    ...(tool?.features || []),
+  ];
+  const sanitizedBestFor = sanitizeLabel(item.bestFor, baseHints) || inferBestForFromTool(tool);
+  const sanitizeNarrativeLine = (line: string): string | null => {
+    const cleaned = sanitizeSentence(line);
+    if (!cleaned) return null;
+    const strongFitMatch = cleaned.match(/^(strong fit for|built for)\s+(.+?)([.!])?$/i);
+    if (!strongFitMatch) return cleaned;
+    const prefix = /built for/i.test(strongFitMatch[1]) ? 'Built for' : 'Strong fit for';
+    const label = sanitizeLabel(strongFitMatch[2], [sanitizedBestFor, ...baseHints]);
+    if (!label) return null;
+    return `${prefix} ${label}.`;
+  };
+
+  const sanitizedStrengths = uniqueStrings(
+    (item.strengths || [])
+      .map((line) => sanitizeNarrativeLine(line))
+      .filter((line): line is string => Boolean(line))
+  ).slice(0, 3);
+  const finalStrengths = sanitizedStrengths.length > 0 ? sanitizedStrengths : [`Strong fit for ${sanitizedBestFor}.`];
+  const finalTradeoffs = sanitizeSentenceList(item.tradeoffs || []).slice(0, 2);
+
+  const next: AlternativesDeepDive & { knownFor?: string | null; audience?: string | null } = {
+    ...item,
+    bestFor: sanitizedBestFor,
+    strengths: finalStrengths,
+    tradeoffs: finalTradeoffs.length > 0 ? finalTradeoffs : ['Trade-offs vary by workflow and team setup.'],
+    pricingStarting: sanitizeSentence(item.pricingStarting) || 'Pricing varies by plan.',
+  };
+
+  const itemAny = item as any;
+  if (Object.prototype.hasOwnProperty.call(itemAny, 'knownFor')) {
+    next.knownFor = sanitizeLabel(itemAny.knownFor, [sanitizedBestFor, ...baseHints]);
+  }
+  if (Object.prototype.hasOwnProperty.call(itemAny, 'audience')) {
+    next.audience = sanitizeLabel(itemAny.audience, [sanitizedBestFor, ...baseHints]);
+  }
+
+  return next;
 }
 
 function uniqueStrings(values: string[]): string[] {
@@ -218,6 +366,51 @@ function stableHash(value: string): number {
     hash = Math.imul(hash, 16777619);
   }
   return hash >>> 0;
+}
+
+function loadBaselineFeaturedCountCache(): Map<string, number> | null {
+  if (baselineFeaturedCountCache !== undefined) return baselineFeaturedCountCache;
+
+  if (!fs.existsSync(BASELINE_REPORT_PATH)) {
+    baselineFeaturedCountCache = null;
+    return baselineFeaturedCountCache;
+  }
+
+  try {
+    const raw = fs.readFileSync(BASELINE_REPORT_PATH, 'utf-8');
+    const parsed = JSON.parse(raw);
+    const items = Array.isArray(parsed) ? parsed : (Array.isArray(parsed?.pages) ? parsed.pages : []);
+    const result = new Map<string, number>();
+
+    for (const item of items) {
+      const slug = normalizeSlugKey(String(item?.slug || ''));
+      if (!slug) continue;
+      const fromDeepDives = Array.isArray(item?.deepDives) ? item.deepDives : [];
+      const fromTopPicks = Array.isArray(item?.topPicks) ? item.topPicks : [];
+      const baselineSlugs = uniqueSlugSequence(
+        [...fromDeepDives, ...fromTopPicks]
+          .map((candidate: unknown) => normalizeSlugKey(String(candidate || '')))
+          .filter((candidate: string) => Boolean(candidate))
+      ).slice(0, 6);
+
+      const featuredCount = baselineSlugs.filter((candidate) => isFeaturedSlug(candidate)).length;
+      result.set(slug, featuredCount);
+    }
+
+    baselineFeaturedCountCache = result;
+  } catch {
+    baselineFeaturedCountCache = null;
+  }
+
+  return baselineFeaturedCountCache;
+}
+
+function getBaselineFeaturedCount(baseSlug: string): number | null {
+  const cache = loadBaselineFeaturedCountCache();
+  if (!cache) return null;
+  const normalized = normalizeSlugKey(baseSlug);
+  if (!normalized) return null;
+  return cache.has(normalized) ? (cache.get(normalized) as number) : null;
 }
 
 function tieBreakScore(baseToolSlug: string, candidateSlug: string): number {
@@ -786,9 +979,16 @@ function insertSlugAtPreferredSlot(slugs: string[], slug: string, preferredSlot:
   return next;
 }
 
-function createFallbackFeaturedDeepDive(featuredSlug: string, toolsBySlug: Map<string, Tool>): AlternativesDeepDive | null {
-  const tool = toolsBySlug.get(featuredSlug);
+function createFallbackToolDeepDive(toolSlug: string, baseSlug: string, toolsBySlug: Map<string, Tool>): AlternativesDeepDive | null {
+  const normalizedSlug = normalizeSlugKey(toolSlug);
+  const tool = toolsBySlug.get(normalizedSlug)
+    || toolsBySlug.get(toolSlug)
+    || [...toolsBySlug.entries()].find(([slug]) => normalizeSlugKey(slug) === normalizedSlug)?.[1];
   if (!tool) return null;
+  const normalizedBase = normalizeSlugKey(baseSlug);
+  const baseTool = toolsBySlug.get(normalizedBase)
+    || toolsBySlug.get(baseSlug)
+    || [...toolsBySlug.entries()].find(([slug]) => normalizeSlugKey(slug) === normalizedBase)?.[1];
 
   const sourceUrls = uniqueStrings([
     ...getEvidenceSources(tool.slug),
@@ -803,6 +1003,12 @@ function createFallbackFeaturedDeepDive(featuredSlug: string, toolsBySlug: Map<s
   const fallbackTradeoffs = uniqueStrings(tool.cons || []).slice(0, 2);
   const image = resolveLocalDeepDiveImage(tool.slug);
   const imageSourceUrl = pickImageSourceUrl(sourceUrls, `/tool/${tool.slug}`);
+  const fallbackBestFor = sanitizeLabel(tool.best_for, [
+    ...(tool.tags || []),
+    ...(tool.categories || []),
+    ...(tool.features || []),
+    ...(tool.pros || []),
+  ]) || inferBestForFromTool(tool);
 
   return {
     toolName: tool.name,
@@ -810,14 +1016,23 @@ function createFallbackFeaturedDeepDive(featuredSlug: string, toolsBySlug: Map<s
     logoUrl: tool.logo_url,
     image,
     imageSourceUrl,
-    bestFor: cleanText(tool.best_for) || 'General AI video workflows',
-    strengths: fallbackStrengths.length > 0 ? fallbackStrengths : ['Need verification from latest docs and reviews.'],
-    tradeoffs: fallbackTradeoffs.length > 0 ? fallbackTradeoffs : ['Need verification from latest docs and reviews.'],
-    pricingStarting: cleanText(tool.starting_price) || 'Need verification',
+    bestFor: fallbackBestFor || `${tool.name} workflows that need a practical ${baseTool?.name || 'alternative'} replacement`,
+    strengths: fallbackStrengths.length > 0 ? fallbackStrengths : [
+      `${tool.name} is straightforward to onboard for day-to-day video production.`,
+      'Built-in templates and guided workflows help teams publish faster.',
+    ],
+    tradeoffs: fallbackTradeoffs.length > 0 ? fallbackTradeoffs : [
+      'Feature depth and output consistency can vary by workflow and plan.',
+    ],
+    pricingStarting: cleanText(tool.starting_price) || 'Pricing varies by plan and usage.',
     ctaHref: tool.affiliate_link || `/tool/${tool.slug}`,
     ctaLabel: 'Try now',
     sourceUrls: sourceUrls.length > 0 ? sourceUrls : [`/tool/${tool.slug}/pricing`],
   };
+}
+
+function createFallbackFeaturedDeepDive(featuredSlug: string, baseSlug: string, toolsBySlug: Map<string, Tool>): AlternativesDeepDive | null {
+  return createFallbackToolDeepDive(featuredSlug, baseSlug, toolsBySlug);
 }
 
 function ensureFeaturedCountForPage({
@@ -906,7 +1121,7 @@ function ensureFeaturedCountForPage({
       const preferredSlot = preferredSlots[Math.min(slotCursor, preferredSlots.length - 1)];
       nextDeepDiveSlugs = insertSlugAtPreferredSlot(nextDeepDiveSlugs, featuredSlug, preferredSlot);
       if (!originalDeepDiveSet.has(featuredSlug) && !injectedSeen.has(featuredSlug)) {
-        const fallback = createFallbackFeaturedDeepDive(featuredSlug, toolIndex);
+        const fallback = createFallbackFeaturedDeepDive(featuredSlug, baseSlug, toolIndex);
         if (fallback) {
           injectedDeepDiveItems.push(fallback);
           injectedSeen.add(featuredSlug);
@@ -944,6 +1159,359 @@ function ensureFeaturedCountForPage({
     topPickSlugs: nextTopPickSlugs,
     deepDiveSlugs: nextDeepDiveSlugs,
     injectedDeepDiveItems,
+  };
+}
+
+function enforceFeaturedInTop3({
+  baseSlug,
+  top6Slugs,
+  featuredPool,
+  featuredMaxPerPage,
+}: {
+  baseSlug: string;
+  top6Slugs: string[];
+  featuredPool: string[];
+  featuredMaxPerPage: number;
+}): string[] {
+  const normalizedBase = normalizeSlugKey(baseSlug);
+  const featuredCanonicalSet = new Set(
+    featuredPool
+      .map((slug) => toFeaturedCanonicalSlug(slug))
+      .filter((slug) => slug && slug !== normalizedBase)
+  );
+  const top = uniqueSlugSequence(top6Slugs)
+    .map((slug) => normalizeSlugKey(slug))
+    .filter((slug) => slug && slug !== normalizedBase)
+    .slice(0, 6);
+  const isFeatured = (slug: string) => featuredCanonicalSet.has(toFeaturedCanonicalSlug(slug));
+  const featuredInOrder = top.filter((slug) => isFeatured(slug));
+  const featuredCount = Math.min(featuredInOrder.length, Math.max(0, featuredMaxPerPage));
+  if (featuredCount === 0) return top;
+
+  const keepFeatured = featuredInOrder.slice(0, featuredCount);
+  const keepFeaturedSet = new Set(keepFeatured);
+  const others = top.filter((slug) => !keepFeaturedSet.has(slug));
+
+  if (featuredCount === 1) {
+    return [keepFeatured[0], ...others].slice(0, 6);
+  }
+  return [keepFeatured[0], keepFeatured[1], ...others].slice(0, 6);
+}
+
+function ensureTop6Constraints({
+  baseSlug,
+  rankedCandidates,
+  allToolIndexOrAllToolsList,
+  existingDeepDiveSlugs,
+  featuredSet,
+  coreAnchors,
+  topN,
+}: {
+  baseSlug: string;
+  rankedCandidates: string[];
+  allToolIndexOrAllToolsList: Map<string, Tool> | Tool[];
+  existingDeepDiveSlugs: string[];
+  featuredSet: Set<string>;
+  coreAnchors: string[];
+  topN: number;
+}): {
+  finalTopN: string[];
+  selectedFeatured: string | null;
+  selectedCoreAnchor: string | null;
+  injectedDeepDiveItems: AlternativesDeepDive[];
+  injectedFallbackSlugs: string[];
+  constraintMissedCore: boolean;
+  constraintMissedFeatured: boolean;
+} {
+  const toolIndex = Array.isArray(allToolIndexOrAllToolsList)
+    ? new Map(allToolIndexOrAllToolsList.map((tool) => [normalizeSlugKey(tool.slug), tool]))
+    : new Map(
+        [...allToolIndexOrAllToolsList.entries()].map(([slug, tool]) => [normalizeSlugKey(slug), tool])
+      );
+  const normalizedBase = normalizeSlugKey(baseSlug);
+  const existingDeepDiveSet = new Set(
+    existingDeepDiveSlugs.map((slug) => normalizeSlugKey(slug)).filter((slug) => Boolean(slug))
+  );
+  const ordered = uniqueSlugSequence(
+    rankedCandidates.map((slug) => normalizeSlugKey(slug)).filter((slug) => Boolean(slug))
+  ).filter((slug) => slug !== normalizedBase);
+  const orderedForRefill = [...ordered];
+  const rankedIndex = new Map(orderedForRefill.map((slug, index) => [slug, index]));
+  const normalizedCoreAnchors = new Set(
+    coreAnchors
+      .map((slug) => normalizeSlugKey(slug))
+      .filter((slug) => slug && slug !== normalizedBase)
+  );
+  const effectiveFeatured = new Set<string>(
+    [...featuredSet].map((slug) => toFeaturedCanonicalSlug(slug))
+  );
+  if (effectiveFeatured.size === 0) {
+    FEATURED_POOL_CANONICAL.forEach((slug) => {
+      if (slug !== normalizedBase) effectiveFeatured.add(slug);
+    });
+  }
+
+  const isFeatured = (slug?: string) => Boolean(slug) && effectiveFeatured.has(toFeaturedCanonicalSlug(slug as string));
+  const isCore = (slug?: string) => Boolean(slug) && normalizedCoreAnchors.has(normalizeSlugKey(slug as string));
+  const insertOrMove = (list: string[], slug: string, preferredSlot: number) => {
+    const next = [...list];
+    const existingIndex = next.indexOf(slug);
+    if (existingIndex >= 0) next.splice(existingIndex, 1);
+    const safeSlot = Math.max(0, Math.min(preferredSlot, next.length));
+    next.splice(safeSlot, 0, slug);
+    return next;
+  };
+  const refill = (list: string[]) => {
+    const next = [...list];
+    for (const candidate of orderedForRefill) {
+      if (next.length >= topN) break;
+      if (next.includes(candidate)) continue;
+      next.push(candidate);
+    }
+    return next;
+  };
+  const refillWithFeaturedCap = (list: string[], maxFeatured: number) => {
+    const next = [...list];
+    let featuredCount = next.filter((slug) => isFeatured(slug)).length;
+    for (const candidate of orderedForRefill) {
+      if (next.length >= topN) break;
+      if (next.includes(candidate)) continue;
+      if (isFeatured(candidate) && featuredCount >= maxFeatured) continue;
+      next.push(candidate);
+      if (isFeatured(candidate)) featuredCount += 1;
+    }
+    return next;
+  };
+  const trimToTopN = (list: string[]) => {
+    const next = [...list];
+    while (next.length > topN) {
+      const removable = next
+        .map((slug, idx) => ({ slug, idx, rank: rankedIndex.get(slug) ?? Number.MAX_SAFE_INTEGER }))
+        .filter((item) => !isFeatured(item.slug) && !isCore(item.slug));
+      const secondary = next
+        .map((slug, idx) => ({ slug, idx, rank: rankedIndex.get(slug) ?? Number.MAX_SAFE_INTEGER }))
+        .filter((item) => !isFeatured(item.slug));
+      const pool = removable.length > 0
+        ? removable
+        : (secondary.length > 0 ? secondary : next.map((slug, idx) => ({ slug, idx, rank: rankedIndex.get(slug) ?? Number.MAX_SAFE_INTEGER })));
+      pool.sort((a, b) => {
+        if (b.rank !== a.rank) return b.rank - a.rank;
+        return b.idx - a.idx;
+      });
+      next.splice(pool[0].idx, 1);
+    }
+    return next;
+  };
+  const injectedDeepDiveItems: AlternativesDeepDive[] = [];
+  const injectedFallbackSlugs: string[] = [];
+  const registerFallbackForSlug = (toolSlug: string) => {
+    const normalized = normalizeSlugKey(toolSlug);
+    if (!normalized || existingDeepDiveSet.has(normalized) || injectedFallbackSlugs.includes(normalized)) return;
+    const fallback = createFallbackToolDeepDive(normalized, normalizedBase, toolIndex);
+    if (!fallback) return;
+    injectedDeepDiveItems.push(fallback);
+    injectedFallbackSlugs.push(normalized);
+    existingDeepDiveSet.add(normalized);
+  };
+  const appendToRankedIfMissing = (toolSlug: string) => {
+    const normalized = normalizeSlugKey(toolSlug);
+    if (!normalized || rankedIndex.has(normalized)) return;
+    orderedForRefill.push(normalized);
+    rankedIndex.set(normalized, orderedForRefill.length - 1);
+  };
+  const pickDeterministicCoreFromSite = (): string | null => {
+    const siteCoreCandidates = uniqueSlugSequence(
+      coreAnchors
+        .map((slug) => normalizeSlugKey(slug))
+        .filter((slug) => slug && slug !== normalizedBase && toolIndex.has(slug))
+    );
+    if (siteCoreCandidates.length === 0) return null;
+    const sorted = [...siteCoreCandidates].sort((a, b) => {
+      const scoreA = stableHash(`${normalizedBase}:${a}`);
+      const scoreB = stableHash(`${normalizedBase}:${b}`);
+      if (scoreB !== scoreA) return scoreB - scoreA;
+      return a.localeCompare(b);
+    });
+    return sorted[0] || null;
+  };
+  const pickSecondFeaturedFromRanked = (existingCanonicals: Set<string>, currentTop: string[]): string | null => {
+    const candidate = orderedForRefill.find((slug) => (
+      slug !== normalizedBase
+      && isFeatured(slug)
+      && !existingCanonicals.has(toFeaturedCanonicalSlug(slug))
+      && !currentTop.includes(slug)
+    ));
+    return candidate || null;
+  };
+  const pickSecondFeaturedFromSite = (existingCanonicals: Set<string>): string | null => {
+    const candidates = FEATURED_POOL_CANONICAL
+      .map((slug) => normalizeSlugKey(slug))
+      .filter((slug) => (
+        slug
+        && slug !== normalizedBase
+        && toolIndex.has(slug)
+        && !existingCanonicals.has(toFeaturedCanonicalSlug(slug))
+      ));
+    if (candidates.length === 0) return null;
+    const sorted = uniqueSlugSequence(candidates).sort((a, b) => {
+      const scoreA = stableHash(`${normalizedBase}:featured2:${a}`);
+      const scoreB = stableHash(`${normalizedBase}:featured2:${b}`);
+      if (scoreB !== scoreA) return scoreB - scoreA;
+      return a.localeCompare(b);
+    });
+    return sorted[0] || null;
+  };
+  const trimToTopNWithProtected = (list: string[], protectedSlugs: Set<string>) => {
+    const next = [...list];
+    while (next.length > topN) {
+      const ranked = next.map((slug, idx) => ({
+        slug,
+        idx,
+        rank: rankedIndex.get(slug) ?? Number.MAX_SAFE_INTEGER,
+      }));
+      const removablePrimary = ranked.filter((item) => (
+        !protectedSlugs.has(item.slug) && !isFeatured(item.slug) && !isCore(item.slug)
+      ));
+      const removableSecondary = ranked.filter((item) => (
+        !protectedSlugs.has(item.slug) && !isFeatured(item.slug)
+      ));
+      const removableTertiary = ranked.filter((item) => !protectedSlugs.has(item.slug));
+      const pool = removablePrimary.length > 0
+        ? removablePrimary
+        : (removableSecondary.length > 0 ? removableSecondary : (removableTertiary.length > 0 ? removableTertiary : ranked));
+
+      pool.sort((a, b) => {
+        if (b.rank !== a.rank) return b.rank - a.rank;
+        return b.idx - a.idx;
+      });
+      next.splice(pool[0].idx, 1);
+    }
+    return next;
+  };
+
+  let top = orderedForRefill.slice(0, topN);
+  let selectedFeatured: string | null = null;
+  const featuredInTop = top.filter((slug) => isFeatured(slug));
+
+  if (featuredInTop.length > 0) {
+    selectedFeatured = [...featuredInTop].sort((a, b) => (rankedIndex.get(a) ?? 9999) - (rankedIndex.get(b) ?? 9999))[0];
+    top = top.filter((slug) => !isFeatured(slug) || slug === selectedFeatured);
+  } else {
+    const featuredCandidate = ordered.find((slug) => isFeatured(slug));
+    if (featuredCandidate) {
+      selectedFeatured = featuredCandidate;
+      const featuredSlot = 1 + (stableHash(normalizedBase) % 3);
+      top = insertOrMove(top, featuredCandidate, featuredSlot);
+    }
+  }
+  top = refill(top);
+  top = trimToTopN(top);
+
+  let selectedCoreAnchor = top.find((slug) => isCore(slug)) || null;
+  let constraintMissedCore = false;
+  if (!selectedCoreAnchor) {
+    const coreCandidate = orderedForRefill.find((slug) => isCore(slug));
+    if (coreCandidate) {
+      selectedCoreAnchor = coreCandidate;
+      const coreSlot = 2 + (stableHash(`${normalizedBase}core`) % 4);
+      top = insertOrMove(top, coreCandidate, coreSlot);
+      top = refill(top);
+      top = trimToTopN(top);
+      registerFallbackForSlug(coreCandidate);
+    } else {
+      const siteCoreCandidate = pickDeterministicCoreFromSite();
+      if (siteCoreCandidate) {
+        selectedCoreAnchor = siteCoreCandidate;
+        appendToRankedIfMissing(siteCoreCandidate);
+        const coreSlot = 2 + (stableHash(`${normalizedBase}core`) % 4);
+        top = insertOrMove(top, siteCoreCandidate, coreSlot);
+        top = refill(top);
+        top = trimToTopN(top);
+        registerFallbackForSlug(siteCoreCandidate);
+      } else {
+        constraintMissedCore = true;
+      }
+    }
+  }
+
+  const featuredAfterCore = top.filter((slug) => isFeatured(slug));
+  if (featuredAfterCore.length > TOP6_FEATURED_MAX) {
+    const keepFeatured = (() => {
+      if (selectedCoreAnchor && isFeatured(selectedCoreAnchor)) return selectedCoreAnchor;
+      if (selectedFeatured && featuredAfterCore.includes(selectedFeatured)) return selectedFeatured;
+      return [...featuredAfterCore].sort((a, b) => (rankedIndex.get(a) ?? 9999) - (rankedIndex.get(b) ?? 9999))[0];
+    })();
+    top = top.filter((slug) => !isFeatured(slug) || slug === keepFeatured);
+    selectedFeatured = keepFeatured;
+    top = refill(top);
+    top = trimToTopN(top);
+  } else {
+    selectedFeatured = featuredAfterCore[0] || null;
+  }
+
+  // Final hard cap pass for featured count: remove extras and refill with non-featured first.
+  let finalTop = uniqueSlugSequence(top).slice(0, topN);
+  const finalFeatured = finalTop.filter((slug) => isFeatured(slug));
+  if (finalFeatured.length > TOP6_FEATURED_MAX) {
+    const keepFeatured = (() => {
+      if (selectedCoreAnchor && isFeatured(selectedCoreAnchor)) return selectedCoreAnchor;
+      if (selectedFeatured && finalFeatured.includes(selectedFeatured)) return selectedFeatured;
+      return [...finalFeatured].sort((a, b) => (rankedIndex.get(a) ?? 9999) - (rankedIndex.get(b) ?? 9999))[0];
+    })();
+    finalTop = finalTop.filter((slug) => !isFeatured(slug) || slug === keepFeatured);
+    finalTop = refillWithFeaturedCap(finalTop, TOP6_FEATURED_MAX);
+    finalTop = trimToTopN(finalTop);
+  }
+
+  const baselineFeaturedCount = getBaselineFeaturedCount(normalizedBase);
+  const currentFeaturedCount = finalTop.filter((slug) => isFeatured(slug)).length;
+  if (baselineFeaturedCount === 1 && currentFeaturedCount === 1) {
+    const existingCanonicals = new Set(
+      finalTop
+        .filter((slug) => isFeatured(slug))
+        .map((slug) => toFeaturedCanonicalSlug(slug))
+    );
+    const secondFeatured = pickSecondFeaturedFromRanked(existingCanonicals, finalTop)
+      || pickSecondFeaturedFromSite(existingCanonicals);
+    if (secondFeatured) {
+      appendToRankedIfMissing(secondFeatured);
+      const featuredSlot = 3 + (stableHash(`${normalizedBase}:featured-slot`) % 2);
+      finalTop = insertOrMove(finalTop, secondFeatured, featuredSlot);
+      finalTop = trimToTopNWithProtected(finalTop, new Set([secondFeatured]));
+      registerFallbackForSlug(secondFeatured);
+    }
+  }
+
+  const hasCoreAnchor = finalTop.some((slug) => isCore(slug));
+  if (!hasCoreAnchor) {
+    constraintMissedCore = true;
+    selectedCoreAnchor = null;
+  }
+
+  const hasFeaturedCandidate = orderedForRefill.some((slug) => isFeatured(slug));
+  selectedFeatured = finalTop.find((slug) => isFeatured(slug)) || null;
+  selectedCoreAnchor = finalTop.find((slug) => isCore(slug)) || selectedCoreAnchor;
+  if (selectedCoreAnchor) {
+    registerFallbackForSlug(selectedCoreAnchor);
+  }
+  const constraintMissedFeatured = hasFeaturedCandidate && !finalTop.some((slug) => isFeatured(slug));
+  const reorderedTop = enforceFeaturedInTop3({
+    baseSlug: normalizedBase,
+    top6Slugs: finalTop,
+    featuredPool: FEATURED_POOL_CANONICAL,
+    featuredMaxPerPage: FEATURED_MAX_PER_PAGE,
+  });
+  selectedFeatured = reorderedTop.find((slug) => isFeatured(slug)) || selectedFeatured;
+  selectedCoreAnchor = reorderedTop.find((slug) => isCore(slug)) || selectedCoreAnchor;
+
+  return {
+    finalTopN: reorderedTop.slice(0, topN),
+    selectedFeatured,
+    selectedCoreAnchor,
+    injectedDeepDiveItems,
+    injectedFallbackSlugs,
+    constraintMissedCore,
+    constraintMissedFeatured,
   };
 }
 
@@ -1046,7 +1614,15 @@ function rankGroupTools(group: AlternativeGroupWithEvidence): LongformToolCard[]
 
   const ranked = ordered
     .map((tool, index) => {
-      const hasBestFor = (tool.bestFor || []).some((line) => Boolean(cleanText(line)));
+      const bestForContext = [
+        ...(tool.bestFor || []),
+        (tool as any).pickThisIf || '',
+        (tool as any).extraReason || '',
+        (tool as any).limitations || '',
+        group.title,
+        group.description,
+      ];
+      const hasBestFor = (tool.bestFor || []).some((line) => Boolean(sanitizeLabel(line, bestForContext)));
       const hasTradeoff = Boolean(cleanText((tool as any).limitations || null));
       const score = (hasBestFor ? 1 : 0) + (hasTradeoff ? 1 : 0);
       return { tool, index, score };
@@ -1062,12 +1638,22 @@ function rankGroupTools(group: AlternativeGroupWithEvidence): LongformToolCard[]
     slug: tool.slug,
     name: tool.name,
     logoUrl: tool.logoUrl,
-    bestFor: (tool.bestFor || []).map((line) => cleanText(line) || '').filter(Boolean),
+    bestFor: sanitizeLabelList(
+      tool.bestFor || [],
+      [
+        ...(tool.bestFor || []),
+        (tool as any).pickThisIf || '',
+        (tool as any).extraReason || '',
+        (tool as any).limitations || '',
+        group.title,
+        group.description,
+      ]
+    ),
     pickThisIf: cleanText((tool as any).pickThisIf || null) || undefined,
     extraReason: cleanText((tool as any).extraReason || null) || undefined,
     limitations: cleanText((tool as any).limitations || null) || undefined,
     pricingSignals: tool.pricingSignals || {},
-    startingPrice: tool.startingPrice || 'Need verification',
+    startingPrice: sanitizeSentence(tool.startingPrice) || 'Pricing varies by plan.',
     affiliateLink: (tool as any).affiliateUrl || tool.affiliateLink || undefined,
     groupId: group.id,
     groupTitle: group.title,
@@ -1165,26 +1751,39 @@ function buildToolDeepDives(cards: LongformToolCard[], currentSlug: string): Alt
   const fallbackSignals = getFallbackSourcesForToolPage(currentSlug);
 
   return cards.map((card) => {
-    const strengths = uniqueStrings(
+    const bestForCandidates = sanitizeLabelList(
+      card.bestFor || [],
       [
-        cleanText(card.pickThisIf || null) || '',
-        cleanText(card.extraReason || null) || '',
-        cleanText(card.pricingSignals.freePlan || null) || '',
-        cleanText(card.pricingSignals.exportQuality || null) || '',
-      ].filter(Boolean)
+        ...(card.bestFor || []),
+        card.name,
+        card.groupTitle,
+        card.groupDescription,
+        card.pickThisIf || '',
+        card.extraReason || '',
+        card.limitations || '',
+      ]
+    );
+    const primaryBestFor = bestForCandidates[0] || sanitizeLabel(card.groupTitle, [card.groupDescription]) || card.groupTitle;
+    const strengths = sanitizeSentenceList(
+      [
+        card.pickThisIf || '',
+        card.extraReason || '',
+        card.pricingSignals.freePlan || '',
+        card.pricingSignals.exportQuality || '',
+      ]
     ).slice(0, 3);
 
     if (strengths.length === 0) {
-      strengths.push(`Strong fit for ${card.bestFor[0] || card.groupTitle.toLowerCase()}.`);
+      strengths.push(`Strong fit for ${primaryBestFor}.`);
     }
 
-    const tradeoffs = uniqueStrings([
-      cleanText(card.limitations || null) || '',
-      cleanText(card.pricingSignals.refundCancel || null) || '',
-    ].filter(Boolean)).slice(0, 2);
+    const tradeoffs = sanitizeSentenceList([
+      card.limitations || '',
+      card.pricingSignals.refundCancel || '',
+    ]).slice(0, 2);
 
     if (tradeoffs.length === 0) {
-      tradeoffs.push('Need verification from latest docs and reviewer feedback.');
+      tradeoffs.push('Trade-offs vary by workflow and team setup.');
     }
 
     const evidenceSources = uniqueStrings(getEvidenceSources(card.slug));
@@ -1208,10 +1807,10 @@ function buildToolDeepDives(cards: LongformToolCard[], currentSlug: string): Alt
       logoUrl: card.logoUrl,
       image,
       imageSourceUrl,
-      bestFor: card.bestFor[0] || card.groupTitle,
+      bestFor: primaryBestFor,
       strengths,
       tradeoffs,
-      pricingStarting: cleanText(card.startingPrice) || 'Need verification',
+      pricingStarting: sanitizeSentence(card.startingPrice) || 'Pricing varies by plan.',
       ctaHref: card.affiliateLink || `/tool/${card.slug}`,
       ctaLabel: 'Try now',
       sourceUrls: sourceUrls.length > 0 ? sourceUrls : [`/tool/${card.slug}/pricing`],
@@ -1233,18 +1832,24 @@ function mapEditingControl(card: LongformToolCard): string {
 function mapToolComparisonRows(deepDives: AlternativesDeepDive[], cardsBySlug: Map<string, LongformToolCard>): AlternativesComparisonRow[] {
   return deepDives.slice(0, 6).map((deepDive) => {
     const card = deepDive.toolSlug ? cardsBySlug.get(deepDive.toolSlug) : undefined;
+    const sanitizedBestFor = sanitizeLabel(deepDive.bestFor, [
+      deepDive.toolName,
+      ...(deepDive.strengths || []),
+      ...(deepDive.tradeoffs || []),
+      ...(card?.bestFor || []),
+    ]) || deepDive.bestFor;
 
     return {
       toolName: deepDive.toolName,
       toolSlug: deepDive.toolSlug,
-      price: deepDive.pricingStarting,
-      freeVersion: cleanText(card?.pricingSignals.freePlan || null)
-        || ((card?.startingPrice || '').toLowerCase().includes('free') ? 'Has free plan' : 'Need verification'),
-      watermark: cleanText(card?.pricingSignals.watermark || null) || 'Need verification',
-      exportLimits: cleanText(card?.pricingSignals.exportQuality || null) || 'Need verification',
-      editingControl: card ? mapEditingControl(card) : 'Need verification',
-      bestFor: deepDive.bestFor,
-      mainTradeoff: deepDive.tradeoffs[0] || 'Need verification',
+      price: sanitizeSentence(deepDive.pricingStarting) || 'Pricing varies by plan.',
+      freeVersion: sanitizeSentence(card?.pricingSignals.freePlan || null)
+        || ((card?.startingPrice || '').toLowerCase().includes('free') ? 'Has free plan' : 'Free plan details vary by tool'),
+      watermark: sanitizeSentence(card?.pricingSignals.watermark || null) || 'Watermark rules vary by plan',
+      exportLimits: sanitizeSentence(card?.pricingSignals.exportQuality || null) || 'Export limits vary by plan',
+      editingControl: sanitizeSentence(card ? mapEditingControl(card) : null) || 'Guided workflow',
+      bestFor: sanitizedBestFor,
+      mainTradeoff: sanitizeSentence(deepDive.tradeoffs[0]) || 'Trade-offs vary by workflow',
     };
   });
 }
@@ -1342,12 +1947,24 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
     })),
   }));
 
-  const tldrBuckets = rawTldrBuckets.map((bucket) => ({
-    ...bucket,
-    items: arcadeIntersection
-      ? bucket.items.filter((item) => item.toolSlug && arcadeIntersection.keepSlugs.has(item.toolSlug))
-      : bucket.items,
-  }));
+  const tldrBuckets = rawTldrBuckets
+    .map((bucket) => ({
+      ...bucket,
+      items: (arcadeIntersection
+        ? bucket.items.filter((item) => item.toolSlug && arcadeIntersection.keepSlugs.has(item.toolSlug))
+        : bucket.items
+      )
+        .map((item) => {
+          const sanitizedWhy = sanitizeSentence(item.why) || sanitizeSentence(bucket.title) || sanitizeSentence('Best fit by workflow');
+          if (!sanitizedWhy) return null;
+          return {
+            ...item,
+            why: sanitizedWhy,
+          };
+        })
+        .filter((item): item is NonNullable<typeof item> => Boolean(item)),
+    }))
+    .filter((bucket) => bucket.items.length > 0);
 
   const uniqueCards: LongformToolCard[] = [];
   const seen = new Set<string>();
@@ -1484,8 +2101,27 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
     if (!item.toolSlug) return;
     deepDiveBySlug.set(item.toolSlug, item);
   });
+  const top6Constraint = ensureTop6Constraints({
+    baseSlug: slug,
+    rankedCandidates: uniqueSlugSequence([
+      ...guardedAfterPostRerank.deepDiveSlugs,
+      ...postFeaturedDeepDiveSlugs,
+      ...diversifiedCandidateSlugs,
+      ...rawCandidateSlugs,
+    ]),
+    allToolIndexOrAllToolsList: toolsBySlug,
+    existingDeepDiveSlugs: [...deepDiveBySlug.keys()].filter((item) => Boolean(item)),
+    featuredSet: new Set(FEATURED_POOL_CANONICAL.map((toolSlug) => toFeaturedCanonicalSlug(toolSlug))),
+    coreAnchors: CORE_ANCHOR_SLUGS,
+    topN: 6,
+  });
+  top6Constraint.injectedDeepDiveItems.forEach((item) => {
+    if (!item.toolSlug) return;
+    deepDiveBySlug.set(item.toolSlug, item);
+  });
+  const constrainedTopPickSlugs = top6Constraint.finalTopN.slice(0, topPicksLimit);
 
-  const topPickCandidates: Array<{ toolName: string; toolSlug: string; href: string } | null> = guardedAfterPostRerank.topPickSlugs
+  const topPickCandidates: Array<{ toolName: string; toolSlug: string; href: string } | null> = constrainedTopPickSlugs
     .map((featuredSlug) => {
       const deepDive = deepDiveBySlug.get(featuredSlug);
       const toolItem = toolsBySlug.get(featuredSlug);
@@ -1500,7 +2136,7 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
     .filter((item): item is NonNullable<typeof item> => Boolean(item))
     .slice(0, topPicksLimit);
 
-  const topOrderedDeepDives = guardedAfterPostRerank.deepDiveSlugs
+  const topOrderedDeepDives = top6Constraint.finalTopN
     .map((toolSlug) => deepDiveBySlug.get(toolSlug))
     .filter((item): item is AlternativesDeepDive => Boolean(item));
   const topOrderedKeys = new Set(topOrderedDeepDives.map((item) => uniqueDeepDiveKey(item)));
@@ -1509,6 +2145,7 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
   const fillerLimit = Math.max(0, baseLimit - topOrderedDeepDives.length);
   let featuredInDeepDiveCount = topOrderedDeepDives.filter((item) => isFeaturedSlug(item.toolSlug)).length;
   const fillerCandidateSlugs = uniqueSlugSequence([
+    ...top6Constraint.finalTopN,
     ...postFeaturedDeepDiveSlugs,
     ...diversifiedCandidateSlugs,
   ]);
@@ -1518,7 +2155,7 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
     if (fillerDeepDives.length >= fillerLimit) break;
     if (topOrderedKeys.has(uniqueDeepDiveKey(item))) continue;
     if (item.toolSlug === slug) continue;
-    if (isFeaturedSlug(item.toolSlug) && featuredInDeepDiveCount >= FEATURED_MAX_PER_PAGE) continue;
+    if (isFeaturedSlug(item.toolSlug) && featuredInDeepDiveCount >= TOP6_FEATURED_MAX) continue;
     if (isFeaturedSlug(item.toolSlug)) featuredInDeepDiveCount += 1;
     fillerDeepDives.push(item);
   }
@@ -1555,8 +2192,14 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
     moreAlternatives: finalMoreAlternatives,
     faqs: finalFaqs,
   });
-  const enrichedDeepDives = filledLongform.deepDives;
-  const enrichedMoreAlternatives = filledLongform.moreAlternatives;
+  const enrichedDeepDives = filledLongform.deepDives.map((item) => {
+    const toolMeta = item.toolSlug ? toolsBySlug.get(item.toolSlug) : undefined;
+    return sanitizeDeepDiveLabels(item, toolMeta);
+  });
+  const enrichedMoreAlternatives = filledLongform.moreAlternatives.map((item) => {
+    const toolMeta = item.toolSlug ? toolsBySlug.get(item.toolSlug) : undefined;
+    return sanitizeDeepDiveLabels(item, toolMeta);
+  });
   const enrichedFaqs = ensureFaqFloor(filledLongform.faqs, `${tool.name} alternatives`);
   const cardsBySlug = new Map(uniqueCards.map((card) => [card.slug, card]));
   const comparisonRows = mapToolComparisonRows(enrichedDeepDives, cardsBySlug);
@@ -1582,6 +2225,8 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
     diversifiedCandidateSlugs,
     featuredPreferenceOrder: getFeaturedPreferenceOrder(slug, topCandidateDeepDives),
     featuredAdjusted,
+    guardedAfterPostRerank,
+    top6Constraint,
     postFeaturedTopPickSlugs,
     postFeaturedDeepDiveSlugs,
     fillerDeepDiveSlugs: fillerDeepDives.map((d) => d.toolSlug),
@@ -1655,17 +2300,17 @@ function parseTopicPricing(pricingNote: string): {
   watermark: string;
   exportLimits: string;
 } {
-  const line = pricingNote || 'Need verification';
+  const line = sanitizeSentence(pricingNote) || 'Pricing varies by plan.';
   const lower = line.toLowerCase();
 
-  const freeVersion = lower.includes('free') ? 'Has free plan or trial' : 'Need verification';
+  const freeVersion = lower.includes('free') ? 'Has free plan or trial' : 'Free plan details vary by tool';
   const watermark = lower.includes('watermark')
     ? line
-    : 'Need verification';
+    : 'Watermark rules vary by plan';
 
   const exportLimits = lower.includes('1080p') || lower.includes('4k') || lower.includes('export')
     ? line
-    : 'Need verification';
+    : 'Export limits vary by plan';
 
   return {
     price: line,
@@ -1747,7 +2392,7 @@ export function buildTopicAlternativesLongformData(slug: string): AlternativesTe
       return {
         toolName: name,
         toolSlug: mappedSlug,
-        why: tool?.bestFor || group.why,
+        why: sanitizeLabel(tool?.bestFor || '', [group.why, name]) || group.why,
         href,
       };
     }),
@@ -1764,6 +2409,14 @@ export function buildTopicAlternativesLongformData(slug: string): AlternativesTe
     ]).slice(0, 4);
     const image = mappedSlug ? resolveLocalDeepDiveImage(mappedSlug) : undefined;
     const imageSourceUrl = pickImageSourceUrl(sourceUrls, tool.visitUrl || fallbackInternal);
+    const topicBestFor = sanitizeLabel(tool.bestFor, [
+      tool.name,
+      ...(tool.strengths || []),
+      ...(tool.tradeoffs || []),
+      mappedTool?.best_for || '',
+      ...(mappedTool?.tags || []),
+      ...(mappedTool?.categories || []),
+    ]) || inferBestForFromTool(mappedTool);
 
     return {
       toolName: tool.name,
@@ -1771,10 +2424,10 @@ export function buildTopicAlternativesLongformData(slug: string): AlternativesTe
       logoUrl: mappedTool?.logo_url || undefined,
       image,
       imageSourceUrl,
-      bestFor: cleanText(tool.bestFor) || 'Need verification',
-      strengths: uniqueStrings(tool.strengths.map((item) => cleanText(item) || '').filter(Boolean)).slice(0, 3),
-      tradeoffs: uniqueStrings(tool.tradeoffs.map((item) => cleanText(item) || '').filter(Boolean)).slice(0, 2),
-      pricingStarting: cleanText(tool.pricingNote) || 'Need verification',
+      bestFor: topicBestFor,
+      strengths: sanitizeSentenceList(tool.strengths).slice(0, 3),
+      tradeoffs: sanitizeSentenceList(tool.tradeoffs).slice(0, 2),
+      pricingStarting: sanitizeSentence(tool.pricingNote) || 'Pricing varies by plan.',
       ctaHref: cleanText(tool.visitUrl) || fallbackInternal,
       ctaLabel: 'Try now',
       sourceUrls,
@@ -1783,7 +2436,7 @@ export function buildTopicAlternativesLongformData(slug: string): AlternativesTe
 
   const comparisonRows: AlternativesComparisonRow[] = deepDives.slice(0, 6).map((deepDive) => {
     const sourceTool = topic.tools.find((tool) => tool.name === deepDive.toolName);
-    const pricing = parseTopicPricing(sourceTool?.pricingNote || 'Need verification');
+    const pricing = parseTopicPricing(sourceTool?.pricingNote || 'Pricing varies by plan.');
 
     const editingControl = (sourceTool?.strengths || []).some((line) => line.toLowerCase().includes('timeline') || line.toLowerCase().includes('edit'))
       ? 'Hands-on editing available'
@@ -1798,7 +2451,7 @@ export function buildTopicAlternativesLongformData(slug: string): AlternativesTe
       exportLimits: pricing.exportLimits,
       editingControl,
       bestFor: deepDive.bestFor,
-      mainTradeoff: deepDive.tradeoffs[0] || 'Need verification',
+      mainTradeoff: sanitizeSentence(deepDive.tradeoffs[0]) || 'Trade-offs vary by workflow',
     };
   });
 

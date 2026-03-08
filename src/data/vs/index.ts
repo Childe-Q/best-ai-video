@@ -1,17 +1,39 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { flikiVsHeygen } from '@/data/vs/fliki-vs-heygen';
+import { invideoVsHeygen } from '@/data/vs/invideo-vs-heygen';
 import { getAllTools, getTool } from '@/lib/getTool';
+import { buildDecisionTableRows, toVsDiffRows } from '@/lib/vsDecisionTable';
+import { buildLegacyBestFor, buildLegacyKeyDiffs, buildLegacyNotFor } from '@/lib/vsDifferentiation';
+import { applyIntentProfileOverride, buildIntentProfile } from '@/lib/vsIntent';
+import { normalizeSourceUrlList } from '@/lib/vsSources';
+import {
+  applyFeaturedCalibration,
+  buildInferredScoreProvenance,
+  getScoreMetricKeys,
+  mergeScoreProvenance,
+  normalizeInternalScore,
+} from '@/lib/vsScore';
+import { buildPreferredRowSources, getStrictPricingSources, getToolSourceDomains } from '@/lib/vsToolSources';
 import { Tool } from '@/types/tool';
-import { VsComparison, VsDiffRow, VsSide } from '@/types/vs';
+import { VsComparison, VsDiffRow, VsPromptVariant, VsSide } from '@/types/vs';
 
 const DEV_LOG = process.env.NODE_ENV === 'development';
 
-const canonicalComparisons: VsComparison[] = [flikiVsHeygen];
+const explicitCanonicalComparisons: VsComparison[] = [flikiVsHeygen, invideoVsHeygen];
 
-const canonicalBySlug = new Map<string, VsComparison>(
-  canonicalComparisons.map((comparison) => [`${comparison.slugA}-vs-${comparison.slugB}`, comparison]),
-);
+const SUPPLEMENTAL_VS_CANDIDATES: Array<[string, string]> = [
+  ['descript', 'veed-io'],
+  ['runway', 'sora'],
+  ['colossyan', 'heygen'],
+  ['deepbrain-ai', 'heygen'],
+  ['colossyan', 'synthesia'],
+  ['deepbrain-ai', 'synthesia'],
+  ['fliki', 'pictory'],
+  ['descript', 'pictory'],
+  ['descript', 'fliki'],
+  ['pictory', 'zebracat'],
+];
 
 const SLUG_ALIAS_MAP: Record<string, string> = {
   invideoai: 'invideo',
@@ -30,9 +52,21 @@ const SLUG_ALIAS_MAP: Record<string, string> = {
   'runway-ml': 'runway',
 };
 
+let canonicalBySlugCache: Map<string, VsComparison> | null = null;
+
 export type ParsedVsSlug = {
   slugA: string;
   slugB: string;
+};
+
+export type VsDuplicateRedirect = {
+  from: string;
+  to: string;
+};
+
+export type VsCandidateSkip = {
+  slug: string;
+  reason: string;
 };
 
 export type VsLoadStatus = 'FULL' | 'PARTIAL' | 'MISSING';
@@ -132,6 +166,38 @@ export function toVsSlug(slugA: string, slugB: string): string {
   return `${normalizeSlugPart(slugA)}-vs-${normalizeSlugPart(slugB)}`;
 }
 
+function canonicalizePair(slugA: string, slugB: string): ParsedVsSlug {
+  const normalizedA = normalizeSlugPart(slugA);
+  const normalizedB = normalizeSlugPart(slugB);
+  if (normalizedA <= normalizedB) {
+    return { slugA: normalizedA, slugB: normalizedB };
+  }
+  return { slugA: normalizedB, slugB: normalizedA };
+}
+
+export function toCanonicalVsSlug(slugA: string, slugB: string): string {
+  const canonicalPair = canonicalizePair(slugA, slugB);
+  return toVsSlug(canonicalPair.slugA, canonicalPair.slugB);
+}
+
+export function canonicalSlug(slugA: string, slugB: string): string {
+  return toCanonicalVsSlug(slugA, slugB);
+}
+
+export function getCanonicalVsSlug(slug: string): string | null {
+  const parsed = parseVsSlug(slug);
+  if (!parsed) return null;
+  return toCanonicalVsSlug(parsed.slugA, parsed.slugB);
+}
+
+function getCanonicalComparisonMap(): Map<string, VsComparison> {
+  if (canonicalBySlugCache) return canonicalBySlugCache;
+  canonicalBySlugCache = new Map<string, VsComparison>(
+    explicitCanonicalComparisons.map((comparison) => [toCanonicalVsSlug(comparison.slugA, comparison.slugB), comparison]),
+  );
+  return canonicalBySlugCache;
+}
+
 export function normalizeVsSlug(slug: string): string | null {
   const parsed = parseVsSlug(slug);
   if (!parsed) return null;
@@ -161,7 +227,7 @@ function getInferredSlugsFromToolContent(): string[] {
       if (extracted) {
         const parsed = parseVsSlug(extracted);
         if (parsed) {
-          inferred.push(toVsSlug(parsed.slugA, parsed.slugB));
+          inferred.push(toCanonicalVsSlug(parsed.slugA, parsed.slugB));
         }
       }
     }
@@ -172,7 +238,7 @@ function getInferredSlugsFromToolContent(): string[] {
       if (extracted) {
         const parsed = parseVsSlug(extracted);
         if (parsed) {
-          inferred.push(toVsSlug(parsed.slugA, parsed.slugB));
+          inferred.push(toCanonicalVsSlug(parsed.slugA, parsed.slugB));
         }
       }
     }
@@ -217,7 +283,7 @@ function getInferredSlugsFromContentDirectory(): string[] {
           if (!extracted) continue;
           const parsed = parseVsSlug(extracted);
           if (parsed) {
-            inferred.push(toVsSlug(parsed.slugA, parsed.slugB));
+            inferred.push(toCanonicalVsSlug(parsed.slugA, parsed.slugB));
           }
         }
 
@@ -227,7 +293,7 @@ function getInferredSlugsFromContentDirectory(): string[] {
           if (!extracted) continue;
           const parsed = parseVsSlug(extracted);
           if (parsed) {
-            inferred.push(toVsSlug(parsed.slugA, parsed.slugB));
+            inferred.push(toCanonicalVsSlug(parsed.slugA, parsed.slugB));
           }
         }
       } catch (error) {
@@ -307,14 +373,48 @@ function parseDiffRows(value: unknown): VsDiffRow[] {
   for (const item of value) {
     if (!isRecord(item)) continue;
     const label = asString(item.label);
-    const a = asString(item.a);
-    const b = asString(item.b);
+    const a = asString(item.a) ?? asString(item.aText);
+    const b = asString(item.b) ?? asString(item.bText);
     if (!label || !a || !b) continue;
+    const aText = asString(item.aText);
+    const bText = asString(item.bText);
     const sourceUrl = asString(item.sourceUrl);
-    rows.push({ label, a, b, ...(sourceUrl ? { sourceUrl } : {}) });
+    const rawSources =
+      isRecord(item.sources)
+        ? {
+            a: normalizeSourceUrlList(item.sources.a),
+            b: normalizeSourceUrlList(item.sources.b),
+          }
+        : undefined;
+    rows.push({
+      label,
+      a,
+      b,
+      ...(aText ? { aText } : {}),
+      ...(bText ? { bText } : {}),
+      ...(rawSources ? { sources: rawSources } : {}),
+      ...(sourceUrl ? { sourceUrl } : {}),
+    });
   }
 
   return rows;
+}
+
+function parsePromptVariants(value: unknown): VsPromptVariant[] {
+  if (!Array.isArray(value)) return [];
+  const variants: VsPromptVariant[] = [];
+
+  for (const item of value) {
+    if (!isRecord(item)) continue;
+    const key = asString(item.key);
+    const title = asString(item.title);
+    const prompt = asString(item.prompt);
+    const settings = asStringArray(item.settings);
+    if (!key || !title || !prompt || settings.length === 0) continue;
+    variants.push({ key, title, prompt, settings });
+  }
+
+  return variants;
 }
 
 function normalizeRelatedPath(value: string, kind: 'tool' | 'alternative' | 'comparison'): string {
@@ -325,7 +425,7 @@ function normalizeRelatedPath(value: string, kind: 'tool' | 'alternative' | 'com
   if (kind === 'comparison') {
     const parsed = parseVsSlug(trimmed);
     if (!parsed) return '';
-    return `/vs/${toVsSlug(parsed.slugA, parsed.slugB)}`;
+    return `/vs/${toCanonicalVsSlug(parsed.slugA, parsed.slugB)}`;
   }
 
   const slug = normalizeSlugPart(trimmed.replace(/^tool\//, '').replace(/\/alternatives$/, ''));
@@ -334,12 +434,12 @@ function normalizeRelatedPath(value: string, kind: 'tool' | 'alternative' | 'com
 }
 
 function deriveFileDataSlugs(fileSlug: string, raw: unknown): string[] {
-  const slugs = new Set<string>([fileSlug]);
+  const slugs = new Set<string>([getCanonicalVsSlug(fileSlug) ?? fileSlug]);
   if (isRecord(raw)) {
     const rawSlugA = asString(raw.slugA);
     const rawSlugB = asString(raw.slugB);
     if (rawSlugA && rawSlugB) {
-      slugs.add(toVsSlug(rawSlugA, rawSlugB));
+      slugs.add(toCanonicalVsSlug(rawSlugA, rawSlugB));
     }
   }
   return Array.from(slugs);
@@ -578,7 +678,7 @@ function discoverVsDataFiles(): VsDiscoveryCache {
               });
             }
           }
-        } else if (!canonicalBySlug.has(slug)) {
+        } else if (!getCanonicalComparisonMap().has(slug)) {
           const filePath = path.join(dataDir, fileName);
           const tsParse = parseTsVsComparisonFile(filePath);
 
@@ -633,19 +733,19 @@ function discoverVsDataFiles(): VsDiscoveryCache {
 }
 
 function getSeedVsSlugs(): string[] {
-  const discovery = discoverVsDataFiles();
-  const canonicalSlugs = Array.from(canonicalBySlug.keys());
-  const inferredSlugs = getInferredSlugsFromToolContent();
-  const inferredFromContentFiles = getInferredSlugsFromContentDirectory();
-  const discoveredFileSlugs = discovery.slugsFromFiles;
-
-  return dedupe([...canonicalSlugs, ...inferredSlugs, ...inferredFromContentFiles, ...discoveredFileSlugs])
+  return dedupe([
+    ...getRawKnownVsSlugs().map((slug) => getCanonicalVsSlug(slug) ?? slug),
+    ...Array.from(getSupplementalCanonicalComparisons().keys()),
+  ])
     .filter((slug) => {
       const parsed = parseVsSlug(slug);
       if (!parsed) return false;
-      const swapped = toVsSlug(parsed.slugB, parsed.slugA);
+      const swapped = toCanonicalVsSlug(parsed.slugB, parsed.slugA);
 
-      if (canonicalBySlug.has(slug) || canonicalBySlug.has(swapped)) return true;
+      if (getCanonicalComparisonMap().has(slug) || getCanonicalComparisonMap().has(swapped)) return true;
+      if (getSupplementalCanonicalComparisons().has(slug) || getSupplementalCanonicalComparisons().has(swapped)) return true;
+
+      const discovery = discoverVsDataFiles();
       if (discovery.jsonComparisonsBySlug.has(slug) || discovery.jsonComparisonsBySlug.has(swapped)) return true;
       if (discovery.tsComparisonsBySlug.has(slug) || discovery.tsComparisonsBySlug.has(swapped)) return true;
       if (discovery.jsonErrorsBySlug.has(slug) || discovery.jsonErrorsBySlug.has(swapped)) return true;
@@ -654,6 +754,15 @@ function getSeedVsSlugs(): string[] {
       return Boolean(getTool(parsed.slugA) && getTool(parsed.slugB));
     })
     .sort();
+}
+
+function getRawKnownVsSlugs(): string[] {
+  const discovery = discoverVsDataFiles();
+  const canonicalSlugs = explicitCanonicalComparisons.map((comparison) => toVsSlug(comparison.slugA, comparison.slugB));
+  const inferredSlugs = getInferredSlugsFromToolContent();
+  const inferredFromContentFiles = getInferredSlugsFromContentDirectory();
+  const discoveredFileSlugs = discovery.slugsFromFiles;
+  return dedupe([...canonicalSlugs, ...inferredSlugs, ...inferredFromContentFiles, ...discoveredFileSlugs]).sort();
 }
 
 function validateVsComparison(data: VsComparison): string[] {
@@ -690,6 +799,36 @@ function validateVsComparison(data: VsComparison): string[] {
   return errors;
 }
 
+function normalizeCanonicalComparison(data: VsComparison): VsComparison {
+  const normalizedSlugA = normalizeSlugPart(data.slugA);
+  const normalizedSlugB = normalizeSlugPart(data.slugB);
+  const matrixRows = toVsDiffRows(buildDecisionTableRows(data.matrixRows, normalizedSlugA, normalizedSlugB));
+  const scoreMetrics = getScoreMetricKeys({ weights: data.score.weights, a: data.score.a, b: data.score.b });
+  const scoreProvenance = mergeScoreProvenance(data.score.provenance, scoreMetrics, [...matrixRows, ...data.keyDiffs]);
+  const normalizedScore = normalizeInternalScore(
+    {
+      ...data.score,
+      provenance: scoreProvenance,
+    },
+    [...matrixRows, ...data.keyDiffs],
+    normalizedSlugA,
+    normalizedSlugB,
+  );
+
+  return {
+    ...data,
+    slugA: normalizedSlugA,
+    slugB: normalizedSlugB,
+    intentProfile: applyIntentProfileOverride(
+      data.intentProfile ?? buildIntentProfile(getTool(normalizedSlugA), getTool(normalizedSlugB), data),
+      normalizedSlugA,
+      normalizedSlugB,
+    ),
+    matrixRows,
+    score: applyFeaturedCalibration(normalizedScore, normalizedSlugA, normalizedSlugB),
+  };
+}
+
 function getMapValue<T>(map: Map<string, T>, slug: string, swappedSlug: string): T | undefined {
   return map.get(slug) ?? map.get(swappedSlug);
 }
@@ -711,8 +850,17 @@ function adaptComparisonFromRaw(raw: unknown, parsed: ParsedVsSlug): VsCompariso
   const verdict = isRecord(raw.verdict) ? raw.verdict : null;
   const related = isRecord(raw.related) ? raw.related : null;
   const promptBox = isRecord(raw.promptBox) ? raw.promptBox : null;
+  const parsedKeyDiffs = parseDiffRows(raw.keyDiffs);
+  const parsedMatrixRows = parseDiffRows(raw.matrixRows);
 
-  const scoreFields = ['pricingValue', 'ease', 'speed', 'output', 'customization'];
+  const scoreFields = dedupe([
+    ...Object.keys(legacy.score.weights ?? {}),
+    ...Object.keys(legacy.score.a ?? {}),
+    ...Object.keys(legacy.score.b ?? {}),
+    ...Object.keys((isRecord(score?.weights) ? score.weights : {}) as Record<string, unknown>),
+    ...Object.keys(scoreA ?? {}),
+    ...Object.keys(scoreB ?? {}),
+  ]);
   const mergedScoreA: Record<string, number> = { ...legacy.score.a };
   const mergedScoreB: Record<string, number> = { ...legacy.score.b };
   for (const field of scoreFields) {
@@ -720,12 +868,43 @@ function adaptComparisonFromRaw(raw: unknown, parsed: ParsedVsSlug): VsCompariso
     if (typeof scoreB?.[field] === 'number') mergedScoreB[field] = scoreB[field] as number;
   }
 
+  const mergedWeights =
+    isRecord(score?.weights) && Object.keys(score.weights).length > 0
+      ? Object.fromEntries(
+          Object.entries(score.weights).filter(([, value]) => typeof value === 'number') as Array<[string, number]>,
+        )
+      : legacy.score.weights;
+  const mergedKeyDiffs = parsedKeyDiffs.length > 0 ? parsedKeyDiffs : legacy.keyDiffs;
+  const mergedMatrixRows = toVsDiffRows(
+    buildDecisionTableRows(parsedMatrixRows.length > 0 ? parsedMatrixRows : legacy.matrixRows, normalizedSlugA, normalizedSlugB),
+  );
+  const scoreMetrics = getScoreMetricKeys({ weights: mergedWeights, a: mergedScoreA, b: mergedScoreB });
+  const scoreProvenance = mergeScoreProvenance(score?.provenance, scoreMetrics, [...mergedMatrixRows, ...mergedKeyDiffs]);
+  const normalizedScore = normalizeInternalScore(
+    {
+      methodNote: asString(score?.methodNote) ?? legacy.score.methodNote,
+      weights: mergedWeights,
+      a: mergedScoreA,
+      b: mergedScoreB,
+      provenance: scoreProvenance,
+    },
+    [...mergedMatrixRows, ...mergedKeyDiffs],
+    normalizedSlugA,
+    normalizedSlugB,
+  );
+  const calibratedScore = applyFeaturedCalibration(normalizedScore, normalizedSlugA, normalizedSlugB);
+
   const merged: VsComparison = {
     ...legacy,
     slugA: normalizedSlugA,
     slugB: normalizedSlugB,
     updatedAt: asString(raw.updatedAt) ?? legacy.updatedAt,
     pricingCheckedAt: asString(raw.pricingCheckedAt) ?? legacy.pricingCheckedAt,
+    intentProfile: applyIntentProfileOverride(
+      legacy.intentProfile ?? buildIntentProfile(getTool(normalizedSlugA), getTool(normalizedSlugB), legacy),
+      normalizedSlugA,
+      normalizedSlugB,
+    ),
     shortAnswer: {
       a: asString(shortAnswer?.a) ?? legacy.shortAnswer.a,
       b: asString(shortAnswer?.b) ?? legacy.shortAnswer.b,
@@ -738,21 +917,16 @@ function adaptComparisonFromRaw(raw: unknown, parsed: ParsedVsSlug): VsCompariso
       a: chooseTopItems(asStringArray(notFor?.a), legacy.notFor.a),
       b: chooseTopItems(asStringArray(notFor?.b), legacy.notFor.b),
     },
-    keyDiffs: parseDiffRows(raw.keyDiffs).length > 0 ? parseDiffRows(raw.keyDiffs) : legacy.keyDiffs,
-    matrixRows: parseDiffRows(raw.matrixRows).length > 0 ? parseDiffRows(raw.matrixRows) : legacy.matrixRows,
-    score: {
-      methodNote: asString(score?.methodNote) ?? legacy.score.methodNote,
-      weights: isRecord(score?.weights)
-        ? Object.fromEntries(
-            Object.entries(score.weights).filter(([, value]) => typeof value === 'number') as Array<[string, number]>,
-          )
-        : legacy.score.weights,
-      a: mergedScoreA,
-      b: mergedScoreB,
-    },
+    keyDiffs: mergedKeyDiffs,
+    matrixRows: mergedMatrixRows,
+    score: calibratedScore,
     promptBox: {
       prompt: asString(promptBox?.prompt) ?? legacy.promptBox.prompt,
       settings: chooseTopItems(asStringArray(promptBox?.settings), legacy.promptBox.settings),
+      variants:
+        parsePromptVariants(promptBox?.variants).length > 0
+          ? parsePromptVariants(promptBox?.variants)
+          : legacy.promptBox.variants ?? [],
     },
     verdict: {
       winnerPrice: parseSide(verdict?.winnerPrice, legacy.verdict.winnerPrice),
@@ -844,8 +1018,61 @@ function chooseTopItems(values: string[], fallback: string[]): string[] {
   return dedupe([...cleaned, ...fallback]).slice(0, 3);
 }
 
+function buildRowSources(
+  slugA: string,
+  slugB: string,
+  type: 'pricing' | 'docs' | 'help' | 'examples',
+  rowLabel?: string,
+): { a: string[]; b: string[] } {
+  const rowSources = buildPreferredRowSources(slugA, slugB, type);
+
+  if (process.env.NODE_ENV === 'development') {
+    const aDomains = rowSources.a.map((url) => {
+      try {
+        return new URL(url).hostname.replace(/^www\./, '');
+      } catch {
+        return '';
+      }
+    });
+    const bDomains = rowSources.b.map((url) => {
+      try {
+        return new URL(url).hostname.replace(/^www\./, '');
+      } catch {
+        return '';
+      }
+    });
+
+    const aHasB = aDomains.some((domain) => getToolSourceDomains(slugB).includes(domain));
+    const bHasA = bDomains.some((domain) => getToolSourceDomains(slugA).includes(domain));
+    if (aHasB || bHasA) {
+      console.error('[vs][sources] cross-bound sources detected', {
+        rowLabel: rowLabel ?? null,
+        slugA,
+        slugB,
+        rowSources,
+      });
+    }
+  }
+
+  return {
+    a: rowSources.a.slice(),
+    b: rowSources.b.slice(),
+  };
+}
+
+function describeWorkflowSpeed(tool: Tool): string {
+  const signal = `${tool.best_for} ${tool.pros.join(' ')} ${tool.tags.join(' ')}`.toLowerCase();
+  if (/(batch|bulk|quick|fast|rapid|auto|automate|shorts)/.test(signal)) {
+    return 'Fast for batch drafts (see docs)';
+  }
+  if (/(advanced|complex|manual|learning curve)/.test(signal)) {
+    return 'Moderate setup before repeatable output (see docs)';
+  }
+  return 'Fast for short iterations (see docs)';
+}
+
 function findRelatedComparisonSlugs(slugA: string, slugB: string): string[] {
-  const current = toVsSlug(slugA, slugB);
+  const current = toCanonicalVsSlug(slugA, slugB);
   const seeds = getSeedVsSlugs();
   const fromSeeds = seeds.filter(
     (slug) =>
@@ -875,8 +1102,8 @@ function findRelatedComparisonSlugs(slugA: string, slugB: string): string[] {
     .sort((left, right) => right.overlap - left.overlap)
     .slice(0, 8)
     .forEach((item) => {
-      related.push(toVsSlug(slugA, item.slug));
-      related.push(toVsSlug(slugB, item.slug));
+      related.push(toCanonicalVsSlug(slugA, item.slug));
+      related.push(toCanonicalVsSlug(slugB, item.slug));
     });
 
   return dedupe(related)
@@ -898,106 +1125,123 @@ function buildLegacyComparison(parsed: ParsedVsSlug): { comparison: VsComparison
   const today = new Date().toISOString().slice(0, 10);
   const scoreA = deriveScoreFromTool(toolA);
   const scoreB = deriveScoreFromTool(toolB);
+  const intentProfile = applyIntentProfileOverride(buildIntentProfile(toolA, toolB), parsed.slugA, parsed.slugB);
+  const pairSlug = toCanonicalVsSlug(parsed.slugA, parsed.slugB);
 
   const priceA = parsePriceValue(toolA.starting_price || '');
   const priceB = parsePriceValue(toolB.starting_price || '');
+
+  const keyDiffs: VsDiffRow[] = buildLegacyKeyDiffs(toolA, toolB, intentProfile, (type, rowLabel) =>
+    buildRowSources(parsed.slugA, parsed.slugB, type, rowLabel),
+  );
+
+  const matrixRows: VsDiffRow[] = toVsDiffRows(buildDecisionTableRows([
+    {
+      label: 'Best for',
+      a: toolA.best_for,
+      b: toolB.best_for,
+      sources: buildRowSources(parsed.slugA, parsed.slugB, 'docs', 'Best for'),
+    },
+    {
+      label: 'Output type',
+      a: toolA.tagline,
+      b: toolB.tagline,
+      sources: buildRowSources(parsed.slugA, parsed.slugB, 'docs', 'Output type'),
+    },
+    {
+      label: 'Workflow speed',
+      a: describeWorkflowSpeed(toolA),
+      b: describeWorkflowSpeed(toolB),
+      sources: buildRowSources(parsed.slugA, parsed.slugB, 'help', 'Workflow speed'),
+    },
+    {
+      label: 'Languages & dubbing',
+      a: toolA.features.find((item) => /language|dubb|voice/i.test(item)) ?? 'See product docs',
+      b: toolB.features.find((item) => /language|dubb|voice/i.test(item)) ?? 'See product docs',
+      sources: buildRowSources(parsed.slugA, parsed.slugB, 'help', 'Languages & dubbing'),
+    },
+    {
+      label: 'Templates',
+      a: toolA.features.find((item) => /template/i.test(item)) ?? 'Template support not explicitly listed',
+      b: toolB.features.find((item) => /template/i.test(item)) ?? 'Template support not explicitly listed',
+      sources: buildRowSources(parsed.slugA, parsed.slugB, 'examples', 'Templates'),
+    },
+    {
+      label: 'API',
+      a: toolA.features.find((item) => /api/i.test(item)) ?? 'API availability depends on plan',
+      b: toolB.features.find((item) => /api/i.test(item)) ?? 'API availability depends on plan',
+      sources: buildRowSources(parsed.slugA, parsed.slugB, 'docs', 'API'),
+    },
+    {
+      label: 'Pricing starting point',
+      a: toolA.starting_price,
+      b: toolB.starting_price,
+      sources: buildRowSources(parsed.slugA, parsed.slugB, 'pricing', 'Pricing starting point'),
+    },
+    {
+      label: 'Free plan',
+      a: toolA.pricing_model.toLowerCase().includes('free') ? 'Yes (check limits)' : 'Not clearly listed',
+      b: toolB.pricing_model.toLowerCase().includes('free') ? 'Yes (check limits)' : 'Not clearly listed',
+      sources: buildRowSources(parsed.slugA, parsed.slugB, 'pricing', 'Free plan'),
+    },
+  ], parsed.slugA, parsed.slugB));
+
+  const scoreWeights = {
+    pricingValue: 25,
+    ease: 20,
+    speed: 20,
+    output: 20,
+    customization: 15,
+  };
+  const scoreMetrics = getScoreMetricKeys({ weights: scoreWeights, a: scoreA, b: scoreB });
+  const scoreProvenance = buildInferredScoreProvenance(scoreMetrics, [...matrixRows, ...keyDiffs]);
+  const normalizedScore = normalizeInternalScore(
+    {
+      methodNote:
+        'Internal score computed from pricingValue (25%), ease (20%), speed (20%), output (20%), and customization (15%), using structured product data when verified source rows are limited.',
+      weights: scoreWeights,
+      a: scoreA,
+      b: scoreB,
+      provenance: scoreProvenance,
+    },
+    [...matrixRows, ...keyDiffs],
+    parsed.slugA,
+    parsed.slugB,
+  );
+  const calibratedScore = applyFeaturedCalibration(normalizedScore, parsed.slugA, parsed.slugB);
 
   const comparison: VsComparison = {
     slugA: parsed.slugA,
     slugB: parsed.slugB,
     updatedAt: today,
     pricingCheckedAt: today,
+    intentProfile,
     shortAnswer: {
       a: `Choose ${toolA.name} when your priority is ${toolA.best_for.toLowerCase()}.`,
       b: `Choose ${toolB.name} when your priority is ${toolB.best_for.toLowerCase()}.`,
     },
     bestFor: {
-      a: chooseTopItems(toolA.pros, [toolA.best_for, ...(toolA.tags ?? [])]),
-      b: chooseTopItems(toolB.pros, [toolB.best_for, ...(toolB.tags ?? [])]),
+      a: chooseTopItems(buildLegacyBestFor(toolA, toolB, pairSlug), [toolA.best_for, ...(toolA.tags ?? [])]),
+      b: chooseTopItems(buildLegacyBestFor(toolB, toolA, pairSlug), [toolB.best_for, ...(toolB.tags ?? [])]),
     },
     notFor: {
-      a: chooseTopItems(toolA.cons, ['Advanced manual editing-centric workflows', 'Strict enterprise governance', 'Ultra-high customization needs']),
-      b: chooseTopItems(toolB.cons, ['Advanced manual editing-centric workflows', 'Strict enterprise governance', 'Ultra-high customization needs']),
+      a: chooseTopItems(
+        buildLegacyNotFor(toolA, toolB, pairSlug),
+        ['Advanced manual editing-centric workflows', 'Strict enterprise governance', 'Ultra-high customization needs'],
+      ),
+      b: chooseTopItems(
+        buildLegacyNotFor(toolB, toolA, pairSlug),
+        ['Advanced manual editing-centric workflows', 'Strict enterprise governance', 'Ultra-high customization needs'],
+      ),
     },
-    keyDiffs: [
-      {
-        label: 'Positioning',
-        a: toolA.best_for,
-        b: toolB.best_for,
-      },
-      {
-        label: 'Starting price',
-        a: toolA.starting_price,
-        b: toolB.starting_price,
-      },
-      {
-        label: 'Core workflow',
-        a: toolA.tagline,
-        b: toolB.tagline,
-      },
-      {
-        label: 'Free trial / free plan',
-        a: toolA.has_free_trial ? 'Available' : 'Not clearly listed',
-        b: toolB.has_free_trial ? 'Available' : 'Not clearly listed',
-      },
-    ],
-    matrixRows: [
-      { label: 'Best for', a: toolA.best_for, b: toolB.best_for },
-      { label: 'Output type', a: toolA.tagline, b: toolB.tagline },
-      {
-        label: 'Workflow speed',
-        a: `${scoreA.speed.toFixed(1)}/10 (dataset)`,
-        b: `${scoreB.speed.toFixed(1)}/10 (dataset)`,
-      },
-      {
-        label: 'Languages & dubbing',
-        a: toolA.features.find((item) => /language|dubb|voice/i.test(item)) ?? 'See product docs',
-        b: toolB.features.find((item) => /language|dubb|voice/i.test(item)) ?? 'See product docs',
-      },
-      {
-        label: 'Templates',
-        a: toolA.features.find((item) => /template/i.test(item)) ?? 'Template support not explicitly listed',
-        b: toolB.features.find((item) => /template/i.test(item)) ?? 'Template support not explicitly listed',
-      },
-      {
-        label: 'API',
-        a: toolA.features.find((item) => /api/i.test(item)) ?? 'API availability depends on plan',
-        b: toolB.features.find((item) => /api/i.test(item)) ?? 'API availability depends on plan',
-      },
-      { label: 'Pricing starting point', a: toolA.starting_price, b: toolB.starting_price },
-      {
-        label: 'Free plan',
-        a: toolA.pricing_model.toLowerCase().includes('free') ? 'Yes (check limits)' : 'Not clearly listed',
-        b: toolB.pricing_model.toLowerCase().includes('free') ? 'Yes (check limits)' : 'Not clearly listed',
-      },
-      {
-        label: 'Ease of use',
-        a: `${scoreA.ease.toFixed(1)}/10`,
-        b: `${scoreB.ease.toFixed(1)}/10`,
-      },
-      {
-        label: 'Output quality',
-        a: `${scoreA.output.toFixed(1)}/10`,
-        b: `${scoreB.output.toFixed(1)}/10`,
-      },
-    ],
-    score: {
-      methodNote:
-        'Score computed from pricingValue (25%), ease (20%), speed (20%), output (20%), and customization (15%), using structured tool attributes when direct row-level data is limited.',
-      weights: {
-        pricingValue: 25,
-        ease: 20,
-        speed: 20,
-        output: 20,
-        customization: 15,
-      },
-      a: scoreA,
-      b: scoreB,
-    },
+    keyDiffs,
+    matrixRows,
+    score: calibratedScore,
     promptBox: {
       prompt:
         'Create a 45-second product update video for a B2B SaaS launch. Include one hook, three key benefits, and one CTA with on-screen captions.',
       settings: ['Duration: 45s', 'Format: 16:9', 'Language: English', 'Output: MP4 1080p', 'Tone: professional'],
+      variants: [],
     },
     verdict: {
       winnerPrice: priceA <= priceB ? 'a' : 'b',
@@ -1015,6 +1259,99 @@ function buildLegacyComparison(parsed: ParsedVsSlug): { comparison: VsComparison
   };
 
   return { comparison };
+}
+
+let supplementalCanonicalCache: Map<string, VsComparison> | null = null;
+let supplementalSkipCache: VsCandidateSkip[] | null = null;
+let isBuildingSupplementalCanonicals = false;
+
+function hasStrictPricingCoverage(slugA: string, slugB: string): boolean {
+  return getStrictPricingSources(slugA).length > 0 && getStrictPricingSources(slugB).length > 0;
+}
+
+function getExistingCanonicalPairSet(): Set<string> {
+  const pairs = new Set<string>();
+  for (const slug of getRawKnownVsSlugs()) {
+    const canonicalSlug = getCanonicalVsSlug(slug);
+    if (canonicalSlug) pairs.add(canonicalSlug);
+  }
+  return pairs;
+}
+
+function getSupplementalCanonicalComparisons(): Map<string, VsComparison> {
+  if (supplementalCanonicalCache) return supplementalCanonicalCache;
+  if (isBuildingSupplementalCanonicals) return new Map();
+
+  isBuildingSupplementalCanonicals = true;
+  try {
+    const existingPairs = getExistingCanonicalPairSet();
+    const generated = new Map<string, VsComparison>();
+    const skipped: VsCandidateSkip[] = [];
+
+    for (const [left, right] of SUPPLEMENTAL_VS_CANDIDATES) {
+      const canonicalSlug = toCanonicalVsSlug(left, right);
+      if (existingPairs.has(canonicalSlug) || getCanonicalComparisonMap().has(canonicalSlug)) {
+        continue;
+      }
+
+      const parsed = parseVsSlug(canonicalSlug);
+      if (!parsed) {
+        skipped.push({ slug: canonicalSlug, reason: 'Candidate slug could not be parsed.' });
+        continue;
+      }
+
+      if (!hasStrictPricingCoverage(parsed.slugA, parsed.slugB)) {
+        skipped.push({ slug: canonicalSlug, reason: 'Strict pricing source missing for one or both tools.' });
+        continue;
+      }
+
+      const built = buildLegacyComparison(parsed).comparison;
+      if (!built) {
+        skipped.push({ slug: canonicalSlug, reason: 'Legacy comparison generator returned null.' });
+        continue;
+      }
+
+      const normalized = normalizeCanonicalComparison(built);
+      const errors = validateVsComparison(normalized);
+      if (errors.length > 0) {
+        skipped.push({ slug: canonicalSlug, reason: `Generated comparison failed schema validation: ${errors.join(' | ')}` });
+        continue;
+      }
+
+      generated.set(canonicalSlug, normalized);
+    }
+
+    supplementalCanonicalCache = generated;
+    supplementalSkipCache = skipped;
+    return supplementalCanonicalCache;
+  } finally {
+    isBuildingSupplementalCanonicals = false;
+  }
+}
+
+export function getSupplementalVsGenerationReport(): {
+  added: string[];
+  skipped: VsCandidateSkip[];
+} {
+  const generated = getSupplementalCanonicalComparisons();
+  return {
+    added: Array.from(generated.keys()).sort(),
+    skipped: supplementalSkipCache ? [...supplementalSkipCache] : [],
+  };
+}
+
+export function listVsDuplicateRedirects(): VsDuplicateRedirect[] {
+  return getRawKnownVsSlugs()
+    .map((slug) => {
+      const canonicalSlug = getCanonicalVsSlug(slug);
+      if (!canonicalSlug || canonicalSlug === slug) return null;
+      return {
+        from: slug,
+        to: canonicalSlug,
+      };
+    })
+    .filter((item): item is VsDuplicateRedirect => Boolean(item))
+    .sort((left, right) => left.from.localeCompare(right.from));
 }
 
 function resolveVsComparison(slug: string, options?: { debug?: boolean }): VsLoadResult {
@@ -1046,18 +1383,19 @@ function resolveVsComparison(slug: string, options?: { debug?: boolean }): VsLoa
   }
 
   const normalizedSlug = toVsSlug(parsed.slugA, parsed.slugB);
-  const swappedSlug = toVsSlug(parsed.slugB, parsed.slugA);
-  const isSeeded = availableSlugs.includes(normalizedSlug) || availableSlugs.includes(swappedSlug);
-  const fromCanonical = getMapValue(canonicalBySlug, normalizedSlug, swappedSlug);
+  const canonicalSlug = toCanonicalVsSlug(parsed.slugA, parsed.slugB);
+  const isSeeded = availableSlugs.includes(canonicalSlug);
+  const fromCanonical = getCanonicalComparisonMap().get(canonicalSlug);
   if (fromCanonical) {
     const errors = validateVsComparison(fromCanonical);
     if (errors.length === 0) {
+      const normalizedCanonical = normalizeCanonicalComparison(fromCanonical);
       if (debug) {
         logDebug('entry hit', { hit: true, source: 'canonical', normalizedSlug, reason: 'registered canonical data' });
       }
       return finalizeVsResult({
         status: 'FULL',
-        comparison: fromCanonical,
+        comparison: normalizedCanonical,
         indexHit: true,
         hitSource: 'canonical',
         source: 'canonical',
@@ -1103,16 +1441,33 @@ function resolveVsComparison(slug: string, options?: { debug?: boolean }): VsLoa
     }
   }
 
-  const fromJson = getMapValue(discovery.jsonComparisonsBySlug, normalizedSlug, swappedSlug);
+  const supplementalCanonical = getSupplementalCanonicalComparisons().get(canonicalSlug);
+  if (supplementalCanonical) {
+    if (debug) {
+      logDebug('entry hit', { hit: true, source: 'canonical', normalizedSlug, reason: 'supplemental canonical generated' });
+    }
+    return finalizeVsResult({
+      status: 'FULL',
+      comparison: supplementalCanonical,
+      indexHit: true,
+      hitSource: 'canonical',
+      source: 'canonical',
+      normalizedSlug,
+      parsed,
+    }, debug);
+  }
+
+  const fromJson = discovery.jsonComparisonsBySlug.get(canonicalSlug);
   if (fromJson) {
     const errors = validateVsComparison(fromJson);
     if (errors.length === 0) {
+      const normalizedJson = normalizeCanonicalComparison(fromJson);
       if (debug) {
         logDebug('entry hit', { hit: true, source: 'canonical', normalizedSlug, reason: 'json file loaded' });
       }
       return finalizeVsResult({
         status: 'FULL',
-        comparison: fromJson,
+        comparison: normalizedJson,
         indexHit: true,
         hitSource: 'canonical',
         source: 'canonical',
@@ -1122,16 +1477,17 @@ function resolveVsComparison(slug: string, options?: { debug?: boolean }): VsLoa
     }
   }
 
-  const fromTs = getMapValue(discovery.tsComparisonsBySlug, normalizedSlug, swappedSlug);
+  const fromTs = discovery.tsComparisonsBySlug.get(canonicalSlug);
   if (fromTs) {
     const errors = validateVsComparison(fromTs);
     if (errors.length === 0) {
+      const normalizedTs = normalizeCanonicalComparison(fromTs);
       if (debug) {
         logDebug('entry hit', { hit: true, source: 'canonical', normalizedSlug, reason: 'ts file auto-loaded' });
       }
       return finalizeVsResult({
         status: 'FULL',
-        comparison: fromTs,
+        comparison: normalizedTs,
         indexHit: true,
         hitSource: 'canonical',
         source: 'canonical',
@@ -1141,14 +1497,14 @@ function resolveVsComparison(slug: string, options?: { debug?: boolean }): VsLoa
     }
   }
 
-  const jsonSchemaErrors = getMapValue(discovery.jsonErrorsBySlug, normalizedSlug, swappedSlug);
-  const tsSchemaErrors = getMapValue(discovery.tsErrorsBySlug, normalizedSlug, swappedSlug);
+  const jsonSchemaErrors = discovery.jsonErrorsBySlug.get(canonicalSlug);
+  const tsSchemaErrors = discovery.tsErrorsBySlug.get(canonicalSlug);
   const schemaErrors = dedupe([...(jsonSchemaErrors ?? []), ...(tsSchemaErrors ?? [])]);
 
   if (schemaErrors.length > 0) {
     const rawFromFile =
-      getMapValue(discovery.jsonRawBySlug, normalizedSlug, swappedSlug) ??
-      getMapValue(discovery.tsRawBySlug, normalizedSlug, swappedSlug);
+      discovery.jsonRawBySlug.get(canonicalSlug) ??
+      discovery.tsRawBySlug.get(canonicalSlug);
 
     if (debug) {
       console.error('[vs-loader] schema validation failed (file discovered)', {
@@ -1223,7 +1579,7 @@ function resolveVsComparison(slug: string, options?: { debug?: boolean }): VsLoa
   }
 
   const tsFileExistsButUnregistered =
-    discovery.tsOnlySlugs.has(normalizedSlug) || discovery.tsOnlySlugs.has(swappedSlug);
+    discovery.tsOnlySlugs.has(normalizedSlug) || discovery.tsOnlySlugs.has(canonicalSlug);
   if (debug && tsFileExistsButUnregistered) {
     console.error('[vs-loader] ts file detected but not registered in canonical imports', {
       normalizedSlug,
@@ -1289,6 +1645,10 @@ function resolveVsComparison(slug: string, options?: { debug?: boolean }): VsLoa
 
 export function listVsSlugs(): string[] {
   return getSeedVsSlugs();
+}
+
+export function listRawVsSlugs(): string[] {
+  return getRawKnownVsSlugs();
 }
 
 export function getVsComparisonWithStatus(slug: string): VsLoadResult {

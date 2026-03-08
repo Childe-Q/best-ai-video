@@ -4,7 +4,27 @@ export type VsDiffRow = {
   label: string;
   a: string;
   b: string;
+  aText?: string;
+  bText?: string;
+  sources?: {
+    a?: string[];
+    b?: string[];
+  };
   sourceUrl?: string;
+};
+
+export type VsPromptVariant = {
+  key: string;
+  title: string;
+  prompt: string;
+  settings: string[];
+};
+
+export type VsIntent = 'avatar' | 'editor' | 'text' | 'repurpose';
+
+export type VsIntentProfile = {
+  primary: VsIntent;
+  intents: VsIntent[];
 };
 
 export type VsScore = {
@@ -12,6 +32,17 @@ export type VsScore = {
   weights: Record<string, number>;
   a: Record<string, number>;
   b: Record<string, number>;
+  provenance: {
+    mode: 'verified' | 'estimated' | 'mixed';
+    coverage: Record<string, 'verified' | 'estimated'>;
+    rationale: Record<string, string>;
+    sources: Record<string, string[]>;
+    calibration?: {
+      applied: boolean;
+      reason: 'featured_tool';
+      margin: number;
+    };
+  };
 };
 
 export type VsComparison = {
@@ -19,6 +50,7 @@ export type VsComparison = {
   slugB: string;
   updatedAt: string;
   pricingCheckedAt: string;
+  intentProfile?: VsIntentProfile;
   shortAnswer: {
     a: string;
     b: string;
@@ -42,6 +74,7 @@ export type VsComparison = {
   promptBox: {
     prompt: string;
     settings: string[];
+    variants?: VsPromptVariant[];
   };
   verdict: {
     winnerPrice: VsSide;
@@ -49,6 +82,10 @@ export type VsComparison = {
     winnerSpeed: VsSide;
     recommendation: string;
   };
+  faq?: Array<{
+    question: string;
+    answer: string;
+  }>;
   related: {
     toolPages: string[];
     alternatives: string[];

@@ -1,0 +1,196 @@
+{
+  "pageTopic": "content-repurposing-ai-tools",
+  "generatedAt": "2026-03-07T23:45:00Z",
+  "featurePageUrl": "/features/content-repurposing-ai-tools",
+  "topicDefinition": {
+    "oneLiner": "Turn blog posts, podcasts, and long-form content into engaging videos.",
+    "boundaries": [
+      "Must have explicit features for importing existing assets (URLs, long videos, podcasts, text).",
+      "Must automate the conversion of one format to another (e.g., text to video, long video to shorts).",
+      "Excludes basic text-to-video generators that cannot ingest long-form URLs or podcast audio files."
+    ]
+  },
+  "howToChoose": [
+    {
+      "title": "Match Input to Output",
+      "desc": "If you are starting with text (blogs/articles), you need tools like Lumen5 or Pictory. If starting with long video/audio, look at Opus Clip or Munch."
+    },
+    {
+      "title": "Check Transcript Editing Quality",
+      "desc": "For audio/video repurposing, ensure the tool offers transcript-based editing where deleting text automatically cuts the corresponding media."
+    },
+    {
+      "title": "Evaluate B-roll Libraries",
+      "desc": "Blog-to-video tools rely heavily on stock media. Ensure the platform has access to high-quality libraries (like Storyblocks or Getty) included in the price."
+    }
+  ],
+  "sources": [
+    {
+      "sourceUrl": "https://www.mootion.com/use-cases/en/compare/pictory-vs-lumen5",
+      "fetchedAt": "2026-03-07T23:40:00Z",
+      "title": "Pictory vs Lumen5: The Ultimate 2026 AI Video Generator Comparison",
+      "excerpt": "A deep comparison between two of the most popular text-to-video and content repurposing tools.",
+      "publishedAt": "2026-01-15T00:00:00Z",
+      "sections": [
+        {
+          "heading": "Top Tools by Use Case",
+          "type": "tool_list",
+          "content": "Pictory excels at converting scripts, articles, and long-form recordings into platform-ready clips featuring transcript-based editing. Lumen5 is optimized for fast blog-to-video conversion by pasting a URL."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Pictory",
+          "toolSlugGuess": "pictory",
+          "bestFor": "Podcasts, webinars, and long-form script conversion",
+          "keyClaims": [
+            "Features transcript-based editing where editing text automatically edits the video",
+            "Integrates ElevenLabs voices"
+          ],
+          "pricingClaims": [],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [
+            "Complex credit system and occasional export issues"
+          ],
+          "proofSnippets": [
+            "Pictory excels at converting scripts, articles, and long-form recordings into platform-ready clips. It features transcript-based editing... making it ideal for podcasts and webinars."
+          ],
+          "confidence": 0.95
+        },
+        {
+          "toolName": "Lumen5",
+          "toolSlugGuess": "lumen5",
+          "bestFor": "Fast blog-to-video conversion",
+          "keyClaims": [
+            "Simply paste a URL and the AI builds scenes with stock media and text animations",
+            "Best for social media managers needing high-volume output quickly"
+          ],
+          "pricingClaims": [],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [
+            "Offers limited granular editing"
+          ],
+          "proofSnippets": [
+            "Lumen5 is optimized for fast blog-to-video conversion. Simply paste a URL and the AI builds scenes with stock media and text animations automatically."
+          ],
+          "confidence": 0.95
+        }
+      ],
+      "confidence": 0.9,
+      "notes": [
+        "Excellent breakdown of the text/blog repurposing market."
+      ]
+    },
+    {
+      "sourceUrl": "https://help.lumen5.com/en/article/how-much-does-lumen5-cost-one87/",
+      "fetchedAt": "2026-03-07T23:42:00Z",
+      "title": "Lumen5 Official Pricing and Limits",
+      "excerpt": "Official details on Lumen5's free tier, watermarks, and refund guarantees.",
+      "publishedAt": null,
+      "sections": [
+        {
+          "heading": "Watermark",
+          "type": "limitations",
+          "content": "The free plan includes Lumen5 branding in videos. Paid plans allow you to remove Lumen5 branding."
+        },
+        {
+          "heading": "Refund Policy",
+          "type": "how_to_choose",
+          "content": "Lumen5 offers a 7-day money-back guarantee."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Lumen5",
+          "toolSlugGuess": "lumen5",
+          "bestFor": "Blog-to-video social posts",
+          "keyClaims": [],
+          "pricingClaims": [
+            "Offers a free Community Plan"
+          ],
+          "watermarkRules": [
+            "Free plan includes Lumen5 branding in videos",
+            "Paid plans remove branding"
+          ],
+          "exportRules": [
+            "Video resolution options are restricted by plan tier"
+          ],
+          "refundRules": [
+            "Offers a 7-day money-back guarantee via support request"
+          ],
+          "limitations": [
+            "No monthly limits on video creation at any subscription level"
+          ],
+          "proofSnippets": [
+            "Lumen5 offers a 7-day money-back guarantee. If you're unhappy with a paid subscription within 7 days, you can request a full refund.",
+            "There are no monthly limits on video creation at any subscription level."
+          ],
+          "confidence": 0.99
+        }
+      ],
+      "confidence": 0.99,
+      "notes": [
+        "Unique insight that Lumen5 does not cap monthly video creations, unlike competitors."
+      ]
+    },
+    {
+      "sourceUrl": "https://meetsona.ai/blog/ai-content-repurposing-tools/",
+      "fetchedAt": "2026-03-07T23:41:00Z",
+      "title": "Best AI Content Repurposing Software In 2026",
+      "excerpt": "A review of video clippers and text repurposing software.",
+      "publishedAt": "2026-01-20T00:00:00Z",
+      "sections": [
+        {
+          "heading": "Top Tools by Use Case",
+          "type": "tool_list",
+          "content": "Munch is ranked as best for trend-optimized clipping without requiring technical skills. Opus Clip ranks as a top choice for turning long videos into shorts with a virality score."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Munch",
+          "toolSlugGuess": "munch",
+          "bestFor": "Trend-optimized clipping from long videos",
+          "keyClaims": [
+            "Best for trend-optimized clipping without requiring technical skills",
+            "Automatically extracts engaging moments from long-form videos"
+          ],
+          "pricingClaims": [],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Munch is ranked as best for trend-optimized clipping without requiring technical skills."
+          ],
+          "confidence": 0.95
+        },
+        {
+          "toolName": "Opus Clip",
+          "toolSlugGuess": "opus-clip",
+          "bestFor": "Long-form video to viral shorts",
+          "keyClaims": [
+            "Turns long videos into shorts with a virality score"
+          ],
+          "pricingClaims": [],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Opus Clip ranks as a top choice for turning long videos into shorts with a 'virality score'."
+          ],
+          "confidence": 0.95
+        }
+      ],
+      "confidence": 0.9,
+      "notes": [
+        "Identifies Munch and Opus Clip as the leaders in long-to-short clipping."
+      ]
+    }
+  ]
+}

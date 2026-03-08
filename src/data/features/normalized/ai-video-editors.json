@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "slug": "ai-video-editors",
+  "title": "Best AI Video Editors (2026)",
+  "summarySeed": {
+    "oneLiner": "This page compares video editors that use AI to automate tedious editing tasks — scene detection, filler word removal, auto-captions, smart reframing, and transcript-based editing. Tools are grouped by editing workflow depth: full editing suites for detailed timeline or transcript work, and clip-focused tools for fast short-form output. Purely generative tools that only output raw footage without built-in editing are excluded.",
+    "boundaries": [
+      "Must have timeline or transcript-based editing capabilities.",
+      "Must use AI to automate editing tasks like auto-captions, scene detection, or filler word removal.",
+      "Excludes purely generative tools that only output raw footage without built-in editing."
+    ],
+    "primaryClassificationRule": "Group by editing workflow depth.",
+    "comparisonAxes": [
+      "pricing and credit limits"
+    ]
+  },
+  "howToChooseSeeds": [
+    {
+      "title": "Decide which editing paradigm fits your workflow.",
+      "desc": "Text-based editing (Descript) lets you edit video by editing a transcript — ideal for podcasters and talking-head creators. Traditional timeline editing (Premiere Pro) suits professionals who need frame-level precision. Template-first editing (CapCut) suits mobile-first creators who want fast output with minimal learning curve."
+    },
+    {
+      "title": "Determine whether you need long-form or short-form tools.",
+      "desc": "Opus Clip specializes in repurposing long videos (podcasts, webinars) into multiple short clips with reported 90%+ AI accuracy. Premiere Pro and Descript are built for full-length timeline editing. Pick based on whether your workflow starts with existing long-form content or from scratch."
+    },
+    {
+      "title": "Understand how each tool meters your usage.",
+      "desc": "Descript charges by media hours and AI credits (Hobbyist: 10 media hours, 400 AI credits/mo at $16/mo). Opus Clip charges by processing minutes (free: 60 min/mo; Starter: 150 min/mo at $15/mo). Premiere Pro charges a flat subscription ($22.99+/mo). These models affect cost differently at scale."
+    }
+  ],
+  "groups": [
+    {
+      "id": "full-editing-suites",
+      "title": "Full editing suites",
+      "rule": "These tools provide deep editing control — either through a professional timeline interface (Adobe Premiere Pro) or through a transcript-first workflow where editing text edits the video (Descript). They suit creators and editors working on longer-form content who need granular control over cuts, effects, and audio.",
+      "toolSlugs": [
+        "adobe-premiere-pro",
+        "descript"
+      ]
+    },
+    {
+      "id": "clip-and-social-editing",
+      "title": "Clip and social editing",
+      "rule": "This group covers tools built for speed: repurposing long videos into short clips, applying templates and effects, or producing social-ready content quickly. They are designed for creators who prioritize fast turnaround over deep editorial control.",
+      "toolSlugs": [
+        "opus-clip",
+        "capcut"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Adobe Premiere Pro",
+      "slug": "adobe-premiere-pro",
+      "verdictSeed": "Industry-standard timeline editor with AI features: scene edit detection, speech-to-text, auto reframe, and object removal.",
+      "pricingSeed": "From $22.99/mo",
+      "policySeed": null,
+      "bestForSeed": "Professional timeline editing with AI automation",
+      "mainLimitationSeed": "Steep learning curve compared to AI-native editors",
+      "officialUrl": "https://www.adobe.com/products/premiere.html",
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://buffer.com/resources/ai-video-tools/"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    },
+    {
+      "name": "CapCut",
+      "slug": "capcut",
+      "verdictSeed": "Flexible all-in-one editor with templates, effects, and strong mobile editing. Popular with short-form creators.",
+      "pricingSeed": "Free plan available; paid from $7.99/mo (Pro: $15/mo annually)",
+      "policySeed": null,
+      "bestForSeed": "Short-form creators who need templates, effects, and fast turnaround",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://www.capcut.com/",
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://www.aihustleguy.com/blog/descript-vs-capcut-vs-opus-clip-ai-video-editor"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-limitation-seed",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    },
+    {
+      "name": "Opus Clip",
+      "slug": "opus-clip",
+      "verdictSeed": "Automatically detects highlights in long-form video and formats them as short clips for multiple platforms.",
+      "pricingSeed": "Free (60 min/mo); Starter from $15/mo (150 min/mo)",
+      "policySeed": null,
+      "bestForSeed": "Repurposing long-form content into short clips at scale",
+      "mainLimitationSeed": "Free tier capped at 60 processing minutes/month",
+      "officialUrl": "https://opusclip.com/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/opus-clip",
+      "logoUrl": "/logos/opus-clip.png",
+      "sourceUrls": [
+        "https://help.opus.pro/docs/article/plans-and-credits"
+      ],
+      "flags": [
+        "missing-policy-seed"
+      ]
+    },
+    {
+      "name": "Descript",
+      "slug": "descript",
+      "verdictSeed": "Edit video by editing text. Transcript-first workflow with AI voice cloning and Studio Sound.",
+      "pricingSeed": "Free; Hobbyist from $16/mo (10 media hours, 400 AI credits)",
+      "policySeed": null,
+      "bestForSeed": "Talking-head, podcast, and interview workflows",
+      "mainLimitationSeed": "Monthly allocations of media minutes and AI credits do not roll over month-to-month",
+      "officialUrl": "https://descript.com/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/descript",
+      "logoUrl": "/logos/descript-logo.svg",
+      "sourceUrls": [
+        "https://descript.com/pricing"
+      ],
+      "flags": [
+        "missing-policy-seed"
+      ]
+    }
+  ],
+  "relatedLinks": {
+    "reviewSlugs": [
+      "opus-clip",
+      "descript"
+    ],
+    "alternativesSlugs": [
+      "opus-clip",
+      "descript"
+    ],
+    "vsSlugs": [],
+    "guideSlugs": []
+  },
+  "faqSeeds": [
+    {
+      "question": "What qualifies a tool for Best AI Video Editors (2026)?",
+      "answerSeed": "Group by editing workflow depth. Must have timeline or transcript-based editing capabilities. Must use AI to automate tedious editing tasks (e.g., filler word removal, auto-captions, scene detection). Excludes purely generative tools that only output raw footage without built-in editing.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "What should readers compare first on this page?",
+      "answerSeed": "Evaluate the Editing Interface: Do you prefer text-based editing (like Descript), traditional timeline editing (like Premiere Pro), or mobile-first template editing (like CapCut)? Check Long-Form vs. Short-Form Capabilities: Tools like Opus Clip specialize in repurposing long videos into shorts, while others like DaVinci Resolve are meant for full-length timeline mastery.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "Which tools already have internal review coverage?",
+      "answerSeed": "Current internal review coverage in this normalized dataset: opus-clip, descript.",
+      "sourceToolSlugs": [
+        "opus-clip",
+        "descript"
+      ]
+    }
+  ],
+  "lastReviewed": "2026-03-07T22:58:00Z",
+  "reviewMetadata": {
+    "generatedFrom": "research-raw",
+    "sourceFile": "src/data/research/features/ai-video-editors.raw.json",
+    "sourceCount": 4,
+    "uniqueToolCount": 4,
+    "needsManualReview": true,
+    "reviewNotes": [
+      "One or more tools still need verified logoUrl coverage.",
+      "One or more tools are missing internal review coverage."
+    ]
+  }
+}

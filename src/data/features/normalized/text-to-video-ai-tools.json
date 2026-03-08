@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "slug": "text-to-video-ai-tools",
+  "title": "Text to Video AI Tools (2026)",
+  "summarySeed": {
+    "oneLiner": "This page compares AI tools that generate net-new video content directly from text prompts — from short cinematic clips to photorealistic scenes. Tools are grouped by generation fidelity and control. Only platforms where text-to-video is a primary workflow are included; purely audio-driven generators, image-only tools without motion, and editors that only work with existing clips are excluded.",
+    "boundaries": [
+      "Must generate new video directly from text prompts, not just edit existing footage.",
+      "Covers short cinematic clips through to longer-form text-to-video conversions.",
+      "Excludes audio-only generators, static image tools, and clip editors."
+    ],
+    "primaryClassificationRule": "Group by text-to-video control and fidelity.",
+    "comparisonAxes": [
+      "commercial rights"
+    ]
+  },
+  "howToChooseSeeds": [
+    {
+      "title": "Test prompt adherence before committing.",
+      "desc": "Check whether the tool faithfully follows your text instructions — camera angles, lighting, subject motion — or frequently hallucinates details not in the prompt. This varies significantly between models and is difficult to judge from marketing demos alone."
+    },
+    {
+      "title": "Understand maximum clip length per generation.",
+      "desc": "Cinematic tools like Sora produce clips up to 20–25 seconds per prompt. If you need longer content (e.g., converting a full blog post into a 3-minute video), a different category of tool may be more appropriate."
+    },
+    {
+      "title": "Confirm commercial use rights on your plan.",
+      "desc": "Runway explicitly grants full ownership and unrestricted commercial use on all plans, including Free. Sora applies visible watermarks by default and embeds C2PA metadata. If you plan to monetize or use video in paid advertising, check the terms before publishing."
+    }
+  ],
+  "groups": [
+    {
+      "id": "cinematic-text-to-video",
+      "title": "Cinematic text-to-video",
+      "rule": "These models are optimized for controlled scene generation and higher fidelity output — producing photorealistic or visually precise clips from detailed text prompts. They suit creators who need cinematic B-roll, product shots, or high-quality short clips where prompt adherence and visual quality are the primary concerns.",
+      "toolSlugs": [
+        "sora",
+        "runway",
+        "kling-ai"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Runway",
+      "slug": "runway",
+      "verdictSeed": "Controlled cinematic generation with a polished editor and broad creative ecosystem. Full commercial rights on all plans, no attribution required.",
+      "pricingSeed": "API: $0.01/credit (5–40 credits/sec depending on model)",
+      "policySeed": null,
+      "bestForSeed": "Controlled cinematic generation with commercial use",
+      "mainLimitationSeed": "Some users report variability in scene logic locking",
+      "officialUrl": "https://runwayml.com/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/runway",
+      "logoUrl": "/logos/runway.png",
+      "sourceUrls": [
+        "https://nerdbot.com/2026/02/27/best-ai-video-generators-in-2026-a-practical-comparison-for-creators/",
+        "https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights"
+      ],
+      "flags": [
+        "duplicate-raw-mentions-merged",
+        "missing-policy-seed"
+      ]
+    },
+    {
+      "name": "Kling AI",
+      "slug": "kling-ai",
+      "verdictSeed": "Known for cinematic motion, high-energy scenes, and native 9:16 vertical support. Positioned for fast social media clip generation from text.",
+      "pricingSeed": null,
+      "policySeed": null,
+      "bestForSeed": "High-energy social media clips from text prompts",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://klingai.com/",
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://nerdbot.com/2026/02/27/best-ai-video-generators-in-2026-a-practical-comparison-for-creators/"
+      ],
+      "flags": [
+        "missing-pricing-seed",
+        "missing-policy-seed",
+        "missing-limitation-seed",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    },
+    {
+      "name": "Sora",
+      "slug": "sora",
+      "verdictSeed": "Photorealistic text-to-video generation. Included with ChatGPT Plus; Pro plan provides 10x more usage. Visible watermarks and C2PA metadata applied by default.",
+      "pricingSeed": "Included with ChatGPT Plus ($20/mo); Pro for 10x usage",
+      "policySeed": "Visible watermarks are applied by default",
+      "bestForSeed": "Photorealistic cinematic text-to-video",
+      "mainLimitationSeed": "ChatGPT Plus limited to 50 videos at 480p/month; visible watermarks on all outputs",
+      "officialUrl": "https://openai.com/sora",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/sora",
+      "logoUrl": "/logos/sora.png",
+      "sourceUrls": [
+        "https://help.openai.com/en/articles/9957612"
+      ],
+      "flags": []
+    }
+  ],
+  "relatedLinks": {
+    "reviewSlugs": [
+      "runway",
+      "sora"
+    ],
+    "alternativesSlugs": [
+      "runway",
+      "sora"
+    ],
+    "vsSlugs": [],
+    "guideSlugs": []
+  },
+  "faqSeeds": [
+    {
+      "question": "What qualifies a tool for Text to Video AI Tools (2026)?",
+      "answerSeed": "Group by text-to-video control and fidelity. Must generate net-new video content directly from text prompts (not just editing existing clips). Must handle text-to-video as a primary workflow, ranging from short cinematic clips to full blog conversions. Excludes purely audio-driven or image-only generators without motion.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "What should readers compare first on this page?",
+      "answerSeed": "Evaluate Prompt Adherence: Check if the tool strictly follows your text instructions (camera angles, lighting, motion) or if it frequently hallucinates details. Check Maximum Video Length: Cinematic tools like Sora or Veo generate 10-25 second clips per prompt, while tools like Pictory can convert an entire 1,500-word blog post into a 3-minute video.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "Which tools already have internal review coverage?",
+      "answerSeed": "Current internal review coverage in this normalized dataset: runway, sora.",
+      "sourceToolSlugs": [
+        "runway",
+        "sora"
+      ]
+    }
+  ],
+  "lastReviewed": "2026-03-08T00:15:00Z",
+  "reviewMetadata": {
+    "generatedFrom": "research-raw",
+    "sourceFile": "src/data/research/features/text-to-video-ai-tools.raw.json",
+    "sourceCount": 3,
+    "uniqueToolCount": 3,
+    "needsManualReview": true,
+    "reviewNotes": [
+      "Duplicate raw tool mentions merged: runway",
+      "One or more tools still need verified logoUrl coverage.",
+      "One or more tools are missing internal review coverage."
+    ]
+  }
+}

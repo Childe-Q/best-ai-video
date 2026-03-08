@@ -1,0 +1,214 @@
+{
+  "pageTopic": "best-ai-video-generators",
+  "generatedAt": "2026-03-07T22:30:00Z",
+  "featurePageUrl": "/features/best-ai-video-generators",
+  "topicDefinition": {
+    "oneLiner": "Discover the top AI video generators that turn text into professional videos.",
+    "boundaries": [
+      "Must have native AI video generation (text-to-video, image-to-video, or avatar generation).",
+      "Excludes traditional video editors that only use AI for peripheral tasks (like auto-captions) without generating the core video."
+    ]
+  },
+  "howToChoose": [
+    {
+      "title": "Evaluate Your Core Use Case",
+      "desc": "Are you creating cinematic B-roll (Sora, Veo, Runway), talking-head presentations (Synthesia, HeyGen), or viral social media clips (Pika, Luma)?"
+    },
+    {
+      "title": "Check Cost and Credit Limits",
+      "desc": "Most platforms use a credit system. Verify how many seconds or minutes of video you actually get per month on standard paid tiers."
+    },
+    {
+      "title": "Verify Commercial Licensing",
+      "desc": "If you are an agency or marketer, ensure the tier you purchase grants full commercial rights to the generated outputs."
+    },
+    {
+      "title": "Consider Output Resolution and Watermarks",
+      "desc": "Check if high-definition (1080p or 4K) exports and watermark removal require an expensive Pro or Enterprise upgrade."
+    }
+  ],
+  "sources": [
+    {
+      "sourceUrl": "https://www.toolworthy.ai/blog/best-ai-video-generator",
+      "fetchedAt": "2026-03-07T22:10:00Z",
+      "title": "14 Best AI Video Generators 2026 - Complete Guide",
+      "excerpt": "A comprehensive breakdown of the top AI video generation tools categorized by cinematic quality, avatars, and social media speed.",
+      "publishedAt": "2026-01-15T00:00:00Z",
+      "sections": [
+        {
+          "heading": "Top-Tier Tools for Cinematic Quality",
+          "type": "tool_list",
+          "content": "OpenAI Sora 2 leads for photorealistic text-to-video generation, offering 15-second clips with excellent audio and video quality. Google Veo 3.1 follows closely for fidelity. Runway (Gen-series) excels for creative control."
+        },
+        {
+          "heading": "For avatars and training",
+          "type": "tool_list",
+          "content": "Synthesia and HeyGen (Avatar IV) support multi-language content, with HeyGen offering 175+ languages and voice cloning."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "OpenAI Sora 2",
+          "toolSlugGuess": "sora",
+          "bestFor": "Photorealistic cinematic clips",
+          "keyClaims": [
+            "Leads for photorealistic text-to-video generation",
+            "Offers 15-second clips (25 seconds with Pro storyboard mode)",
+            "Excellent audio and video quality"
+          ],
+          "pricingClaims": [
+            "Best free option available"
+          ],
+          "watermarkRules": [
+            "Outputs include watermarks"
+          ],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [
+            "Commercial licensing typically requires paid subscriptions"
+          ],
+          "proofSnippets": [
+            "OpenAI Sora 2 leads for photorealistic text-to-video generation, offering 15-second clips (25 seconds with Pro storyboard mode) with excellent audio and video quality, though outputs include watermarks."
+          ]
+        },
+        {
+          "toolName": "Synthesia",
+          "toolSlugGuess": "synthesia",
+          "bestFor": "Corporate training and presentations",
+          "keyClaims": [
+            "Supports multi-language content",
+            "Seat-based governance model"
+          ],
+          "pricingClaims": [],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Synthesia and HeyGen (Avatar IV) support multi-language content"
+          ]
+        },
+        {
+          "toolName": "Pika",
+          "toolSlugGuess": "pika",
+          "bestFor": "TikTok and Reels effects",
+          "keyClaims": [
+            "Model 2.2 generates ultra-fast, effects-driven content"
+          ],
+          "pricingClaims": [],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Pika (Model 2.2) generates ultra-fast, effects-driven content for TikTok and Reels."
+          ]
+        }
+      ],
+      "confidence": 0.95,
+      "notes": [
+        "Focused heavily on high-end generative models for 2026."
+      ]
+    },
+    {
+      "sourceUrl": "https://vidwave.ai/heygen-vs-synthesia-pricing-2025-full-cost-breakdown",
+      "fetchedAt": "2026-03-07T22:20:00Z",
+      "title": "HeyGen vs Synthesia Pricing: Full Cost Breakdown",
+      "excerpt": "A detailed comparison of pricing models, limits, and credit systems for top avatar video generators.",
+      "publishedAt": "2026-02-10T00:00:00Z",
+      "sections": [
+        {
+          "heading": "Pricing Overview",
+          "type": "pricing",
+          "content": "HeyGen offers three tiers: Free ($0/mo), Creator ($29/mo), Pro ($99/mo). Synthesia offers Basic (Free), Starter ($29/mo), Creator ($89/mo), and Enterprise."
+        },
+        {
+          "heading": "Watermarks and Limits",
+          "type": "limitations",
+          "content": "HeyGen's Creator plan ($29/mo) includes watermark removal. Synthesia includes watermark removal in the Starter plan ($29/mo)."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "HeyGen",
+          "toolSlugGuess": "heygen",
+          "bestFor": "Flexible avatar video creation",
+          "keyClaims": [
+            "175+ languages and voice cloning",
+            "Uses a consumption-based model with credit add-ons"
+          ],
+          "pricingClaims": [
+            "Free: $0/mo",
+            "Creator: $29/mo",
+            "Pro: $99/mo"
+          ],
+          "watermarkRules": [
+            "Creator plan ($29/mo) includes watermark removal",
+            "Free plan includes watermarks"
+          ],
+          "exportRules": [
+            "Free plan exports at 720p",
+            "Creator plan supports 1080p",
+            "Pro plan supports 4K export"
+          ],
+          "refundRules": [],
+          "limitations": [
+            "Free plan limited to 3 videos/month",
+            "Creator plan caps Avatar IV models to ~10 minutes per month"
+          ],
+          "proofSnippets": [
+            "HeyGen's 'unlimited' Creator plan actually caps high-quality Avatar IV models to approximately 10 minutes per month on the base tier."
+          ]
+        },
+        {
+          "toolName": "Synthesia",
+          "toolSlugGuess": "synthesia",
+          "bestFor": "Predictable enterprise training videos",
+          "keyClaims": [
+            "Operates on a seat-based governance model with predictable costs"
+          ],
+          "pricingClaims": [
+            "Basic: Free (1,200 credits/mo)",
+            "Starter: $29/mo",
+            "Creator: $89/mo"
+          ],
+          "watermarkRules": [
+            "Watermark removal is included in the Starter plan ($29/mo) and higher"
+          ],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [
+            "Starter gets 10 minutes/month",
+            "Creator gets 30 minutes/month",
+            "Custom pricing required for SCORM export and SSO"
+          ],
+          "proofSnippets": [
+            "Synthesia uses a credit system with hard caps: Starter gets 10 minutes/month, Creator gets 30 minutes/month."
+          ]
+        },
+        {
+          "toolName": "Runway",
+          "toolSlugGuess": "runway",
+          "bestFor": "Creative effects and short clips",
+          "keyClaims": [
+            "Excels for creative control across various plan options"
+          ],
+          "pricingClaims": [
+            "Starts at $15/mo with 625 credits"
+          ],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "Runway starts at $15/mo with 625 credits for creative effects and short clips."
+          ]
+        }
+      ],
+      "confidence": 0.98,
+      "notes": [
+        "Excellent details on exact limits which are usually hidden behind marketing copy."
+      ]
+    }
+  ]
+}

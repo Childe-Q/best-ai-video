@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "slug": "viral-ai-video-generators",
+  "title": "AI Video Generators for Viral Content (2026)",
+  "summarySeed": {
+    "oneLiner": "This page compares AI video tools specifically built around virality — hook generation, virality scoring, trend-optimized pacing, dynamic captions, and automated B-roll insertion. Tools are grouped by virality workflow: repurposing long-form video into scored short clips, or trend-led creation that starts from ideation rather than existing footage. Generic video editors without algorithmic or viral optimization features are excluded.",
+    "boundaries": [
+      "Must include virality-focused features: hook scoring, trend analysis, viral captions, or algorithmic clip selection.",
+      "Must support fast social formats: TikTok, Reels, YouTube Shorts.",
+      "Excludes generic editors that lack algorithmic or engagement-optimization features."
+    ],
+    "primaryClassificationRule": "Group by virality workflow.",
+    "comparisonAxes": []
+  },
+  "howToChooseSeeds": [
+    {
+      "title": "Decide whether you are repurposing existing footage or creating from scratch.",
+      "desc": "If you have long-form recordings and need to extract short clips, Opus Clip, Vizard, and Munch are purpose-built for that. If you need to discover trends and plan original content, Hooked and GEN.pro approach virality from the ideation side. These are fundamentally different starting points."
+    },
+    {
+      "title": "Look for virality scoring as a concrete feature.",
+      "desc": "Opus Clip is reported to generate a Virality Score for each clip it extracts, helping you prioritize which shorts to publish. Not all tools in this category offer quantified scoring — some rely on qualitative trend suggestions instead."
+    },
+    {
+      "title": "Check auto-captioning quality and style options.",
+      "desc": "Viral short-form content relies heavily on fast, animated captions (often called \"Hormozi-style\"). Ensure the tool offers high-accuracy transcription with customizable, trend-appropriate fonts — not just plain subtitles."
+    }
+  ],
+  "groups": [
+    {
+      "id": "repurposing-and-clipping",
+      "title": "Repurposing and clipping",
+      "rule": "These tools take existing long-form video — podcasts, webinars, demos, live streams — and extract the moments most likely to perform on social platforms. They use AI to identify hooks, score clips by predicted virality, add dynamic captions, and reframe horizontal footage into 9:16 vertical. The workflow starts with content you already have.",
+      "toolSlugs": [
+        "opus-clip",
+        "vizard",
+        "munch"
+      ]
+    },
+    {
+      "id": "trend-led-creation",
+      "title": "Trend-led creation",
+      "rule": "This group covers tools that start from the other end: trend discovery and content ideation. Rather than clipping existing footage, they help creators identify what to make next based on real-time trend intelligence and predictive social analysis. They suit creators and agencies planning content calendars, not just repurposing archives.",
+      "toolSlugs": [
+        "hooked",
+        "gen-pro"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Hooked",
+      "slug": "hooked",
+      "verdictSeed": "Trend-driven short-form content tool with real-time trend intelligence and a reported 30-day strategy roadmap for planning viral content.",
+      "pricingSeed": null,
+      "policySeed": null,
+      "bestForSeed": "Trend-driven short-form content workflows",
+      "mainLimitationSeed": null,
+      "officialUrl": null,
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://www.tryhooked.ai/blog/best-ai-video-creation-tools"
+      ],
+      "flags": [
+        "missing-pricing-seed",
+        "missing-policy-seed",
+        "missing-limitation-seed",
+        "missing-official-url",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    },
+    {
+      "name": "GEN.pro",
+      "slug": "gen-pro",
+      "verdictSeed": "Influence engine with a \"Large Social Model\" for predictive trend analysis and automated engagement via its AURA engine. Positioned for creators and agencies at scale.",
+      "pricingSeed": "From $99/mo",
+      "policySeed": null,
+      "bestForSeed": "Creators and agencies building viral content at scale",
+      "mainLimitationSeed": null,
+      "officialUrl": null,
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://www.tryhooked.ai/blog/best-ai-video-creation-tools"
+      ],
+      "flags": [
+        "missing-policy-seed",
+        "missing-limitation-seed",
+        "missing-official-url",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    },
+    {
+      "name": "Opus Clip",
+      "slug": "opus-clip",
+      "verdictSeed": "Converts long-form videos into short clips with a Virality Score that ranks each clip's predicted performance. Automatically identifies engaging moments and generates fully captioned output.",
+      "pricingSeed": "From $15/mo",
+      "policySeed": null,
+      "bestForSeed": "Repurposing long videos into scored viral shorts",
+      "mainLimitationSeed": "Works best with talking-head videos; less effective for action-heavy content",
+      "officialUrl": "https://opusclip.com/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/opus-clip",
+      "logoUrl": "/logos/opus-clip.png",
+      "sourceUrls": [
+        "https://vizard.ai/blog/the-12-best-video-editing-tools-in-2025-turn-long-demos-into-viral-ugc-clips-vizard-vs-opus-clip-more"
+      ],
+      "flags": [
+        "missing-policy-seed"
+      ]
+    },
+    {
+      "name": "Vizard",
+      "slug": "vizard",
+      "verdictSeed": "Highlight discovery and vertical reframing with text-based editing. Handles auto-subtitles and translation for global publishing.",
+      "pricingSeed": "Free (60 credits/mo, 720p + watermark); Creator: 600+ credits",
+      "policySeed": "Free plan includes watermark",
+      "bestForSeed": "Highlight discovery and 9:16 vertical reframing",
+      "mainLimitationSeed": "Max file size 10 GB; free plan limited to 720p with watermark",
+      "officialUrl": "https://vizard.ai/",
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://vizard.ai/blog/the-12-best-video-editing-tools-in-2025-turn-long-demos-into-viral-ugc-clips-vizard-vs-opus-clip-more",
+        "https://vizard.ai/pricing"
+      ],
+      "flags": [
+        "duplicate-raw-mentions-merged",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    },
+    {
+      "name": "GetMunch",
+      "slug": "munch",
+      "verdictSeed": "All-in-one clip generation tool. Cancellation must be submitted at least 3 business days before billing renewal; no refunds for the current period.",
+      "pricingSeed": null,
+      "policySeed": null,
+      "bestForSeed": "All-in-one clip generation",
+      "mainLimitationSeed": null,
+      "officialUrl": "https://go.getmunch.com/",
+      "hasReviewPage": false,
+      "reviewUrl": null,
+      "logoUrl": null,
+      "sourceUrls": [
+        "https://go.getmunch.com/payment-and-cancellation-policy"
+      ],
+      "flags": [
+        "missing-pricing-seed",
+        "missing-policy-seed",
+        "missing-limitation-seed",
+        "missing-logo-url",
+        "missing-review-coverage"
+      ]
+    }
+  ],
+  "relatedLinks": {
+    "reviewSlugs": [
+      "opus-clip"
+    ],
+    "alternativesSlugs": [
+      "opus-clip"
+    ],
+    "vsSlugs": [],
+    "guideSlugs": []
+  },
+  "faqSeeds": [
+    {
+      "question": "What qualifies a tool for AI Video Generators for Viral Content (2026)?",
+      "answerSeed": "Group by virality workflow. Must focus on features that drive virality (hooks, B-roll, pacing, trendy captions, Virality Scores). Must support fast social formats (TikTok, Reels, Shorts). Excludes generic video editors that lack algorithmic/viral optimization features.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "What should readers compare first on this page?",
+      "answerSeed": "Look for Virality Scoring: Top tools analyze your long-form video and score clips based on hook strength, pacing, and trend potential to predict social performance. Check Auto-Captioning Styles: Viral content relies heavily on dynamic, animated 'Hormozi-style' captions. Ensure the tool offers high-accuracy text with customizable, trendy fonts.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "Which tools already have internal review coverage?",
+      "answerSeed": "Current internal review coverage in this normalized dataset: opus-clip.",
+      "sourceToolSlugs": [
+        "opus-clip"
+      ]
+    }
+  ],
+  "lastReviewed": "2026-03-07T23:25:00Z",
+  "reviewMetadata": {
+    "generatedFrom": "research-raw",
+    "sourceFile": "src/data/research/features/viral-ai-video-generators.raw.json",
+    "sourceCount": 4,
+    "uniqueToolCount": 5,
+    "needsManualReview": true,
+    "reviewNotes": [
+      "Duplicate raw tool mentions merged: vizard",
+      "One or more tools still need verified officialUrl coverage.",
+      "One or more tools still need verified logoUrl coverage.",
+      "One or more tools are missing internal review coverage."
+    ]
+  }
+}

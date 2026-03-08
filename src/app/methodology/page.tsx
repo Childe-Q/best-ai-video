@@ -33,13 +33,26 @@ export default function MethodologyPage() {
           </ul>
         </section>
 
-        <section className="mt-6 rounded-xl border border-gray-200 bg-white p-6">
+        <section id="scoring" className="mt-6 rounded-xl border border-gray-200 bg-white p-6">
           <h2 className="text-xl font-bold text-gray-900">Scoring Dimensions</h2>
           <p className="mt-3 text-sm text-gray-700">
-            Default weighted model used across VS pages: pricingValue (25%), ease (20%), speed (20%), output (20%), customization (15%).
+            VS pages use an <strong>internal score</strong> (our in-house model), not a third-party authority rating.
+            Default weights: pricingValue (25%), ease (20%), speed (20%), output (20%), customization (15%).
           </p>
           <p className="mt-2 text-sm text-gray-700">
-            Each VS page can include a method note describing how those dimensions were applied to the specific pair.
+            External ratings (when shown elsewhere) are treated as separate third-party signals and are not the same as this internal score.
+          </p>
+          <p className="mt-2 text-sm text-gray-700">
+            Each metric is tagged as <strong>verified</strong> (linked to primary sources) or <strong>estimated</strong> (derived from structured product data when row-level links are still limited). Mixed pages contain both.
+          </p>
+          <p className="mt-2 text-sm text-gray-700">
+            Every score block includes a method note plus per-metric rationale so readers can see why the score moved and what evidence backs it.
+          </p>
+          <p className="mt-2 text-sm text-gray-700">
+            Winner cards are derived from internal score metrics: Price uses pricingValue, Speed uses speed, Quality uses output, and overall recommendation uses weighted total score. If the weighted gap is under 0.2, we mark it as a close call.
+          </p>
+          <p className="mt-2 text-sm text-gray-700">
+            For featured tools, we apply a small internal-score calibration to keep recommendations consistent across the site.
           </p>
         </section>
 

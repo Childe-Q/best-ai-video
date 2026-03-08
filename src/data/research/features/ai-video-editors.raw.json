@@ -1,0 +1,209 @@
+{
+  "pageTopic": "ai-video-editors",
+  "generatedAt": "2026-03-07T22:58:00Z",
+  "featurePageUrl": "/features/ai-video-editors",
+  "topicDefinition": {
+    "oneLiner": "Professional video editing made easy with AI. Auto-subtitles, background removal, and smart editing features.",
+    "boundaries": [
+      "Must have timeline or transcript-based editing capabilities.",
+      "Must use AI to automate tedious editing tasks (e.g., filler word removal, auto-captions, scene detection).",
+      "Excludes purely generative tools that only output raw footage without built-in editing."
+    ]
+  },
+  "howToChoose": [
+    {
+      "title": "Evaluate the Editing Interface",
+      "desc": "Do you prefer text-based editing (like Descript), traditional timeline editing (like Premiere Pro), or mobile-first template editing (like CapCut)?"
+    },
+    {
+      "title": "Check Long-Form vs. Short-Form Capabilities",
+      "desc": "Tools like Opus Clip specialize in repurposing long videos into shorts, while others like DaVinci Resolve are meant for full-length timeline mastery."
+    },
+    {
+      "title": "Assess Credit Limits vs. Media Hours",
+      "desc": "Understand how the tool prices your usage—some charge by the hour of footage uploaded, while others charge by AI processing credits."
+    }
+  ],
+  "sources": [
+    {
+      "sourceUrl": "https://buffer.com/resources/ai-video-tools/",
+      "fetchedAt": "2026-03-07T22:46:00Z",
+      "title": "The 11 Best AI Video Editors in 2025, Tried and Tested",
+      "excerpt": "A deep dive into the best AI video editors, categorizing them by professional use, quick edits, and content repurposing.",
+      "publishedAt": "2025-10-01T00:00:00Z",
+      "sections": [
+        {
+          "heading": "Top Picks by Use Case",
+          "type": "tool_list",
+          "content": "For Professionals: Adobe Premiere Pro leads with AI features like scene edit detection. For Text-Based Editing: Descript excels at editing video through transcripts. For Content Repurposing: Opus Clip turns long videos into short, shareable clips."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Adobe Premiere Pro",
+          "toolSlugGuess": "adobe-premiere-pro",
+          "bestFor": "Professional timeline editors",
+          "keyClaims": [
+            "Leads with AI features like scene edit detection, speech-to-text, auto reframe, and object removal"
+          ],
+          "pricingClaims": [
+            "Costs $22.99+/month"
+          ],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [
+            "Steep learning curve"
+          ],
+          "proofSnippets": [
+            "Adobe Premiere Pro leads with AI features like scene edit detection, speech-to-text, auto reframe, and object removal, though it has a steep learning curve and costs $22.99+/month."
+          ],
+          "confidence": 0.95
+        }
+      ],
+      "confidence": 0.9,
+      "notes": [
+        "A highly reputable social media tool blog offering practical marketing tool recommendations."
+      ]
+    },
+    {
+      "sourceUrl": "https://www.aihustleguy.com/blog/descript-vs-capcut-vs-opus-clip-ai-video-editor",
+      "fetchedAt": "2026-03-07T22:48:00Z",
+      "title": "Opus Clip vs CapCut vs Descript: Best AI for Viral Videos",
+      "excerpt": "Comparing the top three AI video editors for short-form creators and podcasters.",
+      "publishedAt": "2026-01-10T00:00:00Z",
+      "sections": [
+        {
+          "heading": "Best For Each Tool",
+          "type": "how_to_choose",
+          "content": "OpusClip is best for turning long videos into multiple short clips at scale, with 90%+ AI accuracy. CapCut is the most flexible all-in-one editor, best for short-form creators who want templates, effects, and fast turnaround with strong mobile editing capabilities."
+        },
+        {
+          "heading": "Pricing",
+          "type": "pricing",
+          "content": "Descript pricing: Free (60 minutes/month), Hobbyist ($16/month), Creator ($24/month). OpusClip: Free tier with 300 credits; paid plans start around $15/month."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "CapCut",
+          "toolSlugGuess": "capcut",
+          "bestFor": "Short-form creators seeking templates and effects",
+          "keyClaims": [
+            "Most flexible all-in-one editor",
+            "Strong mobile and desktop editing capabilities",
+            "Provides ready-made templates and effects"
+          ],
+          "pricingClaims": [
+            "Offers strong free value with mobile and desktop options",
+            "Paid plans start at $7.99/month (Pro tier is $15/month annually)"
+          ],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [],
+          "proofSnippets": [
+            "CapCut is the most flexible all-in-one editor, best for short-form creators who want templates, effects, and fast turnaround with strong mobile editing capabilities."
+          ],
+          "confidence": 0.95
+        }
+      ],
+      "confidence": 0.95,
+      "notes": [
+        "Provides excellent specific pricing and feature breakdown for the top modern AI editors."
+      ]
+    },
+    {
+      "sourceUrl": "https://help.opus.pro/docs/article/plans-and-credits",
+      "fetchedAt": "2026-03-07T22:56:00Z",
+      "title": "Opus Clip Official Documentation",
+      "excerpt": "Official pricing, limits, and refund policy for Opus Clip.",
+      "publishedAt": null,
+      "sections": [
+        {
+          "heading": "Pricing Plans",
+          "type": "pricing",
+          "content": "Free: $0/month with 60 processing minutes. Starter: $15/month with 150 processing minutes. Pro: $29/month with 300 processing minutes."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Opus Clip",
+          "toolSlugGuess": "opus-clip",
+          "bestFor": "Scaling long-form into short clips",
+          "keyClaims": [
+            "Automatically detects highlights and formats them for multiple platforms"
+          ],
+          "pricingClaims": [
+            "Free: 60 minutes/month",
+            "Starter: $15/month",
+            "Pro: $29/month"
+          ],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [
+            "Pro users can refund individual projects within 14 days of upload if no clips have been downloaded yet to restore credits."
+          ],
+          "limitations": [
+            "Free tier limited to 60 processing minutes per month",
+            "Pro plan limited to 300 minutes/month"
+          ],
+          "proofSnippets": [
+            "Pro users can refund individual projects within 14 days of upload if no clips have been downloaded yet."
+          ],
+          "confidence": 0.99
+        }
+      ],
+      "confidence": 0.99,
+      "notes": [
+        "Official documentation provides highest confidence for limits and refunds."
+      ]
+    },
+    {
+      "sourceUrl": "https://descript.com/pricing",
+      "fetchedAt": "2026-03-07T22:55:00Z",
+      "title": "Descript Official Pricing and Limits",
+      "excerpt": "Official details on Descript plans, credits, and media limits.",
+      "publishedAt": null,
+      "sections": [
+        {
+          "heading": "Pricing Plans",
+          "type": "pricing",
+          "content": "Hobbyist: $16/month (10 media hours, 400 AI credits). Creator: $24/month (30 media hours, 800 AI credits). Business: $50/month (40 media hours, 1500 AI credits)."
+        }
+      ],
+      "toolMentions": [
+        {
+          "toolName": "Descript",
+          "toolSlugGuess": "descript",
+          "bestFor": "Talking-head and podcast workflows",
+          "keyClaims": [
+            "Edit video by editing text",
+            "Studio Sound, AI Voice cloning"
+          ],
+          "pricingClaims": [
+            "Free: $0",
+            "Hobbyist: $16/month",
+            "Creator: $24/month",
+            "Business: $50/month"
+          ],
+          "watermarkRules": [],
+          "exportRules": [],
+          "refundRules": [],
+          "limitations": [
+            "Monthly allocations of media minutes and AI credits do not roll over month-to-month",
+            "Free plan limited to 60 minutes/month"
+          ],
+          "proofSnippets": [
+            "Plans include monthly allocations of media minutes and AI credits that don't roll over month-to-month."
+          ],
+          "confidence": 0.99
+        }
+      ],
+      "confidence": 0.99,
+      "notes": [
+        "Official pricing page ensures accurate constraints."
+      ]
+    }
+  ]
+}
