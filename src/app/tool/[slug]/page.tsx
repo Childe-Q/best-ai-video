@@ -14,6 +14,7 @@ import EditorialSummary from '@/components/tool/EditorialSummary';
 // EvidenceNotes hidden for now, but data preserved for future "Methodology & sources" feature
 // import EvidenceNotes from '@/components/tool/EvidenceNotes';
 import EvidenceNuggets from '@/components/tool/EvidenceNuggets';
+import { ToolContent } from '@/types/toolContent';
 
 const editorialSummaries: Record<
   string,
@@ -45,6 +46,14 @@ const editorialSummaries: Record<
       'Cost control is the weak point. Credits expire, free output is constrained, and the value drops quickly if you are not shipping avatar-led videos often enough to justify the subscription rhythm.',
   },
 };
+
+function hasProsConsContent(content: unknown): content is Pick<ToolContent, 'pros' | 'cons'> {
+  if (!content || typeof content !== 'object') {
+    return false;
+  }
+
+  return 'pros' in content || 'cons' in content;
+}
 
 export async function generateStaticParams() {
   const { getAllTools } = await import('@/lib/getTool');
@@ -90,6 +99,7 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
   const relatedComparisons = getRelatedComparisons(slug);
   const alternativesLink = getAlternativesLink(slug);
   const editorialSummary = editorialSummaries[slug];
+  const contentProsCons = hasProsConsContent(content) ? content : undefined;
 
   return (
     <>
@@ -193,8 +203,8 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
 
           {/* Pros & Cons */}
           <ProsCons
-            pros={content?.pros ?? tool.pros ?? []}
-            cons={content?.cons ?? tool.cons ?? []}
+            pros={contentProsCons?.pros ?? tool.pros ?? []}
+            cons={contentProsCons?.cons ?? tool.cons ?? []}
           />
 
           {/* Evidence Nuggets - Verified facts from official pages */}
