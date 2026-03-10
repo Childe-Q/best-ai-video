@@ -10,9 +10,13 @@ const NORMALIZED_FEATURES_DATA_DIR = path.join(FEATURES_DATA_DIR, 'normalized');
 const SAFE_SLUG_PATTERN = /^[a-z0-9-]+$/;
 const NORMALIZED_VALIDATION_SLUGS = new Set([
   'enterprise-ai-video-solutions',
+  'best-ai-video-generators',
   'ai-avatar-video-generators',
   'ai-video-editors',
+  'fast-ai-video-generators',
   'ai-video-for-social-media',
+  'ai-video-for-marketing',
+  'ai-video-for-youtube',
   'ai-video-generators-comparison',
   'viral-ai-video-generators',
   'text-to-video-ai-tools',

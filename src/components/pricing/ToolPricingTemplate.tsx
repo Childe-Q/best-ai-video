@@ -8,10 +8,10 @@ import BillingToggle from './BillingToggle';
 import PricingCardsGrid from '@/components/PricingCardsGrid';
 import PlansComparedTable from './PlansComparedTable';
 import VerdictSection from './VerdictSection';
+import PricingFitGuide from './PricingFitGuide';
 import DisclosureSection from '@/components/DisclosureSection';
 import DisclosurePopover from '@/components/DisclosurePopover';
 import CommonPaidFeatures from './CommonPaidFeatures';
-import { getStartingPrice } from '@/lib/utils';
 import { generatePricingSnapshot } from '@/lib/generatePricingSnapshot';
 import { filterPaidPlans, isFreePlan } from '@/lib/pricing/filterPaidPlans';
 import { deriveRecommendations } from '@/lib/pricing/deriveRecommendations';
@@ -44,6 +44,11 @@ interface ToolPricingTemplateProps {
     title: string;
     text: string;
   };
+  editorialGuide?: {
+    planFit: string;
+    upgradeTrigger: string;
+    whoOverpays: string;
+  };
   
   // Tool data for content derivation
   toolData?: {
@@ -71,6 +76,19 @@ interface ToolPricingTemplateProps {
   startingPrice: string;
 }
 
+function getNumericPlanPrice(planPrice: PricingPlan['price'], billing: 'monthly' | 'yearly'): number | null {
+  if (!planPrice || typeof planPrice !== 'object' || !('monthly' in planPrice)) {
+    return null;
+  }
+
+  const candidate = billing === 'yearly' && 'yearly' in planPrice ? planPrice.yearly : planPrice.monthly;
+  if (!candidate || typeof candidate !== 'object' || !('amount' in candidate)) {
+    return null;
+  }
+
+  return typeof candidate.amount === 'number' ? candidate.amount : null;
+}
+
 export default function ToolPricingTemplate({
   toolName,
   toolSlug,
@@ -80,6 +98,7 @@ export default function ToolPricingTemplate({
   creditUsage,
   planPicker,
   verdict,
+  editorialGuide,
   toolData,
   usageNotes,
   verdictText: serverVerdictText,
@@ -111,8 +130,8 @@ export default function ToolPricingTemplate({
     
     pricingPlans.forEach(plan => {
       if (plan.price && typeof plan.price === 'object' && 'monthly' in plan.price && 'yearly' in plan.price) {
-        const monthly = (plan.price.monthly as any)?.amount;
-        const yearly = (plan.price.yearly as any)?.amount;
+        const monthly = getNumericPlanPrice(plan.price, 'monthly');
+        const yearly = getNumericPlanPrice(plan.price, 'yearly');
         if (monthly && yearly && monthly > 0) {
           const discount = Math.round(((monthly - yearly) / monthly) * 100);
           totalDiscount += discount;
@@ -374,11 +393,11 @@ export default function ToolPricingTemplate({
     if (!plan.price || typeof plan.price !== 'object') return null;
     
     if ('monthly' in plan.price && typeof plan.price.monthly === 'object' && 'amount' in plan.price.monthly) {
-      const amount = (plan.price.monthly as any).amount;
+      const amount = getNumericPlanPrice(plan.price, 'monthly');
       if (amount === 0) return 'Free';
       
       if (currentBilling === 'yearly' && 'yearly' in plan.price && typeof plan.price.yearly === 'object') {
-        const yearlyAmount = (plan.price.yearly as any).amount;
+        const yearlyAmount = getNumericPlanPrice(plan.price, 'yearly');
         if (yearlyAmount !== undefined && yearlyAmount !== null) {
           return `$${yearlyAmount}/mo (billed yearly)`;
         }
@@ -663,6 +682,8 @@ export default function ToolPricingTemplate({
             toolName={toolName}
           />
 
+          {editorialGuide ? <PricingFitGuide {...editorialGuide} /> : null}
+
           {/* 3. Billing Toggle */}
           {hasYearlyPricing && (
             <BillingToggle 
@@ -682,7 +703,7 @@ export default function ToolPricingTemplate({
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
                       {paidPlansForGrid.map((plan, index) => {
                         // Determine if plan is popular (matching PricingCardsGrid logic)
-                        const badgeText = (plan as any).ribbonText || plan.badge || '';
+                        const badgeText = plan.ribbonText || plan.badge || '';
                         const isPopular = badgeText.toLowerCase().includes('popular') || 
                                          badgeText.toLowerCase().includes('best value') || 
                                          plan.isPopular ||

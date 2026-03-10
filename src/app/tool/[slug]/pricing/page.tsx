@@ -9,19 +9,44 @@ import { generateVerdictText } from '@/lib/pricing/generateVerdictText';
 import * as fs from 'fs';
 import * as path from 'path';
 
+const pricingEditorialGuides: Record<
+  string,
+  {
+    planFit: string;
+    upgradeTrigger: string;
+    whoOverpays: string;
+  }
+> = {
+  heygen: {
+    planFit:
+      'Free is only for validating avatar quality and export workflow. Creator is the real solo-operator tier if you publish client-facing videos regularly. Team only makes sense once more than one person needs seats, review flow, or 4K export in the same workflow.',
+    upgradeTrigger:
+      'Move up when the bottleneck becomes delivery, not experimentation: you need longer videos, cleaner exports, shared review loops, or translation edits across multiple stakeholders. If you are still testing scripts and avatars, upgrading early just buys unused capacity.',
+    whoOverpays:
+      'Occasional marketers and founders who want HeyGen "just in case" are the easiest customers to overpay. Credit expiry and seat minimums punish uneven usage, so the wrong buyer funds dormant capacity instead of steady production.',
+  },
+};
+
 // Helper function to get official pricing URL from sources
 function getOfficialPricingUrl(slug: string): string | null {
   try {
     const projectRoot = process.cwd();
     const sourcesPath = path.join(projectRoot, 'src', 'data', 'sources', 'tools.sources.json');
     if (fs.existsSync(sourcesPath)) {
-      const sourcesData = JSON.parse(fs.readFileSync(sourcesPath, 'utf-8'));
-      const toolSource = sourcesData.find((s: any) => s.slug === slug);
+      const sourcesData = JSON.parse(fs.readFileSync(sourcesPath, 'utf-8')) as Array<{
+        slug: string;
+        official_urls?: {
+          pricing?: {
+            url?: string;
+          };
+        };
+      }>;
+      const toolSource = sourcesData.find((s) => s.slug === slug);
       if (toolSource?.official_urls?.pricing?.url) {
         return toolSource.official_urls.pricing.url;
       }
     }
-  } catch (error) {
+  } catch {
     // Silently fail
   }
   return null;
@@ -60,7 +85,6 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
 
   if (!tool) notFound();
 
-  const seoYear = getSEOCurrentYear();
   const pricingPlans = tool.pricing_plans || [];
 
   // Get comparison_table: first from tool, then fallback to pricing JSON file
@@ -79,15 +103,15 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
           comparisonTable = pricingData.comparison_table;
         }
       }
-    } catch (error) {
+    } catch {
       // Silently fail if pricing JSON doesn't exist or is invalid
-      // console.warn(`[PricingPage] Could not load comparison_table from pricing JSON for ${slug}:`, error);
     }
   }
 
   // Get official pricing URL and last updated date
   const officialPricingUrl = getOfficialPricingUrl(slug);
   const lastUpdated = getLastUpdatedDate();
+  const editorialGuide = pricingEditorialGuides[slug];
 
   // Generate pricing snapshot (for snapshot text used in usage notes)
   const snapshotData = generatePricingSnapshot(pricingPlans);
@@ -135,6 +159,7 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
       creditUsage={tool.content?.pricing?.creditUsage}
       planPicker={tool.content?.pricing?.planPicker}
       verdict={tool.content?.pricing?.verdict}
+      editorialGuide={editorialGuide}
       toolData={{
         key_facts: tool.key_facts,
         highlights: tool.highlights,

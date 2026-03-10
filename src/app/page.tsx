@@ -55,6 +55,50 @@ const featuredUseCases = [
     desc: 'Compare higher-control platforms for business and production teams.',
   },
 ];
+const startPaths = [
+  {
+    title: 'Start with a use case',
+    description: 'Use this path when you know the job to be done but not the tool yet.',
+    href: '/features',
+    cta: 'Open the feature hub',
+    bullets: [
+      'Best for narrowing the field before you compare pricing.',
+      'Strongest entry point for avatar, social, repurposing, and enterprise workflows.',
+    ],
+    links: [
+      { href: '/features/ai-avatar-video-generators', label: 'Avatar tools' },
+      { href: '/features/content-repurposing-ai-tools', label: 'Repurposing tools' },
+    ],
+  },
+  {
+    title: 'Start with a tool review',
+    description: 'Use this path when one product is already on your shortlist and you need a grounded read on fit and trade-offs.',
+    href: '/#tools-section',
+    cta: 'Browse tool reviews',
+    bullets: [
+      'Review best-for, limitations, and related alternatives before paying.',
+      'Best for buyers already comparing one or two known tools.',
+    ],
+    links: [
+      { href: '/tool/invideo', label: 'InVideo review' },
+      { href: '/tool/heygen', label: 'HeyGen review' },
+    ],
+  },
+  {
+    title: 'Start with a head-to-head comparison',
+    description: 'Use this path when the shortlist is already clear and the decision is between two formats or two pricing models.',
+    href: '/vs',
+    cta: 'See VS pages',
+    bullets: [
+      'Best for deciding between stock-first, text-first, and avatar-first workflows.',
+      'Fastest route when stakeholders keep asking "which one should we actually buy?"',
+    ],
+    links: [
+      { href: canonicalizeVsHref('/vs/heygen-vs-synthesia'), label: 'HeyGen vs Synthesia' },
+      { href: canonicalizeVsHref('/vs/invideo-vs-heygen'), label: 'InVideo vs HeyGen' },
+    ],
+  },
+];
 const topPicks = [
   { tool: 'InVideo', vs: 'vs HeyGen', href: '/tool/invideo', vsHref: canonicalizeVsHref('/vs/invideo-vs-heygen'), desc: 'Best for YouTube automation' },
   { tool: 'HeyGen', vs: 'vs Synthesia', href: '/tool/heygen', vsHref: canonicalizeVsHref('/vs/heygen-vs-synthesia'), desc: 'Top AI avatar platform' },
@@ -106,7 +150,7 @@ export default function Home() {
           
           {/* Description */}
           <p className="text-xl font-medium text-gray-600 max-w-2xl mx-auto mt-6 leading-relaxed">
-            Stop guessing. Compare the top {toolCount}+ tools for YouTube, Text-to-Video, and Avatars. Filter by Free Plan, No Watermark, and 4K Export.
+            Stop guessing. Start from the path that matches your decision: use case, tool review, or direct comparison. Then narrow down the top {toolCount}+ tools for YouTube, text-to-video, avatars, and business workflows.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
@@ -127,6 +171,51 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <section className="mb-16 rounded-xl border-2 border-black bg-white p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+          <div className="max-w-3xl">
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-gray-500">Start here</p>
+            <h2 className="mt-3 text-2xl md:text-4xl font-black text-gray-900 uppercase">
+              Pick the route that matches your buying stage
+            </h2>
+            <p className="mt-3 text-base font-medium leading-7 text-gray-600">
+              This site works in three distinct ways. If you are still framing the problem, begin in the feature hub. If one product is already under review, go to the tool page. If the shortlist is down to two names, jump straight into the VS pages.
+            </p>
+          </div>
+          <div className="mt-8 grid gap-5 xl:grid-cols-3">
+            {startPaths.map((path) => (
+              <article key={path.title} className="rounded-xl border-2 border-black bg-[#FAF7F0] p-5">
+                <h3 className="text-xl font-black text-gray-900">{path.title}</h3>
+                <p className="mt-3 text-sm font-medium leading-7 text-gray-600">{path.description}</p>
+                <ul className="mt-4 space-y-2 text-sm font-medium text-gray-700">
+                  {path.bullets.map((bullet) => (
+                    <li key={bullet} className="flex gap-2">
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-black" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {path.links.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="inline-flex items-center rounded-full border-2 border-black bg-white px-3 py-1.5 text-xs font-bold text-black no-underline hover:bg-[#F6D200]"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+                <Link
+                  href={path.href}
+                  className="mt-5 inline-flex items-center border-b-2 border-black text-sm font-black text-black no-underline hover:bg-[#B8F500] px-1"
+                >
+                  {path.cta} →
+                </Link>
+              </article>
+            ))}
+          </div>
+        </section>
+
         {/* VS Comparison Section */}
         <section className="mb-16 bg-[#FAF7F0] rounded-xl p-8 border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
           <h2 className="text-2xl md:text-4xl font-black text-gray-900 mb-6 text-center uppercase">

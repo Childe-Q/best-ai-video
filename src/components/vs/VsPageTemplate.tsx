@@ -3,6 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import CTAButton from '@/components/CTAButton';
 import ToolLogo from '@/components/ToolLogo';
 import DecisionPanel from '@/components/vs/DecisionPanel';
+import EditorialDecisionGuide from '@/components/vs/EditorialDecisionGuide';
 import PromptBox from '@/components/vs/PromptBox';
 import SourceTooltip from './SourceTooltip';
 import VsDecisionTable from '@/components/vs/VsDecisionTable';
@@ -53,16 +54,52 @@ const GENERIC_BEST_FOR = ['quick drafts', 'simple edits', 'solo creators'];
 const GENERIC_NOT_FOR = ['highly regulated enterprise workflows', 'frame-level editing control needs', 'complex multi-step production pipelines'];
 const EMOJI_REGEX = /[\p{Extended_Pictographic}\uFE0F\u200D]/gu;
 
-type SuggestionSignals = {
-  angle: string;
-  scenario: string;
-  audience: string;
-  job: string;
-  outcome: string;
-  constraint: string;
-  useCase: string;
-  antiCase: string;
-  tradeoff: string;
+const editorialDecisionGuides: Record<
+  string,
+  {
+    realDecision: string;
+    chooseAIf: string;
+    chooseBIf: string;
+    hiddenTradeoff: string;
+    wrongChoiceRegret: string;
+  }
+> = {
+  'heygen-vs-invideo': {
+    realDecision:
+      'This is a workflow choice, not a generic winner-takes-all comparison. InVideo is built for volume drafts assembled from prompts, stock footage, captions, and voiceover. HeyGen is built for message delivery through a repeatable on-screen presenter.',
+    chooseAIf:
+      'Choose HeyGen if the viewer needs to see a consistent spokesperson: outbound sales, product education, onboarding, or multilingual updates where presenter continuity matters more than raw content volume.',
+    chooseBIf:
+      'Choose InVideo if the brief is social output at scale: shorts, faceless explainers, ad variations, or blog-to-video production where speed and media assembly matter more than avatar realism.',
+    hiddenTradeoff:
+      'HeyGen produces stronger presenter-led output, but you are paying for a narrower format. InVideo covers more content types, but revision-heavy teams can lose efficiency once credits and draft cleanup start piling up.',
+    wrongChoiceRegret:
+      'Teams regret HeyGen when they only needed captioned stock-video production and end up with higher recurring cost than the workflow requires. They regret InVideo when customer-facing videos later need a believable presenter and stock-first output starts to feel generic.',
+  },
+  'heygen-vs-synthesia': {
+    realDecision:
+      'The real split here is agility versus operational stability. HeyGen is usually the more flexible choice for growth, marketing, and fast localization loops. Synthesia is the stronger fit when avatar video is part of a governed training or enterprise communication system.',
+    chooseAIf:
+      'Choose HeyGen if you want faster iteration across campaigns, more experimentation in avatar-led content, and a workflow owned by revenue or content teams rather than centralized learning ops.',
+    chooseBIf:
+      'Choose Synthesia if you care more about predictable enterprise rollout: structured training libraries, formal approvals, compliance posture, and a platform that feels designed for scaled business use.',
+    hiddenTradeoff:
+      'HeyGen can feel more modern and flexible, but cost control becomes important because usage patterns and credits matter. Synthesia is steadier for structured deployment, yet some teams will find it less accommodating when they want social-style experimentation.',
+    wrongChoiceRegret:
+      'Lean teams regret choosing Synthesia when every small request starts to feel heavier than the content itself. Enterprise teams regret choosing HeyGen when governance, procurement, and repeatable training operations become more important than creative speed.',
+  },
+  'fliki-vs-heygen': {
+    realDecision:
+      'This page is really deciding whether your video starts from text or from a presenter. Fliki is a text-first conversion workflow for turning scripts, blogs, and voice-led explainers into video. HeyGen is for when the face on screen changes the message.',
+    chooseAIf:
+      'Choose Fliki if the source material already exists as text or audio and the priority is getting narrated videos out quickly without paying for an avatar workflow you do not actually need.',
+    chooseBIf:
+      'Choose HeyGen if the message lands better with a speaker on screen, especially for sales outreach, training, onboarding, or customer communication where presentation style is part of the value.',
+    hiddenTradeoff:
+      'Fliki is faster and usually cheaper for conversion-style workflows, but the output can feel more like narrated media than a presentation. HeyGen improves presenter-led delivery, but you pay for that format even when a strong voiceover would have been enough.',
+    wrongChoiceRegret:
+      'Content teams regret HeyGen when the avatar step slows a workflow that should have remained text-first. Sales and training teams regret Fliki when the final video still lacks the credibility and human presence they expected from the project.',
+  },
 };
 
 function toTitleCase(value: string): string {
@@ -186,70 +223,6 @@ function stableHash(input: string): number {
     hash = Math.imul(hash, 16777619);
   }
   return hash >>> 0;
-}
-
-const CARD_TEMPLATES: Array<(signals: SuggestionSignals) => string> = [
-  (signals) => `Best if you need ${signals.angle}.`,
-  (signals) => `Pick this when ${signals.scenario} matters most.`,
-  (signals) => `Designed for ${signals.audience} who want ${signals.job}.`,
-  (signals) => `Fastest path to ${signals.outcome}, especially when ${signals.constraint}.`,
-  (signals) => `Works best for ${signals.useCase}; less ideal for ${signals.antiCase}.`,
-  (signals) => `Strong choice when you care about ${signals.tradeoff}.`,
-];
-
-function inferSuggestionSignals(
-  comparison: VsComparison,
-  side: VsSide,
-  tool: ToolMeta,
-): SuggestionSignals {
-  const bestForValues = comparison.bestFor[side] ?? [];
-  const notForValues = comparison.notFor[side] ?? [];
-  const primaryBestFor = cleanFragment(bestForValues[0]);
-  const primaryNotFor = cleanFragment(notForValues[0]);
-
-  const toolData = tool.data;
-  const audience =
-    cleanFragment(toolData?.target_audience_list?.[0]) ||
-    cleanFragment(toolData?.best_for) ||
-    cleanFragment(toolData?.categories?.[0] ? `${toolData?.categories?.[0]} teams` : '') ||
-    'solo creators';
-
-  const useCase =
-    cleanFragment(toolData?.content?.overview?.useCases?.[0]?.title) ||
-    cleanFragment(toolData?.tags?.[0]) ||
-    primaryBestFor ||
-    'quick drafts';
-
-  const primaryOutcome = primaryBestFor || cleanFragment(toolData?.best_for) || 'publish-ready videos quickly';
-  const constraint =
-    primaryNotFor ||
-    cleanFragment(toolData?.cons?.[0]) ||
-    'you need fast turnaround with lighter manual setup';
-  const antiCase = primaryNotFor || 'deep frame-by-frame customization';
-  const tradeoff = `${primaryOutcome} over deep manual editing`;
-
-  return {
-    angle: primaryOutcome,
-    scenario: useCase,
-    audience,
-    job: primaryOutcome,
-    outcome: primaryOutcome,
-    constraint,
-    useCase,
-    antiCase,
-    tradeoff,
-  };
-}
-
-function buildSuggestionCardText(
-  comparison: VsComparison,
-  side: VsSide,
-  tool: ToolMeta,
-  slugSeed: string,
-): string {
-  const signals = inferSuggestionSignals(comparison, side, tool);
-  const templateIndex = stableHash(`${slugSeed}:${side}:${tool.slug}`) % CARD_TEMPLATES.length;
-  return sanitizeSentence(CARD_TEMPLATES[templateIndex](signals));
 }
 
 function buildPickCardCopy(tool: ToolMeta, bestForList: string[], positioning?: string): string {
@@ -692,6 +665,7 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
   const pricingChecked = formatIsoDate(comparison.pricingCheckedAt);
   const verificationDomains = sortSourceDomainsByRelevance(extractSourceDomainItems(comparison), toolA, toolB);
   const slugSeed = toCanonicalVsSlug(comparison.slugA, comparison.slugB);
+  const editorialDecisionGuide = editorialDecisionGuides[slugSeed];
   const keyDiffLead = getKeyDiffLead(comparison.intentProfile, toolA.name, toolB.name);
   const orderedKeyDiffs = orderKeyDiffsForIntent(comparison.keyDiffs, comparison.intentProfile);
   const cardTextA = sanitizeSentence(
@@ -893,6 +867,18 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
             </article>
           </div>
         </section>
+
+        {editorialDecisionGuide ? (
+          <EditorialDecisionGuide
+            toolAName={toolA.name}
+            toolBName={toolB.name}
+            realDecision={editorialDecisionGuide.realDecision}
+            chooseAIf={editorialDecisionGuide.chooseAIf}
+            chooseBIf={editorialDecisionGuide.chooseBIf}
+            hiddenTradeoff={editorialDecisionGuide.hiddenTradeoff}
+            wrongChoiceRegret={editorialDecisionGuide.wrongChoiceRegret}
+          />
+        ) : null}
 
         <section className="grid gap-4 md:grid-cols-3">
           {scenarioConclusions.map((scenario) => (

@@ -8,11 +8,43 @@ import TldrBlock from '@/components/tool/TldrBlock';
 import MiniTestBlock from '@/components/tool/MiniTestBlock';
 import UseCaseCards from '@/components/tool/UseCaseCards';
 import ProsCons from '@/components/tool/ProsCons';
+import EditorialSummary from '@/components/tool/EditorialSummary';
 // FeaturesList removed from Overview page (still available for /features route)
 // import FeaturesList from '@/components/tool/FeaturesList';
 // EvidenceNotes hidden for now, but data preserved for future "Methodology & sources" feature
 // import EvidenceNotes from '@/components/tool/EvidenceNotes';
 import EvidenceNuggets from '@/components/tool/EvidenceNuggets';
+
+const editorialSummaries: Record<
+  string,
+  {
+    bestFor: string;
+    notIdealFor: string;
+    whyChooseIt: string;
+    biggestLimitation: string;
+  }
+> = {
+  invideo: {
+    bestFor:
+      'Small marketing teams, faceless YouTube operators, and repurposing-heavy creators who want one prompt to produce script, stock footage, captions, and voiceover without opening a full editor.',
+    notIdealFor:
+      'Editors who constantly tweak scenes after generation or teams that need every shot to feel original. InVideo works best when the draft is close to final before you start regenerating.',
+    whyChooseIt:
+      'It removes the slowest part of low-cost video production: sourcing footage, assembling scenes, and captioning. If the job is volume output rather than handcrafted editing, that workflow compression matters more than raw polish.',
+    biggestLimitation:
+      'Iteration is expensive in practice. Credits and minutes can disappear during revisions, so the tool feels efficient when your prompt is disciplined and frustrating when your process is exploratory.',
+  },
+  heygen: {
+    bestFor:
+      'Sales, enablement, and localization teams that need a repeatable avatar spokesperson instead of a different stock-footage draft every time. It is strongest when the same message format gets reused across markets or campaigns.',
+    notIdealFor:
+      'Low-volume buyers who publish a few videos some months and none in others. The plan structure makes more sense for steady usage than for occasional experimentation.',
+    whyChooseIt:
+      'HeyGen solves a different problem from generic AI video tools: presenter consistency. When your audience expects a person on screen for outreach, onboarding, or multilingual updates, the avatar workflow is the reason to pay more.',
+    biggestLimitation:
+      'Cost control is the weak point. Credits expire, free output is constrained, and the value drops quickly if you are not shipping avatar-led videos often enough to justify the subscription rhythm.',
+  },
+};
 
 export async function generateStaticParams() {
   const { getAllTools } = await import('@/lib/getTool');
@@ -57,6 +89,7 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
   // Get related links
   const relatedComparisons = getRelatedComparisons(slug);
   const alternativesLink = getAlternativesLink(slug);
+  const editorialSummary = editorialSummaries[slug];
 
   return (
     <>
@@ -94,6 +127,8 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
               why={tool.pros && tool.pros.length > 0 ? tool.pros[0] : `Strong value proposition with ${tool.starting_price || 'competitive pricing'} and ${tool.features && tool.features.length > 0 ? tool.features[0] : 'key features'} that streamline video creation workflow`}
             />
           )}
+
+          {editorialSummary ? <EditorialSummary {...editorialSummary} /> : null}
 
           {/* Mini Test Section */}
           {content?.overview?.miniTest ? (
@@ -158,8 +193,8 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
 
           {/* Pros & Cons */}
           <ProsCons
-            pros={('pros' in (content || {})) ? (content as any).pros : (tool.pros || [])}
-            cons={('cons' in (content || {})) ? (content as any).cons : (tool.cons || [])}
+            pros={content?.pros ?? tool.pros ?? []}
+            cons={content?.cons ?? tool.cons ?? []}
           />
 
           {/* Evidence Nuggets - Verified facts from official pages */}
