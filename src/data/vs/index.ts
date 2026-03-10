@@ -190,6 +190,20 @@ export function getCanonicalVsSlug(slug: string): string | null {
   return toCanonicalVsSlug(parsed.slugA, parsed.slugB);
 }
 
+export function canonicalizeVsHref(href: string): string {
+  const match = href.match(/^\/vs\/([^?#]+)([?#].*)?$/);
+  if (!match) {
+    return href;
+  }
+
+  const canonicalSlug = getCanonicalVsSlug(match[1]);
+  if (!canonicalSlug) {
+    return href;
+  }
+
+  return `/vs/${canonicalSlug}${match[2] ?? ''}`;
+}
+
 function getCanonicalComparisonMap(): Map<string, VsComparison> {
   if (canonicalBySlugCache) return canonicalBySlugCache;
   canonicalBySlugCache = new Map<string, VsComparison>(

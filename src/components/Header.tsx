@@ -86,7 +86,8 @@ export default function Header() {
                 setFeaturesTimeoutId(timeoutId);
               }}
             >
-              <button
+              <Link
+                href="/features"
                 className="text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors flex items-center gap-1"
               >
                 Features
@@ -103,7 +104,7 @@ export default function Header() {
                     d="M19 9l-7 7-7-7"
                   />
                 </svg>
-              </button>
+              </Link>
 
               {/* Dropdown Panel */}
               {isFeaturesHovered && (
@@ -148,13 +149,13 @@ export default function Header() {
 
           {/* Right: CTA Button (Desktop) */}
           <div className="hidden md:flex items-center flex-shrink-0">
-            <a
+            <Link
               href="/#tools-section"
               onClick={handleAllToolsClick}
               className="px-6 py-2.5 text-sm font-bold text-black bg-[#F6D200] border-2 border-black rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_#111111]"
             >
               All Tools
-            </a>
+            </Link>
           </div>
 
           {/* Mobile: Hamburger Menu Button */}
@@ -216,7 +217,7 @@ export default function Header() {
               Compare
             </Link>
             
-            <a
+            <Link
               href="/#tools-section"
               onClick={(e) => {
                 handleAllToolsClick(e);
@@ -225,7 +226,7 @@ export default function Header() {
               className="block px-6 py-2.5 text-base font-bold text-black bg-[#F6D200] border-2 border-black rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_#111111] text-center mt-4"
             >
               All Tools
-            </a>
+            </Link>
           </div>
         </div>
       )}

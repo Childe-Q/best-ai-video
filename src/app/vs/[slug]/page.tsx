@@ -61,6 +61,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const resolved = await params;
   const load = getVsComparisonWithStatus(resolved.slug);
   const parsed = load.parsed ?? parseVsSlug(resolved.slug);
+  const canonicalSlug = getCanonicalVsSlug(resolved.slug) ?? resolved.slug;
 
   if (!parsed) {
     return {
@@ -78,12 +79,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {
       title: `${toolAName} vs ${toolBName} ${seoYear}: Comparison in Progress`,
       description: `This ${toolAName} vs ${toolBName} comparison is shown in template mode while we finalize the full verified dataset.`,
+      alternates: {
+        canonical: `/vs/${canonicalSlug}`,
+      },
     };
   }
 
   return {
     title: `${toolAName} vs ${toolBName} ${seoYear}: Detailed Comparison & Verdict`,
     description: `Side-by-side comparison of ${toolAName} vs ${toolBName}: pricing, workflow differences, source-backed matrix, and clear verdict.`,
+    alternates: {
+      canonical: `/vs/${canonicalSlug}`,
+    },
     openGraph: {
       title: `${toolAName} vs ${toolBName} ${seoYear} Comparison`,
       description: `${load.comparison?.shortAnswer.a ?? ''} ${load.comparison?.shortAnswer.b ?? ''}`.trim(),

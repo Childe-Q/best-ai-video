@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import FeatureHubPage from '@/components/features/FeatureHubPage';
+import { getCanonicalVsSlug } from '@/data/vs';
 import { getTool } from '@/lib/getTool';
 import { getFeaturePageSlugs, readFeaturePageData } from '@/lib/features/readFeaturePageData';
 import { FeaturePageData, FeatureRecommendedReadingLink } from '@/types/featurePage';
@@ -79,11 +80,12 @@ function buildRecommendedReadingLinks(pageData: FeaturePageData): FeatureRecomme
   }
 
   for (const vsSlug of pageData.recommendedReading.vsPages || []) {
+    const canonicalVsSlug = getCanonicalVsSlug(vsSlug) ?? vsSlug;
     links.push({
-      href: `/vs/${vsSlug}`,
-      label: titleizeSlug(vsSlug.replace(/-vs-/g, ' vs ')),
+      href: `/vs/${canonicalVsSlug}`,
+      label: titleizeSlug(canonicalVsSlug.replace(/-vs-/g, ' vs ')),
       linkType: 'vs',
-      destinationSlug: vsSlug,
+      destinationSlug: canonicalVsSlug,
     });
   }
 

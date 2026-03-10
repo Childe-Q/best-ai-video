@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { canonicalizeVsHref } from '@/data/vs';
 
 interface UseCase {
   title: string;
@@ -26,7 +27,7 @@ export default function UseCaseCards({ useCases }: UseCaseCardsProps) {
                 <strong className="font-semibold">{useCase.title}:</strong> {useCase.why}
               </p>
               <Link
-                href={useCase.linkHref}
+                href={canonicalizeVsHref(useCase.linkHref)}
                 className="text-base text-indigo-600 hover:text-indigo-700 mt-2 inline-block font-medium"
               >
                 {useCase.linkText || 'Learn more →'}

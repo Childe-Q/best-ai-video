@@ -7,7 +7,7 @@ import PromptBox from '@/components/vs/PromptBox';
 import SourceTooltip from './SourceTooltip';
 import VsDecisionTable from '@/components/vs/VsDecisionTable';
 import VsScoreChart from '@/components/vs/VsScoreChart';
-import { listVsSlugs, parseVsSlug, toCanonicalVsSlug, VsLoadResult } from '@/data/vs';
+import { canonicalizeVsHref, listVsSlugs, parseVsSlug, toCanonicalVsSlug, VsLoadResult } from '@/data/vs';
 import { getAllTools, getTool } from '@/lib/getTool';
 import { applyIntentProfileOverride, buildIntentProfile, getKeyDiffLead, getPreferredUseCaseLabels, orderKeyDiffsForIntent } from '@/lib/vsIntent';
 import { buildPromptVariants, inferUseCaseKey, UseCaseKey } from '@/lib/promptLibrary';
@@ -173,6 +173,10 @@ function cleanFragment(value: string | undefined): string {
     .replace(/\s+/g, ' ')
     .replace(/[.?!;:,]+$/g, '')
     .toLowerCase();
+}
+
+function dedupePaths(paths: string[]): string[] {
+  return Array.from(new Set(paths.filter(Boolean)));
 }
 
 function stableHash(input: string): number {
@@ -628,16 +632,24 @@ function ensureTemplateComparison(base: VsComparison | null, currentSlug: string
         `Use ${toolA.name} if you prioritize its strengths in this table, and choose ${toolB.name} when those workflow tradeoffs fit your team better.`,
     },
     related: {
-      toolPages: base?.related?.toolPages?.length
-        ? base.related.toolPages.slice(0, 2)
-        : [`/tool/${slugA}`, `/tool/${slugB}`],
-      alternatives: base?.related?.alternatives?.length
-        ? base.related.alternatives.slice(0, 2)
-        : [`/tool/${slugA}/alternatives`, `/tool/${slugB}/alternatives`],
+      toolPages: dedupePaths(
+        base?.related?.toolPages?.length
+          ? base.related.toolPages.slice(0, 2)
+          : [`/tool/${slugA}`, `/tool/${slugB}`],
+      ),
+      alternatives: dedupePaths(
+        base?.related?.alternatives?.length
+          ? base.related.alternatives.slice(0, 2)
+          : [`/tool/${slugA}/alternatives`, `/tool/${slugB}/alternatives`],
+      ),
       comparisons:
-        base?.related?.comparisons?.length && base.related.comparisons.length >= 4
-          ? base.related.comparisons.slice(0, 6)
-          : getFallbackComparisonLinks(sameSlug, slugA, slugB),
+        dedupePaths(
+          (
+            base?.related?.comparisons?.length && base.related.comparisons.length >= 4
+              ? base.related.comparisons.slice(0, 6)
+              : getFallbackComparisonLinks(sameSlug, slugA, slugB)
+          ).map((path) => canonicalizeVsHref(path)),
+        ),
     },
     disclosure:
       base?.disclosure ??
@@ -646,8 +658,10 @@ function ensureTemplateComparison(base: VsComparison | null, currentSlug: string
 }
 
 function labelForPath(path: string): string {
-  if (path.startsWith('/tool/')) {
-    const [, , slug, subPath] = path.split('/');
+  const normalizedPath = canonicalizeVsHref(path);
+
+  if (normalizedPath.startsWith('/tool/')) {
+    const [, , slug, subPath] = normalizedPath.split('/');
     const tool = getTool(slug);
     if (subPath === 'alternatives') {
       return `${tool?.name ?? toTitleCase(slug)} Alternatives`;
@@ -655,8 +669,8 @@ function labelForPath(path: string): string {
     return `${tool?.name ?? toTitleCase(slug)} Full Review`;
   }
 
-  if (path.startsWith('/vs/')) {
-    const slug = path.replace('/vs/', '');
+  if (normalizedPath.startsWith('/vs/')) {
+    const slug = normalizedPath.replace('/vs/', '');
     const parsed = parseVsSlug(slug);
     if (!parsed) return toTitleCase(slug);
     const toolA = getTool(parsed.slugA);
@@ -664,7 +678,7 @@ function labelForPath(path: string): string {
     return `${toolA?.name ?? toTitleCase(parsed.slugA)} vs ${toolB?.name ?? toTitleCase(parsed.slugB)}`;
   }
 
-  return path;
+  return normalizedPath;
 }
 
 export default function VsPageTemplate({ load, resolved, showDebug = false }: VsPageTemplateProps) {

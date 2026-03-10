@@ -1,4 +1,5 @@
 import { getAllTools } from '@/lib/getTool';
+import { toCanonicalVsSlug } from '@/data/vs';
 
 /**
  * Find related comparison pages (VS pages) for a tool
@@ -22,9 +23,15 @@ export function getRelatedComparisons(slug: string): Array<{ slug: string; title
 
   // Generate comparison links (VS pages are dynamic, so we can generate any slug)
   for (const tool of relatedTools.slice(0, 3)) {
+    const comparisonSlug = toCanonicalVsSlug(slug, tool.slug);
+    const title =
+      comparisonSlug === `${slug}-vs-${tool.slug}`
+        ? `${currentTool.name} vs ${tool.name}`
+        : `${tool.name} vs ${currentTool.name}`;
+
     comparisons.push({
-      slug: `${slug}-vs-${tool.slug}`,
-      title: `${currentTool.name} vs ${tool.name}`,
+      slug: comparisonSlug,
+      title,
     });
   }
 

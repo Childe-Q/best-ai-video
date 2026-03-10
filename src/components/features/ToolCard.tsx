@@ -1,8 +1,6 @@
 'use client';
 
-import type { KeyboardEvent, MouseEvent } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { track } from '@/lib/features/track';
 import { FeatureToolCardDisplay } from '@/types/featurePage';
 
@@ -46,7 +44,6 @@ function resolveToolCardCta(tool: FeatureToolCardDisplay): ToolCardCta {
 }
 
 export default function ToolCard({ tool, featureSlug, groupTitle, position }: ToolCardProps) {
-  const router = useRouter();
   const cta = resolveToolCardCta(tool);
 
   const trackToolCardClick = () => {
@@ -58,48 +55,9 @@ export default function ToolCard({ tool, featureSlug, groupTitle, position }: To
     });
   };
 
-  const handleCardClick = (event: MouseEvent<HTMLElement>) => {
-    const target = event.target as HTMLElement;
-    if (target.closest('a, button')) {
-      return;
-    }
-
-    if (cta.kind !== 'internal') {
-      return;
-    }
-
-    trackToolCardClick();
-    router.push(cta.href);
-  };
-
-  const handleCardKeyDown = (event: KeyboardEvent<HTMLElement>) => {
-    if (event.key !== 'Enter' && event.key !== ' ') {
-      return;
-    }
-
-    const target = event.target as HTMLElement;
-    if (target.closest('a, button')) {
-      return;
-    }
-
-    if (cta.kind !== 'internal') {
-      return;
-    }
-
-    event.preventDefault();
-    trackToolCardClick();
-    router.push(cta.href);
-  };
-
   return (
     <article
-      role={cta.kind === 'internal' ? 'link' : undefined}
-      tabIndex={cta.kind === 'internal' ? 0 : undefined}
-      onClick={cta.kind === 'internal' ? handleCardClick : undefined}
-      onKeyDown={cta.kind === 'internal' ? handleCardKeyDown : undefined}
-      className={`group flex h-full flex-col rounded-2xl border-2 border-black bg-white p-6 shadow-[6px_6px_0px_0px_#000] transition-all duration-200 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000] ${
-        cta.kind === 'internal' ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2' : ''
-      }`}
+      className="group flex h-full flex-col rounded-2xl border-2 border-black bg-white p-6 shadow-[6px_6px_0px_0px_#000] transition-all duration-200 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_0px_#000]"
     >
       <div className="mb-5 flex items-start gap-4">
         {hasDisplayValue(tool.resolvedLogoUrl) ? (
@@ -126,9 +84,37 @@ export default function ToolCard({ tool, featureSlug, groupTitle, position }: To
           </div>
         )}
         <div className="min-w-0 flex-1">
-          <h3 className="text-xl font-bold leading-tight text-gray-900 transition-colors group-hover:text-indigo-600">
-            {tool.displayName}
-          </h3>
+          {cta.kind === 'internal' ? (
+            <Link
+              href={cta.href}
+              onClick={trackToolCardClick}
+              className="inline-block text-xl font-bold leading-tight text-gray-900 transition-colors group-hover:text-indigo-600"
+            >
+              {tool.displayName}
+            </Link>
+          ) : cta.kind === 'external' ? (
+            <a
+              href={cta.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                track('click_outbound', {
+                  tool_slug: tool.toolSlug,
+                  destination_url: cta.href,
+                  position,
+                  group_title: groupTitle,
+                  feature_slug: featureSlug,
+                });
+              }}
+              className="inline-block text-xl font-bold leading-tight text-gray-900 transition-colors group-hover:text-indigo-600"
+            >
+              {tool.displayName}
+            </a>
+          ) : (
+            <h3 className="text-xl font-bold leading-tight text-gray-900 transition-colors group-hover:text-indigo-600">
+              {tool.displayName}
+            </h3>
+          )}
         </div>
       </div>
 
@@ -213,8 +199,7 @@ export default function ToolCard({ tool, featureSlug, groupTitle, position }: To
             href={tool.outboundUrl}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={(event) => {
-              event.stopPropagation();
+            onClick={() => {
               track('click_outbound', {
                 tool_slug: tool.toolSlug,
                 destination_url: tool.outboundUrl,
