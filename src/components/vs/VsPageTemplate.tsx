@@ -43,6 +43,8 @@ type ScenarioConfig = {
   keywords: string[];
   tieBreaker: VsSide;
   promptKey?: UseCaseKey | null;
+  authoredWinner?: VsSide;
+  authoredVerdict?: string;
 };
 
 type UseCaseCandidate = {
@@ -145,6 +147,14 @@ function sanitizeSentence(text: string): string {
   if (!cleaned) return '';
   const sentence = cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
   return /[.?!]$/.test(sentence) ? sentence : `${sentence}.`;
+}
+
+function stripLeadChoose(text: string, toolName: string): string {
+  return sanitizeTextForUi(text)
+    .replace(new RegExp(`^choose\\s+${toolName}\\s+(if|when)\\s+`, 'i'), '')
+    .replace(/^use\s+/i, '')
+    .replace(/^start with\s+/i, '')
+    .trim();
 }
 
 function countKeywordMatches(text: string, keywords: string[]): number {
@@ -292,6 +302,8 @@ function buildUseCases(
     ...((comparison.decisionCases ?? []).map((item) => ({
       label: sanitizeTextForUi(item.label),
       keywords: dedupe((item.keywords ?? []).map((keyword) => cleanFragment(keyword)).filter(Boolean)),
+      winner: item.winner,
+      verdict: item.verdict ? sanitizeTextForUi(item.verdict) : undefined,
     })) ?? []),
     ...((comparison.useCases ?? []).map((label) => ({
       label: sanitizeTextForUi(label),
@@ -304,6 +316,8 @@ function buildUseCases(
     return {
       label,
       keywords: found?.keywords?.length ? found.keywords : inferKeywordsFromLabel(label),
+      winner: found?.winner,
+      verdict: found?.verdict,
     };
   });
 
@@ -355,6 +369,8 @@ function buildUseCases(
     unique.push({
       label: sanitizeTextForUi(item.label),
       keywords: item.keywords.length > 0 ? item.keywords : inferKeywordsFromLabel(item.label),
+      ...(item.winner ? { winner: item.winner } : {}),
+      ...(item.verdict ? { verdict: item.verdict } : {}),
     });
     if (unique.length === 3) break;
   }
@@ -365,6 +381,8 @@ function buildUseCases(
     keywords: item.keywords,
     tieBreaker: tieBreakers[index % tieBreakers.length] ?? 'a',
     promptKey: inferUseCaseKey(item.label, item.keywords, `${toolSignals} ${matrixSignal}`),
+    authoredWinner: 'winner' in item ? item.winner : undefined,
+    authoredVerdict: 'verdict' in item ? item.verdict : undefined,
   }));
 }
 
@@ -691,7 +709,7 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
   const defaultPromptKey = scenarios[0]?.promptKey ?? promptVariants[0]?.key ?? null;
 
   const scenarioConclusions = scenarios.map((scenario) => {
-    const winner = pickWinnerForScenario(comparison, scenario);
+    const winner = scenario.authoredWinner ?? pickWinnerForScenario(comparison, scenario);
     const winnerName = winner === 'a' ? toolA.name : toolB.name;
     const reason = extractReason(comparison, winner, scenario.keywords);
 
@@ -699,7 +717,8 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
       ...scenario,
       winnerName,
       sentence: sanitizeTextForUi(
-        `${winnerName} is the stronger fit here because it is better aligned with ${reason.toLowerCase()}.`,
+        scenario.authoredVerdict ??
+          `${winnerName} is the stronger fit here because it is better aligned with ${reason.toLowerCase()}.`,
       ),
     };
   });
@@ -709,29 +728,31 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
     return winner === 'a' ? toolA.name : toolB.name;
   };
   const recommendationText =
-    scoreVerdict.overallWinner === 'close'
-      ? `Close call on weighted internal score (${formatInternalScore(scoreVerdict.weightedTotalA)} vs ${formatInternalScore(scoreVerdict.weightedTotalB)}). Choose ${toolA.name} when ${sanitizeTextForUi(
-          comparison.shortAnswer.a.toLowerCase(),
-        )}. Choose ${toolB.name} when ${sanitizeTextForUi(comparison.shortAnswer.b.toLowerCase())}.`
-      : `Our recommendation: ${
-          scoreVerdict.overallWinner === 'a' ? toolA.name : toolB.name
-        } based on weighted internal score (${formatInternalScore(scoreVerdict.weightedTotalA)} vs ${formatInternalScore(
-          scoreVerdict.weightedTotalB,
-        )}).`;
+    comparison.verdict?.recommendation?.trim()
+      ? sanitizeTextForUi(comparison.verdict.recommendation)
+      : scoreVerdict.overallWinner === 'close'
+        ? `Close call on weighted internal score (${formatInternalScore(scoreVerdict.weightedTotalA)} vs ${formatInternalScore(scoreVerdict.weightedTotalB)}). Choose ${toolA.name} when ${sanitizeTextForUi(
+            comparison.shortAnswer.a.toLowerCase(),
+          )}. Choose ${toolB.name} when ${sanitizeTextForUi(comparison.shortAnswer.b.toLowerCase())}.`
+        : `Our recommendation: ${
+            scoreVerdict.overallWinner === 'a' ? toolA.name : toolB.name
+          } based on weighted internal score (${formatInternalScore(scoreVerdict.weightedTotalA)} vs ${formatInternalScore(
+            scoreVerdict.weightedTotalB,
+          )}).`;
   const fallbackFaqItems = [
     {
-      question: `Which is better for beginners: ${toolA.name} or ${toolB.name}?`,
-      answer: `${winnerLabel(
-        scoreVerdict.winnerSpeed,
-      )} is generally easier to start with when time-to-first-output is your priority, but check the decision table rows for templates and workflow fit.`,
+      question: `${toolA.name} vs ${toolB.name}: which should I choose first?`,
+      answer: `Choose ${toolA.name} if you need ${stripLeadChoose(comparison.shortAnswer.a, toolA.name)}. Choose ${toolB.name} if you need ${stripLeadChoose(comparison.shortAnswer.b, toolB.name)}.`,
     },
     {
-      question: `Which one gives better value for money?`,
-      answer: `${winnerLabel(priceWinner)} currently has the lower visible starting price in this comparison. Confirm current plan limits before purchasing.`,
+      question: `What is the main workflow difference?`,
+      answer: comparison.keyDiffs[0]
+        ? `${toolA.name}: ${sanitizeTextForUi(comparison.keyDiffs[0].a)} ${toolB.name}: ${sanitizeTextForUi(comparison.keyDiffs[0].b)}`
+        : `${toolA.name} and ${toolB.name} differ most in workflow, output style, and team fit.`,
     },
     {
-      question: `Can I use both tools in one workflow?`,
-      answer: `Yes. Many teams use one tool for ideation/batch output and another for avatar or presentation-focused delivery.`,
+      question: `Can a team use both tools in one workflow?`,
+      answer: `Yes. Many teams use one tool for volume drafts or stock-scene production and another for presenter-led delivery or higher-trust communication.`,
     },
   ];
   const faqItems =
@@ -752,15 +773,29 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
             <div className="text-3xl font-bold text-gray-400">VS</div>
             <ToolLogo logoUrl={toolB.logoUrl} toolName={toolB.name} size="xl" />
           </div>
-          <h1 className="text-center text-3xl font-extrabold text-gray-900 md:text-4xl">
-            {toolA.name} vs {toolB.name}: {seoYear} AI Video Generator Comparison Report
+          <h1 className="mx-auto max-w-4xl text-center text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
+            {comparison.decisionSummary ? `${toolA.name} vs ${toolB.name}: Which should you choose?` : `${toolA.name} vs ${toolB.name}: ${seoYear} AI Video Generator Comparison Report`}
           </h1>
+          {comparison.decisionSummary ? (
+            <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-7 text-gray-600">
+              {comparison.decisionSummary}
+            </p>
+          ) : null}
           <DecisionPanel scenarios={scenarios.map(({ id, label, promptKey }) => ({ id, label, promptKey }))} />
-          <div className="mx-auto mt-6 grid max-w-4xl gap-3 md:grid-cols-2">
-            <p className="rounded-lg border border-gray-200 bg-white p-4 text-sm text-gray-700">
+          <div className="mt-4 flex justify-center">
+            <Link
+              href="/features"
+              className="inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-4 py-2 text-sm font-semibold text-gray-700 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-indigo-300 hover:bg-white hover:text-indigo-600 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-2 active:translate-y-0"
+            >
+              Not sure this is the right pair? Browse by workflow first
+              <span className="ml-2">→</span>
+            </Link>
+          </div>
+          <div className="mx-auto mt-6 grid max-w-4xl gap-4 md:grid-cols-2">
+            <p className="rounded-xl border border-gray-200 bg-white p-4 text-sm leading-6 text-gray-700 shadow-sm shadow-gray-100/60">
               <strong>{toolA.name}:</strong> {cardTextA}
             </p>
-            <p className="rounded-lg border border-gray-200 bg-white p-4 text-sm text-gray-700">
+            <p className="rounded-xl border border-gray-200 bg-white p-4 text-sm leading-6 text-gray-700 shadow-sm shadow-gray-100/60">
               <strong>{toolB.name}:</strong> {cardTextB}
             </p>
           </div>
@@ -771,14 +806,101 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
       </header>
 
       <main className="mx-auto max-w-7xl space-y-10 px-4 py-10 sm:px-6 lg:px-8">
+        {comparison.editorialNotes &&
+        (comparison.editorialNotes.whyPeopleCompareTheseTools ||
+          comparison.editorialNotes.looksSimilarButActuallyDifferent ||
+          comparison.editorialNotes.editorsTake ||
+          comparison.editorialNotes.chooseAIf ||
+          comparison.editorialNotes.chooseBIf ||
+          comparison.editorialNotes.hiddenTradeOff ||
+          comparison.editorialNotes.whoWillRegretTheWrongChoice) ? (
+          <section className="rounded-xl border border-gray-200 bg-white p-6">
+            <div className="grid gap-4 lg:grid-cols-2">
+              {comparison.editorialNotes.whyPeopleCompareTheseTools ? (
+                <article className="rounded-xl border border-gray-200 bg-gray-50/70 p-4">
+                  <h2 className="text-lg font-semibold text-gray-900">Why people compare HeyGen and InVideo</h2>
+                  <p className="mt-3 text-sm leading-6 text-gray-700">
+                    {comparison.editorialNotes.whyPeopleCompareTheseTools}
+                  </p>
+                </article>
+              ) : null}
+              {comparison.editorialNotes.looksSimilarButActuallyDifferent ? (
+                <article className="rounded-xl border border-gray-200 bg-gray-50/70 p-4">
+                  <h2 className="text-lg font-semibold text-gray-900">They look similar, but the workflow is not</h2>
+                  <p className="mt-3 text-sm leading-6 text-gray-700">
+                    {comparison.editorialNotes.looksSimilarButActuallyDifferent}
+                  </p>
+                </article>
+              ) : null}
+            </div>
+
+            {comparison.editorialNotes.editorsTake ? (
+              <article className="mt-4 rounded-xl border border-gray-200 bg-white p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Editor&apos;s take</p>
+                <p className="mt-3 text-sm leading-6 text-gray-700">{comparison.editorialNotes.editorsTake}</p>
+              </article>
+            ) : null}
+
+            {(comparison.editorialNotes.chooseAIf || comparison.editorialNotes.chooseBIf) ? (
+              <div className="mt-4 grid gap-4 md:grid-cols-2">
+                {comparison.editorialNotes.chooseAIf ? (
+                  <article className="rounded-xl border border-gray-200 bg-gray-50/70 p-4">
+                    <h2 className="text-lg font-semibold text-gray-900">Choose {toolA.name} if</h2>
+                    <p className="mt-3 text-sm leading-6 text-gray-700">{comparison.editorialNotes.chooseAIf}</p>
+                  </article>
+                ) : null}
+                {comparison.editorialNotes.chooseBIf ? (
+                  <article className="rounded-xl border border-gray-200 bg-gray-50/70 p-4">
+                    <h2 className="text-lg font-semibold text-gray-900">Choose {toolB.name} if</h2>
+                    <p className="mt-3 text-sm leading-6 text-gray-700">{comparison.editorialNotes.chooseBIf}</p>
+                  </article>
+                ) : null}
+              </div>
+            ) : null}
+
+            <div className="mt-4 grid gap-4 lg:grid-cols-2">
+              {comparison.editorialNotes.hiddenTradeOff ? (
+                <article className="rounded-xl border border-gray-200 bg-gray-50/70 p-4">
+                  <h2 className="text-lg font-semibold text-gray-900">Hidden trade-off</h2>
+                  <p className="mt-3 text-sm leading-6 text-gray-700">{comparison.editorialNotes.hiddenTradeOff}</p>
+                </article>
+              ) : null}
+              {comparison.editorialNotes.whoWillRegretTheWrongChoice ? (
+                <article className="rounded-xl border border-gray-200 bg-gray-50/70 p-4">
+                  <h2 className="text-lg font-semibold text-gray-900">Who will regret the wrong choice</h2>
+                  <p className="mt-3 text-sm leading-6 text-gray-700">
+                    {comparison.editorialNotes.whoWillRegretTheWrongChoice}
+                  </p>
+                </article>
+              ) : null}
+            </div>
+          </section>
+        ) : null}
+
         <VsDecisionTable comparison={comparison} toolAName={toolA.name} toolBName={toolB.name} />
 
+        <section className="grid gap-4 md:grid-cols-3">
+          {scenarioConclusions.map((scenario) => (
+            <article
+              key={scenario.id}
+              id={scenario.id}
+              className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm shadow-gray-100/60 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md hover:shadow-gray-200/70"
+            >
+              <p className="text-xs font-semibold tracking-wide text-gray-500">{sanitizeTextForUi(scenario.label)}</p>
+              <p className="mt-2 text-lg font-semibold text-gray-900">Winner: {scenario.winnerName}</p>
+              <p data-conclusion="true" className="mt-2 rounded-md px-1 py-1 text-sm text-gray-700 transition-all">
+                {scenario.sentence}
+              </p>
+            </article>
+          ))}
+        </section>
+
         <section className="rounded-xl border border-gray-200 bg-white p-6">
-          <h2 className="text-2xl font-bold text-gray-900">Key Differences</h2>
+          <h2 className="text-2xl font-bold text-gray-900">Where the workflows split</h2>
           <p className="mt-2 text-sm text-gray-600">{keyDiffLead}</p>
           <div className="mt-5 space-y-4">
             {orderedKeyDiffs.map((diff) => (
-              <article key={diff.label} className="rounded-xl border border-gray-200 bg-gray-50/70 p-4">
+              <article key={diff.label} className="rounded-xl border border-gray-200 bg-gray-50/70 p-4 shadow-sm shadow-gray-100/50 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-gray-300 hover:bg-gray-50 hover:shadow-md hover:shadow-gray-200/60">
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-500">Difference</p>
@@ -809,7 +931,7 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
         </section>
 
         <section className="rounded-xl border border-gray-200 bg-white p-6">
-          <h2 className="text-2xl font-bold text-gray-900">Best For / Not For</h2>
+          <h2 className="text-2xl font-bold text-gray-900">Best fit and poor fit</h2>
           <div className="mt-4 grid gap-4 md:grid-cols-2">
             <article className="rounded-xl border border-gray-200 p-4">
               <h3 className="text-lg font-semibold text-gray-900">{toolA.name}</h3>
@@ -868,7 +990,48 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
           </div>
         </section>
 
-        {editorialDecisionGuide ? (
+        <section className="rounded-xl border border-gray-200 bg-white p-6">
+          <div className="flex flex-wrap items-center gap-3">
+            <h2 className="text-2xl font-bold text-gray-900">Final recommendation</h2>
+            {comparison.score.provenance.mode !== 'verified' ? (
+              <Link
+                href="/methodology#scoring"
+                className="inline-flex items-center rounded-full border border-slate-300 bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 hover:bg-slate-200"
+              >
+                Estimated
+              </Link>
+            ) : null}
+          </div>
+          <div className="mt-4 grid gap-4 md:grid-cols-3">
+            <div className="rounded-lg border border-green-200 bg-green-50 p-4 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-sm hover:shadow-green-100/70">
+              <p className="text-sm font-semibold text-gray-900">Winner for Price</p>
+              <p className="mt-1 text-lg font-bold text-gray-900">{winnerLabel(priceWinner)}</p>
+            </div>
+            <div className="rounded-lg border border-blue-200 bg-blue-50 p-4 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-sm hover:shadow-blue-100/70">
+              <p className="text-sm font-semibold text-gray-900">Winner for Quality</p>
+              <p className="mt-1 text-lg font-bold text-gray-900">{winnerLabel(scoreVerdict.winnerQuality)}</p>
+            </div>
+            <div className="rounded-lg border border-amber-200 bg-amber-50 p-4 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-sm hover:shadow-amber-100/70">
+              <p className="text-sm font-semibold text-gray-900">Winner for Speed</p>
+              <p className="mt-1 text-lg font-bold text-gray-900">{winnerLabel(scoreVerdict.winnerSpeed)}</p>
+            </div>
+          </div>
+          <p className="mt-4 text-sm text-gray-700">{recommendationText}</p>
+        </section>
+
+        <section className="rounded-xl border border-gray-200 bg-white p-6">
+          <h2 className="text-2xl font-bold text-gray-900">Common buyer questions</h2>
+          <div className="mt-4 space-y-4">
+            {faqItems.map((item) => (
+              <article key={item.question} className="rounded-lg border border-gray-200 p-4">
+                <h3 className="text-base font-semibold text-gray-900">{item.question}</h3>
+                <p className="mt-2 text-sm text-gray-700">{item.answer}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {!comparison.editorialNotes && editorialDecisionGuide ? (
           <EditorialDecisionGuide
             toolAName={toolA.name}
             toolBName={toolB.name}
@@ -880,62 +1043,19 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
           />
         ) : null}
 
-        <section className="grid gap-4 md:grid-cols-3">
-          {scenarioConclusions.map((scenario) => (
-            <article key={scenario.id} id={scenario.id} className="rounded-xl border border-gray-200 bg-white p-5 transition-all">
-              <p className="text-xs font-semibold tracking-wide text-gray-500">{sanitizeTextForUi(scenario.label)}</p>
-              <p className="mt-2 text-lg font-semibold text-gray-900">Winner: {scenario.winnerName}</p>
-              <p data-conclusion="true" className="mt-2 rounded-md px-1 py-1 text-sm text-gray-700 transition-all">
-                {scenario.sentence}
-              </p>
-            </article>
-          ))}
+        <section className="rounded-xl border border-gray-200 bg-white/80 p-5">
+          <PromptBox variants={promptVariants} defaultVariantKey={defaultPromptKey} />
         </section>
 
-        <VsScoreChart toolAName={toolA.name} toolBName={toolB.name} score={comparison.score} />
-
-        <PromptBox variants={promptVariants} defaultVariantKey={defaultPromptKey} />
-
-        <section className="rounded-xl border border-gray-200 bg-white p-6">
-          <div className="flex flex-wrap items-center gap-3">
-            <h2 className="text-2xl font-bold text-gray-900">Verdict</h2>
-            {comparison.score.provenance.mode !== 'verified' ? (
-              <Link
-                href="/methodology#scoring"
-                className="inline-flex items-center rounded-full border border-slate-300 bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700 hover:bg-slate-200"
-              >
-                Estimated
-              </Link>
-            ) : null}
+        <details className="rounded-xl border border-gray-200 bg-gray-50/40 p-5">
+          <summary className="cursor-pointer list-none text-lg font-semibold text-gray-900 marker:hidden transition-colors duration-200 hover:text-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2">Supporting score model</summary>
+          <p className="mt-2 max-w-3xl text-sm text-gray-600">
+            Internal score is supporting material only. The editorial verdict above should be the primary buying guide for this pair.
+          </p>
+          <div className="mt-4 rounded-xl border border-gray-200 bg-white p-4">
+            <VsScoreChart toolAName={toolA.name} toolBName={toolB.name} score={comparison.score} />
           </div>
-          <div className="mt-4 grid gap-4 md:grid-cols-3">
-            <div className="rounded-lg border border-green-200 bg-green-50 p-4">
-              <p className="text-sm font-semibold text-gray-900">Winner for Price</p>
-              <p className="mt-1 text-lg font-bold text-gray-900">{winnerLabel(priceWinner)}</p>
-            </div>
-            <div className="rounded-lg border border-blue-200 bg-blue-50 p-4">
-              <p className="text-sm font-semibold text-gray-900">Winner for Quality</p>
-              <p className="mt-1 text-lg font-bold text-gray-900">{winnerLabel(scoreVerdict.winnerQuality)}</p>
-            </div>
-            <div className="rounded-lg border border-amber-200 bg-amber-50 p-4">
-              <p className="text-sm font-semibold text-gray-900">Winner for Speed</p>
-              <p className="mt-1 text-lg font-bold text-gray-900">{winnerLabel(scoreVerdict.winnerSpeed)}</p>
-            </div>
-          </div>
-          <p className="mt-4 text-sm text-gray-700">{recommendationText}</p>
-        </section>
-
-        <section className="rounded-xl border border-gray-200 bg-white p-6">
-          <h2 className="text-2xl font-bold text-gray-900">FAQ</h2>
-          <div className="mt-4 space-y-4">
-            {faqItems.map((item) => (
-              <article key={item.question} className="rounded-lg border border-gray-200 p-4">
-                <h3 className="text-base font-semibold text-gray-900">{item.question}</h3>
-                <p className="mt-2 text-sm text-gray-700">{item.answer}</p>
-              </article>
-            ))}
-          </div>
-        </section>
+        </details>
 
         <section className="rounded-xl border border-gray-200 bg-white p-6">
           <details>
@@ -955,7 +1075,7 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
                         href={item.url}
                         target="_blank"
                         rel="noopener noreferrer nofollow"
-                        className="text-indigo-600 hover:text-indigo-700"
+                        className="text-indigo-600 transition-colors duration-200 hover:text-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-2"
                       >
                         {item.domain}
                       </a>
@@ -965,7 +1085,7 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
               ) : (
                 <p className="text-gray-600">No verified source yet.</p>
               )}
-              <Link href="/methodology" className="inline-block font-medium text-indigo-600 hover:text-indigo-700">
+              <Link href="/methodology" className="inline-block font-medium text-indigo-600 transition-colors duration-200 hover:text-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-2">
                 Read methodology →
               </Link>
             </div>
@@ -1018,7 +1138,7 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
               <ul className="mt-2 space-y-1">
                 {comparison.related.toolPages.slice(0, 2).map((path) => (
                   <li key={path}>
-                    <Link href={path} className="text-sm text-indigo-600 hover:text-indigo-700">
+                    <Link href={path} className="inline-flex items-center rounded-md px-1 py-1 text-sm text-indigo-600 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:text-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-2">
                       {labelForPath(path)} →
                     </Link>
                   </li>
@@ -1030,7 +1150,7 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
               <ul className="mt-2 space-y-1">
                 {comparison.related.alternatives.slice(0, 2).map((path) => (
                   <li key={path}>
-                    <Link href={path} className="text-sm text-indigo-600 hover:text-indigo-700">
+                    <Link href={path} className="inline-flex items-center rounded-md px-1 py-1 text-sm text-indigo-600 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:text-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-2">
                       {labelForPath(path)} →
                     </Link>
                   </li>
@@ -1042,7 +1162,7 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
               <ul className="mt-2 space-y-1">
                 {comparison.related.comparisons.slice(0, 6).map((path) => (
                   <li key={path}>
-                    <Link href={path} className="text-sm text-indigo-600 hover:text-indigo-700">
+                    <Link href={path} className="inline-flex items-center rounded-md px-1 py-1 text-sm text-indigo-600 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:text-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-2">
                       {labelForPath(path)} →
                     </Link>
                   </li>
@@ -1055,7 +1175,7 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
         <section className="rounded-xl border border-gray-200 bg-white p-6">
           <h2 className="text-lg font-semibold text-gray-900">Disclosure</h2>
           <p className="mt-2 text-sm text-gray-700">{comparison.disclosure}</p>
-          <Link href="/methodology" className="mt-3 inline-block text-sm font-medium text-indigo-600 hover:text-indigo-700">
+          <Link href="/methodology" className="mt-3 inline-block rounded-md px-1 py-1 text-sm font-medium text-indigo-600 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:text-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-2">
             Read our methodology →
           </Link>
         </section>

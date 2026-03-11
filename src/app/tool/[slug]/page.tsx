@@ -140,6 +140,23 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
 
           {editorialSummary ? <EditorialSummary {...editorialSummary} /> : null}
 
+          <div className="rounded-2xl border border-slate-200 bg-white p-6">
+            <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Use-case hub</p>
+            <h2 className="mt-2 text-xl font-bold text-gray-900">Still choosing by workflow, not just by product?</h2>
+            <p className="mt-3 max-w-3xl text-sm leading-7 text-gray-600">
+              Browse the feature hub to compare the routes first: presenter-led video, text-to-video, repurposing,
+              social publishing, or team buying. It is the fastest way to decide whether this tool is even in the right
+              category before you compare it against nearby options.
+            </p>
+            <Link
+              href="/features"
+              className="mt-4 inline-flex items-center text-sm font-bold text-indigo-600 hover:text-indigo-700"
+            >
+              Browse AI video tools by workflow
+              <span className="ml-2">→</span>
+            </Link>
+          </div>
+
           {/* Mini Test Section */}
           {content?.overview?.miniTest ? (
             <div id={videoId ? undefined : 'mini-test'}>

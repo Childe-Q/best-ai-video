@@ -2,8 +2,6 @@
 
 import Link from 'next/link';
 import { Tool } from '@/types/tool';
-import ToolLogo from './ToolLogo';
-import CTAButton from './CTAButton';
 import EditorialScoreSimple from './EditorialScoreSimple';
 import { EXTERNAL_TOOL_TAGS } from '@/data/externalToolTags';
 import { getEditorialHomeTags } from '@/data/home/editorialTags';
@@ -15,64 +13,42 @@ interface ToolCardProps {
 // Helper function to get pricing tag and color
 function getPricingTag(tool: Tool): { label: string; color: string } {
   if (tool.has_free_trial) {
-    return { label: 'Free Trial', color: 'bg-green-100 text-green-800' };
+    return { label: 'Free trial', color: 'bg-black/[0.04] text-black/60' };
   }
   
   const pricingModel = tool.pricing_model?.toLowerCase() || '';
   
   if (pricingModel.includes('freemium')) {
-    return { label: 'Freemium', color: 'bg-green-100 text-green-800' };
+    return { label: 'Freemium', color: 'bg-black/[0.04] text-black/60' };
   }
   if (pricingModel.includes('subscription') || pricingModel.includes('paid')) {
-    return { label: 'Subscription', color: 'bg-blue-100 text-blue-800' };
+    return { label: 'Paid', color: 'bg-black/[0.04] text-black/60' };
   }
   
-  return { label: tool.pricing_model || 'Paid', color: 'bg-gray-100 text-gray-800' };
+  return { label: tool.pricing_model || 'Paid', color: 'bg-black/[0.04] text-black/65' };
 }
 
 
-// 获取首页标签（优先外部标签，不足 3 个时用编辑标签补足到 3 个）
 function getHomeTags(tool: Tool): string[] {
-  // 优先使用外部标签
   const ext = EXTERNAL_TOOL_TAGS[tool.slug] ?? [];
-  const extClean = ext.map(t => t.trim()).filter(Boolean);
-  
-  // 如果外部标签 >= 3，直接返回前 3 个
-  if (extClean.length >= 3) {
-    return extClean.slice(0, 3);
-  }
-  
-  // 如果外部标签 < 3，用编辑标签补足到 3 个
+  const extClean = [...new Set(ext.map((t) => t.trim()).filter(Boolean))];
   const editorialTags = getEditorialHomeTags(tool.slug);
-  const editorialLabels = editorialTags.map(t => t.label);
-  
-  // 合并外部标签和编辑标签，去重，取前 3 个
+  const editorialLabels = editorialTags.map((t) => t.label.trim()).filter(Boolean);
   const combined = [...extClean];
+
   for (const label of editorialLabels) {
-    if (combined.length >= 3) break;
+    if (combined.length >= 2) break;
     if (!combined.includes(label)) {
       combined.push(label);
     }
   }
-  
-  // 如果完全没有标签，返回 3 个兜底标签
-  if (combined.length === 0) {
-    return ['AI Video Tool', 'AI Video Tool', 'AI Video Tool'];
-  }
-  
-  // 如果仍不足 3 个，用最后一个标签补足（确保始终显示 3 个）
-  const lastTag = combined[combined.length - 1];
-  while (combined.length < 3) {
-    combined.push(lastTag);
-  }
-  
-  return combined.slice(0, 3);
+
+  return combined.slice(0, 2);
 }
 
-// 判断标签是否为"核心标签"（用于样式区分）
 function isCoreTag(label: string): boolean {
   const coreKeywords = ['Avatar', 'Editor', 'Generator'];
-  return coreKeywords.some(keyword => label.includes(keyword));
+  return coreKeywords.some((keyword) => label.includes(keyword));
 }
 
 export default function ToolCard({ tool }: ToolCardProps) {
@@ -80,53 +56,47 @@ export default function ToolCard({ tool }: ToolCardProps) {
   const homeTags = getHomeTags(tool);
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-indigo-500/50 flex flex-col h-full">
-      <div className="p-5 flex-1 flex flex-col">
-        {/* Header: Logo + Name + Rating (Side by Side) */}
-        <div className="relative mb-3">
-          {/* Pricing Badge - Top Right Corner */}
-          <span className={`absolute top-0 right-0 inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold ${pricingTag.color} shadow-sm z-10`}>
-            {pricingTag.label}
-          </span>
-          
-          {/* Logo and Name Row */}
-          <div className="flex flex-row items-start gap-3 pr-20">
-            {/* Logo Container - Removed shadow-sm to fix black block overlay */}
-            <div className="w-16 h-16 flex items-center justify-center bg-white rounded-xl border border-gray-100 shrink-0">
-              <img 
-                src={tool.logo_url} 
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-black/10 bg-white px-5 py-5 transition-all duration-200 ease-out hover:-translate-y-1 hover:border-black/16 hover:bg-[#FFFEFB] hover:shadow-[0_16px_34px_rgba(0,0,0,0.06)]">
+      <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+        <div className="absolute inset-x-0 top-0 h-16 bg-[linear-gradient(180deg,rgba(246,210,0,0.14),transparent)]" />
+        <div className="absolute inset-y-0 left-0 w-px bg-[linear-gradient(180deg,transparent,rgba(184,245,0,0.45),transparent)]" />
+      </div>
+      <div className="flex flex-1 flex-col">
+        <div className="mb-4 flex items-start justify-between gap-3">
+          <div className="flex min-w-0 items-start gap-3">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-black/6 bg-[#FAF8F2] transition-all duration-200 group-hover:border-black/10 group-hover:bg-white">
+              <img
+                src={tool.logo_url}
                 alt={tool.name}
-                className="w-12 h-12 object-contain p-1"
+                className="h-9 w-9 object-contain"
               />
             </div>
-            
-            {/* Name + Rating Column */}
-            <div className="flex flex-col flex-1 min-w-0">
-              <Link href={`/tool/${tool.slug}`} className="block group">
-                <h3 className="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors mb-1">
+            <div className="min-w-0">
+              <Link href={`/tool/${tool.slug}`} className="block">
+                <h3 className="truncate text-lg font-black tracking-tight text-gray-900 transition-colors group-hover:text-black/70">
                   {tool.name}
                 </h3>
               </Link>
-              {/* Editorial Score */}
               <EditorialScoreSimple score={tool.rating} />
             </div>
           </div>
+          <span className={`inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-semibold ${pricingTag.color}`}>
+            {pricingTag.label}
+          </span>
         </div>
-        
-        {/* Description */}
-        <p className="text-gray-500 text-sm mb-3 line-clamp-2">
+
+        <p className="mb-4 line-clamp-2 text-sm leading-6 text-gray-600 transition-colors duration-200 group-hover:text-gray-700">
           {tool.short_description}
         </p>
-        
-        {/* Tags - External Tags (Non-clickable) */}
+
         {homeTags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-3">
+          <div className="mb-4 flex flex-wrap gap-2">
             {homeTags.map((tag, idx) => {
               const isCore = isCoreTag(tag);
-              const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-medium transition';
+              const baseClasses = 'inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-medium';
               const coreClasses = isCore 
-                ? 'border-black/10 bg-black/[0.05] text-black/80 hover:bg-black/[0.08] hover:border-black/20 hover:text-black/90'
-                : 'border-black/10 bg-black/[0.03] text-black/70 hover:bg-black/[0.06] hover:border-black/20 hover:text-black/80';
+                ? 'bg-[#F7F4EC] text-black/75'
+                : 'bg-black/[0.04] text-black/55';
               
               return (
                 <span
@@ -139,27 +109,31 @@ export default function ToolCard({ tool }: ToolCardProps) {
             })}
           </div>
         )}
-        
-        {/* Pricing */}
-        <div className="text-sm font-medium text-gray-900 mb-0 mt-auto">
-          {tool.starting_price}
+
+        <div className="mt-auto flex items-end justify-between gap-3 border-t border-black/8 pt-4">
+          <div className="min-w-0">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-black/35">Starting from</p>
+            <p className="mt-1 truncate text-sm font-semibold text-gray-900">{tool.starting_price || 'Pricing varies'}</p>
+          </div>
+          <div className="flex items-center gap-2">
+            <Link
+              href={`/tool/${tool.slug}`}
+              className="group/link inline-flex items-center text-sm font-medium text-black/55 transition-colors no-underline hover:text-black"
+            >
+              <span>Review</span>
+              <span className="ml-1.5 transition-transform duration-200 group-hover/link:translate-x-0.5">→</span>
+            </Link>
+            <Link
+              href={tool.affiliate_link || '#'}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="inline-flex items-center rounded-full border border-black/10 bg-[#FAF8F2] px-3 py-2 text-xs font-semibold text-black/75 no-underline transition-all duration-200 hover:-translate-y-0.5 hover:border-black/16 hover:bg-[#F6D200] hover:text-black"
+            >
+              Visit site
+            </Link>
+          </div>
         </div>
       </div>
-
-      {/* Footer with CTA */}
-      <div className="bg-gray-50 px-5 py-3 border-t border-gray-200 flex items-center justify-between">
-        <Link 
-          href={`/tool/${tool.slug}`}
-          className="text-sm text-gray-500 hover:text-gray-700 transition-colors"
-        >
-          View Review →
-        </Link>
-        <CTAButton 
-          affiliateLink={tool.affiliate_link} 
-          text="Visit Website" 
-          size="sm" 
-        />
-      </div>
-    </div>
+    </article>
   );
 }

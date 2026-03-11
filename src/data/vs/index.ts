@@ -978,6 +978,23 @@ function parsePriceValue(startingPrice: string): number {
   return Number.parseFloat(match[1]);
 }
 
+function toLegacyNeedPhrase(value: string, toolName: string): string {
+  const normalizedToolName = toolName.toLowerCase();
+  return value
+    .trim()
+    .replace(/[.?!]+$/g, '')
+    .replace(new RegExp(`^${normalizedToolName}\\s+`, 'i'), '')
+    .replace(/^is the better fit for\s+/i, '')
+    .replace(/^is a strong fit for\s+/i, '')
+    .replace(/^fits teams that need\s+/i, '')
+    .replace(/^works best for\s+/i, '')
+    .replace(/^best when the job is\s+/i, '')
+    .replace(/^useful for\s+/i, '')
+    .replace(/^stronger if you want a workflow that\s+/i, 'a workflow that ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function clampScore(score: number): number {
   if (Number.isNaN(score)) return 0;
   return Math.max(0, Math.min(10, score));
@@ -1148,6 +1165,18 @@ function buildLegacyComparison(parsed: ParsedVsSlug): { comparison: VsComparison
   const keyDiffs: VsDiffRow[] = buildLegacyKeyDiffs(toolA, toolB, intentProfile, (type, rowLabel) =>
     buildRowSources(parsed.slugA, parsed.slugB, type, rowLabel),
   );
+  const legacyBestForA = chooseTopItems(buildLegacyBestFor(toolA, toolB, pairSlug), [toolA.best_for, ...(toolA.tags ?? [])]);
+  const legacyBestForB = chooseTopItems(buildLegacyBestFor(toolB, toolA, pairSlug), [toolB.best_for, ...(toolB.tags ?? [])]);
+  const legacyNeedA = toLegacyNeedPhrase(legacyBestForA[0] ?? toolA.best_for, toolA.name);
+  const legacyNeedB = toLegacyNeedPhrase(legacyBestForB[0] ?? toolB.best_for, toolB.name);
+  const legacyNotForA = chooseTopItems(
+    buildLegacyNotFor(toolA, toolB, pairSlug),
+    ['Advanced manual editing-centric workflows', 'Strict enterprise governance', 'Ultra-high customization needs'],
+  );
+  const legacyNotForB = chooseTopItems(
+    buildLegacyNotFor(toolB, toolA, pairSlug),
+    ['Advanced manual editing-centric workflows', 'Strict enterprise governance', 'Ultra-high customization needs'],
+  );
 
   const matrixRows: VsDiffRow[] = toVsDiffRows(buildDecisionTableRows([
     {
@@ -1231,22 +1260,16 @@ function buildLegacyComparison(parsed: ParsedVsSlug): { comparison: VsComparison
     pricingCheckedAt: today,
     intentProfile,
     shortAnswer: {
-      a: `Choose ${toolA.name} when your priority is ${toolA.best_for.toLowerCase()}.`,
-      b: `Choose ${toolB.name} when your priority is ${toolB.best_for.toLowerCase()}.`,
+      a: `Choose ${toolA.name} if you need ${legacyNeedA}.`,
+      b: `Choose ${toolB.name} if you need ${legacyNeedB}.`,
     },
     bestFor: {
-      a: chooseTopItems(buildLegacyBestFor(toolA, toolB, pairSlug), [toolA.best_for, ...(toolA.tags ?? [])]),
-      b: chooseTopItems(buildLegacyBestFor(toolB, toolA, pairSlug), [toolB.best_for, ...(toolB.tags ?? [])]),
+      a: legacyBestForA,
+      b: legacyBestForB,
     },
     notFor: {
-      a: chooseTopItems(
-        buildLegacyNotFor(toolA, toolB, pairSlug),
-        ['Advanced manual editing-centric workflows', 'Strict enterprise governance', 'Ultra-high customization needs'],
-      ),
-      b: chooseTopItems(
-        buildLegacyNotFor(toolB, toolA, pairSlug),
-        ['Advanced manual editing-centric workflows', 'Strict enterprise governance', 'Ultra-high customization needs'],
-      ),
+      a: legacyNotForA,
+      b: legacyNotForB,
     },
     keyDiffs,
     matrixRows,
@@ -1261,7 +1284,7 @@ function buildLegacyComparison(parsed: ParsedVsSlug): { comparison: VsComparison
       winnerPrice: priceA <= priceB ? 'a' : 'b',
       winnerQuality: scoreA.output >= scoreB.output ? 'a' : 'b',
       winnerSpeed: scoreA.speed >= scoreB.speed ? 'a' : 'b',
-      recommendation: `Use ${toolA.name} if ${toolA.best_for.toLowerCase()}. Use ${toolB.name} if ${toolB.best_for.toLowerCase()}.`,
+      recommendation: `Start with ${toolA.name} if you need ${legacyNeedA}. Start with ${toolB.name} if you need ${legacyNeedB}.`,
     },
     related: {
       toolPages: [`/tool/${parsed.slugA}`, `/tool/${parsed.slugB}`],

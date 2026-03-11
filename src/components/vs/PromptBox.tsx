@@ -54,10 +54,13 @@ export default function PromptBox({ variants, defaultVariantKey }: PromptBoxProp
   if (!activeVariant) return null;
 
   return (
-    <details className="rounded-xl border border-gray-200 bg-white p-6" open>
-      <summary className="cursor-pointer text-lg font-semibold text-gray-900">
-        Prompt Testing Box
+    <details className="rounded-xl border border-gray-200 bg-gray-50/40 p-5">
+      <summary className="cursor-pointer list-none text-lg font-semibold text-gray-900 marker:hidden transition-colors duration-200 hover:text-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2">
+        Test both tools with this brief
       </summary>
+      <p className="mt-2 text-sm text-gray-600">
+        Run the same brief in both tools to compare presenter-led delivery against faster stock-scene production.
+      </p>
       <div className="mt-4 space-y-4">
         {variants.length > 1 ? (
           <div className="flex flex-wrap gap-2">
@@ -66,10 +69,10 @@ export default function PromptBox({ variants, defaultVariantKey }: PromptBoxProp
                 key={variant.key}
                 type="button"
                 onClick={() => setActiveVariantKey(variant.key)}
-                className={`rounded-full border px-3 py-1.5 text-sm font-medium transition ${
+                className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 active:translate-y-0 ${
                   activeVariantKey === variant.key
-                    ? 'border-gray-500 bg-white text-gray-900 shadow-sm'
-                    : 'border-gray-300 bg-gray-50 text-gray-700 hover:border-gray-400 hover:bg-white hover:text-gray-900'
+                    ? 'border-gray-500 bg-white text-gray-900 shadow-sm shadow-gray-200/70'
+                    : 'border-gray-300 bg-white text-gray-700 hover:-translate-y-0.5 hover:border-gray-400 hover:bg-white hover:text-gray-900 hover:shadow-sm hover:shadow-gray-200/70'
                 }`}
               >
                 {variant.title}
@@ -77,7 +80,7 @@ export default function PromptBox({ variants, defaultVariantKey }: PromptBoxProp
             ))}
           </div>
         ) : null}
-        <div className="rounded-lg bg-gray-50 p-4">
+        <div className="rounded-lg border border-gray-200 bg-white p-4">
           <div className="flex items-center justify-between gap-4">
             <div>
               <p className="text-sm font-medium text-gray-700">Prompt</p>
@@ -86,7 +89,7 @@ export default function PromptBox({ variants, defaultVariantKey }: PromptBoxProp
             <button
               type="button"
               onClick={copyPrompt}
-              className="rounded-md border border-gray-300 px-3 py-1 text-xs font-medium text-gray-700 hover:bg-gray-100"
+              className="rounded-md border border-gray-300 px-3 py-1 text-xs font-medium text-gray-700 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:bg-gray-100 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 active:translate-y-0"
             >
               {copied ? 'Copied' : 'Copy'}
             </button>

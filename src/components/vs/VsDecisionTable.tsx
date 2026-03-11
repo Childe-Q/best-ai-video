@@ -51,7 +51,7 @@ export default function VsDecisionTable({ comparison, toolAName, toolBName }: Vs
           </thead>
           <tbody>
             {rows.map((row) => (
-              <tr key={row.label} className="border-b border-gray-100">
+              <tr key={row.label} className="group border-b border-gray-100 transition-colors duration-200 ease-out hover:bg-gray-50/70">
                 <td className="px-4 py-3 font-medium text-gray-900">
                   <span className="inline-flex items-center gap-2">
                     <span>{row.label}</span>
@@ -65,8 +65,8 @@ export default function VsDecisionTable({ comparison, toolAName, toolBName }: Vs
                     />
                   </span>
                 </td>
-                <td className="px-4 py-3 text-gray-700">{row.aText}</td>
-                <td className="px-4 py-3 text-gray-700">{row.bText}</td>
+                <td className="px-4 py-3 text-gray-700 transition-colors duration-200 ease-out group-hover:text-gray-900">{row.aText}</td>
+                <td className="px-4 py-3 text-gray-700 transition-colors duration-200 ease-out group-hover:text-gray-900">{row.bText}</td>
               </tr>
             ))}
           </tbody>

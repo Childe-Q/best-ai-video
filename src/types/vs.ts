@@ -58,6 +58,8 @@ export type VsComparison = {
   decisionCases?: Array<{
     label: string;
     keywords?: string[];
+    winner?: VsSide;
+    verdict?: string;
   }>;
   useCases?: string[];
   bestFor: {
@@ -75,6 +77,16 @@ export type VsComparison = {
     prompt: string;
     settings: string[];
     variants?: VsPromptVariant[];
+  };
+  decisionSummary?: string;
+  editorialNotes?: {
+    whyPeopleCompareTheseTools?: string;
+    looksSimilarButActuallyDifferent?: string;
+    editorsTake?: string;
+    chooseAIf?: string;
+    chooseBIf?: string;
+    hiddenTradeOff?: string;
+    whoWillRegretTheWrongChoice?: string;
   };
   verdict: {
     winnerPrice: VsSide;
