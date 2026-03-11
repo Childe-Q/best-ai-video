@@ -52,6 +52,11 @@ type UseCaseCandidate = {
   keywords: string[];
 };
 
+type UseCaseSeed = UseCaseCandidate & {
+  winner?: VsSide;
+  verdict?: string;
+};
+
 const GENERIC_BEST_FOR = ['quick drafts', 'simple edits', 'solo creators'];
 const GENERIC_NOT_FOR = ['highly regulated enterprise workflows', 'frame-level editing control needs', 'complex multi-step production pipelines'];
 const EMOJI_REGEX = /[\p{Extended_Pictographic}\uFE0F\u200D]/gu;
@@ -298,7 +303,7 @@ function buildUseCases(
 ): ScenarioConfig[] {
   const preferredLabels = getPreferredUseCaseLabels(comparison.intentProfile);
 
-  const fromComparisonRaw = [
+  const fromComparisonRaw: UseCaseSeed[] = [
     ...((comparison.decisionCases ?? []).map((item) => ({
       label: sanitizeTextForUi(item.label),
       keywords: dedupe((item.keywords ?? []).map((keyword) => cleanFragment(keyword)).filter(Boolean)),
@@ -311,7 +316,7 @@ function buildUseCases(
     })) ?? []),
   ].filter((item) => item.label);
 
-  const directUseCases = dedupe(fromComparisonRaw.map((item) => item.label)).map((label) => {
+  const directUseCases: UseCaseSeed[] = dedupe(fromComparisonRaw.map((item) => item.label)).map((label) => {
     const found = fromComparisonRaw.find((item) => item.label === label);
     return {
       label,
@@ -344,7 +349,7 @@ function buildUseCases(
       return left.tieBreaker - right.tieBreaker;
     });
 
-  const fallbackUseCases: UseCaseCandidate[] = [
+  const fallbackUseCases: UseCaseSeed[] = [
     { label: 'Fast content drafts', keywords: ['fast', 'draft', 'batch', 'output'] },
     { label: 'Polished marketing videos', keywords: ['marketing', 'brand', 'campaign', 'quality'] },
     { label: 'Repeatable publishing workflow', keywords: ['workflow', 'repeatable', 'team', 'process'] },
@@ -352,16 +357,16 @@ function buildUseCases(
 
   const prioritizedCandidates = preferredLabels
     .map((label) => USE_CASE_CANDIDATES.find((candidate) => candidate.label === label))
-    .filter((candidate): candidate is UseCaseCandidate => Boolean(candidate));
+    .filter((candidate): candidate is UseCaseSeed => Boolean(candidate));
 
-  const combined = [
+  const combined: UseCaseSeed[] = [
     ...directUseCases,
     ...prioritizedCandidates,
     ...scoredCandidates.map((item) => ({ label: item.label, keywords: item.keywords })),
     ...fallbackUseCases,
   ];
 
-  const unique: Array<{ label: string; keywords: string[] }> = [];
+  const unique: UseCaseSeed[] = [];
   for (const item of combined) {
     if (!item.label) continue;
     const exists = unique.some((existing) => existing.label.toLowerCase() === item.label.toLowerCase());
