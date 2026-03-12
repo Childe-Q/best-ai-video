@@ -8,6 +8,7 @@ const VS_USE_CASE_EVENT = 'vs:use-case-change';
 interface PromptBoxProps {
   variants: VsPromptVariant[];
   defaultVariantKey?: string | null;
+  helperText?: string;
 }
 
 function getInitialVariantKey(variants: VsPromptVariant[], defaultVariantKey?: string | null): string {
@@ -17,7 +18,7 @@ function getInitialVariantKey(variants: VsPromptVariant[], defaultVariantKey?: s
   return variants[0]?.key ?? '';
 }
 
-export default function PromptBox({ variants, defaultVariantKey }: PromptBoxProps) {
+export default function PromptBox({ variants, defaultVariantKey, helperText }: PromptBoxProps) {
   const [copied, setCopied] = useState(false);
   const [activeVariantKey, setActiveVariantKey] = useState(() => getInitialVariantKey(variants, defaultVariantKey));
 
@@ -59,7 +60,7 @@ export default function PromptBox({ variants, defaultVariantKey }: PromptBoxProp
         Test both tools with this brief
       </summary>
       <p className="mt-2 text-sm text-gray-600">
-        Run the same brief in both tools to compare presenter-led delivery against faster stock-scene production.
+        {helperText ?? 'Run the same brief in both tools to compare how each workflow handles the same job.'}
       </p>
       <div className="mt-4 space-y-4">
         {variants.length > 1 ? (

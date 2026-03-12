@@ -77,11 +77,13 @@ export type VsComparison = {
     prompt: string;
     settings: string[];
     variants?: VsPromptVariant[];
+    helperText?: string;
   };
   decisionSummary?: string;
   editorialNotes?: {
     whyPeopleCompareTheseTools?: string;
     looksSimilarButActuallyDifferent?: string;
+    realDecision?: string;
     editorsTake?: string;
     chooseAIf?: string;
     chooseBIf?: string;

@@ -590,6 +590,7 @@ function ensureTemplateComparison(base: VsComparison | null, currentSlug: string
     slugB,
     updatedAt: base?.updatedAt ?? todayIso(),
     pricingCheckedAt: base?.pricingCheckedAt ?? todayIso(),
+    ...(base?.decisionSummary ? { decisionSummary: base.decisionSummary } : {}),
     intentProfile: applyIntentProfileOverride(
       base?.intentProfile ?? buildIntentProfile(toolA.data, toolB.data, base),
       slugA,
@@ -618,7 +619,11 @@ function ensureTemplateComparison(base: VsComparison | null, currentSlug: string
         ? base.promptBox.settings
         : ['Duration: 45s', 'Format: 16:9', 'Language: English', 'Output: MP4 1080p', 'Tone: professional'],
       variants: base?.promptBox?.variants ?? [],
+      ...(base?.promptBox?.helperText ? { helperText: base.promptBox.helperText } : {}),
     },
+    ...(base?.decisionCases?.length ? { decisionCases: base.decisionCases } : {}),
+    ...(base?.useCases?.length ? { useCases: base.useCases } : {}),
+    ...(base?.editorialNotes ? { editorialNotes: base.editorialNotes } : {}),
     verdict: {
       winnerPrice: base?.verdict?.winnerPrice ?? 'a',
       winnerQuality: base?.verdict?.winnerQuality ?? 'b',
@@ -627,6 +632,7 @@ function ensureTemplateComparison(base: VsComparison | null, currentSlug: string
         base?.verdict?.recommendation ??
         `Use ${toolA.name} if you prioritize its strengths in this table, and choose ${toolB.name} when those workflow tradeoffs fit your team better.`,
     },
+    ...(base?.faq?.length ? { faq: base.faq } : {}),
     related: {
       toolPages: dedupePaths(
         base?.related?.toolPages?.length
@@ -814,6 +820,7 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
         {comparison.editorialNotes &&
         (comparison.editorialNotes.whyPeopleCompareTheseTools ||
           comparison.editorialNotes.looksSimilarButActuallyDifferent ||
+          comparison.editorialNotes.realDecision ||
           comparison.editorialNotes.editorsTake ||
           comparison.editorialNotes.chooseAIf ||
           comparison.editorialNotes.chooseBIf ||
@@ -823,7 +830,7 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
             <div className="grid gap-4 lg:grid-cols-2">
               {comparison.editorialNotes.whyPeopleCompareTheseTools ? (
                 <article className="rounded-xl border border-gray-200 bg-gray-50/70 p-4">
-                  <h2 className="text-lg font-semibold text-gray-900">Why people compare HeyGen and InVideo</h2>
+                  <h2 className="text-lg font-semibold text-gray-900">Why people compare {toolA.name} and {toolB.name}</h2>
                   <p className="mt-3 text-sm leading-6 text-gray-700">
                     {comparison.editorialNotes.whyPeopleCompareTheseTools}
                   </p>
@@ -839,10 +846,14 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
               ) : null}
             </div>
 
-            {comparison.editorialNotes.editorsTake ? (
+            {comparison.editorialNotes.realDecision || comparison.editorialNotes.editorsTake ? (
               <article className="mt-4 rounded-xl border border-gray-200 bg-white p-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Editor&apos;s take</p>
-                <p className="mt-3 text-sm leading-6 text-gray-700">{comparison.editorialNotes.editorsTake}</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">
+                  {comparison.editorialNotes.realDecision ? 'The real decision' : 'Editor&apos;s take'}
+                </p>
+                <p className="mt-3 text-sm leading-6 text-gray-700">
+                  {comparison.editorialNotes.realDecision ?? comparison.editorialNotes.editorsTake}
+                </p>
               </article>
             ) : null}
 
@@ -1049,7 +1060,11 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
         ) : null}
 
         <section className="rounded-xl border border-gray-200 bg-white/80 p-5">
-          <PromptBox variants={promptVariants} defaultVariantKey={defaultPromptKey} />
+            <PromptBox
+              variants={promptVariants}
+              defaultVariantKey={defaultPromptKey}
+              helperText={comparison.promptBox.helperText}
+            />
         </section>
 
         <details className="rounded-xl border border-gray-200 bg-gray-50/40 p-5">

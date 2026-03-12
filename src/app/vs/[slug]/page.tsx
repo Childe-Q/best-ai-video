@@ -42,7 +42,7 @@ function isComparisonReady(comparison: ReturnType<typeof getVsComparisonWithStat
   if (!comparison) return false;
   const decisionRows = buildDecisionTableRows(comparison.matrixRows, comparison.slugA, comparison.slugB);
   const tableReady =
-    decisionRows.length >= 6 &&
+    decisionRows.length >= 5 &&
     decisionRows.length <= 8 &&
     decisionRows.every((row) => !isPlaceholderText(row.aText) && !isPlaceholderText(row.bText));
   const hasKeyDiffs = comparison.keyDiffs.length >= 3;

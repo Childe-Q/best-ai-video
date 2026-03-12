@@ -22,6 +22,407 @@ const DEV_LOG = process.env.NODE_ENV === 'development';
 
 const explicitCanonicalComparisons: VsComparison[] = [flikiVsHeygen, invideoVsHeygen];
 
+type VsAuthoredOverride = {
+  decisionSummary?: string;
+  shortAnswer?: Partial<VsComparison['shortAnswer']>;
+  bestFor?: Partial<VsComparison['bestFor']>;
+  notFor?: Partial<VsComparison['notFor']>;
+  keyDiffs?: VsDiffRow[];
+  matrixRows?: Array<Partial<VsDiffRow>>;
+  decisionCases?: VsComparison['decisionCases'];
+  editorialNotes?: VsComparison['editorialNotes'];
+  faq?: NonNullable<VsComparison['faq']>;
+  promptBox?: {
+    helperText?: string;
+  };
+  verdict?: {
+    recommendation?: string;
+  };
+};
+
+const AUTHORED_VS_OVERRIDES: Record<string, VsAuthoredOverride> = {
+  'invideo-vs-pictory': {
+    decisionSummary:
+      'Choose InVideo when you are creating new stock-scene drafts for ads, explainers, and shorts. Choose Pictory when you are cutting existing webinars, podcasts, or articles into clips.',
+    shortAnswer: {
+      a: 'InVideo is the better fit for faceless explainers, ad creatives, and from-scratch visual drafts.',
+      b: 'Pictory is the better fit for repurposing webinars, podcasts, Zoom recordings, and long-form clips.',
+    },
+    keyDiffs: [
+      {
+        label: 'Core workflow',
+        a: 'InVideo is stronger when the team is starting from prompts, scripts, and a blank draft rather than existing footage.',
+        b: 'Pictory is stronger when the team already has webinars, podcasts, articles, or recordings that need to be cut into clips.',
+      },
+      {
+        label: 'Editing model',
+        a: 'InVideo is closer to from-scratch visual drafting, where scenes and pacing are built for a new video concept.',
+        b: 'Pictory is closer to transcript and highlight extraction, where the job is condensing what already exists.',
+      },
+      {
+        label: 'Use case fit',
+        a: 'InVideo fits ad creatives, faceless explainers, and short-form batches when the team needs fresh output volume.',
+        b: 'Pictory fits webinar, podcast, and thought-leadership teams that want more mileage from long-form assets.',
+      },
+      {
+        label: 'Where each tool saves time',
+        a: 'InVideo saves more time when there is no source footage and the team needs new drafts quickly.',
+        b: 'Pictory saves more time when the source material already exists and the bottleneck is cutting it down.',
+      },
+    ],
+    bestFor: {
+      a: [
+        'Teams creating new stock-scene drafts for ads, explainers, and shorts',
+        'Marketers testing multiple visual concepts before they have source footage',
+        'Faceless video workflows that start from prompts or scripts',
+      ],
+      b: [
+        'Teams turning webinars, podcasts, and recordings into short clips',
+        'Content programs built around repurposing long-form assets',
+        'Workflows that begin with existing articles or video rather than a blank draft',
+      ],
+    },
+    notFor: {
+      a: [
+        'Teams whose best source material already exists in long-form recordings',
+        'Transcript-first repurposing workflows',
+        'Projects where highlight extraction matters more than draft generation',
+      ],
+      b: [
+        'Teams that need fresh ad concepts from prompts rather than repurposing',
+        'Stock-scene drafting from scratch',
+        'Faceless social output when there is no long-form source to cut down',
+      ],
+    },
+    matrixRows: [
+      { label: 'Best for', a: 'New stock-scene drafts for ads, explainers, and shorts', b: 'Repurposing webinars, podcasts, and articles into clips' },
+      { label: 'Output type', a: 'Prompt-led stock-scene videos with captions and voiceover', b: 'Clip-first videos built from existing long-form source material' },
+      { label: 'Workflow speed', a: 'Fast for batch drafts', b: 'Fast for short iterations' },
+      { label: 'Pricing starting point', a: '$28/mo', b: '$19/mo' },
+      { label: 'Free plan', a: 'Free plan', b: 'Free plan' },
+    ],
+    decisionCases: [
+      {
+        label: 'Start from scratch',
+        keywords: ['social', 'shorts', 'ads', 'stock', 'drafts'],
+        winner: 'a',
+        verdict: 'InVideo is the better fit when the team is building new scenes, captions, and visual drafts from prompts or scripts rather than trimming existing long-form footage.',
+      },
+      {
+        label: 'Repurpose webinars & podcasts',
+        keywords: ['webinar', 'podcast', 'zoom', 'clips', 'repurpose'],
+        winner: 'b',
+        verdict: 'Pictory is the better fit when the input already exists as webinars, podcasts, Zoom recordings, or long-form clips.',
+      },
+      {
+        label: 'Repurpose existing content',
+        keywords: ['article', 'blog', 'script', 'repurpose', 'clips'],
+        winner: 'b',
+        verdict: 'Pictory is the stronger choice when the input is existing articles or long-form source material that needs to be condensed.',
+      },
+    ],
+    editorialNotes: {
+      whyPeopleCompareTheseTools:
+        'People compare InVideo and Pictory because both promise to speed up AI video production and both can end in short publishable clips. The confusion is understandable. One is closer to generation from scratch, while the other is closer to repurposing from existing material.',
+      looksSimilarButActuallyDifferent:
+        'They overlap at the output layer: both can help teams publish short videos faster. The real split is upstream. InVideo is usually chosen when the team is creating new drafts from prompts, scripts, and stock footage. Pictory is usually chosen when the team already has webinars, podcasts, articles, or recordings that need to be turned into clips.',
+      realDecision:
+        'The real decision is whether you are starting from zero or starting from long-form source material. If the workflow begins with prompts and fresh drafts, InVideo is usually the better fit. If the workflow begins with existing content that needs trimming, Pictory is usually the better fit.',
+      hiddenTradeOff:
+        'InVideo is faster when the job is new content volume, but it asks the team to shape the story from scratch. Pictory saves time when long-form source material already exists, but it is less useful if there is nothing substantial to repurpose.',
+      whoWillRegretTheWrongChoice:
+        'Performance teams regret Pictory when they needed fresh ad or short-form concepts, not repurposing. Webinar, podcast, and thought-leadership teams regret InVideo when they end up recreating assets that already existed in longer form.',
+    },
+    faq: [
+      {
+        question: 'InVideo vs Pictory: which should I choose first?',
+        answer:
+          'Choose InVideo if the team needs from-scratch visual drafts built from prompts or scripts. Choose Pictory if the team is repurposing webinars, podcasts, articles, or recordings into clips.',
+      },
+      {
+        question: 'What is the main workflow difference?',
+        answer:
+          'InVideo is generation-first. Pictory is repurposing-first.',
+      },
+      {
+        question: 'Who usually regrets the wrong choice?',
+        answer:
+          'Teams making new ad or explainer concepts regret Pictory when there is not enough source material to repurpose. Teams sitting on webinars, podcasts, articles, or recordings regret InVideo when they really needed a repurposing workflow instead of from-scratch visual drafting.',
+      },
+    ],
+    promptBox: {
+      helperText:
+        'Run the same brief in both tools to compare generation from scratch against repurposing from existing long-form content.',
+    },
+  },
+  'heygen-vs-synthesia': {
+    decisionSummary:
+      'Choose HeyGen for avatar-led outreach, spokesperson videos, and faster presenter experimentation. Choose Synthesia for structured training, internal communication, and enterprise rollout.',
+    bestFor: {
+      a: [
+        'Sales outreach, product explainers, and spokesperson-style videos',
+        'Teams experimenting with presenter-led communication outside formal training ops',
+        'Customer-facing avatar videos that need to feel more campaign-like than instructional',
+      ],
+      b: [
+        'Structured training programs and internal communication rollout',
+        'Enterprise teams prioritizing governance and repeatable learning workflows',
+        'Localization-heavy training content delivered at organizational scale',
+      ],
+    },
+    notFor: {
+      a: [
+        'Organizations buying primarily for formal training rollout',
+        'Teams that need heavier enterprise governance than creative flexibility',
+        'Lesson-library workflows centered on structured internal education',
+      ],
+      b: [
+        'Fast-moving outreach or spokesperson video teams',
+        'Revenue teams that want lighter presenter iteration',
+        'Use cases where campaign agility matters more than rollout structure',
+      ],
+    },
+    matrixRows: [
+      { label: 'Best for', a: 'Outreach, spokesperson videos, and avatar-led explainers', b: 'Corporate training, internal communication, and enterprise rollout' },
+      { label: 'Output type', a: 'Presenter-led avatar videos for customer-facing communication', b: 'Avatar videos built for training and internal business communication' },
+      { label: 'Workflow speed', a: 'Depends on workflow setup', b: 'Depends on workflow setup' },
+      { label: 'Languages & dubbing', a: 'Multilingual presenter delivery with voice cloning options', b: 'Broad language coverage for enterprise training localization' },
+      { label: 'Pricing starting point', a: '$29/mo', b: '$29/mo' },
+      { label: 'Free plan', a: 'Free plan', b: 'Free trial' },
+    ],
+    decisionCases: [
+      {
+        label: 'Sales outreach & spokesperson videos',
+        keywords: ['sales', 'outreach', 'spokesperson', 'avatar', 'presenter'],
+        winner: 'a',
+        verdict: 'HeyGen is the better fit when the video is closer to sales, outreach, or spokesperson-style delivery than formal training.',
+      },
+      {
+        label: 'Corporate training rollout',
+        keywords: ['training', 'enterprise', 'internal', 'learning', 'rollout'],
+        winner: 'b',
+        verdict: 'Synthesia is the better fit when the workflow is centered on structured training and enterprise internal communication.',
+      },
+      {
+        label: 'Multilingual internal updates',
+        keywords: ['multilingual', 'language', 'internal', 'localization', 'training'],
+        winner: 'b',
+        verdict: 'Synthesia is the stronger choice when localization is tied to formal internal communication and training rollout.',
+      },
+    ],
+    editorialNotes: {
+      whyPeopleCompareTheseTools:
+        'People compare HeyGen and Synthesia because both sit in the same avatar-video category and both can replace traditional talking-head production. On a feature checklist they look close. In buying context, they tend to serve different teams.',
+      looksSimilarButActuallyDifferent:
+        'Both tools create avatar-led video without a film crew. The difference is where the workflow naturally lives. HeyGen is often pulled into growth, sales, and customer-facing communication. Synthesia is often pulled into training, internal communication, and enterprise rollout.',
+      realDecision:
+        'The real decision is not avatar quality in isolation. It is whether the workflow is closer to campaign communication or structured training operations.',
+      hiddenTradeOff:
+        'HeyGen tends to feel lighter and more flexible for presenter-led communication, but that can matter less when the organization needs more formal rollout structure. Synthesia fits that structure better, but some teams will feel the workflow is heavier than the content requires.',
+      whoWillRegretTheWrongChoice:
+        'Growth and revenue teams regret Synthesia when every presenter video starts to feel heavier than the ask. Enterprise learning and internal comms teams regret HeyGen when governance and rollout discipline matter more than iteration speed.',
+    },
+    faq: [
+      {
+        question: 'HeyGen vs Synthesia: which should I choose first?',
+        answer:
+          'Choose HeyGen for avatar-led outreach and presenter-style communication. Choose Synthesia for training, internal communication, and enterprise rollout.',
+      },
+      {
+        question: 'What is the practical difference?',
+        answer:
+          'HeyGen is usually the lighter choice for communication-led workflows. Synthesia is usually the steadier choice for structured training and enterprise deployment.',
+      },
+      {
+        question: 'Who usually regrets the wrong choice?',
+        answer:
+          'Revenue teams regret Synthesia when the workflow becomes too heavy for sales-style video. Enterprise learning teams regret HeyGen when rollout, governance, and training structure matter more than flexibility.',
+      },
+    ],
+    promptBox: {
+      helperText:
+        'Run the same avatar brief in both tools to compare campaign-style presenter delivery against training-led enterprise rollout.',
+    },
+  },
+  'fliki-vs-invideo': {
+    decisionSummary:
+      'Choose Fliki when the workflow is text-first and narration-led. Choose InVideo when the team needs faster stock-scene drafts for ads, explainers, and short-form production.',
+    bestFor: {
+      a: [
+        'Blog-to-video and narration-led explainers',
+        'Teams turning scripts or articles into voice-led videos quickly',
+        'Workflows where the story is carried mostly by narration rather than scene design',
+      ],
+      b: [
+        'Faceless explainers, ad creatives, and stock-scene drafts',
+        'Teams producing short-form marketing output at higher volume',
+        'Workflows where scene assembly matters more than narration-first conversion',
+      ],
+    },
+    notFor: {
+      a: [
+        'Teams that need broader stock-scene variation from scratch',
+        'Projects that depend on more visual assembly than voice-led conversion',
+        'Ad workflows centered on scene-driven iteration rather than narration',
+      ],
+      b: [
+        'Text-first teams mainly converting blogs or scripts into narrated videos',
+        'Narration-led explainers where a lighter workflow would do',
+        'Projects where the voiceover carries most of the value',
+      ],
+    },
+    matrixRows: [
+      { label: 'Best for', a: 'Blog-to-video and narration-led explainers', b: 'Faceless explainers and stock-scene marketing drafts' },
+      { label: 'Output type', a: 'Narrated videos built from scripts, articles, and voiceover', b: 'Prompt-led stock-scene videos with captions and voiceover' },
+      { label: 'Workflow speed', a: 'Fast for short iterations', b: 'Fast for batch drafts' },
+      { label: 'Languages & dubbing', a: 'Voice cloning and multilingual narration workflows', b: 'Multilingual voiceover and caption workflows for stock-scene output' },
+      { label: 'Pricing starting point', a: '$28/mo', b: '$28/mo' },
+      { label: 'Free plan', a: 'Free plan', b: 'Free plan' },
+    ],
+    decisionCases: [
+      {
+        label: 'Blog or article to video',
+        keywords: ['blog', 'article', 'voiceover', 'narrated', 'script'],
+        winner: 'a',
+        verdict: 'Fliki is the better fit when the source material already exists as text and the job is turning it into a narrated video quickly.',
+      },
+      {
+        label: 'Faceless explainers & ad drafts',
+        keywords: ['faceless', 'ads', 'stock', 'social', 'drafts'],
+        winner: 'b',
+        verdict: 'InVideo is the better fit when the workflow depends on faster stock-scene drafts for explainers, social clips, and ad variants.',
+      },
+      {
+        label: 'Narration-first explainers',
+        keywords: ['voiceover', 'narration', 'script', 'blog', 'explainer'],
+        winner: 'a',
+        verdict: 'Fliki is the stronger choice when the voiceover is doing most of the communication work.',
+      },
+    ],
+    editorialNotes: {
+      whyPeopleCompareTheseTools:
+        'People compare Fliki and InVideo because both reduce editing overhead and both can turn written ideas into finished video. The overlap is real, especially for teams trying to publish quickly without filming.',
+      looksSimilarButActuallyDifferent:
+        'They look similar if you only ask whether text can become video. The split is in format. Fliki is usually a narration-led conversion workflow. InVideo is usually a scene-assembly workflow built for faster visual drafting and broader short-form output.',
+      realDecision:
+        'The real decision is whether the video is carried by narration or by scene assembly. If voiceover and scripts do most of the work, Fliki is usually cleaner. If the team needs more stock-scene output and faster ad-style iteration, InVideo is usually stronger.',
+      hiddenTradeOff:
+        'Fliki is lighter when the team already thinks in scripts, articles, and voiceover. InVideo is broader for visual drafting, but it can be heavier than necessary if the message did not need that extra scene-assembly layer.',
+      whoWillRegretTheWrongChoice:
+        'Text-first teams regret InVideo when the workflow becomes more visual-production-heavy than the brief requires. Social and ad teams regret Fliki when narrated conversion is not enough and they need more scene-driven output variety.',
+    },
+    faq: [
+      {
+        question: 'Fliki vs InVideo: which should I choose first?',
+        answer:
+          'Choose Fliki for text-first, narration-led video. Choose InVideo for stock-scene drafts, faceless explainers, and faster ad-style output.',
+      },
+      {
+        question: 'What is the main workflow difference?',
+        answer:
+          'Fliki turns scripts or articles into narrated videos. InVideo assembles stock scenes and captions more like a production workflow for short-form output.',
+      },
+      {
+        question: 'Who usually regrets the wrong choice?',
+        answer:
+          'Text-first teams regret InVideo when it adds more visual production work than they needed. Social teams regret Fliki when a narration-led workflow is too narrow for the output mix.',
+      },
+    ],
+    promptBox: {
+      helperText:
+        'Run the same script in both tools to compare a narration-first workflow against a broader scene-assembly workflow.',
+    },
+  },
+  'invideo-vs-zebracat': {
+    decisionSummary:
+      'Choose InVideo when you need broader stock-scene drafts and faceless explainers. Choose Zebracat when the job is short-form social clips, ad variants, and trend-driven output.',
+    bestFor: {
+      a: [
+        'Broader stock-scene drafts and faceless explainers',
+        'Teams that need one tool to cover shorts plus general explainer output',
+        'Prompt-led video workflows that extend beyond quick social clips',
+      ],
+      b: [
+        'Short-form social clips, ad variants, and trend-driven output',
+        'Teams shipping high-volume marketing cuts for Shorts, Reels, and ads',
+        'Workflows that prioritize speed for social publishing over broader explainer coverage',
+      ],
+    },
+    notFor: {
+      a: [
+        'Teams that only need a tight short-form social clip engine',
+        'Trend-led output where broader explainer capability adds little value',
+        'Pure social workflows optimized around rapid short-form publishing',
+      ],
+      b: [
+        'Broader faceless explainer pipelines',
+        'Teams that need more mixed-format output than short-form social clips',
+        'Prompt-led workflows that also need general-purpose stock-scene coverage',
+      ],
+    },
+    matrixRows: [
+      { label: 'Best for', a: 'Broader stock-scene drafts and faceless explainers', b: 'Short-form social clips and ad-style marketing output' },
+      { label: 'Output type', a: 'Prompt-led stock-scene videos for explainers and mixed-format output', b: 'Short-form marketing clips optimized for social publishing' },
+      { label: 'Workflow speed', a: 'Fast for batch drafts', b: 'Fast for batch drafts' },
+      { label: 'Pricing starting point', a: '$28/mo', b: '$19/mo' },
+      { label: 'Free plan', a: 'Free plan', b: 'Free trial' },
+    ],
+    decisionCases: [
+      {
+        label: 'Faceless explainers',
+        keywords: ['explainers', 'stock', 'script', 'faceless', 'drafts'],
+        winner: 'a',
+        verdict: 'InVideo is the better fit when the team needs broader faceless explainers and stock-scene drafts, not just short-form social cuts.',
+      },
+      {
+        label: 'Short-form social ads',
+        keywords: ['social', 'shorts', 'reels', 'ads', 'clips'],
+        winner: 'b',
+        verdict: 'Zebracat is the better fit when the workflow is centered on short-form social ads, Reels, Shorts, and quick marketing clips.',
+      },
+      {
+        label: 'Trend-driven marketing clips',
+        keywords: ['trend', 'marketing', 'clips', 'shorts', 'social'],
+        winner: 'b',
+        verdict: 'Zebracat is the stronger choice when speed for trend-driven short-form marketing matters more than broader explainer coverage.',
+      },
+    ],
+    editorialNotes: {
+      whyPeopleCompareTheseTools:
+        'People compare InVideo and Zebracat because both are fast AI video tools aimed at teams that need output volume rather than handcrafted edits. They often show up in the same social-content and ad-production searches.',
+      looksSimilarButActuallyDifferent:
+        'Both help teams publish quickly, but they do not aim at the same center of gravity. InVideo covers a broader stock-scene and faceless-explainer workflow. Zebracat is tighter around short-form social cuts and trend-driven marketing output.',
+      realDecision:
+        'The real decision is whether the team needs broader visual drafting or a more short-form-native social clip engine.',
+      hiddenTradeOff:
+        'InVideo gives more room for broader explainer and stock-scene production, but that can be more workflow than a short-form social team actually needs. Zebracat is faster for social-style clips, but it is narrower if the team also needs more general explainer output.',
+      whoWillRegretTheWrongChoice:
+        'Broader content teams regret Zebracat when the workflow is too narrow for explainers and mixed-format publishing. Short-form ad teams regret InVideo when they wanted a tighter social clip workflow and got a broader tool instead.',
+    },
+    faq: [
+      {
+        question: 'InVideo vs Zebracat: which should I choose first?',
+        answer:
+          'Choose InVideo for broader stock-scene drafts and faceless explainers. Choose Zebracat for short-form social clips and ad-style marketing output.',
+      },
+      {
+        question: 'What is the practical difference?',
+        answer:
+          'InVideo is broader. Zebracat is narrower but more social-first.',
+      },
+      {
+        question: 'Who usually regrets the wrong choice?',
+        answer:
+          'Mixed-format content teams regret Zebracat when they need broader explainer coverage. Short-form social teams regret InVideo when they wanted a more focused clip workflow.',
+      },
+    ],
+    promptBox: {
+      helperText:
+        'Run the same short-form brief in both tools to compare broader stock-scene drafting against a tighter social-clip workflow.',
+    },
+  },
+};
+
 const SUPPLEMENTAL_VS_CANDIDATES: Array<[string, string]> = [
   ['descript', 'veed-io'],
   ['runway', 'sora'],
@@ -429,6 +830,53 @@ function parsePromptVariants(value: unknown): VsPromptVariant[] {
   }
 
   return variants;
+}
+
+function parseFaqItems(value: unknown): Array<{ question: string; answer: string }> {
+  if (!Array.isArray(value)) return [];
+  const items: Array<{ question: string; answer: string }> = [];
+  for (const item of value) {
+    if (!isRecord(item)) continue;
+    const question = asString(item.question);
+    const answer = asString(item.answer);
+    if (!question || !answer) continue;
+    items.push({ question, answer });
+  }
+  return items;
+}
+
+function parseDecisionCases(
+  value: unknown,
+): Array<{ label: string; keywords?: string[]; winner?: VsSide; verdict?: string }> {
+  if (!Array.isArray(value)) return [];
+  const items: Array<{ label: string; keywords?: string[]; winner?: VsSide; verdict?: string }> = [];
+  for (const item of value) {
+    if (!isRecord(item)) continue;
+    const label = asString(item.label);
+    if (!label) continue;
+    items.push({
+      label,
+      ...(asStringArray(item.keywords).length > 0 ? { keywords: asStringArray(item.keywords) } : {}),
+      ...(item.winner === 'a' || item.winner === 'b' ? { winner: item.winner } : {}),
+      ...(asString(item.verdict) ? { verdict: asString(item.verdict) } : {}),
+    });
+  }
+  return items;
+}
+
+function parseEditorialNotes(value: unknown): VsComparison['editorialNotes'] | undefined {
+  if (!isRecord(value)) return undefined;
+  const notes = {
+    whyPeopleCompareTheseTools: asString(value.whyPeopleCompareTheseTools),
+    looksSimilarButActuallyDifferent: asString(value.looksSimilarButActuallyDifferent),
+    realDecision: asString(value.realDecision),
+    editorsTake: asString(value.editorsTake),
+    chooseAIf: asString(value.chooseAIf),
+    chooseBIf: asString(value.chooseBIf),
+    hiddenTradeOff: asString(value.hiddenTradeOff),
+    whoWillRegretTheWrongChoice: asString(value.whoWillRegretTheWrongChoice),
+  };
+  return Object.values(notes).some(Boolean) ? notes : undefined;
 }
 
 function normalizeRelatedPath(value: string, kind: 'tool' | 'alternative' | 'comparison'): string {
@@ -847,6 +1295,46 @@ function getMapValue<T>(map: Map<string, T>, slug: string, swappedSlug: string):
   return map.get(slug) ?? map.get(swappedSlug);
 }
 
+function applyAuthoredVsOverride(base: VsComparison, parsed: ParsedVsSlug): VsComparison {
+  const override = AUTHORED_VS_OVERRIDES[toCanonicalVsSlug(parsed.slugA, parsed.slugB)];
+  if (!override) return base;
+
+  const mergedMatrixRows =
+    override.matrixRows && override.matrixRows.length > 0
+      ? toVsDiffRows(buildDecisionTableRows(override.matrixRows as VsDiffRow[], parsed.slugA, parsed.slugB))
+      : base.matrixRows;
+
+  return {
+    ...base,
+    ...(override.decisionSummary ? { decisionSummary: override.decisionSummary } : {}),
+    shortAnswer: {
+      a: override.shortAnswer?.a ?? base.shortAnswer.a,
+      b: override.shortAnswer?.b ?? base.shortAnswer.b,
+    },
+    bestFor: {
+      a: override.bestFor?.a ?? base.bestFor.a,
+      b: override.bestFor?.b ?? base.bestFor.b,
+    },
+    notFor: {
+      a: override.notFor?.a ?? base.notFor.a,
+      b: override.notFor?.b ?? base.notFor.b,
+    },
+    keyDiffs: override.keyDiffs?.length ? override.keyDiffs : base.keyDiffs,
+    matrixRows: mergedMatrixRows,
+    ...(override.decisionCases?.length ? { decisionCases: override.decisionCases } : {}),
+    ...(override.editorialNotes ? { editorialNotes: override.editorialNotes } : {}),
+    ...(override.faq?.length ? { faq: override.faq } : {}),
+    promptBox: {
+      ...base.promptBox,
+      ...(override.promptBox?.helperText ? { helperText: override.promptBox.helperText } : {}),
+    },
+    verdict: {
+      ...base.verdict,
+      ...(override.verdict?.recommendation ? { recommendation: override.verdict.recommendation } : {}),
+    },
+  };
+}
+
 function adaptComparisonFromRaw(raw: unknown, parsed: ParsedVsSlug): VsComparison | null {
   const legacy = buildLegacyComparison(parsed).comparison;
   if (!legacy) return null;
@@ -864,6 +1352,9 @@ function adaptComparisonFromRaw(raw: unknown, parsed: ParsedVsSlug): VsCompariso
   const verdict = isRecord(raw.verdict) ? raw.verdict : null;
   const related = isRecord(raw.related) ? raw.related : null;
   const promptBox = isRecord(raw.promptBox) ? raw.promptBox : null;
+  const editorialNotes = parseEditorialNotes(raw.editorialNotes);
+  const decisionCases = parseDecisionCases(raw.decisionCases);
+  const faq = parseFaqItems(raw.faq);
   const parsedKeyDiffs = parseDiffRows(raw.keyDiffs);
   const parsedMatrixRows = parseDiffRows(raw.matrixRows);
 
@@ -937,17 +1428,22 @@ function adaptComparisonFromRaw(raw: unknown, parsed: ParsedVsSlug): VsCompariso
     promptBox: {
       prompt: asString(promptBox?.prompt) ?? legacy.promptBox.prompt,
       settings: chooseTopItems(asStringArray(promptBox?.settings), legacy.promptBox.settings),
+      ...(asString(promptBox?.helperText) ? { helperText: asString(promptBox?.helperText) } : {}),
       variants:
         parsePromptVariants(promptBox?.variants).length > 0
           ? parsePromptVariants(promptBox?.variants)
           : legacy.promptBox.variants ?? [],
     },
+    ...(asString(raw.decisionSummary) ? { decisionSummary: asString(raw.decisionSummary) } : {}),
+    ...(editorialNotes ? { editorialNotes } : {}),
+    ...(decisionCases.length > 0 ? { decisionCases } : {}),
     verdict: {
       winnerPrice: parseSide(verdict?.winnerPrice, legacy.verdict.winnerPrice),
       winnerQuality: parseSide(verdict?.winnerQuality, legacy.verdict.winnerQuality),
       winnerSpeed: parseSide(verdict?.winnerSpeed, legacy.verdict.winnerSpeed),
       recommendation: asString(verdict?.recommendation) ?? legacy.verdict.recommendation,
     },
+    ...(faq.length > 0 ? { faq } : {}),
     related: {
       toolPages: chooseTopItems(
         asStringArray(related?.toolPages).map((item) => normalizeRelatedPath(item, 'tool')).filter(Boolean),
@@ -1426,7 +1922,7 @@ function resolveVsComparison(slug: string, options?: { debug?: boolean }): VsLoa
   if (fromCanonical) {
     const errors = validateVsComparison(fromCanonical);
     if (errors.length === 0) {
-      const normalizedCanonical = normalizeCanonicalComparison(fromCanonical);
+      const normalizedCanonical = applyAuthoredVsOverride(normalizeCanonicalComparison(fromCanonical), parsed);
       if (debug) {
         logDebug('entry hit', { hit: true, source: 'canonical', normalizedSlug, reason: 'registered canonical data' });
       }
@@ -1480,12 +1976,13 @@ function resolveVsComparison(slug: string, options?: { debug?: boolean }): VsLoa
 
   const supplementalCanonical = getSupplementalCanonicalComparisons().get(canonicalSlug);
   if (supplementalCanonical) {
+    const mergedSupplementalCanonical = applyAuthoredVsOverride(supplementalCanonical, parsed);
     if (debug) {
       logDebug('entry hit', { hit: true, source: 'canonical', normalizedSlug, reason: 'supplemental canonical generated' });
     }
     return finalizeVsResult({
       status: 'FULL',
-      comparison: supplementalCanonical,
+      comparison: mergedSupplementalCanonical,
       indexHit: true,
       hitSource: 'canonical',
       source: 'canonical',
@@ -1494,11 +1991,30 @@ function resolveVsComparison(slug: string, options?: { debug?: boolean }): VsLoa
     }, debug);
   }
 
+  const authoredOverride = AUTHORED_VS_OVERRIDES[canonicalSlug];
+  if (authoredOverride) {
+    const authoredComparison = adaptComparisonFromRaw(authoredOverride, parsed);
+    if (authoredComparison) {
+      if (debug) {
+        logDebug('entry hit', { hit: true, source: 'canonical', normalizedSlug, reason: 'authored override merged onto legacy base' });
+      }
+      return finalizeVsResult({
+        status: 'FULL',
+        comparison: authoredComparison,
+        indexHit: true,
+        hitSource: 'canonical',
+        source: 'canonical',
+        normalizedSlug,
+        parsed,
+      }, debug);
+    }
+  }
+
   const fromJson = discovery.jsonComparisonsBySlug.get(canonicalSlug);
   if (fromJson) {
     const errors = validateVsComparison(fromJson);
     if (errors.length === 0) {
-      const normalizedJson = normalizeCanonicalComparison(fromJson);
+      const normalizedJson = applyAuthoredVsOverride(normalizeCanonicalComparison(fromJson), parsed);
       if (debug) {
         logDebug('entry hit', { hit: true, source: 'canonical', normalizedSlug, reason: 'json file loaded' });
       }
@@ -1518,7 +2034,7 @@ function resolveVsComparison(slug: string, options?: { debug?: boolean }): VsLoa
   if (fromTs) {
     const errors = validateVsComparison(fromTs);
     if (errors.length === 0) {
-      const normalizedTs = normalizeCanonicalComparison(fromTs);
+      const normalizedTs = applyAuthoredVsOverride(normalizeCanonicalComparison(fromTs), parsed);
       if (debug) {
         logDebug('entry hit', { hit: true, source: 'canonical', normalizedSlug, reason: 'ts file auto-loaded' });
       }
