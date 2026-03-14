@@ -6,7 +6,7 @@ type BuildSourcesFn = (type: 'pricing' | 'docs' | 'help' | 'examples', rowLabel:
   b: string[];
 };
 
-type ToolMode =
+export type ToolMode =
   | 'avatar'
   | 'repurpose'
   | 'transcript_editor'
@@ -16,7 +16,7 @@ type ToolMode =
   | 'browser_editor'
   | 'generic';
 
-type ToolSignals = {
+export type ToolSignals = {
   mode: ToolMode;
   workflow: string;
   editingModel: string;
@@ -27,7 +27,7 @@ type ToolSignals = {
   outputStyle: string;
 };
 
-type AvatarProfile = {
+export type AvatarProfile = {
   realism: string;
   workflow: string;
   localization: string;
@@ -116,7 +116,7 @@ function hasAny(text: string, patterns: RegExp[]): boolean {
   return patterns.some((pattern) => pattern.test(text));
 }
 
-function inferToolSignals(tool: Tool): ToolSignals {
+export function inferToolSignals(tool: Tool): ToolSignals {
   const text = joinToolText(tool);
 
   if (hasAny(text, [/\bavatar\b/, /\bpresenter\b/, /\bdigital human\b/, /\btalking photo\b/, /\blip-sync\b/])) {
@@ -256,7 +256,7 @@ function inferToolSignals(tool: Tool): ToolSignals {
   };
 }
 
-function getAvatarProfile(tool: Tool): AvatarProfile | null {
+export function getAvatarProfile(tool: Tool): AvatarProfile | null {
   return AVATAR_PROFILES[tool.slug] ?? null;
 }
 

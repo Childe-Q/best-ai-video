@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { INTERNAL_SCORE_METRICS } from '@/lib/vsScore';
 
 const METRIC_DETAILS = [
   {
@@ -41,9 +42,17 @@ const METRIC_DETAILS = [
       'Reusable assets, workspace controls, and editing flexibility',
     ],
   },
-];
+ ] as const;
 
-export default function VsScoringDetails() {
+interface VsScoringDetailsProps {
+  activeMetrics?: string[];
+}
+
+export default function VsScoringDetails({ activeMetrics = [...INTERNAL_SCORE_METRICS] }: VsScoringDetailsProps) {
+  const visibleMetrics = METRIC_DETAILS.filter((metric) =>
+    activeMetrics.some((activeMetric) => metric.label.toLowerCase() === activeMetric.replace(/([A-Z])/g, ' $1').trim().toLowerCase()),
+  );
+
   return (
     <details className="mt-4 rounded-lg border border-gray-200 bg-gray-50 p-4">
       <summary className="cursor-pointer text-sm font-semibold text-gray-900">Scoring &amp; sources</summary>
@@ -52,7 +61,7 @@ export default function VsScoringDetails() {
           This is an internal scoring model, not a third-party rating. We only score against verified official sources or structured product data that maps back to official product pages.
         </p>
         <div className="grid gap-3 md:grid-cols-2">
-          {METRIC_DETAILS.map((metric) => (
+          {visibleMetrics.map((metric) => (
             <div key={metric.label} className="rounded-lg border border-gray-200 bg-white p-3">
               <p className="font-medium text-gray-900">{metric.label}</p>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-xs text-gray-600">

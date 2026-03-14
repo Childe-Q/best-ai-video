@@ -6,6 +6,7 @@ import { getAllTools, getTool } from '@/lib/getTool';
 import { buildDecisionTableRows, toVsDiffRows } from '@/lib/vsDecisionTable';
 import { buildLegacyBestFor, buildLegacyKeyDiffs, buildLegacyNotFor } from '@/lib/vsDifferentiation';
 import { applyIntentProfileOverride, buildIntentProfile } from '@/lib/vsIntent';
+import { buildVsPairCopy } from '@/lib/vsPairType';
 import { normalizeSourceUrlList } from '@/lib/vsSources';
 import {
   applyFeaturedCalibration,
@@ -242,6 +243,189 @@ const AUTHORED_VS_OVERRIDES: Record<string, VsAuthoredOverride> = {
     promptBox: {
       helperText:
         'Run the same avatar brief in both tools to compare campaign-style presenter delivery against training-led enterprise rollout.',
+    },
+  },
+  'deepbrain-ai-vs-heygen': {
+    decisionSummary:
+      'Choose DeepBrain AI when avatar video is part of an enterprise deployment: realistic presenters, API-backed rollout, or white-label delivery. Choose HeyGen when the job is lighter spokesperson video for outreach, explainers, and faster presenter-led communication.',
+    shortAnswer: {
+      a: 'DeepBrain AI is the stronger fit for enterprise presenter deployment, API-backed workflows, and white-label delivery.',
+      b: 'HeyGen is the stronger fit for spokesperson videos, outreach, and lighter presenter-led explainers.',
+    },
+    keyDiffs: [
+      {
+        label: 'Deployment model',
+        a: 'DeepBrain AI is positioned more like an enterprise presenter platform, with API integration and white-label deployment in the buying story.',
+        b: 'HeyGen is positioned more like a lighter browser workflow for spokesperson videos, outreach, and fast presenter-led explainers.',
+        sources: {
+          a: ['https://www.deepbrain.io/ai-avatars'],
+          b: ['https://www.heygen.com/features'],
+        },
+      },
+      {
+        label: 'Workflow style',
+        a: 'DeepBrain AI fits teams building repeatable presenter workflows that may connect to existing systems and formal rollout processes.',
+        b: 'HeyGen fits teams that want to move faster from script to presenter video without treating deployment as a larger systems project.',
+        sources: {
+          a: ['https://www.deepbrain.io/ai-avatars'],
+          b: ['https://www.heygen.com/features'],
+        },
+      },
+      {
+        label: 'Localization posture',
+        a: 'DeepBrain AI frames multilingual presenter delivery as part of broader enterprise-scale communication and rollout.',
+        b: 'HeyGen frames multilingual delivery around voice cloning, lip-sync, and presenter updates that still feel campaign-ready.',
+        sources: {
+          a: ['https://www.deepbrain.io/help'],
+          b: ['https://www.heygen.com/help-center'],
+        },
+      },
+      {
+        label: 'Best-fit use case',
+        a: 'DeepBrain AI is more convincing when the buyer cares about deployment posture, system fit, and high-polish enterprise presenters.',
+        b: 'HeyGen is more convincing when the buyer cares about spokesperson delivery, outreach velocity, and lighter presenter iteration.',
+        sources: {
+          a: ['https://www.deepbrain.io/ai-avatars'],
+          b: ['https://www.heygen.com/features'],
+        },
+      },
+    ],
+    bestFor: {
+      a: [
+        'Enterprise teams rolling out realistic presenter video with API or white-label requirements',
+        'Avatar workflows tied to formal deployment, governance, or systems integration',
+        'Global teams that want presenter-led communication with stronger enterprise posture',
+      ],
+      b: [
+        'Spokesperson videos, outreach, and presenter-led explainers that need to move quickly',
+        'Revenue, marketing, and enablement teams that want a lighter presenter workflow',
+        'Teams iterating on avatar-led communication without a heavier deployment project behind it',
+      ],
+    },
+    notFor: {
+      a: [
+        'Lean teams that mainly need lightweight outreach or campaign-style presenter videos',
+        'Workflows where fast iteration matters more than deployment controls',
+        'Buyers who do not need API-backed rollout, white-label delivery, or enterprise posture',
+      ],
+      b: [
+        'Organizations buying avatar video as part of a larger enterprise deployment',
+        'Teams that need stronger white-label or systems-integration posture',
+        'Presenter programs where rollout structure matters more than lightweight iteration',
+      ],
+    },
+    matrixRows: [
+      {
+        label: 'Best for',
+        a: 'Enterprise avatar deployment, API-backed rollout, and white-label presenter workflows',
+        b: 'Spokesperson videos, outreach, and lighter presenter-led explainers',
+        sources: {
+          a: ['https://www.deepbrain.io/ai-avatars'],
+          b: ['https://www.heygen.com/features'],
+        },
+      },
+      {
+        label: 'Output type',
+        a: 'Realistic presenter videos built for enterprise communication and deployment-led workflows',
+        b: 'Presenter-led avatar videos for outreach, explainers, and lighter communication workflows',
+        sources: {
+          a: ['https://www.deepbrain.io/ai-avatars'],
+          b: ['https://www.heygen.com/features'],
+        },
+      },
+      {
+        label: 'Workflow speed',
+        a: 'Fast for batch drafts',
+        b: 'Fast for lighter presenter videos and campaign-style iterations',
+        sources: {
+          a: ['https://www.deepbrain.io/help'],
+          b: ['https://www.heygen.com/help-center'],
+        },
+      },
+      {
+        label: 'Languages & dubbing',
+        a: '100+ language presenter delivery aimed at enterprise-scale rollout',
+        b: 'Multilingual presenter delivery with voice cloning and lip-sync workflow',
+        sources: {
+          a: ['https://www.deepbrain.io/help'],
+          b: ['https://www.heygen.com/help-center'],
+        },
+      },
+      {
+        label: 'Pricing starting point',
+        a: '$24/mo',
+        b: '$29/mo',
+        sources: {
+          a: ['https://www.deepbrain.io/pricing'],
+          b: ['https://www.heygen.com/pricing'],
+        },
+      },
+      {
+        label: 'Free plan',
+        a: 'Free trial',
+        b: 'Free plan',
+        sources: {
+          a: ['https://www.deepbrain.io/pricing'],
+          b: ['https://www.heygen.com/pricing'],
+        },
+      },
+    ],
+    decisionCases: [
+      {
+        label: 'Sales outreach & spokesperson videos',
+        keywords: ['sales', 'outreach', 'spokesperson', 'presenter'],
+        winner: 'b',
+        verdict: 'HeyGen is the better fit when the job is spokesperson-style outreach, sales communication, or presenter-led explainers that need to move quickly.',
+      },
+      {
+        label: 'Enterprise training rollout',
+        keywords: ['training', 'enterprise', 'internal', 'learning', 'rollout'],
+        winner: 'a',
+        verdict: 'DeepBrain AI is the better fit when avatar video sits inside a more formal enterprise rollout with stronger deployment and systems requirements.',
+      },
+      {
+        label: 'API-backed deployment',
+        keywords: ['api', 'white-label', 'deployment', 'integration', 'enterprise'],
+        winner: 'a',
+        verdict: 'DeepBrain AI is the stronger choice when the buyer cares about API-backed rollout, white-label options, or a more deployment-oriented avatar program.',
+      },
+    ],
+    editorialNotes: {
+      whyPeopleCompareTheseTools:
+        'People compare DeepBrain AI and HeyGen because both promise realistic presenter-led video without a traditional film workflow. They overlap at the category level, but the buying motion is usually different once deployment requirements enter the discussion.',
+      looksSimilarButActuallyDifferent:
+        'Both tools make avatar video with a realistic presenter feel. The difference is not simply avatar quality. DeepBrain AI is closer to enterprise deployment, API-backed rollout, and white-label posture. HeyGen is closer to lighter spokesperson workflows for outreach, explainers, and presenter-led communication that needs to move faster.',
+      realDecision:
+        'The real decision is whether avatar video is being bought as a lighter communication workflow or as part of a broader enterprise deployment. If the team needs systems posture and rollout control, DeepBrain AI is usually the stronger fit. If the team mainly needs faster presenter-led communication, HeyGen is usually the cleaner buy.',
+      hiddenTradeOff:
+        'DeepBrain AI can make more sense once deployment, API, or white-label needs are real, but that posture is heavier than some communication teams actually need. HeyGen is lighter for spokesperson-style work, but it can look too lightweight when the purchase is really about enterprise rollout structure.',
+      whoWillRegretTheWrongChoice:
+        'Revenue and marketing teams regret DeepBrain AI when the workflow only needed fast presenter-led outreach and the deployment posture adds unnecessary weight. Enterprise teams regret HeyGen when avatar video becomes part of a more formal rollout with systems integration, white-label, or governance expectations.',
+    },
+    faq: [
+      {
+        question: 'DeepBrain AI vs HeyGen: which belongs on the shortlist first?',
+        answer:
+          'Put DeepBrain AI first when the buying motion is enterprise presenter deployment, API-backed rollout, or white-label delivery. Put HeyGen first when the team mainly needs spokesperson videos, outreach, and lighter presenter-led explainers.',
+      },
+      {
+        question: 'What is the real buying split?',
+        answer:
+          'DeepBrain AI is closer to an enterprise presenter workflow with stronger deployment posture. HeyGen is closer to a lighter browser workflow for spokesperson videos, outreach, and presenter-led explainers.',
+      },
+      {
+        question: 'Who usually regrets the wrong choice?',
+        answer:
+          'Teams focused on outreach and fast presenter communication regret DeepBrain AI when enterprise deployment posture adds more process than the workflow needs. Teams buying for rollout, integration, or white-label delivery regret HeyGen when the organization really needed a more deployment-oriented avatar platform.',
+      },
+    ],
+    promptBox: {
+      helperText:
+        'Run the same presenter brief in both tools to compare enterprise deployment posture against a lighter spokesperson workflow.',
+    },
+    verdict: {
+      recommendation:
+        'Choose DeepBrain AI when avatar video is part of an enterprise deployment with API, white-label, or rollout requirements. Choose HeyGen when the team mainly needs faster spokesperson videos, outreach, and lighter presenter-led communication.',
     },
   },
   'fliki-vs-invideo': {
@@ -1474,23 +1658,6 @@ function parsePriceValue(startingPrice: string): number {
   return Number.parseFloat(match[1]);
 }
 
-function toLegacyNeedPhrase(value: string, toolName: string): string {
-  const normalizedToolName = toolName.toLowerCase();
-  return value
-    .trim()
-    .replace(/[.?!]+$/g, '')
-    .replace(new RegExp(`^${normalizedToolName}\\s+`, 'i'), '')
-    .replace(/^is the better fit for\s+/i, '')
-    .replace(/^is a strong fit for\s+/i, '')
-    .replace(/^fits teams that need\s+/i, '')
-    .replace(/^works best for\s+/i, '')
-    .replace(/^best when the job is\s+/i, '')
-    .replace(/^useful for\s+/i, '')
-    .replace(/^stronger if you want a workflow that\s+/i, 'a workflow that ')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
 function clampScore(score: number): number {
   if (Number.isNaN(score)) return 0;
   return Math.max(0, Math.min(10, score));
@@ -1663,8 +1830,6 @@ function buildLegacyComparison(parsed: ParsedVsSlug): { comparison: VsComparison
   );
   const legacyBestForA = chooseTopItems(buildLegacyBestFor(toolA, toolB, pairSlug), [toolA.best_for, ...(toolA.tags ?? [])]);
   const legacyBestForB = chooseTopItems(buildLegacyBestFor(toolB, toolA, pairSlug), [toolB.best_for, ...(toolB.tags ?? [])]);
-  const legacyNeedA = toLegacyNeedPhrase(legacyBestForA[0] ?? toolA.best_for, toolA.name);
-  const legacyNeedB = toLegacyNeedPhrase(legacyBestForB[0] ?? toolB.best_for, toolB.name);
   const legacyNotForA = chooseTopItems(
     buildLegacyNotFor(toolA, toolB, pairSlug),
     ['Advanced manual editing-centric workflows', 'Strict enterprise governance', 'Ultra-high customization needs'],
@@ -1734,6 +1899,7 @@ function buildLegacyComparison(parsed: ParsedVsSlug): { comparison: VsComparison
   };
   const scoreMetrics = getScoreMetricKeys({ weights: scoreWeights, a: scoreA, b: scoreB });
   const scoreProvenance = buildInferredScoreProvenance(scoreMetrics, [...matrixRows, ...keyDiffs]);
+  const pairCopy = buildVsPairCopy(toolA, toolB, intentProfile);
   const normalizedScore = normalizeInternalScore(
     {
       methodNote:
@@ -1755,10 +1921,12 @@ function buildLegacyComparison(parsed: ParsedVsSlug): { comparison: VsComparison
     updatedAt: today,
     pricingCheckedAt: today,
     intentProfile,
+    decisionSummary: pairCopy.decisionSummary,
     shortAnswer: {
-      a: `Choose ${toolA.name} if you need ${legacyNeedA}.`,
-      b: `Choose ${toolB.name} if you need ${legacyNeedB}.`,
+      a: pairCopy.shortAnswer.a,
+      b: pairCopy.shortAnswer.b,
     },
+    decisionCases: pairCopy.decisionCases,
     bestFor: {
       a: legacyBestForA,
       b: legacyBestForB,
@@ -1775,13 +1943,15 @@ function buildLegacyComparison(parsed: ParsedVsSlug): { comparison: VsComparison
         'Create a 45-second product update video for a B2B SaaS launch. Include one hook, three key benefits, and one CTA with on-screen captions.',
       settings: ['Duration: 45s', 'Format: 16:9', 'Language: English', 'Output: MP4 1080p', 'Tone: professional'],
       variants: [],
+      helperText: pairCopy.promptHelperText,
     },
     verdict: {
       winnerPrice: priceA <= priceB ? 'a' : 'b',
       winnerQuality: scoreA.output >= scoreB.output ? 'a' : 'b',
       winnerSpeed: scoreA.speed >= scoreB.speed ? 'a' : 'b',
-      recommendation: `Start with ${toolA.name} if you need ${legacyNeedA}. Start with ${toolB.name} if you need ${legacyNeedB}.`,
+      recommendation: pairCopy.recommendation,
     },
+    faq: pairCopy.faq,
     related: {
       toolPages: [`/tool/${parsed.slugA}`, `/tool/${parsed.slugB}`],
       alternatives: [`/tool/${parsed.slugA}/alternatives`, `/tool/${parsed.slugB}/alternatives`],

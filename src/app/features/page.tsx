@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { canonicalizeVsHref } from '@/data/vs';
 import { categories } from '@/data/categories';
 import { getSEOCurrentYear } from '@/lib/utils';
+import FeaturesFAQ from '@/components/features/FeaturesFAQ';
 
 const seoYear = getSEOCurrentYear();
 
@@ -20,28 +21,28 @@ function getFeatureTitle(slug: string): string {
 /*  Data                                                               */
 /* ------------------------------------------------------------------ */
 
-const scenarioRoutes = [
+const quickRoutes = [
   {
     question: 'Need a spokesperson on screen?',
-    detail:
-      'Start with the avatar hub if the buyer expects a presenter-led video rather than a stock-footage montage.',
+    when: 'Use this path when the message depends on face, voice, and delivery.',
+    category: 'Avatar tools',
     href: '/features/ai-avatar-video-generators',
   },
   {
-    question: 'Turning existing content into video?',
-    detail:
-      'Go here if your raw material is a webinar, article, podcast, or transcript that needs to become short-form output.',
+    question: 'Repurposing existing content?',
+    when: 'Start here if you already have blogs, webinars, podcasts, or transcripts.',
+    category: 'Repurposing tools',
     href: '/features/content-repurposing-ai-tools',
   },
   {
-    question: 'Buying for a team, not a solo creator?',
-    detail:
-      'Use the enterprise route when approvals, governance, translation workflow, or procurement posture matter as much as the editor itself.',
+    question: 'Buying for a team?',
+    when: 'Go here when approvals, admin controls, or localization affect the shortlist.',
+    category: 'Enterprise tools',
     href: '/features/enterprise-ai-video-solutions',
   },
 ];
 
-const featureCategories = [
+const primaryCategories = [
   {
     slug: 'best-ai-video-generators',
     description:
@@ -62,6 +63,9 @@ const featureCategories = [
     description:
       'AI-powered editing when the draft already exists. Transcript cuts, auto-captions, background removal, and smart cleanup.',
   },
+];
+
+const secondaryCategories = [
   {
     slug: 'fast-ai-video-generators',
     description:
@@ -116,30 +120,6 @@ const featureCategories = [
     slug: 'ai-video-generators-comparison',
     description:
       'Side-by-side model comparison on speed, resolution, realism, and API posture across leading generators.',
-  },
-];
-
-const editorialPicks = [
-  {
-    useCase: 'Avatar-led sales or training',
-    tool: 'HeyGen',
-    detail:
-      'Best when the message depends on a repeatable presenter, not just scenes and captions.',
-    href: '/tool/heygen',
-  },
-  {
-    useCase: 'High-volume faceless publishing',
-    tool: 'InVideo',
-    detail:
-      'Best when you need stock-first drafts for Shorts, explainers, and marketing output at speed.',
-    href: '/tool/invideo',
-  },
-  {
-    useCase: 'Blog or script to video',
-    tool: 'Fliki',
-    detail:
-      'Best when the workflow begins with text and speed matters more than having a digital host on screen.',
-    href: '/tool/fliki',
   },
 ];
 
@@ -210,174 +190,191 @@ export function generateMetadata(): Metadata {
 
 export default function FeaturesHubPage() {
   return (
-    <div className="min-h-screen bg-[#F8F7F3] pb-16 text-gray-900">
+    <div className="min-h-screen bg-[#FCFBF7] pb-16">
 
-      {/* ── 1. Hero ────────────────────────────────────────────── */}
-      <header className="border-b border-gray-200 bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+      {/* ── Hero + Quick Routes ──────────────────────────────── */}
+      <header className="relative overflow-hidden border-b border-black/10 bg-white">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-full bg-[radial-gradient(circle_at_top_right,_rgba(184,245,0,0.12),_transparent_50%),radial-gradient(circle_at_10%_30%,_rgba(246,210,0,0.10),_transparent_35%)]" />
+
+        <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-400">
-              Use-case hub
-            </p>
-            <h1 className="mt-3 text-4xl font-black tracking-tight text-gray-900 md:text-5xl">
-              Explore AI Video Tools by Use Case
+            <span className="inline-flex items-center rounded-full border border-black/10 bg-white/90 px-4 py-2 text-xs font-bold tracking-[0.16em] text-black/70 backdrop-blur">
+              USE-CASE HUB
+            </span>
+
+            <h1 className="mt-5 text-4xl font-black tracking-[-0.02em] text-gray-900 md:text-5xl lg:text-6xl">
+              Explore AI Video Tools{' '}
+              <span className="block">by Use Case</span>
             </h1>
-            <p className="mt-5 text-lg leading-8 text-gray-600">
-              This hub organizes every AI video category by workflow, not by brand. Pick the
-              route that matches your job, scan the tools inside, then use reviews and comparison
-              pages to make the final call.
+
+            <p className="mt-5 max-w-2xl text-base font-medium leading-7 text-gray-600 md:text-lg">
+              Pick the route that matches your workflow, then narrow down with reviews and direct comparisons.
             </p>
+          </div>
+
+          {/* Quick routes — merged from old Scenario Router */}
+          <div className="mt-12 border-t border-black/8 pt-6">
+            <div className="grid gap-4 md:grid-cols-3">
+              {quickRoutes.map((r) => (
+                <Link
+                  key={r.href}
+                  href={r.href}
+                  className="group no-underline"
+              >
+                <p className="text-sm font-bold text-black transition-colors duration-200 group-hover:text-black/70">
+                  {r.question}
+                </p>
+                <p className="mt-1.5 max-w-[22rem] text-sm leading-6 text-black/52 transition-colors duration-200 group-hover:text-black/62">
+                  {r.when}
+                </p>
+                <span className="mt-2 inline-flex items-center text-sm font-semibold text-black/45 transition-colors duration-200 group-hover:text-black/70">
+                  {r.category}
+                  <span className="ml-1.5 transition-transform duration-200 group-hover:translate-x-1">→</span>
+                </span>
+              </Link>
+              ))}
+            </div>
           </div>
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl px-4 pt-12 sm:px-6 lg:px-8">
+      <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
 
-        {/* ── 2. Scenario Router ───────────────────────────────── */}
-        <section className="mb-16 rounded-3xl border border-black/10 bg-white p-8 shadow-sm lg:p-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-400">
-            Where to go next
-          </p>
-          <h2 className="mt-2 text-2xl font-black text-gray-900 md:text-3xl">
-            Text-first entrances into the strongest sub-hubs
-          </h2>
-
-          <div className="mt-8 divide-y divide-gray-100">
-            {scenarioRoutes.map((r) => (
-              <Link
-                key={r.href}
-                href={r.href}
-                className="group flex items-start gap-6 py-6 first:pt-0 last:pb-0"
-              >
-                <div className="min-w-0 flex-1">
-                  <h3 className="text-lg font-bold text-gray-900 transition-colors group-hover:text-indigo-600">
-                    {r.question}
-                  </h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-gray-500">{r.detail}</p>
-                </div>
-                <span className="mt-1 shrink-0 text-lg text-gray-300 transition-colors group-hover:text-indigo-500">
-                  →
-                </span>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* ── 3. Category Directory ────────────────────────────── */}
-        <section className="mb-16">
-          <div className="mb-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-400">
-              All categories
+        {/* ── Tier 1: Primary Categories ─────────────────────── */}
+        <section className="mb-12">
+          <div className="max-w-2xl">
+            <p className="text-[11px] font-black uppercase tracking-[0.18em] text-black/40">
+              Most common starting points
             </p>
-            <h2 className="mt-2 text-2xl font-black text-gray-900 md:text-3xl">
-              Browse every AI video tool category
+            <h2 className="mt-3 text-2xl font-black text-gray-900 md:text-3xl">
+              Four routes that cover the majority of buyers
             </h2>
+            <p className="mt-3 text-sm leading-6 text-black/52">
+              These are the best starting hubs when you are still narrowing the workflow, not browsing the full index.
+            </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {featureCategories.map((cat) => (
+          <div className="mt-8 grid gap-3 md:grid-cols-2">
+            {primaryCategories.map((cat) => (
               <Link
                 key={cat.slug}
                 href={`/features/${cat.slug}`}
-                className="group rounded-2xl border border-black/[0.06] bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
+                className="group rounded-[1.4rem] border border-black/8 bg-white px-6 py-6 no-underline transition-all duration-200 ease-out hover:-translate-y-1 hover:border-black/14 hover:shadow-[0_12px_28px_rgba(0,0,0,0.04)]"
               >
-                <h3 className="text-base font-bold text-gray-900 transition-colors group-hover:text-indigo-600">
+                <p className="text-[11px] font-black uppercase tracking-[0.16em] text-black/35">
+                  Feature hub
+                </p>
+                <h3 className="mt-2 text-lg font-black text-gray-900 transition-colors duration-200 group-hover:text-black/70">
                   {getFeatureTitle(cat.slug)}
                 </h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-gray-500">{cat.description}</p>
-                <span className="mt-4 inline-flex items-center text-sm font-semibold text-gray-900 transition-colors group-hover:text-indigo-600">
-                  Explore Tools <span className="ml-1.5">→</span>
+                <p className="mt-2 max-w-sm text-sm leading-6 text-black/55">
+                  {cat.description}
+                </p>
+                <span className="mt-4 inline-flex items-center text-sm font-bold text-black">
+                  <span className="border-b border-black/25 transition-colors duration-200 group-hover:border-black">
+                    Start here
+                  </span>
+                  <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">→</span>
                 </span>
               </Link>
             ))}
           </div>
         </section>
 
-        {/* ── 4. Editorial Picks ───────────────────────────────── */}
-        <section className="mb-16 rounded-3xl border border-black/10 bg-white p-8 shadow-sm lg:p-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-400">
-            Best picks by use case
-          </p>
-          <h2 className="mt-2 text-2xl font-black text-gray-900 md:text-3xl">
-            Three fast starting points if you do not want to scan every category
-          </h2>
+        {/* ── Tier 2: All Other Categories ────────────────────── */}
+        <section className="mb-12 border-t border-black/6 pt-10">
+          <div className="max-w-2xl">
+            <p className="text-[11px] font-black uppercase tracking-[0.18em] text-black/40">
+              All categories
+            </p>
+            <h2 className="mt-3 text-2xl font-black text-gray-900 md:text-3xl">
+              Browse the full directory
+            </h2>
+            <p className="mt-3 text-sm leading-6 text-black/52">
+              Use this index once you already know the route family you want, or if the curated starting points above are too narrow.
+            </p>
+          </div>
 
-          <div className="mt-8 grid gap-5 lg:grid-cols-3">
-            {editorialPicks.map((pick) => (
+          <div className="mt-8 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+            {secondaryCategories.map((cat) => (
               <Link
-                key={pick.href}
-                href={pick.href}
-                className="group rounded-2xl border border-black/[0.06] bg-[#FCFBF7] p-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
+                key={cat.slug}
+                href={`/features/${cat.slug}`}
+                className="group rounded-xl border border-black/8 bg-white/65 px-4 py-3.5 no-underline transition-colors duration-200 hover:border-black/14 hover:bg-white"
               >
-                <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-gray-400">
-                  {pick.useCase}
-                </p>
-                <h3 className="mt-2 text-xl font-black text-gray-900">{pick.tool}</h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-gray-500">{pick.detail}</p>
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="text-[15px] font-bold text-gray-900 transition-colors duration-200 group-hover:text-black/70">
+                      {getFeatureTitle(cat.slug)}
+                    </h3>
+                    <p className="mt-1.5 text-sm leading-6 text-black/47">
+                      {cat.description}
+                    </p>
+                  </div>
+                  <span className="pt-0.5 text-sm font-semibold text-black/30 transition-colors duration-200 group-hover:text-black/55">
+                    →
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
         </section>
 
-        {/* ── 5. FAQ ───────────────────────────────────────────── */}
-        <section className="mb-16 rounded-3xl border border-black/10 bg-white p-8 shadow-sm lg:p-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-400">FAQ</p>
-          <h2 className="mt-2 text-2xl font-black text-gray-900 md:text-3xl">
+        {/* ── FAQ ────────────────────────────────────────────── */}
+        <section className="mb-12 rounded-2xl bg-[#F3F1EA] px-6 py-8 sm:px-8 sm:py-10">
+          <p className="text-[11px] font-black uppercase tracking-[0.18em] text-black/40">
+            FAQ
+          </p>
+          <h2 className="mt-3 text-2xl font-black text-gray-900 md:text-3xl">
             Common questions about choosing the right route
           </h2>
 
-          <div className="mt-8 space-y-3">
-            {faqItems.map((item) => (
-              <details
-                key={item.question}
-                className="group rounded-2xl border border-gray-200 bg-[#FCFBF7] px-6 py-5"
-              >
-                <summary className="cursor-pointer select-none list-none text-base font-bold text-gray-900 [&::-webkit-details-marker]:hidden">
-                  <span className="flex items-center justify-between gap-4">
-                    <span>{item.question}</span>
-                    <span className="shrink-0 text-lg text-gray-400 transition-transform duration-200 group-open:rotate-45">
-                      +
-                    </span>
-                  </span>
-                </summary>
-                <p className="mt-4 text-sm leading-7 text-gray-600">{item.answer}</p>
-              </details>
-            ))}
+          <div className="mt-8">
+            <FeaturesFAQ items={faqItems} />
           </div>
         </section>
 
-        {/* ── 6. Cross-links ───────────────────────────────────── */}
-        <section className="flex flex-col gap-8 sm:flex-row sm:gap-16">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-400">
-              Tool reviews
-            </p>
-            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
-              {toolReviewLinks.map((link) => (
+        {/* ── Cross-links ────────────────────────────────────── */}
+        <section className="border-t border-black/6 pt-8">
+          <p className="text-[11px] font-black uppercase tracking-[0.18em] text-black/35">
+            See also
+          </p>
+          <div className="mt-4 flex flex-col gap-6 sm:flex-row sm:gap-12">
+            <div>
+              <div className="flex items-center gap-3">
+                <p className="text-xs font-bold text-black/50">Tool reviews</p>
                 <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm font-semibold text-gray-700 transition-colors hover:text-indigo-600"
+                  href="/"
+                  className="text-xs font-semibold text-black/65 no-underline transition-colors hover:text-black"
                 >
-                  {link.label}
+                  See all tool reviews
                 </Link>
-              ))}
+              </div>
+              <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5">
+                {toolReviewLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm font-semibold text-black no-underline transition-colors hover:text-black/55"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-400">
-              Comparisons
-            </p>
-            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
-              {comparisonLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm font-semibold text-gray-700 transition-colors hover:text-indigo-600"
-                >
-                  {link.label}
-                </Link>
-              ))}
+            <div>
+              <p className="text-xs font-bold text-black/50">Comparisons</p>
+              <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5">
+                {comparisonLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm font-semibold text-black no-underline transition-colors hover:text-black/55"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </section>

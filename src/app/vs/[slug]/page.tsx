@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation';
 import VsPageTemplate from '@/components/vs/VsPageTemplate';
 import { getCanonicalVsSlug, getVsComparisonWithStatus, listVsSlugs, parseVsSlug } from '@/data/vs';
 import { getTool } from '@/lib/getTool';
+import { buildVsFaqJsonLd } from '@/lib/vsPageModel';
 import { getSEOCurrentYear } from '@/lib/utils';
 import { buildDecisionTableRows } from '@/lib/vsDecisionTable';
 
@@ -126,5 +127,19 @@ export default async function ComparisonPage({ params, searchParams }: PageProps
     });
   }
 
-  return <VsPageTemplate load={load} resolved={resolved} showDebug={showDebug} />;
+  const toolAName = load.parsed ? getDisplayToolName(load.parsed.slugA) : 'AI Video Tool';
+  const toolBName = load.parsed ? getDisplayToolName(load.parsed.slugB) : 'AI Video Tool';
+  const faqJsonLd = load.comparison ? buildVsFaqJsonLd(load.comparison, toolAName, toolBName) : null;
+
+  return (
+    <>
+      {faqJsonLd ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      ) : null}
+      <VsPageTemplate load={load} resolved={resolved} showDebug={showDebug} />
+    </>
+  );
 }

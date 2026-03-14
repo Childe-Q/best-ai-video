@@ -7,6 +7,219 @@ export const invideoVsHeygen: VsComparison = {
   pricingCheckedAt: '2026-03-07',
   decisionSummary:
     'Choose HeyGen when the message needs a visible presenter. Choose InVideo when the job is fast stock-scene production for shorts, ads, and caption-first batches.',
+  facts: [
+    {
+      key: 'startingPriceMonthly',
+      label: 'Starting price',
+      a: '$29/mo',
+      b: '$28/mo',
+      sources: {
+        a: ['https://www.heygen.com/pricing'],
+        b: ['https://invideo.io/pricing/'],
+      },
+      note: 'The visible monthly entry points are close, so workflow fit usually matters more than the first dollar difference.',
+    },
+    {
+      key: 'freePlan',
+      label: 'Free plan',
+      a: 'Free plan available, with watermark and usage limits.',
+      b: 'Free plan available, with watermark and usage limits.',
+      sources: {
+        a: ['https://www.heygen.com/pricing'],
+        b: ['https://invideo.io/pricing/'],
+      },
+    },
+    {
+      key: 'templates',
+      label: 'Template bias',
+      a: 'Avatar scenes and reusable presenter layouts.',
+      b: 'Marketing templates and scene presets for rapid draft assembly.',
+      sources: {
+        a: ['https://www.heygen.com/features'],
+        b: ['https://invideo.io/templates/'],
+      },
+    },
+    {
+      key: 'voiceLanguages',
+      label: 'Voice and language workflow',
+      a: 'Multilingual presenter delivery, translation, and avatar voice localization.',
+      b: 'Multilingual voiceover and caption workflow for stock-scene videos.',
+      sources: {
+        a: ['https://www.heygen.com/features'],
+        b: ['https://invideo.io/help/'],
+      },
+    },
+    {
+      key: 'stockMedia',
+      label: 'Stock media dependence',
+      a: 'Presenter footage matters more than stock-scene depth in the core workflow.',
+      b: 'Stock scenes, captions, and media assembly are central to the default workflow.',
+      sources: {
+        a: ['https://www.heygen.com/showcase'],
+        b: ['https://invideo.io/video-showcase/'],
+      },
+    },
+    {
+      key: 'textToVideo',
+      label: 'Text-to-video starting point',
+      a: 'Script-to-presenter workflow with avatar delivery at the center.',
+      b: 'Prompt-to-video and script-to-scene workflow built for fast drafts.',
+      sources: {
+        a: ['https://www.heygen.com/features'],
+        b: ['https://invideo.io/tools/'],
+      },
+    },
+    {
+      key: 'collaboration',
+      label: 'Team workflow bias',
+      a: 'Better fit for repeatable training, outreach, and presenter-led updates where message ownership matters.',
+      b: 'Better fit for campaign teams that need more draft volume, ad variations, and short-form output speed.',
+      sources: {
+        a: ['https://www.heygen.com/features'],
+        b: ['https://invideo.io/'],
+      },
+    },
+    {
+      key: 'editingDepth',
+      label: 'Editing depth',
+      a: 'Editing revolves around script, presenter scene setup, and reusable avatar layouts.',
+      b: 'Editing revolves around stock-scene selection, caption cleanup, and quick visual iteration.',
+      sources: {
+        a: ['https://www.heygen.com/features'],
+        b: ['https://invideo.io/help/'],
+      },
+    },
+    {
+      key: 'useCases',
+      label: 'Default use-case center',
+      a: 'Spokesperson videos, onboarding, training, and multilingual presenter updates.',
+      b: 'Shorts, social ads, faceless explainers, and batch campaign drafts.',
+      sources: {
+        a: ['https://www.heygen.com/'],
+        b: ['https://invideo.io/'],
+      },
+    },
+    {
+      key: 'bestFor',
+      label: 'Best fit at a glance',
+      a: 'Teams buying communication format: a visible presenter on screen.',
+      b: 'Teams buying production throughput: more stock-scene drafts and faster iteration.',
+      sources: {
+        a: ['https://www.heygen.com/'],
+        b: ['https://invideo.io/'],
+      },
+    },
+    {
+      key: 'notIdealFor',
+      label: 'Less ideal when',
+      a: 'The job is cheap, high-volume faceless production where presenter continuity adds overhead.',
+      b: 'The message depends on a trusted speaker rather than scenes, captions, and voiceover.',
+      sources: {
+        a: ['https://www.heygen.com/pricing'],
+        b: ['https://invideo.io/pricing/'],
+      },
+    },
+    {
+      key: 'workflow-anchor',
+      label: 'Workflow anchor',
+      a: 'HeyGen centers the workflow on a reusable presenter, script delivery, and avatar scenes.',
+      b: 'InVideo centers the workflow on stock-scene assembly, captions, and fast draft iteration.',
+      sources: {
+        a: ['https://www.heygen.com/'],
+        b: ['https://invideo.io/'],
+      },
+      note: 'This is the clearest buying split for this pair: visible presenter communication versus volume-first scene assembly.',
+    },
+    {
+      key: 'pricing-value',
+      label: 'Entry pricing',
+      a: '$29/mo',
+      b: '$28/mo',
+      sources: {
+        a: ['https://www.heygen.com/pricing'],
+        b: ['https://invideo.io/pricing'],
+      },
+      note: 'Entry pricing is close, so the workflow difference usually matters more than the first visible monthly price.',
+    },
+    {
+      key: 'team-collaboration',
+      label: 'Team workflow bias',
+      a: 'HeyGen fits repeatable training, outreach, and presenter-led updates where message ownership matters.',
+      b: 'InVideo fits campaign teams that need more draft volume, ad variations, and short-form output speed.',
+      sources: {
+        a: ['https://www.heygen.com/'],
+        b: ['https://invideo.io/'],
+      },
+    },
+  ],
+  externalValidation: [
+    {
+      key: 'communitySentimentSummary',
+      label: 'Community sentiment snapshot',
+      summary:
+        'The local review data in this repo paints InVideo as convenient for all-in-one drafting and asset sourcing, while the stored HeyGen review notes emphasize where pricing friction and credit rules matter more than basic avatar usefulness.',
+      sourceName: 'InVideo review snapshot',
+      sourceUrl: 'https://www.g2.com/products/invideo/reviews',
+      kind: 'community',
+    },
+    {
+      key: 'commonComplaints',
+      label: 'Common complaints',
+      summary:
+        'The recurring friction points in local evidence are cost-control issues rather than missing core capability: credit burn, watermark or export limits, and plan-related restrictions if teams iterate heavily.',
+      sourceName: 'Pricing and review notes',
+      sourceUrl: 'https://www.heygen.com/pricing',
+      kind: 'community',
+    },
+    {
+      key: 'commonPraises',
+      label: 'Common praises',
+      summary:
+        'The strongest positive signals in local evidence are workflow clarity: HeyGen for presenter-led communication and InVideo for all-in-one draft creation with stock and captions in one place.',
+      sourceName: 'Product and review sources',
+      sourceUrl: 'https://invideo.io/',
+      kind: 'community',
+    },
+    {
+      key: 'externalEvidenceNotes',
+      label: 'External evidence note',
+      summary:
+        'External proof is not symmetrical for this pair in the current local dataset. InVideo has stronger stored review inputs, while HeyGen has stronger official pricing and help notes. Treat outside sentiment as secondary to the workflow split.',
+      sourceName: 'Stored review and source inventory',
+      kind: 'review',
+    },
+    {
+      key: 'externalSources',
+      label: 'External source trail',
+      summary:
+        'Current outside-source trail available locally for this pair includes G2 and Product Hunt references for InVideo plus pricing, help, and review-source pointers for HeyGen.',
+      sourceName: 'Product Hunt',
+      sourceUrl: 'https://www.producthunt.com/products/invideo',
+      kind: 'review',
+    },
+    {
+      label: 'Official positioning check',
+      summary:
+        'The official product pages frame HeyGen around avatars and presenter delivery, while InVideo is framed around AI video generation and stock-scene workflow speed.',
+      sourceName: 'Product pages',
+      sourceUrl: 'https://www.heygen.com/',
+      kind: 'official-proof',
+    },
+    {
+      label: 'Pricing verification',
+      summary:
+        'Both entry plans are visible on official pricing pages, so this pair can be checked against verified pricing rather than inferred value claims.',
+      sourceName: 'Pricing pages',
+      sourceUrl: 'https://www.heygen.com/pricing',
+      kind: 'official-proof',
+    },
+  ],
+  derived: {
+    hardDataIntro:
+      'If the verdict still feels close, check these source-backed anchors before you compare secondary features.',
+    externalValidationIntro:
+      'These proof points are supporting material only. They exist to show what the verdict is grounded in, not to replace the editorial decision.',
+  },
   shortAnswer: {
     a: 'Choose HeyGen when the message works better with an on-screen spokesperson for training, outreach, or multilingual presenter communication.',
     b: 'Choose InVideo when you need prompt-to-video drafts for shorts, social ads, and stock-scene batches at higher output volume.',
@@ -121,9 +334,9 @@ export const invideoVsHeygen: VsComparison = {
     },
     {
       label: 'Workflow speed',
-      a: 'Fast once avatar templates, scripts, and presenter scenes are standardized',
+      a: 'Fast for repeat presenter updates once avatar templates and reusable scenes are already set',
       b: 'Fast for first drafts and batch variants when the goal is speed over presenter presence',
-      aText: 'Fast once avatar templates, scripts, and presenter scenes are standardized',
+      aText: 'Fast for repeat presenter updates once avatar templates and reusable scenes are already set',
       bText: 'Fast for first drafts and batch variants when the goal is speed over presenter presence',
       sources: {
         a: ['https://www.heygen.com/'],
@@ -274,16 +487,19 @@ export const invideoVsHeygen: VsComparison = {
       question: 'HeyGen vs InVideo: which should I choose first?',
       answer:
         'Choose HeyGen if the video needs a presenter on screen. Choose InVideo if the goal is faster stock-scene production for shorts, social ads, and caption-first batches.',
+      sourceHint: 'Pair decision summary',
     },
     {
       question: 'What is the actual workflow difference?',
       answer:
         'HeyGen is built around presenter delivery. InVideo is built around prompt-to-scene assembly, stock footage, captions, and faster batch drafts.',
+      sourceHint: 'Core workflow difference',
     },
     {
       question: 'Who usually regrets the wrong choice?',
       answer:
         'Sales enablement and onboarding teams regret InVideo when the message needed a visible presenter. Content-ops and paid social teams regret HeyGen when the workflow mostly needed cheap, fast variation.',
+      sourceHint: 'Trade-off and regret analysis',
     },
   ],
   related: {

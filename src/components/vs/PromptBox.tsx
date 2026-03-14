@@ -59,12 +59,14 @@ export default function PromptBox({ variants, defaultVariantKey, helperText }: P
       <summary className="cursor-pointer list-none text-lg font-semibold text-gray-900 marker:hidden transition-colors duration-200 hover:text-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2">
         Test both tools with this brief
       </summary>
-      <p className="mt-2 text-sm text-gray-600">
-        {helperText ?? 'Run the same brief in both tools to compare how each workflow handles the same job.'}
-      </p>
-      <div className="mt-4 space-y-4">
+      <div className="mt-3 space-y-4">
+        <div className="space-y-1">
+          <p className="text-sm text-gray-600">
+            {helperText ?? 'Run the same brief in both tools to compare how each workflow handles the same job.'}
+          </p>
+        </div>
         {variants.length > 1 ? (
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 pt-1">
             {variants.map((variant) => (
               <button
                 key={variant.key}
@@ -82,10 +84,10 @@ export default function PromptBox({ variants, defaultVariantKey, helperText }: P
           </div>
         ) : null}
         <div className="rounded-lg border border-gray-200 bg-white p-4">
-          <div className="flex items-center justify-between gap-4">
-            <div>
-              <p className="text-sm font-medium text-gray-700">Prompt</p>
-              <p className="mt-1 text-xs text-gray-500">{activeVariant.title}</p>
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <div className="min-w-0">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Prompt</p>
+              <p className="mt-2 text-sm font-medium text-gray-900">{activeVariant.title}</p>
             </div>
             <button
               type="button"
@@ -95,11 +97,13 @@ export default function PromptBox({ variants, defaultVariantKey, helperText }: P
               {copied ? 'Copied' : 'Copy'}
             </button>
           </div>
-          <p className="mt-2 text-sm text-gray-800">{activeVariant.prompt}</p>
+          <div className="mt-3 rounded-lg bg-gray-50 px-3 py-3">
+            <p className="text-sm leading-6 text-gray-800">{activeVariant.prompt}</p>
+          </div>
         </div>
-        <div>
-          <p className="text-sm font-medium text-gray-700">Settings</p>
-          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
+        <div className="rounded-lg border border-gray-200 bg-white p-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">Settings</p>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-gray-700">
             {activeVariant.settings.map((setting) => (
               <li key={setting}>{setting}</li>
             ))}

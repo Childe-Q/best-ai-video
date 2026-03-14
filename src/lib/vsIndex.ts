@@ -1,15 +1,23 @@
 import { getVsComparison, listVsSlugs, canonicalSlug } from '@/data/vs';
 import { getTool } from '@/lib/getTool';
+import { buildVsPairCopy } from '@/lib/vsPairType';
 import { VsIntent } from '@/types/vs';
 
 export type VsIndexCard = {
   slug: string;
   toolAName: string;
   toolBName: string;
-  shortA: string;
-  shortB: string;
+  hubDistinction: string;
+  hubSelection: string;
   updatedAt: string;
   intent: VsIntent;
+};
+
+export type VsIndexGroup = {
+  intent: VsIntent;
+  title: string;
+  helper: string;
+  items: VsIndexCard[];
 };
 
 export const VS_INDEX_FEATURED_SLUGS = [
@@ -32,6 +40,20 @@ export const VS_INDEX_INTENT_LABELS: Record<VsIntent, string> = {
   repurpose: 'Repurposing comparisons',
 };
 
+export const VS_INDEX_FEATURED_HELPER =
+  'Start here if you already know the pair you are deciding between. These are the highest-priority head-to-head pages and the strongest entry points into the comparison library.';
+
+export const VS_INDEX_INTENT_HELPERS: Record<VsIntent, string> = {
+  avatar:
+    'Use this group when the real question is rollout model: lighter spokesperson workflows versus more structured avatar deployment, governance, or enterprise posture.',
+  editor:
+    'Use this group when the bottleneck sits after generation. These comparisons separate first-draft creation from revision control, cleanup, and editing leverage.',
+  text:
+    'Use this group when the choice is really about how video starts: narration-first conversion, broader scene assembly, or format-driven communication.',
+  repurpose:
+    'Use this group when existing source material changes the buying decision. These pages help separate blank-page drafting from repurposing webinars, podcasts, articles, or recordings.',
+};
+
 function toTitleCase(value: string): string {
   return value
     .split('-')
@@ -48,13 +70,14 @@ export function listVsIndexCards(): VsIndexCard[] {
 
       const toolA = getTool(comparison.slugA);
       const toolB = getTool(comparison.slugB);
+      const pairCopy = toolA && toolB ? buildVsPairCopy(toolA, toolB, comparison.intentProfile) : null;
 
       return {
         slug,
         toolAName: toolA?.name ?? toTitleCase(comparison.slugA),
         toolBName: toolB?.name ?? toTitleCase(comparison.slugB),
-        shortA: comparison.shortAnswer.a,
-        shortB: comparison.shortAnswer.b,
+        hubDistinction: comparison.decisionSummary ?? pairCopy?.decisionSummary ?? comparison.shortAnswer.a,
+        hubSelection: comparison.verdict.recommendation ?? pairCopy?.recommendation ?? comparison.shortAnswer.b,
         updatedAt: comparison.updatedAt,
         intent: comparison.intentProfile?.primary ?? 'text',
       } satisfies VsIndexCard;
@@ -68,11 +91,12 @@ export function getFeaturedVsCards(cards: VsIndexCard[]): VsIndexCard[] {
   return VS_INDEX_FEATURED_SLUGS.map((slug) => cardMap.get(slug)).filter((card): card is VsIndexCard => Boolean(card));
 }
 
-export function getGroupedVsCards(cards: VsIndexCard[]): Array<{ intent: VsIntent; title: string; items: VsIndexCard[] }> {
+export function getGroupedVsCards(cards: VsIndexCard[]): VsIndexGroup[] {
   return VS_INDEX_INTENT_ORDER
     .map((intent) => ({
       intent,
       title: VS_INDEX_INTENT_LABELS[intent],
+      helper: VS_INDEX_INTENT_HELPERS[intent],
       items: cards.filter((card) => card.intent === intent).slice(0, 6),
     }))
     .filter((group) => group.items.length > 0);

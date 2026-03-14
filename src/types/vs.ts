@@ -27,6 +27,48 @@ export type VsIntentProfile = {
   intents: VsIntent[];
 };
 
+export type VsDisplayCondition = {
+  intents?: VsIntent[];
+  requiresFacts?: string[];
+  requiresExternalValidation?: boolean;
+};
+
+export type VsFactItem = {
+  key: string;
+  label: string;
+  a: string;
+  b: string;
+  sources?: {
+    a?: string[];
+    b?: string[];
+  };
+  note?: string;
+  displayCondition?: VsDisplayCondition;
+};
+
+export type VsExternalValidationItem = {
+  key?: string;
+  label: string;
+  summary: string;
+  sourceName?: string;
+  sourceUrl?: string;
+  kind: 'official-proof' | 'review' | 'community' | 'security' | 'case-study';
+  displayCondition?: VsDisplayCondition;
+};
+
+export type VsFaqItem = {
+  question: string;
+  answer: string;
+  displayCondition?: VsDisplayCondition;
+  sourceHint?: string;
+};
+
+export type VsDerivedSeed = {
+  quickVerdict?: string;
+  hardDataIntro?: string;
+  externalValidationIntro?: string;
+};
+
 export type VsScore = {
   methodNote: string;
   weights: Record<string, number>;
@@ -80,6 +122,9 @@ export type VsComparison = {
     helperText?: string;
   };
   decisionSummary?: string;
+  facts?: VsFactItem[];
+  externalValidation?: VsExternalValidationItem[];
+  derived?: VsDerivedSeed;
   editorialNotes?: {
     whyPeopleCompareTheseTools?: string;
     looksSimilarButActuallyDifferent?: string;
@@ -96,10 +141,7 @@ export type VsComparison = {
     winnerSpeed: VsSide;
     recommendation: string;
   };
-  faq?: Array<{
-    question: string;
-    answer: string;
-  }>;
+  faq?: VsFaqItem[];
   related: {
     toolPages: string[];
     alternatives: string[];

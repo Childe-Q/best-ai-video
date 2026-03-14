@@ -7,9 +7,13 @@ import EditorialDecisionGuide from '@/components/vs/EditorialDecisionGuide';
 import PromptBox from '@/components/vs/PromptBox';
 import SourceTooltip from './SourceTooltip';
 import VsDecisionTable from '@/components/vs/VsDecisionTable';
+import VsExternalProofSection from '@/components/vs/VsExternalProofSection';
+import VsHardDataSection from '@/components/vs/VsHardDataSection';
 import VsScoreChart from '@/components/vs/VsScoreChart';
 import { canonicalizeVsHref, listVsSlugs, parseVsSlug, toCanonicalVsSlug, VsLoadResult } from '@/data/vs';
 import { getAllTools, getTool } from '@/lib/getTool';
+import { buildVsPairCopy } from '@/lib/vsPairType';
+import { buildVsPageModel } from '@/lib/vsPageModel';
 import { applyIntentProfileOverride, buildIntentProfile, getKeyDiffLead, getPreferredUseCaseLabels, orderKeyDiffsForIntent } from '@/lib/vsIntent';
 import { buildPromptVariants, inferUseCaseKey, UseCaseKey } from '@/lib/promptLibrary';
 import { collectComparisonSourceUrls, getSourceDomain } from '@/lib/vsSources';
@@ -152,14 +156,6 @@ function sanitizeSentence(text: string): string {
   if (!cleaned) return '';
   const sentence = cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
   return /[.?!]$/.test(sentence) ? sentence : `${sentence}.`;
-}
-
-function stripLeadChoose(text: string, toolName: string): string {
-  return sanitizeTextForUi(text)
-    .replace(new RegExp(`^choose\\s+${toolName}\\s+(if|when)\\s+`, 'i'), '')
-    .replace(/^use\s+/i, '')
-    .replace(/^start with\s+/i, '')
-    .trim();
 }
 
 function countKeywordMatches(text: string, keywords: string[]): number {
@@ -584,21 +580,22 @@ function ensureTemplateComparison(base: VsComparison | null, currentSlug: string
     slugB,
   );
   const calibratedScore = applyFeaturedCalibration(normalizedScore, slugA, slugB);
+  const pairCopy = toolA.data && toolB.data ? buildVsPairCopy(toolA.data, toolB.data, base?.intentProfile) : null;
 
   return {
     slugA,
     slugB,
     updatedAt: base?.updatedAt ?? todayIso(),
     pricingCheckedAt: base?.pricingCheckedAt ?? todayIso(),
-    ...(base?.decisionSummary ? { decisionSummary: base.decisionSummary } : {}),
+    ...((base?.decisionSummary ?? pairCopy?.decisionSummary) ? { decisionSummary: base?.decisionSummary ?? pairCopy?.decisionSummary } : {}),
     intentProfile: applyIntentProfileOverride(
       base?.intentProfile ?? buildIntentProfile(toolA.data, toolB.data, base),
       slugA,
       slugB,
     ),
     shortAnswer: {
-      a: base?.shortAnswer?.a ?? `${toolA.name} is suited to fast-moving content teams and creators.`,
-      b: base?.shortAnswer?.b ?? `${toolB.name} is suited to teams prioritizing repeatable video workflows.`,
+      a: base?.shortAnswer?.a ?? pairCopy?.shortAnswer.a ?? `${toolA.name} is suited to fast-moving content teams and creators.`,
+      b: base?.shortAnswer?.b ?? pairCopy?.shortAnswer.b ?? `${toolB.name} is suited to teams prioritizing repeatable video workflows.`,
     },
     bestFor: {
       a: normalizeStringArray(base?.bestFor?.a, buildBestForFallback(slugA)),
@@ -619,9 +616,11 @@ function ensureTemplateComparison(base: VsComparison | null, currentSlug: string
         ? base.promptBox.settings
         : ['Duration: 45s', 'Format: 16:9', 'Language: English', 'Output: MP4 1080p', 'Tone: professional'],
       variants: base?.promptBox?.variants ?? [],
-      ...(base?.promptBox?.helperText ? { helperText: base.promptBox.helperText } : {}),
+      ...((base?.promptBox?.helperText ?? pairCopy?.promptHelperText) ? { helperText: base?.promptBox?.helperText ?? pairCopy?.promptHelperText } : {}),
     },
-    ...(base?.decisionCases?.length ? { decisionCases: base.decisionCases } : {}),
+    ...((base?.decisionCases?.length ? base.decisionCases : pairCopy?.decisionCases)?.length
+      ? { decisionCases: base?.decisionCases?.length ? base.decisionCases : pairCopy?.decisionCases }
+      : {}),
     ...(base?.useCases?.length ? { useCases: base.useCases } : {}),
     ...(base?.editorialNotes ? { editorialNotes: base.editorialNotes } : {}),
     verdict: {
@@ -630,9 +629,10 @@ function ensureTemplateComparison(base: VsComparison | null, currentSlug: string
       winnerSpeed: base?.verdict?.winnerSpeed ?? 'a',
       recommendation:
         base?.verdict?.recommendation ??
+        pairCopy?.recommendation ??
         `Use ${toolA.name} if you prioritize its strengths in this table, and choose ${toolB.name} when those workflow tradeoffs fit your team better.`,
     },
-    ...(base?.faq?.length ? { faq: base.faq } : {}),
+    ...((base?.faq?.length ? base.faq : pairCopy?.faq)?.length ? { faq: base?.faq?.length ? base.faq : pairCopy?.faq } : {}),
     related: {
       toolPages: dedupePaths(
         base?.related?.toolPages?.length
@@ -694,6 +694,7 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
   const pricingChecked = formatIsoDate(comparison.pricingCheckedAt);
   const verificationDomains = sortSourceDomainsByRelevance(extractSourceDomainItems(comparison), toolA, toolB);
   const slugSeed = toCanonicalVsSlug(comparison.slugA, comparison.slugB);
+  const pageModel = buildVsPageModel({ comparison, toolAName: toolA.name, toolBName: toolB.name });
   const editorialDecisionGuide = editorialDecisionGuides[slugSeed];
   const keyDiffLead = getKeyDiffLead(comparison.intentProfile, toolA.name, toolB.name);
   const orderedKeyDiffs = orderKeyDiffsForIntent(comparison.keyDiffs, comparison.intentProfile);
@@ -750,30 +751,6 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
           } based on weighted internal score (${formatInternalScore(scoreVerdict.weightedTotalA)} vs ${formatInternalScore(
             scoreVerdict.weightedTotalB,
           )}).`;
-  const fallbackFaqItems = [
-    {
-      question: `${toolA.name} vs ${toolB.name}: which should I choose first?`,
-      answer: `Choose ${toolA.name} if you need ${stripLeadChoose(comparison.shortAnswer.a, toolA.name)}. Choose ${toolB.name} if you need ${stripLeadChoose(comparison.shortAnswer.b, toolB.name)}.`,
-    },
-    {
-      question: `What is the main workflow difference?`,
-      answer: comparison.keyDiffs[0]
-        ? `${toolA.name}: ${sanitizeTextForUi(comparison.keyDiffs[0].a)} ${toolB.name}: ${sanitizeTextForUi(comparison.keyDiffs[0].b)}`
-        : `${toolA.name} and ${toolB.name} differ most in workflow, output style, and team fit.`,
-    },
-    {
-      question: `Can a team use both tools in one workflow?`,
-      answer: `Yes. Many teams use one tool for volume drafts or stock-scene production and another for presenter-led delivery or higher-trust communication.`,
-    },
-  ];
-  const faqItems =
-    comparison.faq && comparison.faq.length >= 3
-      ? comparison.faq.slice(0, 6).map((item) => ({
-          question: sanitizeTextForUi(item.question),
-          answer: sanitizeTextForUi(item.answer),
-        }))
-      : fallbackFaqItems;
-
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="border-b border-gray-200 bg-white">
@@ -849,7 +826,7 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
             {comparison.editorialNotes.realDecision || comparison.editorialNotes.editorsTake ? (
               <article className="mt-4 rounded-xl border border-gray-200 bg-white p-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">
-                  {comparison.editorialNotes.realDecision ? 'The real decision' : 'Editor&apos;s take'}
+                  {comparison.editorialNotes.realDecision ? 'The real decision' : "Editor's take"}
                 </p>
                 <p className="mt-3 text-sm leading-6 text-gray-700">
                   {comparison.editorialNotes.realDecision ?? comparison.editorialNotes.editorsTake}
@@ -894,6 +871,16 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
         ) : null}
 
         <VsDecisionTable comparison={comparison} toolAName={toolA.name} toolBName={toolB.name} />
+
+        {pageModel.sectionFlags.hardDataComparison ? (
+          <VsHardDataSection
+            toolAName={toolA.name}
+            toolBName={toolB.name}
+            pricingCheckedAt={comparison.pricingCheckedAt}
+            facts={pageModel.hardDataFacts}
+            intro={pageModel.derivedCopy.hardDataIntro}
+          />
+        ) : null}
 
         <section className="grid gap-4 md:grid-cols-3">
           {scenarioConclusions.map((scenario) => (
@@ -1038,10 +1025,11 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
         <section className="rounded-xl border border-gray-200 bg-white p-6">
           <h2 className="text-2xl font-bold text-gray-900">Common buyer questions</h2>
           <div className="mt-4 space-y-4">
-            {faqItems.map((item) => (
+            {pageModel.faqItems.map((item) => (
               <article key={item.question} className="rounded-lg border border-gray-200 p-4">
                 <h3 className="text-base font-semibold text-gray-900">{item.question}</h3>
                 <p className="mt-2 text-sm text-gray-700">{item.answer}</p>
+                {item.sourceHint ? <p className="mt-2 text-xs text-gray-500">Source hint: {item.sourceHint}</p> : null}
               </article>
             ))}
           </div>
@@ -1076,6 +1064,13 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
             <VsScoreChart toolAName={toolA.name} toolBName={toolB.name} score={comparison.score} />
           </div>
         </details>
+
+        {pageModel.sectionFlags.externalProof ? (
+          <VsExternalProofSection
+            items={pageModel.externalProofItems}
+            intro={pageModel.derivedCopy.externalValidationIntro}
+          />
+        ) : null}
 
         <section className="rounded-xl border border-gray-200 bg-white p-6">
           <details>

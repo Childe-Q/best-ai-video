@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { getSEOCurrentYear } from '@/lib/utils';
-import { getFeaturedVsCards, getGroupedVsCards, listVsIndexCards } from '@/lib/vsIndex';
+import { getFeaturedVsCards, getGroupedVsCards, listVsIndexCards, VS_INDEX_FEATURED_HELPER } from '@/lib/vsIndex';
 
 const seoYear = getSEOCurrentYear();
 
@@ -24,6 +24,9 @@ export default function VSIndexPage() {
           <p className="mx-auto mt-4 max-w-3xl text-center text-lg text-gray-600">
             Data-driven VS pages with traceable sources, unified scoring, and reusable decision structure.
           </p>
+          <p className="mx-auto mt-3 max-w-3xl text-center text-sm text-gray-500">
+            Start with Featured if you already know the pair. Use the groups below when you are still deciding what kind of comparison problem you actually have.
+          </p>
         </div>
       </header>
 
@@ -32,7 +35,7 @@ export default function VSIndexPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-900">Featured comparisons</h2>
             <p className="mt-2 text-sm text-gray-600">
-              Highest-priority head-to-head pages. This block stays visible even when a pair would be pushed out of an intent group.
+              {VS_INDEX_FEATURED_HELPER}
             </p>
             <div className="mt-5 grid gap-6 md:grid-cols-2">
               {featured.map((comparison) => (
@@ -44,8 +47,8 @@ export default function VSIndexPage() {
                   <h3 className="text-xl font-bold text-gray-900">
                     {comparison.toolAName} vs {comparison.toolBName}
                   </h3>
-                  <p className="mt-3 text-sm text-gray-700">{comparison.shortA}</p>
-                  <p className="mt-1 text-sm text-gray-700">{comparison.shortB}</p>
+                  <p className="mt-3 text-sm text-gray-700">{comparison.hubDistinction}</p>
+                  <p className="mt-2 text-sm text-gray-600">{comparison.hubSelection}</p>
                   <p className="mt-4 text-xs text-gray-500">Updated {comparison.updatedAt}</p>
                 </Link>
               ))}
@@ -54,7 +57,10 @@ export default function VSIndexPage() {
 
           {grouped.map((group) => (
             <section key={group.intent}>
-              <h2 className="text-2xl font-bold text-gray-900">{group.title}</h2>
+              <div className="max-w-3xl">
+                <h2 className="text-2xl font-bold text-gray-900">{group.title}</h2>
+                <p className="mt-2 text-sm text-gray-600">{group.helper}</p>
+              </div>
               <div className="mt-5 grid gap-6 md:grid-cols-2">
                 {group.items.map((comparison) => (
                   <Link
@@ -65,8 +71,8 @@ export default function VSIndexPage() {
                     <h3 className="text-xl font-bold text-gray-900">
                       {comparison.toolAName} vs {comparison.toolBName}
                     </h3>
-                    <p className="mt-3 text-sm text-gray-700">{comparison.shortA}</p>
-                    <p className="mt-1 text-sm text-gray-700">{comparison.shortB}</p>
+                    <p className="mt-3 text-sm text-gray-700">{comparison.hubDistinction}</p>
+                    <p className="mt-2 text-sm text-gray-600">{comparison.hubSelection}</p>
                     <p className="mt-4 text-xs text-gray-500">Updated {comparison.updatedAt}</p>
                   </Link>
                 ))}

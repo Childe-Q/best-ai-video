@@ -20,14 +20,31 @@ function toLabel(metric: string): string {
     .trim();
 }
 
+function buildVisibleMethodNote(score: VsScore, metrics: string[]): string {
+  const weightedMetrics = metrics
+    .map((metric) => ({ metric, weight: score.weights[metric] }))
+    .filter((item): item is { metric: string; weight: number } => typeof item.weight === 'number' && item.weight > 0)
+    .map((item) => `${toLabel(item.metric)} (${item.weight}%)`);
+
+  const methodPrefix =
+    weightedMetrics.length > 0
+      ? `Internal score computed from ${weightedMetrics.join(', ')}.`
+      : 'Internal score computed from the visible weighted metrics on this page.';
+
+  const sourceSentence = score.methodNote.split('.').slice(1).join('.').trim();
+  return sourceSentence ? `${methodPrefix} ${sourceSentence}`.trim() : methodPrefix;
+}
+
 export default function VsScoreChart({ toolAName, toolBName, score }: VsScoreChartProps) {
-  const metrics = [...INTERNAL_SCORE_METRICS];
+  const metrics = INTERNAL_SCORE_METRICS.filter((metric) => (score.weights[metric] ?? 0) > 0);
   const chartData = metrics.map((metric) => ({
     metric: toLabel(metric),
     [toolAName]: score.a[metric] ?? 0,
     [toolBName]: score.b[metric] ?? 0,
   }));
   const isEstimated = score.provenance.mode !== 'verified';
+  const dimensionLabels = metrics.map((metric) => toLabel(metric)).join(', ');
+  const visibleMethodNote = buildVisibleMethodNote(score, metrics);
 
   return (
     <section className="rounded-xl border border-gray-200 bg-white p-6">
@@ -45,9 +62,7 @@ export default function VsScoreChart({ toolAName, toolBName, score }: VsScoreCha
       <p className="mt-2 text-sm text-gray-600">
         Internal score is our in-house weighted model. External ratings are third-party signals and should be read separately.
       </p>
-      <p className="mt-1 text-xs text-gray-500">
-        Dimensions: Pricing value, Ease, Speed, Output, Customization
-      </p>
+      <p className="mt-1 text-xs text-gray-500">Dimensions: {dimensionLabels || 'Pricing value, Ease, Speed, Output'}</p>
       <div className="mt-4 h-[340px] w-full">
         <ResponsiveContainer width="100%" height="100%">
           <RadarChart data={chartData}>
@@ -101,8 +116,8 @@ export default function VsScoreChart({ toolAName, toolBName, score }: VsScoreCha
           </tbody>
         </table>
       </div>
-      <p className="mt-3 text-xs text-gray-600">{score.methodNote}</p>
-      <VsScoringDetails />
+      <p className="mt-3 text-xs text-gray-600">{visibleMethodNote}</p>
+      <VsScoringDetails activeMetrics={metrics} />
     </section>
   );
 }
