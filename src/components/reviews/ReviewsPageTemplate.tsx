@@ -174,15 +174,17 @@ export default function ReviewsPageTemplate({ toolSlug, data }: ReviewsPageTempl
                     )}
                     
                     {/* Title: Problem statement (12-16 words max) */}
-                    <p className={`text-base font-semibold text-gray-900 ${showBadge ? 'pr-20' : ''} mb-3 leading-[1.65]`}>
+                    <p className={`text-base font-semibold text-gray-900 ${showBadge ? 'pr-20' : ''} ${(!issue.action || issue.action.includes('Check official docs') || issue.action.includes('ask support before upgrading')) ? 'mb-0' : 'mb-3'} leading-[1.65]`}>
                       {issue.title}
                     </p>
                     
-                    {/* Action: One sentence recommendation (max 18 words) */}
-                    <p className="text-base text-gray-700 leading-[1.65]">
-                      <span className="font-semibold">Action: </span>
-                      {issue.action || 'Check official docs or ask support before upgrading.'}
-                    </p>
+                    {/* Action: Only render if not generic boilerplate */}
+                    {issue.action && !issue.action.includes('Check official docs') && !issue.action.includes('ask support before upgrading') && (
+                      <p className="text-base text-gray-700 leading-[1.65]">
+                        <span className="font-semibold">Action: </span>
+                        {issue.action}
+                      </p>
+                    )}
                   </div>
                 );
               };

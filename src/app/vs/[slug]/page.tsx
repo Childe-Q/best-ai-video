@@ -5,7 +5,7 @@ import { getCanonicalVsSlug, getVsComparisonWithStatus, listVsSlugs, parseVsSlug
 import { getTool } from '@/lib/getTool';
 import { buildVsFaqJsonLd } from '@/lib/vsPageModel';
 import { getSEOCurrentYear } from '@/lib/utils';
-import { buildDecisionTableRows } from '@/lib/vsDecisionTable';
+import { isComparisonReady } from '@/lib/vsComparisonReady';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -25,33 +25,6 @@ function getDisplayToolName(slug?: string): string {
   const tool = getTool(slug);
   return tool?.name ?? toTitleCase(slug);
 }
-
-function isPlaceholderText(value: string): boolean {
-  const normalized = value.toLowerCase().trim();
-  return (
-    !normalized ||
-    normalized.includes('pending verification') ||
-    normalized === 'see product docs' ||
-    normalized === 'check current pricing' ||
-    normalized === 'check plan limits' ||
-    normalized === 'not explicitly listed' ||
-    normalized === 'see product positioning'
-  );
-}
-
-function isComparisonReady(comparison: ReturnType<typeof getVsComparisonWithStatus>['comparison']): boolean {
-  if (!comparison) return false;
-  const decisionRows = buildDecisionTableRows(comparison.matrixRows, comparison.slugA, comparison.slugB);
-  const tableReady =
-    decisionRows.length >= 5 &&
-    decisionRows.length <= 8 &&
-    decisionRows.every((row) => !isPlaceholderText(row.aText) && !isPlaceholderText(row.bText));
-  const hasKeyDiffs = comparison.keyDiffs.length >= 3;
-  const hasScore = Boolean(comparison.score && Object.keys(comparison.score.a ?? {}).length > 0 && Object.keys(comparison.score.b ?? {}).length > 0);
-  const hasVerdict = Boolean(comparison.verdict?.recommendation);
-  return tableReady && hasKeyDiffs && hasScore && hasVerdict;
-}
-
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
@@ -82,6 +55,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: `This ${toolAName} vs ${toolBName} comparison is shown in template mode while we finalize the full verified dataset.`,
       alternates: {
         canonical: `/vs/${canonicalSlug}`,
+      },
+      robots: {
+        index: false,
+        follow: true,
       },
     };
   }

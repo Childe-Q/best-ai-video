@@ -2,14 +2,24 @@ import { MetadataRoute } from 'next';
 import toolsData from '@/data/tools.json';
 import { Tool } from '@/types/tool';
 import { getFeaturePageSlugs } from '@/lib/features/readFeaturePageData';
-import { listVsSlugs } from '@/data/vs';
+import { listVsSlugs, getVsComparisonWithStatus } from '@/data/vs';
+import {
+  getTopicAlternativesSlugs,
+  buildTopicAlternativesLongformData,
+  buildToolAlternativesLongformData,
+  isAlternativesPageThin,
+} from '@/lib/alternatives/buildLongformData';
+import { isFeaturePageThin } from '@/lib/features/isFeaturePageThin';
+import { isReviewPageThin } from '@/lib/reviews/isReviewPageThin';
+import { loadToolContent } from '@/lib/loadToolContent';
+import { isComparisonReady } from '@/lib/vsComparisonReady';
 
 const tools: Tool[] = toolsData as Tool[];
 
 // Change this to your actual domain
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://best-ai-video.com';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes: MetadataRoute.Sitemap = [];
   const seen = new Set<string>();
 
@@ -49,13 +59,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   });
   pushRoute({
+    url: `${BASE_URL}/methodology`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  });
+  pushRoute({
     url: `${BASE_URL}/vs`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.8,
   });
 
-  // 5. Features Hub Page
+  // 3. Alternatives Hub Page
+  pushRoute({
+    url: `${BASE_URL}/alternatives`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  });
+
+  // 4. Features Hub Page
   pushRoute({
     url: `${BASE_URL}/features`,
     lastModified: new Date(),
@@ -63,7 +87,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   });
 
-  // 6. Feature Category Pages (only real routable slugs)
+  // 5. Feature Category Pages (only real routable slugs)
   getFeaturePageSlugs().forEach((slug) => {
     pushRoute({
       url: `${BASE_URL}/features/${slug}`,
@@ -73,8 +97,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // 3. Programmatic Pages for each tool
-  tools.forEach((tool) => {
+  // 6. Programmatic Pages for each tool
+  for (const tool of tools) {
     // Overview Page
     pushRoute({
       url: `${BASE_URL}/tool/${tool.slug}`,
@@ -91,23 +115,64 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     });
 
-    // Alternatives Page
-    pushRoute({
-      url: `${BASE_URL}/tool/${tool.slug}/alternatives`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    });
+    // Alternatives Page — only include if page is not thin (matches page-level noindex logic)
+    const altData = await buildToolAlternativesLongformData(tool.slug);
+    if (!isAlternativesPageThin(altData)) {
+      pushRoute({
+        url: `${BASE_URL}/tool/${tool.slug}/alternatives`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      });
+    }
+
+    // Features Page — only include if page is not thin (matches page-level noindex logic)
+    const featContent = loadToolContent(tool.slug);
+    if (!isFeaturePageThin(tool, featContent)) {
+      pushRoute({
+        url: `${BASE_URL}/tool/${tool.slug}/features`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.7,
+      });
+    }
+
+    // Reviews Page — only include if page is not thin (matches page-level noindex logic)
+    if (!isReviewPageThin(tool, featContent)) {
+      pushRoute({
+        url: `${BASE_URL}/tool/${tool.slug}/reviews`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.7,
+      });
+    }
+  }
+
+  // 7. Comparison Pages (VS pages) - canonical slugs only, exclude "in progress" comparisons
+  listVsSlugs().forEach((slug) => {
+    const { comparison } = getVsComparisonWithStatus(slug);
+    
+    if (isComparisonReady(comparison)) {
+      pushRoute({
+        url: `${BASE_URL}/vs/${slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.7,
+      });
+    }
   });
 
-  // 4. Comparison Pages (VS pages) - canonical slugs only
-  listVsSlugs().forEach((slug) => {
-    pushRoute({
-      url: `${BASE_URL}/vs/${slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    });
+  // 8. Topic Alternatives Pages - only include non-thin pages
+  getTopicAlternativesSlugs().forEach((slug) => {
+    const data = buildTopicAlternativesLongformData(slug);
+    if (data && !isAlternativesPageThin(data)) {
+      pushRoute({
+        url: `${BASE_URL}/alternatives/topic/${slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.7,
+      });
+    }
   });
 
   return routes;

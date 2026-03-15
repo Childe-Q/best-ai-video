@@ -332,17 +332,5 @@ export function generateFeatureDeepDives(tool: Tool, content: ToolContent | null
         });
     }
 
-    // Fallback
-    if (dives.length < 3) {
-        dives.push({
-            title: "Platform Overview",
-            summary: `${tool.name} operates as a cloud-based solution.`,
-            bullets: [
-                `Suitable for users who need general video creation.`,
-                `Note that features vary by plan.`
-            ]
-        });
-    }
-
     return dives.slice(0, 6);
 }

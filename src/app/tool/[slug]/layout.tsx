@@ -14,6 +14,7 @@ import DoubleLayerChips from '@/components/tool/DoubleLayerChips';
 import { getUseCaseChips, getCapabilityChips } from '@/lib/toolChips';
 import EditorialScore from '@/components/tool/EditorialScore';
 import { getCurrentMonthYear } from '@/lib/utils';
+import { buildBreadcrumbJsonLd } from '@/lib/jsonLd';
 
 interface ToolLayoutProps {
   children: ReactNode;
@@ -51,6 +52,18 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
 
   return (
     <div className="min-h-screen bg-slate-50 text-gray-900 font-sans">
+      {/* Structured Data: BreadcrumbList */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildBreadcrumbJsonLd([
+              { name: 'Home', href: '/' },
+              { name: tool.name },
+            ])
+          ),
+        }}
+      />
       {/* Main Content Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* 1. Breadcrumbs Row */}

@@ -7,6 +7,11 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
+      disallow: [
+        '/go/',   // Affiliate redirect routes — no content
+        '/api/',  // API endpoints (e.g. /api/visit)
+        '/dev/',  // Dev-only routes (e.g. OG image preview)
+      ],
     },
     sitemap: `${BASE_URL}/sitemap.xml`,
   };

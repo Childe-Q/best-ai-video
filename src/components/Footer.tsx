@@ -4,10 +4,19 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   const siteName = 'Best AI Video Tools';
 
+  const popularTools = [
+    { href: '/tool/heygen', label: 'HeyGen' },
+    { href: '/tool/invideo', label: 'InVideo' },
+    { href: '/tool/synthesia', label: 'Synthesia' },
+    { href: '/tool/fliki', label: 'Fliki' },
+    { href: '/tool/runway', label: 'Runway' },
+    { href: '/tool/pictory', label: 'Pictory' },
+  ];
+
   return (
     <footer className="bg-[#FAF7F2] border-t border-black/10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-black font-bold text-xl mb-4">{siteName}</h3>
@@ -17,32 +26,61 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Explore */}
           <div>
-            <h4 className="text-black font-semibold text-sm mb-4 uppercase tracking-wider">Quick Links</h4>
+            <h4 className="text-black font-semibold text-sm mb-4 uppercase tracking-wider">Explore</h4>
             <ul className="space-y-3">
-              <li>
-                <Link href="/" className="text-sm text-black/70 hover:text-black transition-colors">
-                  Home
-                </Link>
-              </li>
               <li>
                 <Link href="/features" className="text-sm text-black/70 hover:text-black transition-colors">
                   Features
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-sm text-black/70 hover:text-black transition-colors">
-                  About
+                <Link href="/vs" className="text-sm text-black/70 hover:text-black transition-colors">
+                  Compare Tools
+                </Link>
+              </li>
+              <li>
+                <Link href="/alternatives" className="text-sm text-black/70 hover:text-black transition-colors">
+                  Alternatives
+                </Link>
+              </li>
+              <li>
+                <Link href="/methodology" className="text-sm text-black/70 hover:text-black transition-colors">
+                  Methodology
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Popular Tools */}
           <div>
-            <h4 className="text-black font-semibold text-sm mb-4 uppercase tracking-wider">Legal</h4>
+            <h4 className="text-black font-semibold text-sm mb-4 uppercase tracking-wider">Popular Tools</h4>
             <ul className="space-y-3">
+              {popularTools.map((tool) => (
+                <li key={tool.href}>
+                  <Link href={tool.href} className="text-sm text-black/70 hover:text-black transition-colors">
+                    {tool.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company & Legal */}
+          <div>
+            <h4 className="text-black font-semibold text-sm mb-4 uppercase tracking-wider">Company</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/about" className="text-sm text-black/70 hover:text-black transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className="text-sm text-black/70 hover:text-black transition-colors">
+                  Home
+                </Link>
+              </li>
               <li>
                 <Link href="/privacy" className="text-sm text-black/70 hover:text-black transition-colors">
                   Privacy Policy

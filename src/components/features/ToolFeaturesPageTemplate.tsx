@@ -576,11 +576,6 @@ function generateHighlights(tool: Tool, content: ToolContent | null): string[] {
     highlights.push(...tagHighlights);
   }
 
-  // Ensure at least 3 items (use generic if needed)
-  while (highlights.length < 3) {
-    highlights.push(`Feature ${highlights.length + 1}`);
-  }
-
   return highlights.slice(0, 5);
 }
 

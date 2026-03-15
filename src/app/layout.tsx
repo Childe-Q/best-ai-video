@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GlobalErrorHandler from "@/components/GlobalErrorHandler";
 import { getSEOCurrentYear } from "@/lib/utils";
+import { buildOrganizationJsonLd, buildWebSiteJsonLd } from "@/lib/jsonLd";
 
 const seoYear = getSEOCurrentYear();
 
@@ -30,6 +31,15 @@ export default function RootLayout({
       <body
         className="antialiased"
       >
+        {/* Structured Data: Organization + WebSite */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(buildOrganizationJsonLd()) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(buildWebSiteJsonLd()) }}
+        />
         {/* Impact Site Verification */}
         <div style={{ display: 'none' }}>Impact-Site-Verification: 85a12125-5860-4b7e-960f-d1d65fe37656</div>
         <GlobalErrorHandler />
@@ -42,3 +52,4 @@ export default function RootLayout({
     </html>
   );
 }
+

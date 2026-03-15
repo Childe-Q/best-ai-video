@@ -6,6 +6,7 @@ import { loadReviewsData } from '@/lib/loadReviewsData';
 import { loadToolContent } from '@/lib/loadToolContent';
 import { generateSmartFAQs } from '@/lib/generateSmartFAQs';
 import { buildReviewsData } from '@/lib/reviews/buildReviewsData';
+import { isReviewPageThin } from '@/lib/reviews/isReviewPageThin';
 
 export async function generateStaticParams() {
   const tools = getAllTools();
@@ -18,6 +19,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!tool) return {};
 
   const seoYear = getSEOCurrentYear();
+  const content = loadToolContent(slug);
+  const thin = isReviewPageThin(tool, content);
 
   return {
     title: `${tool.name} Reviews & User Feedback (${seoYear})`,
@@ -25,6 +28,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     alternates: {
       canonical: `/tool/${slug}/reviews`,
     },
+    ...(thin
+      ? {
+          robots: {
+            index: false,
+            follow: true,
+          },
+        }
+      : {}),
   };
 }
 
