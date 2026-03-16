@@ -2,8 +2,17 @@ import 'server-only';
 
 import fs from 'fs';
 import path from 'path';
-import { FeaturePageData, FeatureGroup, FeatureHero, FeatureHowToChoose, FeatureRecommendedReading, FeatureToolCard } from '@/types/featurePage';
+import {
+  FeatureFaqItem,
+  FeaturePageData,
+  FeatureGroup,
+  FeatureHero,
+  FeatureHowToChoose,
+  FeatureRecommendedReading,
+  FeatureToolCard,
+} from '@/types/featurePage';
 import { NormalizedFeaturePage } from '@/types/normalizedFeaturePage';
+import { getFeaturePageModules, getFeaturePageType, getFeaturePageVariant } from '@/lib/features/pageType';
 
 const FEATURES_DATA_DIR = path.join(process.cwd(), 'src', 'data', 'features');
 const NORMALIZED_FEATURES_DATA_DIR = path.join(FEATURES_DATA_DIR, 'normalized');
@@ -173,6 +182,35 @@ function parseRecommendedReading(raw: unknown): FeatureRecommendedReading | unde
   };
 }
 
+function parseFaq(raw: unknown): FeatureFaqItem[] | undefined {
+  if (!Array.isArray(raw)) {
+    return undefined;
+  }
+
+  const items = raw
+    .map((item) => {
+      if (!item || typeof item !== 'object') {
+        return null;
+      }
+
+      const faq = item as Record<string, unknown>;
+      const question = asOptionalString(faq.question);
+      const answer = asOptionalString(faq.answer);
+
+      if (!question || !answer) {
+        return null;
+      }
+
+      return {
+        question,
+        answer,
+      };
+    })
+    .filter((item): item is NonNullable<typeof item> => item !== null);
+
+  return items.length > 0 ? items : undefined;
+}
+
 function parseNormalizedFeaturePage(raw: unknown): NormalizedFeaturePage | null {
   if (!raw || typeof raw !== 'object') {
     return null;
@@ -212,6 +250,8 @@ function mapNormalizedTool(tool: NormalizedFeaturePage['tools'][number]): Featur
 }
 
 function mapNormalizedFeaturePage(data: NormalizedFeaturePage): FeaturePageData | null {
+  const pageType = getFeaturePageType(data.slug);
+
   const toolMap = new Map<string, FeatureToolCard>();
 
   for (const tool of data.tools) {
@@ -276,6 +316,24 @@ function mapNormalizedFeaturePage(data: NormalizedFeaturePage): FeaturePageData 
     guides: Array.isArray(data.relatedLinks?.guideSlugs) ? data.relatedLinks.guideSlugs.filter(isNonEmptyString).map((item) => item.trim()) : [],
   };
 
+  const faq = Array.isArray(data.faqSeeds)
+    ? data.faqSeeds
+        .map((item) => {
+          const question = asOptionalString(item?.question);
+          const answer = asOptionalString(item?.answerSeed);
+
+          if (!question || !answer) {
+            return null;
+          }
+
+          return {
+            question,
+            answer,
+          };
+        })
+        .filter((item): item is NonNullable<typeof item> => item !== null)
+    : [];
+
   return {
     slug: data.slug,
     hero: {
@@ -293,6 +351,25 @@ function mapNormalizedFeaturePage(data: NormalizedFeaturePage): FeaturePageData 
       0
         ? recommendedReading
         : undefined,
+    faq: faq.length > 0 ? faq : undefined,
+    meta: {
+      pageType,
+      variant: getFeaturePageVariant(pageType),
+      modules: getFeaturePageModules(pageType),
+      primaryClassificationRule: asOptionalString(data.summarySeed?.primaryClassificationRule),
+      comparisonAxes: Array.isArray(data.summarySeed?.comparisonAxes)
+        ? data.summarySeed.comparisonAxes.filter(isNonEmptyString).map((item) => item.trim())
+        : [],
+      lastReviewed: asOptionalString(data.lastReviewed),
+      generatedFrom: data.reviewMetadata?.generatedFrom ?? null,
+      sourceCount: typeof data.reviewMetadata?.sourceCount === 'number' ? data.reviewMetadata.sourceCount : null,
+      uniqueToolCount:
+        typeof data.reviewMetadata?.uniqueToolCount === 'number' ? data.reviewMetadata.uniqueToolCount : null,
+      needsManualReview: Boolean(data.reviewMetadata?.needsManualReview),
+      reviewNotes: Array.isArray(data.reviewMetadata?.reviewNotes)
+        ? data.reviewMetadata.reviewNotes.filter(isNonEmptyString).map((item) => item.trim())
+        : [],
+    },
   };
 }
 
@@ -312,6 +389,46 @@ function readNormalizedFeaturePageData(slug: string): FeaturePageData | null {
   } catch {
     return null;
   }
+}
+
+function buildDirectPolicyFaq(
+  hero: FeatureHero,
+  groups: FeatureGroup[],
+  howToChoose?: FeatureHowToChoose,
+): FeatureFaqItem[] | undefined {
+  if (groups.length === 0) {
+    return undefined;
+  }
+
+  const firstGroup = groups[0];
+  const secondGroup = groups[1];
+  const thirdGroup = groups[2];
+  const firstToolNames = firstGroup?.tools.slice(0, 3).map((tool) => tool.name || tool.toolSlug) ?? [];
+
+  const items: FeatureFaqItem[] = [
+    {
+      question: 'How are tools grouped on this page?',
+      answer: hero.definitionBullets.join(' '),
+    },
+    {
+      question: 'Which bucket should I check first?',
+      answer:
+        firstGroup && secondGroup && thirdGroup
+          ? `Start with ${firstGroup.groupTitle} if clean free exports matter most. Check ${secondGroup.groupTitle} if the no-watermark claim only works under limits. Use ${thirdGroup.groupTitle} if you mainly need to know the cheapest paid upgrade path.`
+          : hero.subheadline,
+    },
+  ];
+
+  if (firstToolNames.length > 0) {
+    items.push({
+      question: 'Which tools are the strongest first checks on the free tier?',
+      answer:
+        `${firstToolNames.join(', ')} are the clearest starting points on this page because they sit in the most permissive policy bucket. ` +
+        `${howToChoose?.criteria?.[1]?.desc ?? howToChoose?.criteria?.[0]?.desc ?? ''}`.trim(),
+    });
+  }
+
+  return items;
 }
 
 export function getFeaturePageSlugs(): string[] {
@@ -346,11 +463,14 @@ export function readFeaturePageData(slug: string): FeaturePageData | null {
     return null;
   }
 
+  const pageType = getFeaturePageType(slug);
+
   try {
     const filePath = path.join(FEATURES_DATA_DIR, `${slug}.json`);
     const rawFile = fs.readFileSync(filePath, 'utf8');
     const parsed = JSON.parse(rawFile) as Record<string, unknown>;
     const hero = parseHero(parsed.hero);
+    const howToChoose = parseHowToChoose(parsed.howToChoose);
     const groups = parseGroups(parsed.groups);
 
     if (!hero || !groups) {
@@ -360,11 +480,35 @@ export function readFeaturePageData(slug: string): FeaturePageData | null {
     return {
       slug,
       hero,
-      howToChoose: parseHowToChoose(parsed.howToChoose),
+      howToChoose,
       groups,
       recommendedReading: parseRecommendedReading(parsed.recommendedReading),
+      faq: parseFaq(parsed.faq) ?? (slug === 'free-ai-video-no-watermark' ? buildDirectPolicyFaq(hero, groups, howToChoose) : undefined),
+      meta: {
+        pageType,
+        variant: getFeaturePageVariant(pageType),
+        modules: getFeaturePageModules(pageType),
+        primaryClassificationRule:
+          slug === 'free-ai-video-no-watermark'
+            ? 'Classify tools by free-tier watermark policy before price, credits, or export quality.'
+            : null,
+        comparisonAxes:
+          slug === 'free-ai-video-no-watermark'
+            ? ['Watermark policy', 'Free export quality', 'Usage caps', 'Commercial use']
+            : [],
+        lastReviewed: null,
+        generatedFrom: 'direct-json',
+        sourceCount: null,
+        uniqueToolCount: groups.reduce((total, group) => total + group.tools.length, 0),
+        needsManualReview: false,
+        reviewNotes: [],
+      },
     };
   } catch {
-    return readNormalizedFeaturePageData(slug);
+    const normalizedPage = readNormalizedFeaturePageData(slug);
+    if (normalizedPage) {
+      return normalizedPage;
+    }
+    return null;
   }
 }

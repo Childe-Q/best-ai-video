@@ -9,6 +9,7 @@ interface ToolCardProps {
   featureSlug: string;
   groupTitle: string;
   position: number;
+  policyLabel?: string;
 }
 
 function hasDisplayValue(value?: string | null): value is string {
@@ -43,7 +44,13 @@ function resolveToolCardCta(tool: FeatureToolCardDisplay): ToolCardCta {
   };
 }
 
-export default function ToolCard({ tool, featureSlug, groupTitle, position }: ToolCardProps) {
+export default function ToolCard({
+  tool,
+  featureSlug,
+  groupTitle,
+  position,
+  policyLabel = 'Policy',
+}: ToolCardProps) {
   const cta = resolveToolCardCta(tool);
 
   const trackToolCardClick = () => {
@@ -120,8 +127,11 @@ export default function ToolCard({ tool, featureSlug, groupTitle, position }: To
 
       <div className="space-y-5">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-indigo-600">Verdict</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-indigo-600">Why it stands out here</p>
           <p className="mt-2 text-base font-medium leading-7 text-gray-900">{tool.reasonLine1}</p>
+          {hasDisplayValue(tool.reasonLine2) && (
+            <p className="mt-2 text-sm leading-6 text-gray-600">{tool.reasonLine2}</p>
+          )}
         </div>
 
         <dl className="space-y-4">
@@ -134,21 +144,21 @@ export default function ToolCard({ tool, featureSlug, groupTitle, position }: To
 
           {hasDisplayValue(tool.watermarkPolicy) && (
             <div className="border-t border-gray-100 pt-4">
-              <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Watermark</dt>
+              <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">{policyLabel}</dt>
               <dd className="mt-1 text-sm leading-6 text-gray-800">{tool.watermarkPolicy}</dd>
             </div>
           )}
 
           {hasDisplayValue(tool.bestFor) && (
             <div className="border-t border-gray-100 pt-4">
-              <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Best for</dt>
+              <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Best fit in this route</dt>
               <dd className="mt-1 text-sm leading-6 text-gray-800">{tool.bestFor}</dd>
             </div>
           )}
 
           {hasDisplayValue(tool.mainTradeoff) && (
             <div className="border-t border-gray-100 pt-4">
-              <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Main limitation</dt>
+              <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Watch out for</dt>
               <dd className="mt-1 text-sm leading-6 text-gray-800">{tool.mainTradeoff}</dd>
             </div>
           )}
