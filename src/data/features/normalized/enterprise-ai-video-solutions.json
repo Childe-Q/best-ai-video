@@ -3,16 +3,17 @@
   "slug": "enterprise-ai-video-solutions",
   "title": "Enterprise AI Video Solutions (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares AI video platforms built for enterprise deployment — tools that offer programmatic API access, strict security certifications (SOC 2, ISO 42001, SSO/SAML), and multi-seat collaboration for large teams. Tools are grouped by primary enterprise use case: internal training and communications, or scalable content repurposing. Each listing reflects reported capabilities and published claims, not vendor marketing.",
+    "oneLiner": "This page compares enterprise AI video platforms that can survive procurement and deployment review: security posture, admin controls, integration depth, and large-scale rollout readiness. Tools are grouped by enterprise deployment path: governed training and communications, or programmatic repurposing and knowledge operations. Team-ready business tools without procurement-grade controls are excluded.",
     "boundaries": [
-      "Custom API access for programmatic video generation at scale.",
-      "Security protocols including SOC 2, ISO 42001, SSO/SAML, and GDPR compliance.",
-      "Multi-seat administration, role-based access, and high-volume output over consumer-grade features."
+      "Must support procurement-grade deployment signals such as SSO/SAML, admin controls, or integration depth.",
+      "Must support enterprise rollout requirements such as security posture, governance, or large-scale operational use.",
+      "Excludes business-team tools where collaboration and brand control matter, but procurement review is not the first filter."
     ],
-    "primaryClassificationRule": "Group by enterprise deployment use case.",
+    "primaryClassificationRule": "Group by enterprise deployment path.",
     "comparisonAxes": [
-      "workflow fit and automation",
-      "team and governance requirements"
+      "security posture",
+      "integration depth",
+      "admin rollout"
     ]
   },
   "howToChooseSeeds": [
@@ -36,8 +37,8 @@
   "groups": [
     {
       "id": "training-and-communications",
-      "title": "Training and communications",
-      "rule": "These platforms focus on internal enablement — corporate training, L&D, HR communications, and multilingual global messaging. They prioritize AI avatar presenters, language coverage, and the kind of compliance posture that enterprise procurement teams expect.",
+      "title": "Governed training and communications",
+      "rule": "These platforms fit enterprise training, HR enablement, and internal communications programs that need multilingual avatar delivery, admin control, and a rollout posture that can survive procurement review.",
       "toolSlugs": [
         "synthesia",
         "deepbrain-ai"
@@ -45,8 +46,8 @@
     },
     {
       "id": "repurposing-and-knowledge-ops",
-      "title": "Repurposing and knowledge ops",
-      "rule": "This group covers tools designed for programmatic content transformation: turning existing assets (articles, documents, recordings) into video at scale via API, rather than through a manual editor. The emphasis is on developer integration and automated pipelines within larger organizations.",
+      "title": "Programmatic repurposing and knowledge ops",
+      "rule": "This group covers platforms for enterprise-scale content transformation: turning existing assets, recordings, or knowledge systems into video through integrated, repeatable workflows. The emphasis is on APIs, automation, and operational rollout rather than manual team editing.",
       "toolSlugs": [
         "pictory"
       ]

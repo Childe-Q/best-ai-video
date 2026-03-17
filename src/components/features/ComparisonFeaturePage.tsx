@@ -462,6 +462,9 @@ export default function ComparisonFeaturePage({
             <h1 className="mt-4 max-w-5xl text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
               {pageData.hero.h1}
             </h1>
+            <p className="mt-4 max-w-4xl text-sm font-semibold uppercase tracking-[0.12em] text-gray-600">
+              Use this page if the workflow is already clear and you are comparing tools directly.
+            </p>
             <p className="mt-5 max-w-4xl text-lg leading-8 text-gray-700">{pageData.hero.subheadline}</p>
 
             <div className="mt-8 grid gap-4 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,0.75fr)]">
@@ -483,7 +486,7 @@ export default function ComparisonFeaturePage({
               </div>
 
               <div className="rounded-2xl border border-black/15 bg-white/85 p-5">
-                <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Not ready for head-to-head?</p>
+                <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Leave this page if...</p>
                 <p className="mt-3 text-sm leading-7 text-gray-800">
                   If you are still deciding between cinematic generation, avatar workflows, or social-first tools, this page is too narrow. Go back to the broader shortlist first.
                 </p>
@@ -593,7 +596,7 @@ export default function ComparisonFeaturePage({
                 <p className="mt-4 text-sm font-semibold text-gray-900">Start with {card.winner}</p>
                 <p className="mt-2 text-sm leading-7 text-gray-700">{card.summary}</p>
                 <div className="mt-4 rounded-2xl border border-gray-200 bg-white p-4">
-                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Skip this lane when</p>
+                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Leave this lane if...</p>
                   <p className="mt-2 text-sm leading-7 text-gray-700">{card.whenToSkip}</p>
                 </div>
                 <div className="mt-4">
@@ -698,7 +701,7 @@ export default function ComparisonFeaturePage({
           <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Further reading</p>
-              <h2 className="mt-3 text-3xl font-bold text-gray-900">Keep it light after the comparison is done</h2>
+              <h2 className="mt-3 text-3xl font-bold text-gray-900">Keep going only if the fit still holds</h2>
             </div>
 
             <div className="mt-8 grid gap-8 xl:grid-cols-2">

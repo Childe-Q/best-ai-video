@@ -3,13 +3,13 @@
   "slug": "ai-video-for-youtube",
   "title": "Best AI Video Tools for YouTube Creators (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares AI video tools built for YouTube workflows — faceless channel automation, script-to-video generation, and avatar-hosted content. Tools must support long-form (16:9) YouTube output or Shorts automation, and include text-to-video, voice cloning, or faceless avatar capabilities. Generic short-form editors without script-to-video automation are excluded.",
+    "oneLiner": "This page compares AI video tools built for YouTube-first publishing systems: faceless channel automation, recurring upload cadence, long-form adjacency, and avatar-hosted YouTube formats. Tools must support 16:9 publishing, faceless scripting and voice workflows, or YouTube-specific host delivery. Generic vertical editors built mainly for fast social posting are excluded.",
     "boundaries": [
-      "Focused on long-form (16:9) YouTube workflows and YouTube Shorts automation.",
-      "Must include text-to-video, voice cloning, or faceless avatar capabilities.",
-      "Excludes generic short-form editors that do not support script-to-video pipelines."
+      "Focused on YouTube-first publishing systems, including long-form adjacency and Shorts programs.",
+      "Must support script, voice, host, or automation workflows that make sense for recurring YouTube publishing.",
+      "Excludes generic vertical editors whose main value is fast social posting rather than channel cadence."
     ],
-    "primaryClassificationRule": "Group by YouTube production workflow.",
+    "primaryClassificationRule": "Group by YouTube publishing system.",
     "comparisonAxes": [
       "pricing and credit limits"
     ]
@@ -35,8 +35,8 @@
   "groups": [
     {
       "id": "channel-automation",
-      "title": "Channel automation",
-      "rule": "These platforms handle the full script-to-publish pipeline — generating video from a text prompt or script, adding voiceover, B-roll, subtitles, and sometimes even scheduling output. They are built for creators who want to run a faceless YouTube channel with minimal manual editing.",
+      "title": "YouTube channel systems",
+      "rule": "These platforms handle the repeatable script-to-publish pipeline for YouTube: scripting, voiceover, B-roll, subtitles, and ongoing upload cadence. They fit creators building faceless channels or repeatable series rather than one-off short social posts.",
       "toolSlugs": [
         "invideo",
         "syllaby"
@@ -44,8 +44,8 @@
     },
     {
       "id": "avatar-support",
-      "title": "Avatar support",
-      "rule": "This group covers tools where a faceless or AI avatar-led host is part of the YouTube workflow. Rather than automating the entire pipeline, they focus on producing a realistic on-screen presenter without requiring the creator to appear on camera.",
+      "title": "YouTube host layer",
+      "rule": "This group covers tools where the main YouTube differentiator is a recurring host: a faceless presenter, avatar explainer, or on-screen spokesperson. They matter when channel identity depends more on delivery format than on a fully automated publishing pipeline.",
       "toolSlugs": [
         "heygen"
       ]

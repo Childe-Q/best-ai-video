@@ -4,12 +4,17 @@ export type FeatureHero = {
   definitionBullets: string[];
 };
 
-export type FeaturePageVariant = 'general' | 'comparison' | 'policy';
-export type FeaturePageType = 'broad-chooser' | 'narrow-workflow' | 'comparison' | 'policy-threshold';
+export type FeaturePageVariant = 'general' | 'comparison' | 'policy' | 'business';
+export type FeaturePageType =
+  | 'broad-chooser'
+  | 'narrow-workflow'
+  | 'comparison'
+  | 'policy-threshold'
+  | 'business-procurement';
 export type FeaturePageSectionMode = 'full' | 'compact' | 'hidden';
 export type FeatureFaqDensity = 'medium' | 'light' | 'hidden';
 export type FeatureFurtherReadingWeight = 'light' | 'hidden';
-export type FeaturePrimarySurface = 'cards' | 'table' | 'bucket-summary';
+export type FeaturePrimarySurface = 'cards' | 'table' | 'bucket-summary' | 'checklist-matrix';
 
 export type FeaturePageModules = {
   atGlance: FeaturePageSectionMode;

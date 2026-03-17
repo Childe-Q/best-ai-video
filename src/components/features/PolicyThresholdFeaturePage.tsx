@@ -51,6 +51,12 @@ type BucketOverride = {
 };
 
 type PolicyThresholdOverride = {
+  heroPill: string;
+  wrongFitText: string;
+  wrongFitHref: string;
+  wrongFitLabel: string;
+  keyAxes: string[];
+  toolPolicyLabel: string;
   summaryCards: PolicySummaryCard[];
   bucketCards: PolicyBucketCard[];
   matrixRows: BucketMatrixRow[];
@@ -82,6 +88,13 @@ const readingOrder: FeatureRecommendedReadingLink['linkType'][] = ['tool', 'tool
 
 const policyThresholdOverrides: Partial<Record<string, PolicyThresholdOverride>> = {
   'free-ai-video-no-watermark': {
+    heroPill: 'Free-tier rule and eligibility first',
+    wrongFitText:
+      'If the real question is not “free and no watermark” but simply “which AI video tool is best overall,” this page is too narrow. Go back to the broader shortlist first.',
+    wrongFitHref: '/features/best-ai-video-generators',
+    wrongFitLabel: 'Go back to the broader generators shortlist',
+    keyAxes: ['watermark rule', 'free-tier eligibility', 'export limits', 'resolution cap', 'commercial-use risk'],
+    toolPolicyLabel: 'Watermark policy',
     summaryCards: [
       {
         eyebrow: 'Best truly free editor',
@@ -226,6 +239,317 @@ const policyThresholdOverrides: Partial<Record<string, PolicyThresholdOverride>>
       },
     },
   },
+  'budget-friendly-ai-video-tools': {
+    heroPill: 'Budget cap and paid-tier value first',
+    wrongFitText:
+      'If the real question is not “what stays under $20 with clean exports” but simply “which generator is best overall,” this page is too narrow. Go back to the broader shortlist first.',
+    wrongFitHref: '/features/best-ai-video-generators',
+    wrongFitLabel: 'Go back to the broader generators shortlist',
+    keyAxes: ['monthly cap', 'credits per dollar', 'watermark removal', 'usable output volume', 'workflow fit'],
+    toolPolicyLabel: 'Budget threshold',
+    summaryCards: [
+      {
+        eyebrow: 'Best overall under $20',
+        title: 'Runway',
+        summary:
+          'Strongest first check if you want the cleanest blend of sub-$20 pricing, watermark-free output, and a tool that still feels serious beyond the entry tier.',
+        href: '/tool/runway',
+        cta: 'Open review',
+      },
+      {
+        eyebrow: 'Best quality-to-price ratio',
+        title: 'Kling AI',
+        summary:
+          'Most relevant if you want the highest motion quality you can get around the $10 mark and can live inside a credit-based generation model.',
+        href: 'https://klingai.com/',
+        external: true,
+        cta: 'Visit official site',
+      },
+      {
+        eyebrow: 'Best low-cost social generator',
+        title: 'Pika',
+        summary:
+          'Best fit if you care more about fast social experiments and creative effects than about the most cinematic output at the price band.',
+        href: '/tool/pika',
+        cta: 'Open review',
+      },
+      {
+        eyebrow: 'Best daily creator workflow',
+        title: 'Magic Hour',
+        summary:
+          'The cleanest starting point if the budget cap matters, but the real job is producing short-form content frequently without heavier creative tooling.',
+        href: 'https://magichour.ai/',
+        external: true,
+        cta: 'Visit official site',
+      },
+    ],
+    bucketCards: [
+      {
+        title: 'Need the strongest generator under $20',
+        summary:
+          'Start with budget generators when the rule is simple: stay under the monthly cap, keep clean exports, and still get a serious generative tool.',
+        compareFirst: 'Credits per month, watermark removal on the entry tier, and whether the output still feels usable after the budget cap',
+        whenToSkip:
+          'Skip this bucket if your real workflow is daily social output rather than general generation, or if the sub-$20 cap matters less than overall model quality.',
+        href: '#budget-generators',
+        label: 'Go to Budget Generators',
+      },
+      {
+        title: 'Need a daily workflow that stays cheap',
+        summary:
+          'Start with daily creator workflows when the threshold is not pure model quality but repeatable short-form output at a price you can keep paying every month.',
+        compareFirst: 'How much output the tier supports, how simple the workflow is, and whether speed matters more than creative control',
+        whenToSkip:
+          'Skip this bucket if you care more about cinematic generation, higher-end controls, or occasional premium output instead of daily publishing volume.',
+        href: '#daily-creator-workflows',
+        label: 'Go to Daily Creator Workflows',
+      },
+      {
+        title: 'Actually need to stay at $0',
+        summary:
+          'If “budget-friendly” still means no paid plan at all, this page is already too far downstream. Start with the free and no-watermark threshold page instead.',
+        compareFirst: 'Whether free clean exports are truly required or whether a small paid tier is acceptable',
+        whenToSkip:
+          'Skip this bucket if you already know a sub-$20 paid plan is fine and the real question is which one gives the best value.',
+        href: '/features/free-ai-video-no-watermark',
+        label: 'Go to Free / No Watermark',
+      },
+    ],
+    matrixRows: [
+      {
+        label: 'Threshold rule',
+        values: {
+          'Budget Generators': 'Stay under $20 while keeping a real generative model and clean exports',
+          'Daily Creator Workflows': 'Stay under $20 while keeping repeatable short-form output practical',
+        },
+      },
+      {
+        label: 'Typical tradeoff',
+        values: {
+          'Budget Generators': 'Credit caps usually limit volume before they limit creativity',
+          'Daily Creator Workflows': 'Speed and simplicity improve, but advanced creative control usually drops',
+        },
+      },
+      {
+        label: 'Who should start here',
+        values: {
+          'Budget Generators': 'People who want the best-looking generator they can afford monthly',
+          'Daily Creator Workflows': 'People who publish frequently and care more about affordable throughput',
+        },
+      },
+      {
+        label: 'Main risk',
+        values: {
+          'Budget Generators': 'The plan looks cheap until credits run out faster than expected',
+          'Daily Creator Workflows': 'The workflow may stay cheap only by capping quality or creative range',
+        },
+      },
+      {
+        label: 'First tools to check',
+        values: {
+          'Budget Generators': 'Runway · Kling AI · Pika',
+          'Daily Creator Workflows': 'Magic Hour',
+        },
+      },
+    ],
+    faqItems: [
+      {
+        question: 'What actually counts as budget-friendly on this page?',
+        answer:
+          'It only counts as budget-friendly if the paid plan stays under $20 per month, removes the watermark, and still gives you meaningful output. A cheap tier that immediately forces an upgrade or collapses under real usage does not qualify in practice.',
+      },
+      {
+        question: 'Which bucket should I check first?',
+        answer:
+          'Start with Budget Generators if you mainly want the strongest generative quality you can afford. Start with Daily Creator Workflows if you publish short-form content frequently and care more about affordable throughput than about model depth.',
+      },
+      {
+        question: 'What matters more here: sticker price, credits, or watermark removal?',
+        answer:
+          'Start with the real usable output after the budget cap, not just the sticker price. Credits and watermark removal usually decide whether the plan is actually viable long before the monthly price alone does.',
+      },
+      {
+        question: 'When should I leave this page and go back to the free threshold page?',
+        answer:
+          'Go back to the free threshold page if paying anything at all is still the blocker. This page only helps once a sub-$20 paid plan is acceptable and the decision is about value inside that cap.',
+      },
+      {
+        question: 'Should I use this page, or go back to the broader generators shortlist?',
+        answer:
+          'Use this page only if the monthly budget cap is the real first filter. If you care more about the best overall tool than about staying under $20, the broader generators shortlist is the better page.',
+      },
+    ],
+    bucketOverrides: {
+      'Budget Generators': {
+        startHereWhen:
+          'Start here when you want the strongest sub-$20 generative option and can accept a credit-based ceiling as the tradeoff for staying affordable.',
+        watchFor:
+          'Cheap plans often look stronger than they are because the credits disappear quickly. Treat monthly price, credit volume, and watermark removal as one combined threshold, not separate nice-to-haves.',
+        nextStepHref: '/features/ai-video-generators-comparison',
+        nextStepLabel: 'Budget cap no longer the first filter?',
+        nextStepNote:
+          'Move to direct comparison once you are choosing between generators head-to-head instead of optimizing for sub-$20 value.',
+      },
+      'Daily Creator Workflows': {
+        startHereWhen:
+          'Start here when the real threshold is staying cheap while publishing often. This is the better bucket if speed and repeatability matter more than the strongest generative model.',
+        watchFor:
+          'A workflow can stay inexpensive by narrowing what you can create. Make sure the low-cost simplicity is helping the real job instead of boxing you into social-only output.',
+        nextStepHref: '/features/ai-video-for-social-media',
+        nextStepLabel: 'Need the workflow page instead?',
+        nextStepNote:
+          'Go there if daily short-form publishing is the real frame and price is no longer the only decision driver.',
+      },
+    },
+  },
+  'fast-ai-video-generators': {
+    heroPill: 'Latency, queue time, and throughput first',
+    wrongFitText:
+      'If the real question is not “which generator is fastest enough” but simply “which generator is best overall,” this page is too narrow. Go back to the broader shortlist first.',
+    wrongFitHref: '/features/best-ai-video-generators',
+    wrongFitLabel: 'Go back to the broader generators shortlist',
+    keyAxes: ['queue time', 'render latency', 'API concurrency', 'quality tradeoff', 'commercial readiness'],
+    toolPolicyLabel: 'Speed threshold',
+    summaryCards: [
+      {
+        eyebrow: 'Fastest overall first check',
+        title: 'Luma Dream Machine',
+        summary:
+          'Strongest first check if the job is pure turnaround speed and high-volume prompt iteration, especially when queue time matters more than the last bit of polish.',
+        href: 'https://lumalabs.ai/',
+        external: true,
+        cta: 'Visit official site',
+      },
+      {
+        eyebrow: 'Best low-cost fast testing',
+        title: 'Minimax Hailuo',
+        summary:
+          'Most relevant if you want fast concept testing and care about keeping the cost per second low while staying in a speed-first workflow.',
+        href: 'https://hailuoai.com/',
+        external: true,
+        cta: 'Visit official site',
+      },
+      {
+        eyebrow: 'Best fast option with a clearer paid path',
+        title: 'Pika',
+        summary:
+          'Best fit if you want near real-time effects and a clearer commercial-ready upgrade path instead of only chasing absolute render speed.',
+        href: '/tool/pika',
+        cta: 'Open review',
+      },
+      {
+        eyebrow: 'Best if speed stops being the only rule',
+        title: 'Go broader',
+        summary:
+          'The fastest tool is not always the right tool. If quality, control, or broader workflow fit matter more than raw turnaround, this page should stop being your main frame.',
+        href: '/features/ai-video-generators-comparison',
+        cta: 'Open comparison',
+      },
+    ],
+    bucketCards: [
+      {
+        title: 'Need the fastest feedback loop now',
+        summary:
+          'Start here when the rule is simple: a few extra seconds or minutes matter, and the real workflow depends on fast iteration more than maximum visual polish.',
+        compareFirst: 'Real render latency, queue behavior on your tier, and whether the fast mode still gives usable output',
+        whenToSkip:
+          'Skip this bucket if you can tolerate slower renders for better quality, or if the workflow is too infrequent for raw speed to matter first.',
+        href: '#rapid-prototyping',
+        label: 'Go to Rapid Prototyping',
+      },
+      {
+        title: 'Need speed that still survives paid work',
+        summary:
+          'Use this threshold when speed matters, but only if the tool still becomes practical for real publishing after you leave the free queue or move to a paid plan.',
+        compareFirst: 'Commercial-use posture, faster queue access on paid tiers, and whether the speed advantage holds once you upgrade',
+        whenToSkip:
+          'Skip this bucket if you only need fast experimentation and do not care yet about commercial readiness or predictable paid throughput.',
+        href: '#rapid-prototyping',
+        label: 'Compare commercial-ready fast options',
+      },
+      {
+        title: 'Actually need quality or control more than raw speed',
+        summary:
+          'If speed sounds attractive but is not the real bottleneck, this page is already too narrow. Move to comparison or the broader shortlist instead of forcing a speed-first decision.',
+        compareFirst: 'Whether the workflow breaks on render latency or on quality, control, and broader fit',
+        whenToSkip:
+          'Skip this bucket if faster queues are still the main operational problem you are trying to solve.',
+        href: '/features/ai-video-generators-comparison',
+        label: 'Go to Comparison',
+      },
+    ],
+    matrixRows: [
+      {
+        label: 'Threshold rule',
+        values: {
+          'Rapid prototyping': 'Stay here only if fast render time or queue avoidance is the real first filter',
+        },
+      },
+      {
+        label: 'Typical tradeoff',
+        values: {
+          'Rapid prototyping': 'You usually get faster turnaround by giving up some polish, control, or predictability',
+        },
+      },
+      {
+        label: 'Who should start here',
+        values: {
+          'Rapid prototyping': 'People who iterate constantly and care about feedback speed more than maximum fidelity',
+        },
+      },
+      {
+        label: 'Main risk',
+        values: {
+          'Rapid prototyping': 'The fastest generator can still be the wrong tool once quality or commercial use becomes the bigger constraint',
+        },
+      },
+      {
+        label: 'First tools to check',
+        values: {
+          'Rapid prototyping': 'Luma Dream Machine · Minimax Hailuo · Pika',
+        },
+      },
+    ],
+    faqItems: [
+      {
+        question: 'What actually counts as fast enough to belong on this page?',
+        answer:
+          'It belongs here only if render speed, queue time, or throughput is the real first filter. A tool is not on this page because it is merely “convenient”; it has to change the workflow by producing output in seconds or low minutes instead of longer waits.',
+      },
+      {
+        question: 'Which speed constraint should I check first: queue time, render time, or API concurrency?',
+        answer:
+          'Start with the bottleneck that actually breaks your workflow. For manual creative work, queue time and render latency usually matter first. For batch generation or product workflows, API concurrency and rate limits can matter more than single-render speed.',
+      },
+      {
+        question: 'When is a fast generator the wrong first choice?',
+        answer:
+          'It is the wrong first choice when quality, control, or commercial posture matters more than raw turnaround. If you can tolerate slower rendering for materially better output, speed should stop being the main filter.',
+      },
+      {
+        question: 'Which fast option is strongest once paid use or commercial work matters?',
+        answer:
+          'Pika is the clearest starting point when you want a faster tool with a more explicit paid path and commercial-use context. Luma and Hailuo remain important if absolute speed or low-cost iteration still matters more than that.',
+      },
+      {
+        question: 'Should I use this page, or go back to the broader generators shortlist?',
+        answer:
+          'Use this page only if latency and queue behavior are the real constraints. If you care more about overall generator quality or broader workflow fit than about speed itself, the broader shortlist or comparison page is the better route.',
+      },
+    ],
+    bucketOverrides: {
+      'Rapid prototyping': {
+        startHereWhen:
+          'Start here when rapid iteration is the job. This bucket exists for workflows where waiting is the main failure mode and getting more shots faster beats maximizing polish on every clip.',
+        watchFor:
+          'Fast is not a free win. The same tool that feels great for concept testing can become weak once you care about quality, commercial use, or predictable throughput across real workloads.',
+        nextStepHref: '/features/ai-video-generators-comparison',
+        nextStepLabel: 'Speed no longer the main filter?',
+        nextStepNote:
+          'Move to direct comparison once the workflow is already set and you are comparing broader tradeoffs than render speed alone.',
+      },
+    },
+  },
 };
 
 export default function PolicyThresholdFeaturePage({
@@ -284,13 +608,16 @@ export default function PolicyThresholdFeaturePage({
             <div className="flex flex-wrap items-center gap-3">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gray-700">Policy guide</p>
               <span className="rounded-full border border-black/10 bg-white/80 px-3 py-1 text-xs font-semibold text-gray-700">
-                Free-tier rule and eligibility first
+                {override.heroPill}
               </span>
             </div>
 
             <h1 className="mt-4 max-w-5xl text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
               {pageData.hero.h1}
             </h1>
+            <p className="mt-4 max-w-4xl text-sm font-semibold uppercase tracking-[0.12em] text-gray-600">
+              Use this page if a threshold, limit, or hard rule is the first filter.
+            </p>
             <p className="mt-5 max-w-4xl text-lg leading-8 text-gray-700">{pageData.hero.subheadline}</p>
 
             <div className="mt-8 grid gap-4 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
@@ -312,16 +639,14 @@ export default function PolicyThresholdFeaturePage({
               </div>
 
               <div className="rounded-2xl border border-black/15 bg-white/85 p-5">
-                <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Wrong fit?</p>
-                <p className="mt-3 text-sm leading-7 text-gray-800">
-                  If the real question is not “free and no watermark” but simply “which AI video tool is best overall,” this page is too narrow. Go back to the broader shortlist first.
-                </p>
+                <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Leave this page if...</p>
+                <p className="mt-3 text-sm leading-7 text-gray-800">{override.wrongFitText}</p>
                 <div className="mt-5">
                   <Link
-                    href="/features/best-ai-video-generators"
+                    href={override.wrongFitHref}
                     className="inline-flex items-center rounded-xl border-2 border-black bg-[#FFF16A] px-4 py-2.5 text-sm font-semibold text-gray-900 shadow-[3px_3px_0px_0px_#000]"
                   >
-                    Go back to the broader generators shortlist
+                    {override.wrongFitLabel}
                   </Link>
                 </div>
               </div>
@@ -330,13 +655,7 @@ export default function PolicyThresholdFeaturePage({
             <div className="mt-8 rounded-2xl border border-black/15 bg-white/85 p-5">
               <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">What matters most</p>
               <div className="mt-3 flex flex-wrap gap-2">
-                {[
-                  'watermark rule',
-                  'free-tier eligibility',
-                  'export limits',
-                  'resolution cap',
-                  'commercial-use risk',
-                ].map((axis) => (
+                {override.keyAxes.map((axis) => (
                   <span
                     key={axis}
                     className="rounded-full border border-black/10 bg-gray-50 px-3 py-1.5 text-xs font-semibold text-gray-700"
@@ -393,7 +712,7 @@ export default function PolicyThresholdFeaturePage({
         <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Eligibility checklist</p>
-            <h2 className="mt-3 text-3xl font-bold text-gray-900">Check the free-tier rule before you compare tools</h2>
+            <h2 className="mt-3 text-3xl font-bold text-gray-900">Check the threshold rule before you compare tools</h2>
           </div>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -410,7 +729,7 @@ export default function PolicyThresholdFeaturePage({
         <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Bucket matrix</p>
-            <h2 className="mt-3 text-3xl font-bold text-gray-900">See the real free-tier rule before you scroll to tools</h2>
+            <h2 className="mt-3 text-3xl font-bold text-gray-900">See the real threshold tradeoff before you scroll to tools</h2>
           </div>
 
           <div className="mt-8 overflow-x-auto">
@@ -451,7 +770,7 @@ export default function PolicyThresholdFeaturePage({
         <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Choose your policy bucket</p>
-            <h2 className="mt-3 text-3xl font-bold text-gray-900">Pick the free-tier rule you can actually tolerate</h2>
+            <h2 className="mt-3 text-3xl font-bold text-gray-900">Pick the bucket that matches the constraint you can actually tolerate</h2>
           </div>
 
           <div className="mt-8 grid gap-4 xl:grid-cols-3">
@@ -464,7 +783,7 @@ export default function PolicyThresholdFeaturePage({
                   <p className="mt-2 text-sm leading-7 text-gray-700">{card.compareFirst}</p>
                 </div>
                 <div className="mt-4 rounded-2xl border border-gray-200 bg-white p-4">
-                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Skip this bucket when</p>
+                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Leave this bucket if...</p>
                   <p className="mt-2 text-sm leading-7 text-gray-700">{card.whenToSkip}</p>
                 </div>
                 <div className="mt-4">
@@ -514,13 +833,13 @@ export default function PolicyThresholdFeaturePage({
                       featureSlug={featureSlug}
                       groupTitle={group.groupTitle}
                       position={index + 1}
-                      policyLabel="Watermark policy"
+                      policyLabel={override.toolPolicyLabel}
                     />
                   ))}
                 </div>
 
                 <div className="mt-8 border-t border-gray-200 pt-5">
-                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Contextual next steps</p>
+                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Exit options</p>
                   <div className="mt-3 flex flex-wrap gap-3">
                     <Link
                       href={bucketOverride?.nextStepHref ?? '/features/best-ai-video-generators'}
@@ -553,7 +872,7 @@ export default function PolicyThresholdFeaturePage({
           <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Further reading</p>
-              <h2 className="mt-3 text-3xl font-bold text-gray-900">Keep it light after the threshold is clear</h2>
+              <h2 className="mt-3 text-3xl font-bold text-gray-900">Keep going only if the fit still holds</h2>
             </div>
 
             <div className="mt-8 grid gap-8 xl:grid-cols-2">

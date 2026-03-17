@@ -3,13 +3,13 @@
   "slug": "ai-video-for-social-media",
   "title": "Best AI Video Tools for Social Media (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares AI video tools built for social-first content — TikTok, Instagram Reels, YouTube Shorts, and similar vertical-format platforms. Tools are grouped by social publishing workflow: template-based clip generation and text-to-video, or avatar-led presenter content. Only platforms with native 9:16 support, engagement-focused features (dynamic captions, hook generation, fast pacing), and quick turnaround are included. Slow cinematic models and complex desktop timeline editors are excluded.",
+    "oneLiner": "This page compares AI video tools built for social-native output: vertical speed, hooks, captions, templates, and rapid posting for TikTok, Reels, Shorts, and similar feeds. Tools are grouped by social publishing style: template and clip velocity, or presenter-led social output. YouTube-first channel systems and slower long-form workflows are excluded.",
     "boundaries": [
-      "Must support vertical (9:16) video formats natively.",
-      "Must include social engagement features: dynamic captions, viral hooks, or fast pacing.",
-      "Excludes slow cinematic models and complex desktop editors not suited for quick social workflows."
+      "Must support vertical (9:16) output and social-native publishing speed.",
+      "Must include engagement-first features such as dynamic captions, hook generation, templates, or fast reframing.",
+      "Excludes YouTube-first channel systems and slower workflows built around long-form cadence."
     ],
-    "primaryClassificationRule": "Group by social publishing workflow.",
+    "primaryClassificationRule": "Group by social-native publishing style.",
     "comparisonAxes": [
       "commercial rights",
       "workflow fit and automation",
@@ -37,8 +37,8 @@
   "groups": [
     {
       "id": "template-and-clip-workflows",
-      "title": "Template and clip workflows",
-      "rule": "These tools are built for repeatable social output — generating videos from text prompts, applying templates, or clipping existing content into short-form posts. They suit creators who need a high volume of vertical content with minimal manual editing, whether from scratch or repurposed from longer material.",
+      "title": "Vertical templates and clip velocity",
+      "rule": "These tools are built for repeatable social output at speed: hooks, captions, templates, reframing, and quick idea-to-post cycles. They fit creators who need a high volume of vertical content with minimal manual editing and social-native pacing.",
       "toolSlugs": [
         "capcut",
         "reelbase",
@@ -47,8 +47,8 @@
     },
     {
       "id": "avatar-and-presentation-social",
-      "title": "Avatar and presentation social",
-      "rule": "This group covers tools where an AI avatar presenter is the content format — producing talking-head TikToks or Reels without the creator appearing on camera. It suits creators and brands who want a consistent on-screen presence without filming themselves.",
+      "title": "Presenter-led social output",
+      "rule": "This group covers tools where the social format itself is a recurring presenter: talking-head TikToks, avatar-led Reels, and spokesperson clips designed to feel native to social feeds rather than to a broader channel system.",
       "toolSlugs": [
         "deepbrain-ai"
       ]

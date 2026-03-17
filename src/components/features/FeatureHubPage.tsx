@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 import ToolCard from '@/components/features/ToolCard';
+import BusinessProcurementFeaturePage from '@/components/features/BusinessProcurementFeaturePage';
 import ComparisonFeaturePage from '@/components/features/ComparisonFeaturePage';
 import FeaturesFAQ from '@/components/features/FeaturesFAQ';
 import NarrowWorkflowFeaturePage from '@/components/features/NarrowWorkflowFeaturePage';
@@ -22,6 +23,21 @@ interface FeatureHubPageProps {
   groups: FeatureGroupDisplay[];
   recommendedReadingLinks: FeatureRecommendedReadingLink[];
 }
+
+const narrowWorkflowSampleSlugs = new Set([
+  'text-to-video-ai-tools',
+  'content-repurposing-ai-tools',
+  'ai-video-for-youtube',
+  'ai-video-for-social-media',
+  'ai-video-for-marketing',
+  'ai-video-editors',
+]);
+
+const policyThresholdSampleSlugs = new Set([
+  'free-ai-video-no-watermark',
+  'budget-friendly-ai-video-tools',
+  'fast-ai-video-generators',
+]);
 
 type RouteRedirect = {
   href: string;
@@ -125,8 +141,25 @@ function getPageTypeEyebrow(pageType: FeaturePageType): string {
       return 'Comparison guide';
     case 'policy-threshold':
       return 'Policy guide';
+    case 'business-procurement':
+      return 'Business guide';
     default:
       return 'Workflow guide';
+  }
+}
+
+function getHeroDefinition(pageType: FeaturePageType): string {
+  switch (pageType) {
+    case 'broad-chooser':
+      return 'Use this page if you still need route-level guidance before deciding which tools deserve a closer look.';
+    case 'comparison':
+      return 'Use this page if the workflow is already clear and you are comparing tools directly.';
+    case 'policy-threshold':
+      return 'Use this page if a threshold, limit, or hard rule is the first filter.';
+    case 'business-procurement':
+      return 'Use this page if the buyer is choosing a business-ready tool rather than a broad workflow.';
+    default:
+      return 'Use this page if the workflow is mostly clear and you want the shortest path to a shortlist.';
   }
 }
 
@@ -1030,9 +1063,9 @@ export default function FeatureHubPage({
   useEffect(() => {
     if (
       pageType === 'comparison' ||
-      (pageType === 'policy-threshold' && pageData.slug === 'free-ai-video-no-watermark') ||
-      (pageType === 'narrow-workflow' &&
-        (pageData.slug === 'text-to-video-ai-tools' || pageData.slug === 'content-repurposing-ai-tools'))
+      (pageType === 'policy-threshold' && policyThresholdSampleSlugs.has(pageData.slug)) ||
+      pageType === 'business-procurement' ||
+      (pageType === 'narrow-workflow' && narrowWorkflowSampleSlugs.has(pageData.slug))
     ) {
       return;
     }
@@ -1054,7 +1087,7 @@ export default function FeatureHubPage({
     );
   }
 
-  if (pageType === 'policy-threshold' && pageData.slug === 'free-ai-video-no-watermark') {
+  if (pageType === 'policy-threshold' && policyThresholdSampleSlugs.has(pageData.slug)) {
     return (
       <PolicyThresholdFeaturePage
         featureSlug={featureSlug}
@@ -1065,10 +1098,18 @@ export default function FeatureHubPage({
     );
   }
 
-  if (
-    pageType === 'narrow-workflow' &&
-    (pageData.slug === 'text-to-video-ai-tools' || pageData.slug === 'content-repurposing-ai-tools')
-  ) {
+  if (pageType === 'business-procurement') {
+    return (
+      <BusinessProcurementFeaturePage
+        featureSlug={featureSlug}
+        pageData={pageData}
+        groups={groups}
+        recommendedReadingLinks={recommendedReadingLinks}
+      />
+    );
+  }
+
+  if (pageType === 'narrow-workflow' && narrowWorkflowSampleSlugs.has(pageData.slug)) {
     return (
       <NarrowWorkflowFeaturePage
         featureSlug={featureSlug}
@@ -1120,6 +1161,9 @@ export default function FeatureHubPage({
             <h1 className="mt-4 max-w-4xl text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
               {pageData.hero.h1}
             </h1>
+            <p className="mt-4 max-w-3xl text-sm font-semibold uppercase tracking-[0.12em] text-gray-600">
+              {getHeroDefinition(pageType)}
+            </p>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-gray-700">{pageData.hero.subheadline}</p>
 
             <div className="mt-8 grid gap-4 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">

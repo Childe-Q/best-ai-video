@@ -3,11 +3,12 @@
   "slug": "ai-video-editors",
   "title": "Best AI Video Editors (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares video editors that use AI to automate tedious editing tasks — scene detection, filler word removal, auto-captions, smart reframing, and transcript-based editing. Tools are grouped by editing workflow depth: full editing suites for detailed timeline or transcript work, and clip-focused tools for fast short-form output. Purely generative tools that only output raw footage without built-in editing are excluded.",
+    "oneLiner": "This page compares AI video editors for post-production workflows that start with footage, audio, or transcripts you already have. Tools are grouped by editing depth: deeper timeline or transcript control, or faster clip packaging for social output. Source-to-video conversion platforms that turn blogs, webinars, or knowledge assets into new formats are excluded because the real job there is conversion, not post-production.",
     "boundaries": [
       "Must have timeline or transcript-based editing capabilities.",
       "Must use AI to automate editing tasks like auto-captions, scene detection, or filler word removal.",
-      "Excludes purely generative tools that only output raw footage without built-in editing."
+      "Excludes purely generative tools that only output raw footage without built-in editing.",
+      "Excludes source-to-video conversion tools where the main workflow is repurposing articles, webinars, podcasts, or content libraries into new formats."
     ],
     "primaryClassificationRule": "Group by editing workflow depth.",
     "comparisonAxes": [
@@ -31,8 +32,8 @@
   "groups": [
     {
       "id": "full-editing-suites",
-      "title": "Full editing suites",
-      "rule": "These tools provide deep editing control — either through a professional timeline interface (Adobe Premiere Pro) or through a transcript-first workflow where editing text edits the video (Descript). They suit creators and editors working on longer-form content who need granular control over cuts, effects, and audio.",
+      "title": "Timeline and transcript post-production",
+      "rule": "These tools are for deeper post-production on footage you already have. They provide timeline precision, transcript-based cleanup, audio polish, and detailed control over cuts, captions, and pacing. They suit editors, podcasters, interview teams, and long-form creators who need to shape an existing piece rather than convert a source library into new formats.",
       "toolSlugs": [
         "adobe-premiere-pro",
         "descript"
@@ -40,8 +41,8 @@
     },
     {
       "id": "clip-and-social-editing",
-      "title": "Clip and social editing",
-      "rule": "This group covers tools built for speed: repurposing long videos into short clips, applying templates and effects, or producing social-ready content quickly. They are designed for creators who prioritize fast turnaround over deep editorial control.",
+      "title": "Fast clip editing and packaging",
+      "rule": "This group covers editors built for speed once the footage already exists. They help cut highlights, add captions, reframe, and package short-form output quickly. They are for teams that need faster post-production, not platforms whose primary job is converting blogs, webinars, or source archives into net-new video formats.",
       "toolSlugs": [
         "opus-clip",
         "capcut"

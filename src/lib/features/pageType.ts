@@ -9,7 +9,7 @@ const FEATURE_PAGE_TYPE_BY_SLUG: Record<string, FeaturePageType> = {
   'ai-avatar-video-generators': 'broad-chooser',
   'text-to-video-ai-tools': 'narrow-workflow',
   'content-repurposing-ai-tools': 'narrow-workflow',
-  'enterprise-ai-video-solutions': 'narrow-workflow',
+  'enterprise-ai-video-solutions': 'business-procurement',
   'ai-video-editors': 'narrow-workflow',
   'ai-video-for-social-media': 'narrow-workflow',
   'ai-video-for-youtube': 'narrow-workflow',
@@ -17,7 +17,7 @@ const FEATURE_PAGE_TYPE_BY_SLUG: Record<string, FeaturePageType> = {
   'free-ai-video-no-watermark': 'policy-threshold',
   'budget-friendly-ai-video-tools': 'policy-threshold',
   'fast-ai-video-generators': 'policy-threshold',
-  'professional-ai-video-tools': 'narrow-workflow',
+  'professional-ai-video-tools': 'business-procurement',
   'ai-video-generators-comparison': 'comparison',
   'viral-ai-video-generators': 'narrow-workflow',
 };
@@ -53,6 +53,13 @@ const FEATURE_PAGE_MODULES_BY_TYPE: Record<FeaturePageType, FeaturePageModules> 
     furtherReading: 'light',
     primarySurface: 'bucket-summary',
   },
+  'business-procurement': {
+    atGlance: 'hidden',
+    routeSplit: 'compact',
+    faqDensity: 'medium',
+    furtherReading: 'light',
+    primarySurface: 'checklist-matrix',
+  },
 };
 
 export function getFeaturePageType(slug: string): FeaturePageType {
@@ -66,6 +73,10 @@ export function getFeaturePageVariant(pageType: FeaturePageType): FeaturePageVar
 
   if (pageType === 'policy-threshold') {
     return 'policy';
+  }
+
+  if (pageType === 'business-procurement') {
+    return 'business';
   }
 
   return 'general';

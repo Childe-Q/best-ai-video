@@ -3,11 +3,12 @@
   "slug": "content-repurposing-ai-tools",
   "title": "Best AI Tools for Content Repurposing (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares AI tools that convert existing content — blog posts, podcasts, webinars, and long-form video — into new video formats. Tools are grouped by source content type: article and script conversion, or long-form video clipping. Only platforms with explicit import capabilities (URLs, audio files, long video) and automated format conversion are included. Basic text-to-video generators that cannot ingest existing long-form content are excluded.",
+    "oneLiner": "This page compares AI tools that turn existing source material — blog posts, scripts, webinars, podcasts, and long-form recordings — into new video formats. Tools are grouped by conversion workflow: written source to video, or recorded source to short clips. Post-production editors whose main job is timeline control, transcript cleanup, and footage polishing are excluded because this page is about conversion and reuse at scale, not editing an assembled project.",
     "boundaries": [
       "Must import existing assets: URLs, long videos, podcasts, or scripts.",
       "Must automate conversion from one format to another (text to video, long video to shorts).",
-      "Excludes basic text-to-video tools that cannot ingest long-form URLs or podcast audio."
+      "Excludes basic text-to-video tools that cannot ingest long-form URLs or podcast audio.",
+      "Excludes post-production editors where the main workflow is timeline editing, transcript cleanup, caption polishing, or manual footage refinement."
     ],
     "primaryClassificationRule": "Group by source content type.",
     "comparisonAxes": [
@@ -31,8 +32,8 @@
   "groups": [
     {
       "id": "article-and-script-conversion",
-      "title": "Article and script conversion",
-      "rule": "These tools turn written content — blog posts, articles, scripts, and documents — into video. They typically work by pasting a URL or text, then the AI builds scenes with stock media, text animations, and voiceover. They suit marketing teams and publishers who need to extract video from an existing content library.",
+      "title": "Written source to video",
+      "rule": "These tools turn written source material — blog posts, articles, scripts, and documents — into video. They typically ingest a URL or pasted text, then assemble scenes with stock media, text animation, and voiceover. They suit teams whose real job is conversion from a content library, not post-production on a finished timeline.",
       "toolSlugs": [
         "pictory",
         "lumen5"
@@ -40,8 +41,8 @@
     },
     {
       "id": "long-form-video-clipping",
-      "title": "Long-form video clipping",
-      "rule": "This group covers tools that take existing long-form recordings — podcasts, webinars, live streams — and automatically extract the best moments as short-form clips. They suit creators who already have long-form content and need to repurpose it for TikTok, Reels, or YouTube Shorts without manual editing.",
+      "title": "Recorded source to short clips",
+      "rule": "This group covers tools that take existing long-form recordings — podcasts, webinars, live streams, interviews — and automatically turn them into short clips. They suit teams repackaging source material for new channels at scale, not editors who need deeper timeline control over an existing cut.",
       "toolSlugs": [
         "munch",
         "opus-clip"
