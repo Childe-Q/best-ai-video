@@ -31,6 +31,7 @@ const narrowWorkflowSampleSlugs = new Set([
   'ai-video-for-social-media',
   'ai-video-for-marketing',
   'ai-video-editors',
+  'viral-ai-video-generators',
 ]);
 
 const policyThresholdSampleSlugs = new Set([
@@ -74,6 +75,7 @@ type FeaturePageOverride = {
   decisionCards?: DecisionCard[];
   faqItems?: FeatureFaqItem[];
   groupOverrides?: Record<string, GroupOverride>;
+  compactFrontHalf?: boolean;
 };
 
 const faqQuestionOverrides: Partial<Record<string, Partial<Record<string, string>>>> = {
@@ -151,16 +153,37 @@ function getPageTypeEyebrow(pageType: FeaturePageType): string {
 function getHeroDefinition(pageType: FeaturePageType): string {
   switch (pageType) {
     case 'broad-chooser':
-      return 'Use this page if you still need route-level guidance before deciding which tools deserve a closer look.';
+      return 'Use this page if you still need route-level guidance before you commit to a narrower shortlist.';
     case 'comparison':
-      return 'Use this page if the workflow is already clear and you are comparing tools directly.';
+      return 'Use this page if the route is already clear and the next job is direct tool-to-tool tradeoffs.';
     case 'policy-threshold':
-      return 'Use this page if a threshold, limit, or hard rule is the first filter.';
+      return 'Use this page if a threshold, bucket, or hard rule is the first filter.';
     case 'business-procurement':
       return 'Use this page if the buyer is choosing a business-ready tool rather than a broad workflow.';
     default:
-      return 'Use this page if the workflow is mostly clear and you want the shortest path to a shortlist.';
+      return 'Use this page if the route is mostly clear and the next job is narrowing a shortlist quickly.';
   }
+}
+
+function getFaqHeading(pageType: FeaturePageType): string {
+  switch (pageType) {
+    case 'broad-chooser':
+      return 'Questions that usually decide the route';
+    case 'comparison':
+      return 'Questions that usually decide the direct comparison';
+    case 'policy-threshold':
+      return 'Questions that usually decide the threshold shortlist';
+    default:
+      return 'Questions that usually decide the shortlist';
+  }
+}
+
+function getFurtherReadingHeading(pageType: FeaturePageType): string {
+  if (pageType === 'broad-chooser') {
+    return 'Keep going only after the route is clear';
+  }
+
+  return 'Keep going only if the fit still holds';
 }
 
 function getAtAGlanceTitle(pageType: FeaturePageType, groupCount: number): string {
@@ -267,6 +290,7 @@ function normalizeFaqItems(
 
 const featurePageOverrides: Partial<Record<string, FeaturePageOverride>> = {
   'best-ai-video-generators': {
+    compactFrontHalf: true,
     atGlanceCards: [
       {
         eyebrow: 'Best first check for cinematic clips',
@@ -405,12 +429,13 @@ const featurePageOverrides: Partial<Record<string, FeaturePageOverride>> = {
     },
   },
   'ai-avatar-video-generators': {
+    compactFrontHalf: true,
     atGlanceCards: [
       {
         eyebrow: 'Best overall',
         title: 'HeyGen',
-        summary: 'Strongest first check for most buyers who need a modern avatar platform without starting in enterprise procurement.',
-        support: 'Best for multilingual marketing, social content, and fast presenter-led output',
+        summary: 'Strongest first check for most buyers who already know the message needs a presenter on screen and do not need to start in enterprise procurement.',
+        support: 'Best for fast talking-head delivery, multilingual spokesperson output, and presenter-led explainers',
         href: '/tool/heygen',
         cta: 'Open review',
       },
@@ -443,33 +468,33 @@ const featurePageOverrides: Partial<Record<string, FeaturePageOverride>> = {
       {
         title: 'Marketing and social avatars',
         whenWins:
-          'Choose this route when speed, language coverage, and believable lip-sync matter more than procurement controls. It is the right fit for outreach, personalized campaigns, and multilingual presenter content that has to ship fast.',
+          'Choose this route when the message has to be delivered by a presenter and speed, language coverage, and believable lip-sync matter more than procurement controls. It is the right fit for outreach, product explainers, and multilingual spokesperson content that has to ship fast.',
         whenDisappoints:
-          'It disappoints when the real buyer is L&D, HR, or compliance. Those teams usually need stronger governance, admin structure, and repeatable training workflows than a campaign-first avatar stack provides.',
-        compareHint: 'Lip-sync quality, language breadth, and turnaround speed',
+          'It disappoints when the real buyer is choosing a marketing workflow rather than an avatar format, or when L&D, HR, and compliance need stronger governance than a lighter presenter stack provides.',
+        compareHint: 'Lip-sync quality, language breadth, and presenter delivery speed',
         redirect: {
           href: '#marketing-and-social-avatars',
           label: 'Go to marketing/social route',
-          note: 'Start there if the buyer cares more about outward-facing content velocity than governed rollout.',
+          note: 'Start there if the buyer cares more about presenter-led outward-facing delivery than governed rollout or campaign orchestration.',
         },
       },
       {
         title: 'Training and enterprise avatars',
         whenWins:
-          'Choose this route when the workflow is structured training, onboarding, compliance, or global internal communications. These tools win when repeatability, governance, and controlled rollout matter more than creative flexibility.',
+          'Choose this route when the workflow is structured training, onboarding, compliance, or global internal communications and a presenter still has to carry the message. These tools win when repeatability, governance, and controlled avatar rollout matter more than creative flexibility.',
         whenDisappoints:
-          'It disappoints when you mainly need faster campaign iteration, lightweight personalization, or social-style publishing. The overhead makes less sense if the job is growth content rather than internal enablement.',
+          'It disappoints when you mainly need campaign iteration, lighter marketing output, or broader commercial workflow tooling. The overhead makes less sense if the job is growth content rather than governed speaker-led enablement.',
         compareHint: 'Governance, admin controls, and custom-avatar policy',
         redirect: {
           href: '#training-and-enterprise-avatars',
           label: 'Go to training/enterprise route',
-          note: 'Start there if approvals, repeatability, and internal rollout matter more than campaign flexibility.',
+          note: 'Start there if approvals, repeatability, and internal speaker-led rollout matter more than campaign flexibility.',
         },
       },
       {
         title: 'Image and API avatar tools',
         whenWins:
-          'Choose this route when you specifically need to animate a still image or deliver avatar output through an API. It is the right lane for product builders and specialized workflows, not general-purpose spokesperson video.',
+          'Choose this route when you specifically need to animate a still image or deliver avatar output through an API. It is the right lane for product builders and specialized speaker-delivery workflows, not general marketing strategy or general-purpose spokesperson video.',
         whenDisappoints:
           'It disappoints when you really want a ready-made presenter library, enterprise training stack, or a broad avatar studio for non-technical teams. The format is narrower by design.',
         compareHint: 'API delivery, photo animation, and custom-input flexibility',
@@ -484,7 +509,7 @@ const featurePageOverrides: Partial<Record<string, FeaturePageOverride>> = {
       {
         question: 'Should I start with HeyGen or Synthesia?',
         answer:
-          'Start with HeyGen if the job is marketing, outreach, or multilingual social content and you need faster iteration. Start with Synthesia if the buyer cares more about enterprise training, governance, and a structured internal rollout.',
+          'Start with HeyGen if the job is outreach, product explanation, or multilingual presenter content and you need faster iteration. Start with Synthesia if the buyer cares more about enterprise training, governance, and a structured internal speaker-led rollout.',
       },
       {
         question: 'When is Colossyan worth it over the bigger avatar platforms?',
@@ -499,7 +524,12 @@ const featurePageOverrides: Partial<Record<string, FeaturePageOverride>> = {
       {
         question: 'What matters first: language support, governance, or cost per minute?',
         answer:
-          'Start with workflow fit, then compare the one constraint most likely to break the rollout. For marketing teams that is usually language coverage, voice quality, and speed. For L&D and compliance teams it is governance and admin structure. Cost per minute matters, but only after you know you are in the right route.',
+          'Start with avatar workflow fit, then compare the one constraint most likely to break the rollout. For outward-facing presenter teams that is usually language coverage, voice quality, and speed. For L&D and compliance teams it is governance and admin structure. Cost per minute matters, but only after you know a presenter-led workflow is really the job.',
+      },
+      {
+        question: 'When is the marketing workflow page a better route than this one?',
+        answer:
+          'Use the marketing page when campaign governance, localization strategy, approval flow, or branded commercial output is the main decision. Stay here when the real first filter is avatar format, talking-head delivery, or how a speaker carries the message on screen.',
       },
       {
         question: 'Which route fits custom likeness, photo animation, or API delivery?',
@@ -510,9 +540,9 @@ const featurePageOverrides: Partial<Record<string, FeaturePageOverride>> = {
     groupOverrides: {
       'Marketing and social avatars': {
         chooseWhen:
-          'Choose this route when the video has to feel like a presenter-led campaign asset: personalized outreach, multilingual product messaging, or fast external-facing content where lip-sync and language breadth are the main levers.',
+          'Choose this route when the video has to be carried by a presenter: personalized outreach, multilingual product messaging, spokesperson explainers, or fast external-facing delivery where lip-sync and language breadth are the main levers.',
         disappoints:
-          'Choose something else when the workflow is formal training, compliance, or controlled internal rollout. Campaign-speed avatar tools are usually the wrong fit once governance becomes the real requirement.',
+          'Choose something else when the workflow is formal training, compliance, or controlled internal rollout. It is also the wrong lane when campaign governance and commercialization strategy matter more than the presenter format itself.',
         redirect: {
           href: '#training-and-enterprise-avatars',
           label: 'Need the enterprise training route?',
@@ -521,9 +551,9 @@ const featurePageOverrides: Partial<Record<string, FeaturePageOverride>> = {
       },
       'Training and enterprise avatars': {
         chooseWhen:
-          'Choose this route when repeatability, admin structure, and training workflow matter more than creative experimentation. This is the right lane for internal enablement, compliance, onboarding, and formal multilingual communications that need a governed system behind them.',
+          'Choose this route when repeatability, admin structure, and training workflow matter more than creative experimentation. This is the right lane for internal enablement, compliance, onboarding, and formal multilingual communications that still depend on a speaker-led format.',
         disappoints:
-          'Choose something else when you mainly need fast campaign personalization or lighter-weight social content. The structure helps enterprise teams, but can feel heavy for growth-led output.',
+          'Choose something else when you mainly need fast campaign personalization or lighter-weight social content. The structure helps enterprise teams, but can feel heavy when the main decision is just a lighter presenter format for external use.',
         redirect: {
           href: '#marketing-and-social-avatars',
           label: 'Need a lighter marketing route?',
@@ -532,7 +562,7 @@ const featurePageOverrides: Partial<Record<string, FeaturePageOverride>> = {
       },
       'Image and API avatar tools': {
         chooseWhen:
-          'Choose this route when the differentiator is custom-photo animation or API delivery. It makes sense when you are building a product workflow, embedding avatar output, or animating a specific image, not when you just need a library of ready-made presenters.',
+          'Choose this route when the differentiator is custom-photo animation or API delivery. It makes sense when you are building a product workflow, embedding avatar output, or animating a specific image, not when you just need a library of ready-made presenters for a campaign.',
         disappoints:
           'Choose something else when non-technical teams need an easier studio, stronger governance, or broader stock-avatar choice. This lane is more specialized and narrower by intent.',
         redirect: {
@@ -968,7 +998,15 @@ function getPolicyLabel(pageData: FeaturePageData): string {
   return pageData.meta.pageType === 'policy-threshold' ? 'Watermark policy' : 'Policy';
 }
 
-function renderAtGlanceCard(card: AtGlanceCard) {
+function renderAtGlanceCard(card: AtGlanceCard, compact = false) {
+  const wrapperClass = compact
+    ? 'block rounded-2xl border border-gray-200 bg-white p-4 transition-colors hover:border-indigo-300'
+    : 'block rounded-2xl border border-gray-200 bg-white p-5 transition-colors hover:border-indigo-300';
+  const staticWrapperClass = compact
+    ? 'rounded-2xl border border-gray-200 bg-white p-4'
+    : 'rounded-2xl border border-gray-200 bg-white p-5';
+  const summary = compact ? firstSentence(card.summary) : card.summary;
+
   if (card.href) {
     if (card.external) {
       return (
@@ -976,12 +1014,16 @@ function renderAtGlanceCard(card: AtGlanceCard) {
           href={card.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="block rounded-2xl border border-gray-200 bg-white p-5 transition-colors hover:border-indigo-300"
+          className={wrapperClass}
         >
           <p className="text-[11px] font-black uppercase tracking-[0.16em] text-indigo-600">{card.eyebrow}</p>
-          <h3 className="mt-3 text-xl font-bold text-gray-900">{card.title}</h3>
-          <p className="mt-3 text-sm leading-7 text-gray-600">{card.summary}</p>
-          {card.support ? <p className="mt-3 text-sm font-medium text-gray-800">{card.support}</p> : null}
+          <h3 className="mt-2.5 text-lg font-bold text-gray-900">{card.title}</h3>
+          <p className="mt-2.5 text-sm leading-6 text-gray-600">{summary}</p>
+          {card.support ? (
+            <p className={`mt-2.5 ${compact ? 'text-xs leading-6 text-gray-700' : 'text-sm font-medium text-gray-800'}`}>
+              {card.support}
+            </p>
+          ) : null}
           {card.cta ? (
             <span className="mt-4 inline-flex items-center text-sm font-semibold text-indigo-600">
               {card.cta}
@@ -995,12 +1037,16 @@ function renderAtGlanceCard(card: AtGlanceCard) {
     return (
       <Link
         href={card.href}
-        className="block rounded-2xl border border-gray-200 bg-white p-5 transition-colors hover:border-indigo-300"
+        className={wrapperClass}
       >
         <p className="text-[11px] font-black uppercase tracking-[0.16em] text-indigo-600">{card.eyebrow}</p>
-        <h3 className="mt-3 text-xl font-bold text-gray-900">{card.title}</h3>
-        <p className="mt-3 text-sm leading-7 text-gray-600">{card.summary}</p>
-        {card.support ? <p className="mt-3 text-sm font-medium text-gray-800">{card.support}</p> : null}
+        <h3 className="mt-2.5 text-lg font-bold text-gray-900">{card.title}</h3>
+        <p className="mt-2.5 text-sm leading-6 text-gray-600">{summary}</p>
+        {card.support ? (
+          <p className={`mt-2.5 ${compact ? 'text-xs leading-6 text-gray-700' : 'text-sm font-medium text-gray-800'}`}>
+            {card.support}
+          </p>
+        ) : null}
         {card.cta ? (
           <span className="mt-4 inline-flex items-center text-sm font-semibold text-indigo-600">
             {card.cta}
@@ -1012,11 +1058,15 @@ function renderAtGlanceCard(card: AtGlanceCard) {
   }
 
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-5">
+    <div className={staticWrapperClass}>
       <p className="text-[11px] font-black uppercase tracking-[0.16em] text-indigo-600">{card.eyebrow}</p>
-      <h3 className="mt-3 text-xl font-bold text-gray-900">{card.title}</h3>
-      <p className="mt-3 text-sm leading-7 text-gray-600">{card.summary}</p>
-      {card.support ? <p className="mt-3 text-sm font-medium text-gray-800">{card.support}</p> : null}
+      <h3 className="mt-2.5 text-lg font-bold text-gray-900">{card.title}</h3>
+      <p className="mt-2.5 text-sm leading-6 text-gray-600">{summary}</p>
+      {card.support ? (
+        <p className={`mt-2.5 ${compact ? 'text-xs leading-6 text-gray-700' : 'text-sm font-medium text-gray-800'}`}>
+          {card.support}
+        </p>
+      ) : null}
     </div>
   );
 }
@@ -1056,6 +1106,7 @@ export default function FeatureHubPage({
   const isCompactRouteSplit = modules.routeSplit === 'compact';
   const atGlanceCards = buildAtGlanceCards(pageData, groups);
   const decisionCards = buildDecisionCards(pageData, groups);
+  const compactFrontHalf = featurePageOverrides[pageData.slug]?.compactFrontHalf === true;
   const lastReviewedLabel = formatDate(pageData.meta.lastReviewed);
   const researchBasisLabel = getResearchBasisLabel(pageData);
   const faqItems = normalizeFaqItems(pageData, groups);
@@ -1206,23 +1257,39 @@ export default function FeatureHubPage({
               </div>
             </div>
 
-            {pageData.hero.definitionBullets.length > 0 && (
-              <div className="mt-8 grid gap-4 md:grid-cols-3">
-                {pageData.hero.definitionBullets.map((bullet) => (
-                  <div
-                    key={bullet}
-                    className="rounded-2xl border-2 border-black bg-white p-4 shadow-[4px_4px_0px_0px_#000]"
-                  >
-                    <p className="text-sm font-medium leading-6 text-gray-800">{bullet}</p>
-                  </div>
-                ))}
-              </div>
-            )}
+            {pageData.hero.definitionBullets.length > 0 &&
+              (compactFrontHalf ? (
+                <div className="mt-7 flex flex-wrap gap-2.5">
+                  {pageData.hero.definitionBullets.map((bullet) => (
+                    <span
+                      key={bullet}
+                      className="rounded-full border border-black/10 bg-white/85 px-3 py-1.5 text-xs font-semibold text-gray-700"
+                    >
+                      {bullet}
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <div className="mt-8 grid gap-4 md:grid-cols-3">
+                  {pageData.hero.definitionBullets.map((bullet) => (
+                    <div
+                      key={bullet}
+                      className="rounded-2xl border-2 border-black bg-white p-4 shadow-[4px_4px_0px_0px_#000]"
+                    >
+                      <p className="text-sm font-medium leading-6 text-gray-800">{bullet}</p>
+                    </div>
+                  ))}
+                </div>
+              ))}
           </div>
         </div>
       </header>
 
-      <main className="mx-auto max-w-6xl space-y-14 px-4 py-12 sm:px-6 lg:px-8">
+      <main
+        className={`mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 ${
+          compactFrontHalf ? 'space-y-12' : 'space-y-14'
+        }`}
+      >
         {modules.atGlance !== 'hidden' && atGlanceCards.length > 0 && (
           <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
             <div className="max-w-3xl">
@@ -1230,9 +1297,9 @@ export default function FeatureHubPage({
               <h2 className="mt-3 text-3xl font-bold text-gray-900">{getAtAGlanceTitle(pageType, groups.length)}</h2>
             </div>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <div className={`mt-8 grid md:grid-cols-2 xl:grid-cols-3 ${compactFrontHalf ? 'gap-3' : 'gap-4'}`}>
               {atGlanceCards.map((card) => (
-                <div key={`${card.eyebrow}-${card.title}`}>{renderAtGlanceCard(card)}</div>
+                <div key={`${card.eyebrow}-${card.title}`}>{renderAtGlanceCard(card, compactFrontHalf)}</div>
               ))}
             </div>
           </section>
@@ -1248,13 +1315,13 @@ export default function FeatureHubPage({
             </div>
 
             <div
-              className={`mt-8 grid gap-4 ${
+              className={`mt-8 grid ${
                 isBroadChooser
                   ? 'lg:grid-cols-3'
                   : isCompactRouteSplit
                     ? 'md:grid-cols-2 xl:grid-cols-3'
                     : 'xl:grid-cols-2'
-              }`}
+              } ${compactFrontHalf ? 'gap-3' : 'gap-4'}`}
             >
               {decisionCards.map((card) => (
                 <article key={card.title} className="rounded-2xl border border-gray-200 bg-[#FCFBF7] p-5">
@@ -1269,14 +1336,18 @@ export default function FeatureHubPage({
 
                   {isBroadChooser ? (
                     <>
-                      <div className="mt-5 space-y-4">
+                      <div className={`mt-5 ${compactFrontHalf ? 'space-y-3' : 'space-y-4'}`}>
                         <div>
                           <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Start here when</p>
-                          <p className="mt-2 text-sm leading-7 text-gray-700">{card.whenWins}</p>
+                          <p className="mt-2 text-sm leading-7 text-gray-700">
+                            {compactFrontHalf ? firstSentence(card.whenWins) : card.whenWins}
+                          </p>
                         </div>
                         <div>
-                          <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Skip this route when</p>
-                          <p className="mt-2 text-sm leading-7 text-gray-700">{card.whenDisappoints}</p>
+                          <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Leave this route if...</p>
+                          <p className="mt-2 text-sm leading-7 text-gray-700">
+                            {compactFrontHalf ? firstSentence(card.whenDisappoints) : card.whenDisappoints}
+                          </p>
                         </div>
                       </div>
 
@@ -1284,7 +1355,7 @@ export default function FeatureHubPage({
                         <Link href={card.redirect.href} className="text-sm font-bold text-indigo-600 hover:text-indigo-700">
                           {card.redirect.label}
                         </Link>
-                        <span className="text-xs leading-6 text-gray-500">{card.redirect.note}</span>
+                        {!compactFrontHalf ? <span className="text-xs leading-6 text-gray-500">{card.redirect.note}</span> : null}
                       </div>
                     </>
                   ) : (
@@ -1300,7 +1371,7 @@ export default function FeatureHubPage({
                         </div>
                         <div>
                           <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">
-                            {isCompactRouteSplit ? 'Not ideal for' : 'Not ideal when'}
+                            Leave this route if...
                           </p>
                           <p className="mt-2 text-sm leading-7 text-gray-700">
                             {isCompactRouteSplit ? firstSentence(card.whenDisappoints) : card.whenDisappoints}
@@ -1338,7 +1409,11 @@ export default function FeatureHubPage({
             groupOverride?.disappoints ?? getWhenDisappoints(pageData, group.groupTitle);
 
           return (
-            <section key={group.groupTitle} id={slugify(group.groupTitle)} className="space-y-6">
+            <section
+              key={group.groupTitle}
+              id={slugify(group.groupTitle)}
+              className={compactFrontHalf ? 'space-y-5' : 'space-y-6'}
+            >
               <div className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">
@@ -1352,20 +1427,20 @@ export default function FeatureHubPage({
 
                 <div className="mt-6 grid gap-3 md:grid-cols-2">
                   <div className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
-                    <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Best when</p>
+                    <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Use this shortlist when</p>
                     <p className="mt-2 text-sm leading-7 text-gray-700">
-                      {isCompactRouteSplit ? firstSentence(chooseWhenText) : chooseWhenText}
+                      {isCompactRouteSplit || compactFrontHalf ? firstSentence(chooseWhenText) : chooseWhenText}
                     </p>
                   </div>
                   <div className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
-                    <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Not ideal when</p>
+                    <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Leave this route if...</p>
                     <p className="mt-2 text-sm leading-7 text-gray-700">
-                      {isCompactRouteSplit ? firstSentence(disappointsText) : disappointsText}
+                      {isCompactRouteSplit || compactFrontHalf ? firstSentence(disappointsText) : disappointsText}
                     </p>
                   </div>
                 </div>
 
-                {!isCompactRouteSplit && (
+                {!isCompactRouteSplit && !compactFrontHalf && (
                   <div className="mt-4 flex flex-wrap items-center gap-3">
                     <Link href={redirect.href} className="text-sm font-bold text-indigo-600 hover:text-indigo-700">
                       {redirect.label}
@@ -1390,7 +1465,7 @@ export default function FeatureHubPage({
                 {displayContextualLinks.length > 0 && (
                   <div className="mt-8 border-t border-gray-200 pt-5">
                     <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">
-                      {isCompactRouteSplit ? 'If not this route' : 'Contextual next steps'}
+                      Exit options
                     </p>
                     <div className="mt-3 flex flex-wrap gap-3">
                       {displayContextualLinks.map((item) => (
@@ -1421,7 +1496,7 @@ export default function FeatureHubPage({
           <section className="rounded-3xl border border-black/10 bg-[#F3F1EA] p-8 shadow-sm sm:p-10">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">FAQ</p>
-              <h2 className="mt-3 text-3xl font-bold text-gray-900">Questions that usually decide the shortlist</h2>
+              <h2 className="mt-3 text-3xl font-bold text-gray-900">{getFaqHeading(pageType)}</h2>
             </div>
 
             <div className="mt-8">
@@ -1434,7 +1509,7 @@ export default function FeatureHubPage({
           <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Further reading</p>
-              <h2 className="mt-3 text-3xl font-bold text-gray-900">Keep going only after the route is clear</h2>
+              <h2 className="mt-3 text-3xl font-bold text-gray-900">{getFurtherReadingHeading(pageType)}</h2>
             </div>
 
             <div className="mt-8 grid gap-8 xl:grid-cols-2">

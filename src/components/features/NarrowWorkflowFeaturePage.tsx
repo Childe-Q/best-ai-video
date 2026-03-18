@@ -47,6 +47,9 @@ type NarrowWorkflowOverride = {
   keyAxes: string[];
   fitCards: FitCheckCard[];
   decisionFrameCards: DecisionFrameCard[];
+  decisionLead?: string;
+  shortlistLead?: string;
+  faqLead?: string;
   sectionOverrides: Record<string, WorkflowSectionOverride>;
   faqItems: FeatureFaqItem[];
 };
@@ -119,6 +122,12 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
           'Rights, watermarks, and production posture matter early here. A model can be visually strong and still be the wrong first choice for paid work.',
       },
     ],
+    decisionLead:
+      'This page only has one real lane, so these checks are here to keep the shortlist honest. They should narrow the job definition before you treat one cinematic route as the answer to every video workflow.',
+    shortlistLead:
+      'Once prompt-first generation is clearly the job, the page should tighten rather than widen. This single shortlist is meant to feel like the main event, not like one stop before another chooser.',
+    faqLead:
+      'If you are still here after the shortlist, the remaining questions are usually about whether text-to-video still holds as the route or whether it is time to move sideways into comparison or an adjacent workflow.',
     sectionOverrides: {
       'Cinematic text-to-video': {
         chooseWhen:
@@ -290,6 +299,127 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
         question: 'When should I leave this page and move to direct comparison or a broader shortlist?',
         answer:
           'Leave this page once source-material conversion is no longer the main constraint. If you need deeper editing control, an on-screen presenter, or net-new scene generation, a neighboring workflow page will usually be more useful than staying here.',
+      },
+    ],
+  },
+  'viral-ai-video-generators': {
+    fitHeading: 'Stay here only if viral performance is the real workflow constraint',
+    fitSummary:
+      'Use this page only if the job is optimizing for hook strength, clip selection, trend fit, or short-form performance rather than just creating videos quickly. If you mainly need generic social publishing, source conversion without virality scoring, or broad generator discovery, leave early instead of treating “viral” as a default label for any short-form tool.',
+    keyAxes: ['virality scoring', 'trend fit', 'caption style', 'clip selection logic', 'workflow fit'],
+    fitCards: [
+      {
+        title: 'Stay here if the real job is maximizing short-form performance',
+        summary:
+          'This is the right route when the workflow is built around hooks, virality scoring, trend-led ideation, or extracting clips most likely to perform on Shorts, Reels, or TikTok.',
+        href: '#repurposing-and-clipping',
+        label: 'Go to the shortlist',
+      },
+      {
+        title: 'Leave for repurposing if conversion matters more than virality',
+        summary:
+          'If the real job is turning webinars, podcasts, articles, or recordings into new formats without a strong virality layer, the repurposing page is the better first route.',
+        href: '/features/content-repurposing-ai-tools',
+        label: 'Go to repurposing',
+      },
+      {
+        title: 'Leave for social workflows if you mainly need publishing speed',
+        summary:
+          'If hooks, captions, and templates matter but the page does not need trend intelligence or virality scoring, the social workflow page is usually the cleaner frame.',
+        href: '/features/ai-video-for-social-media',
+        label: 'Go to social media',
+      },
+    ],
+    decisionFrameCards: [
+      {
+        title: 'Clip scoring versus content planning',
+        summary:
+          'Start by deciding whether the workflow begins with existing footage that needs to be scored and clipped, or with trend signals that tell you what to make next. Those are different viral jobs.',
+      },
+      {
+        title: 'Virality layer versus generic short-form output',
+        summary:
+          'This page is only worth using if the tool adds a real viral lens: hook scoring, trend signals, algorithmic clip selection, or caption styles that change how the content is shaped.',
+      },
+      {
+        title: 'Trend fit versus editing depth',
+        summary:
+          'If the main decision is manual editing quality or a broader repurposing workflow, this page is already too narrow. Stay only if performance-oriented automation is the reason the shortlist exists.',
+      },
+    ],
+    sectionOverrides: {
+      'Repurposing and clipping': {
+        chooseWhen:
+          'Choose this shortlist when you already have long-form footage and the job is to find the moments most likely to perform, package them for vertical platforms, and move faster than a normal repurposing workflow would allow.',
+        disappoints:
+          'Leave this route if the main need is general source conversion, transcript cleanup, or post-production control rather than virality scoring and short-form performance optimization.',
+        contextualExits: [
+          {
+            href: '/features/viral-ai-video-generators#trend-led-creation',
+            label: 'Actually starting from trend ideation?',
+            note: 'Jump to the trend-led route if the workflow begins with what to make next rather than with footage you already have.',
+          },
+          {
+            href: '/features/content-repurposing-ai-tools',
+            label: 'Need broader repurposing instead?',
+            note: 'Use the repurposing page if source conversion is the real frame and virality scoring is only a secondary nice-to-have.',
+          },
+          {
+            href: '/features/ai-video-editors',
+            label: 'Need editing depth instead?',
+            note: 'Use the editors page if timeline control, transcript cleanup, or post-production polish matters more than viral clip selection.',
+          },
+        ],
+      },
+      'Trend-led creation': {
+        chooseWhen:
+          'Choose this shortlist when the workflow starts with trend intelligence, hook planning, or deciding what short-form content to make next rather than with existing footage to clip.',
+        disappoints:
+          'Leave this route if you already have source material and mainly need extraction, reframing, captions, and clip packaging. It is also the wrong lane if you just need faster social publishing without a real trend-analysis layer.',
+        contextualExits: [
+          {
+            href: '/features/viral-ai-video-generators#repurposing-and-clipping',
+            label: 'Actually starting from recorded footage?',
+            note: 'Jump back if the real workflow starts with podcasts, webinars, demos, or long-form videos that need clipping.',
+          },
+          {
+            href: '/features/ai-video-for-social-media',
+            label: 'Need social-native output instead?',
+            note: 'Use the social workflow page if template speed, captions, and publishing cadence matter more than predictive trend signals.',
+          },
+          {
+            href: '/features/best-ai-video-generators',
+            label: 'Still too early for a viral-only frame?',
+            note: 'Go back to the broader shortlist if virality is still just one consideration rather than the reason the workflow exists.',
+          },
+        ],
+      },
+    },
+    faqItems: [
+      {
+        question: 'Do I actually need a viral-content page, or just repurposing tools?',
+        answer:
+          'Use this page when virality scoring, trend fit, hook strength, or performance-oriented clip selection are the main reasons the workflow exists. Use the repurposing page when the real job is simply converting source material into new formats.',
+      },
+      {
+        question: 'Should I start with repurposing and clipping or trend-led creation?',
+        answer:
+          'Start with repurposing and clipping when you already have long-form footage. Start with trend-led creation when the workflow begins with deciding what to make next based on trend signals and short-form opportunity.',
+      },
+      {
+        question: 'What matters most here: virality scoring, captions, or trend intelligence?',
+        answer:
+          'Start with the feature that actually changes your workflow. If you already have footage, virality scoring and clip selection usually matter first. If you are planning content from scratch, trend intelligence matters first. Caption style becomes important once the right lane is already clear.',
+      },
+      {
+        question: 'When is the social-media page a better route than this one?',
+        answer:
+          'Use the social-media page when the real job is publishing social-native content quickly with strong hooks, captions, and templates, but not necessarily with a predictive virality layer. Stay here only if viral optimization is the main filter.',
+      },
+      {
+        question: 'When should I leave this page and go back to a broader shortlist?',
+        answer:
+          'Leave this page once virality stops being the main reason the shortlist exists. If the workflow becomes more about general generation, source conversion, or editing depth, an adjacent page or the broader shortlist becomes more useful.',
       },
     ],
   },
@@ -538,13 +668,13 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
   'ai-video-for-marketing': {
     fitHeading: 'Stay here only if campaign output and brand control are the real constraints',
     fitSummary:
-      'Use this page only if the work is external-facing marketing video: campaign variants, localized ads, product demos, or branded storytelling where governance and commercial posture matter early. If the real job is organic social speed, broad generator discovery, or generic avatar exploration, exit early.',
+      'Use this page only if the work is external-facing marketing video: campaign variants, localized ads, product demos, or branded storytelling where governance, approvals, and commercial use matter early. If the real job is picking a presenter format, comparing avatar studios, or solving speaker-led delivery before campaign workflow, leave for the avatar page instead of treating every spokesperson tool as a marketing decision.',
     keyAxes: ['brand governance', 'localization depth', 'variant scale', 'commercial posture', 'workflow fit'],
     fitCards: [
       {
         title: 'Stay here if you are making campaign or branded marketing assets',
         summary:
-          'This is the right route when brand consistency, localization, client-facing quality, or campaign variants matter more than hobbyist creation speed.',
+          'This is the right route when brand consistency, localization, client-facing quality, or campaign variants matter more than presenter format or hobbyist creation speed.',
         href: '#personalization-and-variants',
         label: 'Go to the shortlist',
       },
@@ -556,18 +686,18 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
         label: 'Go to social media',
       },
       {
-        title: 'Leave for the broader generators shortlist if you are still choosing the lane',
+        title: 'Leave for avatar tools if presenter format is the main decision',
         summary:
-          'If you have not yet decided between cinematic generation, avatar workflows, and other broad routes, this page is too downstream. Start from the broader shortlist first.',
-        href: '/features/best-ai-video-generators',
-        label: 'Go to the broader shortlist',
+          'If the real question is which avatar platform gives you the right talking-head delivery, lip-sync, or language coverage, use the avatar page first. Marketing context alone is not enough if presenter format is the real filter.',
+        href: '/features/ai-avatar-video-generators',
+        label: 'Go to avatar tools',
       },
     ],
     decisionFrameCards: [
       {
         title: 'Governance first',
         summary:
-          'Check whether brand kits, approvals, and output consistency matter before anything else. If they do not, this page may be too marketing-specific for the real workflow.',
+          'Check whether brand kits, approvals, localization review, and output consistency matter before anything else. If they do not, this page may be too marketing-specific for the real workflow.',
       },
       {
         title: 'Variant scale versus hero quality',
@@ -577,15 +707,15 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
       {
         title: 'Localization depth',
         summary:
-          'If multilingual campaigns, translation, or regional versions matter, that usually reshapes the shortlist more than price does. Treat localization as a first filter, not a nice-to-have.',
+          'If multilingual campaigns, translation, or regional versions matter, that usually reshapes the shortlist more than price does. Treat localization as a campaign workflow filter, not as a generic avatar feature check.',
       },
     ],
     sectionOverrides: {
       'Personalization and variants': {
         chooseWhen:
-          'Choose this shortlist when the job is producing many campaign versions, localized variants, or personalized outreach assets from a repeatable template or avatar-led workflow.',
+          'Choose this shortlist when the job is producing many campaign versions, localized variants, or personalized outreach assets from a repeatable commercial workflow. Use it when campaign throughput and brand consistency matter more than comparing presenter formats.',
         disappoints:
-          'Leave this route if the real job is a hero ad, cinematic brand narrative, or any workflow where visual polish matters more than scale and repeatability. It is also the wrong lane if organic social speed is the real constraint.',
+          'Leave this route if the real job is a hero ad, cinematic brand narrative, or any workflow where visual polish matters more than scale and repeatability. It is also the wrong lane if the main decision is simply which avatar presenter looks or sounds best.',
         contextualExits: [
           {
             href: '/features/ai-video-for-marketing#generative-brand-storytelling',
@@ -595,7 +725,7 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
           {
             href: '/features/ai-avatar-video-generators',
             label: 'Need the broader avatar market?',
-            note: 'Use the avatar page if presenter technology is the main decision and marketing context is secondary.',
+            note: 'Use the avatar page if talking-head delivery, lip-sync, or avatar format is the main decision and campaign workflow is secondary.',
           },
           {
             href: '/features/ai-video-for-social-media',
@@ -606,9 +736,9 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
       },
       'Generative brand storytelling': {
         chooseWhen:
-          'Choose this shortlist when the output needs to feel like branded creative: hero ads, polished launches, or narrative marketing assets where visual fidelity matters more than batch automation.',
+          'Choose this shortlist when the output needs to feel like branded creative: hero ads, polished launches, or narrative marketing assets where visual fidelity and commercial polish matter more than batch automation or talking-head delivery.',
         disappoints:
-          'Leave this route if you need dozens of localized variants, campaign personalization, or a tightly governed template workflow. It is also the wrong lane if you are still at broad generator discovery rather than a marketing-specific decision.',
+          'Leave this route if you need dozens of localized variants, campaign personalization, or a tightly governed template workflow. It is also the wrong lane if a presenter-led avatar is carrying the message more than the creative treatment itself.',
         contextualExits: [
           {
             href: '/features/ai-video-for-marketing#personalization-and-variants',
@@ -633,6 +763,11 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
         question: 'Do I actually need a marketing workflow page, or a broader generators shortlist?',
         answer:
           'Use this page when the real constraints are brand governance, campaign localization, variant scale, or commercial posture. If you are still choosing between general generator routes, the broader shortlist is the better first page.',
+      },
+      {
+        question: 'When is the avatar page a better route than this one?',
+        answer:
+          'Use the avatar page when the real decision is presenter format: talking-head delivery, lip-sync quality, speaker realism, or avatar workflow fit. Stay here when campaign output, localization, approvals, and commercial use case are the real first filters.',
       },
       {
         question: 'Should I start with personalization and variants or generative brand storytelling?',
@@ -843,7 +978,7 @@ export default function NarrowWorkflowFeaturePage({
               {pageData.hero.h1}
             </h1>
             <p className="mt-4 max-w-4xl text-sm font-semibold uppercase tracking-[0.12em] text-gray-600">
-              Use this page if the workflow is already mostly clear and you want the shortest path to the shortlist.
+              Use this page if the route is mostly clear and the next job is getting to a shortlist fast.
             </p>
             <p className="mt-5 max-w-4xl text-lg leading-8 text-gray-700">{pageData.hero.subheadline}</p>
 
@@ -881,7 +1016,11 @@ export default function NarrowWorkflowFeaturePage({
         </div>
       </header>
 
-      <main className="mx-auto max-w-6xl space-y-12 px-4 py-12 sm:px-6 lg:px-8">
+      <main
+        className={`mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 ${
+          groups.length === 1 ? 'space-y-10' : 'space-y-12'
+        }`}
+      >
         <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Fit check</p>
@@ -906,8 +1045,11 @@ export default function NarrowWorkflowFeaturePage({
 
         <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Before you shortlist</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Route checks</p>
             <h2 className="mt-3 text-3xl font-bold text-gray-900">Use these checks before you over-read the page</h2>
+            {override.decisionLead ? (
+              <p className="mt-4 text-base leading-8 text-gray-600">{override.decisionLead}</p>
+            ) : null}
           </div>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -927,8 +1069,13 @@ export default function NarrowWorkflowFeaturePage({
             <section key={group.groupTitle} id={group.groupTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-')} className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Main shortlist</p>
               <h2 className="mt-3 text-3xl font-bold text-gray-900">{group.groupTitle}</h2>
+              {override.shortlistLead ? (
+                <p className="mt-4 max-w-3xl text-base leading-8 text-gray-600">{override.shortlistLead}</p>
+              ) : null}
               {group.groupSummary ? (
-                <p className="mt-4 max-w-3xl text-base leading-8 text-gray-600">{group.groupSummary}</p>
+                <p className={`${override.shortlistLead ? 'mt-3' : 'mt-4'} max-w-3xl text-base leading-8 text-gray-600`}>
+                  {group.groupSummary}
+                </p>
               ) : null}
 
               <div className="mt-6 grid gap-3 md:grid-cols-2">
@@ -992,7 +1139,8 @@ export default function NarrowWorkflowFeaturePage({
           <section className="rounded-3xl border border-black/10 bg-[#F3F1EA] p-8 shadow-sm sm:p-10">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">FAQ</p>
-              <h2 className="mt-3 text-3xl font-bold text-gray-900">Questions that usually decide whether this workflow is right</h2>
+              <h2 className="mt-3 text-3xl font-bold text-gray-900">Questions that usually decide whether the route still fits</h2>
+              {override.faqLead ? <p className="mt-4 text-base leading-8 text-gray-600">{override.faqLead}</p> : null}
             </div>
 
             <div className="mt-8">

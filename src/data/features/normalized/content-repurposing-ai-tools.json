@@ -98,7 +98,7 @@
       "policySeed": null,
       "bestForSeed": "Trend-optimized clipping from long-form video",
       "mainLimitationSeed": null,
-      "officialUrl": null,
+      "officialUrl": "https://go.getmunch.com/",
       "hasReviewPage": false,
       "reviewUrl": null,
       "logoUrl": null,
@@ -109,7 +109,6 @@
         "missing-pricing-seed",
         "missing-policy-seed",
         "missing-limitation-seed",
-        "missing-official-url",
         "missing-logo-url",
         "missing-review-coverage"
       ]
@@ -180,7 +179,6 @@
     "needsManualReview": true,
     "reviewNotes": [
       "Duplicate raw tool mentions merged: lumen5",
-      "One or more tools still need verified officialUrl coverage.",
       "One or more tools still need verified logoUrl coverage.",
       "One or more tools are missing internal review coverage."
     ]

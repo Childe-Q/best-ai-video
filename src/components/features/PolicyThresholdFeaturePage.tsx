@@ -60,6 +60,12 @@ type PolicyThresholdOverride = {
   summaryCards: PolicySummaryCard[];
   bucketCards: PolicyBucketCard[];
   matrixRows: BucketMatrixRow[];
+  summaryLead?: string;
+  checklistLead?: string;
+  matrixLead?: string;
+  bucketLead?: string;
+  shortlistLead?: string;
+  faqLead?: string;
   faqItems: FeatureFaqItem[];
   bucketOverrides: Record<string, BucketOverride>;
 };
@@ -446,6 +452,8 @@ const policyThresholdOverrides: Partial<Record<string, PolicyThresholdOverride>>
         cta: 'Open comparison',
       },
     ],
+    summaryLead:
+      'This page is intentionally narrow: all of these starting points still collapse back into the same speed-first market. The job here is to decide which kind of speed pressure is real before you scroll into tools.',
     bucketCards: [
       {
         title: 'Need the fastest feedback loop now',
@@ -478,6 +486,8 @@ const policyThresholdOverrides: Partial<Record<string, PolicyThresholdOverride>>
         label: 'Go to Comparison',
       },
     ],
+    checklistLead:
+      'Because this page only has one real shortlist bucket, the checklist has to do more filtering than usual. If these checks fail, the speed frame usually fails with them.',
     matrixRows: [
       {
         label: 'Threshold rule',
@@ -510,6 +520,8 @@ const policyThresholdOverrides: Partial<Record<string, PolicyThresholdOverride>>
         },
       },
     ],
+    matrixLead:
+      'Even on a single-bucket page, speed can fail in different places: the queue, the render itself, or the throughput after you start scaling. Read the matrix as a reality check, not just a label table.',
     faqItems: [
       {
         question: 'What actually counts as fast enough to belong on this page?',
@@ -537,6 +549,12 @@ const policyThresholdOverrides: Partial<Record<string, PolicyThresholdOverride>>
           'Use this page only if latency and queue behavior are the real constraints. If you care more about overall generator quality or broader workflow fit than about speed itself, the broader shortlist or comparison page is the better route.',
       },
     ],
+    bucketLead:
+      'These bucket cards do not create three separate tool sections. They clarify which speed threshold you are really optimizing for before you enter the same rapid-prototyping shortlist.',
+    shortlistLead:
+      'This section is intentionally single-bucket. Once speed is confirmed as the first filter, the remaining job is deciding which fast generator still survives real usage, paid work, and repeated iteration.',
+    faqLead:
+      'If the page is doing its job, the questions below should feel like the continuation of the shortlist rather than a second guide layered underneath it.',
     bucketOverrides: {
       'Rapid prototyping': {
         startHereWhen:
@@ -616,7 +634,7 @@ export default function PolicyThresholdFeaturePage({
               {pageData.hero.h1}
             </h1>
             <p className="mt-4 max-w-4xl text-sm font-semibold uppercase tracking-[0.12em] text-gray-600">
-              Use this page if a threshold, limit, or hard rule is the first filter.
+              Use this page if a threshold, bucket, or hard rule is the first filter.
             </p>
             <p className="mt-5 max-w-4xl text-lg leading-8 text-gray-700">{pageData.hero.subheadline}</p>
 
@@ -669,11 +687,16 @@ export default function PolicyThresholdFeaturePage({
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl space-y-14 px-4 py-12 sm:px-6 lg:px-8">
+      <main
+        className={`mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 ${
+          groups.length === 1 ? 'space-y-12' : 'space-y-14'
+        }`}
+      >
         <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Bucket summary</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Threshold summary</p>
             <h2 className="mt-3 text-3xl font-bold text-gray-900">Start with the bucket that matches the rule you can live with</h2>
+            {override.summaryLead ? <p className="mt-4 text-base leading-8 text-gray-600">{override.summaryLead}</p> : null}
           </div>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
@@ -711,8 +734,9 @@ export default function PolicyThresholdFeaturePage({
 
         <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Eligibility checklist</p>
-            <h2 className="mt-3 text-3xl font-bold text-gray-900">Check the threshold rule before you compare tools</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Threshold checklist</p>
+            <h2 className="mt-3 text-3xl font-bold text-gray-900">Check the threshold before you compare tools</h2>
+            {override.checklistLead ? <p className="mt-4 text-base leading-8 text-gray-600">{override.checklistLead}</p> : null}
           </div>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -728,8 +752,9 @@ export default function PolicyThresholdFeaturePage({
 
         <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Bucket matrix</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Threshold matrix</p>
             <h2 className="mt-3 text-3xl font-bold text-gray-900">See the real threshold tradeoff before you scroll to tools</h2>
+            {override.matrixLead ? <p className="mt-4 text-base leading-8 text-gray-600">{override.matrixLead}</p> : null}
           </div>
 
           <div className="mt-8 overflow-x-auto">
@@ -771,6 +796,7 @@ export default function PolicyThresholdFeaturePage({
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Choose your policy bucket</p>
             <h2 className="mt-3 text-3xl font-bold text-gray-900">Pick the bucket that matches the constraint you can actually tolerate</h2>
+            {override.bucketLead ? <p className="mt-4 text-base leading-8 text-gray-600">{override.bucketLead}</p> : null}
           </div>
 
           <div className="mt-8 grid gap-4 xl:grid-cols-3">
@@ -798,8 +824,9 @@ export default function PolicyThresholdFeaturePage({
 
         <section className="space-y-6">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Buckets</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Threshold shortlist</p>
             <h2 className="mt-3 text-3xl font-bold text-gray-900">Look at tools only after the bucket is clear</h2>
+            {override.shortlistLead ? <p className="mt-4 text-base leading-8 text-gray-600">{override.shortlistLead}</p> : null}
           </div>
 
           {groups.map((group) => {
@@ -859,7 +886,8 @@ export default function PolicyThresholdFeaturePage({
           <section className="rounded-3xl border border-black/10 bg-[#F3F1EA] p-8 shadow-sm sm:p-10">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">FAQ</p>
-              <h2 className="mt-3 text-3xl font-bold text-gray-900">Questions that usually decide the policy shortlist</h2>
+              <h2 className="mt-3 text-3xl font-bold text-gray-900">Questions that usually decide the threshold shortlist</h2>
+              {override.faqLead ? <p className="mt-4 text-base leading-8 text-gray-600">{override.faqLead}</p> : null}
             </div>
 
             <div className="mt-8">

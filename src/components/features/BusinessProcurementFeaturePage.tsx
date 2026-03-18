@@ -200,7 +200,7 @@ const businessProcurementOverrides: Partial<Record<string, BusinessProcurementOv
     exitOptionsLabel: 'Exit options',
     verifyLabel: 'Check before rollout',
     faqHeading: 'Questions that usually decide the business-team shortlist',
-    furtherReadingHeading: 'Keep going only if the team-fit stays clear',
+    furtherReadingHeading: 'Keep going only if the business-team fit still holds',
     faqItems: [
       {
         question: 'Do I actually need this page, or an enterprise solutions page?',
@@ -323,11 +323,11 @@ const businessProcurementOverrides: Partial<Record<string, BusinessProcurementOv
     checklistLabel: 'Procurement checklist',
     checklistHeading: 'Check enterprise fit before you compare vendors',
     checklistIntro:
-      'Use procurement filters first. If these fail, the rest of the tool comparison usually stops mattering.',
+      'Use procurement filters first. If these fail, the rest of the shortlist usually stops mattering.',
     matrixLabel: 'Capability matrix',
     matrixHeading: 'See which deployment path actually matches the organization',
     matrixIntro:
-      'This matrix exists to separate internal training rollout from API-led repurposing before you over-read individual tools.',
+      'Use the matrix to separate governed training rollout from API-led repurposing before you over-read vendors.',
     matrixRows: [
       {
         label: 'Primary buyer',
@@ -368,12 +368,12 @@ const businessProcurementOverrides: Partial<Record<string, BusinessProcurementOv
     shortlistLabel: 'Enterprise shortlist',
     sectionsHeading: 'Shortlist only after procurement fit is clear',
     sectionsIntro:
-      'The sections below assume the buyer is already in an enterprise decision. If that is still not true, this page should stop being the main frame.',
+      'The sections below assume procurement fit is already established. If that is still not true, this page should stop being the main frame.',
     laneLabel: 'Shortlist lane',
     exitOptionsLabel: 'Exit options',
     verifyLabel: 'Check before procurement',
     faqHeading: 'Questions that usually decide enterprise procurement fit',
-    furtherReadingHeading: 'Keep it light after deployment fit is clear',
+    furtherReadingHeading: 'Keep going only if deployment fit still holds',
     faqItems: [
       {
         question: 'Do I actually need an enterprise page, or just a business team tool?',
@@ -480,6 +480,7 @@ export default function BusinessProcurementFeaturePage({
     }))
     .filter((group) => group.items.length > 0);
   const isBusinessLight = override.mode === 'business-light';
+  const isProcurementHeavy = override.mode === 'procurement-heavy';
 
   return (
     <div
@@ -575,7 +576,11 @@ export default function BusinessProcurementFeaturePage({
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl space-y-14 px-4 py-12 sm:px-6 lg:px-8">
+      <main
+        className={`mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 ${
+          isProcurementHeavy ? 'space-y-12' : 'space-y-14'
+        }`}
+      >
         <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Fit check</p>
@@ -583,12 +588,17 @@ export default function BusinessProcurementFeaturePage({
             <p className="mt-4 text-base leading-8 text-gray-600">{override.fitSummary}</p>
           </div>
 
-          <div className={`mt-8 grid gap-4 ${isBusinessLight ? 'xl:grid-cols-3' : 'lg:grid-cols-3'}`}>
+          <div className={`mt-6 grid gap-3 ${isBusinessLight ? 'xl:grid-cols-3' : 'lg:grid-cols-3'}`}>
             {override.fitCards.map((card) => (
-              <article key={card.title} className="rounded-2xl border border-gray-200 bg-[#FCFBF7] p-5">
-                <h3 className="text-xl font-bold text-gray-900">{card.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-gray-700">{card.summary}</p>
-                <div className="mt-4">
+              <article
+                key={card.title}
+                className={`rounded-2xl border border-gray-200 bg-[#FCFBF7] ${isProcurementHeavy ? 'p-4' : 'p-5'}`}
+              >
+                <h3 className={`${isProcurementHeavy ? 'text-lg' : 'text-xl'} font-bold text-gray-900`}>{card.title}</h3>
+                <p className={`mt-2.5 text-sm ${isProcurementHeavy ? 'leading-6' : 'leading-7'} text-gray-700`}>
+                  {card.summary}
+                </p>
+                <div className="mt-3">
                   <Link href={card.href} className="text-sm font-bold text-indigo-600 hover:text-indigo-700">
                     {card.label}
                   </Link>
@@ -605,12 +615,21 @@ export default function BusinessProcurementFeaturePage({
             <p className="mt-4 text-base leading-8 text-gray-600">{override.checklistIntro}</p>
           </div>
 
-          <div className={`mt-8 grid gap-4 ${isBusinessLight ? 'lg:grid-cols-3' : 'md:grid-cols-2'}`}>
+          <div className={`mt-6 grid gap-3 ${isBusinessLight ? 'lg:grid-cols-3' : 'md:grid-cols-2'}`}>
             {(override.checklistItems ?? pageData.howToChoose?.criteria ?? []).map((criterion) => (
-              <div key={criterion.title} className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
+              <div
+                key={criterion.title}
+                className={`rounded-2xl border border-gray-200 bg-[#F9FAFB] ${isProcurementHeavy ? 'p-4' : 'p-5'}`}
+              >
                 <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Checklist item</p>
-                <h3 className="mt-3 text-lg font-bold text-gray-900">{criterion.title}</h3>
-                {criterion.desc ? <p className="mt-3 text-sm leading-7 text-gray-600">{criterion.desc}</p> : null}
+                <h3 className={`mt-2.5 ${isProcurementHeavy ? 'text-base' : 'text-lg'} font-bold text-gray-900`}>
+                  {criterion.title}
+                </h3>
+                {criterion.desc ? (
+                  <p className={`mt-2.5 text-sm ${isProcurementHeavy ? 'leading-6' : 'leading-7'} text-gray-600`}>
+                    {criterion.desc}
+                  </p>
+                ) : null}
               </div>
             ))}
           </div>
@@ -623,7 +642,7 @@ export default function BusinessProcurementFeaturePage({
             <p className="mt-4 text-base leading-8 text-gray-600">{override.matrixIntro}</p>
           </div>
 
-          <div className={`mt-8 overflow-x-auto ${isBusinessLight ? 'max-w-5xl' : ''}`}>
+          <div className={`mt-6 overflow-x-auto ${isBusinessLight ? 'max-w-5xl' : ''}`}>
             <table className="min-w-full border-separate border-spacing-0">
               <thead>
                 <tr>
@@ -654,7 +673,10 @@ export default function BusinessProcurementFeaturePage({
                       const groupLabel = override.groupLabels?.[group.groupTitle] ?? group.groupTitle;
 
                       return (
-                        <td key={`${row.label}-${group.groupTitle}`} className="border-b border-gray-200 px-4 py-4 text-sm leading-6 text-gray-700">
+                        <td
+                          key={`${row.label}-${group.groupTitle}`}
+                          className={`border-b border-gray-200 px-4 ${isProcurementHeavy ? 'py-3.5' : 'py-4'} text-sm ${isProcurementHeavy ? 'leading-6' : 'leading-6'} text-gray-700`}
+                        >
                           {row.values[groupLabel] ?? row.values[group.groupTitle]}
                         </td>
                       );
@@ -666,7 +688,7 @@ export default function BusinessProcurementFeaturePage({
           </div>
         </section>
 
-        <section className="space-y-6">
+        <section className="space-y-5">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">{override.shortlistLabel}</p>
             <h2 className="mt-3 text-3xl font-bold text-gray-900">{override.sectionsHeading}</h2>
@@ -686,13 +708,17 @@ export default function BusinessProcurementFeaturePage({
                 ) : null}
 
                 <div className="mt-6 grid gap-3 md:grid-cols-2">
-                  <div className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
+                  <div className={`rounded-2xl border border-gray-200 bg-[#F9FAFB] ${isProcurementHeavy ? 'p-4' : 'p-5'}`}>
                     <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Start here when</p>
-                    <p className="mt-2 text-sm leading-7 text-gray-700">{sectionOverride?.startHereWhen}</p>
+                    <p className={`mt-2 text-sm ${isProcurementHeavy ? 'leading-6' : 'leading-7'} text-gray-700`}>
+                      {sectionOverride?.startHereWhen}
+                    </p>
                   </div>
-                  <div className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
+                  <div className={`rounded-2xl border border-gray-200 bg-[#F9FAFB] ${isProcurementHeavy ? 'p-4' : 'p-5'}`}>
                     <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">{override.verifyLabel}</p>
-                    <p className="mt-2 text-sm leading-7 text-gray-700">{sectionOverride?.verifyFirst}</p>
+                    <p className={`mt-2 text-sm ${isProcurementHeavy ? 'leading-6' : 'leading-7'} text-gray-700`}>
+                      {sectionOverride?.verifyFirst}
+                    </p>
                   </div>
                 </div>
 
@@ -766,7 +792,7 @@ export default function BusinessProcurementFeaturePage({
           <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Further reading</p>
-              <h2 className="mt-3 text-3xl font-bold text-gray-900">Keep going only if the fit still holds</h2>
+              <h2 className="mt-3 text-3xl font-bold text-gray-900">{override.furtherReadingHeading}</h2>
             </div>
 
             <div className="mt-8 grid gap-8 xl:grid-cols-2">

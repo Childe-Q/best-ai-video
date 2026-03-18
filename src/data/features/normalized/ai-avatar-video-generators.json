@@ -3,11 +3,12 @@
   "slug": "ai-avatar-video-generators",
   "title": "Best AI Avatar Video Generators (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares AI platforms that specialize in talking-head avatar video — tools with native AI presenters, automated lip-syncing, and text-to-speech generation. They are grouped by deployment context: marketing and social use, enterprise training and compliance, or image-animation and API-driven delivery. General text-to-video generators that do not focus on human-like presenters are excluded.",
+    "oneLiner": "This page compares AI platforms built around presenter-led delivery: talking-head avatars, lip-synced spokesperson video, and speaker-first communication workflows. They are grouped by avatar workflow: fast external-facing presenter content, governed training and internal rollout, or image-animation and API delivery. Marketing tools belong here only when the real decision is avatar format and on-screen delivery, not campaign strategy or broader commercial workflow.",
     "boundaries": [
       "Must feature native AI talking-head or presenter avatars with automated lip-syncing.",
-      "Must support text-to-speech — not just video overlays on existing recordings.",
-      "Compared across cost-per-minute, use-case specialization, and custom avatar availability."
+      "Must support text-to-speech and avatar delivery — not just overlays on existing recordings.",
+      "Compared across speaker realism, language coverage, delivery format, and custom avatar availability.",
+      "Excludes broader marketing-workflow decisions where campaign governance, variant scale, or brand output strategy matters more than presenter format."
     ],
     "primaryClassificationRule": "Group by avatar workflow and deployment context.",
     "comparisonAxes": [
@@ -34,7 +35,7 @@
     {
       "id": "marketing-and-social",
       "title": "Marketing and social avatars",
-      "rule": "This group covers avatar platforms tailored for multilingual marketing, social content personalization, and campaign-scale output. The emphasis is on lip-sync quality, language breadth, and fast turnaround for external-facing content rather than internal training material.",
+      "rule": "This group covers avatar platforms tailored for fast external-facing presenter content. The emphasis is on lip-sync quality, language breadth, and on-screen delivery for outreach, product explainers, and multilingual spokesperson workflows rather than internal training systems or broader campaign orchestration.",
       "toolSlugs": [
         "heygen"
       ]
@@ -42,7 +43,7 @@
     {
       "id": "training-and-enterprise",
       "title": "Training and enterprise avatars",
-      "rule": "These platforms focus on structured learning, corporate compliance, and governance-first workflows. They suit L&D teams, HR departments, and organizations that need controlled brand output, seat-based access, and — in some cases — branching e-learning scenarios.",
+      "rule": "These platforms focus on structured speaker-led training, corporate compliance, and governance-first avatar deployment. They suit L&D teams, HR departments, and organizations that need controlled presenter workflows, seat-based access, and — in some cases — branching e-learning scenarios.",
       "toolSlugs": [
         "synthesia",
         "colossyan",
@@ -52,7 +53,7 @@
     {
       "id": "image-and-api-avatar",
       "title": "Image and API avatar tools",
-      "rule": "This group covers tools oriented toward animating still images into talking avatars, or delivering avatar video via real-time API. They suit developers building avatar capabilities into their own products, or creators who need to animate a photo rather than use a stock presenter.",
+      "rule": "This group covers tools oriented toward animating still images into talking avatars, or delivering avatar video via real-time API. They suit developers building speaker-led avatar capabilities into their own products, or creators who need photo-based animation rather than a stock presenter studio.",
       "toolSlugs": [
         "d-id"
       ]

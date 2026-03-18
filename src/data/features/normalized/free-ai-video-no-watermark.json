@@ -92,10 +92,9 @@
       "officialUrl": "https://leonardo.ai/ai-video-generator",
       "hasReviewPage": false,
       "reviewUrl": null,
-      "logoUrl": null,
+      "logoUrl": "/logos/tools/leonardo-ai.png",
       "sourceUrls": [],
       "flags": [
-        "missing-logo-url",
         "missing-review-coverage"
       ]
     },
@@ -110,10 +109,9 @@
       "officialUrl": "https://hailuoai.com/",
       "hasReviewPage": false,
       "reviewUrl": null,
-      "logoUrl": null,
+      "logoUrl": "/logos/tools/hailuo-ai.svg",
       "sourceUrls": [],
       "flags": [
-        "missing-logo-url",
         "missing-review-coverage"
       ]
     },
@@ -128,10 +126,9 @@
       "officialUrl": "https://www.jogg.ai/",
       "hasReviewPage": false,
       "reviewUrl": null,
-      "logoUrl": null,
+      "logoUrl": "/logos/tools/jogg-ai.png",
       "sourceUrls": [],
       "flags": [
-        "missing-logo-url",
         "missing-review-coverage"
       ]
     },
@@ -146,10 +143,9 @@
       "officialUrl": "https://www.kapwing.com/",
       "hasReviewPage": false,
       "reviewUrl": null,
-      "logoUrl": null,
+      "logoUrl": "/logos/tools/kapwing.jpg",
       "sourceUrls": [],
       "flags": [
-        "missing-logo-url",
         "missing-review-coverage"
       ]
     },
@@ -164,11 +160,10 @@
       "officialUrl": null,
       "hasReviewPage": false,
       "reviewUrl": null,
-      "logoUrl": null,
+      "logoUrl": "/logos/tools/clipclip.png",
       "sourceUrls": [],
       "flags": [
         "missing-official-url",
-        "missing-logo-url",
         "missing-review-coverage"
       ]
     },
@@ -229,7 +224,6 @@
     "reviewNotes": [
       "No raw research file exists for this slug; normalized from existing frontend JSON.",
       "One or more tools still need verified officialUrl coverage.",
-      "One or more tools still need verified logoUrl coverage.",
       "One or more tools are missing internal review coverage."
     ]
   }

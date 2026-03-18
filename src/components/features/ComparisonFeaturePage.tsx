@@ -463,7 +463,7 @@ export default function ComparisonFeaturePage({
               {pageData.hero.h1}
             </h1>
             <p className="mt-4 max-w-4xl text-sm font-semibold uppercase tracking-[0.12em] text-gray-600">
-              Use this page if the workflow is already clear and you are comparing tools directly.
+              Use this page if the route is already clear and the next job is direct tool-to-tool tradeoffs.
             </p>
             <p className="mt-5 max-w-4xl text-lg leading-8 text-gray-700">{pageData.hero.subheadline}</p>
 
@@ -523,7 +523,7 @@ export default function ComparisonFeaturePage({
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl space-y-14 px-4 py-12 sm:px-6 lg:px-8">
+      <main className="mx-auto max-w-7xl space-y-12 px-4 py-12 sm:px-6 lg:px-8">
         <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Best by priority</p>
@@ -688,7 +688,7 @@ export default function ComparisonFeaturePage({
           <section className="rounded-3xl border border-black/10 bg-[#F3F1EA] p-8 shadow-sm sm:p-10">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">FAQ</p>
-              <h2 className="mt-3 text-3xl font-bold text-gray-900">Questions that usually decide the comparison</h2>
+              <h2 className="mt-3 text-3xl font-bold text-gray-900">Questions that usually decide the direct comparison</h2>
             </div>
 
             <div className="mt-8">

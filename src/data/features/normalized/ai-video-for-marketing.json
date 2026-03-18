@@ -3,11 +3,12 @@
   "slug": "ai-video-for-marketing",
   "title": "Best AI Video Tools for Marketing (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares AI video tools suited for external-facing marketing assets — product demos, brand ads, social campaigns, and localized content. Tools are grouped by marketing production workflow: campaign personalization and variant generation, or generative brand storytelling. Only platforms with brand governance, commercial-grade output, or custom branding capabilities are included.",
+    "oneLiner": "This page compares AI video tools for commercial marketing output: campaign variants, localized product messaging, branded demos, and hero creative. Tools are grouped by marketing production workflow: personalization and scaled campaign output, or higher-fidelity brand storytelling. Avatar platforms are included only when they serve a marketing use case; avatar-first tools whose main decision is presenter format rather than campaign workflow belong on the dedicated avatar page.",
     "boundaries": [
       "Must support brand governance: custom fonts, colors, logos, or locked-down brand kits.",
-      "Suited for external-facing assets — B2B demos, B2C social ads, and campaign content.",
-      "Excludes low-quality, heavily watermarked tools unsuitable for professional brand reputation."
+      "Suited for external-facing assets — B2B demos, B2C ads, localized campaign content, or branded launches.",
+      "Excludes low-quality, heavily watermarked tools unsuitable for professional brand reputation.",
+      "Excludes avatar-first decisions where presenter format, talking-head delivery, or speaker realism matters more than campaign workflow."
     ],
     "primaryClassificationRule": "Group by marketing production workflow.",
     "comparisonAxes": [
@@ -37,7 +38,7 @@
     {
       "id": "personalization-and-variants",
       "title": "Personalization and variants",
-      "rule": "These tools are built for campaign-level output — generating dozens or hundreds of video variants from a single template, or localizing content across languages with AI avatars. They suit marketing teams running A/B tests, regional campaigns, or personalized outreach at scale.",
+      "rule": "These tools are built for campaign-level output: generating localized versions, personalized variants, and repeatable commercial assets from a governed workflow. They suit marketing teams running A/B tests, regional campaigns, lifecycle outreach, or product messaging at scale.",
       "toolSlugs": [
         "abyssale",
         "heygen"
@@ -46,7 +47,7 @@
     {
       "id": "generative-brand-storytelling",
       "title": "Generative brand storytelling",
-      "rule": "This group covers tools focused on creating cinematic or prompt-driven marketing assets. They prioritize visual fidelity and professional controls over template-based automation, making them a better fit for hero ads and brand narrative content.",
+      "rule": "This group covers tools focused on higher-fidelity branded creative: hero ads, launches, and narrative marketing assets where visual polish matters more than batch automation. They prioritize commercial output quality and brand feel over presenter format or avatar-led delivery."
       "toolSlugs": [
         "runway",
         "mootion"
