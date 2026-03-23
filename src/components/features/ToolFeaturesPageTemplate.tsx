@@ -4,6 +4,7 @@ import { ToolContent } from '@/types/toolContent';
 import { getSEOCurrentYear } from '@/lib/utils';
 import { getRelatedLinks } from '@/lib/getRelatedLinks';
 import { loadToolContent } from '@/lib/loadToolContent';
+import { getPageReadiness } from '@/lib/readiness';
 import CTAButton from '@/components/CTAButton';
 
 interface ToolFeaturesPageTemplateProps {
@@ -25,7 +26,7 @@ interface FeaturesPageData {
   sources?: Array<{ label: string; url: string }>;
 }
 
-export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPageTemplateProps) {
+export default async function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPageTemplateProps) {
   const seoYear = getSEOCurrentYear();
 
   // Load content JSON if available
@@ -47,7 +48,8 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
   const featuresData = buildFeaturesPageData(tool, content, slug);
 
   // Get related links
-  const relatedLinks = getRelatedLinks(slug);
+  const relatedLinks = await getRelatedLinks(slug);
+  const reviewsReadiness = await getPageReadiness('toolReviews', slug);
 
   return (
     <div className="min-h-screen bg-[#F9FAFB] pb-24 font-sans">
@@ -307,12 +309,14 @@ export default function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPag
             >
               Pricing →
             </Link>
-            <Link
-              href={`/tool/${slug}/reviews`}
-              className="inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50 border border-indigo-200 transition-colors"
-            >
-              Reviews →
-            </Link>
+            {reviewsReadiness.ready && (
+              <Link
+                href={`/tool/${slug}/reviews`}
+                className="inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50 border border-indigo-200 transition-colors"
+              >
+                Reviews →
+              </Link>
+            )}
             {relatedLinks.comparisons && relatedLinks.comparisons.length > 0 && (
               <>
                 {relatedLinks.comparisons.slice(0, 2).map((comp, idx) => (

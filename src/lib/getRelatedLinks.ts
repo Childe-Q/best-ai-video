@@ -1,5 +1,6 @@
 import { getAllTools } from '@/lib/getTool';
 import { toCanonicalVsSlug } from '@/data/vs';
+import { getPageReadiness, getPageReadinessSync } from '@/lib/readiness';
 
 /**
  * Find related comparison pages (VS pages) for a tool
@@ -22,8 +23,16 @@ export function getRelatedComparisons(slug: string): Array<{ slug: string; title
   });
 
   // Generate comparison links (VS pages are dynamic, so we can generate any slug)
-  for (const tool of relatedTools.slice(0, 3)) {
+  for (const tool of relatedTools) {
+    if (comparisons.length >= 3) {
+      break;
+    }
+
     const comparisonSlug = toCanonicalVsSlug(slug, tool.slug);
+    const comparisonReadiness = getPageReadinessSync('vs', comparisonSlug);
+    if (!comparisonReadiness.ready) {
+      continue;
+    }
     const title =
       comparisonSlug === `${slug}-vs-${tool.slug}`
         ? `${currentTool.name} vs ${tool.name}`
@@ -40,9 +49,13 @@ export function getRelatedComparisons(slug: string): Array<{ slug: string; title
 
 /**
  * Get alternatives page link for a tool
- * Alternatives pages are dynamic routes, so they always exist
  */
-export function getAlternativesLink(slug: string): { slug: string; title: string } | null {
+export async function getAlternativesLink(slug: string): Promise<{ slug: string; title: string } | null> {
+  const readiness = await getPageReadiness('toolAlternatives', slug);
+  if (!readiness.ready) {
+    return null;
+  }
+
   return {
     slug: `/tool/${slug}/alternatives`,
     title: 'View All Alternatives',
@@ -52,16 +65,16 @@ export function getAlternativesLink(slug: string): { slug: string; title: string
 /**
  * Get all related links for a tool (comparisons and alternatives)
  */
-export function getRelatedLinks(slug: string): {
+export async function getRelatedLinks(slug: string): Promise<{
   comparisons: Array<{ href: string; title: string }>;
   alternatives: { href: string; title: string } | null;
-} {
+}> {
   const comparisons = getRelatedComparisons(slug).map(comp => ({
     href: `/vs/${comp.slug}`,
     title: comp.title
   }));
   
-  const alternatives = getAlternativesLink(slug);
+  const alternatives = await getAlternativesLink(slug);
   
   return {
     comparisons,

@@ -1,6 +1,7 @@
 import { getVsComparison, listVsSlugs, canonicalSlug } from '@/data/vs';
 import { getTool } from '@/lib/getTool';
 import { buildVsPairCopy } from '@/lib/vsPairType';
+import { getPageReadinessSync } from '@/lib/readiness';
 import { VsIntent } from '@/types/vs';
 
 export type VsIndexCard = {
@@ -21,14 +22,14 @@ export type VsIndexGroup = {
 };
 
 export const VS_INDEX_FEATURED_SLUGS = [
-  canonicalSlug('heygen', 'invideo'),
   canonicalSlug('heygen', 'synthesia'),
-  canonicalSlug('fliki', 'heygen'),
-  canonicalSlug('invideo', 'pictory'),
-  canonicalSlug('invideo', 'veed-io'),
-  canonicalSlug('descript', 'veed-io'),
-  canonicalSlug('runway', 'sora'),
+  canonicalSlug('heygen', 'invideo'),
   canonicalSlug('deepbrain-ai', 'heygen'),
+  canonicalSlug('invideo', 'pictory'),
+  canonicalSlug('fliki', 'invideo'),
+  canonicalSlug('fliki', 'pictory'),
+  canonicalSlug('descript', 'veed-io'),
+  canonicalSlug('pika', 'runway'),
 ];
 
 export const VS_INDEX_INTENT_ORDER: VsIntent[] = ['avatar', 'editor', 'text', 'repurpose'];
@@ -41,7 +42,7 @@ export const VS_INDEX_INTENT_LABELS: Record<VsIntent, string> = {
 };
 
 export const VS_INDEX_FEATURED_HELPER =
-  'Start here if you already know the pair you are deciding between. These are the highest-priority head-to-head pages and the strongest entry points into the comparison library.';
+  'Start here if the buying route is already clear and the decision is down to two credible options. These are the flagship head-to-head pages and the strongest entry points into the comparison library.';
 
 export const VS_INDEX_INTENT_HELPERS: Record<VsIntent, string> = {
   avatar:
@@ -65,6 +66,10 @@ function toTitleCase(value: string): string {
 export function listVsIndexCards(): VsIndexCard[] {
   return listVsSlugs()
     .map((slug) => {
+      if (!getPageReadinessSync('vs', slug).ready) {
+        return null;
+      }
+
       const comparison = getVsComparison(slug);
       if (!comparison) return null;
 

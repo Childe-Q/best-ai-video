@@ -1,0 +1,149 @@
+{
+  "slug": "d-id",
+  "lastUpdated": "2026-03-21T17:55:00+08:00",
+  "sources": {
+    "pricing": "https://www.d-id.com/pricing/",
+    "api": "https://www.d-id.com/pricing/",
+    "ethics": "https://www.d-id.com/ethics/"
+  },
+  "nuggets": [
+    {
+      "text": "D-ID Trial is a 14-day plan with 3 minutes total for videos, agents, video translate, and API usage.",
+      "theme": "pricing",
+      "sourceUrl": "https://www.d-id.com/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:55:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Trial includes 100 plus stock AI avatars, 1 personal avatar, API access, and a full-screen watermark with personal-use licensing.",
+      "theme": "avatars",
+      "sourceUrl": "https://www.d-id.com/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:55:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Lite is listed at about $4.70 per month billed annually, includes 10 minutes per month, standard avatars only, 1 embedded agent, and a D-ID watermark.",
+      "theme": "pricing",
+      "sourceUrl": "https://www.d-id.com/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:55:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Pro is listed at $16 per month and includes 15 minutes per month, premium and standard avatars, 3 personal avatars, 1 voice clone, and commercial-use licensing.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.d-id.com/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:55:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Pro still keeps an AI watermark rather than a clean export, which is a key limit for publishable branded output.",
+      "theme": "export",
+      "sourceUrl": "https://www.d-id.com/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:55:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Advanced is listed at $108 per month and includes 100 minutes per month, 5 personal avatars, 3 voice clones, 3 embedded agents, and a custom logo watermark replacement option.",
+      "theme": "team",
+      "sourceUrl": "https://www.d-id.com/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:55:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Enterprise adds unlimited video minutes, custom API minutes, custom personal and studio avatars, professional voice cloning, and team collaboration.",
+      "theme": "enterprise",
+      "sourceUrl": "https://www.d-id.com/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:55:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The pricing matrix says API access is included on every plan, and API minutes are deducted from the same balance as the web app.",
+      "theme": "api",
+      "sourceUrl": "https://www.d-id.com/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:55:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Translated video support rises from up to 30 seconds on Trial to up to 5 minutes on Lite, Pro, and Advanced, and up to 30 minutes on Enterprise.",
+      "theme": "localization",
+      "sourceUrl": "https://www.d-id.com/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:55:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Only Enterprise lists SAML SSO, enterprise-grade security, customer success management, and manual content moderation.",
+      "theme": "security",
+      "sourceUrl": "https://www.d-id.com/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:55:00+08:00",
+      "confidence": "high"
+    }
+  ],
+  "topUpClaims": [
+    {
+      "claim": "commercial_ownership_licensing",
+      "status": "supported",
+      "sourceUrl": "https://help.d-id.com/hc/en-us/articles/31350883819537-What-are-the-copyright-and-commercial-use-rights-for-my-videos",
+      "sourceType": "help_center_article",
+      "note": "Official help says Trial, Lite, and Build are non-commercial, while Pro, Advanced, Enterprise, Launch, and Scale support commercial use. The same source also distinguishes use rights from broader ownership questions.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "refund_cancellation",
+      "status": "supported",
+      "sourceUrl": "https://www.d-id.com/studio-end-user-license-agreement/",
+      "sourceType": "terms",
+      "note": "Official terms say subscriptions can be canceled, cancellation must happen before the next billing period to avoid the next charge, and paid fees are non-refundable unless explicitly stated otherwise.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "workflow_limits",
+      "status": "supported",
+      "sourceUrl": "https://help.d-id.com/hc/en-us/articles/31425358108305-What-happens-when-I-run-out-of-credits",
+      "sourceType": "help_center_article",
+      "note": "Official help says credits are replenished on billing renewal, running out of credits blocks further generation until upgrade or renewal, and usage remains tied to the current subscription balance.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "export_resolution_format",
+      "status": "partially_supported",
+      "sourceUrl": "https://help.d-id.com/hc/en-us/articles/30782586495633-How-do-I-generate-a-video-in-D-ID-s-studio",
+      "sourceType": "help_center_article",
+      "note": "Official help directly supports parts of the export surface, including audio input formats, some resolution limits, subtitle export behavior, and the rule that draft videos must be generated before they can be downloaded.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "cautious"
+    },
+    {
+      "claim": "privacy_access_visibility",
+      "status": "partially_supported",
+      "sourceUrl": "https://www.d-id.com/privacy-policy/",
+      "sourceType": "privacy_policy",
+      "note": "Official privacy and terms pages support account, upload, gallery, download, and sharing data-handling behavior, but they do not fully establish a complete default visibility model for all projects and outputs.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "cautious"
+    }
+  ],
+  "topUpFlags": [
+    {
+      "claim": "watermark",
+      "status": "conflicting",
+      "sourceUrl": "https://help.d-id.com/hc/en-us/articles/31350550554641-How-do-I-change-or-remove-the-watermark-on-my-videos",
+      "sourceType": "help_center_article",
+      "note": "Current help documentation provides a plan-specific watermark matrix, but this conflicts with broader terms language about watermark treatment for paying users. Do not treat watermark behavior as fully resolved without manual review.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "flag"
+    }
+  ]
+}

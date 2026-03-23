@@ -4,6 +4,7 @@ import { canonicalizeVsHref } from '@/data/vs';
 import { categories } from '@/data/categories';
 import { getSEOCurrentYear } from '@/lib/utils';
 import FeaturesFAQ from '@/components/features/FeaturesFAQ';
+import { filterPromoteSafeLinks } from '@/lib/readiness';
 
 const seoYear = getSEOCurrentYear();
 
@@ -23,103 +24,112 @@ function getFeatureTitle(slug: string): string {
 
 const quickRoutes = [
   {
-    question: 'Need a spokesperson on screen?',
-    when: 'Use this path when the message depends on face, voice, and delivery.',
-    category: 'Avatar tools',
+    kind: 'feature' as const,
+    slug: 'best-ai-video-generators',
+    question: 'Need the broadest starting point?',
+    when: 'Start here when the route is still broad and you need the cleanest shortlist split first.',
+    category: 'Best overall picks',
+    href: '/features/best-ai-video-generators',
+  },
+  {
+    kind: 'feature' as const,
+    slug: 'text-to-video-ai-tools',
+    question: 'Creating net-new scenes from prompts?',
+    when: 'Use this path when text prompts, scene generation, and cinematic control are the first filters.',
+    category: 'Text-to-video tools',
+    href: '/features/text-to-video-ai-tools',
+  },
+  {
+    kind: 'feature' as const,
+    slug: 'ai-avatar-video-generators',
+    question: 'Need a presenter-led workflow?',
+    when: 'Go here when the message needs an on-screen host, multilingual delivery, or repeatable avatar-led production.',
+    category: 'AI avatar tools',
     href: '/features/ai-avatar-video-generators',
-  },
-  {
-    question: 'Repurposing existing content?',
-    when: 'Start here if you already have blogs, webinars, podcasts, or transcripts.',
-    category: 'Repurposing tools',
-    href: '/features/content-repurposing-ai-tools',
-  },
-  {
-    question: 'Buying for a team?',
-    when: 'Go here when approvals, admin controls, or localization affect the shortlist.',
-    category: 'Enterprise tools',
-    href: '/features/enterprise-ai-video-solutions',
   },
 ];
 
 const primaryCategories = [
   {
+    kind: 'feature' as const,
     slug: 'best-ai-video-generators',
     description:
       'The broadest starting point. Separate cinematic, avatar, and social-first tools before picking a niche.',
   },
   {
-    slug: 'ai-avatar-video-generators',
-    description:
-      'Talking-head and presenter-led tools for training, demos, sales, and any workflow where a face carries the message.',
-  },
-  {
+    kind: 'feature' as const,
     slug: 'text-to-video-ai-tools',
     description:
       'Prompt-first generation for creators who start from text and need scenes, not a stock montage or transcript editor.',
   },
   {
-    slug: 'ai-video-editors',
+    kind: 'feature' as const,
+    slug: 'ai-avatar-video-generators',
     description:
-      'AI-powered editing when the draft already exists. Transcript cuts, auto-captions, background removal, and smart cleanup.',
+      'Talking-head and presenter-led tools for training, demos, sales, and any workflow where a face carries the message.',
+  },
+  {
+    kind: 'feature' as const,
+    slug: 'content-repurposing-ai-tools',
+    description:
+      'Convert blogs, webinars, podcasts, and long recordings into new video formats without starting from scratch.',
   },
 ];
 
 const secondaryCategories = [
   {
-    slug: 'fast-ai-video-generators',
+    kind: 'feature' as const,
+    slug: 'ai-video-generators-comparison',
     description:
-      'Speed-first tools for rapid iteration. Ideal for testing concepts, social publishing, and quick turnaround.',
+      'Side-by-side model comparison on speed, resolution, realism, and API posture across leading generators.',
   },
   {
-    slug: 'ai-video-for-social-media',
-    description:
-      'Templates, captions, and fast turnaround built for Shorts, Reels, TikTok, and daily social cadence.',
-  },
-  {
-    slug: 'viral-ai-video-generators',
-    description:
-      'Hook-first tools that prioritize clip scoring, trend ideation, and engagement-optimized short-form packaging.',
-  },
-  {
-    slug: 'professional-ai-video-tools',
-    description:
-      'Business-grade platforms with brand governance, team collaboration, and commercial-ready export pipelines.',
-  },
-  {
-    slug: 'content-repurposing-ai-tools',
-    description:
-      'Convert blogs, webinars, podcasts, and long recordings into new video formats without starting from scratch.',
-  },
-  {
-    slug: 'budget-friendly-ai-video-tools',
-    description:
-      'Solid production under $20/month for creators who need real output without enterprise pricing.',
-  },
-  {
-    slug: 'ai-video-for-marketing',
-    description:
-      'Campaign-ready tools for ads, demos, personalized outbound, and localized marketing content.',
-  },
-  {
-    slug: 'ai-video-for-youtube',
-    description:
-      'Faceless channel automation and script-to-video workflows built for YouTube publishing volume.',
-  },
-  {
+    kind: 'feature' as const,
     slug: 'free-ai-video-no-watermark',
     description:
       'Free tiers with genuinely usable exports. Find which tools stay clean and which force upgrades.',
   },
   {
+    kind: 'feature' as const,
     slug: 'enterprise-ai-video-solutions',
     description:
       'API, SSO, admin controls, and procurement-ready plans for IT, operations, and large-team rollouts.',
   },
   {
-    slug: 'ai-video-generators-comparison',
+    kind: 'feature' as const,
+    slug: 'fast-ai-video-generators',
     description:
-      'Side-by-side model comparison on speed, resolution, realism, and API posture across leading generators.',
+      'Speed-first tools for rapid iteration. Ideal for testing concepts, social publishing, and quick turnaround.',
+  },
+  {
+    kind: 'feature' as const,
+    slug: 'ai-video-for-social-media',
+    description:
+      'Templates, captions, and fast turnaround built for Shorts, Reels, TikTok, and daily social cadence.',
+  },
+  {
+    kind: 'feature' as const,
+    slug: 'viral-ai-video-generators',
+    description:
+      'Hook-first tools that prioritize clip scoring, trend ideation, and engagement-optimized short-form packaging.',
+  },
+  {
+    kind: 'feature' as const,
+    slug: 'budget-friendly-ai-video-tools',
+    description:
+      'Solid production under $20/month for creators who need real output without enterprise pricing.',
+  },
+  {
+    kind: 'feature' as const,
+    slug: 'ai-video-for-marketing',
+    description:
+      'Campaign-ready tools for ads, demos, personalized outbound, and localized marketing content.',
+  },
+  {
+    kind: 'feature' as const,
+    slug: 'ai-video-for-youtube',
+    description:
+      'Faceless channel automation and script-to-video workflows built for YouTube publishing volume.',
   },
 ];
 
@@ -152,16 +162,31 @@ const faqItems = [
 ];
 
 const toolReviewLinks = [
-  { href: '/tool/heygen', label: 'HeyGen' },
-  { href: '/tool/invideo', label: 'InVideo' },
-  { href: '/tool/pictory', label: 'Pictory' },
-  { href: '/tool/runway', label: 'Runway' },
+  { kind: 'tool' as const, slug: 'heygen', href: '/tool/heygen', label: 'HeyGen' },
+  { kind: 'tool' as const, slug: 'invideo', href: '/tool/invideo', label: 'InVideo' },
+  { kind: 'tool' as const, slug: 'pictory', href: '/tool/pictory', label: 'Pictory' },
+  { kind: 'tool' as const, slug: 'runway', href: '/tool/runway', label: 'Runway' },
 ];
 
 const comparisonLinks = [
-  { href: canonicalizeVsHref('/vs/heygen-vs-synthesia'), label: 'HeyGen vs Synthesia' },
-  { href: canonicalizeVsHref('/vs/heygen-vs-invideo'), label: 'HeyGen vs InVideo' },
-  { href: canonicalizeVsHref('/vs/fliki-vs-pictory'), label: 'Fliki vs Pictory' },
+  {
+    kind: 'vs' as const,
+    slug: 'heygen-vs-synthesia',
+    href: canonicalizeVsHref('/vs/heygen-vs-synthesia'),
+    label: 'HeyGen vs Synthesia',
+  },
+  {
+    kind: 'vs' as const,
+    slug: 'heygen-vs-invideo',
+    href: canonicalizeVsHref('/vs/heygen-vs-invideo'),
+    label: 'HeyGen vs InVideo',
+  },
+  {
+    kind: 'vs' as const,
+    slug: 'fliki-vs-pictory',
+    href: canonicalizeVsHref('/vs/fliki-vs-pictory'),
+    label: 'Fliki vs Pictory',
+  },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -188,7 +213,13 @@ export function generateMetadata(): Metadata {
 /*  Page                                                               */
 /* ------------------------------------------------------------------ */
 
-export default function FeaturesHubPage() {
+export default async function FeaturesHubPage() {
+  const readyQuickRoutes = await filterPromoteSafeLinks(quickRoutes);
+  const readyPrimaryCategories = await filterPromoteSafeLinks(primaryCategories);
+  const readySecondaryCategories = await filterPromoteSafeLinks(secondaryCategories);
+  const readyToolReviewLinks = await filterPromoteSafeLinks(toolReviewLinks);
+  const readyComparisonLinks = await filterPromoteSafeLinks(comparisonLinks);
+
   return (
     <div className="min-h-screen bg-[#FCFBF7] pb-16">
 
@@ -215,7 +246,7 @@ export default function FeaturesHubPage() {
           {/* Quick routes — merged from old Scenario Router */}
           <div className="mt-12 border-t border-black/8 pt-6">
             <div className="grid gap-4 md:grid-cols-3">
-              {quickRoutes.map((r) => (
+              {readyQuickRoutes.map((r) => (
                 <Link
                   key={r.href}
                   href={r.href}
@@ -241,21 +272,22 @@ export default function FeaturesHubPage() {
       <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
 
         {/* ── Tier 1: Primary Categories ─────────────────────── */}
+        {readyPrimaryCategories.length > 0 && (
         <section className="mb-12">
           <div className="max-w-2xl">
             <p className="text-[11px] font-black uppercase tracking-[0.18em] text-black/40">
               Most common starting points
             </p>
             <h2 className="mt-3 text-2xl font-black text-gray-900 md:text-3xl">
-              Four routes that cover the majority of buyers
+              Flagship routes that cover the highest-priority entry points
             </h2>
             <p className="mt-3 text-sm leading-6 text-black/52">
-              These are the best starting hubs when you are still narrowing the workflow, not browsing the full index.
+              Start with these curated hubs before you fan out into the broader directory.
             </p>
           </div>
 
           <div className="mt-8 grid gap-3 md:grid-cols-2">
-            {primaryCategories.map((cat) => (
+            {readyPrimaryCategories.map((cat) => (
               <Link
                 key={cat.slug}
                 href={`/features/${cat.slug}`}
@@ -280,8 +312,10 @@ export default function FeaturesHubPage() {
             ))}
           </div>
         </section>
+        )}
 
         {/* ── Tier 2: All Other Categories ────────────────────── */}
+        {readySecondaryCategories.length > 0 && (
         <section className="mb-12 border-t border-black/6 pt-10">
           <div className="max-w-2xl">
             <p className="text-[11px] font-black uppercase tracking-[0.18em] text-black/40">
@@ -296,7 +330,7 @@ export default function FeaturesHubPage() {
           </div>
 
           <div className="mt-8 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
-            {secondaryCategories.map((cat) => (
+            {readySecondaryCategories.map((cat) => (
               <Link
                 key={cat.slug}
                 href={`/features/${cat.slug}`}
@@ -319,6 +353,7 @@ export default function FeaturesHubPage() {
             ))}
           </div>
         </section>
+        )}
 
         {/* ── FAQ ────────────────────────────────────────────── */}
         <section className="mb-12 rounded-2xl bg-[#F3F1EA] px-6 py-8 sm:px-8 sm:py-10">
@@ -335,6 +370,7 @@ export default function FeaturesHubPage() {
         </section>
 
         {/* ── Cross-links ────────────────────────────────────── */}
+        {(readyToolReviewLinks.length > 0 || readyComparisonLinks.length > 0) && (
         <section className="border-t border-black/6 pt-8">
           <p className="text-[11px] font-black uppercase tracking-[0.18em] text-black/35">
             See also
@@ -351,7 +387,7 @@ export default function FeaturesHubPage() {
                 </Link>
               </div>
               <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5">
-                {toolReviewLinks.map((link) => (
+                {readyToolReviewLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
@@ -365,7 +401,7 @@ export default function FeaturesHubPage() {
             <div>
               <p className="text-xs font-bold text-black/50">Comparisons</p>
               <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5">
-                {comparisonLinks.map((link) => (
+                {readyComparisonLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
@@ -378,6 +414,7 @@ export default function FeaturesHubPage() {
             </div>
           </div>
         </section>
+        )}
       </main>
     </div>
   );

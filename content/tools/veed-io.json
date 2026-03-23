@@ -1,76 +1,68 @@
 {
   "overview": {
     "tldr": {
-      "bestFor": "Quick browser-based editing and simple exports when 720p is enough",
-      "notFor": "Anyone who needs watermark-free output without paying, or expects easy refunds",
-      "why": "Free exports are watermarked and capped at 720p, and refund terms are case-by-case"
+      "bestFor": "Creators and small teams that need browser-based editing, captions, and straightforward MP4 or audio exports",
+      "notFor": "Anyone who expects watermark-free exports on Free or wants advanced editing without a paid tier",
+      "why": "Free exports are watermarked at 720p, paid plans unlock cleaner exports, and existing projects must be re-exported after upgrading"
     },
     "miniTest": {
       "prompt": "Create a 30-45 second video about [topic] for [audience]. Include a 1-sentence hook, 3 key points, and a CTA. Add captions, keep pacing tight, and export in the highest available resolution for my plan",
       "checklist": [
         {
-          "label": "Goal",
-          "value": "Shorts / ad / explainer / internal"
+          "label": "Primary workflow fit",
+          "value": "Browser editing / captions / quick exports"
         },
         {
-          "label": "Input type",
-          "value": "Script / blog / bullets"
+          "label": "Free watermark",
+          "value": "Expected on Free exports and embeds"
         },
         {
-          "label": "Edit responsiveness",
-          "value": "User reports: can lag on longer projects"
+          "label": "Free export ceiling",
+          "value": "Free plan exports are documented at 720p"
         },
         {
-          "label": "Captions accuracy",
-          "value": "1-5 rating"
+          "label": "Paid export tiers",
+          "value": "Higher tiers unlock 1080p or up to 4K depending on plan"
         },
         {
-          "label": "Audio export needed",
-          "value": "MP3 (Yes/No)"
-        },
-        {
-          "label": "Output format",
+          "label": "Export formats",
           "value": "MP4 / MP3 / GIF"
         },
         {
-          "label": "Watermark present",
-          "value": "Yes - expected on Free plan"
+          "label": "Upgrade path",
+          "value": "Removing a watermark from an older export requires re-exporting the original project"
         },
         {
-          "label": "Export resolution",
-          "value": "720p / 1080p / 4K based on plan"
+          "label": "Cancellation timing",
+          "value": "Access continues until the current billing period ends after auto-renewal is turned off"
         },
         {
-          "label": "AI video generation used",
-          "value": "Yes/No"
+          "label": "Browser workflow",
+          "value": "Runs as a browser-based editor"
         },
         {
-          "label": "Billing clarity",
-          "value": "User reports: confusing renewals/cancellations"
-        },
-        {
-          "label": "If upgrading later",
-          "value": "Re-export required to remove watermark"
+          "label": "Refund sensitivity",
+          "value": "Refunds are case-by-case under terms of sale"
         }
       ],
-      "verdict": "Result: partial. Biggest friction was lag/billing/watermark. If you need clean 1080p/4K and no watermark, plan on upgrading and re-exporting"
+      "verdict": "Use this as a source-backed workflow check, not a completed hands-on run. VEED fits caption-heavy browser editing and simple exports when the watermark, resolution tier, and re-export rules fit the publishing workflow."
     },
     "useCases": [
       {
-        "title": "YouTube Shorts",
-        "why": "Fast captions + MP4 export, but Free adds a watermark",
+        "title": "Social Clips",
+        "why": "Fits quick browser-based social edits when teams need captions and straightforward MP4 exports",
         "linkHref": "/tool/veed-io/pricing",
         "linkText": "Check pricing →"
       },
       {
-        "title": "Marketing Ads",
-        "why": "Quick edits and 1080p+ exports require a paid plan",
+        "title": "Caption-Heavy Videos",
+        "why": "Useful when subtitle workflows and simple export options matter more than deep post-production control",
         "linkHref": "/tool/veed-io/features",
         "linkText": "See features →"
       },
       {
-        "title": "Blog-to-video",
-        "why": "Assemble clips and captions, then export MP4 plus optional MP3",
+        "title": "Simple Explainers",
+        "why": "Works for lightweight explainers and internal videos when a browser editor is preferred over a heavier desktop workflow",
         "linkHref": "/vs/veed-io-vs-invideo",
         "linkText": "Compare alternatives →"
       }

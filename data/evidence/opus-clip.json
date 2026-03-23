@@ -1,0 +1,149 @@
+{
+  "slug": "opus-clip",
+  "lastUpdated": "2026-03-21T18:20:00+08:00",
+  "sources": {
+    "pricing": "https://www.opus.pro/pricing",
+    "features": "https://www.opus.pro/",
+    "faq": "https://www.opus.pro/pricing"
+  },
+  "nuggets": [
+    {
+      "text": "OpusClip's pricing FAQ says new users get a 7-day Pro trial with 90 minutes of processing time, and the free-forever plan refreshes 60 minutes monthly after trial.",
+      "theme": "pricing",
+      "sourceUrl": "https://www.opus.pro/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:20:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Free plan supports local video uploads up to 10GB, vertical 9:16 output, watermarking, and clips that expire after 3 days.",
+      "theme": "export",
+      "sourceUrl": "https://www.opus.pro/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:20:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Starter is priced at $15 per month and adds verified YouTube imports, a 30-day export limit, highest available resolution, one brand template, and AI plus stock B-roll generation at low monthly quotas.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.opus.pro/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:20:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Starter still keeps watermarking, so it is better for validating repurposing flow than for polished branded publishing.",
+      "theme": "export",
+      "sourceUrl": "https://www.opus.pro/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:20:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Pro is priced at $29 per month and adds local videos up to 30GB, public mp4 URLs, topic search, prompt-to-clip, 9:16 plus 1:1 plus 16:9 output, and no export limit with highest available resolution.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.opus.pro/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:20:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Pro also includes up to 2 templates, up to 2 fonts, 100GB fixed storage, one default folder, and a team pack with 2 users expandable to 4 users.",
+      "theme": "team",
+      "sourceUrl": "https://www.opus.pro/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:20:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The features page describes ClipAnything as an AI clipping model for vlogs, gaming, sports, interviews, explainer videos, and even videos with little or no dialogue.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.opus.pro/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T18:20:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "OpusClip's ReframeAnything is positioned as an AI reframing model that keeps moving subjects centered with AI object tracking or manual tracking guidance.",
+      "theme": "features",
+      "sourceUrl": "https://www.opus.pro/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T18:20:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The product page positions workflow automation around a web app plus API to create and publish videos faster while keeping output rolling in the background.",
+      "theme": "api",
+      "sourceUrl": "https://www.opus.pro/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T18:20:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The FAQ says OpusClip automatically adds captions at over 97 percent accuracy and supports English, German, Spanish, French, Portuguese, Italian, Dutch, Russian, Polish, Indonesian, Ukrainian, Swedish, Turkish, Norwegian, Croatian, Romanian, Slovak, Greek, Danish, Finnish, Hungarian, Czech, Japanese, Korean, Vietnamese, and more.",
+      "theme": "captions",
+      "sourceUrl": "https://www.opus.pro/pricing",
+      "sourceType": "faq",
+      "capturedAt": "2026-03-21T18:20:00+08:00",
+      "confidence": "high"
+    }
+  ],
+  "topUpClaims": [
+    {
+      "claim": "watermark",
+      "status": "supported",
+      "sourceUrl": "https://help.opus.pro/docs/article/watermark",
+      "sourceType": "help_center_article",
+      "note": "Official help says Free Trial and Free Plan projects carry the OpusClip watermark, and upgrading to a paid plan removes those watermarks from Free or Trial projects.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "refund_cancellation",
+      "status": "partially_supported",
+      "sourceUrl": "https://help.opus.pro/docs/article/plans-and-credits",
+      "sourceType": "help_center_article",
+      "note": "Official help clearly documents cancellation and downgrade timing, including end-of-cycle cancellation and immediate downgrade-to-Free behavior. Public refund support is narrower and mainly covers specific credit-refund cases rather than a broad subscription refund policy.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "cautious"
+    },
+    {
+      "claim": "workflow_limits",
+      "status": "supported",
+      "sourceUrl": "https://help.opus.pro/docs/article/how-are-credits-consumed",
+      "sourceType": "help_center_article",
+      "note": "Official help says credits are consumed based on imported-video duration, Starter includes 150 monthly credits, Pro includes 300 credits per pack, and monthly credits remain valid for 60 days.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "privacy_access_visibility",
+      "status": "partially_supported",
+      "sourceUrl": "https://help.opus.pro/docs/article/6219255-team-management",
+      "sourceType": "help_center_article",
+      "note": "Official team-workspace docs show that credits, videos, and brand templates can be shared within a team, and removed members lose access to the workspace. Public docs do not fully define a broader default visibility model outside workspace behavior.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "cautious"
+    },
+    {
+      "claim": "export_resolution_format",
+      "status": "supported",
+      "sourceUrl": "https://www.opus.pro/pricing?category=sales",
+      "sourceType": "pricing_page",
+      "note": "Current pricing positions paid plans as the watermark-free lane, with Starter and Pro adding broader export support and Pro adding public MP4 URLs and more format flexibility.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    }
+  ],
+  "topUpFlags": [
+    {
+      "claim": "commercial_ownership_licensing",
+      "status": "needs_human_review",
+      "sourceUrl": "https://www.opus.pro/pricing?category=sales",
+      "sourceType": "pricing_page",
+      "note": "Current public pricing and help docs explain credits, plans, storage, and watermark behavior, but they do not clearly settle a broad ownership or commercial-rights conclusion for exported clips.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "flag"
+    }
+  ]
+}

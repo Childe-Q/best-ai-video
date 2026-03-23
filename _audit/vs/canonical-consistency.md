@@ -1,12 +1,12 @@
 # VS Canonical Consistency
 
-Generated: 2026-03-08
+Generated: 2026-03-21
 
 ## Summary
 
 - Raw source pair count: 11
 - Final canonical pair count: 21
-- Raw slug count: 11
+- Raw slug count: 12
 - Canonical display count: 21
 - Parse errors: 0
 - missingCanonicalInIndex: 0
@@ -156,7 +156,7 @@ Generated: 2026-03-08
 
 ### heygen-vs-invideo
 
-- seenSlugs: invideo-vs-heygen
+- seenSlugs: heygen-vs-invideo, invideo-vs-heygen
 - canonicalSlug: heygen-vs-invideo
 - canonicalInDisplayIndex: Yes
 - nonCanonicalInDisplayIndex: No

@@ -1,0 +1,149 @@
+{
+  "slug": "synthesys",
+  "lastUpdated": "2026-03-21T19:20:00+08:00",
+  "sources": {
+    "pricing": "https://synthesys.io/pricing",
+    "features": "https://synthesys.io/",
+    "faq": "https://synthesys.io/pricing"
+  },
+  "nuggets": [
+    {
+      "text": "Synthesys positions itself as an AI content suite that combines avatars, realistic voice-overs, dubbing, and translated video workflows inside one platform.",
+      "theme": "workflow",
+      "sourceUrl": "https://synthesys.io/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T19:20:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The product page emphasizes realistic avatars, custom avatars, and UGC-style AI actors with natural emotions, gestures, and voices for marketing and creator workflows.",
+      "theme": "avatars",
+      "sourceUrl": "https://synthesys.io/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T19:20:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesys also highlights built-in dubbing plus a voice layer with hundreds of human-sounding voices and multilingual coverage, making it more than a pure avatar tool.",
+      "theme": "voice",
+      "sourceUrl": "https://synthesys.io/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T19:20:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The pricing table includes a Free plan with 10 video generation credits, up to 720p export, 3 slides for AI avatars, 10 Sora2 and VEO3 persona credits, 10,000 voice generation credits, and 1 seat.",
+      "theme": "pricing",
+      "sourceUrl": "https://synthesys.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T19:20:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Personal is priced at $20 per month and raises limits to 100 video credits, 50,000 voice credits, 10 Sora2 and VEO3 credits, 1 custom video avatar, and up to 1080p export.",
+      "theme": "export",
+      "sourceUrl": "https://synthesys.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T19:20:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Creator is priced at $41 per month and expands usage to 250 video credits, 200,000 voice credits, 40 Sora2 and VEO3 credits, 5 custom video avatars, and fast processing.",
+      "theme": "usage",
+      "sourceUrl": "https://synthesys.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T19:20:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Business Unlimited is priced at $69 per month and adds unlimited video and voice credits under fair use, up to 4K export, unlimited custom video avatars, faster processing, 2 seats, and API access in the enterprise section.",
+      "theme": "team",
+      "sourceUrl": "https://synthesys.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T19:20:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The same pricing table shows Business has 30 maximum video slides for AI avatars, while Free has 3, Personal has 6, and Creator has 12.",
+      "theme": "usage",
+      "sourceUrl": "https://synthesys.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T19:20:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesys' comparison table includes voice cloning, customizable voices, video and audio dubbing, voice changer, and multi-speaker podcast creation as higher-tier capabilities.",
+      "theme": "features",
+      "sourceUrl": "https://synthesys.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T19:20:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The enterprise callout adds turbo speed generations, unlimited max duration per video, custom usage limits, API, premium custom avatars, priority support, and a dedicated customer success path.",
+      "theme": "enterprise",
+      "sourceUrl": "https://synthesys.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T19:20:00+08:00",
+      "confidence": "high"
+    }
+  ],
+  "topUpClaims": [
+    {
+      "claim": "refund_cancellation",
+      "status": "supported",
+      "sourceUrl": "https://synthesys.io/ai-refund-policy/",
+      "sourceType": "refund_policy",
+      "note": "Official refund policy says requests must be submitted within 72 hours of purchase and are only eligible if total usage stays below 5 minutes. Cancellations take effect at the end of the current billing cycle.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "workflow_limits",
+      "status": "supported",
+      "sourceUrl": "https://synthesys.io/pricing/",
+      "sourceType": "pricing_page",
+      "note": "Official pricing documents plan-level video credits, voice credits, Sora or VEO persona credits, and maximum slide counts by tier. Business Unlimited is publicly positioned as unlimited only under a fair-use model.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "export_resolution_format",
+      "status": "supported",
+      "sourceUrl": "https://synthesys.io/pricing/",
+      "sourceType": "pricing_page",
+      "note": "Official pricing says Free exports up to 720p, Personal and Creator export up to 1080p, and Business Unlimited exports up to 4K.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "privacy_access_visibility",
+      "status": "partially_supported",
+      "sourceUrl": "https://synthesys.io/ai-privacy-policy/",
+      "sourceType": "privacy_policy",
+      "note": "The privacy policy says client data is not used to train, retrain, or enhance Synthesys models and that clients retain ownership of their data. Public docs do not fully define a complete visibility model for all generated assets and workspaces.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "cautious"
+    }
+  ],
+  "topUpFlags": [
+    {
+      "claim": "watermark",
+      "status": "not_found",
+      "sourceUrl": "https://synthesys.io/pricing/",
+      "sourceType": "pricing_page",
+      "note": "Current public pricing and policy pages clearly document credits, resolutions, and fair-use limits, but do not cleanly resolve watermark behavior for paid exports.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "flag"
+    },
+    {
+      "claim": "commercial_ownership_licensing",
+      "status": "needs_human_review",
+      "sourceUrl": "https://synthesys.io/ai-privacy-policy/",
+      "sourceType": "privacy_policy",
+      "note": "Public docs support client data ownership and a no-training policy, but they do not fully settle broader ownership and commercial-rights language for generated outputs.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "flag"
+    }
+  ]
+}

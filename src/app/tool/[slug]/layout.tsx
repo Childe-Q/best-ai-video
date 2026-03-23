@@ -15,6 +15,7 @@ import { getUseCaseChips, getCapabilityChips } from '@/lib/toolChips';
 import EditorialScore from '@/components/tool/EditorialScore';
 import { getCurrentMonthYear } from '@/lib/utils';
 import { buildBreadcrumbJsonLd } from '@/lib/jsonLd';
+import { getPricingDisplay, getToolPricingSummary } from '@/lib/pricing/display';
 
 interface ToolLayoutProps {
   children: ReactNode;
@@ -33,6 +34,9 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
       `[ToolLayout] 数据串页警告: URL slug="${slug}" 但 tool.slug="${tool.slug}"。请检查 getTool() 是否正确返回了对应 slug 的工具数据。`
     );
   }
+
+  const pricingDisplay = getPricingDisplay(tool);
+  const pricingSummary = getToolPricingSummary(tool);
 
   // Load content JSON and merge with tool.content
   const contentJson = loadToolContent(slug);
@@ -142,22 +146,24 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
                     {/* Pricing Model, Starting Price, and Active Deal */}
                     <div className="mb-2">
                       {/* 2-Column Grid for Pricing Info */}
-                      {(tool.pricing_model || tool.starting_price) && (
-                        <div className="grid grid-cols-2 gap-2 mb-1.5">
-                          {tool.pricing_model && (
-                            <div>
-                              <div className="text-xs text-gray-500 uppercase mb-1">Pricing</div>
-                              <div className="text-sm font-semibold text-gray-900">{tool.pricing_model}</div>
-                            </div>
-                          )}
-                          {tool.starting_price && (
-                            <div>
-                              <div className="text-xs text-gray-500 uppercase mb-1">Starting</div>
-                              <div className="text-sm font-semibold text-gray-900">{tool.starting_price}</div>
-                            </div>
-                          )}
+                      <div className="grid grid-cols-2 gap-2 mb-1.5">
+                        <div>
+                          <div className="text-xs text-gray-500 uppercase mb-1">Pricing</div>
+                          <div className="text-sm font-semibold text-gray-900">
+                            {pricingSummary.verification === 'verified'
+                              ? pricingSummary.status === 'custom' || pricingSummary.status === 'enterprise'
+                                ? 'Custom pricing'
+                                : 'Verified pricing'
+                              : pricingSummary.verification === 'trusted'
+                                ? 'Trusted pricing'
+                              : 'Pricing unverified'}
+                          </div>
                         </div>
-                      )}
+                        <div>
+                          <div className="text-xs text-gray-500 uppercase mb-1">Starting</div>
+                          <div className="text-sm font-semibold text-gray-900">{pricingDisplay.displayText}</div>
+                        </div>
+                      </div>
                       {/* Active Deal - Full Width Highlighted */}
                       {tool.deal && (
                         <div className="bg-green-50 text-green-700 px-3 py-2 rounded-lg text-sm font-medium">
@@ -295,11 +301,11 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
               <VerdictCard
                 reviewContent={tool.review_content || ''}
                 affiliateLink={tool.affiliate_link}
-                hasFreeTrial={tool.has_free_trial}
+                hasFreeTrial={pricingSummary.verification === 'verified' ? tool.has_free_trial : false}
                 rating={tool.rating}
                 toolName={tool.name}
                 bestFor={tool.best_for}
-                startingPrice={tool.starting_price}
+                startingPrice={pricingSummary.verification === 'verified' ? pricingDisplay.displayText : undefined}
                 embedded={true}
                 verdictData={mergedContent?.reviews?.verdict}
               />

@@ -3,7 +3,7 @@
   "slug": "enterprise-ai-video-solutions",
   "title": "Enterprise AI Video Solutions (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares enterprise AI video platforms that can survive procurement and deployment review: security posture, admin controls, integration depth, and large-scale rollout readiness. Tools are grouped by enterprise deployment path: governed training and communications, or programmatic repurposing and knowledge operations. Team-ready business tools without procurement-grade controls are excluded.",
+    "oneLiner": "This page compares enterprise AI video platforms that can survive procurement and deployment review: security posture, admin controls, integration depth, and large-scale rollout readiness. Tools are grouped by enterprise deployment path: governed training and communications, or programmatic repurposing and knowledge operations. The most useful differences now come from evidence-backed deployment signals such as SSO, SCORM, workspace roles, watermark-free paid delivery, and whether data-handling or commercial-use rules are clear enough for procurement review.",
     "boundaries": [
       "Must support procurement-grade deployment signals such as SSO/SAML, admin controls, or integration depth.",
       "Must support enterprise rollout requirements such as security posture, governance, or large-scale operational use.",
@@ -13,7 +13,9 @@
     "comparisonAxes": [
       "security posture",
       "integration depth",
-      "admin rollout"
+      "admin rollout",
+      "governance and access control",
+      "workflow limits and plan gating"
     ]
   },
   "howToChooseSeeds": [
@@ -41,7 +43,9 @@
       "rule": "These platforms fit enterprise training, HR enablement, and internal communications programs that need multilingual avatar delivery, admin control, and a rollout posture that can survive procurement review.",
       "toolSlugs": [
         "synthesia",
-        "deepbrain-ai"
+        "deepbrain-ai",
+        "colossyan",
+        "elai-io"
       ]
     },
     {
@@ -59,73 +63,111 @@
       "slug": "synthesia",
       "verdictSeed": "Leading enterprise video platform for HR, L&D, and corporate training. Reports adoption by 60% of Fortune 100 companies.",
       "pricingSeed": "Enterprise: custom pricing, unlimited minutes",
-      "policySeed": null,
+      "policySeed": "Enterprise posture is anchored in Synthesia's governance and security stack, including AI governance, content integrity, and security-practices coverage rather than just a higher minute allowance",
       "bestForSeed": "Corporate training, L&D, and internal communications",
-      "mainLimitationSeed": null,
+      "mainLimitationSeed": "The strongest controls and rollout features sit behind enterprise contracting, so self-serve plans are not a full proxy for procurement-ready deployment",
       "officialUrl": "https://www.synthesia.io/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/synthesia",
       "logoUrl": "/logos/synthesia.png",
       "sourceUrls": [
-        "https://www.genmedialab.com/reviews/synthesia-review/"
+        "https://www.synthesia.io/pricing",
+        "https://www.synthesia.io/legal/security-practices",
+        "https://www.synthesia.io/legal/ai-governance-practices"
       ],
-      "flags": [
-        "missing-policy-seed",
-        "missing-limitation-seed"
-      ]
+      "flags": []
     },
     {
       "name": "Pictory",
       "slug": "pictory",
       "verdictSeed": "API-first platform for programmatic content repurposing. Offers SSO and brand kits for enterprise teams.",
-      "pricingSeed": "From $19/mo (enterprise API tier may differ)",
-      "policySeed": null,
+      "pricingSeed": "Self-serve plans exist, but enterprise API and governance packaging differ from entry pricing",
+      "policySeed": "Enterprise fit depends on the paid API and team path rather than the free tier, with governance features such as SSO and brand controls attached to the business-oriented rollout",
       "bestForSeed": "Programmatic content repurposing via API",
-      "mainLimitationSeed": null,
+      "mainLimitationSeed": "It is strongest for repurposing and knowledge operations, not for presenter-led enterprise training where avatar governance and multilingual speaker control are the main buying criteria",
       "officialUrl": "https://pictory.ai/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/pictory",
       "logoUrl": "/logos/pictory.png",
       "sourceUrls": [
-        "https://pictory.ai/api-enterprise-2"
+        "https://pictory.ai/api-enterprise-2",
+        "https://pictory.ai/pricing",
+        "https://pictory.ai/features"
       ],
-      "flags": [
-        "missing-pricing-seed",
-        "missing-policy-seed",
-        "missing-limitation-seed"
-      ]
+      "flags": []
     },
     {
       "name": "DeepBrain AI",
       "slug": "deepbrain-ai",
       "verdictSeed": "Enterprise-tier avatar platform with 2,000+ AI presenters and support for 150+ languages. Strongest fit for multilingual marketing at scale.",
-      "pricingSeed": "Enterprise: custom pricing",
-      "policySeed": null,
+      "pricingSeed": "Self-serve and Team plans exist, but procurement-grade rollout sits on Team and Enterprise",
+      "policySeed": "The paid business and enterprise path is where DeepBrain's SAML SSO, SCORM, bulk generation, and governance controls become relevant for procurement review",
       "bestForSeed": "Multilingual marketing and global content at scale",
-      "mainLimitationSeed": null,
+      "mainLimitationSeed": "The enterprise value is real, but the strongest controls and unlimited duration/custom-avatar terms only appear on custom enterprise deals rather than self-serve entry plans",
       "officialUrl": "https://deepbrain.ai/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/deepbrain-ai",
       "logoUrl": "/logos/deepbrain-logo.svg",
       "sourceUrls": [
-        "https://www.aistudios.com/tech-and-ai-explained/synthesia-vs-ai-studios-which-ai-video-generator-is-right-for-you-2026-edition"
+        "https://www.deepbrain.io/pricing",
+        "https://www.deepbrain.io/ai-avatars",
+        "https://www.deepbrain.io/templates"
       ],
-      "flags": [
-        "missing-policy-seed",
-        "missing-limitation-seed"
-      ]
+      "flags": []
+    },
+    {
+      "name": "Colossyan",
+      "slug": "colossyan",
+      "verdictSeed": "Governance-aware training platform with branching scenarios, quizzes, shared workspaces, and enterprise rollout features that fit LMS and onboarding programs.",
+      "pricingSeed": "Self-serve plans available; Business and Enterprise are where SCORM, SAML SSO, and stronger governance appear",
+      "policySeed": "Colossyan becomes materially more procurement-ready on Business and Enterprise, where SCORM export, auto-translation, shared workspaces, role controls, and SAML SSO show up.",
+      "bestForSeed": "Interactive L&D, onboarding, and LMS-driven rollout",
+      "mainLimitationSeed": "Starter is viable for pilots, but the strongest governance and rollout controls sit above the entry tier.",
+      "officialUrl": "https://www.colossyan.com/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/colossyan",
+      "logoUrl": "/logos/colossyan.png",
+      "sourceUrls": [
+        "https://www.colossyan.com/pricing",
+        "https://www.colossyan.com/terms-and-conditions",
+        "https://www.colossyan.com/privacy-policy"
+      ],
+      "flags": []
+    },
+    {
+      "name": "Elai.io",
+      "slug": "elai-io",
+      "verdictSeed": "Structured presenter-video system for enterprise onboarding and internal comms, with role-based workspaces and SCORM or SSO on the enterprise path.",
+      "pricingSeed": "Free proof-of-concept tier; paid self-serve 1080p lane; enterprise path adds workspaces, SSO, and SCORM",
+      "policySeed": "Elai's enterprise value is tied to workspaces, role-based access, SSO, and SCORM export rather than headline entry pricing.",
+      "bestForSeed": "Presenter-led training, onboarding, and internal updates",
+      "mainLimitationSeed": "Minute bundles and seat-gated collaboration still matter, so self-serve plans are better for pilots than procurement-scale rollout.",
+      "officialUrl": "https://elai.io/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/elai-io",
+      "logoUrl": "/logos/tools/elai-io.png",
+      "sourceUrls": [
+        "https://elai.io/pricing",
+        "https://elai.freshdesk.com/support/solutions/articles/73000560715-workspace-settings",
+        "https://elai.freshdesk.com/support/solutions/articles/73000561776-team-plan"
+      ],
+      "flags": []
     }
   ],
   "relatedLinks": {
     "reviewSlugs": [
       "synthesia",
       "pictory",
-      "deepbrain-ai"
+      "deepbrain-ai",
+      "colossyan",
+      "elai-io"
     ],
     "alternativesSlugs": [
       "synthesia",
       "pictory",
-      "deepbrain-ai"
+      "deepbrain-ai",
+      "colossyan",
+      "elai-io"
     ],
     "vsSlugs": [],
     "guideSlugs": []
@@ -143,21 +185,25 @@
     },
     {
       "question": "Which tools already have internal review coverage?",
-      "answerSeed": "Current internal review coverage in this normalized dataset: synthesia, pictory, deepbrain-ai.",
+      "answerSeed": "Current internal review coverage in this normalized dataset: synthesia, pictory, deepbrain-ai, colossyan, elai-io.",
       "sourceToolSlugs": [
         "synthesia",
         "pictory",
-        "deepbrain-ai"
+        "deepbrain-ai",
+        "colossyan",
+        "elai-io"
       ]
     }
   ],
-  "lastReviewed": "2026-03-08T00:45:00Z",
+  "lastReviewed": "2026-03-22T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/enterprise-ai-video-solutions.raw.json",
     "sourceCount": 3,
-    "uniqueToolCount": 3,
+    "uniqueToolCount": 5,
     "needsManualReview": false,
-    "reviewNotes": []
+    "reviewNotes": [
+      "Manual evidence backfill added Colossyan and Elai.io and tightened procurement-oriented governance framing from completed tool evidence."
+    ]
   }
 }

@@ -1,76 +1,68 @@
 {
   "overview": {
     "tldr": {
-      "bestFor": "Training, internal comms, and product explainers needing reliable 1080p MP4 exports",
-      "notFor": "Paid ads using stock avatars, or teams expecting flexible refunds",
-      "why": "Freemium videos are watermarked, licensing restricts paid promotion with stock avatars, and refunds can be limited by customer type"
+      "bestFor": "Training, internal communications, and product explainer teams that need avatar-led delivery with documented 1080p MP4 downloads",
+      "notFor": "Teams planning paid promotion with stock avatars or buyers who need flexible refund terms",
+      "why": "Freemium videos are watermarked, paid-promotion use is restricted for stock avatars, and refund language varies by customer type"
     },
     "miniTest": {
       "prompt": "Create a 45-60 second presenter-style video about [topic] for [audience]. Use a clear hook, 3 key points, and a short closing line. Add captions, keep language policy-safe, and export a standard downloadable MP4",
       "checklist": [
         {
-          "label": "Use case",
-          "value": "Training / onboarding / update / explainer"
+          "label": "Primary workflow fit",
+          "value": "Training / internal comms / product explainer"
         },
         {
-          "label": "Script acceptance",
-          "value": "User reports: moderation can reject scripts"
+          "label": "Freemium watermark",
+          "value": "Expected on Freemium videos"
         },
         {
-          "label": "Generation reliability",
-          "value": "User reports: can stall near 99%"
+          "label": "Watermark removal path",
+          "value": "Requires upgrading and re-generating the video"
         },
         {
-          "label": "Watermark present",
-          "value": "Yes - expected on Freemium plan"
+          "label": "MP4 download resolution",
+          "value": "Standard downloadable MP4 is documented as 1080p"
         },
         {
-          "label": "Downloaded successfully",
-          "value": "Yes/No"
-        },
-        {
-          "label": "Interactive elements used",
-          "value": "May block download"
-        },
-        {
-          "label": "Export resolution",
-          "value": "1080p confirmed for MP4 downloads"
-        },
-        {
-          "label": "Export formats needed",
+          "label": "Export formats",
           "value": "MP4 / WAV / XLIFF / SRT / VTT"
         },
         {
-          "label": "Browser + version",
-          "value": "Chrome / Edge (meets minimum requirements)"
+          "label": "Interactive elements",
+          "value": "Interactive videos may not be downloadable as MP4"
         },
         {
-          "label": "OS",
-          "value": "Windows 10+ / macOS Catalina+"
+          "label": "Paid promotion restriction",
+          "value": "Stock avatars are restricted for paid promotion use"
         },
         {
-          "label": "Intended usage: paid promotion",
-          "value": "Stock avatar ads restricted"
+          "label": "System requirements",
+          "value": "Modern browsers and supported OS versions are required"
+        },
+        {
+          "label": "Refund sensitivity",
+          "value": "Refund wording differs by customer type and should be checked before purchase"
         }
       ],
-      "verdict": "Result: partial. Primary blocker was moderation/download/processing/browser. If you need paid ads or guaranteed refunds, validate licensing and refund terms before scaling"
+      "verdict": "Use this as a source-backed workflow check, not a completed hands-on run. Synthesia fits training, internal comms, and product explainer use when download, licensing, and policy constraints match the team workflow."
     },
     "useCases": [
       {
-        "title": "YouTube Shorts",
-        "why": "Create short presenter explainers, then export MP4 with captions",
+        "title": "Training Videos",
+        "why": "Fits structured onboarding and learning content where avatar-led delivery and caption exports matter more than timeline-heavy editing",
         "linkHref": "/tool/synthesia/pricing",
         "linkText": "Check pricing →"
       },
       {
-        "title": "Marketing Ads",
-        "why": "Needs caution—stock avatars are restricted for paid promotion uses",
+        "title": "Internal Communications",
+        "why": "Useful for internal updates and announcements when teams need presenter-style delivery and documented download formats",
         "linkHref": "/tool/synthesia/features",
         "linkText": "See features →"
       },
       {
-        "title": "Blog-to-video",
-        "why": "Convert blog sections into a script, then export MP4 plus SRT/VTT captions",
+        "title": "Product Explainers",
+        "why": "Works for product walkthroughs and customer education when avatar delivery is the priority and paid-ad restrictions are not the main use case",
         "linkHref": "/vs/synthesia-vs-heygen",
         "linkText": "Compare alternatives →"
       }

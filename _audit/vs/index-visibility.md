@@ -1,6 +1,6 @@
 # VS Index Visibility
 
-Generated: 2026-03-08
+Generated: 2026-03-21
 
 ## Summary
 
@@ -34,14 +34,14 @@ Generated: 2026-03-08
 
 ## Featured slugs
 
-- heygen-vs-invideo
 - heygen-vs-synthesia
-- fliki-vs-heygen
-- invideo-vs-pictory
-- invideo-vs-veed-io
-- descript-vs-veed-io
-- runway-vs-sora
+- heygen-vs-invideo
 - deepbrain-ai-vs-heygen
+- invideo-vs-pictory
+- fliki-vs-invideo
+- fliki-vs-pictory
+- descript-vs-veed-io
+- pika-vs-runway
 
 ## Grouped visibility
 

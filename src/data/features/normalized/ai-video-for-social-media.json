@@ -68,6 +68,7 @@
       "reviewUrl": null,
       "logoUrl": null,
       "sourceUrls": [
+        "https://www.capcut.com/",
         "https://www.capcut.com/resource/6-best-AI-video-tools-for-social-media"
       ],
       "flags": [
@@ -90,6 +91,7 @@
       "reviewUrl": null,
       "logoUrl": null,
       "sourceUrls": [
+        "https://reelbase.io/",
         "https://reelbase.io/blog/best-ai-video-generators-for-tiktok-reels-2024"
       ],
       "flags": [
@@ -112,7 +114,9 @@
       "reviewUrl": "/tool/invideo",
       "logoUrl": "/logos/InVideo_logo.svg",
       "sourceUrls": [
-        "https://invideo.io/pricing"
+        "https://invideo.io/pricing/",
+        "https://invideo.io/make/ai-video-generator/",
+        "https://help.invideo.io/en/collections/9486043-pricing-plans"
       ],
       "flags": []
     },
@@ -121,20 +125,19 @@
       "slug": "deepbrain-ai",
       "verdictSeed": "Professional avatar-driven TikToks with 2,000+ AI avatars, 150+ languages, and 7,000+ TikTok-optimized templates.",
       "pricingSeed": "Free tier available; up to $24/mo for individual creators",
-      "policySeed": null,
+      "policySeed": "Free exports are a short demo path with watermarking, while Personal and higher tiers are the real route for publishable avatar-led social output",
       "bestForSeed": "Professional avatar-driven TikToks and Reels",
-      "mainLimitationSeed": null,
+      "mainLimitationSeed": "DeepBrain AI is heavier and pricier than social-first template tools, and the stronger brand, workspace, and 4K controls only show up on Team or higher tiers",
       "officialUrl": "https://deepbrain.ai/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/deepbrain-ai",
       "logoUrl": "/logos/deepbrain-logo.svg",
       "sourceUrls": [
-        "https://www.aistudios.com/best/top-tiktok-ai-video-generators-of-2026-ultimate-guide"
+        "https://www.deepbrain.io/pricing",
+        "https://www.deepbrain.io/ai-avatars",
+        "https://www.deepbrain.io/templates"
       ],
-      "flags": [
-        "missing-policy-seed",
-        "missing-limitation-seed"
-      ]
+      "flags": []
     }
   ],
   "relatedLinks": {
@@ -169,16 +172,13 @@
       ]
     }
   ],
-  "lastReviewed": "2026-03-07T23:15:00Z",
+  "lastReviewed": "2026-03-21T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/ai-video-for-social-media.raw.json",
     "sourceCount": 4,
     "uniqueToolCount": 4,
-    "needsManualReview": true,
-    "reviewNotes": [
-      "One or more tools still need verified logoUrl coverage.",
-      "One or more tools are missing internal review coverage."
-    ]
+    "needsManualReview": false,
+    "reviewNotes": []
   }
 }

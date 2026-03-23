@@ -6,16 +6,88 @@ import { Tool } from '@/types/tool';
 import { getSEOCurrentYear, getCurrentMonthYear } from '@/lib/utils';
 import HomeToolGrid from '@/components/HomeToolGrid';
 import GlobalScoringRubric from '@/components/GlobalScoringRubric';
+import { filterPromoteSafeLinks, getPageReadiness } from '@/lib/readiness';
 
 // Force cast to Tool[] to ensure type safety if JSON import inference is loose
 const tools: Tool[] = toolsData as Tool[];
+const flagshipToolSlugs = ['heygen', 'invideo', 'fliki'];
+
+function prioritizeFlagshipTools(allTools: Tool[]): Tool[] {
+  const flagshipOrder = new Map(flagshipToolSlugs.map((slug, index) => [slug, index]));
+  const flagship = allTools
+    .filter((tool) => flagshipOrder.has(tool.slug))
+    .sort((a, b) => (flagshipOrder.get(a.slug) ?? 0) - (flagshipOrder.get(b.slug) ?? 0));
+  const rest = allTools.filter((tool) => !flagshipOrder.has(tool.slug));
+  return [...flagship, ...rest];
+}
 
 // Calculate dynamic tool count
 const toolCount = tools.length;
 const displayCount = toolCount >= 10 ? `${toolCount}+` : '';
 const seoYear = getSEOCurrentYear();
 const currentMonthYear = getCurrentMonthYear();
-const startPaths = [
+type StartPathLink = {
+  kind: 'feature' | 'tool' | 'vs';
+  slug: string;
+  href: string;
+  label: string;
+};
+
+type HomepagePrimaryPromo = {
+  slug: string;
+  tool: string;
+  href: string;
+  reviewLabel: string;
+  desc: string;
+  compareSlug: string;
+  compareHref: string;
+  compareLabel: string;
+};
+
+// Homepage core promo slots follow business priority, not editorial flagship ordering.
+const homepagePrimaryPromotedTools: HomepagePrimaryPromo[] = [
+  {
+    slug: 'heygen',
+    tool: 'HeyGen',
+    href: '/tool/heygen',
+    reviewLabel: 'HeyGen review',
+    desc: 'Top AI avatar platform',
+    compareSlug: 'heygen-vs-synthesia',
+    compareHref: canonicalizeVsHref('/vs/heygen-vs-synthesia'),
+    compareLabel: 'HeyGen vs Synthesia',
+  },
+  {
+    slug: 'invideo',
+    tool: 'InVideo',
+    href: '/tool/invideo',
+    reviewLabel: 'InVideo review',
+    desc: 'Fast prompt-to-video pick',
+    compareSlug: 'invideo-vs-heygen',
+    compareHref: canonicalizeVsHref('/vs/invideo-vs-heygen'),
+    compareLabel: 'InVideo vs HeyGen',
+  },
+  {
+    slug: 'fliki',
+    tool: 'Fliki',
+    href: '/tool/fliki',
+    reviewLabel: 'Fliki review',
+    desc: 'Fast text-to-video and voiceover pick',
+    compareSlug: 'fliki-vs-heygen',
+    compareHref: canonicalizeVsHref('/vs/fliki-vs-heygen'),
+    compareLabel: 'Fliki vs HeyGen',
+  },
+];
+
+type StartPath = {
+  title: string;
+  stage: string;
+  verdict: string;
+  href: string;
+  cta: string;
+  links: StartPathLink[];
+};
+
+const startPaths: StartPath[] = [
   {
     title: 'Use case',
     stage: 'Early-stage research',
@@ -23,8 +95,18 @@ const startPaths = [
     href: '/features',
     cta: 'Open feature hub',
     links: [
-      { href: '/features/ai-avatar-video-generators', label: 'Avatar tools' },
-      { href: '/features/content-repurposing-ai-tools', label: 'Repurposing tools' },
+      {
+        kind: 'feature' as const,
+        slug: 'best-ai-video-generators',
+        href: '/features/best-ai-video-generators',
+        label: 'Best overall picks',
+      },
+      {
+        kind: 'feature' as const,
+        slug: 'text-to-video-ai-tools',
+        href: '/features/text-to-video-ai-tools',
+        label: 'Text-to-video tools',
+      },
     ],
   },
   {
@@ -33,10 +115,12 @@ const startPaths = [
     verdict: 'Start here if one product is already in play and you need fit fast.',
     href: '/#tools-section',
     cta: 'Browse tool reviews',
-    links: [
-      { href: '/tool/invideo', label: 'InVideo review' },
-      { href: '/tool/heygen', label: 'HeyGen review' },
-    ],
+    links: homepagePrimaryPromotedTools.slice(0, 2).map((tool) => ({
+      kind: 'tool' as const,
+      slug: tool.slug,
+      href: tool.href,
+      label: tool.reviewLabel,
+    })),
   },
   {
     title: 'Comparison',
@@ -45,34 +129,30 @@ const startPaths = [
     href: '/vs',
     cta: 'Open VS pages',
     links: [
-      { href: canonicalizeVsHref('/vs/heygen-vs-synthesia'), label: 'HeyGen vs Synthesia' },
-      { href: canonicalizeVsHref('/vs/invideo-vs-heygen'), label: 'InVideo vs HeyGen' },
+      {
+        kind: 'vs' as const,
+        slug: 'heygen-vs-synthesia',
+        href: canonicalizeVsHref('/vs/heygen-vs-synthesia'),
+        label: 'HeyGen vs Synthesia',
+      },
+      {
+        kind: 'vs' as const,
+        slug: 'heygen-vs-invideo',
+        href: canonicalizeVsHref('/vs/invideo-vs-heygen'),
+        label: 'InVideo vs HeyGen',
+      },
     ],
   },
 ];
-const topPicks = [
-  {
-    tool: 'InVideo',
-    href: '/tool/invideo',
-    desc: 'Best for YouTube automation',
-    compareHref: canonicalizeVsHref('/vs/invideo-vs-heygen'),
-    compareLabel: 'InVideo vs HeyGen',
-  },
-  {
-    tool: 'HeyGen',
-    href: '/tool/heygen',
-    desc: 'Top AI avatar platform',
-    compareHref: canonicalizeVsHref('/vs/heygen-vs-synthesia'),
-    compareLabel: 'HeyGen vs Synthesia',
-  },
-  {
-    tool: 'Fliki',
-    href: '/tool/fliki',
-    desc: 'Fastest text-to-video',
-    compareHref: canonicalizeVsHref('/vs/fliki-vs-pictory'),
-    compareLabel: 'Fliki vs Pictory',
-  },
-];
+const topPicks = homepagePrimaryPromotedTools.map((tool) => ({
+  slug: tool.slug,
+  tool: tool.tool,
+  href: tool.href,
+  desc: tool.desc,
+  compareSlug: tool.compareSlug,
+  compareHref: tool.compareHref,
+  compareLabel: tool.compareLabel,
+}));
 
 export function generateMetadata(): Metadata {
   return {
@@ -81,7 +161,31 @@ export function generateMetadata(): Metadata {
   };
 }
 
-export default function Home() {
+export default async function Home() {
+  const prioritizedTools = prioritizeFlagshipTools(tools);
+  const readyStartPaths = await Promise.all(
+    startPaths.map(async (path) => ({
+      ...path,
+      links: await filterPromoteSafeLinks(path.links),
+    }))
+  );
+  const readyTopPicks = (
+    await Promise.all(
+      topPicks.map(async (item) => {
+        const toolReadiness = await getPageReadiness('tool', item.slug);
+        if (!toolReadiness.ready) {
+          return null;
+        }
+
+        const comparisonReadiness = await getPageReadiness('vs', item.compareSlug);
+        return {
+          ...item,
+          compareHref: comparisonReadiness.ready ? item.compareHref : null,
+        };
+      })
+    )
+  ).filter((item): item is NonNullable<typeof item> => Boolean(item));
+
   return (
     <div className="min-h-screen bg-[#FCFBF7] pb-20">
       {/* Hero Section */}
@@ -154,7 +258,7 @@ export default function Home() {
           </div>
           <div className="mt-8 border-y border-black/6">
             <div className="grid gap-2 xl:grid-cols-3 xl:gap-0">
-              {startPaths.map((path) => (
+              {readyStartPaths.map((path) => (
                 <article
                   key={path.title}
                   className="group flex flex-col px-1 py-5 sm:px-0 xl:px-4 xl:py-6"
@@ -201,7 +305,7 @@ export default function Home() {
               </Link>
             </div>
             <div className="mt-4 grid gap-3 lg:grid-cols-3">
-            {topPicks.map((item) => (
+            {readyTopPicks.map((item) => (
               <Link
                 key={item.tool}
                 href={item.href}
@@ -241,7 +345,7 @@ export default function Home() {
             <span>Methodology applies across tools</span>
           </div>
         </div>
-        <HomeToolGrid tools={tools} />
+        <HomeToolGrid tools={prioritizedTools} />
       </main>
     </div>
   );

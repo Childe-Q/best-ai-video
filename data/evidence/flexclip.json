@@ -1,0 +1,91 @@
+{
+  "slug": "flexclip",
+  "lastUpdated": "2026-03-21T18:45:00+08:00",
+  "sources": {
+    "pricing": "https://www.flexclip.com/pricing.html",
+    "features": "https://www.flexclip.com/features/",
+    "help": "https://www.flexclip.com/pricing.html"
+  },
+  "nuggets": [
+    {
+      "text": "FlexClip Free includes 720p downloads, a free trial of AI features, one stock video and one stock audio per project, a 12-project save limit, and videos up to 10 minutes.",
+      "theme": "pricing",
+      "sourceUrl": "https://www.flexclip.com/pricing.html",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Plus is priced at $11.99 monthly or $19.99 monthly-equivalent without annual savings and adds 1080p downloads, unlimited projects, no watermark, Brand Kit, custom fonts, and up to 100 templates.",
+      "theme": "pricing",
+      "sourceUrl": "https://www.flexclip.com/pricing.html",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Plus also includes 3600 AI credits per year, FlexClip premium resources, 30GB cloud space, 100GB video hosting space, and up to 5 stock videos and 5 stock audio items per project.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.flexclip.com/pricing.html",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Business is priced at $19.99 monthly and adds 4K downloads, 9600 AI credits per year, unlimited stock video and audio, 100GB cloud space, and 1TB video hosting space.",
+      "theme": "pricing",
+      "sourceUrl": "https://www.flexclip.com/pricing.html",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Business plan also increases saved templates to 200 and preserves no-watermark export with unlimited video length.",
+      "theme": "export",
+      "sourceUrl": "https://www.flexclip.com/pricing.html",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The pricing FAQ says exceeding your plan's stock-video limit per project can add a FlexClip watermark even on higher plans if the resource usage exceeds plan limits.",
+      "theme": "export",
+      "sourceUrl": "https://www.flexclip.com/pricing.html",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The features page frames FlexClip as an easy-to-use editor for trim, music, text, voiceover, merger, watermarking, aspect ratio, resolution, and slideshow-style assembly.",
+      "theme": "features",
+      "sourceUrl": "https://www.flexclip.com/features/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "FlexClip also highlights media-library access to millions of stock photos, footage, and music for template-led business and social workflows.",
+      "theme": "stock",
+      "sourceUrl": "https://www.flexclip.com/features/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Feature copy emphasizes simple browser editing tools such as split, rotate, zoom, transitions, filters, speed control, text animation, and photo-to-video rather than heavy professional post-production.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.flexclip.com/features/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "FlexClip's pricing page offers a 7-day money-back guarantee and uses SSL-secured checkout for subscription purchases.",
+      "theme": "support",
+      "sourceUrl": "https://www.flexclip.com/pricing.html",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    }
+  ]
+}

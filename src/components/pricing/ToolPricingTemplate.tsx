@@ -17,6 +17,8 @@ import { filterPaidPlans, isFreePlan } from '@/lib/pricing/filterPaidPlans';
 import { deriveRecommendations } from '@/lib/pricing/deriveRecommendations';
 import PricingCard from '@/components/PricingCard';
 import CTAButton from '@/components/CTAButton';
+import { isExplicitFreePlan } from '@/lib/pricing/display';
+import type { PricingVerification } from '@/lib/pricing/display';
 
 interface ToolPricingTemplateProps {
   // Tool metadata
@@ -74,6 +76,8 @@ interface ToolPricingTemplateProps {
   affiliateLink: string;
   hasFreeTrial: boolean;
   startingPrice: string;
+  pricingStatusHint?: string | null;
+  pricingVerification?: PricingVerification;
 }
 
 function getNumericPlanPrice(planPrice: PricingPlan['price'], billing: 'monthly' | 'yearly'): number | null {
@@ -107,6 +111,8 @@ export default function ToolPricingTemplate({
   affiliateLink,
   hasFreeTrial,
   startingPrice,
+  pricingStatusHint,
+  pricingVerification = 'unverified',
 }: ToolPricingTemplateProps) {
   const [billing, setBilling] = useState<'monthly' | 'yearly'>('monthly');
 
@@ -394,7 +400,7 @@ export default function ToolPricingTemplate({
     
     if ('monthly' in plan.price && typeof plan.price.monthly === 'object' && 'amount' in plan.price.monthly) {
       const amount = getNumericPlanPrice(plan.price, 'monthly');
-      if (amount === 0) return 'Free';
+      if (amount === 0) return isExplicitFreePlan(plan) ? 'Free' : null;
       
       if (currentBilling === 'yearly' && 'yearly' in plan.price && typeof plan.price.yearly === 'object') {
         const yearlyAmount = getNumericPlanPrice(plan.price, 'yearly');
@@ -626,7 +632,11 @@ export default function ToolPricingTemplate({
   const shouldUseSeparateFreeLayout = isInVideo && freePlans.length > 0 && paidPlansForGrid.length >= 3;
 
   // Verdict data - use pre-computed text from server to avoid hydration mismatch
-  const verdictTitle = verdict?.title?.replace('{price}', startingPrice) || `Is ${toolName} worth ${startingPrice}?`;
+  const canUsePriceInVerdictTitle =
+    pricingVerification === 'verified' && /^Starts at \$/.test(startingPrice);
+  const verdictTitle =
+    verdict?.title?.replace('{price}', startingPrice) ||
+    (canUsePriceInVerdictTitle ? `Is ${toolName} worth ${startingPrice}?` : `Is ${toolName} worth it?`);
   // Use server-computed verdict text (deterministic, no hydration issues)
   const verdictText = serverVerdictText || verdict?.text || `If you need to produce videos regularly and want to avoid manual asset sourcing, the time savings can justify the cost. The Free plan works for testing, but watermarks and limits make it unsuitable for publishing. Start with monthly billing to test your actual usage before committing to annual plans.`;
 
@@ -642,6 +652,9 @@ export default function ToolPricingTemplate({
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Compare plans, understand credit usage, and find the right tier for your production volume.
             </p>
+            {pricingStatusHint && (
+              <p className="mt-3 text-sm font-medium text-gray-500">{pricingStatusHint}</p>
+            )}
             
             {/* Trust Bar: Last updated + Source + Disclosure */}
             <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs text-gray-500">
@@ -813,7 +826,10 @@ export default function ToolPricingTemplate({
               </>
             ) : (
               <div className="bg-white rounded-2xl p-8 text-center mb-12">
-                <p className="text-gray-500">Pricing information coming soon.</p>
+                <p className="text-gray-700 font-semibold">{startingPrice}</p>
+                {pricingStatusHint && (
+                  <p className="mt-2 text-sm text-gray-500">{pricingStatusHint}</p>
+                )}
               </div>
             )}
           </div>

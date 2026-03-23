@@ -1,0 +1,159 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "Teams, creators, and developers who want talking-photo output, lightweight avatar clips, or embedded avatar workflows without jumping straight into heavier enterprise avatar stacks",
+      "notFor": "Buyers who need deeper training workflows, premium presenter realism for enterprise rollout, or clean branded exports on low tiers",
+      "why": "D-ID is strongest when the main job is animating still images, creating short spokesperson-style clips, or embedding avatar video into an app through API access. Current official pricing, help, and policy pages make the commercial-use boundary and usage rules clearer than the branding story: lower tiers stay narrow, Pro is the first clearly commercial self-serve tier, and higher plans expand minutes, avatars, voice tools, and branding control."
+    },
+    "miniTest": {
+      "prompt": "Create one 30-second talking-photo video from a still image, test one short spokesperson-style clip, and verify whether the output is good enough for lightweight product demo, support, or embedded-agent use.",
+      "checklist": [
+        {
+          "label": "Goal",
+          "value": "Talking-photo / avatar clip / lightweight marketing or product demo"
+        },
+        {
+          "label": "Best test tier",
+          "value": "Trial for workflow validation, Pro or above if commercial use matters, and higher plans if branding control or heavier usage limits matter"
+        },
+        {
+          "label": "Branding and watermark rules",
+          "value": "Check the current plan docs carefully before publishable use because D-ID's public pages are not perfectly aligned on watermark treatment by tier"
+        },
+        {
+          "label": "Photo animation quality",
+          "value": "Check whether a still image turns into a believable short talking visual"
+        },
+        {
+          "label": "Avatar flexibility",
+          "value": "Check whether the tool is sufficient for short-form use instead of longer presenter or training workflows"
+        },
+        {
+          "label": "API usefulness",
+          "value": "Check whether the API, embedded agents, and shared minute pool are actually useful for the product workflow"
+        },
+        {
+          "label": "Translation limits",
+          "value": "Check whether up to 5-minute translated videos on paid self-serve tiers are enough for the intended use case"
+        },
+        {
+          "label": "Cost posture",
+          "value": "Compare whether the lower entry price offsets the narrower feature set and the branding limits on lower tiers"
+        }
+      ],
+      "verdict": "Result: strongest when the buyer needs talking-photo output, lightweight avatar clips, or API-accessible animation at a lower cost. The trade-off is breadth and export policy clarity: D-ID is narrower than more complete avatar platforms, commercial-use rights are clearer than branding rules, and publishable output still needs plan-by-plan verification."
+    },
+    "useCases": [
+      {
+        "title": "Budget avatar evaluation",
+        "why": "D-ID is a strong fit when the buyer wants affordable spokesperson-style output without moving into a heavier enterprise avatar stack.",
+        "linkHref": "/features/ai-avatar-video-generators",
+        "linkText": "See avatar guide →"
+      },
+      {
+        "title": "Creative marketing and lightweight demos",
+        "why": "Useful when the workflow starts with still images or short scripts and the goal is a simple talking visual rather than a deeper production pipeline.",
+        "linkHref": "/tool/d-id/features",
+        "linkText": "See features →"
+      },
+      {
+        "title": "Embedded avatar and API path",
+        "why": "Best fit when the team wants avatar generation, translation, or embedded agents inside its own app rather than only standalone exports.",
+        "linkHref": "/tool/d-id/pricing",
+        "linkText": "Check pricing →"
+      },
+      {
+        "title": "Enterprise vs lightweight avatar path",
+        "why": "Best fit when comparing simple talking-photo output against more structured business-oriented presenter tools.",
+        "linkHref": "/features/enterprise-ai-video-solutions",
+        "linkText": "See enterprise guide →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "Talking-photo generation for animating still images into short speaking visuals",
+      "API access across the full plan ladder for videos, agents, translation, and avatar streaming workflows",
+      "Plan ladder that moves from trial validation to a clearly commercial-use self-serve tier on Pro, then to higher-capacity plans with broader branding control and usage headroom",
+      "Voice cloning, embedded agents, translated videos, subtitle export, and third-party voice import on higher paid tiers",
+      "Lower-cost entry than many broader avatar platforms, but with tighter branding rules and workflow limits on lower tiers"
+    ]
+  },
+  "pros": [
+    "Affordable entry point for avatar and talking-photo workflows",
+    "Photo animation use case is more distinct than generic avatar output",
+    "API access is available even on entry plans, which is useful for developer-led implementations",
+    "Commercial-use rights, usage limits, and billing rules are more clearly documented than many lighter avatar tools",
+    "Good fit for short-form experiments, support flows, and lightweight marketing content"
+  ],
+  "cons": [
+    "Feature set is narrower than more complete avatar platforms",
+    "Longer-form presenter and training workflows are less compelling",
+    "Branding and watermark treatment still need plan-by-plan verification because D-ID's public pages are not fully aligned on the exact lower-tier behavior",
+    "Creative teams may outgrow it once they need broader production control or cleaner branded exports"
+  ],
+  "reviews": {
+    "verdict": {
+      "bottomLine": "D-ID is best for talking-photo and lightweight avatar workflows where cost and API access matter more than full platform breadth. It is less attractive for teams that need deeper presenter quality, training workflows, or cleaner low-tier branded publishing.",
+      "bestFor": [
+        "Talking-photo videos",
+        "Budget avatar experiments",
+        "Developer-led avatar integrations"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Who is D-ID best for?",
+        "answer": "D-ID is best for teams, creators, and developers who want affordable talking-photo or lightweight avatar video output."
+      },
+      {
+        "question": "Does D-ID have a free way to test the product?",
+        "answer": "Yes. The current pricing page lists a 14-day Trial with 3 total minutes, API access, 100 plus stock avatars, and a full-screen watermark, so it works best as a workflow test rather than a publishing tier."
+      },
+      {
+        "question": "What changes when you move from Lite to Pro?",
+        "answer": "Lite stays narrow and non-commercial, while Pro is the first clearly commercial self-serve tier. Pro also adds premium avatars, more monthly usage headroom, more personal-avatar capacity, and voice cloning, but branding and watermark treatment should still be rechecked against the current official plan docs."
+      },
+      {
+        "question": "What makes D-ID different from other avatar tools?",
+        "answer": "Its clearest differentiator is talking-photo animation plus API access across all plans, which makes it useful for lightweight creative and embedded-product workflows."
+      },
+      {
+        "question": "What is the main trade-off with D-ID?",
+        "answer": "The main trade-off is depth versus cost. D-ID is affordable and distinct for photo animation, but it offers a narrower workflow than fuller avatar platforms, and buyers should verify branding and export rules carefully before assuming a low-tier plan is ready for publishable client work."
+      },
+      {
+        "question": "What should buyers confirm before paying for publishable use?",
+        "answer": "Confirm three things in the live official docs: whether the chosen tier supports commercial use, how branding or watermark rules apply on that tier, and whether the current billing and cancellation terms match your buying posture. D-ID's public pages are clearer on commercial-use rights and billing rules than on the exact watermark behavior across every plan."
+      },
+      {
+        "question": "What should buyers know about cancellation and refunds?",
+        "answer": "Official terms say subscriptions can be canceled, downgrades usually take effect on the next billing cycle, and paid fees are generally non-refundable unless D-ID explicitly states otherwise. That makes D-ID easier to reason about from a billing-policy standpoint than from a branding-policy standpoint."
+      },
+      {
+        "question": "When should a buyer skip D-ID?",
+        "answer": "Skip D-ID when the team needs enterprise-grade presenter workflows, longer-form training video production, or broader creative tooling beyond lightweight avatar output."
+      }
+    ]
+  },
+  "sources": {
+    "d-id.com": {
+      "type": "OFFICIAL_WEBSITE",
+      "howToVerify": "Check the official D-ID product and pricing pages for talking-photo, agents, translation, and API claims",
+      "suggestedQuery": "site:d-id.com pricing talking photo API agents voice clone"
+    },
+    "d-id.com/pricing": {
+      "type": "OFFICIAL_PRICING",
+      "howToVerify": "Check the official pricing page for minutes, watermarks, voice clones, translation limits, and security claims",
+      "suggestedQuery": "site:d-id.com/pricing D-ID watermark API minutes SAML security"
+    },
+    "d-id.com/ethics": {
+      "type": "OFFICIAL_POLICY",
+      "howToVerify": "Check the official ethics page for watermark and transparency framing",
+      "suggestedQuery": "site:d-id.com/ethics D-ID watermark synthetic content"
+    }
+  },
+  "related": {
+    "comparisons": []
+  }
+}

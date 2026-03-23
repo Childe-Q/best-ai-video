@@ -1,0 +1,154 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "Content marketers, publishers, and comms teams that want to turn articles, PDFs, or pasted text into branded videos fast",
+      "notFor": "Buyers who need deeper timeline editing, original scene generation, or self-serve creative control beyond an article-to-video system",
+      "why": "Lumen5 is strongest when the source already exists as written content and the team wants AI script generation, brand-safe templates, and fast repurposing into social or marketing video. Current pricing and knowledge-base pages make the operating rules clearer than exact price points: the free Community tier is for testing, paid upgrades remove the branded outro, Starter is the first clear 1080p self-serve tier, and higher business tiers are where workspaces, permissions, and stronger sharing controls show up."
+    },
+    "miniTest": {
+      "prompt": "Take one published article or PDF, turn it into a short branded summary video, test AI Script Composer variations, apply brand colors and logo treatment, then export one draft for social distribution.",
+      "checklist": [
+        {
+          "label": "Goal",
+          "value": "Article-to-video / blog repurposing / content marketing summary"
+        },
+        {
+          "label": "Plan tier",
+          "value": "Free for a proof of concept; Starter is the first clear self-serve 1080p publish tier, while Business and Enterprise are where stronger workspace and team controls show up"
+        },
+        {
+          "label": "Watermark present",
+          "value": "Community keeps a branded outro; paid upgrades remove Lumen5 branding, and higher tiers add custom watermark and broader brand-control options"
+        },
+        {
+          "label": "Article parsing quality",
+          "value": "Check whether the tool extracts the right key points from the source article"
+        },
+        {
+          "label": "Template depth",
+          "value": "Check whether Starter-level brand controls are enough or if you really need Pro brand kits and custom watermarks"
+        },
+        {
+          "label": "Brand consistency",
+          "value": "Check whether logo, colors, fonts, and overall style stay consistent through the video"
+        },
+        {
+          "label": "Localization need",
+          "value": "If the workflow needs regular translations or shared workspaces, check the current Business and Enterprise docs because those controls are plan-gated"
+        },
+        {
+          "label": "Duration ceiling",
+          "value": "Confirm whether the 10-minute max video duration fits the use case"
+        }
+      ],
+      "verdict": "Result: strongest when the team wants fast article-to-video output with brand control and little editing friction. The trade-off is that Lumen5 is more of a repurposing system than a flexible editor, and serious governance only shows up on the higher business tiers."
+    },
+    "useCases": [
+      {
+        "title": "Blog-to-video workflows",
+        "why": "Lumen5 is a strong fit when the workflow starts from blog posts, URLs, or PDFs and the goal is fast summary-style video output.",
+        "linkHref": "/features/content-repurposing-ai-tools",
+        "linkText": "See repurposing guide →"
+      },
+      {
+        "title": "Brand-safe marketing distribution",
+        "why": "Useful when a marketing team wants repeatable awareness videos with brand colors, fonts, watermarks, and consistent templates.",
+        "linkHref": "/tool/lumen5/features",
+        "linkText": "See features →"
+      },
+      {
+        "title": "Repurposing-first evaluation",
+        "why": "Best fit when comparing written-content repurposing against tools focused on clipping recordings, transcript editing, or generating new scenes from scratch.",
+        "linkHref": "/tool/pictory",
+        "linkText": "Compare adjacent workflow →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "Article-to-video workflow that starts from URLs, PDFs, pasted text, or outlines",
+      "AI Script Composer that generates multiple script angles from the source content",
+      "Template-led editing aimed at fast repurposing rather than bespoke production",
+      "Brand controls covering colors, fonts, branded outros, custom watermarks, aspect ratios, and larger brand kits on higher tiers",
+      "AI Voiceover, Talking Head overlays, multilingual translation, and publishing controls that expand from solo use into Business and Enterprise workspace governance"
+    ]
+  },
+  "pros": [
+    "Fast for article-to-video repurposing from blogs, PDFs, and pasted text",
+    "AI Script Composer makes it easier for non-editors to get to a first draft quickly",
+    "Starter and above add meaningful brand controls for 1080p marketing output",
+    "Knowledge-base docs cover billing, privacy settings, and licensing well enough for cautious business evaluation"
+  ],
+  "cons": [
+    "Editing depth is limited compared with more flexible editors or transcript-first tools",
+    "Template-led output can start to feel repetitive without manual customization",
+    "Self-serve plans stay single-user, so larger teams need Business or Enterprise for workspaces and permissions",
+    "Maximum video duration stays at 10 minutes across self-serve tiers"
+  ],
+  "reviews": {
+    "verdict": {
+      "bottomLine": "Lumen5 is best for content teams that already publish written content and want a fast path to branded marketing video. It is less attractive for buyers who need deeper editing, original generation, or broader self-serve team controls than the single-user tiers offer.",
+      "bestFor": [
+        "Article-to-video repurposing",
+        "Content marketing summaries",
+        "Branded blog distribution",
+        "Marketing teams scaling text-first video production"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Who is Lumen5 best for?",
+        "answer": "Lumen5 is best for content marketers, publishers, and brand teams repurposing written content into short branded videos without using a traditional editor."
+      },
+      {
+        "question": "Does Lumen5 have a free plan?",
+        "answer": "Yes. Lumen5 keeps a free Community Plan for testing article-to-video workflows before upgrading to paid publishing tiers."
+      },
+      {
+        "question": "What is the first real publish-ready Lumen5 tier?",
+        "answer": "Starter is still the clearest self-serve publish-ready tier because it adds 1080p export and stronger branding controls. Lower paid tiers reduce Lumen5 branding, but Starter is where the self-serve brand package becomes meaningfully stronger."
+      },
+      {
+        "question": "What is the main trade-off with Lumen5?",
+        "answer": "The main trade-off is speed versus flexibility. Lumen5 is fast for text-first repurposing, but it offers less editing depth and can feel templated without customization."
+      },
+      {
+        "question": "How does Lumen5 handle teams and enterprise controls?",
+        "answer": "Current help docs show that self-serve plans are built for solo use, while higher business tiers add multiple workspaces, project permissions, team members, and enterprise-only controls such as SSO."
+      },
+      {
+        "question": "What should buyers know about billing and refunds?",
+        "answer": "Lumen5's billing FAQ says subscriptions can be paused for up to 3 months and canceled at the end of the current billing cycle. The money-back policy also gives a 7-day refund window on upgrades."
+      },
+      {
+        "question": "What are the biggest constraints buyers should notice before choosing Lumen5?",
+        "answer": "Watch the 10-minute maximum video duration on self-serve plans, the translation caps outside Team, and the fact that Lumen5 is much better for repurposing existing written content than for original scene-by-scene creative production."
+      }
+    ]
+  },
+  "sources": {
+    "lumen5.com/pricing": {
+      "type": "OFFICIAL_PRICING",
+      "howToVerify": "Check the official pricing page for plan limits, translations, workspaces, and team controls",
+      "suggestedQuery": "site:lumen5.com/pricing Lumen5 Basic Starter Pro Team translations SSO"
+    },
+    "lumen5.com/features": {
+      "type": "OFFICIAL_PRODUCT",
+      "howToVerify": "Check the official features page for AI Script Composer, article-to-video workflow, AI Voiceover, and Talking Head",
+      "suggestedQuery": "site:lumen5.com/features Lumen5 AI Script Composer Talking Head article to video"
+    },
+    "lumen5.com": {
+      "type": "OFFICIAL_WEBSITE",
+      "howToVerify": "Check the official product pages and customer examples",
+      "suggestedQuery": "site:lumen5.com Lumen5 marketers publishers brands video content"
+    }
+  },
+  "related": {
+    "comparisons": [
+      {
+        "slug": "invideo-vs-pictory",
+        "title": "InVideo vs Pictory"
+      }
+    ]
+  }
+}

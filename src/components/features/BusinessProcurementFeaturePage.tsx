@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import ToolCard from '@/components/features/ToolCard';
 import FeaturesFAQ from '@/components/features/FeaturesFAQ';
+import { isPromoteSafeFeatureHref, toPromoteSafeFeatureHref } from '@/components/features/filterPromoteSafeFeatureHrefs';
 import { track } from '@/lib/features/track';
 import {
   FeatureCriteriaItem,
@@ -18,6 +19,7 @@ interface BusinessProcurementFeaturePageProps {
   pageData: FeaturePageData;
   groups: FeatureGroupDisplay[];
   recommendedReadingLinks: FeatureRecommendedReadingLink[];
+  promoteSafeFeatureHrefs: string[];
 }
 
 type BusinessProcurementMode = 'business-light' | 'procurement-heavy';
@@ -459,8 +461,28 @@ export default function BusinessProcurementFeaturePage({
   pageData,
   groups,
   recommendedReadingLinks,
+  promoteSafeFeatureHrefs,
 }: BusinessProcurementFeaturePageProps) {
-  const override = businessProcurementOverrides[pageData.slug];
+  const rawOverride = businessProcurementOverrides[pageData.slug];
+  const promoteSafeFeatureHrefSet = new Set(promoteSafeFeatureHrefs);
+  const safeOverride = rawOverride
+    ? {
+        ...rawOverride,
+        wrongFitHref: toPromoteSafeFeatureHref(rawOverride.wrongFitHref, promoteSafeFeatureHrefSet),
+        fitCards: rawOverride.fitCards.filter((card) => isPromoteSafeFeatureHref(card.href, promoteSafeFeatureHrefSet)),
+        sectionOverrides: Object.fromEntries(
+          Object.entries(rawOverride.sectionOverrides).map(([sectionTitle, sectionOverride]) => [
+            sectionTitle,
+            {
+              ...sectionOverride,
+              contextualExits: sectionOverride.contextualExits.filter((item) =>
+                isPromoteSafeFeatureHref(item.href, promoteSafeFeatureHrefSet)
+              ),
+            },
+          ])
+        ),
+      }
+    : null;
 
   useEffect(() => {
     track('page_view', {
@@ -469,9 +491,11 @@ export default function BusinessProcurementFeaturePage({
     });
   }, [featureSlug]);
 
-  if (!override) {
+  if (!safeOverride) {
     return null;
   }
+
+  const override = safeOverride;
 
   const recommendedGroups: ReadingGroup[] = readingOrder
     .map((linkType) => ({
@@ -549,11 +573,11 @@ export default function BusinessProcurementFeaturePage({
                 <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Leave this page if...</p>
                 <p className="mt-3 text-sm leading-7 text-gray-800">{override.wrongFitText}</p>
                 <div className="mt-5">
-                  <Link
-                    href={override.wrongFitHref}
+                <Link
+                  href={safeOverride.wrongFitHref ?? '/features'}
                     className="inline-flex items-center rounded-xl border-2 border-black bg-[#FFF16A] px-4 py-2.5 text-sm font-semibold text-gray-900 shadow-[3px_3px_0px_0px_#000]"
                   >
-                    {override.wrongFitLabel}
+                    {safeOverride.wrongFitLabel}
                   </Link>
                 </div>
               </div>
@@ -589,7 +613,7 @@ export default function BusinessProcurementFeaturePage({
           </div>
 
           <div className={`mt-6 grid gap-3 ${isBusinessLight ? 'xl:grid-cols-3' : 'lg:grid-cols-3'}`}>
-            {override.fitCards.map((card) => (
+            {safeOverride.fitCards.map((card) => (
               <article
                 key={card.title}
                 className={`rounded-2xl border border-gray-200 bg-[#FCFBF7] ${isProcurementHeavy ? 'p-4' : 'p-5'}`}
@@ -696,7 +720,7 @@ export default function BusinessProcurementFeaturePage({
           </div>
 
           {groups.map((group) => {
-            const sectionOverride = override.sectionOverrides[group.groupTitle];
+                const sectionOverride = safeOverride.sectionOverrides[group.groupTitle];
             const sectionId = group.groupTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
             return (

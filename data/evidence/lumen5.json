@@ -1,0 +1,139 @@
+{
+  "slug": "lumen5",
+  "lastUpdated": "2026-03-21T18:45:00+08:00",
+  "sources": {
+    "pricing": "https://lumen5.com/pricing/",
+    "features": "https://lumen5.com/features/",
+    "faq": "https://lumen5.com/pricing/"
+  },
+  "nuggets": [
+    {
+      "text": "Lumen5's features page positions the product around turning blog posts, PDFs, URLs, pasted text, and outlines into branded videos with an article-to-video workflow.",
+      "theme": "workflow",
+      "sourceUrl": "https://lumen5.com/features/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The features page says AI Script Composer analyzes the source text, surfaces key messages, and generates multiple script variations that can be adjusted for tone, pacing, and length.",
+      "theme": "features",
+      "sourceUrl": "https://lumen5.com/features/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Lumen5's product page highlights brand customization controls such as custom colors, custom fonts, watermarks, graphics, layouts, and multiple aspect ratios for reformatting videos.",
+      "theme": "branding",
+      "sourceUrl": "https://lumen5.com/features/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The features page also advertises AI Voiceover with more than 40 voices and multilingual options, plus a Talking Head feature for presenter clips and overlays inside Lumen5 videos.",
+      "theme": "voice",
+      "sourceUrl": "https://lumen5.com/features/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Lumen5's Free plan is positioned as a forever-free entry point with 5 videos per month, 2-minute video duration, and a branded outro.",
+      "theme": "pricing",
+      "sourceUrl": "https://lumen5.com/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Basic is priced at $19 per month billed yearly and adds 3,500 AI media credits, no Lumen5 branding, and longer AI voiceover support.",
+      "theme": "pricing",
+      "sourceUrl": "https://lumen5.com/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Starter is priced at $59 per month billed yearly and upgrades output to 1080p, adds 12,000 AI media credits, access to 50M plus stock assets, and custom fonts plus colors.",
+      "theme": "export",
+      "sourceUrl": "https://lumen5.com/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Pro is priced at $149 per month billed yearly and adds 36,000 AI media credits, 500M stock assets, custom watermarks, uploaded fonts, multiple blueprints, and multiple brand kits.",
+      "theme": "branding",
+      "sourceUrl": "https://lumen5.com/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Across the comparison table, self-serve plans stay single-user, maximum video duration remains 10 minutes, and AI voiceover minutes step up from 240 to 720 to 2160 minutes per year.",
+      "theme": "usage",
+      "sourceUrl": "https://lumen5.com/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Team is a custom enterprise tier that adds multiple users, custom workspaces, unlimited translations, SSO, approval workflow, DAM integration, enterprise security, invoiced billing, and a dedicated customer success manager.",
+      "theme": "team",
+      "sourceUrl": "https://lumen5.com/pricing/",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T18:45:00+08:00",
+      "confidence": "high"
+    }
+  ],
+  "topUpClaims": [
+    {
+      "claim": "refund_cancellation",
+      "status": "supported",
+      "sourceUrl": "https://help.lumen5.com/en/article/billing-faq-hsa1w9/",
+      "sourceType": "help_center_article",
+      "note": "Official billing docs say subscriptions can be canceled at any time, cancellations take effect at the end of the current billing cycle, and accounts can be paused for up to 3 months. The same billing guidance also references a 7-day money-back test window on upgrades.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "workflow_limits",
+      "status": "supported",
+      "sourceUrl": "https://help.lumen5.com/en/article/how-long-can-a-lumen5-video-be-d8np5f/",
+      "sourceType": "help_center_article",
+      "note": "Official help says Lumen5 videos are limited to 10 minutes regardless of subscription level.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "privacy_access_visibility",
+      "status": "supported",
+      "sourceUrl": "https://help.lumen5.com/en/article/changing-your-video-privacy-settings-1br4je9/",
+      "sourceType": "help_center_article",
+      "note": "Official help says published videos can be set to public, anyone-with-a-link, or private. Private videos are only accessible to the owner or team members sharing the workspace on Enterprise.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "commercial_ownership_licensing",
+      "status": "supported",
+      "sourceUrl": "https://help.lumen5.com/en/article/can-i-monetize-my-videos-or-create-them-for-my-clients-jwdt3l/",
+      "sourceType": "help_center_article",
+      "note": "Official licensing guidance says users have full commercial rights to the videos they create with Lumen5 and can create client work, while commercial use still depends on using editorial-only media correctly.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "watermark",
+      "status": "partially_supported",
+      "sourceUrl": "https://help.lumen5.com/en/article/our-money-back-guarantee-xcr4p1/",
+      "sourceType": "help_center_article",
+      "note": "Official billing guidance says the free Community plan keeps the branded outro and that paid upgrades remove Lumen5 branding. Higher-tier custom watermark controls are documented separately, so this is a bounded branding note rather than a full watermark policy matrix.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "cautious"
+    }
+  ],
+  "topUpFlags": []
+}

@@ -15,8 +15,8 @@ export async function generateMetadata() {
   };
 }
 
-export default function AlternativesHubPage() {
-  const data = getAlternativesHubData();
+export default async function AlternativesHubPage() {
+  const data = await getAlternativesHubData();
 
   return <AlternativesHubClient tools={data.tools} topics={data.topics} />;
 }

@@ -2496,33 +2496,59 @@ export function buildTopicAlternativesLongformData(slug: string): AlternativesTe
   };
 }
 
-export function getAlternativesHubData(): {
+export async function getAlternativesHubData(): Promise<{
   tools: Array<{ name: string; slug: string; href: string; summary: string }>;
   topics: Array<{ title: string; slug: string; href: string; intro: string }>;
-} {
-  const tools = getAllTools()
+}> {
+  const { filterPromoteSafeLinks } = await import('@/lib/readiness');
+  const toolCandidates = getAllTools()
     .slice()
     .sort((a, b) => (b.rating || 0) - (a.rating || 0))
     .slice(0, 24)
     .map((tool) => ({
+      kind: 'toolAlternatives' as const,
       name: tool.name,
       slug: tool.slug,
       href: `/tool/${tool.slug}/alternatives`,
       summary: `Compare by pricing, editing control, and workflow speed for ${tool.name}.`,
     }));
 
-  const topics = getTopicAlternativesSlugs()
+  const topicCandidates = getTopicAlternativesSlugs()
     .map((slug) => {
       const topic = readTopicAlternativesData(slug);
       if (!topic) return null;
       return {
+        kind: 'alternativesTopic' as const,
         title: topic.title,
         slug,
         href: `/alternatives/topic/${slug}`,
         intro: topic.intro,
       };
     })
-    .filter((item): item is { title: string; slug: string; href: string; intro: string } => Boolean(item));
+    .filter(
+      (
+        item
+      ): item is {
+        kind: 'alternativesTopic';
+        title: string;
+        slug: string;
+        href: string;
+        intro: string;
+      } => Boolean(item)
+    );
+
+  const tools = (await filterPromoteSafeLinks(toolCandidates)).map((item) => ({
+    name: item.name,
+    slug: item.slug,
+    href: item.href,
+    summary: item.summary,
+  }));
+  const topics = (await filterPromoteSafeLinks(topicCandidates)).map((item) => ({
+    title: item.title,
+    slug: item.slug,
+    href: item.href,
+    intro: item.intro,
+  }));
 
   return { tools, topics };
 }

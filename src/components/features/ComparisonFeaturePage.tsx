@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 import FeaturesFAQ from '@/components/features/FeaturesFAQ';
+import { resolvePromoteSafeFeatureHref } from '@/components/features/filterPromoteSafeFeatureHrefs';
 import { track } from '@/lib/features/track';
 import {
   FeatureFaqItem,
@@ -17,6 +18,7 @@ interface ComparisonFeaturePageProps {
   pageData: FeaturePageData;
   groups: FeatureGroupDisplay[];
   recommendedReadingLinks: FeatureRecommendedReadingLink[];
+  promoteSafeFeatureHrefs?: string[];
 }
 
 type ComparisonSummaryCard = {
@@ -65,6 +67,12 @@ type ComparisonToolGroup = {
   title: string;
   items: FeatureRecommendedReadingLink[];
 };
+
+const SAFE_FEATURE_HUB_EXIT = {
+  href: '/features',
+  label: 'Browse feature hub',
+  note: 'Return to the feature hub if the narrower comparison path is not promote-safe yet.',
+} as const;
 
 function hasDisplayValue(value?: string | null): value is string {
   return typeof value === 'string' && value.trim().length > 0;
@@ -402,8 +410,10 @@ export default function ComparisonFeaturePage({
   pageData,
   groups,
   recommendedReadingLinks,
+  promoteSafeFeatureHrefs,
 }: ComparisonFeaturePageProps) {
   const override = getComparisonOverride(pageData.slug);
+  const promoteSafeFeatureHrefSet = new Set(promoteSafeFeatureHrefs ?? []);
   const recommendedGroups: ComparisonToolGroup[] = comparisonReadingOrder
     .map((linkType) => ({
       title: getRecommendedSectionTitle(linkType),
@@ -421,6 +431,36 @@ export default function ComparisonFeaturePage({
   if (!override) {
     return null;
   }
+
+  const broaderShortlist = resolvePromoteSafeFeatureHref(
+    '/features/best-ai-video-generators',
+    promoteSafeFeatureHrefSet,
+    SAFE_FEATURE_HUB_EXIT.href
+  );
+  const safeLaneOverrides = Object.fromEntries(
+    Object.entries(override.laneOverrides).map(([laneTitle, laneOverride]) => {
+      const resolved = resolvePromoteSafeFeatureHref(
+        laneOverride.nextStepHref,
+        promoteSafeFeatureHrefSet,
+        SAFE_FEATURE_HUB_EXIT.href
+      );
+
+      return [
+        laneTitle,
+        resolved.usedFallback
+          ? {
+              ...laneOverride,
+              nextStepHref: SAFE_FEATURE_HUB_EXIT.href,
+              nextStepLabel: SAFE_FEATURE_HUB_EXIT.label,
+              nextStepNote: SAFE_FEATURE_HUB_EXIT.note,
+            }
+          : {
+              ...laneOverride,
+              nextStepHref: resolved.href ?? laneOverride.nextStepHref,
+            },
+      ];
+    })
+  ) as Record<string, ComparisonLaneOverride>;
 
   const matrixToolOrder = groups.flatMap((group) => group.tools);
   const matrixToolSlugs = matrixToolOrder.map((tool) => tool.toolSlug);
@@ -492,10 +532,10 @@ export default function ComparisonFeaturePage({
                 </p>
                 <div className="mt-5">
                   <Link
-                    href="/features/best-ai-video-generators"
+                    href={broaderShortlist.href ?? SAFE_FEATURE_HUB_EXIT.href}
                     className="inline-flex items-center rounded-xl border-2 border-black bg-[#FFF16A] px-4 py-2.5 text-sm font-semibold text-gray-900 shadow-[3px_3px_0px_0px_#000]"
                   >
-                    Go back to the broader generators shortlist
+                    {broaderShortlist.usedFallback ? 'Go to the feature hub' : 'Go back to the broader generators shortlist'}
                   </Link>
                 </div>
               </div>
@@ -623,7 +663,7 @@ export default function ComparisonFeaturePage({
 
           <div className="grid gap-6 xl:grid-cols-2">
             {groups.map((group) => {
-              const laneOverride = override.laneOverrides[group.groupTitle];
+              const laneOverride = safeLaneOverrides[group.groupTitle];
 
               return (
                 <section key={group.groupTitle} className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm">
@@ -647,10 +687,17 @@ export default function ComparisonFeaturePage({
                   </div>
 
                   <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-gray-200 pt-4">
-                    <Link href={laneOverride?.nextStepHref ?? '/features/best-ai-video-generators'} className="text-sm font-bold text-indigo-600 hover:text-indigo-700">
-                      {laneOverride?.nextStepLabel ?? 'Go back to the broader shortlist'}
+                    <Link
+                      href={laneOverride?.nextStepHref ?? broaderShortlist.href ?? SAFE_FEATURE_HUB_EXIT.href}
+                      className="text-sm font-bold text-indigo-600 hover:text-indigo-700"
+                    >
+                      {laneOverride?.nextStepLabel ??
+                        (broaderShortlist.usedFallback ? SAFE_FEATURE_HUB_EXIT.label : 'Go back to the broader shortlist')}
                     </Link>
-                    <span className="text-xs leading-6 text-gray-500">{laneOverride?.nextStepNote}</span>
+                    <span className="text-xs leading-6 text-gray-500">
+                      {laneOverride?.nextStepNote ??
+                        (broaderShortlist.usedFallback ? SAFE_FEATURE_HUB_EXIT.note : undefined)}
+                    </span>
                   </div>
                 </section>
               );
@@ -677,9 +724,15 @@ export default function ComparisonFeaturePage({
               <p className="text-sm font-bold text-gray-900">Already leaning Pika?</p>
               <p className="mt-2 text-sm leading-6 text-gray-600">Open the review if fast social experimentation is the real requirement.</p>
             </Link>
-            <Link href="/features/best-ai-video-generators" className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
-              <p className="text-sm font-bold text-gray-900">Not ready for head-to-head?</p>
-              <p className="mt-2 text-sm leading-6 text-gray-600">Go back to the broad shortlist if you still need route-level guidance.</p>
+            <Link href={broaderShortlist.href ?? SAFE_FEATURE_HUB_EXIT.href} className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
+              <p className="text-sm font-bold text-gray-900">
+                {broaderShortlist.usedFallback ? 'Need the feature hub instead?' : 'Not ready for head-to-head?'}
+              </p>
+              <p className="mt-2 text-sm leading-6 text-gray-600">
+                {broaderShortlist.usedFallback
+                  ? 'Return to the feature hub if the broader shortlist route is not promote-safe yet.'
+                  : 'Go back to the broad shortlist if you still need route-level guidance.'}
+              </p>
             </Link>
           </div>
         </section>

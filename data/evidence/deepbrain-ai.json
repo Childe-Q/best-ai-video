@@ -1,0 +1,91 @@
+{
+  "slug": "deepbrain-ai",
+  "lastUpdated": "2026-03-21T17:10:00+08:00",
+  "sources": {
+    "pricing": "https://www.deepbrain.io/pricing",
+    "product": "https://www.deepbrain.io/",
+    "help": "https://www.deepbrain.io/pricing"
+  },
+  "nuggets": [
+    {
+      "text": "DeepBrain AI's Free tier includes 3 exports, videos up to 3 minutes, 1 custom avatar, 16 generative credits, and 720p export with watermark included.",
+      "theme": "pricing",
+      "sourceUrl": "https://www.deepbrain.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:10:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Personal starts at $24 per month and includes unlimited exports, videos up to 30 minutes, 3 custom avatars, 60 generative credits, 1080p export, and no watermark.",
+      "theme": "pricing",
+      "sourceUrl": "https://www.deepbrain.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:10:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Team starts at $55 per month for 1 seat and includes 150 generative credits, 4K export, team collaboration workspace, custom brand kit, and multi-avatar scenes.",
+      "theme": "team",
+      "sourceUrl": "https://www.deepbrain.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:10:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Enterprise adds unlimited video duration, unlimited custom avatars, flexible credits, priority video processing, and enterprise-grade SAML SSO.",
+      "theme": "security",
+      "sourceUrl": "https://www.deepbrain.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:10:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The pricing page lists one-click translation, proofread AI dubbing scripts, subtitle upload and download, and dubbing SRT or ASS upload on higher tiers.",
+      "theme": "localization",
+      "sourceUrl": "https://www.deepbrain.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:10:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "DeepBrain AI positions language support at 30 plus languages on Free and 150 plus languages with 1,000 plus voices on paid plans.",
+      "theme": "localization",
+      "sourceUrl": "https://www.deepbrain.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:10:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The platform advertises 2,000 plus AI-generated avatars across all plans, with stock avatar counts rising from 40 plus on Free to 155 plus on Team and Enterprise.",
+      "theme": "avatars",
+      "sourceUrl": "https://www.deepbrain.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:10:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Personal includes unlimited photo avatars, AI dubbing with SRT or ASS upload, 7,000 plus templates, 3 million plus Shutterstock images, and no watermark.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.deepbrain.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:10:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The pricing page also lists screen recording with avatar, topic-to-video, script-to-video, URL-to-video, docs-to-video, product-to-video, and bulk video generation features.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.deepbrain.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:10:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Enterprise additionally lists SCORM export, bulk video generation, 24/7 priority technical support, and a dedicated account manager.",
+      "theme": "enterprise",
+      "sourceUrl": "https://www.deepbrain.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:10:00+08:00",
+      "confidence": "high"
+    }
+  ]
+}

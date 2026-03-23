@@ -1,10 +1,10 @@
 # VS Matrix Report
 
-Generated: 2026-03-08
+Generated: 2026-03-21
 
 ## Summary
 
-- Total pages before dedupe: 11
+- Total pages before dedupe: 12
 - Total pages after dedupe: 21
 - Duplicate redirects: 1
 - Added canonical comparisons: 10

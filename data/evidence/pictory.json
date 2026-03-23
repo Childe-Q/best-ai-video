@@ -1,0 +1,139 @@
+{
+  "slug": "pictory",
+  "lastUpdated": "2026-03-21T14:00:00+08:00",
+  "sources": {
+    "pricing": "https://pictory.ai/pricing",
+    "features": "https://pictory.ai/features",
+    "faq": "https://pictory.ai/faq"
+  },
+  "nuggets": [
+    {
+      "text": "The local Pictory tool data defines the core workflow around blog-to-video, edit video using text, auto highlight, and auto captions.",
+      "theme": "workflow",
+      "sourceUrl": "https://pictory.ai/features",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T14:00:00+08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "Pictory's positioning in local product data centers on repurposing webinars, Zoom calls, podcasts, and articles into shorter publishable videos.",
+      "theme": "workflow",
+      "sourceUrl": "https://pictory.ai/features",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T14:00:00+08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "The Free tier is positioned as a testing entry point with 15 minutes total, 720p export, and a visible watermark.",
+      "theme": "usage",
+      "sourceUrl": "https://pictory.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T14:00:00+08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "Starter is modeled at 200 export minutes per month with 1080p export, 50 AI credits, and no watermark.",
+      "theme": "export",
+      "sourceUrl": "https://pictory.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T14:00:00+08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "Pro expands monthly export capacity to 600 minutes and adds Getty Images plus advanced features.",
+      "theme": "usage",
+      "sourceUrl": "https://pictory.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T14:00:00+08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "Team expands monthly export capacity to 1800 minutes and adds team collaboration with dedicated support.",
+      "theme": "team",
+      "sourceUrl": "https://pictory.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T14:00:00+08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "Pictory's pricing HTML explains that export minutes apply only when videos are exported, not when they are previewed or shared inside the account.",
+      "theme": "usage",
+      "sourceUrl": "https://pictory.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T14:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The same pricing page says Team plan export-minute limits are shared among all team members.",
+      "theme": "team",
+      "sourceUrl": "https://pictory.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T14:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Pictory's pricing page offers a free 14-day trial for paid plans.",
+      "theme": "usage",
+      "sourceUrl": "https://pictory.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T14:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The pricing HTML highlights bundled libraries and services including ElevenLabs, Getty Images, and Storyblocks.",
+      "theme": "stock",
+      "sourceUrl": "https://pictory.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T14:00:00+08:00",
+      "confidence": "high"
+    }
+  ],
+  "topUpClaims": [
+    {
+      "claim": "watermark",
+      "status": "supported",
+      "sourceUrl": "https://kb.pictory.ai/en/articles/8468876-how-to-remove-the-pictory-watermark-and-branding-from-my-video",
+      "sourceType": "help_center_article",
+      "note": "Official help says videos downloaded during the Free Trial include Pictory branding and that subscribing to a paid plan removes the watermark on newly downloaded videos.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "refund_cancellation",
+      "status": "supported",
+      "sourceUrl": "https://kb.pictory.ai/en/articles/8468806-how-to-cancel-the-subscription",
+      "sourceType": "help_center_article",
+      "note": "Official help says subscriptions can be canceled from Billing, stay usable until the current term ends, and downloaded output is restricted after expiry. Current terms also state that paid accounts are non-refundable.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "workflow_limits",
+      "status": "supported",
+      "sourceUrl": "https://kb.pictory.ai/en/articles/8468935-frequently-asked-questions-teams-plan",
+      "sourceType": "help_center_article",
+      "note": "Official help says unused project quota does not roll over, project quota renews on the first of the month, and cancellation takes effect at the end of the current billing cycle.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "privacy_access_visibility",
+      "status": "supported",
+      "sourceUrl": "https://kb.pictory.ai/en/articles/8468939-why-can-t-my-teammates-view-projects-or-assets-in-the-workspace",
+      "sourceType": "help_center_article",
+      "note": "Official help says projects in a team's workspace are not automatically shared with everyone and must be manually shared with the team or selected team members.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "commercial_ownership_licensing",
+      "status": "partially_supported",
+      "sourceUrl": "https://kb.pictory.ai/en/articles/8468881-are-videos-created-on-pictory-copyright-free",
+      "sourceType": "help_center_article",
+      "note": "Official help directly supports usage rights for stock visuals and music sourced through Pictory's library, describing them as licensed and royalty-free when downloaded, but it does not by itself settle broader ownership claims for every output type.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "cautious"
+    }
+  ],
+  "topUpFlags": []
+}

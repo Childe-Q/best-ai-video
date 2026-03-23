@@ -1,0 +1,92 @@
+{
+  "slug": "descript",
+  "lastUpdated": "2026-03-21T16:30:00+08:00",
+  "sources": {
+    "pricing": "https://www.descript.com/pricing",
+    "features": "https://www.descript.com/features",
+    "faq": "https://www.descript.com/faq",
+    "help": "https://help.descript.com/"
+  },
+  "nuggets": [
+    {
+      "text": "Descript Free includes 60 minutes of media per month, 100 one-time AI credits, and 720p watermark-free export.",
+      "theme": "pricing",
+      "sourceUrl": "https://www.descript.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T16:30:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Hobbyist includes 10 media hours per month, 400 AI credits per month, and 1080p watermark-free export.",
+      "theme": "pricing",
+      "sourceUrl": "https://www.descript.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T16:30:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Creator adds 30 media hours plus 5 bonus hours, 800 monthly AI credits plus 500 bonus credits, and 4K watermark-free export.",
+      "theme": "export",
+      "sourceUrl": "https://www.descript.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T16:30:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Business adds 40 media hours plus 10 bonus hours, 1500 monthly AI credits plus 1000 bonus credits, Brand Studio, and priority support.",
+      "theme": "team",
+      "sourceUrl": "https://www.descript.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T16:30:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Paid tiers expose Underlord, Studio Sound, Remove Filler Words, Create Clips, AI speech, and Regenerate, while Free lists only limited use.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.descript.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T16:30:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Creator also adds full access to Underlord, 20+ more AI tools, the latest AI video models, and an unlimited royalty-free stock media library.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.descript.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T16:30:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Descript's product page positions the core workflow as instant transcription followed by editing the media by editing the text.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.descript.com/features",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T16:30:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The feature page highlights Studio Sound, Remove Filler Words, captions, translation, avatars, Quick Design, and generated B-roll as built-in AI tools.",
+      "theme": "features",
+      "sourceUrl": "https://www.descript.com/features",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T16:30:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Remote recording supports up to 10 room participants on all listed tiers, with monthly recording hours increasing from 2 to 25 hours depending on plan.",
+      "theme": "recording",
+      "sourceUrl": "https://www.descript.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T16:30:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The pricing FAQ says you do not need a credit card to try Descript's Free plan, and the same page states the company is SOC 2 Type II compliant.",
+      "theme": "security",
+      "sourceUrl": "https://www.descript.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T16:30:00+08:00",
+      "confidence": "high"
+    }
+  ]
+}

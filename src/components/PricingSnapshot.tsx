@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { PricingPlan } from '@/types/tool';
 import { CheckIcon } from '@heroicons/react/24/solid';
+import { isExplicitContactSalesPlan, isExplicitFreePlan } from '@/lib/pricing/display';
 
 interface PricingSnapshotProps {
   plans: PricingPlan[];
@@ -34,7 +35,8 @@ export default function PricingSnapshot({ plans, affiliateLink, toolSlug }: Pric
   }
 
   // Helper function to get price string (supports multiple formats)
-  const getPriceString = (price: string | { monthly: string | { amount: number; currency: string; period: string }; yearly?: string | { amount: number; currency: string; period: string } } | { amount: number; currency: string; period: string } | undefined, useYearly: boolean = false): string => {
+  const getPriceString = (plan: PricingPlan, useYearly: boolean = false): string => {
+    const price = plan.price;
     if (!price) return 'N/A';
     if (typeof price === 'string') {
       return price; // Old format: string
@@ -52,7 +54,10 @@ export default function PricingSnapshot({ plans, affiliateLink, toolSlug }: Pric
       // If selected is an object (new format)
       if (typeof selected === 'object' && selected !== null) {
         if (selected.amount === 0) {
-          return 'Free';
+          if (isExplicitContactSalesPlan(plan)) {
+            return 'Custom pricing';
+          }
+          return isExplicitFreePlan(plan) ? 'Free' : 'N/A';
         }
         const currency = selected.currency === 'USD' ? '$' : selected.currency + ' ';
         return `${currency}${selected.amount}`;
@@ -61,7 +66,10 @@ export default function PricingSnapshot({ plans, affiliateLink, toolSlug }: Pric
     // Old format with amount/currency/period (direct object, not nested)
     if ('amount' in price && 'currency' in price && 'period' in price && !('monthly' in price)) {
       if (price.amount === 0) {
-        return (price as any).unitPriceNote || 'Free';
+        if (isExplicitContactSalesPlan(plan)) {
+          return 'Custom pricing';
+        }
+        return isExplicitFreePlan(plan) ? 'Free' : 'N/A';
       }
       const currency = price.currency === 'USD' ? '$' : price.currency + ' ';
       return `${currency}${price.amount}`;
@@ -70,71 +78,19 @@ export default function PricingSnapshot({ plans, affiliateLink, toolSlug }: Pric
   };
 
   // Helper function to check if price is enterprise/custom
-  const isEnterprisePrice = (price: string | { monthly: string | { amount: number; currency: string; period: string }; yearly?: string | { amount: number; currency: string; period: string } } | { amount: number; currency: string; period: string } | undefined): boolean => {
-    if (!price) return false;
-    if (typeof price === 'string') {
-      return price.toLowerCase() === 'custom' || price.toLowerCase() === 'contact';
-    }
-    // Check monthly/yearly format (new object structure)
-    if ('monthly' in price) {
-      const monthly = price.monthly;
-      if (typeof monthly === 'string') {
-        return monthly.toLowerCase() === 'custom' || monthly.toLowerCase() === 'contact';
-      }
-      if (typeof monthly === 'object' && monthly !== null) {
-        // Check if it's enterprise (amount is 0 and has custom pricing note)
-        const unitPriceNote = (price as any).unitPriceNote;
-        if (unitPriceNote && typeof unitPriceNote === 'string' && unitPriceNote.toLowerCase().includes('custom')) {
-          return true;
-        }
-        // Enterprise plans might have amount 0 with period 'year'
-        if (monthly.amount === 0 && monthly.period === 'year') {
-          return true;
-        }
-      }
-    }
-    // Check amount/currency/period format (old format)
-    if ('amount' in price && 'currency' in price && 'period' in price && !('monthly' in price)) {
-      const unitPriceNote = (price as any).unitPriceNote;
-      if (unitPriceNote && typeof unitPriceNote === 'string') {
-        return unitPriceNote.toLowerCase().includes('custom');
-      }
-      // Enterprise plans might have amount 0 with period 'year'
-      if (price.amount === 0 && price.period === 'year') {
-        return true;
-      }
-      return false;
-    }
-    return false;
+  const isEnterprisePrice = (plan: PricingPlan): boolean => {
+    return isExplicitContactSalesPlan(plan);
   };
 
   // Helper function to check if price is free
-  const isFreePrice = (price: string | { monthly: string | { amount: number; currency: string; period: string }; yearly?: string | { amount: number; currency: string; period: string } } | { amount: number; currency: string; period: string } | undefined): boolean => {
-    if (!price) return false;
-    if (typeof price === 'string') {
-      return price.toLowerCase() === 'free' || price === '$0';
-    }
-    // Check monthly/yearly format (new object structure)
-    if ('monthly' in price) {
-      const monthly = price.monthly;
-      if (typeof monthly === 'string') {
-        return monthly.toLowerCase() === 'free' || monthly === '$0';
-      }
-      if (typeof monthly === 'object' && monthly !== null) {
-        return monthly.amount === 0 && monthly.period !== 'year'; // Free plan, not Enterprise
-      }
-    }
-    // Check amount/currency/period format (old format)
-    if ('amount' in price && 'currency' in price && 'period' in price && !('monthly' in price)) {
-      return price.amount === 0 && price.period !== 'year'; // Free plan, not Enterprise
-    }
-    return false;
+  const isFreePrice = (plan: PricingPlan): boolean => {
+    return isExplicitFreePlan(plan);
   };
 
   // Determine background color based on plan type
   const getBackgroundColor = (plan: PricingPlan): string => {
-    const isEnterprise = isEnterprisePrice(plan.price);
-    const isFree = isFreePrice(plan.price);
+    const isEnterprise = isEnterprisePrice(plan);
+    const isFree = isFreePrice(plan);
     
     // Free & Enterprise: Light gray background
     if (isFree || isEnterprise) {
@@ -152,8 +108,8 @@ export default function PricingSnapshot({ plans, affiliateLink, toolSlug }: Pric
       return 'border-2 border-pink-600';
     }
     // Free & Enterprise: transparent or very subtle gray
-    const isEnterprise = isEnterprisePrice(plan.price);
-    const isFree = isFreePrice(plan.price);
+    const isEnterprise = isEnterprisePrice(plan);
+    const isFree = isFreePrice(plan);
     if (isFree || isEnterprise) {
       return 'border border-transparent';
     }
@@ -162,7 +118,7 @@ export default function PricingSnapshot({ plans, affiliateLink, toolSlug }: Pric
 
   // Format price for display
   const formatPrice = (plan: PricingPlan, useYearly: boolean = false): string => {
-    const priceStr = getPriceString(plan.price, useYearly);
+    const priceStr = getPriceString(plan, useYearly);
     if (!priceStr || priceStr === 'N/A') return 'N/A';
     
     // Handle string format
@@ -231,8 +187,8 @@ export default function PricingSnapshot({ plans, affiliateLink, toolSlug }: Pric
         const badgeText = (plan as any).ribbonText || plan.badge || '';
         // Force highlight if it's the 2nd card (Standard) - Index-based fallback
         const isPopular = (badgeText.includes('Popular') || badgeText.includes('Best Value') || plan.name.includes('Standard') || index === 1);
-        const isEnterprise = isEnterprisePrice(plan.price);
-        const isFree = isFreePrice(plan.price);
+        const isEnterprise = isEnterprisePrice(plan);
+        const isFree = isFreePrice(plan);
         
         // Check if Custom pricing (same logic as PricingCard)
         const planId = String((plan as any).id || '').toLowerCase();

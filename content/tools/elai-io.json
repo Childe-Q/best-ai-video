@@ -1,80 +1,64 @@
 {
   "overview": {
     "tldr": {
-      "bestFor": "Teams that want 1080p avatar videos with a simple web workflow",
-      "notFor": "Light monthly users who want unused minutes to roll over",
-      "why": "Free exports are watermarked, monthly minutes expire, and commercial/refund terms need careful review"
+      "bestFor": "Teams that want text-first presenter videos, localization support, and a simple web workflow without assembling multiple avatar and voice tools",
+      "notFor": "Buyers who need deep editing control, open-ended generative video workflows, or a clearer self-serve usage model than Elai's minute bundles provide",
+      "why": "Elai is strongest when the workflow starts from scripts, presentations, or URLs and the team wants avatars, languages, voices, and brand controls inside one browser-based system. Current official pricing, help, and policy pages make the self-serve structure clearer than exact price points: Free is only a proof-of-concept lane, the first paid self-serve tier is the 1080p no-watermark lane, the higher team tier adds 4K and collaboration, and Enterprise is where workspaces, SSO, and broader governance become meaningful."
     },
     "miniTest": {
-      "prompt": "Create a 45-60 second avatar video explaining [topic] for [audience]. Use a neutral, factual tone, add on-screen headings for each point, and include captions. Export the final video and note minutes used",
+      "prompt": "Create a 45-60 second avatar video explaining [topic] for [audience], then test one presentation-to-video or URL-to-video input path, add captions, and export the final video while tracking minutes and resolution.",
       "checklist": [
         {
           "label": "Goal",
           "value": "Training / onboarding / product demo / internal update"
         },
         {
+          "label": "Plan tier",
+          "value": "Free for a proof of concept; the first paid self-serve tier is the 1080p no-watermark lane; the higher team tier matters when 4K or collaboration matters"
+        },
+        {
           "label": "Watermark present",
-          "value": "Yes - expected on Free plan"
+          "value": "Use Free only as a test tier; Creator and above remove the watermark on current official plan docs"
         },
         {
           "label": "Export resolution",
           "value": "1080p / 4K based on plan"
         },
         {
-          "label": "Export format",
-          "value": "MP4"
-        },
-        {
-          "label": "Render time for 60 seconds",
-          "value": "User reports: can be slow"
-        },
-        {
-          "label": "Template availability",
-          "value": "User reports: limited templates"
-        },
-        {
           "label": "Avatar expressiveness",
-          "value": "User reports: limited gestures"
+          "value": "Check whether stock avatars or one of the custom avatar types is good enough for the target audience"
         },
         {
-          "label": "Minutes used this run",
-          "value": "Track usage"
+          "label": "Input path",
+          "value": "Check whether script, presentation, or URL input gives the fastest usable result"
         },
         {
-          "label": "Rollover expectation",
-          "value": "Monthly unused minutes expire"
+          "label": "Localization need",
+          "value": "Check whether the language and voice options are enough for the target rollout"
         },
         {
-          "label": "Annual vs monthly fit",
-          "value": "Monthly / annual upfront minutes"
-        },
-        {
-          "label": "Intended usage is commercial",
-          "value": "Licensing/commercial rights need verification"
-        },
-        {
-          "label": "Cancellation path",
-          "value": "Confirmed in account settings"
+          "label": "Usage bundle fit",
+          "value": "Confirm whether monthly minute bundles are enough, because monthly credits do not roll over while annual plans front-load usage"
         }
       ],
-      "verdict": "Result: partial. Biggest constraint was watermark/minutes expiry/render time/templates/avatar motion. If commercial usage or refunds matter, verify the exact terms before scaling"
+      "verdict": "Result: strongest when the buyer wants a browser-based avatar workflow that can start from text, presentations, or URLs and then localize the output. The main trade-off is that Elai feels more like a structured presenter-video system than a flexible editing or generative studio, and self-serve usage is still governed by minute bundles and billing-cycle rules."
     },
     "useCases": [
       {
-        "title": "YouTube Shorts",
-        "why": "Produce quick 1080p explainers, then swap in your own b-roll",
+        "title": "Training and onboarding videos",
+        "why": "Elai is a strong fit when the workflow centers on structured presenter-led explainers with multilingual rollout needs.",
+        "linkHref": "/features/enterprise-ai-video-solutions",
+        "linkText": "See enterprise guide →"
+      },
+      {
+        "title": "Presentation-to-video workflows",
+        "why": "Useful when the team already works from decks or documents and wants a faster path to narrated presenter video.",
         "linkHref": "/tool/elai-io/pricing",
         "linkText": "Check pricing →"
       },
       {
-        "title": "Marketing Ads",
-        "why": "Needs caution—commercial rights and ad usage terms need verification",
-        "linkHref": "/tool/elai-io/features",
-        "linkText": "See features →"
-      },
-      {
-        "title": "Blog-to-video",
-        "why": "Turn a post into a short script and export an MP4 summary cut",
+        "title": "Avatar platform evaluation",
+        "why": "Best fit when the buyer wants custom avatar options and localization without jumping straight to a heavier enterprise stack.",
         "linkHref": "/vs/elai-io-vs-synthesia",
         "linkText": "Compare alternatives →"
       }
@@ -82,111 +66,85 @@
   },
   "features": {
     "keyFeatures": [
-      "Free plan videos include visible watermark",
-      "Creator plan supports 1080p Full HD exports",
-      "Team and Enterprise plans support up to 4K exports",
-      "Monthly minutes do not roll over; unused minutes expire",
-      "Annual plans receive all minutes upfront",
-      "Web-based; requires computer and stable internet connection",
-      "Royalty-free media library access included (images/videos/icons)",
-      "Selfie Avatar option available on pricing"
+      "Text-first presenter video workflow with script, URL, and presentation input paths",
+      "80 plus avatars, 75 plus languages, and 450 plus voices in the product positioning",
+      "Four custom avatar modes: Selfie, Studio, Photo, and Animated mascot",
+      "Current plan docs position the first paid self-serve tier at 1080p with no watermark, while the higher team tier adds Ultra 4K HD and multi-user collaboration",
+      "Enterprise layer adds workspaces, role-based access, SSO, brand kit, premium support, and broader multi-user rollout"
     ]
   },
   "pros": [
-    "1080p exports available on Creator plan",
-    "Clear rule: monthly minutes expire, no rollover",
-    "Annual plan minutes provided upfront",
-    "Simple web-based setup, minimal requirements",
-    "Straightforward cancellation steps in help docs",
-    "Built-in royalty-free media options available"
+    "1080p exports are available on Creator without jumping straight to enterprise pricing",
+    "Supports multiple structured input paths including text, URLs, and presentations",
+    "Custom avatar options are broader than many lightweight presenter tools",
+    "Enterprise layer adds real team and governance controls like workspaces, roles, and SSO"
   ],
   "cons": [
-    "Free plan watermark limits professional publishing",
-    "User reports: rendering can be slow for short videos",
-    "User reports: fewer templates than major competitors",
-    "User reports: limited avatar gestures and expressiveness",
-    "Commercial rights wording is unclear and needs verification"
+    "Usage is still governed by minute bundles rather than a simpler unlimited model",
+    "The workflow is less attractive for buyers who need deep editing or cinematic generation",
+    "Free tier is mainly useful for testing rather than polished publishing",
+    "Team-level value depends on whether the buyer will actually use multiple seats, guests, and 4K output, and exact pricing depends on live billing-cycle state"
   ],
   "reviews": {
     "verdict": {
-      "bottomLine": "Elai.io is best for teams that want 1080p avatar videos with a simple web workflow. The trade-off is usage limits: free exports are watermarked, monthly minutes expire without rollover, and commercial/refund terms need careful review. User reports suggest rendering can be slow and avatar expressiveness is limited compared to competitors.",
+      "bottomLine": "Elai.io is best for teams that want structured presenter videos with localization support and a simple browser workflow. It is less attractive for buyers who need deeper editing, broader generative freedom, or a simpler usage model than minute-based plans.",
       "bestFor": [
-        "1080p avatar videos",
-        "Simple web workflow",
-        "Team training content"
+        "Presenter-led training videos",
+        "Presentation-to-video workflows",
+        "Localized avatar explainers"
       ]
     },
     "faqs": [
       {
-        "question": "Do Free plan videos have a watermark?",
-        "answer": "Yes—watermark-free videos are stated as available for paid accounts. That implies Free plan outputs include a visible watermark."
+        "question": "Who is Elai.io best for?",
+        "answer": "Elai.io is best for teams that want avatar-led explainers, training videos, or localized updates from scripts, presentations, or URLs inside one browser-based workflow."
+      },
+      {
+        "question": "What is the first publish-ready Elai.io tier?",
+        "answer": "The first paid self-serve tier is the clearest publish-ready lane because current official plan docs position it with 1080p Full HD, no watermark, and the full avatar, voice, and language library."
       },
       {
         "question": "What export resolution does Elai support?",
-        "answer": "Pricing states Creator exports 1080p Full HD and Team supports 4K Ultra HD. Free/Creator 1080p vs Team/Enterprise 4K is plan-dependent."
+        "answer": "Current official help and pricing pages position the paid self-serve lane at 1080p Full HD and the higher team tier at Ultra 4K HD, so output quality depends heavily on the plan tier."
       },
       {
-        "question": "Do unused minutes roll over month to month?",
-        "answer": "No—official plan documentation says unused minutes expire at the end of the billing cycle. If rollover matters, monthly subscriptions may feel wasteful."
+        "question": "What makes Elai.io different from lighter avatar tools?",
+        "answer": "Elai.io puts more emphasis on structured business workflows such as presentation-to-video, URL-to-video, multilingual output, and multiple custom avatar types."
       },
       {
-        "question": "How do annual plans handle minutes?",
-        "answer": "Official documentation says annual subscriptions receive all minutes upfront. That can fit users who need bursts of production rather than steady monthly use."
+        "question": "When does Team make more sense than Creator?",
+        "answer": "Team starts to make more sense when the workflow needs multiple editors and guests, custom images and fonts, premium voices, role-based collaboration, and Ultra 4K output instead of a single-user 1080p workflow."
       },
       {
-        "question": "Can I cancel my subscription anytime?",
-        "answer": "Yes—help docs describe canceling via profile settings under Manage Subscriptions. Effects timing (immediate vs end-of-term) needs verification."
+        "question": "What should buyers know about cancellation and refunds?",
+        "answer": "Official help says you can cancel your subscription at any time from your account. Current subscription and workspace docs also say monthly minutes do not roll over, annual plans front-load usage, and deleting a workspace does not create refunds for leftover credits."
       },
       {
-        "question": "What's the refund policy?",
-        "answer": "Terms do state paid services can be cancelled without refund in specific misuse cases. Clear consumer-friendly refund window needs verification from official terms."
-      },
-      {
-        "question": "Is Elai allowed for commercial use?",
-        "answer": "The terms excerpt provided grants a license for personal, non-commercial use. Whether paid plans grant commercial rights needs verification from official Elai documentation."
-      },
-      {
-        "question": "What stock media is included?",
-        "answer": "Pricing indicates access to a variety of royalty-free images, videos, icons, and shapes. Specific providers need verification from official docs."
-      },
-      {
-        "question": "What format do exported videos download as?",
-        "answer": "MP4 downloads are reported by third-party sources. Official Elai confirmation for MP4 export wording needs verification."
-      },
-      {
-        "question": "Do I need a powerful computer to use Elai?",
-        "answer": "Elai is presented as web-based and only requires a computer and internet connection. Specific hardware/RAM recommendations are not confirmed."
-      },
-      {
-        "question": "Why do some users complain about slow rendering?",
-        "answer": "User reports: even short videos can take several minutes to render in some tests. Expect variability and plan buffer time for deadlines."
-      },
-      {
-        "question": "How expressive are the avatars (gestures/movement)?",
-        "answer": "User reports: avatars may have limited gestures and mostly neck-up movement. If you need body language, test your target style before committing."
+        "question": "When should a buyer skip Elai.io?",
+        "answer": "Skip Elai.io when the workflow needs deep timeline editing, open-ended generative filmmaking, or a simpler usage model than minute bundles and seat-based scaling."
       }
     ]
   },
   "sources": {
+    "elai.io/pricing": {
+      "type": "OFFICIAL_PRICING",
+      "howToVerify": "Check the official pricing page for plan limits, seat structure, 1080p vs 4K, and enterprise features",
+      "suggestedQuery": "site:elai.io pricing Elai Creator Team Enterprise 4K SSO"
+    },
+    "elai.io/features": {
+      "type": "OFFICIAL_PRODUCT",
+      "howToVerify": "Check the official features page for avatars, languages, voices, URL-to-video, and presentation-to-video workflow",
+      "suggestedQuery": "site:elai.io/features Elai avatars languages voices presentation to video URL to video"
+    },
     "elai.io": {
       "type": "OFFICIAL_WEBSITE",
-      "howToVerify": "Visit official Elai website and pricing page",
-      "suggestedQuery": "elai.io pricing features commercial use"
+      "howToVerify": "Visit the official Elai website for product positioning and workflow examples",
+      "suggestedQuery": "site:elai.io Elai presenter videos localization avatars"
     },
     "elai.freshdesk.com": {
       "type": "HELP_CENTER",
       "howToVerify": "Check official Elai help documentation",
-      "suggestedQuery": "site:elai.freshdesk.com minutes rollover cancellation"
-    },
-    "vidmetoo.com": {
-      "type": "USER_REVIEWS",
-      "howToVerify": "Check user reviews and tutorials",
-      "suggestedQuery": "elai.io vidmetoo review"
-    },
-    "tekpon.com": {
-      "type": "USER_REVIEWS",
-      "howToVerify": "Check user reviews on Tekpon",
-      "suggestedQuery": "elai.io tekpon review"
+      "suggestedQuery": "site:elai.freshdesk.com Elai help cancellation subscriptions"
     }
   }
 }

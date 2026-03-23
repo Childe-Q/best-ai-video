@@ -1,11 +1,13 @@
 import { notFound } from 'next/navigation';
 import { getTool, getAllTools } from '@/lib/getTool';
 import ToolPricingTemplate from '@/components/pricing/ToolPricingTemplate';
-import { getSEOCurrentYear, getStartingPrice } from '@/lib/utils';
+import { getSEOCurrentYear } from '@/lib/utils';
 import { ComparisonTable } from '@/types/tool';
 import { deriveUsageNotes } from '@/lib/pricing/deriveUsageNotes';
 import { generatePricingSnapshot } from '@/lib/generatePricingSnapshot';
 import { generateVerdictText } from '@/lib/pricing/generateVerdictText';
+import { getPricingDisplay, getToolPricingSummary } from '@/lib/pricing/display';
+import type { PricingVerification } from '@/lib/pricing/display';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -85,13 +87,16 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
 
   if (!tool) notFound();
 
-  const pricingPlans = tool.pricing_plans || [];
+  const pricingSummary = getToolPricingSummary(tool);
+  const pricingDisplay = getPricingDisplay(tool);
+  const pricingPlans = pricingSummary.verification !== 'unverified' ? tool.pricing_plans || [] : [];
 
   // Get comparison_table: first from tool, then fallback to pricing JSON file
-  let comparisonTable: ComparisonTable | undefined = tool.comparison_table;
+  let comparisonTable: ComparisonTable | undefined =
+    pricingSummary.verification === 'verified' ? tool.comparison_table : undefined;
 
   // If not in tool, try to load from pricing JSON file
-  if (!comparisonTable) {
+  if (!comparisonTable && pricingSummary.verification === 'verified') {
     try {
       // In Next.js, we need to resolve from the project root
       const projectRoot = process.cwd();
@@ -170,8 +175,10 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
       lastUpdated={lastUpdated}
       officialPricingUrl={officialPricingUrl}
       affiliateLink={tool.affiliate_link}
-      hasFreeTrial={tool.has_free_trial}
-      startingPrice={getStartingPrice(tool)}
+      hasFreeTrial={pricingSummary.verification === 'verified' ? tool.has_free_trial : false}
+      startingPrice={pricingDisplay.displayText}
+      pricingStatusHint={pricingDisplay.hintText}
+      pricingVerification={pricingSummary.verification as PricingVerification}
     />
   );
 }

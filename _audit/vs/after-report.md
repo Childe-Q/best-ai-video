@@ -1,6 +1,6 @@
 # VS Sources Audit
 
-Generated: 2026-03-08
+Generated: 2026-03-21
 
 ## Summary
 
@@ -17,16 +17,13 @@ Generated: 2026-03-08
 ## Avatar group
 
 - avatar_group_pages: 8
-- avatar_group_avg_uniqueness: 0.49
+- avatar_group_avg_uniqueness: 0.44
 - avatar_group_max_ambiguity: 0
 
 ## Top risk pages after strict pass
 
-- /vs/fliki-vs-pictory: ambiguity_points=2, placeholder_cells=0, keydiff_uniqueness_score=0.66
-- /vs/invideo-vs-pictory: ambiguity_points=2, placeholder_cells=0, keydiff_uniqueness_score=0.66
 - /vs/descript-vs-veed-io: ambiguity_points=1, placeholder_cells=0, keydiff_uniqueness_score=0.36
 - /vs/invideo-vs-veed-io: ambiguity_points=1, placeholder_cells=0, keydiff_uniqueness_score=0.32
-- /vs/runway-vs-sora: ambiguity_points=1, placeholder_cells=0, keydiff_uniqueness_score=0.27
 
 ## Pages with missing verified sources
 
@@ -63,7 +60,7 @@ Generated: 2026-03-08
 - Free plan strict: Yes
 - API strict: Yes
 - Placeholder cells remaining: 0
-- keydiff_uniqueness_score: 0.55
+- keydiff_uniqueness_score: 0.18
 - Ambiguity points: 0
 
 ### /vs/deepbrain-ai-vs-synthesia
@@ -118,7 +115,7 @@ Generated: 2026-03-08
 - Free plan strict: Yes
 - API strict: Yes
 - Placeholder cells remaining: 0
-- keydiff_uniqueness_score: 0.55
+- keydiff_uniqueness_score: 0.54
 - Ambiguity points: 0
 
 ### /vs/elai-io-vs-synthesia
@@ -162,8 +159,8 @@ Generated: 2026-03-08
 - Free plan strict: Yes
 - API strict: Yes
 - Placeholder cells remaining: 0
-- keydiff_uniqueness_score: 0.66
-- Ambiguity points: 2
+- keydiff_uniqueness_score: 0.34
+- Ambiguity points: 0
 
 ### /vs/fliki-vs-zebracat
 
@@ -184,7 +181,7 @@ Generated: 2026-03-08
 - Free plan strict: Yes
 - API strict: Yes
 - Placeholder cells remaining: 0
-- keydiff_uniqueness_score: 0.19
+- keydiff_uniqueness_score: 0.14
 - Ambiguity points: 0
 
 ### /vs/heygen-vs-synthesia
@@ -206,8 +203,8 @@ Generated: 2026-03-08
 - Free plan strict: Yes
 - API strict: Yes
 - Placeholder cells remaining: 0
-- keydiff_uniqueness_score: 0.66
-- Ambiguity points: 2
+- keydiff_uniqueness_score: 0.27
+- Ambiguity points: 0
 
 ### /vs/invideo-vs-veed-io
 
@@ -239,7 +236,7 @@ Generated: 2026-03-08
 - Free plan strict: Yes
 - API strict: Yes
 - Placeholder cells remaining: 0
-- keydiff_uniqueness_score: 0.29
+- keydiff_uniqueness_score: 0.28
 - Ambiguity points: 0
 
 ### /vs/pika-vs-runway
@@ -262,5 +259,5 @@ Generated: 2026-03-08
 - API strict: Yes
 - Placeholder cells remaining: 0
 - keydiff_uniqueness_score: 0.27
-- Ambiguity points: 1
+- Ambiguity points: 0
 

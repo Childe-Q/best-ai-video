@@ -46,9 +46,9 @@ export function readEvidence(slug: string): EvidenceNormalized | null {
     return null;
   }
 
-  // Validate basic structure - support both nuggets and hardFacts
-  if (!rawData || (!rawData.nuggets && !rawData.hardFacts)) {
-    console.warn(`[evidence] Invalid structure for ${slug}: missing nuggets/hardFacts array`);
+  // Validate basic structure - support nuggets, hardFacts, and pageEvidence
+  if (!rawData || (!rawData.nuggets && !rawData.hardFacts && !rawData.pageEvidence)) {
+    console.warn(`[evidence] Invalid structure for ${slug}: missing nuggets/hardFacts/pageEvidence array`);
     return null;
   }
 

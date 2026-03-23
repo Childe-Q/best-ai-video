@@ -1,0 +1,148 @@
+{
+  "slug": "steve-ai",
+  "lastUpdated": "2026-03-21T19:05:00+08:00",
+  "sources": {
+    "pricing": "https://steve.ai/pricing",
+    "features": "https://steve.ai/",
+    "faq": "https://steve.ai/"
+  },
+  "nuggets": [
+    {
+      "text": "Steve AI's homepage positions the product around turning text, scripts, or even a single idea into videos for faceless YouTube explainers, UGC ads, shorts, and motion graphics without using cameras or complex editing tools.",
+      "theme": "workflow",
+      "sourceUrl": "https://steve.ai/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T19:05:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The product page describes a workflow that goes from prompt to video, script to video, and audio to video, with 7 plus output styles including animations, generative AI, and live training videos.",
+      "theme": "workflow",
+      "sourceUrl": "https://steve.ai/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T19:05:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Steve AI highlights an Advanced Prompter that shapes tone, style, and length before turning the script into a finished video draft.",
+      "theme": "features",
+      "sourceUrl": "https://steve.ai/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T19:05:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The homepage also markets Multi-Voice Storytelling for assigning lifelike AI voices to different characters in explainers, kids stories, and UGC-style ads.",
+      "theme": "voice",
+      "sourceUrl": "https://steve.ai/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T19:05:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Local Steve AI tool data models a Free entry tier with 720p export, watermarking, basic features, and limited access.",
+      "theme": "pricing",
+      "sourceUrl": "https://steve.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T19:05:00+08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "The same local tool data models Basic at $10 per month with 1080p export, 75 minutes of AI avatars, and no watermark.",
+      "theme": "export",
+      "sourceUrl": "https://steve.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T19:05:00+08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "Starter is modeled at $19 per month with 150 minutes of AI avatars, no watermark, and advanced features plus priority support.",
+      "theme": "usage",
+      "sourceUrl": "https://steve.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T19:05:00+08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "Pro is modeled at $39 per month with 400 minutes of AI avatars, ninety-five percent human voices, advanced features, and a brand kit.",
+      "theme": "branding",
+      "sourceUrl": "https://steve.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T19:05:00+08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "The highest self-serve package in local tool data is a $99 Generative AI tier that adds custom avatars, 15 minutes of generative video, and all Pro features.",
+      "theme": "avatars",
+      "sourceUrl": "https://steve.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T19:05:00+08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "Steve AI's site also advertises an iOS app and repeatedly frames the product as a tool for fast faceless content creation and channel scaling rather than premium enterprise video production.",
+      "theme": "usage",
+      "sourceUrl": "https://steve.ai/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T19:05:00+08:00",
+      "confidence": "high"
+    }
+  ],
+  "topUpClaims": [
+    {
+      "claim": "watermark",
+      "status": "supported",
+      "sourceUrl": "https://support.steve.ai/en/articles/8295526-how-do-i-remove-the-steve-ai-watermark-from-the-videos",
+      "sourceType": "help_center_article",
+      "note": "Official support says upgrading to any premium Steve AI plan removes the Steve AI watermark from videos.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "refund_cancellation",
+      "status": "supported",
+      "sourceUrl": "https://support.steve.ai/en/articles/8524890-how-do-i-get-a-refund-of-my-subscription-fee",
+      "sourceType": "help_center_article",
+      "note": "Official support says Steve AI does not offer subscription refunds because a free plan exists to evaluate the product first, and subscriptions can be canceled from My Plan before renewal.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "workflow_limits",
+      "status": "supported",
+      "sourceUrl": "https://support.steve.ai/en/articles/8524340-what-is-the-maximum-video-duration-i-can-create-with-steve-ai-s-ai-video-maker",
+      "sourceType": "help_center_article",
+      "note": "Official help says Steve AI videos can run up to 20 minutes across all plans, with scene caps of up to 120 scenes for 2D Animation or Live Action and 50 scenes for Generative AI videos.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "export_resolution_format",
+      "status": "supported",
+      "sourceUrl": "https://support.steve.ai/en/articles/8525405-what-are-the-resolutions-in-which-the-project-can-be-downloaded",
+      "sourceType": "help_center_article",
+      "note": "Official help says Basic supports 720p, Starter supports 720p and 1080p, Pro adds 2K, and Enterprise adds 4K exports.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "commercial_ownership_licensing",
+      "status": "supported",
+      "sourceUrl": "https://support.steve.ai/en/articles/8295575-can-i-use-ai-generated-videos-from-steve-ai-on-my-website",
+      "sourceType": "help_center_article",
+      "note": "Official support distinguishes commercial use from resale: premium plans include commercial rights for website, branding, and monetized use, while full resell rights are reserved for the Enterprise plan.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "privacy_access_visibility",
+      "status": "supported",
+      "sourceUrl": "https://support.steve.ai/en/articles/8532006-how-to-set-video-privacy-in-steve-ai",
+      "sourceType": "help_center_article",
+      "note": "Official help says videos are private by default and only become public when the user shares edit or view links.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    }
+  ],
+  "topUpFlags": []
+}

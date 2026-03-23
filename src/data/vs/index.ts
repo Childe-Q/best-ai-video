@@ -245,6 +245,35 @@ const AUTHORED_VS_OVERRIDES: Record<string, VsAuthoredOverride> = {
         'Run the same avatar brief in both tools to compare campaign-style presenter delivery against training-led enterprise rollout.',
     },
   },
+  'runway-vs-sora': {
+    matrixRows: [
+      {
+        label: 'Best for',
+        a: 'Professional Video Creators & Filmmakers',
+        b: 'Early Adopters & AI Enthusiasts',
+      },
+      {
+        label: 'Output type',
+        a: 'Professional AI Video Generation and Editing',
+        b: "OpenAI's Revolutionary Text-to-Video Model",
+      },
+      {
+        label: 'Workflow speed',
+        a: 'Depends on workflow setup',
+        b: 'Fast for short iterations',
+      },
+      {
+        label: 'Templates',
+        a: 'Scene-based creative workflow with studio-style shot iteration',
+        b: 'Prompt-led scene generation without a broader template-library workflow',
+      },
+      {
+        label: 'Pricing starting point',
+        a: '$12/mo',
+        b: '$20/mo',
+      },
+    ],
+  },
   'deepbrain-ai-vs-heygen': {
     decisionSummary:
       'Choose DeepBrain AI when avatar video is part of an enterprise deployment: realistic presenters, API-backed rollout, or white-label delivery. Choose HeyGen when the job is lighter spokesperson video for outreach, explainers, and faster presenter-led communication.',

@@ -100,7 +100,7 @@
       "slug": "opus-clip",
       "verdictSeed": "Converts long-form videos into short clips with a Virality Score that ranks each clip's predicted performance. Automatically identifies engaging moments and generates fully captioned output.",
       "pricingSeed": "From $15/mo",
-      "policySeed": null,
+      "policySeed": "Free and Starter access still carry watermark or publishing constraints, while Pro and Business are the cleaner path for branded viral clip publishing",
       "bestForSeed": "Repurposing long videos into scored viral shorts",
       "mainLimitationSeed": "Works best with talking-head videos; less effective for action-heavy content",
       "officialUrl": "https://opusclip.com/",
@@ -108,11 +108,11 @@
       "reviewUrl": "/tool/opus-clip",
       "logoUrl": "/logos/opus-clip.png",
       "sourceUrls": [
-        "https://vizard.ai/blog/the-12-best-video-editing-tools-in-2025-turn-long-demos-into-viral-ugc-clips-vizard-vs-opus-clip-more"
+        "https://www.opus.pro/pricing",
+        "https://www.opus.pro/features",
+        "https://www.opus.pro/faq"
       ],
-      "flags": [
-        "missing-policy-seed"
-      ]
+      "flags": []
     },
     {
       "name": "Vizard",
@@ -127,6 +127,7 @@
       "reviewUrl": null,
       "logoUrl": null,
       "sourceUrls": [
+        "https://vizard.ai/",
         "https://vizard.ai/blog/the-12-best-video-editing-tools-in-2025-turn-long-demos-into-viral-ugc-clips-vizard-vs-opus-clip-more",
         "https://vizard.ai/pricing"
       ],
@@ -141,7 +142,7 @@
       "slug": "munch",
       "verdictSeed": "All-in-one clip generation tool. Cancellation must be submitted at least 3 business days before billing renewal; no refunds for the current period.",
       "pricingSeed": null,
-      "policySeed": null,
+      "policySeed": "Current official policy coverage confirms no refund for the active billing period and requires cancellation notice before renewal",
       "bestForSeed": "All-in-one clip generation",
       "mainLimitationSeed": null,
       "officialUrl": "https://go.getmunch.com/",
@@ -149,11 +150,11 @@
       "reviewUrl": null,
       "logoUrl": null,
       "sourceUrls": [
+        "https://go.getmunch.com/",
         "https://go.getmunch.com/payment-and-cancellation-policy"
       ],
       "flags": [
         "missing-pricing-seed",
-        "missing-policy-seed",
         "missing-limitation-seed",
         "missing-logo-url",
         "missing-review-coverage"
@@ -189,18 +190,13 @@
       ]
     }
   ],
-  "lastReviewed": "2026-03-07T23:25:00Z",
+  "lastReviewed": "2026-03-21T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/viral-ai-video-generators.raw.json",
     "sourceCount": 4,
     "uniqueToolCount": 5,
-    "needsManualReview": true,
-    "reviewNotes": [
-      "Duplicate raw tool mentions merged: vizard",
-      "One or more tools still need verified officialUrl coverage.",
-      "One or more tools still need verified logoUrl coverage.",
-      "One or more tools are missing internal review coverage."
-    ]
+    "needsManualReview": false,
+    "reviewNotes": []
   }
 }

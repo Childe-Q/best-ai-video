@@ -1,0 +1,149 @@
+{
+  "slug": "elai-io",
+  "lastUpdated": "2026-03-21T19:40:00+08:00",
+  "sources": {
+    "pricing": "https://elai.io/pricing",
+    "features": "https://elai.io/features",
+    "help": "https://elai.freshdesk.com/"
+  },
+  "nuggets": [
+    {
+      "text": "Elai.io's features page positions the product around creating AI videos with customizable digital presenters from text, with 80 plus avatars, 75 plus languages, and 450 plus voices.",
+      "theme": "workflow",
+      "sourceUrl": "https://elai.io/features",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T19:40:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The same features page highlights prompt-based generation, AI script crafting, video generation from URLs, presentation-to-video conversion, voice cloning, and four types of custom avatars.",
+      "theme": "features",
+      "sourceUrl": "https://elai.io/features",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T19:40:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Local Elai.io plan data models a Free tier with 1 user, 1 minute, 80 plus avatars, 75 plus languages, and Full HD 1080p access as a testing entry point.",
+      "theme": "pricing",
+      "sourceUrl": "https://elai.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T19:40:00+08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "Creator is modeled at $29 monthly or $23 monthly billed yearly for 1 user, up to 15 minutes per month, 1080p Full HD, and full avatar, voice, and language library access.",
+      "theme": "export",
+      "sourceUrl": "https://elai.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T19:40:00+08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "Team is modeled at $125 monthly or $100 monthly billed yearly and adds 3 editors plus 3 guests, custom images and fonts, premium voices, and Ultra 4K HD video.",
+      "theme": "team",
+      "sourceUrl": "https://elai.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T19:40:00+08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "The local Team plan data also defines multiple monthly-minute bands at 50, 100, and 150 minutes, indicating Elai's team usage scales by seat and usage bundle rather than simple unlimited access.",
+      "theme": "usage",
+      "sourceUrl": "https://elai.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T19:40:00+08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "Enterprise is modeled with unlimited users, 3 voice clones, 3 selfie avatars, premium avatars, brand kit, workspaces, SSO, and premium support.",
+      "theme": "enterprise",
+      "sourceUrl": "https://elai.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T19:40:00+08:00",
+      "confidence": "medium"
+    },
+    {
+      "text": "Elai's feature set repeatedly emphasizes localization and content transformation workflows, including presentation-to-video, URL-to-video, and multilingual narrator output.",
+      "theme": "localization",
+      "sourceUrl": "https://elai.io/features",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T19:40:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The feature page says Elai supports four custom avatar modes: Selfie, Studio, Photo, and Animated mascot.",
+      "theme": "avatars",
+      "sourceUrl": "https://elai.io/features",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T19:40:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Local plan data and feature positioning together suggest Elai is strongest for text-first presenter videos with localization and brand controls, rather than for deep timeline editing or open-ended generative filmmaking.",
+      "theme": "workflow",
+      "sourceUrl": "https://elai.io/features",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T19:40:00+08:00",
+      "confidence": "medium"
+    }
+  ],
+  "topUpClaims": [
+    {
+      "claim": "watermark",
+      "status": "supported",
+      "sourceUrl": "https://elai.freshdesk.com/support/solutions/articles/73000561775-creator-plan",
+      "sourceType": "help_center_article",
+      "note": "Official help says the Free plan adds a watermark, while the Creator plan removes watermarks on videos.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "refund_cancellation",
+      "status": "supported",
+      "sourceUrl": "https://elai.freshdesk.com/support/solutions/articles/73000650694-cancel-subscription",
+      "sourceType": "help_center_article",
+      "note": "Official help says subscriptions can be canceled any time from the account settings. Current workspace guidance also says deleting a workspace does not trigger refunds for leftover credits.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "workflow_limits",
+      "status": "supported",
+      "sourceUrl": "https://elai.freshdesk.com/support/solutions/articles/73000561775-creator-plan",
+      "sourceType": "help_center_article",
+      "note": "Official help says Creator includes 15 video minutes per month, monthly minutes do not roll over, and annual subscriptions provide the full year's minutes upfront.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "export_resolution_format",
+      "status": "supported",
+      "sourceUrl": "https://elai.freshdesk.com/support/solutions/articles/73000561776-team-plan",
+      "sourceType": "help_center_article",
+      "note": "Official help says Creator renders at 1080p Full HD and Team renders at Ultra 4K HD, with Team also including all Creator features.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "privacy_access_visibility",
+      "status": "supported",
+      "sourceUrl": "https://elai.freshdesk.com/support/solutions/articles/73000560715-workspace-settings",
+      "sourceType": "help_center_article",
+      "note": "Official workspace docs describe admin, user, editor, reviewer, and locked roles, with role-based access to rendering, billing, API keys, and workspace content.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    }
+  ],
+  "topUpFlags": [
+    {
+      "claim": "commercial_ownership_licensing",
+      "status": "needs_human_review",
+      "sourceUrl": "https://elai.io/prior-terms-and-conditions/",
+      "sourceType": "terms",
+      "note": "Current public pricing and help pages document plan gating, collaboration, and cancellation, but they do not cleanly resolve a broad ownership or commercial-rights conclusion for all generated outputs.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "flag"
+    }
+  ]
+}

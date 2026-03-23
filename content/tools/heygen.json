@@ -1,7 +1,7 @@
 {
   "overview": {
     "tldr": {
-      "bestFor": "Creators and small teams who want quick avatar-led videos with predictable export resolution limits",
+      "bestFor": "Sales outreach, training, and localization teams that want avatar-led videos with plan-based export limits",
       "notFor": "Light users who dislike monthly credit expiry or anyone expecting unlimited avatar generation",
       "why": "Free outputs are watermarked, credits expire after 30 days, and refunds are discretionary"
     },
@@ -9,48 +9,52 @@
       "prompt": "Create a 20-30 second talking-head video explaining a topic for an audience. Tone: professional. Include 1 hook, 3 key points, and a 1-sentence CTA",
       "checklist": [
         {
-          "label": "Goal",
-          "value": "Education / conversion"
+          "label": "Primary workflow fit",
+          "value": "Sales outreach / training / localization"
         },
         {
-          "label": "Target platform",
-          "value": "Shorts / Reels / TikTok"
-        },
-        {
-          "label": "Lip-sync / voice naturalness",
-          "value": "Needs verification for chosen avatar/voice setup"
-        },
-        {
-          "label": "Watermark present",
-          "value": "Yes - expected on Free plan"
+          "label": "Watermark on Free",
+          "value": "Expected on free outputs"
         },
         {
           "label": "Export resolution",
-          "value": "720p / 1080p / 4K based on plan"
+          "value": "720p / up to 1080p / up to 4K based on plan"
         },
         {
-          "label": "Credits consumed",
-          "value": "Needs verification"
+          "label": "Credit expiry",
+          "value": "Credits expire 30 days after issuance"
+        },
+        {
+          "label": "Free-plan commercial use",
+          "value": "FAQ says free-version videos may be used only for non-commercial purposes"
+        },
+        {
+          "label": "Cancellation timing",
+          "value": "Access continues through the current billing cycle after cancellation"
+        },
+        {
+          "label": "Unlimited AvatarIV plan",
+          "value": "No plan offers unlimited AvatarIV usage and credits"
         }
       ],
-      "verdict": "Result: partial. Quality was strongest in avatar realism and weakest in credit expiry policy. If credits/watermark/resolution or verification friction is a dealbreaker, choose a different plan/tool"
+      "verdict": "Use this as a source-backed workflow check, not a completed hands-on run. HeyGen fits avatar-led outreach, training, and localization when export limits, credit expiry, and ownership rules match your use case."
     },
     "useCases": [
       {
-        "title": "YouTube Shorts",
-        "why": "Fast avatar explainers where 720p-4K export depends on plan",
+        "title": "Sales Outreach",
+        "why": "Fits personalized avatar-led outreach when teams need quick presenter videos and can work within plan-based export limits",
         "linkHref": "/vs/heygen-vs-synthesia",
         "linkText": "Compare with alternatives →"
       },
       {
-        "title": "Marketing Ads",
-        "why": "Quick iterations, but watch credit expiry and refund expectations",
+        "title": "Training Videos",
+        "why": "Works for onboarding and internal explainers where avatar delivery matters more than frame-level editing control",
         "linkHref": "/tool/heygen/pricing",
         "linkText": "Check pricing →"
       },
       {
-        "title": "Blog-to-video",
-        "why": "Turn posts into scripts plus avatar narration, verify export format first",
+        "title": "Localization",
+        "why": "Useful for multilingual presenter-style videos when language coverage and plan limits fit the rollout",
         "linkHref": "/vs/heygen-vs-elai-io",
         "linkText": "See comparison →"
       }

@@ -1,0 +1,91 @@
+{
+  "slug": "sora",
+  "lastUpdated": "2026-03-21T13:00:00+08:00",
+  "sources": {
+    "pricing": "https://platform.openai.com/docs/pricing",
+    "features": "https://openai.com/sora/",
+    "docs": "https://platform.openai.com/docs/sora"
+  },
+  "nuggets": [
+    {
+      "text": "The official Sora page says you can start from a prompt or upload an image to create videos.",
+      "theme": "workflow",
+      "sourceUrl": "https://openai.com/sora/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T13:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "OpenAI's Sora page describes output styles as cinematic, animated, photorealistic, or surreal.",
+      "theme": "models",
+      "sourceUrl": "https://openai.com/sora/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T13:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Sora product page says videos include hyperreal motion and sound.",
+      "theme": "export",
+      "sourceUrl": "https://openai.com/sora/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T13:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The official page says music, sound effects, and dialogue are automatically included to complete scenes.",
+      "theme": "voice",
+      "sourceUrl": "https://openai.com/sora/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T13:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Sora's Characters feature lets you cast yourself or friends in videos and control how or when the character is used.",
+      "theme": "avatar",
+      "sourceUrl": "https://openai.com/sora/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T13:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Sora page also highlights remixing an existing creation by swapping characters, changing the vibe, adding scenes, or extending the story.",
+      "theme": "editing",
+      "sourceUrl": "https://openai.com/sora/",
+      "sourceType": "features",
+      "capturedAt": "2026-03-21T13:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "OpenAI's pricing docs list sora-2 video output at $0.10 per second for 720x1280 portrait or 1280x720 landscape.",
+      "theme": "usage",
+      "sourceUrl": "https://platform.openai.com/docs/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T13:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The same pricing docs list sora-2-pro at $0.30 per second for 720p portrait or landscape output.",
+      "theme": "usage",
+      "sourceUrl": "https://platform.openai.com/docs/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T13:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "OpenAI's pricing docs list higher-resolution sora-2-pro output at $0.50 per second for 1024x1792 portrait or 1792x1024 landscape.",
+      "theme": "export",
+      "sourceUrl": "https://platform.openai.com/docs/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T13:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The official pricing model makes Sora better suited to premium generation use cases than to low-cost batch publishing.",
+      "theme": "general",
+      "sourceUrl": "https://platform.openai.com/docs/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T13:00:00+08:00",
+      "confidence": "medium"
+    }
+  ]
+}

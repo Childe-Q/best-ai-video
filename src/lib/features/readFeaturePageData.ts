@@ -1,4 +1,4 @@
-import 'server-only';
+import '@/lib/optionalServerOnly';
 
 import fs from 'fs';
 import path from 'path';

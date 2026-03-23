@@ -3,8 +3,8 @@
 import { Tool } from '@/types/tool';
 import { CurrencyDollarIcon, StarIcon, TagIcon, ClockIcon, ChartBarIcon, CheckCircleIcon } from '@heroicons/react/24/outline';
 import { CurrencyDollarIcon as CurrencyDollarIconSolid, StarIcon as StarIconSolid } from '@heroicons/react/24/solid';
-import { getStartingPrice, hasFreePlan } from '@/lib/utils';
 import ToolLogo from '@/components/ToolLogo';
+import { getPricingDisplay, getToolPricingSummary, getVerifiedSafePriceValue } from '@/lib/pricing/display';
 
 interface ComparisonTableProps {
   toolA: Tool;
@@ -22,8 +22,8 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
 
   // Calculate scores for visualization
   const getPriceValueScore = (tool: Tool): number => {
-    const startingPrice = getStartingPrice(tool);
-    const price = parseFloat(startingPrice.replace(/[^0-9.]/g, ''));
+    const price = getVerifiedSafePriceValue(tool);
+    if (price === null) return 5;
     if (price <= 10) return 10;
     if (price <= 20) return 9;
     if (price <= 30) return 7;
@@ -91,8 +91,12 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
     return configs[rowLabel] || { text: 'Winner', className: 'bg-green-100 text-green-700 border-green-200' };
   };
 
-  const priceA = parseFloat(getStartingPrice(toolA).replace(/[^0-9.]/g, ''));
-  const priceB = parseFloat(getStartingPrice(toolB).replace(/[^0-9.]/g, ''));
+  const pricingDisplayA = getPricingDisplay(toolA);
+  const pricingDisplayB = getPricingDisplay(toolB);
+  const pricingSummaryA = getToolPricingSummary(toolA);
+  const pricingSummaryB = getToolPricingSummary(toolB);
+  const priceA = getVerifiedSafePriceValue(toolA);
+  const priceB = getVerifiedSafePriceValue(toolB);
 
   // Get unique tags (tags that are NOT shared between both tools)
   const getUniqueTags = (tool: Tool, otherTool: Tool): string[] => {
@@ -103,7 +107,14 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
   const uniqueTagsB = getUniqueTags(toolB, toolA);
 
   // Determine winners for each row
-  const winnerPrice = priceA < priceB ? 'A' : priceB < priceA ? 'B' : null;
+  const winnerPrice =
+    priceA !== null && priceB !== null
+      ? priceA < priceB
+        ? 'A'
+        : priceB < priceA
+          ? 'B'
+          : null
+      : null;
   
   // Special logic for Rating row to favor money tools
   const isToolAMoney = isMoneyTool(toolA);
@@ -168,22 +179,32 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
                 </div>
               </td>
               <td className={`px-6 py-4 text-center border-l border-gray-100 ${winnerPrice === 'A' ? 'bg-green-50/30' : ''}`}>
-                <div className="flex items-center justify-center gap-2">
-                  <span className="text-sm font-semibold text-gray-900">{toolA.starting_price}</span>
-                  {priceA < priceB && (
-                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                      Cheaper
-                    </span>
+                <div className="flex flex-col items-center justify-center gap-1">
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="text-sm font-semibold text-gray-900">{pricingDisplayA.displayText}</span>
+                    {priceA !== null && priceB !== null && priceA < priceB && (
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                        Cheaper
+                      </span>
+                    )}
+                  </div>
+                  {pricingDisplayA.hintText && (
+                    <span className="text-xs text-gray-500">{pricingDisplayA.hintText}</span>
                   )}
                 </div>
               </td>
               <td className={`px-6 py-4 text-center border-l border-gray-100 ${winnerPrice === 'B' ? 'bg-green-50/30' : ''}`}>
-                <div className="flex items-center justify-center gap-2">
-                  <span className="text-sm font-semibold text-gray-900">{toolB.starting_price}</span>
-                  {priceB < priceA && (
-                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                      Cheaper
-                    </span>
+                <div className="flex flex-col items-center justify-center gap-1">
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="text-sm font-semibold text-gray-900">{pricingDisplayB.displayText}</span>
+                    {priceA !== null && priceB !== null && priceB < priceA && (
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                        Cheaper
+                      </span>
+                    )}
+                  </div>
+                  {pricingDisplayB.hintText && (
+                    <span className="text-xs text-gray-500">{pricingDisplayB.hintText}</span>
                   )}
                 </div>
               </td>
@@ -198,23 +219,25 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
                 </div>
               </td>
               <td className="px-6 py-4 text-center border-l border-gray-100">
-                {hasFreePlan(toolA) ? (
+                {pricingSummaryA.freePlan === 'yes' ? (
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
                     Yes
-                    {toolA.pricing_model === 'Freemium' && ' (Watermarked)'}
                   </span>
-                ) : (
+                ) : pricingSummaryA.freePlan === 'no' ? (
                   <span className="text-sm text-gray-500">No</span>
+                ) : (
+                  <span className="text-sm text-gray-500">Not verified</span>
                 )}
               </td>
               <td className="px-6 py-4 text-center border-l border-gray-100">
-                {hasFreePlan(toolB) ? (
+                {pricingSummaryB.freePlan === 'yes' ? (
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
                     Yes
-                    {toolB.pricing_model === 'Freemium' && ' (Watermarked)'}
                   </span>
-                ) : (
+                ) : pricingSummaryB.freePlan === 'no' ? (
                   <span className="text-sm text-gray-500">No</span>
+                ) : (
+                  <span className="text-sm text-gray-500">Not verified</span>
                 )}
               </td>
             </tr>

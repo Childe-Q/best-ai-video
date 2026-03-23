@@ -1,76 +1,72 @@
 {
   "overview": {
     "tldr": {
-      "bestFor": "Creators who want quick text-to-video experiments and occasional commercial use on higher tiers",
-      "notFor": "Anyone who needs guaranteed refunds, flawless reliability, or easy cancellation UX",
-      "why": "Most tiers are watermarked/personal-use, refunds are non-refundable per terms, and users report cancellation/generation issues"
+      "bestFor": "Creators who want short stylized text-to-video clips and can move to higher tiers for cleaner exports or commercial use",
+      "notFor": "Teams that need predictable refund terms, private-by-default output, or clearly documented export specs on lower tiers",
+      "why": "Lower tiers are watermarked and limited, while commercial use and unwatermarked downloads are tied to higher plans"
     },
     "miniTest": {
       "prompt": "Generate a 6-10 second video of [subject] in [style] with a clear action and stable camera. Keep it safe for work, no logos, no copyrighted characters, and no text overlays. Output in a share-ready format and match [aspect ratio]",
       "checklist": [
         {
-          "label": "Goal",
-          "value": "Social clip / concept art / product visual / meme"
+          "label": "Primary workflow fit",
+          "value": "Short stylized clips / concept visuals / creative experiments"
         },
         {
           "label": "Plan tier",
           "value": "Free / Basic / Standard / Pro / Fancy"
         },
         {
-          "label": "Watermark present",
-          "value": "Yes - expected on Free/Basic/Standard"
+          "label": "Watermark on lower tiers",
+          "value": "Expected on Free and lower paid tiers"
         },
         {
           "label": "Commercial use needed",
-          "value": "Only Pro/Fancy per FAQ"
+          "value": "Commercial use is tied to higher paid plans per pricing and FAQ"
         },
         {
-          "label": "Privacy needed",
-          "value": "Public-by-default unless Pro/Fancy"
+          "label": "Privacy mode",
+          "value": "Output privacy is not the default on lower access levels"
         },
         {
-          "label": "Generation success rate",
-          "value": "Track attempts to get 1 usable clip"
+          "label": "Resolution tier",
+          "value": "480p / 720p / 1080p availability depends on plan and mode"
         },
         {
-          "label": "Generation failed errors",
-          "value": "User reports: errors encountered"
+          "label": "Credits model",
+          "value": "Credits vary by feature, duration, quality, and plan"
         },
         {
-          "label": "Resolution achieved",
-          "value": "Verify exact resolution (1080p mentioned in reviews)"
+          "label": "Rollover policy",
+          "value": "Paid plans mention purchasable roll-over credits"
         },
         {
-          "label": "Aspect ratio used",
-          "value": "Verify available ratios"
+          "label": "Refund policy",
+          "value": "Subscription payments are described as non-refundable in terms"
         },
         {
-          "label": "Credits spent per usable clip",
-          "value": "Track usage"
-        },
-        {
-          "label": "Cancellation path",
-          "value": "User reports: confusion finding cancel option"
+          "label": "Ownership baseline",
+          "value": "Terms state you retain ownership rights in your user content"
         }
       ],
-      "verdict": "Result: partial. Biggest blocker was watermark/credits/failures/cancellation/privacy. If you need commercial use or privacy, compare Pro vs Fancy and verify export specs first"
+      "verdict": "Use this as a source-backed workflow check, not a completed hands-on run. Pika fits short-form creative generation when plan tier, watermark, privacy, and commercial-use limits are acceptable before production use."
     },
     "useCases": [
       {
-        "title": "YouTube Shorts",
-        "why": "Generate short stylized clips, then edit and caption externally",
+        "title": "Stylized Social Clips",
+        "why": "Fits short-form visual experiments when teams can handle captioning and final packaging in another tool",
         "linkHref": "/tool/pika/pricing",
         "linkText": "Check pricing →"
       },
       {
-        "title": "Marketing Ads",
-        "why": "Use only if you're on Pro/Fancy and license requirements fit",
+        "title": "Creative Prototypes",
+        "why": "Useful for testing visual directions and short concept shots before committing to a fuller production workflow",
         "linkHref": "/tool/pika/features",
         "linkText": "See features →"
       },
       {
-        "title": "Blog-to-video",
-        "why": "Turn a paragraph into a short visual scene, then stitch multiple clips",
+        "title": "Short Visual Scenes",
+        "why": "Works when the goal is a short standalone scene rather than a long structured explainer or repurposed article workflow",
         "linkHref": "/vs/pika-vs-runway",
         "linkText": "Compare alternatives →"
       }

@@ -20,8 +20,6 @@ export default function VeedBridgePage() {
     redirect(targetUrl);
   }
 
-  console.warn('[out/veed] Missing VEED_OUT_URL; rendering fallback page.');
-
   return (
     <div className="min-h-screen bg-white text-gray-900 flex items-center justify-center p-6">
       <div className="max-w-xl w-full rounded-xl border border-gray-200 p-8 text-center shadow-sm">

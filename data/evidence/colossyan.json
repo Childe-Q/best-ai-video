@@ -1,0 +1,139 @@
+{
+  "slug": "colossyan",
+  "lastUpdated": "2026-03-21T17:35:00+08:00",
+  "sources": {
+    "pricing": "https://www.colossyan.com/pricing",
+    "features": "https://www.colossyan.com/features",
+    "help": "https://www.colossyan.com/pricing"
+  },
+  "nuggets": [
+    {
+      "text": "Colossyan Free is a trial-style entry point with 3 video minutes, 15 scenes, 3-minute max video length, 20 plus stock avatars, and watermark included.",
+      "theme": "pricing",
+      "sourceUrl": "https://www.colossyan.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:35:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Starter begins around $27 monthly or $19 billed annually and includes up to 15 video minutes per month, 5-minute max video length, 70 plus stock avatars, and 3 instant avatars.",
+      "theme": "pricing",
+      "sourceUrl": "https://www.colossyan.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:35:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Starter also includes unlimited viewers, multiple-avatar scenes, one voice clone, 1080p download resolution, and watermark removal.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.colossyan.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:35:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Business begins around $88 monthly or $70 billed annually, adds unlimited video minutes, 170 plus stock avatars, 10 instant avatars per editor, and 4K download resolution.",
+      "theme": "team",
+      "sourceUrl": "https://www.colossyan.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:35:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Business also adds up to 3 seats, 4 interactive videos per month, and 10 auto-translations per month for multilingual rollout.",
+      "theme": "localization",
+      "sourceUrl": "https://www.colossyan.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:35:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Enterprise adds unlimited access to interactive quizzes, branching scenarios, auto-translations, and more, alongside 200 plus stock avatars.",
+      "theme": "enterprise",
+      "sourceUrl": "https://www.colossyan.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:35:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Enterprise plan explicitly lists brand kits, SAML and SSO, and SCORM export for LMS-aligned deployment.",
+      "theme": "security",
+      "sourceUrl": "https://www.colossyan.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:35:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Colossyan positions language support at over 70 languages and accents with over 100 voices across the plan matrix.",
+      "theme": "localization",
+      "sourceUrl": "https://www.colossyan.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:35:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The pricing page includes AI script assistant, prompt-to-video, AI image generation, voice upload, pronunciation dictionary, and branded templates as part of the workflow story.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.colossyan.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:35:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The same plan details highlight shared workspaces, team permissions, team templates, custom share pages, HTML embedding, subtitles, PPT or PDF import, and in-app screen recording.",
+      "theme": "publishing",
+      "sourceUrl": "https://www.colossyan.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T17:35:00+08:00",
+      "confidence": "high"
+    }
+  ],
+  "topUpClaims": [
+    {
+      "claim": "refund_cancellation",
+      "status": "supported",
+      "sourceUrl": "https://www.colossyan.com/refund-policy",
+      "sourceType": "refund_policy",
+      "note": "Official refund policy says paid self-serve plans can qualify for a full refund within 14 days if usage remains below the documented threshold, while Enterprise plans and heavier usage do not qualify in the same way.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "workflow_limits",
+      "status": "supported",
+      "sourceUrl": "https://www.colossyan.com/pricing",
+      "sourceType": "pricing",
+      "note": "Official pricing clearly distinguishes the usage ladder across plans, including trial-style free access, capped self-serve minutes on Starter, broader interactivity and translation allowances on Business, and enterprise governance on higher tiers.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "export_resolution_format",
+      "status": "supported",
+      "sourceUrl": "https://www.colossyan.com/pricing",
+      "sourceType": "pricing",
+      "note": "Official pricing directly supports plan-gated export differences such as Full HD download on Starter, 4K on Business, and SCORM export on Enterprise-oriented tiers.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "direct"
+    },
+    {
+      "claim": "commercial_ownership_licensing",
+      "status": "partially_supported",
+      "sourceUrl": "https://www.colossyan.com/terms",
+      "sourceType": "terms",
+      "note": "Official terms support a bounded ownership model: each party retains its own IP, customer-created content can be published after the subscription term, and customers remain responsible for third-party rights, consents, and avatar-related permissions.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "cautious"
+    },
+    {
+      "claim": "privacy_access_visibility",
+      "status": "partially_supported",
+      "sourceUrl": "https://www.colossyan.com/pricing",
+      "sourceType": "pricing",
+      "note": "Official pricing supports parts of the access and visibility model through shared workspaces, team permissions, custom share pages, and enterprise governance features, but it does not by itself define a full default visibility policy for every asset type.",
+      "capturedAt": "2026-03-22",
+      "writebackClass": "cautious"
+    }
+  ],
+  "topUpFlags": []
+}

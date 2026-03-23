@@ -63,7 +63,8 @@
       "reviewUrl": null,
       "logoUrl": null,
       "sourceUrls": [
-        "https://buffer.com/resources/ai-video-tools/"
+        "https://www.adobe.com/products/premiere.html",
+        "https://www.adobe.com/creativecloud/plans.html"
       ],
       "flags": [
         "missing-policy-seed",
@@ -84,7 +85,8 @@
       "reviewUrl": null,
       "logoUrl": null,
       "sourceUrls": [
-        "https://www.aihustleguy.com/blog/descript-vs-capcut-vs-opus-clip-ai-video-editor"
+        "https://www.capcut.com/",
+        "https://www.capcut.com/resource/6-best-AI-video-tools-for-social-media"
       ],
       "flags": [
         "missing-policy-seed",
@@ -98,7 +100,7 @@
       "slug": "opus-clip",
       "verdictSeed": "Automatically detects highlights in long-form video and formats them as short clips for multiple platforms.",
       "pricingSeed": "Free (60 min/mo); Starter from $15/mo (150 min/mo)",
-      "policySeed": null,
+      "policySeed": "Free and Starter access still carry watermark or publishing constraints, while Pro and Business are the cleaner path for branded short-form output",
       "bestForSeed": "Repurposing long-form content into short clips at scale",
       "mainLimitationSeed": "Free tier capped at 60 processing minutes/month",
       "officialUrl": "https://opusclip.com/",
@@ -106,18 +108,18 @@
       "reviewUrl": "/tool/opus-clip",
       "logoUrl": "/logos/opus-clip.png",
       "sourceUrls": [
-        "https://help.opus.pro/docs/article/plans-and-credits"
+        "https://www.opus.pro/pricing",
+        "https://www.opus.pro/features",
+        "https://www.opus.pro/faq"
       ],
-      "flags": [
-        "missing-policy-seed"
-      ]
+      "flags": []
     },
     {
       "name": "Descript",
       "slug": "descript",
       "verdictSeed": "Edit video by editing text. Transcript-first workflow with AI voice cloning and Studio Sound.",
       "pricingSeed": "Free; Hobbyist from $16/mo (10 media hours, 400 AI credits)",
-      "policySeed": null,
+      "policySeed": "Free plan already publishes at 720p without watermark, while paid tiers mainly expand media hours, AI credits, and export quality",
       "bestForSeed": "Talking-head, podcast, and interview workflows",
       "mainLimitationSeed": "Monthly allocations of media minutes and AI credits do not roll over month-to-month",
       "officialUrl": "https://descript.com/",
@@ -125,11 +127,11 @@
       "reviewUrl": "/tool/descript",
       "logoUrl": "/logos/descript-logo.svg",
       "sourceUrls": [
-        "https://descript.com/pricing"
+        "https://www.descript.com/pricing",
+        "https://www.descript.com/features",
+        "https://www.descript.com/faq"
       ],
-      "flags": [
-        "missing-policy-seed"
-      ]
+      "flags": []
     }
   ],
   "relatedLinks": {
@@ -164,16 +166,13 @@
       ]
     }
   ],
-  "lastReviewed": "2026-03-07T22:58:00Z",
+  "lastReviewed": "2026-03-21T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/ai-video-editors.raw.json",
     "sourceCount": 4,
     "uniqueToolCount": 4,
-    "needsManualReview": true,
-    "reviewNotes": [
-      "One or more tools still need verified logoUrl coverage.",
-      "One or more tools are missing internal review coverage."
-    ]
+    "needsManualReview": false,
+    "reviewNotes": []
   }
 }

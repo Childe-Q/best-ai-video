@@ -1,33 +1,56 @@
 {
   "overview": {
     "tldr": {
-      "bestFor": "Content creators needing faceless YouTube videos with quick text-to-video conversion",
-      "notFor": "Professional filmmakers requiring advanced editing or unlimited exports",
-      "why": "InVideo AI stands out by integrating prompt-to-video with built-in stock, captions, and voice in one workflow"
+      "bestFor": "Marketers, YouTubers, and faceless creators who need fast prompt-to-video drafts with built-in stock and voiceover",
+      "notFor": "Teams that need frame-level editing control or users who iterate heavily without closely tracking credits",
+      "why": "InVideo combines prompt-to-video generation, built-in stock sources, captions, and credit-cost preview in one workflow"
     },
     "miniTest": {
       "prompt": "Create a 30-second vertical video explaining a tech product launch with upbeat music and text overlays",
-      "generationTime": "2 mins 15 secs",
-      "footageMatch": "8/10 clips were relevant",
-      "subtitleAccuracy": "100% accurate",
-      "verdict": "Ideally suited for faceless Shorts creators, but expect to spend 5-10 minutes refining"
+      "checklist": [
+        {
+          "label": "Credit cost preview",
+          "value": "Shown in the UI before you create the video"
+        },
+        {
+          "label": "Free plan export",
+          "value": "Exports include an InVideo watermark and stock-media watermarks"
+        },
+        {
+          "label": "Watermark removal",
+          "value": "Paid exports remove the InVideo watermark"
+        },
+        {
+          "label": "Free allowance",
+          "value": "2 video minutes, 1 AI credit, and 4 exports per week"
+        },
+        {
+          "label": "Shared visibility default",
+          "value": "Shared videos default to public unless you change the setting"
+        },
+        {
+          "label": "After cancellation",
+          "value": "Paid access remains until the billing period ends, then downgrades to Free"
+        }
+      ],
+      "verdict": "Best for fast social and faceless drafts, but less forgiving when cost control and repeated revisions matter."
     },
     "useCases": [
       {
         "title": "YouTube Shorts",
-        "why": "Quickly turn blog posts or scripts into engaging short-form videos with auto-subtitles and stock footage",
+        "why": "Good for stock-first Shorts workflows when you want script, visuals, and voiceover assembled in one pass",
         "linkHref": "/vs/invideo-vs-pictory",
         "linkText": "Compare with alternatives →"
       },
       {
         "title": "Marketing Ads",
-        "why": "Create product promotion videos using the 8M+ stock library and AI script generator for consistent brand messaging",
+        "why": "Useful for fast ad drafts when marketers need built-in media libraries instead of sourcing assets separately",
         "linkHref": "/tool/invideo/features",
         "linkText": "Explore features →"
       },
       {
         "title": "Blog-to-video",
-        "why": "Automatically convert blog articles into video content with AI-selected visuals and voiceover for content repurposing",
+        "why": "Fits content repurposing teams that want text-led drafts before moving into deeper manual editing",
         "linkHref": "/vs/invideo-vs-fliki",
         "linkText": "See comparison →"
       }
@@ -35,37 +58,37 @@
   },
   "features": {
     "keyFeatures": [
-      "Prompt-to-video with built-in stock library",
-      "Auto-subtitles and captions",
-      "AI voiceover in multiple languages",
-      "8M+ stock media library",
-      "Text-based editing interface",
-      "Export up to 4K resolution",
-      "Team collaboration features",
-      "Brand kit and templates"
+      "Prompt-to-video workflow from a text brief",
+      "Built-in stock media from Storyblocks, Shutterstock, and iStock",
+      "Subtitle and caption workflows",
+      "AI voiceover for faceless production",
+      "Credit cost preview before generation",
+      "Private, unlisted, and public shared visibility",
+      "Paid exports remove the InVideo watermark",
+      "Unlimited HD exports on InVideo AI plans"
     ]
   },
   "pros": [
-    "Fast text-to-video conversion workflow",
-    "Large stock media library included",
-    "Auto-subtitles save time",
-    "Affordable starting price",
-    "Good for faceless content creators",
-    "Cloud-based, no downloads needed"
+    "Shows credit deduction before you generate",
+    "Built-in stock libraries reduce asset sourcing work",
+    "Paid exports remove the InVideo watermark",
+    "Shared videos support private, unlisted, and public visibility",
+    "Media stays accessible after cancellation",
+    "Free plan gives a limited weekly test path"
   ],
   "cons": [
-    "Credits can run out quickly with iterations",
-    "Watermark on free plan",
-    "Limited advanced editing features",
-    "Export quality depends on plan tier",
-    "Some stock footage may be generic",
-    "Learning curve for complex projects"
+    "Free exports include InVideo and stock-media watermarks",
+    "Free usage is capped at 2 minutes, 1 AI credit, and 4 exports weekly",
+    "v4 generative workflows can consume credits quickly",
+    "Usage rules differ between older and newer systems",
+    "Older exports keep watermarks until re-exported on paid",
+    "Shared videos default to public unless changed"
   ],
   "sources": {
     "help.invideo.io": {
       "type": "HELP_CENTER",
       "howToVerify": "Check official help documentation",
-      "suggestedQuery": "site:help.invideo.io pricing credits"
+      "suggestedQuery": "site:help.invideo.io invideo watermark credits export visibility cancellation"
     },
     "invideo.io": {
       "type": "OFFICIAL_PRICING",

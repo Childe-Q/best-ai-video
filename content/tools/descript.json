@@ -1,0 +1,164 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "Podcasters, interview editors, YouTube teams, and internal comms teams that want to edit audio and video by editing a transcript instead of living in a timeline first",
+      "notFor": "Buyers who mainly want cinematic scene generation, a lightweight browser-only editor, or the cheapest way to publish large batches of templated social videos",
+      "why": "Descript is strongest when the source material is spoken content and the team wants one workspace for recording, transcription, cleanup, clipping, and publishing. Official pricing and feature pages also make the plan logic clearer than before: Free is a real no-watermark workflow test, while Creator and Business are where 4K, fuller AI access, collaboration, dubbing, and custom avatar workflows start to matter."
+    },
+    "miniTest": {
+      "prompt": "Import a 20-minute podcast, webinar, or talking-head interview, remove filler words, fix one sentence with Regenerate or AI speech, cut one section by deleting transcript text, then export one full edit plus two short clips.",
+      "checklist": [
+        {
+          "label": "Primary workflow fit",
+          "value": "Podcast / interview / talking-head cleanup and repurposing"
+        },
+        {
+          "label": "Free-plan baseline",
+          "value": "Free includes 60 minutes per month and 720p watermark-free export"
+        },
+        {
+          "label": "Paid tier progression",
+          "value": "Hobbyist moves to 1080p, Creator adds 4K, and higher tiers add more AI credits and team controls"
+        },
+        {
+          "label": "Workflow shape",
+          "value": "Transcript-first editing rather than timeline-first editing"
+        },
+        {
+          "label": "Built-in AI scope",
+          "value": "Feature pages list Studio Sound, filler-word removal, translation, avatars, Quick Design, and generated B-roll"
+        },
+        {
+          "label": "Remote recording fit",
+          "value": "Rooms and higher-tier collaboration matter when interviews or team workflows are central"
+        },
+        {
+          "label": "Export target",
+          "value": "Watermark-free export is available even on Free, with higher resolutions on paid tiers"
+        }
+      ],
+      "verdict": "Use this as a source-backed workflow check, not a completed hands-on run. Descript fits transcript-first editing and repurposing workflows when spoken source material is the center of production."
+    },
+    "useCases": [
+      {
+        "title": "Podcast and interview editing",
+        "why": "Descript is a strong fit when the team needs to cut spoken content quickly, remove filler words, clean audio, and produce publishable long-form edits without timeline-heavy work.",
+        "linkHref": "/features/ai-video-editors",
+        "linkText": "See editor guide →"
+      },
+      {
+        "title": "Repurposing long-form recordings",
+        "why": "Useful when webinars, interviews, or podcasts need to become shorter clips, captions, and summaries for YouTube, LinkedIn, or social publishing.",
+        "linkHref": "/features/content-repurposing-ai-tools",
+        "linkText": "See repurposing guide →"
+      },
+      {
+        "title": "Remote recording plus transcript editing",
+        "why": "Best fit when the team wants recording, transcription, editing, and publishing to happen in one environment instead of stitching together separate remote recording and editor tools.",
+        "linkHref": "/tool/descript/features",
+        "linkText": "See features →"
+      },
+      {
+        "title": "Transcript-first vs template-first tools",
+        "why": "Best fit when the decision is between editing spoken source material deeply and using a more templated repurposing workflow.",
+        "linkHref": "/vs/descript-vs-pictory",
+        "linkText": "Compare with Pictory →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "Text-based editing that cuts audio and video by editing the transcript instead of trimming a timeline first",
+      "Underlord AI co-editor for rewrite, clip extraction, cleanup, and draft-generation tasks across paid tiers",
+      "Studio Sound, filler-word removal, Regenerate, and AI speech tools for spoken-content cleanup and patch fixes",
+      "Screen recording and Rooms-based remote recording, with up to 10 participants and higher monthly recording limits on paid tiers",
+      "No-watermark export even on Free, with paid plans expanding to 1080p or 4K, larger media-hour limits, more AI credits, stock access, translation, dubbing, and brand controls"
+    ]
+  },
+  "pros": [
+    "Transcript-first editing is genuinely faster for podcasts, interviews, and talking-head workflows",
+    "Free plan is unusually practical for evaluation because it includes no-watermark export",
+    "Combines recording, editing, cleanup, clip creation, and publishing in one workflow",
+    "Paid tiers add real operational value through media-hour limits, AI credits, remote recording, translation, and collaboration"
+  ],
+  "cons": [
+    "Desktop workflow can feel heavier than lightweight browser editors on weaker machines",
+    "Less relevant when the buyer mainly needs original scene generation or motion design",
+    "The transcript-first model still takes adjustment for traditional editors who think in timelines first",
+    "The best AI, translation, avatar, and collaboration features show up more meaningfully on Creator, Business, or Enterprise tiers"
+  ],
+  "reviews": {
+    "verdict": {
+      "bottomLine": "Descript is one of the stronger tools for transcript-first editing workflows built around podcasts, interviews, screen recordings, remote recording, and talking-head video. It is less compelling when the buyer needs cinematic generation, a browser-light editor, or a cheap high-volume template engine.",
+      "bestFor": [
+        "Podcast editing",
+        "Interview cleanup",
+        "Transcript-based repurposing"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Who is Descript best for?",
+        "answer": "Descript is best for podcasters, interview editors, creator teams, and internal video teams that want to edit spoken audio and video through a transcript-first workflow."
+      },
+      {
+        "question": "Does Descript have a free plan?",
+        "answer": "Yes. Official pricing lists a Free plan with 1 media hour per month, 100 one-time AI credits, and 720p watermark-free export, with paid plans starting above that."
+      },
+      {
+        "question": "Does the free plan include a watermark?",
+        "answer": "No. Current official pricing explicitly shows watermark-free export on the Free tier, though the plan is still limited to 720p and 1 media hour per month."
+      },
+      {
+        "question": "What changes when you move up to Hobbyist or Creator?",
+        "answer": "Hobbyist moves to 1080p, 10 media hours, and 400 monthly AI credits, while Creator adds 4K export, 30 plus 5 bonus media hours, fuller Underlord access, latest AI video models, and unlimited stock media."
+      },
+      {
+        "question": "Is Descript good for remote interviews or podcast teams?",
+        "answer": "Yes, especially if the workflow includes Rooms. Official pricing shows up to 10 participants per room across tiers, with recording-hour allowances increasing substantially on paid plans."
+      },
+      {
+        "question": "What is the main trade-off with Descript?",
+        "answer": "The main trade-off is workflow shape and app weight. Descript is excellent for spoken-content editing, but it is less suitable for generation-first work and can feel heavier than simpler browser-based tools."
+      },
+      {
+        "question": "What higher-tier features matter for business use?",
+        "answer": "Business adds Brand Studio, higher media-hour and AI-credit limits, translation and dubbing in 30 plus languages with proofread, custom avatar generation, and priority support."
+      },
+      {
+        "question": "How does Descript differ from Pictory?",
+        "answer": "Descript is stronger for transcript-first editing, cleanup, remote recording, and deeper spoken-content workflows. Pictory is stronger when the team mainly wants templated repurposing from webinars, articles, or recordings into quick clips."
+      }
+    ]
+  },
+  "sources": {
+    "descript.com": {
+      "type": "OFFICIAL_WEBSITE",
+      "howToVerify": "Check the official Descript product pages for transcript editing, Underlord, recording, and AI workflow claims",
+      "suggestedQuery": "site:descript.com/features Descript Underlord transcript editing Rooms"
+    },
+    "descript.com/pricing": {
+      "type": "OFFICIAL_PRICING",
+      "howToVerify": "Check the official pricing page for media hours, AI credits, export resolution, watermark policy, dubbing, and team limits",
+      "suggestedQuery": "site:descript.com/pricing Descript media hours AI credits 4K watermark"
+    },
+    "help.descript.com": {
+      "type": "HELP_CENTER",
+      "howToVerify": "Check official help articles for Rooms, publishing, transcript editing, and AI feature behavior",
+      "suggestedQuery": "site:help.descript.com Descript Rooms publish transcript editing"
+    },
+    "descript.com/faq": {
+      "type": "OFFICIAL_FAQ",
+      "howToVerify": "Check official FAQs for billing, privacy, and free-plan access questions",
+      "suggestedQuery": "site:descript.com/faq Descript free plan credit card privacy"
+    }
+  },
+  "related": {
+    "comparisons": [
+      {
+        "slug": "descript-vs-pictory",
+        "title": "Descript vs Pictory"
+      }
+    ]
+  }
+}

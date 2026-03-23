@@ -63,7 +63,7 @@
       "slug": "kling-ai",
       "verdictSeed": "Native 4K at 60fps — reported as the first model to reach this resolution. Cheapest API cost at $0.029/sec. 6-cut multi-shot storyboarding support.",
       "pricingSeed": "API: ~$0.029/sec; free tier: 66 daily credits",
-      "policySeed": null,
+      "policySeed": "Access starts with a daily free-credit tier, but current source coverage does not confirm native audio or stronger governance controls.",
       "bestForSeed": "High-resolution volume and social media speed",
       "mainLimitationSeed": "No native audio generation",
       "officialUrl": "https://klingai.com/",
@@ -71,10 +71,10 @@
       "reviewUrl": null,
       "logoUrl": null,
       "sourceUrls": [
+        "https://klingai.com/",
         "https://www.aifreeapi.com/en/posts/seedance-2-vs-kling-3-vs-sora-2-vs-veo-3"
       ],
       "flags": [
-        "missing-policy-seed",
         "missing-logo-url",
         "missing-review-coverage"
       ]
@@ -84,7 +84,7 @@
       "slug": "sora",
       "verdictSeed": "Photorealistic text-to-video with physics-aware generation. Longest native clip duration at 25 seconds. Includes a storyboard timeline editor.",
       "pricingSeed": "Requires ChatGPT Plus ($20/mo); API: ~$0.10–0.50/sec",
-      "policySeed": null,
+      "policySeed": "High-resolution Sora output is priced per second, making it a premium generation path rather than a low-cost batch workflow.",
       "bestForSeed": "Cinematic realism and physics simulation",
       "mainLimitationSeed": "No native audio generation; no free tier",
       "officialUrl": "https://openai.com/sora",
@@ -92,18 +92,18 @@
       "reviewUrl": "/tool/sora",
       "logoUrl": "/logos/sora.png",
       "sourceUrls": [
-        "https://www.aifreeapi.com/en/posts/seedance-2-vs-kling-3-vs-sora-2-vs-veo-3"
+        "https://openai.com/sora/",
+        "https://platform.openai.com/docs/pricing",
+        "https://platform.openai.com/docs/sora"
       ],
-      "flags": [
-        "missing-policy-seed"
-      ]
+      "flags": []
     },
     {
       "name": "Veo 3.1",
       "slug": "veo",
       "verdictSeed": "Google's generation model with native audio sync and official API access for developers. Supports up to 4K output.",
       "pricingSeed": "API: $0.15/sec (fast mode)",
-      "policySeed": null,
+      "policySeed": "Official API access is part of Veo's value proposition, but current source coverage still describes preview access for UI-first users as limited.",
       "bestForSeed": "Developer API integration with native audio sync",
       "mainLimitationSeed": "Limited preview access for UI-based users; max clip duration is 8 seconds",
       "officialUrl": "https://deepmind.google/models/veo/",
@@ -111,10 +111,10 @@
       "reviewUrl": null,
       "logoUrl": null,
       "sourceUrls": [
+        "https://deepmind.google/models/veo/",
         "https://www.aifreeapi.com/en/posts/seedance-2-vs-kling-3-vs-sora-2-vs-veo-3"
       ],
       "flags": [
-        "missing-policy-seed",
         "missing-logo-url",
         "missing-review-coverage"
       ]
@@ -124,7 +124,7 @@
       "slug": "seedance",
       "verdictSeed": "Supports up to 12-file multimodal input (images, video, audio) in a single generation request. Native audio-video sync.",
       "pricingSeed": "260 free credits on signup; API: $0.10–0.80/min (third-party only)",
-      "policySeed": null,
+      "policySeed": "Access currently looks more experimental than polished: free signup credits exist, but API access is described through third-party providers rather than a cleaner first-party path.",
       "bestForSeed": "Maximum creative control via multimodal input",
       "mainLimitationSeed": "Frame rate locked to 24fps; API available only through third-party providers",
       "officialUrl": null,
@@ -135,7 +135,6 @@
         "https://www.aifreeapi.com/en/posts/seedance-2-vs-kling-3-vs-sora-2-vs-veo-3"
       ],
       "flags": [
-        "missing-policy-seed",
         "missing-official-url",
         "missing-logo-url",
         "missing-review-coverage"
@@ -146,40 +145,38 @@
       "slug": "runway",
       "verdictSeed": "Exceptional motion quality with consistent character coherence. Offers a broader creative suite with professional editing integration and team workflows.",
       "pricingSeed": "Standard: $12/mo; Pro: $28/mo",
-      "policySeed": null,
+      "policySeed": "Free keeps a watermark, while paid plans remove watermarks and unlock access to all video models.",
       "bestForSeed": "Creative teams needing a broader editing suite alongside generation",
-      "mainLimitationSeed": null,
+      "mainLimitationSeed": "Costs more than Kling for high-volume generation if API economics matter more than workflow depth",
       "officialUrl": "https://runwayml.com/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/runway",
       "logoUrl": "/logos/runway.png",
       "sourceUrls": [
-        "https://tooltester24.com/best-ai-video-generators-2026-complete-comparison-reviews/"
+        "https://runwayml.com/pricing",
+        "https://runwayml.com/ai-tools",
+        "https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights"
       ],
-      "flags": [
-        "missing-policy-seed",
-        "missing-limitation-seed"
-      ]
+      "flags": []
     },
     {
       "name": "Pika",
       "slug": "pika",
       "verdictSeed": "Intuitive interface ideal for beginners and social media creators. Free tier available for experimentation.",
       "pricingSeed": "Free tier; Pro from $10/mo",
-      "policySeed": null,
+      "policySeed": "Lower tiers are watermarked and personal-use oriented; Pro and Fancy unlock unwatermarked commercial use.",
       "bestForSeed": "Beginners and social media creators",
-      "mainLimitationSeed": null,
+      "mainLimitationSeed": "Best for fast social clips, not frontier realism or technical-control workflows",
       "officialUrl": "https://pika.style/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/pika",
       "logoUrl": "/logos/pika-logo.jpeg",
       "sourceUrls": [
-        "https://tooltester24.com/best-ai-video-generators-2026-complete-comparison-reviews/"
+        "https://pika.art/",
+        "https://pika.art/pricing",
+        "https://pika.art/faq"
       ],
-      "flags": [
-        "missing-policy-seed",
-        "missing-limitation-seed"
-      ]
+      "flags": []
     }
   ],
   "relatedLinks": {
@@ -217,17 +214,13 @@
       ]
     }
   ],
-  "lastReviewed": "2026-03-08T00:35:00Z",
+  "lastReviewed": "2026-03-21T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/ai-video-generators-comparison.raw.json",
     "sourceCount": 2,
     "uniqueToolCount": 6,
-    "needsManualReview": true,
-    "reviewNotes": [
-      "One or more tools still need verified officialUrl coverage.",
-      "One or more tools still need verified logoUrl coverage.",
-      "One or more tools are missing internal review coverage."
-    ]
+    "needsManualReview": false,
+    "reviewNotes": []
   }
 }

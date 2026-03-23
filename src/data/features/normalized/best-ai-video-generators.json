@@ -78,7 +78,9 @@
       "reviewUrl": "/tool/sora",
       "logoUrl": "/logos/sora.png",
       "sourceUrls": [
-        "https://www.toolworthy.ai/blog/best-ai-video-generator"
+        "https://openai.com/sora/",
+        "https://platform.openai.com/docs/pricing",
+        "https://platform.openai.com/docs/sora"
       ],
       "flags": []
     },
@@ -95,8 +97,9 @@
       "reviewUrl": "/tool/synthesia",
       "logoUrl": "/logos/synthesia.png",
       "sourceUrls": [
-        "https://www.toolworthy.ai/blog/best-ai-video-generator",
-        "https://vidwave.ai/heygen-vs-synthesia-pricing-2025-full-cost-breakdown"
+        "https://www.synthesia.io/pricing",
+        "https://help.synthesia.io/en/articles/9994493-what-is-synthesia",
+        "https://docs.synthesia.io/docs/video-creation"
       ],
       "flags": [
         "duplicate-raw-mentions-merged"
@@ -107,21 +110,19 @@
       "slug": "pika",
       "verdictSeed": "Ultra-fast effects-driven content for TikTok and Reels via the Model 2.2 engine.",
       "pricingSeed": "From $8/mo",
-      "policySeed": null,
+      "policySeed": "Paid plans explicitly add no-watermark downloads and commercial-use support, so free or lighter entry use is better treated as experimentation rather than a clean publishing path",
       "bestForSeed": "TikTok and Reels effects",
-      "mainLimitationSeed": null,
+      "mainLimitationSeed": "Cheap entry pricing still comes with credit ceilings, and heavier effect usage quickly pushes you toward higher tiers if you need reliable output volume",
       "officialUrl": "https://pika.style/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/pika",
       "logoUrl": "/logos/pika-logo.jpeg",
       "sourceUrls": [
-        "https://www.toolworthy.ai/blog/best-ai-video-generator"
+        "https://pika.art/",
+        "https://pika.art/pricing",
+        "https://pika.art/faq"
       ],
-      "flags": [
-        "missing-pricing-seed",
-        "missing-policy-seed",
-        "missing-limitation-seed"
-      ]
+      "flags": []
     },
     {
       "name": "HeyGen",
@@ -136,7 +137,9 @@
       "reviewUrl": "/tool/heygen",
       "logoUrl": "/logos/heygen-logo.png",
       "sourceUrls": [
-        "https://vidwave.ai/heygen-vs-synthesia-pricing-2025-full-cost-breakdown"
+        "https://www.heygen.com/pricing",
+        "https://www.heygen.com/features",
+        "https://docs.heygen.com/reference/limits"
       ],
       "flags": []
     },
@@ -145,20 +148,19 @@
       "slug": "runway",
       "verdictSeed": "Creative control for effects-driven and cinematic short clips. Supports professional controls including color grading.",
       "pricingSeed": "From $15/mo (625 credits)",
-      "policySeed": null,
+      "policySeed": "Free access keeps a watermark and excludes higher-end video access, while paid plans remove the watermark and unlock the cleaner publish-ready path",
       "bestForSeed": "Creative effects and short cinematic clips",
-      "mainLimitationSeed": null,
+      "mainLimitationSeed": "The entry paid tier still runs on a 625-credit monthly cap, so heavier generation volume or higher-end models push you up the pricing ladder quickly",
       "officialUrl": "https://runwayml.com/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/runway",
       "logoUrl": "/logos/runway.png",
       "sourceUrls": [
-        "https://vidwave.ai/heygen-vs-synthesia-pricing-2025-full-cost-breakdown"
+        "https://runwayml.com/pricing",
+        "https://runwayml.com/features",
+        "https://help.runwayml.com/hc/en-us/articles/39210171493459-Usage-rights"
       ],
-      "flags": [
-        "missing-policy-seed",
-        "missing-limitation-seed"
-      ]
+      "flags": []
     }
   ],
   "relatedLinks": {
@@ -200,15 +202,13 @@
       ]
     }
   ],
-  "lastReviewed": "2026-03-07T22:30:00Z",
+  "lastReviewed": "2026-03-21T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/best-ai-video-generators.raw.json",
     "sourceCount": 2,
     "uniqueToolCount": 5,
-    "needsManualReview": true,
-    "reviewNotes": [
-      "Duplicate raw tool mentions merged: synthesia"
-    ]
+    "needsManualReview": false,
+    "reviewNotes": []
   }
 }

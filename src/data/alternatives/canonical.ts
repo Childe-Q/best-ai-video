@@ -65,7 +65,7 @@ export const canonicalAlternativesConfigs: Record<string, CanonicalAlternativesC
         id: 'editing-control',
         title: 'Editing control',
         description: 'Gaining post-generation control and manual editing.',
-        toolSlugs: ['descript', 'capcut']
+        toolSlugs: ['descript', 'flexclip']
       },
       {
         id: 'workflow-speed',
@@ -82,25 +82,25 @@ export const canonicalAlternativesConfigs: Record<string, CanonicalAlternativesC
         id: 'cost-control',
         title: 'Cost control',
         description: 'Avoiding watermark restrictions and upgrade costs.',
-        toolSlugs: ['capcut', 'submagic']
+        toolSlugs: ['flexclip', 'invideo']
       },
       {
         id: 'quality-issues',
         title: 'Quality issues',
         description: 'Escaping export limitations and browser reliability issues.',
-        toolSlugs: ['descript', 'riverside']
+        toolSlugs: ['descript', 'pictory']
       },
       {
         id: 'editing-control',
         title: 'Editing control',
         description: 'Gaining advanced timeline and multi-track editing.',
-        toolSlugs: ['camtasia', 'davinci-resolve']
+        toolSlugs: ['descript', 'flexclip']
       },
       {
         id: 'workflow-speed',
         title: 'Workflow speed',
         description: 'Faster rendering and better stability.',
-        toolSlugs: ['captions-ai', 'elevenlabs']
+        toolSlugs: ['heygen', 'fliki']
       }
     ]
   },
@@ -111,7 +111,7 @@ export const canonicalAlternativesConfigs: Record<string, CanonicalAlternativesC
         id: 'cost-control',
         title: 'Cost control',
         description: 'Avoiding credit volatility and strict refund windows.',
-        toolSlugs: ['invideo', 'canva']
+        toolSlugs: ['invideo', 'flexclip']
       },
       {
         id: 'quality-issues',
@@ -123,13 +123,13 @@ export const canonicalAlternativesConfigs: Record<string, CanonicalAlternativesC
         id: 'editing-control',
         title: 'Editing control',
         description: 'Gaining post-generation control and manual editing.',
-        toolSlugs: ['pictory', 'capcut']
+        toolSlugs: ['pictory', 'descript']
       },
       {
         id: 'workflow-speed',
         title: 'Workflow speed',
         description: 'Accelerated ad creation and platform stability.',
-        toolSlugs: ['creatify']
+        toolSlugs: ['invideo']
       }
     ]
   },
@@ -140,13 +140,13 @@ export const canonicalAlternativesConfigs: Record<string, CanonicalAlternativesC
         id: 'cost-control',
         title: 'Cost control',
         description: 'Avoiding credit expiration and high volume costs.',
-        toolSlugs: ['vidnoz', 'heygen']
+        toolSlugs: ['d-id', 'heygen']
       },
       {
         id: 'quality-issues',
         title: 'Quality issues',
         description: 'Escaping stiff avatars and robotic facial dynamics.',
-        toolSlugs: ['synthesia', 'hour-one']
+        toolSlugs: ['synthesia', 'deepbrain-ai']
       },
       {
         id: 'workflow-speed',
@@ -181,13 +181,13 @@ export const canonicalAlternativesConfigs: Record<string, CanonicalAlternativesC
         id: 'quality-issues',
         title: 'Quality issues',
         description: 'Reducing uncanny valley and accented robotic voices.',
-        toolSlugs: ['hour-one', 'deepbrain-ai']
+        toolSlugs: ['deepbrain-ai', 'heygen']
       },
       {
         id: 'enterprise-security',
         title: 'Enterprise/security',
         description: 'Unlocking essential corporate features without paywalls.',
-        toolSlugs: ['vyond', 'descript']
+        toolSlugs: ['colossyan', 'descript']
       }
     ]
   },

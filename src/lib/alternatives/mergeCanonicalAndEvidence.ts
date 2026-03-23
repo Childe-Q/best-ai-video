@@ -11,6 +11,7 @@ import { getAlternativesShortlist } from './getAlternativesShortlist';
 import { getTrustedAlternativesPool } from './getTrustedAlternativesPool';
 import { isTryNowTool } from './affiliateWhitelist';
 import { normalizeEvidenceText } from './normalizeEvidenceText';
+import { getPricingDisplay } from '@/lib/pricing/display';
 
 /**
  * Validate that all tool slugs in canonical config exist in tools.json
@@ -125,11 +126,23 @@ function generateFallbackCopy(tool: Tool, groupIntent: string, currentTool: Tool
       pickThisIf = `${tool.name} offers improved ${groupLower.includes('quality') ? 'output quality' : 'asset management'}`;
     }
   } else if (groupLower.includes('pricing') || groupLower.includes('cost') || groupLower.includes('predictable')) {
-    if (tool.has_free_trial || (typeof tool.starting_price === 'string' && tool.starting_price.toLowerCase().includes('free'))) {
-      pickThisIf = `${tool.name} offers ${tool.has_free_trial ? 'a free trial' : 'free tier'} with ${typeof tool.starting_price === 'string' ? tool.starting_price : 'flexible pricing'}`;
+    const pricingDisplay = getPricingDisplay(tool);
+    if (pricingDisplay.verification === 'verified') {
+      if (pricingDisplay.freePlan === 'yes') {
+        pickThisIf = `${tool.name} offers a free plan with ${pricingDisplay.displayText.toLowerCase()}.`;
+      } else if (pricingDisplay.status === 'custom' || pricingDisplay.status === 'enterprise') {
+        pickThisIf = `${tool.name} uses custom pricing for buyers who need sales-led packaging.`;
+      } else {
+        pickThisIf = `${tool.name} provides ${pricingDisplay.displayText.toLowerCase()} for buyers who want verified pricing guidance.`;
+      }
+    } else if (pricingDisplay.verification === 'trusted') {
+      if (pricingDisplay.status === 'custom' || pricingDisplay.status === 'enterprise') {
+        pickThisIf = `${tool.name} appears to use custom pricing, but confirm live packaging before you decide.`;
+      } else {
+        pickThisIf = `${tool.name} currently shows repo-maintained pricing around ${pricingDisplay.displayText.toLowerCase()}, but check the live pricing page before budgeting around it.`;
+      }
     } else {
-      const priceStr = typeof tool.starting_price === 'string' ? tool.starting_price : 'competitive pricing';
-      pickThisIf = `${tool.name} provides ${priceStr} with ${tool.has_free_trial ? 'free trial' : 'transparent pricing'}`;
+      pickThisIf = `${tool.name} may fit pricing-sensitive buyers, but the current site pricing is not verified yet.`;
     }
   } else {
     // Generic but tool-specific fallback
@@ -143,7 +156,7 @@ function generateFallbackCopy(tool: Tool, groupIntent: string, currentTool: Tool
   // Generate limitations based on tool properties
   if (tool.cons && tool.cons.length > 0) {
     limitations = tool.cons[0]; // Use first con as limitation
-  } else if (typeof tool.starting_price === 'string' && !tool.starting_price.toLowerCase().includes('free')) {
+  } else if (getPricingDisplay(tool).verification === 'verified') {
     limitations = `Paid plans required for full features`;
   } else if (!tool.has_free_trial) {
     limitations = `No free trial available`;
@@ -228,7 +241,7 @@ function buildToolWithEvidence(
     slug: tool.slug,
     name: tool.name,
     logoUrl: tool.logo_url || '',
-    startingPrice: tool.starting_price || 'Free Trial',
+    startingPrice: getPricingDisplay(tool).displayText,
     rating: tool.rating,
     affiliateLink: tool.affiliate_link || '',
     affiliateUrl: tool.affiliate_link || undefined,

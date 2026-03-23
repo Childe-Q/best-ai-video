@@ -3,7 +3,7 @@
   "slug": "content-repurposing-ai-tools",
   "title": "Best AI Tools for Content Repurposing (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares AI tools that turn existing source material — blog posts, scripts, webinars, podcasts, and long-form recordings — into new video formats. Tools are grouped by conversion workflow: written source to video, or recorded source to short clips. Post-production editors whose main job is timeline control, transcript cleanup, and footage polishing are excluded because this page is about conversion and reuse at scale, not editing an assembled project.",
+    "oneLiner": "This page compares AI tools that turn existing source material — blog posts, scripts, webinars, podcasts, and long-form recordings — into new video formats. Tools are grouped by conversion workflow: written source to video, or recorded source to short clips. They are compared across the operating details that usually decide the shortlist: watermark removal, export ceilings, credit expiry or quota reset rules, and whether the tool adds shared workspaces or stays a solo repurposing lane.",
     "boundaries": [
       "Must import existing assets: URLs, long videos, podcasts, or scripts.",
       "Must automate conversion from one format to another (text to video, long video to shorts).",
@@ -12,7 +12,10 @@
     ],
     "primaryClassificationRule": "Group by source content type.",
     "comparisonAxes": [
-      "pricing and credit limits"
+      "pricing and credit limits",
+      "watermark and export policy",
+      "workflow limits and retention",
+      "team sharing and reuse controls"
     ]
   },
   "howToChooseSeeds": [
@@ -27,6 +30,10 @@
     {
       "title": "Evaluate stock media libraries for blog-to-video tools.",
       "desc": "Blog conversion tools rely heavily on B-roll and stock media to illustrate text content. Verify that the platform includes access to high-quality stock libraries (e.g., Storyblocks, Getty) in the plan price, rather than charging separately."
+    },
+    {
+      "title": "Check which tier actually gives you clean exports and durable project storage.",
+      "desc": "Some tools keep branding, short retention windows, or expiring credits on free or lighter plans. For example, paid upgrades remove branding on Lumen5 and Opus Clip, while Opus credits and saved-project access still depend on plan and storage tier."
     }
   ],
   "groups": [
@@ -53,38 +60,38 @@
     {
       "name": "Pictory",
       "slug": "pictory",
-      "verdictSeed": "Converts scripts, articles, and long-form recordings into platform-ready clips. Features transcript-based editing where editing text edits the video. Integrates ElevenLabs voices.",
-      "pricingSeed": "From $19/mo",
-      "policySeed": null,
+      "verdictSeed": "Converts scripts, articles, and long-form recordings into platform-ready clips, with transcript-led editing and clearer team-sharing rules than most solo repurposing tools.",
+      "pricingSeed": "Free trial plus paid plans; larger quotas and cleaner branded exports sit on paid tiers",
+      "policySeed": "Free output keeps a watermark, while paid plans are the practical route for branded repurposing and larger monthly export-minute capacity",
       "bestForSeed": "Podcasts, webinars, and long-form script conversion",
-      "mainLimitationSeed": "Complex credit system; occasional export issues reported",
+      "mainLimitationSeed": "Quota resets, plan-gated branding, and team-sharing rules matter more than the headline entry price.",
       "officialUrl": "https://pictory.ai/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/pictory",
       "logoUrl": "/logos/pictory.png",
       "sourceUrls": [
-        "https://www.mootion.com/use-cases/en/compare/pictory-vs-lumen5"
+        "https://pictory.ai/",
+        "https://pictory.ai/pricing",
+        "https://pictory.ai/features"
       ],
-      "flags": [
-        "missing-pricing-seed",
-        "missing-policy-seed"
-      ]
+      "flags": []
     },
     {
       "name": "Lumen5",
       "slug": "lumen5",
-      "verdictSeed": "Paste a blog URL and the AI builds scenes with stock media and text animations. No monthly limit on video creation at any plan level.",
-      "pricingSeed": "Free Community Plan available; paid plans remove branding",
-      "policySeed": null,
+      "verdictSeed": "Paste a blog URL and the AI builds scenes with stock media and text animations. Paid tiers remove branding, while higher business tiers add workspace permissions and stronger publishing controls.",
+      "pricingSeed": "Free Community Plan available; paid tiers remove branding and Starter is the first clear 1080p self-serve lane",
+      "policySeed": "Free output keeps Lumen5 branding, while paid plans remove the platform watermark for publishable marketing use",
       "bestForSeed": "Fast blog-to-video conversion for social media",
-      "mainLimitationSeed": "Limited granular editing; free plan includes Lumen5 branding",
+      "mainLimitationSeed": "It is capped at 10 minutes per video and is much stronger at repurposing than at granular editing.",
       "officialUrl": "https://lumen5.com/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/lumen5",
       "logoUrl": "/logos/Lumen5-Logo.svg",
       "sourceUrls": [
-        "https://www.mootion.com/use-cases/en/compare/pictory-vs-lumen5",
-        "https://help.lumen5.com/en/article/how-much-does-lumen5-cost-one87/"
+        "https://lumen5.com/pricing/",
+        "https://lumen5.com/features/",
+        "https://lumen5.com/faq/"
       ],
       "flags": [
         "duplicate-raw-mentions-merged"
@@ -103,6 +110,8 @@
       "reviewUrl": null,
       "logoUrl": null,
       "sourceUrls": [
+        "https://go.getmunch.com/",
+        "https://go.getmunch.com/payment-and-cancellation-policy",
         "https://meetsona.ai/blog/ai-content-repurposing-tools/"
       ],
       "flags": [
@@ -116,23 +125,21 @@
     {
       "name": "Opus Clip",
       "slug": "opus-clip",
-      "verdictSeed": "Turns long videos into short-form clips with a virality score that ranks each clip's predicted performance.",
-      "pricingSeed": "From $15/mo",
-      "policySeed": null,
+      "verdictSeed": "Turns long videos into short-form clips with a virality score, automated captions, and reframing. Paid plans remove branding, while Pro adds cloud-saved projects and team workspace.",
+      "pricingSeed": "Free trial plus paid plans; Starter is the first paid lane, while Pro adds workspace and storage",
+      "policySeed": "Free Trial and Free Plan carry watermark constraints, paid plans remove the watermark, and monthly credits remain valid for 60 days",
       "bestForSeed": "Long-form video to viral shorts",
-      "mainLimitationSeed": null,
+      "mainLimitationSeed": "Automated clipping is strongest for talking-head or interview-style footage, and saved-project retention or uploaded assets still depend heavily on plan level.",
       "officialUrl": "https://opusclip.com/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/opus-clip",
       "logoUrl": "/logos/opus-clip.png",
       "sourceUrls": [
-        "https://meetsona.ai/blog/ai-content-repurposing-tools/"
+        "https://www.opus.pro/pricing",
+        "https://www.opus.pro/features",
+        "https://www.opus.pro/faq"
       ],
-      "flags": [
-        "missing-pricing-seed",
-        "missing-policy-seed",
-        "missing-limitation-seed"
-      ]
+      "flags": []
     }
   ],
   "relatedLinks": {
@@ -146,8 +153,13 @@
       "lumen5",
       "opus-clip"
     ],
-    "vsSlugs": [],
-    "guideSlugs": []
+    "vsSlugs": [
+      "descript-vs-pictory",
+      "invideo-vs-pictory"
+    ],
+    "guideSlugs": [
+      "ai-video-for-youtube"
+    ]
   },
   "faqSeeds": [
     {
@@ -170,17 +182,13 @@
       ]
     }
   ],
-  "lastReviewed": "2026-03-07T23:45:00Z",
+  "lastReviewed": "2026-03-22T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/content-repurposing-ai-tools.raw.json",
     "sourceCount": 3,
     "uniqueToolCount": 4,
-    "needsManualReview": true,
-    "reviewNotes": [
-      "Duplicate raw tool mentions merged: lumen5",
-      "One or more tools still need verified logoUrl coverage.",
-      "One or more tools are missing internal review coverage."
-    ]
+    "needsManualReview": false,
+    "reviewNotes": []
   }
 }

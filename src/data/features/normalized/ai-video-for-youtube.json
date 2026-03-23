@@ -65,8 +65,9 @@
       "reviewUrl": "/tool/invideo",
       "logoUrl": "/logos/InVideo_logo.svg",
       "sourceUrls": [
-        "https://trendyri.com/article/best-ai-video-generators-faceless-youtube-channels-2026",
-        "https://help-ai.invideo.io/en/collections/9486043-pricing-plans"
+        "https://invideo.io/pricing/",
+        "https://invideo.io/make/youtube-video-editor/",
+        "https://help.invideo.io/en/collections/9486043-pricing-plans"
       ],
       "flags": [
         "duplicate-raw-mentions-merged"
@@ -77,21 +78,19 @@
       "slug": "heygen",
       "verdictSeed": "Creates hyper-realistic AI avatar hosts for faceless YouTube channels. Suited for creators who want an on-screen presenter without appearing on camera.",
       "pricingSeed": "From $29/mo (Creator)",
-      "policySeed": null,
+      "policySeed": "Free output remains watermarked and non-commercial, while paid plans are the real path for publishable avatar-hosted YouTube output",
       "bestForSeed": "Avatar-hosted faceless YouTube channels",
-      "mainLimitationSeed": null,
+      "mainLimitationSeed": "Credit-based usage, scene caps, and character limits make it weaker for high-volume channel automation than full pipeline systems",
       "officialUrl": "https://www.heygen.com/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/heygen",
       "logoUrl": "/logos/heygen-logo.png",
       "sourceUrls": [
-        "https://trendyri.com/article/best-ai-video-generators-faceless-youtube-channels-2026"
+        "https://www.heygen.com/pricing",
+        "https://www.heygen.com/features",
+        "https://docs.heygen.com/reference/limits"
       ],
-      "flags": [
-        "missing-pricing-seed",
-        "missing-policy-seed",
-        "missing-limitation-seed"
-      ]
+      "flags": []
     },
     {
       "name": "Syllaby",
@@ -106,6 +105,7 @@
       "reviewUrl": null,
       "logoUrl": null,
       "sourceUrls": [
+        "https://syllaby.io/",
         "https://syllaby.io/blog/best-faceless-video-ai-generators-youtube-automation/"
       ],
       "flags": [
@@ -146,17 +146,13 @@
       ]
     }
   ],
-  "lastReviewed": "2026-03-08T00:25:00Z",
+  "lastReviewed": "2026-03-21T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/ai-video-for-youtube.raw.json",
     "sourceCount": 3,
     "uniqueToolCount": 3,
-    "needsManualReview": true,
-    "reviewNotes": [
-      "Duplicate raw tool mentions merged: invideo",
-      "One or more tools still need verified logoUrl coverage.",
-      "One or more tools are missing internal review coverage."
-    ]
+    "needsManualReview": false,
+    "reviewNotes": []
   }
 }

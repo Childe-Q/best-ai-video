@@ -8,6 +8,7 @@ import AlternativeToolCard from '@/components/alternatives/AlternativeToolCard';
 import { AlternativeTool } from '@/components/alternatives/types';
 import { getToolByNameOrSlug } from '@/lib/alternatives/mapToolNameToSlug';
 import { getPricingDetails } from '@/lib/alternatives/getPricingDetails';
+import { getPricingDisplay } from '@/lib/pricing/display';
 
 type FilterState = {
   hasFreeTrial: boolean;
@@ -163,7 +164,7 @@ export default function VeedAlternativesClient({ data }: VeedAlternativesClientP
       slug: tool.slug,
       name: tool.name,
       logoUrl: tool.logo_url || '',
-      startingPrice: tool.starting_price || 'Free Trial',
+      startingPrice: getPricingDisplay(tool).displayText,
       rating: tool.rating,
       affiliateLink: tool.affiliate_link || '',
       hasFreeTrial: tool.has_free_trial || false,

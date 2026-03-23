@@ -5,6 +5,7 @@ import { Tool } from '@/types/tool';
 import EditorialScoreSimple from './EditorialScoreSimple';
 import { EXTERNAL_TOOL_TAGS } from '@/data/externalToolTags';
 import { getEditorialHomeTags } from '@/data/home/editorialTags';
+import { getPricingDisplay, getToolPricingSummary } from '@/lib/pricing/display';
 
 interface ToolCardProps {
   tool: Tool;
@@ -12,20 +13,25 @@ interface ToolCardProps {
 
 // Helper function to get pricing tag and color
 function getPricingTag(tool: Tool): { label: string; color: string } {
-  if (tool.has_free_trial) {
-    return { label: 'Free trial', color: 'bg-black/[0.04] text-black/60' };
+  const summary = getToolPricingSummary(tool);
+
+  if (summary.verification === 'unverified') {
+    return { label: 'Pricing unverified', color: 'bg-black/[0.04] text-black/60' };
   }
-  
-  const pricingModel = tool.pricing_model?.toLowerCase() || '';
-  
-  if (pricingModel.includes('freemium')) {
-    return { label: 'Freemium', color: 'bg-black/[0.04] text-black/60' };
+
+  if (summary.verification === 'trusted') {
+    return { label: 'Trusted pricing', color: 'bg-black/[0.04] text-black/60' };
   }
-  if (pricingModel.includes('subscription') || pricingModel.includes('paid')) {
-    return { label: 'Paid', color: 'bg-black/[0.04] text-black/60' };
+
+  if (summary.status === 'custom' || summary.status === 'enterprise') {
+    return { label: 'Custom pricing', color: 'bg-black/[0.04] text-black/60' };
   }
-  
-  return { label: tool.pricing_model || 'Paid', color: 'bg-black/[0.04] text-black/65' };
+
+  if (summary.status === 'free') {
+    return { label: 'Free', color: 'bg-black/[0.04] text-black/60' };
+  }
+
+  return { label: 'Paid', color: 'bg-black/[0.04] text-black/60' };
 }
 
 
@@ -54,6 +60,7 @@ function isCoreTag(label: string): boolean {
 export default function ToolCard({ tool }: ToolCardProps) {
   const pricingTag = getPricingTag(tool);
   const homeTags = getHomeTags(tool);
+  const pricingDisplay = getPricingDisplay(tool);
 
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-black/10 bg-white px-5 py-5 transition-all duration-200 ease-out hover:-translate-y-1 hover:border-black/16 hover:bg-[#FFFEFB] hover:shadow-[0_16px_34px_rgba(0,0,0,0.06)]">
@@ -113,7 +120,10 @@ export default function ToolCard({ tool }: ToolCardProps) {
         <div className="mt-auto flex items-end justify-between gap-3 border-t border-black/8 pt-4">
           <div className="min-w-0">
             <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-black/35">Starting from</p>
-            <p className="mt-1 truncate text-sm font-semibold text-gray-900">{tool.starting_price || 'Pricing varies'}</p>
+            <p className="mt-1 truncate text-sm font-semibold text-gray-900">{pricingDisplay.displayText}</p>
+            {pricingDisplay.hintText && pricingDisplay.verification !== 'unverified' && (
+              <p className="mt-1 truncate text-[11px] font-medium text-gray-500">{pricingDisplay.hintText}</p>
+            )}
           </div>
           <div className="flex items-center gap-2">
             <Link

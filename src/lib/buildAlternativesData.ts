@@ -5,6 +5,7 @@ import alternativesEvidenceData from '@/data/alternativesEvidence.json';
 import { alternativesEvidence } from '@/data/evidence/alternatives';
 import { isTryNowTool } from './alternatives/affiliateWhitelist';
 import { mapAlternativeCardCopy } from './alternatives/mapAlternativeCardCopy';
+import { getPricingDisplay } from '@/lib/pricing/display';
 
 // Helper to check if tool has affiliate link
 export function hasAffiliate(tool: Tool): boolean {
@@ -51,7 +52,7 @@ export function buildAlternativeTool(
     slug: tool.slug,
     name: tool.name,
     logoUrl: tool.logo_url,
-    startingPrice: tool.starting_price || 'Free Trial',
+    startingPrice: getPricingDisplay(tool).displayText,
     rating: tool.rating,
     affiliateLink: tool.affiliate_link || '',
     affiliateUrl: tool.affiliate_link || undefined,

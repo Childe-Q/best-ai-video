@@ -1,0 +1,145 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "Teams and creators who want flagship model-led video generation, prompt-or-image starting points, and stronger realism than template-first tools usually deliver",
+      "notFor": "Buyers who need a free plan, a built-in editor-first workflow, or low-cost high-volume experimentation with predictable spend",
+      "why": "Sora is strongest when the buying question is output realism, style range, and direct generation capability. The official product and pricing material point to a generation-first workflow with paid access and per-second video costs, not a lightweight editor or cheap volume engine."
+    },
+    "miniTest": {
+      "prompt": "Generate a 10-15 second product teaser with one clear subject, one camera move, one environmental detail, synced sound, and one clean ending frame. Keep the scene realistic and avoid on-screen text.",
+      "checklist": [
+        {
+          "label": "Goal",
+          "value": "Text-to-video concept footage / prototype creative / cinematic teaser"
+        },
+        {
+          "label": "Access model",
+          "value": "Confirm whether the team is buying Sora as premium model access rather than as a cheap daily production tool"
+        },
+        {
+          "label": "Prompt adherence",
+          "value": "Check whether the subject, action, sound, and ending frame all match the brief"
+        },
+        {
+          "label": "Motion realism",
+          "value": "Check whether movement feels smooth and physically believable"
+        },
+        {
+          "label": "Scene coherence",
+          "value": "Check whether lighting, camera movement, and subject consistency hold through the full clip"
+        },
+        {
+          "label": "Style range",
+          "value": "Check whether the output can move cleanly between photorealistic, cinematic, animated, or surreal treatments"
+        },
+        {
+          "label": "Cost posture",
+          "value": "Compare whether per-second video pricing and premium access fit the team's generation volume"
+        }
+      ],
+      "verdict": "Result: strongest when the buying question is model quality, realism, and direct generation range. The trade-off is that Sora is less editor-centric than Runway and less cost-friendly than simpler publishing tools."
+    },
+    "useCases": [
+      {
+        "title": "Flagship model benchmark",
+        "why": "Sora is a strong benchmark when the team wants to compare pure generation quality, realism, and style flexibility against other flagship models.",
+        "linkHref": "/vs/runway-vs-sora",
+        "linkText": "Compare with Runway →"
+      },
+      {
+        "title": "Prototype footage",
+        "why": "Useful for early-stage concept videos and visual prototyping where realistic motion, sound, and output quality matter more than template workflows.",
+        "linkHref": "/features/text-to-video-ai-tools",
+        "linkText": "See text-to-video guide →"
+      },
+      {
+        "title": "Premium generation access",
+        "why": "Best fit when the buyer is comfortable paying for a flagship video model and managing generation cost more like premium compute than like a social editor subscription.",
+        "linkHref": "/tool/sora/pricing",
+        "linkText": "Check pricing →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "Prompt-to-video and image-to-video generation from the official Sora app experience",
+      "Style range that explicitly spans cinematic, animated, photorealistic, and surreal outputs",
+      "Automatic inclusion of music, sound effects, and dialogue in generated scenes",
+      "Characters workflow for casting yourself or teammates in videos with explicit usage control",
+      "Generation-first workflow with paid access and per-second video pricing rather than a built-in editor-heavy stack"
+    ]
+  },
+  "pros": [
+    "Strong credibility as a flagship model benchmark for text-to-video quality",
+    "Clear fit for teams prioritizing realism, style range, and direct generation capability",
+    "Supports prompt and image starting points instead of forcing one workflow",
+    "Official product positioning includes sound and character workflows, not just silent clip generation"
+  ],
+  "cons": [
+    "No free entry point for lightweight testing",
+    "Less appealing if the team needs a full editing workflow in the same tool",
+    "Video output cost can rise quickly because pricing is published per second rather than as a flat creator plan",
+    "Best fit is narrower when the workflow is primarily templated publishing or low-cost batch output"
+  ],
+  "reviews": {
+    "verdict": {
+      "bottomLine": "Sora is a strong flagship choice when the team cares most about model quality, realism, and premium generation capability. It is a weaker fit when the workflow needs built-in editing depth, cheap experimentation, or a simpler publishing stack.",
+      "bestFor": [
+        "Flagship text-to-video generation",
+        "Prototype footage",
+        "High-quality concept creative"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Who is Sora best for?",
+        "answer": "Sora is best for teams and creators who want flagship prompt-to-video quality and are comfortable paying for premium model access instead of starting from a free creator plan."
+      },
+      {
+        "question": "What does OpenAI's pricing page say about Sora costs?",
+        "answer": "The current pricing docs publish Sora video rates per second: sora-2 at $0.10 per second for 720p output, sora-2-pro at $0.30 per second for 720p, and sora-2-pro at $0.50 per second for higher-resolution output."
+      },
+      {
+        "question": "What is the main trade-off with Sora?",
+        "answer": "The main trade-off is that Sora behaves more like premium generation infrastructure than like an all-in-one editor. You get stronger model-driven output, but you also accept higher cost sensitivity and less editing depth."
+      },
+      {
+        "question": "What does the official Sora product page emphasize besides raw generation?",
+        "answer": "The product page explicitly highlights prompt-or-image starts, style flexibility, character casting, remix workflows, and automatic music, sound effects, and dialogue."
+      },
+      {
+        "question": "How does Sora differ from Runway?",
+        "answer": "Sora is more generation-first, while Runway is stronger when the team wants a studio-style workflow with more editing control around the generated footage."
+      },
+      {
+        "question": "When should a buyer skip Sora?",
+        "answer": "Skip Sora when the priority is low-cost testing, a free plan, or a workflow centered on editing and templated publishing rather than pure generation quality."
+      }
+    ]
+  },
+  "sources": {
+    "openai.com/sora": {
+      "type": "OFFICIAL_WEBSITE",
+      "howToVerify": "Check the official Sora product page for workflow, style, sound, and character claims",
+      "suggestedQuery": "site:openai.com/sora prompt image sound characters remix"
+    },
+    "platform.openai.com/docs/sora": {
+      "type": "OFFICIAL_DOCS",
+      "howToVerify": "Check the official Sora docs and product guidance for access posture and usage details",
+      "suggestedQuery": "site:platform.openai.com/docs/sora Sora docs access video"
+    },
+    "platform.openai.com/docs/pricing": {
+      "type": "OFFICIAL_PRICING",
+      "howToVerify": "Check the current official pricing documentation for per-second Sora video costs and resolution tiers",
+      "suggestedQuery": "site:platform.openai.com/docs/pricing Sora video per second pricing"
+    }
+  },
+  "related": {
+    "comparisons": [
+      {
+        "slug": "runway-vs-sora",
+        "title": "Runway vs Sora"
+      }
+    ]
+  }
+}

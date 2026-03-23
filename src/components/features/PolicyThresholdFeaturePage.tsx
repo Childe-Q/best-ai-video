@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import ToolCard from '@/components/features/ToolCard';
 import FeaturesFAQ from '@/components/features/FeaturesFAQ';
+import { isPromoteSafeFeatureHref, toPromoteSafeFeatureHref } from '@/components/features/filterPromoteSafeFeatureHrefs';
 import { track } from '@/lib/features/track';
 import {
   FeatureFaqItem,
@@ -17,6 +18,7 @@ interface PolicyThresholdFeaturePageProps {
   pageData: FeaturePageData;
   groups: FeatureGroupDisplay[];
   recommendedReadingLinks: FeatureRecommendedReadingLink[];
+  promoteSafeFeatureHrefs: string[];
 }
 
 type PolicySummaryCard = {
@@ -575,8 +577,32 @@ export default function PolicyThresholdFeaturePage({
   pageData,
   groups,
   recommendedReadingLinks,
+  promoteSafeFeatureHrefs,
 }: PolicyThresholdFeaturePageProps) {
-  const override = policyThresholdOverrides[pageData.slug];
+  const rawOverride = policyThresholdOverrides[pageData.slug];
+  const promoteSafeFeatureHrefSet = new Set(promoteSafeFeatureHrefs);
+  const safeOverride = rawOverride
+    ? {
+        ...rawOverride,
+        wrongFitHref: toPromoteSafeFeatureHref(rawOverride.wrongFitHref, promoteSafeFeatureHrefSet) ?? '/features',
+        summaryCards: rawOverride.summaryCards.filter(
+          (card) => !card.href || isPromoteSafeFeatureHref(card.href, promoteSafeFeatureHrefSet)
+        ),
+        bucketCards: rawOverride.bucketCards.filter((card) =>
+          isPromoteSafeFeatureHref(card.href, promoteSafeFeatureHrefSet)
+        ),
+        bucketOverrides: Object.fromEntries(
+          Object.entries(rawOverride.bucketOverrides).map(([bucketTitle, bucketOverride]) => [
+            bucketTitle,
+            {
+              ...bucketOverride,
+              nextStepHref:
+                toPromoteSafeFeatureHref(bucketOverride.nextStepHref, promoteSafeFeatureHrefSet) ?? '/features',
+            },
+          ])
+        ),
+      }
+    : null;
 
   useEffect(() => {
     track('page_view', {
@@ -585,9 +611,11 @@ export default function PolicyThresholdFeaturePage({
     });
   }, [featureSlug]);
 
-  if (!override) {
+  if (!safeOverride) {
     return null;
   }
+
+  const override = safeOverride;
 
   const recommendedGroups: ReadingGroup[] = readingOrder
     .map((linkType) => ({

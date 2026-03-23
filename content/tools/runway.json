@@ -1,0 +1,158 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "Creators, studios, and brand teams that need cinematic prompt-to-video output plus a real post-production workflow in the same product",
+      "notFor": "Buyers who want predictable flat-cost publishing, lightweight caption editing, or the cheapest path to batch social output",
+      "why": "Runway stands out when visual quality, shot control, and model breadth matter more than speed alone. The trade-off is that credits, model selection, and iteration discipline matter much more here than in template-led tools."
+    },
+    "miniTest": {
+      "prompt": "Create a 6-8 second cinematic product reveal with one hero object, one camera move, one lighting shift, and no on-screen text. Keep subject continuity stable across the full shot and make the motion feel intentional instead of chaotic.",
+      "checklist": [
+        {
+          "label": "Primary workflow fit",
+          "value": "Cinematic concept footage / product reveal / creative prototype"
+        },
+        {
+          "label": "Free-plan baseline",
+          "value": "Free starts with 125 one-time credits, keeps a watermark, and excludes Gen-4 video"
+        },
+        {
+          "label": "Paid-plan unlocks",
+          "value": "Paid plans add watermark removal, upscale resolution, and broader model access"
+        },
+        {
+          "label": "Credit model",
+          "value": "Credits scale with plan and with the generation mode selected"
+        },
+        {
+          "label": "Model choice",
+          "value": "Runway differentiates value through broader model access rather than a single fixed workflow"
+        },
+        {
+          "label": "Export readiness",
+          "value": "Paid plans are the practical path when outputs need to be watermark-free for review or delivery"
+        },
+        {
+          "label": "Workflow weight",
+          "value": "This is a heavier creative-generation workflow than template-first social tools"
+        }
+      ],
+      "verdict": "Use this as a source-backed workflow check, not a completed hands-on run. Runway fits teams prioritizing cinematic quality, model access, and creative control over cheap high-volume output."
+    },
+    "useCases": [
+      {
+        "title": "Cinematic concept footage",
+        "why": "Runway is a strong first stop when the team needs polished visual drafts, camera movement, and scene experimentation before a full shoot or paid production pass.",
+        "linkHref": "/vs/runway-vs-sora",
+        "linkText": "Compare with Sora →"
+      },
+      {
+        "title": "Creative ad prototypes",
+        "why": "Useful for product reveals, teaser visuals, and early ad concepts where style control, scene realism, and model quality matter more than rigid template output.",
+        "linkHref": "/tool/runway/pricing",
+        "linkText": "Check pricing →"
+      },
+      {
+        "title": "Studio-style AI video workflow",
+        "why": "Good fit when the decision is about generation quality, model access, and post-generation control rather than avatar delivery, clipping, or blog repurposing.",
+        "linkHref": "/features/text-to-video-ai-tools",
+        "linkText": "See text-to-video guide →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "Access to multiple generation models, including Gen-4.5, Gen-4, Gen-4 Turbo, Aleph, and Veo models on paid tiers",
+      "Prompt-led video generation with a workflow that can move from concept shot to edited creative draft inside one tool",
+      "Inpainting, outpainting, and motion tracking for shot cleanup and compositing-style adjustments",
+      "Background removal and green screen tools for faster ad, explainer, and concept workflows",
+      "Paid plans remove watermarks and expand workspace, storage, and team controls beyond the Free tier"
+    ]
+  },
+  "pros": [
+    "One of the stronger tools for cinematic concept footage and premium-looking creative drafts",
+    "Combines model-led generation with editing and compositing controls in one workflow",
+    "Paid tiers add meaningful team, storage, and model access rather than just removing a few limits",
+    "Strong fit when a team wants one flagship generation environment instead of chaining multiple lightweight tools"
+  ],
+  "cons": [
+    "Credit-based usage can become expensive when teams iterate heavily or test multiple prompts per asset",
+    "The workflow is heavier than a simple social editor or caption-first repurposing tool",
+    "Beginners face a steeper learning curve than template-first tools built for speed",
+    "Free plan access is useful for validation but too constrained for serious production work"
+  ],
+  "reviews": {
+    "verdict": {
+      "bottomLine": "Runway is a flagship pick when the buying criteria center on model quality, cinematic control, and serious creative workflow. It is a weaker fit when the team mainly wants cheap volume publishing, simple templates, or predictable flat-cost output.",
+      "bestFor": [
+        "Cinematic concept footage",
+        "Creative ad prototyping",
+        "Professional text-to-video workflows"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Who is Runway best for?",
+        "answer": "Runway is strongest for creators, filmmakers, and brand teams that want higher-end generated footage plus editing controls in the same environment."
+      },
+      {
+        "question": "Is the Free plan enough to evaluate Runway?",
+        "answer": "Yes for first-pass evaluation, but not for serious production. Official pricing states the Free tier starts with 125 one-time credits, keeps a watermark, and does not include Gen-4 video."
+      },
+      {
+        "question": "Do paid plans remove the watermark?",
+        "answer": "Yes. Current official pricing indicates the Free tier keeps a watermark while Standard and higher tiers remove it."
+      },
+      {
+        "question": "What is the main trade-off with Runway?",
+        "answer": "The main trade-off is credit discipline. You get stronger model quality and more control, but the workflow becomes more expensive and operationally heavier when the team iterates loosely."
+      },
+      {
+        "question": "How much team support do paid plans add?",
+        "answer": "Official pricing states Standard supports up to 5 users per workspace and 100GB asset storage, while Pro supports up to 10 users and 500GB storage."
+      },
+      {
+        "question": "What do you gain above the Free tier besides watermark removal?",
+        "answer": "Official plan details also add broader model access, more monthly credits, better storage, team workspace capacity, and options like custom voices or enterprise controls on higher plans."
+      },
+      {
+        "question": "How does Runway differ from simpler AI video tools?",
+        "answer": "Runway is better when the job needs generation quality, scene control, and editing depth. Simpler tools are often faster when the job is templated social publishing, blog repurposing, or lightweight batch output."
+      }
+    ]
+  },
+  "sources": {
+    "runwayml.com": {
+      "type": "OFFICIAL_WEBSITE",
+      "howToVerify": "Check the official Runway product pages for model lineup, editor workflows, and overview claims",
+      "suggestedQuery": "site:runwayml.com Runway Gen-4.5 Aleph Act-Two editor"
+    },
+    "runwayml.com/pricing": {
+      "type": "OFFICIAL_PRICING",
+      "howToVerify": "Check the official pricing page for credits, watermark policy, model access, storage, and workspace limits",
+      "suggestedQuery": "site:runwayml.com/pricing Runway credits watermark users workspace"
+    },
+    "help.runwayml.com": {
+      "type": "HELP_CENTER",
+      "howToVerify": "Check official help articles for editor workflow details, feature behavior, and account limits",
+      "suggestedQuery": "site:help.runwayml.com Runway motion tracking inpainting exporting"
+    },
+    "runwayml.com/enterprise": {
+      "type": "ENTERPRISE_PAGE",
+      "howToVerify": "Check the official enterprise page for SSO, security, analytics, and internal tool integration claims",
+      "suggestedQuery": "site:runwayml.com Runway enterprise SSO analytics internal tools"
+    }
+  },
+  "related": {
+    "comparisons": [
+      {
+        "slug": "runway-vs-sora",
+        "title": "Runway vs Sora"
+      },
+      {
+        "slug": "pika-vs-runway",
+        "title": "Pika vs Runway"
+      }
+    ]
+  }
+}

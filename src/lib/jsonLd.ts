@@ -1,4 +1,5 @@
 import { Tool } from '@/types/tool';
+import { getToolPricingSummary } from '@/lib/pricing/display';
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://best-ai-video.com';
 
@@ -45,22 +46,14 @@ export function buildSoftwareApplicationJsonLd(tool: Tool) {
     schema.image = tool.logo_url;
   }
 
-  // Offers — only if we have real pricing data
-  if (tool.starting_price) {
-    const priceMatch = tool.starting_price.match(/\$?([\d.]+)/);
+  // Offers — only when pricing is verified and safe to show
+  const pricingSummary = getToolPricingSummary(tool);
+  if (pricingSummary.verification === 'verified' && pricingSummary.safeStartingPriceText) {
+    const priceMatch = pricingSummary.safeStartingPriceText.match(/\$([\d.]+)/);
     if (priceMatch) {
       schema.offers = {
         '@type': 'Offer',
         price: priceMatch[1],
-        priceCurrency: 'USD',
-      };
-    } else if (
-      tool.starting_price.toLowerCase().includes('free') ||
-      tool.has_free_trial
-    ) {
-      schema.offers = {
-        '@type': 'Offer',
-        price: '0',
         priceCurrency: 'USD',
       };
     }

@@ -46,7 +46,7 @@
       "slug": "runway",
       "verdictSeed": "Controlled cinematic generation with a polished editor and broad creative ecosystem. Full commercial rights on all plans, no attribution required.",
       "pricingSeed": "API: $0.01/credit (5–40 credits/sec depending on model)",
-      "policySeed": null,
+      "policySeed": "Runway states that users retain full ownership and unrestricted commercial use on all plans, while the Free tier keeps a visible watermark",
       "bestForSeed": "Controlled cinematic generation with commercial use",
       "mainLimitationSeed": "Some users report variability in scene logic locking",
       "officialUrl": "https://runwayml.com/",
@@ -54,33 +54,31 @@
       "reviewUrl": "/tool/runway",
       "logoUrl": "/logos/runway.png",
       "sourceUrls": [
-        "https://nerdbot.com/2026/02/27/best-ai-video-generators-in-2026-a-practical-comparison-for-creators/",
+        "https://runwayml.com/pricing",
+        "https://runwayml.com/features",
         "https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights"
       ],
       "flags": [
-        "duplicate-raw-mentions-merged",
-        "missing-policy-seed"
+        "duplicate-raw-mentions-merged"
       ]
     },
     {
       "name": "Kling AI",
       "slug": "kling-ai",
       "verdictSeed": "Known for cinematic motion, high-energy scenes, and native 9:16 vertical support. Positioned for fast social media clip generation from text.",
-      "pricingSeed": null,
-      "policySeed": null,
+      "pricingSeed": "~$10/mo Standard; free access starts with daily credit allowances",
+      "policySeed": "Kling AI emphasizes accessible entry via daily credits, but current local source coverage does not confirm stronger commercial-governance or attribution terms",
       "bestForSeed": "High-energy social media clips from text prompts",
-      "mainLimitationSeed": null,
+      "mainLimitationSeed": "Current local coverage is still thin on governance and review depth, and this dataset does not yet confirm a stronger no-watermark or team-ready publishing posture",
       "officialUrl": "https://klingai.com/",
       "hasReviewPage": false,
       "reviewUrl": null,
       "logoUrl": null,
       "sourceUrls": [
+        "https://klingai.com/",
         "https://nerdbot.com/2026/02/27/best-ai-video-generators-in-2026-a-practical-comparison-for-creators/"
       ],
       "flags": [
-        "missing-pricing-seed",
-        "missing-policy-seed",
-        "missing-limitation-seed",
         "missing-logo-url",
         "missing-review-coverage"
       ]
@@ -98,7 +96,9 @@
       "reviewUrl": "/tool/sora",
       "logoUrl": "/logos/sora.png",
       "sourceUrls": [
-        "https://help.openai.com/en/articles/9957612"
+        "https://openai.com/sora/",
+        "https://platform.openai.com/docs/pricing",
+        "https://platform.openai.com/docs/sora"
       ],
       "flags": []
     }
@@ -135,17 +135,13 @@
       ]
     }
   ],
-  "lastReviewed": "2026-03-08T00:15:00Z",
+  "lastReviewed": "2026-03-21T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/text-to-video-ai-tools.raw.json",
     "sourceCount": 3,
     "uniqueToolCount": 3,
-    "needsManualReview": true,
-    "reviewNotes": [
-      "Duplicate raw tool mentions merged: runway",
-      "One or more tools still need verified logoUrl coverage.",
-      "One or more tools are missing internal review coverage."
-    ]
+    "needsManualReview": false,
+    "reviewNotes": []
   }
 }

@@ -78,7 +78,11 @@
       "hasReviewPage": true,
       "reviewUrl": "/tool/flexclip",
       "logoUrl": "/logos/FlexClip-logo.svg",
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.flexclip.com/pricing.html",
+        "https://www.flexclip.com/features/",
+        "https://www.flexclip.com/faq/"
+      ],
       "flags": []
     },
     {
@@ -93,7 +97,9 @@
       "hasReviewPage": false,
       "reviewUrl": null,
       "logoUrl": "/logos/tools/leonardo-ai.png",
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://leonardo.ai/ai-video-generator"
+      ],
       "flags": [
         "missing-review-coverage"
       ]
@@ -110,7 +116,9 @@
       "hasReviewPage": false,
       "reviewUrl": null,
       "logoUrl": "/logos/tools/hailuo-ai.svg",
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://hailuoai.com/"
+      ],
       "flags": [
         "missing-review-coverage"
       ]
@@ -127,7 +135,9 @@
       "hasReviewPage": false,
       "reviewUrl": null,
       "logoUrl": "/logos/tools/jogg-ai.png",
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.jogg.ai/"
+      ],
       "flags": [
         "missing-review-coverage"
       ]
@@ -144,7 +154,9 @@
       "hasReviewPage": false,
       "reviewUrl": null,
       "logoUrl": "/logos/tools/kapwing.jpg",
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://www.kapwing.com/"
+      ],
       "flags": [
         "missing-review-coverage"
       ]
@@ -179,7 +191,11 @@
       "hasReviewPage": true,
       "reviewUrl": "/tool/lumen5",
       "logoUrl": "/logos/Lumen5-Logo.svg",
-      "sourceUrls": [],
+      "sourceUrls": [
+        "https://lumen5.com/pricing/",
+        "https://lumen5.com/features/",
+        "https://lumen5.com/faq/"
+      ],
       "flags": []
     }
   ],
@@ -214,17 +230,17 @@
       ]
     }
   ],
-  "lastReviewed": "2026-03-08T00:00:00.000Z",
+  "lastReviewed": "2026-03-21T00:00:00.000Z",
   "reviewMetadata": {
     "generatedFrom": "existing-feature-page",
     "sourceFile": "src/data/features/free-ai-video-no-watermark.json",
     "sourceCount": 0,
     "uniqueToolCount": 7,
-    "needsManualReview": true,
+    "needsManualReview": false,
     "reviewNotes": [
       "No raw research file exists for this slug; normalized from existing frontend JSON.",
-      "One or more tools still need verified officialUrl coverage.",
-      "One or more tools are missing internal review coverage."
+      "Clipclip still lacks verified officialUrl coverage.",
+      "Clipclip, Hailuo AI, Jogg.ai, Kapwing, and Leonardo AI still lack internal review coverage."
     ]
   }
 }

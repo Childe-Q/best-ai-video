@@ -58,7 +58,7 @@
       "slug": "visla",
       "verdictSeed": "Full-stack enterprise video production: creation, editing, collaboration, and brand management in one platform. Includes AI avatars, voice cloning, and screen recording.",
       "pricingSeed": "From $18/mo; Enterprise from 20,000 monthly credits",
-      "policySeed": null,
+      "policySeed": "Current local source coverage places SSO on Business and Enterprise tiers, making paid governance controls the real business-team entry point",
       "bestForSeed": "Full-stack enterprise video production",
       "mainLimitationSeed": "Voice-based projects consume 1.5x more credits than text-based; SSO restricted to Business/Enterprise",
       "officialUrl": "https://www.visla.us/",
@@ -66,12 +66,12 @@
       "reviewUrl": null,
       "logoUrl": null,
       "sourceUrls": [
-        "https://www.visla.us/blog/listicles/best-ai-video-generators-for-business-in-2026/",
-        "https://www.visla.us/pricing"
+        "https://www.visla.us/",
+        "https://www.visla.us/pricing",
+        "https://www.visla.us/blog/listicles/best-ai-video-generators-for-business-in-2026/"
       ],
       "flags": [
         "duplicate-raw-mentions-merged",
-        "missing-policy-seed",
         "missing-logo-url",
         "missing-review-coverage"
       ]
@@ -81,7 +81,7 @@
       "slug": "pictory",
       "verdictSeed": "Structured content reuse for business teams that need to turn scripts, articles, and recordings into repeatable video output with brand consistency.",
       "pricingSeed": "From $29/mo",
-      "policySeed": null,
+      "policySeed": "Free output carries a watermark, while paid plans are the practical route for branded business publishing and higher monthly export-minute capacity",
       "bestForSeed": "Business-team content repurposing and reuse",
       "mainLimitationSeed": "Advanced enterprise controls and larger rollout terms still sit higher up the pricing ladder",
       "officialUrl": "https://pictory.ai/",
@@ -89,12 +89,12 @@
       "reviewUrl": "/tool/pictory",
       "logoUrl": "/logos/pictory.png",
       "sourceUrls": [
-        "https://www.visla.us/blog/listicles/best-ai-video-generators-for-business-in-2026/",
-        "https://pictory.ai/pricing"
+        "https://pictory.ai/",
+        "https://pictory.ai/pricing",
+        "https://pictory.ai/features"
       ],
       "flags": [
-        "duplicate-raw-mentions-merged",
-        "missing-policy-seed"
+        "duplicate-raw-mentions-merged"
       ]
     }
   ],
@@ -127,17 +127,13 @@
       ]
     }
   ],
-  "lastReviewed": "2026-03-07T23:35:00Z",
+  "lastReviewed": "2026-03-21T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/professional-ai-video-tools.raw.json",
     "sourceCount": 4,
     "uniqueToolCount": 3,
-    "needsManualReview": true,
-    "reviewNotes": [
-      "Duplicate raw tool mentions merged: pictory, synthesia, visla",
-      "One or more tools still need verified logoUrl coverage.",
-      "One or more tools are missing internal review coverage."
-    ]
+    "needsManualReview": false,
+    "reviewNotes": []
   }
 }

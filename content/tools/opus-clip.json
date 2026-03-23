@@ -1,0 +1,163 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "YouTubers, podcasters, agencies, and social teams turning long-form videos into short clips quickly without manually scrubbing an entire timeline",
+      "notFor": "Buyers who need deep scene-by-scene editing control, polished cinematic generation, or a broader all-in-one editor for original production",
+      "why": "Opus Clip is strongest when the source video already exists and the main job is finding highlights, adding captions, reframing for vertical formats, and shipping short-form clips fast. Current official product, pricing, and help pages make the workflow ladder clearer than exact pack pricing: Free is a trial-style repurposing lane, paid plans remove the watermark and add cleaner exports, and Pro is where wider import sources, team workspaces, cloud storage, and multi-format delivery start to feel production-ready."
+    },
+    "miniTest": {
+      "prompt": "Upload a 20-30 minute interview, podcast, vlog, or YouTube episode, generate 3 short clips for Shorts or Reels, review captions and reframing, then export one version with only light manual cleanup.",
+      "checklist": [
+        {
+          "label": "Goal",
+          "value": "Turn one long-form recording into multiple short clips"
+        },
+        {
+          "label": "Best test tier",
+          "value": "Free for workflow validation, Starter for higher monthly clipping volume, and Pro when you need team workspace, saved projects, or broader export and import options"
+        },
+        {
+          "label": "Watermark present",
+          "value": "Expected on Free or Free Trial; current pricing and help docs say paid plans remove the OpusClip watermark"
+        },
+        {
+          "label": "Highlight detection",
+          "value": "Check whether the AI picks genuinely reusable moments instead of generic excerpts"
+        },
+        {
+          "label": "Caption quality",
+          "value": "Check whether captions are accurate and readable enough for direct publishing without heavy rewrites"
+        },
+        {
+          "label": "Clip framing",
+          "value": "Check whether AI reframing keeps speakers or moving subjects centered without heavy manual rework"
+        },
+        {
+          "label": "Repurposing speed",
+          "value": "Measure how quickly one long source becomes several publishable social clips"
+        },
+        {
+          "label": "Workflow fit",
+          "value": "Check whether prompt-to-clip, broader import sources, 60-day credit validity, saved projects, or team workspace matter enough to justify Pro over lighter clipping tools"
+        }
+      ],
+      "verdict": "Result: strongest when the team already has long-form video and wants fast short-form extraction. The trade-off is editing flexibility, because Opus Clip is better at automated clipping, reframing, and republishing than at bespoke post-production."
+    },
+    "useCases": [
+      {
+        "title": "YouTube to Shorts repurposing",
+        "why": "Opus Clip is a strong fit when the workflow starts from longer YouTube content and the goal is publishing short clips across multiple channels quickly.",
+        "linkHref": "/features/ai-video-for-youtube",
+        "linkText": "See YouTube guide →"
+      },
+      {
+        "title": "Social clip distribution",
+        "why": "Useful when the team wants AI-picked highlights with captions and reframing for TikTok, Reels, and Shorts rather than manual clip selection.",
+        "linkHref": "/features/ai-video-for-social-media",
+        "linkText": "See social guide →"
+      },
+      {
+        "title": "Repurposing-first workflows",
+        "why": "Best fit when the decision is about clipping existing recordings rather than editing from scratch or generating new scenes.",
+        "linkHref": "/features/content-repurposing-ai-tools",
+        "linkText": "See repurposing guide →"
+      },
+      {
+        "title": "API and team repurposing workflow",
+        "why": "Useful when the buyer wants clipping, publishing, and clip discovery to sit inside a team workflow or CMS-connected automation path instead of a solo manual tool.",
+        "linkHref": "/tool/opus-clip/pricing",
+        "linkText": "Check pricing →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "Auto clip generation through ClipAnything for turning podcasts, interviews, vlogs, sports, explainers, and other long videos into short social-ready excerpts",
+      "AI reframing through ReframeAnything to keep moving subjects centered in vertical or square crops",
+      "Auto captions positioned at over 97 percent accuracy, plus support for many major publishing languages",
+      "Paid workflow features such as prompt-to-clip, topic search, multi-format export, templates, and Pro cloud storage for saved projects",
+      "Current plan docs position Starter as the first paid watermark-free lane, while Pro adds team workspace, public MP4 URLs, and 100GB cloud storage"
+    ]
+  },
+  "pros": [
+    "Saves time when repurposing long-form recordings into short clips",
+    "Highlight detection reduces manual scrubbing through source footage",
+    "Captions and AI reframing support fast social publishing across short-form platforms",
+    "Starter already removes the watermark, so a basic paid plan is enough for cleaner publishing"
+  ],
+  "cons": [
+    "Editing flexibility is limited compared with fuller editors",
+    "Clip quality depends heavily on source video quality and source pacing",
+    "Automated picks still need human review before publishing",
+    "Credit expiry, project retention, and cloud-saved assets still depend heavily on the current plan"
+  ],
+  "reviews": {
+    "verdict": {
+      "bottomLine": "Opus Clip is best for repurposing long-form recordings into short-form social clips quickly. It is less attractive for buyers who need deeper editing control or a broader production workflow beyond automated clipping, reframing, and republishing.",
+      "bestFor": [
+        "YouTube to Shorts repurposing",
+        "Podcast and interview clipping",
+        "Short-form social distribution"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Who is Opus Clip best for?",
+        "answer": "Opus Clip is best for YouTubers, podcasters, agencies, and creator teams turning long-form recordings into short clips for Shorts, Reels, and TikTok."
+      },
+      {
+        "question": "Does Opus Clip have a free plan?",
+        "answer": "Yes. New users get a 7-day Pro trial, and after that Opus Clip falls back to a free plan with monthly credits. Current help docs also say monthly paid credits remain valid for 60 days."
+      },
+      {
+        "question": "Does Opus Clip remove the watermark on paid plans?",
+        "answer": "Current pricing and help docs say Free and Free Trial projects carry the OpusClip watermark, while paid plans remove it."
+      },
+      {
+        "question": "What do you gain on Pro over Starter?",
+        "answer": "Pro adds public MP4 URLs, topic search, broader team workspace support, more credits, and 100GB cloud storage for saved projects and uploaded assets beyond Starter's lighter repurposing lane."
+      },
+      {
+        "question": "What is the main trade-off with Opus Clip?",
+        "answer": "The main trade-off is speed versus control. Opus Clip is fast for automated clipping, but it offers less control than a fuller editor when a team wants custom post-production."
+      },
+      {
+        "question": "What makes Opus Clip stronger than generic clipping tools?",
+        "answer": "The strongest differentiators in the current product copy are ClipAnything for more video genres, ReframeAnything for moving-subject crops, and workflow automation through the web app plus API."
+      },
+      {
+        "question": "What should buyers know about cancellation and refunds?",
+        "answer": "Official help says web-plan cancellation or downgrade changes take effect at the start of the next billing cycle, OpusClip does not offer subscription pause, and iOS subscription refunds are handled by Apple. OpusClip also documents a separate project-credit refund flow for eligible Pro projects that have not been downloaded."
+      },
+      {
+        "question": "When should a buyer skip Opus Clip?",
+        "answer": "Skip Opus Clip when the team needs deep manual editing, broader production features, or workflows centered on original scene creation instead of repurposing existing recordings."
+      }
+    ]
+  },
+  "sources": {
+    "opus.pro": {
+      "type": "OFFICIAL_WEBSITE",
+      "howToVerify": "Check the official OpusClip website for ClipAnything, ReframeAnything, workflow automation, and team workflow claims",
+      "suggestedQuery": "site:opus.pro OpusClip ClipAnything ReframeAnything API team workspace"
+    },
+    "opus.pro/pricing": {
+      "type": "OFFICIAL_PRICING",
+      "howToVerify": "Check the official pricing page for credits, watermarks, upload limits, team workspace, and export policy",
+      "suggestedQuery": "site:opus.pro/pricing OpusClip watermark Pro Starter storage templates"
+    },
+    "opus.pro/faq": {
+      "type": "OFFICIAL_CONTENT",
+      "howToVerify": "Check official FAQ text for free-plan posture, caption accuracy, supported languages, and clip-selection claims",
+      "suggestedQuery": "site:opus.pro OpusClip FAQ captions languages free plan"
+    }
+  },
+  "related": {
+    "comparisons": [
+      {
+        "slug": "descript-vs-pictory",
+        "title": "Descript vs Pictory"
+      }
+    ]
+  }
+}

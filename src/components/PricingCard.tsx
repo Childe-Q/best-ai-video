@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { CheckIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import CTAButton from './CTAButton';
 import { PricingPlan } from '@/types/tool';
+import { isExplicitContactSalesPlan, isExplicitFreePlan } from '@/lib/pricing/display';
 
 interface PricingCardProps {
   plan: PricingPlan;
@@ -66,14 +67,8 @@ export default function PricingCard({
   }
   
   // Check if this is Contact Sales / Enterprise (must check before Free)
-  const isContactSales = 
-    (name || '').toLowerCase().includes('enterprise') ||
-    (name || '').toLowerCase().includes('custom') ||
-    (name || '').toLowerCase().includes('contact') ||
-    (ctaText || '').toLowerCase().includes('contact sales') ||
-    (ctaText || '').toLowerCase().includes('talk to sales') ||
-    (plan.unitPriceNote || '').toLowerCase().includes('custom') ||
-    (plan.unitPriceNote || '').toLowerCase().includes('enterprise pricing');
+  const isContactSales = isExplicitContactSalesPlan(plan);
+  const isFreePlan = isExplicitFreePlan(plan);
   
   const period = typeof currentPrice === 'number' && currentPrice > 0 ? '/mo' : '';
   let priceDisplay: string;
@@ -81,13 +76,11 @@ export default function PricingCard({
   if (isContactSales) {
     priceDisplay = 'Contact sales';
   } else if (typeof currentPrice === 'number') {
-    priceDisplay = currentPrice === 0 ? 'Free' : `$${currentPrice}`;
+    priceDisplay = currentPrice === 0 ? (isFreePlan ? 'Free' : 'N/A') : `$${currentPrice}`;
   } else if (typeof price === 'string') {
     priceDisplay = price;
   } else {
-    // Fallback: check if name suggests free
-    const planName = (name || '').toLowerCase();
-    priceDisplay = planName.includes('free') ? 'Free' : 'Contact sales';
+    priceDisplay = isFreePlan ? 'Free' : 'Contact sales';
   }
   
   const monthlyPriceDisplay = monthlyPrice !== null && monthlyPrice > 0 ? `$${monthlyPrice}` : null;

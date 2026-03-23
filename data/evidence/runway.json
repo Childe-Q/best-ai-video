@@ -1,0 +1,91 @@
+{
+  "slug": "runway",
+  "lastUpdated": "2026-03-21T12:00:00+08:00",
+  "sources": {
+    "pricing": "https://runwayml.com/pricing",
+    "features": "https://runwayml.com/ai-tools",
+    "docs": "https://help.runwayml.com/"
+  },
+  "nuggets": [
+    {
+      "text": "Runway Free starts with 125 one-time credits, which the pricing page maps to about 25 seconds of Gen-4 Turbo generation.",
+      "theme": "usage",
+      "sourceUrl": "https://runwayml.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The Free plan keeps a watermark and does not include Gen-4 video access.",
+      "theme": "export",
+      "sourceUrl": "https://runwayml.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Runway Standard includes 625 monthly credits, which the pricing page maps to 25 seconds of Gen-4.5 or 125 seconds of Gen-4 Turbo generation.",
+      "theme": "usage",
+      "sourceUrl": "https://runwayml.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Standard plan access includes Aleph, Gen-4.5, Gen-4, Act-Two, Veo 3.1, and Veo 3.",
+      "theme": "models",
+      "sourceUrl": "https://runwayml.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Standard supports up to 5 users per workspace and 100GB of asset storage.",
+      "theme": "team",
+      "sourceUrl": "https://runwayml.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Pro expands the workspace limit to 10 users and 500GB of asset storage.",
+      "theme": "team",
+      "sourceUrl": "https://runwayml.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Paid plans include watermark removal, upscale resolution, and access to all video models.",
+      "theme": "export",
+      "sourceUrl": "https://runwayml.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Unlimited adds Explore Mode with unlimited generations at a relaxed rate.",
+      "theme": "usage",
+      "sourceUrl": "https://runwayml.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Enterprise advertises single sign-on, advanced security and compliance, and workspace analytics.",
+      "theme": "security",
+      "sourceUrl": "https://runwayml.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Enterprise also lists configurable organization spaces and integration with internal tools.",
+      "theme": "integrations",
+      "sourceUrl": "https://runwayml.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-03-21T12:00:00+08:00",
+      "confidence": "high"
+    }
+  ]
+}

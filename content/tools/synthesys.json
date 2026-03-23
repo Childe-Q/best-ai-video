@@ -1,0 +1,149 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "Marketing, e-learning, and creator teams that want AI avatars, synthetic voices, UGC-style personas, and dubbing inside one tool instead of stitching separate apps together",
+      "notFor": "Buyers who need the cheapest entry point, deeper standalone editing control, or a more proven enterprise rollout stack than an integrated avatar-plus-voice studio",
+      "why": "Synthesys is strongest when the value is having AI presenter video, synthetic voice generation, and multilingual dubbing in one workflow for explainers, promos, UGC, and training content. Current pricing, privacy, and policy pages make the operating rules clearer than exact price points: Free is a no-card proof-of-concept tier, paid plans move to 1080p, Business pushes to 4K and fair-use scale, and the privacy policy says client data is not used to train the models."
+    },
+    "miniTest": {
+      "prompt": "Create a 45-second marketing or training explainer with one AI avatar, one generated voice, and one dubbed variant. Compare whether the integrated workflow is faster than stitching separate voice and video tools together.",
+      "checklist": [
+        {
+          "label": "Goal",
+          "value": "E-learning / training / marketing explainer with both avatar and voice"
+        },
+        {
+          "label": "Plan tier",
+          "value": "Free for a proof of concept; paid plans are the first clear 1080p tiers, while Business is where 4K and fair-use scale start"
+        },
+        {
+          "label": "Watermark present",
+          "value": "Public docs are clearer on resolution and credits than on watermark policy, so validate a live paid export before treating watermark behavior as fully settled"
+        },
+        {
+          "label": "Voice quality",
+          "value": "Check whether the synthetic voice is usable without needing a separate voice tool"
+        },
+        {
+          "label": "Avatar quality",
+          "value": "Check whether the presenter or UGC persona output is good enough for business explainers and training content"
+        },
+        {
+          "label": "Credits fit",
+          "value": "Check whether plan credits and Business fair-use or daily generation limits fit recurring usage"
+        },
+        {
+          "label": "Localization workflow",
+          "value": "Check whether dubbing and translated output are strong enough to avoid a second localization tool"
+        }
+      ],
+      "verdict": "Result: strongest when the buyer wants one tool for both avatar video and AI voice, with enough dubbing and persona depth for explainers or ads. The trade-off is flexibility: the integrated workflow is simpler, but public docs are stronger on pricing and privacy than on watermark or output-rights edge cases."
+    },
+    "useCases": [
+      {
+        "title": "Training and e-learning explainers",
+        "why": "Synthesys is a strong fit when the team needs an AI presenter plus synthetic narration and dubbing for instructional content in one workflow.",
+        "linkHref": "/features/enterprise-ai-video-solutions",
+        "linkText": "See enterprise guide →"
+      },
+      {
+        "title": "Avatar platform evaluation",
+        "why": "Useful when the buyer is comparing avatar tools and cares about built-in voice generation, UGC personas, and dubbing rather than only presenter output.",
+        "linkHref": "/features/ai-avatar-video-generators",
+        "linkText": "See avatar guide →"
+      },
+      {
+        "title": "Script-to-video with narration",
+        "why": "Best fit when the workflow starts from a script and the team wants both video and voice generated without stitching multiple tools together.",
+        "linkHref": "/features/text-to-video-ai-tools",
+        "linkText": "See text-to-video guide →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "AI avatars, UGC-style personas, and AI voice generation inside one platform",
+      "Script-to-video workflow for explainers, promos, ads, and training content",
+      "Built-in dubbing and multilingual support for localization-heavy workflows",
+      "Paid tiers that scale from free testing to 1080p output, with Business adding 4K export and fair-use unlimited positioning",
+      "Higher tiers add API, faster processing, more persona credits, and a privacy posture that explicitly says client data is not used for AI training"
+    ]
+  },
+  "pros": [
+    "Combines avatar video, synthetic voice, and dubbing in one workflow",
+    "Good fit for training explainers, marketing ads, and creator-style UGC output",
+    "Integrated approach can reduce tool-switching friction",
+    "Privacy policy is unusually explicit about no AI training on client data"
+  ],
+  "cons": [
+    "Less attractive for buyers who only need one specialized capability",
+    "Customization depth is narrower than pairing separate best-in-class tools",
+    "Public docs are much clearer on pricing and privacy than on watermark policy or full output-rights edge cases",
+    "Business still relies on fair-use and daily generation limits rather than unlimited capacity in the absolute sense"
+  ],
+  "reviews": {
+    "verdict": {
+      "bottomLine": "Synthesys is best for teams that want AI avatar video, AI voice generation, and dubbing in one platform for explainers, ads, and training content. It is less attractive for buyers prioritizing lowest cost, deeper editing control, or more explicit enterprise-grade governance than this integrated studio provides.",
+      "bestFor": [
+        "E-learning videos",
+        "Marketing explainers",
+        "Avatar plus voice workflows",
+        "UGC-style ad production"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Who is Synthesys best for?",
+        "answer": "Synthesys is best for marketing, e-learning, and creator teams that want AI avatars, AI voices, and dubbing together in one workflow."
+      },
+      {
+        "question": "Does Synthesys have a free plan?",
+        "answer": "Yes. Synthesys presents Free as a no-card entry tier, with paid plans moving into 1080p output and higher credit allowances."
+      },
+      {
+        "question": "What is the first publish-ready Synthesys tier?",
+        "answer": "Current pricing pages position Personal as the first paid 1080p tier, while Business is where 4K and broader scale become available."
+      },
+      {
+        "question": "What makes Synthesys different from other avatar tools?",
+        "answer": "Its main differentiator is combining AI video avatars, synthetic voices, dubbing, and UGC-style personas in the same platform instead of relying on separate tools."
+      },
+      {
+        "question": "What is the main trade-off with Synthesys?",
+        "answer": "The main trade-off is integration versus specialization. Synthesys is convenient if you want voice, avatars, and dubbing together, but it can be less flexible than combining specialist tools."
+      },
+      {
+        "question": "What should buyers know about refunds and cancellations?",
+        "answer": "Synthesys' refund policy gives a 72-hour window after purchase if usage stays under 5 minutes. The same policy says cancellations take effect at the end of the current billing cycle, and Business plans are non-refundable."
+      },
+      {
+        "question": "How does Synthesys handle client data?",
+        "answer": "The privacy policy says client data is not used to train, retrain, or improve Synthesys models, and that clients retain ownership of their data."
+      },
+      {
+        "question": "When should a buyer skip Synthesys?",
+        "answer": "Skip Synthesys when the workflow needs cheaper entry pricing, deeper editing control, or stronger enterprise governance than an integrated creator-and-marketing studio offers."
+      }
+    ]
+  },
+  "sources": {
+    "synthesys.io/pricing": {
+      "type": "OFFICIAL_PRICING",
+      "howToVerify": "Check the official pricing page for credits, 1080p or 4K limits, seats, and API availability",
+      "suggestedQuery": "site:synthesys.io pricing credits 4K API UGC personas"
+    },
+    "synthesys.io/features": {
+      "type": "OFFICIAL_PRODUCT",
+      "howToVerify": "Check the official homepage for avatars, dubbing, UGC, and AI voice positioning",
+      "suggestedQuery": "site:synthesys.io avatars dubbing UGC AI voices Synthesys"
+    },
+    "synthesys.io": {
+      "type": "OFFICIAL_WEBSITE",
+      "howToVerify": "Check the official product pages for avatar, voice, and creator workflow examples",
+      "suggestedQuery": "site:synthesys.io Synthesys marketing e-learning AI voice video"
+    }
+  },
+  "related": {
+    "comparisons": []
+  }
+}

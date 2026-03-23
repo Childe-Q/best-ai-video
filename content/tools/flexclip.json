@@ -1,0 +1,165 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "Small businesses, solo operators, marketers, and beginners who want an affordable browser-based editor with templates, stock assets, and basic AI helpers",
+      "notFor": "Buyers who need advanced AI generation, high-end editing control, or a premium creative workflow beyond template-led production",
+      "why": "FlexClip is strongest when ease of use and price matter more than deep AI features or professional post-production depth. Current official pricing, privacy, terms, and help pages make the ladder clearer without needing to rely on exact price points: Free is good for basic drafts, Plus is the first practical no-watermark tier, and Business is where 4K, unlimited stock, and larger hosting become meaningful for heavier SMB usage. The current public docs also make FlexClip's privacy defaults and refund window unusually explicit."
+    },
+    "miniTest": {
+      "prompt": "Create a 20-30 second promo video from a template with one logo, three text scenes, one stock clip, and one voiceover or text-to-speech pass. Export one free-tier draft and one Plus-style version, then check whether the template and stock limits are enough for the real workflow.",
+      "checklist": [
+        {
+          "label": "Goal",
+          "value": "Small business promo / social post / simple explainer"
+        },
+        {
+          "label": "Best test tier",
+          "value": "Free for draft validation, Plus for real publishing, Business only if 4K or heavier stock usage matters"
+        },
+        {
+          "label": "Watermark present",
+          "value": "Expected on Free; removed on Plus and Business, but excessive stock usage can still trigger a watermark if it exceeds the plan limit"
+        },
+        {
+          "label": "Template speed",
+          "value": "Check how quickly a usable video can be assembled from a template"
+        },
+        {
+          "label": "Editing flexibility",
+          "value": "Check whether scene, text, timing, and simple motion edits are sufficient for the intended use"
+        },
+        {
+          "label": "Stock media fit",
+          "value": "Check whether the built-in assets are usable without heavy replacement work and whether per-project stock limits are enough"
+        },
+        {
+          "label": "Export quality",
+          "value": "Compare whether Free 720p versus paid 1080p or 4K is acceptable for the target channel"
+        },
+        {
+          "label": "AI value",
+          "value": "Check whether the AI feature trial or annual AI credit bonus actually changes the workflow, or whether templates and stock are the real reason to pay"
+        }
+      ],
+      "verdict": "Result: strongest when the buyer wants quick template-led output at a low price. The trade-off is depth: FlexClip is easier than heavier tools, but less capable for advanced AI workflows or complex editing."
+    },
+    "useCases": [
+      {
+        "title": "Budget-friendly business promos",
+        "why": "FlexClip is a good fit when a small business needs simple promo videos, social posts, or slideshows without learning a complex editor.",
+        "linkHref": "/features/budget-friendly-ai-video-tools",
+        "linkText": "See budget-friendly guide →"
+      },
+      {
+        "title": "Beginner-friendly editing",
+        "why": "Useful when the buying question is simplicity and template speed rather than high-end creative control.",
+        "linkHref": "/features/ai-video-editors",
+        "linkText": "See video editors guide →"
+      },
+      {
+        "title": "Social and SMB content production",
+        "why": "Best fit when the team needs repeatable browser-based production for promos, social posts, explainers, or slideshows without a heavier desktop suite.",
+        "linkHref": "/features/ai-video-for-social-media",
+        "linkText": "See social guide →"
+      },
+      {
+        "title": "Lightweight editor comparison",
+        "why": "Best fit when comparing easy browser-based editing against more feature-heavy or generation-first tools.",
+        "linkHref": "/tool/flexclip/features",
+        "linkText": "See features →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "Template library for fast promo, slideshow, and social video creation, with saved-template capacity expanding materially on paid plans",
+      "Browser-based video editing aimed at beginners and small teams, covering trim, merge, captions, voiceover, filters, transitions, and aspect-ratio changes",
+      "Built-in stock media for simple business and social workflows, with per-project stock limits that rise from Free to Plus to Business",
+      "Lightweight AI layer through trial AI features on Free and annual AI-credit bonuses on paid plans rather than a generation-first product core",
+      "Free entry tier with watermark and 720p, Plus with 1080p no-watermark output and Brand Kit, and Business with 4K plus larger storage and hosting, while user-created videos stay private by default"
+    ]
+  },
+  "pros": [
+    "Affordable pricing compared with heavier editing suites",
+    "Template-first workflow is easy for beginners",
+    "Good fit for small business promo, slideshow, and social videos",
+    "Paid tiers add practical upgrades such as no-watermark export, Brand Kit, more templates, and larger storage",
+    "Official terms and privacy pages clearly document default-private videos, refund timing, and ownership of uploaded content"
+  ],
+  "cons": [
+    "AI feature depth is limited compared with specialist tools",
+    "Editing controls are more basic than pro-oriented platforms",
+    "Free tier keeps watermark and lower export quality",
+    "Even on paid tiers, stock overages and template-first constraints make it less attractive for advanced creative work",
+    "Exact paid pricing depends on monthly versus annual billing state and should be checked on the live pricing page"
+  ],
+  "reviews": {
+    "verdict": {
+      "bottomLine": "FlexClip is best for buyers who want a simple, affordable online editor with templates, stock media, and basic AI helpers. It is less attractive for teams that need advanced AI generation, pro-level editing control, or premium creative polish.",
+      "bestFor": [
+        "Small business promos",
+        "Beginner-friendly editing",
+        "Budget-conscious social videos"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Who is FlexClip best for?",
+        "answer": "FlexClip is best for beginners, solo operators, marketers, and small businesses that want a simple browser-based editor with templates and low pricing."
+      },
+      {
+        "question": "Does FlexClip have a free plan?",
+        "answer": "Yes. The current pricing page shows a Free tier with 720p downloads, up to 10-minute videos, a 12-project save cap, and a free trial of AI features."
+      },
+      {
+        "question": "Do paid plans remove the watermark?",
+        "answer": "Yes, Plus and Business remove the FlexClip watermark in normal use. The main caveat on the pricing FAQ is that exceeding stock-resource limits for the current plan can still cause watermarking."
+      },
+      {
+        "question": "What do you gain on Plus besides watermark removal?",
+        "answer": "Plus adds 1080p downloads, unlimited projects, higher annual AI-credit allowances, FlexClip premium resources, Brand Kit, custom fonts, more template capacity, and more cloud and hosting space than Free."
+      },
+      {
+        "question": "What is the main trade-off with FlexClip?",
+        "answer": "The main trade-off is simplicity versus depth. FlexClip is easier and cheaper, but it offers fewer advanced AI and editing capabilities than heavier tools."
+      },
+      {
+        "question": "When does Business make sense?",
+        "answer": "Business is the right fit when the team needs 4K exports, unlimited stock assets, much larger hosting space, and more template or asset capacity than Plus provides."
+      },
+      {
+        "question": "What should buyers know about refunds and privacy?",
+        "answer": "Official terms and help pages say FlexClip offers a 7-day refund window on the first payment of the current subscription period, requires cancellation at least 48 hours before renewal to avoid the next charge, keeps videos private by default, and lets users restore a deleted account within 14 days."
+      },
+      {
+        "question": "When should a buyer skip FlexClip?",
+        "answer": "Skip FlexClip when the workflow needs advanced generation, premium creative quality, or more sophisticated editing control than a template-first editor provides."
+      }
+    ]
+  },
+  "sources": {
+    "flexclip.com": {
+      "type": "OFFICIAL_WEBSITE",
+      "howToVerify": "Check the official FlexClip product and pricing pages for template, editor, and stock workflow claims",
+      "suggestedQuery": "site:flexclip.com FlexClip pricing template editor stock media"
+    },
+    "flexclip.com/pricing.html": {
+      "type": "OFFICIAL_PRICING",
+      "howToVerify": "Check the official pricing page for resolution, storage, AI credits, template limits, and watermark policy",
+      "suggestedQuery": "site:flexclip.com/pricing FlexClip 4K AI credits brand kit watermark"
+    },
+    "flexclip.com/features": {
+      "type": "OFFICIAL_PRODUCT",
+      "howToVerify": "Check official feature pages for editing controls, media library, and lightweight workflow scope",
+      "suggestedQuery": "site:flexclip.com/features FlexClip trim merge voiceover media library"
+    }
+  },
+  "related": {
+    "comparisons": [
+      {
+        "slug": "descript-vs-veed-io",
+        "title": "Descript vs VEED"
+      }
+    ]
+  }
+}

@@ -15,6 +15,7 @@ import EvidenceNotes from '@/components/tool/EvidenceNotes';
 import EvidenceNuggets from '@/components/tool/EvidenceNuggets';
 import { ToolContent } from '@/types/toolContent';
 import { buildSoftwareApplicationJsonLd } from '@/lib/jsonLd';
+import { getPageReadiness } from '@/lib/readiness';
 
 const editorialSummaries: Record<
   string,
@@ -97,7 +98,11 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
 
   // Get related links
   const relatedComparisons = getRelatedComparisons(slug);
-  const alternativesLink = getAlternativesLink(slug);
+  const alternativesLink = await getAlternativesLink(slug);
+  const [featuresReadiness, reviewsReadiness] = await Promise.all([
+    getPageReadiness('toolFeatures', slug),
+    getPageReadiness('toolReviews', slug),
+  ]);
   const editorialSummary = editorialSummaries[slug];
   const contentProsCons = hasProsConsContent(content) ? content : undefined;
 
@@ -237,30 +242,36 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
                 <span className="text-sm font-bold text-gray-900 group-hover:text-indigo-600">Pricing</span>
                 <span className="text-xs text-gray-500">Plans & costs</span>
               </Link>
-              <Link
-                href={`/tool/${slug}/features`}
-                className="group flex flex-col items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-5 text-center transition-all hover:border-indigo-300 hover:bg-indigo-50"
-              >
-                <span className="text-2xl">⚡</span>
-                <span className="text-sm font-bold text-gray-900 group-hover:text-indigo-600">Features</span>
-                <span className="text-xs text-gray-500">Full capabilities</span>
-              </Link>
-              <Link
-                href={`/tool/${slug}/reviews`}
-                className="group flex flex-col items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-5 text-center transition-all hover:border-indigo-300 hover:bg-indigo-50"
-              >
-                <span className="text-2xl">💬</span>
-                <span className="text-sm font-bold text-gray-900 group-hover:text-indigo-600">Reviews</span>
-                <span className="text-xs text-gray-500">User feedback</span>
-              </Link>
-              <Link
-                href={`/tool/${slug}/alternatives`}
-                className="group flex flex-col items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-5 text-center transition-all hover:border-indigo-300 hover:bg-indigo-50"
-              >
-                <span className="text-2xl">🔄</span>
-                <span className="text-sm font-bold text-gray-900 group-hover:text-indigo-600">Alternatives</span>
-                <span className="text-xs text-gray-500">Compare options</span>
-              </Link>
+              {featuresReadiness.ready && (
+                <Link
+                  href={`/tool/${slug}/features`}
+                  className="group flex flex-col items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-5 text-center transition-all hover:border-indigo-300 hover:bg-indigo-50"
+                >
+                  <span className="text-2xl">⚡</span>
+                  <span className="text-sm font-bold text-gray-900 group-hover:text-indigo-600">Features</span>
+                  <span className="text-xs text-gray-500">Full capabilities</span>
+                </Link>
+              )}
+              {reviewsReadiness.ready && (
+                <Link
+                  href={`/tool/${slug}/reviews`}
+                  className="group flex flex-col items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-5 text-center transition-all hover:border-indigo-300 hover:bg-indigo-50"
+                >
+                  <span className="text-2xl">💬</span>
+                  <span className="text-sm font-bold text-gray-900 group-hover:text-indigo-600">Reviews</span>
+                  <span className="text-xs text-gray-500">User feedback</span>
+                </Link>
+              )}
+              {alternativesLink && (
+                <Link
+                  href={`/tool/${slug}/alternatives`}
+                  className="group flex flex-col items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-5 text-center transition-all hover:border-indigo-300 hover:bg-indigo-50"
+                >
+                  <span className="text-2xl">🔄</span>
+                  <span className="text-sm font-bold text-gray-900 group-hover:text-indigo-600">Alternatives</span>
+                  <span className="text-xs text-gray-500">Compare options</span>
+                </Link>
+              )}
             </div>
           </div>
 

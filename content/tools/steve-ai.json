@@ -1,0 +1,153 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "Content creators and small businesses that want affordable prompt-to-video, text-to-video, or template-led production without learning a complex editor",
+      "notFor": "Buyers who need premium avatar realism, deeper editing control, or a more reliable path to polished brand production than a budget-first creator tool provides",
+      "why": "Steve AI is strongest when price, speed, and ease of use matter more than creative depth, especially for faceless explainers, UGC-style ads, shorts, and lightweight promo workflows. Current pricing and support docs make the operating ladder clearer than older local plan snapshots: Free is a trial lane, Basic is the first no-watermark paid tier, Starter is the first clear 1080p self-serve export tier, Pro adds 2K, and Enterprise is where 4K, resell rights, and stronger controls show up."
+    },
+    "miniTest": {
+      "prompt": "Create a 30-second faceless explainer or UGC-style promo from a text prompt, test an avatar or multi-voice variation, add subtitles, then compare a free draft against a Basic or Starter no-watermark export.",
+      "checklist": [
+        {
+          "label": "Goal",
+          "value": "Budget explainer / promo / social video"
+        },
+        {
+          "label": "Plan tier",
+          "value": "Free for a proof of concept; Basic is the first no-watermark paid tier, but Starter is the first clear 1080p self-serve export tier"
+        },
+        {
+          "label": "Watermark present",
+          "value": "Expected on Free; removed on Basic and above"
+        },
+        {
+          "label": "Template speed",
+          "value": "Check how quickly a usable draft appears from a prompt or starter template"
+        },
+        {
+          "label": "Output style fit",
+          "value": "Check whether the workflow fits explainers, shorts, UGC ads, or motion graphics better than presenter-heavy business video"
+        },
+        {
+          "label": "Avatar quality",
+          "value": "Check whether the avatar output is good enough for lightweight business use rather than premium presenter work"
+        },
+        {
+          "label": "Voice realism",
+          "value": "Check whether the multi-voice and AI narration output sounds usable enough for direct publishing"
+        },
+        {
+          "label": "Cost fit",
+          "value": "720p on Basic, 1080p on Starter, 2K on Pro, and 4K on Enterprise"
+        }
+      ],
+      "verdict": "Result: strongest when the buyer wants inexpensive, easy video production with templates, prompt-based drafting, and basic avatar support. The trade-off is output sophistication: Steve AI is less compelling for teams that need premium presenter quality, richer brand governance, or deeper editing control."
+    },
+    "useCases": [
+      {
+        "title": "Budget-friendly creator workflows",
+        "why": "Steve AI is a strong fit when a creator or small business needs affordable explainer or promo videos without learning a complex production stack.",
+        "linkHref": "/features/budget-friendly-ai-video-tools",
+        "linkText": "See budget-friendly guide →"
+      },
+      {
+        "title": "Text-to-video starter workflows",
+        "why": "Useful when the decision is about simple prompt-led or text-led video production rather than heavier editing or advanced generation tools.",
+        "linkHref": "/features/text-to-video-ai-tools",
+        "linkText": "See text-to-video guide →"
+      },
+      {
+        "title": "Faceless and UGC-style content tests",
+        "why": "Best fit when the buyer wants an easy template-driven tool for shorts, explainers, UGC-style ads, and repeatable marketing content.",
+        "linkHref": "/tool/steve-ai/features",
+        "linkText": "See features →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "Prompt-to-video, script-to-video, and audio-to-video workflow for fast draft creation",
+      "7 plus output styles spanning animations, generative AI, and live training video formats",
+      "AI avatars and multi-voice storytelling for lightweight presenter or character-led content",
+      "Template library for faster creator, shorts, and small-business video production",
+      "Paid plans remove watermark, unlock commercial use, and scale from 720p or 1080p exports up to 2K and 4K on higher tiers"
+    ]
+  },
+  "pros": [
+    "Affordable entry point for small businesses and solo creators",
+    "Template-led workflow is easy to use without advanced editing experience",
+    "Supports lightweight prompt-to-video, explainers, shorts, and UGC-style drafts",
+    "Support docs clearly spell out watermark, privacy, commercial-rights, and resolution rules"
+  ],
+  "cons": [
+    "Avatar quality is not as strong as premium avatar platforms",
+    "Advanced editing and generation depth are limited",
+    "Output can feel more templated than higher-end tools",
+    "Unused monthly credits do not carry over, and full resell rights are reserved for Enterprise"
+  ],
+  "reviews": {
+    "verdict": {
+      "bottomLine": "Steve AI is best for budget-conscious creators and small businesses that need simple prompt-to-video, text-to-video, or template-based production. It is less attractive for teams that need premium avatar quality, deeper editing control, or more sophisticated brand-grade output.",
+      "bestFor": [
+        "Budget explainers",
+        "Small-business promos",
+        "Lightweight text-to-video workflows",
+        "Faceless and UGC-style creator content"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Who is Steve AI best for?",
+        "answer": "Steve AI is best for content creators and small businesses that want affordable, easy video production with templates, prompt-based drafting, and basic AI support."
+      },
+      {
+        "question": "Does Steve AI have a free plan?",
+        "answer": "Yes. Steve AI keeps a free entry tier, but watermark-free exports and higher resolutions start on paid plans."
+      },
+      {
+        "question": "What is the first publish-ready Steve AI tier?",
+        "answer": "Basic is the first no-watermark paid tier, but Starter is the first clear 1080p self-serve tier. Pro extends to 2K and Enterprise to 4K."
+      },
+      {
+        "question": "What is the main trade-off with Steve AI?",
+        "answer": "The main trade-off is affordability versus sophistication. Steve AI is easy and low-cost, but it offers less polish, less editing depth, and weaker avatar quality than more advanced tools."
+      },
+      {
+        "question": "Do you own the rights to videos made in Steve AI?",
+        "answer": "Official help says paid plans include commercial rights to use and monetize your videos, while a separate support article says full resell rights are reserved for the Enterprise plan."
+      },
+      {
+        "question": "What should buyers know about cancellation and refunds?",
+        "answer": "Steve AI support says plans can be canceled any time without cancellation charges, but subscription fees are non-refundable because a free plan already exists. Unused monthly credits also do not carry over."
+      },
+      {
+        "question": "What kinds of videos does Steve AI fit best?",
+        "answer": "Its site positioning is strongest around faceless explainers, UGC-style ads, shorts, motion graphics, and other lightweight creator workflows where speed matters more than premium polish."
+      },
+      {
+        "question": "When should a buyer skip Steve AI?",
+        "answer": "Skip Steve AI when the workflow needs premium avatar realism, deeper editing control, or higher-end generation quality than a template-first budget tool provides."
+      }
+    ]
+  },
+  "sources": {
+    "steve.ai/pricing": {
+      "type": "OFFICIAL_PRICING",
+      "howToVerify": "Check the official pricing page for current plan structure and any export or watermark limits",
+      "suggestedQuery": "site:steve.ai pricing Steve AI Basic Starter Pro watermark 1080p"
+    },
+    "steve.ai/features": {
+      "type": "OFFICIAL_PRODUCT",
+      "howToVerify": "Check the homepage and product sections for prompt-to-video, output styles, UGC, and multi-voice storytelling claims",
+      "suggestedQuery": "site:steve.ai prompt to video UGC faceless multi voice Steve AI"
+    },
+    "steve.ai": {
+      "type": "OFFICIAL_WEBSITE",
+      "howToVerify": "Check the official Steve AI website for creator positioning and workflow examples",
+      "suggestedQuery": "site:steve.ai Steve AI faceless creators shorts explainer"
+    }
+  },
+  "related": {
+    "comparisons": []
+  }
+}

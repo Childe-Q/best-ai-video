@@ -1,0 +1,159 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "L&D teams, internal enablement teams, and enterprise buyers creating repeatable avatar-led training, onboarding, and multilingual instructional videos",
+      "notFor": "Solo creators looking for the cheapest avatar tool, buyers who mainly need marketing-style spokesperson clips, or teams that do not need training-focused workflows, SCORM, or structured rollout",
+      "why": "Colossyan is strongest when the video program is structured around training, onboarding, internal communication, and multilingual instructional delivery rather than general-purpose creator video. Current official pricing, ethics, and terms pages make the deployment story clearer than raw price points: Starter is the first real publishing tier, Business adds interactivity and shared team controls, and Enterprise is where brand kits, SAML SSO, and SCORM turn it into an LMS-friendly deployment tool. Colossyan also documents ownership and refund rules more explicitly than many avatar tools."
+    },
+    "miniTest": {
+      "prompt": "Create a 60-second onboarding or training video with one AI presenter, three process steps, one quiz checkpoint, and one localized variant. Test both the default avatar output and the template workflow for repeatable training delivery.",
+      "checklist": [
+        {
+          "label": "Goal",
+          "value": "Training / onboarding / L&D / internal communication"
+        },
+        {
+          "label": "Best test tier",
+          "value": "Starter for publishable evaluation, Business if quizzes, more seats, or 4K matter"
+        },
+        {
+          "label": "Watermark present",
+          "value": "Expected on Free; paid tiers should be checked separately because Starter already removes watermark"
+        },
+        {
+          "label": "Presenter quality",
+          "value": "Check avatar lip-sync, expression, and presenter credibility for instructional content"
+        },
+        {
+          "label": "Localization fit",
+          "value": "Check whether 70 plus language support, voice cloning, and translation workflow are practical for repeatable training rollout"
+        },
+        {
+          "label": "Template usefulness",
+          "value": "Check whether the workflow speeds up recurring training production instead of one-off creation only"
+        },
+        {
+          "label": "Interactivity fit",
+          "value": "Check whether quizzes, branching scenarios, and scenario-based videos are necessary or just nice-to-have for the use case"
+        },
+        {
+          "label": "Deployment fit",
+          "value": "If LMS or enterprise rollout matters, check whether SCORM, SSO, and shared workspace controls are actually required"
+        }
+      ],
+      "verdict": "Result: strongest when the buying question is structured training video production with avatars, localization, and repeatable deployment. The trade-off is that Colossyan is less compelling for cheap creator experimentation or broader non-training workflows."
+    },
+    "useCases": [
+      {
+        "title": "Corporate training and onboarding",
+        "why": "Colossyan is a strong fit when the team needs repeatable AI presenter videos for L&D, onboarding, and internal education, especially when reusable templates and multilingual delivery matter.",
+        "linkHref": "/features/enterprise-ai-video-solutions",
+        "linkText": "See enterprise guide →"
+      },
+      {
+        "title": "Avatar platform evaluation",
+        "why": "Useful when the decision is about training-oriented avatar workflows rather than lighter creator-focused talking-head tools or sales-video platforms.",
+        "linkHref": "/features/ai-avatar-video-generators",
+        "linkText": "See avatar guide →"
+      },
+      {
+        "title": "Interactive learning content",
+        "why": "Best fit when the team needs quizzes, branching scenarios, and translation-aware learning content instead of plain talking-head exports.",
+        "linkHref": "/tool/colossyan/features",
+        "linkText": "See features →"
+      },
+      {
+        "title": "LMS and enterprise delivery",
+        "why": "Useful when the buyer cares about SCORM export, brand kits, SSO, and governed workspace controls rather than just avatar quality.",
+        "linkHref": "/tool/colossyan/pricing",
+        "linkText": "Check pricing →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "AI avatars aimed at training and instructional video workflows, with stock avatars, instant avatars, and multi-avatar scene support",
+      "70 plus language support with voice cloning, auto-translation, and multilingual playback for global training delivery",
+      "Template-led production path with prompt-to-video, AI script assistant, PPT or PDF import, and branded templates for repeatable rollout",
+      "Interactive learning support through quizzes, branching scenarios, and SCORM export on higher tiers",
+      "Paid plans that scale from Starter publishing to Business interactivity and Enterprise governance with shared workspaces, team permissions, brand kits, and SAML SSO"
+    ]
+  },
+  "pros": [
+    "Focused positioning for L&D and training teams instead of trying to be a generic creator tool",
+    "Avatar workflow is aligned with repeatable instructional content, templates, and team rollout",
+    "Multilingual support plus voice cloning and translation are useful for global training delivery",
+    "Business and Enterprise tiers add meaningful deployment features such as interactivity, SCORM, governance, and clearer ownership and refund policy documentation"
+  ],
+  "cons": [
+    "Less attractive for buyers outside training, enablement, and internal communication use cases",
+    "More expensive than lighter creator-first alternatives once multiple seats or enterprise controls matter",
+    "Creative flexibility is narrower than broader video production tools",
+    "Exact plan pricing depends on monthly or annual billing state and editor-count selection, so buyers should verify the live pricing view before budgeting",
+    "Free access is only a trial-style path and not suitable for long-term publishing"
+  ],
+  "reviews": {
+    "verdict": {
+      "bottomLine": "Colossyan is best for L&D and enterprise teams creating repeatable avatar-led training content with localization and structured deployment. It is less attractive for buyers who mainly need low-cost creator workflows or broader non-training video production.",
+      "bestFor": [
+        "Training videos",
+        "Employee onboarding",
+        "Multilingual instructional content"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Who is Colossyan best for?",
+        "answer": "Colossyan is best for L&D teams, internal enablement teams, and enterprises creating onboarding, training, and instructional presenter videos."
+      },
+      {
+        "question": "Does Colossyan offer a free way to test the product?",
+        "answer": "Yes. The current pricing page presents a Free entry path with 3 video minutes, a 3-minute max duration, and watermarked output, so it works better as a workflow trial than as a real publishing tier."
+      },
+      {
+        "question": "What changes when you move from Starter to Business?",
+        "answer": "Starter is the first real publishing tier with capped minutes, custom avatars, and Full HD downloads. Business shifts into heavier training deployment with unlimited NEO 1 video minutes, larger avatar libraries, 4K download resolution, interactive video, auto-translation, and stronger shared-workspace controls."
+      },
+      {
+        "question": "What is the main trade-off with Colossyan?",
+        "answer": "The main trade-off is specialization. Colossyan is strong for training workflows, but it is less flexible for buyers who want a broader creator or marketing video platform."
+      },
+      {
+        "question": "Why do teams choose Colossyan over lighter avatar tools?",
+        "answer": "They usually choose it for training-focused workflows, multilingual delivery, interactive learning content, and more structured template support for repeatable instructional content."
+      },
+      {
+        "question": "What enterprise features matter most here?",
+        "answer": "The clearest enterprise differentiators are brand kits, SAML SSO, SCORM export, unlimited interactive features, and stronger team permissions for larger governed rollouts."
+      },
+      {
+        "question": "What should buyers know about refunds and cancellation?",
+        "answer": "Official pricing and terms say monthly plans can be canceled at any time, annual plans can also be canceled but are paid upfront, and refunds are limited. Colossyan's refund policy is explicit: paid plans can qualify for a refund within 14 days if usage stays below the documented threshold, while Enterprise plans and heavier usage do not."
+      },
+      {
+        "question": "When should a buyer skip Colossyan?",
+        "answer": "Skip Colossyan when the main need is low-cost creator experimentation, broader editing flexibility, or marketing-style avatar content rather than training and onboarding."
+      }
+    ]
+  },
+  "sources": {
+    "colossyan.com": {
+      "type": "OFFICIAL_WEBSITE",
+      "howToVerify": "Check the official Colossyan product and pricing pages for avatar, training, and localization claims",
+      "suggestedQuery": "site:colossyan.com pricing training video avatars SCORM SSO"
+    },
+    "colossyan.com/pricing": {
+      "type": "OFFICIAL_PRICING",
+      "howToVerify": "Check the official pricing page for minute limits, avatar counts, interactivity, translation, SCORM, and SSO claims",
+      "suggestedQuery": "site:colossyan.com/pricing Colossyan SCORM SSO interactive videos translations"
+    },
+    "colossyan.com/help": {
+      "type": "OFFICIAL_CONTENT",
+      "howToVerify": "Check official help and documentation for product behavior and deployment details",
+      "suggestedQuery": "site:colossyan.com/help Colossyan training onboarding SCORM"
+    }
+  },
+  "related": {
+    "comparisons": []
+  }
+}

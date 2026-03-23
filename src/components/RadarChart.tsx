@@ -2,7 +2,7 @@
 
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend } from 'recharts';
 import { Tool } from '@/types/tool';
-import { getStartingPrice } from '@/lib/utils';
+import { getVerifiedSafePriceValue } from '@/lib/pricing/display';
 
 interface RadarChartProps {
   toolA: Tool;
@@ -12,8 +12,8 @@ interface RadarChartProps {
 export default function ComparisonRadarChart({ toolA, toolB }: RadarChartProps) {
   // Calculate scores (same logic as ComparisonTable)
   const getPriceValueScore = (tool: Tool): number => {
-    const startingPrice = getStartingPrice(tool);
-    const price = parseFloat(startingPrice.replace(/[^0-9.]/g, ''));
+    const price = getVerifiedSafePriceValue(tool);
+    if (price === null) return 5;
     if (price <= 10) return 10;
     if (price <= 20) return 9;
     if (price <= 30) return 7;
@@ -112,4 +112,3 @@ export default function ComparisonRadarChart({ toolA, toolB }: RadarChartProps) 
     </div>
   );
 }
-

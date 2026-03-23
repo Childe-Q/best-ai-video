@@ -1,0 +1,157 @@
+{
+  "overview": {
+    "tldr": {
+      "bestFor": "Teams and creators repurposing webinars, Zoom calls, podcasts, and articles into short clips without rebuilding the edit from scratch",
+      "notFor": "Buyers who mainly need cinematic generation, premium voice quality, or a broader editor-first workflow for original footage",
+      "why": "Pictory is strongest when the source material already exists and the job is turning long-form content into social-ready clips quickly. Current official pricing, help, and policy pages reinforce that it is a repurposing-first workflow built around transcript editing, highlights, recurring monthly quotas, and downloadable outputs rather than a broad creator suite. Paid plans remove Pictory branding from newly downloaded videos, while team collaboration still depends on explicit project sharing."
+    },
+    "miniTest": {
+      "prompt": "Upload a 15-20 minute webinar or interview, extract 3 short clips with captions, and produce one social-ready cut plus one summary version from the same source.",
+      "checklist": [
+        {
+          "label": "Goal",
+          "value": "Repurpose webinar / podcast / Zoom recording into short clips"
+        },
+        {
+          "label": "Plan tier",
+          "value": "Free Trial for workflow validation; paid plans for publishable downloads and recurring monthly usage"
+        },
+        {
+          "label": "Watermark present",
+          "value": "Expected on the Free Trial; paid plans remove Pictory branding on newly downloaded videos, but trial exports must be re-downloaded after upgrade"
+        },
+        {
+          "label": "Transcript edit quality",
+          "value": "Check whether deleting text cleanly trims the underlying footage"
+        },
+        {
+          "label": "Highlight extraction",
+          "value": "Check whether the AI finds usable moments without heavy manual cleanup"
+        },
+        {
+          "label": "Caption readability",
+          "value": "Check whether captions are accurate and usable for social publishing"
+        },
+        {
+          "label": "Repurposing speed",
+          "value": "Track how quickly one long source becomes multiple publishable clips"
+        },
+        {
+          "label": "Export-minute fit",
+          "value": "Check whether recurring monthly video, voiceover, and transcription quotas match the team's real clip volume"
+        }
+      ],
+      "verdict": "Result: strongest when the source content already exists and the buyer wants fast repurposing with transcript-based editing. The trade-off is output polish: AI voice, stock selection, and final pacing may still need human cleanup for higher-end brand use."
+    },
+    "useCases": [
+      {
+        "title": "Webinar and Zoom repurposing",
+        "why": "Pictory is a strong fit when the team needs to turn recordings into short clips without rebuilding the edit manually in a timeline editor.",
+        "linkHref": "/features/content-repurposing-ai-tools",
+        "linkText": "See repurposing guide →"
+      },
+      {
+        "title": "Blog-to-video workflows",
+        "why": "Useful when the source starts as written content and the team wants a faster path to summary-style video output with stock-led scenes.",
+        "linkHref": "/tool/pictory/features",
+        "linkText": "See features →"
+      },
+      {
+        "title": "Repurposing vs generation",
+        "why": "Best fit when the decision is about clipping existing long-form content rather than generating new scenes from scratch or building a heavy edit by hand.",
+        "linkHref": "/vs/invideo-vs-pictory",
+        "linkText": "Compare with InVideo →"
+      }
+    ]
+  },
+  "features": {
+    "keyFeatures": [
+      "Blog-to-video conversion for turning articles and written content into summary-style videos",
+      "Edit video by text through transcript-based trimming instead of manual timeline cuts",
+      "Auto highlight extraction for finding shareable moments in longer recordings",
+      "Auto captions for faster social-ready outputs and cross-platform packaging",
+      "Plan structure centered on recurring monthly video quotas, voiceover limits, and shared team quota behavior rather than one-off exports"
+    ]
+  },
+  "pros": [
+    "Strong fit for repurposing webinars, Zoom recordings, and podcasts",
+    "Transcript-based editing speeds up clip extraction",
+    "Captions and highlights reduce manual editing time",
+    "Paid plans remove Pictory branding from newly downloaded videos and keep quota and billing rules well documented"
+  ],
+  "cons": [
+    "AI voice quality can feel weaker than specialist voice tools",
+    "Stock footage can feel generic without manual review",
+    "Less compelling when the workflow starts from a blank creative brief",
+    "Team workspaces still require explicit sharing because projects are not automatically visible to every teammate"
+  ],
+  "reviews": {
+    "verdict": {
+      "bottomLine": "Pictory is best for content repurposing workflows where the source material already exists and the team needs speed more than handcrafted polish. It is less attractive when the workflow depends on original scene generation, premium voice quality, or a more cinematic editing environment.",
+      "bestFor": [
+        "Webinar repurposing",
+        "Podcast and Zoom clip extraction",
+        "Blog-to-video summaries"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Who is Pictory best for?",
+        "answer": "Pictory is best for teams repurposing long-form content such as webinars, Zoom calls, podcasts, and articles into shorter publishable videos."
+      },
+      {
+        "question": "What does the current pricing structure look like?",
+        "answer": "Pictory offers a Free Trial plus paid monthly or yearly subscriptions. The practical differences center on video minutes, storage, brand kits, voiceover and transcription quotas, and team collaboration features rather than a one-time license."
+      },
+      {
+        "question": "Do paid plans remove the watermark?",
+        "answer": "Yes. The current tool data indicates the free experience includes watermarking and paid plans remove that limitation."
+      },
+      {
+        "question": "What is the main trade-off with Pictory?",
+        "answer": "The main trade-off is polish versus speed. Pictory is fast for repurposing, but voice quality, stock-scene feel, and final pacing may still need manual improvement."
+      },
+      {
+        "question": "What constraint matters most for heavier usage?",
+        "answer": "Recurring monthly quotas matter more than sign-up access. Official help and pricing pages show that video quotas renew on the first of the month, Premium voiceover usage is quota-based, and team quota is shared across the workspace."
+      },
+      {
+        "question": "What should buyers know about cancellation and refunds?",
+        "answer": "Official help and terms say Pictory subscriptions auto-renew by default, can be canceled before the next renewal, stay usable until the end of the current term, and do not offer refunds on paid accounts. Pictory also offers a low-cost pause option instead of full account loss."
+      },
+      {
+        "question": "How does Pictory differ from generation-first tools?",
+        "answer": "Pictory is better when the source already exists and the job is clipping or summarizing it. Generation-first tools are better when the team needs to create new scenes from scratch."
+      }
+    ]
+  },
+  "sources": {
+    "pictory.ai": {
+      "type": "OFFICIAL_WEBSITE",
+      "howToVerify": "Check the official Pictory product pages for repurposing workflow, transcript editing, highlights, and captions",
+      "suggestedQuery": "site:pictory.ai Pictory webinar Zoom blog to video edit by text"
+    },
+    "pictory.ai/pricing": {
+      "type": "OFFICIAL_PRICING",
+      "howToVerify": "Check the official pricing page for export-minute limits, watermark policy, trial access, and included media libraries",
+      "suggestedQuery": "site:pictory.ai pricing export minutes watermark Getty Storyblocks ElevenLabs"
+    },
+    "pictory.ai/features": {
+      "type": "OFFICIAL_FEATURES",
+      "howToVerify": "Check official workflow pages for blog-to-video, transcript editing, highlights, and captions",
+      "suggestedQuery": "site:pictory.ai/features Pictory auto highlight captions edit by text"
+    }
+  },
+  "related": {
+    "comparisons": [
+      {
+        "slug": "invideo-vs-pictory",
+        "title": "InVideo vs Pictory"
+      },
+      {
+        "slug": "descript-vs-pictory",
+        "title": "Descript vs Pictory"
+      }
+    ]
+  }
+}

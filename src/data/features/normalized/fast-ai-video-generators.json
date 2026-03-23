@@ -47,7 +47,7 @@
       "slug": "luma-dream-machine",
       "verdictSeed": "Reported as the fastest AI video generator — renders clips in seconds rather than minutes. API supports 10 concurrent generations.",
       "pricingSeed": "Lite: $9.99/mo; Plus: $29.99/mo; Unlimited: $94.99/mo",
-      "policySeed": null,
+      "policySeed": "Free users can be pushed into slower queues, while paid tiers are the cleaner route if fast turnaround is the real requirement",
       "bestForSeed": "Rapid prototyping and high-volume fast generation",
       "mainLimitationSeed": "API rate-limited to 20 requests/minute; free users placed in waitlist queue during peak",
       "officialUrl": "https://lumalabs.ai/",
@@ -55,12 +55,11 @@
       "reviewUrl": null,
       "logoUrl": null,
       "sourceUrls": [
-        "https://www.comparegen.ai/blog/best-ai-video-generator-2026",
+        "https://lumalabs.ai/",
         "https://lumalabs.ai/learning-hub/dream-machine-support-pricing-information"
       ],
       "flags": [
         "duplicate-raw-mentions-merged",
-        "missing-policy-seed",
         "missing-logo-url",
         "missing-review-coverage"
       ]
@@ -78,6 +77,7 @@
       "reviewUrl": null,
       "logoUrl": "/logos/tools/hailuo-ai.svg",
       "sourceUrls": [
+        "https://hailuoai.com/",
         "https://www.comparegen.ai/blog/best-ai-video-generator-2026"
       ],
       "flags": [
@@ -92,7 +92,7 @@
       "slug": "pika",
       "verdictSeed": "Near real-time generation via the Pikaformance model. Standard and Pro plans offer faster queues and commercial use.",
       "pricingSeed": "Free (80 credits); Standard: $8/mo; Pro: $28/mo",
-      "policySeed": null,
+      "policySeed": "Paid plans explicitly add no-watermark downloads and commercial-use support, so the free tier is better treated as experimentation rather than a publish-ready path",
       "bestForSeed": "Near real-time social media effects",
       "mainLimitationSeed": "Free plan restricted to 480p and strictly prohibits commercial use",
       "officialUrl": "https://pika.style/",
@@ -100,11 +100,11 @@
       "reviewUrl": "/tool/pika",
       "logoUrl": "/logos/pika-logo.jpeg",
       "sourceUrls": [
-        "https://pika.art/pricing"
+        "https://pika.art/",
+        "https://pika.art/pricing",
+        "https://pika.art/faq"
       ],
-      "flags": [
-        "missing-policy-seed"
-      ]
+      "flags": []
     }
   ],
   "relatedLinks": {
@@ -136,17 +136,13 @@
       ]
     }
   ],
-  "lastReviewed": "2026-03-07T23:05:00Z",
+  "lastReviewed": "2026-03-21T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/fast-ai-video-generators.raw.json",
     "sourceCount": 3,
     "uniqueToolCount": 3,
-    "needsManualReview": true,
-    "reviewNotes": [
-      "Duplicate raw tool mentions merged: luma-dream-machine",
-      "One or more tools still need verified logoUrl coverage.",
-      "One or more tools are missing internal review coverage."
-    ]
+    "needsManualReview": false,
+    "reviewNotes": []
   }
 }

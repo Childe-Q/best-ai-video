@@ -1,0 +1,891 @@
+{
+  "generatedAt": "2026-03-22T05:24:36.169Z",
+  "totals": {
+    "total": 122,
+    "ready": 122,
+    "excluded": 0
+  },
+  "promoteSafeByKind": {
+    "hub": [
+      {
+        "kind": "hub",
+        "slug": "home",
+        "href": "/",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "hub",
+        "slug": "features",
+        "href": "/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "hub",
+        "slug": "alternatives",
+        "href": "/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "hub",
+        "slug": "vs",
+        "href": "/vs",
+        "ready": true,
+        "reasons": []
+      }
+    ],
+    "tool": [
+      {
+        "kind": "tool",
+        "slug": "invideo",
+        "href": "/tool/invideo",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "heygen",
+        "href": "/tool/heygen",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "fliki",
+        "href": "/tool/fliki",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "veed-io",
+        "href": "/tool/veed-io",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "zebracat",
+        "href": "/tool/zebracat",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "synthesia",
+        "href": "/tool/synthesia",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "elai-io",
+        "href": "/tool/elai-io",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "pika",
+        "href": "/tool/pika",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "descript",
+        "href": "/tool/descript",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "opus-clip",
+        "href": "/tool/opus-clip",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "runway",
+        "href": "/tool/runway",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "sora",
+        "href": "/tool/sora",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "pictory",
+        "href": "/tool/pictory",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "colossyan",
+        "href": "/tool/colossyan",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "d-id",
+        "href": "/tool/d-id",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "deepbrain-ai",
+        "href": "/tool/deepbrain-ai",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "synthesys",
+        "href": "/tool/synthesys",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "flexclip",
+        "href": "/tool/flexclip",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "lumen5",
+        "href": "/tool/lumen5",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "tool",
+        "slug": "steve-ai",
+        "href": "/tool/steve-ai",
+        "ready": true,
+        "reasons": []
+      }
+    ],
+    "toolAlternatives": [
+      {
+        "kind": "toolAlternatives",
+        "slug": "invideo",
+        "href": "/tool/invideo/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "heygen",
+        "href": "/tool/heygen/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "fliki",
+        "href": "/tool/fliki/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "veed-io",
+        "href": "/tool/veed-io/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "zebracat",
+        "href": "/tool/zebracat/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "synthesia",
+        "href": "/tool/synthesia/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "elai-io",
+        "href": "/tool/elai-io/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "pika",
+        "href": "/tool/pika/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "descript",
+        "href": "/tool/descript/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "opus-clip",
+        "href": "/tool/opus-clip/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "runway",
+        "href": "/tool/runway/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "sora",
+        "href": "/tool/sora/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "pictory",
+        "href": "/tool/pictory/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "colossyan",
+        "href": "/tool/colossyan/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "d-id",
+        "href": "/tool/d-id/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "deepbrain-ai",
+        "href": "/tool/deepbrain-ai/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "synthesys",
+        "href": "/tool/synthesys/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "flexclip",
+        "href": "/tool/flexclip/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "lumen5",
+        "href": "/tool/lumen5/alternatives",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolAlternatives",
+        "slug": "steve-ai",
+        "href": "/tool/steve-ai/alternatives",
+        "ready": true,
+        "reasons": []
+      }
+    ],
+    "toolFeatures": [
+      {
+        "kind": "toolFeatures",
+        "slug": "invideo",
+        "href": "/tool/invideo/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "heygen",
+        "href": "/tool/heygen/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "fliki",
+        "href": "/tool/fliki/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "veed-io",
+        "href": "/tool/veed-io/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "zebracat",
+        "href": "/tool/zebracat/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "synthesia",
+        "href": "/tool/synthesia/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "elai-io",
+        "href": "/tool/elai-io/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "pika",
+        "href": "/tool/pika/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "descript",
+        "href": "/tool/descript/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "opus-clip",
+        "href": "/tool/opus-clip/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "runway",
+        "href": "/tool/runway/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "sora",
+        "href": "/tool/sora/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "pictory",
+        "href": "/tool/pictory/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "colossyan",
+        "href": "/tool/colossyan/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "d-id",
+        "href": "/tool/d-id/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "deepbrain-ai",
+        "href": "/tool/deepbrain-ai/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "synthesys",
+        "href": "/tool/synthesys/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "flexclip",
+        "href": "/tool/flexclip/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "lumen5",
+        "href": "/tool/lumen5/features",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolFeatures",
+        "slug": "steve-ai",
+        "href": "/tool/steve-ai/features",
+        "ready": true,
+        "reasons": []
+      }
+    ],
+    "toolReviews": [
+      {
+        "kind": "toolReviews",
+        "slug": "invideo",
+        "href": "/tool/invideo/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "heygen",
+        "href": "/tool/heygen/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "fliki",
+        "href": "/tool/fliki/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "veed-io",
+        "href": "/tool/veed-io/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "zebracat",
+        "href": "/tool/zebracat/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "synthesia",
+        "href": "/tool/synthesia/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "elai-io",
+        "href": "/tool/elai-io/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "pika",
+        "href": "/tool/pika/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "descript",
+        "href": "/tool/descript/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "opus-clip",
+        "href": "/tool/opus-clip/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "runway",
+        "href": "/tool/runway/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "sora",
+        "href": "/tool/sora/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "pictory",
+        "href": "/tool/pictory/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "colossyan",
+        "href": "/tool/colossyan/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "d-id",
+        "href": "/tool/d-id/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "deepbrain-ai",
+        "href": "/tool/deepbrain-ai/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "synthesys",
+        "href": "/tool/synthesys/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "flexclip",
+        "href": "/tool/flexclip/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "lumen5",
+        "href": "/tool/lumen5/reviews",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "toolReviews",
+        "slug": "steve-ai",
+        "href": "/tool/steve-ai/reviews",
+        "ready": true,
+        "reasons": []
+      }
+    ],
+    "feature": [
+      {
+        "kind": "feature",
+        "slug": "ai-avatar-video-generators",
+        "href": "/features/ai-avatar-video-generators",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "feature",
+        "slug": "ai-video-editors",
+        "href": "/features/ai-video-editors",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "feature",
+        "slug": "ai-video-for-marketing",
+        "href": "/features/ai-video-for-marketing",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "feature",
+        "slug": "ai-video-for-social-media",
+        "href": "/features/ai-video-for-social-media",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "feature",
+        "slug": "ai-video-for-youtube",
+        "href": "/features/ai-video-for-youtube",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "feature",
+        "slug": "ai-video-generators-comparison",
+        "href": "/features/ai-video-generators-comparison",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "feature",
+        "slug": "best-ai-video-generators",
+        "href": "/features/best-ai-video-generators",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "feature",
+        "slug": "budget-friendly-ai-video-tools",
+        "href": "/features/budget-friendly-ai-video-tools",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "feature",
+        "slug": "content-repurposing-ai-tools",
+        "href": "/features/content-repurposing-ai-tools",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "feature",
+        "slug": "enterprise-ai-video-solutions",
+        "href": "/features/enterprise-ai-video-solutions",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "feature",
+        "slug": "fast-ai-video-generators",
+        "href": "/features/fast-ai-video-generators",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "feature",
+        "slug": "free-ai-video-no-watermark",
+        "href": "/features/free-ai-video-no-watermark",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "feature",
+        "slug": "professional-ai-video-tools",
+        "href": "/features/professional-ai-video-tools",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "feature",
+        "slug": "text-to-video-ai-tools",
+        "href": "/features/text-to-video-ai-tools",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "feature",
+        "slug": "viral-ai-video-generators",
+        "href": "/features/viral-ai-video-generators",
+        "ready": true,
+        "reasons": []
+      }
+    ],
+    "vs": [
+      {
+        "kind": "vs",
+        "slug": "colossyan-vs-heygen",
+        "href": "/vs/colossyan-vs-heygen",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "colossyan-vs-synthesia",
+        "href": "/vs/colossyan-vs-synthesia",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "deepbrain-ai-vs-heygen",
+        "href": "/vs/deepbrain-ai-vs-heygen",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "deepbrain-ai-vs-synthesia",
+        "href": "/vs/deepbrain-ai-vs-synthesia",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "descript-vs-fliki",
+        "href": "/vs/descript-vs-fliki",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "descript-vs-pictory",
+        "href": "/vs/descript-vs-pictory",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "descript-vs-veed-io",
+        "href": "/vs/descript-vs-veed-io",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "elai-io-vs-heygen",
+        "href": "/vs/elai-io-vs-heygen",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "elai-io-vs-synthesia",
+        "href": "/vs/elai-io-vs-synthesia",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "fliki-vs-heygen",
+        "href": "/vs/fliki-vs-heygen",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "fliki-vs-invideo",
+        "href": "/vs/fliki-vs-invideo",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "fliki-vs-pictory",
+        "href": "/vs/fliki-vs-pictory",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "fliki-vs-zebracat",
+        "href": "/vs/fliki-vs-zebracat",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "heygen-vs-invideo",
+        "href": "/vs/heygen-vs-invideo",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "heygen-vs-synthesia",
+        "href": "/vs/heygen-vs-synthesia",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "invideo-vs-pictory",
+        "href": "/vs/invideo-vs-pictory",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "invideo-vs-veed-io",
+        "href": "/vs/invideo-vs-veed-io",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "invideo-vs-zebracat",
+        "href": "/vs/invideo-vs-zebracat",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "pictory-vs-zebracat",
+        "href": "/vs/pictory-vs-zebracat",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "pika-vs-runway",
+        "href": "/vs/pika-vs-runway",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "vs",
+        "slug": "runway-vs-sora",
+        "href": "/vs/runway-vs-sora",
+        "ready": true,
+        "reasons": []
+      }
+    ],
+    "alternativesTopic": [
+      {
+        "kind": "alternativesTopic",
+        "slug": "ai-avatar-video-for-training",
+        "href": "/alternatives/topic/ai-avatar-video-for-training",
+        "ready": true,
+        "reasons": []
+      },
+      {
+        "kind": "alternativesTopic",
+        "slug": "ai-video-for-youtube-growth",
+        "href": "/alternatives/topic/ai-video-for-youtube-growth",
+        "ready": true,
+        "reasons": []
+      }
+    ]
+  },
+  "excludedByKind": {
+    "hub": [],
+    "tool": [],
+    "toolAlternatives": [],
+    "toolFeatures": [],
+    "toolReviews": [],
+    "feature": [],
+    "vs": [],
+    "alternativesTopic": []
+  },
+  "gaps": []
+}

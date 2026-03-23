@@ -56,19 +56,18 @@
       "slug": "kling-ai",
       "verdictSeed": "Reported as the best quality-to-price ratio for regular AI video generation. Strong motion coherence and physics simulation at the ~$10/mo price point.",
       "pricingSeed": "~$10/mo Standard (660 credits; 1080p output)",
-      "policySeed": null,
+      "policySeed": "Kling AI emphasizes accessible entry via daily credits, but current local source coverage does not confirm stronger commercial-governance or attribution terms",
       "bestForSeed": "High-quality motion and physics on a budget",
-      "mainLimitationSeed": null,
+      "mainLimitationSeed": "Current local coverage is still thin on governance and review depth, and this dataset does not yet confirm a stronger no-watermark or team-ready publishing posture",
       "officialUrl": "https://klingai.com/",
       "hasReviewPage": false,
       "reviewUrl": null,
       "logoUrl": null,
       "sourceUrls": [
+        "https://klingai.com/",
         "https://blog.republiclabs.ai/2026/01/best-ai-video-generators-under-20-month.html"
       ],
       "flags": [
-        "missing-policy-seed",
-        "missing-limitation-seed",
         "missing-logo-url",
         "missing-review-coverage"
       ]
@@ -78,20 +77,19 @@
       "slug": "pika",
       "verdictSeed": "Beginner-friendly generator with fast generation and creative effects (Pikaffects). Generous credits at the entry tier.",
       "pricingSeed": "$8–10/mo",
-      "policySeed": null,
+      "policySeed": "Lower-cost tiers are attractive for experimentation, but commercial publishing and cleaner output assumptions depend on staying on paid plans rather than the free entry path",
       "bestForSeed": "Social media content with fast generations",
-      "mainLimitationSeed": null,
+      "mainLimitationSeed": "Entry pricing is cheap, but serious usage still depends on credit limits and upgrade tiers once you need consistent output volume or stronger production controls",
       "officialUrl": "https://pika.style/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/pika",
       "logoUrl": "/logos/pika-logo.jpeg",
       "sourceUrls": [
-        "https://blog.republiclabs.ai/2026/01/best-ai-video-generators-under-20-month.html"
+        "https://pika.art/",
+        "https://pika.art/pricing",
+        "https://pika.art/faq"
       ],
-      "flags": [
-        "missing-policy-seed",
-        "missing-limitation-seed"
-      ]
+      "flags": []
     },
     {
       "name": "Runway",
@@ -106,7 +104,9 @@
       "reviewUrl": "/tool/runway",
       "logoUrl": "/logos/runway.png",
       "sourceUrls": [
-        "https://runwayml.com/pricing"
+        "https://runwayml.com/pricing",
+        "https://runwayml.com/ai-tools",
+        "https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights"
       ],
       "flags": []
     },
@@ -123,6 +123,7 @@
       "reviewUrl": null,
       "logoUrl": null,
       "sourceUrls": [
+        "https://magichour.ai/",
         "https://magichour.ai/blog/best-ai-video-tools-for-daily-content-creators-on-a-budget"
       ],
       "flags": [
@@ -165,16 +166,13 @@
       ]
     }
   ],
-  "lastReviewed": "2026-03-07T23:55:00Z",
+  "lastReviewed": "2026-03-22T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/budget-friendly-ai-video-tools.raw.json",
     "sourceCount": 3,
     "uniqueToolCount": 4,
-    "needsManualReview": true,
-    "reviewNotes": [
-      "One or more tools still need verified logoUrl coverage.",
-      "One or more tools are missing internal review coverage."
-    ]
+    "needsManualReview": false,
+    "reviewNotes": []
   }
 }

@@ -8,6 +8,7 @@ import ComparisonFeaturePage from '@/components/features/ComparisonFeaturePage';
 import FeaturesFAQ from '@/components/features/FeaturesFAQ';
 import NarrowWorkflowFeaturePage from '@/components/features/NarrowWorkflowFeaturePage';
 import PolicyThresholdFeaturePage from '@/components/features/PolicyThresholdFeaturePage';
+import { resolvePromoteSafeFeatureHref } from '@/components/features/filterPromoteSafeFeatureHrefs';
 import { track } from '@/lib/features/track';
 import {
   FeatureFaqItem,
@@ -22,6 +23,7 @@ interface FeatureHubPageProps {
   pageData: FeaturePageData;
   groups: FeatureGroupDisplay[];
   recommendedReadingLinks: FeatureRecommendedReadingLink[];
+  promoteSafeFeatureHrefs: string[];
 }
 
 const narrowWorkflowSampleSlugs = new Set([
@@ -76,6 +78,12 @@ type FeaturePageOverride = {
   faqItems?: FeatureFaqItem[];
   groupOverrides?: Record<string, GroupOverride>;
   compactFrontHalf?: boolean;
+};
+
+const SAFE_FEATURE_HUB_REDIRECT: RouteRedirect = {
+  href: '/features',
+  label: 'Browse feature hub',
+  note: 'Return to the feature hub to continue through promote-safe routes only.',
 };
 
 const faqQuestionOverrides: Partial<Record<string, Partial<Record<string, string>>>> = {
@@ -944,6 +952,7 @@ function getContextLinksForGroup(
   pageData: FeaturePageData,
   group: FeatureGroupDisplay,
   recommendedReadingLinks: FeatureRecommendedReadingLink[],
+  promoteSafeFeatureHrefs: Set<string>,
 ): FeatureRecommendedReadingLink[] {
   const toolSlugs = new Set(group.tools.map((tool) => tool.toolSlug));
 
@@ -969,12 +978,16 @@ function getContextLinksForGroup(
     return [];
   }
 
-  return redirects.slice(0, 1).map((redirect) => ({
-    href: redirect.href,
-    label: redirect.label,
-    linkType: 'guide',
-    destinationSlug: redirect.href.replace(/^\/+/, ''),
-  }));
+  return redirects.slice(0, 1).map((redirect) => {
+    const safeRedirect = sanitizeRouteRedirect(redirect, promoteSafeFeatureHrefs);
+
+    return {
+      href: safeRedirect.href,
+      label: safeRedirect.label,
+      linkType: 'guide',
+      destinationSlug: safeRedirect.href.replace(/^\/+/, ''),
+    };
+  });
 }
 
 function getRecommendedSectionTitle(linkType: FeatureRecommendedReadingLink['linkType']): string {
@@ -992,10 +1005,52 @@ function getRecommendedSectionTitle(linkType: FeatureRecommendedReadingLink['lin
   }
 }
 
-const recommendedReadingOrder: FeatureRecommendedReadingLink['linkType'][] = ['tool', 'tool_alternatives', 'vs', 'guide'];
+const recommendedReadingOrder: FeatureRecommendedReadingLink['linkType'][] = ['tool', 'vs', 'guide', 'tool_alternatives'];
 
 function getPolicyLabel(pageData: FeaturePageData): string {
   return pageData.meta.pageType === 'policy-threshold' ? 'Watermark policy' : 'Policy';
+}
+
+function sanitizeRouteRedirect(redirect: RouteRedirect, promoteSafeFeatureHrefs: Set<string>): RouteRedirect {
+  const resolved = resolvePromoteSafeFeatureHref(redirect.href, promoteSafeFeatureHrefs, SAFE_FEATURE_HUB_REDIRECT.href);
+
+  if (!resolved.usedFallback) {
+    return {
+      ...redirect,
+      href: resolved.href ?? redirect.href,
+    };
+  }
+
+  return SAFE_FEATURE_HUB_REDIRECT;
+}
+
+function sanitizeAtGlanceCard(card: AtGlanceCard, promoteSafeFeatureHrefs: Set<string>): AtGlanceCard {
+  if (!card.href) {
+    return card;
+  }
+
+  const resolved = resolvePromoteSafeFeatureHref(card.href, promoteSafeFeatureHrefs, SAFE_FEATURE_HUB_REDIRECT.href);
+
+  if (!resolved.usedFallback) {
+    return {
+      ...card,
+      href: resolved.href,
+    };
+  }
+
+  return {
+    ...card,
+    href: SAFE_FEATURE_HUB_REDIRECT.href,
+    cta: SAFE_FEATURE_HUB_REDIRECT.label,
+    external: false,
+  };
+}
+
+function sanitizeDecisionCard(card: DecisionCard, promoteSafeFeatureHrefs: Set<string>): DecisionCard {
+  return {
+    ...card,
+    redirect: sanitizeRouteRedirect(card.redirect, promoteSafeFeatureHrefs),
+  };
 }
 
 function renderAtGlanceCard(card: AtGlanceCard, compact = false) {
@@ -1092,7 +1147,9 @@ export default function FeatureHubPage({
   pageData,
   groups,
   recommendedReadingLinks,
+  promoteSafeFeatureHrefs,
 }: FeatureHubPageProps) {
+  const promoteSafeFeatureHrefSet = new Set(promoteSafeFeatureHrefs);
   const recommendedGroups = recommendedReadingOrder
     .map((linkType) => ({
       linkType,
@@ -1104,8 +1161,12 @@ export default function FeatureHubPage({
   const { pageType, modules } = pageData.meta;
   const isBroadChooser = pageType === 'broad-chooser';
   const isCompactRouteSplit = modules.routeSplit === 'compact';
-  const atGlanceCards = buildAtGlanceCards(pageData, groups);
-  const decisionCards = buildDecisionCards(pageData, groups);
+  const atGlanceCards = buildAtGlanceCards(pageData, groups).map((card) =>
+    sanitizeAtGlanceCard(card, promoteSafeFeatureHrefSet)
+  );
+  const decisionCards = buildDecisionCards(pageData, groups).map((card) =>
+    sanitizeDecisionCard(card, promoteSafeFeatureHrefSet)
+  );
   const compactFrontHalf = featurePageOverrides[pageData.slug]?.compactFrontHalf === true;
   const lastReviewedLabel = formatDate(pageData.meta.lastReviewed);
   const researchBasisLabel = getResearchBasisLabel(pageData);
@@ -1125,7 +1186,7 @@ export default function FeatureHubPage({
       page_type: 'feature_hub',
       feature_slug: featureSlug,
     });
-  }, [featureSlug, pageType]);
+  }, [featureSlug, pageData.slug, pageType]);
 
   if (pageType === 'comparison') {
     return (
@@ -1134,6 +1195,7 @@ export default function FeatureHubPage({
         pageData={pageData}
         groups={groups}
         recommendedReadingLinks={recommendedReadingLinks}
+        promoteSafeFeatureHrefs={promoteSafeFeatureHrefs}
       />
     );
   }
@@ -1145,6 +1207,7 @@ export default function FeatureHubPage({
         pageData={pageData}
         groups={groups}
         recommendedReadingLinks={recommendedReadingLinks}
+        promoteSafeFeatureHrefs={promoteSafeFeatureHrefs}
       />
     );
   }
@@ -1156,6 +1219,7 @@ export default function FeatureHubPage({
         pageData={pageData}
         groups={groups}
         recommendedReadingLinks={recommendedReadingLinks}
+        promoteSafeFeatureHrefs={promoteSafeFeatureHrefs}
       />
     );
   }
@@ -1167,6 +1231,7 @@ export default function FeatureHubPage({
         pageData={pageData}
         groups={groups}
         recommendedReadingLinks={recommendedReadingLinks}
+        promoteSafeFeatureHrefs={promoteSafeFeatureHrefs}
       />
     );
   }
@@ -1396,11 +1461,19 @@ export default function FeatureHubPage({
         )}
 
         {groups.map((group) => {
-          const contextualLinks = getContextLinksForGroup(pageData, group, recommendedReadingLinks);
+          const contextualLinks = getContextLinksForGroup(
+            pageData,
+            group,
+            recommendedReadingLinks,
+            promoteSafeFeatureHrefSet
+          );
           const displayContextualLinks =
             isCompactRouteSplit ? contextualLinks.slice(0, 2) : contextualLinks;
           const groupOverride = featurePageOverrides[pageData.slug]?.groupOverrides?.[group.groupTitle];
-          const redirect = groupOverride?.redirect ?? getGroupRedirect(pageData, group.groupTitle);
+          const redirect = sanitizeRouteRedirect(
+            groupOverride?.redirect ?? getGroupRedirect(pageData, group.groupTitle),
+            promoteSafeFeatureHrefSet
+          );
           const chooseWhenText =
             groupOverride?.chooseWhen ??
             (firstSentence(group.groupSummary) ||

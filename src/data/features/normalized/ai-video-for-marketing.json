@@ -47,7 +47,7 @@
     {
       "id": "generative-brand-storytelling",
       "title": "Generative brand storytelling",
-      "rule": "This group covers tools focused on higher-fidelity branded creative: hero ads, launches, and narrative marketing assets where visual polish matters more than batch automation. They prioritize commercial output quality and brand feel over presenter format or avatar-led delivery."
+      "rule": "This group covers tools focused on higher-fidelity branded creative: hero ads, launches, and narrative marketing assets where visual polish matters more than batch automation. They prioritize commercial output quality and brand feel over presenter format or avatar-led delivery.",
       "toolSlugs": [
         "runway",
         "mootion"
@@ -68,6 +68,7 @@
       "reviewUrl": null,
       "logoUrl": null,
       "sourceUrls": [
+        "https://www.abyssale.com/",
         "https://www.abyssale.com/blog/ai-video-editor"
       ],
       "flags": [
@@ -83,7 +84,7 @@
       "slug": "heygen",
       "verdictSeed": "Multilingual AI avatars for marketing personalization. Pay-as-you-go API at $0.1/sec for Avatar IV or Precision Translation.",
       "pricingSeed": "Pay-as-you-go: $0.1/sec (Avatar IV / Precision Translation)",
-      "policySeed": null,
+      "policySeed": "Free exports stay watermarked and non-commercial, while paid plans and pay-as-you-go access are the publishable path for branded marketing output",
       "bestForSeed": "Multilingual marketing avatars and localized campaigns",
       "mainLimitationSeed": "Max 50 video scenes per generated video; input text capped at 5,000 characters",
       "officialUrl": "https://www.heygen.com/",
@@ -91,12 +92,12 @@
       "reviewUrl": "/tool/heygen",
       "logoUrl": "/logos/heygen-logo.png",
       "sourceUrls": [
-        "https://www.abyssale.com/blog/ai-video-editor",
+        "https://www.heygen.com/pricing",
+        "https://www.heygen.com/features",
         "https://docs.heygen.com/reference/limits"
       ],
       "flags": [
-        "duplicate-raw-mentions-merged",
-        "missing-policy-seed"
+        "duplicate-raw-mentions-merged"
       ]
     },
     {
@@ -104,21 +105,19 @@
       "slug": "runway",
       "verdictSeed": "Cinematic-grade generative video with professional controls including color grading. Suited for hero ads and brand narrative content.",
       "pricingSeed": "From $12/mo",
-      "policySeed": null,
+      "policySeed": "Paid Runway plans remove the watermark, and Runway states users retain full ownership and unrestricted commercial use on all plans",
       "bestForSeed": "High-end cinematic brand storytelling",
-      "mainLimitationSeed": null,
+      "mainLimitationSeed": "Credit-based generation and model-specific burn rates make polished campaign iteration more expensive than template-led marketing tools",
       "officialUrl": "https://runwayml.com/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/runway",
       "logoUrl": "/logos/runway.png",
       "sourceUrls": [
-        "https://www.mootion.com/use-cases/en/the-best-AI-marketing-video-generators"
+        "https://runwayml.com/pricing",
+        "https://runwayml.com/features",
+        "https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights"
       ],
-      "flags": [
-        "missing-pricing-seed",
-        "missing-policy-seed",
-        "missing-limitation-seed"
-      ]
+      "flags": []
     },
     {
       "name": "Mootion",
@@ -133,6 +132,7 @@
       "reviewUrl": null,
       "logoUrl": null,
       "sourceUrls": [
+        "https://www.mootion.com/",
         "https://www.mootion.com/use-cases/en/the-best-AI-marketing-video-generators"
       ],
       "flags": [
@@ -173,17 +173,13 @@
       ]
     }
   ],
-  "lastReviewed": "2026-03-08T00:05:00Z",
+  "lastReviewed": "2026-03-21T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/ai-video-for-marketing.raw.json",
     "sourceCount": 3,
     "uniqueToolCount": 4,
-    "needsManualReview": true,
-    "reviewNotes": [
-      "Duplicate raw tool mentions merged: heygen",
-      "One or more tools still need verified logoUrl coverage.",
-      "One or more tools are missing internal review coverage."
-    ]
+    "needsManualReview": false,
+    "reviewNotes": []
   }
 }

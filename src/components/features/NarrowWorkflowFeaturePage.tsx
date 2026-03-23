@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import ToolCard from '@/components/features/ToolCard';
 import FeaturesFAQ from '@/components/features/FeaturesFAQ';
+import { resolvePromoteSafeFeatureHref } from '@/components/features/filterPromoteSafeFeatureHrefs';
 import { track } from '@/lib/features/track';
 import {
   FeatureFaqItem,
@@ -17,6 +18,7 @@ interface NarrowWorkflowFeaturePageProps {
   pageData: FeaturePageData;
   groups: FeatureGroupDisplay[];
   recommendedReadingLinks: FeatureRecommendedReadingLink[];
+  promoteSafeFeatureHrefs?: string[];
 }
 
 type FitCheckCard = {
@@ -58,6 +60,12 @@ type ReadingGroup = {
   title: string;
   items: FeatureRecommendedReadingLink[];
 };
+
+const SAFE_FEATURE_HUB_EXIT = {
+  href: '/features',
+  label: 'Browse feature hub',
+  note: 'Return to the feature hub to continue through promote-safe routes only.',
+} as const;
 
 function getRecommendedSectionTitle(linkType: FeatureRecommendedReadingLink['linkType']): string {
   switch (linkType) {
@@ -919,8 +927,10 @@ export default function NarrowWorkflowFeaturePage({
   pageData,
   groups,
   recommendedReadingLinks,
+  promoteSafeFeatureHrefs,
 }: NarrowWorkflowFeaturePageProps) {
   const override = narrowWorkflowOverrides[pageData.slug];
+  const promoteSafeFeatureHrefSet = new Set(promoteSafeFeatureHrefs ?? []);
 
   useEffect(() => {
     track('page_view', {
@@ -932,6 +942,47 @@ export default function NarrowWorkflowFeaturePage({
   if (!override) {
     return null;
   }
+
+  const safeOverride = {
+    ...override,
+    fitCards: override.fitCards.map((card) => {
+      const resolved = resolvePromoteSafeFeatureHref(card.href, promoteSafeFeatureHrefSet, SAFE_FEATURE_HUB_EXIT.href);
+
+      return resolved.usedFallback
+        ? {
+            ...card,
+            href: SAFE_FEATURE_HUB_EXIT.href,
+            label: SAFE_FEATURE_HUB_EXIT.label,
+          }
+        : {
+            ...card,
+            href: resolved.href ?? card.href,
+          };
+    }),
+    sectionOverrides: Object.fromEntries(
+      Object.entries(override.sectionOverrides).map(([sectionTitle, sectionOverride]) => [
+        sectionTitle,
+        {
+          ...sectionOverride,
+          contextualExits: sectionOverride.contextualExits.map((item) => {
+            const resolved = resolvePromoteSafeFeatureHref(item.href, promoteSafeFeatureHrefSet, SAFE_FEATURE_HUB_EXIT.href);
+
+            return resolved.usedFallback
+              ? {
+                  ...item,
+                  href: SAFE_FEATURE_HUB_EXIT.href,
+                  label: SAFE_FEATURE_HUB_EXIT.label,
+                  note: SAFE_FEATURE_HUB_EXIT.note,
+                }
+              : {
+                  ...item,
+                  href: resolved.href ?? item.href,
+                };
+          }),
+        },
+      ])
+    ) as Record<string, WorkflowSectionOverride>,
+  };
 
   const recommendedGroups: ReadingGroup[] = readingOrder
     .map((linkType) => ({
@@ -1024,12 +1075,12 @@ export default function NarrowWorkflowFeaturePage({
         <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Fit check</p>
-            <h2 className="mt-3 text-3xl font-bold text-gray-900">{override.fitHeading}</h2>
-            <p className="mt-4 text-base leading-8 text-gray-600">{override.fitSummary}</p>
+            <h2 className="mt-3 text-3xl font-bold text-gray-900">{safeOverride.fitHeading}</h2>
+            <p className="mt-4 text-base leading-8 text-gray-600">{safeOverride.fitSummary}</p>
           </div>
 
           <div className="mt-8 grid gap-4 lg:grid-cols-3">
-            {override.fitCards.map((card) => (
+            {safeOverride.fitCards.map((card) => (
               <article key={card.title} className="rounded-2xl border border-gray-200 bg-[#FCFBF7] p-5">
                 <h3 className="text-xl font-bold text-gray-900">{card.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-gray-700">{card.summary}</p>
@@ -1047,13 +1098,13 @@ export default function NarrowWorkflowFeaturePage({
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Route checks</p>
             <h2 className="mt-3 text-3xl font-bold text-gray-900">Use these checks before you over-read the page</h2>
-            {override.decisionLead ? (
-              <p className="mt-4 text-base leading-8 text-gray-600">{override.decisionLead}</p>
+            {safeOverride.decisionLead ? (
+              <p className="mt-4 text-base leading-8 text-gray-600">{safeOverride.decisionLead}</p>
             ) : null}
           </div>
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {override.decisionFrameCards.map((card) => (
+            {safeOverride.decisionFrameCards.map((card) => (
               <div key={card.title} className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
                 <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">{card.title}</p>
                 <p className="mt-3 text-sm leading-7 text-gray-700">{card.summary}</p>
@@ -1063,17 +1114,17 @@ export default function NarrowWorkflowFeaturePage({
         </section>
 
         {groups.map((group) => {
-          const sectionOverride = override.sectionOverrides[group.groupTitle];
+          const sectionOverride = safeOverride.sectionOverrides[group.groupTitle];
 
           return (
             <section key={group.groupTitle} id={group.groupTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-')} className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Main shortlist</p>
               <h2 className="mt-3 text-3xl font-bold text-gray-900">{group.groupTitle}</h2>
-              {override.shortlistLead ? (
-                <p className="mt-4 max-w-3xl text-base leading-8 text-gray-600">{override.shortlistLead}</p>
+              {safeOverride.shortlistLead ? (
+                <p className="mt-4 max-w-3xl text-base leading-8 text-gray-600">{safeOverride.shortlistLead}</p>
               ) : null}
               {group.groupSummary ? (
-                <p className={`${override.shortlistLead ? 'mt-3' : 'mt-4'} max-w-3xl text-base leading-8 text-gray-600`}>
+                <p className={`${safeOverride.shortlistLead ? 'mt-3' : 'mt-4'} max-w-3xl text-base leading-8 text-gray-600`}>
                   {group.groupSummary}
                 </p>
               ) : null}
@@ -1135,16 +1186,16 @@ export default function NarrowWorkflowFeaturePage({
           );
         })}
 
-        {override.faqItems.length > 0 && (
+        {safeOverride.faqItems.length > 0 && (
           <section className="rounded-3xl border border-black/10 bg-[#F3F1EA] p-8 shadow-sm sm:p-10">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">FAQ</p>
               <h2 className="mt-3 text-3xl font-bold text-gray-900">Questions that usually decide whether the route still fits</h2>
-              {override.faqLead ? <p className="mt-4 text-base leading-8 text-gray-600">{override.faqLead}</p> : null}
+              {safeOverride.faqLead ? <p className="mt-4 text-base leading-8 text-gray-600">{safeOverride.faqLead}</p> : null}
             </div>
 
             <div className="mt-8">
-              <FeaturesFAQ items={override.faqItems} />
+              <FeaturesFAQ items={safeOverride.faqItems} />
             </div>
           </section>
         )}
