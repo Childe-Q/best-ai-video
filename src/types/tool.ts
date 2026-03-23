@@ -19,6 +19,10 @@ export type PricingPlan = {
   } | {
     monthly: string; // Legacy format: e.g. "$28"
     yearly?: string;  // Legacy format: e.g. "$17" (The effective monthly cost when billed yearly)
+  } | {
+    amount: number;
+    currency: string;
+    period: string;
   };
   period?: string; // e.g. "/mo", "/yr", or "" for free
   description?: string; // Short descriptor like "For beginners"
