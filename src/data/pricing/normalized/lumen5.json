@@ -1,0 +1,85 @@
+{
+  "toolSlug": "lumen5",
+  "capturedAt": "2026-03-25T09:45:53.319Z",
+  "sourceUrls": [
+    "https://lumen5.com/pricing/"
+  ],
+  "governance": {
+    "origin": "newly-captured",
+    "safeToShow": true,
+    "reviewRequired": true
+  },
+  "verification": "verified",
+  "status": "paid",
+  "coarseDisplayText": "Paid plans available",
+  "hasFreePlan": true,
+  "hasFreeTrial": null,
+  "hasSelfServePaid": true,
+  "hasEnterprise": true,
+  "hasInteractivePricing": false,
+  "interactiveReasons": [],
+  "plans": [
+    {
+      "name": "Free",
+      "headlinePriceText": null,
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "free",
+      "sourceUrls": [
+        "https://lumen5.com/pricing/"
+      ],
+      "evidence": [
+        "checkDedicated customer success managercheckEnterprise-level securitycheckProfessional ServicescheckInvoiced billingFree$0forever freeFor casual video enthusiastsWhat's included:checkContains Lumen5 Branded Outrocheck2 minute long videoscheck5 videos per monthCo"
+      ]
+    },
+    {
+      "name": "Basic",
+      "headlinePriceText": null,
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "unknown",
+      "sourceUrls": [],
+      "evidence": []
+    },
+    {
+      "name": "Starter",
+      "headlinePriceText": null,
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "unknown",
+      "sourceUrls": [],
+      "evidence": []
+    },
+    {
+      "name": "Pro",
+      "headlinePriceText": null,
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "unknown",
+      "sourceUrls": [],
+      "evidence": []
+    },
+    {
+      "name": "Team",
+      "headlinePriceText": null,
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "unknown",
+      "sourceUrls": [],
+      "evidence": []
+    }
+  ],
+  "verifiedStartingPrice": {
+    "amount": 19,
+    "currency": "USD",
+    "cadence": "month",
+    "displayText": "Starts at $19/mo billed yearly",
+    "safeToShow": true,
+    "reason": "Official pricing page explicitly lists the Basic plan at $19/month billed yearly."
+  },
+  "notes": [
+    "Pricing page shows annual-billed monthly-equivalent prices for Basic, Starter, and Pro.",
+    "Display-safe price keeps the billing qualifier instead of flattening it to ordinary monthly pricing.",
+    "Review required because this run reused cached source captures rather than refreshing live HTML."
+  ]
+}

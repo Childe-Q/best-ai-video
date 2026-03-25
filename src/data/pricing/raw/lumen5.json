@@ -1,0 +1,263 @@
+{
+  "toolSlug": "lumen5",
+  "capturedAt": "2026-03-25T09:45:53.319Z",
+  "pages": [
+    {
+      "sourceType": "pricing",
+      "sourceUrl": "https://lumen5.com/pricing/",
+      "captureLayer": "playwright",
+      "usedCache": true,
+      "cacheMode": "dynamic",
+      "capturedAt": "2026-01-10T12:38:48.376Z",
+      "textLength": 7082,
+      "fallbackReasons": [
+        "source-config-marked-dynamic",
+        "billing-toggle-or-annual-qualifier"
+      ],
+      "snippets": [
+        {
+          "kind": "plan-card",
+          "text": "Basic$19"
+        },
+        {
+          "kind": "plan-card",
+          "text": "Free, plus:check3,500 AI media creditscheckNo Lumen5 brandingcheckAdvanced AI Script Composer featurescheckLonger AI Voiceover videos and more voicesStarter$59"
+        },
+        {
+          "kind": "plan-card",
+          "text": "creatorsEverything in Basic, plus:check12,000 AI media creditscheck1080p video resolutioncheck50M+ stock photos & videoscheckChoose your own fontcheckCustom"
+        },
+        {
+          "kind": "plan-card",
+          "text": "Pro$149"
+        },
+        {
+          "kind": "plan-card",
+          "text": "businessesEverything in Starter, plus:check36,000 AI media creditscheck500M stock photos & videoscheckCustom"
+        },
+        {
+          "kind": "plan-card",
+          "text": "TeamCustom"
+        },
+        {
+          "kind": "plan-card",
+          "text": "EnterpriseFor enterprise teamsEverything in Pro, plus:checkCustom"
+        },
+        {
+          "kind": "plan-card",
+          "text": "team memberscheckVideo approval processcheckSingle sign-on (SSO)checkDedicated custom"
+        },
+        {
+          "kind": "billing-note",
+          "text": "es with your video strategyBasic$19 USDper month, billed yearlyFor creating simple videosEverything in Free, plus:check3,500 AI media creditsch"
+        },
+        {
+          "kind": "billing-note",
+          "text": "er videos and more voicesStarter$59 USDper month, billed yearlySave 25%For content creatorsEverything in Basic, plus:check12,000 AI media credi"
+        },
+        {
+          "kind": "billing-note",
+          "text": "kCustom colorsPOPULAR CHOICEPro$149 USDper month, billed yearlyFor small businessesEverything in Starter, plus:check36,000 AI media creditschec"
+        },
+        {
+          "kind": "billing-note",
+          "text": "tiple BlueprintscheckMultiple brand kitsTeamCustombilled yearlyLearn About EnterpriseFor enterprise teamsEverything in Pro, plus:checkCustom AI"
+        },
+        {
+          "kind": "billing-note",
+          "text": "Compare features across plansBasic$19.00 USD/monthbilled yearlyStarter$59.00 USD/monthbilled yearlyPro$149.00 USD/monthbilled yearlyTeamLet's t"
+        },
+        {
+          "kind": "faq-item",
+          "text": "Frequently asked questionsIt depends on your goals. The Basic and Starter plans are ideal for individual creators who need simple, fast video creation. Pro is best for small businesses that require advanced"
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "kind": "free-plan",
+      "planName": "Free",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "checkDedicated customer success managercheckEnterprise-level securitycheckProfessional ServicescheckInvoiced billingFree$0forever freeFor casual video enthusiastsWhat's included:checkContains Lumen5 Branded Outrocheck2 minute long videoscheck5 videos per monthCo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://lumen5.com/pricing/",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:38:48.376Z",
+          "snippet": "checkDedicated customer success managercheckEnterprise-level securitycheckProfessional ServicescheckInvoiced billingFree$0forever freeFor casual video enthusiastsWhat's included:checkContains Lumen5 Branded Outrocheck2 minute long videoscheck5 videos per monthCo"
+        }
+      ]
+    },
+    {
+      "kind": "enterprise",
+      "planName": "Enterprise",
+      "valueText": "scheckCustom watermarkscheckUpload your own fontscheckMultiple BlueprintscheckMultiple brand kitsTeamCustombilled yearlyLearn About EnterpriseFor enterprise teamsEverything in Pro, plus:checkCustom AI media creditscheckBespoke branded templatecheckVideo translat",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://lumen5.com/pricing/",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:38:48.376Z",
+          "snippet": "scheckCustom watermarkscheckUpload your own fontscheckMultiple BlueprintscheckMultiple brand kitsTeamCustombilled yearlyLearn About EnterpriseFor enterprise teamsEverything in Pro, plus:checkCustom AI media creditscheckBespoke branded templatecheckVideo translat"
+        }
+      ]
+    },
+    {
+      "kind": "interactive-pricing",
+      "valueText": "PRICINGPricing that scales with your video strategyBasic$19 USDper month, billed yearlyFor creating simple videosEverything in Free, plus:check3,500 AI media creditscheckNo Lumen5 brandingcheckAdvanced AI Sc",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://lumen5.com/pricing/",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:38:48.376Z",
+          "snippet": "PRICINGPricing that scales with your video strategyBasic$19 USDper month, billed yearlyFor creating simple videosEverything in Free, plus:check3,500 AI media creditscheckNo Lumen5 brandingcheckAdvanced AI Sc"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 19,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$19 USDper month, billed yearly",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://lumen5.com/pricing/",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:38:48.376Z",
+          "snippet": "$19 USDper month, billed yearly billed yearly"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 59,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$59 USDper month, billed yearly",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://lumen5.com/pricing/",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:38:48.376Z",
+          "snippet": "$59 USDper month, billed yearly billed yearly"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 149,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$149 USDper month, billed yearly",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://lumen5.com/pricing/",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:38:48.376Z",
+          "snippet": "$149 USDper month, billed yearly billed yearly"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$0",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://lumen5.com/pricing/",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:38:48.376Z",
+          "snippet": "$0"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 19,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$19.00 USD/monthbilled yearly",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://lumen5.com/pricing/",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:38:48.376Z",
+          "snippet": "$19.00 USD/monthbilled yearly billed yearly"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 59,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$59.00 USD/monthbilled yearly",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://lumen5.com/pricing/",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:38:48.376Z",
+          "snippet": "$59.00 USD/monthbilled yearly billed yearly"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 149,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$149.00 USD/monthbilled yearly",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://lumen5.com/pricing/",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:38:48.376Z",
+          "snippet": "$149.00 USD/monthbilled yearly billed yearly"
+        }
+      ]
+    },
+    {
+      "kind": "self-serve-paid",
+      "valueText": "Paid plan language found",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://lumen5.com/pricing/",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:38:48.376Z",
+          "snippet": "Paid plan language found"
+        }
+      ]
+    }
+  ],
+  "sourceUrls": [
+    "https://lumen5.com/pricing/"
+  ],
+  "notes": [
+    "pricing upgraded to Playwright: source-config-marked-dynamic, billing-toggle-or-annual-qualifier",
+    "Skipped faq: no cached capture available for this trial run."
+  ]
+}

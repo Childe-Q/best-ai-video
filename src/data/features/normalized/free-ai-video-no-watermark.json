@@ -3,7 +3,7 @@
   "slug": "free-ai-video-no-watermark",
   "title": "Free AI Video Generators (No Watermark)",
   "summarySeed": {
-    "oneLiner": "This page compares truly free, conditional free, and low-cost removal tools by free-tier watermark policy, resolution limits, duration caps, credit allowances, and commercial-use constraints.",
+    "oneLiner": "This page compares truly free, conditional free, and low-cost removal tools by free-tier watermark policy, export ceiling, workflow caps, and whether the first paid lane is actually clean enough to publish.",
     "boundaries": [
       "Truly Free: Free exports stay watermark-free without needing an upgrade.",
       "Conditional Free: Free exports stay watermark-free only if you remain within stated limits.",
@@ -11,10 +11,10 @@
     ],
     "primaryClassificationRule": "Group by free-tier watermark policy.",
     "comparisonAxes": [
-      "pricing and credit limits",
+      "free-tier usage limits",
       "watermark policy",
       "export quality",
-      "commercial rights"
+      "workflow limits and commercial-use posture"
     ]
   },
   "howToChooseSeeds": [
@@ -28,7 +28,7 @@
     },
     {
       "title": "What export quality do you get for free?",
-      "desc": "Verify the free resolution, clip length, and render limits. Many tools remove the watermark but still stop at 720p or short generations."
+      "desc": "Verify the free resolution, clip length, and render limits. Many tools remove the watermark only after upgrading, and free output often still stops at 720p or short generations."
     },
     {
       "title": "Can you use the output commercially?",
@@ -61,7 +61,8 @@
       "rule": "Free tier adds branding; upgrade removes it.",
       "toolSlugs": [
         "clipclip",
-        "lumen5"
+        "lumen5",
+        "steve-ai"
       ]
     }
   ],
@@ -70,10 +71,10 @@
       "name": "FlexClip",
       "slug": "flexclip",
       "verdictSeed": "A practical browser editor if you want free exports without a watermark.",
-      "pricingSeed": "Free plan; Plus from $9.99/mo",
-      "policySeed": "Free exports are listed without a watermark",
+      "pricingSeed": "Free plan plus paid Plus and Business tiers that raise export quality, storage, and stock limits",
+      "policySeed": "Free exports can stay watermark-free, while Plus and Business add cleaner publishing headroom and broader stock allowances",
       "bestForSeed": "Quick browser edits with templates",
-      "mainLimitationSeed": "The free plan limits stock assets and advanced libraries",
+      "mainLimitationSeed": "The free plan limits stock assets, AI usage, and export headroom even though it can stay watermark-free",
       "officialUrl": "https://flexclip.com/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/flexclip",
@@ -183,10 +184,10 @@
       "name": "Lumen5",
       "slug": "lumen5",
       "verdictSeed": "Free blog-to-video exports keep Lumen5 branding until you upgrade.",
-      "pricingSeed": "Free plan; Basic from $29/mo",
-      "policySeed": "The free plan adds a watermark",
+      "pricingSeed": "Community test tier plus paid publishing tiers, with Starter as the first clear 1080p self-serve lane",
+      "policySeed": "The Community tier keeps Lumen5 branding, while paid upgrades remove the branded outro and add stronger brand controls",
       "bestForSeed": "Turning blog posts into simple social videos",
-      "mainLimitationSeed": "Removing branding requires a paid subscription",
+      "mainLimitationSeed": "Removing branding requires a paid subscription, and higher workspace or permission controls only show up on business tiers",
       "officialUrl": "https://lumen5.com/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/lumen5",
@@ -197,12 +198,32 @@
         "https://lumen5.com/faq/"
       ],
       "flags": []
+    },
+    {
+      "name": "Steve AI",
+      "slug": "steve-ai",
+      "verdictSeed": "A budget-friendly prompt-to-video option when the goal is removing the free-tier watermark without jumping to an expensive creator suite.",
+      "pricingSeed": "Free trial lane plus paid tiers that step from no-watermark 720p into 1080p, 2K, and 4K on higher plans",
+      "policySeed": "Free exports keep the Steve AI watermark, while paid plans remove it and unlock commercial use",
+      "bestForSeed": "Low-cost explainers, shorts, and UGC-style drafts",
+      "mainLimitationSeed": "The first clean paid lane is still a lighter creator workflow, and full resell rights are reserved for Enterprise",
+      "officialUrl": "https://www.steve.ai/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/steve-ai",
+      "logoUrl": "/logos/Steve-AI-logo.svg",
+      "sourceUrls": [
+        "https://www.steve.ai/pricing",
+        "https://support.steve.ai/en/articles/8295526-how-do-i-remove-the-steve-ai-watermark-from-the-videos",
+        "https://support.steve.ai/en/articles/8525405-what-are-the-resolutions-in-which-the-project-can-be-downloaded"
+      ],
+      "flags": []
     }
   ],
   "relatedLinks": {
     "reviewSlugs": [
       "flexclip",
-      "lumen5"
+      "lumen5",
+      "steve-ai"
     ],
     "alternativesSlugs": [
       "lumen5"
@@ -223,24 +244,26 @@
     },
     {
       "question": "Which tools already have internal review coverage?",
-      "answerSeed": "Current internal review coverage in this normalized dataset: flexclip, lumen5.",
+      "answerSeed": "Current internal review coverage in this normalized dataset: flexclip, lumen5, steve-ai.",
       "sourceToolSlugs": [
         "flexclip",
-        "lumen5"
+        "lumen5",
+        "steve-ai"
       ]
     }
   ],
-  "lastReviewed": "2026-03-21T00:00:00.000Z",
+  "lastReviewed": "2026-03-25T00:00:00.000Z",
   "reviewMetadata": {
     "generatedFrom": "existing-feature-page",
     "sourceFile": "src/data/features/free-ai-video-no-watermark.json",
     "sourceCount": 0,
-    "uniqueToolCount": 7,
+    "uniqueToolCount": 8,
     "needsManualReview": false,
     "reviewNotes": [
       "No raw research file exists for this slug; normalized from existing frontend JSON.",
       "Clipclip still lacks verified officialUrl coverage.",
-      "Clipclip, Hailuo AI, Jogg.ai, Kapwing, and Leonardo AI still lack internal review coverage."
+      "Clipclip, Hailuo AI, Jogg.ai, Kapwing, and Leonardo AI still lack internal review coverage.",
+      "Steve AI was added from completed top-up and editorial handoff evidence to strengthen the low-cost watermark-removal group."
     ]
   }
 }

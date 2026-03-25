@@ -1,0 +1,84 @@
+{
+  "toolSlug": "colossyan",
+  "capturedAt": "2026-03-25T09:45:53.344Z",
+  "sourceUrls": [
+    "https://www.colossyan.com/pricing"
+  ],
+  "governance": {
+    "origin": "newly-captured",
+    "safeToShow": false,
+    "reviewRequired": true
+  },
+  "verification": "partial",
+  "status": "paid",
+  "coarseDisplayText": "Paid plans available",
+  "hasFreePlan": true,
+  "hasFreeTrial": true,
+  "hasSelfServePaid": true,
+  "hasEnterprise": true,
+  "hasInteractivePricing": true,
+  "interactiveReasons": [
+    "pricing page contains monthly/annual toggles",
+    "pricing page contains minute-based pricing calculator",
+    "top-card prices use from-pricing language"
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "headlinePriceText": null,
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "free",
+      "sourceUrls": [
+        "https://www.colossyan.com/pricing"
+      ],
+      "evidence": [
+        "MonthlyAnnually30% OFFExplore our free planStarterFor individual content creatorsFrom$27/mo"
+      ]
+    },
+    {
+      "name": "Starter",
+      "headlinePriceText": null,
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "unknown",
+      "sourceUrls": [],
+      "evidence": []
+    },
+    {
+      "name": "Business",
+      "headlinePriceText": null,
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "unknown",
+      "sourceUrls": [],
+      "evidence": []
+    },
+    {
+      "name": "Enterprise",
+      "headlinePriceText": "EnterpriseCompanies scaling video productionCustom pricingLet’s talkCustom editorsContact salesEverything in Business +Unlimited featuresGet unlimited access to interactive quizzes, branching scenarios, auto transla",
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "enterprise",
+      "sourceUrls": [
+        "https://www.colossyan.com/pricing"
+      ],
+      "evidence": [
+        "EnterpriseCompanies scaling video productionCustom pricingLet’s talkCustom editorsContact salesEverything in Business +Unlimited featuresGet unlimited access to interactive quizzes, branching scenarios, auto transla"
+      ]
+    }
+  ],
+  "verifiedStartingPrice": {
+    "amount": null,
+    "currency": "USD",
+    "cadence": "month",
+    "displayText": null,
+    "safeToShow": false,
+    "reason": "The page mixes from-pricing with annual toggles and interactive minute pricing, so exact price is not treated as display-safe in this trial."
+  },
+  "notes": [
+    "Official pricing page exposes multiple self-serve prices, but they are tied to monthly/annual mode and interactive minute selectors.",
+    "The capture is sufficient to confirm paid plans exist, but not stable enough for exact display in this conservative trial.",
+    "Review required because this run reused cached source captures rather than refreshing live HTML."
+  ]
+}

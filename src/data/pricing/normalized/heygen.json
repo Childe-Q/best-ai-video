@@ -1,0 +1,85 @@
+{
+  "toolSlug": "heygen",
+  "capturedAt": "2026-03-25T09:45:53.445Z",
+  "sourceUrls": [
+    "https://www.heygen.com/pricing",
+    "https://www.heygen.com/faq"
+  ],
+  "governance": {
+    "origin": "newly-captured",
+    "safeToShow": true,
+    "reviewRequired": true
+  },
+  "verification": "verified",
+  "status": "paid",
+  "coarseDisplayText": "Paid plans available",
+  "hasFreePlan": true,
+  "hasFreeTrial": null,
+  "hasSelfServePaid": true,
+  "hasEnterprise": true,
+  "hasInteractivePricing": true,
+  "interactiveReasons": [
+    "pricing page requires monthly/yearly toggle handling"
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "headlinePriceText": null,
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "free",
+      "sourceUrls": [
+        "https://www.heygen.com/pricing"
+      ],
+      "evidence": [
+        "Pay monthlyPay yearly (Save 22%)FreeCreatorTeamFree$0/moIdeal entry point for creators and marketers looking to test the waters with AI tools, like HeyGen’s AI video maker"
+      ]
+    },
+    {
+      "name": "Creator",
+      "headlinePriceText": null,
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "unknown",
+      "sourceUrls": [],
+      "evidence": []
+    },
+    {
+      "name": "Team",
+      "headlinePriceText": null,
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "unknown",
+      "sourceUrls": [],
+      "evidence": []
+    },
+    {
+      "name": "Enterprise",
+      "headlinePriceText": "|PlatformUse casesLearningPricingEnterpriseCompanyLog inSign upThe leading AI video generatorFlexible pricing plans for every creator and teamHeyGen empowers 100,0",
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "enterprise",
+      "sourceUrls": [
+        "https://www.heygen.com/pricing",
+        "https://www.heygen.com/faq"
+      ],
+      "evidence": [
+        "|PlatformUse casesLearningPricingEnterpriseCompanyLog inSign upThe leading AI video generatorFlexible pricing plans for every creator and teamHeyGen empowers 100,0",
+        "ossary Stay updated with HeyGen’s latest news Pricing Pricing Plans API Pricing See how Trivago is creating with HeyGen Enterprise Company About Us Careers Trust &amp; Safety AI Research See how Trivago is creating with HeyGen Login Sign up for free"
+      ]
+    }
+  ],
+  "verifiedStartingPrice": {
+    "amount": 29,
+    "currency": "USD",
+    "cadence": "month",
+    "displayText": "Starts at $29/mo",
+    "safeToShow": true,
+    "reason": "Official pricing page shows a self-serve Creator monthly price of $29/mo."
+  },
+  "notes": [
+    "Captured from cached Playwright HTML plus official FAQ.",
+    "Annual pricing is also present, but display-safe preview uses the explicit monthly Creator price.",
+    "Review required because this run reused cached source captures rather than refreshing live HTML."
+  ]
+}

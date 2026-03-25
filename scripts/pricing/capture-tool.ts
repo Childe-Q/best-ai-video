@@ -1,0 +1,87 @@
+#!/usr/bin/env tsx
+
+import * as path from 'path';
+import type { PricingSourceType, RawPricingCaptureFile, RawPricingFact } from '../../src/lib/pricing/types';
+import { captureDynamicSource } from './capture-dynamic';
+import { captureStaticSource } from './capture-static';
+import {
+  RAW_OUTPUT_DIR,
+  ensureOutputDirs,
+  getToolSource,
+  loadCachedPage,
+  parseArgs,
+  summarizeCapture,
+  writeJson,
+} from './shared';
+
+function shouldUseDynamicFallback(sourceType: PricingSourceType, fallbackReasons: string[]): boolean {
+  if (sourceType !== 'pricing') {
+    return false;
+  }
+  return fallbackReasons.length > 0;
+}
+
+async function captureSource(
+  slug: string,
+  sourceType: PricingSourceType,
+  useCache: boolean,
+): Promise<{ page: RawPricingCaptureFile['pages'][number]; facts: RawPricingFact[] }> {
+  const staticResult = await captureStaticSource(slug, sourceType, useCache);
+  if (!shouldUseDynamicFallback(sourceType, staticResult.page.fallbackReasons)) {
+    return staticResult;
+  }
+
+  return captureDynamicSource(slug, sourceType, useCache, staticResult.page.fallbackReasons);
+}
+
+export async function captureTool(slug: string, useCache: boolean): Promise<RawPricingCaptureFile> {
+  ensureOutputDirs();
+
+  const pages = [];
+  const facts: RawPricingFact[] = [];
+  const notes: string[] = [];
+
+  for (const sourceType of ['pricing', 'faq'] as PricingSourceType[]) {
+    const source = getToolSource(slug, sourceType);
+    if (!source) continue;
+    if (useCache && !loadCachedPage(slug, sourceType) && sourceType !== 'pricing') {
+      notes.push(`Skipped ${sourceType}: no cached capture available for this trial run.`);
+      continue;
+    }
+    const result = await captureSource(slug, sourceType, useCache);
+    pages.push(result.page);
+    facts.push(...result.facts);
+    if (result.page.captureLayer === 'playwright' && result.page.fallbackReasons.length > 0) {
+      notes.push(`${sourceType} upgraded to Playwright: ${result.page.fallbackReasons.join(', ')}`);
+    }
+  }
+
+  if (pages.length === 0) {
+    throw new Error(`No pricing-capable sources found for ${slug}`);
+  }
+
+  const capture = summarizeCapture(slug, pages, facts, notes);
+  const outPath = path.join(RAW_OUTPUT_DIR, `${slug}.json`);
+  writeJson(outPath, capture);
+  return capture;
+}
+
+async function main() {
+  const args = parseArgs(process.argv.slice(2));
+  const slug = String(args.slug || '');
+  const useCache = args['no-cache'] ? false : true;
+
+  if (!slug) {
+    throw new Error('Usage: tsx scripts/pricing/capture-tool.ts --slug <slug> [--no-cache]');
+  }
+
+  const capture = await captureTool(slug, useCache);
+  process.stdout.write(`${JSON.stringify(capture, null, 2)}\n`);
+}
+
+if (require.main === module) {
+  main().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+}

@@ -3,7 +3,7 @@
   "slug": "ai-video-editors",
   "title": "Best AI Video Editors (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares AI video editors for post-production workflows that start with footage, audio, or transcripts you already have. Tools are grouped by editing depth: deeper timeline or transcript control, or faster clip packaging for social output. Source-to-video conversion platforms that turn blogs, webinars, or knowledge assets into new formats are excluded because the real job there is conversion, not post-production.",
+    "oneLiner": "This page compares AI video editors for post-production workflows that start with footage, audio, or transcripts you already have. The most useful split is editing depth: deeper timeline or transcript control versus faster clipping, reframing, and social packaging once the source already exists.",
     "boundaries": [
       "Must have timeline or transcript-based editing capabilities.",
       "Must use AI to automate editing tasks like auto-captions, scene detection, or filler word removal.",
@@ -12,7 +12,10 @@
     ],
     "primaryClassificationRule": "Group by editing workflow depth.",
     "comparisonAxes": [
-      "pricing and credit limits"
+      "editing workflow depth",
+      "watermark and publish path",
+      "export posture",
+      "team and recording workflow"
     ]
   },
   "howToChooseSeeds": [
@@ -22,11 +25,11 @@
     },
     {
       "title": "Determine whether you need long-form or short-form tools.",
-      "desc": "Opus Clip specializes in repurposing long videos (podcasts, webinars) into multiple short clips with reported 90%+ AI accuracy. Premiere Pro and Descript are built for full-length timeline editing. Pick based on whether your workflow starts with existing long-form content or from scratch."
+      "desc": "Opus Clip specializes in repurposing long videos into multiple short clips, while Descript is much stronger for full spoken-content edits and cleanup. Pick based on whether your workflow is full-episode editing or fast clip packaging."
     },
     {
       "title": "Understand how each tool meters your usage.",
-      "desc": "Descript charges by media hours and AI credits (Hobbyist: 10 media hours, 400 AI credits/mo at $16/mo). Opus Clip charges by processing minutes (free: 60 min/mo; Starter: 150 min/mo at $15/mo). Premiere Pro charges a flat subscription ($22.99+/mo). These models affect cost differently at scale."
+      "desc": "Some tools meter by media hours, some by processing minutes or credits, and some by broader software access. For this page, the more important question is whether the workflow stays usable once you move beyond a free or trial lane."
     }
   ],
   "groups": [
@@ -99,10 +102,10 @@
       "name": "Opus Clip",
       "slug": "opus-clip",
       "verdictSeed": "Automatically detects highlights in long-form video and formats them as short clips for multiple platforms.",
-      "pricingSeed": "Free (60 min/mo); Starter from $15/mo (150 min/mo)",
-      "policySeed": "Free and Starter access still carry watermark or publishing constraints, while Pro and Business are the cleaner path for branded short-form output",
+      "pricingSeed": "Free and paid lanes scale from trial-style clipping into broader cloud, team, and export workflows",
+      "policySeed": "Free and trial access are mainly for validation, while paid plans remove the watermark and make saved projects, cloud storage, and team workflow more practical",
       "bestForSeed": "Repurposing long-form content into short clips at scale",
-      "mainLimitationSeed": "Free tier capped at 60 processing minutes/month",
+      "mainLimitationSeed": "It is much stronger at automated clipping, captions, and reframing than at deeper scene-by-scene post-production",
       "officialUrl": "https://opusclip.com/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/opus-clip",
@@ -118,10 +121,10 @@
       "name": "Descript",
       "slug": "descript",
       "verdictSeed": "Edit video by editing text. Transcript-first workflow with AI voice cloning and Studio Sound.",
-      "pricingSeed": "Free; Hobbyist from $16/mo (10 media hours, 400 AI credits)",
-      "policySeed": "Free plan already publishes at 720p without watermark, while paid tiers mainly expand media hours, AI credits, and export quality",
+      "pricingSeed": "Free plus paid tiers that expand media hours, AI access, recording, and 1080p-to-4K export",
+      "policySeed": "Free already exports without a watermark at 720p, while paid tiers mostly expand media hours, AI access, collaboration, and export quality",
       "bestForSeed": "Talking-head, podcast, and interview workflows",
-      "mainLimitationSeed": "Monthly allocations of media minutes and AI credits do not roll over month-to-month",
+      "mainLimitationSeed": "It is heavier than lightweight browser clippers, and the strongest AI, translation, and collaboration paths show up more clearly on higher tiers",
       "officialUrl": "https://descript.com/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/descript",
@@ -143,7 +146,9 @@
       "opus-clip",
       "descript"
     ],
-    "vsSlugs": [],
+    "vsSlugs": [
+      "descript-vs-pictory"
+    ],
     "guideSlugs": []
   },
   "faqSeeds": [
@@ -154,7 +159,7 @@
     },
     {
       "question": "What should readers compare first on this page?",
-      "answerSeed": "Evaluate the Editing Interface: Do you prefer text-based editing (like Descript), traditional timeline editing (like Premiere Pro), or mobile-first template editing (like CapCut)? Check Long-Form vs. Short-Form Capabilities: Tools like Opus Clip specialize in repurposing long videos into shorts, while others like DaVinci Resolve are meant for full-length timeline mastery.",
+      "answerSeed": "Start with workflow shape: do you need transcript-first editing and cleanup, or fast clipping and social packaging? Descript is much stronger for full spoken-content editing, while Opus Clip is stronger for rapid highlight extraction, captions, reframing, and short-form packaging once the source already exists.",
       "sourceToolSlugs": []
     },
     {
@@ -166,13 +171,16 @@
       ]
     }
   ],
-  "lastReviewed": "2026-03-21T00:00:00Z",
+  "lastReviewed": "2026-03-25T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/ai-video-editors.raw.json",
     "sourceCount": 4,
     "uniqueToolCount": 4,
     "needsManualReview": false,
-    "reviewNotes": []
+    "reviewNotes": [
+      "Descript and Opus Clip were tightened using completed top-up and editorial handoff evidence.",
+      "Interactive pricing states were intentionally excluded in favor of workflow depth, watermark path, export posture, and team behavior."
+    ]
   }
 }

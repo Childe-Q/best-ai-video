@@ -3,7 +3,7 @@
   "slug": "ai-video-for-marketing",
   "title": "Best AI Video Tools for Marketing (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares AI video tools for commercial marketing output: campaign variants, localized product messaging, branded demos, and hero creative. Tools are grouped by marketing production workflow: personalization and scaled campaign output, or higher-fidelity brand storytelling. Avatar platforms are included only when they serve a marketing use case; avatar-first tools whose main decision is presenter format rather than campaign workflow belong on the dedicated avatar page.",
+    "oneLiner": "This page compares AI video tools for commercial marketing output: campaign variants, localized product messaging, branded demos, and hero creative. The most useful split is whether the workflow is built for personalized campaign delivery or for higher-fidelity brand storytelling where publish-ready watermark, export, and governance posture matter more than pure speed.",
     "boundaries": [
       "Must support brand governance: custom fonts, colors, logos, or locked-down brand kits.",
       "Suited for external-facing assets — B2B demos, B2C ads, localized campaign content, or branded launches.",
@@ -13,6 +13,8 @@
     "primaryClassificationRule": "Group by marketing production workflow.",
     "comparisonAxes": [
       "workflow fit and automation",
+      "watermark and publish path",
+      "commercial-use posture",
       "team and governance requirements"
     ]
   },
@@ -23,7 +25,7 @@
     },
     {
       "title": "Evaluate multilingual localization depth.",
-      "desc": "If you run global campaigns, check whether the tool offers native 1-click translation and voice dubbing. HeyGen reports support for this via its Precision Translation mode at $0.1/sec (pay-as-you-go)."
+      "desc": "If you run global campaigns, check whether the tool offers native translation, dubbing, or multilingual presenter support without forcing the team into a separate localization stack."
     },
     {
       "title": "Assess batch variant capabilities.",
@@ -31,7 +33,7 @@
     },
     {
       "title": "Clarify watermark and resolution on your target plan.",
-      "desc": "Mootion removes watermarks starting at $15/mo (Standard plan). HeyGen supports up to 4,096px resolution. Confirm these details match your export requirements before committing."
+      "desc": "For external-facing campaigns, check whether the first realistic publishing lane actually removes branding and supports the export posture your team needs. In many tools, free access is only a test lane."
     }
   ],
   "groups": [
@@ -82,11 +84,11 @@
     {
       "name": "HeyGen",
       "slug": "heygen",
-      "verdictSeed": "Multilingual AI avatars for marketing personalization. Pay-as-you-go API at $0.1/sec for Avatar IV or Precision Translation.",
-      "pricingSeed": "Pay-as-you-go: $0.1/sec (Avatar IV / Precision Translation)",
+      "verdictSeed": "Multilingual AI avatars for personalized marketing, campaign localization, and spokesperson-style communication that needs to move faster than a heavier enterprise rollout.",
+      "pricingSeed": "Free testing plus paid and API-driven publishing paths for avatar-led marketing workflows",
       "policySeed": "Free exports stay watermarked and non-commercial, while paid plans and pay-as-you-go access are the publishable path for branded marketing output",
       "bestForSeed": "Multilingual marketing avatars and localized campaigns",
-      "mainLimitationSeed": "Max 50 video scenes per generated video; input text capped at 5,000 characters",
+      "mainLimitationSeed": "Usage still depends on credit expiry, plan-based limits, and a lighter governance posture than training- or deployment-oriented avatar platforms",
       "officialUrl": "https://www.heygen.com/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/heygen",
@@ -104,8 +106,8 @@
       "name": "Runway",
       "slug": "runway",
       "verdictSeed": "Cinematic-grade generative video with professional controls including color grading. Suited for hero ads and brand narrative content.",
-      "pricingSeed": "From $12/mo",
-      "policySeed": "Paid Runway plans remove the watermark, and Runway states users retain full ownership and unrestricted commercial use on all plans",
+      "pricingSeed": "Free testing plus paid creative-production paths that expand model access, storage, and team workflow",
+      "policySeed": "Paid Runway plans remove the watermark, and the platform is the cleaner path when a brand team needs commercial-ready generated footage rather than test output",
       "bestForSeed": "High-end cinematic brand storytelling",
       "mainLimitationSeed": "Credit-based generation and model-specific burn rates make polished campaign iteration more expensive than template-led marketing tools",
       "officialUrl": "https://runwayml.com/",
@@ -150,7 +152,10 @@
       "heygen",
       "runway"
     ],
-    "vsSlugs": [],
+    "vsSlugs": [
+      "runway-vs-sora",
+      "heygen-vs-synthesia"
+    ],
     "guideSlugs": []
   },
   "faqSeeds": [
@@ -161,7 +166,7 @@
     },
     {
       "question": "What should readers compare first on this page?",
-      "answerSeed": "Evaluate Brand Kit Governance: For marketing teams, the tool must enforce brand consistency across team members by locking down custom fonts, colors, and logos. Check Multilingual Localization: If running global ad campaigns, tools with native 1-click translation and voice dubbing (like HeyGen) save thousands in local agency fees.",
+      "answerSeed": "Start with workflow shape: do you need personalized campaign delivery or higher-fidelity brand storytelling? Then check whether the publish path is actually usable for external-facing work. HeyGen is strongest when the team wants multilingual presenter-led marketing without a heavy rollout stack, while Runway is stronger when hero creative, cinematic control, and publish-ready generated footage matter more than simple speed.",
       "sourceToolSlugs": []
     },
     {
@@ -173,13 +178,16 @@
       ]
     }
   ],
-  "lastReviewed": "2026-03-21T00:00:00Z",
+  "lastReviewed": "2026-03-25T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/ai-video-for-marketing.raw.json",
     "sourceCount": 3,
     "uniqueToolCount": 4,
     "needsManualReview": false,
-    "reviewNotes": []
+    "reviewNotes": [
+      "HeyGen and Runway were tightened using completed top-up and editorial handoff evidence.",
+      "Thin tools such as Abyssale and Mootion were intentionally left at lighter seed depth rather than being force-upgraded."
+    ]
   }
 }

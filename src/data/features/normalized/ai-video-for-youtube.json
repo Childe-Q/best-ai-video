@@ -3,7 +3,7 @@
   "slug": "ai-video-for-youtube",
   "title": "Best AI Video Tools for YouTube Creators (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares AI video tools built for YouTube-first publishing systems: faceless channel automation, recurring upload cadence, long-form adjacency, and avatar-hosted YouTube formats. Tools must support 16:9 publishing, faceless scripting and voice workflows, or YouTube-specific host delivery. Generic vertical editors built mainly for fast social posting are excluded.",
+    "oneLiner": "This page compares AI video tools built for YouTube-first publishing systems: faceless channel automation, avatar-hosted explainers, and long-form-to-Shorts repurposing. The most useful split is not headline pricing but whether the tool supports recurring channel cadence, clean exports, workable watermark rules, and enough workflow headroom for YouTube production.",
     "boundaries": [
       "Focused on YouTube-first publishing systems, including long-form adjacency and Shorts programs.",
       "Must support script, voice, host, or automation workflows that make sense for recurring YouTube publishing.",
@@ -11,7 +11,10 @@
     ],
     "primaryClassificationRule": "Group by YouTube publishing system.",
     "comparisonAxes": [
-      "pricing and credit limits"
+      "workflow fit and usage limits",
+      "watermark path",
+      "export posture",
+      "repurposing versus generation model"
     ]
   },
   "howToChooseSeeds": [
@@ -25,11 +28,11 @@
     },
     {
       "title": "Calculate cost per minute at your publishing cadence.",
-      "desc": "YouTube demands volume. InVideo's free plan allows only 2 video minutes and 1 AI credit per week — far below what a daily channel requires. At $29/mo, both Syllaby (500 credits) and HeyGen (Creator tier) open up more capacity, but check whether their limits match your posting schedule."
+      "desc": "YouTube demands volume. Check whether the plan you actually need gives enough usable minutes, credits, or repurposing headroom for a recurring upload cadence rather than just a test run."
     },
     {
       "title": "Understand watermark removal requirements.",
-      "desc": "InVideo's free exports include a watermark. Syllaby's watermark removal is only confirmed on the Lifetime Deal ($799). HeyGen's watermark policy on the Creator plan for this use case is not confirmed in our current data."
+      "desc": "Check the publish path before you commit. InVideo free exports keep visible branding, Opus Clip's clean export path starts on paid plans, and avatar tools usually reserve watermark-free output for paid publishing tiers."
     }
   ],
   "groups": [
@@ -40,6 +43,14 @@
       "toolSlugs": [
         "invideo",
         "syllaby"
+      ]
+    },
+    {
+      "id": "repurposing-shorts",
+      "title": "Long-form to Shorts repurposing",
+      "rule": "These tools are strongest when the source video already exists and the job is turning YouTube episodes, podcasts, interviews, or webinars into short clips quickly. They matter more for channel extension and clip distribution than for generating a full YouTube episode from scratch.",
+      "toolSlugs": [
+        "opus-clip"
       ]
     },
     {
@@ -93,6 +104,25 @@
       "flags": []
     },
     {
+      "name": "Opus Clip",
+      "slug": "opus-clip",
+      "verdictSeed": "A strong fit for turning long-form YouTube episodes, podcasts, and interviews into Shorts quickly through automated clipping, captions, and reframing.",
+      "pricingSeed": "Free trial-style lane plus paid publish-ready tiers that expand credits, saved projects, cloud storage, and team workspace",
+      "policySeed": "Free and trial projects carry the OpusClip watermark, while paid plans remove it for cleaner publishing",
+      "bestForSeed": "YouTube to Shorts repurposing and multi-channel clip distribution",
+      "mainLimitationSeed": "It is better at automated clipping and reframing than at deeper manual post-production, and saved assets or credits still depend heavily on the current plan",
+      "officialUrl": "https://www.opus.pro/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/opus-clip",
+      "logoUrl": "/logos/OpusClip-logo.svg",
+      "sourceUrls": [
+        "https://www.opus.pro/pricing?category=sales",
+        "https://help.opus.pro/docs/article/watermark",
+        "https://help.opus.pro/docs/article/cloud-storage"
+      ],
+      "flags": []
+    },
+    {
       "name": "Syllaby",
       "slug": "syllaby",
       "verdictSeed": "End-to-end YouTube automation with AI-driven scripting, voice cloning, and automated visuals. Offers a Lifetime Deal as an alternative to monthly billing.",
@@ -117,13 +147,18 @@
   "relatedLinks": {
     "reviewSlugs": [
       "invideo",
-      "heygen"
+      "heygen",
+      "opus-clip"
     ],
     "alternativesSlugs": [
       "invideo",
-      "heygen"
+      "heygen",
+      "opus-clip"
     ],
-    "vsSlugs": [],
+    "vsSlugs": [
+      "invideo-vs-pictory",
+      "descript-vs-pictory"
+    ],
     "guideSlugs": []
   },
   "faqSeeds": [
@@ -134,25 +169,29 @@
     },
     {
       "question": "What should readers compare first on this page?",
-      "answerSeed": "Evaluate the Content Style: Are you creating documentary-style B-roll videos (InVideo AI), talking-head avatar videos (HeyGen), or high-end cinematic shorts (Runway)? Check Voice and Audio Capabilities: A faceless channel lives and dies by its voiceover. Ensure the tool either integrates directly with high-quality TTS like ElevenLabs or allows custom voice cloning.",
+      "answerSeed": "First decide whether the channel workflow is generation-first, avatar-hosted, or repurposing-first. Then check whether the publish path is actually workable: free or trial tiers often keep visible branding, recurring quotas can be tight, and tools like Opus Clip are much stronger for YouTube-to-Shorts repurposing than for generating a full episode from scratch.",
       "sourceToolSlugs": []
     },
     {
       "question": "Which tools already have internal review coverage?",
-      "answerSeed": "Current internal review coverage in this normalized dataset: invideo, heygen.",
+      "answerSeed": "Current internal review coverage in this normalized dataset: invideo, heygen, opus-clip.",
       "sourceToolSlugs": [
         "invideo",
-        "heygen"
+        "heygen",
+        "opus-clip"
       ]
     }
   ],
-  "lastReviewed": "2026-03-21T00:00:00Z",
+  "lastReviewed": "2026-03-25T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/ai-video-for-youtube.raw.json",
     "sourceCount": 3,
-    "uniqueToolCount": 3,
+    "uniqueToolCount": 4,
     "needsManualReview": false,
-    "reviewNotes": []
+    "reviewNotes": [
+      "Opus Clip was added from completed top-up and editorial handoff evidence to cover long-form-to-Shorts repurposing for YouTube teams.",
+      "Interactive pricing states were intentionally excluded in favor of watermark path, export posture, and recurring workflow fit."
+    ]
   }
 }

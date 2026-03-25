@@ -3,7 +3,7 @@
   "slug": "text-to-video-ai-tools",
   "title": "Text to Video AI Tools (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares AI tools that generate net-new video content directly from text prompts — from short cinematic clips to photorealistic scenes. Tools are grouped by generation fidelity and control. Only platforms where text-to-video is a primary workflow are included; purely audio-driven generators, image-only tools without motion, and editors that only work with existing clips are excluded.",
+    "oneLiner": "This page compares AI tools that generate net-new video content directly from text prompts, from short cinematic clips to photorealistic scenes. The most useful split is not price but generation posture: model quality, watermark path, commercial-use boundary, and whether the workflow behaves like premium generation infrastructure or a lighter creator tool.",
     "boundaries": [
       "Must generate new video directly from text prompts, not just edit existing footage.",
       "Covers short cinematic clips through to longer-form text-to-video conversions.",
@@ -11,7 +11,10 @@
     ],
     "primaryClassificationRule": "Group by text-to-video control and fidelity.",
     "comparisonAxes": [
-      "commercial rights"
+      "generation fidelity and control",
+      "watermark and publish path",
+      "commercial-use posture",
+      "workflow weight"
     ]
   },
   "howToChooseSeeds": [
@@ -21,11 +24,11 @@
     },
     {
       "title": "Understand maximum clip length per generation.",
-      "desc": "Cinematic tools like Sora produce clips up to 20–25 seconds per prompt. If you need longer content (e.g., converting a full blog post into a 3-minute video), a different category of tool may be more appropriate."
+      "desc": "Cinematic tools in this category are still strongest for short scene generation rather than full-length editing or long source conversion. If you need a longer conversion workflow, this is usually the wrong page."
     },
     {
       "title": "Confirm commercial use rights on your plan.",
-      "desc": "Runway explicitly grants full ownership and unrestricted commercial use on all plans, including Free. Sora applies visible watermarks by default and embeds C2PA metadata. If you plan to monetize or use video in paid advertising, check the terms before publishing."
+      "desc": "Check the current publish path before committing. Runway is easier to position for commercial creative work, while Sora is more generation-first and still keeps visible watermarking in its default output path."
     }
   ],
   "groups": [
@@ -44,11 +47,11 @@
     {
       "name": "Runway",
       "slug": "runway",
-      "verdictSeed": "Controlled cinematic generation with a polished editor and broad creative ecosystem. Full commercial rights on all plans, no attribution required.",
-      "pricingSeed": "API: $0.01/credit (5–40 credits/sec depending on model)",
-      "policySeed": "Runway states that users retain full ownership and unrestricted commercial use on all plans, while the Free tier keeps a visible watermark",
+      "verdictSeed": "Controlled cinematic generation with a polished editor and broad creative ecosystem. It is strongest when the team wants generation quality plus a studio-style workflow around the output.",
+      "pricingSeed": "Free testing plus paid creative-production paths that expand model access, storage, and team workflow",
+      "policySeed": "Runway is easier to position for commercial creative use, while the Free tier still keeps a visible watermark and the paid path is the practical route for publish-ready output",
       "bestForSeed": "Controlled cinematic generation with commercial use",
-      "mainLimitationSeed": "Some users report variability in scene logic locking",
+      "mainLimitationSeed": "The workflow is heavier and more credit-sensitive than lighter creator tools, so loose iteration can become operationally expensive",
       "officialUrl": "https://runwayml.com/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/runway",
@@ -86,11 +89,11 @@
     {
       "name": "Sora",
       "slug": "sora",
-      "verdictSeed": "Photorealistic text-to-video generation. Included with ChatGPT Plus; Pro plan provides 10x more usage. Visible watermarks and C2PA metadata applied by default.",
-      "pricingSeed": "Included with ChatGPT Plus ($20/mo); Pro for 10x usage",
-      "policySeed": "Visible watermarks are applied by default",
+      "verdictSeed": "Photorealistic text-to-video generation with a generation-first workflow, strong realism, and style range for teams treating video more like premium model access than like a built-in editor.",
+      "pricingSeed": "Paid access path geared toward premium model use rather than a lightweight free-creator lane",
+      "policySeed": "Visible watermarks are applied by default, so the default output path should be treated as generation-first rather than as a clean publish workflow",
       "bestForSeed": "Photorealistic cinematic text-to-video",
-      "mainLimitationSeed": "ChatGPT Plus limited to 50 videos at 480p/month; visible watermarks on all outputs",
+      "mainLimitationSeed": "It is less editor-centric than Runway and less attractive when the workflow depends on lightweight testing, built-in editing, or cheap batch output",
       "officialUrl": "https://openai.com/sora",
       "hasReviewPage": true,
       "reviewUrl": "/tool/sora",
@@ -112,7 +115,9 @@
       "runway",
       "sora"
     ],
-    "vsSlugs": [],
+    "vsSlugs": [
+      "runway-vs-sora"
+    ],
     "guideSlugs": []
   },
   "faqSeeds": [
@@ -123,7 +128,7 @@
     },
     {
       "question": "What should readers compare first on this page?",
-      "answerSeed": "Evaluate Prompt Adherence: Check if the tool strictly follows your text instructions (camera angles, lighting, motion) or if it frequently hallucinates details. Check Maximum Video Length: Cinematic tools like Sora or Veo generate 10-25 second clips per prompt, while tools like Pictory can convert an entire 1,500-word blog post into a 3-minute video.",
+      "answerSeed": "Start with generation posture: do you need a heavier studio-style workflow around generated footage, or a purer model-first generation path? Runway is stronger when the team wants more creative control and publish-ready workflow around the output. Sora is stronger when the team mostly wants flagship model quality, realism, and style range from a generation-first system.",
       "sourceToolSlugs": []
     },
     {
@@ -135,13 +140,16 @@
       ]
     }
   ],
-  "lastReviewed": "2026-03-21T00:00:00Z",
+  "lastReviewed": "2026-03-25T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/text-to-video-ai-tools.raw.json",
     "sourceCount": 3,
     "uniqueToolCount": 3,
     "needsManualReview": false,
-    "reviewNotes": []
+    "reviewNotes": [
+      "Runway and Sora were tightened using completed editorial evidence around watermark path, workflow weight, and generation posture.",
+      "Kling AI was intentionally left at lighter seed depth because the current coverage remains thinner than the Runway and Sora anchors."
+    ]
   }
 }

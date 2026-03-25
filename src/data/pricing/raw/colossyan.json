@@ -1,0 +1,378 @@
+{
+  "toolSlug": "colossyan",
+  "capturedAt": "2026-03-25T09:45:53.344Z",
+  "pages": [
+    {
+      "sourceType": "pricing",
+      "sourceUrl": "https://www.colossyan.com/pricing",
+      "captureLayer": "playwright",
+      "usedCache": true,
+      "cacheMode": "dynamic",
+      "capturedAt": "2026-01-10T12:31:03.583Z",
+      "textLength": 14466,
+      "fallbackReasons": [
+        "source-config-marked-dynamic",
+        "billing-toggle-or-annual-qualifier",
+        "interactive-or-unit-priced-plans"
+      ],
+      "snippets": [
+        {
+          "kind": "plan-card",
+          "text": "free planStarterFor individual content creatorsFrom$27"
+        },
+        {
+          "kind": "plan-card",
+          "text": "Free +15 minutes of video per monthGenerate up to 10 minutes of video every month. 70+ Colossyan AI AvatarsGet access to our diverse library of professional AI avatars.3 Custom"
+        },
+        {
+          "kind": "plan-card",
+          "text": "BusinessFor professionals or small teamsFrom$88"
+        },
+        {
+          "kind": "plan-card",
+          "text": "Starter +Unlimited minutes of videoGenerate any amount of videos.170+ Colossyan AI AvatarsGet access to our diverse library of professional AI avatars in different industries. 10 Custom"
+        },
+        {
+          "kind": "plan-card",
+          "text": "EnterpriseCompanies scaling video productionCustom"
+        },
+        {
+          "kind": "plan-card",
+          "text": "Enterprise-level security with centralized authentication.SCORM exportSeamlessly integrate Colossyan content into your learning management system.StarterFor individual content creatorsFrom$19"
+        },
+        {
+          "kind": "plan-card",
+          "text": "Free +15 minutes of video per monthGenerate up to 15 minutes of video every month. 70+ Colossyan AI AvatarsGet access to our diverse library of professional AI avatars.3 Custom"
+        },
+        {
+          "kind": "plan-card",
+          "text": "BusinessFor professionals or small teamsFrom$70"
+        },
+        {
+          "kind": "billing-note",
+          "text": "ll while saving up to 80% of your time and budget.MonthlyAnnually30% OFFExplore our free planStarterFor individual content creatorsFrom$2"
+        },
+        {
+          "kind": "billing-note",
+          "text": ".StarterFor individual content creatorsFrom$19/mo.billed annually1 editorStart Free TrialBuy NowEverything in Free +15 minutes of video per month"
+        },
+        {
+          "kind": "billing-note",
+          "text": "usinessFor professionals or small teamsFrom$70/mo.billed annuallyOops! Something went wrong while submitting the form.Start Free TrialBuy NowEver"
+        },
+        {
+          "kind": "billing-note",
+          "text": "ro$120/moEnterpriseContact SalesStarter$28/mo$336 billed yearlyPro$96/mo$1152 billed yearlyEnterpriseContact SalesFrequently askedquestionsCan"
+        },
+        {
+          "kind": "billing-note",
+          "text": "chat to do so.Can I cancel Colossyan at any time?Monthly plans can be canceled at any time. Although annual plans can also be canceled,"
+        },
+        {
+          "kind": "billing-note",
+          "text": "ription. Starter and Business plans can be billed monthly or annually, and all Enterprise plans are billed annually.Can I use Colossyan f"
+        },
+        {
+          "kind": "faq-item",
+          "text": "questionsCan I test out Colossyan before signing up?Yes! Create your first video with Colossyan’s free trial, or book a personal demo with our sales team to learn more.How much does Colossy"
+        },
+        {
+          "kind": "faq-item",
+          "text": "How much does a Colossyan custom avatar cost?Instant custom avatars are included in any active plan. However, studio custom avatars – which are filmed professionally using a green screen – are"
+        },
+        {
+          "kind": "faq-item",
+          "text": "Can I use Colossyan for free?Yes! With Colossyan’s trial period, you can create your first AI video for free.Didn’t find the answer you were looking for?Check out help centerReviewsHere’s why leading teams choose Colossyan4.8from 450+ reviews on G2“The ease of content update and cost sav"
+        },
+        {
+          "kind": "faq-item",
+          "text": "questions and get a free Enterprise trial for your team.Book a demo"
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "kind": "free-trial",
+      "valueText": "1 editorStart Free TrialBuy NowEverything in Free +15 minutes of video per monthGenerate up to 10 minutes of video every month",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:31:03.583Z",
+          "snippet": "1 editorStart Free TrialBuy NowEverything in Free +15 minutes of video per monthGenerate up to 10 minutes of video every month"
+        }
+      ]
+    },
+    {
+      "kind": "free-plan",
+      "planName": "Free",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "MonthlyAnnually30% OFFExplore our free planStarterFor individual content creatorsFrom$27/mo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:31:03.583Z",
+          "snippet": "MonthlyAnnually30% OFFExplore our free planStarterFor individual content creatorsFrom$27/mo"
+        }
+      ]
+    },
+    {
+      "kind": "enterprise",
+      "planName": "Enterprise",
+      "valueText": "EnterpriseCompanies scaling video productionCustom pricingLet’s talkCustom editorsContact salesEverything in Business +Unlimited featuresGet unlimited access to interactive quizzes, branching scenarios, auto transla",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:31:03.583Z",
+          "snippet": "EnterpriseCompanies scaling video productionCustom pricingLet’s talkCustom editorsContact salesEverything in Business +Unlimited featuresGet unlimited access to interactive quizzes, branching scenarios, auto transla"
+        }
+      ]
+    },
+    {
+      "kind": "interactive-pricing",
+      "valueText": "MonthlyAnnually30% OFFExplore our free planStarterFor individual content creatorsFrom$27/mo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:31:03.583Z",
+          "snippet": "MonthlyAnnually30% OFFExplore our free planStarterFor individual content creatorsFrom$27/mo"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 27,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "From$27/mo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:31:03.583Z",
+          "snippet": "From$27/mo"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 88,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "From$88/mo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:31:03.583Z",
+          "snippet": "From$88/mo"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 19,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "From$19/mo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:31:03.583Z",
+          "snippet": "From$19/mo"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 70,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "From$70/mo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:31:03.583Z",
+          "snippet": "From$70/mo"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 2719,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "From$2719/mo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:31:03.583Z",
+          "snippet": "From$2719/mo"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 8870,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "From$8870/mo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:31:03.583Z",
+          "snippet": "From$8870/mo"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 35,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$35/mo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:31:03.583Z",
+          "snippet": "$35/mo"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 120,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$120/mo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:31:03.583Z",
+          "snippet": "$120/mo"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 28,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$28/mo$336 billed yearly",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:31:03.583Z",
+          "snippet": "$28/mo$336 billed yearly billed yearly"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 96,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$96/mo$1152 billed yearly",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:31:03.583Z",
+          "snippet": "$96/mo$1152 billed yearly billed yearly"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 19,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$19 per month",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:31:03.583Z",
+          "snippet": "$19 per month"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 1000,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$1000",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:31:03.583Z",
+          "snippet": "$1000"
+        }
+      ]
+    },
+    {
+      "kind": "self-serve-paid",
+      "valueText": "1 editorStart Free TrialBuy NowEverything in Free +15 minutes of video per monthGenerate up to 10 minutes of video every month",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:31:03.583Z",
+          "snippet": "1 editorStart Free TrialBuy NowEverything in Free +15 minutes of video per monthGenerate up to 10 minutes of video every month"
+        }
+      ]
+    }
+  ],
+  "sourceUrls": [
+    "https://www.colossyan.com/pricing"
+  ],
+  "notes": [
+    "pricing upgraded to Playwright: source-config-marked-dynamic, billing-toggle-or-annual-qualifier, interactive-or-unit-priced-plans",
+    "Skipped faq: no cached capture available for this trial run."
+  ]
+}

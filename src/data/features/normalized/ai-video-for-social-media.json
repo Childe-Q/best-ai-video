@@ -3,7 +3,7 @@
   "slug": "ai-video-for-social-media",
   "title": "Best AI Video Tools for Social Media (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares AI video tools built for social-native output: vertical speed, hooks, captions, templates, and rapid posting for TikTok, Reels, Shorts, and similar feeds. Tools are grouped by social publishing style: template and clip velocity, or presenter-led social output. YouTube-first channel systems and slower long-form workflows are excluded.",
+    "oneLiner": "This page compares AI video tools built for social-native output: vertical speed, hooks, captions, templates, reframing, and rapid posting for TikTok, Reels, Shorts, and similar feeds. The most useful split is whether the tool is stronger for generation-first social drafts, long-form-to-short repurposing, or presenter-led social output.",
     "boundaries": [
       "Must support vertical (9:16) output and social-native publishing speed.",
       "Must include engagement-first features such as dynamic captions, hook generation, templates, or fast reframing.",
@@ -11,9 +11,10 @@
     ],
     "primaryClassificationRule": "Group by social-native publishing style.",
     "comparisonAxes": [
-      "commercial rights",
       "workflow fit and automation",
-      "generation speed"
+      "watermark and publish path",
+      "repurposing versus generation model",
+      "team and export posture"
     ]
   },
   "howToChooseSeeds": [
@@ -27,7 +28,7 @@
     },
     {
       "title": "Decide between from-scratch generation and long-to-short repurposing.",
-      "desc": "If you have existing podcasts or webinars, prioritize clipping tools. If you need original content from text prompts, InVideo and Reelbase are oriented toward that workflow. These are fundamentally different pipelines."
+      "desc": "If you already have long-form video, prioritize clipping and reframing tools. If you need original social drafts from prompts, use generation-first tools. These are fundamentally different pipelines."
     },
     {
       "title": "Verify commercial music rights if running paid ads.",
@@ -42,7 +43,8 @@
       "toolSlugs": [
         "capcut",
         "reelbase",
-        "invideo"
+        "invideo",
+        "opus-clip"
       ]
     },
     {
@@ -104,11 +106,11 @@
     {
       "name": "InVideo",
       "slug": "invideo",
-      "verdictSeed": "Generative AI video from text prompts. Supports faceless YouTube Shorts and social content. Paid tiers include Plus, Max, and Generative plans.",
-      "pricingSeed": "Plus, Max, and Generative tiers (Generative: 900 credits)",
-      "policySeed": "Free plan exports come with an InVideo watermark applied",
+      "verdictSeed": "Generation-first social video workflow for faceless Shorts, prompt-led drafts, and fast stock-scene content.",
+      "pricingSeed": "Free plus paid publishing lanes that scale usage, export freedom, and workflow headroom",
+      "policySeed": "Free exports keep the InVideo watermark, while paid exports remove it and make social publishing more practical",
       "bestForSeed": "Faceless YouTube Shorts and text-to-video social content",
-      "mainLimitationSeed": "Free plan limited to 2 video minutes and 1 AI credit per week; all free exports carry watermark",
+      "mainLimitationSeed": "Heavy social iteration still depends on credit discipline, and shared videos default to public unless the setting is changed",
       "officialUrl": "https://invideo.io/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/invideo",
@@ -121,10 +123,29 @@
       "flags": []
     },
     {
+      "name": "Opus Clip",
+      "slug": "opus-clip",
+      "verdictSeed": "A strong fit for turning YouTube videos, podcasts, interviews, and webinars into Shorts, Reels, and TikToks quickly through automated clipping, captions, and reframing.",
+      "pricingSeed": "Free and paid lanes scale from trial-style clipping into broader cloud, team, and export workflows",
+      "policySeed": "Free and trial projects keep the OpusClip watermark, while paid plans remove it for cleaner social publishing",
+      "bestForSeed": "Long-form-to-short social repurposing",
+      "mainLimitationSeed": "It is much better at automated clipping and reframing than at deeper manual post-production or original scene generation",
+      "officialUrl": "https://www.opus.pro/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/opus-clip",
+      "logoUrl": "/logos/OpusClip-logo.svg",
+      "sourceUrls": [
+        "https://www.opus.pro/pricing?category=sales",
+        "https://help.opus.pro/docs/article/watermark",
+        "https://help.opus.pro/docs/article/cloud-storage"
+      ],
+      "flags": []
+    },
+    {
       "name": "DeepBrain AI",
       "slug": "deepbrain-ai",
-      "verdictSeed": "Professional avatar-driven TikToks with 2,000+ AI avatars, 150+ languages, and 7,000+ TikTok-optimized templates.",
-      "pricingSeed": "Free tier available; up to $24/mo for individual creators",
+      "verdictSeed": "Professional avatar-driven social video for teams that want realistic presenters, localization, and stronger brand or team controls than lightweight creator tools provide.",
+      "pricingSeed": "Free demo lane plus paid social publishing paths that scale quality, governance, and team rollout",
       "policySeed": "Free exports are a short demo path with watermarking, while Personal and higher tiers are the real route for publishable avatar-led social output",
       "bestForSeed": "Professional avatar-driven TikToks and Reels",
       "mainLimitationSeed": "DeepBrain AI is heavier and pricier than social-first template tools, and the stronger brand, workspace, and 4K controls only show up on Team or higher tiers",
@@ -143,13 +164,17 @@
   "relatedLinks": {
     "reviewSlugs": [
       "invideo",
-      "deepbrain-ai"
+      "deepbrain-ai",
+      "opus-clip"
     ],
     "alternativesSlugs": [
       "invideo",
-      "deepbrain-ai"
+      "deepbrain-ai",
+      "opus-clip"
     ],
-    "vsSlugs": [],
+    "vsSlugs": [
+      "invideo-vs-pictory"
+    ],
     "guideSlugs": []
   },
   "faqSeeds": [
@@ -160,25 +185,29 @@
     },
     {
       "question": "What should readers compare first on this page?",
-      "answerSeed": "Look for Native 9:16 and Auto-Reframing: Ensure the tool doesn't just crop horizontally, but uses AI to actively track the speaker and keep them centered in a vertical frame. Check Dynamic Caption Styles: TikTok and Reels rely heavily on fast, animated captions (often called 'Hormozi style'). Make sure the platform includes these templates out of the box.",
+      "answerSeed": "Start with workflow shape: do you need generation-first social drafts, long-form-to-short repurposing, or presenter-led social output? Then check whether the publish path is actually workable: InVideo free exports keep visible branding, Opus Clip's clean clip path starts on paid plans, and DeepBrain AI only becomes a realistic publish route once you move beyond the demo tier.",
       "sourceToolSlugs": []
     },
     {
       "question": "Which tools already have internal review coverage?",
-      "answerSeed": "Current internal review coverage in this normalized dataset: invideo, deepbrain-ai.",
+      "answerSeed": "Current internal review coverage in this normalized dataset: invideo, deepbrain-ai, opus-clip.",
       "sourceToolSlugs": [
         "invideo",
-        "deepbrain-ai"
+        "deepbrain-ai",
+        "opus-clip"
       ]
     }
   ],
-  "lastReviewed": "2026-03-21T00:00:00Z",
+  "lastReviewed": "2026-03-25T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/ai-video-for-social-media.raw.json",
     "sourceCount": 4,
-    "uniqueToolCount": 4,
+    "uniqueToolCount": 5,
     "needsManualReview": false,
-    "reviewNotes": []
+    "reviewNotes": [
+      "Opus Clip was added from completed top-up and editorial handoff evidence to cover long-form-to-short social repurposing.",
+      "Interactive pricing states were intentionally excluded in favor of watermark path, workflow shape, and export posture."
+    ]
   }
 }

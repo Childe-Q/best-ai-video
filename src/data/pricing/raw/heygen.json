@@ -1,0 +1,316 @@
+{
+  "toolSlug": "heygen",
+  "capturedAt": "2026-03-25T09:45:53.445Z",
+  "pages": [
+    {
+      "sourceType": "pricing",
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "captureLayer": "playwright",
+      "usedCache": true,
+      "cacheMode": "dynamic",
+      "capturedAt": "2026-01-11T09:18:43.972Z",
+      "textLength": 11231,
+      "fallbackReasons": [
+        "source-config-marked-dynamic",
+        "billing-toggle-or-annual-qualifier",
+        "interactive-or-unit-priced-plans"
+      ],
+      "snippets": [
+        {
+          "kind": "plan-card",
+          "text": "Product of 2025, we make professional video creation easier than ever.Pay monthlyPay yearly (Save 22%)FreeCreatorTeamFree$0"
+        },
+        {
+          "kind": "plan-card",
+          "text": "processingAccess to Avatar IV video generationFeatures You’ll Love:1 Custom"
+        },
+        {
+          "kind": "plan-card",
+          "text": "Creator$29"
+        },
+        {
+          "kind": "plan-card",
+          "text": "processingExtended video generation w/ Avatar IVEverything in Free, plus:1 Custom"
+        },
+        {
+          "kind": "plan-card",
+          "text": "Team$39"
+        },
+        {
+          "kind": "plan-card",
+          "text": "processingExtended video generation with Avatar IVEverything in Creator, plus:2 seats included2 Custom"
+        },
+        {
+          "kind": "plan-card",
+          "text": "proofread translation scriptWorkspace collaborationVideo draft commenting & editingInvites & team managementPay as you growScale your brand and centralize assetsFree$0"
+        },
+        {
+          "kind": "billing-note",
+          "text": "make professional video creation easier than ever.Pay monthlyPay yearly (Save 22%)FreeCreatorTeamFree$0/moIdeal entry point for creators and"
+        },
+        {
+          "kind": "billing-note",
+          "text": "plan costs $29 per month (or $24/month if you pay annually). For teams looking to create high quality videos and collaborate, HeyGen Team"
+        },
+        {
+          "kind": "billing-note",
+          "text": "osts $39/seat/month (or $30/seat/month if you pay annually), and starts at 2 seats.What happens when I cancel my subscription?When you can"
+        },
+        {
+          "kind": "billing-note",
+          "text": "ny more renewals.What Is the difference between a monthly & yearly subscription?The monthly subscription charges your payment method ever"
+        },
+        {
+          "kind": "billing-note",
+          "text": "l subscription charges it once a year. The actual monthly cost of the annual subscription is less than the monthly subscription.How do I"
+        },
+        {
+          "kind": "faq-item",
+          "text": "How much does HeyGen cost?You can use HeyGen for free and generate up 3 videos a month, no credit card required. HeyGen paid plans include unlimited video creation. For individuals creating sho"
+        }
+      ]
+    },
+    {
+      "sourceType": "faq",
+      "sourceUrl": "https://www.heygen.com/faq",
+      "captureLayer": "fetch-cheerio",
+      "usedCache": true,
+      "cacheMode": "unknown",
+      "capturedAt": "2026-01-28T08:26:00.822Z",
+      "textLength": 10318,
+      "fallbackReasons": [
+        "missing-price-tokens"
+      ],
+      "snippets": [
+        {
+          "kind": "plan-card",
+          "text": "Product Explainers How-to Videos Learning Courses All Use Cases What is HeyGen Resources Blog Custom"
+        },
+        {
+          "kind": "plan-card",
+          "text": "processing time. If it takes an unusually long time or an error occurs, please contact us via the &#x27;help&#x27; button. About AI Avatar How long does it take to custom"
+        },
+        {
+          "kind": "plan-card",
+          "text": "Creators to Marketers. 100+ Use Cases for HeyGen. Get Started Talk To Sales Testimonials What Custom"
+        },
+        {
+          "kind": "plan-card",
+          "text": "free Login English Pricing Pricing Plans API Pricing HeyGen for Enterprise Enterprise Contact Sales"
+        },
+        {
+          "kind": "billing-note",
+          "text": "erms &amp; Privacy What is the difference between monthly subscription and yearly? The monthly subscription charges your payment method e"
+        },
+        {
+          "kind": "billing-note",
+          "text": "l subscription charges it once a year. The actual monthly cost of the annual subscription is less than the monthly subscription. Ownershi"
+        },
+        {
+          "kind": "faq-item",
+          "text": "Frequently Asked Questions (FAQs). About HeyGen AI Video &amp; Avatar Tools Explore all you need about HeyGen’s AI video generator, AI avatar generator, and AI translation and localization tools. Dive deep"
+        },
+        {
+          "kind": "faq-item",
+          "text": "Can I use this AI video maker on mobile/pad? You will have a better experience with HeyGen on PC, but we made a special page for mobile user to make a video demo . Adding The HeyGen Extension On Chrome HeyGen has developed a HeyGen lite version for the Google Chrome browser which can be added by clicking on this link: ‍ HeyGen Extension for Chrome How to Make Videos on HeyGen? Creating a video canvas on HeyGen There are three ways to create a video canvas on HeyGen Option 1: From scratch. Hover the mouse over the &#x27;+Create Video&#x27; button in the upper right corner of the web application. You will see a selection of vertical and horizontal videos. Option 2: From a template. Browse our library of video templates, find one that suits your needs, and click on the &#x27;+ Use this Template&#x27; button. Option 3: From an avatar. Browse our list of avatars and select the AI avatar you like. The page will open a window prompting you to create a video. Tutorials from HeyGen Blog Adding Multiple AI spokespersons in each video Each scene allows for one character. You can add multiple avatars by having different ones in different scenes. Adding transition effects to make the video smoother The transition effect will only appear at the junction of two scenes. Click the &#x27;...&#x27; button in the upper right corner of the scene, and you can adjust effects. Saving the video draft to edit later HeyGen will automatically save the video draft, and you can find it in the &#x27;draft&#x27; section of &#x27;video&#x27; tab. Exporting videos Click the &#x27;☑️ Submit&#x27; button in the upper right corner, the video will be submitted for generation. You can check its progress in the &#x27;Video&#x27; tab. Once the video is generated, you can export the video by clicking the &#x27;download&#x27; button on &#x27;My Video&#x27; tab Editing Your Videos If you haven&#x27;t submitted your video yet, there is a re-do arrow tab at the top of the editing screen. Click on it to undo what your previous action. After your video has been successfully submitted, you will need to create a clone to edit. From the &#x27;My Video&#x27; tab, choose the &#x27;...&#x27; button on the desired video, and then click&#x27;Duplicate&#x27;. How much time is needed to process the video? It depends on the number of videos being processed. When there are many users submitting videos at the same time, it may take a little longer than usual. Users on paid plans have priority processing time. If it takes an unusually long time or an error occurs, please contact us via the &#x27;help&#x27; button. About AI Avatar How long does it take to customize my avatar? Custom Avatars are automatically generated and take only a few minutes! A Studio Avatar, which is professionally curated by our team, can take up to 7 days from beginning to end. How Can I preview the gesture and Movement Of avatars in my video? Animating your Avatar to read your script will require AI to process and create your video. You can preview audio, but to see outputs such as Avatar lip sync and gestures, you will need to submit your video for processing first. Can I control the avatars&#x27; gestures? Currently, you are not able to control the gestures and movements. An alternative option is to choose an avatar with natural gestures that align with your script or use case. Leave your feedback on the user group! Price, Terms &amp; Privacy What is the difference between monthly subscription and yearly? The monthly subscription charges your payment method every month, whereas the annual subscription charges it once a year. The actual monthly cost of the annual subscription is less than the monthly subscription. Ownership and Copyright Who Owns the Videos I Generate on HeyGen? If you are a paying subscriber to HeyGen, then you own the videos you generate, subject to your compliance with HeyGen&#x27;s Terms of Service . If you are using a free version of HeyGen, we retain ownership of the videos you generate, but you are allowed to use those videos for non-commercial purposes, subject to your compliance with HeyGen&#x27;s Terms of Service . See HeyGen&#x27;s Terms of Service for a more detailed discussion about the ownership and usage rules for the content generated using HeyGen. FAQs What is HeyGen? HeyGen is an AI-powered video platform enabling users to effortlessly create high-quality videos with lifelike AI avatars and multilingual voice cloning, fostering scalability in content production. Begin your creative journey here . Can I use HeyGen AI video maker on mobile or tablet? While the best experience is on a PC, a special page for mobile users to make video demos is available. Discover more about mobile functionality here . How do you create an AI Avatar with HeyGen? You can transform yourself into a lifelike talking AI avatar that mimics your voice, expressions, and gestures seamlessly. Start creating your avatar here . How can I access HeyGen API? The HeyGen API offers similar functionalities to the web application, allowing seamless integration into your own workflows. Learn how to integrate and automate workflows. How long does it take to customize my avatar? Custom avatars are generated in minutes, while studio avatars may take up to 7 days. Begin customizing now here . Who owns the videos generated by HeyGen? Paying subscribers own their generated videos, subjected to compliance with HeyGen&#x27;s Terms of Service, while free users can use videos non-commercially. Learn about subscription ownership here . How much time is needed to process a video? The processing time varies with demand, but paying users receive priority. Long delays or errors should be reported via the &#x27;help&#x27; button. Get started quickly here . Use Cases From Creators to Marketers. 100+ Use Cases for HeyGen. Get Started Talk To Sales Testimonials What Customers Say About Us Get Started For Free Tools Explore more AI powered tools Bring any photo to life with hyper-realistic voice and movement using Avatar IV. AI Video Generator Video Translator AI Avatar Generator Image to Video Text to Video AI Podcast Generator Voice Cloning Audio to Video AI Dubbing Faceswap Video Video Avatar AI UGC Text to Speech Avatar Add Emojis to Video Add Photo to Video Add Stickers to Video Add Text to Video Merge Videos Video Volume Booster Video Looper Online Video Trimmer PPT to video Video Resizer Screen Recorder Video Sharing Home FAQs Sign up for free Login English Pricing Pricing Plans API Pricing HeyGen for Enterprise Enterprise Contact Sales Products Video Avatars Talking Photo AI Generative Avatars Stock Avatars Avatar Look"
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "kind": "free-plan",
+      "planName": "Free",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "Pay monthlyPay yearly (Save 22%)FreeCreatorTeamFree$0/moIdeal entry point for creators and marketers looking to test the waters with AI tools, like HeyGen’s AI video maker",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-11T09:18:43.972Z",
+          "snippet": "Pay monthlyPay yearly (Save 22%)FreeCreatorTeamFree$0/moIdeal entry point for creators and marketers looking to test the waters with AI tools, like HeyGen’s AI video maker"
+        }
+      ]
+    },
+    {
+      "kind": "enterprise",
+      "planName": "Enterprise",
+      "valueText": "|PlatformUse casesLearningPricingEnterpriseCompanyLog inSign upThe leading AI video generatorFlexible pricing plans for every creator and teamHeyGen empowers 100,0",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-11T09:18:43.972Z",
+          "snippet": "|PlatformUse casesLearningPricingEnterpriseCompanyLog inSign upThe leading AI video generatorFlexible pricing plans for every creator and teamHeyGen empowers 100,0"
+        }
+      ]
+    },
+    {
+      "kind": "interactive-pricing",
+      "valueText": "Pay monthlyPay yearly (Save 22%)FreeCreatorTeamFree$0/moIdeal entry point for creators and marketers looking to test the waters with AI tools",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-11T09:18:43.972Z",
+          "snippet": "Pay monthlyPay yearly (Save 22%)FreeCreatorTeamFree$0/moIdeal entry point for creators and marketers looking to test the waters with AI tools"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$0/mo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-11T09:18:43.972Z",
+          "snippet": "$0/mo"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 29,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$29/mo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-11T09:18:43.972Z",
+          "snippet": "$29/mo"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 39,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "seat",
+      "valueText": "$39/seat/mo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-11T09:18:43.972Z",
+          "snippet": "$39/seat/mo"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 29,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$29 per month",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-11T09:18:43.972Z",
+          "snippet": "$29 per month"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 24,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$24/mo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-11T09:18:43.972Z",
+          "snippet": "$24/mo"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 30,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "seat",
+      "valueText": "$30/seat/mo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-11T09:18:43.972Z",
+          "snippet": "$30/seat/mo"
+        }
+      ]
+    },
+    {
+      "kind": "self-serve-paid",
+      "valueText": "Paid plan language found",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-11T09:18:43.972Z",
+          "snippet": "Paid plan language found"
+        }
+      ]
+    },
+    {
+      "kind": "enterprise",
+      "planName": "Enterprise",
+      "valueText": "ossary Stay updated with HeyGen’s latest news Pricing Pricing Plans API Pricing See how Trivago is creating with HeyGen Enterprise Company About Us Careers Trust &amp; Safety AI Research See how Trivago is creating with HeyGen Login Sign up for free",
+      "evidence": [
+        {
+          "sourceType": "faq",
+          "sourceUrl": "https://www.heygen.com/faq",
+          "captureLayer": "fetch-cheerio",
+          "capturedAt": "2026-01-28T08:26:00.822Z",
+          "snippet": "ossary Stay updated with HeyGen’s latest news Pricing Pricing Plans API Pricing See how Trivago is creating with HeyGen Enterprise Company About Us Careers Trust &amp; Safety AI Research See how Trivago is creating with HeyGen Login Sign up for free"
+        }
+      ]
+    },
+    {
+      "kind": "self-serve-paid",
+      "valueText": "Paid plan language found",
+      "evidence": [
+        {
+          "sourceType": "faq",
+          "sourceUrl": "https://www.heygen.com/faq",
+          "captureLayer": "fetch-cheerio",
+          "capturedAt": "2026-01-28T08:26:00.822Z",
+          "snippet": "Paid plan language found"
+        }
+      ]
+    }
+  ],
+  "sourceUrls": [
+    "https://www.heygen.com/pricing",
+    "https://www.heygen.com/faq"
+  ],
+  "notes": [
+    "pricing upgraded to Playwright: source-config-marked-dynamic, billing-toggle-or-annual-qualifier, interactive-or-unit-priced-plans"
+  ]
+}
