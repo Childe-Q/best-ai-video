@@ -1,0 +1,604 @@
+{
+  "toolSlug": "synthesia",
+  "metadata": {
+    "collectedAt": "2026-03-28",
+    "sampleTrack": "enterprise-oriented",
+    "officialSourceCount": 8,
+    "sourceTypes": [
+      "pricing",
+      "feature_page",
+      "api_docs",
+      "docs",
+      "help_center"
+    ]
+  },
+  "sourceBlocks": [
+    {
+      "id": "pricing-main",
+      "sourceType": "pricing",
+      "title": "Synthesia pricing",
+      "url": "https://www.synthesia.io/pricing",
+      "priorityRank": 5,
+      "coverage": [
+        "minutes",
+        "avatars",
+        "api access",
+        "collaboration",
+        "enterprise gates"
+      ]
+    },
+    {
+      "id": "feature-localization",
+      "sourceType": "feature_page",
+      "title": "Synthesia video localization",
+      "url": "https://www.synthesia.io/features/video-localization",
+      "priorityRank": 2,
+      "coverage": [
+        "translation",
+        "dubbing",
+        "captions",
+        "multilingual player"
+      ]
+    },
+    {
+      "id": "docs-video-creation",
+      "sourceType": "docs",
+      "title": "Creating AI videos in Synthesia",
+      "url": "https://docs.synthesia.io/docs/video-creation",
+      "priorityRank": 1,
+      "coverage": [
+        "ai assistant",
+        "template workflow",
+        "source inputs",
+        "video limits"
+      ]
+    },
+    {
+      "id": "api-intro",
+      "sourceType": "api_docs",
+      "title": "Synthesia API introduction",
+      "url": "https://docs.synthesia.io/reference/introduction",
+      "priorityRank": 1,
+      "coverage": [
+        "api plans",
+        "rate limits",
+        "webhooks"
+      ]
+    },
+    {
+      "id": "api-create-video",
+      "sourceType": "api_docs",
+      "title": "Create a video",
+      "url": "https://docs.synthesia.io/reference/create-video",
+      "priorityRank": 1,
+      "coverage": [
+        "video creation endpoint"
+      ]
+    },
+    {
+      "id": "api-dubbing",
+      "sourceType": "api_docs",
+      "title": "Create a dubbing project",
+      "url": "https://docs.synthesia.io/reference/create-a-dubbing-project",
+      "priorityRank": 1,
+      "coverage": [
+        "dubbing API",
+        "beta restrictions"
+      ]
+    },
+    {
+      "id": "docs-brand-kits",
+      "sourceType": "docs",
+      "title": "Brand kits",
+      "url": "https://docs.synthesia.io/docs/brand-kits",
+      "priorityRank": 1,
+      "coverage": [
+        "brand governance",
+        "workspace controls",
+        "brand components"
+      ]
+    },
+    {
+      "id": "docs-video-overview",
+      "sourceType": "docs",
+      "title": "Video overview page",
+      "url": "https://docs.synthesia.io/docs/video-overview",
+      "priorityRank": 1,
+      "coverage": [
+        "collaboration",
+        "comments",
+        "analytics",
+        "publish"
+      ]
+    },
+    {
+      "id": "help-scorm",
+      "sourceType": "help_center",
+      "title": "How do I export my video as a SCORM package?",
+      "url": "https://help.synthesia.io/en/articles/9771805-how-do-i-export-my-video-as-a-scorm-package",
+      "priorityRank": 2,
+      "coverage": [
+        "scorm export",
+        "enterprise gate",
+        "lms output"
+      ]
+    },
+    {
+      "id": "help-sso-publishing",
+      "sourceType": "help_center",
+      "title": "How can I restrict access to videos using SSO?",
+      "url": "https://help.synthesia.io/en/articles/11173480-how-can-i-restrict-access-to-videos-using-sso-protected-publishing-beta",
+      "priorityRank": 2,
+      "coverage": [
+        "sso",
+        "protected publishing",
+        "organization controls"
+      ]
+    }
+  ],
+  "capabilityFacts": [
+    {
+      "category": "core_capability",
+      "rawLabel": "AI Video Assistant",
+      "normalizedLabel": "text_to_video",
+      "value": "Synthesia can generate videos from prompts, URLs, documents, or scripts through the AI video assistant.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The video creation guide lists prompt, URL, document, and script as assistant inputs before generating an outline and then a video.",
+      "sourceUrl": "https://docs.synthesia.io/docs/video-creation",
+      "confidence": "high"
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "Avatar video",
+      "normalizedLabel": "avatar_video",
+      "value": "Synthesia provides stock AI avatars, personal avatars, and branded on-brand avatars depending on plan.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The pricing page breaks out AI avatars, personal avatars, and custom on-brand avatars by plan.",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "confidence": "high"
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "AI dubbing and translation",
+      "normalizedLabel": "ai_dubbing_localization",
+      "value": "Synthesia supports dubbing, one-click translations, captions, and a multilingual player.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The localization feature page explicitly groups AI dubbing, video translator, multilingual player, and auto-captions into one flow.",
+      "sourceUrl": "https://www.synthesia.io/features/video-localization",
+      "confidence": "high"
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "Template-based creation",
+      "normalizedLabel": "template_based_creation",
+      "value": "Templates are a first-class creation path in both the editor and the API.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The video creation guide and create-from-template API reference both treat templates as a primary video creation flow.",
+      "sourceUrl": "https://docs.synthesia.io/docs/video-creation",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "Monthly video minutes",
+      "normalizedLabel": "usage_minutes",
+      "value": "Free and Starter are capped at 10 minutes per month, Creator at 30 minutes, while Enterprise is listed as unlimited.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The pricing page explicitly maps monthly video minutes to each plan.",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "Logo removal",
+      "normalizedLabel": "watermark",
+      "value": "Downloading videos and removing the Synthesia logo require at least Starter.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The pricing page lists download your videos and remove Synthesia logo under Starter and above.",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "Scene and duration limits",
+      "normalizedLabel": "video_structure_limits",
+      "value": "A single video can contain up to 150 scenes, each up to 5 minutes, with a total duration cap of 4 hours.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The video creation guide states all three limits directly.",
+      "sourceUrl": "https://docs.synthesia.io/docs/video-creation",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "No rollover",
+      "normalizedLabel": "usage_rollover",
+      "value": "Unused monthly video minutes do not roll over into the next billing period.",
+      "supportType": "not_supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The pricing FAQ explicitly says unused minutes do not roll over.",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "Dubbing API beta sourceVideoUrl",
+      "normalizedLabel": "api_beta_restriction",
+      "value": "Using sourceVideoUrl in the dubbing API is beta-only for selected workspaces and only supports S3 signed URLs.",
+      "supportType": "beta",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The dubbing endpoint documents both the selected-workspace gate and S3 signed URL requirement.",
+      "sourceUrl": "https://docs.synthesia.io/reference/create-a-dubbing-project",
+      "confidence": "high"
+    }
+  ],
+  "modelSupportItems": [
+    {
+      "rawName": "Synthesia AI Avatars",
+      "normalizedName": "synthesia_ai_avatars",
+      "provider": "Synthesia",
+      "supportType": "proprietary",
+      "scope": "Stock avatar library across plans",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The pricing page exposes a Synthesia AI avatar library that scales from 9 to 240 plus avatars across plans.",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "confidence": "high"
+    },
+    {
+      "rawName": "Personal avatars",
+      "normalizedName": "personal_avatars",
+      "provider": "Synthesia",
+      "supportType": "proprietary",
+      "scope": "Custom persona cloning inside the platform",
+      "claimType": "confirmed_fact",
+      "evidenceText": "Pricing explicitly lists personal avatar counts by plan and calls unlimited personal avatars subject to fair use on Enterprise.",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "confidence": "high"
+    },
+    {
+      "rawName": "OpenAI-powered AI video assistant",
+      "normalizedName": "openai_ai_video_assistant",
+      "provider": "OpenAI",
+      "supportType": "provider_option",
+      "scope": "Prompt interpretation inside the AI video assistant",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The video creation docs explicitly state that the AI video assistant is powered by OpenAI.",
+      "sourceUrl": "https://docs.synthesia.io/docs/video-creation",
+      "confidence": "high"
+    },
+    {
+      "rawName": "Foundation model switching",
+      "normalizedName": "foundation_model_switching",
+      "provider": "Unclear",
+      "supportType": "unclear",
+      "scope": "User-facing model picker",
+      "claimType": "unclear",
+      "evidenceText": "The reviewed official pages disclose OpenAI usage in the assistant but do not expose a general public model-switching control or provider catalog.",
+      "sourceUrl": "https://docs.synthesia.io/docs/video-creation",
+      "confidence": "medium"
+    }
+  ],
+  "uniqueValueItems": [
+    {
+      "theme": "business video system",
+      "summary": "Synthesia is positioned less like a raw creative model playground and more like a managed business video system for repeatable avatar, localization, and learning workflows.",
+      "claimType": "structured_inference",
+      "evidenceText": "Pricing, SCORM, brand kit, comments, and SSO pages all push toward repeatable business operations rather than open-ended cinematic generation.",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "confidence": "high"
+    },
+    {
+      "theme": "governed localization",
+      "summary": "Localization is a major differentiator because Synthesia combines translation, dubbing, captions, synced updates, and a multilingual player in one managed stack.",
+      "claimType": "structured_inference",
+      "evidenceText": "The localization page details player-level language switching, smart updates, captions, and dubbing as one coordinated workflow.",
+      "sourceUrl": "https://www.synthesia.io/features/video-localization",
+      "confidence": "high"
+    }
+  ],
+  "differentiationItems": [
+    {
+      "dimension": "product_archetype",
+      "positioning": "enterprise video ops and avatar platform with localization workflow depth",
+      "claimType": "structured_inference",
+      "evidenceText": "The official materials repeatedly emphasize workspaces, templates, comments, brand kits, SCORM, and SSO alongside avatars.",
+      "sourceUrl": "https://docs.synthesia.io/docs/video-overview",
+      "confidence": "high"
+    },
+    {
+      "dimension": "headline_strength",
+      "positioning": "Repeatable business communication and training outputs are stronger than experimental model-hopping or deep edit craft.",
+      "claimType": "structured_inference",
+      "evidenceText": "The sources lean toward managed video production at scale instead of exposing a large creative model catalog.",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "confidence": "high"
+    }
+  ],
+  "collaborationItems": [
+    {
+      "category": "collaboration",
+      "rawLabel": "Comments and collaborators",
+      "normalizedLabel": "comments_review",
+      "value": "Users can invite collaborators to view, edit, or comment on a video, and comments live on the video overview page.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The video overview docs explicitly list collaborators, comments, and pre-existing comment threads.",
+      "sourceUrl": "https://docs.synthesia.io/docs/video-overview",
+      "confidence": "high"
+    },
+    {
+      "category": "collaboration",
+      "rawLabel": "Guests",
+      "normalizedLabel": "guest_collaboration",
+      "value": "Starter includes 1 editor and 3 guests; Creator includes 1 editor and 5 guests.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The pricing table lists editor and guest counts per paid self-serve plan.",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "confidence": "high"
+    },
+    {
+      "category": "collaboration",
+      "rawLabel": "Live team collaboration",
+      "normalizedLabel": "live_collaboration",
+      "value": "Live team collaboration is marketed as an enterprise capability.",
+      "supportType": "enterprise_only",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The enterprise plan feature list includes live team collaboration.",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "confidence": "high"
+    },
+    {
+      "category": "collaboration",
+      "rawLabel": "Brand kit enforcement",
+      "normalizedLabel": "brand_guardrails",
+      "value": "Admins can enforce approved brand kits across workspaces on Enterprise.",
+      "supportType": "enterprise_only",
+      "claimType": "confirmed_fact",
+      "evidenceText": "Brand kit docs and help center both say enforcement is an enterprise admin control.",
+      "sourceUrl": "https://docs.synthesia.io/docs/brand-kits",
+      "confidence": "high"
+    }
+  ],
+  "developerItems": [
+    {
+      "category": "developer",
+      "rawLabel": "API access tier",
+      "normalizedLabel": "api_plan_access",
+      "value": "API access starts on Creator or above.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The API introduction explicitly states that API access is available for Creator plans or above.",
+      "sourceUrl": "https://docs.synthesia.io/reference/introduction",
+      "confidence": "high"
+    },
+    {
+      "category": "developer",
+      "rawLabel": "Rate limits",
+      "normalizedLabel": "api_rate_limits",
+      "value": "Creator and Enterprise API tiers have different read and write rate limits.",
+      "supportType": "api_available",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The API introduction includes a full per-tier rate-limit table.",
+      "sourceUrl": "https://docs.synthesia.io/reference/introduction",
+      "confidence": "high"
+    },
+    {
+      "category": "developer",
+      "rawLabel": "Templates via API",
+      "normalizedLabel": "template_api",
+      "value": "The API can create videos from templates for batch personalized production.",
+      "supportType": "api_available",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The create-from-template API reference and guide are dedicated to automated personalized production.",
+      "sourceUrl": "https://docs.synthesia.io/reference/create-video",
+      "confidence": "medium"
+    },
+    {
+      "category": "developer",
+      "rawLabel": "Webhooks",
+      "normalizedLabel": "webhooks",
+      "value": "Webhook creation and retrieval are part of the public API surface.",
+      "supportType": "api_available",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The introduction page lists create webhook and retrieve webhook among the supported operations.",
+      "sourceUrl": "https://docs.synthesia.io/reference/introduction",
+      "confidence": "high"
+    }
+  ],
+  "commercialItems": [
+    {
+      "category": "commercial",
+      "rawLabel": "SCORM export",
+      "normalizedLabel": "scorm_export",
+      "value": "SCORM export is enterprise-only and downloads as a zip package for LMS use.",
+      "supportType": "enterprise_only",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The SCORM help article explicitly states Enterprise-only access and outlines the export flow.",
+      "sourceUrl": "https://help.synthesia.io/en/articles/9771805-how-do-i-export-my-video-as-a-scorm-package",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "Branded video pages",
+      "normalizedLabel": "branded_video_pages",
+      "value": "Branded video pages begin on Creator.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The Creator plan list includes branded video pages.",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "Protected publishing",
+      "normalizedLabel": "sso_protected_publishing",
+      "value": "Published video links and embeds can be locked behind SSO for enterprise organizations.",
+      "supportType": "enterprise_only",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The SSO-protected publishing article explains organization, workspace, and individual-video enforcement.",
+      "sourceUrl": "https://help.synthesia.io/en/articles/11173480-how-can-i-restrict-access-to-videos-using-sso-protected-publishing-beta",
+      "confidence": "high"
+    }
+  ],
+  "limitationItems": [
+    {
+      "category": "limitation",
+      "rawLabel": "Brand kits on Enterprise only",
+      "normalizedLabel": "brand_kit_gate",
+      "value": "Brand kits are only available on the Enterprise plan.",
+      "supportType": "enterprise_only",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The brand kits documentation explicitly states this restriction.",
+      "sourceUrl": "https://docs.synthesia.io/docs/brand-kits",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "Dubbing on Enterprise is add-on priced",
+      "normalizedLabel": "enterprise_dubbing_addon",
+      "value": "Full AI dubbing on Enterprise is a paid add-on rather than a default entitlement.",
+      "supportType": "addon_required",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The pricing page labels Enterprise AI dubbing as a paid add-on.",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "API key ownership",
+      "normalizedLabel": "api_key_workspace_scope",
+      "value": "API keys belong to the individual account that created them rather than the whole workspace.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The API intro warns that created API keys and webhook subscriptions are tied to the account, not the workspace.",
+      "sourceUrl": "https://docs.synthesia.io/reference/introduction",
+      "confidence": "high"
+    }
+  ],
+  "useCaseItems": [
+    {
+      "useCase": "training and LMS publishing",
+      "audience": "learning and development teams",
+      "fit": "Strong fit for organizations that need branded avatar videos distributed through LMS systems.",
+      "claimType": "structured_inference",
+      "evidenceText": "SCORM export, comments, templates, and avatars are all explicitly documented within the official product surface.",
+      "sourceUrl": "https://help.synthesia.io/en/articles/9771805-how-do-i-export-my-video-as-a-scorm-package",
+      "confidence": "high"
+    },
+    {
+      "useCase": "multilingual internal or customer communication",
+      "audience": "enterprise communications and support teams",
+      "fit": "A strong fit when one source video must reach audiences in many languages through one player and controlled brand surfaces.",
+      "claimType": "structured_inference",
+      "evidenceText": "The localization page stresses one-click translations, multilingual player behavior, captions, and synced updates.",
+      "sourceUrl": "https://www.synthesia.io/features/video-localization",
+      "confidence": "high"
+    },
+    {
+      "useCase": "personalized templated video automation",
+      "audience": "SaaS, lifecycle, and outbound teams",
+      "fit": "The API plus template system suit personalized videos that need repeatability more than cinematic originality.",
+      "claimType": "structured_inference",
+      "evidenceText": "Synthesia's API introduction emphasizes onboarding, outbound sales, and customer lifecycle automation with templates.",
+      "sourceUrl": "https://docs.synthesia.io/reference/introduction",
+      "confidence": "high"
+    }
+  ],
+  "userFitItems": [
+    {
+      "segment": "creator",
+      "fit": "Self-serve creators can use it, but the strongest official story is still business communication rather than creator-first experimentation.",
+      "rationale": "Self-serve plans exist, yet the core differentiators are workspaces, templates, brand pages, API, and enterprise collaboration.",
+      "claimType": "structured_inference",
+      "evidenceText": "Most premium features described on official pages cluster around business production and repeatability.",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "confidence": "medium"
+    },
+    {
+      "segment": "SMB team",
+      "fit": "Creator tier is suitable for small teams that need templated avatar output and API access with limited collaborators.",
+      "rationale": "Creator exposes API access, multiple avatars per scene, branded video pages, and up to 5 guests.",
+      "claimType": "structured_inference",
+      "evidenceText": "These features are concentrated in Creator rather than Basic or Starter.",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "confidence": "high"
+    },
+    {
+      "segment": "enterprise",
+      "fit": "This is where Synthesia looks strongest: governance, brand enforcement, SSO, live collaboration, SCORM, and implementation support all concentrate here.",
+      "rationale": "Enterprise tiers unlock the controls most aligned with managed video operations at scale.",
+      "claimType": "structured_inference",
+      "evidenceText": "Enterprise-only features span security, publishing, localization, and onboarding support.",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "confidence": "high"
+    }
+  ],
+  "rawEvidenceBlocks": [
+    {
+      "sourceUrl": "https://docs.synthesia.io/docs/video-creation",
+      "sourceType": "docs",
+      "topic": "creation inputs",
+      "evidenceText": "Official docs let users start from prompt, URL, document, or script and then move into a template-guided AI assistant flow.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://www.synthesia.io/features/video-localization",
+      "sourceType": "feature_page",
+      "topic": "localization stack",
+      "evidenceText": "Localization covers translation, captions, player behavior, dubbing, and smart updates in one official workflow.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://docs.synthesia.io/reference/introduction",
+      "sourceType": "api_docs",
+      "topic": "developer coverage",
+      "evidenceText": "The public API exposes create, update, template, asset, webhook, and dubbing endpoints with plan-specific rate limits.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://docs.synthesia.io/docs/brand-kits",
+      "sourceType": "docs",
+      "topic": "brand governance",
+      "evidenceText": "Brand kits are treated as workspace-level controls with optional admin enforcement, pointing to a governance-first design for enterprise teams.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://docs.synthesia.io/docs/video-overview",
+      "sourceType": "docs",
+      "topic": "review workflow",
+      "evidenceText": "Comments, collaborator roles, analytics, sharing, and publishing are all part of the standard video lifecycle page.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    }
+  ],
+  "unresolvedQuestions": [
+    {
+      "question": "Does Synthesia publish a detailed public admin matrix for RBAC beyond editors, guests, workspace admins, and organization admins?",
+      "reason": "The reviewed sources show collaboration and admin controls, but not a comprehensive public RBAC matrix.",
+      "recommendedSourceTypes": [
+        "docs",
+        "help_center"
+      ],
+      "status": "open"
+    },
+    {
+      "question": "Which exact avatar or dubbing models sit underneath each feature tier besides the disclosed OpenAI assistant dependency?",
+      "reason": "The official pages disclose product features and one assistant dependency, but not a broader model stack breakdown.",
+      "recommendedSourceTypes": [
+        "docs",
+        "blog"
+      ],
+      "status": "needs_manual_verification"
+    }
+  ]
+}

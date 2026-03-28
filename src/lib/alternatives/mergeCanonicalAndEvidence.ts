@@ -12,6 +12,7 @@ import { getTrustedAlternativesPool } from './getTrustedAlternativesPool';
 import { isTryNowTool } from './affiliateWhitelist';
 import { normalizeEvidenceText } from './normalizeEvidenceText';
 import { getPricingDisplay } from '@/lib/pricing/display';
+import { getToolCardPricingDisplay } from '@/lib/pricing/cardDisplay';
 
 /**
  * Validate that all tool slugs in canonical config exist in tools.json
@@ -241,7 +242,7 @@ function buildToolWithEvidence(
     slug: tool.slug,
     name: tool.name,
     logoUrl: tool.logo_url || '',
-    startingPrice: getPricingDisplay(tool).displayText,
+    startingPrice: getToolCardPricingDisplay(tool).displayText,
     rating: tool.rating,
     affiliateLink: tool.affiliate_link || '',
     affiliateUrl: tool.affiliate_link || undefined,

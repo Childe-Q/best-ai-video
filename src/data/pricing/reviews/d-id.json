@@ -1,0 +1,509 @@
+{
+  "toolSlug": "d-id",
+  "capturedAt": "2026-03-27T14:09:12.576Z",
+  "billingStates": [
+    {
+      "stateId": "monthly-toggle",
+      "label": "Monthly",
+      "billingMode": "monthly",
+      "isDefaultVisible": false
+    },
+    {
+      "stateId": "annual-default",
+      "label": "Annual",
+      "billingMode": "annual",
+      "isDefaultVisible": true
+    },
+    {
+      "stateId": "monthly-visible",
+      "label": "Monthly",
+      "billingMode": "monthly",
+      "isDefaultVisible": true
+    }
+  ],
+  "defaultVisibleStateIds": [
+    "annual-default",
+    "monthly-visible"
+  ],
+  "recommendedPublicDisplay": "Starts at $16/mo billed annually",
+  "publicStartPriceCandidate": {
+    "display": "Starts at $16/mo billed annually",
+    "planName": "Pro",
+    "stateId": "annual-default",
+    "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+    "allowedForExactDisplay": true
+  },
+  "monthlyPrices": [
+    {
+      "planName": "Lite",
+      "display": "$5.9/mo",
+      "eligibleForPublicStartPrice": false
+    },
+    {
+      "planName": "Pro",
+      "display": "$29/mo",
+      "eligibleForPublicStartPrice": true
+    },
+    {
+      "planName": "Advanced",
+      "display": "$196/mo",
+      "eligibleForPublicStartPrice": true
+    }
+  ],
+  "annualPrices": [
+    {
+      "planName": "Trial",
+      "display": "$0/yr billed annually",
+      "eligibleForPublicStartPrice": false
+    },
+    {
+      "planName": "Trial",
+      "display": "$0",
+      "eligibleForPublicStartPrice": false
+    },
+    {
+      "planName": "Lite",
+      "display": "$56/yr billed annually",
+      "eligibleForPublicStartPrice": false
+    },
+    {
+      "planName": "Lite",
+      "display": "$4.7/mo billed annually",
+      "eligibleForPublicStartPrice": false
+    },
+    {
+      "planName": "Pro",
+      "display": "$191/yr billed annually",
+      "eligibleForPublicStartPrice": false
+    },
+    {
+      "planName": "Pro",
+      "display": "$16/mo billed annually",
+      "eligibleForPublicStartPrice": true
+    },
+    {
+      "planName": "Advanced",
+      "display": "$1293/yr billed annually",
+      "eligibleForPublicStartPrice": false
+    },
+    {
+      "planName": "Advanced",
+      "display": "$108/mo billed annually",
+      "eligibleForPublicStartPrice": true
+    }
+  ],
+  "blockedPrices": [
+    {
+      "reason": "trial pricing is not a public paid start price",
+      "items": [
+        {
+          "planName": "Trial",
+          "stateId": "monthly-toggle",
+          "display": "$0",
+          "reason": "trial pricing is not a public paid start price",
+          "priceRole": "core-recurring",
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displays": [
+            "$0"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Trial",
+          "stateId": "monthly-toggle",
+          "display": "$0/yr billed annually",
+          "reason": "trial pricing is not a public paid start price",
+          "priceRole": "yearly-total",
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displays": [
+            "$0/yr billed annually"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Trial",
+          "stateId": "annual-default",
+          "display": "$0",
+          "reason": "trial pricing is not a public paid start price",
+          "priceRole": "core-recurring",
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displays": [
+            "$0"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Trial",
+          "stateId": "annual-default",
+          "display": "$0/yr billed annually",
+          "reason": "trial pricing is not a public paid start price",
+          "priceRole": "yearly-total",
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displays": [
+            "$0/yr billed annually"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Lite",
+          "stateId": "monthly-toggle",
+          "display": "$5.9/mo",
+          "reason": "trial pricing is not a public paid start price",
+          "priceRole": "core-recurring",
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displays": [
+            "$5.9/mo"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Lite",
+          "stateId": "monthly-toggle",
+          "display": "$56/yr billed annually",
+          "reason": "trial pricing is not a public paid start price",
+          "priceRole": "yearly-total",
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displays": [
+            "$56/yr billed annually"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Lite",
+          "stateId": "annual-default",
+          "display": "$4.7/mo billed annually",
+          "reason": "trial pricing is not a public paid start price",
+          "priceRole": "core-recurring",
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displays": [
+            "$4.7/mo billed annually"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Lite",
+          "stateId": "annual-default",
+          "display": "$56/yr billed annually",
+          "reason": "trial pricing is not a public paid start price",
+          "priceRole": "yearly-total",
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displays": [
+            "$56/yr billed annually"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "reason": "yearly-total price is details-only",
+      "items": [
+        {
+          "planName": "Pro",
+          "stateId": "monthly-toggle",
+          "display": "$191/yr billed annually",
+          "reason": "yearly-total price is details-only",
+          "priceRole": "yearly-total",
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displays": [
+            "$191/yr billed annually"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Pro",
+          "stateId": "annual-default",
+          "display": "$191/yr billed annually",
+          "reason": "yearly-total price is details-only",
+          "priceRole": "yearly-total",
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displays": [
+            "$191/yr billed annually"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Advanced",
+          "stateId": "monthly-toggle",
+          "display": "$1293/yr billed annually",
+          "reason": "yearly-total price is details-only",
+          "priceRole": "yearly-total",
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displays": [
+            "$1293/yr billed annually"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Advanced",
+          "stateId": "annual-default",
+          "display": "$1293/yr billed annually",
+          "reason": "yearly-total price is details-only",
+          "priceRole": "yearly-total",
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displays": [
+            "$1293/yr billed annually"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Enterprise",
+          "stateId": "monthly-toggle",
+          "display": null,
+          "reason": "yearly-total price is details-only",
+          "priceRole": "yearly-total",
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displays": [],
+          "count": 1
+        },
+        {
+          "planName": "Enterprise",
+          "stateId": "annual-default",
+          "display": null,
+          "reason": "yearly-total price is details-only",
+          "priceRole": "yearly-total",
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displays": [],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "reason": "custom pricing is not a numeric self-serve start price",
+      "items": [
+        {
+          "planName": "Enterprise",
+          "stateId": "monthly-toggle",
+          "display": null,
+          "reason": "custom pricing is not a numeric self-serve start price",
+          "priceRole": "custom",
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displays": [],
+          "count": 1
+        },
+        {
+          "planName": "Enterprise",
+          "stateId": "annual-default",
+          "display": null,
+          "reason": "custom pricing is not a numeric self-serve start price",
+          "priceRole": "custom",
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displays": [],
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "planCards": [
+    {
+      "planName": "Trial",
+      "planKind": "trial",
+      "displayedPrice": "$0",
+      "qualifier": "14-day trial",
+      "eligibleForPublicStartPrice": false,
+      "badge": null,
+      "cta": "Start Free Trial",
+      "cardProvenance": [
+        {
+          "stateId": "monthly-toggle",
+          "isDefaultVisible": false,
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displayedPrice": "$0",
+          "qualifier": "14-day trial"
+        },
+        {
+          "stateId": "annual-default",
+          "isDefaultVisible": true,
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displayedPrice": "$0",
+          "qualifier": "14-day trial"
+        }
+      ],
+      "mainBullets": [
+        "3 minutes for Videos, Agents, Video Translate & API",
+        "100+ Stock AI Avatars",
+        "Video & Photo Avatars",
+        "1 Personal Avatar",
+        "Standard voices",
+        "Full-screen watermark",
+        "API access",
+        "Personal use license"
+      ],
+      "pricingQualifiers": [
+        "14-day trial",
+        "billed annually"
+      ],
+      "upgradeAddOnInfo": [],
+      "missingFields": []
+    },
+    {
+      "planName": "Lite",
+      "planKind": "trial",
+      "displayedPrice": "$4.7/mo",
+      "qualifier": "$56 billed annually (20% discount)",
+      "eligibleForPublicStartPrice": false,
+      "badge": null,
+      "cta": "Get started",
+      "cardProvenance": [
+        {
+          "stateId": "monthly-toggle",
+          "isDefaultVisible": false,
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displayedPrice": "$5.9/mo",
+          "qualifier": "$56 billed annually (20% discount)"
+        },
+        {
+          "stateId": "annual-default",
+          "isDefaultVisible": true,
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displayedPrice": "$4.7/mo",
+          "qualifier": "$56 billed annually (20% discount)"
+        }
+      ],
+      "mainBullets": [
+        "Unlimited videos1 for your first month!",
+        "10 min. / month for Videos, Agents, Video Translate & API",
+        "Everything in Trial",
+        "Photo & 2 Video Avatars",
+        "D-ID watermark",
+        "1 Embedded Agent",
+        "Fast video processing"
+      ],
+      "pricingQualifiers": [
+        "$56 billed annually (20% discount)",
+        "billed annually"
+      ],
+      "upgradeAddOnInfo": [],
+      "missingFields": []
+    },
+    {
+      "planName": "Pro",
+      "planKind": "paid",
+      "displayedPrice": "$16/mo",
+      "qualifier": "$191 billed annually (45% discount)",
+      "eligibleForPublicStartPrice": true,
+      "badge": null,
+      "cta": "Get started",
+      "cardProvenance": [
+        {
+          "stateId": "monthly-toggle",
+          "isDefaultVisible": false,
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displayedPrice": "$29/mo",
+          "qualifier": "$191 billed annually (45% discount)"
+        },
+        {
+          "stateId": "annual-default",
+          "isDefaultVisible": true,
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displayedPrice": "$16/mo",
+          "qualifier": "$191 billed annually (45% discount)"
+        }
+      ],
+      "mainBullets": [
+        "Unlimited videos1 for your first month!",
+        "15 min. / month for Videos, Agents, Video Translate & API",
+        "Everything in Lite",
+        "Video & Photo Avatars",
+        "3 Personal Avatars",
+        "Premium voices",
+        "1 Voice clone",
+        "AI watermark"
+      ],
+      "pricingQualifiers": [
+        "$191 billed annually (45% discount)",
+        "billed annually"
+      ],
+      "upgradeAddOnInfo": [],
+      "missingFields": []
+    },
+    {
+      "planName": "Advanced",
+      "planKind": "paid",
+      "displayedPrice": "$108/mo",
+      "qualifier": "$1,293 billed annually (45% discount)",
+      "eligibleForPublicStartPrice": true,
+      "badge": null,
+      "cta": "Get started",
+      "cardProvenance": [
+        {
+          "stateId": "monthly-toggle",
+          "isDefaultVisible": false,
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displayedPrice": "$196/mo",
+          "qualifier": "$1,293 billed annually (45% discount)"
+        },
+        {
+          "stateId": "annual-default",
+          "isDefaultVisible": true,
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displayedPrice": "$108/mo",
+          "qualifier": "$1,293 billed annually (45% discount)"
+        }
+      ],
+      "mainBullets": [
+        "Unlimited videos1 for your first month",
+        "100 min. / month for Videos, Agents, Video Translate & API",
+        "Everything in Pro",
+        "Video & Photo Avatars",
+        "5 Personal Avatars",
+        "3 Voice clones",
+        "3 Embedded Agents",
+        "Custom logo"
+      ],
+      "pricingQualifiers": [
+        "$1,293 billed annually (45% discount)",
+        "billed annually"
+      ],
+      "upgradeAddOnInfo": [],
+      "missingFields": []
+    },
+    {
+      "planName": "Enterprise",
+      "planKind": "enterprise",
+      "displayedPrice": "Let's talk",
+      "qualifier": null,
+      "eligibleForPublicStartPrice": false,
+      "badge": null,
+      "cta": "Contact us",
+      "cardProvenance": [
+        {
+          "stateId": "monthly-toggle",
+          "isDefaultVisible": false,
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displayedPrice": "Let's talk",
+          "qualifier": null
+        },
+        {
+          "stateId": "annual-default",
+          "isDefaultVisible": true,
+          "provenance": "live/playwright @ 2026-03-27T14:09:05.684Z",
+          "displayedPrice": "Let's talk",
+          "qualifier": null
+        }
+      ],
+      "mainBullets": [
+        "Unlimited video minutes",
+        "Custom minutes for Campaigns & Agents",
+        "Custom minutes for API",
+        "Everything in Advanced",
+        "Custom # of Personal & Studio Avatars",
+        "Professional voice cloning",
+        "Customer Success Manager",
+        "Fastest video processing"
+      ],
+      "pricingQualifiers": [],
+      "upgradeAddOnInfo": [],
+      "missingFields": [
+        "qualifier"
+      ]
+    }
+  ],
+  "reviewWarnings": [
+    "pricing upgraded to Playwright: billing-toggle-or-annual-qualifier, missing-price-tokens, source-config-marked-dynamic",
+    "Trial was preserved as trial-only and not normalized as a free plan.",
+    "Lite remains classified as trial-like because the public card still inherits Trial language and should not seed the public start price without manual confirmation.",
+    "Annual-billed qualifier is preserved whenever an annual state price point is selected.",
+    "Candidate result only. Do not replace existing frontend pricing or exact-price display without manual review.",
+    "Some plan cards still have missingFields and need manual review."
+  ]
+}

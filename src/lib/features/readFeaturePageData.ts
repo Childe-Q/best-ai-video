@@ -13,6 +13,7 @@ import {
 } from '@/types/featurePage';
 import { NormalizedFeaturePage } from '@/types/normalizedFeaturePage';
 import { getFeaturePageModules, getFeaturePageType, getFeaturePageVariant } from '@/lib/features/pageType';
+import { getFeatureSeedCardPriceBlock } from '@/lib/pricing/cardPriceBlock';
 
 const FEATURES_DATA_DIR = path.join(process.cwd(), 'src', 'data', 'features');
 const NORMALIZED_FEATURES_DATA_DIR = path.join(FEATURES_DATA_DIR, 'normalized');
@@ -106,13 +107,16 @@ function parseTool(raw: unknown): FeatureToolCard | null {
     return null;
   }
 
+  const pricingStartAt = asOptionalString(tool.pricingStartAt);
+
   return {
     toolSlug: tool.toolSlug.trim(),
     name: asOptionalString(tool.name) ?? undefined,
     logoUrl: asOptionalString(tool.logoUrl),
     reasonLine1: tool.reasonLine1.trim(),
     reasonLine2: asOptionalString(tool.reasonLine2),
-    pricingStartAt: asOptionalString(tool.pricingStartAt),
+    pricingStartAt,
+    priceBlock: getFeatureSeedCardPriceBlock(pricingStartAt),
     watermarkPolicy: asOptionalString(tool.watermarkPolicy),
     bestFor: asOptionalString(tool.bestFor),
     mainTradeoff: asOptionalString(tool.mainTradeoff),
@@ -234,12 +238,15 @@ function mapNormalizedTool(tool: NormalizedFeaturePage['tools'][number]): Featur
     return null;
   }
 
+  const pricingStartAt = asOptionalString(tool.pricingSeed);
+
   return {
     toolSlug: tool.slug.trim(),
     name: tool.name.trim(),
     logoUrl: asOptionalString(tool.logoUrl),
     reasonLine1: verdictSeed,
-    pricingStartAt: asOptionalString(tool.pricingSeed),
+    pricingStartAt,
+    priceBlock: getFeatureSeedCardPriceBlock(pricingStartAt),
     watermarkPolicy: asOptionalString(tool.policySeed),
     bestFor: asOptionalString(tool.bestForSeed),
     mainTradeoff: asOptionalString(tool.mainLimitationSeed),

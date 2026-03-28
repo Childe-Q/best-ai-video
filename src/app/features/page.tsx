@@ -55,24 +55,32 @@ const primaryCategories = [
     slug: 'best-ai-video-generators',
     description:
       'The broadest starting point. Separate cinematic, avatar, and social-first tools before picking a niche.',
+    annotation:
+      'Choose this route when you haven\u2019t filtered by workflow type yet and need the broadest starting point to separate tool families first.',
   },
   {
     kind: 'feature' as const,
     slug: 'text-to-video-ai-tools',
     description:
       'Prompt-first generation for creators who start from text and need scenes, not a stock montage or transcript editor.',
+    annotation:
+      'Choose this route when the creative starts from a prompt or script and you need scene generation \u2014 not editing, avatars, or repurposing.',
   },
   {
     kind: 'feature' as const,
     slug: 'ai-avatar-video-generators',
     description:
       'Talking-head and presenter-led tools for training, demos, sales, and any workflow where a face carries the message.',
+    annotation:
+      'Choose this route when the format requires an on-screen speaker and the constraint is that no one is available to film.',
   },
   {
     kind: 'feature' as const,
     slug: 'content-repurposing-ai-tools',
     description:
       'Convert blogs, webinars, podcasts, and long recordings into new video formats without starting from scratch.',
+    annotation:
+      'Choose this route when the raw material already exists \u2014 articles, webinars, podcasts \u2014 and the job is conversion, not creation.',
   },
 ];
 
@@ -195,14 +203,14 @@ const comparisonLinks = [
 
 export function generateMetadata(): Metadata {
   return {
-    title: `Explore AI Video Tools by Use Case ${seoYear}`,
+    title: `Which AI Video Tool Do You Need? Use-Case Guide ${seoYear}`,
     description:
-      'Choose AI video tools by workflow, not by brand. Start with the right route for avatars, text-to-video, repurposing, social publishing, or enterprise buying.',
+      'Figure out which type of AI video tool fits your workflow before comparing products. Decision hub for text-to-video, avatars, repurposing, social, and enterprise.',
     alternates: { canonical: '/features' },
     openGraph: {
-      title: `Explore AI Video Tools by Use Case ${seoYear}`,
+      title: `Which AI Video Tool Do You Need? Use-Case Guide ${seoYear}`,
       description:
-        'A workflow-first hub for choosing the right AI video route before you compare individual tools, reviews, and VS pages.',
+        'A workflow decision hub that helps you choose the right AI video route before you compare individual tools.',
       url: '/features',
     },
     robots: { index: true, follow: true },
@@ -234,33 +242,29 @@ export default async function FeaturesHubPage() {
             </span>
 
             <h1 className="mt-5 text-4xl font-black tracking-[-0.02em] text-gray-900 md:text-5xl lg:text-6xl">
-              Explore AI Video Tools{' '}
-              <span className="block">by Use Case</span>
+              Which type of AI video{' '}
+              <span className="block">tool do you actually need?</span>
             </h1>
 
             <p className="mt-5 max-w-2xl text-base font-medium leading-7 text-gray-600 md:text-lg">
-              Pick the route that matches your workflow, then narrow down with reviews and direct comparisons.
+              Most people start by comparing products. Start by choosing the right workflow instead &mdash; then the shortlist builds itself.
             </p>
           </div>
 
-          {/* Quick routes — merged from old Scenario Router */}
-          <div className="mt-12 border-t border-black/8 pt-6">
+          {/* Quick routes */}
+          <div className="mt-8 border-t border-black/8 pt-5">
             <div className="grid gap-4 md:grid-cols-3">
               {readyQuickRoutes.map((r) => (
                 <Link
                   key={r.href}
                   href={r.href}
-                  className="group no-underline"
+                  className="group flex items-baseline gap-2 no-underline"
               >
-                <p className="text-sm font-bold text-black transition-colors duration-200 group-hover:text-black/70">
+                <span className="text-sm font-bold text-black transition-colors duration-200 group-hover:text-black/70">
                   {r.question}
-                </p>
-                <p className="mt-1.5 max-w-[22rem] text-sm leading-6 text-black/52 transition-colors duration-200 group-hover:text-black/62">
-                  {r.when}
-                </p>
-                <span className="mt-2 inline-flex items-center text-sm font-semibold text-black/45 transition-colors duration-200 group-hover:text-black/70">
-                  {r.category}
-                  <span className="ml-1.5 transition-transform duration-200 group-hover:translate-x-1">→</span>
+                </span>
+                <span className="whitespace-nowrap text-sm font-semibold text-black/40 transition-colors duration-200 group-hover:text-black/65">
+                  {r.category}&nbsp;→
                 </span>
               </Link>
               ))}
@@ -269,20 +273,63 @@ export default async function FeaturesHubPage() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <main className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
 
-        {/* ── Tier 1: Primary Categories ─────────────────────── */}
-        {readyPrimaryCategories.length > 0 && (
-        <section className="mb-12">
+        {/* ── Editorial Decision Map ─────────────────────────── */}
+        <section className="mb-16">
           <div className="max-w-2xl">
             <p className="text-[11px] font-black uppercase tracking-[0.18em] text-black/40">
-              Most common starting points
+              HOW TO CHOOSE
             </p>
             <h2 className="mt-3 text-2xl font-black text-gray-900 md:text-3xl">
-              Flagship routes that cover the highest-priority entry points
+              Start from your situation, not from a tool name
+            </h2>
+          </div>
+
+          <div className="mt-6 grid gap-px overflow-hidden rounded-xl border border-black/[0.05] bg-black/[0.03] md:grid-cols-2">
+            <div className="bg-[#FCFBF7] px-5 py-4">
+              <p className="text-[13px] font-bold text-gray-900">Generating video from scratch with a text prompt?</p>
+              <p className="mt-1 text-[13px] leading-[1.55] text-black/48">
+                Start with <Link href="/features/text-to-video-ai-tools" className="font-semibold text-black no-underline hover:text-black/65">text-to-video tools</Link>. Built for scene generation when there&#39;s no existing footage.
+              </p>
+            </div>
+            <div className="bg-[#FCFBF7] px-5 py-4">
+              <p className="text-[13px] font-bold text-gray-900">Need a visible presenter but not filming anyone?</p>
+              <p className="mt-1 text-[13px] leading-[1.55] text-black/48">
+                Start with <Link href="/features/ai-avatar-video-generators" className="font-semibold text-black no-underline hover:text-black/65">AI avatar tools</Link>. The right path for training, sales demos, and multilingual delivery.
+              </p>
+            </div>
+            <div className="bg-[#FCFBF7] px-5 py-4">
+              <p className="text-[13px] font-bold text-gray-900">Already have blogs, webinars, or recordings?</p>
+              <p className="mt-1 text-[13px] leading-[1.55] text-black/48">
+                Start with <Link href="/features/content-repurposing-ai-tools" className="font-semibold text-black no-underline hover:text-black/65">repurposing tools</Link>. Generators are the wrong first stop when source material already exists.
+              </p>
+            </div>
+            <div className="bg-[#FCFBF7] px-5 py-4">
+              <p className="text-[13px] font-bold text-gray-900">Not sure yet, or the job could go in multiple directions?</p>
+              <p className="mt-1 text-[13px] leading-[1.55] text-black/48">
+                Start with the <Link href="/features/best-ai-video-generators" className="font-semibold text-black no-underline hover:text-black/65">broadest shortlist</Link>. It separates cinematic, avatar, and social-first tools first.
+              </p>
+            </div>
+          </div>
+
+          <p className="mt-3 text-[13px] leading-6 text-black/38">
+            If the primary filter is speed, budget, platform, or team size &mdash; skip to the <a href="#specialized-routes" className="font-semibold text-black/50 no-underline hover:text-black/65">specialized routes</a> below.
+          </p>
+        </section>
+
+        {/* ── Best starting points by workflow ────────────────── */}
+        {readyPrimaryCategories.length > 0 && (
+        <section className="mb-14 border-t border-black/6 pt-10">
+          <div className="max-w-2xl">
+            <p className="text-[11px] font-black uppercase tracking-[0.18em] text-black/40">
+              Best starting points
+            </p>
+            <h2 className="mt-3 text-2xl font-black text-gray-900 md:text-3xl">
+              Start with these workflows
             </h2>
             <p className="mt-3 text-sm leading-6 text-black/52">
-              Start with these curated hubs before you fan out into the broader directory.
+              Four distinct workflow families &mdash; pick the one that matches your job before you narrow further.
             </p>
           </div>
 
@@ -291,18 +338,15 @@ export default async function FeaturesHubPage() {
               <Link
                 key={cat.slug}
                 href={`/features/${cat.slug}`}
-                className="group rounded-[1.4rem] border border-black/8 bg-white px-6 py-6 no-underline transition-all duration-200 ease-out hover:-translate-y-1 hover:border-black/14 hover:shadow-[0_12px_28px_rgba(0,0,0,0.04)]"
+                className="group rounded-[1.4rem] border border-black/8 bg-white px-6 py-5 no-underline transition-all duration-200 ease-out hover:-translate-y-1 hover:border-black/14 hover:shadow-[0_12px_28px_rgba(0,0,0,0.04)]"
               >
-                <p className="text-[11px] font-black uppercase tracking-[0.16em] text-black/35">
-                  Feature hub
-                </p>
-                <h3 className="mt-2 text-lg font-black text-gray-900 transition-colors duration-200 group-hover:text-black/70">
+                <h3 className="text-lg font-black text-gray-900 transition-colors duration-200 group-hover:text-black/70">
                   {getFeatureTitle(cat.slug)}
                 </h3>
-                <p className="mt-2 max-w-sm text-sm leading-6 text-black/55">
+                <p className="mt-1.5 max-w-sm text-sm leading-6 text-black/55">
                   {cat.description}
                 </p>
-                <span className="mt-4 inline-flex items-center text-sm font-bold text-black">
+                <span className="mt-3 inline-flex items-center text-sm font-bold text-black">
                   <span className="border-b border-black/25 transition-colors duration-200 group-hover:border-black">
                     Start here
                   </span>
@@ -314,18 +358,18 @@ export default async function FeaturesHubPage() {
         </section>
         )}
 
-        {/* ── Tier 2: All Other Categories ────────────────────── */}
+        {/* ── Specialized routes ──────────────────────────────── */}
         {readySecondaryCategories.length > 0 && (
-        <section className="mb-12 border-t border-black/6 pt-10">
+        <section id="specialized-routes" className="mb-12 border-t border-black/6 pt-10">
           <div className="max-w-2xl">
             <p className="text-[11px] font-black uppercase tracking-[0.18em] text-black/40">
-              All categories
+              Narrow by constraint
             </p>
             <h2 className="mt-3 text-2xl font-black text-gray-900 md:text-3xl">
-              Browse the full directory
+              Specialized routes
             </h2>
             <p className="mt-3 text-sm leading-6 text-black/52">
-              Use this index once you already know the route family you want, or if the curated starting points above are too narrow.
+              Already know the workflow family? Filter further by speed, budget, platform, or team size.
             </p>
           </div>
 

@@ -1,0 +1,255 @@
+{
+  "toolSlug": "d-id",
+  "capturedAt": "2026-03-27T14:09:12.576Z",
+  "validationIssues": [],
+  "capturedStates": [
+    {
+      "stateId": "monthly-toggle",
+      "label": "Monthly",
+      "billingMode": "monthly",
+      "isDefaultVisible": false,
+      "sourcePage": "pricing"
+    },
+    {
+      "stateId": "annual-default",
+      "label": "Annual",
+      "billingMode": "annual",
+      "isDefaultVisible": true,
+      "sourcePage": "pricing"
+    },
+    {
+      "stateId": "monthly-visible",
+      "label": "Monthly",
+      "billingMode": "monthly",
+      "isDefaultVisible": true,
+      "sourcePage": "faq"
+    }
+  ],
+  "planCardSummary": [
+    {
+      "planId": "trial",
+      "name": "Trial",
+      "planType": "trial",
+      "stateAvailability": [
+        "monthly-toggle",
+        "annual-default"
+      ],
+      "pricePointCount": 4,
+      "bulletCount": 9
+    },
+    {
+      "planId": "lite",
+      "name": "Lite",
+      "planType": "trial",
+      "stateAvailability": [
+        "monthly-toggle",
+        "annual-default"
+      ],
+      "pricePointCount": 4,
+      "bulletCount": 7
+    },
+    {
+      "planId": "pro",
+      "name": "Pro",
+      "planType": "paid",
+      "stateAvailability": [
+        "monthly-toggle",
+        "annual-default"
+      ],
+      "pricePointCount": 4,
+      "bulletCount": 11
+    },
+    {
+      "planId": "advanced",
+      "name": "Advanced",
+      "planType": "paid",
+      "stateAvailability": [
+        "monthly-toggle",
+        "annual-default"
+      ],
+      "pricePointCount": 4,
+      "bulletCount": 9
+    },
+    {
+      "planId": "enterprise",
+      "name": "Enterprise",
+      "planType": "enterprise",
+      "stateAvailability": [
+        "monthly-toggle",
+        "annual-default"
+      ],
+      "pricePointCount": 4,
+      "bulletCount": 14
+    }
+  ],
+  "recommendedDisplayPrice": {
+    "amount": 16,
+    "currency": "USD",
+    "cadence": "month",
+    "unit": "account",
+    "displayText": "Starts at $16/mo billed annually",
+    "safeToShow": true,
+    "reason": "Derived from Pro. Qualifier preserved: billed annually.",
+    "planId": "pro",
+    "planName": "Pro",
+    "stateId": "annual-default",
+    "priceRole": "core-recurring",
+    "comparisonEligible": true,
+    "structuredDataEligible": true,
+    "scoringEligible": true
+  },
+  "resolverPreview": {
+    "displayText": "Starts at $16/mo billed annually",
+    "coarseDisplayText": "Paid plans available",
+    "exactPriceAllowed": {
+      "display": true,
+      "comparison": true,
+      "structured-data": true,
+      "scoring": true
+    }
+  },
+  "exactPriceAllowedForDisplay": true,
+  "comparisonEligible": true,
+  "structuredDataEligible": true,
+  "detailsOnlyPricePoints": [
+    {
+      "planId": "trial",
+      "planName": "Trial",
+      "stateId": "monthly-toggle",
+      "displayText": "$0/yr billed annually",
+      "priceRole": "yearly-total",
+      "reason": "trial pricing is not a public paid start price"
+    },
+    {
+      "planId": "trial",
+      "planName": "Trial",
+      "stateId": "annual-default",
+      "displayText": "$0/yr billed annually",
+      "priceRole": "yearly-total",
+      "reason": "trial pricing is not a public paid start price"
+    },
+    {
+      "planId": "lite",
+      "planName": "Lite",
+      "stateId": "monthly-toggle",
+      "displayText": "$56/yr billed annually",
+      "priceRole": "yearly-total",
+      "reason": "trial pricing is not a public paid start price"
+    },
+    {
+      "planId": "lite",
+      "planName": "Lite",
+      "stateId": "annual-default",
+      "displayText": "$56/yr billed annually",
+      "priceRole": "yearly-total",
+      "reason": "trial pricing is not a public paid start price"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$191/yr billed annually",
+      "priceRole": "yearly-total",
+      "reason": "yearly-total price is details-only"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$191/yr billed annually",
+      "priceRole": "yearly-total",
+      "reason": "yearly-total price is details-only"
+    },
+    {
+      "planId": "advanced",
+      "planName": "Advanced",
+      "stateId": "monthly-toggle",
+      "displayText": "$1293/yr billed annually",
+      "priceRole": "yearly-total",
+      "reason": "yearly-total price is details-only"
+    },
+    {
+      "planId": "advanced",
+      "planName": "Advanced",
+      "stateId": "annual-default",
+      "displayText": "$1293/yr billed annually",
+      "priceRole": "yearly-total",
+      "reason": "yearly-total price is details-only"
+    },
+    {
+      "planId": "enterprise",
+      "planName": "Enterprise",
+      "stateId": "monthly-toggle",
+      "displayText": null,
+      "priceRole": "yearly-total",
+      "reason": "yearly-total price is details-only"
+    },
+    {
+      "planId": "enterprise",
+      "planName": "Enterprise",
+      "stateId": "annual-default",
+      "displayText": null,
+      "priceRole": "yearly-total",
+      "reason": "yearly-total price is details-only"
+    }
+  ],
+  "blockedPricePoints": [
+    {
+      "planId": "trial",
+      "planName": "Trial",
+      "stateId": "monthly-toggle",
+      "displayText": "$0",
+      "priceRole": "core-recurring",
+      "blockedReason": "trial pricing is not a public paid start price"
+    },
+    {
+      "planId": "trial",
+      "planName": "Trial",
+      "stateId": "annual-default",
+      "displayText": "$0",
+      "priceRole": "core-recurring",
+      "blockedReason": "trial pricing is not a public paid start price"
+    },
+    {
+      "planId": "lite",
+      "planName": "Lite",
+      "stateId": "monthly-toggle",
+      "displayText": "$5.9/mo",
+      "priceRole": "core-recurring",
+      "blockedReason": "trial pricing is not a public paid start price"
+    },
+    {
+      "planId": "lite",
+      "planName": "Lite",
+      "stateId": "annual-default",
+      "displayText": "$4.7/mo billed annually",
+      "priceRole": "core-recurring",
+      "blockedReason": "trial pricing is not a public paid start price"
+    },
+    {
+      "planId": "enterprise",
+      "planName": "Enterprise",
+      "stateId": "monthly-toggle",
+      "displayText": null,
+      "priceRole": "custom",
+      "blockedReason": "custom pricing is not a numeric self-serve start price"
+    },
+    {
+      "planId": "enterprise",
+      "planName": "Enterprise",
+      "stateId": "annual-default",
+      "displayText": null,
+      "priceRole": "custom",
+      "blockedReason": "custom pricing is not a numeric self-serve start price"
+    }
+  ],
+  "manualReviewChecklist": [
+    "Review required before any frontend adoption.",
+    "Confirm recommended display price remains correct: Starts at $16/mo billed annually",
+    "Confirm trial is not treated as a free plan.",
+    "Review plans with missingFields before using captured plan details."
+  ],
+  "finalDisplayText": "Starts at $16/mo billed annually",
+  "safeToShow": true,
+  "coarseDisplayText": "Paid plans available"
+}

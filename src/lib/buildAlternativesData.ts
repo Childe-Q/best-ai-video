@@ -6,6 +6,7 @@ import { alternativesEvidence } from '@/data/evidence/alternatives';
 import { isTryNowTool } from './alternatives/affiliateWhitelist';
 import { mapAlternativeCardCopy } from './alternatives/mapAlternativeCardCopy';
 import { getPricingDisplay } from '@/lib/pricing/display';
+import { getToolCardPricingDisplay } from '@/lib/pricing/cardDisplay';
 
 // Helper to check if tool has affiliate link
 export function hasAffiliate(tool: Tool): boolean {
@@ -52,7 +53,7 @@ export function buildAlternativeTool(
     slug: tool.slug,
     name: tool.name,
     logoUrl: tool.logo_url,
-    startingPrice: getPricingDisplay(tool).displayText,
+    startingPrice: getToolCardPricingDisplay(tool).displayText,
     rating: tool.rating,
     affiliateLink: tool.affiliate_link || '',
     affiliateUrl: tool.affiliate_link || undefined,

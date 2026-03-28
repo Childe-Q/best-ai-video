@@ -1,0 +1,127 @@
+{
+  "toolSlug": "deepbrain-ai",
+  "capturedAt": "2026-03-27T14:08:10.140Z",
+  "validationIssues": [],
+  "capturedStates": [
+    {
+      "stateId": "monthly-default",
+      "label": "Monthly",
+      "billingMode": "monthly",
+      "isDefaultVisible": true,
+      "sourcePage": "pricing"
+    },
+    {
+      "stateId": "annual-visible",
+      "label": "Yearly",
+      "billingMode": "annual",
+      "isDefaultVisible": false,
+      "sourcePage": "pricing"
+    }
+  ],
+  "planCardSummary": [
+    {
+      "planId": "free",
+      "name": "Free",
+      "planType": "free",
+      "stateAvailability": [
+        "annual-visible"
+      ],
+      "pricePointCount": 1,
+      "bulletCount": 15
+    },
+    {
+      "planId": "personal",
+      "name": "Personal",
+      "planType": "paid",
+      "stateAvailability": [
+        "annual-visible"
+      ],
+      "pricePointCount": 1,
+      "bulletCount": 15
+    },
+    {
+      "planId": "team",
+      "name": "Team",
+      "planType": "paid",
+      "stateAvailability": [
+        "annual-visible"
+      ],
+      "pricePointCount": 1,
+      "bulletCount": 17
+    },
+    {
+      "planId": "enterprise",
+      "name": "Enterprise",
+      "planType": "enterprise",
+      "stateAvailability": [
+        "annual-visible"
+      ],
+      "pricePointCount": 1,
+      "bulletCount": 14
+    }
+  ],
+  "recommendedDisplayPrice": {
+    "amount": 24,
+    "currency": "USD",
+    "cadence": "month",
+    "unit": "account",
+    "displayText": "Starts at $24/mo billed yearly",
+    "safeToShow": false,
+    "reason": "Derived from Personal. Qualifier preserved: billed yearly. candidate price currently depends on cache-fallback card capture default-visible state does not yet have clean card coverage for the candidate plan",
+    "planId": "personal",
+    "planName": "Personal",
+    "stateId": "annual-visible",
+    "priceRole": "core-recurring",
+    "comparisonEligible": false,
+    "structuredDataEligible": false,
+    "scoringEligible": false
+  },
+  "resolverPreview": {
+    "displayText": "Paid plans available",
+    "coarseDisplayText": "Paid plans available",
+    "exactPriceAllowed": {
+      "display": false,
+      "comparison": false,
+      "structured-data": false,
+      "scoring": false
+    }
+  },
+  "exactPriceAllowedForDisplay": false,
+  "comparisonEligible": false,
+  "structuredDataEligible": false,
+  "detailsOnlyPricePoints": [],
+  "blockedPricePoints": [
+    {
+      "planId": "free",
+      "planName": "Free",
+      "stateId": "annual-visible",
+      "displayText": "$0/mo billed yearly",
+      "priceRole": "core-recurring",
+      "blockedReason": "free plan is not a paid start price"
+    },
+    {
+      "planId": "team",
+      "planName": "Team",
+      "stateId": "annual-visible",
+      "displayText": "$55/seat/mo billed yearly",
+      "priceRole": "core-recurring",
+      "blockedReason": "per-seat pricing is not a generic public start price"
+    },
+    {
+      "planId": "enterprise",
+      "planName": "Enterprise",
+      "stateId": "annual-visible",
+      "displayText": null,
+      "priceRole": "core-recurring",
+      "blockedReason": "price point is not eligible for recommended display"
+    }
+  ],
+  "manualReviewChecklist": [
+    "Review required before any frontend adoption.",
+    "No exact public price is currently allowed.",
+    "Review plans with missingFields before using captured plan details."
+  ],
+  "finalDisplayText": "Paid plans available",
+  "safeToShow": false,
+  "coarseDisplayText": "Paid plans available"
+}

@@ -1,0 +1,616 @@
+{
+  "toolSlug": "deepbrain-ai",
+  "capturedAt": "2026-03-28T07:28:13.630Z",
+  "pages": [
+    {
+      "sourceType": "pricing",
+      "sourceUrl": "https://www.aistudios.com/pricing",
+      "captureLayer": "playwright",
+      "usedCache": false,
+      "cacheMode": "dynamic",
+      "capturedAt": "2026-03-28T07:28:04.160Z",
+      "textLength": 20929,
+      "fallbackReasons": [
+        "billing-toggle-or-annual-qualifier",
+        "interactive-or-unit-priced-plans",
+        "source-config-marked-dynamic"
+      ],
+      "stateIds": [
+        "monthly-default",
+        "annual-visible"
+      ],
+      "cardIds": [
+        "annual-visible::free",
+        "annual-visible::personal",
+        "annual-visible::team",
+        "annual-visible::enterprise"
+      ],
+      "snippets": [
+        {
+          "kind": "plan-card",
+          "heading": "Free",
+          "text": "FreeStart your AI video journey completely free$0/MoGet StartedWhat’s included3 Audio/Video ExportsVideos up to 3 mins1 Custom Avatar16 Generative Credits720p Video ExportStandard Video ProcessingKey featuresAI Video Gen"
+        },
+        {
+          "kind": "plan-card",
+          "heading": "Personal",
+          "text": "PersonalPowerful AI video creation for individual creators$24/MoGet StartedWhat’s includedUnlimited Video ExportsVideos up to 30 mins 3 Custom Avatars60 Generative Credits1080p Video ExportFast Video ProcessingEverything"
+        },
+        {
+          "kind": "plan-card",
+          "heading": "Team",
+          "text": "TeamScalable AI video creation for growing teams$55/Mo1 SeatGet StartedAbout This PlanWhat’s includedUnlimited Video ExportsVideos up to 30 mins5 Custom Avatars150 Generative Credits4K Video ExportFast Video ProcessingEv"
+        },
+        {
+          "kind": "plan-card",
+          "heading": "Enterprise",
+          "text": "EnterpriseCustom-built AI video solutions for enterprisesLet’s TalkContact UsWhat’s includedUnlimited AI VideosUnlimited Video DurationUnlimited Custom AvatarsFlexible Generative Credits4K Video ExportPriority Video Proc"
+        }
+      ]
+    }
+  ],
+  "states": [
+    {
+      "stateId": "monthly-default",
+      "label": "Monthly",
+      "billingMode": "monthly",
+      "isDefaultVisible": true,
+      "triggerType": "default",
+      "triggerLabel": "Monthly",
+      "sourcePage": "pricing"
+    },
+    {
+      "stateId": "annual-visible",
+      "label": "Yearly",
+      "billingMode": "annual",
+      "isDefaultVisible": false,
+      "triggerType": "default",
+      "triggerLabel": "Yearly",
+      "sourcePage": "pricing",
+      "notes": [
+        "state imported from cache fallback after live card extraction returned empty"
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "cardId": "annual-visible::free",
+      "stateId": "annual-visible",
+      "cardKind": "core-plan",
+      "isVisible": true,
+      "isDefaultVisible": false,
+      "selector": ".studios-plan-item:nth-of-type(1)",
+      "htmlFragment": "<div class=\"studios-plan-item\"><div class=\"pricing-title-wrap\"><h5 class=\"pricing-h5\">Free</h5><div class=\"pricing_desc\">Start your AI video journey completely free</div><div class=\"div-block-140\"><div class=\"pricing-big-text-2\">$0</div><div class=\"sub_text\">/Mo</div></div></div><div class=\"w-layout-vflex pricing_btn_wrap pt-44\"><a id=\"btn-pricing-free\" click_text=\"get started\" href=\"https://app.aistudios.com/dashboard?openSubscribe=true\" class=\"pricing-btn tracking_main get_started_pricing_main_personal\">Get Started</a></div><div class=\"plan-sub\"><div><div class=\"text-block-93\">What’s included</div><ul role=\"list\" class=\"plan-sub-list w-list-unstyled\"><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra\"><strong>3 Audio/Video Exports</strong><br></div></li><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra\">Videos up to 3 mins</div></li><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra\">1 Custom Avatar</div></li><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra\">16 Generative Credits</div></li><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra\">720p Video Export</div></li><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color font-12\">Standard Video Processing</div></li></ul></div><div><div class=\"text-block-98\">Key features<br></div><ul role=\"list\"...",
+      "textFragment": "FreeStart your AI video journey completely free$0/MoGet StartedWhat’s included3 Audio/Video ExportsVideos up to 3 mins1 Custom Avatar16 Generative Credits720p Video ExportStandard Video ProcessingKey featuresAI Video GenerationAI Video & Image GeneratorAI DubbingVoice Cloning2,000+ AI Generated AvatarsScreen Recording with Avatar30+ LanguagesShare & Download VideoWatermark Included",
+      "rawPlanText": "FreeStart your AI video journey completely free$0/MoGet StartedWhat’s included3 Audio/Video ExportsVideos up to 3 mins1 Custom Avatar16 Generative Credits720p Video ExportStandard Video ProcessingKey featuresAI Video GenerationAI Video & Image GeneratorAI DubbingVoice Cloning2,000+ AI Generated AvatarsScreen Recording with Avatar30+ LanguagesShare & Download VideoWatermark Included",
+      "planNameRaw": "Free",
+      "planNameNormalized": "Free",
+      "planName": "Free",
+      "planTypeHint": "free",
+      "subtitle": "Start your AI video journey completely free",
+      "cardDescription": "Start your AI video journey completely free",
+      "badge": null,
+      "ctaText": "Get Started",
+      "ctaHref": "https://app.aistudios.com/dashboard?openSubscribe=true",
+      "ctaMeta": {
+        "text": "Get Started",
+        "href": "https://app.aistudios.com/dashboard?openSubscribe=true",
+        "intent": "get-started"
+      },
+      "displayedPrice": "$0/mo billed yearly",
+      "displayedQualifier": "billed yearly",
+      "eligibleForPublicStartPrice": false,
+      "sectionHeadings": [
+        "What’s included",
+        "Key features"
+      ],
+      "bulletSections": [
+        {
+          "title": "What’s included",
+          "items": [
+            "3 Audio/Video Exports",
+            "Videos up to 3 mins",
+            "1 Custom Avatar",
+            "16 Generative Credits",
+            "720p Video Export",
+            "Standard Video Processing"
+          ]
+        },
+        {
+          "title": "Key features",
+          "items": [
+            "AI Video Generation",
+            "AI Video & Image Generator",
+            "AI Dubbing",
+            "Voice Cloning",
+            "2,000+ AI Generated Avatars",
+            "Screen Recording with Avatar",
+            "30+ Languages",
+            "Share & Download Video",
+            "Watermark Included"
+          ]
+        }
+      ],
+      "pricingQualifiers": [
+        "billed yearly"
+      ],
+      "promoNotes": [
+        "-20% off"
+      ],
+      "trialNotes": [],
+      "creditOptions": [
+        "16 Generative Credits"
+      ],
+      "usageOptions": [
+        "Videos up to 3 mins"
+      ],
+      "explanatoryCopy": [
+        "Start your AI video journey completely free",
+        "-20% off yearly billing"
+      ],
+      "planControls": [],
+      "upgradeAddOnInfo": [],
+      "priceBlocks": [
+        {
+          "rawText": "$0/Mo",
+          "amountText": "$0",
+          "amount": 0,
+          "currency": "USD",
+          "cadence": "month",
+          "unit": "account",
+          "priceRole": "core-recurring",
+          "billingQualifier": "billed yearly",
+          "visibility": "default",
+          "safeDisplayCandidate": false
+        }
+      ],
+      "missingFields": [],
+      "provenance": {
+        "captureLayer": "playwright",
+        "provenance": "cache",
+        "cacheMode": "dynamic",
+        "capturedAt": "2026-01-10T12:34:24.769Z",
+        "sourceType": "pricing",
+        "sourceUrl": "https://www.deepbrain.io/pricing"
+      },
+      "sourceType": "pricing",
+      "sourceUrl": "https://www.deepbrain.io/pricing"
+    },
+    {
+      "cardId": "annual-visible::personal",
+      "stateId": "annual-visible",
+      "cardKind": "core-plan",
+      "isVisible": true,
+      "isDefaultVisible": false,
+      "selector": ".studios-plan-item:nth-of-type(2)",
+      "htmlFragment": "<div class=\"studios-plan-item\"><div class=\"pricing-title-wrap\"><h5 class=\"pricing-h5\">Personal</h5><div class=\"pricing_desc\">Powerful AI video creation for individual creators</div><div class=\"div-block-140\"><div id=\"price_label_starter\" class=\"pricing-big-text-2\">$24</div><div class=\"sub_text\">/Mo</div></div></div><div class=\"w-layout-vflex pricing_btn_wrap pt-44\"><a id=\"btn-pricing-starter\" click_text=\"get started\" href=\"https://app.aistudios.com/dashboard?openSubscribe=true\" class=\"pricing-btn tracking_main get_started_pricing_main_personal\">Get Started</a></div><div class=\"plan-sub\"><div class=\"div-block-332\"><div class=\"text-block-94\">What’s included</div><ul role=\"list\" class=\"plan-sub-list w-list-unstyled\"><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra\">Unlimited Video Exports</div></li><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra\">Videos up to 30 mins </div></li><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra\">3 Custom Avatars</div></li><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra\">60 Generative Credits</div></li><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra\">1080p Video Export</div></li><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra\">Fast Video Processing</div></li></ul></div><div class=\"div-bloc...",
+      "textFragment": "PersonalPowerful AI video creation for individual creators$24/MoGet StartedWhat’s includedUnlimited Video ExportsVideos up to 30 mins 3 Custom Avatars60 Generative Credits1080p Video ExportFast Video ProcessingEverything in FreeUnlimited Photo AvatarsUnlimited Youtube DownloaderAI Dubbing with SRT/ASS Upload Generate Videos from Any Input150+ Languages, 1,000+ Voices7,000+ Video Templates3M+ Premium Shutterstock MediaSupports Add-onsNo Watermark",
+      "rawPlanText": "PersonalPowerful AI video creation for individual creators$24/MoGet StartedWhat’s includedUnlimited Video ExportsVideos up to 30 mins 3 Custom Avatars60 Generative Credits1080p Video ExportFast Video ProcessingEverything in FreeUnlimited Photo AvatarsUnlimited Youtube DownloaderAI Dubbing with SRT/ASS Upload Generate Videos from Any Input150+ Languages, 1,000+ Voices7,000+ Video Templates3M+ Premium Shutterstock MediaSupports Add-onsNo Watermark",
+      "planNameRaw": "Personal",
+      "planNameNormalized": "Personal",
+      "planName": "Personal",
+      "planTypeHint": "paid",
+      "subtitle": "Powerful AI video creation for individual creators",
+      "cardDescription": "Powerful AI video creation for individual creators",
+      "badge": null,
+      "ctaText": "Get Started",
+      "ctaHref": "https://app.aistudios.com/dashboard?openSubscribe=true",
+      "ctaMeta": {
+        "text": "Get Started",
+        "href": "https://app.aistudios.com/dashboard?openSubscribe=true",
+        "intent": "get-started"
+      },
+      "displayedPrice": "$24/mo billed yearly",
+      "displayedQualifier": "billed yearly",
+      "eligibleForPublicStartPrice": true,
+      "sectionHeadings": [
+        "What’s included",
+        "Everything in Free"
+      ],
+      "bulletSections": [
+        {
+          "title": "What’s included",
+          "items": [
+            "Unlimited Video Exports",
+            "Videos up to 30 mins",
+            "3 Custom Avatars",
+            "60 Generative Credits",
+            "1080p Video Export",
+            "Fast Video Processing"
+          ]
+        },
+        {
+          "title": "Everything in Free",
+          "items": [
+            "Unlimited Photo Avatars",
+            "Unlimited Youtube Downloader",
+            "AI Dubbing with SRT/ASS Upload",
+            "Generate Videos from Any Input",
+            "150+ Languages, 1,000+ Voices",
+            "7,000+ Video Templates",
+            "3M+ Premium Shutterstock Media",
+            "Supports Add-ons",
+            "No Watermark"
+          ]
+        }
+      ],
+      "pricingQualifiers": [
+        "billed yearly"
+      ],
+      "promoNotes": [
+        "-20% off"
+      ],
+      "trialNotes": [],
+      "creditOptions": [
+        "60 Generative Credits"
+      ],
+      "usageOptions": [
+        "Videos up to 30 mins"
+      ],
+      "explanatoryCopy": [
+        "Powerful AI video creation for individual creators",
+        "-20% off yearly billing"
+      ],
+      "planControls": [],
+      "upgradeAddOnInfo": [],
+      "priceBlocks": [
+        {
+          "rawText": "$24/Mo",
+          "amountText": "$24",
+          "amount": 24,
+          "currency": "USD",
+          "cadence": "month",
+          "unit": "account",
+          "priceRole": "core-recurring",
+          "billingQualifier": "billed yearly",
+          "visibility": "default",
+          "safeDisplayCandidate": true
+        }
+      ],
+      "missingFields": [],
+      "provenance": {
+        "captureLayer": "playwright",
+        "provenance": "cache",
+        "cacheMode": "dynamic",
+        "capturedAt": "2026-01-10T12:34:24.769Z",
+        "sourceType": "pricing",
+        "sourceUrl": "https://www.deepbrain.io/pricing"
+      },
+      "sourceType": "pricing",
+      "sourceUrl": "https://www.deepbrain.io/pricing"
+    },
+    {
+      "cardId": "annual-visible::team",
+      "stateId": "annual-visible",
+      "cardKind": "core-plan",
+      "isVisible": true,
+      "isDefaultVisible": false,
+      "selector": ".studios-plan-item:nth-of-type(3)",
+      "htmlFragment": "<div class=\"studios-plan-item\"><div class=\"pricing-title-wrap\"><h5 class=\"pricing-h5\">Team</h5><div class=\"pricing_desc\">Scalable AI video creation for growing teams</div><div class=\"div-block-140\"><div id=\"price_label_pro\" class=\"pricing-big-text-2\">$55</div><div class=\"sub_text\">/Mo</div></div></div><div class=\"w-layout-vflex pricing_btn_wrap\"><div class=\"w-layout-hflex flex-block-141\"><div id=\"Minus\" class=\"team_icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" app=\"ikonik\" class=\"team_icon\"><path d=\"M7 10.9998C6.73478 10.9998 6.48043 11.1051 6.29289 11.2927C6.10536 11.4802 6 11.7345 6 11.9998C6 12.265 6.10536 12.5193 6.29289 12.7069C6.48043 12.8944 6.73478 12.9998 7 12.9998H17C17.2652 12.9998 17.5196 12.8944 17.7071 12.7069C17.8946 12.5193 18 12.265 18 11.9998C18 11.7345 17.8946 11.4802 17.7071 11.2927C17.5196 11.1051 17.2652 10.9998 17 10.9998H7Z\" fill=\"currentColor\" app=\"ikonik\" class=\"path-bh2lq\"></path></svg></div><div class=\"seat_num\"><span id=\"Seat\">1</span> Seat</div><div id=\"Plus\" class=\"team_icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" app=\"ikonik\" class=\"team_icon\"><path d=\"M7 12L17 12\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" app=\"ikonik\" class=\"path-uwg67\"></path><path d=\"M12 17V7\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" app=\"ikonik\" class=\"path-zykrf\"></path></svg></div></div><a id=\"btn-pricing-pro\" href=\"https://app.aistudios.com/dashboard?openSubscribe=true\" class=\"pricing-btn tracking_main get_started_pricing_main_personal\">Get Started</a><a href=\"https://help.deepbrain.io/en/articles/10257972-introducing-the-new-unlimited-team-plan\" target=\"_blank\" class=\"link-block-25 w-inline-block\"><div>About This Plan</div></a></div><div class=\"plan-sub\"><div><div class=\"text-block-95\">What’s included</div><ul role=\"list\" class=\"plan-sub-list w-list-unstyled\"><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra\">Unlimited Video Exports</div></li><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra...",
+      "textFragment": "TeamScalable AI video creation for growing teams$55/Mo1 SeatGet StartedAbout This PlanWhat’s includedUnlimited Video ExportsVideos up to 30 mins5 Custom Avatars150 Generative Credits4K Video ExportFast Video ProcessingEverything in PersonalProofread AI Dubbing ScriptsUp/Download Subtitle FilesOne-Click TranslationPremium 125+ AI Avatars4K Youtube DownloaderAvatar Gesture ControlMulti-Avatar ScenesInteractive VideosEffect Animation with TimingTeam Collaboration WorkspaceCustom Brand Kit",
+      "rawPlanText": "TeamScalable AI video creation for growing teams$55/Mo1 SeatGet StartedAbout This PlanWhat’s includedUnlimited Video ExportsVideos up to 30 mins5 Custom Avatars150 Generative Credits4K Video ExportFast Video ProcessingEverything in PersonalProofread AI Dubbing ScriptsUp/Download Subtitle FilesOne-Click TranslationPremium 125+ AI Avatars4K Youtube DownloaderAvatar Gesture ControlMulti-Avatar ScenesInteractive VideosEffect Animation with TimingTeam Collaboration WorkspaceCustom Brand Kit",
+      "planNameRaw": "Team",
+      "planNameNormalized": "Team",
+      "planName": "Team",
+      "planTypeHint": "paid",
+      "subtitle": "Scalable AI video creation for growing teams",
+      "cardDescription": "Scalable AI video creation for growing teams",
+      "badge": "Best Value",
+      "ctaText": "Get Started",
+      "ctaHref": "https://app.aistudios.com/dashboard?openSubscribe=true",
+      "ctaMeta": {
+        "text": "Get Started",
+        "href": "https://app.aistudios.com/dashboard?openSubscribe=true",
+        "intent": "get-started"
+      },
+      "displayedPrice": "$55/seat/mo billed yearly",
+      "displayedQualifier": "billed yearly",
+      "eligibleForPublicStartPrice": false,
+      "sectionHeadings": [
+        "What’s included",
+        "Everything in Personal"
+      ],
+      "bulletSections": [
+        {
+          "title": "What’s included",
+          "items": [
+            "Unlimited Video Exports",
+            "Videos up to 30 mins",
+            "5 Custom Avatars",
+            "150 Generative Credits",
+            "4K Video Export",
+            "Fast Video Processing"
+          ]
+        },
+        {
+          "title": "Everything in Personal",
+          "items": [
+            "Proofread AI Dubbing Scripts",
+            "Up/Download Subtitle Files",
+            "One-Click Translation",
+            "Premium 125+ AI Avatars",
+            "4K Youtube Downloader",
+            "Avatar Gesture Control",
+            "Multi-Avatar Scenes",
+            "Interactive Videos",
+            "Effect Animation with Timing",
+            "Team Collaboration Workspace",
+            "Custom Brand Kit"
+          ]
+        }
+      ],
+      "pricingQualifiers": [
+        "billed yearly",
+        "1 seat"
+      ],
+      "promoNotes": [
+        "-20% off"
+      ],
+      "trialNotes": [],
+      "creditOptions": [
+        "150 Generative Credits"
+      ],
+      "usageOptions": [
+        "Videos up to 30 mins",
+        "1 Seat"
+      ],
+      "explanatoryCopy": [
+        "Scalable AI video creation for growing teams",
+        "Best Value",
+        "-20% off yearly billing"
+      ],
+      "planControls": [
+        {
+          "controlType": "seat-stepper",
+          "label": "Seat selector",
+          "valueText": "1 Seat",
+          "href": null,
+          "options": [
+            "1 Seat"
+          ]
+        },
+        {
+          "controlType": "link",
+          "label": "About this plan",
+          "valueText": "About This Plan",
+          "href": "https://help.deepbrain.io/en/articles/10257972-introducing-the-new-unlimited-team-plan",
+          "options": []
+        }
+      ],
+      "upgradeAddOnInfo": [],
+      "priceBlocks": [
+        {
+          "rawText": "$55/Mo",
+          "amountText": "$55",
+          "amount": 55,
+          "currency": "USD",
+          "cadence": "month",
+          "unit": "seat",
+          "priceRole": "core-recurring",
+          "billingQualifier": "billed yearly",
+          "visibility": "default",
+          "safeDisplayCandidate": true
+        }
+      ],
+      "missingFields": [],
+      "provenance": {
+        "captureLayer": "playwright",
+        "provenance": "cache",
+        "cacheMode": "dynamic",
+        "capturedAt": "2026-01-10T12:34:24.769Z",
+        "sourceType": "pricing",
+        "sourceUrl": "https://www.deepbrain.io/pricing"
+      },
+      "sourceType": "pricing",
+      "sourceUrl": "https://www.deepbrain.io/pricing"
+    },
+    {
+      "cardId": "annual-visible::enterprise",
+      "stateId": "annual-visible",
+      "cardKind": "enterprise-card",
+      "isVisible": true,
+      "isDefaultVisible": false,
+      "selector": ".studios-plan-item:nth-of-type(4)",
+      "htmlFragment": "<div class=\"studios-plan-item enterprise\"><div class=\"pricing-title-wrap white-text\"><h5 class=\"pricing-h5 white-text color-w\">Enterprise</h5><div class=\"pricing_desc color-w\">Custom-built AI video solutions for enterprises</div><div class=\"div-block-98\"><div class=\"pricing-big-text-2 white-text\">Let’s Talk</div></div></div><div class=\"w-layout-vflex pricing_btn_wrap pt-44\"><a id=\"enterprise_a\" href=\"/company/contact\" class=\"pricing-btn w-button\">Contact Us</a></div><div class=\"plan-sub\"><div><div class=\"text-block-99\">What’s included</div><ul role=\"list\" class=\"plan-sub-list w-list-unstyled\"><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra\">Unlimited AI Videos</div></li><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra\">Unlimited Video Duration</div></li><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra\">Unlimited Custom Avatars</div></li><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra\">Flexible Generative Credits</div></li><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra\">4K Video Export</div></li><li class=\"pricing-list-item\"><img width=\"15\" alt=\"\" src=\"https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/675681fe0d79cc2e00620c0a_blue_check_icon.svg\" loading=\"lazy\" class=\"pricing-bullet\"><div class=\"pricing-maintext pricing-color key_color_gra\">Priority Video Processing</div></li></ul></div><div><div class=\"text-block-97\">Everything in Team</div><ul role=\"list\" class=\"plan-sub-list w-list-unstyled\"><li class=\"pricing-...",
+      "textFragment": "EnterpriseCustom-built AI video solutions for enterprisesLet’s TalkContact UsWhat’s includedUnlimited AI VideosUnlimited Video DurationUnlimited Custom AvatarsFlexible Generative Credits4K Video ExportPriority Video ProcessingEverything in TeamEnterprise-grade SAML SSOSCORM ExportBulk Video GenerationVoice Cloning with Audio UploadVideo Production Support24/7 Priority Technical SupportDedicated Account Manager Marketing Link",
+      "rawPlanText": "EnterpriseCustom-built AI video solutions for enterprisesLet’s TalkContact UsWhat’s includedUnlimited AI VideosUnlimited Video DurationUnlimited Custom AvatarsFlexible Generative Credits4K Video ExportPriority Video ProcessingEverything in TeamEnterprise-grade SAML SSOSCORM ExportBulk Video GenerationVoice Cloning with Audio UploadVideo Production Support24/7 Priority Technical SupportDedicated Account Manager Marketing Link",
+      "planNameRaw": "Enterprise",
+      "planNameNormalized": "Enterprise",
+      "planName": "Enterprise",
+      "planTypeHint": "enterprise",
+      "subtitle": "Custom-built AI video solutions for enterprises",
+      "cardDescription": "Custom-built AI video solutions for enterprises",
+      "badge": null,
+      "ctaText": "Contact Us",
+      "ctaHref": "/company/contact",
+      "ctaMeta": {
+        "text": "Contact Us",
+        "href": "/company/contact",
+        "intent": "contact-sales"
+      },
+      "displayedPrice": "Let’s Talk",
+      "displayedQualifier": null,
+      "eligibleForPublicStartPrice": false,
+      "sectionHeadings": [
+        "What’s included",
+        "Everything in Team"
+      ],
+      "bulletSections": [
+        {
+          "title": "What’s included",
+          "items": [
+            "Unlimited AI Videos",
+            "Unlimited Video Duration",
+            "Unlimited Custom Avatars",
+            "Flexible Generative Credits",
+            "4K Video Export",
+            "Priority Video Processing"
+          ]
+        },
+        {
+          "title": "Everything in Team",
+          "items": [
+            "Enterprise-grade SAML SSO",
+            "SCORM Export",
+            "Bulk Video Generation",
+            "Voice Cloning with Audio Upload",
+            "Video Production Support",
+            "24/7 Priority Technical Support",
+            "Dedicated Account Manager",
+            "Marketing Link"
+          ]
+        }
+      ],
+      "pricingQualifiers": [
+        "billed yearly"
+      ],
+      "promoNotes": [
+        "-20% off"
+      ],
+      "trialNotes": [],
+      "creditOptions": [],
+      "usageOptions": [],
+      "explanatoryCopy": [
+        "Custom-built AI video solutions for enterprises",
+        "-20% off yearly billing"
+      ],
+      "planControls": [],
+      "upgradeAddOnInfo": [],
+      "priceBlocks": [
+        {
+          "rawText": "Let’s Talk",
+          "amountText": null,
+          "amount": null,
+          "currency": null,
+          "cadence": null,
+          "unit": "account",
+          "priceRole": "core-recurring",
+          "billingQualifier": "billed yearly",
+          "visibility": "default",
+          "safeDisplayCandidate": false
+        }
+      ],
+      "missingFields": [
+        "qualifier"
+      ],
+      "provenance": {
+        "captureLayer": "playwright",
+        "provenance": "cache",
+        "cacheMode": "dynamic",
+        "capturedAt": "2026-01-10T12:34:24.769Z",
+        "sourceType": "pricing",
+        "sourceUrl": "https://www.deepbrain.io/pricing"
+      },
+      "sourceType": "pricing",
+      "sourceUrl": "https://www.deepbrain.io/pricing"
+    }
+  ],
+  "facts": [
+    {
+      "kind": "free-plan",
+      "valueText": "FreeStart your AI video journey completely free$0/MoGet StartedWhat’s included3 Audio/Video ExportsVideos up to 3 mins1 Custom Avatar16 Generative Credits720p Video ExportStandard Video ProcessingKey featuresAI Video GenerationAI Video & Image GeneratorAI DubbingVoice Cloning2,000+ AI Generated AvatarsScreen Recording with Avatar30+ LanguagesShare & Download VideoWatermark Included",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.deepbrain.io/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:34:24.769Z",
+          "snippet": "FreeStart your AI video journey completely free$0/MoGet StartedWhat’s included3 Audio/Video ExportsVideos up to 3 mins1 Custom Avatar16 Generative Credits720p Video ExportStandard Video ProcessingKey featuresAI Video GenerationAI Video & Image GeneratorAI DubbingVoice Cloning2,000+ AI Generated AvatarsScreen Recording with Avatar30+ LanguagesShare & Download VideoWatermark Included"
+        }
+      ],
+      "planName": "Free",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account"
+    },
+    {
+      "kind": "price-point",
+      "valueText": "$0/Mo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.deepbrain.io/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:34:24.769Z",
+          "snippet": "$0/Mo"
+        }
+      ],
+      "planName": "Free",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account"
+    },
+    {
+      "kind": "price-point",
+      "valueText": "$24/Mo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.deepbrain.io/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:34:24.769Z",
+          "snippet": "$24/Mo"
+        }
+      ],
+      "planName": "Personal",
+      "amount": 24,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account"
+    },
+    {
+      "kind": "price-point",
+      "valueText": "$55/Mo",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.deepbrain.io/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:34:24.769Z",
+          "snippet": "$55/Mo"
+        }
+      ],
+      "planName": "Team",
+      "amount": 55,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "seat"
+    },
+    {
+      "kind": "enterprise",
+      "valueText": "EnterpriseCustom-built AI video solutions for enterprisesLet’s TalkContact UsWhat’s includedUnlimited AI VideosUnlimited Video DurationUnlimited Custom AvatarsFlexible Generative Credits4K Video ExportPriority Video ProcessingEverything in TeamEnterprise-grade SAML SSOSCORM ExportBulk Video GenerationVoice Cloning with Audio UploadVideo Production Support24/7 Priority Technical SupportDedicated Account Manager Marketing Link",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.deepbrain.io/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:34:24.769Z",
+          "snippet": "EnterpriseCustom-built AI video solutions for enterprisesLet’s TalkContact UsWhat’s includedUnlimited AI VideosUnlimited Video DurationUnlimited Custom AvatarsFlexible Generative Credits4K Video ExportPriority Video ProcessingEverything in TeamEnterprise-grade SAML SSOSCORM ExportBulk Video GenerationVoice Cloning with Audio UploadVideo Production Support24/7 Priority Technical SupportDedicated Account Manager Marketing Link"
+        }
+      ],
+      "planName": "Enterprise"
+    },
+    {
+      "kind": "self-serve-paid",
+      "valueText": "Paid plans available",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.deepbrain.io/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:34:24.769Z",
+          "snippet": "Paid plans available"
+        }
+      ]
+    }
+  ],
+  "sourceUrls": [
+    "https://www.aistudios.com/pricing"
+  ],
+  "notes": [
+    "pricing upgraded to Playwright: billing-toggle-or-annual-qualifier, interactive-or-unit-priced-plans, source-config-marked-dynamic",
+    "Skipped faq: HTTP 404: Not Found"
+  ]
+}

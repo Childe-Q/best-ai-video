@@ -1,0 +1,1369 @@
+{
+  "toolSlug": "steve-ai",
+  "capturedAt": "2026-03-27T14:08:26.176Z",
+  "validationIssues": [],
+  "capturedStates": [
+    {
+      "stateId": "monthly-toggle",
+      "label": "Monthly",
+      "billingMode": "monthly",
+      "isDefaultVisible": false,
+      "sourcePage": "pricing"
+    },
+    {
+      "stateId": "annual-default",
+      "label": "Annually",
+      "billingMode": "annual",
+      "isDefaultVisible": true,
+      "sourcePage": "pricing"
+    }
+  ],
+  "planCardSummary": [
+    {
+      "planId": "basic",
+      "name": "Basic",
+      "planType": "paid",
+      "stateAvailability": [
+        "monthly-toggle",
+        "annual-default"
+      ],
+      "pricePointCount": 46,
+      "bulletCount": 11
+    },
+    {
+      "planId": "starter",
+      "name": "Starter",
+      "planType": "paid",
+      "stateAvailability": [
+        "monthly-toggle",
+        "annual-default"
+      ],
+      "pricePointCount": 64,
+      "bulletCount": 11
+    },
+    {
+      "planId": "pro",
+      "name": "Pro",
+      "planType": "paid",
+      "stateAvailability": [
+        "monthly-toggle",
+        "annual-default"
+      ],
+      "pricePointCount": 42,
+      "bulletCount": 11
+    },
+    {
+      "planId": "generative-ai",
+      "name": "Generative AI",
+      "planType": "paid",
+      "stateAvailability": [
+        "monthly-toggle",
+        "annual-default"
+      ],
+      "pricePointCount": 8,
+      "bulletCount": 12
+    },
+    {
+      "planId": "enterprise",
+      "name": "Enterprise",
+      "planType": "enterprise",
+      "stateAvailability": [
+        "monthly-toggle",
+        "annual-default"
+      ],
+      "pricePointCount": 4,
+      "bulletCount": 4
+    }
+  ],
+  "recommendedDisplayPrice": {
+    "amount": 10,
+    "currency": "USD",
+    "cadence": "month",
+    "unit": "account",
+    "displayText": "Starts at $10/mo billed annually",
+    "safeToShow": true,
+    "reason": "Derived from Basic. Qualifier preserved: billed annually.",
+    "planId": "basic",
+    "planName": "Basic",
+    "stateId": "annual-default",
+    "priceRole": "core-recurring",
+    "comparisonEligible": true,
+    "structuredDataEligible": true,
+    "scoringEligible": true
+  },
+  "resolverPreview": {
+    "displayText": "Paid plans available",
+    "coarseDisplayText": "Paid plans available",
+    "exactPriceAllowed": {
+      "display": false,
+      "comparison": false,
+      "structured-data": false,
+      "scoring": false
+    }
+  },
+  "exactPriceAllowedForDisplay": false,
+  "comparisonEligible": false,
+  "structuredDataEligible": false,
+  "detailsOnlyPricePoints": [
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "strike-through",
+      "reason": "strike-through price is details-only"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": null,
+      "priceRole": "add-on",
+      "reason": "add-on price is details-only"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$15",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$45",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$60",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$10",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$10",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$10",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$10",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$10",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$10",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$10",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$10",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "strike-through",
+      "reason": "strike-through price is details-only"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": null,
+      "priceRole": "add-on",
+      "reason": "add-on price is details-only"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$15",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$45",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$60",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$10",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$10",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$10",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$10",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$10",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$10",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$10",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$10",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "basic",
+      "planName": "Basic",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$29",
+      "priceRole": "strike-through",
+      "reason": "strike-through price is details-only"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$228/yr billed yearly",
+      "priceRole": "yearly-total",
+      "reason": "yearly-total price is details-only"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": null,
+      "priceRole": "add-on",
+      "reason": "add-on price is details-only"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$19",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": null,
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$45",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$60",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$45",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$60",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$45",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$60",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$60",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$45",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$60",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$29",
+      "priceRole": "strike-through",
+      "reason": "strike-through price is details-only"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$228/yr billed yearly",
+      "priceRole": "yearly-total",
+      "reason": "yearly-total price is details-only"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": null,
+      "priceRole": "add-on",
+      "reason": "add-on price is details-only"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$19",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": null,
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$45",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$60",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$45",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$60",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$45",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$60",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$60",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$45",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$60",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "starter",
+      "planName": "Starter",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$59",
+      "priceRole": "strike-through",
+      "reason": "strike-through price is details-only"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$468/yr billed yearly",
+      "priceRole": "yearly-total",
+      "reason": "yearly-total price is details-only"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": null,
+      "priceRole": "add-on",
+      "reason": "add-on price is details-only"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": null,
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$60",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$60",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$60",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$10",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "monthly-toggle",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$59",
+      "priceRole": "strike-through",
+      "reason": "strike-through price is details-only"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$468/yr billed yearly",
+      "priceRole": "yearly-total",
+      "reason": "yearly-total price is details-only"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": null,
+      "priceRole": "add-on",
+      "reason": "add-on price is details-only"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": null,
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$60",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$60",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$60",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$20",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$10",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "pro",
+      "planName": "Pro",
+      "stateId": "annual-default",
+      "displayText": "$39",
+      "priceRole": "upgrade",
+      "reason": "non-core card"
+    },
+    {
+      "planId": "generative-ai",
+      "planName": "Generative AI",
+      "stateId": "monthly-toggle",
+      "displayText": "$129",
+      "priceRole": "strike-through",
+      "reason": "strike-through price is details-only"
+    },
+    {
+      "planId": "generative-ai",
+      "planName": "Generative AI",
+      "stateId": "monthly-toggle",
+      "displayText": "$1188/yr billed yearly",
+      "priceRole": "yearly-total",
+      "reason": "yearly-total price is details-only"
+    },
+    {
+      "planId": "generative-ai",
+      "planName": "Generative AI",
+      "stateId": "monthly-toggle",
+      "displayText": null,
+      "priceRole": "add-on",
+      "reason": "add-on price is details-only"
+    },
+    {
+      "planId": "generative-ai",
+      "planName": "Generative AI",
+      "stateId": "annual-default",
+      "displayText": "$129",
+      "priceRole": "strike-through",
+      "reason": "strike-through price is details-only"
+    },
+    {
+      "planId": "generative-ai",
+      "planName": "Generative AI",
+      "stateId": "annual-default",
+      "displayText": "$1188/yr billed yearly",
+      "priceRole": "yearly-total",
+      "reason": "yearly-total price is details-only"
+    },
+    {
+      "planId": "generative-ai",
+      "planName": "Generative AI",
+      "stateId": "annual-default",
+      "displayText": null,
+      "priceRole": "add-on",
+      "reason": "add-on price is details-only"
+    }
+  ],
+  "blockedPricePoints": [
+    {
+      "planId": "enterprise",
+      "planName": "Enterprise",
+      "stateId": "monthly-toggle",
+      "displayText": null,
+      "priceRole": "custom",
+      "blockedReason": "custom pricing is not a numeric self-serve start price"
+    },
+    {
+      "planId": "enterprise",
+      "planName": "Enterprise",
+      "stateId": "monthly-toggle",
+      "displayText": null,
+      "priceRole": "unknown",
+      "blockedReason": "price point is not eligible for recommended display"
+    },
+    {
+      "planId": "enterprise",
+      "planName": "Enterprise",
+      "stateId": "annual-default",
+      "displayText": null,
+      "priceRole": "custom",
+      "blockedReason": "custom pricing is not a numeric self-serve start price"
+    },
+    {
+      "planId": "enterprise",
+      "planName": "Enterprise",
+      "stateId": "annual-default",
+      "displayText": null,
+      "priceRole": "unknown",
+      "blockedReason": "price point is not eligible for recommended display"
+    }
+  ],
+  "manualReviewChecklist": [
+    "Review required before any frontend adoption.",
+    "Confirm recommended display price remains correct: Starts at $10/mo billed annually",
+    "Confirm promo/list/strike-through pricing is not used as public start price.",
+    "Confirm add-on and upgrade prices remain plan-details only.",
+    "Review plans with missingFields before using captured plan details."
+  ],
+  "finalDisplayText": "Paid plans available",
+  "safeToShow": true,
+  "coarseDisplayText": "Paid plans available"
+}

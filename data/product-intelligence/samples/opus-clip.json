@@ -1,0 +1,555 @@
+{
+  "toolSlug": "opus-clip",
+  "metadata": {
+    "collectedAt": "2026-03-28",
+    "sampleTrack": "repurposing-heavy",
+    "officialSourceCount": 7,
+    "sourceTypes": [
+      "product_page",
+      "pricing",
+      "help_center",
+      "api_docs"
+    ]
+  },
+  "sourceBlocks": [
+    {
+      "id": "home",
+      "sourceType": "product_page",
+      "title": "OpusClip home",
+      "url": "https://www.opus.pro/",
+      "priorityRank": 2,
+      "coverage": [
+        "product positioning",
+        "core workflow",
+        "supported sources"
+      ]
+    },
+    {
+      "id": "api-page",
+      "sourceType": "product_page",
+      "title": "OpusClip API",
+      "url": "https://www.opus.pro/api",
+      "priorityRank": 2,
+      "coverage": [
+        "developer workflow",
+        "multilingual distribution",
+        "enterprise security"
+      ]
+    },
+    {
+      "id": "plans",
+      "sourceType": "help_center",
+      "title": "Plans and credits",
+      "url": "https://help.opus.pro/docs/article/plans-and-credits",
+      "priorityRank": 3,
+      "coverage": [
+        "minutes",
+        "watermark",
+        "team packs",
+        "social publishing"
+      ]
+    },
+    {
+      "id": "team",
+      "sourceType": "help_center",
+      "title": "Team management",
+      "url": "https://help.opus.pro/docs/article/6219255-team-management",
+      "priorityRank": 3,
+      "coverage": [
+        "workspace collaboration",
+        "seat rules",
+        "permissions"
+      ]
+    },
+    {
+      "id": "clipanything",
+      "sourceType": "help_center",
+      "title": "What is ClipAnything?",
+      "url": "https://help.opus.pro/docs/article/9947095-clip-anything",
+      "priorityRank": 1,
+      "coverage": [
+        "multimodal clipping",
+        "reframe anything",
+        "genre support"
+      ]
+    },
+    {
+      "id": "clipanything-howto",
+      "sourceType": "help_center",
+      "title": "How to use ClipAnything",
+      "url": "https://help.opus.pro/docs/article/how-to-use-clipanything",
+      "priorityRank": 2,
+      "coverage": [
+        "clip model selection",
+        "natural language prompts",
+        "workflow defaults"
+      ]
+    },
+    {
+      "id": "api-overview",
+      "sourceType": "api_docs",
+      "title": "OpusClip API overview",
+      "url": "https://help.opus.pro/api-reference/overview",
+      "priorityRank": 1,
+      "coverage": [
+        "api limits",
+        "webhooks",
+        "project lifecycle"
+      ]
+    },
+    {
+      "id": "brand-template-api",
+      "sourceType": "api_docs",
+      "title": "Brand template API",
+      "url": "https://help.opus.pro/api-reference/brand-template",
+      "priorityRank": 1,
+      "coverage": [
+        "template ids",
+        "brand template automation"
+      ]
+    }
+  ],
+  "capabilityFacts": [
+    {
+      "category": "core_capability",
+      "rawLabel": "Long video to shorts",
+      "normalizedLabel": "clip_extraction",
+      "value": "OpusClip turns long-form source videos into short clips and can publish them directly to social platforms.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The main product page and help center both describe a long-video to shorts workflow with one-click publishing.",
+      "sourceUrl": "https://www.opus.pro/",
+      "confidence": "high"
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "Multimodal clipping",
+      "normalizedLabel": "multimodal_clip_discovery",
+      "value": "ClipAnything uses visual, audio, and sentiment cues to find clips even when there is little dialogue.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The ClipAnything article explains that the model analyzes frames through visual, audio, and sentiment cues and works on videos with little or no dialogue.",
+      "sourceUrl": "https://help.opus.pro/docs/article/9947095-clip-anything",
+      "confidence": "high"
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "Prompt-based scene search",
+      "normalizedLabel": "prompted_clip_search",
+      "value": "Users can prompt for specific moments, actions, characters, emotions, or viral moments during clipping.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The usage guide tells users to select ClipAnything and enter natural-language prompts to find specific scenes and events.",
+      "sourceUrl": "https://help.opus.pro/docs/article/how-to-use-clipanything",
+      "confidence": "high"
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "Captioning and reframe",
+      "normalizedLabel": "caption_reframe",
+      "value": "OpusClip auto-generates captions and reframes clips across 9:16, 1:1, and 16:9 outputs.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "Both the pricing article and ClipAnything docs call out captions and the three main aspect ratios.",
+      "sourceUrl": "https://help.opus.pro/docs/article/plans-and-credits",
+      "confidence": "high"
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "AI B-roll and voice-over",
+      "normalizedLabel": "ai_b_roll_voiceover",
+      "value": "The platform exposes AI B-roll, AI audio enhance, and AI voice-over in the core product surface.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "These capabilities are listed directly on the official home page feature rail.",
+      "sourceUrl": "https://www.opus.pro/",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "Free forever plan",
+      "normalizedLabel": "free_plan",
+      "value": "The free plan includes 60 processing minutes per month, captions, YouTube and local imports, and one brand template.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The plans page itemizes the Free Forever plan entitlements.",
+      "sourceUrl": "https://help.opus.pro/docs/article/plans-and-credits",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "Watermark-free exports",
+      "normalizedLabel": "watermark",
+      "value": "Watermark-free exports are a paid capability; downgrading to free reintroduces watermarked videos.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The downgrade section explicitly warns that videos will be watermarked on the free plan.",
+      "sourceUrl": "https://help.opus.pro/docs/article/plans-and-credits",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "Team seat cap",
+      "normalizedLabel": "team_workspace_seat_limit",
+      "value": "Self-serve team workspace tops out at 4 seats; larger teams are pushed to contact sales.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The Team Management article says Pro packs allow up to 4 seats and asks users with larger needs to contact OpusClip.",
+      "sourceUrl": "https://help.opus.pro/docs/article/6219255-team-management",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "No chat or review thread",
+      "normalizedLabel": "team_commenting_gap",
+      "value": "The current team workspace does not include an internal chat or note system.",
+      "supportType": "not_supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The FAQ in Team Management explicitly says this is not supported in the current version.",
+      "sourceUrl": "https://help.opus.pro/docs/article/6219255-team-management",
+      "confidence": "high"
+    }
+  ],
+  "modelSupportItems": [
+    {
+      "rawName": "ClipAnything",
+      "normalizedName": "clipanything",
+      "provider": "OpusClip",
+      "supportType": "proprietary",
+      "scope": "Multimodal clip selection in web app",
+      "claimType": "confirmed_fact",
+      "evidenceText": "OpusClip presents ClipAnything as its multimodal AI clipping model and instructs users to select it under Clip model.",
+      "sourceUrl": "https://help.opus.pro/docs/article/how-to-use-clipanything",
+      "confidence": "high"
+    },
+    {
+      "rawName": "ReframeAnything",
+      "normalizedName": "reframeanything",
+      "provider": "OpusClip",
+      "supportType": "proprietary",
+      "scope": "Object-aware reframing across aspect ratios",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The ClipAnything article describes ReframeAnything as the model that keeps key objects centered across resized outputs.",
+      "sourceUrl": "https://help.opus.pro/docs/article/9947095-clip-anything",
+      "confidence": "high"
+    },
+    {
+      "rawName": "AI editing models",
+      "normalizedName": "ai_editing_models",
+      "provider": "OpusClip",
+      "supportType": "proprietary",
+      "scope": "Core clipping and editing stack",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The home page describes OpusClip as using AI editing models that understand every pixel of a video.",
+      "sourceUrl": "https://www.opus.pro/",
+      "confidence": "medium"
+    },
+    {
+      "rawName": "Third-party model switching",
+      "normalizedName": "third_party_model_switching",
+      "provider": "Unclear",
+      "supportType": "unclear",
+      "scope": "Public model marketplace",
+      "claimType": "unclear",
+      "evidenceText": "The reviewed official pages expose OpusClip's own clipping and reframe models, but do not show a user-facing third-party model catalog or provider picker.",
+      "sourceUrl": "https://www.opus.pro/",
+      "confidence": "medium"
+    }
+  ],
+  "uniqueValueItems": [
+    {
+      "theme": "repurposing intelligence",
+      "summary": "OpusClip's main differentiator is not generic generation but automated repurposing of existing long-form footage into short-form output that is already formatted for social channels.",
+      "claimType": "structured_inference",
+      "evidenceText": "Official pages are centered on long video ingestion, clip discovery, captions, reframe, publishing, and feed distribution rather than creating scenes from scratch.",
+      "sourceUrl": "https://www.opus.pro/",
+      "confidence": "high"
+    },
+    {
+      "theme": "multimodal clip finding",
+      "summary": "ClipAnything stands out because it is positioned to work on genres where dialogue alone is a weak signal, such as sports, gaming, and vlogs.",
+      "claimType": "structured_inference",
+      "evidenceText": "The ClipAnything article repeatedly stresses visual, audio, and sentiment cues plus support for low-dialogue video.",
+      "sourceUrl": "https://help.opus.pro/docs/article/9947095-clip-anything",
+      "confidence": "high"
+    }
+  ],
+  "differentiationItems": [
+    {
+      "dimension": "product_archetype",
+      "positioning": "repurposing tool with workflow automation and publishing layers",
+      "claimType": "structured_inference",
+      "evidenceText": "The product pages treat clipping, reframing, captioning, and publishing as the core motion, with generation features acting as assistive layers.",
+      "sourceUrl": "https://www.opus.pro/",
+      "confidence": "high"
+    },
+    {
+      "dimension": "headline_strength",
+      "positioning": "Best where the input is existing video inventory and the goal is faster distribution, not where teams need full scene generation or deep collaborative review.",
+      "claimType": "structured_inference",
+      "evidenceText": "Official pages lead with long-video inputs and social outputs, while team review features are comparatively narrow.",
+      "sourceUrl": "https://help.opus.pro/docs/article/plans-and-credits",
+      "confidence": "high"
+    }
+  ],
+  "collaborationItems": [
+    {
+      "category": "collaboration",
+      "rawLabel": "Team workspace",
+      "normalizedLabel": "team_workspace",
+      "value": "Team workspaces share credits, videos, and brand templates across the team.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The Team Management article explicitly says teams can share credits, videos, and brand templates.",
+      "sourceUrl": "https://help.opus.pro/docs/article/6219255-team-management",
+      "confidence": "high"
+    },
+    {
+      "category": "collaboration",
+      "rawLabel": "Owner versus member permissions",
+      "normalizedLabel": "role_basics",
+      "value": "Owners can manage members and subscriptions; members can create using shared credits but cannot manage billing or the team.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The permissions FAQ distinguishes owner capabilities from member capabilities.",
+      "sourceUrl": "https://help.opus.pro/docs/article/6219255-team-management",
+      "confidence": "high"
+    },
+    {
+      "category": "collaboration",
+      "rawLabel": "Future granular roles",
+      "normalizedLabel": "granular_roles",
+      "value": "Granular role assignment is not fully available yet and is marked as a future capability.",
+      "supportType": "unclear",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The permissions section says the ability to assign diverse roles and permissions is a future capability.",
+      "sourceUrl": "https://help.opus.pro/docs/article/6219255-team-management",
+      "confidence": "high"
+    }
+  ],
+  "developerItems": [
+    {
+      "category": "developer",
+      "rawLabel": "Project-based API",
+      "normalizedLabel": "rest_api_projects",
+      "value": "The API supports create-project, query-clips, brand template, share-project, and webhook flows.",
+      "supportType": "api_available",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The API overview enumerates the core endpoints and project lifecycle.",
+      "sourceUrl": "https://help.opus.pro/api-reference/overview",
+      "confidence": "high"
+    },
+    {
+      "category": "developer",
+      "rawLabel": "API limits",
+      "normalizedLabel": "api_limits",
+      "value": "The API is rate-limited at 30 requests per minute per key, supports up to 10-hour videos, 30 GB files, and 50 concurrent projects.",
+      "supportType": "api_available",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The API overview publishes rate, duration, size, storage, and concurrency limits.",
+      "sourceUrl": "https://help.opus.pro/api-reference/overview",
+      "confidence": "high"
+    },
+    {
+      "category": "developer",
+      "rawLabel": "Brand template automation",
+      "normalizedLabel": "brand_template_api",
+      "value": "API callers can list brand templates and create projects with a chosen template id.",
+      "supportType": "api_available",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The brand-template API docs show listing templates and passing a brandTemplateId in project creation.",
+      "sourceUrl": "https://help.opus.pro/api-reference/brand-template",
+      "confidence": "high"
+    }
+  ],
+  "commercialItems": [
+    {
+      "category": "commercial",
+      "rawLabel": "Social posting and scheduling",
+      "normalizedLabel": "social_distribution",
+      "value": "Starter adds social posting to YouTube, TikTok, and Instagram, while Pro adds more channels and scheduling.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The plans page itemizes posting and scheduling capabilities by plan.",
+      "sourceUrl": "https://help.opus.pro/docs/article/plans-and-credits",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "Storage",
+      "normalizedLabel": "cloud_storage",
+      "value": "Pro packs include 100 GB cloud storage, and API projects expire after 30 days unless autosave is enabled.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The plans page lists Pro cloud storage and the API overview explains default 30-day project expiration.",
+      "sourceUrl": "https://help.opus.pro/api-reference/overview",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "Enterprise security signal",
+      "normalizedLabel": "soc2_type_ii",
+      "value": "OpusClip markets SOC 2 Type II compliance on its API page.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The API landing page explicitly says enterprise-grade security with SOC 2 Type II compliance.",
+      "sourceUrl": "https://www.opus.pro/api",
+      "confidence": "high"
+    }
+  ],
+  "limitationItems": [
+    {
+      "category": "limitation",
+      "rawLabel": "Minutes-based quotas",
+      "normalizedLabel": "processing_minutes_cap",
+      "value": "Self-serve usage is primarily limited by monthly or yearly processing minutes.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The plans page anchors every tier to processing minutes rather than unlimited usage.",
+      "sourceUrl": "https://help.opus.pro/docs/article/plans-and-credits",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "No standalone seat purchase",
+      "normalizedLabel": "pack_based_seat_purchase",
+      "value": "Extra seats cannot be purchased independently; users must buy another pack that bundles seats, credits, templates, and storage.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The plans FAQ explicitly says extra seats cannot be purchased on their own.",
+      "sourceUrl": "https://help.opus.pro/docs/article/plans-and-credits",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "Owner credit consumption",
+      "normalizedLabel": "owner_credit_liability",
+      "value": "Team workspaces burn the owner's credits, not the member's own subscription credits.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The team FAQ explicitly says workspace activity consumes the owner's credits.",
+      "sourceUrl": "https://help.opus.pro/docs/article/6219255-team-management",
+      "confidence": "high"
+    }
+  ],
+  "useCaseItems": [
+    {
+      "useCase": "podcast to shorts",
+      "audience": "creators and creator teams",
+      "fit": "Strong fit when the main job is clipping long podcast or interview inventory into short-form output.",
+      "claimType": "structured_inference",
+      "evidenceText": "The default workflow assumes a long video source and short social outputs with captions and reframing.",
+      "sourceUrl": "https://www.opus.pro/",
+      "confidence": "high"
+    },
+    {
+      "useCase": "sports, gaming, or vlog highlight mining",
+      "audience": "media and high-volume creator operations",
+      "fit": "ClipAnything is particularly suited to footage where non-dialogue moments matter.",
+      "claimType": "structured_inference",
+      "evidenceText": "Official examples stress sports, travel, gaming, and other visual moment detection scenarios.",
+      "sourceUrl": "https://help.opus.pro/docs/article/9947095-clip-anything",
+      "confidence": "high"
+    },
+    {
+      "useCase": "automated publishing pipeline",
+      "audience": "developers, agencies, and media brands",
+      "fit": "The API is useful when teams need clip generation, captioning, reframing, and publishing inside an automated distribution stack.",
+      "claimType": "structured_inference",
+      "evidenceText": "The API landing page and reference emphasize autonomous workflows, multilingual distribution, webhooks, and scalable feed publishing.",
+      "sourceUrl": "https://www.opus.pro/api",
+      "confidence": "high"
+    }
+  ],
+  "userFitItems": [
+    {
+      "segment": "creator",
+      "fit": "Strong fit for creators whose bottleneck is turning one long recording into many short posts quickly.",
+      "rationale": "Free and Starter plans already center on import, captions, and social export rather than full editing suites.",
+      "claimType": "structured_inference",
+      "evidenceText": "The official plan ladder starts with processing minutes, imports, captions, and simple brand templates.",
+      "sourceUrl": "https://help.opus.pro/docs/article/plans-and-credits",
+      "confidence": "high"
+    },
+    {
+      "segment": "SMB team",
+      "fit": "Useful for small teams that share a clip pipeline, though collaboration is operational rather than review-centric.",
+      "rationale": "The team workspace shares credits and assets, but lacks chat and deep review tooling.",
+      "claimType": "structured_inference",
+      "evidenceText": "Team management focuses on membership, credits, and shared assets; several collaboration niceties are explicitly unsupported.",
+      "sourceUrl": "https://help.opus.pro/docs/article/6219255-team-management",
+      "confidence": "high"
+    },
+    {
+      "segment": "enterprise",
+      "fit": "Fit increases when teams need high-volume API clipping, sales-assisted seats, or more than the self-serve workspace limits.",
+      "rationale": "Business and API access route users to contact sales, which signals a higher-touch operational tier.",
+      "claimType": "structured_inference",
+      "evidenceText": "The plans page moves larger seat counts, large volume usage, custom solutions, and API into the Business contact flow.",
+      "sourceUrl": "https://help.opus.pro/docs/article/plans-and-credits",
+      "confidence": "high"
+    }
+  ],
+  "rawEvidenceBlocks": [
+    {
+      "sourceUrl": "https://www.opus.pro/",
+      "sourceType": "product_page",
+      "topic": "core motion",
+      "evidenceText": "Official positioning centers on converting one long video into many clips and publishing them to social channels.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://help.opus.pro/docs/article/9947095-clip-anything",
+      "sourceType": "help_center",
+      "topic": "multimodal clipping",
+      "evidenceText": "ClipAnything is documented as multimodal and explicitly useful for low-dialogue content.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://help.opus.pro/docs/article/plans-and-credits",
+      "sourceType": "help_center",
+      "topic": "plan gates",
+      "evidenceText": "Minutes, watermark removal, source integrations, social posting, and team access are all plan-gated.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://help.opus.pro/api-reference/overview",
+      "sourceType": "api_docs",
+      "topic": "developer limits",
+      "evidenceText": "The API has explicit per-key rate limits, project concurrency caps, file size limits, and default project expiry.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://help.opus.pro/docs/article/6219255-team-management",
+      "sourceType": "help_center",
+      "topic": "team boundary",
+      "evidenceText": "Collaboration exists through shared assets and owner-managed workspaces, but not through mature review or communication features.",
+      "claimType": "structured_inference",
+      "confidence": "high"
+    }
+  ],
+  "unresolvedQuestions": [
+    {
+      "question": "Is there a public admin or audit log feature for enterprise workspace governance beyond owner-member basics?",
+      "reason": "The reviewed pages show basic ownership and seat rules, but not a full enterprise governance surface.",
+      "recommendedSourceTypes": [
+        "help_center",
+        "security"
+      ],
+      "status": "open"
+    },
+    {
+      "question": "Does OpusClip publish a formal commercial licensing or content ownership page for generated captions, AI B-roll, and voice-over outputs?",
+      "reason": "The reviewed product and help pages focus on workflow and plans, not rights language.",
+      "recommendedSourceTypes": [
+        "legal",
+        "help_center"
+      ],
+      "status": "needs_manual_verification"
+    }
+  ]
+}

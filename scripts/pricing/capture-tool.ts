@@ -1,7 +1,13 @@
 #!/usr/bin/env tsx
 
 import * as path from 'path';
-import type { PricingSourceType, RawPricingCaptureFile, RawPricingFact } from '../../src/lib/pricing/types';
+import type {
+  PricingSourceType,
+  RawPricingCaptureFile,
+  RawPricingCard,
+  RawPricingFact,
+  RawPricingState,
+} from '../../src/lib/pricing/types';
 import { captureDynamicSource } from './capture-dynamic';
 import { captureStaticSource } from './capture-static';
 import {
@@ -25,8 +31,23 @@ async function captureSource(
   slug: string,
   sourceType: PricingSourceType,
   useCache: boolean,
-): Promise<{ page: RawPricingCaptureFile['pages'][number]; facts: RawPricingFact[] }> {
-  const staticResult = await captureStaticSource(slug, sourceType, useCache);
+): Promise<{
+  page: RawPricingCaptureFile['pages'][number];
+  states: RawPricingState[];
+  cards: RawPricingCard[];
+  facts: RawPricingFact[];
+}> {
+  let staticResult;
+  try {
+    staticResult = await captureStaticSource(slug, sourceType, useCache);
+  } catch (error) {
+    const source = getToolSource(slug, sourceType);
+    if (sourceType === 'pricing' && source?.mode === 'dynamic') {
+      const reason = error instanceof Error ? error.message : String(error);
+      return captureDynamicSource(slug, sourceType, useCache, ['static-fetch-failed', reason]);
+    }
+    throw error;
+  }
   if (!shouldUseDynamicFallback(sourceType, staticResult.page.fallbackReasons)) {
     return staticResult;
   }
@@ -38,6 +59,8 @@ export async function captureTool(slug: string, useCache: boolean): Promise<RawP
   ensureOutputDirs();
 
   const pages = [];
+  const states: RawPricingState[] = [];
+  const cards: RawPricingCard[] = [];
   const facts: RawPricingFact[] = [];
   const notes: string[] = [];
 
@@ -48,11 +71,21 @@ export async function captureTool(slug: string, useCache: boolean): Promise<RawP
       notes.push(`Skipped ${sourceType}: no cached capture available for this trial run.`);
       continue;
     }
-    const result = await captureSource(slug, sourceType, useCache);
-    pages.push(result.page);
-    facts.push(...result.facts);
-    if (result.page.captureLayer === 'playwright' && result.page.fallbackReasons.length > 0) {
-      notes.push(`${sourceType} upgraded to Playwright: ${result.page.fallbackReasons.join(', ')}`);
+    try {
+      const result = await captureSource(slug, sourceType, useCache);
+      pages.push(result.page);
+      states.push(...result.states);
+      cards.push(...result.cards);
+      facts.push(...result.facts);
+      if (result.page.captureLayer === 'playwright' && result.page.fallbackReasons.length > 0) {
+        notes.push(`${sourceType} upgraded to Playwright: ${result.page.fallbackReasons.join(', ')}`);
+      }
+    } catch (error) {
+      if (sourceType === 'pricing') {
+        throw error;
+      }
+      const message = error instanceof Error ? error.message : String(error);
+      notes.push(`Skipped ${sourceType}: ${message}`);
     }
   }
 
@@ -60,7 +93,7 @@ export async function captureTool(slug: string, useCache: boolean): Promise<RawP
     throw new Error(`No pricing-capable sources found for ${slug}`);
   }
 
-  const capture = summarizeCapture(slug, pages, facts, notes);
+  const capture = summarizeCapture(slug, pages, states, cards, facts, notes);
   const outPath = path.join(RAW_OUTPUT_DIR, `${slug}.json`);
   writeJson(outPath, capture);
   return capture;

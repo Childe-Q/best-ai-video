@@ -5,35 +5,11 @@ import { Tool } from '@/types/tool';
 import EditorialScoreSimple from './EditorialScoreSimple';
 import { EXTERNAL_TOOL_TAGS } from '@/data/externalToolTags';
 import { getEditorialHomeTags } from '@/data/home/editorialTags';
-import { getPricingDisplay, getToolPricingSummary } from '@/lib/pricing/display';
+import { getHomeCardPriceBlock } from '@/lib/pricing/cardPriceBlock';
 
 interface ToolCardProps {
   tool: Tool;
 }
-
-// Helper function to get pricing tag and color
-function getPricingTag(tool: Tool): { label: string; color: string } {
-  const summary = getToolPricingSummary(tool);
-
-  if (summary.verification === 'unverified') {
-    return { label: 'Pricing unverified', color: 'bg-black/[0.04] text-black/60' };
-  }
-
-  if (summary.verification === 'trusted') {
-    return { label: 'Trusted pricing', color: 'bg-black/[0.04] text-black/60' };
-  }
-
-  if (summary.status === 'custom' || summary.status === 'enterprise') {
-    return { label: 'Custom pricing', color: 'bg-black/[0.04] text-black/60' };
-  }
-
-  if (summary.status === 'free') {
-    return { label: 'Free', color: 'bg-black/[0.04] text-black/60' };
-  }
-
-  return { label: 'Paid', color: 'bg-black/[0.04] text-black/60' };
-}
-
 
 function getHomeTags(tool: Tool): string[] {
   const ext = EXTERNAL_TOOL_TAGS[tool.slug] ?? [];
@@ -58,9 +34,9 @@ function isCoreTag(label: string): boolean {
 }
 
 export default function ToolCard({ tool }: ToolCardProps) {
-  const pricingTag = getPricingTag(tool);
+  const priceBlock = getHomeCardPriceBlock(tool);
   const homeTags = getHomeTags(tool);
-  const pricingDisplay = getPricingDisplay(tool);
+  const pricingHref = `/tool/${tool.slug}/pricing`;
 
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-black/10 bg-white px-5 py-5 transition-all duration-200 ease-out hover:-translate-y-1 hover:border-black/16 hover:bg-[#FFFEFB] hover:shadow-[0_16px_34px_rgba(0,0,0,0.06)]">
@@ -87,9 +63,6 @@ export default function ToolCard({ tool }: ToolCardProps) {
               <EditorialScoreSimple score={tool.rating} />
             </div>
           </div>
-          <span className={`inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-semibold ${pricingTag.color}`}>
-            {pricingTag.label}
-          </span>
         </div>
 
         <p className="mb-4 line-clamp-2 text-sm leading-6 text-gray-600 transition-colors duration-200 group-hover:text-gray-700">
@@ -117,14 +90,13 @@ export default function ToolCard({ tool }: ToolCardProps) {
           </div>
         )}
 
-        <div className="mt-auto flex items-end justify-between gap-3 border-t border-black/8 pt-4">
-          <div className="min-w-0">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-black/35">Starting from</p>
-            <p className="mt-1 truncate text-sm font-semibold text-gray-900">{pricingDisplay.displayText}</p>
-            {pricingDisplay.hintText && pricingDisplay.verification !== 'unverified' && (
-              <p className="mt-1 truncate text-[11px] font-medium text-gray-500">{pricingDisplay.hintText}</p>
-            )}
-          </div>
+        <div className="mt-auto flex items-center justify-between gap-3 border-t border-black/8 pt-4">
+          <Link
+            href={pricingHref}
+            className="min-w-0 truncate text-sm font-semibold text-gray-900 underline decoration-black/15 underline-offset-4 transition-colors duration-200 hover:text-indigo-600 hover:decoration-indigo-300"
+          >
+            {priceBlock.pricePrimary}
+          </Link>
           <div className="flex items-center gap-2">
             <Link
               href={`/tool/${tool.slug}`}

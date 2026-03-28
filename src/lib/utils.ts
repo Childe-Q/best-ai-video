@@ -1,5 +1,6 @@
 import { Tool } from '@/types/tool';
 import { getPricingDisplay, hasVerifiedFreePlan } from '@/lib/pricing/display';
+import { getToolCardPricingDisplay } from '@/lib/pricing/cardDisplay';
 
 /**
  * Get the SEO current year for metadata
@@ -42,5 +43,5 @@ export function hasFreePlan(tool: Tool): boolean {
 }
 
 export function getStartingPrice(tool: Tool): string {
-  return getPricingDisplay(tool).displayText;
+  return getToolCardPricingDisplay(tool).displayText;
 }

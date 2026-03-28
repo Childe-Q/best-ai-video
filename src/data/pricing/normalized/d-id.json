@@ -1,0 +1,2194 @@
+{
+  "toolSlug": "d-id",
+  "capturedAt": "2026-03-28T07:28:55.661Z",
+  "sourceUrls": [
+    "https://www.d-id.com/pricing/",
+    "https://www.d-id.com/faq"
+  ],
+  "governance": {
+    "origin": "newly-captured",
+    "safeToShow": true,
+    "reviewRequired": true
+  },
+  "verification": "verified",
+  "status": "paid",
+  "coarseDisplayText": "Paid plans available",
+  "hasFreePlan": null,
+  "hasFreeTrial": true,
+  "hasSelfServePaid": true,
+  "hasEnterprise": true,
+  "hasInteractivePricing": true,
+  "interactiveReasons": [
+    "pricing upgraded to Playwright: billing-toggle-or-annual-qualifier, missing-price-tokens, source-config-marked-dynamic",
+    "multiple billing states captured"
+  ],
+  "billingStates": [
+    {
+      "stateId": "monthly-toggle",
+      "label": "Monthly",
+      "billingMode": "monthly",
+      "isDefaultVisible": false,
+      "sourcePage": "pricing"
+    },
+    {
+      "stateId": "annual-default",
+      "label": "Annual",
+      "billingMode": "annual",
+      "isDefaultVisible": true,
+      "sourcePage": "pricing"
+    },
+    {
+      "stateId": "monthly-visible",
+      "label": "Monthly",
+      "billingMode": "monthly",
+      "isDefaultVisible": true,
+      "sourcePage": "faq"
+    }
+  ],
+  "captureMeta": {
+    "pageCount": 2,
+    "cardCount": 10,
+    "factCount": 16,
+    "defaultVisibleStateIds": [
+      "annual-default",
+      "monthly-visible"
+    ],
+    "pageSources": [
+      {
+        "sourceType": "pricing",
+        "sourceUrl": "https://www.d-id.com/pricing/",
+        "captureLayer": "playwright",
+        "usedCache": false,
+        "cacheMode": "dynamic",
+        "capturedAt": "2026-03-28T07:28:50.790Z"
+      },
+      {
+        "sourceType": "faq",
+        "sourceUrl": "https://www.d-id.com/faq",
+        "captureLayer": "fetch-cheerio",
+        "usedCache": false,
+        "cacheMode": "static",
+        "capturedAt": "2026-03-28T07:28:55.633Z"
+      }
+    ]
+  },
+  "plans": [
+    {
+      "planId": "trial",
+      "name": "Trial",
+      "planNameRaw": "Trial",
+      "planNameNormalized": "Trial",
+      "badge": null,
+      "subtitle": "14-day trial",
+      "cardDescription": "14-day trial",
+      "cta": {
+        "text": "Start Free Trial",
+        "href": "https://studio.d-id.com/"
+      },
+      "ctaMeta": {
+        "text": "Start Free Trial",
+        "href": "https://studio.d-id.com/",
+        "intent": "start-trial"
+      },
+      "displayedPrice": "$0",
+      "displayedQualifier": "14-day trial",
+      "eligibleForPublicStartPrice": false,
+      "headlinePriceText": "$0",
+      "billingQualifier": "billed annually",
+      "unit": "account",
+      "planType": "trial",
+      "stateAvailability": [
+        "monthly-toggle",
+        "annual-default"
+      ],
+      "billingVariants": [
+        {
+          "stateId": "annual-default",
+          "stateLabel": "Annual",
+          "billingMode": "annual",
+          "isDefaultVisible": true,
+          "displayedPrice": "$0",
+          "displayedQualifier": "14-day trial",
+          "headlinePriceText": "$0",
+          "cardDescription": "14-day trial",
+          "subtitle": "14-day trial",
+          "qualifiers": [
+            "14-day trial"
+          ],
+          "promoNotes": [],
+          "trialNotes": [
+            "14-day trial",
+            "Trial Plan name: Trial$014-day trial$0 billed annually () Start Free Trial Includes Title: Includes3 minutes for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build Agents during your 14-day trialFEATURES INCLUDED Title: FEATURES INCLUDED100+ Stock AI AvatarsVideo & Photo AvatarsUse any of our diverse stock Avatars1 Personal AvatarUpload a video to create custom Avatars and use them in the Videos you create on D-IDStandard voicesFull-screen watermarkA D-ID watermark will appear on the videoAPI accessCreate Avatars, Videos, Campaigns, Agents, or stream Avatars using our APIPersonal use licenseFor non-business projects or individual use. Suitable for personal hobbies, learning, or non-commercial content creation.Standard video processingSee all features"
+          ],
+          "creditOptions": [],
+          "usageOptions": [
+            "3 minutes for Videos, Agents, Video Translate & API"
+          ],
+          "planControls": [],
+          "explanatoryCopy": [
+            "14-day trial",
+            "$0 billed annually ()"
+          ],
+          "rawPlanText": "Trial Plan name: Trial$014-day trial$0 billed annually () Start Free Trial Includes Title: Includes3 minutes for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build Agents during your 14-day trialFEATURES INCLUDED Title: FEATURES INCLUDED100+ Stock AI AvatarsVideo & Photo AvatarsUse any of our diverse stock Avatars1 Personal AvatarUpload a video to create custom Avatars and use them in the Videos you create on D-IDStandard voicesFull-screen watermarkA D-ID watermark will appear on the videoAPI accessCreate Avatars, Videos, Campaigns, Agents, or stream Avatars using our APIPersonal use licenseFor non-business projects or individual use. Suitable for personal hobbies, learning, or non-commercial content creation.Standard video processingSee all features"
+        },
+        {
+          "stateId": "monthly-toggle",
+          "stateLabel": "Monthly",
+          "billingMode": "monthly",
+          "isDefaultVisible": false,
+          "displayedPrice": "$0",
+          "displayedQualifier": "14-day trial",
+          "headlinePriceText": "$0",
+          "cardDescription": "14-day trial",
+          "subtitle": "14-day trial",
+          "qualifiers": [
+            "14-day trial"
+          ],
+          "promoNotes": [],
+          "trialNotes": [
+            "14-day trial",
+            "Trial Plan name: Trial$014-day trial$0 billed annually () Start Free Trial Includes Title: Includes3 minutes for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build Agents during your 14-day trialFEATURES INCLUDED Title: FEATURES INCLUDED100+ Stock AI AvatarsVideo & Photo AvatarsUse any of our diverse stock Avatars1 Personal AvatarUpload a video to create custom Avatars and use them in the Videos you create on D-IDStandard voicesFull-screen watermarkA D-ID watermark will appear on the videoAPI accessCreate Avatars, Videos, Campaigns, Agents, or stream Avatars using our APIPersonal use licenseFor non-business projects or individual use. Suitable for personal hobbies, learning, or non-commercial content creation.Standard video processingSee all features"
+          ],
+          "creditOptions": [],
+          "usageOptions": [
+            "3 minutes for Videos, Agents, Video Translate & API"
+          ],
+          "planControls": [],
+          "explanatoryCopy": [
+            "14-day trial",
+            "$0 billed annually ()"
+          ],
+          "rawPlanText": "Trial Plan name: Trial$014-day trial$0 billed annually () Start Free Trial Includes Title: Includes3 minutes for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build Agents during your 14-day trialFEATURES INCLUDED Title: FEATURES INCLUDED100+ Stock AI AvatarsVideo & Photo AvatarsUse any of our diverse stock Avatars1 Personal AvatarUpload a video to create custom Avatars and use them in the Videos you create on D-IDStandard voicesFull-screen watermarkA D-ID watermark will appear on the videoAPI accessCreate Avatars, Videos, Campaigns, Agents, or stream Avatars using our APIPersonal use licenseFor non-business projects or individual use. Suitable for personal hobbies, learning, or non-commercial content creation.Standard video processingSee all features"
+        }
+      ],
+      "pricePoints": [
+        {
+          "stateId": "monthly-toggle",
+          "amount": 0,
+          "currency": "USD",
+          "cadence": null,
+          "unit": "account",
+          "priceRole": "core-recurring",
+          "billingQualifier": null,
+          "isDefaultVisible": false,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": false,
+          "blockedReason": "trial pricing is not a public paid start price",
+          "rawText": "$0",
+          "displayText": "$0"
+        },
+        {
+          "stateId": "monthly-toggle",
+          "amount": 0,
+          "currency": "USD",
+          "cadence": "year",
+          "unit": "account",
+          "priceRole": "yearly-total",
+          "billingQualifier": "billed annually",
+          "isDefaultVisible": false,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": false,
+          "blockedReason": "trial pricing is not a public paid start price",
+          "rawText": "$0 billed annually ()",
+          "displayText": "$0/yr billed annually"
+        },
+        {
+          "stateId": "annual-default",
+          "amount": 0,
+          "currency": "USD",
+          "cadence": null,
+          "unit": "account",
+          "priceRole": "core-recurring",
+          "billingQualifier": "billed annually",
+          "isDefaultVisible": true,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": false,
+          "blockedReason": "trial pricing is not a public paid start price",
+          "rawText": "$0",
+          "displayText": "$0"
+        },
+        {
+          "stateId": "annual-default",
+          "amount": 0,
+          "currency": "USD",
+          "cadence": "year",
+          "unit": "account",
+          "priceRole": "yearly-total",
+          "billingQualifier": "billed annually",
+          "isDefaultVisible": true,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": false,
+          "blockedReason": "trial pricing is not a public paid start price",
+          "rawText": "$0 billed annually ()",
+          "displayText": "$0/yr billed annually"
+        }
+      ],
+      "bulletSections": [
+        {
+          "title": "Includes",
+          "bullets": [
+            "3 minutes for Videos, Agents, Video Translate & API"
+          ]
+        },
+        {
+          "title": "FEATURES INCLUDED",
+          "bullets": [
+            "100+ Stock AI Avatars",
+            "Video & Photo Avatars",
+            "1 Personal Avatar",
+            "Standard voices",
+            "Full-screen watermark",
+            "API access",
+            "Personal use license",
+            "Standard video processing"
+          ]
+        }
+      ],
+      "bullets": [
+        {
+          "sectionTitle": "Includes",
+          "text": "3 minutes for Videos, Agents, Video Translate & API",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "100+ Stock AI Avatars",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Video & Photo Avatars",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "1 Personal Avatar",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Standard voices",
+          "kind": "feature"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Full-screen watermark",
+          "kind": "feature"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "API access",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Personal use license",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Standard video processing",
+          "kind": "unknown"
+        }
+      ],
+      "coreBullets": [
+        {
+          "sectionTitle": "Includes",
+          "text": "3 minutes for Videos, Agents, Video Translate & API",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "100+ Stock AI Avatars",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Video & Photo Avatars",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "1 Personal Avatar",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Standard voices",
+          "kind": "feature"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Full-screen watermark",
+          "kind": "feature"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "API access",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Personal use license",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Standard video processing",
+          "kind": "unknown"
+        }
+      ],
+      "rawBullets": [
+        "3 minutes for Videos, Agents, Video Translate & API",
+        "100+ Stock AI Avatars",
+        "Video & Photo Avatars",
+        "1 Personal Avatar",
+        "Standard voices",
+        "Full-screen watermark",
+        "API access",
+        "Personal use license",
+        "Standard video processing"
+      ],
+      "pricingQualifiers": [
+        "14-day trial",
+        "billed annually"
+      ],
+      "qualifiers": [
+        "14-day trial",
+        "billed annually"
+      ],
+      "promoNotes": [],
+      "trialNotes": [
+        "14-day trial",
+        "Trial Plan name: Trial$014-day trial$0 billed annually () Start Free Trial Includes Title: Includes3 minutes for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build Agents during your 14-day trialFEATURES INCLUDED Title: FEATURES INCLUDED100+ Stock AI AvatarsVideo & Photo AvatarsUse any of our diverse stock Avatars1 Personal AvatarUpload a video to create custom Avatars and use them in the Videos you create on D-IDStandard voicesFull-screen watermarkA D-ID watermark will appear on the videoAPI accessCreate Avatars, Videos, Campaigns, Agents, or stream Avatars using our APIPersonal use licenseFor non-business projects or individual use. Suitable for personal hobbies, learning, or non-commercial content creation.Standard video processingSee all features"
+      ],
+      "creditOptions": [],
+      "usageOptions": [
+        "3 minutes for Videos, Agents, Video Translate & API"
+      ],
+      "explanatoryCopy": [
+        "14-day trial",
+        "$0 billed annually ()"
+      ],
+      "planControls": [],
+      "marketingBadgeText": null,
+      "addOnCards": [],
+      "upgradeCards": [],
+      "upgradeAddOnInfo": [],
+      "missingFields": [],
+      "cardSnapshots": [
+        {
+          "cardId": "monthly-toggle::trial",
+          "stateId": "monthly-toggle",
+          "isDefaultVisible": false,
+          "cardKind": "core-plan",
+          "displayedPrice": "$0",
+          "displayedQualifier": "14-day trial",
+          "eligibleForPublicStartPrice": false,
+          "selector": ".c-pricing-app-cards__item:nth-of-type(1) .c-pricing-app-card",
+          "provenance": {
+            "captureLayer": "playwright",
+            "provenance": "live",
+            "cacheMode": null,
+            "capturedAt": "2026-03-28T07:28:50.790Z",
+            "sourceType": "pricing",
+            "sourceUrl": "https://www.d-id.com/pricing/"
+          }
+        },
+        {
+          "cardId": "annual-default::trial",
+          "stateId": "annual-default",
+          "isDefaultVisible": true,
+          "cardKind": "core-plan",
+          "displayedPrice": "$0",
+          "displayedQualifier": "14-day trial",
+          "eligibleForPublicStartPrice": false,
+          "selector": ".c-pricing-app-cards__item:nth-of-type(1) .c-pricing-app-card",
+          "provenance": {
+            "captureLayer": "playwright",
+            "provenance": "live",
+            "cacheMode": null,
+            "capturedAt": "2026-03-28T07:28:50.790Z",
+            "sourceType": "pricing",
+            "sourceUrl": "https://www.d-id.com/pricing/"
+          }
+        }
+      ],
+      "sourceCardIds": [
+        "monthly-toggle::trial",
+        "annual-default::trial"
+      ],
+      "rawPlanText": [
+        "Trial Plan name: Trial$014-day trial$0 billed annually () Start Free Trial Includes Title: Includes3 minutes for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build Agents during your 14-day trialFEATURES INCLUDED Title: FEATURES INCLUDED100+ Stock AI AvatarsVideo & Photo AvatarsUse any of our diverse stock Avatars1 Personal AvatarUpload a video to create custom Avatars and use them in the Videos you create on D-IDStandard voicesFull-screen watermarkA D-ID watermark will appear on the videoAPI accessCreate Avatars, Videos, Campaigns, Agents, or stream Avatars using our APIPersonal use licenseFor non-business projects or individual use. Suitable for personal hobbies, learning, or non-commercial content creation.Standard video processingSee all features"
+      ],
+      "sourceMeta": [
+        {
+          "stateId": "monthly-toggle",
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.d-id.com/pricing/",
+          "captureLayer": "playwright",
+          "provenance": "live",
+          "cacheMode": null,
+          "capturedAt": "2026-03-28T07:28:50.790Z"
+        },
+        {
+          "stateId": "annual-default",
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.d-id.com/pricing/",
+          "captureLayer": "playwright",
+          "provenance": "live",
+          "cacheMode": null,
+          "capturedAt": "2026-03-28T07:28:50.790Z"
+        }
+      ],
+      "captureMeta": {
+        "defaultVisibleStateIds": [
+          "annual-default",
+          "monthly-visible"
+        ],
+        "hasDefaultVisibleCardCoverage": true,
+        "cacheFallbackStateIds": []
+      },
+      "notes": [],
+      "sourceUrls": [
+        "https://www.d-id.com/pricing/"
+      ],
+      "evidence": [
+        "Trial Plan name: Trial$014-day trial$0 billed annually () Start Free Trial Includes Title: Includes3 minutes for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build Agents during your 14-day trialFEATURES INCLUDED Title: FEATURES INCLUDED100+ Stock AI AvatarsVideo & Photo AvatarsUse any of our diverse stock Avatars1 Personal AvatarUpload a video to create custom Avatars and use them in the Videos you create on D-IDStandard voicesFull-screen watermarkA D-ID watermark will appear on the videoAPI accessCreate Avatars, Videos, Campaigns, Agents, or stream Avatars using our APIPersonal use licenseFor non-business projects or individual use. Suitable for personal hobbies, learning, or non-commercial content creation.Standard video processingSee all features"
+      ]
+    },
+    {
+      "planId": "lite",
+      "name": "Lite",
+      "planNameRaw": "Lite",
+      "planNameNormalized": "Lite",
+      "badge": null,
+      "subtitle": null,
+      "cardDescription": null,
+      "cta": {
+        "text": "Get started",
+        "href": "https://studio.d-id.com/checkout?price=price_1NSbc5JxEKZ2zAynHAZNFOZz"
+      },
+      "ctaMeta": {
+        "text": "Get started",
+        "href": "https://studio.d-id.com/checkout?price=price_1NSbc5JxEKZ2zAynHAZNFOZz",
+        "intent": "get-started"
+      },
+      "displayedPrice": "$4.7/mo",
+      "displayedQualifier": "$56 billed annually (20% discount)",
+      "eligibleForPublicStartPrice": false,
+      "headlinePriceText": "$5.9/mo",
+      "billingQualifier": "billed annually",
+      "unit": "account",
+      "planType": "trial",
+      "stateAvailability": [
+        "monthly-toggle",
+        "annual-default"
+      ],
+      "billingVariants": [
+        {
+          "stateId": "annual-default",
+          "stateLabel": "Annual",
+          "billingMode": "annual",
+          "isDefaultVisible": true,
+          "displayedPrice": "$4.7/mo",
+          "displayedQualifier": "$56 billed annually (20% discount)",
+          "headlinePriceText": "$4.7/mo",
+          "cardDescription": null,
+          "subtitle": null,
+          "qualifiers": [
+            "$56 billed annually (20% discount)"
+          ],
+          "promoNotes": [
+            "$56 billed annually (20% discount)"
+          ],
+          "trialNotes": [],
+          "creditOptions": [
+            "40 credits",
+            "52 credits",
+            "64 credits"
+          ],
+          "usageOptions": [
+            "10 min. / month for Videos, Agents, Video Translate & API"
+          ],
+          "planControls": [
+            {
+              "controlType": "credit-switch",
+              "label": "Credit options",
+              "valueText": "40 credits",
+              "href": null,
+              "options": [
+                "40 credits",
+                "52 credits",
+                "64 credits"
+              ]
+            }
+          ],
+          "explanatoryCopy": [
+            "$56 billed annually (20% discount)"
+          ],
+          "rawPlanText": "Lite Plan name: Lite$4.7/month$56 billed annually (20% discount) 40 credits40 credits 52 credits52 credits 64 credits64 credits Get started Includes Title: IncludesUnlimited videos1 for your first month!10 min. / month for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build AgentsFEATURES INCLUDED Title: FEATURES INCLUDEDEverything in TrialPhoto & 2 Video AvatarsUse any of our diverse Photo Avatars and 2 Video AvatarsD-ID watermark1 Embedded AgentEmbed your Agents on your siteFast video processingSee all features"
+        },
+        {
+          "stateId": "monthly-toggle",
+          "stateLabel": "Monthly",
+          "billingMode": "monthly",
+          "isDefaultVisible": false,
+          "displayedPrice": "$5.9/mo",
+          "displayedQualifier": "$56 billed annually (20% discount)",
+          "headlinePriceText": "$5.9/mo",
+          "cardDescription": null,
+          "subtitle": null,
+          "qualifiers": [
+            "$56 billed annually (20% discount)"
+          ],
+          "promoNotes": [
+            "$56 billed annually (20% discount)"
+          ],
+          "trialNotes": [],
+          "creditOptions": [
+            "40 credits",
+            "52 credits",
+            "64 credits"
+          ],
+          "usageOptions": [
+            "10 min. / month for Videos, Agents, Video Translate & API"
+          ],
+          "planControls": [
+            {
+              "controlType": "credit-switch",
+              "label": "Credit options",
+              "valueText": "40 credits",
+              "href": null,
+              "options": [
+                "40 credits",
+                "52 credits",
+                "64 credits"
+              ]
+            }
+          ],
+          "explanatoryCopy": [
+            "$56 billed annually (20% discount)"
+          ],
+          "rawPlanText": "Lite Plan name: Lite$5.9/month$56 billed annually (20% discount) 40 credits40 credits 52 credits52 credits 64 credits64 credits Get started Includes Title: IncludesUnlimited videos1 for your first month!10 min. / month for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build AgentsFEATURES INCLUDED Title: FEATURES INCLUDEDEverything in TrialPhoto & 2 Video AvatarsUse any of our diverse Photo Avatars and 2 Video AvatarsD-ID watermark1 Embedded AgentEmbed your Agents on your siteFast video processingSee all features"
+        }
+      ],
+      "pricePoints": [
+        {
+          "stateId": "monthly-toggle",
+          "amount": 5.9,
+          "currency": "USD",
+          "cadence": "month",
+          "unit": "account",
+          "priceRole": "core-recurring",
+          "billingQualifier": null,
+          "isDefaultVisible": false,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": false,
+          "blockedReason": "trial pricing is not a public paid start price",
+          "rawText": "$5.9/month",
+          "displayText": "$5.9/mo"
+        },
+        {
+          "stateId": "monthly-toggle",
+          "amount": 56,
+          "currency": "USD",
+          "cadence": "year",
+          "unit": "account",
+          "priceRole": "yearly-total",
+          "billingQualifier": "billed annually",
+          "isDefaultVisible": false,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": false,
+          "blockedReason": "trial pricing is not a public paid start price",
+          "rawText": "$56 billed annually (20% discount)",
+          "displayText": "$56/yr billed annually"
+        },
+        {
+          "stateId": "annual-default",
+          "amount": 4.7,
+          "currency": "USD",
+          "cadence": "month",
+          "unit": "account",
+          "priceRole": "core-recurring",
+          "billingQualifier": "billed annually",
+          "isDefaultVisible": true,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": false,
+          "blockedReason": "trial pricing is not a public paid start price",
+          "rawText": "$4.7/month",
+          "displayText": "$4.7/mo billed annually"
+        },
+        {
+          "stateId": "annual-default",
+          "amount": 56,
+          "currency": "USD",
+          "cadence": "year",
+          "unit": "account",
+          "priceRole": "yearly-total",
+          "billingQualifier": "billed annually",
+          "isDefaultVisible": true,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": false,
+          "blockedReason": "trial pricing is not a public paid start price",
+          "rawText": "$56 billed annually (20% discount)",
+          "displayText": "$56/yr billed annually"
+        }
+      ],
+      "bulletSections": [
+        {
+          "title": "Includes",
+          "bullets": [
+            "Unlimited videos1 for your first month!",
+            "10 min. / month for Videos, Agents, Video Translate & API"
+          ]
+        },
+        {
+          "title": "FEATURES INCLUDED",
+          "bullets": [
+            "Everything in Trial",
+            "Photo & 2 Video Avatars",
+            "D-ID watermark",
+            "1 Embedded Agent",
+            "Fast video processing"
+          ]
+        }
+      ],
+      "bullets": [
+        {
+          "sectionTitle": "Includes",
+          "text": "Unlimited videos1 for your first month!",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "Includes",
+          "text": "10 min. / month for Videos, Agents, Video Translate & API",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Everything in Trial",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Photo & 2 Video Avatars",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "D-ID watermark",
+          "kind": "feature"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "1 Embedded Agent",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Fast video processing",
+          "kind": "unknown"
+        }
+      ],
+      "coreBullets": [
+        {
+          "sectionTitle": "Includes",
+          "text": "Unlimited videos1 for your first month!",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "Includes",
+          "text": "10 min. / month for Videos, Agents, Video Translate & API",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Everything in Trial",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Photo & 2 Video Avatars",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "D-ID watermark",
+          "kind": "feature"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "1 Embedded Agent",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Fast video processing",
+          "kind": "unknown"
+        }
+      ],
+      "rawBullets": [
+        "Unlimited videos1 for your first month!",
+        "10 min. / month for Videos, Agents, Video Translate & API",
+        "Everything in Trial",
+        "Photo & 2 Video Avatars",
+        "D-ID watermark",
+        "1 Embedded Agent",
+        "Fast video processing"
+      ],
+      "pricingQualifiers": [
+        "$56 billed annually (20% discount)",
+        "billed annually"
+      ],
+      "qualifiers": [
+        "$56 billed annually (20% discount)",
+        "billed annually"
+      ],
+      "promoNotes": [
+        "$56 billed annually (20% discount)"
+      ],
+      "trialNotes": [],
+      "creditOptions": [
+        "40 credits",
+        "52 credits",
+        "64 credits"
+      ],
+      "usageOptions": [
+        "10 min. / month for Videos, Agents, Video Translate & API"
+      ],
+      "explanatoryCopy": [
+        "$56 billed annually (20% discount)"
+      ],
+      "planControls": [
+        {
+          "controlType": "credit-switch",
+          "label": "Credit options",
+          "valueText": "40 credits",
+          "href": null,
+          "options": [
+            "40 credits",
+            "52 credits",
+            "64 credits"
+          ]
+        }
+      ],
+      "marketingBadgeText": null,
+      "addOnCards": [],
+      "upgradeCards": [],
+      "upgradeAddOnInfo": [],
+      "missingFields": [],
+      "cardSnapshots": [
+        {
+          "cardId": "monthly-toggle::lite",
+          "stateId": "monthly-toggle",
+          "isDefaultVisible": false,
+          "cardKind": "core-plan",
+          "displayedPrice": "$5.9/mo",
+          "displayedQualifier": "$56 billed annually (20% discount)",
+          "eligibleForPublicStartPrice": false,
+          "selector": ".c-pricing-app-cards__item:nth-of-type(2) .c-pricing-app-card",
+          "provenance": {
+            "captureLayer": "playwright",
+            "provenance": "live",
+            "cacheMode": null,
+            "capturedAt": "2026-03-28T07:28:50.790Z",
+            "sourceType": "pricing",
+            "sourceUrl": "https://www.d-id.com/pricing/"
+          }
+        },
+        {
+          "cardId": "annual-default::lite",
+          "stateId": "annual-default",
+          "isDefaultVisible": true,
+          "cardKind": "core-plan",
+          "displayedPrice": "$4.7/mo",
+          "displayedQualifier": "$56 billed annually (20% discount)",
+          "eligibleForPublicStartPrice": false,
+          "selector": ".c-pricing-app-cards__item:nth-of-type(2) .c-pricing-app-card",
+          "provenance": {
+            "captureLayer": "playwright",
+            "provenance": "live",
+            "cacheMode": null,
+            "capturedAt": "2026-03-28T07:28:50.790Z",
+            "sourceType": "pricing",
+            "sourceUrl": "https://www.d-id.com/pricing/"
+          }
+        }
+      ],
+      "sourceCardIds": [
+        "monthly-toggle::lite",
+        "annual-default::lite"
+      ],
+      "rawPlanText": [
+        "Lite Plan name: Lite$5.9/month$56 billed annually (20% discount) 40 credits40 credits 52 credits52 credits 64 credits64 credits Get started Includes Title: IncludesUnlimited videos1 for your first month!10 min. / month for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build AgentsFEATURES INCLUDED Title: FEATURES INCLUDEDEverything in TrialPhoto & 2 Video AvatarsUse any of our diverse Photo Avatars and 2 Video AvatarsD-ID watermark1 Embedded AgentEmbed your Agents on your siteFast video processingSee all features",
+        "Lite Plan name: Lite$4.7/month$56 billed annually (20% discount) 40 credits40 credits 52 credits52 credits 64 credits64 credits Get started Includes Title: IncludesUnlimited videos1 for your first month!10 min. / month for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build AgentsFEATURES INCLUDED Title: FEATURES INCLUDEDEverything in TrialPhoto & 2 Video AvatarsUse any of our diverse Photo Avatars and 2 Video AvatarsD-ID watermark1 Embedded AgentEmbed your Agents on your siteFast video processingSee all features"
+      ],
+      "sourceMeta": [
+        {
+          "stateId": "monthly-toggle",
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.d-id.com/pricing/",
+          "captureLayer": "playwright",
+          "provenance": "live",
+          "cacheMode": null,
+          "capturedAt": "2026-03-28T07:28:50.790Z"
+        },
+        {
+          "stateId": "annual-default",
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.d-id.com/pricing/",
+          "captureLayer": "playwright",
+          "provenance": "live",
+          "cacheMode": null,
+          "capturedAt": "2026-03-28T07:28:50.790Z"
+        }
+      ],
+      "captureMeta": {
+        "defaultVisibleStateIds": [
+          "annual-default",
+          "monthly-visible"
+        ],
+        "hasDefaultVisibleCardCoverage": true,
+        "cacheFallbackStateIds": []
+      },
+      "notes": [],
+      "sourceUrls": [
+        "https://www.d-id.com/pricing/"
+      ],
+      "evidence": [
+        "Lite Plan name: Lite$5.9/month$56 billed annually (20% discount) 40 credits40 credits 52 credits52 credits 64 credits64 credits Get started Includes Title: IncludesUnlimited videos1 for your first month!10 min. / month for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build AgentsFEATURES INCLUDED Title: FEATURES INCLUDEDEverything in TrialPhoto & 2 Video AvatarsUse any of our diverse Photo Avatars and 2 Video AvatarsD-ID watermark1 Embedded AgentEmbed your Agents on your siteFast video processingSee all features",
+        "Lite Plan name: Lite$4.7/month$56 billed annually (20% discount) 40 credits40 credits 52 credits52 credits 64 credits64 credits Get started Includes Title: IncludesUnlimited videos1 for your first month!10 min. / month for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build AgentsFEATURES INCLUDED Title: FEATURES INCLUDEDEverything in TrialPhoto & 2 Video AvatarsUse any of our diverse Photo Avatars and 2 Video AvatarsD-ID watermark1 Embedded AgentEmbed your Agents on your siteFast video processingSee all features"
+      ]
+    },
+    {
+      "planId": "pro",
+      "name": "Pro",
+      "planNameRaw": "Pro",
+      "planNameNormalized": "Pro",
+      "badge": null,
+      "subtitle": null,
+      "cardDescription": null,
+      "cta": {
+        "text": "Get started",
+        "href": "https://studio.d-id.com/checkout?price=price_1Nk3sJJxEKZ2zAynejvpq0px"
+      },
+      "ctaMeta": {
+        "text": "Get started",
+        "href": "https://studio.d-id.com/checkout?price=price_1Nk3sJJxEKZ2zAynejvpq0px",
+        "intent": "get-started"
+      },
+      "displayedPrice": "$16/mo",
+      "displayedQualifier": "$191 billed annually (45% discount)",
+      "eligibleForPublicStartPrice": true,
+      "headlinePriceText": "$29/mo",
+      "billingQualifier": "billed annually",
+      "unit": "account",
+      "planType": "paid",
+      "stateAvailability": [
+        "monthly-toggle",
+        "annual-default"
+      ],
+      "billingVariants": [
+        {
+          "stateId": "annual-default",
+          "stateLabel": "Annual",
+          "billingMode": "annual",
+          "isDefaultVisible": true,
+          "displayedPrice": "$16/mo",
+          "displayedQualifier": "$191 billed annually (45% discount)",
+          "headlinePriceText": "$16/mo",
+          "cardDescription": null,
+          "subtitle": null,
+          "qualifiers": [
+            "$191 billed annually (45% discount)"
+          ],
+          "promoNotes": [
+            "$191 billed annually (45% discount)"
+          ],
+          "trialNotes": [],
+          "creditOptions": [
+            "60 credits",
+            "100 credits",
+            "240 credits"
+          ],
+          "usageOptions": [
+            "15 min. / month for Videos, Agents, Video Translate & API"
+          ],
+          "planControls": [
+            {
+              "controlType": "credit-switch",
+              "label": "Credit options",
+              "valueText": "60 credits",
+              "href": null,
+              "options": [
+                "60 credits",
+                "100 credits",
+                "240 credits"
+              ]
+            }
+          ],
+          "explanatoryCopy": [
+            "$191 billed annually (45% discount)"
+          ],
+          "rawPlanText": "Pro Plan name: Pro$16/month$191 billed annually (45% discount) 60 credits60 credits 100 credits100 credits 240 credits240 credits Get started Includes Title: IncludesUnlimited videos1 for your first month!15 min. / month for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build AgentsFEATURES INCLUDED Title: FEATURES INCLUDEDEverything in LiteVideo & Photo AvatarsUse any of our diverse stock avatars3 Personal AvatarsUpload a video to create custom Avatars and use them in the Videos you create on D-IDPremium voicesUse any of our diverse stock avatars1 Voice cloneUpload a voice recording and make your Avatars say anything you type with a custom voiceAI watermarkAn \"AI\" watermark will appear on the video1 Embedded AgentEmbed your Agents on your siteCommercial use licenseFor business-related projects. Includes any content or media used for marketing, profit, or in connection with a business or organization.Faster video processingSee all features"
+        },
+        {
+          "stateId": "monthly-toggle",
+          "stateLabel": "Monthly",
+          "billingMode": "monthly",
+          "isDefaultVisible": false,
+          "displayedPrice": "$29/mo",
+          "displayedQualifier": "$191 billed annually (45% discount)",
+          "headlinePriceText": "$29/mo",
+          "cardDescription": null,
+          "subtitle": null,
+          "qualifiers": [
+            "$191 billed annually (45% discount)"
+          ],
+          "promoNotes": [
+            "$191 billed annually (45% discount)"
+          ],
+          "trialNotes": [],
+          "creditOptions": [
+            "60 credits",
+            "100 credits",
+            "240 credits"
+          ],
+          "usageOptions": [
+            "15 min. / month for Videos, Agents, Video Translate & API"
+          ],
+          "planControls": [
+            {
+              "controlType": "credit-switch",
+              "label": "Credit options",
+              "valueText": "60 credits",
+              "href": null,
+              "options": [
+                "60 credits",
+                "100 credits",
+                "240 credits"
+              ]
+            }
+          ],
+          "explanatoryCopy": [
+            "$191 billed annually (45% discount)"
+          ],
+          "rawPlanText": "Pro Plan name: Pro$29/month$191 billed annually (45% discount) 60 credits60 credits 100 credits100 credits 240 credits240 credits Get started Includes Title: IncludesUnlimited videos1 for your first month!15 min. / month for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build AgentsFEATURES INCLUDED Title: FEATURES INCLUDEDEverything in LiteVideo & Photo AvatarsUse any of our diverse stock avatars3 Personal AvatarsUpload a video to create custom Avatars and use them in the Videos you create on D-IDPremium voicesUse any of our diverse stock avatars1 Voice cloneUpload a voice recording and make your Avatars say anything you type with a custom voiceAI watermarkAn \"AI\" watermark will appear on the video1 Embedded AgentEmbed your Agents on your siteCommercial use licenseFor business-related projects. Includes any content or media used for marketing, profit, or in connection with a business or organization.Faster video processingSee all features"
+        }
+      ],
+      "pricePoints": [
+        {
+          "stateId": "monthly-toggle",
+          "amount": 29,
+          "currency": "USD",
+          "cadence": "month",
+          "unit": "account",
+          "priceRole": "core-recurring",
+          "billingQualifier": null,
+          "isDefaultVisible": false,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": true,
+          "blockedReason": null,
+          "rawText": "$29/month",
+          "displayText": "$29/mo"
+        },
+        {
+          "stateId": "monthly-toggle",
+          "amount": 191,
+          "currency": "USD",
+          "cadence": "year",
+          "unit": "account",
+          "priceRole": "yearly-total",
+          "billingQualifier": "billed annually",
+          "isDefaultVisible": false,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": false,
+          "blockedReason": "yearly-total price is details-only",
+          "rawText": "$191 billed annually (45% discount)",
+          "displayText": "$191/yr billed annually"
+        },
+        {
+          "stateId": "annual-default",
+          "amount": 16,
+          "currency": "USD",
+          "cadence": "month",
+          "unit": "account",
+          "priceRole": "core-recurring",
+          "billingQualifier": "billed annually",
+          "isDefaultVisible": true,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": true,
+          "blockedReason": null,
+          "rawText": "$16/month",
+          "displayText": "$16/mo billed annually"
+        },
+        {
+          "stateId": "annual-default",
+          "amount": 191,
+          "currency": "USD",
+          "cadence": "year",
+          "unit": "account",
+          "priceRole": "yearly-total",
+          "billingQualifier": "billed annually",
+          "isDefaultVisible": true,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": false,
+          "blockedReason": "yearly-total price is details-only",
+          "rawText": "$191 billed annually (45% discount)",
+          "displayText": "$191/yr billed annually"
+        }
+      ],
+      "bulletSections": [
+        {
+          "title": "Includes",
+          "bullets": [
+            "Unlimited videos1 for your first month!",
+            "15 min. / month for Videos, Agents, Video Translate & API"
+          ]
+        },
+        {
+          "title": "FEATURES INCLUDED",
+          "bullets": [
+            "Everything in Lite",
+            "Video & Photo Avatars",
+            "3 Personal Avatars",
+            "Premium voices",
+            "1 Voice clone",
+            "AI watermark",
+            "1 Embedded Agent",
+            "Commercial use license",
+            "Faster video processing"
+          ]
+        }
+      ],
+      "bullets": [
+        {
+          "sectionTitle": "Includes",
+          "text": "Unlimited videos1 for your first month!",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "Includes",
+          "text": "15 min. / month for Videos, Agents, Video Translate & API",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Everything in Lite",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Video & Photo Avatars",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "3 Personal Avatars",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Premium voices",
+          "kind": "feature"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "1 Voice clone",
+          "kind": "feature"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "AI watermark",
+          "kind": "feature"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "1 Embedded Agent",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Commercial use license",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Faster video processing",
+          "kind": "unknown"
+        }
+      ],
+      "coreBullets": [
+        {
+          "sectionTitle": "Includes",
+          "text": "Unlimited videos1 for your first month!",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "Includes",
+          "text": "15 min. / month for Videos, Agents, Video Translate & API",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Everything in Lite",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Video & Photo Avatars",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "3 Personal Avatars",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Premium voices",
+          "kind": "feature"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "1 Voice clone",
+          "kind": "feature"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "AI watermark",
+          "kind": "feature"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "1 Embedded Agent",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Commercial use license",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Faster video processing",
+          "kind": "unknown"
+        }
+      ],
+      "rawBullets": [
+        "Unlimited videos1 for your first month!",
+        "15 min. / month for Videos, Agents, Video Translate & API",
+        "Everything in Lite",
+        "Video & Photo Avatars",
+        "3 Personal Avatars",
+        "Premium voices",
+        "1 Voice clone",
+        "AI watermark",
+        "1 Embedded Agent",
+        "Commercial use license",
+        "Faster video processing"
+      ],
+      "pricingQualifiers": [
+        "$191 billed annually (45% discount)",
+        "billed annually"
+      ],
+      "qualifiers": [
+        "$191 billed annually (45% discount)",
+        "billed annually"
+      ],
+      "promoNotes": [
+        "$191 billed annually (45% discount)"
+      ],
+      "trialNotes": [],
+      "creditOptions": [
+        "60 credits",
+        "100 credits",
+        "240 credits"
+      ],
+      "usageOptions": [
+        "15 min. / month for Videos, Agents, Video Translate & API"
+      ],
+      "explanatoryCopy": [
+        "$191 billed annually (45% discount)"
+      ],
+      "planControls": [
+        {
+          "controlType": "credit-switch",
+          "label": "Credit options",
+          "valueText": "60 credits",
+          "href": null,
+          "options": [
+            "60 credits",
+            "100 credits",
+            "240 credits"
+          ]
+        }
+      ],
+      "marketingBadgeText": null,
+      "addOnCards": [],
+      "upgradeCards": [],
+      "upgradeAddOnInfo": [],
+      "missingFields": [],
+      "cardSnapshots": [
+        {
+          "cardId": "monthly-toggle::pro",
+          "stateId": "monthly-toggle",
+          "isDefaultVisible": false,
+          "cardKind": "core-plan",
+          "displayedPrice": "$29/mo",
+          "displayedQualifier": "$191 billed annually (45% discount)",
+          "eligibleForPublicStartPrice": true,
+          "selector": ".c-pricing-app-cards__item:nth-of-type(3) .c-pricing-app-card",
+          "provenance": {
+            "captureLayer": "playwright",
+            "provenance": "live",
+            "cacheMode": null,
+            "capturedAt": "2026-03-28T07:28:50.790Z",
+            "sourceType": "pricing",
+            "sourceUrl": "https://www.d-id.com/pricing/"
+          }
+        },
+        {
+          "cardId": "annual-default::pro",
+          "stateId": "annual-default",
+          "isDefaultVisible": true,
+          "cardKind": "core-plan",
+          "displayedPrice": "$16/mo",
+          "displayedQualifier": "$191 billed annually (45% discount)",
+          "eligibleForPublicStartPrice": true,
+          "selector": ".c-pricing-app-cards__item:nth-of-type(3) .c-pricing-app-card",
+          "provenance": {
+            "captureLayer": "playwright",
+            "provenance": "live",
+            "cacheMode": null,
+            "capturedAt": "2026-03-28T07:28:50.790Z",
+            "sourceType": "pricing",
+            "sourceUrl": "https://www.d-id.com/pricing/"
+          }
+        }
+      ],
+      "sourceCardIds": [
+        "monthly-toggle::pro",
+        "annual-default::pro"
+      ],
+      "rawPlanText": [
+        "Pro Plan name: Pro$29/month$191 billed annually (45% discount) 60 credits60 credits 100 credits100 credits 240 credits240 credits Get started Includes Title: IncludesUnlimited videos1 for your first month!15 min. / month for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build AgentsFEATURES INCLUDED Title: FEATURES INCLUDEDEverything in LiteVideo & Photo AvatarsUse any of our diverse stock avatars3 Personal AvatarsUpload a video to create custom Avatars and use them in the Videos you create on D-IDPremium voicesUse any of our diverse stock avatars1 Voice cloneUpload a voice recording and make your Avatars say anything you type with a custom voiceAI watermarkAn \"AI\" watermark will appear on the video1 Embedded AgentEmbed your Agents on your siteCommercial use licenseFor business-related projects. Includes any content or media used for marketing, profit, or in connection with a business or organization.Faster video processingSee all features",
+        "Pro Plan name: Pro$16/month$191 billed annually (45% discount) 60 credits60 credits 100 credits100 credits 240 credits240 credits Get started Includes Title: IncludesUnlimited videos1 for your first month!15 min. / month for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build AgentsFEATURES INCLUDED Title: FEATURES INCLUDEDEverything in LiteVideo & Photo AvatarsUse any of our diverse stock avatars3 Personal AvatarsUpload a video to create custom Avatars and use them in the Videos you create on D-IDPremium voicesUse any of our diverse stock avatars1 Voice cloneUpload a voice recording and make your Avatars say anything you type with a custom voiceAI watermarkAn \"AI\" watermark will appear on the video1 Embedded AgentEmbed your Agents on your siteCommercial use licenseFor business-related projects. Includes any content or media used for marketing, profit, or in connection with a business or organization.Faster video processingSee all features"
+      ],
+      "sourceMeta": [
+        {
+          "stateId": "monthly-toggle",
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.d-id.com/pricing/",
+          "captureLayer": "playwright",
+          "provenance": "live",
+          "cacheMode": null,
+          "capturedAt": "2026-03-28T07:28:50.790Z"
+        },
+        {
+          "stateId": "annual-default",
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.d-id.com/pricing/",
+          "captureLayer": "playwright",
+          "provenance": "live",
+          "cacheMode": null,
+          "capturedAt": "2026-03-28T07:28:50.790Z"
+        }
+      ],
+      "captureMeta": {
+        "defaultVisibleStateIds": [
+          "annual-default",
+          "monthly-visible"
+        ],
+        "hasDefaultVisibleCardCoverage": true,
+        "cacheFallbackStateIds": []
+      },
+      "notes": [],
+      "sourceUrls": [
+        "https://www.d-id.com/pricing/"
+      ],
+      "evidence": [
+        "Pro Plan name: Pro$29/month$191 billed annually (45% discount) 60 credits60 credits 100 credits100 credits 240 credits240 credits Get started Includes Title: IncludesUnlimited videos1 for your first month!15 min. / month for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build AgentsFEATURES INCLUDED Title: FEATURES INCLUDEDEverything in LiteVideo & Photo AvatarsUse any of our diverse stock avatars3 Personal AvatarsUpload a video to create custom Avatars and use them in the Videos you create on D-IDPremium voicesUse any of our diverse stock avatars1 Voice cloneUpload a voice recording and make your Avatars say anything you type with a custom voiceAI watermarkAn \"AI\" watermark will appear on the video1 Embedded AgentEmbed your Agents on your siteCommercial use licenseFor business-related projects. Includes any content or media used for marketing, profit, or in connection with a business or organization.Faster video processingSee all features",
+        "Pro Plan name: Pro$16/month$191 billed annually (45% discount) 60 credits60 credits 100 credits100 credits 240 credits240 credits Get started Includes Title: IncludesUnlimited videos1 for your first month!15 min. / month for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build AgentsFEATURES INCLUDED Title: FEATURES INCLUDEDEverything in LiteVideo & Photo AvatarsUse any of our diverse stock avatars3 Personal AvatarsUpload a video to create custom Avatars and use them in the Videos you create on D-IDPremium voicesUse any of our diverse stock avatars1 Voice cloneUpload a voice recording and make your Avatars say anything you type with a custom voiceAI watermarkAn \"AI\" watermark will appear on the video1 Embedded AgentEmbed your Agents on your siteCommercial use licenseFor business-related projects. Includes any content or media used for marketing, profit, or in connection with a business or organization.Faster video processingSee all features"
+      ]
+    },
+    {
+      "planId": "advanced",
+      "name": "Advanced",
+      "planNameRaw": "Advanced",
+      "planNameNormalized": "Advanced",
+      "badge": null,
+      "subtitle": null,
+      "cardDescription": null,
+      "cta": {
+        "text": "Get started",
+        "href": "https://studio.d-id.com/checkout?price=price_1Nk3zcJxEKZ2zAynytYcIHGD"
+      },
+      "ctaMeta": {
+        "text": "Get started",
+        "href": "https://studio.d-id.com/checkout?price=price_1Nk3zcJxEKZ2zAynytYcIHGD",
+        "intent": "get-started"
+      },
+      "displayedPrice": "$108/mo",
+      "displayedQualifier": "$1,293 billed annually (45% discount)",
+      "eligibleForPublicStartPrice": true,
+      "headlinePriceText": "$196/mo",
+      "billingQualifier": "billed annually",
+      "unit": "account",
+      "planType": "paid",
+      "stateAvailability": [
+        "monthly-toggle",
+        "annual-default"
+      ],
+      "billingVariants": [
+        {
+          "stateId": "annual-default",
+          "stateLabel": "Annual",
+          "billingMode": "annual",
+          "isDefaultVisible": true,
+          "displayedPrice": "$108/mo",
+          "displayedQualifier": "$1,293 billed annually (45% discount)",
+          "headlinePriceText": "$108/mo",
+          "cardDescription": null,
+          "subtitle": null,
+          "qualifiers": [
+            "$1,293 billed annually (45% discount)"
+          ],
+          "promoNotes": [
+            "$1,293 billed annually (45% discount)"
+          ],
+          "trialNotes": [],
+          "creditOptions": [
+            "400 credits",
+            "600 credits",
+            "700 credits"
+          ],
+          "usageOptions": [
+            "100 min. / month for Videos, Agents, Video Translate & API"
+          ],
+          "planControls": [
+            {
+              "controlType": "credit-switch",
+              "label": "Credit options",
+              "valueText": "400 credits",
+              "href": null,
+              "options": [
+                "400 credits",
+                "600 credits",
+                "700 credits"
+              ]
+            }
+          ],
+          "explanatoryCopy": [
+            "$1,293 billed annually (45% discount)"
+          ],
+          "rawPlanText": "Advanced Plan name: Advanced$108/month$1,293 billed annually (45% discount) 400 credits400 credits 600 credits600 credits 700 credits700 credits Get started Includes Title: IncludesUnlimited videos1 for your first month100 min. / month for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build AgentsFEATURES INCLUDED Title: FEATURES INCLUDEDEverything in ProVideo & Photo AvatarsUse any of our diverse stock avatars5 Personal AvatarsUpload a video to create custom Avatars and use them in the Videos you create on D-ID3 Voice clonesUpload a voice recording and make your Avatars say anything you type with a custom voice3 Embedded AgentsEmbed your Agents on your siteCustom logoRemove the watermark and replace it with your own logo, or leave it blankFaster video processingSee all features"
+        },
+        {
+          "stateId": "monthly-toggle",
+          "stateLabel": "Monthly",
+          "billingMode": "monthly",
+          "isDefaultVisible": false,
+          "displayedPrice": "$196/mo",
+          "displayedQualifier": "$1,293 billed annually (45% discount)",
+          "headlinePriceText": "$196/mo",
+          "cardDescription": null,
+          "subtitle": null,
+          "qualifiers": [
+            "$1,293 billed annually (45% discount)"
+          ],
+          "promoNotes": [
+            "$1,293 billed annually (45% discount)"
+          ],
+          "trialNotes": [],
+          "creditOptions": [
+            "400 credits",
+            "600 credits",
+            "700 credits"
+          ],
+          "usageOptions": [
+            "100 min. / month for Videos, Agents, Video Translate & API"
+          ],
+          "planControls": [
+            {
+              "controlType": "credit-switch",
+              "label": "Credit options",
+              "valueText": "400 credits",
+              "href": null,
+              "options": [
+                "400 credits",
+                "600 credits",
+                "700 credits"
+              ]
+            }
+          ],
+          "explanatoryCopy": [
+            "$1,293 billed annually (45% discount)"
+          ],
+          "rawPlanText": "Advanced Plan name: Advanced$196/month$1,293 billed annually (45% discount) 400 credits400 credits 600 credits600 credits 700 credits700 credits Get started Includes Title: IncludesUnlimited videos1 for your first month100 min. / month for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build AgentsFEATURES INCLUDED Title: FEATURES INCLUDEDEverything in ProVideo & Photo AvatarsUse any of our diverse stock avatars5 Personal AvatarsUpload a video to create custom Avatars and use them in the Videos you create on D-ID3 Voice clonesUpload a voice recording and make your Avatars say anything you type with a custom voice3 Embedded AgentsEmbed your Agents on your siteCustom logoRemove the watermark and replace it with your own logo, or leave it blankFaster video processingSee all features"
+        }
+      ],
+      "pricePoints": [
+        {
+          "stateId": "monthly-toggle",
+          "amount": 196,
+          "currency": "USD",
+          "cadence": "month",
+          "unit": "account",
+          "priceRole": "core-recurring",
+          "billingQualifier": null,
+          "isDefaultVisible": false,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": true,
+          "blockedReason": null,
+          "rawText": "$196/month",
+          "displayText": "$196/mo"
+        },
+        {
+          "stateId": "monthly-toggle",
+          "amount": 1293,
+          "currency": "USD",
+          "cadence": "year",
+          "unit": "account",
+          "priceRole": "yearly-total",
+          "billingQualifier": "billed annually",
+          "isDefaultVisible": false,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": false,
+          "blockedReason": "yearly-total price is details-only",
+          "rawText": "$1,293 billed annually (45% discount)",
+          "displayText": "$1293/yr billed annually"
+        },
+        {
+          "stateId": "annual-default",
+          "amount": 108,
+          "currency": "USD",
+          "cadence": "month",
+          "unit": "account",
+          "priceRole": "core-recurring",
+          "billingQualifier": "billed annually",
+          "isDefaultVisible": true,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": true,
+          "blockedReason": null,
+          "rawText": "$108/month",
+          "displayText": "$108/mo billed annually"
+        },
+        {
+          "stateId": "annual-default",
+          "amount": 1293,
+          "currency": "USD",
+          "cadence": "year",
+          "unit": "account",
+          "priceRole": "yearly-total",
+          "billingQualifier": "billed annually",
+          "isDefaultVisible": true,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": false,
+          "blockedReason": "yearly-total price is details-only",
+          "rawText": "$1,293 billed annually (45% discount)",
+          "displayText": "$1293/yr billed annually"
+        }
+      ],
+      "bulletSections": [
+        {
+          "title": "Includes",
+          "bullets": [
+            "Unlimited videos1 for your first month",
+            "100 min. / month for Videos, Agents, Video Translate & API"
+          ]
+        },
+        {
+          "title": "FEATURES INCLUDED",
+          "bullets": [
+            "Everything in Pro",
+            "Video & Photo Avatars",
+            "5 Personal Avatars",
+            "3 Voice clones",
+            "3 Embedded Agents",
+            "Custom logo",
+            "Faster video processing"
+          ]
+        }
+      ],
+      "bullets": [
+        {
+          "sectionTitle": "Includes",
+          "text": "Unlimited videos1 for your first month",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "Includes",
+          "text": "100 min. / month for Videos, Agents, Video Translate & API",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Everything in Pro",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Video & Photo Avatars",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "5 Personal Avatars",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "3 Voice clones",
+          "kind": "feature"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "3 Embedded Agents",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Custom logo",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Faster video processing",
+          "kind": "unknown"
+        }
+      ],
+      "coreBullets": [
+        {
+          "sectionTitle": "Includes",
+          "text": "Unlimited videos1 for your first month",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "Includes",
+          "text": "100 min. / month for Videos, Agents, Video Translate & API",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Everything in Pro",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Video & Photo Avatars",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "5 Personal Avatars",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "3 Voice clones",
+          "kind": "feature"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "3 Embedded Agents",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Custom logo",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "FEATURES INCLUDED",
+          "text": "Faster video processing",
+          "kind": "unknown"
+        }
+      ],
+      "rawBullets": [
+        "Unlimited videos1 for your first month",
+        "100 min. / month for Videos, Agents, Video Translate & API",
+        "Everything in Pro",
+        "Video & Photo Avatars",
+        "5 Personal Avatars",
+        "3 Voice clones",
+        "3 Embedded Agents",
+        "Custom logo",
+        "Faster video processing"
+      ],
+      "pricingQualifiers": [
+        "$1,293 billed annually (45% discount)",
+        "billed annually"
+      ],
+      "qualifiers": [
+        "$1,293 billed annually (45% discount)",
+        "billed annually"
+      ],
+      "promoNotes": [
+        "$1,293 billed annually (45% discount)"
+      ],
+      "trialNotes": [],
+      "creditOptions": [
+        "400 credits",
+        "600 credits",
+        "700 credits"
+      ],
+      "usageOptions": [
+        "100 min. / month for Videos, Agents, Video Translate & API"
+      ],
+      "explanatoryCopy": [
+        "$1,293 billed annually (45% discount)"
+      ],
+      "planControls": [
+        {
+          "controlType": "credit-switch",
+          "label": "Credit options",
+          "valueText": "400 credits",
+          "href": null,
+          "options": [
+            "400 credits",
+            "600 credits",
+            "700 credits"
+          ]
+        }
+      ],
+      "marketingBadgeText": null,
+      "addOnCards": [],
+      "upgradeCards": [],
+      "upgradeAddOnInfo": [],
+      "missingFields": [],
+      "cardSnapshots": [
+        {
+          "cardId": "monthly-toggle::advanced",
+          "stateId": "monthly-toggle",
+          "isDefaultVisible": false,
+          "cardKind": "core-plan",
+          "displayedPrice": "$196/mo",
+          "displayedQualifier": "$1,293 billed annually (45% discount)",
+          "eligibleForPublicStartPrice": true,
+          "selector": ".c-pricing-app-cards__item:nth-of-type(4) .c-pricing-app-card",
+          "provenance": {
+            "captureLayer": "playwright",
+            "provenance": "live",
+            "cacheMode": null,
+            "capturedAt": "2026-03-28T07:28:50.790Z",
+            "sourceType": "pricing",
+            "sourceUrl": "https://www.d-id.com/pricing/"
+          }
+        },
+        {
+          "cardId": "annual-default::advanced",
+          "stateId": "annual-default",
+          "isDefaultVisible": true,
+          "cardKind": "core-plan",
+          "displayedPrice": "$108/mo",
+          "displayedQualifier": "$1,293 billed annually (45% discount)",
+          "eligibleForPublicStartPrice": true,
+          "selector": ".c-pricing-app-cards__item:nth-of-type(4) .c-pricing-app-card",
+          "provenance": {
+            "captureLayer": "playwright",
+            "provenance": "live",
+            "cacheMode": null,
+            "capturedAt": "2026-03-28T07:28:50.790Z",
+            "sourceType": "pricing",
+            "sourceUrl": "https://www.d-id.com/pricing/"
+          }
+        }
+      ],
+      "sourceCardIds": [
+        "monthly-toggle::advanced",
+        "annual-default::advanced"
+      ],
+      "rawPlanText": [
+        "Advanced Plan name: Advanced$196/month$1,293 billed annually (45% discount) 400 credits400 credits 600 credits600 credits 700 credits700 credits Get started Includes Title: IncludesUnlimited videos1 for your first month100 min. / month for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build AgentsFEATURES INCLUDED Title: FEATURES INCLUDEDEverything in ProVideo & Photo AvatarsUse any of our diverse stock avatars5 Personal AvatarsUpload a video to create custom Avatars and use them in the Videos you create on D-ID3 Voice clonesUpload a voice recording and make your Avatars say anything you type with a custom voice3 Embedded AgentsEmbed your Agents on your siteCustom logoRemove the watermark and replace it with your own logo, or leave it blankFaster video processingSee all features",
+        "Advanced Plan name: Advanced$108/month$1,293 billed annually (45% discount) 400 credits400 credits 600 credits600 credits 700 credits700 credits Get started Includes Title: IncludesUnlimited videos1 for your first month100 min. / month for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build AgentsFEATURES INCLUDED Title: FEATURES INCLUDEDEverything in ProVideo & Photo AvatarsUse any of our diverse stock avatars5 Personal AvatarsUpload a video to create custom Avatars and use them in the Videos you create on D-ID3 Voice clonesUpload a voice recording and make your Avatars say anything you type with a custom voice3 Embedded AgentsEmbed your Agents on your siteCustom logoRemove the watermark and replace it with your own logo, or leave it blankFaster video processingSee all features"
+      ],
+      "sourceMeta": [
+        {
+          "stateId": "monthly-toggle",
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.d-id.com/pricing/",
+          "captureLayer": "playwright",
+          "provenance": "live",
+          "cacheMode": null,
+          "capturedAt": "2026-03-28T07:28:50.790Z"
+        },
+        {
+          "stateId": "annual-default",
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.d-id.com/pricing/",
+          "captureLayer": "playwright",
+          "provenance": "live",
+          "cacheMode": null,
+          "capturedAt": "2026-03-28T07:28:50.790Z"
+        }
+      ],
+      "captureMeta": {
+        "defaultVisibleStateIds": [
+          "annual-default",
+          "monthly-visible"
+        ],
+        "hasDefaultVisibleCardCoverage": true,
+        "cacheFallbackStateIds": []
+      },
+      "notes": [],
+      "sourceUrls": [
+        "https://www.d-id.com/pricing/"
+      ],
+      "evidence": [
+        "Advanced Plan name: Advanced$196/month$1,293 billed annually (45% discount) 400 credits400 credits 600 credits600 credits 700 credits700 credits Get started Includes Title: IncludesUnlimited videos1 for your first month100 min. / month for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build AgentsFEATURES INCLUDED Title: FEATURES INCLUDEDEverything in ProVideo & Photo AvatarsUse any of our diverse stock avatars5 Personal AvatarsUpload a video to create custom Avatars and use them in the Videos you create on D-ID3 Voice clonesUpload a voice recording and make your Avatars say anything you type with a custom voice3 Embedded AgentsEmbed your Agents on your siteCustom logoRemove the watermark and replace it with your own logo, or leave it blankFaster video processingSee all features",
+        "Advanced Plan name: Advanced$108/month$1,293 billed annually (45% discount) 400 credits400 credits 600 credits600 credits 700 credits700 credits Get started Includes Title: IncludesUnlimited videos1 for your first month100 min. / month for Videos, Agents, Video Translate & APICreate videos, translate videos, send Campaigns, or build AgentsFEATURES INCLUDED Title: FEATURES INCLUDEDEverything in ProVideo & Photo AvatarsUse any of our diverse stock avatars5 Personal AvatarsUpload a video to create custom Avatars and use them in the Videos you create on D-ID3 Voice clonesUpload a voice recording and make your Avatars say anything you type with a custom voice3 Embedded AgentsEmbed your Agents on your siteCustom logoRemove the watermark and replace it with your own logo, or leave it blankFaster video processingSee all features"
+      ]
+    },
+    {
+      "planId": "enterprise",
+      "name": "Enterprise",
+      "planNameRaw": "Enterprise",
+      "planNameNormalized": "Enterprise",
+      "badge": null,
+      "subtitle": null,
+      "cardDescription": null,
+      "cta": {
+        "text": "Contact us",
+        "href": "https://www.d-id.com/contact-sales/?utm_campaign=Active%20users-%20DS%20workflow&utm_source=email&utm_medium=CU-studio"
+      },
+      "ctaMeta": {
+        "text": "Contact us",
+        "href": "https://www.d-id.com/contact-sales/?utm_campaign=Active%20users-%20DS%20workflow&utm_source=email&utm_medium=CU-studio",
+        "intent": "contact-sales"
+      },
+      "displayedPrice": "Let's talk",
+      "displayedQualifier": null,
+      "eligibleForPublicStartPrice": false,
+      "headlinePriceText": null,
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "enterprise",
+      "stateAvailability": [
+        "monthly-toggle",
+        "annual-default"
+      ],
+      "billingVariants": [
+        {
+          "stateId": "annual-default",
+          "stateLabel": "Annual",
+          "billingMode": "annual",
+          "isDefaultVisible": true,
+          "displayedPrice": "Let's talk",
+          "displayedQualifier": null,
+          "headlinePriceText": "Let's talk",
+          "cardDescription": null,
+          "subtitle": null,
+          "qualifiers": [],
+          "promoNotes": [],
+          "trialNotes": [],
+          "creditOptions": [],
+          "usageOptions": [],
+          "planControls": [],
+          "explanatoryCopy": [
+            "NaN billed annually ()"
+          ],
+          "rawPlanText": "Enterprise Plan name: EnterpriseLet's talkNaN billed annually () Contact us Includes Title: IncludesUnlimited video minutesCustom minutes for Campaigns & AgentsCustom minutes for APIKey Features Title: Key FeaturesEverything in AdvancedCustom # of Personal & Studio AvatarsProfessional voice cloningCustomer Success ManagerFastest video processingConcurrent video processingEnterprise-grade securityIntegrations supportVideo editing servicesProfessional translation servicesTeam collaborationCreate and edit anything together as a teamSee all features"
+        },
+        {
+          "stateId": "monthly-toggle",
+          "stateLabel": "Monthly",
+          "billingMode": "monthly",
+          "isDefaultVisible": false,
+          "displayedPrice": "Let's talk",
+          "displayedQualifier": null,
+          "headlinePriceText": "Let's talk",
+          "cardDescription": null,
+          "subtitle": null,
+          "qualifiers": [],
+          "promoNotes": [],
+          "trialNotes": [],
+          "creditOptions": [],
+          "usageOptions": [],
+          "planControls": [],
+          "explanatoryCopy": [
+            "NaN billed annually ()"
+          ],
+          "rawPlanText": "Enterprise Plan name: EnterpriseLet's talkNaN billed annually () Contact us Includes Title: IncludesUnlimited video minutesCustom minutes for Campaigns & AgentsCustom minutes for APIKey Features Title: Key FeaturesEverything in AdvancedCustom # of Personal & Studio AvatarsProfessional voice cloningCustomer Success ManagerFastest video processingConcurrent video processingEnterprise-grade securityIntegrations supportVideo editing servicesProfessional translation servicesTeam collaborationCreate and edit anything together as a teamSee all features"
+        }
+      ],
+      "pricePoints": [
+        {
+          "stateId": "monthly-toggle",
+          "amount": null,
+          "currency": null,
+          "cadence": null,
+          "unit": "account",
+          "priceRole": "custom",
+          "billingQualifier": null,
+          "isDefaultVisible": false,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": false,
+          "blockedReason": "custom pricing is not a numeric self-serve start price",
+          "rawText": "Let's talk",
+          "displayText": null
+        },
+        {
+          "stateId": "monthly-toggle",
+          "amount": null,
+          "currency": null,
+          "cadence": "year",
+          "unit": "account",
+          "priceRole": "yearly-total",
+          "billingQualifier": "billed annually",
+          "isDefaultVisible": false,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": false,
+          "blockedReason": "yearly-total price is details-only",
+          "rawText": "NaN billed annually ()",
+          "displayText": null
+        },
+        {
+          "stateId": "annual-default",
+          "amount": null,
+          "currency": null,
+          "cadence": null,
+          "unit": "account",
+          "priceRole": "custom",
+          "billingQualifier": null,
+          "isDefaultVisible": true,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": false,
+          "blockedReason": "custom pricing is not a numeric self-serve start price",
+          "rawText": "Let's talk",
+          "displayText": null
+        },
+        {
+          "stateId": "annual-default",
+          "amount": null,
+          "currency": null,
+          "cadence": "year",
+          "unit": "account",
+          "priceRole": "yearly-total",
+          "billingQualifier": "billed annually",
+          "isDefaultVisible": true,
+          "isCorePlanPrice": true,
+          "eligibleForRecommendedDisplay": false,
+          "blockedReason": "yearly-total price is details-only",
+          "rawText": "NaN billed annually ()",
+          "displayText": null
+        }
+      ],
+      "bulletSections": [
+        {
+          "title": "Includes",
+          "bullets": [
+            "Unlimited video minutes",
+            "Custom minutes for Campaigns & Agents",
+            "Custom minutes for API"
+          ]
+        },
+        {
+          "title": "Key Features",
+          "bullets": [
+            "Everything in Advanced",
+            "Custom # of Personal & Studio Avatars",
+            "Professional voice cloning",
+            "Customer Success Manager",
+            "Fastest video processing",
+            "Concurrent video processing",
+            "Enterprise-grade security",
+            "Integrations support",
+            "Video editing services",
+            "Professional translation services",
+            "Team collaboration"
+          ]
+        }
+      ],
+      "bullets": [
+        {
+          "sectionTitle": "Includes",
+          "text": "Unlimited video minutes",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "Includes",
+          "text": "Custom minutes for Campaigns & Agents",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "Includes",
+          "text": "Custom minutes for API",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Everything in Advanced",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Custom # of Personal & Studio Avatars",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Professional voice cloning",
+          "kind": "feature"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Customer Success Manager",
+          "kind": "support"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Fastest video processing",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Concurrent video processing",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Enterprise-grade security",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Integrations support",
+          "kind": "support"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Video editing services",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Professional translation services",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Team collaboration",
+          "kind": "unknown"
+        }
+      ],
+      "coreBullets": [
+        {
+          "sectionTitle": "Includes",
+          "text": "Unlimited video minutes",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "Includes",
+          "text": "Custom minutes for Campaigns & Agents",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "Includes",
+          "text": "Custom minutes for API",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Everything in Advanced",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Custom # of Personal & Studio Avatars",
+          "kind": "limit"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Professional voice cloning",
+          "kind": "feature"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Customer Success Manager",
+          "kind": "support"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Fastest video processing",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Concurrent video processing",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Enterprise-grade security",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Integrations support",
+          "kind": "support"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Video editing services",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Professional translation services",
+          "kind": "unknown"
+        },
+        {
+          "sectionTitle": "Key Features",
+          "text": "Team collaboration",
+          "kind": "unknown"
+        }
+      ],
+      "rawBullets": [
+        "Unlimited video minutes",
+        "Custom minutes for Campaigns & Agents",
+        "Custom minutes for API",
+        "Everything in Advanced",
+        "Custom # of Personal & Studio Avatars",
+        "Professional voice cloning",
+        "Customer Success Manager",
+        "Fastest video processing",
+        "Concurrent video processing",
+        "Enterprise-grade security",
+        "Integrations support",
+        "Video editing services",
+        "Professional translation services",
+        "Team collaboration"
+      ],
+      "pricingQualifiers": [],
+      "qualifiers": [],
+      "promoNotes": [],
+      "trialNotes": [],
+      "creditOptions": [],
+      "usageOptions": [],
+      "explanatoryCopy": [
+        "NaN billed annually ()"
+      ],
+      "planControls": [],
+      "marketingBadgeText": null,
+      "addOnCards": [],
+      "upgradeCards": [],
+      "upgradeAddOnInfo": [],
+      "missingFields": [
+        "qualifier"
+      ],
+      "cardSnapshots": [
+        {
+          "cardId": "monthly-toggle::enterprise",
+          "stateId": "monthly-toggle",
+          "isDefaultVisible": false,
+          "cardKind": "enterprise-card",
+          "displayedPrice": "Let's talk",
+          "displayedQualifier": null,
+          "eligibleForPublicStartPrice": false,
+          "selector": ".c-pricing-app-cards__item:nth-of-type(5) .c-pricing-app-card",
+          "provenance": {
+            "captureLayer": "playwright",
+            "provenance": "live",
+            "cacheMode": null,
+            "capturedAt": "2026-03-28T07:28:50.790Z",
+            "sourceType": "pricing",
+            "sourceUrl": "https://www.d-id.com/pricing/"
+          }
+        },
+        {
+          "cardId": "annual-default::enterprise",
+          "stateId": "annual-default",
+          "isDefaultVisible": true,
+          "cardKind": "enterprise-card",
+          "displayedPrice": "Let's talk",
+          "displayedQualifier": null,
+          "eligibleForPublicStartPrice": false,
+          "selector": ".c-pricing-app-cards__item:nth-of-type(5) .c-pricing-app-card",
+          "provenance": {
+            "captureLayer": "playwright",
+            "provenance": "live",
+            "cacheMode": null,
+            "capturedAt": "2026-03-28T07:28:50.790Z",
+            "sourceType": "pricing",
+            "sourceUrl": "https://www.d-id.com/pricing/"
+          }
+        }
+      ],
+      "sourceCardIds": [
+        "monthly-toggle::enterprise",
+        "annual-default::enterprise"
+      ],
+      "rawPlanText": [
+        "Enterprise Plan name: EnterpriseLet's talkNaN billed annually () Contact us Includes Title: IncludesUnlimited video minutesCustom minutes for Campaigns & AgentsCustom minutes for APIKey Features Title: Key FeaturesEverything in AdvancedCustom # of Personal & Studio AvatarsProfessional voice cloningCustomer Success ManagerFastest video processingConcurrent video processingEnterprise-grade securityIntegrations supportVideo editing servicesProfessional translation servicesTeam collaborationCreate and edit anything together as a teamSee all features"
+      ],
+      "sourceMeta": [
+        {
+          "stateId": "monthly-toggle",
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.d-id.com/pricing/",
+          "captureLayer": "playwright",
+          "provenance": "live",
+          "cacheMode": null,
+          "capturedAt": "2026-03-28T07:28:50.790Z"
+        },
+        {
+          "stateId": "annual-default",
+          "sourceType": "pricing",
+          "sourceUrl": "https://www.d-id.com/pricing/",
+          "captureLayer": "playwright",
+          "provenance": "live",
+          "cacheMode": null,
+          "capturedAt": "2026-03-28T07:28:50.790Z"
+        }
+      ],
+      "captureMeta": {
+        "defaultVisibleStateIds": [
+          "annual-default",
+          "monthly-visible"
+        ],
+        "hasDefaultVisibleCardCoverage": true,
+        "cacheFallbackStateIds": []
+      },
+      "notes": [],
+      "sourceUrls": [
+        "https://www.d-id.com/pricing/"
+      ],
+      "evidence": [
+        "Enterprise Plan name: EnterpriseLet's talkNaN billed annually () Contact us Includes Title: IncludesUnlimited video minutesCustom minutes for Campaigns & AgentsCustom minutes for APIKey Features Title: Key FeaturesEverything in AdvancedCustom # of Personal & Studio AvatarsProfessional voice cloningCustomer Success ManagerFastest video processingConcurrent video processingEnterprise-grade securityIntegrations supportVideo editing servicesProfessional translation servicesTeam collaborationCreate and edit anything together as a teamSee all features"
+      ]
+    }
+  ],
+  "recommendedDisplayPrice": {
+    "amount": 16,
+    "currency": "USD",
+    "cadence": "month",
+    "unit": "account",
+    "displayText": "Starts at $16/mo billed annually",
+    "safeToShow": true,
+    "reason": "Derived from Pro. Qualifier preserved: billed annually.",
+    "planId": "pro",
+    "planName": "Pro",
+    "stateId": "annual-default",
+    "priceRole": "core-recurring",
+    "comparisonEligible": true,
+    "structuredDataEligible": true,
+    "scoringEligible": true
+  },
+  "verifiedStartingPrice": {
+    "amount": 16,
+    "currency": "USD",
+    "cadence": "month",
+    "displayText": "Starts at $16/mo billed annually",
+    "safeToShow": true,
+    "reason": "Derived from Pro. Qualifier preserved: billed annually."
+  },
+  "notes": [
+    "pricing upgraded to Playwright: billing-toggle-or-annual-qualifier, missing-price-tokens, source-config-marked-dynamic",
+    "Trial was preserved as trial-only and not normalized as a free plan.",
+    "Lite remains classified as trial-like because the public card still inherits Trial language and should not seed the public start price without manual confirmation.",
+    "Annual-billed qualifier is preserved whenever an annual state price point is selected.",
+    "Candidate result only. Do not replace existing frontend pricing or exact-price display without manual review."
+  ]
+}

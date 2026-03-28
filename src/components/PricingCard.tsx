@@ -26,6 +26,8 @@ export default function PricingCard({
   comparisonTable
 }: PricingCardProps) {
   const { name, price, features, featureItems, ctaText, badge, description } = plan;
+  const shortUnitNote = plan.unitPriceNote?.trim();
+  const shortBillingNote = plan.billingNote?.trim();
   
   // Extract monthly and yearly prices
   let monthlyPrice: number | null = null;
@@ -74,7 +76,10 @@ export default function PricingCard({
   let priceDisplay: string;
   
   if (isContactSales) {
-    priceDisplay = 'Contact sales';
+    priceDisplay =
+      typeof price === 'string' && price.toLowerCase().includes('custom')
+        ? 'Custom pricing'
+        : 'Contact sales';
   } else if (typeof currentPrice === 'number') {
     priceDisplay = currentPrice === 0 ? (isFreePlan ? 'Free' : 'N/A') : `$${currentPrice}`;
   } else if (typeof price === 'string') {
@@ -179,6 +184,16 @@ export default function PricingCard({
         {isAnnual && typeof currentPrice === 'number' && currentPrice > 0 && yearlyTotal !== null && (
           <p className="text-xs text-gray-600 font-medium mt-1">
             Billed yearly (${yearlyTotal}/yr)
+          </p>
+        )}
+        {shortUnitNote && (
+          <p className="text-xs text-gray-600 font-medium mt-1">
+            {shortUnitNote}
+          </p>
+        )}
+        {!isAnnual && shortBillingNote && (
+          <p className="text-xs text-gray-600 font-medium mt-1">
+            {shortBillingNote}
           </p>
         )}
       </div>

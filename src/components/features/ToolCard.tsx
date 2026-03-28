@@ -52,6 +52,7 @@ export default function ToolCard({
   policyLabel = 'Policy',
 }: ToolCardProps) {
   const cta = resolveToolCardCta(tool);
+  const pricingHref = `/tool/${tool.toolSlug}/pricing`;
 
   const trackToolCardClick = () => {
     track('click_tool_card', {
@@ -135,12 +136,15 @@ export default function ToolCard({
         </div>
 
         <dl className="space-y-4">
-          {hasDisplayValue(tool.pricingStartAt) && (
-            <div className="border-t border-gray-100 pt-4">
-              <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Pricing</dt>
-              <dd className="mt-1 text-sm leading-6 text-gray-800">{tool.pricingStartAt}</dd>
-            </div>
-          )}
+          <div className="border-t border-gray-100 pt-4">
+            <Link
+              href={pricingHref}
+              onClick={trackToolCardClick}
+              className="inline-flex max-w-full items-center text-sm font-semibold leading-6 text-gray-900 underline decoration-black/15 underline-offset-4 transition-colors hover:text-indigo-600 hover:decoration-indigo-300"
+            >
+              <span className="truncate">{tool.priceBlock?.pricePrimary ?? 'Pricing not verified'}</span>
+            </Link>
+          </div>
 
           {hasDisplayValue(tool.watermarkPolicy) && (
             <div className="border-t border-gray-100 pt-4">

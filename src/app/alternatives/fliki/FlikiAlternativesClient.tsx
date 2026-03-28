@@ -9,6 +9,7 @@ import { AlternativeTool } from '@/components/alternatives/types';
 import { getToolByNameOrSlug } from '@/lib/alternatives/mapToolNameToSlug';
 import { getPricingDetails } from '@/lib/alternatives/getPricingDetails';
 import { getPricingDisplay } from '@/lib/pricing/display';
+import { getToolCardPricingDisplay } from '@/lib/pricing/cardDisplay';
 import { isTryNowTool } from '@/lib/alternatives/affiliateWhitelist';
 
 type FilterState = {
@@ -165,7 +166,7 @@ export default function FlikiAlternativesClient({ data }: FlikiAlternativesClien
       slug: tool.slug,
       name: tool.name,
       logoUrl: tool.logo_url || '',
-      startingPrice: getPricingDisplay(tool).displayText,
+      startingPrice: getToolCardPricingDisplay(tool).displayText,
       rating: tool.rating,
       affiliateLink: tool.affiliate_link || '',
       hasFreeTrial: tool.has_free_trial || false,

@@ -5,6 +5,7 @@ import { CurrencyDollarIcon, StarIcon, TagIcon, ClockIcon, ChartBarIcon, CheckCi
 import { CurrencyDollarIcon as CurrencyDollarIconSolid, StarIcon as StarIconSolid } from '@heroicons/react/24/solid';
 import ToolLogo from '@/components/ToolLogo';
 import { getPricingDisplay, getToolPricingSummary, getVerifiedSafePriceValue } from '@/lib/pricing/display';
+import { getToolCardPricingDisplay } from '@/lib/pricing/cardDisplay';
 
 interface ComparisonTableProps {
   toolA: Tool;
@@ -91,8 +92,8 @@ export default function ComparisonTable({ toolA, toolB }: ComparisonTableProps) 
     return configs[rowLabel] || { text: 'Winner', className: 'bg-green-100 text-green-700 border-green-200' };
   };
 
-  const pricingDisplayA = getPricingDisplay(toolA);
-  const pricingDisplayB = getPricingDisplay(toolB);
+  const pricingDisplayA = getToolCardPricingDisplay(toolA);
+  const pricingDisplayB = getToolCardPricingDisplay(toolB);
   const pricingSummaryA = getToolPricingSummary(toolA);
   const pricingSummaryB = getToolPricingSummary(toolB);
   const priceA = getVerifiedSafePriceValue(toolA);

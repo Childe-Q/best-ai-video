@@ -13,6 +13,19 @@ interface ErrorBoundaryProps {
 }
 
 export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  static isInjectedMaskedPostMessageError(error: Error): boolean {
+    const message = error.message || '';
+    const stack = error.stack || '';
+    return (
+      message.toLowerCase().includes('postmessage') &&
+      (stack.includes('webkit-masked-url') ||
+        stack.includes('safari-web-extension://') ||
+        stack.includes('chrome-extension://') ||
+        stack.includes('moz-extension://') ||
+        stack.includes('hidden/:'))
+    );
+  }
+
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, error: null };
@@ -32,8 +45,11 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
     const isExtensionError = 
       error.message?.includes('_0x') ||
       error.stack?.includes('webkit-masked-url') ||
+      error.stack?.includes('hidden/:') ||
       error.stack?.includes('chrome-extension://') ||
       error.stack?.includes('moz-extension://') ||
+      error.stack?.includes('safari-web-extension://') ||
+      ErrorBoundary.isInjectedMaskedPostMessageError(error) ||
       (error.name === 'ReferenceError' && error.message?.includes('Can\'t find variable')) ||
       // Handle NotAllowedError from browser extensions trying to autoplay
       (error.name === 'NotAllowedError' && (error.stack?.includes('webkit-masked-url') || error.stack?.includes('chrome-extension://') || error.stack?.includes('moz-extension://'))) ||
@@ -62,8 +78,11 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
     const isExtensionError = 
       error.message?.includes('_0x') ||
       error.stack?.includes('webkit-masked-url') ||
+      error.stack?.includes('hidden/:') ||
       error.stack?.includes('chrome-extension://') ||
       error.stack?.includes('moz-extension://') ||
+      error.stack?.includes('safari-web-extension://') ||
+      ErrorBoundary.isInjectedMaskedPostMessageError(error) ||
       (error.name === 'ReferenceError' && error.message?.includes('Can\'t find variable')) ||
       // Handle NotAllowedError from browser extensions trying to autoplay
       (error.name === 'NotAllowedError' && (error.stack?.includes('webkit-masked-url') || error.stack?.includes('chrome-extension://') || error.stack?.includes('moz-extension://'))) ||
@@ -101,4 +120,3 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
     return this.props.children;
   }
 }
-

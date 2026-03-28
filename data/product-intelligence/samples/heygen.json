@@ -1,0 +1,579 @@
+{
+  "toolSlug": "heygen",
+  "metadata": {
+    "collectedAt": "2026-03-28",
+    "sampleTrack": "avatar-heavy",
+    "officialSourceCount": 7,
+    "sourceTypes": [
+      "pricing",
+      "feature_page",
+      "api_docs",
+      "docs",
+      "help_center"
+    ]
+  },
+  "sourceBlocks": [
+    {
+      "id": "pricing-main",
+      "sourceType": "pricing",
+      "title": "HeyGen pricing",
+      "url": "https://www.heygen.com/pricing",
+      "priorityRank": 5,
+      "coverage": [
+        "plan gates",
+        "export resolution",
+        "collaboration",
+        "security"
+      ]
+    },
+    {
+      "id": "feature-localization",
+      "sourceType": "feature_page",
+      "title": "HeyGen localization",
+      "url": "https://www.heygen.com/localization/",
+      "priorityRank": 2,
+      "coverage": [
+        "video translation",
+        "brand voice",
+        "batch workflows",
+        "lip sync"
+      ]
+    },
+    {
+      "id": "docs-quickstart",
+      "sourceType": "api_docs",
+      "title": "HeyGen API quick start",
+      "url": "https://docs.heygen.com/docs/quick-start",
+      "priorityRank": 1,
+      "coverage": [
+        "integration paths",
+        "video agent",
+        "API billing"
+      ]
+    },
+    {
+      "id": "docs-avatars",
+      "sourceType": "docs",
+      "title": "Creating videos with avatars",
+      "url": "https://docs.heygen.com/docs/create-videos-with-avatars",
+      "priorityRank": 1,
+      "coverage": [
+        "avatar engines",
+        "photo avatars",
+        "digital twins"
+      ]
+    },
+    {
+      "id": "docs-translate",
+      "sourceType": "api_docs",
+      "title": "Video translate API",
+      "url": "https://docs.heygen.com/reference/video-translate",
+      "priorityRank": 1,
+      "coverage": [
+        "translation languages",
+        "batch translation",
+        "API access"
+      ]
+    },
+    {
+      "id": "help-sso",
+      "sourceType": "help_center",
+      "title": "Set up SAML SSO with Okta",
+      "url": "https://www.heygen.com/academy/setup-checklist/set-up-saml-sso-with-okta",
+      "priorityRank": 3,
+      "coverage": [
+        "SSO",
+        "workspace security"
+      ]
+    },
+    {
+      "id": "academy-voice-models",
+      "sourceType": "help_center",
+      "title": "What are voice models?",
+      "url": "https://www.heygen.com/academy/voice/what-are-voice-models",
+      "priorityRank": 3,
+      "coverage": [
+        "voice engines",
+        "auto engine selection"
+      ]
+    }
+  ],
+  "capabilityFacts": [
+    {
+      "category": "core_capability",
+      "rawLabel": "AI video generator from prompt",
+      "normalizedLabel": "text_to_video",
+      "value": "HeyGen exposes a prompt-to-video flow through Video Agent.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The quick start documents a one-prompt to one-video flow using the Video Agent endpoint.",
+      "sourceUrl": "https://docs.heygen.com/docs/quick-start",
+      "confidence": "high"
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "Photo avatars and digital twins",
+      "normalizedLabel": "avatar_video",
+      "value": "The platform supports public avatars, photo avatars, and digital twin style custom avatars.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The avatar creation guide lists Photo Avatars, Public Avatars, and Instant Avatars or Digital Twins as supported video-creation paths.",
+      "sourceUrl": "https://docs.heygen.com/docs/create-videos-with-avatars",
+      "confidence": "high"
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "Interactive real-time avatar",
+      "normalizedLabel": "interactive_avatar",
+      "value": "HeyGen supports real-time streaming avatars for virtual assistants and simulations.",
+      "supportType": "api_available",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The Streaming API overview describes low-latency interactive avatars over WebRTC for assistants and training simulations.",
+      "sourceUrl": "https://docs.heygen.com/docs/quick-start",
+      "confidence": "high",
+      "scope": "Available through API and SDK paths rather than only in the editor."
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "Video translation with lip sync",
+      "normalizedLabel": "ai_dubbing_localization",
+      "value": "Translated videos can be generated into 175+ supported languages with lip sync and batch outputs.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The translation API and localization page both describe multi-language video translation, batch outputs, natural voice cloning, and lip-sync preservation.",
+      "sourceUrl": "https://docs.heygen.com/reference/video-translate",
+      "confidence": "high"
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "Brand voice and glossary controls",
+      "normalizedLabel": "brand_consistency",
+      "value": "Localization workflows can use brand voice, term-base style controls, and asset kits.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The localization page calls out Brand Kit and Voice, while pricing lists brand voice and brand kit on paid plans.",
+      "sourceUrl": "https://www.heygen.com/localization/",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "Export resolution",
+      "normalizedLabel": "export_resolution",
+      "value": "Free exports at 720p, Creator at up to 1080p, and Pro or higher at up to 4K.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The pricing table explicitly maps export resolution to plan tier.",
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "Watermark removal",
+      "normalizedLabel": "watermark",
+      "value": "Watermark removal is not included on free web or API tiers but is available on paid tiers.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The pricing page shows watermark removal as a paid-plan feature, and the API plan article states that API free content carries a watermark while Pro removes it.",
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "Free plan duration cap",
+      "normalizedLabel": "max_video_duration",
+      "value": "Free plan videos are capped at 3 minutes.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The pricing comparison lists 3-minute max duration for the free tier.",
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "Avatar IV duration cap",
+      "normalizedLabel": "avatar_engine_duration_cap",
+      "value": "Avatar IV generation is capped to 30 seconds on free and 3 minutes on Creator and Pro.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The pricing table breaks out Avatar IV generation minutes and per-video duration by tier.",
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "Interactive Avatar sunset",
+      "normalizedLabel": "interactive_avatar_sunset",
+      "value": "Legacy Interactive Avatar is being replaced by LiveAvatar and the old path is sunsetting on March 31, 2026.",
+      "supportType": "beta",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The streaming-avatar docs warn that Interactive Avatar is sunsetting and instruct developers to integrate on LiveAvatar instead.",
+      "sourceUrl": "https://docs.heygen.com/docs/quick-start",
+      "confidence": "high"
+    }
+  ],
+  "modelSupportItems": [
+    {
+      "rawName": "Avatar IV",
+      "normalizedName": "avatar_iv",
+      "provider": "HeyGen",
+      "supportType": "proprietary",
+      "scope": "Web app and API avatar video generation",
+      "claimType": "confirmed_fact",
+      "evidenceText": "Avatar docs say creators can choose avatar III or avatar IV, and pricing gates Avatar IV usage by tier.",
+      "sourceUrl": "https://docs.heygen.com/docs/create-videos-with-avatars",
+      "confidence": "high"
+    },
+    {
+      "rawName": "avatar III",
+      "normalizedName": "avatar_iii",
+      "provider": "HeyGen",
+      "supportType": "selectable_model",
+      "scope": "Avatar video generation engine option",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The avatar creation guide explicitly says creators can choose avatar III or avatar IV depending on needs.",
+      "sourceUrl": "https://docs.heygen.com/docs/create-videos-with-avatars",
+      "confidence": "high"
+    },
+    {
+      "rawName": "Latest Video Agent model",
+      "normalizedName": "video_agent",
+      "provider": "HeyGen",
+      "supportType": "proprietary",
+      "scope": "Prompt-native video generation in the web app",
+      "claimType": "confirmed_fact",
+      "evidenceText": "Pricing and quick-start materials describe Video Agent as HeyGen's prompt-to-video path and gate the latest model to paid tiers.",
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "confidence": "high"
+    },
+    {
+      "rawName": "Multiple voice engines",
+      "normalizedName": "voice_engines",
+      "provider": "HeyGen",
+      "supportType": "provider_option",
+      "scope": "Voice selection and auto engine choice",
+      "claimType": "confirmed_fact",
+      "evidenceText": "HeyGen's academy material says voices are powered by multiple voice engines and that Auto picks the best one based on language and content.",
+      "sourceUrl": "https://www.heygen.com/academy/voice/what-are-voice-models",
+      "confidence": "high"
+    },
+    {
+      "rawName": "Third-party model selection",
+      "normalizedName": "third_party_model_switching",
+      "provider": "Unclear",
+      "supportType": "unclear",
+      "scope": "Public web app model catalog",
+      "claimType": "unclear",
+      "evidenceText": "The public official pages reviewed do not expose a named third-party model catalog or provider picker comparable to model marketplaces.",
+      "sourceUrl": "https://docs.heygen.com/docs/quick-start",
+      "confidence": "medium"
+    }
+  ],
+  "uniqueValueItems": [
+    {
+      "theme": "avatar-led production",
+      "summary": "HeyGen is strongest where a realistic speaker, cloned persona, or interactive presenter is the center of the workflow rather than a generic scene generator.",
+      "claimType": "structured_inference",
+      "evidenceText": "Across pricing, avatar docs, and localization pages, HeyGen repeatedly packages generation around avatars, digital twins, translation, and live avatar experiences.",
+      "sourceUrl": "https://docs.heygen.com/docs/create-videos-with-avatars",
+      "confidence": "high"
+    },
+    {
+      "theme": "localization at scale",
+      "summary": "The product differentiates by turning localization into a first-class workflow with batch translation, voice preservation, lip sync, and brand controls.",
+      "claimType": "structured_inference",
+      "evidenceText": "The localization feature page and translation API are much more detailed than generic subtitle-only support pages, indicating that translated video operations are a core motion.",
+      "sourceUrl": "https://www.heygen.com/localization/",
+      "confidence": "high"
+    }
+  ],
+  "differentiationItems": [
+    {
+      "dimension": "product_archetype",
+      "positioning": "avatar platform with adjacent prompt-to-video and localization layers",
+      "claimType": "structured_inference",
+      "evidenceText": "The official materials anchor around avatars, digital twins, live avatar, translation, and business collaboration before generic editing depth.",
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "confidence": "high"
+    },
+    {
+      "dimension": "headline_strength",
+      "positioning": "interactive avatars, digital twins, and brand-safe multilingual video are stronger headline motions than deep timeline editing.",
+      "claimType": "structured_inference",
+      "evidenceText": "The reviewed pages emphasize avatar engines, translation, LiveAvatar, and brand voice; they do not emphasize frame-level editing as the core reason to buy.",
+      "sourceUrl": "https://docs.heygen.com/docs/quick-start",
+      "confidence": "medium"
+    }
+  ],
+  "collaborationItems": [
+    {
+      "category": "collaboration",
+      "rawLabel": "Workspace collaboration",
+      "normalizedLabel": "team_workspace",
+      "value": "Business tier adds workspace collaboration, video draft commenting and editing, invites, and team management.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The business plan feature list explicitly includes workspace collaboration and draft commenting or editing.",
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "confidence": "high"
+    },
+    {
+      "category": "collaboration",
+      "rawLabel": "Seats",
+      "normalizedLabel": "seat_management",
+      "value": "Business adds paid extra seats, while individual tiers are single-seat.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The pricing page lists one seat on Free, Creator, and Pro, and paid add-on seats on Business.",
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "confidence": "high"
+    },
+    {
+      "category": "collaboration",
+      "rawLabel": "Role and content controls",
+      "normalizedLabel": "role_controls",
+      "value": "Role controls, content access controls, and granular content access controls are reserved for higher plans.",
+      "supportType": "enterprise_only",
+      "claimType": "confirmed_fact",
+      "evidenceText": "These controls are listed in the workspace and privacy comparison rows of the pricing page.",
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "confidence": "high"
+    },
+    {
+      "category": "collaboration",
+      "rawLabel": "SSO",
+      "normalizedLabel": "saml_sso",
+      "value": "SAML SSO is available for business or enterprise workspace security flows.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The pricing page includes SAML or SSO in higher tiers and the academy article provides an Okta setup path inside the HeyGen workspace settings.",
+      "sourceUrl": "https://www.heygen.com/academy/setup-checklist/set-up-saml-sso-with-okta",
+      "confidence": "high"
+    }
+  ],
+  "developerItems": [
+    {
+      "category": "developer",
+      "rawLabel": "Standalone API billing",
+      "normalizedLabel": "standalone_api_plan",
+      "value": "HeyGen separates direct API billing from web-plan billing, with API keys for direct API and OAuth for MCP.",
+      "supportType": "api_available",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The quick start distinguishes Direct API and MCP, including different auth and billing sources.",
+      "sourceUrl": "https://docs.heygen.com/docs/quick-start",
+      "confidence": "high"
+    },
+    {
+      "category": "developer",
+      "rawLabel": "Video translate API",
+      "normalizedLabel": "video_translate_api",
+      "value": "Developers can programmatically translate into one or more target languages and poll translation status.",
+      "supportType": "api_available",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The translation API docs show batch translation using output_languages and a follow-up status check flow.",
+      "sourceUrl": "https://docs.heygen.com/reference/video-translate",
+      "confidence": "high"
+    },
+    {
+      "category": "developer",
+      "rawLabel": "Streaming avatar SDK",
+      "normalizedLabel": "streaming_avatar_sdk",
+      "value": "A dedicated SDK exists for real-time avatar sessions.",
+      "supportType": "api_available",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The streaming-avatar SDK docs describe an SDK package for controlling live avatar sessions programmatically.",
+      "sourceUrl": "https://docs.heygen.com/docs/quick-start",
+      "confidence": "medium"
+    }
+  ],
+  "commercialItems": [
+    {
+      "category": "commercial",
+      "rawLabel": "4K export",
+      "normalizedLabel": "4k_export",
+      "value": "4K export begins on Pro and continues on Business and Enterprise.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The pricing comparison maps 4K export to Pro and higher tiers.",
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "Brand kit",
+      "normalizedLabel": "brand_kit",
+      "value": "Brand kit is included on Creator and higher tiers.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "Brand kit appears in the pricing comparison and on localization feature content.",
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "Interactive learning outputs",
+      "normalizedLabel": "interactive_video_scorm",
+      "value": "Interactive video, branching, quizzes, SCORM export, and LMS integrations are business or enterprise motions.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "Those items appear in the Learning & Development and Business feature rows on the pricing page.",
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "confidence": "high"
+    }
+  ],
+  "limitationItems": [
+    {
+      "category": "limitation",
+      "rawLabel": "Premium features gated",
+      "normalizedLabel": "premium_usage_gating",
+      "value": "Agent, Avatar IV, and lip-synced translation are trial or premium-gated on lower tiers.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The free plan section explicitly frames these as trial premium features, while paid tiers describe larger premium usage pools.",
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "API and web plans are separate",
+      "normalizedLabel": "api_web_plan_split",
+      "value": "A paid web tier does not by itself imply API credits or API usage entitlement at the same billing pool.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "HeyGen's API pricing docs explicitly say API plans are standalone subscriptions separate from standard HeyGen plans.",
+      "sourceUrl": "https://docs.heygen.com/docs/quick-start",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "API free tier watermark",
+      "normalizedLabel": "api_watermark_limit",
+      "value": "API free output includes a watermark.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The API subscription article calls out watermark inclusion on the free API plan and no watermark on paid API plans.",
+      "sourceUrl": "https://www.heygen.com/academy/setup-checklist/set-up-saml-sso-with-okta",
+      "confidence": "medium"
+    }
+  ],
+  "useCaseItems": [
+    {
+      "useCase": "multilingual marketing video localization",
+      "audience": "marketing teams",
+      "fit": "Strong fit when the same asset must be translated across many markets while keeping lip sync and brand terms aligned.",
+      "claimType": "structured_inference",
+      "evidenceText": "The localization page emphasizes batch translation, captions, brand voice, and lip sync for global rollout.",
+      "sourceUrl": "https://www.heygen.com/localization/",
+      "confidence": "high"
+    },
+    {
+      "useCase": "avatar-led training and simulations",
+      "audience": "enablement and learning teams",
+      "fit": "Strong fit for narrated training or simulation use cases that benefit from an on-screen presenter or interactive avatar.",
+      "claimType": "structured_inference",
+      "evidenceText": "The streaming API docs explicitly mention training simulations and virtual assistants; the pricing page adds SCORM and LMS flows.",
+      "sourceUrl": "https://docs.heygen.com/docs/quick-start",
+      "confidence": "high"
+    },
+    {
+      "useCase": "personalized outreach or lifecycle video",
+      "audience": "SaaS and customer lifecycle teams",
+      "fit": "API access plus templates and batch generation make it suitable for personalized outbound or onboarding videos.",
+      "claimType": "structured_inference",
+      "evidenceText": "The API docs highlight SaaS integrations, personalized videos, and automation scenarios.",
+      "sourceUrl": "https://docs.heygen.com/docs/quick-start",
+      "confidence": "medium"
+    }
+  ],
+  "userFitItems": [
+    {
+      "segment": "creator",
+      "fit": "Good fit for solo creators who care about avatars, voice cloning, and brand consistency more than deep editing control.",
+      "rationale": "Creator and Pro tiers expose avatar-heavy premium features while remaining single-seat products.",
+      "claimType": "structured_inference",
+      "evidenceText": "Single-seat plans include unlimited avatar videos, voice cloning, and brand kit before business collaboration features appear.",
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "confidence": "high"
+    },
+    {
+      "segment": "SMB team",
+      "fit": "Business is oriented to teams that need seats, collaboration, and SSO without going full enterprise.",
+      "rationale": "Business adds seat expansion, team management, collaboration, and centralized billing.",
+      "claimType": "structured_inference",
+      "evidenceText": "Those controls are concentrated in the Business feature list.",
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "confidence": "high"
+    },
+    {
+      "segment": "enterprise",
+      "fit": "Enterprise fit increases when access control, SCIM, multi-workspace governance, and success support matter.",
+      "rationale": "The enterprise tier adds SCIM, granular access controls, commercial terms, and dedicated support.",
+      "claimType": "structured_inference",
+      "evidenceText": "These capabilities appear only in higher security and enterprise rows.",
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "confidence": "high"
+    }
+  ],
+  "rawEvidenceBlocks": [
+    {
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "sourceType": "pricing",
+      "topic": "plan structure",
+      "evidenceText": "The public pricing table distinguishes creator, pro, business, and enterprise by export resolution, seats, collaboration, security, and premium usage pools.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://docs.heygen.com/docs/quick-start",
+      "sourceType": "api_docs",
+      "topic": "integration paths",
+      "evidenceText": "Quick-start materials split HeyGen integrations into direct API and MCP, each with different authentication and billing routes.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://docs.heygen.com/docs/create-videos-with-avatars",
+      "sourceType": "docs",
+      "topic": "avatar engines",
+      "evidenceText": "Avatar docs describe multiple avatar types and explicitly allow engine choice between avatar III and avatar IV.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://docs.heygen.com/reference/video-translate",
+      "sourceType": "api_docs",
+      "topic": "translation",
+      "evidenceText": "The translation API supports one or many target languages and returns translation identifiers for later polling.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://www.heygen.com/localization/",
+      "sourceType": "feature_page",
+      "topic": "brand-safe localization",
+      "evidenceText": "Localization pages group batch translation, brand kit, captions, voice cloning, and lip sync into one workflow rather than treating subtitles as a side feature.",
+      "claimType": "structured_inference",
+      "confidence": "high"
+    }
+  ],
+  "unresolvedQuestions": [
+    {
+      "question": "Does HeyGen expose a public administrator page for enabling or disabling individual foundation models or providers?",
+      "reason": "Reviewed official pages mention advanced AI models and engine choices, but not a public provider governance screen like model marketplaces.",
+      "recommendedSourceTypes": [
+        "docs",
+        "help_center"
+      ],
+      "status": "open"
+    },
+    {
+      "question": "What are the exact feature boundaries between current LiveAvatar plans and older Interactive Avatar references?",
+      "reason": "The docs include a migration notice and sunset warning, but a single current public plan matrix for LiveAvatar was not captured in this pass.",
+      "recommendedSourceTypes": [
+        "api_docs",
+        "pricing",
+        "help_center"
+      ],
+      "status": "needs_manual_verification"
+    }
+  ]
+}

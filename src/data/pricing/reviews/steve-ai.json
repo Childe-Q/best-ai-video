@@ -1,0 +1,732 @@
+{
+  "toolSlug": "steve-ai",
+  "capturedAt": "2026-03-27T14:08:26.176Z",
+  "billingStates": [
+    {
+      "stateId": "monthly-toggle",
+      "label": "Monthly",
+      "billingMode": "monthly",
+      "isDefaultVisible": false
+    },
+    {
+      "stateId": "annual-default",
+      "label": "Annually",
+      "billingMode": "annual",
+      "isDefaultVisible": true
+    }
+  ],
+  "defaultVisibleStateIds": [
+    "annual-default"
+  ],
+  "recommendedPublicDisplay": "Paid plans available",
+  "publicStartPriceCandidate": {
+    "display": "Starts at $10/mo billed annually",
+    "planName": "Basic",
+    "stateId": "annual-default",
+    "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+    "allowedForExactDisplay": false
+  },
+  "monthlyPrices": [
+    {
+      "planName": "Basic",
+      "display": "$10/mo",
+      "eligibleForPublicStartPrice": true
+    },
+    {
+      "planName": "Starter",
+      "display": "$19/mo",
+      "eligibleForPublicStartPrice": true
+    },
+    {
+      "planName": "Pro",
+      "display": "$39/mo",
+      "eligibleForPublicStartPrice": true
+    },
+    {
+      "planName": "Generative AI",
+      "display": "$99/mo",
+      "eligibleForPublicStartPrice": true
+    }
+  ],
+  "annualPrices": [
+    {
+      "planName": "Basic",
+      "display": "$10/mo billed annually",
+      "eligibleForPublicStartPrice": true
+    },
+    {
+      "planName": "Starter",
+      "display": "$228/yr billed yearly",
+      "eligibleForPublicStartPrice": false
+    },
+    {
+      "planName": "Starter",
+      "display": "$19/mo billed annually",
+      "eligibleForPublicStartPrice": true
+    },
+    {
+      "planName": "Pro",
+      "display": "$468/yr billed yearly",
+      "eligibleForPublicStartPrice": false
+    },
+    {
+      "planName": "Pro",
+      "display": "$39/mo billed annually",
+      "eligibleForPublicStartPrice": true
+    },
+    {
+      "planName": "Generative AI",
+      "display": "$1188/yr billed yearly",
+      "eligibleForPublicStartPrice": false
+    },
+    {
+      "planName": "Generative AI",
+      "display": "$99/mo billed annually",
+      "eligibleForPublicStartPrice": true
+    }
+  ],
+  "blockedPrices": [
+    {
+      "reason": "strike-through price is details-only",
+      "items": [
+        {
+          "planName": "Basic",
+          "stateId": "monthly-toggle",
+          "display": "$20",
+          "reason": "strike-through price is details-only",
+          "priceRole": "strike-through",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$20"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Basic",
+          "stateId": "annual-default",
+          "display": "$20",
+          "reason": "strike-through price is details-only",
+          "priceRole": "strike-through",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$20"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Starter",
+          "stateId": "monthly-toggle",
+          "display": "$29",
+          "reason": "strike-through price is details-only",
+          "priceRole": "strike-through",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$29"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Starter",
+          "stateId": "annual-default",
+          "display": "$29",
+          "reason": "strike-through price is details-only",
+          "priceRole": "strike-through",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$29"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Pro",
+          "stateId": "monthly-toggle",
+          "display": "$59",
+          "reason": "strike-through price is details-only",
+          "priceRole": "strike-through",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$59"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Pro",
+          "stateId": "annual-default",
+          "display": "$59",
+          "reason": "strike-through price is details-only",
+          "priceRole": "strike-through",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$59"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Generative AI",
+          "stateId": "monthly-toggle",
+          "display": "$129",
+          "reason": "strike-through price is details-only",
+          "priceRole": "strike-through",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$129"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Generative AI",
+          "stateId": "annual-default",
+          "display": "$129",
+          "reason": "strike-through price is details-only",
+          "priceRole": "strike-through",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$129"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "reason": "add-on price is details-only",
+      "items": [
+        {
+          "planName": "Basic",
+          "stateId": "monthly-toggle",
+          "display": null,
+          "reason": "add-on price is details-only",
+          "priceRole": "add-on",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [],
+          "count": 1
+        },
+        {
+          "planName": "Basic",
+          "stateId": "annual-default",
+          "display": null,
+          "reason": "add-on price is details-only",
+          "priceRole": "add-on",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [],
+          "count": 1
+        },
+        {
+          "planName": "Starter",
+          "stateId": "monthly-toggle",
+          "display": null,
+          "reason": "add-on price is details-only",
+          "priceRole": "add-on",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [],
+          "count": 1
+        },
+        {
+          "planName": "Starter",
+          "stateId": "annual-default",
+          "display": null,
+          "reason": "add-on price is details-only",
+          "priceRole": "add-on",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [],
+          "count": 1
+        },
+        {
+          "planName": "Pro",
+          "stateId": "monthly-toggle",
+          "display": null,
+          "reason": "add-on price is details-only",
+          "priceRole": "add-on",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [],
+          "count": 1
+        },
+        {
+          "planName": "Pro",
+          "stateId": "annual-default",
+          "display": null,
+          "reason": "add-on price is details-only",
+          "priceRole": "add-on",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [],
+          "count": 1
+        },
+        {
+          "planName": "Generative AI",
+          "stateId": "monthly-toggle",
+          "display": null,
+          "reason": "add-on price is details-only",
+          "priceRole": "add-on",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [],
+          "count": 1
+        },
+        {
+          "planName": "Generative AI",
+          "stateId": "annual-default",
+          "display": null,
+          "reason": "add-on price is details-only",
+          "priceRole": "add-on",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "reason": "non-core card",
+      "items": [
+        {
+          "planName": "Basic",
+          "stateId": "monthly-toggle",
+          "display": "$15, $45, $20 (+2 more)",
+          "reason": "non-core card",
+          "priceRole": "upgrade",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$15",
+            "$45",
+            "$20",
+            "$60",
+            "$10"
+          ],
+          "count": 5
+        },
+        {
+          "planName": "Basic",
+          "stateId": "annual-default",
+          "display": "$15, $45, $20 (+2 more)",
+          "reason": "non-core card",
+          "priceRole": "upgrade",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$15",
+            "$45",
+            "$20",
+            "$60",
+            "$10"
+          ],
+          "count": 5
+        },
+        {
+          "planName": "Starter",
+          "stateId": "monthly-toggle",
+          "display": "$19, $45, $60 (+2 more)",
+          "reason": "non-core card",
+          "priceRole": "upgrade",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$19",
+            "$45",
+            "$60",
+            "$20",
+            "$39"
+          ],
+          "count": 6
+        },
+        {
+          "planName": "Starter",
+          "stateId": "annual-default",
+          "display": "$19, $45, $60 (+2 more)",
+          "reason": "non-core card",
+          "priceRole": "upgrade",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$19",
+            "$45",
+            "$60",
+            "$20",
+            "$39"
+          ],
+          "count": 6
+        },
+        {
+          "planName": "Pro",
+          "stateId": "monthly-toggle",
+          "display": "$60, $39, $20 (+1 more)",
+          "reason": "non-core card",
+          "priceRole": "upgrade",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$60",
+            "$39",
+            "$20",
+            "$10"
+          ],
+          "count": 5
+        },
+        {
+          "planName": "Pro",
+          "stateId": "annual-default",
+          "display": "$60, $39, $20 (+1 more)",
+          "reason": "non-core card",
+          "priceRole": "upgrade",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$60",
+            "$39",
+            "$20",
+            "$10"
+          ],
+          "count": 5
+        }
+      ]
+    },
+    {
+      "reason": "yearly-total price is details-only",
+      "items": [
+        {
+          "planName": "Starter",
+          "stateId": "monthly-toggle",
+          "display": "$228/yr billed yearly",
+          "reason": "yearly-total price is details-only",
+          "priceRole": "yearly-total",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$228/yr billed yearly"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Starter",
+          "stateId": "annual-default",
+          "display": "$228/yr billed yearly",
+          "reason": "yearly-total price is details-only",
+          "priceRole": "yearly-total",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$228/yr billed yearly"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Pro",
+          "stateId": "monthly-toggle",
+          "display": "$468/yr billed yearly",
+          "reason": "yearly-total price is details-only",
+          "priceRole": "yearly-total",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$468/yr billed yearly"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Pro",
+          "stateId": "annual-default",
+          "display": "$468/yr billed yearly",
+          "reason": "yearly-total price is details-only",
+          "priceRole": "yearly-total",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$468/yr billed yearly"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Generative AI",
+          "stateId": "monthly-toggle",
+          "display": "$1188/yr billed yearly",
+          "reason": "yearly-total price is details-only",
+          "priceRole": "yearly-total",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$1188/yr billed yearly"
+          ],
+          "count": 1
+        },
+        {
+          "planName": "Generative AI",
+          "stateId": "annual-default",
+          "display": "$1188/yr billed yearly",
+          "reason": "yearly-total price is details-only",
+          "priceRole": "yearly-total",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [
+            "$1188/yr billed yearly"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "reason": "custom pricing is not a numeric self-serve start price",
+      "items": [
+        {
+          "planName": "Enterprise",
+          "stateId": "monthly-toggle",
+          "display": null,
+          "reason": "custom pricing is not a numeric self-serve start price",
+          "priceRole": "custom",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [],
+          "count": 1
+        },
+        {
+          "planName": "Enterprise",
+          "stateId": "annual-default",
+          "display": null,
+          "reason": "custom pricing is not a numeric self-serve start price",
+          "priceRole": "custom",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "reason": "price point is not eligible for recommended display",
+      "items": [
+        {
+          "planName": "Enterprise",
+          "stateId": "monthly-toggle",
+          "display": null,
+          "reason": "price point is not eligible for recommended display",
+          "priceRole": "unknown",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [],
+          "count": 1
+        },
+        {
+          "planName": "Enterprise",
+          "stateId": "annual-default",
+          "display": null,
+          "reason": "price point is not eligible for recommended display",
+          "priceRole": "unknown",
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displays": [],
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "planCards": [
+    {
+      "planName": "Basic",
+      "planKind": "paid",
+      "displayedPrice": "$10/mo",
+      "qualifier": "billed annually",
+      "eligibleForPublicStartPrice": true,
+      "badge": null,
+      "cta": "Start Now",
+      "cardProvenance": [
+        {
+          "stateId": "monthly-toggle",
+          "isDefaultVisible": false,
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displayedPrice": "$10/mo",
+          "qualifier": null
+        },
+        {
+          "stateId": "annual-default",
+          "isDefaultVisible": true,
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displayedPrice": "$10/mo",
+          "qualifier": null
+        }
+      ],
+      "mainBullets": [
+        "120 sec",
+        "300 AI Images & Premium Stock /month",
+        "100 mins AI Videos /month",
+        "800 AI Images & Premium Stock /month",
+        "720p Video Resolution",
+        "Up to 90% Human-like Voices",
+        "No Steve AI Watermark",
+        "Unlimited Video Exports"
+      ],
+      "pricingQualifiers": [
+        "billed annually"
+      ],
+      "upgradeAddOnInfo": [
+        "ADD ON 1xPower-Up 60s, GenAi motion",
+        "ADD ON 1xPower-Up 60s, GenAi motion Generative Credits 120 sec - + Max Limit Exceeded Power Up 300 AI Images & Premium Stock /month 100 mins AI Videos /month - + Max Limit Exceeded",
+        "$15/ mo Basic $45/ mo Starter 5 Video Downloads/Month Additional video downloads at $5/export 10 Credits to use Premium Assets/Month 720p Video resolution 15 Video Downloads/Month Additional video downloads at $5/export 25 Credits to use Premium Assets/Month 1080p Video resolution Upgrade Upgrade",
+        "$20/ mo Basic $60/ mo Starter 10 Credits to use Premium Assets/Month 720p Video resolution 25 Credits to use Premium Assets/Month 1080p Video resolution Upgrade Upgrade",
+        "$10/ mo Basic $20/ mo Starter Build 5 Custom Characters 5 Video Downloads/Month Build 15 Custom Characters 10 Video Downloads/Month Upgrade Upgrade"
+      ],
+      "missingFields": [
+        "qualifier"
+      ]
+    },
+    {
+      "planName": "Starter",
+      "planKind": "paid",
+      "displayedPrice": "$19/mo",
+      "qualifier": "$228 / billed yearly",
+      "eligibleForPublicStartPrice": true,
+      "badge": null,
+      "cta": "Start Now",
+      "cardProvenance": [
+        {
+          "stateId": "monthly-toggle",
+          "isDefaultVisible": false,
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displayedPrice": "$19/mo",
+          "qualifier": "$228 / billed yearly"
+        },
+        {
+          "stateId": "annual-default",
+          "isDefaultVisible": true,
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displayedPrice": "$19/mo",
+          "qualifier": "$228 / billed yearly"
+        }
+      ],
+      "mainBullets": [
+        "800 AI Images & Premium Stock /month",
+        "100 mins AI Videos /month",
+        "1080p Video Resolution",
+        "Up to 90% Human-like Voices",
+        "No Steve AI Watermark",
+        "Unlimited Video Exports",
+        "300+ Animated Characters"
+      ],
+      "pricingQualifiers": [
+        "$228 / billed yearly",
+        "billed annually"
+      ],
+      "upgradeAddOnInfo": [
+        "ADD ON 1x Power Up, 120 Secs Generative Credits",
+        "ADD ON 1x Generative Credit ,120 Secs Generative Credits Generative Credits 120 Secs - + Max Limit Exceeded Power Up 800 AI Images & Premium Stock /month 100 mins AI Videos /month - + Max Limit Exceeded",
+        "$19/ mo Starter $pro_yearly_month_price/ mo Pro Watermark Free Videos 1080P Video resolution Watermark Free Videos 2K Video resolution Upgrade Upgrade",
+        "$45/ mo Starter $60/ mo Pro 15 Video Downloads/Month Additional video downloads at $5/export 25 Credits to use Premium Assets/Month 1080p Video resolution 40 Video Downloads/Month Additional video downloads at $5/export 50 Credits to use Premium Assets/Month 2k Video resolution Upgrade Upgrade",
+        "$45/ mo Starter $60/ mo Pro 1080p video export 15 Video Downloads/Month Additional video downloads at $5/export 2K video export 40 Video Downloads/Month Additional video downloads at $5/export Upgrade Upgrade"
+      ],
+      "missingFields": []
+    },
+    {
+      "planName": "Pro",
+      "planKind": "paid",
+      "displayedPrice": "$39/mo",
+      "qualifier": "$468 / billed yearly",
+      "eligibleForPublicStartPrice": true,
+      "badge": null,
+      "cta": "Start Now",
+      "cardProvenance": [
+        {
+          "stateId": "monthly-toggle",
+          "isDefaultVisible": false,
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displayedPrice": "$39/mo",
+          "qualifier": "$468 / billed yearly"
+        },
+        {
+          "stateId": "annual-default",
+          "isDefaultVisible": true,
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displayedPrice": "$39/mo",
+          "qualifier": "$468 / billed yearly"
+        }
+      ],
+      "mainBullets": [
+        "2400 AI Images & Premium Stock /month",
+        "300 mins AI Videos /month",
+        "2K Video Resolution",
+        "95% Human-like Voices",
+        "No Steve AI Watermark",
+        "Unlimited Video Exports",
+        "300+ Animated Characters"
+      ],
+      "pricingQualifiers": [
+        "$468 / billed yearly",
+        "billed annually"
+      ],
+      "upgradeAddOnInfo": [
+        "ADD ON 1x Power Up, 120 Secs Generative Credits",
+        "ADD ON 1x Generative Credit ,120 Secs Generative Credits Generative Credits 120 Secs - + Max Limit Exceeded Power Up 2400 AI Images & Premium Stock /month 300 mins AI Videos /month - + Max Limit Exceeded",
+        "$pro_yearly_month_price/ mo Pro Watermark Free Videos 2K Video resolution Upgrade",
+        "$60/ mo Pro 40 Video Downloads/Month Additional video downloads at $5/export 50 Credits to use Premium Assets/Month 2K Video resolution Upgrade",
+        "$60/ mo Pro 2K video export 40 Video Downloads/Month Additional video downloads at $5/export Upgrade"
+      ],
+      "missingFields": []
+    },
+    {
+      "planName": "Generative AI",
+      "planKind": "paid",
+      "displayedPrice": "$99/mo",
+      "qualifier": "$1188 / billed yearly",
+      "eligibleForPublicStartPrice": true,
+      "badge": null,
+      "cta": "Start Now",
+      "cardProvenance": [
+        {
+          "stateId": "monthly-toggle",
+          "isDefaultVisible": false,
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displayedPrice": "$99/mo",
+          "qualifier": "$1188 / billed yearly"
+        },
+        {
+          "stateId": "annual-default",
+          "isDefaultVisible": true,
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displayedPrice": "$99/mo",
+          "qualifier": "$1188 / billed yearly"
+        }
+      ],
+      "mainBullets": [
+        "15 Mins",
+        "3200 AI Images & Premium Stock /month",
+        "400 mins AI Videos /month",
+        "2K Video Resolution",
+        "100% Human-like Voices",
+        "No Steve AI Watermark",
+        "Unlimited Video Exports",
+        "300+ Animated Characters"
+      ],
+      "pricingQualifiers": [
+        "$1188 / billed yearly",
+        "billed annually"
+      ],
+      "upgradeAddOnInfo": [
+        "ADD ON 1x Power Up, 15 Mins Generative Credits",
+        "ADD ON 1x Generative Credit ,15 Mins Generative Credits Generative Credits 15 Mins - + Max Limit Exceeded Power Up 3200 AI Images & Premium Stock /month 400 mins AI Videos /month - + Max Limit Exceeded"
+      ],
+      "missingFields": []
+    },
+    {
+      "planName": "Enterprise",
+      "planKind": "enterprise",
+      "displayedPrice": "Custom Pricing",
+      "qualifier": null,
+      "eligibleForPublicStartPrice": false,
+      "badge": null,
+      "cta": "Contact us",
+      "cardProvenance": [
+        {
+          "stateId": "monthly-toggle",
+          "isDefaultVisible": false,
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displayedPrice": "Custom Pricing",
+          "qualifier": null
+        },
+        {
+          "stateId": "annual-default",
+          "isDefaultVisible": true,
+          "provenance": "live/playwright @ 2026-03-27T14:08:20.426Z",
+          "displayedPrice": "Custom Pricing",
+          "qualifier": null
+        }
+      ],
+      "mainBullets": [
+        "6000 mins AI Videos /month",
+        "48000 AI Images & Premium Stock/month",
+        "4K Video Resolution",
+        "No Steve AI Watermark"
+      ],
+      "pricingQualifiers": [],
+      "upgradeAddOnInfo": [],
+      "missingFields": [
+        "qualifier"
+      ]
+    }
+  ],
+  "reviewWarnings": [
+    "pricing upgraded to Playwright: billing-toggle-or-annual-qualifier, interactive-or-unit-priced-plans, source-config-marked-dynamic",
+    "Skipped faq: HTTP 500: Internal Server Error",
+    "Core plan prices were separated from upgrade and add-on pricing.",
+    "Manual review should confirm which Steve AI plan family is the primary public pricing surface if the page changes.",
+    "Candidate result only. Do not replace existing frontend pricing or exact-price display without manual review.",
+    "Some plan cards still have missingFields and need manual review."
+  ]
+}

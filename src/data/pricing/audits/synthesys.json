@@ -1,0 +1,18 @@
+{
+  "toolSlug": "synthesys",
+  "capturedAt": "2026-03-26T10:09:55.142Z",
+  "validationIssues": [],
+  "resolverPreview": {
+    "displayText": "Paid plans available",
+    "coarseDisplayText": "Paid plans available",
+    "exactPriceAllowed": {
+      "display": false,
+      "comparison": false,
+      "structured-data": false,
+      "scoring": false
+    }
+  },
+  "finalDisplayText": "Paid plans available",
+  "safeToShow": false,
+  "coarseDisplayText": "Paid plans available"
+}

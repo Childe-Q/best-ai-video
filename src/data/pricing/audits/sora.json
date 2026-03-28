@@ -1,0 +1,18 @@
+{
+  "toolSlug": "sora",
+  "capturedAt": "2026-03-26T10:09:55.021Z",
+  "validationIssues": [],
+  "resolverPreview": {
+    "displayText": "Pricing not verified",
+    "coarseDisplayText": "Pricing not verified",
+    "exactPriceAllowed": {
+      "display": false,
+      "comparison": false,
+      "structured-data": false,
+      "scoring": false
+    }
+  },
+  "finalDisplayText": "Pricing not verified",
+  "safeToShow": false,
+  "coarseDisplayText": "Pricing not verified"
+}

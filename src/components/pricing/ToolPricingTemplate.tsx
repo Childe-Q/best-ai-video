@@ -121,7 +121,13 @@ export default function ToolPricingTemplate({
     return pricingPlans.some(plan => {
       if (!plan.price || typeof plan.price !== 'object' || plan.price === null) return false;
       if ('monthly' in plan.price) {
-        return 'yearly' in plan.price && plan.price.yearly !== undefined && plan.price.yearly !== null;
+        if (!('yearly' in plan.price) || plan.price.yearly === undefined || plan.price.yearly === null) {
+          return false;
+        }
+
+        const monthly = getNumericPlanPrice(plan.price, 'monthly');
+        const yearly = getNumericPlanPrice(plan.price, 'yearly');
+        return monthly !== null && yearly !== null && monthly !== yearly;
       }
       return false;
     });
@@ -691,6 +697,7 @@ export default function ToolPricingTemplate({
 
           {/* 2a. How usage works (Consolidated) */}
           <PricingUsageExplainer 
+            title={creditUsage?.title}
             usageNotes={usageNotes}
             toolName={toolName}
           />

@@ -1,0 +1,291 @@
+{
+  "toolSlug": "sora",
+  "capturedAt": "2026-03-26T10:09:55.021Z",
+  "pages": [
+    {
+      "sourceType": "pricing",
+      "sourceUrl": "https://platform.openai.com/docs/pricing",
+      "captureLayer": "fetch-cheerio",
+      "usedCache": true,
+      "cacheMode": "static",
+      "capturedAt": "2026-01-11T06:08:30.753Z",
+      "textLength": 8989,
+      "fallbackReasons": [],
+      "snippets": [
+        {
+          "kind": "plan-card",
+          "text": "pro$10"
+        },
+        {
+          "kind": "plan-card",
+          "text": "pro$7"
+        },
+        {
+          "kind": "plan-card",
+          "text": "pro$75"
+        },
+        {
+          "kind": "plan-card",
+          "text": "pro$21"
+        },
+        {
+          "kind": "plan-card",
+          "text": "pro$15"
+        },
+        {
+          "kind": "plan-card",
+          "text": "pro$150"
+        },
+        {
+          "kind": "plan-card",
+          "text": "pro$20"
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "kind": "free-plan",
+      "planName": "Free",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "2$0",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://platform.openai.com/docs/pricing",
+          "captureLayer": "fetch-cheerio",
+          "capturedAt": "2026-01-11T06:08:30.753Z",
+          "snippet": "2$0"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 0.87,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$0.87",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://platform.openai.com/docs/pricing",
+          "captureLayer": "fetch-cheerio",
+          "capturedAt": "2026-01-11T06:08:30.753Z",
+          "snippet": "$0.87"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 0.08,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$0.08",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://platform.openai.com/docs/pricing",
+          "captureLayer": "fetch-cheerio",
+          "capturedAt": "2026-01-11T06:08:30.753Z",
+          "snippet": "$0.08"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 7,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$7.00",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://platform.openai.com/docs/pricing",
+          "captureLayer": "fetch-cheerio",
+          "capturedAt": "2026-01-11T06:08:30.753Z",
+          "snippet": "$7.00"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 0.62,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$0.62",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://platform.openai.com/docs/pricing",
+          "captureLayer": "fetch-cheerio",
+          "capturedAt": "2026-01-11T06:08:30.753Z",
+          "snippet": "$0.62"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 0.06,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$0.06",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://platform.openai.com/docs/pricing",
+          "captureLayer": "fetch-cheerio",
+          "capturedAt": "2026-01-11T06:08:30.753Z",
+          "snippet": "$0.06"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 5,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$5.00",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://platform.openai.com/docs/pricing",
+          "captureLayer": "fetch-cheerio",
+          "capturedAt": "2026-01-11T06:08:30.753Z",
+          "snippet": "$5.00"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 0.12,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$0.12",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://platform.openai.com/docs/pricing",
+          "captureLayer": "fetch-cheerio",
+          "capturedAt": "2026-01-11T06:08:30.753Z",
+          "snippet": "$0.12"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 0.01,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$0.01",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://platform.openai.com/docs/pricing",
+          "captureLayer": "fetch-cheerio",
+          "capturedAt": "2026-01-11T06:08:30.753Z",
+          "snippet": "$0.01"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 1,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$1.00",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://platform.openai.com/docs/pricing",
+          "captureLayer": "fetch-cheerio",
+          "capturedAt": "2026-01-11T06:08:30.753Z",
+          "snippet": "$1.00"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 0.02,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$0.02",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://platform.openai.com/docs/pricing",
+          "captureLayer": "fetch-cheerio",
+          "capturedAt": "2026-01-11T06:08:30.753Z",
+          "snippet": "$0.02"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$0.00",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://platform.openai.com/docs/pricing",
+          "captureLayer": "fetch-cheerio",
+          "capturedAt": "2026-01-11T06:08:30.753Z",
+          "snippet": "$0.00"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 0.2,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$0.20",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://platform.openai.com/docs/pricing",
+          "captureLayer": "fetch-cheerio",
+          "capturedAt": "2026-01-11T06:08:30.753Z",
+          "snippet": "$0.20"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 10.5,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$10.50",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://platform.openai.com/docs/pricing",
+          "captureLayer": "fetch-cheerio",
+          "capturedAt": "2026-01-11T06:08:30.753Z",
+          "snippet": "$10.50"
+        }
+      ]
+    }
+  ],
+  "sourceUrls": [
+    "https://platform.openai.com/docs/pricing"
+  ],
+  "notes": []
+}

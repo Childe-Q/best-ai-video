@@ -1,0 +1,38 @@
+{
+  "toolSlug": "sora",
+  "capturedAt": "2026-03-26T10:09:55.021Z",
+  "sourceUrls": [
+    "https://platform.openai.com/docs/pricing"
+  ],
+  "governance": {
+    "origin": "newly-captured",
+    "safeToShow": false,
+    "reviewRequired": true
+  },
+  "verification": "unverified",
+  "status": "pricing-not-verified",
+  "coarseDisplayText": "Pricing not verified",
+  "hasFreePlan": null,
+  "hasFreeTrial": null,
+  "hasSelfServePaid": null,
+  "hasEnterprise": null,
+  "hasInteractivePricing": true,
+  "interactiveReasons": [
+    "official source in this repo points to API unit pricing rather than a clear Sora self-serve plan page"
+  ],
+  "plans": [],
+  "verifiedStartingPrice": {
+    "amount": null,
+    "currency": "USD",
+    "cadence": null,
+    "displayText": null,
+    "safeToShow": false,
+    "reason": "Captured prices are API/unit prices from official docs, not a stable Sora starting price for this site."
+  },
+  "notes": [
+    "The cached official source is OpenAI pricing docs rather than a simple Sora subscription/pricing page.",
+    "Captured dollar amounts appear to be API or unit pricing, so they are not normalized into a public exact tool price candidate.",
+    "Manual review should confirm whether Sora should be represented with consumer pricing, API pricing, or no public price.",
+    "Candidate result only. Do not replace existing frontend pricing or exact-price display without manual review."
+  ]
+}

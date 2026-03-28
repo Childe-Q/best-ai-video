@@ -4,6 +4,14 @@ import { useEffect } from 'react';
 
 export default function GlobalErrorHandler() {
   useEffect(() => {
+    const isMaskedInjectedPostMessageError = (message: string, source: string) =>
+      message.toLowerCase().includes('postmessage') &&
+      (source.includes('webkit-masked-url') ||
+        source.includes('safari-web-extension://') ||
+        source.includes('chrome-extension://') ||
+        source.includes('moz-extension://') ||
+        source.includes('hidden/:'));
+
     // Handle unhandled errors
     const handleError = (event: ErrorEvent) => {
       const error = event.error || event.message || '';
@@ -18,6 +26,7 @@ export default function GlobalErrorHandler() {
 
       const filename = event.filename || '';
       const target = event.target as HTMLElement;
+      const maskedPostMessageError = isMaskedInjectedPostMessageError(errorMessage || errorString, `${filename} ${errorString}`);
       
       // Check if error is from image loading failure
       const isImageLoadError = 
@@ -30,13 +39,16 @@ export default function GlobalErrorHandler() {
       const isExtensionError = 
         errorString.includes('_0x') ||
         errorString.includes('webkit-masked-url') ||
+        errorString.includes('hidden/:') ||
         filename.includes('webkit-masked-url') ||
+        filename.includes('hidden/:') ||
         filename.includes('chrome-extension://') ||
         filename.includes('moz-extension://') ||
         filename.includes('safari-web-extension://') ||
         errorString.includes('chrome-extension://') ||
         errorString.includes('moz-extension://') ||
         errorString.includes('safari-web-extension://') ||
+        maskedPostMessageError ||
         (errorString.includes('Can\'t find variable') && errorString.includes('_0x')) ||
         // Handle NotAllowedError from browser extensions trying to autoplay
         (errorName === 'NotAllowedError' && filename.includes('webkit-masked-url')) ||
@@ -88,14 +100,17 @@ export default function GlobalErrorHandler() {
       const errorString = String(error);
       const errorName = error?.name || '';
       const errorMessage = error?.message || '';
+      const maskedPostMessageError = isMaskedInjectedPostMessageError(errorMessage || errorString, errorString);
       
       // Check if error is from browser extension
       const isExtensionError = 
         errorString.includes('_0x') ||
         errorString.includes('webkit-masked-url') ||
+        errorString.includes('hidden/:') ||
         errorString.includes('chrome-extension://') ||
         errorString.includes('moz-extension://') ||
         errorString.includes('safari-web-extension://') ||
+        maskedPostMessageError ||
         (errorString.includes('Can\'t find variable') && errorString.includes('_0x')) ||
         // Handle NotAllowedError from browser extensions trying to autoplay
         (errorName === 'NotAllowedError' && errorString.includes('webkit-masked-url')) ||
@@ -127,6 +142,8 @@ export default function GlobalErrorHandler() {
       const message = args.join(' ');
       // Filter out extension-related console errors
       if (
+        (message.toLowerCase().includes('postmessage') &&
+          (message.includes('webkit-masked-url') || message.includes('hidden/:') || message.includes('safari-web-extension://'))) ||
         message.includes('safari-web-extension://') ||
         message.includes('chrome-extension://') ||
         message.includes('moz-extension://') ||
@@ -157,4 +174,3 @@ export default function GlobalErrorHandler() {
 
   return null;
 }
-

@@ -1,0 +1,579 @@
+{
+  "toolSlug": "runway",
+  "metadata": {
+    "collectedAt": "2026-03-28",
+    "sampleTrack": "generator-heavy",
+    "officialSourceCount": 9,
+    "sourceTypes": [
+      "pricing",
+      "product_page",
+      "api_docs",
+      "help_center"
+    ]
+  },
+  "sourceBlocks": [
+    {
+      "id": "pricing-main",
+      "sourceType": "pricing",
+      "title": "Runway pricing",
+      "url": "https://runwayml.com/pricing/",
+      "priorityRank": 5,
+      "coverage": [
+        "plans",
+        "credits",
+        "explore mode",
+        "workspace access"
+      ]
+    },
+    {
+      "id": "api-page",
+      "sourceType": "product_page",
+      "title": "Runway API overview",
+      "url": "https://runwayml.com/api",
+      "priorityRank": 2,
+      "coverage": [
+        "developer access",
+        "api packaging",
+        "latest models"
+      ]
+    },
+    {
+      "id": "api-ref",
+      "sourceType": "api_docs",
+      "title": "Runway API reference",
+      "url": "https://docs.dev.runwayml.com/api",
+      "priorityRank": 1,
+      "coverage": [
+        "model names",
+        "image to video",
+        "authentication"
+      ]
+    },
+    {
+      "id": "models-guide",
+      "sourceType": "help_center",
+      "title": "Available models on Runway",
+      "url": "https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway",
+      "priorityRank": 1,
+      "coverage": [
+        "proprietary models",
+        "third-party models",
+        "credit rates"
+      ]
+    },
+    {
+      "id": "unlimited-guide",
+      "sourceType": "help_center",
+      "title": "Unlimited plan details",
+      "url": "https://help.runwayml.com/hc/en-us/articles/18053095835795-Unlimited-plan-details",
+      "priorityRank": 2,
+      "coverage": [
+        "explore mode",
+        "concurrency limits",
+        "credit exceptions"
+      ]
+    },
+    {
+      "id": "enterprise-org",
+      "sourceType": "help_center",
+      "title": "Organization spaces for Enterprise",
+      "url": "https://help.runwayml.com/hc/en-us/articles/40261817303699-Organization-spaces-for-Enterprise",
+      "priorityRank": 2,
+      "coverage": [
+        "workspace governance",
+        "seat management",
+        "model enablement"
+      ]
+    },
+    {
+      "id": "security-guide",
+      "sourceType": "help_center",
+      "title": "Runway security and privacy standards",
+      "url": "https://help.runwayml.com/hc/en-us/articles/24300377879827-Understanding-Runway-s-security-and-privacy-standards",
+      "priorityRank": 2,
+      "coverage": [
+        "soc2",
+        "privacy defaults",
+        "enterprise trust center"
+      ]
+    },
+    {
+      "id": "lip-sync-guide",
+      "sourceType": "help_center",
+      "title": "Creating with Lip Sync",
+      "url": "https://help.runwayml.com/hc/en-us/articles/31941427186323-Creating-with-Lip-Sync",
+      "priorityRank": 2,
+      "coverage": [
+        "lip sync inputs",
+        "speaker limits",
+        "resolution caps"
+      ]
+    },
+    {
+      "id": "gen4-guide",
+      "sourceType": "help_center",
+      "title": "Creating with Gen-4 Video",
+      "url": "https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video",
+      "priorityRank": 2,
+      "coverage": [
+        "upscale",
+        "extend",
+        "edit flow"
+      ]
+    }
+  ],
+  "capabilityFacts": [
+    {
+      "category": "core_capability",
+      "rawLabel": "Text to video",
+      "normalizedLabel": "text_to_video",
+      "value": "Runway supports text-to-video on multiple in-house and third-party models.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The models guide lists text-to-video for Gen-4.5, Veo, Kling, and Sora families.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway",
+      "confidence": "high"
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "Image to video",
+      "normalizedLabel": "image_to_video",
+      "value": "Image-to-video is supported in both the product and the API.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The API reference has a dedicated image_to_video endpoint, and the models guide maps image-to-video across Runway and third-party models.",
+      "sourceUrl": "https://docs.dev.runwayml.com/api",
+      "confidence": "high"
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "Video-to-video stylization",
+      "normalizedLabel": "video_to_video",
+      "value": "Runway supports video-to-video editing and stylization through Aleph and older Gen-3 paths.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The models guide lists Gen-4 Aleph for video-to-video edits, and Runway help docs keep a dedicated video-to-video path for Gen-3 Alpha and Turbo.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway",
+      "confidence": "high"
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "Character performance animation",
+      "normalizedLabel": "character_animation",
+      "value": "Act-Two and selected third-party models support performance-driven character animation.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The models guide lists Act-Two as character performance and also exposes WAN2.2 for reference-video character animation.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway",
+      "confidence": "high"
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "Lip sync",
+      "normalizedLabel": "lip_sync",
+      "value": "Lip Sync accepts image or video visuals and audio or text scripts, with up to four animated faces per output.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The Lip Sync guide documents supported input types, max speakers, and resolution caps.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/31941427186323-Creating-with-Lip-Sync",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "4K upscale",
+      "normalizedLabel": "4k_upscale",
+      "value": "Generated videos can be upscaled to 4K from the Gen-4 creation flow.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The Gen-4 creation guide includes an Upscale to 4K action from generated results.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "Private assets by default",
+      "normalizedLabel": "asset_privacy_default",
+      "value": "Uploaded assets are private by default unless a user deliberately changes asset privacy.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The security standards article explicitly says uploaded assets are automatically set to private.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/24300377879827-Understanding-Runway-s-security-and-privacy-standards",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "Explore mode concurrency",
+      "normalizedLabel": "explore_mode_queue_limit",
+      "value": "Unlimited-plan Explore Mode can slow down and restrict simultaneous generations based on system load.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The Unlimited plan details say Explore Mode runs at a relaxed rate, can take longer, and has simultaneous generation limits.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/18053095835795-Unlimited-plan-details",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "Veo credit-only exception",
+      "normalizedLabel": "veo_requires_credits",
+      "value": "Veo 3 and Veo 3.1 do not use Explore Mode and require credits even on Unlimited.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The Unlimited plan article explicitly excludes Veo 3 and Veo 3.1 from Explore Mode.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/18053095835795-Unlimited-plan-details",
+      "confidence": "high"
+    }
+  ],
+  "modelSupportItems": [
+    {
+      "rawName": "Gen-4.5",
+      "normalizedName": "gen_4_5",
+      "provider": "Runway",
+      "supportType": "proprietary",
+      "scope": "Text-to-video and image-to-video generation",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The available models guide identifies Gen-4.5 as the latest Runway video generation model.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway",
+      "confidence": "high"
+    },
+    {
+      "rawName": "Gen-4 Aleph",
+      "normalizedName": "gen_4_aleph",
+      "provider": "Runway",
+      "supportType": "proprietary",
+      "scope": "Video-to-video editing and stylization",
+      "claimType": "confirmed_fact",
+      "evidenceText": "Runway describes Aleph as the video editing and stylization model for video-to-video edits.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway",
+      "confidence": "high"
+    },
+    {
+      "rawName": "Act-Two",
+      "normalizedName": "act_two",
+      "provider": "Runway",
+      "supportType": "proprietary",
+      "scope": "Character performance animation",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The models guide labels Act-Two as the Runway model for character performance.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway",
+      "confidence": "high"
+    },
+    {
+      "rawName": "Veo 3.1",
+      "normalizedName": "veo_3_1",
+      "provider": "Google",
+      "supportType": "provider_option",
+      "scope": "Third-party video generation with or without audio",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The API reference and models guide both list Veo 3.1 among accepted model values for image-to-video and text-to-video workflows.",
+      "sourceUrl": "https://docs.dev.runwayml.com/api",
+      "confidence": "high"
+    },
+    {
+      "rawName": "Sora 2 Pro",
+      "normalizedName": "sora_2_pro",
+      "provider": "OpenAI",
+      "supportType": "provider_option",
+      "scope": "Third-party video generation with audio and speech",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The models guide lists Sora 2 Pro under OpenAI third-party models with text-to-video and image-to-video support.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway",
+      "confidence": "high"
+    },
+    {
+      "rawName": "Third-party model configuration",
+      "normalizedName": "enterprise_model_governance",
+      "provider": "Runway organization controls",
+      "supportType": "enterprise_only",
+      "scope": "Admins can enable or disable individual third-party models per organization or workspace",
+      "claimType": "confirmed_fact",
+      "evidenceText": "Runway's enterprise guide explains that admins can grant or revoke model access globally or per workspace.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/40261817303699-Organization-spaces-for-Enterprise",
+      "confidence": "high"
+    }
+  ],
+  "uniqueValueItems": [
+    {
+      "theme": "multi-model creative control",
+      "summary": "Runway is not just selling one flagship generator; it is selling a creative operating surface that mixes in-house and third-party models under one workspace and API.",
+      "claimType": "structured_inference",
+      "evidenceText": "The official materials spend significant space on model catalogs, third-party provider options, and organization-level model governance.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway",
+      "confidence": "high"
+    },
+    {
+      "theme": "generator-plus-transformer stack",
+      "summary": "The product differentiates by pairing generation with transformation tools such as Aleph, Act-Two, Lip Sync, keyframes, and upscale rather than stopping at raw generation.",
+      "claimType": "structured_inference",
+      "evidenceText": "The Gen-4 and model guides repeatedly connect generation with follow-on editing and transformation actions inside the same session.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video",
+      "confidence": "high"
+    }
+  ],
+  "differentiationItems": [
+    {
+      "dimension": "product_archetype",
+      "positioning": "generator-led creative platform with editor and model-router characteristics",
+      "claimType": "structured_inference",
+      "evidenceText": "Runway exposes more model choice, provider control, and transformation tools than a simple template-first editor.",
+      "sourceUrl": "https://runwayml.com/api",
+      "confidence": "high"
+    },
+    {
+      "dimension": "headline_strength",
+      "positioning": "Model ceiling, controllable generation, and creative workflow breadth are stronger than low-cost volume or rigid templates.",
+      "claimType": "structured_inference",
+      "evidenceText": "The official pages emphasize realism, cinematography, stylization, prompt control, and model access rather than fixed business templates.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway",
+      "confidence": "high"
+    }
+  ],
+  "collaborationItems": [
+    {
+      "category": "collaboration",
+      "rawLabel": "Organization spaces",
+      "normalizedLabel": "organization_space",
+      "value": "Enterprise organizations can manage multiple workspaces, move credits, and create reporting views from a shared organization surface.",
+      "supportType": "enterprise_only",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The enterprise organization guide lists user management, credit movement, workspace creation, and basic reporting from Organizational Spaces.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/40261817303699-Organization-spaces-for-Enterprise",
+      "confidence": "high"
+    },
+    {
+      "category": "collaboration",
+      "rawLabel": "Seat billing",
+      "normalizedLabel": "seat_management",
+      "value": "Enterprise admins can purchase and allocate additional seats across workspaces.",
+      "supportType": "enterprise_only",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The organization guide explains how purchased seats and overages are handled when members are added.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/40261817303699-Organization-spaces-for-Enterprise",
+      "confidence": "high"
+    },
+    {
+      "category": "collaboration",
+      "rawLabel": "Sharing controls",
+      "normalizedLabel": "workspace_sharing_controls",
+      "value": "Enterprise admins can constrain sharing to members with workspace access when desired.",
+      "supportType": "enterprise_only",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The organization guide explicitly describes limiting asset sharing to users with access to the relevant workspace.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/40261817303699-Organization-spaces-for-Enterprise",
+      "confidence": "high"
+    }
+  ],
+  "developerItems": [
+    {
+      "category": "developer",
+      "rawLabel": "REST API",
+      "normalizedLabel": "rest_api",
+      "value": "Runway offers a versioned REST API with API-key authentication and task endpoints.",
+      "supportType": "api_available",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The API reference documents Bearer auth, explicit API version headers, and task-based generation endpoints.",
+      "sourceUrl": "https://docs.dev.runwayml.com/api",
+      "confidence": "high"
+    },
+    {
+      "category": "developer",
+      "rawLabel": "API packaging",
+      "normalizedLabel": "api_plan_packaging",
+      "value": "Runway separates API access into Build and Enterprise packaging for internal products or large-scale services.",
+      "supportType": "api_available",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The API overview page markets Build for individuals or teams and Enterprise for larger organizations embedding Runway into products or services.",
+      "sourceUrl": "https://runwayml.com/api",
+      "confidence": "high"
+    },
+    {
+      "category": "developer",
+      "rawLabel": "Model parameterization",
+      "normalizedLabel": "model_parameter_selection",
+      "value": "API callers explicitly choose a model per request.",
+      "supportType": "selectable_model",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The image_to_video endpoint requires a model value and lists accepted model names including Runway and third-party options.",
+      "sourceUrl": "https://docs.dev.runwayml.com/api",
+      "confidence": "high"
+    }
+  ],
+  "commercialItems": [
+    {
+      "category": "commercial",
+      "rawLabel": "SOC 2 Type II",
+      "normalizedLabel": "soc2_type_ii",
+      "value": "Runway publicly states SOC 2 Type II certification.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The security standards article explicitly states SOC 2 Type II certification and points enterprise users to the Trust Center.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/24300377879827-Understanding-Runway-s-security-and-privacy-standards",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "Explore Mode",
+      "normalizedLabel": "explore_mode",
+      "value": "Unlimited plan users can create infinite generations in supported modes without spending credits, but at a relaxed rate.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The Unlimited plan guide explains Explore Mode semantics and its differences from faster Credits Mode.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/18053095835795-Unlimited-plan-details",
+      "confidence": "high"
+    }
+  ],
+  "limitationItems": [
+    {
+      "category": "limitation",
+      "rawLabel": "Model-specific billing",
+      "normalizedLabel": "per_model_credit_variation",
+      "value": "Costs vary substantially by model and resolution, especially across third-party models.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The models guide lists materially different credit burn rates for Gen-4.5, Veo, Kling, Sora, and image models.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "Lip Sync duration cap",
+      "normalizedLabel": "lip_sync_duration_limit",
+      "value": "Lip Sync supports up to 40 seconds per dialogue and up to 10 dialogues.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The Lip Sync guide lists both duration and dialogue caps.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/31941427186323-Creating-with-Lip-Sync",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "Enterprise-only model governance",
+      "normalizedLabel": "model_governance_scope",
+      "value": "Per-model enable or disable controls for third-party models are not a standard self-serve control on basic plans.",
+      "supportType": "enterprise_only",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The model enablement article is framed for enterprise admins through Organization Space settings.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/40261817303699-Organization-spaces-for-Enterprise",
+      "confidence": "high"
+    }
+  ],
+  "useCaseItems": [
+    {
+      "useCase": "high-end generative shot creation",
+      "audience": "creative studios and filmmakers",
+      "fit": "Strong fit when realism, cinematography, and model choice matter more than template speed.",
+      "claimType": "structured_inference",
+      "evidenceText": "Runway's model docs repeatedly emphasize realism, cinematography, stylization, and creative control.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway",
+      "confidence": "high"
+    },
+    {
+      "useCase": "AI-assisted post-production and VFX",
+      "audience": "post teams",
+      "fit": "Aleph, Lip Sync, retiming, and upscale make Runway suitable when generated media must be refined rather than only created from scratch.",
+      "claimType": "structured_inference",
+      "evidenceText": "The Gen-4 and Aleph materials connect video generation with edit, stylize, expand, lip sync, and upscale actions.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video",
+      "confidence": "high"
+    },
+    {
+      "useCase": "embedded video generation platform",
+      "audience": "product and platform teams",
+      "fit": "The API is strong when teams need direct model access inside their own product or internal creative tooling.",
+      "claimType": "structured_inference",
+      "evidenceText": "Runway markets its API to teams adding its latest models to projects, internal products, products, and services.",
+      "sourceUrl": "https://runwayml.com/api",
+      "confidence": "high"
+    }
+  ],
+  "userFitItems": [
+    {
+      "segment": "creator",
+      "fit": "Good fit for advanced solo creators who want model choice and can manage credit tradeoffs.",
+      "rationale": "Runway's surface rewards users who care about generation controls and model selection, not only simplicity.",
+      "claimType": "structured_inference",
+      "evidenceText": "The official docs are model- and prompt-heavy, which suggests a higher technical ceiling than template-first tools.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway",
+      "confidence": "medium"
+    },
+    {
+      "segment": "SMB team",
+      "fit": "Moderate fit for creative teams that can tolerate credit accounting and want shared creative tooling.",
+      "rationale": "Build, credits, and model catalogs are team-usable, but some governance controls only appear at enterprise level.",
+      "claimType": "structured_inference",
+      "evidenceText": "API Build and workspace plans exist for teams, while finer controls are pushed into enterprise organization features.",
+      "sourceUrl": "https://runwayml.com/api",
+      "confidence": "medium"
+    },
+    {
+      "segment": "enterprise",
+      "fit": "Strong fit when centralized model governance, seat allocation, reporting, and security reviews matter.",
+      "rationale": "Organization spaces, trust-center artifacts, and model enablement controls are enterprise-facing.",
+      "claimType": "structured_inference",
+      "evidenceText": "Runway's enterprise help center dedicates separate articles to organization spaces, SSO, and model controls.",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/40261817303699-Organization-spaces-for-Enterprise",
+      "confidence": "high"
+    }
+  ],
+  "rawEvidenceBlocks": [
+    {
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway",
+      "sourceType": "help_center",
+      "topic": "model catalog",
+      "evidenceText": "The model catalog includes both proprietary Runway models and third-party models from Google, OpenAI, Kling, Alibaba, and others, each with modality and credit rates.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://docs.dev.runwayml.com/api",
+      "sourceType": "api_docs",
+      "topic": "developer flow",
+      "evidenceText": "The API is versioned and model-driven: callers authenticate with an API key and specify the target model in the request payload.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/18053095835795-Unlimited-plan-details",
+      "sourceType": "help_center",
+      "topic": "usage tradeoffs",
+      "evidenceText": "Unlimited mode is not unlimited performance; Runway explicitly warns about slower speeds and concurrency limits under Explore Mode.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/24300377879827-Understanding-Runway-s-security-and-privacy-standards",
+      "sourceType": "help_center",
+      "topic": "security baseline",
+      "evidenceText": "Runway states SOC 2 Type II and private-by-default media handling on its public help center.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/40261817303699-Organization-spaces-for-Enterprise",
+      "sourceType": "help_center",
+      "topic": "enterprise governance",
+      "evidenceText": "Enterprise admins can govern workspaces, credits, seats, and third-party model availability from organization settings.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    }
+  ],
+  "unresolvedQuestions": [
+    {
+      "question": "Which specific SSO protocols and identity providers are publicly documented for enterprise accounts?",
+      "reason": "The enterprise help center lists SSO resources, but a single concise public capability matrix was not captured in this pass.",
+      "recommendedSourceTypes": [
+        "help_center",
+        "security"
+      ],
+      "status": "open"
+    },
+    {
+      "question": "What are the default output rights and commercial usage terms per model family, especially for third-party providers?",
+      "reason": "The reviewed pages document model access, moderation, and billing, but not a consolidated rights matrix per provider.",
+      "recommendedSourceTypes": [
+        "legal",
+        "help_center"
+      ],
+      "status": "needs_manual_verification"
+    }
+  ]
+}

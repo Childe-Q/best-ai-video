@@ -16,6 +16,8 @@ import EditorialScore from '@/components/tool/EditorialScore';
 import { getCurrentMonthYear } from '@/lib/utils';
 import { buildBreadcrumbJsonLd } from '@/lib/jsonLd';
 import { getPricingDisplay, getToolPricingSummary } from '@/lib/pricing/display';
+import { getToolCardPricingDisplay } from '@/lib/pricing/cardDisplay';
+import { getPricingAcceptanceResult } from '@/lib/pricing/acceptance';
 
 interface ToolLayoutProps {
   children: ReactNode;
@@ -35,8 +37,19 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
     );
   }
 
-  const pricingDisplay = getPricingDisplay(tool);
+  const pricingDisplay = getToolCardPricingDisplay(tool);
   const pricingSummary = getToolPricingSummary(tool);
+  const acceptedPricing = getPricingAcceptanceResult(tool);
+  const topSummaryPricingLabel = acceptedPricing?.summaryLabel ?? (
+    pricingSummary.verification === 'verified'
+      ? pricingSummary.status === 'custom' || pricingSummary.status === 'enterprise'
+        ? 'Custom pricing'
+        : 'Verified pricing'
+      : pricingSummary.verification === 'trusted'
+        ? 'Trusted pricing'
+        : 'Pricing unverified'
+  );
+  const topSummaryPricingText = acceptedPricing?.displayText ?? pricingDisplay.displayText;
 
   // Load content JSON and merge with tool.content
   const contentJson = loadToolContent(slug);
@@ -150,18 +163,12 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
                         <div>
                           <div className="text-xs text-gray-500 uppercase mb-1">Pricing</div>
                           <div className="text-sm font-semibold text-gray-900">
-                            {pricingSummary.verification === 'verified'
-                              ? pricingSummary.status === 'custom' || pricingSummary.status === 'enterprise'
-                                ? 'Custom pricing'
-                                : 'Verified pricing'
-                              : pricingSummary.verification === 'trusted'
-                                ? 'Trusted pricing'
-                              : 'Pricing unverified'}
+                            {topSummaryPricingLabel}
                           </div>
                         </div>
                         <div>
                           <div className="text-xs text-gray-500 uppercase mb-1">Starting</div>
-                          <div className="text-sm font-semibold text-gray-900">{pricingDisplay.displayText}</div>
+                          <div className="text-sm font-semibold text-gray-900">{topSummaryPricingText}</div>
                         </div>
                       </div>
                       {/* Active Deal - Full Width Highlighted */}

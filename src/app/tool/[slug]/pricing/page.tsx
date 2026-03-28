@@ -1,13 +1,17 @@
 import { notFound } from 'next/navigation';
 import { getTool, getAllTools } from '@/lib/getTool';
 import ToolPricingTemplate from '@/components/pricing/ToolPricingTemplate';
+import CapturedPricingPage from '@/components/pricing/CapturedPricingPage';
 import { getSEOCurrentYear } from '@/lib/utils';
 import { ComparisonTable } from '@/types/tool';
 import { deriveUsageNotes } from '@/lib/pricing/deriveUsageNotes';
 import { generatePricingSnapshot } from '@/lib/generatePricingSnapshot';
 import { generateVerdictText } from '@/lib/pricing/generateVerdictText';
-import { getPricingDisplay, getToolPricingSummary } from '@/lib/pricing/display';
+import { getToolPricingSummary } from '@/lib/pricing/display';
+import { getToolCardPricingDisplay } from '@/lib/pricing/cardDisplay';
+import { getProofPricingPageData } from '@/lib/pricing/proofPages';
 import type { PricingVerification } from '@/lib/pricing/display';
+import { getProductizedPricingPageOverride } from '@/lib/pricing/productPageOverrides';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -87,16 +91,26 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
 
   if (!tool) notFound();
 
+  const productizedPricingOverride = getProductizedPricingPageOverride(slug, tool);
+  const proofPricingData = getProofPricingPageData(slug);
+  if (!productizedPricingOverride && proofPricingData) {
+    return <CapturedPricingPage toolName={tool.name} data={proofPricingData} />;
+  }
+
   const pricingSummary = getToolPricingSummary(tool);
-  const pricingDisplay = getPricingDisplay(tool);
-  const pricingPlans = pricingSummary.verification !== 'unverified' ? tool.pricing_plans || [] : [];
+  const pricingDisplay = getToolCardPricingDisplay(tool);
+  const effectivePricingVerification =
+    productizedPricingOverride?.pricingVerification ?? pricingSummary.verification;
+  const pricingPlans =
+    productizedPricingOverride?.pricingPlans ??
+    (pricingSummary.verification !== 'unverified' ? tool.pricing_plans || [] : []);
 
   // Get comparison_table: first from tool, then fallback to pricing JSON file
   let comparisonTable: ComparisonTable | undefined =
-    pricingSummary.verification === 'verified' ? tool.comparison_table : undefined;
+    effectivePricingVerification === 'verified' ? tool.comparison_table : undefined;
 
   // If not in tool, try to load from pricing JSON file
-  if (!comparisonTable && pricingSummary.verification === 'verified') {
+  if (!comparisonTable && effectivePricingVerification === 'verified') {
     try {
       // In Next.js, we need to resolve from the project root
       const projectRoot = process.cwd();
@@ -117,6 +131,9 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
   const officialPricingUrl = getOfficialPricingUrl(slug);
   const lastUpdated = getLastUpdatedDate();
   const editorialGuide = pricingEditorialGuides[slug];
+  const pricingSnapshot = productizedPricingOverride?.pricingSnapshot ?? tool.content?.pricing?.snapshot;
+  const creditUsage = productizedPricingOverride?.creditUsage ?? tool.content?.pricing?.creditUsage;
+  const verdict = productizedPricingOverride?.verdict ?? tool.content?.pricing?.verdict;
 
   // Generate pricing snapshot (for snapshot text used in usage notes)
   const snapshotData = generatePricingSnapshot(pricingPlans);
@@ -125,33 +142,37 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
   // Pre-compute usage notes on server side to avoid hydration mismatch
   // This ensures SSR and CSR render the same content
   // IMPORTANT: All logic must be deterministic (no random, no Date, no window checks)
-  const usageNotes = deriveUsageNotes(
-    {
-      key_facts: tool.key_facts,
-      highlights: tool.highlights,
-      category: undefined, // TODO: get from tool if available
-      stand_out_metrics: undefined // TODO: get from tool if available
-    },
-    pricingPlans,
-    snapshotText,
-    tool.name,
-    undefined // No dedupeMap needed on server side (we do local deduplication)
-  );
+  const usageNotes =
+    productizedPricingOverride?.usageNotes ??
+    deriveUsageNotes(
+      {
+        key_facts: tool.key_facts,
+        highlights: tool.highlights,
+        category: undefined, // TODO: get from tool if available
+        stand_out_metrics: undefined // TODO: get from tool if available
+      },
+      pricingPlans,
+      snapshotText,
+      tool.name,
+      undefined // No dedupeMap needed on server side (we do local deduplication)
+    );
 
   // Pre-compute verdict text on server side to avoid hydration mismatch
   // Generate from toolData, plans, snapshot, and comparable attributes
-  const generatedVerdictText = generateVerdictText(
-    {
-      key_facts: tool.key_facts,
-      highlights: tool.highlights,
-      best_for: tool.best_for
-    },
-    pricingPlans,
-    tool.name,
-    slug, // Pass slug for deterministic style selection
-    snapshotData.plans.map(p => p.bullets).flat(), // Pass snapshot bullets
-    comparisonTable // Pass comparison table for contrast features
-  );
+  const generatedVerdictText =
+    verdict?.text ??
+    generateVerdictText(
+      {
+        key_facts: tool.key_facts,
+        highlights: tool.highlights,
+        best_for: tool.best_for
+      },
+      pricingPlans,
+      tool.name,
+      slug, // Pass slug for deterministic style selection
+      snapshotData.plans.map(p => p.bullets).flat(), // Pass snapshot bullets
+      comparisonTable // Pass comparison table for contrast features
+    );
 
   // Use the new template for all tools (including InVideo for consistency)
   return (
@@ -160,10 +181,10 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
       toolSlug={slug}
       pricingPlans={pricingPlans}
       comparisonTable={comparisonTable}
-      pricingSnapshot={tool.content?.pricing?.snapshot}
-      creditUsage={tool.content?.pricing?.creditUsage}
+      pricingSnapshot={pricingSnapshot}
+      creditUsage={creditUsage}
       planPicker={tool.content?.pricing?.planPicker}
-      verdict={tool.content?.pricing?.verdict}
+      verdict={verdict}
       editorialGuide={editorialGuide}
       toolData={{
         key_facts: tool.key_facts,
@@ -175,10 +196,16 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
       lastUpdated={lastUpdated}
       officialPricingUrl={officialPricingUrl}
       affiliateLink={tool.affiliate_link}
-      hasFreeTrial={pricingSummary.verification === 'verified' ? tool.has_free_trial : false}
-      startingPrice={pricingDisplay.displayText}
-      pricingStatusHint={pricingDisplay.hintText}
-      pricingVerification={pricingSummary.verification as PricingVerification}
+      hasFreeTrial={
+        productizedPricingOverride
+          ? productizedPricingOverride.hasFreeTrial
+          : pricingSummary.verification === 'verified'
+          ? tool.has_free_trial
+          : false
+      }
+      startingPrice={productizedPricingOverride?.startingPrice ?? pricingDisplay.displayText}
+      pricingStatusHint={productizedPricingOverride?.pricingStatusHint ?? pricingDisplay.hintText}
+      pricingVerification={effectivePricingVerification as PricingVerification}
     />
   );
 }

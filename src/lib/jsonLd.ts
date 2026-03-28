@@ -1,5 +1,6 @@
 import { Tool } from '@/types/tool';
 import { getToolPricingSummary } from '@/lib/pricing/display';
+import { getToolCardPricingDisplay } from '@/lib/pricing/cardDisplay';
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://best-ai-video.com';
 
@@ -46,10 +47,10 @@ export function buildSoftwareApplicationJsonLd(tool: Tool) {
     schema.image = tool.logo_url;
   }
 
-  // Offers — only when pricing is verified and safe to show
-  const pricingSummary = getToolPricingSummary(tool);
-  if (pricingSummary.verification === 'verified' && pricingSummary.safeStartingPriceText) {
-    const priceMatch = pricingSummary.safeStartingPriceText.match(/\$([\d.]+)/);
+  // Offers — based on candidate logic for exact/legacy accepted
+  const cardDisplay = getToolCardPricingDisplay(tool);
+  if ((cardDisplay.source === 'candidate-exact' || cardDisplay.source === 'legacy-accepted') && cardDisplay.displayText) {
+    const priceMatch = cardDisplay.displayText.match(/\$([\d.]+)/);
     if (priceMatch) {
       schema.offers = {
         '@type': 'Offer',

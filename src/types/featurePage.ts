@@ -1,3 +1,5 @@
+import type { CardPriceBlock } from '@/types/cardPriceBlock';
+
 export type FeatureHero = {
   h1: string;
   subheadline: string;
@@ -40,6 +42,7 @@ export type FeatureToolCard = {
   reasonLine1: string;
   reasonLine2?: string | null;
   pricingStartAt?: string | null;
+  priceBlock?: CardPriceBlock;
   watermarkPolicy?: string | null;
   bestFor?: string | null;
   mainTradeoff?: string | null;

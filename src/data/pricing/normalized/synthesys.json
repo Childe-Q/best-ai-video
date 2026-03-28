@@ -1,0 +1,93 @@
+{
+  "toolSlug": "synthesys",
+  "capturedAt": "2026-03-26T10:09:55.142Z",
+  "sourceUrls": [
+    "https://synthesys.io/pricing"
+  ],
+  "governance": {
+    "origin": "newly-captured",
+    "safeToShow": false,
+    "reviewRequired": true
+  },
+  "verification": "partial",
+  "status": "paid",
+  "coarseDisplayText": "Paid plans available",
+  "hasFreePlan": true,
+  "hasFreeTrial": null,
+  "hasSelfServePaid": true,
+  "hasEnterprise": true,
+  "hasInteractivePricing": true,
+  "interactiveReasons": [
+    "pricing page mixes yearly prices, monthly-equivalent prices, and limited-time promotional prices",
+    "multiple plan cards expose overlapping list and discounted price values"
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "headlinePriceText": null,
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "free",
+      "sourceUrls": [
+        "https://synthesys.io/pricing"
+      ],
+      "evidence": [
+        "Standard video processingSee all our standard features Try Synthesys with our Free PlanOur trusted brandsEvery Plan Includes Full Access"
+      ]
+    },
+    {
+      "name": "Personal",
+      "headlinePriceText": null,
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "unknown",
+      "sourceUrls": [],
+      "evidence": []
+    },
+    {
+      "name": "Creator",
+      "headlinePriceText": null,
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "unknown",
+      "sourceUrls": [],
+      "evidence": []
+    },
+    {
+      "name": "Business Unlimited",
+      "headlinePriceText": null,
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "unknown",
+      "sourceUrls": [],
+      "evidence": []
+    },
+    {
+      "name": "Enterprise",
+      "headlinePriceText": "lti-speaker (Podcast creator)WorkspaceUsers Seats1112Simultaneously user access1112Start for freeAre you looking for an enterprise package?Turbo Speed GenerationsUnlimited Max Duration per Video Custom usage limitsAPIPriority supportPremium Custom Av",
+      "billingQualifier": null,
+      "unit": "unknown",
+      "planType": "enterprise",
+      "sourceUrls": [
+        "https://synthesys.io/pricing"
+      ],
+      "evidence": [
+        "lti-speaker (Podcast creator)WorkspaceUsers Seats1112Simultaneously user access1112Start for freeAre you looking for an enterprise package?Turbo Speed GenerationsUnlimited Max Duration per Video Custom usage limitsAPIPriority supportPremium Custom Av"
+      ]
+    }
+  ],
+  "verifiedStartingPrice": {
+    "amount": null,
+    "currency": "USD",
+    "cadence": "month",
+    "displayText": null,
+    "safeToShow": false,
+    "reason": "The page mixes promotional and billed-yearly values, so a stable exact starting price is not display-safe in this candidate run."
+  },
+  "notes": [
+    "Synthesys exposes public paid pricing, but the official page interleaves original prices, discounted prices, and yearly totals.",
+    "This candidate confirms paid plans exist without forcing a single exact number into the frontend.",
+    "Manual review should confirm whether any non-promotional self-serve monthly entry price can be safely extracted.",
+    "Candidate result only. Do not replace existing frontend pricing or exact-price display without manual review."
+  ]
+}

@@ -1,11 +1,17 @@
 #!/usr/bin/env tsx
 
-import type { PricingSourceType, RawPricingPageCapture } from '../../src/lib/pricing/types';
+import type {
+  PricingSourceType,
+  RawPricingCard,
+  RawPricingFact,
+  RawPricingPageCapture,
+  RawPricingState,
+} from '../../src/lib/pricing/types';
 import {
   computeFallbackReasons,
   ensureOutputDirs,
-  extractFactsFromPage,
-  extractSnippets,
+  extractStructuredPricingFromStateHtmls,
+  inferStateHtmlCapturesFromHtml,
   loadPageContent,
   makePageCapture,
   parseArgs,
@@ -15,10 +21,32 @@ export async function captureStaticSource(
   slug: string,
   sourceType: PricingSourceType,
   useCache: boolean,
-): Promise<{ page: RawPricingPageCapture; facts: ReturnType<typeof extractFactsFromPage> }> {
+): Promise<{
+  page: RawPricingPageCapture;
+  states: RawPricingState[];
+  cards: RawPricingCard[];
+  facts: RawPricingFact[];
+}> {
   ensureOutputDirs();
   const pageContent = await loadPageContent(slug, sourceType, 'fetch-cheerio', useCache);
-  const fallbackReasons = computeFallbackReasons(pageContent.html, pageContent.text, pageContent.cacheMode === 'dynamic' ? 'dynamic' : 'static');
+  const fallbackReasons = computeFallbackReasons(
+    pageContent.html,
+    pageContent.text,
+    pageContent.cacheMode === 'dynamic' ? 'dynamic' : 'static',
+  );
+
+  const stateHtmls = inferStateHtmlCapturesFromHtml(slug, pageContent.html, sourceType);
+  const extracted = extractStructuredPricingFromStateHtmls({
+    slug,
+    sourceType,
+    sourceUrl: pageContent.sourceUrl,
+    captureLayer: 'fetch-cheerio',
+    capturedAt: pageContent.capturedAt,
+    provenance: pageContent.usedCache ? 'cache' : 'live',
+    cacheMode: pageContent.usedCache ? pageContent.cacheMode : null,
+    states: stateHtmls,
+  });
+
   const page = makePageCapture({
     sourceType,
     sourceUrl: pageContent.sourceUrl,
@@ -28,12 +56,16 @@ export async function captureStaticSource(
     capturedAt: pageContent.capturedAt,
     textLength: pageContent.text.length,
     fallbackReasons,
-    snippets: extractSnippets(pageContent.text),
+    stateIds: extracted.states.map((state) => state.stateId),
+    cardIds: extracted.cards.map((card) => card.cardId),
+    snippets: extracted.snippets,
   });
 
   return {
     page,
-    facts: extractFactsFromPage(page, pageContent.text),
+    states: extracted.states,
+    cards: extracted.cards,
+    facts: extracted.facts,
   };
 }
 

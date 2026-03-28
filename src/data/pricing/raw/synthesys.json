@@ -1,0 +1,239 @@
+{
+  "toolSlug": "synthesys",
+  "capturedAt": "2026-03-26T10:09:55.142Z",
+  "pages": [
+    {
+      "sourceType": "pricing",
+      "sourceUrl": "https://synthesys.io/pricing",
+      "captureLayer": "playwright",
+      "usedCache": true,
+      "cacheMode": "dynamic",
+      "capturedAt": "2026-01-10T12:36:52.015Z",
+      "textLength": 7423,
+      "fallbackReasons": [
+        "source-config-marked-dynamic",
+        "billing-toggle-or-annual-qualifier"
+      ],
+      "snippets": [
+        {
+          "kind": "plan-card",
+          "text": "creators exploring UGC videos, AI avatars, and voices.$20"
+        },
+        {
+          "kind": "plan-card",
+          "text": "processingSee all our standard features Limited Time 50% OFF CREATOR Built for small teams producing UGC ads, branded videos, and social campaigns.$99"
+        },
+        {
+          "kind": "plan-card",
+          "text": "processingSee all our standard features 72% of professionals prefer itLimited Time 50% OFF BUSINESS UNLIMITED Optimized for agencies and brands scaling unlimited UGC and AI content.$198"
+        },
+        {
+          "kind": "plan-card",
+          "text": "Business plan credit limits. Unlimited Custom"
+        },
+        {
+          "kind": "plan-card",
+          "text": "processingSee all our standard features PERSONAL Designed for creators exploring UGC videos, AI avatars, and voices.$20"
+        },
+        {
+          "kind": "billing-note",
+          "text": "ring UGC videos, AI avatars, and voices.$20/m$243 Billed Yearly Switch to MonthlyFull platform access100 videos credits/monthEach credit equals"
+        },
+        {
+          "kind": "billing-note",
+          "text": "branded videos, and social campaigns.$99$41/m$495 Billed Yearly Switch to MonthlyFull platform access250 videos credits/monthEach credit equals"
+        },
+        {
+          "kind": "billing-note",
+          "text": "caling unlimited UGC and AI content.$198$69/m$831 Billed Yearly Switch to MonthlyFull platform accessUnlimited video credits/monthBusiness plan"
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "kind": "free-plan",
+      "planName": "Free",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "Standard video processingSee all our standard features Try Synthesys with our Free PlanOur trusted brandsEvery Plan Includes Full Access",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://synthesys.io/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:36:52.015Z",
+          "snippet": "Standard video processingSee all our standard features Try Synthesys with our Free PlanOur trusted brandsEvery Plan Includes Full Access"
+        }
+      ]
+    },
+    {
+      "kind": "enterprise",
+      "planName": "Enterprise",
+      "valueText": "lti-speaker (Podcast creator)WorkspaceUsers Seats1112Simultaneously user access1112Start for freeAre you looking for an enterprise package?Turbo Speed GenerationsUnlimited Max Duration per Video Custom usage limitsAPIPriority supportPremium Custom Av",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://synthesys.io/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:36:52.015Z",
+          "snippet": "lti-speaker (Podcast creator)WorkspaceUsers Seats1112Simultaneously user access1112Start for freeAre you looking for an enterprise package?Turbo Speed GenerationsUnlimited Max Duration per Video Custom usage limitsAPIPriority supportPremium Custom Av"
+        }
+      ]
+    },
+    {
+      "kind": "interactive-pricing",
+      "valueText": "$20/m$243 Billed Yearly Switch to MonthlyFull platform access100 videos credits/monthEach credit equals one generated video",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://synthesys.io/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:36:52.015Z",
+          "snippet": "$20/m$243 Billed Yearly Switch to MonthlyFull platform access100 videos credits/monthEach credit equals one generated video"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 20,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$20/m$243 Billed Yearly",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://synthesys.io/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:36:52.015Z",
+          "snippet": "$20/m$243 Billed Yearly Billed Yearly"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 99,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$99$41/m$495 Billed Yearly",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://synthesys.io/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:36:52.015Z",
+          "snippet": "$99$41/m$495 Billed Yearly Billed Yearly"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 198,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$198$69/m$831 Billed Yearly",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://synthesys.io/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:36:52.015Z",
+          "snippet": "$198$69/m$831 Billed Yearly Billed Yearly"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 0,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$0",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://synthesys.io/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:36:52.015Z",
+          "snippet": "$0"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 20,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$20",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://synthesys.io/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:36:52.015Z",
+          "snippet": "$20"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 41,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$41",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://synthesys.io/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:36:52.015Z",
+          "snippet": "$41"
+        }
+      ]
+    },
+    {
+      "kind": "price-point",
+      "amount": 69,
+      "currency": "USD",
+      "cadence": "month",
+      "unit": "account",
+      "valueText": "$69",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://synthesys.io/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:36:52.015Z",
+          "snippet": "$69"
+        }
+      ]
+    },
+    {
+      "kind": "self-serve-paid",
+      "valueText": "Paid plan language found",
+      "evidence": [
+        {
+          "sourceType": "pricing",
+          "sourceUrl": "https://synthesys.io/pricing",
+          "captureLayer": "playwright",
+          "capturedAt": "2026-01-10T12:36:52.015Z",
+          "snippet": "Paid plan language found"
+        }
+      ]
+    }
+  ],
+  "sourceUrls": [
+    "https://synthesys.io/pricing"
+  ],
+  "notes": [
+    "pricing upgraded to Playwright: source-config-marked-dynamic, billing-toggle-or-annual-qualifier",
+    "Skipped faq: no cached capture available for this trial run."
+  ]
+}

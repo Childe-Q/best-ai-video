@@ -1,0 +1,581 @@
+{
+  "toolSlug": "invideo",
+  "metadata": {
+    "collectedAt": "2026-03-28",
+    "sampleTrack": "template-workflow-oriented",
+    "officialSourceCount": 8,
+    "sourceTypes": [
+      "product_page",
+      "pricing",
+      "help_center"
+    ]
+  },
+  "sourceBlocks": [
+    {
+      "id": "home",
+      "sourceType": "product_page",
+      "title": "Invideo home",
+      "url": "https://invideo.io/",
+      "priorityRank": 2,
+      "coverage": [
+        "overall product direction",
+        "model catalog",
+        "core feature set"
+      ]
+    },
+    {
+      "id": "ai-generator",
+      "sourceType": "product_page",
+      "title": "AI video generator",
+      "url": "https://invideo.io/ai-video-generator/",
+      "priorityRank": 2,
+      "coverage": [
+        "prompt to video",
+        "workflow framing",
+        "editing modes"
+      ]
+    },
+    {
+      "id": "ai-models",
+      "sourceType": "product_page",
+      "title": "AI models in Invideo",
+      "url": "https://invideo.io/ai-models/",
+      "priorityRank": 1,
+      "coverage": [
+        "third-party models",
+        "provider options",
+        "media model coverage"
+      ]
+    },
+    {
+      "id": "pricing",
+      "sourceType": "pricing",
+      "title": "Invideo pricing",
+      "url": "https://invideo.io/pricing/",
+      "priorityRank": 5,
+      "coverage": [
+        "plan gates",
+        "watermark",
+        "team plan",
+        "security"
+      ]
+    },
+    {
+      "id": "plans-overview",
+      "sourceType": "help_center",
+      "title": "Pricing plans overview",
+      "url": "https://help.invideo.io/en/articles/10947888-pricing-plans-overview",
+      "priorityRank": 3,
+      "coverage": [
+        "generative features",
+        "team plan",
+        "storage",
+        "iStock"
+      ]
+    },
+    {
+      "id": "express-clones",
+      "sourceType": "help_center",
+      "title": "Upgrade plan for more express avatars",
+      "url": "https://help.invideo.io/en/articles/11335019-how-can-i-upgrade-my-plan-to-create-more-express-avatars-ai-twins",
+      "priorityRank": 3,
+      "coverage": [
+        "avatar counts",
+        "free plan limits",
+        "team plan limits"
+      ]
+    },
+    {
+      "id": "voiceovers",
+      "sourceType": "help_center",
+      "title": "How can I add multiple voiceovers in the video?",
+      "url": "https://help.invideo.io/en/articles/9414279-how-can-i-add-multiple-voiceovers-in-the-video",
+      "priorityRank": 3,
+      "coverage": [
+        "multiple speakers",
+        "script mode",
+        "voice workflow"
+      ]
+    },
+    {
+      "id": "team-members",
+      "sourceType": "help_center",
+      "title": "How to add team members?",
+      "url": "https://help.invideo.io/en/articles/9382163-how-to-add-team-members",
+      "priorityRank": 3,
+      "coverage": [
+        "seat limits",
+        "team plan",
+        "user counts"
+      ]
+    },
+    {
+      "id": "shared-workspaces",
+      "sourceType": "help_center",
+      "title": "How do shared workspaces work?",
+      "url": "https://help.invideo.io/en/articles/9663730-how-do-shared-workspaces-work",
+      "priorityRank": 3,
+      "coverage": [
+        "workspace sharing",
+        "collaboration",
+        "owner and invitee structure"
+      ]
+    }
+  ],
+  "capabilityFacts": [
+    {
+      "category": "core_capability",
+      "rawLabel": "Prompt-to-video",
+      "normalizedLabel": "text_to_video",
+      "value": "Invideo turns prompts into ready-to-share videos for ads, explainers, stories, and social content.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The official home and AI video generator pages frame the product as prompt-native video creation.",
+      "sourceUrl": "https://invideo.io/ai-video-generator/",
+      "confidence": "high"
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "AI avatars and AI twins",
+      "normalizedLabel": "avatar_video",
+      "value": "The platform supports AI avatars, express avatars or AI twins, and voice-only cloning paths.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "Home-page feature rails list AI avatars and voice cloning, while the help article details clone counts by plan.",
+      "sourceUrl": "https://help.invideo.io/en/articles/11335019-how-can-i-upgrade-my-plan-to-create-more-express-avatars-ai-twins",
+      "confidence": "high"
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "Image-to-video",
+      "normalizedLabel": "image_to_video",
+      "value": "Image-to-video is part of the published AI video tool set.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The official home page lists image to video among the product's AI video tools.",
+      "sourceUrl": "https://invideo.io/",
+      "confidence": "high"
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "Voice cloning and multiple speakers",
+      "normalizedLabel": "voice_cloning",
+      "value": "Users can clone only a voice and can build longer conversations with up to 5 additional speakers plus 1 narrator.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The express clone article allows voice-only clones, and the multiple voiceovers help page documents up to 5 speakers with 1 narrator.",
+      "sourceUrl": "https://help.invideo.io/en/articles/9414279-how-can-i-add-multiple-voiceovers-in-the-video",
+      "confidence": "high"
+    },
+    {
+      "category": "core_capability",
+      "rawLabel": "Video translator and subtitles",
+      "normalizedLabel": "translation_and_subtitles",
+      "value": "Video translator and subtitles are both part of the advertised AI feature set.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The official home page lists Video Translator and Subtitles in the AI features column.",
+      "sourceUrl": "https://invideo.io/",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "Free-plan limits",
+      "normalizedLabel": "free_plan_limits",
+      "value": "Free users get 10 video minutes per week, 1 express clone, 10 GB storage, 4 exports per week, access to standard media, and the invideo logo on exports.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The express avatar upgrade article lists the free-plan entitlements in detail.",
+      "sourceUrl": "https://help.invideo.io/en/articles/11335019-how-can-i-upgrade-my-plan-to-create-more-express-avatars-ai-twins",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "Generative features",
+      "normalizedLabel": "generative_feature_access",
+      "value": "The free plan does not include generative features.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The official home pricing block explicitly states no access to generative features on free.",
+      "sourceUrl": "https://invideo.io/",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "Export watermark",
+      "normalizedLabel": "watermark",
+      "value": "Free exports include the invideo watermark.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "Both the home pricing block and free-plan help article state that free exports carry the invideo logo.",
+      "sourceUrl": "https://invideo.io/",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "Plan boost dependence",
+      "normalizedLabel": "plan_boost_dependency",
+      "value": "Higher quotas for minutes, credits, iStock, avatars, and storage often require boosting the base plan rather than a simple feature toggle.",
+      "supportType": "addon_required",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The pricing help articles explain that users boost plans to unlock more minutes, credits, iStock, clones, and storage.",
+      "sourceUrl": "https://help.invideo.io/en/articles/10947888-pricing-plans-overview",
+      "confidence": "high"
+    }
+  ],
+  "modelSupportItems": [
+    {
+      "rawName": "Google Veo 3.1",
+      "normalizedName": "veo_3_1",
+      "provider": "Google",
+      "supportType": "provider_option",
+      "scope": "Video model catalog in Invideo AI",
+      "claimType": "confirmed_fact",
+      "evidenceText": "Invideo's home page and AI models page both list Google Veo 3.1 in the video model lineup.",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "confidence": "high"
+    },
+    {
+      "rawName": "Sora 2",
+      "normalizedName": "sora_2",
+      "provider": "OpenAI",
+      "supportType": "provider_option",
+      "scope": "Video model catalog in Invideo AI",
+      "claimType": "confirmed_fact",
+      "evidenceText": "Sora 2 appears in the official video model list.",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "confidence": "high"
+    },
+    {
+      "rawName": "Kling AI",
+      "normalizedName": "kling_ai",
+      "provider": "Kuaishou",
+      "supportType": "provider_option",
+      "scope": "Video model catalog in Invideo AI",
+      "claimType": "confirmed_fact",
+      "evidenceText": "Kling AI is included in the official model lineup on the AI models page.",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "confidence": "high"
+    },
+    {
+      "rawName": "Hailuo AI",
+      "normalizedName": "hailuo_ai",
+      "provider": "MiniMax",
+      "supportType": "provider_option",
+      "scope": "Video model catalog in Invideo AI",
+      "claimType": "confirmed_fact",
+      "evidenceText": "Hailuo AI appears in the official video model list.",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "confidence": "high"
+    },
+    {
+      "rawName": "ElevenLabs",
+      "normalizedName": "elevenlabs",
+      "provider": "ElevenLabs",
+      "supportType": "provider_option",
+      "scope": "Audio and voice model catalog",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The home page lists Eleven Labs under audio models.",
+      "sourceUrl": "https://invideo.io/",
+      "confidence": "high"
+    },
+    {
+      "rawName": "Minimax",
+      "normalizedName": "minimax",
+      "provider": "MiniMax",
+      "supportType": "provider_option",
+      "scope": "Audio model catalog",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The home page lists Minimax in the audio model lineup.",
+      "sourceUrl": "https://invideo.io/",
+      "confidence": "high"
+    }
+  ],
+  "uniqueValueItems": [
+    {
+      "theme": "workflow breadth",
+      "summary": "Invideo's official positioning is broad workflow coverage: prompt-native generation, old-school timeline editing, avatars, translation, and a large third-party model catalog in one brand surface.",
+      "claimType": "structured_inference",
+      "evidenceText": "The home page explicitly separates prompt-native AI creation from Studio-style timeline editing while also listing model, avatar, and translator features.",
+      "sourceUrl": "https://invideo.io/",
+      "confidence": "high"
+    },
+    {
+      "theme": "model menu plus practical production",
+      "summary": "Compared with narrower avatar or repurposing tools, Invideo is trying to be a practical all-round AI video workstation with provider choice rather than a single-model story.",
+      "claimType": "structured_inference",
+      "evidenceText": "The official model pages publish a broad video, image, and audio model catalog instead of focusing on one proprietary engine.",
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "confidence": "high"
+    }
+  ],
+  "differentiationItems": [
+    {
+      "dimension": "product_archetype",
+      "positioning": "template and workflow-oriented creation platform with expanding multi-model generation",
+      "claimType": "structured_inference",
+      "evidenceText": "Official pages emphasize ready-to-share outputs, stock and avatar workflows, Studio editing, and model catalogs together.",
+      "sourceUrl": "https://invideo.io/ai-video-generator/",
+      "confidence": "high"
+    },
+    {
+      "dimension": "headline_strength",
+      "positioning": "Breadth and practical production speed look like the main strengths, more than deep enterprise governance or one premium generative engine.",
+      "claimType": "structured_inference",
+      "evidenceText": "The official story focuses on coverage across many workflows and models, while security and admin detail are comparatively thin until enterprise sales.",
+      "sourceUrl": "https://invideo.io/",
+      "confidence": "medium"
+    }
+  ],
+  "collaborationItems": [
+    {
+      "category": "collaboration",
+      "rawLabel": "Shared workspaces",
+      "normalizedLabel": "shared_workspaces",
+      "value": "One account can have multiple workspaces, and invitees can collaborate on videos inside the owner's workspace.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The shared workspaces article explains owner and invitee workspaces and how collaboration happens in the owner's environment.",
+      "sourceUrl": "https://help.invideo.io/en/articles/9663730-how-do-shared-workspaces-work",
+      "confidence": "high"
+    },
+    {
+      "category": "collaboration",
+      "rawLabel": "User counts on self-serve plans",
+      "normalizedLabel": "seat_counts",
+      "value": "Plus, Max, and Generative plans support up to 3 users total before teams need larger Team-plan style upgrades.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The add-team-members article states the 3-user cap on self-serve plans and pushes larger usage toward Team plan.",
+      "sourceUrl": "https://help.invideo.io/en/articles/9382163-how-to-add-team-members",
+      "confidence": "high"
+    },
+    {
+      "category": "collaboration",
+      "rawLabel": "Owner and invitee split",
+      "normalizedLabel": "owner_invitee_roles",
+      "value": "Workspace ownership and invitee membership are explicit collaboration roles, though public documentation does not present deeper RBAC layers.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The shared workspace article explains owner workspace versus invitee workspace responsibilities.",
+      "sourceUrl": "https://help.invideo.io/en/articles/9663730-how-do-shared-workspaces-work",
+      "confidence": "high"
+    }
+  ],
+  "developerItems": [
+    {
+      "category": "developer",
+      "rawLabel": "Public API",
+      "normalizedLabel": "public_api",
+      "value": "Public official pages reviewed in this sample do not document a general developer API comparable to Runway or Synthesia.",
+      "supportType": "unclear",
+      "claimType": "unclear",
+      "evidenceText": "The official source set emphasizes web product flows, help center articles, and enterprise sales, but no public API docs were found in this pass.",
+      "sourceUrl": "https://invideo.io/",
+      "confidence": "medium"
+    },
+    {
+      "category": "developer",
+      "rawLabel": "Enterprise security",
+      "normalizedLabel": "enterprise_security",
+      "value": "Enterprise is presented as offering advanced security and flexible pricing, but the public feature detail is sparse.",
+      "supportType": "enterprise_only",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The home pricing block advertises advanced security for enterprise, but without a public technical breakdown.",
+      "sourceUrl": "https://invideo.io/",
+      "confidence": "medium"
+    }
+  ],
+  "commercialItems": [
+    {
+      "category": "commercial",
+      "rawLabel": "Media asset access",
+      "normalizedLabel": "stock_media_access",
+      "value": "Free includes 2.5M plus standard media assets, and higher plans unlock more iStock access.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The express avatar article lists standard media on free, and the boost article says boosts unlock more iStock.",
+      "sourceUrl": "https://help.invideo.io/en/articles/11335019-how-can-i-upgrade-my-plan-to-create-more-express-avatars-ai-twins",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "Storage",
+      "normalizedLabel": "cloud_storage",
+      "value": "Storage scales by plan, beginning at 10 GB on free and increasing with paid and boosted plans.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "Free storage is documented in the express-clone article, and the boost article says storage grows with higher boosts.",
+      "sourceUrl": "https://help.invideo.io/en/articles/10947888-pricing-plans-overview",
+      "confidence": "high"
+    },
+    {
+      "category": "commercial",
+      "rawLabel": "Exports per week on free",
+      "normalizedLabel": "free_export_frequency",
+      "value": "The free plan limits exports to 4 per week.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The express clone article enumerates 4 exports per week for the free plan.",
+      "sourceUrl": "https://help.invideo.io/en/articles/11335019-how-can-i-upgrade-my-plan-to-create-more-express-avatars-ai-twins",
+      "confidence": "high"
+    }
+  ],
+  "limitationItems": [
+    {
+      "category": "limitation",
+      "rawLabel": "Generative feature lock",
+      "normalizedLabel": "free_generative_lock",
+      "value": "The free plan is intentionally positioned as non-generative, which matters because model choice only becomes relevant on paid usage.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The home pricing block explicitly says free has no access to generative features.",
+      "sourceUrl": "https://invideo.io/",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "Clone counts tied to plan and boost",
+      "normalizedLabel": "clone_count_gate",
+      "value": "Express clone counts are tightly tied to both plan tier and boost multiplier.",
+      "supportType": "plan_gated",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The clone article shows ascending clone counts from free to Generative and Team, with further boosts unlocking more capacity.",
+      "sourceUrl": "https://help.invideo.io/en/articles/11335019-how-can-i-upgrade-my-plan-to-create-more-express-avatars-ai-twins",
+      "confidence": "high"
+    },
+    {
+      "category": "limitation",
+      "rawLabel": "Speaker language coupling",
+      "normalizedLabel": "speaker_language_coupling",
+      "value": "Additional speakers in multi-speaker videos speak the same language as the narrator.",
+      "supportType": "supported",
+      "claimType": "confirmed_fact",
+      "evidenceText": "The multiple voiceovers article explicitly states that extra speakers use the narrator's language.",
+      "sourceUrl": "https://help.invideo.io/en/articles/9414279-how-can-i-add-multiple-voiceovers-in-the-video",
+      "confidence": "high"
+    }
+  ],
+  "useCaseItems": [
+    {
+      "useCase": "marketing and social video production",
+      "audience": "marketers and agencies",
+      "fit": "Strong fit when teams want fast coverage across ads, stories, explainers, and social outputs.",
+      "claimType": "structured_inference",
+      "evidenceText": "The official positioning repeatedly names ads, storytelling, social media, and ready-to-share output.",
+      "sourceUrl": "https://invideo.io/ai-video-generator/",
+      "confidence": "high"
+    },
+    {
+      "useCase": "template plus timeline editing",
+      "audience": "small teams that want both AI generation and manual adjustment",
+      "fit": "Invideo is a fit when users want AI-first creation but still need a more traditional Studio editor as a fallback.",
+      "claimType": "structured_inference",
+      "evidenceText": "The home page explicitly splits invideo AI from invideo Studio and says users can go old-school and edit with timelines.",
+      "sourceUrl": "https://invideo.io/",
+      "confidence": "high"
+    },
+    {
+      "useCase": "UGC and avatar-led ad variants",
+      "audience": "performance marketing teams",
+      "fit": "Strong fit for teams producing many ad or UGC variants with avatars, cloned voice, and multiple model options.",
+      "claimType": "structured_inference",
+      "evidenceText": "UGC and Avatars is a named section on the official home page, and plans track clone counts and avatar access closely.",
+      "sourceUrl": "https://invideo.io/",
+      "confidence": "high"
+    }
+  ],
+  "userFitItems": [
+    {
+      "segment": "creator",
+      "fit": "Good fit for creators who want breadth and quick outputs more than one specialist workflow.",
+      "rationale": "The product bundles models, avatars, voice tools, and editing modes under one surface.",
+      "claimType": "structured_inference",
+      "evidenceText": "Official navigation and feature rails show a very broad toolset compared with single-purpose products.",
+      "sourceUrl": "https://invideo.io/",
+      "confidence": "high"
+    },
+    {
+      "segment": "SMB team",
+      "fit": "A practical SMB fit if the team can live inside shared workspaces and modest user caps before moving to the Team plan.",
+      "rationale": "The help center documents collaboration and team members, but the self-serve cap remains relatively low.",
+      "claimType": "structured_inference",
+      "evidenceText": "Shared workspaces and the 3-user cap coexist in the official help content.",
+      "sourceUrl": "https://help.invideo.io/en/articles/9382163-how-to-add-team-members",
+      "confidence": "high"
+    },
+    {
+      "segment": "enterprise",
+      "fit": "Potential fit exists, but the public evidence is thin and routed through sales rather than detailed docs.",
+      "rationale": "Enterprise is advertised, but detailed security, governance, and onboarding documentation is much lighter than on enterprise-native platforms.",
+      "claimType": "structured_inference",
+      "evidenceText": "The reviewed pages describe enterprise at a high level without deep public admin or compliance detail.",
+      "sourceUrl": "https://invideo.io/",
+      "confidence": "medium"
+    }
+  ],
+  "rawEvidenceBlocks": [
+    {
+      "sourceUrl": "https://invideo.io/",
+      "sourceType": "product_page",
+      "topic": "breadth",
+      "evidenceText": "Invideo publicly presents itself as both an AI generation surface and a more traditional editing surface.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://invideo.io/ai-models/",
+      "sourceType": "product_page",
+      "topic": "model catalog",
+      "evidenceText": "The official AI models page lists multiple video, image, and audio model providers rather than one proprietary-only stack.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://help.invideo.io/en/articles/11335019-how-can-i-upgrade-my-plan-to-create-more-express-avatars-ai-twins",
+      "sourceType": "help_center",
+      "topic": "free limits",
+      "evidenceText": "The free plan is tightly constrained by minutes, exports, watermarking, storage, and clone counts.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://help.invideo.io/en/articles/9663730-how-do-shared-workspaces-work",
+      "sourceType": "help_center",
+      "topic": "team collaboration",
+      "evidenceText": "Invideo supports shared workspaces, but the public docs frame collaboration around ownership and invites rather than advanced review systems.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    },
+    {
+      "sourceUrl": "https://help.invideo.io/en/articles/9414279-how-can-i-add-multiple-voiceovers-in-the-video",
+      "sourceType": "help_center",
+      "topic": "voice workflow",
+      "evidenceText": "The voice workflow is explicitly multi-speaker and script-aware, not just a single narration pass.",
+      "claimType": "confirmed_fact",
+      "confidence": "high"
+    }
+  ],
+  "unresolvedQuestions": [
+    {
+      "question": "Is there a public API or SDK for Invideo AI beyond the web product and enterprise sales path?",
+      "reason": "The reviewed official pages did not expose developer docs comparable to public API products.",
+      "recommendedSourceTypes": [
+        "docs",
+        "help_center",
+        "pricing"
+      ],
+      "status": "open"
+    },
+    {
+      "question": "Which security and compliance standards back the enterprise plan in detail?",
+      "reason": "Enterprise security is advertised, but the official public detail remains light in this sample pass.",
+      "recommendedSourceTypes": [
+        "security",
+        "help_center",
+        "legal"
+      ],
+      "status": "needs_manual_verification"
+    }
+  ]
+}

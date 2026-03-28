@@ -1,0 +1,254 @@
+{
+  "toolSlug": "deepbrain-ai",
+  "capturedAt": "2026-03-27T14:08:10.140Z",
+  "billingStates": [
+    {
+      "stateId": "monthly-default",
+      "label": "Monthly",
+      "billingMode": "monthly",
+      "isDefaultVisible": true
+    },
+    {
+      "stateId": "annual-visible",
+      "label": "Yearly",
+      "billingMode": "annual",
+      "isDefaultVisible": false
+    }
+  ],
+  "defaultVisibleStateIds": [
+    "monthly-default"
+  ],
+  "recommendedPublicDisplay": "Paid plans available",
+  "publicStartPriceCandidate": {
+    "display": "Starts at $24/mo billed yearly",
+    "planName": "Personal",
+    "stateId": "annual-visible",
+    "provenance": "cache/playwright cache:dynamic @ 2026-01-10T12:34:24.769Z",
+    "allowedForExactDisplay": false
+  },
+  "monthlyPrices": [],
+  "annualPrices": [
+    {
+      "planName": "Free",
+      "display": "$0/mo billed yearly",
+      "eligibleForPublicStartPrice": false
+    },
+    {
+      "planName": "Personal",
+      "display": "$24/mo billed yearly",
+      "eligibleForPublicStartPrice": true
+    },
+    {
+      "planName": "Team",
+      "display": "$55/seat/mo billed yearly",
+      "eligibleForPublicStartPrice": false
+    }
+  ],
+  "blockedPrices": [
+    {
+      "reason": "free plan is not a paid start price",
+      "items": [
+        {
+          "planName": "Free",
+          "stateId": "annual-visible",
+          "display": "$0/mo billed yearly",
+          "reason": "free plan is not a paid start price",
+          "priceRole": "core-recurring",
+          "provenance": "cache/playwright cache:dynamic @ 2026-01-10T12:34:24.769Z",
+          "displays": [
+            "$0/mo billed yearly"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "reason": "per-seat pricing is not a generic public start price",
+      "items": [
+        {
+          "planName": "Team",
+          "stateId": "annual-visible",
+          "display": "$55/seat/mo billed yearly",
+          "reason": "per-seat pricing is not a generic public start price",
+          "priceRole": "core-recurring",
+          "provenance": "cache/playwright cache:dynamic @ 2026-01-10T12:34:24.769Z",
+          "displays": [
+            "$55/seat/mo billed yearly"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "reason": "price point is not eligible for recommended display",
+      "items": [
+        {
+          "planName": "Enterprise",
+          "stateId": "annual-visible",
+          "display": null,
+          "reason": "price point is not eligible for recommended display",
+          "priceRole": "core-recurring",
+          "provenance": "cache/playwright cache:dynamic @ 2026-01-10T12:34:24.769Z",
+          "displays": [],
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "planCards": [
+    {
+      "planName": "Free",
+      "planKind": "free",
+      "displayedPrice": "$0/mo billed yearly",
+      "qualifier": "billed yearly",
+      "eligibleForPublicStartPrice": false,
+      "badge": null,
+      "cta": "Get Started",
+      "cardProvenance": [
+        {
+          "stateId": "annual-visible",
+          "isDefaultVisible": false,
+          "provenance": "cache/playwright cache:dynamic @ 2026-01-10T12:34:24.769Z",
+          "displayedPrice": "$0/mo billed yearly",
+          "qualifier": "billed yearly"
+        }
+      ],
+      "mainBullets": [
+        "3 Audio/Video Exports",
+        "Videos up to 3 mins",
+        "1 Custom Avatar",
+        "16 Generative Credits",
+        "720p Video Export",
+        "Standard Video Processing",
+        "AI Video Generation",
+        "AI Video & Image Generator"
+      ],
+      "pricingQualifiers": [
+        "billed yearly"
+      ],
+      "upgradeAddOnInfo": [],
+      "missingFields": [
+        "defaultStateCoverage"
+      ]
+    },
+    {
+      "planName": "Personal",
+      "planKind": "paid",
+      "displayedPrice": "$24/mo billed yearly",
+      "qualifier": "billed yearly",
+      "eligibleForPublicStartPrice": true,
+      "badge": null,
+      "cta": "Get Started",
+      "cardProvenance": [
+        {
+          "stateId": "annual-visible",
+          "isDefaultVisible": false,
+          "provenance": "cache/playwright cache:dynamic @ 2026-01-10T12:34:24.769Z",
+          "displayedPrice": "$24/mo billed yearly",
+          "qualifier": "billed yearly"
+        }
+      ],
+      "mainBullets": [
+        "Unlimited Video Exports",
+        "Videos up to 30 mins",
+        "3 Custom Avatars",
+        "60 Generative Credits",
+        "1080p Video Export",
+        "Fast Video Processing",
+        "Unlimited Photo Avatars",
+        "Unlimited Youtube Downloader"
+      ],
+      "pricingQualifiers": [
+        "billed yearly"
+      ],
+      "upgradeAddOnInfo": [],
+      "missingFields": [
+        "defaultStateCoverage"
+      ]
+    },
+    {
+      "planName": "Team",
+      "planKind": "paid",
+      "displayedPrice": "$55/seat/mo billed yearly",
+      "qualifier": "billed yearly",
+      "eligibleForPublicStartPrice": false,
+      "badge": "Best Value",
+      "cta": "Get Started",
+      "cardProvenance": [
+        {
+          "stateId": "annual-visible",
+          "isDefaultVisible": false,
+          "provenance": "cache/playwright cache:dynamic @ 2026-01-10T12:34:24.769Z",
+          "displayedPrice": "$55/seat/mo billed yearly",
+          "qualifier": "billed yearly"
+        }
+      ],
+      "mainBullets": [
+        "Unlimited Video Exports",
+        "Videos up to 30 mins",
+        "5 Custom Avatars",
+        "150 Generative Credits",
+        "4K Video Export",
+        "Fast Video Processing",
+        "Proofread AI Dubbing Scripts",
+        "Up/Download Subtitle Files"
+      ],
+      "pricingQualifiers": [
+        "billed yearly",
+        "1 seat",
+        "per seat"
+      ],
+      "upgradeAddOnInfo": [],
+      "missingFields": [
+        "defaultStateCoverage"
+      ]
+    },
+    {
+      "planName": "Enterprise",
+      "planKind": "enterprise",
+      "displayedPrice": "Let’s Talk",
+      "qualifier": null,
+      "eligibleForPublicStartPrice": false,
+      "badge": null,
+      "cta": "Contact Us",
+      "cardProvenance": [
+        {
+          "stateId": "annual-visible",
+          "isDefaultVisible": false,
+          "provenance": "cache/playwright cache:dynamic @ 2026-01-10T12:34:24.769Z",
+          "displayedPrice": "Let’s Talk",
+          "qualifier": null
+        }
+      ],
+      "mainBullets": [
+        "Unlimited AI Videos",
+        "Unlimited Video Duration",
+        "Unlimited Custom Avatars",
+        "Flexible Generative Credits",
+        "4K Video Export",
+        "Priority Video Processing",
+        "Enterprise-grade SAML SSO",
+        "SCORM Export"
+      ],
+      "pricingQualifiers": [
+        "billed yearly"
+      ],
+      "upgradeAddOnInfo": [],
+      "missingFields": [
+        "qualifier",
+        "defaultStateCoverage"
+      ]
+    }
+  ],
+  "reviewWarnings": [
+    "pricing upgraded to Playwright: billing-toggle-or-annual-qualifier, interactive-or-unit-priced-plans, source-config-marked-dynamic",
+    "Skipped faq: HTTP 404: Not Found",
+    "State-aware candidate generated from plan cards and billing states.",
+    "Manual review should confirm whether the default visible state on the live page is monthly or annual at capture time.",
+    "Current candidate depends on cache-fallback annual cards while the live default-visible monthly state did not yield stable plan cards.",
+    "Candidate result only. Do not replace existing frontend pricing or exact-price display without manual review.",
+    "Some plans do not yet have card extraction for the live default-visible state.",
+    "Some card snapshots came from cache fallback and should be manually verified against the live page.",
+    "Some plan cards still have missingFields and need manual review."
+  ]
+}
