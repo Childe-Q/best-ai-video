@@ -158,6 +158,9 @@ export function generateMetadata(): Metadata {
   return {
     title: `${displayCount ? `${displayCount} ` : ''}Best AI Video Generators & Tools ${seoYear} | Free & Paid Reviews`,
     description: `Discover ${displayCount ? `${displayCount} ` : ''}best AI video generators for ${seoYear}. Free plans, no watermark, text-to-video, 4K export. In-depth reviews, pricing comparisons & alternatives for YouTube creators.`,
+    alternates: {
+      canonical: 'https://best-ai-video.com/',
+    },
   };
 }
 

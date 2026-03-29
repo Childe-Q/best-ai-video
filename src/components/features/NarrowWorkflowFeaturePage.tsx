@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import Link from 'next/link';
+import FeatureNextSteps from '@/components/features/FeatureNextSteps';
 import ToolCard from '@/components/features/ToolCard';
 import FeaturesFAQ from '@/components/features/FeaturesFAQ';
 import { resolvePromoteSafeFeatureHref } from '@/components/features/filterPromoteSafeFeatureHrefs';
@@ -61,6 +62,12 @@ type ReadingGroup = {
   items: FeatureRecommendedReadingLink[];
 };
 
+const narrowWorkflowPrimaryReadingTypes = new Set<FeatureRecommendedReadingLink['linkType']>([
+  'tool',
+  'vs',
+  'tool_alternatives',
+]);
+
 const SAFE_FEATURE_HUB_EXIT = {
   href: '/features',
   label: 'Browse feature hub',
@@ -82,31 +89,60 @@ function getRecommendedSectionTitle(linkType: FeatureRecommendedReadingLink['lin
   }
 }
 
-const readingOrder: FeatureRecommendedReadingLink['linkType'][] = ['tool', 'tool_alternatives', 'vs', 'guide'];
+function buildRecommendedGroups(
+  featureSlug: string,
+  recommendedReadingLinks: FeatureRecommendedReadingLink[],
+): ReadingGroup[] {
+  const primaryGroups = readingOrder
+    .filter((linkType) => narrowWorkflowPrimaryReadingTypes.has(linkType))
+    .map((linkType) => ({
+      title: getRecommendedSectionTitle(linkType),
+      items: recommendedReadingLinks.filter((item) => item.linkType === linkType).slice(0, 2),
+    }))
+    .filter((group) => group.items.length > 0);
+
+  if (primaryGroups.length > 0) {
+    return primaryGroups;
+  }
+
+  if (featureSlug === 'content-repurposing-ai-tools') {
+    return [];
+  }
+
+  return readingOrder
+    .filter((linkType) => linkType === 'guide')
+    .map((linkType) => ({
+      title: getRecommendedSectionTitle(linkType),
+      items: recommendedReadingLinks.filter((item) => item.linkType === linkType).slice(0, 1),
+    }))
+    .filter((group) => group.items.length > 0);
+}
+
+const readingOrder: FeatureRecommendedReadingLink['linkType'][] = ['tool', 'vs', 'tool_alternatives', 'guide'];
 
 const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> = {
   'text-to-video-ai-tools': {
-    fitHeading: 'Stay here only if the workflow really starts from a prompt',
+    fitHeading: 'Stay here only if the job starts from a prompt or script',
     fitSummary:
-      'Use this page only if you already know the workflow starts from a prompt and the output should be generated from scratch. If you already have source material, need a presenter, or want a broader discovery page, you should exit early.',
+      'Use this page only when the input is a blank prompt, loose script, or narration brief and the footage has to be generated from scratch. If you already have source material to convert or need a presenter on screen, this is the wrong first route.',
     keyAxes: ['prompt adherence', 'clip length', 'commercial rights', 'scene quality', 'workflow fit'],
     fitCards: [
       {
-        title: 'Stay here if you need net-new scene generation',
+        title: 'Prompt or script in -> stay here',
         summary:
-          'This is the right route when the job is prompt-driven footage: cinematic B-roll, concept scenes, product visuals, or short clips that do not start from an existing recording.',
+          'Stay when the output is net-new footage: cinematic B-roll, concept scenes, product visuals, or short clips that do not start from an article, webinar, podcast, or recorded timeline.',
         href: '#cinematic-text-to-video',
         label: 'Go to the shortlist',
       },
       {
-        title: 'Leave for repurposing if you already have source material',
+        title: 'Existing source in -> leave for repurposing',
         summary:
           'If you are converting articles, webinars, podcasts, or long-form footage into video, text-to-video is the wrong first page. Start with the repurposing workflow instead.',
         href: '/features/content-repurposing-ai-tools',
         label: 'Go to repurposing',
       },
       {
-        title: 'Leave for avatars if a speaker matters more than scenes',
+        title: 'Presenter needed -> leave for avatars',
         summary:
           'If the output needs a presenter, lip-sync, or multilingual on-screen delivery, text-to-video is usually the wrong workflow. Start with avatar tools instead.',
         href: '/features/ai-avatar-video-generators',
@@ -115,25 +151,25 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
     ],
     decisionFrameCards: [
       {
-        title: 'Prompt adherence',
+        title: 'Input signal',
         summary:
-          'Start by asking whether the model actually follows scene instructions or drifts. If prompt control is weak, the rest of the comparison usually does not matter.',
+          'Blank prompt or script: stay. Existing article, webinar, podcast, or footage: leave for repurposing or editing.',
       },
       {
-        title: 'Clip length and usable output',
+        title: 'Output signal',
         summary:
-          'A model that looks impressive in demos may still fail if each generation is too short for your real workflow. Check usable clip length before price.',
+          'Need scenes, motion, or visual concepts: stay. Need a visible speaker carrying the message: leave for avatar tools.',
       },
       {
-        title: 'Commercial readiness',
+        title: 'Compare first',
         summary:
-          'Rights, watermarks, and production posture matter early here. A model can be visually strong and still be the wrong first choice for paid work.',
+          'Once the route is right, compare prompt adherence, usable clip length, and commercial posture before you compare price.',
       },
     ],
     decisionLead:
-      'This page only has one real lane, so these checks are here to keep the shortlist honest. They should narrow the job definition before you treat one cinematic route as the answer to every video workflow.',
+      'This page only has one real lane. These checks are here to confirm that the workflow is still prompt-first before you read the tools like a generic generator list.',
     shortlistLead:
-      'Once prompt-first generation is clearly the job, the page should tighten rather than widen. This single shortlist is meant to feel like the main event, not like one stop before another chooser.',
+      'Once prompt-first generation is clearly the job, the page should narrow quickly. This shortlist is here to compare scene-generation options, not to reopen the route decision.',
     faqLead:
       'If you are still here after the shortlist, the remaining questions are usually about whether text-to-video still holds as the route or whether it is time to move sideways into comparison or an adjacent workflow.',
     sectionOverrides: {
@@ -163,27 +199,32 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
     },
     faqItems: [
       {
-        question: 'Do I actually need text-to-video, or is repurposing a better route?',
+        question: 'I have a prompt or a script. Is this still the right page?',
+        answer:
+          'Yes, if that prompt or script is being used to generate net-new scenes from scratch. No, if it is really supporting an existing recording, article, webinar, or presenter-led workflow.',
+      },
+      {
+        question: 'What if I already have a blog, webinar, or podcast?',
         answer:
           'Use text-to-video only when the output begins from a prompt and the footage has to be generated from scratch. If you already have an article, webinar, podcast, or long-form recording, repurposing is usually the better first route.',
       },
       {
-        question: 'When is text-to-video better than avatar tools?',
+        question: 'Should I use avatar tools instead if someone needs to speak on screen?',
         answer:
           'Use text-to-video when scenes, B-roll, or visual storytelling are carrying the message. Use avatar tools when a speaker, lip-sync, or multilingual presenter format is doing the real work.',
       },
       {
-        question: 'What matters most: prompt adherence, clip length, or generation cost?',
+        question: 'What should I compare first once I know this is the right route?',
         answer:
           'Start with prompt adherence, because a cheaper model is still a bad fit if it cannot reliably follow the scene you asked for. Then check clip length, then cost. Rights and production posture should enter before you commit to a real workflow.',
       },
       {
-        question: 'Which tools are strongest for scene generation versus quick experiments?',
+        question: 'Which tools make the most sense for flagship scenes versus lighter experiments?',
         answer:
           'Start with Sora or Runway when scene quality and control matter most. Start with Kling when you care more about faster, high-energy output and want a lighter entry point for experiments.',
       },
       {
-        question: 'When should I stop using this page and move to direct comparison?',
+        question: 'When should I leave this page for direct comparison?',
         answer:
           'Move to direct comparison once you are no longer deciding whether text-to-video is the right workflow. If you are already comparing model-to-model tradeoffs, this page has done its job and the comparison page becomes more useful.',
       },
@@ -192,25 +233,25 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
   'content-repurposing-ai-tools': {
     fitHeading: 'Stay here only if the workflow starts with content you already have',
     fitSummary:
-      'Use this page only if the job starts with an existing asset and the outcome is a new format: article to video, script to video, webinar to clips, or podcast to shorts. If the real work is timeline control, transcript cleanup, caption polishing, or post-production on an existing edit, leave for the editors page instead of forcing a conversion workflow to answer an editing problem.',
+      'Use this page only if the job starts with an existing asset and the outcome is a new format: article to video, script to video, webinar to clips, or podcast to shorts. If the real work is shaping an existing edit with timeline control, transcript cleanup, captions, or polish, leave for the editors page instead.',
     keyAxes: ['source format', 'conversion path', 'transcript extraction', 'reuse at scale', 'workflow fit'],
     fitCards: [
       {
-        title: 'Stay here if you are converting existing content into video',
+        title: 'Blog, script, webinar, or podcast in -> stay here',
         summary:
           'This is the right route when the asset already exists and the job is to turn it into another format: article to video, script to video, webinar to shorts, or podcast to clips.',
         href: '#written-source-to-video',
         label: 'Go to the shortlist',
       },
       {
-        title: 'Leave for editors if post-production is the real job',
+        title: 'Assembled footage in -> leave for editors',
         summary:
           'If you already have footage assembled and need timeline edits, transcript cleanup, captions, or tighter polish, use the editors page. Repurposing is for source-to-output conversion, not post-production depth.',
         href: '/features/ai-video-editors',
         label: 'Go to editors',
       },
       {
-        title: 'Leave for text-to-video if you are starting from a blank prompt',
+        title: 'No source asset yet -> leave for text-to-video',
         summary:
           'If there is no article, recording, or source transcript to work from, repurposing is the wrong first page. Start with text-to-video instead of forcing a conversion workflow.',
         href: '/features/text-to-video-ai-tools',
@@ -219,21 +260,25 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
     ],
     decisionFrameCards: [
       {
-        title: 'Source format first',
+        title: 'Source asset',
         summary:
-          'Decide whether the starting asset is written content or a recording before anything else. Written-source conversion and recorded-source clipping are different workflows, and the wrong bucket wastes time fast.',
+          'Text, article, or script: start with written-source conversion. Webinar, podcast, live stream, or interview: start with recorded-source clipping.',
       },
       {
-        title: 'Conversion workflow versus post-production',
+        title: 'Conversion versus editing',
         summary:
-          'Use this page when the real job is converting source material into another format. If the material is already assembled and you mainly need editing control, transcript cleanup, or polish, an editor is usually the better route.',
+          'Stay when the job is converting one source format into another. Leave when the footage already has editorial shape and mainly needs cleanup, cuts, captions, or polish.',
       },
       {
-        title: 'Transcript extraction and reuse at scale',
+        title: 'Scale signal',
         summary:
-          'For webinars, podcasts, and interviews, the tool has to surface usable moments quickly and consistently. For articles and scripts, it has to package written input into video without turning the process back into manual editing.',
+          'Stay here if the job is repeatable reuse: pulling moments from long recordings or packaging written assets into video without rebuilding each piece manually.',
       },
     ],
+    decisionLead:
+      'Start with the asset, not the brand. The first call is written source versus recording, then whether the real job is conversion or post-production.',
+    shortlistLead:
+      'These two routes exist to narrow the conversion workflow quickly. They should feel like source-based choices, not like two generic tool buckets.',
     sectionOverrides: {
       'Written source to video': {
         chooseWhen:
@@ -275,18 +320,23 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
             note: 'Use the editors page if transcript cleanup, timeline control, or post-production polish matters more than automated clip extraction.',
           },
           {
-            href: '/features/best-ai-video-generators',
-            label: 'Free of the source-material constraint?',
-            note: 'Go back to the broader generators shortlist if conversion from existing material is no longer the main constraint.',
+            href: '/features/text-to-video-ai-tools',
+            label: 'Actually starting from a blank prompt?',
+            note: 'Go to text-to-video if there is no recording to clip and the job is net-new scene generation.',
           },
         ],
       },
     },
     faqItems: [
       {
-        question: 'Do I actually need repurposing, or an AI editor instead?',
+        question: 'I have blog posts or scripts. Is this the right route?',
         answer:
-          'Use repurposing when the workflow begins with source material that needs to become a new format: article to video, webinar to clips, podcast to shorts. Use an AI editor when the footage already exists and the real job is timeline control, transcript cleanup, captions, reframing, or post-production polish.',
+          'Yes. Written-source conversion belongs here when the job is turning articles, scripts, or documents into video without rebuilding everything manually in an editor.',
+      },
+      {
+        question: 'I have webinars, podcasts, or recordings. Is this repurposing or editing?',
+        answer:
+          'It is repurposing if the job is converting that source into clips or another publishable format. It is editing if you already have a cut or assembled footage and mainly need cleanup, trimming, captions, or deeper post-production control.',
       },
       {
         question: 'Should I start with written-source conversion or recorded-source clipping?',
@@ -294,17 +344,17 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
           'Start with written-source conversion when the asset is text. Start with recorded-source clipping when the asset is a webinar, interview, live stream, or podcast. The source format should decide the first bucket, not pricing or brand familiarity.',
       },
       {
-        question: 'When does transcript extraction become the deciding factor?',
+        question: 'Are repurposing tools the same as AI editors?',
+        answer:
+          'No. Repurposing tools are for source-to-output conversion. AI editors are for shaping footage that already exists. The overlap is real, but the first question is still whether you are converting a source asset or polishing an edit.',
+      },
+      {
+        question: 'What matters most for podcast or webinar repurposing?',
         answer:
           'Transcript extraction matters most when the source is spoken content and the workflow depends on finding usable moments fast. If the source is a webinar, podcast, or interview, weak transcription usually destroys the efficiency of repurposing at scale.',
       },
       {
-        question: 'Which tools are strongest for blog or script conversion versus clipping recordings?',
-        answer:
-          'Start with Pictory or Lumen5 when the asset is written content that needs scenes, stock media, and voiceover packaging. Start with Opus Clip or Munch when the job is pulling short moments from a long recording.',
-      },
-      {
-        question: 'When should I leave this page and move to direct comparison or a broader shortlist?',
+        question: 'When should I leave this page?',
         answer:
           'Leave this page once source-material conversion is no longer the main constraint. If you need deeper editing control, an on-screen presenter, or net-new scene generation, a neighboring workflow page will usually be more useful than staying here.',
       },
@@ -802,25 +852,25 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
   'ai-video-editors': {
     fitHeading: 'Stay here only if editing existing footage is the real job',
     fitSummary:
-      'Use this page only if the workflow starts with footage, audio, or a transcript that needs post-production help: timeline work, transcript cleanup, captions, reframing, clip trimming, or polish. If the real job is converting articles, webinars, podcasts, or content libraries into new formats, leave for repurposing instead of forcing an editor page to answer a conversion problem.',
+      'Use this page only if the workflow starts with footage, audio, or a transcript that needs post-production help: timeline work, transcript cleanup, captions, reframing, clip trimming, or polish. If the real job is converting source material into a new format or generating scenes from scratch, leave early.',
     keyAxes: ['editing interface', 'timeline control', 'transcript cleanup', 'post-production speed', 'workflow fit'],
     fitCards: [
       {
-        title: 'Stay here if you need AI-assisted editing on existing material',
+        title: 'Footage, audio, or transcript already exists -> stay here',
         summary:
           'This is the right route when you already have footage or audio and the job is cutting, captioning, reframing, cleaning, or packaging that material faster.',
         href: '#timeline-and-transcript-post-production',
         label: 'Go to the shortlist',
       },
       {
-        title: 'Leave for text-to-video if you need scenes generated from scratch',
+        title: 'Need net-new scenes -> leave for text-to-video',
         summary:
           'If the workflow begins from a prompt instead of existing footage, editors are the wrong first page. Start with text-to-video or the broader generator shortlist.',
         href: '/features/text-to-video-ai-tools',
         label: 'Go to text-to-video',
       },
       {
-        title: 'Leave for repurposing if source conversion matters more than editing depth',
+        title: 'Need source conversion -> leave for repurposing',
         summary:
           'If the real job is turning blogs, webinars, podcasts, or long-form recordings into other formats with minimal manual editing, repurposing is usually the better first route.',
         href: '/features/content-repurposing-ai-tools',
@@ -829,21 +879,25 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
     ],
     decisionFrameCards: [
       {
-        title: 'Editing paradigm first',
+        title: 'Route signal',
         summary:
-          'Decide whether you need timeline precision, transcript-first editing, or fast clip extraction. Those are different workflows, and the wrong interface usually kills adoption faster than pricing.',
+          'Stay only if the asset already exists and the job is post-production. Leave if you still need source conversion or prompt-led generation.',
       },
       {
-        title: 'Post-production depth versus conversion workflow',
+        title: 'Interface fit',
         summary:
-          'This page is for shaping footage that already exists. If the real job is taking source material and turning it into new formats at scale, use repurposing instead of stretching an editor into a conversion platform.',
+          'Transcript-first editing, timeline control, and fast clip packaging are different jobs. The wrong editing paradigm usually breaks the workflow faster than pricing does.',
       },
       {
-        title: 'Long-form control versus short-form speed',
+        title: 'Depth versus speed',
         summary:
-          'Some tools win because they help you shape full episodes, interviews, and talking-head content. Others win because they package social-ready clips quickly. Pick the post-production job before the tool.',
+          'Choose between longer-form narrative control and faster clip packaging before you compare tools. This split is about editing posture, not just product popularity.',
       },
     ],
+    decisionLead:
+      'This page is for post-production. The first question is not which editor is best, but whether editing is actually the workflow or just a symptom of a different route.',
+    shortlistLead:
+      'The split below is about editing posture: deeper narrative cleanup versus faster clip packaging once the footage already exists.',
     sectionOverrides: {
       'Timeline and transcript post-production': {
         chooseWhen:
@@ -880,41 +934,41 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
             note: 'Jump back to the deeper post-production route if transcript workflows, audio cleanup, and long-form polish matter more than speed.',
           },
           {
-            href: '/features/ai-video-for-social-media',
-            label: 'Actually optimizing for social publishing?',
-            note: 'Use the social workflow page if hooks, templates, and vertical output cadence are the real first filters.',
-          },
-          {
             href: '/features/content-repurposing-ai-tools',
             label: 'Working from source content instead?',
             note: 'Go there if the main job is converting webinars, podcasts, or articles into new formats rather than editing finished footage.',
+          },
+          {
+            href: '/features/text-to-video-ai-tools',
+            label: 'Need generation instead?',
+            note: 'Go to text-to-video if there is no usable footage yet and the output has to be generated from scratch.',
           },
         ],
       },
     },
     faqItems: [
       {
-        question: 'Do I actually need an AI editor, or a repurposing tool instead?',
+        question: 'I already have a webinar or podcast. Do I need an editor or a repurposing tool?',
         answer:
           'Use this page when you already have footage, audio, or a transcript and the job is editing it faster. Use repurposing when the real job is turning articles, webinars, podcasts, or long-form recordings into new video formats with minimal manual editing.',
       },
       {
-        question: 'Should I start with deeper post-production tools or faster clip editing tools?',
+        question: 'When is text-to-video the better route than this page?',
+        answer:
+          'Text-to-video is the better route when the project starts from a prompt or script and needs net-new scenes. This page only makes sense once footage, audio, or a transcript already exists.',
+      },
+      {
+        question: 'Should I start with transcript-first editing or fast clip packaging?',
         answer:
           'Start with deeper post-production tools when you need longer-form control, transcript editing, or precise post-production. Start with faster clip editing tools when speed, highlight extraction, and short-form packaging are the real priorities.',
       },
       {
-        question: 'When is repurposing a better route than this page?',
-        answer:
-          'Repurposing is the better route when the job starts with an article, webinar, podcast, or other source content that needs to become a new format with minimal manual editing. This page is for editing workflows, not source-to-output conversion decisions.',
-      },
-      {
-        question: 'What matters most here: interface style, timeline control, or turnaround speed?',
+        question: 'What should I compare first once I know I need an AI editor?',
         answer:
           'Start with interface style, because the wrong editing paradigm creates friction immediately. Then check whether timeline control or turnaround speed is the bigger constraint for the actual post-production workflow you run most often.',
       },
       {
-        question: 'When should I leave this page for a narrower adjacent workflow?',
+        question: 'When does this page stop being the right frame?',
         answer:
           'Leave for text-to-video if you need net-new generation, for repurposing if source conversion is the real job, or for the social workflow page if short-form publishing speed matters more than editing depth.',
       },
@@ -984,12 +1038,7 @@ export default function NarrowWorkflowFeaturePage({
     ) as Record<string, WorkflowSectionOverride>,
   };
 
-  const recommendedGroups: ReadingGroup[] = readingOrder
-    .map((linkType) => ({
-      title: getRecommendedSectionTitle(linkType),
-      items: recommendedReadingLinks.filter((item) => item.linkType === linkType),
-    }))
-    .filter((group) => group.items.length > 0);
+  const recommendedGroups = buildRecommendedGroups(featureSlug, recommendedReadingLinks);
 
   return (
     <div
@@ -1154,7 +1203,7 @@ export default function NarrowWorkflowFeaturePage({
 
               {sectionOverride?.contextualExits?.length ? (
                 <div className="mt-8 border-t border-gray-200 pt-5">
-                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Exit options</p>
+                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">If this route stops fitting</p>
                   <div className="mt-3 flex flex-wrap gap-3">
                     {sectionOverride.contextualExits.map((item) => (
                       <Link
@@ -1201,38 +1250,12 @@ export default function NarrowWorkflowFeaturePage({
         )}
 
         {recommendedGroups.length > 0 && (
-          <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
-            <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Further reading</p>
-              <h2 className="mt-3 text-3xl font-bold text-gray-900">Keep going only if the fit still holds</h2>
-            </div>
-
-            <div className="mt-8 grid gap-8 xl:grid-cols-2">
-              {recommendedGroups.map((group) => (
-                <div key={group.title}>
-                  <h3 className="text-lg font-bold text-gray-900">{group.title}</h3>
-                  <div className="mt-4 flex flex-wrap gap-3">
-                    {group.items.map((item) => (
-                      <Link
-                        key={`${item.linkType}-${item.destinationSlug}`}
-                        href={item.href}
-                        onClick={() =>
-                          track('click_internal_link', {
-                            link_type: item.linkType,
-                            destination_slug: item.destinationSlug,
-                            feature_slug: featureSlug,
-                          })
-                        }
-                        className="rounded-full border border-gray-200 bg-[#F9FAFB] px-4 py-2 text-sm font-semibold text-gray-800 transition-colors hover:border-indigo-300 hover:text-indigo-600"
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+          <FeatureNextSteps
+            featureSlug={featureSlug}
+            title="Keep going only if the fit still holds"
+            intro="These are follow-on paths for people who have already confirmed the workflow. They should not pull attention away from the main shortlist above."
+            groups={recommendedGroups}
+          />
         )}
       </main>
     </div>

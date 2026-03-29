@@ -4,6 +4,9 @@ export const metadata = {
   title: 'Methodology | AI Video Tool Comparisons',
   description:
     'How we run VS comparisons: prompt controls, source policy, scoring weights, and update-date rules.',
+  alternates: {
+    canonical: 'https://best-ai-video.com/methodology',
+  },
 };
 
 export default function MethodologyPage() {

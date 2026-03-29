@@ -9,7 +9,7 @@ import {
 } from '@/data/vs';
 import { buildDecisionTableRowEntries, countPlaceholderCells, hasDecisionRow } from '@/lib/vsDecisionTable';
 import { computeKeyDiffUniquenessScore } from '@/lib/vsDifferentiation';
-import { getFeaturedVsCards, getGroupedVsCards, listVsIndexCards } from '@/lib/vsIndex';
+import { getGroupedVsCards, getPrimaryStartingPointCards, listVsIndexCards } from '@/lib/vsIndex';
 import { getDecisionRowLabelsForIntent, VS_INTENT_OVERRIDES } from '@/lib/vsIntent';
 import { resolveRowSourcesForTools } from '@/lib/vsToolSources';
 import { VsDiffRow } from '@/types/vs';
@@ -438,7 +438,7 @@ export function buildVsCanonicalConsistencyReport(): string {
 
 export function buildVsIndexVisibilityReport(): string {
   const cards = listVsIndexCards();
-  const featured = getFeaturedVsCards(cards);
+  const startingPoints = getPrimaryStartingPointCards(cards);
   const grouped = getGroupedVsCards(cards);
 
   const lines: string[] = [
@@ -449,16 +449,16 @@ export function buildVsIndexVisibilityReport(): string {
     '## Summary',
     '',
     `- Canonical index count: ${cards.length}`,
-    `- Featured count: ${featured.length}`,
+    `- Starting-point count: ${startingPoints.length}`,
     `- Group count: ${grouped.length}`,
     '',
     '## Canonical slugs in index',
     '',
     ...cards.map((card) => `- ${card.slug}`),
     '',
-    '## Featured slugs',
+    '## Starting-point slugs',
     '',
-    ...featured.map((card) => `- ${card.slug}`),
+    ...startingPoints.map((card) => `- ${card.slug}`),
     '',
     '## Grouped visibility',
     '',

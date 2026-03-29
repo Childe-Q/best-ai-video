@@ -6,6 +6,7 @@ import ToolCard from '@/components/features/ToolCard';
 import BusinessProcurementFeaturePage from '@/components/features/BusinessProcurementFeaturePage';
 import ComparisonFeaturePage from '@/components/features/ComparisonFeaturePage';
 import FeaturesFAQ from '@/components/features/FeaturesFAQ';
+import FeatureNextSteps from '@/components/features/FeatureNextSteps';
 import NarrowWorkflowFeaturePage from '@/components/features/NarrowWorkflowFeaturePage';
 import PolicyThresholdFeaturePage from '@/components/features/PolicyThresholdFeaturePage';
 import { resolvePromoteSafeFeatureHref } from '@/components/features/filterPromoteSafeFeatureHrefs';
@@ -440,15 +441,15 @@ const featurePageOverrides: Partial<Record<string, FeaturePageOverride>> = {
     compactFrontHalf: true,
     atGlanceCards: [
       {
-        eyebrow: 'Best overall',
+        eyebrow: 'Default once avatar fit is clear',
         title: 'HeyGen',
-        summary: 'Strongest first check for most buyers who already know the message needs a presenter on screen and do not need to start in enterprise procurement.',
+        summary: 'Strongest first check once you know the message needs a presenter on screen and the job is not really enterprise training, API delivery, or photo animation.',
         support: 'Best for fast talking-head delivery, multilingual spokesperson output, and presenter-led explainers',
         href: '/tool/heygen',
         cta: 'Open review',
       },
       {
-        eyebrow: 'Best for enterprise training',
+        eyebrow: 'Best if governance drives the choice',
         title: 'Synthesia',
         summary: 'Best starting point when governance, training rollout, and predictable seat-based deployment matter more than campaign flexibility.',
         support: 'Best for corporate training, compliance, and L&D teams',
@@ -456,7 +457,7 @@ const featurePageOverrides: Partial<Record<string, FeaturePageOverride>> = {
         cta: 'Open review',
       },
       {
-        eyebrow: 'Best for interactive e-learning',
+        eyebrow: 'Best if interactivity is the real need',
         title: 'Colossyan',
         summary: 'Most relevant if branching scenarios and quiz-style training are what actually justify using an avatar platform.',
         support: 'Best for instructional design and structured learning flows',
@@ -464,7 +465,7 @@ const featurePageOverrides: Partial<Record<string, FeaturePageOverride>> = {
         cta: 'Open review',
       },
       {
-        eyebrow: 'Best for API or photo animation',
+        eyebrow: 'Best if delivery is technical or photo-based',
         title: 'D-ID',
         summary: 'Best fit when the job is animating an image or plugging avatar generation into a product workflow, not picking a stock presenter.',
         support: 'Best for API delivery and photo-to-avatar use cases',
@@ -476,33 +477,33 @@ const featurePageOverrides: Partial<Record<string, FeaturePageOverride>> = {
       {
         title: 'Marketing and social avatars',
         whenWins:
-          'Choose this route when the message has to be delivered by a presenter and speed, language coverage, and believable lip-sync matter more than procurement controls. It is the right fit for outreach, product explainers, and multilingual spokesperson content that has to ship fast.',
+          'Choose this route only after you know a presenter has to carry the message. It is the right fit for outreach, product explainers, and multilingual spokesperson content where speed, language coverage, and believable lip-sync matter more than procurement controls.',
         whenDisappoints:
-          'It disappoints when the real buyer is choosing a marketing workflow rather than an avatar format, or when L&D, HR, and compliance need stronger governance than a lighter presenter stack provides.',
-        compareHint: 'Lip-sync quality, language breadth, and presenter delivery speed',
+          'It disappoints when the real buyer is still choosing a broader marketing workflow, or when L&D, HR, and compliance need stronger governance than a lighter presenter stack provides.',
+        compareHint: 'Presenter realism, lip-sync, and delivery speed',
         redirect: {
           href: '#marketing-and-social-avatars',
           label: 'Go to marketing/social route',
-          note: 'Start there if the buyer cares more about presenter-led outward-facing delivery than governed rollout or campaign orchestration.',
+          note: 'Start there only after presenter-led outward-facing delivery is clearly the job.',
         },
       },
       {
         title: 'Training and enterprise avatars',
         whenWins:
-          'Choose this route when the workflow is structured training, onboarding, compliance, or global internal communications and a presenter still has to carry the message. These tools win when repeatability, governance, and controlled avatar rollout matter more than creative flexibility.',
+          'Choose this route after avatar fit is clear and the workflow is structured training, onboarding, compliance, or global internal communications. These tools win when repeatability, governance, and controlled avatar rollout matter more than creative flexibility.',
         whenDisappoints:
           'It disappoints when you mainly need campaign iteration, lighter marketing output, or broader commercial workflow tooling. The overhead makes less sense if the job is growth content rather than governed speaker-led enablement.',
         compareHint: 'Governance, admin controls, and custom-avatar policy',
         redirect: {
           href: '#training-and-enterprise-avatars',
           label: 'Go to training/enterprise route',
-          note: 'Start there if approvals, repeatability, and internal speaker-led rollout matter more than campaign flexibility.',
+          note: 'Start there when approvals, repeatability, and internal speaker-led rollout matter more than campaign flexibility.',
         },
       },
       {
         title: 'Image and API avatar tools',
         whenWins:
-          'Choose this route when you specifically need to animate a still image or deliver avatar output through an API. It is the right lane for product builders and specialized speaker-delivery workflows, not general marketing strategy or general-purpose spokesperson video.',
+          'Choose this route after avatar fit is clear and you specifically need still-image animation or avatar output through an API. It is for product builders and specialized delivery workflows, not general-purpose spokesperson video.',
         whenDisappoints:
           'It disappoints when you really want a ready-made presenter library, enterprise training stack, or a broad avatar studio for non-technical teams. The format is narrower by design.',
         compareHint: 'API delivery, photo animation, and custom-input flexibility',
@@ -515,34 +516,39 @@ const featurePageOverrides: Partial<Record<string, FeaturePageOverride>> = {
     ],
     faqItems: [
       {
-        question: 'Should I start with HeyGen or Synthesia?',
+        question: 'Do I actually need avatar tools, or would text-to-video be better?',
         answer:
-          'Start with HeyGen if the job is outreach, product explanation, or multilingual presenter content and you need faster iteration. Start with Synthesia if the buyer cares more about enterprise training, governance, and a structured internal speaker-led rollout.',
+          'Use avatar tools when the message depends on a presenter speaking on screen. Use text-to-video when scenes, B-roll, or visual storytelling carry the message without a human-like host.',
+      },
+      {
+        question: 'I need a talking presenter for marketing. Do I start with HeyGen or something else?',
+        answer:
+          'Start with HeyGen if the job is outreach, product explanation, or multilingual presenter content and you need faster iteration. Move elsewhere only if the real constraint is enterprise governance or API/photo-animation delivery.',
+      },
+      {
+        question: 'I need training videos. Should I start with Synthesia, Colossyan, or a lighter avatar tool?',
+        answer:
+          'Start with Synthesia when governance, repeatability, and structured rollout are the main constraints. Start with Colossyan when interactive training is the reason you are buying. Use a lighter avatar tool when the job is external-facing presenter delivery rather than training ops.',
       },
       {
         question: 'When is Colossyan worth it over the bigger avatar platforms?',
         answer:
-          'Colossyan is the better route when interactive training is the reason you are buying the tool. If branching scenarios and quiz-based learning are central, it is more relevant than a general avatar platform built mainly for marketing or corporate announcements.',
+          'Colossyan is the better route when branching scenarios and quiz-based learning are the real reason you need avatars. If interactivity is not central, broader avatar platforms are usually the cleaner first stop.',
       },
       {
-        question: 'Do I need an avatar platform or a text-to-video generator?',
+        question: 'What if I need a custom likeness, photo animation, or API delivery?',
         answer:
-          'Use an avatar platform when the message depends on a presenter speaking on screen. Use text-to-video when the output is prompt-driven scenes, B-roll, or visual storytelling without a human-like host carrying the message.',
+          'Start with the image and API route if you need photo animation or a technical delivery path. If you need a governed custom avatar for internal rollout, the enterprise route is usually more relevant. Treat custom likeness as an early filter because eligibility changes a lot by vendor and plan.',
       },
       {
-        question: 'What matters first: language support, governance, or cost per minute?',
+        question: 'What should I compare first after I know avatar tools are the right route?',
         answer:
           'Start with avatar workflow fit, then compare the one constraint most likely to break the rollout. For outward-facing presenter teams that is usually language coverage, voice quality, and speed. For L&D and compliance teams it is governance and admin structure. Cost per minute matters, but only after you know a presenter-led workflow is really the job.',
       },
       {
-        question: 'When is the marketing workflow page a better route than this one?',
+        question: 'When does this page stop being the right frame?',
         answer:
-          'Use the marketing page when campaign governance, localization strategy, approval flow, or branded commercial output is the main decision. Stay here when the real first filter is avatar format, talking-head delivery, or how a speaker carries the message on screen.',
-      },
-      {
-        question: 'Which route fits custom likeness, photo animation, or API delivery?',
-        answer:
-          'If you need to animate a still image or ship avatar output through an API, start with the image and API route. If you need a governed custom avatar for internal rollout, the enterprise route is usually more relevant. Treat custom likeness as an early shortlist filter, because plan eligibility varies sharply by vendor and tier.',
+          'Leave this page when the real decision is no longer presenter-led delivery. If you mainly need prompt-generated scenes, source-content conversion, or a broader marketing workflow, another route will usually answer the question faster.',
       },
     ],
     groupOverrides: {
@@ -969,6 +975,13 @@ function getContextLinksForGroup(
     return false;
   });
 
+  if (pageData.slug === 'ai-avatar-video-generators') {
+    const matchedReviews = matched.filter((item) => item.linkType === 'tool');
+    if (matchedReviews.length > 0) {
+      return matchedReviews.slice(0, 2);
+    }
+  }
+
   if (matched.length > 0) {
     return matched.slice(0, 3);
   }
@@ -1006,6 +1019,29 @@ function getRecommendedSectionTitle(linkType: FeatureRecommendedReadingLink['lin
 }
 
 const recommendedReadingOrder: FeatureRecommendedReadingLink['linkType'][] = ['tool', 'vs', 'guide', 'tool_alternatives'];
+
+function buildRecommendedGroups(
+  pageData: FeaturePageData,
+  recommendedReadingLinks: FeatureRecommendedReadingLink[],
+) {
+  if (pageData.slug === 'ai-avatar-video-generators') {
+    return (['tool', 'vs'] as const)
+      .map((linkType) => ({
+        linkType,
+        title: getRecommendedSectionTitle(linkType),
+        items: recommendedReadingLinks.filter((item) => item.linkType === linkType).slice(0, 2),
+      }))
+      .filter((group) => group.items.length > 0);
+  }
+
+  return recommendedReadingOrder
+    .map((linkType) => ({
+      linkType,
+      title: getRecommendedSectionTitle(linkType),
+      items: recommendedReadingLinks.filter((item) => item.linkType === linkType),
+    }))
+    .filter((group) => group.items.length > 0);
+}
 
 function getPolicyLabel(pageData: FeaturePageData): string {
   return pageData.meta.pageType === 'policy-threshold' ? 'Watermark policy' : 'Policy';
@@ -1150,13 +1186,7 @@ export default function FeatureHubPage({
   promoteSafeFeatureHrefs,
 }: FeatureHubPageProps) {
   const promoteSafeFeatureHrefSet = new Set(promoteSafeFeatureHrefs);
-  const recommendedGroups = recommendedReadingOrder
-    .map((linkType) => ({
-      linkType,
-      title: getRecommendedSectionTitle(linkType),
-      items: recommendedReadingLinks.filter((item) => item.linkType === linkType),
-    }))
-    .filter((group) => group.items.length > 0);
+  const recommendedGroups = buildRecommendedGroups(pageData, recommendedReadingLinks);
 
   const { pageType, modules } = pageData.meta;
   const isBroadChooser = pageType === 'broad-chooser';
@@ -1538,7 +1568,7 @@ export default function FeatureHubPage({
                 {displayContextualLinks.length > 0 && (
                   <div className="mt-8 border-t border-gray-200 pt-5">
                     <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">
-                      Exit options
+                      If this route stops fitting
                     </p>
                     <div className="mt-3 flex flex-wrap gap-3">
                       {displayContextualLinks.map((item) => (
@@ -1579,38 +1609,19 @@ export default function FeatureHubPage({
         )}
 
         {modules.furtherReading !== 'hidden' && recommendedGroups.length > 0 && (
-          <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
-            <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Further reading</p>
-              <h2 className="mt-3 text-3xl font-bold text-gray-900">{getFurtherReadingHeading(pageType)}</h2>
-            </div>
-
-            <div className="mt-8 grid gap-8 xl:grid-cols-2">
-              {recommendedGroups.map((group) => (
-                <div key={group.linkType}>
-                  <h3 className="text-lg font-bold text-gray-900">{group.title}</h3>
-                  <div className="mt-4 flex flex-wrap gap-3">
-                    {group.items.map((item) => (
-                      <Link
-                        key={`${item.linkType}-${item.destinationSlug}`}
-                        href={item.href}
-                        onClick={() =>
-                          track('click_internal_link', {
-                            link_type: item.linkType,
-                            destination_slug: item.destinationSlug,
-                            feature_slug: featureSlug,
-                          })
-                        }
-                        className="rounded-full border border-gray-200 bg-[#F9FAFB] px-4 py-2 text-sm font-semibold text-gray-800 transition-colors hover:border-indigo-300 hover:text-indigo-600"
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+          <FeatureNextSteps
+            featureSlug={featureSlug}
+            title={getFurtherReadingHeading(pageType)}
+            intro={
+              isBroadChooser
+                ? 'These links help only after the route is clear. They are next steps, not substitutes for the decision this page is trying to make.'
+                : 'These links help only after the current route still looks right. Treat them as the next layer of research, not as a new starting point.'
+            }
+            groups={recommendedGroups.map((group) => ({
+              title: group.title,
+              items: group.items,
+            }))}
+          />
         )}
       </main>
     </div>

@@ -4,6 +4,9 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Terms of Service | Best AI Video Tools',
   description: 'Terms of Service for Best AI Video Tools. Read our terms and conditions for using our website.',
+  alternates: {
+    canonical: 'https://best-ai-video.com/terms',
+  },
 };
 
 export default function TermsPage() {
@@ -123,4 +126,3 @@ export default function TermsPage() {
     </div>
   );
 }
-

@@ -4,6 +4,9 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Privacy Policy | Best AI Video Tools',
   description: 'Privacy Policy for Best AI Video Tools. Learn how we collect, use, and protect your personal information.',
+  alternates: {
+    canonical: 'https://best-ai-video.com/privacy',
+  },
 };
 
 export default function PrivacyPage() {
@@ -109,4 +112,3 @@ export default function PrivacyPage() {
     </div>
   );
 }
-

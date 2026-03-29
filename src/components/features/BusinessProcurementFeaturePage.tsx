@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import Link from 'next/link';
+import FeatureNextSteps from '@/components/features/FeatureNextSteps';
 import ToolCard from '@/components/features/ToolCard';
 import FeaturesFAQ from '@/components/features/FeaturesFAQ';
 import { isPromoteSafeFeatureHref, toPromoteSafeFeatureHref } from '@/components/features/filterPromoteSafeFeatureHrefs';
@@ -199,7 +200,7 @@ const businessProcurementOverrides: Partial<Record<string, BusinessProcurementOv
     sectionsIntro:
       'The sections below assume the buyer is a team or department lead, not a procurement committee. If that stops being true, this page should stop being the main frame.',
     laneLabel: 'Shortlist lane',
-    exitOptionsLabel: 'Exit options',
+    exitOptionsLabel: 'If this frame stops fitting',
     verifyLabel: 'Check before rollout',
     faqHeading: 'Questions that usually decide the business-team shortlist',
     furtherReadingHeading: 'Keep going only if the business-team fit still holds',
@@ -372,7 +373,7 @@ const businessProcurementOverrides: Partial<Record<string, BusinessProcurementOv
     sectionsIntro:
       'The sections below assume procurement fit is already established. If that is still not true, this page should stop being the main frame.',
     laneLabel: 'Shortlist lane',
-    exitOptionsLabel: 'Exit options',
+    exitOptionsLabel: 'If this frame stops fitting',
     verifyLabel: 'Check before procurement',
     faqHeading: 'Questions that usually decide enterprise procurement fit',
     furtherReadingHeading: 'Keep going only if deployment fit still holds',
@@ -813,38 +814,12 @@ export default function BusinessProcurementFeaturePage({
         )}
 
         {recommendedGroups.length > 0 && (
-          <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
-            <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Further reading</p>
-              <h2 className="mt-3 text-3xl font-bold text-gray-900">{override.furtherReadingHeading}</h2>
-            </div>
-
-            <div className="mt-8 grid gap-8 xl:grid-cols-2">
-              {recommendedGroups.map((group) => (
-                <div key={group.title}>
-                  <h3 className="text-lg font-bold text-gray-900">{group.title}</h3>
-                  <div className="mt-4 flex flex-wrap gap-3">
-                    {group.items.map((item) => (
-                      <Link
-                        key={`${item.linkType}-${item.destinationSlug}`}
-                        href={item.href}
-                        onClick={() =>
-                          track('click_internal_link', {
-                            link_type: item.linkType,
-                            destination_slug: item.destinationSlug,
-                            feature_slug: featureSlug,
-                          })
-                        }
-                        className="rounded-full border border-gray-200 bg-[#F9FAFB] px-4 py-2 text-sm font-semibold text-gray-800 transition-colors hover:border-indigo-300 hover:text-indigo-600"
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+          <FeatureNextSteps
+            featureSlug={featureSlug}
+            title={override.furtherReadingHeading}
+            intro="Use these only after the buyer frame on this page still feels right. They should deepen the current decision, not restart it from another angle."
+            groups={recommendedGroups}
+          />
         )}
       </main>
     </div>

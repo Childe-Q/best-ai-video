@@ -4,6 +4,9 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'About Us | Best AI Video Tools',
   description: 'Learn about Best AI Video Tools. We provide independent reviews and comparisons of AI video creation software.',
+  alternates: {
+    canonical: 'https://best-ai-video.com/about',
+  },
 };
 
 export default function AboutPage() {
@@ -80,4 +83,3 @@ export default function AboutPage() {
     </div>
   );
 }
-

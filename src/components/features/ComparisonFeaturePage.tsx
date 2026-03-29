@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import Link from 'next/link';
+import FeatureNextSteps from '@/components/features/FeatureNextSteps';
 import FeaturesFAQ from '@/components/features/FeaturesFAQ';
 import { resolvePromoteSafeFeatureHref } from '@/components/features/filterPromoteSafeFeatureHrefs';
 import { track } from '@/lib/features/track';
@@ -751,38 +752,12 @@ export default function ComparisonFeaturePage({
         )}
 
         {recommendedGroups.length > 0 && (
-          <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
-            <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Further reading</p>
-              <h2 className="mt-3 text-3xl font-bold text-gray-900">Keep going only if the fit still holds</h2>
-            </div>
-
-            <div className="mt-8 grid gap-8 xl:grid-cols-2">
-              {recommendedGroups.map((group) => (
-                <div key={group.title}>
-                  <h3 className="text-lg font-bold text-gray-900">{group.title}</h3>
-                  <div className="mt-4 flex flex-wrap gap-3">
-                    {group.items.map((item) => (
-                      <Link
-                        key={`${item.linkType}-${item.destinationSlug}`}
-                        href={item.href}
-                        onClick={() =>
-                          track('click_internal_link', {
-                            link_type: item.linkType,
-                            destination_slug: item.destinationSlug,
-                            feature_slug: featureSlug,
-                          })
-                        }
-                        className="rounded-full border border-gray-200 bg-[#F9FAFB] px-4 py-2 text-sm font-semibold text-gray-800 transition-colors hover:border-indigo-300 hover:text-indigo-600"
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+          <FeatureNextSteps
+            featureSlug={featureSlug}
+            title="Keep going only if the fit still holds"
+            intro="These links are useful only after the direct comparison frame still feels right. If the comparison itself is premature, the broader shortlist is the better next move."
+            groups={recommendedGroups}
+          />
         )}
       </main>
     </div>

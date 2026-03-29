@@ -424,10 +424,17 @@ function loadScrapedSignals(): ScrapedIndex {
   const siteSlugs = new Set(siteTools.map((tool) => tool.slug));
   const siteNamesBySlug = new Map(siteTools.map((tool) => [tool.slug, tool.name]));
 
-  const baseDirs = fs
-    .readdirSync(outputDir, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory())
-    .map((entry) => entry.name);
+  let baseDirs: string[] = [];
+  try {
+    baseDirs = fs
+      .readdirSync(outputDir, { withFileTypes: true })
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => entry.name);
+  } catch (e) {
+    console.warn(`[Scraper] Skipping scraped data, unable to read directory: ${outputDir}`);
+    cachedScrapedIndex = scrapedIndex;
+    return scrapedIndex;
+  }
 
   for (const baseDirName of baseDirs) {
     const canonicalBaseSlug =

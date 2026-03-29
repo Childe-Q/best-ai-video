@@ -7,19 +7,32 @@ interface FAQItem {
   answer: string;
 }
 
-export default function FeaturesFAQ({ items }: { items: FAQItem[] }) {
+export default function FeaturesFAQ({
+  items,
+  variant = 'card',
+}: {
+  items: FAQItem[];
+  variant?: 'card' | 'minimal';
+}) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <div className="space-y-2">
+    <div
+      className={
+        variant === 'minimal'
+          ? 'divide-y divide-black/8 border-y border-black/8'
+          : 'space-y-3'
+      }
+    >
       {items.map((item, i) => (
         <AccordionItem
           key={item.question}
           item={item}
           isOpen={openIndex === i}
           onToggle={() => toggle(i)}
+          variant={variant}
         />
       ))}
     </div>
@@ -30,10 +43,12 @@ function AccordionItem({
   item,
   isOpen,
   onToggle,
+  variant,
 }: {
   item: FAQItem;
   isOpen: boolean;
   onToggle: () => void;
+  variant: 'card' | 'minimal';
 }) {
   const contentRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -52,19 +67,25 @@ function AccordionItem({
 
   return (
     <div
-      className={`rounded-xl border bg-white px-5 py-0 transition-all duration-300 ease-out ${
-        isOpen
-          ? 'border-black/12 shadow-[0_2px_12px_rgba(0,0,0,0.04)]'
-          : 'border-black/6 hover:border-black/10'
-      }`}
+      className={
+        variant === 'minimal'
+          ? 'transition-all duration-300 ease-out'
+          : `rounded-[1.35rem] border px-5 py-0 transition-all duration-300 ease-out sm:px-6 ${
+              isOpen
+                ? 'border-black/12 bg-white shadow-[0_14px_28px_rgba(0,0,0,0.05)]'
+                : 'border-black/8 bg-white/88 hover:border-black/12 hover:bg-white'
+            }`
+      }
     >
       <button
         onClick={onToggle}
-        className="flex w-full items-center justify-between gap-4 bg-transparent py-4 text-left"
+        className={`group flex w-full items-center justify-between gap-4 bg-transparent text-left ${
+          variant === 'minimal' ? 'py-5 sm:py-6' : 'py-5'
+        }`}
         aria-expanded={isOpen}
       >
         <span
-          className={`text-sm font-bold leading-relaxed transition-colors duration-200 ${
+          className={`text-[15px] font-black leading-6 transition-colors duration-200 ${
             isOpen ? 'text-gray-900' : 'text-gray-700'
           }`}
         >
@@ -72,10 +93,14 @@ function AccordionItem({
         </span>
 
         <span
-          className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
-            isOpen
-              ? 'bg-black/8 rotate-45 text-black/60'
-              : 'bg-transparent text-black/30 group-hover:text-black/50'
+          className={`flex h-6 w-6 shrink-0 items-center justify-center transition-all duration-300 ${
+            variant === 'minimal'
+              ? isOpen
+                ? 'rotate-45 text-black/60'
+                : 'text-black/26 group-hover:text-black/48'
+              : isOpen
+                ? 'rotate-45 rounded-full bg-black/8 text-black/60'
+                : 'rounded-full bg-[#F4F2EA] text-black/30 group-hover:bg-black/5 group-hover:text-black/50'
           }`}
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="transition-transform duration-300">
@@ -88,7 +113,10 @@ function AccordionItem({
         className="overflow-hidden transition-all duration-300 ease-out"
         style={{ maxHeight: isOpen ? height : 0, opacity: isOpen ? 1 : 0 }}
       >
-        <div ref={contentRef} className="pb-5 pr-10">
+        <div
+          ref={contentRef}
+          className={variant === 'minimal' ? 'max-w-4xl pb-6 pr-10' : 'pb-6 pr-10'}
+        >
           <p className="text-sm leading-7 text-black/55">{item.answer}</p>
         </div>
       </div>
