@@ -6,7 +6,13 @@ import type {
   CanonicalPricingTool,
 } from '@/types/pricingCards';
 
-const PRICING_CARDS_DIR = path.join(process.cwd(), '..', 'information', 'data', 'pricing-cards');
+const PRICING_CARDS_DIR_CANDIDATES = [
+  path.join(process.cwd(), 'information', 'data', 'pricing-cards'),
+  path.join(process.cwd(), '..', 'information', 'data', 'pricing-cards'),
+];
+const PRICING_CARDS_DIR =
+  PRICING_CARDS_DIR_CANDIDATES.find((candidate) => fs.existsSync(candidate)) ??
+  PRICING_CARDS_DIR_CANDIDATES[0];
 const PRICING_CARDS_INDEX_PATH = path.join(PRICING_CARDS_DIR, 'index.json');
 const SITE_TO_CANONICAL_SLUG_MAP: Record<string, string> = {
   'deepbrain-ai': 'aistudios-com',

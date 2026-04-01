@@ -1,0 +1,148 @@
+{
+  "slug": "zebracat-ai",
+  "toolName": "Zebracat",
+  "status": "done",
+  "sourceType": "pricing_markdown",
+  "notes": [
+    "缺失字段: Enterprise: 只有 \"$599+/mo Custom Pricing\""
+  ],
+  "plans": [
+    {
+      "name": "Cat Mode",
+      "description": "Create fully AI-generated videos without stock or uploads",
+      "cta": "Get Started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$39",
+        "displayUnit": "/mo",
+        "billingLabel": "Billed monthly"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$19",
+        "displayUnit": "/mo",
+        "billingLabel": "Billed yearly",
+        "yearlyTotalPrice": "$228/year",
+        "annualNote": "Save 50%"
+      },
+      "bullets": [
+        "VIDEO CREATION",
+        "15 videos / mo",
+        "Any length - each video counts as one.",
+        "350 generative AI credits / mo",
+        "Access to cutting-edge AI models such as VEO3, Kling, Nano Banana, Seedance, Pixverse & many more",
+        "Fast processing",
+        "INCLUDES",
+        "Generative video enabled",
+        "Create fully AI-generated videos without stock or uploads",
+        "Limited AI Avatars",
+        "Standard AI voices (175+ languages)",
+        "Basic stock clips & music",
+        "1 Brand Kit",
+        "See all features"
+      ]
+    },
+    {
+      "name": "Super Cat",
+      "description": "Create fully AI-generated videos without stock or uploads",
+      "cta": "Get Started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$99",
+        "displayUnit": "/mo",
+        "billingLabel": "Billed monthly"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$49",
+        "displayUnit": "/mo",
+        "billingLabel": "Billed yearly",
+        "yearlyTotalPrice": "$588/year",
+        "annualNote": "Save 50%"
+      },
+      "bullets": [
+        "MOST POPULAR",
+        "Video Generation:",
+        "40 videos / mo",
+        "Any length - each video counts as one.",
+        "1400 generative AI credits / mo",
+        "Access to cutting-edge AI video models such as VEO3, Kling, Nano Banana, Seedance, Pixverse & many more",
+        "Faster processing",
+        "Features You'll Love:",
+        "Everything in Cat Mode",
+        "Generative video enabled",
+        "Create fully AI-generated videos without stock or uploads",
+        "5 custom avatars",
+        "Create up to 5 new custom avatars each month",
+        "5 voice clones /mo",
+        "120+ premium AI avatars",
+        "Premium AI voices",
+        "Translate videos into 25+ languages",
+        "Full stock & music library",
+        "5 Brand Kits",
+        "See all features"
+      ]
+    },
+    {
+      "name": "Unlimited Cat",
+      "description": "Create fully AI-generated videos without stock or uploads",
+      "cta": "Get Started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$199",
+        "displayUnit": "/mo",
+        "billingLabel": "Billed monthly"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$99",
+        "displayUnit": "/mo",
+        "billingLabel": "Billed yearly",
+        "yearlyTotalPrice": "$1,188/year",
+        "annualNote": "Save 50%"
+      },
+      "bullets": [
+        "BEST VALUE",
+        "Video Generation:",
+        "Unlimited videos",
+        "3,600 generative AI credits / mo",
+        "Access to cutting-edge AI models such as VEO3, Kling, Nano Banana, Seedance, Pixverse & many more",
+        "Fastest processing",
+        "Features You'll Love:",
+        "Everything in Super Cat",
+        "Generative video enabled",
+        "Create fully AI-generated videos without stock or uploads",
+        "10 custom avatars / mo",
+        "10 voice clones /mo",
+        "Unlimited Brand Kits",
+        "Priority support",
+        "See all features"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "description": "Advanced team roles / permissions",
+      "cta": "Talk to Sales",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$599+",
+        "displayUnit": "/mo",
+        "billingLabel": "Custom Pricing"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "not_found",
+        "displayUnit": "not_found",
+        "billingLabel": "not_found",
+        "yearlyTotalPrice": "yearly_total_not_found",
+        "annualNote": "Custom pricing"
+      },
+      "bullets": [
+        "Video Generation:",
+        "Unlimited videos / mo",
+        "Custom generative AI credits",
+        "Priority processing",
+        "Features You'll Love:",
+        "Everything in Unlimited Cat",
+        "Unlimited custom avatars & voice clones (enterprise quality)",
+        "API access",
+        "Custom AI models",
+        "Advanced team roles / permissions",
+        "Dedicated success manager",
+        "See all features"
+      ]
+    }
+  ]
+}

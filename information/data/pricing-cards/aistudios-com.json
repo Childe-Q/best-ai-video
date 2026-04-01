@@ -1,0 +1,169 @@
+{
+  "slug": "aistudios-com",
+  "toolName": "AI Studios",
+  "status": "done",
+  "sourceType": "pricing_markdown",
+  "notes": [
+    "缺失字段: Free: billingLabel 未找到",
+    "缺失字段: Personal/Team: monthlyPriceBlock billingLabel 未找到",
+    "缺失字段: Enterprise: 无固定价格，只有 \"Custom pricing\"",
+    "价格计算: Personal: $29/mo (monthly) → $24/mo (yearly) = $288/year",
+    "价格计算: Team: $69/seat/mo (monthly) → $55/seat/mo (yearly) = $660/seat/year",
+    "价格计算: 年付折扣: ~17-20%"
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "description": "Best for getting started with AI video creation",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found",
+        "yearlyTotalPrice": "$0/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "Best for getting started with AI video creation",
+        "AI Videos:",
+        "Create up to 3 AI videos",
+        "Videos up to 3 minutes",
+        "1 Custom Avatar",
+        "Export videos in 720p",
+        "1 Priority video per month",
+        "AI Dubbing:",
+        "Audio-only AI Dubbing",
+        "Generative usage:",
+        "16 one-time generative credits",
+        "Limited generative models",
+        "View All Features"
+      ]
+    },
+    {
+      "name": "Personal",
+      "description": "Best for solo creators producing AI videos without limits",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$29",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$24",
+        "displayUnit": "/mo",
+        "billingLabel": "billed annually",
+        "yearlyTotalPrice": "$288/year",
+        "annualNote": "Save 20% with annual billing"
+      },
+      "bullets": [
+        "Most Popular",
+        "Best for solo creators producing AI videos without limits",
+        "AI Videos:",
+        "Unlimited AI videos",
+        "Videos up to 30 minutes",
+        "3 Custom Avatars",
+        "Export videos in 1080p",
+        "50 priority videos per month",
+        "AI Dubbing:",
+        "AI Dubbing with lip-sync",
+        "120 minutes of AI Dubbing per month",
+        "Generative usage:",
+        "720 generative credits per year",
+        "60 generative credits per month",
+        "Full access to generative models (Veo, Sora, and more)",
+        "Add-ons for additional generative credits",
+        "Advanced Capabilities:",
+        "Interactive Avatars",
+        "Premium Stock Library",
+        "SRT Upload & Download",
+        "Extend with Add-ons",
+        "More powerful creation tools",
+        "View All Features"
+      ]
+    },
+    {
+      "name": "Team",
+      "description": "Built for teams collaborating on unlimited AI video creation",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$69",
+        "displayUnit": "/seat/mo",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$55",
+        "displayUnit": "/seat/mo",
+        "billingLabel": "billed annually",
+        "yearlyTotalPrice": "$660/seat/year",
+        "annualNote": "Save 20% with annual billing"
+      },
+      "bullets": [
+        "Best Value",
+        "Built for teams collaborating on unlimited AI video creation",
+        "AI Videos:",
+        "Unlimited AI videos",
+        "Videos up to 60 minutes",
+        "5 Custom Avatars",
+        "Export videos in 4K",
+        "150 priority videos per month",
+        "AI Dubbing:",
+        "AI Dubbing with lip-sync",
+        "240 minutes of AI Dubbing per month",
+        "Proofread and refine translated scripts",
+        "Generative usage:",
+        "1800 generative credits per year (per seat, shared across the team)",
+        "150 generative credits per month (per seat, shared across the team)",
+        "Full access to generative models (Veo, Sora, and more)",
+        "Add-ons for additional generative credits",
+        "Available for Teams:",
+        "Interactive Videos",
+        "Shared Workspaces",
+        "More collaboration and control features",
+        "View All Features"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "description": "Advanced AI video solutions for enterprise needs",
+      "cta": "Contact Us",
+      "monthlyPriceBlock": {
+        "displayedPrice": "not_found",
+        "displayUnit": "not_found",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "not_found",
+        "displayUnit": "not_found",
+        "billingLabel": "not_found",
+        "yearlyTotalPrice": "yearly_total_not_found",
+        "annualNote": "Custom pricing"
+      },
+      "bullets": [
+        "Advanced AI video solutions for enterprise needs",
+        "AI Videos:",
+        "Unlimited AI videos",
+        "Unlimited Video Duration",
+        "Unlimited Custom Avatars",
+        "Export videos in 4K",
+        "Always priority processing",
+        "AI Dubbing & Generative usage:",
+        "Extended AI Dubbing with lip-sync",
+        "Proofread and refine translated scripts",
+        "Enterprise-scale generative credit",
+        "Full access to generative models with custom options",
+        "Exclusive to Enterprise:",
+        "Enterprise-grade SAML SSO",
+        "SCORM Export",
+        "Interactive Quizzes",
+        "Bulk Video Generation",
+        "More enterprise-ready features",
+        "View All Features"
+      ]
+    }
+  ]
+}

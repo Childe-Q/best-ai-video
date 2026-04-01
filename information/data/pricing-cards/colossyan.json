@@ -1,0 +1,148 @@
+{
+  "slug": "colossyan",
+  "toolName": "Colossyan",
+  "status": "done",
+  "sourceType": "pricing_markdown",
+  "notes": [
+    "状态: **done**（通过运行时抓取获取完整双状态价格）"
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "description": "Create an avatar of yourself from a photo or a video, and use your voice clone to narrate.",
+      "cta": "Generate a free video",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "null",
+        "billingLabel": "free"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "null",
+        "billingLabel": "free",
+        "yearlyTotalPrice": "$0/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "Free forever",
+        "10 minutes of video per month",
+        "Generate up to 10 minutes of video every month.",
+        "70+ Colossyan AI Avatars",
+        "Get access to our diverse library of professional AI avatars.",
+        "3 Custom Avatars + 1 Voice",
+        "Create an avatar of yourself from a photo or a video, and use your voice clone to narrate.",
+        "Unlimited viewers",
+        "Invite unlimited viewers to watch your videos and  leave comments.",
+        "Multiple avatars",
+        "Create realistic conversational videos between multiple avatars."
+      ]
+    },
+    {
+      "name": "Starter",
+      "description": "For individual content creators",
+      "cta": "Start Free Trial | Buy Now",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$27",
+        "displayUnit": "/mo",
+        "billingLabel": "per editor"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$19",
+        "displayUnit": "/mo",
+        "billingLabel": "billed annually",
+        "yearlyTotalPrice": "$228/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "For individual content creators",
+        "From",
+        "1 editor",
+        "Everything in Free +",
+        "15 minutes of video per month",
+        "Generate up to 15 minutes of video every month.",
+        "70+ Colossyan AI Avatars",
+        "Get access to our diverse library of professional AI avatars.",
+        "3 Custom Avatars + 1 Voice",
+        "Create an avatar of yourself from a photo or a video, and use your voice clone to narrate.",
+        "Unlimited viewers",
+        "Invite unlimited viewers to watch your videos and  leave comments.",
+        "Multiple avatars",
+        "Create realistic conversational videos between multiple avatars."
+      ]
+    },
+    {
+      "name": "Business",
+      "description": "For professionals or small teams",
+      "cta": "Start Free Trial | Buy Now",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$88",
+        "displayUnit": "/mo",
+        "billingLabel": "per editor"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$70",
+        "displayUnit": "/mo",
+        "billingLabel": "billed annually",
+        "yearlyTotalPrice": "$840/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "For professionals or small teams",
+        "From",
+        "1 editor",
+        "2 editors",
+        "3 editors",
+        "30 min",
+        "60 min",
+        "90 min",
+        "Everything in Starter +",
+        "Unlimited minutes of video",
+        "Generate any amount of videos on NEO 1 model. Each video can be up to 30 minutes long.",
+        "Access to the latest models",
+        "NEO 2 is our latest video model, powering our most natural, expressive, and consistent videos yet.",
+        "170+ Colossyan AI Avatars",
+        "Get access to our diverse library of professional AI avatars in different industries and styles.",
+        "10 Custom Avatars + 2 Voices per editor",
+        "Create an avatar of yourself from a photo or a video, and use your voice clone to narrate.",
+        "4 Interactive videos per month",
+        "Create videos with quizzes and branching scenarios.",
+        "10 auto translations per month",
+        "Translate videos into over 70 languages in seconds."
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "description": "not_found",
+      "cta": "Let's talk | Contact sales",
+      "monthlyPriceBlock": {
+        "displayedPrice": "Custom",
+        "displayUnit": "null",
+        "billingLabel": "Custom"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "Custom",
+        "displayUnit": "null",
+        "billingLabel": "Custom",
+        "yearlyTotalPrice": "yearly_total_not_found",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "Companies scaling video production",
+        "Custom editors",
+        "Everything in Business +",
+        "Unlimited features",
+        "Get unlimited access to interactive quizzes, branching scenarios, auto translations and more.",
+        "Access to the latest models",
+        "NEO 2 is our latest video model, powering our most natural, expressive, and consistent videos yet.",
+        "200+ Colossyan AI Avatars",
+        "Get access to our diverse library of professional AI avatars in different industries and styles.",
+        "Brand kits",
+        "Apply your company's branding to videos and templates.",
+        "SAML & SSO",
+        "Ensure Enterprise-level security with centralized authentication.",
+        "SCORM export",
+        "Seamlessly integrate Colossyan content into your learning management system."
+      ]
+    }
+  ]
+}

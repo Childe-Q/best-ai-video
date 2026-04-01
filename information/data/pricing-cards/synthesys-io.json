@@ -1,0 +1,116 @@
+{
+  "slug": "synthesys-io",
+  "toolName": "Synthesys",
+  "status": "done",
+  "sourceType": "pricing_markdown",
+  "notes": [
+    "状态: **done**（yearly 价格直接显示，monthly 价格通过折扣反算并标记来源）"
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "description": "not_found",
+      "cta": "Start for free",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "null",
+        "billingLabel": "free"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "null",
+        "billingLabel": "free",
+        "yearlyTotalPrice": "$0/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "10 video generation credits",
+        "10,000 voice generation credits",
+        "200 stock video avatars",
+        "1000+ voices",
+        "175+ languages"
+      ]
+    },
+    {
+      "name": "Personal",
+      "description": "not_found",
+      "cta": "Start Now",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$29",
+        "displayUnit": "/m",
+        "billingLabel": "billed monthly"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$20",
+        "displayUnit": "/m",
+        "billingLabel": "Billed Yearly",
+        "yearlyTotalPrice": "$243/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "Designed for creators exploring UGC videos, AI avatars, and voices",
+        "Full platform access",
+        "1000 video credits/month",
+        "50,000 voice credits/month",
+        "10 Sora2 & VEO3 credits/month",
+        "1 Custom video avatar",
+        "Standard video processing"
+      ]
+    },
+    {
+      "name": "Creator",
+      "description": "Built for small teams producing UGC ads, branded videos, and social campaigns",
+      "cta": "Start Now",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$59",
+        "displayUnit": "/m",
+        "billingLabel": "billed monthly"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$41",
+        "displayUnit": "/m",
+        "billingLabel": "Billed Yearly",
+        "yearlyTotalPrice": "$495/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "Built for small teams producing UGC ads, branded videos, and social campaigns",
+        "Limited Time 50% OFF",
+        "Full platform access",
+        "2500 video credits/month",
+        "200,000 voice credits/month",
+        "40 Sora2 & VEO3 credits/month",
+        "5 Custom video avatars",
+        "Fast video processing"
+      ]
+    },
+    {
+      "name": "Business Unlimited",
+      "description": "not_found",
+      "cta": "Start Now",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$99",
+        "displayUnit": "/m",
+        "billingLabel": "billed monthly"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$69",
+        "displayUnit": "/m",
+        "billingLabel": "Billed Yearly",
+        "yearlyTotalPrice": "$831/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "Optimized for agencies and brands scaling unlimited UGC and AI content",
+        "72% of professionals prefer it",
+        "Limited Time 50% OFF",
+        "Full platform access",
+        "Unlimited video credits/month (fair use policy applies)",
+        "Unlimited voice credits/month",
+        "150 Sora2 & VEO3 credits/month",
+        "Unlimited Custom Video Avatars",
+        "Faster video processing"
+      ]
+    }
+  ]
+}

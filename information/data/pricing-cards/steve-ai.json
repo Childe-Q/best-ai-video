@@ -1,0 +1,12 @@
+{
+  "slug": "steve-ai",
+  "toolName": "Steve AI",
+  "status": "insufficient_evidence",
+  "sourceType": "pricing_markdown",
+  "notes": [
+    "状态: **local_evidence_insufficient**",
+    "状态: **skip_without_modification**",
+    "结论: Steve AI 本地 HTML 证据不足以提取准确的双状态价格数据，原因： 1. 存在动态价格占位符未渲染 2. HTML 中的价格数据与 summary 中的价格数据不一致 3. 定价可能因用户登录状态而异 **标记**: `local_evidence_insufficient, skip_without_modification`"
+  ],
+  "plans": []
+}

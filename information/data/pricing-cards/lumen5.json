@@ -1,0 +1,159 @@
+{
+  "slug": "lumen5",
+  "toolName": "Lumen5",
+  "status": "frozen",
+  "sourceType": "pricing_markdown",
+  "notes": [
+    "Frozen by existing project protection report.",
+    "价格说明: 页面默认显示 Yearly pricing",
+    "价格说明: Monthly billing 选项未在主页面显示",
+    "价格说明: 所有价格均为 \"per month, billed yearly\"",
+    "价格说明: yearlyTotalPrice 根据 monthly equivalent 计算",
+    "缺失字段: 所有 plans 的 monthlyPriceBlock 未找到 (页面只显示 yearly pricing)",
+    "缺失字段: Team: 无固定价格，只有 \"Custom pricing\"",
+    "价格计算: Basic yearly: $19/mo × 12 = $228/year",
+    "价格计算: Starter yearly: $59/mo × 12 = $708/year",
+    "价格计算: Pro yearly: $149/mo × 12 = $1,788/year",
+    "价格计算: 年付折扣: 25%"
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "description": "For casual video enthusiasts",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "forever free",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "forever free",
+        "billingLabel": "not_found",
+        "yearlyTotalPrice": "$0/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "For casual video enthusiasts",
+        "What's included:",
+        "Contains Lumen5 Branded Outro",
+        "2 minute long videos",
+        "5 videos per month"
+      ]
+    },
+    {
+      "name": "Basic",
+      "description": "For creating simple videos",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$29",
+        "displayUnit": "USD/month",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$19",
+        "displayUnit": "USD/month",
+        "billingLabel": "billed yearly",
+        "yearlyTotalPrice": "$228/year",
+        "annualNote": "Yearly (save 25%)"
+      },
+      "bullets": [
+        "For creating simple videos",
+        "Everything in Free, plus:",
+        "3,500 AI media credits",
+        "No Lumen5 branding",
+        "Advanced AI Script Composer features",
+        "Longer AI Voiceover videos and more voices",
+        "and more..."
+      ]
+    },
+    {
+      "name": "Starter",
+      "description": "For content creators",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$79",
+        "displayUnit": "USD/month",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$59",
+        "displayUnit": "USD/month",
+        "billingLabel": "billed yearly",
+        "yearlyTotalPrice": "$708/year",
+        "annualNote": "Save 25%"
+      },
+      "bullets": [
+        "For content creators",
+        "Everything in Basic, plus:",
+        "12,000 AI media credits",
+        "1080p video resolution",
+        "50M+ stock photos & videos",
+        "Choose from preset fonts",
+        "Custom colors",
+        "and more..."
+      ]
+    },
+    {
+      "name": "Pro",
+      "description": "For small businesses",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$199",
+        "displayUnit": "USD/month",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$149",
+        "displayUnit": "USD/month",
+        "billingLabel": "billed yearly",
+        "yearlyTotalPrice": "$1,788/year",
+        "annualNote": "Yearly (save 25%)"
+      },
+      "bullets": [
+        "POPULAR CHOICE",
+        "For small businesses",
+        "Everything in Starter, plus:",
+        "36,000 AI media credits",
+        "500M stock photos & videos",
+        "Custom watermarks",
+        "Upload your own fonts",
+        "Multiple Blueprints",
+        "Multiple brand kits",
+        "and more..."
+      ]
+    },
+    {
+      "name": "Team",
+      "description": "For enterprise teams",
+      "cta": "Learn about Enterprise",
+      "monthlyPriceBlock": {
+        "displayedPrice": "Custom",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "Custom",
+        "displayUnit": "/mo",
+        "billingLabel": "billed yearly",
+        "yearlyTotalPrice": "Custom",
+        "annualNote": "Custom pricing"
+      },
+      "bullets": [
+        "For enterprise teams",
+        "Everything in Pro, plus:",
+        "Custom AI media credits",
+        "Bespoke branded template",
+        "Video translations",
+        "Collaborate with team members",
+        "Video approval process",
+        "Single sign-on (SSO)",
+        "Dedicated customer success manager",
+        "Enterprise-level security",
+        "Professional Services",
+        "Invoiced billing",
+        "and more..."
+      ]
+    }
+  ]
+}

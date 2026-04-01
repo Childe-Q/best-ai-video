@@ -1,0 +1,158 @@
+{
+  "slug": "runwayml-com",
+  "toolName": "RunwayML",
+  "status": "done",
+  "sourceType": "pricing_markdown",
+  "notes": [
+    "状态: **done**（yearly 价格直接显示，monthly 价格通过折扣反算并标记来源）"
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "description": "For individuals looking to explore Runway's AI Tools and content creation features",
+      "cta": "Sign Up",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/editor/month",
+        "billingLabel": "free forever"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/editor/month",
+        "billingLabel": "free forever",
+        "yearlyTotalPrice": "$0/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "For individuals looking to explore Runway's AI Tools and content creation features",
+        "Includes 125 credits (one time)",
+        "125 credits = 25s of Gen-4 Turbo or Gen-3 Alpha Turbo",
+        "Generative Video: Gen-4 Turbo (Image to Video)",
+        "Generative Image: Gen-4 (Text to Image, References)",
+        "Gemini 3 Pro, Gemini 2.5",
+        "Image Apps",
+        "Generative Audio: Text to Speech",
+        "Audio Apps",
+        "3 video editor projects",
+        "5GB asset storage",
+        "No Gen-4 Video"
+      ]
+    },
+    {
+      "name": "Standard",
+      "description": "For individuals and small teams looking for more access, more AI Tools and more",
+      "cta": "Subscribe Now",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$15",
+        "displayUnit": "/user/month",
+        "billingLabel": "billed monthly"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$12",
+        "displayUnit": "/user/month",
+        "billingLabel": "billed annually as $144",
+        "yearlyTotalPrice": "$144/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "For individuals and small teams looking for more access, more AI Tools and more",
+        "Max. 5 users per workspace",
+        "Includes 625 credits monthly",
+        "625 credits = 25s of Gen-4.5, 52s of Gen-4, 125s of Gen-4 Turbo, 78 Gen-4 Images",
+        "Everything in Free and...",
+        "Access to all Apps",
+        "Ability to run Workflows",
+        "Generative Video: Aleph (Video Editing), Gen-4.5 (Text to Video), Gen-4 (Image to Video), Act-Two (Performance Capture), Veo 3.1, Veo 3",
+        "Video Apps: Upscale resolution, All video models, Remove watermarks",
+        "Credits refresh monthly",
+        "No rate restrictions",
+        "Buy more credits",
+        "100GB asset storage",
+        "Unlimited video editor projects",
+        "Technical support via Runway dashboard"
+      ]
+    },
+    {
+      "name": "Pro",
+      "description": "For individuals and teams looking to add all of Runway's features into their work",
+      "cta": "Subscribe Now",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$35",
+        "displayUnit": "/user/month",
+        "billingLabel": "billed monthly"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$28",
+        "displayUnit": "/user/month",
+        "billingLabel": "billed annually as $336",
+        "yearlyTotalPrice": "$336/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "For individuals and teams looking to add all of Runway's features into their work",
+        "Max. 10 users per workspace",
+        "Includes 2250 credits monthly",
+        "2250 credits = 90s of Gen-4.5, 187s of Gen-4, 450s of Gen-4 Turbo, 281 Gen-4 Images",
+        "Everything in Standard and...",
+        "Create Custom Voices for Lip Sync and Text to Speech",
+        "500GB asset storage"
+      ]
+    },
+    {
+      "name": "Unlimited",
+      "description": "not_found",
+      "cta": "Subscribe Now",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$95",
+        "displayUnit": "/user/month",
+        "billingLabel": "billed monthly"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$76",
+        "displayUnit": "/user/month",
+        "billingLabel": "billed annually as $912",
+        "yearlyTotalPrice": "$912/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "All the access of the pro plan with the flexibility of unlimited video generation",
+        "Max. 10 users per workspace",
+        "Includes 2250 credits monthly",
+        "Everything in Pro and...",
+        "Explore Mode",
+        "Unlimited generations of Aleph, Gen-4.5, Gen-4 Turbo, Gen-4 (Image and Video), Act-Two"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "description": "For teams and organizations that need customization, advanced security and support",
+      "cta": "Contact Us",
+      "monthlyPriceBlock": {
+        "displayedPrice": "Custom",
+        "displayUnit": "null",
+        "billingLabel": "Custom"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "Custom",
+        "displayUnit": "null",
+        "billingLabel": "Custom",
+        "yearlyTotalPrice": "yearly_total_not_found",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "For teams and organizations that need customization, advanced security and support",
+        "Scalable for large organizations",
+        "Includes all Pro Plan features, plus:",
+        "Single sign-on",
+        "Custom credit amounts",
+        "Configurable organization and team spaces",
+        "Advanced security and compliance",
+        "Enterprise-wide onboarding",
+        "Ongoing success program",
+        "Priority support",
+        "Integration with internal tools",
+        "Workspace Analytics"
+      ]
+    }
+  ]
+}

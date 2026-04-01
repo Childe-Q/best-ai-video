@@ -1,0 +1,155 @@
+{
+  "slug": "descript",
+  "toolName": "Descript",
+  "status": "done",
+  "sourceType": "pricing_markdown",
+  "notes": [
+    "缺失字段: Free: billingLabel 未找到",
+    "缺失字段: Enterprise: 无固定价格，只有 \"Custom pricing\"",
+    "价格计算: Hobbyist yearly: $16/mo × 12 = $192/year",
+    "价格计算: Creator yearly: $24/mo × 12 = $288/year",
+    "价格计算: Business yearly: $50/mo × 12 = $600/year",
+    "价格计算: 年付折扣: ~33-35%"
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "description": "not_found",
+      "cta": "Get started for free",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found",
+        "yearlyTotalPrice": "$0/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "Get started on your creative journey with text-based editing and give AI a try",
+        "60 minutes (1 hr) / month media minutes",
+        "100 (one-time) AI credits",
+        "Limited access to AI tools"
+      ]
+    },
+    {
+      "name": "Hobbyist",
+      "description": "not_found",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$24",
+        "displayUnit": "/mo",
+        "billingLabel": "per person/month"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$16",
+        "displayUnit": "/mo",
+        "billingLabel": "per person/month",
+        "yearlyTotalPrice": "$192/year",
+        "annualNote": "Save up to 35% with annual billing"
+      },
+      "bullets": [
+        "1 person included",
+        "Elevate your projects, watermark-free",
+        "10 media hours / month",
+        "400 AI credits / month",
+        "Export 1080p, watermark-free",
+        "Access to Underlord, our AI video co-editor",
+        "AI tools including Studio Sound, Remove Filler Words, Create Clips, and more",
+        "AI Speech with custom voice clones and video regenerate"
+      ]
+    },
+    {
+      "name": "Creator",
+      "description": "Scale to a team of 3 (billed separately)",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$35",
+        "displayUnit": "/mo",
+        "billingLabel": "per person/month"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$24",
+        "displayUnit": "/mo",
+        "billingLabel": "per person/month",
+        "yearlyTotalPrice": "$288/year",
+        "annualNote": "Save up to 35% with annual billing"
+      },
+      "bullets": [
+        "MOST POPULAR",
+        "Scale to a team of 3 (billed separately)",
+        "Unlock advanced AI-powered creativity",
+        "30 media hours / month",
+        "+5 bonus hours",
+        "800 AI credits / month",
+        "+500 bonus credits",
+        "Export 4k, watermark-free",
+        "Full access to Underlord, our AI video co-editor and 20+ more AI tools",
+        "Generate video with the latest AI models",
+        "Unlimited access to royalty-free stock media library",
+        "Access to top ups for more media hours and AI credits"
+      ]
+    },
+    {
+      "name": "Business",
+      "description": "Scale to a team of 5 (billed separately)",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$65",
+        "displayUnit": "/mo",
+        "billingLabel": "per person/month"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$50",
+        "displayUnit": "/mo",
+        "billingLabel": "per person/month",
+        "yearlyTotalPrice": "$600/year",
+        "annualNote": "Save up to 35% with annual billing"
+      },
+      "bullets": [
+        "Scale to a team of 5 (billed separately)",
+        "Empower collaboration on your team",
+        "40 media hours / month",
+        "+10 bonus hours",
+        "1500 AI credits / month",
+        "+1000 bonus credits",
+        "Team-wide access to Brand Studio",
+        "Translate and dub video in 30+ languages with proofread",
+        "Generate custom avatars from photo upload or text",
+        "Priority support (with SLA)",
+        "Access to top ups for more media hours and AI credits"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "description": "Advanced Security and SSO / SCIM",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "Custom",
+        "displayUnit": "/mo",
+        "billingLabel": "Custom"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "not_found",
+        "displayUnit": "not_found",
+        "billingLabel": "not_found",
+        "yearlyTotalPrice": "yearly_total_not_found",
+        "annualNote": "Custom pricing"
+      },
+      "bullets": [
+        "Tailored solutions and enterprise-grade security for large or growing teams",
+        "Advanced Security and SSO / SCIM",
+        "Granular brand controls",
+        "Custom AI credits",
+        "Custom media minutes",
+        "Custom legal terms",
+        "Custom AI Controls",
+        "Flexible licensing model",
+        "Flexible billing"
+      ]
+    }
+  ]
+}

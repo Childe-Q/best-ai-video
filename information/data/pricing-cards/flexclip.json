@@ -1,0 +1,107 @@
+{
+  "slug": "flexclip",
+  "toolName": "FlexClip",
+  "status": "frozen",
+  "sourceType": "pricing_markdown",
+  "notes": [
+    "Frozen by existing project protection report.",
+    "缺失字段: Free: yearlyPriceBlock 不适用",
+    "缺失字段: 所有 plans 的 monthlyPriceBlock billingLabel 未找到",
+    "价格计算: Plus yearly: $143.88/year (页面直接显示)",
+    "价格计算: Business yearly: $239.88/year (页面直接显示)",
+    "价格计算: 年付折扣: ~40% (save up to $120)"
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "description": "not_found",
+      "cta": "Get Started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$0.00",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$0.00",
+        "displayUnit": "/mo",
+        "billingLabel": "$0.00 billed annually",
+        "yearlyTotalPrice": "$0/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "720p HD downloads",
+        "Free trial of AI features",
+        "1 stock video per project",
+        "1 stock audio per project",
+        "Maximum 12 projects",
+        "Save up to 12 video projects online and make edits at any time.",
+        "Video length up to 10 mins"
+      ]
+    },
+    {
+      "name": "Plus",
+      "description": "not_found",
+      "cta": "Get Plus",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$19.99",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$11.99",
+        "displayUnit": "/mo",
+        "billingLabel": "$143.88 billed annually",
+        "yearlyTotalPrice": "$143.88/year",
+        "annualNote": "save up to $120"
+      },
+      "bullets": [
+        "MOST POPULAR",
+        "1080p Full-HD downloads",
+        "3600 AI credits bonus/yr",
+        "5 stock videos per project",
+        "5 stock audio per project",
+        "FlexClip premium resources",
+        "Save unlimited projects online",
+        "Unlimited video length",
+        "Brand Kit",
+        "30GB cloud space",
+        "100GB video hosting space",
+        "Upload custom fonts",
+        "Save up to 100 templates",
+        "No FlexClip watermark"
+      ]
+    },
+    {
+      "name": "Business",
+      "description": "not_found",
+      "cta": "Get Business",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$29.99",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$19.99",
+        "displayUnit": "/mo",
+        "billingLabel": "$239.88 billed annually",
+        "yearlyTotalPrice": "$239.88/year",
+        "annualNote": "save up to $120"
+      },
+      "bullets": [
+        "4K Ultra HD downloads",
+        "9600 AI credits bonus/yr",
+        "Unlimited stock videos",
+        "Unlimited stock audio",
+        "FlexClip premium resources",
+        "Save unlimited projects online",
+        "Unlimited video length",
+        "Brand Kit",
+        "100GB cloud space",
+        "1TB video hosting space",
+        "Upload custom fonts",
+        "Save up to 200 templates",
+        "No FlexClip watermark"
+      ]
+    }
+  ]
+}

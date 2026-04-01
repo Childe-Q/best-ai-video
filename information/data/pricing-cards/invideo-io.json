@@ -1,0 +1,138 @@
+{
+  "slug": "invideo-io",
+  "toolName": "InVideo",
+  "status": "frozen",
+  "sourceType": "pricing_markdown",
+  "notes": [
+    "Frozen by existing project protection report.",
+    "价格说明: 页面显示 Annual pricing",
+    "价格说明: Plus: 年付无折扣 (0% off)",
+    "价格说明: Max: 年付 40% off",
+    "价格说明: Generative: 年付 20% off",
+    "价格说明: 年付总价直接显示在页面上",
+    "缺失字段: Free: yearlyPriceBlock 不适用",
+    "缺失字段: 所有 plans 的 monthlyPriceBlock billingLabel 未找到",
+    "缺失字段: 页面未明确区分 monthly vs yearly monthly equivalent 价格"
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "description": "not_found",
+      "cta": "Meet invideo",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/mo",
+        "billingLabel": "No credit card required"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found",
+        "yearlyTotalPrice": "$0/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "Limited credits",
+        "Includes:",
+        "Limited credits",
+        "No access to the unlimited mode on image generations",
+        "Limited access to AI models, agents & VFX tools",
+        "Exports with invideo logo"
+      ]
+    },
+    {
+      "name": "Plus",
+      "description": "For exploring",
+      "cta": "Get Plus",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$25",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$25",
+        "displayUnit": "/mo",
+        "billingLabel": "Billed $300 yearly",
+        "yearlyTotalPrice": "$300/year",
+        "annualNote": "Annual 0% off"
+      },
+      "bullets": [
+        "For exploring",
+        "100 credits/mo.",
+        "100 credits is enough for: 400 Nano banana pro, 800 Nano banana 2 generations",
+        "No access to the unlimited mode on image generations",
+        "Access to all AI models including Veo 3.1, Sora 2 & Kling 3",
+        "Access to all AI workflows",
+        "Access to AI video trends",
+        "4 AI avatars & voice clones",
+        "Limited concurrency",
+        "20 GB storage",
+        "100 iStock",
+        "Unlimited exports without watermark"
+      ]
+    },
+    {
+      "name": "Max",
+      "description": "For occasional use",
+      "cta": "Get Max",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$100",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$60",
+        "displayUnit": "/mo",
+        "billingLabel": "Billed $720 yearly",
+        "yearlyTotalPrice": "$720/year",
+        "annualNote": "Annual 40% off"
+      },
+      "bullets": [
+        "Most popular",
+        "For occasional use",
+        "400 credits/mo.",
+        "400 credits is enough for: 1600 Nano banana pro, 3200 Nano banana 2 generations",
+        "Unlimited mode on all image generations till 31st Dec, 2026",
+        "Access to all AI models including Veo 3.1, Sora 2 & Kling 3",
+        "Access to all AI workflows",
+        "Access to AI video trends",
+        "16 AI avatars & voice clones",
+        "2x more concurrency than Plus",
+        "100 GB storage",
+        "200 iStock",
+        "Unlimited exports without watermark"
+      ]
+    },
+    {
+      "name": "Generative",
+      "description": "For daily use",
+      "cta": "Get Generative",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$200",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$200",
+        "displayUnit": "/mo",
+        "billingLabel": "Billed $2400 yearly",
+        "yearlyTotalPrice": "$2,400/year",
+        "annualNote": "Annual 20% off"
+      },
+      "bullets": [
+        "For daily use",
+        "1000 credits/mo.",
+        "1000 credits is enough for: 4000 Nano banana pro, 8000 Nano banana 2 generations",
+        "Unlimited mode on all image generations till 31st Dec, 2026",
+        "Access to all AI models including Veo 3.1, Sora 2 & Kling 3",
+        "Access to all AI workflows",
+        "Access to AI video trends",
+        "40 AI avatars & voice clones",
+        "10x more concurrency than Plus",
+        "2 TB storage",
+        "1000 iStock",
+        "Unlimited exports without watermark"
+      ]
+    }
+  ]
+}

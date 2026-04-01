@@ -1,0 +1,165 @@
+{
+  "slug": "d-id",
+  "toolName": "D-ID",
+  "status": "done",
+  "sourceType": "pricing_markdown",
+  "notes": [],
+  "plans": [
+    {
+      "name": "Trial",
+      "description": "Create videos, translate videos, send Campaigns, or build Agents during your 14-day trial",
+      "cta": "Start Free Trial",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/14 days",
+        "billingLabel": "14-day trial"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/14 days",
+        "billingLabel": "14-day trial",
+        "yearlyTotalPrice": "yearly_total_not_found",
+        "annualNote": "14-day trial"
+      },
+      "bullets": [
+        "3 minutes for Videos, Agents, Video Translate & API",
+        "Create videos, translate videos, send Campaigns, or build Agents during your 14-day trial",
+        "FEATURES INCLUDED:",
+        "100+ Stock AI Avatars",
+        "Video & Photo Avatars",
+        "Use any of our diverse stock Avatars",
+        "1 Personal Avatar",
+        "Upload a video to create custom Avatars and use them in the Videos you create on D-ID",
+        "Standard voices",
+        "Full-screen watermark",
+        "API access",
+        "Personal use license",
+        "Standard video processing"
+      ]
+    },
+    {
+      "name": "Lite",
+      "description": "Create videos, translate videos, send Campaigns, or build Agents",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$5.9",
+        "displayUnit": "/month",
+        "billingLabel": "per month"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$4.7",
+        "displayUnit": "/month",
+        "billingLabel": "billed annually",
+        "yearlyTotalPrice": "$56/year",
+        "annualNote": "billed annually (20% discount)"
+      },
+      "bullets": [
+        "Unlimited videos for your first month!",
+        "10 min. / month for Videos, Agents, Video Translate & API",
+        "Create videos, translate videos, send Campaigns, or build Agents",
+        "FEATURES INCLUDED:",
+        "Everything in Trial",
+        "Photo & 2 Video Avatars",
+        "D-ID watermark",
+        "1 Embedded Agent",
+        "Fast video processing"
+      ]
+    },
+    {
+      "name": "Pro",
+      "description": "Create videos, translate videos, send Campaigns, or build Agents",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$29",
+        "displayUnit": "/month",
+        "billingLabel": "per month"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$16",
+        "displayUnit": "/month",
+        "billingLabel": "billed annually",
+        "yearlyTotalPrice": "$192/year",
+        "annualNote": "billed annually (45% discount)"
+      },
+      "bullets": [
+        "Unlimited videos for your first month!",
+        "15 min. / month for Videos, Agents, Video Translate & API",
+        "Create videos, translate videos, send Campaigns, or build Agents",
+        "FEATURES INCLUDED:",
+        "Everything in Lite",
+        "Video & Photo Avatars",
+        "3 Personal Avatars",
+        "Premium voices",
+        "1 Voice clone",
+        "AI watermark",
+        "1 Embedded Agent",
+        "Commercial use license",
+        "Faster video processing"
+      ]
+    },
+    {
+      "name": "Advanced",
+      "description": "Create videos, translate videos, send Campaigns, or build Agents",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$196",
+        "displayUnit": "/month",
+        "billingLabel": "per month"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$108",
+        "displayUnit": "/month",
+        "billingLabel": "billed annually",
+        "yearlyTotalPrice": "$1,296/year",
+        "annualNote": "billed annually (45% discount)"
+      },
+      "bullets": [
+        "Unlimited videos for your first month",
+        "100 min. / month for Videos, Agents, Video Translate & API",
+        "Create videos, translate videos, send Campaigns, or build Agents",
+        "FEATURES INCLUDED:",
+        "Everything in Pro",
+        "Video & Photo Avatars",
+        "5 Personal Avatars",
+        "3 Voice clones",
+        "3 Embedded Agents",
+        "Custom logo",
+        "Faster video processing"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "description": "not_found",
+      "cta": "Contact us",
+      "monthlyPriceBlock": {
+        "displayedPrice": "Custom",
+        "displayUnit": "/month",
+        "billingLabel": "Custom pricing"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "not_found",
+        "displayUnit": "not_found",
+        "billingLabel": "not_found",
+        "yearlyTotalPrice": "yearly_total_not_found",
+        "annualNote": "Custom pricing"
+      },
+      "bullets": [
+        "Unlimited video minutes",
+        "Custom minutes for Campaigns & Agents",
+        "Custom minutes for API",
+        "Key Features:",
+        "Everything in Advanced",
+        "Custom # of Personal & Studio Avatars",
+        "Professional voice cloning",
+        "Customer Success Manager",
+        "Fastest video processing",
+        "Concurrent video processing",
+        "Enterprise-grade security",
+        "Integrations support",
+        "Video editing services",
+        "Professional translation services",
+        "Team collaboration"
+      ]
+    }
+  ]
+}

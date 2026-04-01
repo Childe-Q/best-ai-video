@@ -1,0 +1,150 @@
+{
+  "slug": "synthesia",
+  "toolName": "Synthesia",
+  "status": "frozen",
+  "sourceType": "pricing_markdown",
+  "notes": [
+    "Frozen by existing project protection report.",
+    "缺失字段: Free: billingLabel 未找到",
+    "缺失字段: Enterprise: 无固定价格，只有 \"Custom pricing\"",
+    "价格计算: Starter yearly: $18/mo × 12 = $216/year",
+    "价格计算: Creator yearly: $64/mo × 12 = $768/year",
+    "价格计算: 年付折扣: ~25%"
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "description": "Experiment with AI video and ready-made Avatars",
+      "cta": "Get started | Get started on desktop",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found",
+        "yearlyTotalPrice": "$0/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "Experiment with AI video and ready-made Avatars",
+        "No credit card required",
+        "Includes:",
+        "1,200 credits/mo",
+        "Credits are now the shared currency across all AI usage-based features - one common pool for everything you create.",
+        "Usable for up to 10 minutes of video/month",
+        "See all features"
+      ]
+    },
+    {
+      "name": "Starter",
+      "description": "Create AI videos with your own Personal Avatar",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$29",
+        "displayUnit": "/mo",
+        "billingLabel": "Billed monthly"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$18",
+        "displayUnit": "/mo",
+        "billingLabel": "Billed yearly",
+        "yearlyTotalPrice": "$216/year",
+        "annualNote": "$29 per month or $216/year if you go with an annual plan"
+      },
+      "bullets": [
+        "Create AI videos with your own Personal Avatar",
+        "What you get in Basic +",
+        "Download your videos",
+        "AI Video Assistant",
+        "AI Dubbing",
+        "Remove Synthesia logo",
+        "1 editor & 3 guests",
+        "125+ Synthesia AI Avatars",
+        "Custom on-brand Avatars",
+        "Chat/email support",
+        "Includes:",
+        "1,200 credits/mo",
+        "Credits are now the shared currency across all AI usage-based features - one common pool for everything you create.",
+        "Usable for up to 10 minutes of video or AI Dubbing/month",
+        "See all features"
+      ]
+    },
+    {
+      "name": "Creator",
+      "description": "Produce AI videos regularly with your team",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$89",
+        "displayUnit": "/mo",
+        "billingLabel": "Billed monthly"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$64",
+        "displayUnit": "/mo",
+        "billingLabel": "Billed yearly",
+        "yearlyTotalPrice": "$768/year",
+        "annualNote": "$89/month or $768/year if you pay annually"
+      },
+      "bullets": [
+        "Produce AI videos regularly with your team",
+        "What you get in starter +",
+        "5 Personal Avatars",
+        "AI Dubbing",
+        "Branded video pages",
+        "API access",
+        "Multiple avatars per scene",
+        "Interactive videos",
+        "1 editor & 5 guests",
+        "180+ Synthesia AI Avatars",
+        "Custom on-brand Avatars",
+        "Priority chat/email support",
+        "Includes:",
+        "3,600 credits/mo",
+        "Credits are now the shared currency across all AI usage-based features - one common pool for everything you create.",
+        "Usable for up to 30 minutes of video or AI Dubbing/month",
+        "See all features"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "description": "Scale on-brand AI videos across large teams",
+      "cta": "Book demo",
+      "monthlyPriceBlock": {
+        "displayedPrice": "not_found",
+        "displayUnit": "not_found",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "not_found",
+        "displayUnit": "not_found",
+        "billingLabel": "not_found",
+        "yearlyTotalPrice": "yearly_total_not_found",
+        "annualNote": "Custom pricing"
+      },
+      "bullets": [
+        "Scale on-brand AI videos across large teams",
+        "What you get in creator +",
+        "Unlimited video minutes",
+        "1-Click Translations into 80+ languages",
+        "240+ stock AI Avatars",
+        "Unlimited Personal Avatars",
+        "SAML/SSO",
+        "Live team collaboration",
+        "Brand Kits",
+        "SCORM export",
+        "AI Dubbing (paid add-on)",
+        "Tailored onboarding",
+        "Implementation services",
+        "Dedicated CSM",
+        "Enterprise community",
+        "Access to live events",
+        "Academy & certifications",
+        "Custom Credits",
+        "See all features"
+      ]
+    }
+  ]
+}

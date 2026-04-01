@@ -1,0 +1,143 @@
+{
+  "slug": "veed-io",
+  "toolName": "VEED.io",
+  "status": "done",
+  "sourceType": "pricing_markdown",
+  "notes": [
+    "状态: **done**（通过运行时抓取获取完整双状态价格）"
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "description": "not_found",
+      "cta": "Try VEED for free",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "null",
+        "billingLabel": "free"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "null",
+        "billingLabel": "free",
+        "yearlyTotalPrice": "$0/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "10 min max video length",
+        "720p export quality",
+        "VEED watermark on exports",
+        "2GB storage",
+        "2 min/mo Auto Subtitles",
+        "2 video / day in Gen-AI Studio"
+      ]
+    },
+    {
+      "name": "Creator",
+      "description": "not_found",
+      "cta": "Go Creator",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$25",
+        "displayUnit": "/mo",
+        "billingLabel": "per user"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$12",
+        "displayUnit": "/Month per editor",
+        "billingLabel": "billed yearly as $144",
+        "yearlyTotalPrice": "$144/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "Watermark-free social videos with AI",
+        "6,000 credits / year (~1200 video clips)",
+        "No watermark",
+        "Unlimited Auto Subtitles",
+        "Full stock audio & video library",
+        "15+ AI tools: Clean Audio, Eye contact...",
+        "5 videos / day in Gen-AI Studio"
+      ]
+    },
+    {
+      "name": "Pro",
+      "description": "not_found",
+      "cta": "Go Pro",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$49",
+        "displayUnit": "/mo",
+        "billingLabel": "per user"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$24",
+        "displayUnit": "/Month per editor",
+        "billingLabel": "billed yearly as $288",
+        "yearlyTotalPrice": "$288/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "On-brand pro-level videos with AI",
+        "RECOMMENDED",
+        "30,000 credits / year (~6000 video clips)",
+        "Everything in Creator",
+        "Multiple Brand Kits",
+        "6 hr/yr of Translations",
+        "Up to 144 hr/yr of AI voice",
+        "Unlimited videos in Gen-AI Studio",
+        "Unlimited AI Image Generations"
+      ]
+    },
+    {
+      "name": "Studio",
+      "description": "not_found",
+      "cta": "Go Studio",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$79",
+        "displayUnit": "/mo",
+        "billingLabel": "per user"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$39",
+        "displayUnit": "/Month per editor",
+        "billingLabel": "billed yearly as $468",
+        "yearlyTotalPrice": "$468/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "AI video generation at scale",
+        "180,000 credits / year (~36000 video clips)",
+        "Everything in Pro",
+        "Project Analytics",
+        "12 hr/yr of Translations",
+        "Up to 960 hr/yr of AI voice",
+        "Custom Templates",
+        "Access to all AI Models"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "description": "Scale your entire team's video creation",
+      "cta": "Let's Talk",
+      "monthlyPriceBlock": {
+        "displayedPrice": "Custom",
+        "displayUnit": "null",
+        "billingLabel": "Custom"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "Custom",
+        "displayUnit": "null",
+        "billingLabel": "Custom",
+        "yearlyTotalPrice": "yearly_total_not_found",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "Scale your entire team's video creation",
+        "Custom credits",
+        "Custom AI Credits",
+        "Centrally manage teams and data",
+        "Review mode for videos",
+        "Privacy controls",
+        "Customer success"
+      ]
+    }
+  ]
+}

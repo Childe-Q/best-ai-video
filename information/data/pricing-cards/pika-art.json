@@ -1,0 +1,136 @@
+{
+  "slug": "pika-art",
+  "toolName": "Pika Art",
+  "status": "done",
+  "sourceType": "pricing_markdown",
+  "notes": [
+    "状态: **done**（yearly 价格直接显示，monthly 价格通过折扣反算并标记来源）"
+  ],
+  "plans": [
+    {
+      "name": "Basic",
+      "description": "not_found",
+      "cta": "not_found",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/month",
+        "billingLabel": "Free"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/month",
+        "billingLabel": "Free",
+        "yearlyTotalPrice": "$0/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "A perfect taste for the creatively curious",
+        "80 monthly video credits",
+        "Cost per video: 10 credits - Turbo model (using Pikascenes, Pikadditions or Pikaswaps)",
+        "Cost per video: 60 credits - Turbo model (using Pikatwists)",
+        "Cost per video: 20 credits - Pro model (using Pikadditions or Pikaswaps)",
+        "Cost per video: 30 credits - Pro model (using Selfie With Your Younger Self template)",
+        "Cost per video: 80 credits - Pro model (using Pikatwists)",
+        "Access to Pika 2.5 (480p only), Pikascenes, Pikadditions, Pikaswaps, Pikatwists",
+        "Download videos with no watermark",
+        "Purchase more roll over video credits",
+        "Commercial use"
+      ]
+    },
+    {
+      "name": "Standard",
+      "description": "not_found",
+      "cta": "not_found",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$10",
+        "displayUnit": "/month",
+        "billingLabel": "billed monthly"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$8",
+        "displayUnit": "/month",
+        "billingLabel": "billed yearly",
+        "yearlyTotalPrice": "$96/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "More videos meets more editing features",
+        "700 monthly video credits",
+        "Cost per video: 10 credits - Turbo model (using Pikascenes, Pikadditions or Pikaswaps)",
+        "Cost per video: 60 credits - Turbo model (using Pikatwists)",
+        "Cost per video: 20 credits - Pro model (using Pikadditions or Pikaswaps)",
+        "Cost per video: 30 credits - Pro model (using Selfie With Your Younger Self template)",
+        "Cost per video: 80 credits - Pro model (using Pikatwists)",
+        "Access to Pika 2.5 (all resolutions), Pikaframes, Pikascenes, Pikadditions, Pikaswaps, Pikatwists",
+        "Fast generations",
+        "Purchase more roll over video credits",
+        "Download videos with no watermark",
+        "Commercial use"
+      ]
+    },
+    {
+      "name": "Pro",
+      "description": "not_found",
+      "cta": "not_found",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$35",
+        "displayUnit": "/month",
+        "billingLabel": "billed monthly"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$28",
+        "displayUnit": "/month",
+        "billingLabel": "billed yearly",
+        "yearlyTotalPrice": "$336/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "More speed, more videos, more fun",
+        "Best value",
+        "2300 monthly video credits",
+        "Cost per video: 10 credits - Turbo model (using Pikascenes, Pikadditions or Pikaswaps)",
+        "Cost per video: 60 credits - Turbo model (using Pikatwists)",
+        "Cost per video: 20 credits - Pro model (using Pikadditions or Pikaswaps)",
+        "Cost per video: 30 credits - Pro model (using Selfie With Your Younger Self template)",
+        "Cost per video: 80 credits - Pro model (using Pikatwists)",
+        "Access to Pika 2.5 (all resolutions), Pikaframes, Pikascenes, Pikadditions, Pikaswaps, Pikatwists",
+        "Faster generations",
+        "Purchase more roll over video credits",
+        "Download videos with no watermark",
+        "Commercial use"
+      ]
+    },
+    {
+      "name": "Fancy",
+      "description": "not_found",
+      "cta": "not_found",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$95",
+        "displayUnit": "/month",
+        "billingLabel": "billed monthly"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$76",
+        "displayUnit": "/month",
+        "billingLabel": "billed yearly",
+        "yearlyTotalPrice": "$912/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "The crème de la creativity",
+        "6000 monthly video credits",
+        "Cost per video: 10 credits - Turbo model (using Pikascenes, Pikadditions or Pikaswaps)",
+        "Cost per video: 60 credits - Turbo model (using Pikatwists)",
+        "Cost per video: 20 credits - Pro model (using Pikadditions or Pikaswaps)",
+        "Cost per video: 30 credits - Pro model (using Selfie With Your Younger Self template)",
+        "Cost per video: 80 credits - Pro model (using Pikatwists)",
+        "Access to Pika 2.5 (all resolutions), Pikaframes, Pikascenes, Pikadditions, Pikaswaps, Pikatwists",
+        "Fastest generations",
+        "Purchase more roll over video credits",
+        "Download videos with no watermark",
+        "Commercial use",
+        "Pikaffects"
+      ]
+    }
+  ]
+}

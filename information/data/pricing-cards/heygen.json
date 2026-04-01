@@ -1,0 +1,197 @@
+{
+  "slug": "heygen",
+  "toolName": "HeyGen",
+  "status": "frozen",
+  "sourceType": "pricing_markdown",
+  "notes": [
+    "Frozen by existing project protection report.",
+    "缺失字段: Free: billingLabel 未找到",
+    "缺失字段: Pro/Business: annualNote 未在本地证据中找到",
+    "缺失字段: Enterprise: 无价格，只有 \"Contact Sales\""
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "description": "Ideal entry point for creators and marketers looking to test the waters with AI tools, like HeyGen's AI video maker.",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found",
+        "yearlyTotalPrice": "$0/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "Ideal entry point for creators and marketers looking to test the waters with AI tools, like HeyGen's AI video maker.",
+        "Plan Features:",
+        "3 videos per month",
+        "Videos up to 3-mins",
+        "1 Custom Digital Twin",
+        "Standard video processing",
+        "500+ stock photo avatars",
+        "720p video export",
+        "Share & download videos",
+        "Trial access to Premium features:",
+        "Video generation with Avatar IV",
+        "Video creation with Agent",
+        "Video Translation with lip sync",
+        "30+ languages"
+      ]
+    },
+    {
+      "name": "Creator",
+      "description": "Advanced AI models (image & videos)",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$29",
+        "displayUnit": "/mo",
+        "billingLabel": "billed monthly"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$24",
+        "displayUnit": "/mo",
+        "billingLabel": "billed annually",
+        "yearlyTotalPrice": "$288/year",
+        "annualNote": "$24/month if you pay annually"
+      },
+      "bullets": [
+        "Unlimited avatar videos designed for solo creators. Provides access to advanced features like the AI video generator and AI voice over.",
+        "Plan Features:",
+        "Videos up to 30-mins",
+        "1 Custom Digital Twin",
+        "Unlimited Photo Avatars",
+        "700+ Stock Video Avatars",
+        "Voice cloning",
+        "175+ languages and dialects",
+        "Fast video processing",
+        "1080p video export",
+        "Brand kit",
+        "Watermark removal",
+        "Access to all Premium features:",
+        "Video generation with Avatar IV",
+        "Latest Video Agent model",
+        "Video Translation with lip sync",
+        "Generate Avatars and Looks",
+        "Advanced AI models (image & videos)"
+      ]
+    },
+    {
+      "name": "Pro",
+      "description": "Built for advanced individuals creating premium content at scale. Unlock 10× more access to premium features and export in stunning 4K video quality.",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$99",
+        "displayUnit": "/mo",
+        "billingLabel": "billed monthly"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$79",
+        "displayUnit": "/mo",
+        "billingLabel": "billed annually",
+        "yearlyTotalPrice": "$948/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "Built for advanced individuals creating premium content at scale. Unlock 10× more access to premium features and export in stunning 4K video quality.",
+        "Everything in Creator, plus:",
+        "10x more Premium usage",
+        "Faster video processing",
+        "Edit & proofread translation script",
+        "4K video export",
+        "Maximum access to all Premium features:",
+        "Video generation with Avatar IV",
+        "Latest Video Agent model",
+        "Video Translation with lip sync",
+        "Generate Avatars and Looks",
+        "Advanced AI models (image & videos)",
+        "Early access to new features"
+      ]
+    },
+    {
+      "name": "Business",
+      "description": "Additional Seats are $20/seat. Secure, scalable video creation for teams and businesses",
+      "cta": "Get started",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$149",
+        "displayUnit": "/mo",
+        "billingLabel": "billed monthly"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$119",
+        "displayUnit": "/mo",
+        "billingLabel": "billed annually",
+        "yearlyTotalPrice": "$1,428/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "Additional Seats are $20/seat. Secure, scalable video creation for teams and businesses",
+        "Video Generation:",
+        "Videos up to 60-mins",
+        "4k video export",
+        "Faster video processing",
+        "Extended video generation with Avatar IV",
+        "Everything in Creator, plus:",
+        "5x more Generative Usage",
+        "5 Custom Digital Twins",
+        "Scale your brand and centralize assets",
+        "Edit & proofread translation script",
+        "Centralized billing",
+        "Auto-reload credits so you never run out",
+        "Add team members for $20/seat/mo",
+        "Workspace collaboration",
+        "Video draft commenting & editing",
+        "Invites & team management",
+        "Interactive Video (Quizzes, Links, & Branching)",
+        "Screen Recorder",
+        "SCORM Export",
+        "LMS Integrations",
+        "Integrations with n8n, Make, Hubspot & Zapier"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "description": "not_found",
+      "cta": "Contact Sales",
+      "monthlyPriceBlock": {
+        "displayedPrice": "not_found",
+        "displayUnit": "not_found",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "not_found",
+        "displayUnit": "not_found",
+        "billingLabel": "not_found",
+        "yearlyTotalPrice": "yearly_total_not_found",
+        "annualNote": "Contact Sales"
+      },
+      "bullets": [
+        "Studio-quality video creation custom to your business needs.",
+        "Video Generation:",
+        "Unlimited videos",
+        "No video duration max",
+        "4k video export",
+        "Fastest video processing",
+        "Extended video generation with Avatar IV",
+        "Everything in Business, plus:",
+        "Multi-workspace control",
+        "Proofreader seats for video translation",
+        "Centrally manage roles and access",
+        "Enterprise-grade security & privacy",
+        "SCIM User Provisioning",
+        "Team Member MFA",
+        "Commercial terms",
+        "Priority customer support",
+        "Dedicated customer success manager",
+        "Tailored onboarding",
+        "Enterprise Community access",
+        "Invoice billing",
+        "Explore API pricing →"
+      ]
+    }
+  ]
+}

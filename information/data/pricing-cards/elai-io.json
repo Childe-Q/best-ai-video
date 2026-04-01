@@ -1,0 +1,123 @@
+{
+  "slug": "elai-io",
+  "toolName": "Elai",
+  "status": "done",
+  "sourceType": "pricing_markdown",
+  "notes": [
+    "特殊说明: Elai 同时显示月费和每分钟价格",
+    "特殊说明: Creator: $1.93/min (monthly) → $1.53/min (annual)",
+    "特殊说明: Team: $2.50/min (monthly) → $2.00/min (annual)",
+    "缺失字段: Free: yearlyPriceBlock 不适用",
+    "缺失字段: Enterprise: 无固定价格，只有 \"Custom pricing\"",
+    "价格计算: Creator yearly: $23/mo × 12 = $276/year",
+    "价格计算: Team yearly: $100/mo × 12 = $1,200/year",
+    "价格计算: 年付折扣: 20%"
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "description": "not_found",
+      "cta": "Get started for free",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/mo",
+        "billingLabel": "No commitment"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found",
+        "yearlyTotalPrice": "$0/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "Our Free plan includes:",
+        "1 User",
+        "1 Minute",
+        "80+ Avatars",
+        "75+ Languages",
+        "All Creator Features"
+      ]
+    },
+    {
+      "name": "Creator",
+      "description": "not_found",
+      "cta": "Choose Creator",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$29",
+        "displayUnit": "/Month",
+        "billingLabel": "Cancel anytime"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$23",
+        "displayUnit": "/Month",
+        "billingLabel": "Billed annually",
+        "yearlyTotalPrice": "$276/year",
+        "annualNote": "$1.53/minute, Save 20% with Annual"
+      },
+      "bullets": [
+        "15 minutes per month",
+        "Our Creator plan includes:",
+        "1 User",
+        "Up to 15 mins/mo",
+        "Full HD video",
+        "Full Avatar, Voice & Language Library"
+      ]
+    },
+    {
+      "name": "Team",
+      "description": "not_found",
+      "cta": "Choose Team",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$125",
+        "displayUnit": "/Month",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$100",
+        "displayUnit": "/Month",
+        "billingLabel": "Billed annually",
+        "yearlyTotalPrice": "$1,200/year",
+        "annualNote": "$2.00/minute, Save 20% with Annual"
+      },
+      "bullets": [
+        "Recommended",
+        "50 minutes per month",
+        "Everything in Creator, plus:",
+        "3 Editors & 3 Guests",
+        "Custom Images and Fonts",
+        "Ultra 4K HD Video",
+        "Premium Voices",
+        "1 Selfie Avatar & 1 Voice Clone"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "description": "not_found",
+      "cta": "Contact Sales",
+      "monthlyPriceBlock": {
+        "displayedPrice": "Custom",
+        "displayUnit": "/mo",
+        "billingLabel": "Tailored to your needs"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "not_found",
+        "displayUnit": "not_found",
+        "billingLabel": "not_found",
+        "yearlyTotalPrice": "yearly_total_not_found",
+        "annualNote": "Custom setup, unlimited options"
+      },
+      "bullets": [
+        "Custom setup, unlimited options",
+        "Unlimited Users",
+        "3 Voice Clones",
+        "3 Selfie Avatars",
+        "Premium Avatars",
+        "Brand Kit",
+        "Workspaces",
+        "SSO",
+        "Premium Support"
+      ]
+    }
+  ]
+}

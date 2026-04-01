@@ -1,0 +1,145 @@
+{
+  "slug": "fliki-ai",
+  "toolName": "Fliki",
+  "status": "frozen",
+  "sourceType": "pricing_markdown",
+  "notes": [
+    "Frozen by existing project protection report.",
+    "缺失字段: Free: yearlyPriceBlock 不适用",
+    "缺失字段: Enterprise: 无固定价格，只有 \"Custom pricing\"",
+    "价格计算: Standard yearly: $21/mo × 12 = $252/year",
+    "价格计算: Premium yearly: $66/mo × 12 = $792/year",
+    "价格计算: 年付折扣: 25%"
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "description": "For beginners trying out AI video creation.",
+      "cta": "Start now",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/mo",
+        "billingLabel": "No credit card required"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found",
+        "yearlyTotalPrice": "$0/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "For beginners trying out AI video creation.",
+        "5 credits per month",
+        "300 (limited) voices, 80+ languages & 100+ dialects",
+        "Create videos with ideas, scripts, blog articles, product pages, PPTs",
+        "Thousands of images, video clips, stickers and music assets",
+        "Generate AI Images",
+        "HD - 720p low-res videos",
+        "Create thumbnail designs, presentations or social carousels",
+        "Contains Fliki Watermark"
+      ]
+    },
+    {
+      "name": "Standard",
+      "description": "For creators venturing into AI video production.",
+      "cta": "Start for free",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$28",
+        "displayUnit": "/mo",
+        "billingLabel": "per month"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$21",
+        "displayUnit": "/mo",
+        "billingLabel": "per month",
+        "yearlyTotalPrice": "$252/year",
+        "annualNote": "Yearly 25% off"
+      },
+      "bullets": [
+        "For creators venturing into AI video production.",
+        "2160 credits per year",
+        "1000 voices including 200 ultra-realistic",
+        "Full HD - 1080p videos",
+        "Millions of premium stock images, video clips, stickers and music assets",
+        "Translate content to 80+ languages",
+        "Videos of length upto 15 minutes",
+        "1 active Series",
+        "Make and Zapier integration",
+        "Limited stock avatars",
+        "Voice cloning",
+        "AI Playground",
+        "YouTube publishing",
+        "Limited AI avatars with custom Avatar",
+        "Commercial rights",
+        "Plus all features from free plan"
+      ]
+    },
+    {
+      "name": "Premium",
+      "description": "For emerging & experienced video creators, perfect for teams of any size",
+      "cta": "Start for free",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$88",
+        "displayUnit": "/mo",
+        "billingLabel": "per month"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$66",
+        "displayUnit": "/mo",
+        "billingLabel": "per month",
+        "yearlyTotalPrice": "$792/year",
+        "annualNote": "Yearly 25% off"
+      },
+      "bullets": [
+        "For emerging & experienced video creators, perfect for teams of any size",
+        "7200 credits per year",
+        "Videos of length upto 40 minutes",
+        "Multiple brand kits",
+        "Multiple voice cloning",
+        "Multiple custom voices",
+        "Generate AI video clips",
+        "Custom fonts",
+        "All AI avatars",
+        "Photo avatars",
+        "3 active Series",
+        "2000+ voices including 1000+ ultra-realistic & 15 multilingual expressive voices",
+        "AI avatars with custom Avatar",
+        "Priority support",
+        "Plus all features from standard plan"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "description": "Custom plan tailored to your organization's specific needs.",
+      "cta": "Contact us",
+      "monthlyPriceBlock": {
+        "displayedPrice": "Custom",
+        "displayUnit": "/mo",
+        "billingLabel": "Custom pricing"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "Custom",
+        "displayUnit": "/mo",
+        "billingLabel": "billed yearly",
+        "yearlyTotalPrice": "Custom",
+        "annualNote": "Custom plan tailored to your organization's specific needs"
+      },
+      "bullets": [
+        "Custom plan tailored to your organization's specific needs.",
+        "Custom credits",
+        "Bulk discounts",
+        "Higher quotas",
+        "Invoiced billing",
+        "API Access",
+        "Personalized avatars",
+        "State-of-the-art AI models",
+        "Professional voice cloning",
+        "Branded custom templates",
+        "Dedicated account manager",
+        "Team collaboration",
+        "Plus all features from premium plan"
+      ]
+    }
+  ]
+}

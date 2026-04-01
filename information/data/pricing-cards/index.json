@@ -1,0 +1,138 @@
+{
+  "toolCount": 19,
+  "tools": [
+    {
+      "slug": "aistudios-com",
+      "toolName": "AI Studios",
+      "status": "done",
+      "planCount": 4,
+      "dataFile": "aistudios-com.json"
+    },
+    {
+      "slug": "colossyan",
+      "toolName": "Colossyan",
+      "status": "done",
+      "planCount": 4,
+      "dataFile": "colossyan.json"
+    },
+    {
+      "slug": "descript",
+      "toolName": "Descript",
+      "status": "done",
+      "planCount": 5,
+      "dataFile": "descript.json"
+    },
+    {
+      "slug": "d-id",
+      "toolName": "D-ID",
+      "status": "done",
+      "planCount": 5,
+      "dataFile": "d-id.json"
+    },
+    {
+      "slug": "elai-io",
+      "toolName": "Elai",
+      "status": "done",
+      "planCount": 4,
+      "dataFile": "elai-io.json"
+    },
+    {
+      "slug": "flexclip",
+      "toolName": "FlexClip",
+      "status": "frozen",
+      "planCount": 3,
+      "dataFile": "flexclip.json"
+    },
+    {
+      "slug": "fliki-ai",
+      "toolName": "Fliki",
+      "status": "frozen",
+      "planCount": 4,
+      "dataFile": "fliki-ai.json"
+    },
+    {
+      "slug": "heygen",
+      "toolName": "HeyGen",
+      "status": "frozen",
+      "planCount": 5,
+      "dataFile": "heygen.json"
+    },
+    {
+      "slug": "invideo-io",
+      "toolName": "InVideo",
+      "status": "frozen",
+      "planCount": 4,
+      "dataFile": "invideo-io.json"
+    },
+    {
+      "slug": "lumen5",
+      "toolName": "Lumen5",
+      "status": "frozen",
+      "planCount": 5,
+      "dataFile": "lumen5.json"
+    },
+    {
+      "slug": "opus-pro",
+      "toolName": "Opus Pro",
+      "status": "done",
+      "planCount": 4,
+      "dataFile": "opus-pro.json"
+    },
+    {
+      "slug": "pictory-ai",
+      "toolName": "Pictory",
+      "status": "usable_with_gaps",
+      "planCount": 4,
+      "dataFile": "pictory-ai.json"
+    },
+    {
+      "slug": "pika-art",
+      "toolName": "Pika Art",
+      "status": "done",
+      "planCount": 4,
+      "dataFile": "pika-art.json"
+    },
+    {
+      "slug": "runwayml-com",
+      "toolName": "RunwayML",
+      "status": "done",
+      "planCount": 5,
+      "dataFile": "runwayml-com.json"
+    },
+    {
+      "slug": "steve-ai",
+      "toolName": "Steve AI",
+      "status": "insufficient_evidence",
+      "planCount": 0,
+      "dataFile": "steve-ai.json"
+    },
+    {
+      "slug": "synthesia",
+      "toolName": "Synthesia",
+      "status": "frozen",
+      "planCount": 4,
+      "dataFile": "synthesia.json"
+    },
+    {
+      "slug": "synthesys-io",
+      "toolName": "Synthesys",
+      "status": "done",
+      "planCount": 4,
+      "dataFile": "synthesys-io.json"
+    },
+    {
+      "slug": "veed-io",
+      "toolName": "VEED.io",
+      "status": "done",
+      "planCount": 5,
+      "dataFile": "veed-io.json"
+    },
+    {
+      "slug": "zebracat-ai",
+      "toolName": "Zebracat",
+      "status": "done",
+      "planCount": 4,
+      "dataFile": "zebracat-ai.json"
+    }
+  ]
+}

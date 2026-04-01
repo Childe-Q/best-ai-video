@@ -1,0 +1,134 @@
+{
+  "slug": "opus-pro",
+  "toolName": "Opus Pro",
+  "status": "done",
+  "sourceType": "pricing_markdown",
+  "notes": [
+    "特殊说明: Starter plan 只有 monthly billing，没有 yearly 选项",
+    "缺失字段: Free: yearlyPriceBlock 不适用",
+    "缺失字段: Starter: yearlyPriceBlock 不适用 (only monthly)",
+    "缺失字段: Business: 无固定价格，只有 \"Custom pricing\"",
+    "价格计算: Pro yearly: $14.5/mo × 12 = $174/year (页面直接显示)",
+    "价格计算: 年付折扣: 50%"
+  ],
+  "plans": [
+    {
+      "name": "Free",
+      "description": "not_found",
+      "cta": "Create an account",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/mo",
+        "billingLabel": "Free forever"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$0",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found",
+        "yearlyTotalPrice": "$0/year",
+        "annualNote": "not_found"
+      },
+      "bullets": [
+        "60 credits per month",
+        "Up to 1080p rendered clips",
+        "Auto reframe",
+        "AI captions with emoji and keyword highlighter",
+        "Has watermark",
+        "No editing",
+        "After 3 days, the clips will no longer be exportable"
+      ]
+    },
+    {
+      "name": "Starter",
+      "description": "For individual creators",
+      "cta": "Start your free trial",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$15",
+        "displayUnit": "/mo",
+        "billingLabel": "$15 billed monthly"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "not_found",
+        "displayUnit": "not_found",
+        "billingLabel": "not_found",
+        "yearlyTotalPrice": "yearly_total_not_found",
+        "annualNote": "Starter plan only available in monthly"
+      },
+      "bullets": [
+        "For individual creators",
+        "No credit card required",
+        "150 credits per month",
+        "AI clipping with Virality Score",
+        "AI animated captions in 20+ languages",
+        "Auto post to YouTube Shorts, TikTok, IG Reels, or download",
+        "Powerful editor",
+        "1 brand template",
+        "Filler & silence removal",
+        "Remove Watermark"
+      ]
+    },
+    {
+      "name": "Pro",
+      "description": "For professional creators, marketers, & teams",
+      "cta": "Start your free trial",
+      "monthlyPriceBlock": {
+        "displayedPrice": "$29",
+        "displayUnit": "/mo",
+        "billingLabel": "not_found"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "$14.5",
+        "displayUnit": "/mo",
+        "billingLabel": "$174 billed annually",
+        "yearlyTotalPrice": "$174/year",
+        "annualNote": "Save up to 50% with annual billing"
+      },
+      "bullets": [
+        "For professional creators, marketers, & teams",
+        "No credit card required",
+        "3,600 credits per year, available instantly",
+        "Team workspace with 2 seats",
+        "2 brand templates",
+        "6 social account connections",
+        "Everything in Starter plan, plus:",
+        "AI B-roll",
+        "Input from 10+ sources",
+        "Export to Adobe Premiere Pro & DaVinci Resolve",
+        "Multiple aspect ratios (9:16, 1:1, 16:9)",
+        "Social media scheduler",
+        "Intercom chat support",
+        "Custom fonts",
+        "Speech enhancement"
+      ]
+    },
+    {
+      "name": "Business",
+      "description": "For organizations that need tailored solutions, API, and more",
+      "cta": "Contact us",
+      "monthlyPriceBlock": {
+        "displayedPrice": "Custom",
+        "displayUnit": "/mo",
+        "billingLabel": "Custom pricing and packs"
+      },
+      "yearlyPriceBlock": {
+        "displayedPrice": "not_found",
+        "displayUnit": "not_found",
+        "billingLabel": "not_found",
+        "yearlyTotalPrice": "yearly_total_not_found",
+        "annualNote": "Custom pricing"
+      },
+      "bullets": [
+        "For organizations that need tailored solutions, API, and more",
+        "Everything in the Pro plan, plus:",
+        "Priority project processing",
+        "Customized credits, team seats and social account connections",
+        "Tailored business assets: brand templates, fonts, vocabulary & more",
+        "Dedicated storage",
+        "API & custom integrations",
+        "Master Service Agreement (MSA)",
+        "Priority support with a dedicated Slack channel",
+        "Enterprise-level security"
+      ]
+    }
+  ]
+}
