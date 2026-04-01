@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { PricingPlan } from '@/types/tool';
 import { CheckIcon } from '@heroicons/react/24/solid';
 import { isExplicitContactSalesPlan, isExplicitFreePlan } from '@/lib/pricing/display';
+import { getPlanReactKey } from '@/lib/pricing/planKey';
 
 interface PricingSnapshotProps {
   plans: PricingPlan[];
@@ -207,7 +208,7 @@ export default function PricingSnapshot({ plans, affiliateLink, toolSlug }: Pric
 
         return (
           <div
-            key={plan.name}
+            key={getPlanReactKey(plan, index, 'legacy-pricing-snapshot')}
             className={`relative rounded-2xl p-5 md:p-7 transition-all duration-300 ${getBackgroundColor(plan)} ${getBorderStyle(plan, index)} ${
               isPopular ? 'shadow-xl scale-105 z-10' : 'shadow-sm'
             }`}

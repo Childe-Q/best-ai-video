@@ -137,13 +137,18 @@ export default function ToolCard({
 
         <dl className="space-y-4">
           <div className="border-t border-gray-100 pt-4">
-            <Link
-              href={pricingHref}
-              onClick={trackToolCardClick}
-              className="inline-flex max-w-full items-center text-sm font-semibold leading-6 text-gray-900 underline decoration-black/15 underline-offset-4 transition-colors hover:text-indigo-600 hover:decoration-indigo-300"
-            >
-              <span className="truncate">{tool.priceBlock?.pricePrimary ?? 'Pricing not verified'}</span>
-            </Link>
+            <div className="min-w-0">
+              <Link
+                href={pricingHref}
+                onClick={trackToolCardClick}
+                className="inline-flex max-w-full items-center text-sm font-semibold leading-6 text-gray-900 underline decoration-black/15 underline-offset-4 transition-colors hover:text-indigo-600 hover:decoration-indigo-300"
+              >
+                <span className="truncate">{tool.priceBlock?.pricePrimary ?? 'See pricing'}</span>
+              </Link>
+              {tool.priceBlock?.priceHelper && (
+                <p className="mt-1 text-xs font-medium text-gray-500">{tool.priceBlock.priceHelper}</p>
+              )}
+            </div>
           </div>
 
           {hasDisplayValue(tool.watermarkPolicy) && (

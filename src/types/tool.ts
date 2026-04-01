@@ -38,6 +38,14 @@ export type PricingPlan = {
   addons?: Array<{ id: string; label: string } | { text: string; badge?: string }>;
   ctaText?: string;
   billingNote?: string;
+  monthlyBillingLabel?: string;
+  yearlyBillingLabel?: string;
+  monthlyDisplayUnit?: string;
+  yearlyDisplayUnit?: string;
+  monthlyPriceDisplay?: string;
+  yearlyPriceDisplay?: string;
+  yearlyTotalPrice?: string;
+  annualNote?: string;
   ribbonText?: string;
   featureItems?: Array<{ icon?: string; text: string; badge?: string; available?: boolean }>;
   isPopular?: boolean;

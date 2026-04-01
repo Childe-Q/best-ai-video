@@ -36,6 +36,11 @@ function getSlug(input: ToolLike): string {
   return typeof input === 'string' ? input : input.slug;
 }
 
+export function getToolCardPricingCandidateRecord(input: ToolLike): NormalizedPricingRecord | null {
+  const slug = getSlug(input).toLowerCase().trim();
+  return CANDIDATE_RECORDS[slug] ?? null;
+}
+
 function getTagLabel(displayText: string): ToolCardPricingDisplay['tagLabel'] {
   if (displayText === 'Custom pricing') {
     return 'Custom pricing';
@@ -84,7 +89,7 @@ function buildCandidateCardDisplay(record: NormalizedPricingRecord): ToolCardPri
 export function getToolCardPricingDisplay(input: ToolLike): ToolCardPricingDisplay {
   const slug = getSlug(input).toLowerCase().trim();
   const legacyDisplay = getPricingDisplay(input);
-  const candidateRecord = CANDIDATE_RECORDS[slug];
+  const candidateRecord = getToolCardPricingCandidateRecord(input);
 
   if (candidateRecord) {
     const candidateDisplay = buildCandidateCardDisplay(candidateRecord);

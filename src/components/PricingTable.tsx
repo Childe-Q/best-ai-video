@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { PricingPlan } from '@/types/tool';
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid';
+import { getPlanReactKey } from '@/lib/pricing/planKey';
 
 interface PricingTableProps {
   plans: PricingPlan[];
@@ -204,7 +205,7 @@ export default function PricingTable({ plans, affiliateLink, hasFreeTrial }: Pri
 
     return (
       <div
-        key={isStaticEnterprise ? 'static-enterprise' : plan.name}
+        key={isStaticEnterprise ? 'static-enterprise' : getPlanReactKey(plan, index, 'legacy-pricing-table')}
         className={`relative rounded-2xl ${cardClasses} shadow-lg overflow-hidden flex flex-col h-full transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:z-10 border border-gray-200`}
       >
         {/* Badge at the top */}

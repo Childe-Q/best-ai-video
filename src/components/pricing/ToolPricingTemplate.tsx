@@ -7,18 +7,21 @@ import PricingUsageExplainer from './PricingUsageExplainer';
 import BillingToggle from './BillingToggle';
 import PricingCardsGrid from '@/components/PricingCardsGrid';
 import PlansComparedTable from './PlansComparedTable';
+import PricingDetailsSection from './PricingDetailsSection';
 import VerdictSection from './VerdictSection';
 import PricingFitGuide from './PricingFitGuide';
 import DisclosureSection from '@/components/DisclosureSection';
 import DisclosurePopover from '@/components/DisclosurePopover';
 import CommonPaidFeatures from './CommonPaidFeatures';
 import { generatePricingSnapshot } from '@/lib/generatePricingSnapshot';
-import { filterPaidPlans, isFreePlan } from '@/lib/pricing/filterPaidPlans';
+import { filterPaidPlans } from '@/lib/pricing/filterPaidPlans';
 import { deriveRecommendations } from '@/lib/pricing/deriveRecommendations';
-import PricingCard from '@/components/PricingCard';
-import CTAButton from '@/components/CTAButton';
 import { isExplicitFreePlan } from '@/lib/pricing/display';
 import type { PricingVerification } from '@/lib/pricing/display';
+import type {
+  ProductizedPricingDetailSection,
+  ProductizedPricingUsageGroup,
+} from '@/lib/pricing/productPageOverrides';
 
 interface ToolPricingTemplateProps {
   // Tool metadata
@@ -64,6 +67,8 @@ interface ToolPricingTemplateProps {
     bullets: string[];
     tip: string;
   };
+  usageGroups?: ProductizedPricingUsageGroup[];
+  pricingDetails?: ProductizedPricingDetailSection | null;
   
   // Pre-computed verdict text (from server) to avoid hydration mismatch
   verdictText?: string;
@@ -105,6 +110,8 @@ export default function ToolPricingTemplate({
   editorialGuide,
   toolData,
   usageNotes,
+  usageGroups,
+  pricingDetails,
   verdictText: serverVerdictText,
   lastUpdated,
   officialPricingUrl,
@@ -615,28 +622,6 @@ export default function ToolPricingTemplate({
     });
   }, [isInVideo, pricingPlans, commonPaidFeatures]);
 
-  // Separate free plans and paid plans for layout
-  const { freePlans, paidPlansForGrid } = useMemo(() => {
-    const free: PricingPlan[] = [];
-    const paid: PricingPlan[] = [];
-    
-    filteredPricingPlans.forEach(plan => {
-      if (isFreePlan(plan)) {
-        free.push(plan);
-      } else {
-        paid.push(plan);
-      }
-    });
-    
-    return {
-      freePlans: free,
-      paidPlansForGrid: paid
-    };
-  }, [filteredPricingPlans]);
-
-  // Check if we should use special layout (ONLY for InVideo: Free exists + >=3 paid plans)
-  const shouldUseSeparateFreeLayout = isInVideo && freePlans.length > 0 && paidPlansForGrid.length >= 3;
-
   // Verdict data - use pre-computed text from server to avoid hydration mismatch
   const canUsePriceInVerdictTitle =
     pricingVerification === 'verified' && /^Starts at \$/.test(startingPrice);
@@ -699,6 +684,7 @@ export default function ToolPricingTemplate({
           <PricingUsageExplainer 
             title={creditUsage?.title}
             usageNotes={usageNotes}
+            groups={usageGroups}
             toolName={toolName}
           />
 
@@ -717,119 +703,14 @@ export default function ToolPricingTemplate({
           <div className="mb-16">
             {pricingPlans.length > 0 ? (
               <>
-                {/* Paid Plans Grid */}
-                {shouldUseSeparateFreeLayout ? (
-                  <div className="mb-12">
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-                      {paidPlansForGrid.map((plan, index) => {
-                        // Determine if plan is popular (matching PricingCardsGrid logic)
-                        const badgeText = plan.ribbonText || plan.badge || '';
-                        const isPopular = badgeText.toLowerCase().includes('popular') || 
-                                         badgeText.toLowerCase().includes('best value') || 
-                                         plan.isPopular ||
-                                         index === 1; // Fallback: second plan is popular
-                        return (
-                          <PricingCard
-                            key={plan.name || index}
-                            plan={plan}
-                            isAnnual={billing === 'yearly'}
-                            affiliateLink={affiliateLink}
-                            hasFreeTrial={hasFreeTrial}
-                            toolSlug={toolSlug}
-                            isPopular={isPopular}
-                            previousPlanName={index > 0 ? paidPlansForGrid[index - 1]?.name : undefined}
-                            comparisonTable={comparisonTable}
-                          />
-                        );
-                      })}
-                    </div>
-                  </div>
-                ) : (
-                  <PricingCardsGrid 
-                    plans={filteredPricingPlans} 
-                    affiliateLink={affiliateLink}
-                    hasFreeTrial={hasFreeTrial}
-                    toolSlug={toolSlug}
-                    comparisonTable={comparisonTable}
-                    externalBilling={billing}
-                  />
-                )}
-
-                {/* Free Plan Section (row banner) */}
-                {shouldUseSeparateFreeLayout && freePlans.length > 0 && (
-                  <div className="mt-8 mb-8">
-                    {freePlans.slice(0, 1).map((plan, index) => {
-                      // Extract key limitations from featureItems, deduplicate and prioritize
-                      const allItems = (plan.featureItems || plan.features || [])
-                        .map(item => typeof item === 'string' ? item : item.text)
-                        .filter(Boolean);
-                      
-                      // Deduplicate: prefer longer/more specific items
-                      const uniqueItems: string[] = [];
-                      const seen = new Set<string>();
-                      
-                      // Sort by length (longer first) to prefer specific items
-                      const sortedItems = [...allItems].sort((a, b) => b.length - a.length);
-                      
-                      for (const item of sortedItems) {
-                        const normalized = item.toLowerCase().trim();
-                        // Skip if we've seen a similar item (contains check)
-                        let isDuplicate = false;
-                        for (const seenItem of seen) {
-                          if (normalized.includes(seenItem) || seenItem.includes(normalized)) {
-                            isDuplicate = true;
-                            break;
-                          }
-                        }
-                        if (!isDuplicate && uniqueItems.length < 6) {
-                          uniqueItems.push(item);
-                          seen.add(normalized);
-                        }
-                      }
-                      
-                      // Get CTA text from plan or use default
-                      const ctaText = plan.ctaText || 'Get Started';
-                      
-                      return (
-                        <div
-                          key={plan.name || index}
-                          className="w-full bg-white rounded-xl border-2 border-gray-200 p-6"
-                        >
-                          {/* Top row: Title + Description on left, Button on right */}
-                          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
-                            <div className="flex-1">
-                              <h3 className="text-lg font-bold text-gray-900 mb-1">Free plan (limited)</h3>
-                              <p className="text-sm text-gray-600">Try the workflow with strict limits before upgrading.</p>
-                            </div>
-                            <div className="flex-shrink-0">
-                              <CTAButton
-                                affiliateLink={affiliateLink}
-                                hasFreeTrial={hasFreeTrial}
-                                text={ctaText}
-                                size="md"
-                                className="w-full md:w-auto"
-                              />
-                            </div>
-                          </div>
-                          
-                          {/* Bottom: Compact list of key limitations */}
-                          {uniqueItems.length > 0 && (
-                            <div className="pt-4 border-t border-gray-100">
-                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                                {uniqueItems.map((limitation, idx) => (
-                                  <div key={idx} className="flex items-start gap-2 text-sm text-gray-600">
-                                    <span className="text-gray-400 mt-0.5">•</span>
-                                    <span>{limitation}</span>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                )}
+                <PricingCardsGrid 
+                  plans={filteredPricingPlans} 
+                  affiliateLink={affiliateLink}
+                  hasFreeTrial={hasFreeTrial}
+                  toolSlug={toolSlug}
+                  comparisonTable={comparisonTable}
+                  externalBilling={billing}
+                />
               </>
             ) : (
               <div className="bg-white rounded-2xl p-8 text-center mb-12">
@@ -845,6 +726,8 @@ export default function ToolPricingTemplate({
           {isInVideo && commonPaidFeatures && commonPaidFeatures.length > 0 && (
             <CommonPaidFeatures features={commonPaidFeatures} />
           )}
+
+          {pricingDetails && <PricingDetailsSection detailSection={pricingDetails} />}
 
           {/* 5. Plans Compared Table (New) */}
           {pricingPlans.length > 0 && (

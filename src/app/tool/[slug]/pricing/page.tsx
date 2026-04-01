@@ -11,6 +11,7 @@ import { getToolPricingSummary } from '@/lib/pricing/display';
 import { getToolCardPricingDisplay } from '@/lib/pricing/cardDisplay';
 import { getProofPricingPageData } from '@/lib/pricing/proofPages';
 import type { PricingVerification } from '@/lib/pricing/display';
+import { getCanonicalPricingPageOverride } from '@/lib/pricing/canonicalPricingAdapter';
 import { getProductizedPricingPageOverride } from '@/lib/pricing/productPageOverrides';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -91,7 +92,8 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
 
   if (!tool) notFound();
 
-  const productizedPricingOverride = getProductizedPricingPageOverride(slug, tool);
+  const canonicalPricingOverride = getCanonicalPricingPageOverride(slug, tool);
+  const productizedPricingOverride = canonicalPricingOverride ?? getProductizedPricingPageOverride(slug, tool);
   const proofPricingData = getProofPricingPageData(slug);
   if (!productizedPricingOverride && proofPricingData) {
     return <CapturedPricingPage toolName={tool.name} data={proofPricingData} />;
@@ -192,6 +194,8 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
         best_for: tool.best_for
       }}
       usageNotes={usageNotes} // Pre-computed on server
+      usageGroups={productizedPricingOverride?.usageGroups}
+      pricingDetails={productizedPricingOverride?.pricingDetails}
       verdictText={generatedVerdictText} // Pre-computed on server
       lastUpdated={lastUpdated}
       officialPricingUrl={officialPricingUrl}

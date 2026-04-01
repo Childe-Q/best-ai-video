@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import type { PricingCtaVariant } from '@/lib/pricing/cta';
 
 interface CTAButtonProps {
   affiliateLink?: string;
@@ -6,10 +7,17 @@ interface CTAButtonProps {
   className?: string;
   text?: string;
   size?: 'sm' | 'md' | 'lg';
+  variant?: PricingCtaVariant;
 }
 
-export default function CTAButton({ affiliateLink, hasFreeTrial, className = '', text, size = 'md' }: CTAButtonProps) {
-  // Neo-Brutalism: Single border, hard shadow, yellow background default
+export default function CTAButton({
+  affiliateLink,
+  hasFreeTrial,
+  className = '',
+  text,
+  size = 'md',
+  variant = 'primary',
+}: CTAButtonProps) {
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
@@ -18,8 +26,7 @@ export default function CTAButton({ affiliateLink, hasFreeTrial, className = '',
 
   const baseClasses = `
     inline-flex items-center justify-center 
-    font-bold text-black hover:text-black uppercase tracking-wide
-    bg-[#F6D200] 
+    font-bold uppercase tracking-wide
     border-2 border-black 
     rounded-lg 
     shadow-[4px_4px_0px_0px_#111111] 
@@ -28,8 +35,12 @@ export default function CTAButton({ affiliateLink, hasFreeTrial, className = '',
     active:translate-y-[4px] active:translate-x-[4px] 
     active:shadow-none
     transition-all duration-200 
-    outline-none focus:ring-0
+    outline-none focus:ring-0 focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2
   `;
+  const variantClasses = {
+    primary: 'bg-[#F6D200] text-black hover:bg-[#E8C600] hover:text-black active:bg-[#D9BA00]',
+    secondary: 'bg-white text-black hover:bg-[#F1ECDD] hover:text-black active:bg-[#E6DECD]',
+  };
 
   const label = text || (hasFreeTrial ? 'Start Free Trial' : 'Visit Website');
   const href = affiliateLink || '#';
@@ -39,7 +50,7 @@ export default function CTAButton({ affiliateLink, hasFreeTrial, className = '',
       href={href} 
       target="_blank"
       rel="noopener noreferrer nofollow"
-      className={`${baseClasses} ${sizeClasses[size]} ${className}`}
+      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
     >
       {label}
       <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

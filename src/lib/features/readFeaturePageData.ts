@@ -2,6 +2,7 @@ import '@/lib/optionalServerOnly';
 
 import fs from 'fs';
 import path from 'path';
+import toolsData from '@/data/tools.json';
 import {
   FeatureFaqItem,
   FeaturePageData,
@@ -12,8 +13,9 @@ import {
   FeatureToolCard,
 } from '@/types/featurePage';
 import { NormalizedFeaturePage } from '@/types/normalizedFeaturePage';
+import type { Tool } from '@/types/tool';
 import { getFeaturePageModules, getFeaturePageType, getFeaturePageVariant } from '@/lib/features/pageType';
-import { getFeatureSeedCardPriceBlock } from '@/lib/pricing/cardPriceBlock';
+import { getFeatureSeedCardPriceBlock, getHomeCardPriceBlock } from '@/lib/pricing/cardPriceBlock';
 
 const FEATURES_DATA_DIR = path.join(process.cwd(), 'src', 'data', 'features');
 const NORMALIZED_FEATURES_DATA_DIR = path.join(FEATURES_DATA_DIR, 'normalized');
@@ -34,6 +36,7 @@ const NORMALIZED_VALIDATION_SLUGS = new Set([
   'content-repurposing-ai-tools',
   'professional-ai-video-tools',
 ]);
+const TOOL_BY_SLUG = new Map((toolsData as Tool[]).map((tool) => [tool.slug, tool] as const));
 
 function isNonEmptyString(value: unknown): value is string {
   return typeof value === 'string' && value.trim().length > 0;
@@ -45,6 +48,15 @@ function asOptionalString(value: unknown): string | null {
 
 function asOptionalBoolean(value: unknown): boolean | undefined {
   return typeof value === 'boolean' ? value : undefined;
+}
+
+function resolveFeatureToolPriceBlock(toolSlug: string, pricingSeed?: string | null) {
+  const canonicalTool = TOOL_BY_SLUG.get(toolSlug.trim());
+  if (canonicalTool) {
+    return getHomeCardPriceBlock(canonicalTool);
+  }
+
+  return getFeatureSeedCardPriceBlock(pricingSeed);
 }
 
 function parseHero(raw: unknown): FeatureHero | null {
@@ -116,7 +128,7 @@ function parseTool(raw: unknown): FeatureToolCard | null {
     reasonLine1: tool.reasonLine1.trim(),
     reasonLine2: asOptionalString(tool.reasonLine2),
     pricingStartAt,
-    priceBlock: getFeatureSeedCardPriceBlock(pricingStartAt),
+    priceBlock: resolveFeatureToolPriceBlock(tool.toolSlug.trim(), pricingStartAt),
     watermarkPolicy: asOptionalString(tool.watermarkPolicy),
     bestFor: asOptionalString(tool.bestFor),
     mainTradeoff: asOptionalString(tool.mainTradeoff),
@@ -246,7 +258,7 @@ function mapNormalizedTool(tool: NormalizedFeaturePage['tools'][number]): Featur
     logoUrl: asOptionalString(tool.logoUrl),
     reasonLine1: verdictSeed,
     pricingStartAt,
-    priceBlock: getFeatureSeedCardPriceBlock(pricingStartAt),
+    priceBlock: resolveFeatureToolPriceBlock(tool.slug.trim(), pricingStartAt),
     watermarkPolicy: asOptionalString(tool.policySeed),
     bestFor: asOptionalString(tool.bestForSeed),
     mainTradeoff: asOptionalString(tool.mainLimitationSeed),

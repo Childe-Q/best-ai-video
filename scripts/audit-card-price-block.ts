@@ -28,6 +28,7 @@ function printFeatureSeedSamples() {
     'Free plan available; paid from $7.99/mo (Pro: $15/mo annually)',
     'Enterprise: custom pricing, unlimited minutes',
     'Free',
+    'Annual plans from $24/mo billed yearly',
     null,
   ];
 

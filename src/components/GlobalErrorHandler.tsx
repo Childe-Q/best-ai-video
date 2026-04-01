@@ -4,13 +4,19 @@ import { useEffect } from 'react';
 
 export default function GlobalErrorHandler() {
   useEffect(() => {
+    const isMaskedInjectedSource = (value: string) =>
+      value.includes('webkit-masked-url') ||
+      value.includes('safari-web-extension://') ||
+      value.includes('chrome-extension://') ||
+      value.includes('moz-extension://') ||
+      value.includes('hidden/:');
+
     const isMaskedInjectedPostMessageError = (message: string, source: string) =>
-      message.toLowerCase().includes('postmessage') &&
-      (source.includes('webkit-masked-url') ||
-        source.includes('safari-web-extension://') ||
-        source.includes('chrome-extension://') ||
-        source.includes('moz-extension://') ||
-        source.includes('hidden/:'));
+      (message.toLowerCase().includes('postmessage') ||
+        message.toLowerCase().includes('.postmessage') ||
+        (message.toLowerCase().includes('null is not an object') &&
+          message.toLowerCase().includes('postmessage'))) &&
+      (isMaskedInjectedSource(message) || isMaskedInjectedSource(source));
 
     // Handle unhandled errors
     const handleError = (event: ErrorEvent) => {
@@ -38,16 +44,8 @@ export default function GlobalErrorHandler() {
       // Check if error is from browser extension (obfuscated code)
       const isExtensionError = 
         errorString.includes('_0x') ||
-        errorString.includes('webkit-masked-url') ||
-        errorString.includes('hidden/:') ||
-        filename.includes('webkit-masked-url') ||
-        filename.includes('hidden/:') ||
-        filename.includes('chrome-extension://') ||
-        filename.includes('moz-extension://') ||
-        filename.includes('safari-web-extension://') ||
-        errorString.includes('chrome-extension://') ||
-        errorString.includes('moz-extension://') ||
-        errorString.includes('safari-web-extension://') ||
+        isMaskedInjectedSource(errorString) ||
+        isMaskedInjectedSource(filename) ||
         maskedPostMessageError ||
         (errorString.includes('Can\'t find variable') && errorString.includes('_0x')) ||
         // Handle NotAllowedError from browser extensions trying to autoplay
@@ -105,11 +103,7 @@ export default function GlobalErrorHandler() {
       // Check if error is from browser extension
       const isExtensionError = 
         errorString.includes('_0x') ||
-        errorString.includes('webkit-masked-url') ||
-        errorString.includes('hidden/:') ||
-        errorString.includes('chrome-extension://') ||
-        errorString.includes('moz-extension://') ||
-        errorString.includes('safari-web-extension://') ||
+        isMaskedInjectedSource(errorString) ||
         maskedPostMessageError ||
         (errorString.includes('Can\'t find variable') && errorString.includes('_0x')) ||
         // Handle NotAllowedError from browser extensions trying to autoplay
@@ -139,18 +133,27 @@ export default function GlobalErrorHandler() {
     // Intercept console errors to filter extension-related messages
     const originalConsoleError = console.error;
     console.error = (...args: any[]) => {
-      const message = args.join(' ');
+      const message = args
+        .map((arg) => {
+          if (typeof arg === 'string') return arg;
+          if (arg instanceof Error) return `${arg.name} ${arg.message} ${arg.stack || ''}`;
+          try {
+            return JSON.stringify(arg);
+          } catch {
+            return String(arg);
+          }
+        })
+        .join(' ');
+      const normalizedMessage = message.toLowerCase();
       // Filter out extension-related console errors
       if (
-        (message.toLowerCase().includes('postmessage') &&
-          (message.includes('webkit-masked-url') || message.includes('hidden/:') || message.includes('safari-web-extension://'))) ||
-        message.includes('safari-web-extension://') ||
-        message.includes('chrome-extension://') ||
-        message.includes('moz-extension://') ||
+        isMaskedInjectedPostMessageError(normalizedMessage, message) ||
+        isMaskedInjectedSource(message) ||
         message.includes('Content-Security-Policy') ||
         message.includes('require-trusted-types-for') ||
         message.includes('script-src directive') ||
         message.includes('Refused to load') ||
+        (normalizedMessage.includes('null is not an object') && normalizedMessage.includes('postmessage')) ||
         (message.includes('network connection was lost') && (message.includes('extension') || message.includes('allowlist') || message.includes('GenerateIT')))
       ) {
         // Silently ignore extension-related console errors

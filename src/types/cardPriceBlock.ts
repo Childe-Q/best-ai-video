@@ -1,6 +1,6 @@
 export type CardPriceState = 'free' | 'paid-exact' | 'paid-coarse' | 'custom' | 'unverified';
 
-export type CardPriceSourceKind = 'normalized' | 'legacy-summary' | 'feature-seed';
+export type CardPriceSourceKind = 'canonical' | 'normalized' | 'legacy-summary' | 'feature-seed';
 
 export type CardPriceConfidence = 'verified' | 'trusted' | 'editorial-seed' | 'unverified';
 
@@ -14,11 +14,10 @@ export type CardPriceBlock = {
   priceState: CardPriceState;
   priceLabel: 'Paid' | 'Free' | 'Custom pricing' | 'Pricing unverified';
   pricePrimary:
-    | 'Free plan available'
+    | 'Free'
     | `Starts at $${string}`
-    | 'Paid plans available'
     | 'Custom pricing'
-    | 'Pricing not verified';
+    | 'See pricing';
   priceHelper: string | null;
   priceSourceKind: CardPriceSourceKind;
   priceConfidence: CardPriceConfidence;

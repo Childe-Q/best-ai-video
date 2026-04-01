@@ -12,15 +12,24 @@ const seoYear = getSEOCurrentYear();
 
 const EARLY_MASKED_URL_ERROR_GUARD = `
 (function () {
+  function isMaskedInjectedSource(value) {
+    var normalizedValue = String(value || '');
+    return (
+      normalizedValue.includes('webkit-masked-url') ||
+      normalizedValue.includes('hidden/:') ||
+      normalizedValue.includes('safari-web-extension://') ||
+      normalizedValue.includes('chrome-extension://') ||
+      normalizedValue.includes('moz-extension://')
+    );
+  }
+
   function isMaskedInjectedPostMessageError(message, source) {
     var normalizedMessage = String(message || '').toLowerCase();
-    var normalizedSource = String(source || '');
-    return normalizedMessage.includes('postmessage') && (
-      normalizedSource.includes('webkit-masked-url') ||
-      normalizedSource.includes('hidden/:') ||
-      normalizedSource.includes('safari-web-extension://') ||
-      normalizedSource.includes('chrome-extension://') ||
-      normalizedSource.includes('moz-extension://')
+    return (
+      (normalizedMessage.includes('postmessage') ||
+        normalizedMessage.includes('.postmessage') ||
+        (normalizedMessage.includes('null is not an object') && normalizedMessage.includes('postmessage'))) &&
+      (isMaskedInjectedSource(normalizedMessage) || isMaskedInjectedSource(source))
     );
   }
 
@@ -29,17 +38,12 @@ const EARLY_MASKED_URL_ERROR_GUARD = `
     var normalizedSource = String(source || '');
     return (
       normalizedMessage.includes('_0x') ||
-      normalizedMessage.includes('webkit-masked-url') ||
-      normalizedMessage.includes('hidden/:') ||
-      normalizedMessage.includes('safari-web-extension://') ||
-      normalizedMessage.includes('chrome-extension://') ||
-      normalizedMessage.includes('moz-extension://') ||
-      normalizedSource.includes('webkit-masked-url') ||
-      normalizedSource.includes('hidden/:') ||
-      normalizedSource.includes('safari-web-extension://') ||
-      normalizedSource.includes('chrome-extension://') ||
-      normalizedSource.includes('moz-extension://') ||
+      isMaskedInjectedSource(normalizedMessage) ||
+      isMaskedInjectedSource(normalizedSource) ||
       isMaskedInjectedPostMessageError(normalizedMessage, normalizedSource) ||
+      (normalizedMessage.toLowerCase().includes('null is not an object') &&
+        normalizedMessage.toLowerCase().includes('postmessage') &&
+        isMaskedInjectedSource(normalizedSource)) ||
       (String(name || '') === 'NotAllowedError' && normalizedSource.includes('webkit-masked-url'))
     );
   }

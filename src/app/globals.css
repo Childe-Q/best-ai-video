@@ -9,6 +9,10 @@
   --neo-yellow: #F6D200;
   --neo-lime: #B8F500;
   --neo-gray: #6B7280;
+  --neo-surface-subtle: #F1ECDD;
+  --neo-surface-muted: #E6DECD;
+  --neo-border-soft: #C7BEAB;
+  --neo-ink-on-dark: #F8F5EE;
   
   --background: var(--neo-bg);
   --foreground: var(--neo-black);
@@ -19,15 +23,15 @@
   --color-foreground: var(--foreground);
   
   /* Color Remapping for Neo-Brutal Look */
-  /* Map standard grays to Neo-Brutal values */
-  --color-gray-50: var(--neo-bg);  /* Blend with bg */
-  --color-gray-100: var(--neo-black); /* Borders are black now */
-  --color-gray-200: var(--neo-black); /* Borders are black now */
-  --color-gray-300: var(--neo-black);
+  /* Keep interaction surfaces light so hover/selected states stay readable. */
+  --color-gray-50: var(--neo-bg);
+  --color-gray-100: var(--neo-surface-subtle);
+  --color-gray-200: var(--neo-surface-muted);
+  --color-gray-300: var(--neo-border-soft);
   --color-gray-900: var(--neo-black);
   
   --color-slate-50: var(--neo-bg);
-  --color-slate-200: var(--neo-black);
+  --color-slate-200: var(--neo-ink-on-dark);
   
   /* Map Brand Colors (Indigo/Blue) to Black or Accent */
   --color-indigo-50: var(--neo-yellow); /* Background highlights -> Yellow */
@@ -87,6 +91,11 @@ a {
   color: inherit;
   text-decoration: none;
   transition: color 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+}
+
+:where(a, button, [role="button"], [role="tab"], summary):focus-visible {
+  outline: 2px solid var(--neo-black);
+  outline-offset: 3px;
 }
 
 /* Text-link styling only (narrow scope) */

@@ -90,13 +90,20 @@ export default function ToolCard({ tool }: ToolCardProps) {
           </div>
         )}
 
-        <div className="mt-auto flex items-center justify-between gap-3 border-t border-black/8 pt-4">
-          <Link
-            href={pricingHref}
-            className="min-w-0 truncate text-sm font-semibold text-gray-900 underline decoration-black/15 underline-offset-4 transition-colors duration-200 hover:text-indigo-600 hover:decoration-indigo-300"
-          >
-            {priceBlock.pricePrimary}
-          </Link>
+        <div className="mt-auto flex items-start justify-between gap-3 border-t border-black/8 pt-4">
+          <div className="min-w-0">
+            <Link
+              href={pricingHref}
+              className="block min-w-0 truncate text-sm font-semibold text-gray-900 underline decoration-black/15 underline-offset-4 transition-colors duration-200 hover:text-indigo-600 hover:decoration-indigo-300"
+            >
+              {priceBlock.pricePrimary}
+            </Link>
+            {priceBlock.priceHelper && (
+              <p className="mt-1 text-xs font-medium text-gray-500">
+                {priceBlock.priceHelper}
+              </p>
+            )}
+          </div>
           <div className="flex items-center gap-2">
             <Link
               href={`/tool/${tool.slug}`}
