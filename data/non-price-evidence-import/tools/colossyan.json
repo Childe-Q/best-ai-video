@@ -1,0 +1,1189 @@
+{
+  "generatedAt": "2026-04-08T13:18:31.051546+00:00",
+  "slug": "colossyan",
+  "toolName": "Colossyan",
+  "officialHost": "www.colossyan.com",
+  "siteRootDir": "www.colossyan.com",
+  "runtimeCaptureDir": "data/runtime-captures/colossyan",
+  "artifacts": {
+    "counts": {
+      "htmlCount": 2,
+      "jsonCount": 1,
+      "mdCount": 1,
+      "runtime_capture_htmlCount": 2,
+      "runtime_capture_jsonCount": 1,
+      "runtime_capture_reportCount": 1
+    },
+    "availablePageUrls": [
+      "https://www.colossyan.com/pricing",
+      "https://www.colossyan.com/security/",
+      "https://www.colossyan.com/api",
+      "https://docs.colossyan.com/basics/editor",
+      "https://www.colossyan.com/privacy"
+    ],
+    "keywordPageUrls": [],
+    "paths": [
+      "data/runtime-captures/colossyan/report.md",
+      "data/runtime-captures/colossyan/rendered_dom_initial.html",
+      "data/runtime-captures/colossyan/network_responses.json",
+      "data/runtime-captures/colossyan/rendered_dom_toggled.html"
+    ]
+  },
+  "fields": {
+    "officialUrl": {
+      "value": "https://www.colossyan.com/",
+      "sourceUrl": "https://www.colossyan.com/",
+      "sourcePath": "data/runtime-captures/colossyan/report.md"
+    },
+    "sourceUrls": [
+      "https://www.colossyan.com/pricing",
+      "https://www.colossyan.com/security/",
+      "https://www.colossyan.com/api",
+      "https://docs.colossyan.com/basics/editor",
+      "https://www.colossyan.com/privacy"
+    ],
+    "policy": {
+      "watermark": [
+        {
+          "valueCandidate": "Remove Colossyan watermark",
+          "snippet": "Remove Colossyan watermark Remove the Colossyan branded overlay from your videos.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Remove Colossyan watermark",
+          "snippet": "Remove Colossyan watermark Remove the Colossyan branded overlay from your videos.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "commercialUse": [],
+      "usageRights": [
+        {
+          "valueCandidate": "Full commercial license",
+          "snippet": "Full commercial license Enjoy full rights to all the videos you create - no attribution required.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Full commercial license",
+          "snippet": "Full commercial license Enjoy full rights to all the videos you create - no attribution required.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "refundCancellation": [
+        {
+          "valueCandidate": "Can I cancel Colossyan at any time?",
+          "snippet": "Can I cancel Colossyan at any time? Monthly plans can be canceled at any time. Although annual plans can also be canceled, please note they are paid upfront for the year, so you won’t be refunded for any unused months.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Monthly plans can be canceled at any time. Although annual plans can also be canceled, please note they are paid upfront for the year, so you won’t be refunded for any unused months.",
+          "snippet": "Monthly plans can be canceled at any time. Although annual plans can also be canceled, please note they are paid upfront for the year, so you won’t be refunded for any unused months.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Can I cancel Colossyan at any time?",
+          "snippet": "Can I cancel Colossyan at any time? Monthly plans can be canceled at any time. Although annual plans can also be canceled, please note they are paid upfront for the year, so you won’t be refunded for any unused months.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Monthly plans can be canceled at any time. Although annual plans can also be canceled, please note they are paid upfront for the year, so you won’t be refunded for any unused months.",
+          "snippet": "Monthly plans can be canceled at any time. Although annual plans can also be canceled, please note they are paid upfront for the year, so you won’t be refunded for any unused months.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "exportLimits": [
+        {
+          "valueCandidate": "SCORM export",
+          "snippet": "SCORM export Track completion rates and viewer analytics.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SCORM export",
+          "snippet": "SCORM export Seamlessly integrate Colossyan content into your learning management system.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SCORM export",
+          "snippet": "SCORM export Team permissions",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Video download resolution",
+          "snippet": "Video download resolution Video download resolution determines a video's clarity, with higher resolutions being sharper but larger in size.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Video download resolution determines a video's clarity, with higher resolutions being sharper but larger in size.",
+          "snippet": "Video download resolution determines a video's clarity, with higher resolutions being sharper but larger in size. Full HD (1080p)",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Full HD (1080p)",
+          "snippet": "Full HD (1080p) Full HD (1080p)",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Full HD (1080p)",
+          "snippet": "Full HD (1080p) Ultra HD (4k)",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Ultra HD (4k)",
+          "snippet": "Ultra HD (4k) Commenting",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SCORM export",
+          "snippet": "SCORM export Track completion rates and viewer analytics.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SCORM export",
+          "snippet": "SCORM export Seamlessly integrate Colossyan content into your learning management system.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SCORM export",
+          "snippet": "SCORM export Team permissions",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Video download resolution",
+          "snippet": "Video download resolution Video download resolution determines a video's clarity, with higher resolutions being sharper but larger in size.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Video download resolution determines a video's clarity, with higher resolutions being sharper but larger in size.",
+          "snippet": "Video download resolution determines a video's clarity, with higher resolutions being sharper but larger in size. Full HD (1080p)",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Full HD (1080p)",
+          "snippet": "Full HD (1080p) Full HD (1080p)",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Full HD (1080p)",
+          "snippet": "Full HD (1080p) Ultra HD (4k)",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Ultra HD (4k)",
+          "snippet": "Ultra HD (4k) Commenting",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ]
+    },
+    "mainLimitations": [
+      {
+        "valueCandidate": "Maximum Storage Duration : 7 days",
+        "snippet": "Maximum Storage Duration : 7 days Type : HTTP Cookie",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : Persistent",
+        "snippet": "Maximum Storage Duration : Persistent Type : HTML Local Storage",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : 1 day",
+        "snippet": "Maximum Storage Duration : 1 day Type : HTTP Cookie",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : Session",
+        "snippet": "Maximum Storage Duration : Session Type : HTML Local Storage",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : Session",
+        "snippet": "Maximum Storage Duration : Session Type : HTTP Cookie",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : 1 year",
+        "snippet": "Maximum Storage Duration : 1 year Type : HTTP Cookie",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : 180 days",
+        "snippet": "Maximum Storage Duration : 180 days Type : HTTP Cookie",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "This cookie is necessary for making credit card transactions on the website. The service is provided by Stripe.com which allows online transactions without storing any credit card information.",
+        "snippet": "This cookie is necessary for making credit card transactions on the website. The service is provided by Stripe.com which allows online transactions without storing any credit card information.",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : 400 days",
+        "snippet": "Maximum Storage Duration : 400 days Type : HTTP Cookie",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : 2 years",
+        "snippet": "Maximum Storage Duration : 2 years Type : HTTP Cookie",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : 3 months",
+        "snippet": "Maximum Storage Duration : 3 months Type : HTTP Cookie",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : Session",
+        "snippet": "Maximum Storage Duration : Session Type : Pixel Tracker",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Collects data on visitor behaviour from multiple websites, in order to present more relevant advertisement - This also allows the website to limit the number of times that they are shown the same advertisement.",
+        "snippet": "Collects data on visitor behaviour from multiple websites, in order to present more relevant advertisement - This also allows the website to limit the number of times that they are shown the same advertisement.",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Registers data on visitor such as IP addresses, geographical location and advertisement interaction. This information is used optimize the advertisement on websites that make use of Rubicon Project-services.",
+        "snippet": "Registers data on visitor such as IP addresses, geographical location and advertisement interaction. This information is used optimize the advertisement on websites that make use of Rubicon Project-services.",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : Persistent",
+        "snippet": "Maximum Storage Duration : Persistent Type : IndexedDB",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : 2 months",
+        "snippet": "Maximum Storage Duration : 2 months Type : HTTP Cookie",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Stay up to date with all of Colossyan's product updates, events and news.",
+        "snippet": "Stay up to date with all of Colossyan's product updates, events and news. Follow us",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Create, update and localize training videos at scale. All while saving up to 80% of your time and budget.",
+        "snippet": "Create, update and localize training videos at scale. All while saving up to 80% of your time and budget. Monthly",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Generate up to 10 minutes of video every month.",
+        "snippet": "Generate up to 10 minutes of video every month. 70+ Colossyan AI Avatars",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Unlimited minutes of video",
+        "snippet": "Unlimited minutes of video Generate any amount of videos on NEO 1 model. Each video can be up to 30 minutes long.",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      }
+    ],
+    "workflowFeatureDocs": [
+      {
+        "valueCandidate": "Screen Recorder",
+        "snippet": "Screen Recorder Record your screen, edit and add narration.",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Avatars",
+        "snippet": "AI Avatars Find relevant AI presenters for your video content.",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Instantly translate videos into over 80 languages.",
+        "snippet": "Instantly translate videos into over 80 languages. Brand Kits",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Brand Kits",
+        "snippet": "Brand Kits Easily apply your company’s brand kit to videos.",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Easily apply your company’s brand kit to videos.",
+        "snippet": "Easily apply your company’s brand kit to videos. Collaboration",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Scale video personalization with Colossyan’s API and templates.",
+        "snippet": "Scale video personalization with Colossyan’s API and templates. Resources",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Templates",
+        "snippet": "Templates Save time with pre-designed videos",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "and other certifications",
+        "snippet": "and other certifications April 30th",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "70+ Colossyan AI Avatars",
+        "snippet": "70+ Colossyan AI Avatars Get access to our diverse library of professional AI avatars.",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Get access to our diverse library of professional AI avatars.",
+        "snippet": "Get access to our diverse library of professional AI avatars. 3 Custom Avatars + 1 Voice",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Create an avatar of yourself from a photo or a video, and use your voice clone to narrate videos in multiple languages.",
+        "snippet": "Create an avatar of yourself from a photo or a video, and use your voice clone to narrate videos in multiple languages. Unlimited viewers",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "170+ Colossyan AI Avatars",
+        "snippet": "170+ Colossyan AI Avatars Get access to our diverse library of professional AI avatars in different industries.",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Get access to our diverse library of professional AI avatars in different industries.",
+        "snippet": "Get access to our diverse library of professional AI avatars in different industries. 10 Custom Avatars + 2 Voices per editor",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Create an avatar of yourself from a photo or a video, and use your voice clone to narrate videos in multiple languages.",
+        "snippet": "Create an avatar of yourself from a photo or a video, and use your voice clone to narrate videos in multiple languages. 4 Interactive videos per month",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Translate videos into over 70 languages in seconds.",
+        "snippet": "Translate videos into over 70 languages in seconds. Enterprise",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "200+ Colossyan AI Avatars",
+        "snippet": "200+ Colossyan AI Avatars Get access to our diverse library of professional AI avatars in different industries.",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Get access to our diverse library of professional AI avatars in different industries.",
+        "snippet": "Get access to our diverse library of professional AI avatars in different industries. Brand kits",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Brand kits",
+        "snippet": "Brand kits Apply your company’s branding to videos and templates.",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Apply your company’s branding to videos and templates.",
+        "snippet": "Apply your company’s branding to videos and templates. SAML & SSO",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Stock AI avatars",
+        "snippet": "Stock AI avatars Premium AI avatars, perfect as presenters for your Colossyan videos.",
+        "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+        "sourceUrl": "https://www.colossyan.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      }
+    ],
+    "securityApiEnterprise": {
+      "security": [
+        {
+          "valueCandidate": "Used in order to detect spam and improve the website's security.",
+          "snippet": "Used in order to detect spam and improve the website's security. Maximum Storage Duration : 1 year",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Ensures visitor browsing-security by preventing cross-site request forgery. This cookie is essential for the security of the website and visitor.",
+          "snippet": "Ensures visitor browsing-security by preventing cross-site request forgery. This cookie is essential for the security of the website and visitor.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Used in order to detect spam and improve the website's security.",
+          "snippet": "Used in order to detect spam and improve the website's security. Maximum Storage Duration : Session",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Learn more about who we are, how you can contact us and how we process personal data in our Privacy Policy.",
+          "snippet": "Learn more about who we are, how you can contact us and how we process personal data in our Privacy Policy. Please state your consent ID and date when you contact us regarding your consent.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security",
+          "snippet": "Security Review our security portal",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Review our security portal",
+          "snippet": "Review our security portal and see our SOC 2, GDPR",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "and see our SOC 2, GDPR",
+          "snippet": "and see our SOC 2, GDPR and other certifications",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Ensure Enterprise-level security with centralized authentication.",
+          "snippet": "Ensure Enterprise-level security with centralized authentication. SCORM export",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Support & Security",
+          "snippet": "Support & Security Live chat",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enhance security and adaptability with your dedicated private server.",
+          "snippet": "Enhance security and adaptability with your dedicated private server. Add-on",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Boost security through centralized authentication.",
+          "snippet": "Boost security through centralized authentication. AI tools",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Thank you!",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security",
+          "snippet": "Security Privacy",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "Privacy Terms",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Used in order to detect spam and improve the website's security.",
+          "snippet": "Used in order to detect spam and improve the website's security. Maximum Storage Duration : 1 year",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Ensures visitor browsing-security by preventing cross-site request forgery. This cookie is essential for the security of the website and visitor.",
+          "snippet": "Ensures visitor browsing-security by preventing cross-site request forgery. This cookie is essential for the security of the website and visitor.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Used in order to detect spam and improve the website's security.",
+          "snippet": "Used in order to detect spam and improve the website's security. Maximum Storage Duration : Session",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Learn more about who we are, how you can contact us and how we process personal data in our Privacy Policy.",
+          "snippet": "Learn more about who we are, how you can contact us and how we process personal data in our Privacy Policy. Please state your consent ID and date when you contact us regarding your consent.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security",
+          "snippet": "Security Review our security portal",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Review our security portal",
+          "snippet": "Review our security portal and see our SOC 2, GDPR",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Colossyan is SOC 2 Type II certified and GDPR compliant.",
+          "snippet": "Colossyan's security page highlights SOC 2 Type II certification, GDPR compliance, and enterprise access controls.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.colossyan.com/security/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Security and Compliance — Colossyan"
+        },
+        {
+          "valueCandidate": "Colossyan says customer-uploaded documents, scripts, and generated training videos are not used to train or fine-tune AI models.",
+          "snippet": "The security FAQ explicitly says customer-uploaded documents, scripts, and generated training videos are not used for AI model training or fine-tuning.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.colossyan.com/security/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Security and Compliance — Colossyan"
+        }
+      ],
+      "api": [
+        {
+          "valueCandidate": "Colossyan API",
+          "snippet": "Colossyan API Scale video personalization with Colossyan’s API and templates.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Scale video personalization with Colossyan’s API and templates.",
+          "snippet": "Scale video personalization with Colossyan’s API and templates. Resources",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Integrations",
+          "snippet": "Integrations Explore our range of integrations",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Explore our range of integrations",
+          "snippet": "Explore our range of integrations Community",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Use the Colossyan API and easily integrate our service into any technology stack.",
+          "snippet": "Use the Colossyan API and easily integrate our service into any technology stack. 360 minutes / year",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Write your scripts faster with our GPT integration",
+          "snippet": "Write your scripts faster with our GPT integration Prompt-to-video",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Create your perfect imagery with our DALL-E integration",
+          "snippet": "Create your perfect imagery with our DALL-E integration Customization",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Developer at QAQF",
+          "snippet": "Developer at QAQF “Highly recommend Colossyan to anyone looking to streamline their training.”",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Integrations",
+          "snippet": "Integrations Partnerships",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Colossyan API",
+          "snippet": "Colossyan API Scale video personalization with Colossyan’s API and templates.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Scale video personalization with Colossyan’s API and templates.",
+          "snippet": "Scale video personalization with Colossyan’s API and templates. Resources",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Integrations",
+          "snippet": "Integrations Explore our range of integrations",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Explore our range of integrations",
+          "snippet": "Explore our range of integrations Community",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Use the Colossyan API and easily integrate our service into any technology stack.",
+          "snippet": "Use the Colossyan API and easily integrate our service into any technology stack. 360 minutes / year",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Write your scripts faster with our GPT integration",
+          "snippet": "Write your scripts faster with our GPT integration Prompt-to-video",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Create your perfect imagery with our DALL-E integration",
+          "snippet": "Create your perfect imagery with our DALL-E integration Customization",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Developer at QAQF",
+          "snippet": "Developer at QAQF “Highly recommend Colossyan to anyone looking to streamline their training.”",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Integrations",
+          "snippet": "Integrations Partnerships",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Colossyan API supports personalized video creation, auto translation, templates, avatars, voice clones, and webhooks/callbacks.",
+          "snippet": "Colossyan's API site and docs describe personalized video generation at scale, translations, templates, avatar and voice assets, and callback-based integrations.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.colossyan.com/api",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Colossyan API"
+        },
+        {
+          "valueCandidate": "Colossyan API requires a Business or Enterprise plan and uses Bearer authentication with workspace tokens.",
+          "snippet": "The authentication docs say API access requires a Business or Enterprise plan and uses Bearer auth tied to workspace tokens.",
+          "sourcePath": null,
+          "sourceUrl": "https://docs.colossyan.com/basics/editor",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Colossyan API Docs - Authentication"
+        }
+      ],
+      "enterprise": [
+        {
+          "valueCandidate": "Colossyan Pricing | Free, Starter, Pro & Enterprise Plans",
+          "snippet": "Colossyan Pricing | Free, Starter, Pro & Enterprise Plans Consent",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Edit and review videos together with your team.",
+          "snippet": "Edit and review videos together with your team. Engagement",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Empower your team and clients",
+          "snippet": "Empower your team and clients Manufacturing",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Employee Onboarding",
+          "snippet": "Employee Onboarding Personalize onboarding content",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Personalize onboarding content",
+          "snippet": "Personalize onboarding content Sales Enablement",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Help your team achieve success",
+          "snippet": "Help your team achieve success Customer Education",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Sign up for free",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "For professionals or small teams",
+          "snippet": "For professionals or small teams From",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Companies scaling video production",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SAML & SSO",
+          "snippet": "SAML & SSO Ensure Enterprise-level security with centralized authentication.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Ensure Enterprise-level security with centralized authentication.",
+          "snippet": "Ensure Enterprise-level security with centralized authentication. SCORM export",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Custom",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "How many users can create and edit videos in the same workspace.",
+          "snippet": "How many users can create and edit videos in the same workspace. 1 seat",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Access to a team that will create and or edit videos to your brand.",
+          "snippet": "Access to a team that will create and or edit videos to your brand. Add-on",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SAML/SSO",
+          "snippet": "SAML/SSO Boost security through centralized authentication.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Shared workspaces",
+          "snippet": "Shared workspaces Work with your team in the same environment.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Work with your team in the same environment.",
+          "snippet": "Work with your team in the same environment. SCORM export",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team permissions",
+          "snippet": "Team permissions Control specific access rights and privileges for team members.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Control specific access rights and privileges for team members.",
+          "snippet": "Control specific access rights and privileges for team members. Save your own team templates",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Save your own team templates",
+          "snippet": "Save your own team templates Set standard templates to keep your videos consistent and speed up production.",
+          "sourcePath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "sourceUrl": "https://www.colossyan.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Colossyan supports OIDC and SAML-based SSO for enterprise customers.",
+          "snippet": "The security FAQ says enterprise teams can use OIDC and SAML-based SSO with identity providers such as Okta, Azure AD, and Google Workspace.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.colossyan.com/security/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Security and Compliance — Colossyan"
+        }
+      ]
+    },
+    "logoSources": [
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn.prod.website-files.com/6230cb61285b0d10e5c13daa/6632371109d198461aa1c3fb_logo.svg"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn.prod.website-files.com/6230cb61285b0d10e5c13daa/69a82320b8cb1dde01fdb246_Under_armour_logo.svg%201.svg"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn.prod.website-files.com/6230cb61285b0d10e5c13daa/69a82321b327aaa6a2344270_JLR_Primary_logo_BLK%201.svg"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://www.colossyan.com/brand-kit"
+      }
+    ]
+  },
+  "missingFields": [
+    "policy.commercialUse"
+  ],
+  "nextFetchTargets": [
+    {
+      "url": "http://help.colossyan.com/",
+      "discoveredFromPath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.colossyan.com/pricing"
+    },
+    {
+      "url": "https://www.colossyan.com/enterprise",
+      "discoveredFromPath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.colossyan.com/pricing"
+    },
+    {
+      "url": "https://www.colossyan.com/collaboration-for-enterprise",
+      "discoveredFromPath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.colossyan.com/pricing"
+    },
+    {
+      "url": "https://www.colossyan.com/api",
+      "discoveredFromPath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.colossyan.com/pricing"
+    },
+    {
+      "url": "https://security.colossyan.com/",
+      "discoveredFromPath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.colossyan.com/pricing"
+    },
+    {
+      "url": "https://app.colossyan.com/api/auth/signup",
+      "discoveredFromPath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.colossyan.com/pricing"
+    },
+    {
+      "url": "https://www.colossyan.com/privacy",
+      "discoveredFromPath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.colossyan.com/pricing"
+    },
+    {
+      "url": "https://www.colossyan.com/terms",
+      "discoveredFromPath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.colossyan.com/pricing"
+    }
+  ],
+  "remoteFetches": {
+    "rounds": [
+      {
+        "roundId": "2026-04-08-remote-round-1",
+        "fetchedAt": "2026-04-08T13:38:41.674776+00:00",
+        "pages": [
+          {
+            "title": "Security and Compliance — Colossyan",
+            "url": "https://www.colossyan.com/security/"
+          },
+          {
+            "title": "Colossyan API",
+            "url": "https://www.colossyan.com/api"
+          },
+          {
+            "title": "Colossyan API Docs - Authentication",
+            "url": "https://docs.colossyan.com/basics/editor"
+          },
+          {
+            "title": "Colossyan Privacy Policy",
+            "url": "https://www.colossyan.com/privacy"
+          }
+        ],
+        "fetchedFields": [
+          "securityApiEnterprise.api",
+          "securityApiEnterprise.enterprise",
+          "securityApiEnterprise.security"
+        ],
+        "unresolvedFields": [
+          "policy.commercialUse"
+        ],
+        "mergedRecordCount": 5
+      }
+    ],
+    "latestRoundId": "2026-04-08-remote-round-1"
+  }
+}

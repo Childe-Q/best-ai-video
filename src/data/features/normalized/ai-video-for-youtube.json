@@ -68,17 +68,17 @@
       "slug": "invideo",
       "verdictSeed": "All-in-one prompt-to-video engine for faceless YouTube channels. Handles scripting, B-roll, subtitles, and voiceover from a single prompt.",
       "pricingSeed": "Basic, Pro, and Ultra paid tiers with up to 20% annual discount",
-      "policySeed": "Free plan exports come with an InVideo watermark",
+      "policySeed": "Free exports stay watermarked; paid removes them, but canceling or downgrading only changes access at cycle end.",
       "bestForSeed": "Documentary-style faceless YouTube content",
-      "mainLimitationSeed": "Free plan restricted to 2 video minutes and 1 AI credit per week; all free exports include watermark",
+      "mainLimitationSeed": "Free stays capped at 2 minutes and 1 AI credit a week; heavier revisions still burn credits.",
       "officialUrl": "https://invideo.io/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/invideo",
       "logoUrl": "/logos/InVideo_logo.svg",
       "sourceUrls": [
         "https://invideo.io/pricing/",
-        "https://invideo.io/make/youtube-video-editor/",
-        "https://help.invideo.io/en/collections/9486043-pricing-plans"
+        "https://help.invideo.io/en/articles/9380227-how-can-i-cancel-my-invideo-ai-subscription",
+        "https://help.invideo.io/en/articles/9387948-why-are-there-still-watermarks-on-my-video-if-i-m-on-a-paid-plan"
       ],
       "flags": [
         "duplicate-raw-mentions-merged"

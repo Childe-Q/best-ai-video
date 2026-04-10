@@ -204,9 +204,9 @@
       "slug": "steve-ai",
       "verdictSeed": "A budget-friendly prompt-to-video option when the goal is removing the free-tier watermark without jumping to an expensive creator suite.",
       "pricingSeed": "Free trial lane plus paid tiers that step from no-watermark 720p into 1080p, 2K, and 4K on higher plans",
-      "policySeed": "Free exports keep the Steve AI watermark, while paid plans remove it and unlock commercial use",
+      "policySeed": "Free exports keep the Steve AI watermark, while premium plans remove it and higher tiers step from 720p into 1080p, 2K, and 4K.",
       "bestForSeed": "Low-cost explainers, shorts, and UGC-style drafts",
-      "mainLimitationSeed": "The first clean paid lane is still a lighter creator workflow, and full resell rights are reserved for Enterprise",
+      "mainLimitationSeed": "The first clean paid lane is affordable, but generated videos still cap at 20 minutes and full reseller rights stay on Enterprise.",
       "officialUrl": "https://www.steve.ai/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/steve-ai",
@@ -214,7 +214,8 @@
       "sourceUrls": [
         "https://www.steve.ai/pricing",
         "https://support.steve.ai/en/articles/8295526-how-do-i-remove-the-steve-ai-watermark-from-the-videos",
-        "https://support.steve.ai/en/articles/8525405-what-are-the-resolutions-in-which-the-project-can-be-downloaded"
+        "https://support.steve.ai/en/articles/8525405-what-are-the-resolutions-in-which-the-project-can-be-downloaded",
+        "https://support.steve.ai/en/articles/8524340-what-is-the-maximum-video-duration-i-can-create-with-steve-ai-s-ai-video-maker"
       ],
       "flags": []
     }

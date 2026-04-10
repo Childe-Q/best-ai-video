@@ -24,6 +24,38 @@
       "confidence": "high"
     },
     {
+      "text": "Runway's security standards help article says uploaded assets are private by default and that SOC 2 Type II coverage applies across plans.",
+      "theme": "security",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/24300377879827-Understanding-Runway-s-security-and-privacy-standards",
+      "sourceType": "help",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Runway's data-security page says customer content is protected with TLS 1.2 or higher in transit and AES-256 encryption at rest.",
+      "theme": "security",
+      "sourceUrl": "https://runwayml.com/data-security",
+      "sourceType": "docs",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Runway's Enterprise Features help article lists SSO, organization and workspace controls, brand kits, enterprise analytics, and the ability to disable external link sharing.",
+      "theme": "enterprise",
+      "sourceUrl": "https://help.runwayml.com/hc/en-us/articles/48625698573075-Enterprise-Features",
+      "sourceType": "help",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Runway also describes Characters as a real-time video agent API for building custom conversational characters with control over voice, personality, knowledge, and actions.",
+      "theme": "workflow",
+      "sourceUrl": "https://runwayml.com/",
+      "sourceType": "features",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
       "text": "Runway Standard includes 625 monthly credits, which the pricing page maps to 25 seconds of Gen-4.5 or 125 seconds of Gen-4 Turbo generation.",
       "theme": "usage",
       "sourceUrl": "https://runwayml.com/pricing",

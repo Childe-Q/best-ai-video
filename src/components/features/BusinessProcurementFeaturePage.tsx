@@ -5,7 +5,7 @@ import Link from 'next/link';
 import FeatureNextSteps from '@/components/features/FeatureNextSteps';
 import ToolCard from '@/components/features/ToolCard';
 import FeaturesFAQ from '@/components/features/FeaturesFAQ';
-import { isPromoteSafeFeatureHref, toPromoteSafeFeatureHref } from '@/components/features/filterPromoteSafeFeatureHrefs';
+import { resolvePromoteSafeFeatureHref } from '@/components/features/filterPromoteSafeFeatureHrefs';
 import { track } from '@/lib/features/track';
 import {
   FeatureCriteriaItem,
@@ -87,6 +87,12 @@ type ReadingGroup = {
   title: string;
   items: FeatureRecommendedReadingLink[];
 };
+
+const SAFE_FEATURE_EXIT = {
+  href: '/features',
+  label: 'Browse feature hub',
+  note: 'Return to the feature hub if this narrower route is not promote-safe yet.',
+} as const;
 
 function getRecommendedSectionTitle(linkType: FeatureRecommendedReadingLink['linkType']): string {
   switch (linkType) {
@@ -465,20 +471,41 @@ export default function BusinessProcurementFeaturePage({
   promoteSafeFeatureHrefs,
 }: BusinessProcurementFeaturePageProps) {
   const rawOverride = businessProcurementOverrides[pageData.slug];
-  const promoteSafeFeatureHrefSet = new Set(promoteSafeFeatureHrefs);
+  const promoteSafeFeatureHrefSet = new Set(promoteSafeFeatureHrefs ?? []);
+  const resolveFeatureExit = (href: string) =>
+    resolvePromoteSafeFeatureHref(href, promoteSafeFeatureHrefSet, SAFE_FEATURE_EXIT.href);
   const safeOverride = rawOverride
     ? {
         ...rawOverride,
-        wrongFitHref: toPromoteSafeFeatureHref(rawOverride.wrongFitHref, promoteSafeFeatureHrefSet),
-        fitCards: rawOverride.fitCards.filter((card) => isPromoteSafeFeatureHref(card.href, promoteSafeFeatureHrefSet)),
+        wrongFitHref: resolveFeatureExit(rawOverride.wrongFitHref).href ?? SAFE_FEATURE_EXIT.href,
+        wrongFitLabel: resolveFeatureExit(rawOverride.wrongFitHref).usedFallback
+          ? SAFE_FEATURE_EXIT.label
+          : rawOverride.wrongFitLabel,
+        fitCards: rawOverride.fitCards.map((card) => {
+          const resolved = resolveFeatureExit(card.href);
+          return resolved.usedFallback
+            ? { ...card, href: SAFE_FEATURE_EXIT.href, label: SAFE_FEATURE_EXIT.label }
+            : { ...card, href: resolved.href ?? card.href };
+        }),
         sectionOverrides: Object.fromEntries(
           Object.entries(rawOverride.sectionOverrides).map(([sectionTitle, sectionOverride]) => [
             sectionTitle,
             {
               ...sectionOverride,
-              contextualExits: sectionOverride.contextualExits.filter((item) =>
-                isPromoteSafeFeatureHref(item.href, promoteSafeFeatureHrefSet)
-              ),
+              contextualExits: sectionOverride.contextualExits.map((item) => {
+                const resolved = resolveFeatureExit(item.href);
+                return resolved.usedFallback
+                  ? {
+                      ...item,
+                      href: SAFE_FEATURE_EXIT.href,
+                      label: SAFE_FEATURE_EXIT.label,
+                      note: SAFE_FEATURE_EXIT.note,
+                    }
+                  : {
+                      ...item,
+                      href: resolved.href ?? item.href,
+                    };
+              }),
             },
           ])
         ),

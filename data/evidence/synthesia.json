@@ -79,6 +79,22 @@
       "confidence": "high"
     },
     {
+      "text": "Synthesia says Freemium videos and API videos generated in test mode include a Synthesia watermark.",
+      "theme": "export",
+      "sourceUrl": "https://help.synthesia.io/en/articles/9564635-how-do-i-remove-the-synthesia-watermark",
+      "sourceType": "help_center_article",
+      "capturedAt": "2026-04-08T13:38:41+00:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesia says subscriptions can be canceled from account settings at any time.",
+      "theme": "support",
+      "sourceUrl": "https://www.synthesia.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-04-08T13:38:41+00:00",
+      "confidence": "high"
+    },
+    {
       "text": "Synthesia is described as an AI video creation platform that turns text into professional videos without cameras, microphones, or editing experience.",
       "theme": "other",
       "sourceUrl": "https://help.synthesia.io/en/articles/9994493-what-is-synthesia",
@@ -1279,5 +1295,76 @@
         }
       ]
     }
-  ]
+  ],
+  "nonPriceEvidenceImport": {
+    "bundleDate": "2026-04-08",
+    "sourceBundle": "data/non-price-evidence-import/tools/synthesia.json",
+    "sourceUrls": [
+      "https://www.synthesia.io/pricing",
+      "https://www.synthesia.io/",
+      "https://www.synthesia.io/features",
+      "https://help.synthesia.io/en/articles/9564635-how-do-i-remove-the-synthesia-watermark",
+      "https://help.synthesia.io/en/articles/8330564-platform-integrity",
+      "https://docs.synthesia.io/docs/video-creation",
+      "https://www.synthesia.io/legal/security-practices"
+    ],
+    "safeWriteback": {
+      "policy": {
+        "watermark": [
+          {
+            "value": "Synthesia watermarking is documented on Freemium videos and on API videos generated in test mode.",
+            "sourceUrl": "https://help.synthesia.io/en/articles/9564635-how-do-i-remove-the-synthesia-watermark"
+          }
+        ],
+        "commercialUse": [
+          {
+            "value": "Synthesia allows authorised branded and business-promotion use when customers have the necessary rights to the source branding and media.",
+            "sourceUrl": "https://help.synthesia.io/en/articles/8330564-platform-integrity"
+          }
+        ],
+        "refundCancellation": [
+          {
+            "value": "Subscriptions can be canceled from account settings at any time.",
+            "sourceUrl": "https://www.synthesia.io/pricing"
+          }
+        ],
+        "exportLimits": [
+          {
+            "value": "Synthesia surfaces Full HD MP4 downloads and SCORM export on the pricing ladder.",
+            "sourceUrl": "https://www.synthesia.io/pricing"
+          }
+        ]
+      },
+      "workflowFeatureDocs": [
+        {
+          "value": "The pricing surface exposes AI avatars, personal avatars, AI dubbing, AI screen recording, and brand kits.",
+          "sourceUrl": "https://www.synthesia.io/pricing"
+        }
+      ],
+      "securityApiEnterprise": {
+        "security": [
+          {
+            "value": "Synthesia surfaces SOC 2 Type II, ISO 42001, GDPR compliance, and platform-wide content moderation on pricing.",
+            "sourceUrl": "https://www.synthesia.io/pricing"
+          }
+        ],
+        "api": [
+          {
+            "value": "Synthesia exposes API access plus dedicated API documentation and integration surfaces.",
+            "sourceUrl": "https://www.synthesia.io/pricing"
+          }
+        ],
+        "enterprise": [
+          {
+            "value": "Enterprise-level rollout includes SSO video pages and broader team-oriented deployment paths.",
+            "sourceUrl": "https://www.synthesia.io/pricing"
+          }
+        ]
+      }
+    },
+    "retainedUnresolved": [
+      "policy.usageRights",
+      "mainLimitations"
+    ]
+  }
 }

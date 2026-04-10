@@ -72,17 +72,17 @@
       "slug": "heygen",
       "verdictSeed": "Leading avatar platform for marketing and multilingual social content. Reported to excel in lip-sync quality with 175+ languages and voice cloning. 1,100+ stock avatars.",
       "pricingSeed": "From $24–29/mo (15 credits ≈ 5 min video)",
-      "policySeed": "Paid plans are the practical publish-ready path because HeyGen gates higher export quality, longer avatar/video duration, and cleaner branded output behind plan limits and watermark-removal controls.",
-      "bestForSeed": "Marketing, social content, and multilingual personalization",
-      "mainLimitationSeed": "Credit-based billing can cause budget volatility at higher volumes",
+      "policySeed": "Free stays watermarked; paid unlocks cleaner branded output, longer avatar duration, and better export quality.",
+      "bestForSeed": "Interactive avatars, multilingual personalization, and real-time demo-agent workflows",
+      "mainLimitationSeed": "Streaming API is strong, but credits and duration caps still shape volume.",
       "officialUrl": "https://www.heygen.com/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/heygen",
       "logoUrl": "/logos/heygen-logo.png",
       "sourceUrls": [
         "https://www.heygen.com/pricing?nb=02",
-        "https://www.heygen.com/faq",
-        "https://security.heygen.com/"
+        "https://docs.heygen.com/reference/limits",
+        "https://docs.heygen.com/docs/streaming-api"
       ],
       "flags": []
     },

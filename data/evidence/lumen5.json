@@ -40,6 +40,22 @@
       "confidence": "high"
     },
     {
+      "text": "Lumen5 says customers can monetize created videos and produce videos for clients, subject to media-library licensing rules.",
+      "theme": "commercial",
+      "sourceUrl": "https://help.lumen5.com/en/article/can-i-monetize-my-videos-or-create-them-for-my-clients-jwdt3l/",
+      "sourceType": "help_center_article",
+      "capturedAt": "2026-04-08T13:38:41+00:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Lumen5 says finished videos remain accessible after cancellation, with premium feature access removed after downgrade.",
+      "theme": "support",
+      "sourceUrl": "https://lumen5.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-04-08T13:38:41+00:00",
+      "confidence": "high"
+    },
+    {
       "text": "Lumen5's Free plan is positioned as a forever-free entry point with 5 videos per month, 2-minute video duration, and a branded outro.",
       "theme": "pricing",
       "sourceUrl": "https://lumen5.com/pricing/",
@@ -135,5 +151,75 @@
       "writebackClass": "cautious"
     }
   ],
-  "topUpFlags": []
+  "topUpFlags": [],
+  "nonPriceEvidenceImport": {
+    "bundleDate": "2026-04-08",
+    "sourceBundle": "data/non-price-evidence-import/tools/lumen5.json",
+    "sourceUrls": [
+      "https://lumen5.com/pricing",
+      "https://lumen5.com/features",
+      "https://help.lumen5.com/en/article/can-i-monetize-my-videos-or-create-them-for-my-clients-jwdt3l/",
+      "https://help.lumen5.com/en/article/why-are-there-watermarks-on-my-video-1jrrc9y/",
+      "https://help.lumen5.com/en/article/billing-faq-hsa1w9/",
+      "https://help.lumen5.com/en/article/how-long-can-a-lumen5-video-be-d8np5f/"
+    ],
+    "safeWriteback": {
+      "policy": {
+        "commercialUse": [
+          {
+            "value": "Lumen5 says customers can monetize created videos and produce videos for clients, subject to media-library licensing rules.",
+            "sourceUrl": "https://help.lumen5.com/en/article/can-i-monetize-my-videos-or-create-them-for-my-clients-jwdt3l/"
+          }
+        ],
+        "refundCancellation": [
+          {
+            "value": "Videos remain accessible after downgrade or cancellation; canceling removes premium feature access rather than ownership of finished videos.",
+            "sourceUrl": "https://lumen5.com/pricing"
+          }
+        ],
+        "exportLimits": [
+          {
+            "value": "Starter and Pro surface 1080p export, while Team adds a broader enterprise video workflow.",
+            "sourceUrl": "https://lumen5.com/pricing"
+          }
+        ]
+      },
+      "mainLimitations": [
+        {
+          "value": "The pricing ladder includes a 2-minute limit on the free path and AI media credit caps that scale by plan.",
+            "sourceUrl": "https://lumen5.com/pricing"
+        }
+      ],
+      "workflowFeatureDocs": [
+        {
+          "value": "Lumen5 surfaces translation, video templates, screen recording, and brand-kit workflows on pricing.",
+          "sourceUrl": "https://lumen5.com/pricing"
+        }
+      ],
+      "securityApiEnterprise": {
+        "security": [
+          {
+            "value": "Team adds enterprise-level security plus security documentation and support.",
+            "sourceUrl": "https://lumen5.com/pricing"
+          }
+        ],
+        "api": [
+          {
+            "value": "The Team tier documents DAM integration as part of the enterprise integration path.",
+            "sourceUrl": "https://lumen5.com/pricing"
+          }
+        ],
+        "enterprise": [
+          {
+            "value": "The Team tier adds SSO, approval workflows, workspace management, and a dedicated customer success manager.",
+            "sourceUrl": "https://lumen5.com/pricing"
+          }
+        ]
+      }
+    },
+    "retainedUnresolved": [
+      "policy.watermark",
+      "policy.usageRights"
+    ]
+  }
 }

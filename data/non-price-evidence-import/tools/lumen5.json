@@ -1,0 +1,1218 @@
+{
+  "generatedAt": "2026-04-08T13:18:38.029382+00:00",
+  "slug": "lumen5",
+  "toolName": "Lumen5",
+  "officialHost": "lumen5.com",
+  "siteRootDir": "lumen5.com",
+  "runtimeCaptureDir": "data/runtime-captures/lumen5",
+  "artifacts": {
+    "counts": {
+      "htmlCount": 4,
+      "jsonCount": 2,
+      "mdCount": 1,
+      "referenced_assetCount": 21,
+      "runtime_capture_htmlCount": 3,
+      "runtime_capture_jsonCount": 2,
+      "runtime_capture_reportCount": 1,
+      "svgCount": 1,
+      "webpCount": 19
+    },
+    "availablePageUrls": [
+      "https://lumen5.com/pricing",
+      "https://help.lumen5.com/en/article/what-is-lumen5-liun7a/",
+      "https://help.lumen5.com/en/article/how-does-lumen5-work-112fo9k/",
+      "https://help.lumen5.com/en/article/can-i-monetize-my-videos-or-create-them-for-my-clients-jwdt3l/",
+      "https://help.lumen5.com/en/article/why-are-there-watermarks-on-my-video-1jrrc9y/",
+      "https://help.lumen5.com/en/article/uploading-your-logo-as-a-watermark-vntfoy/"
+    ],
+    "keywordPageUrls": [],
+    "paths": [
+      "data/runtime-captures/lumen5/report.md",
+      "data/runtime-captures/lumen5/pricing_plans.json",
+      "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "data/runtime-captures/lumen5/network_responses.json",
+      "data/runtime-captures/lumen5/rendered_dom.html",
+      "data/runtime-captures/lumen5/rendered_dom_toggled.html",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/L5-logo/2024/Lumen5-PrimaryLogo.svg",
+      "lumen5.com/lumen5.com/pricing/index.html",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/ADP.webp",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/Cisco.webp",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/Colliers.webp",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/DNV.webp",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/Emerson.webp",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/Financial Times.webp",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/KPMG.webp",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/Lixil.webp",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/Mitsubishi.webp",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/PWC.webp",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/SAP.webp",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/Sanofi.webp",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/Siemens.webp",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/Sodexo.webp",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/Swiss Re.webp",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/The Independent.webp",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/UGA.webp",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/cognizant.webp",
+      "lumen5.com/cdn.lumen5.com/lumen5-site-images/2025-website-assets/logos/color/moodys.webp"
+    ]
+  },
+  "fields": {
+    "officialUrl": {
+      "value": "https://lumen5.com/",
+      "sourceUrl": "https://lumen5.com/",
+      "sourcePath": "data/runtime-captures/lumen5/report.md"
+    },
+    "sourceUrls": [
+      "https://lumen5.com/pricing",
+      "https://help.lumen5.com/en/article/what-is-lumen5-liun7a/",
+      "https://help.lumen5.com/en/article/how-does-lumen5-work-112fo9k/",
+      "https://help.lumen5.com/en/article/can-i-monetize-my-videos-or-create-them-for-my-clients-jwdt3l/",
+      "https://help.lumen5.com/en/article/why-are-there-watermarks-on-my-video-1jrrc9y/",
+      "https://help.lumen5.com/en/article/uploading-your-logo-as-a-watermark-vntfoy/"
+    ],
+    "policy": {
+      "watermark": [
+        {
+          "valueCandidate": "watermarks",
+          "snippet": "l},{\"text1\":\"500M stock photos & videos\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"Custom watermarks\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"Upload your own fonts\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"Multiple Bl",
+          "sourcePath": "data/runtime-captures/lumen5/pricing_plans.json",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_json",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Custom watermarks",
+          "snippet": "Custom watermarks check",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark upload",
+          "snippet": "Watermark upload —",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Custom watermarks",
+          "snippet": "Custom watermarks check",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark upload",
+          "snippet": "Watermark upload —",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Custom watermarks",
+          "snippet": "Custom watermarks check",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_toggled.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark upload",
+          "snippet": "Watermark upload —",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_toggled.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Lumen5 watermarks may appear in the editor/media library preview but are removed once the video is rendered.",
+          "snippet": "The watermark article says preview watermarks in the editor and media library do not appear on the rendered video.",
+          "sourcePath": null,
+          "sourceUrl": "https://help.lumen5.com/en/article/why-are-there-watermarks-on-my-video-1jrrc9y/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Why are there watermarks on my video? | Lumen5 Knowledge Base"
+        }
+      ],
+      "commercialUse": [
+        {
+          "valueCandidate": "Lumen5 says users have full commercial rights to created videos and can create videos for clients.",
+          "snippet": "The monetization article says users have full commercial rights to videos created with Lumen5 and can monetize them or create videos on behalf of clients.",
+          "sourcePath": null,
+          "sourceUrl": "https://help.lumen5.com/en/article/can-i-monetize-my-videos-or-create-them-for-my-clients-jwdt3l/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Can I monetize my videos or create them for my clients? | Lumen5 Knowledge Base"
+        }
+      ],
+      "usageRights": [
+        {
+          "valueCandidate": "Millions of worry-free licensed images and videos",
+          "snippet": "Millions of worry-free licensed images and videos check",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Copyright © 2026 Lumen5",
+          "snippet": "Copyright © 2026 Lumen5 System Status",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Millions of worry-free licensed images and videos",
+          "snippet": "Millions of worry-free licensed images and videos check",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Copyright © 2026 Lumen5",
+          "snippet": "Copyright © 2026 Lumen5 System Status",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Millions of worry-free licensed images and videos",
+          "snippet": "Millions of worry-free licensed images and videos check",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_toggled.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Copyright © 2026 Lumen5",
+          "snippet": "Copyright © 2026 Lumen5 System Status",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_toggled.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Lumen5 says almost all media library assets are copyright-free and free for commercial use, subject to editorial-media rules.",
+          "snippet": "The commercial-use and editorial-license articles say the media library is largely copyright-free for commercial use, while editorial-only assets remain limited to editorial contexts.",
+          "sourcePath": null,
+          "sourceUrl": "https://help.lumen5.com/en/article/can-i-monetize-my-videos-or-create-them-for-my-clients-jwdt3l/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Can I monetize my videos or create them for my clients? | Lumen5 Knowledge Base"
+        }
+      ],
+      "refundCancellation": [
+        {
+          "valueCandidate": "Will my videos remain accessible if I downgrade or cancel my plan?",
+          "snippet": "Will my videos remain accessible if I downgrade or cancel my plan? +",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes. All videos you create are yours to keep permanently. You can download and reuse them even if you cancel your plan. You will only lose access to premium features associated with higher tier subscriptions.",
+          "snippet": "Yes. All videos you create are yours to keep permanently. You can download and reuse them even if you cancel your plan. You will only lose access to premium features associated with higher tier subscriptions.",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Will my videos remain accessible if I downgrade or cancel my plan?",
+          "snippet": "Will my videos remain accessible if I downgrade or cancel my plan? +",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes. All videos you create are yours to keep permanently. You can download and reuse them even if you cancel your plan. You will only lose access to premium features associated with higher tier subscriptions.",
+          "snippet": "Yes. All videos you create are yours to keep permanently. You can download and reuse them even if you cancel your plan. You will only lose access to premium features associated with higher tier subscriptions.",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Will my videos remain accessible if I downgrade or cancel my plan?",
+          "snippet": "Will my videos remain accessible if I downgrade or cancel my plan? +",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_toggled.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes. All videos you create are yours to keep permanently. You can download and reuse them even if you cancel your plan. You will only lose access to premium features associated with higher tier subscriptions.",
+          "snippet": "Yes. All videos you create are yours to keep permanently. You can download and reuse them even if you cancel your plan. You will only lose access to premium features associated with higher tier subscriptions.",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_toggled.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "exportLimits": [
+        {
+          "valueCandidate": "1080p",
+          "snippet": "_avatar\":true,\"has_audit_log\":false,\"max_ai_media_credits_per_month\":36000},\"highlights\":[{\"text1\":\"1080p video resolution\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"No Lumen5 branding\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1",
+          "sourcePath": "data/runtime-captures/lumen5/pricing_plans.json",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_json",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "1080p",
+          "snippet": "oltip\":null},{\"text1\":\"12,000 AI media credits\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"1080p video resolution\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"50M+ stock photos & videos\",\"text2\":null,\"text3\":null,\"tooltip\":null}",
+          "sourcePath": "data/runtime-captures/lumen5/pricing_plans.json",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_json",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "1080p video resolution",
+          "snippet": "1080p video resolution check",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes. Starter and Pro include brand kits, custom colors, and font uploads. The Team plan adds bespoke branded templates, custom transitions, and support from the Lumen5 Creative Services team so every exported video stays aligned with your brand identity across teams and regions.",
+          "snippet": "Yes. Starter and Pro include brand kits, custom colors, and font uploads. The Team plan adds bespoke branded templates, custom transitions, and support from the Lumen5 Creative Services team so every exported video stays aligned with your brand identity acr...",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes. All videos you create are yours to keep permanently. You can download and reuse them even if you cancel your plan. You will only lose access to premium features associated with higher tier subscriptions.",
+          "snippet": "Yes. All videos you create are yours to keep permanently. You can download and reuse them even if you cancel your plan. You will only lose access to premium features associated with higher tier subscriptions.",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "export",
+          "snippet": ": \"Create multiple short, on-brand clips from any long video\\u2014fast. Auto-find highlights, batch-export channel-ready formats with captions and your brand styles.\", \"image\": {\"title\": \"Clip Maker SEO Thumbnail\", \"description\": \"\", \"file\": {\"ur",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "1080p",
+          "snippet": "_avatar\":true,\"has_audit_log\":false,\"max_ai_media_credits_per_month\":36000},\"highlights\":[{\"text1\":\"1080p video resolution\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"No Lumen5 branding\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1",
+          "sourcePath": "data/runtime-captures/lumen5/network_responses.json",
+          "sourceUrl": "https://lumen5.com/api/pricing/plans",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "1080p video resolution",
+          "snippet": "1080p video resolution check",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes. Starter and Pro include brand kits, custom colors, and font uploads. The Team plan adds bespoke branded templates, custom transitions, and support from the Lumen5 Creative Services team so every exported video stays aligned with your brand identity across teams and regions.",
+          "snippet": "Yes. Starter and Pro include brand kits, custom colors, and font uploads. The Team plan adds bespoke branded templates, custom transitions, and support from the Lumen5 Creative Services team so every exported video stays aligned with your brand identity acr...",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes. All videos you create are yours to keep permanently. You can download and reuse them even if you cancel your plan. You will only lose access to premium features associated with higher tier subscriptions.",
+          "snippet": "Yes. All videos you create are yours to keep permanently. You can download and reuse them even if you cancel your plan. You will only lose access to premium features associated with higher tier subscriptions.",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "export",
+          "snippet": ": \"Create multiple short, on-brand clips from any long video\\u2014fast. Auto-find highlights, batch-export channel-ready formats with captions and your brand styles.\", \"image\": {\"title\": \"Clip Maker SEO Thumbnail\", \"description\": \"\", \"file\": {\"ur",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "1080p video resolution",
+          "snippet": "1080p video resolution check",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_toggled.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes. Starter and Pro include brand kits, custom colors, and font uploads. The Team plan adds bespoke branded templates, custom transitions, and support from the Lumen5 Creative Services team so every exported video stays aligned with your brand identity across teams and regions.",
+          "snippet": "Yes. Starter and Pro include brand kits, custom colors, and font uploads. The Team plan adds bespoke branded templates, custom transitions, and support from the Lumen5 Creative Services team so every exported video stays aligned with your brand identity acr...",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_toggled.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes. All videos you create are yours to keep permanently. You can download and reuse them even if you cancel your plan. You will only lose access to premium features associated with higher tier subscriptions.",
+          "snippet": "Yes. All videos you create are yours to keep permanently. You can download and reuse them even if you cancel your plan. You will only lose access to premium features associated with higher tier subscriptions.",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_toggled.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "export",
+          "snippet": ": \"Create multiple short, on-brand clips from any long video\\u2014fast. Auto-find highlights, batch-export channel-ready formats with captions and your brand styles.\", \"image\": {\"title\": \"Clip Maker SEO Thumbnail\", \"description\": \"\", \"file\": {\"ur",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_toggled.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "export",
+          "snippet": ": \"Create multiple short, on-brand clips from any long video\\u2014fast. Auto-find highlights, batch-export channel-ready formats with captions and your brand styles.\", \"image\": {\"title\": \"Clip Maker SEO Thumbnail\", \"description\": \"\", \"file\": {\"ur",
+          "sourcePath": "lumen5.com/lumen5.com/pricing/index.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "referenced_asset",
+          "contentType": "html"
+        }
+      ]
+    },
+    "mainLimitations": [
+      {
+        "valueCandidate": "credits",
+        "snippet": "xt1\":\"Everything in Free, plus:\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"3,500 AI media credits\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"No Lumen5 branding\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"Advanced AI Sc",
+        "sourcePath": "data/runtime-captures/lumen5/pricing_plans.json",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_json",
+        "contentType": "json"
+      },
+      {
+        "valueCandidate": "credits",
+        "snippet": "1\":\"Everything in Basic, plus:\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"12,000 AI media credits\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"1080p video resolution\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"50M+ stock",
+        "sourcePath": "data/runtime-captures/lumen5/pricing_plans.json",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_json",
+        "contentType": "json"
+      },
+      {
+        "valueCandidate": "credits",
+        "snippet": ":\"Everything in Starter, plus:\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"36,000 AI media credits\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"500M stock photos & videos\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"Custom",
+        "sourcePath": "data/runtime-captures/lumen5/pricing_plans.json",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_json",
+        "contentType": "json"
+      },
+      {
+        "valueCandidate": "credits",
+        "snippet": ":[{\"text1\":\"Everything in Pro, plus:\",\"text2\":\"\",\"text3\":\"\",\"tooltip\":\"\"},{\"text1\":\"Custom AI media credits\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"Bespoke branded template\",\"text2\":\"\",\"text3\":\"\",\"tooltip\":\"\"},{\"text1\":\"Video translat",
+        "sourcePath": "data/runtime-captures/lumen5/pricing_plans.json",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_json",
+        "contentType": "json"
+      },
+      {
+        "valueCandidate": "3,500 AI media credits",
+        "snippet": "3,500 AI media credits check",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "12,000 AI media credits",
+        "snippet": "12,000 AI media credits check",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "36,000 AI media credits",
+        "snippet": "36,000 AI media credits check",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Custom AI media credits",
+        "snippet": "Custom AI media credits check",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "2 minute long videos",
+        "snippet": "2 minute long videos check",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Video limits",
+        "snippet": "Video limits Unlimited",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum video duration",
+        "snippet": "Maximum video duration 10 minutes",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "10 minutes",
+        "snippet": "10 minutes 10 minutes",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "10 minutes",
+        "snippet": "10 minutes Published AI voiceover minutes",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Published AI voiceover minutes",
+        "snippet": "Published AI voiceover minutes 240 mins/year",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI media credits",
+        "snippet": "AI media credits 42,000 credits/year",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "“We’re able to create a video quickly with a turnaround of five minutes versus trying to coordinate with an agency and see if they have time to fit you in. With Lumen5, you could just get it right then and there.”",
+        "snippet": "“We’re able to create a video quickly with a turnaround of five minutes versus trying to coordinate with an agency and see if they have time to fit you in. With Lumen5, you could just get it right then and there.”",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "“The best part about Lumen5 is that it's not time-consuming. It's really easy and you only need a couple of minutes to create a video because everything is included.”",
+        "snippet": "“The best part about Lumen5 is that it's not time-consuming. It's really easy and you only need a couple of minutes to create a video because everything is included.”",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "All paid plans include AI Script Composer, AI Voiceover, and high quality AI media. The Basic plan includes standard AI features, while Starter and Pro offer expanded AI capabilities and longer AI voiceover limits. The Team plan introduces advanced capabilities like translations and custom AI Voice options.",
+        "snippet": "All paid plans include AI Script Composer, AI Voiceover, and high quality AI media. The Basic plan includes standard AI features, while Starter and Pro offer expanded AI capabilities and longer AI voiceover limits. The Team plan introduces advanced capabili...",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Lumen5 combines powerful AI with a simple drag-and-drop interface to help you create professional video content in minutes.",
+        "snippet": "Lumen5 combines powerful AI with a simple drag-and-drop interface to help you create professional video content in minutes.",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "minutes",
+        "snippet": "owered video platform for Learning & Development teams to deliver professional, on-brand content in minutes.\", \"image\": {\"title\": \"beneva health\", \"description\": \"\", \"file\": {\"url\": \"//images.ctfassets.net/5ltrds677kah/1UbYCPSKjoSaF0jqWGRc5/c1aca6",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      }
+    ],
+    "workflowFeatureDocs": [
+      {
+        "valueCandidate": "Translate",
+        "snippet": "\":null,\"tooltip\":null},{\"text1\":\"AI voiceovers\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"Translate videos\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"500M stock photos & videos\",\"text2\":null,\"text3\":null,\"tooltip\":null}],\"is_ente",
+        "sourcePath": "data/runtime-captures/lumen5/pricing_plans.json",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_json",
+        "contentType": "json"
+      },
+      {
+        "valueCandidate": "template",
+        "snippet": "ext1\":\"Custom AI media credits\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"Bespoke branded template\",\"text2\":\"\",\"text3\":\"\",\"tooltip\":\"\"},{\"text1\":\"Video translations\",\"text2\":\"\",\"text3\":\"\",\"tooltip\":\"\"},{\"text1\":\"Collaborate with team memb",
+        "sourcePath": "data/runtime-captures/lumen5/pricing_plans.json",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_json",
+        "contentType": "json"
+      },
+      {
+        "valueCandidate": "brand kits",
+        "snippet": "\":null},{\"text1\":\"Multiple Blueprints\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"Multiple brand kits\",\"text2\":null,\"text3\":null,\"tooltip\":null}],\"is_enterprise\":false,\"is_trial\":false,\"hide_in_public_pricing_page\":false},{\"name\":\"Team_v1\",\"",
+        "sourcePath": "data/runtime-captures/lumen5/pricing_plans.json",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_json",
+        "contentType": "json"
+      },
+      {
+        "valueCandidate": "Screen Recording",
+        "snippet": "Screen Recording Custom Branding",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Video Templates",
+        "snippet": "Video Templates Enterprise expand_more",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Branded Templates",
+        "snippet": "Branded Templates Professional Services",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Multiple brand kits",
+        "snippet": "Multiple brand kits and more...",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Bespoke branded template",
+        "snippet": "Bespoke branded template check",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Brand kits",
+        "snippet": "Brand kits —",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "30+ popular templates",
+        "snippet": "30+ popular templates check",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Custom on-brand templates",
+        "snippet": "Custom on-brand templates —",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "It depends on your goals. The Basic and Starter plans are ideal for individual creators who need simple, fast video creation. Pro is best for small businesses that require advanced branding, premium media, and more customization. The Team plan is built for organizations that need custom templates, collaboration features, workflow controls, translations, SSO, and enterprise grade support.",
+        "snippet": "It depends on your goals. The Basic and Starter plans are ideal for individual creators who need simple, fast video creation. Pro is best for small businesses that require advanced branding, premium media, and more customization. The Team plan is built for...",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "The Team plan includes everything in Pro plus enterprise capabilities such as custom branded templates, bespoke scene designs, workspace and user management, translation tools, SSO, approval workflows, DAM integrations, and a dedicated customer success manager. It is designed for companies scaling video creation across multiple teams or locations.",
+        "snippet": "The Team plan includes everything in Pro plus enterprise capabilities such as custom branded templates, bespoke scene designs, workspace and user management, translation tools, SSO, approval workflows, DAM integrations, and a dedicated customer success mana...",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Yes. Starter and Pro include brand kits, custom colors, and font uploads. The Team plan adds bespoke branded templates, custom transitions, and support from the Lumen5 Creative Services team so every exported video stays aligned with your brand identity across teams and regions.",
+        "snippet": "Yes. Starter and Pro include brand kits, custom colors, and font uploads. The Team plan adds bespoke branded templates, custom transitions, and support from the Lumen5 Creative Services team so every exported video stays aligned with your brand identity acr...",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Translate",
+        "snippet": "\":null,\"tooltip\":null},{\"text1\":\"AI voiceovers\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"Translate videos\",\"text2\":null,\"text3\":null,\"tooltip\":null},{\"text1\":\"500M stock photos & videos\",\"text2\":null,\"text3\":null,\"tooltip\":null}],\"is_ente",
+        "sourcePath": "data/runtime-captures/lumen5/network_responses.json",
+        "sourceUrl": "https://lumen5.com/api/pricing/plans",
+        "artifactType": "runtime_network_response",
+        "contentType": "json"
+      },
+      {
+        "valueCandidate": "Screen Recording",
+        "snippet": "Screen Recording Custom Branding",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Video Templates",
+        "snippet": "Video Templates Enterprise expand_more",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Branded Templates",
+        "snippet": "Branded Templates Professional Services",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Multiple brand kits",
+        "snippet": "Multiple brand kits and more...",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Bespoke branded template",
+        "snippet": "Bespoke branded template check",
+        "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+        "sourceUrl": "https://lumen5.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Lumen5 turns blog posts or article links into videos and uses NLP plus computer vision to build storyboards and media matches.",
+        "snippet": "Lumen5's help center says users can paste a blog or article link and the platform uses NLP and computer vision to generate a storyboard with matched media and music.",
+        "sourcePath": null,
+        "sourceUrl": "https://help.lumen5.com/en/article/how-does-lumen5-work-112fo9k/",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "How does Lumen5 work? | Lumen5 Knowledge Base"
+      }
+    ],
+    "securityApiEnterprise": {
+      "security": [
+        {
+          "valueCandidate": "security",
+          "snippet": "\"Dedicated customer success manager\",\"text2\":\"\",\"text3\":\"\",\"tooltip\":\"\"},{\"text1\":\"Enterprise-level security\",\"text2\":\"\",\"text3\":\"\",\"tooltip\":\"\"},{\"text1\":\"Professional Services\",\"text2\":\"\",\"text3\":\"\",\"tooltip\":\"\"},{\"text1\":\"Invoiced billing\",\"text",
+          "sourcePath": "data/runtime-captures/lumen5/pricing_plans.json",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_json",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Enterprise-level security",
+          "snippet": "Enterprise-level security check",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security Documentation & Support",
+          "snippet": "Security Documentation & Support —",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy This website uses cookies",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy .",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-level security",
+          "snippet": "Enterprise-level security check",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security Documentation & Support",
+          "snippet": "Security Documentation & Support —",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy This website uses cookies",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy .",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-level security",
+          "snippet": "Enterprise-level security check",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_toggled.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security Documentation & Support",
+          "snippet": "Security Documentation & Support —",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_toggled.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy This website uses cookies",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_toggled.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy .",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_toggled.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "api": [
+        {
+          "valueCandidate": "Integrations",
+          "snippet": "Integrations Solutions expand_more",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "DAM Integration",
+          "snippet": "DAM Integration —",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "The Team plan includes everything in Pro plus enterprise capabilities such as custom branded templates, bespoke scene designs, workspace and user management, translation tools, SSO, approval workflows, DAM integrations, and a dedicated customer success manager. It is designed for companies scaling video creation across multiple teams or locations.",
+          "snippet": "The Team plan includes everything in Pro plus enterprise capabilities such as custom branded templates, bespoke scene designs, workspace and user management, translation tools, SSO, approval workflows, DAM integrations, and a dedicated customer success mana...",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Integrations",
+          "snippet": "Integrations Solutions expand_more",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "DAM Integration",
+          "snippet": "DAM Integration —",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "The Team plan includes everything in Pro plus enterprise capabilities such as custom branded templates, bespoke scene designs, workspace and user management, translation tools, SSO, approval workflows, DAM integrations, and a dedicated customer success manager. It is designed for companies scaling video creation across multiple teams or locations.",
+          "snippet": "The Team plan includes everything in Pro plus enterprise capabilities such as custom branded templates, bespoke scene designs, workspace and user management, translation tools, SSO, approval workflows, DAM integrations, and a dedicated customer success mana...",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Integrations",
+          "snippet": "Integrations Solutions expand_more",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_toggled.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "DAM Integration",
+          "snippet": "DAM Integration —",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_toggled.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "The Team plan includes everything in Pro plus enterprise capabilities such as custom branded templates, bespoke scene designs, workspace and user management, translation tools, SSO, approval workflows, DAM integrations, and a dedicated customer success manager. It is designed for companies scaling video creation across multiple teams or locations.",
+          "snippet": "The Team plan includes everything in Pro plus enterprise capabilities such as custom branded templates, bespoke scene designs, workspace and user management, translation tools, SSO, approval workflows, DAM integrations, and a dedicated customer success mana...",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_toggled.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "enterprise": [
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "lse,\"hide_in_public_pricing_page\":false},{\"name\":\"Team_v1\",\"display_name\":\"Team\",\"description\":\"For enterprise teams\",\"price\":399.0,\"billing_cycle\":\"monthly\",\"deprecated\":false,\"featured\":false,\"features\":{\"no_branding\":true,\"max_brand_kits\":1,\"cc_me",
+          "sourcePath": "data/runtime-captures/lumen5/pricing_plans.json",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_json",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "ip\":\"\"},{\"text1\":\"Dedicated customer success manager\",\"text2\":\"\",\"text3\":\"\",\"tooltip\":\"\"},{\"text1\":\"Enterprise-level security\",\"text2\":\"\",\"text3\":\"\",\"tooltip\":\"\"},{\"text1\":\"Professional Services\",\"text2\":\"\",\"text3\":\"\",\"tooltip\":\"\"},{\"text1\":\"Invoiced",
+          "sourcePath": "data/runtime-captures/lumen5/pricing_plans.json",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_json",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "SSO",
+          "snippet": "\"\"},{\"text1\":\"Video approval process\",\"text2\":\"\",\"text3\":\"\",\"tooltip\":\"\"},{\"text1\":\"Single sign-on (SSO)\",\"text2\":\"\",\"text3\":\"\",\"tooltip\":\"\"},{\"text1\":\"Dedicated customer success manager\",\"text2\":\"\",\"text3\":\"\",\"tooltip\":\"\"},{\"text1\":\"Enterpris",
+          "sourcePath": "data/runtime-captures/lumen5/pricing_plans.json",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_json",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Team",
+          "snippet": "rise\":false,\"is_trial\":false,\"hide_in_public_pricing_page\":false},{\"name\":\"Team_v1\",\"display_name\":\"Team\",\"description\":\"For enterprise teams\",\"price\":399.0,\"billing_cycle\":\"monthly\",\"deprecated\":false,\"featured\":false,\"features\":{\"no_branding\"",
+          "sourcePath": "data/runtime-captures/lumen5/pricing_plans.json",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_json",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "teams",
+          "snippet": "n_public_pricing_page\":false},{\"name\":\"Team_v1\",\"display_name\":\"Team\",\"description\":\"For enterprise teams\",\"price\":399.0,\"billing_cycle\":\"monthly\",\"deprecated\":false,\"featured\":false,\"features\":{\"no_branding\":true,\"max_brand_kits\":1,\"cc_media\":t",
+          "sourcePath": "data/runtime-captures/lumen5/pricing_plans.json",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_json",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "team",
+          "snippet": "p\":\"\"},{\"text1\":\"Video translations\",\"text2\":\"\",\"text3\":\"\",\"tooltip\":\"\"},{\"text1\":\"Collaborate with team members\",\"text2\":\"\",\"text3\":\"\",\"tooltip\":\"\"},{\"text1\":\"Video approval process\",\"text2\":\"\",\"text3\":\"\",\"tooltip\":\"\"},{\"text1\":\"Single sign-on",
+          "sourcePath": "data/runtime-captures/lumen5/pricing_plans.json",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_json",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Enterprise expand_more",
+          "snippet": "Enterprise expand_more Scale up",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Lumen5 for Enterprise",
+          "snippet": "Lumen5 for Enterprise Branded Templates",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Learn about Enterprise",
+          "snippet": "Learn about Enterprise For enterprise teams",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "For enterprise teams",
+          "snippet": "For enterprise teams Everything in Pro, plus:",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Collaborate with team members",
+          "snippet": "Collaborate with team members check",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Single sign-on (SSO)",
+          "snippet": "Single sign-on (SSO) check",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-level security",
+          "snippet": "Enterprise-level security check",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Learn about Enterprise",
+          "snippet": "Learn about Enterprise Usage",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team members",
+          "snippet": "Team members Single user",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Workspaces",
+          "snippet": "Workspaces 1",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Lumen5 Design Team Access",
+          "snippet": "Lumen5 Design Team Access —",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team management",
+          "snippet": "Team management Basic",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Workspace management",
+          "snippet": "Workspace management —",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "“We have scaled Lumen5's use across our marketing organization, realizing benefits across many team layers. As company communicators, this agile tool enhances each customer's experience and engagement.”",
+          "snippet": "“We have scaled Lumen5's use across our marketing organization, realizing benefits across many team layers. As company communicators, this agile tool enhances each customer's experience and engagement.”",
+          "sourcePath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+          "sourceUrl": "https://lumen5.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ]
+    },
+    "logoSources": [
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn.lumen5.com/lumen5-site-images/favicon/2025/favicon.ico"
+      }
+    ]
+  },
+  "missingFields": [],
+  "nextFetchTargets": [
+    {
+      "url": "https://lumen5.com/features/blog-to-video",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://lumen5.com/features/automatic-video-translation",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://lumen5.com/features/idea-to-video",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://lumen5.com/features/collaborate-review-approve",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://lumen5.com/features/ai-video-generator",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://lumen5.com/features/ai-voiceover-video-generator",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://lumen5.com/features/ai-image-generator",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://lumen5.com/features/video-clip-maker",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://lumen5.com/features/ai-script-writing",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://lumen5.com/features/video-blueprints",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://lumen5.com/features/talking-head",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://lumen5.com/features/in-app-recording",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://lumen5.com/features/screen-recorder",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://lumen5.com/features/video-branding-customization",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://lumen5.com/features/media-library",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://lumen5.com/features/video-templates-scene-designs",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://lumen5.com/enterprise",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://help.lumen5.com/en",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://lumen5.com/terms",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    },
+    {
+      "url": "https://lumen5.com/privacy",
+      "discoveredFromPath": "data/runtime-captures/lumen5/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://lumen5.com/pricing"
+    }
+  ],
+  "remoteFetches": {
+    "rounds": [
+      {
+        "roundId": "2026-04-08-remote-round-1",
+        "fetchedAt": "2026-04-08T13:38:41.674996+00:00",
+        "pages": [
+          {
+            "title": "What is Lumen5? | Lumen5 Knowledge Base",
+            "url": "https://help.lumen5.com/en/article/what-is-lumen5-liun7a/"
+          },
+          {
+            "title": "How does Lumen5 work? | Lumen5 Knowledge Base",
+            "url": "https://help.lumen5.com/en/article/how-does-lumen5-work-112fo9k/"
+          },
+          {
+            "title": "Can I monetize my videos or create them for my clients? | Lumen5 Knowledge Base",
+            "url": "https://help.lumen5.com/en/article/can-i-monetize-my-videos-or-create-them-for-my-clients-jwdt3l/"
+          },
+          {
+            "title": "Why are there watermarks on my video? | Lumen5 Knowledge Base",
+            "url": "https://help.lumen5.com/en/article/why-are-there-watermarks-on-my-video-1jrrc9y/"
+          },
+          {
+            "title": "Uploading your logo as a watermark | Lumen5 Knowledge Base",
+            "url": "https://help.lumen5.com/en/article/uploading-your-logo-as-a-watermark-vntfoy/"
+          }
+        ],
+        "fetchedFields": [
+          "policy.commercialUse",
+          "policy.usageRights",
+          "policy.watermark",
+          "workflowFeatureDocs"
+        ],
+        "unresolvedFields": [],
+        "mergedRecordCount": 4
+      }
+    ],
+    "latestRoundId": "2026-04-08-remote-round-1"
+  }
+}

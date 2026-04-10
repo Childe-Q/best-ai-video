@@ -1,0 +1,1392 @@
+{
+  "generatedAt": "2026-04-08T13:18:37.812699+00:00",
+  "slug": "invideo-io",
+  "toolName": "InVideo",
+  "officialHost": "invideo.io",
+  "siteRootDir": "invideo.io",
+  "runtimeCaptureDir": "data/runtime-captures/invideo-io",
+  "artifacts": {
+    "counts": {
+      "htmlCount": 4,
+      "jsCount": 23,
+      "jsonCount": 1,
+      "mdCount": 1,
+      "pngCount": 1,
+      "referenced_assetCount": 41,
+      "runtime_capture_htmlCount": 3,
+      "runtime_capture_jsonCount": 1,
+      "runtime_capture_reportCount": 1,
+      "svgCount": 14,
+      "webpCount": 2
+    },
+    "availablePageUrls": [
+      "https://invideo.io/pricing",
+      "https://help.invideo.io/en/articles/9382129-where-can-i-check-my-current-usage",
+      "https://help.invideo.io/en/articles/9382156-what-does-export-visibility-mean",
+      "https://invideo.io/terms-and-conditions/",
+      "https://invideo.io/privacy-policy/"
+    ],
+    "keywordPageUrls": [],
+    "paths": [
+      "data/runtime-captures/invideo-io/report.md",
+      "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+      "data/runtime-captures/invideo-io/network_responses.json",
+      "data/runtime-captures/invideo-io/rendered_dom.html",
+      "data/runtime-captures/invideo-io/rendered_dom_toggled.html",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/73ff70575a2fe9c4.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/9045e4e7e5be344d.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/6536545c58085de5.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/9cf0c0cf4a337a0c.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/22a98eba0e0288a3.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/turbopack-641517f69f47ef29.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/5b17a7ef9e9709ad.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/cb9f61116ec3279a.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/d74610cab3af1941.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/c1dcc322868a619f.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/a1e4319a0bd7a34b.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/2c49fb8d5fb56623.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/73527ee9b1d0c82e.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/2b55579e206c0527.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/33320f427243cb25.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/0e2a0ad71d12251b.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/43b797d655a2ba8f.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/6c1f74828c02644d.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/3c51c5b6836ea74c.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/5ae96bc5940f1e2c.js",
+      "invideo.io/invideo.io/pricing/index.html",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/89adae1dac0166e9.js",
+      "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/54d57d567f3e6b9c.js",
+      "invideo.io/web-assets.invideo.io/iv-pro-landing-pages/prod/common/banner/abundantia-web-banner.png",
+      "invideo.io/web-assets.invideo.io/iv-pro-landing-pages/prod/home/iv.svg",
+      "invideo.io/web-assets.invideo.io/iv-pro-landing-pages/prod/home/invideo_title.svg",
+      "invideo.io/web-assets.invideo.io/iv-pro-landing-pages/prod/folds/pricing/apple.svg",
+      "invideo.io/web-assets.invideo.io/iv-pro-landing-pages/prod/folds/pricing/google.svg",
+      "invideo.io/web-assets.invideo.io/iv-pro-landing-pages/prod/folds/pricing/microsoft.svg",
+      "invideo.io/web-assets.invideo.io/iv-pro-landing-pages/prod/folds/pricing/walmart.svg",
+      "invideo.io/web-assets.invideo.io/iv-pro-landing-pages/prod/folds/pricing/visa.svg",
+      "invideo.io/web-assets.invideo.io/iv-pro-landing-pages/prod/folds/pricing/disney.svg",
+      "invideo.io/web-assets.invideo.io/iv-pro-landing-pages/prod/folds/app-promo/app-play-black.webp",
+      "invideo.io/web-assets.invideo.io/iv-pro-landing-pages/prod/folds/app-promo/app-ios-black.webp",
+      "invideo.io/web-assets.invideo.io/iv-pro-landing-pages/prod/home/full-iv.svg",
+      "invideo.io/web-assets.invideo.io/iv-pro-landing-pages/prod/common/social/facebook.svg",
+      "invideo.io/web-assets.invideo.io/iv-pro-landing-pages/prod/common/social/twitter.svg",
+      "invideo.io/web-assets.invideo.io/iv-pro-landing-pages/prod/common/social/linkedin.svg",
+      "invideo.io/web-assets.invideo.io/iv-pro-landing-pages/prod/common/social/instragram.svg",
+      "invideo.io/web-assets.invideo.io/iv-pro-landing-pages/prod/common/social/youtube.svg",
+      "invideo.io/invideo.io/cdn-cgi/challenge-platform/scripts/jsd/main.js"
+    ]
+  },
+  "fields": {
+    "officialUrl": {
+      "value": "https://invideo.io/",
+      "sourceUrl": "https://invideo.io/",
+      "sourcePath": "data/runtime-captures/invideo-io/report.md"
+    },
+    "sourceUrls": [
+      "https://invideo.io/pricing",
+      "https://help.invideo.io/en/articles/9382129-where-can-i-check-my-current-usage",
+      "https://help.invideo.io/en/articles/9382156-what-does-export-visibility-mean",
+      "https://invideo.io/terms-and-conditions/",
+      "https://invideo.io/privacy-policy/"
+    ],
+    "policy": {
+      "watermark": [
+        {
+          "valueCandidate": "Unlimited exports without watermark",
+          "snippet": "Unlimited exports without watermark Most popular",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited exports without watermark",
+          "snippet": "Unlimited exports without watermark Generative",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited exports without watermark",
+          "snippet": "Unlimited exports without watermark All paid plans include:",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited exports without watermark",
+          "snippet": "Unlimited exports without watermark Most popular",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited exports without watermark",
+          "snippet": "Unlimited exports without watermark Generative",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited exports without watermark",
+          "snippet": "Unlimited exports without watermark All paid plans include:",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited exports without watermark",
+          "snippet": "Unlimited exports without watermark Most popular",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_toggled.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited exports without watermark",
+          "snippet": "Unlimited exports without watermark Generative",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_toggled.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited exports without watermark",
+          "snippet": "Unlimited exports without watermark All paid plans include:",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_toggled.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "commercialUse": [],
+      "usageRights": [],
+      "refundCancellation": [
+        {
+          "valueCandidate": "What happens if I upgrade, downgrade, or cancel my subscription?",
+          "snippet": "What happens if I upgrade, downgrade, or cancel my subscription? What should I do if I run out of credits? Do you offer add-ons?",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "tures as per their pricing.\"}},{\"@type\":\"Question\",\"name\":\"What happens if I upgrade, downgrade, or cancel my subscription?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"If you upgrade to a higher plan, any unused credits from your previous plan wi",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "any unused credits from your previous plan will be rolled over to the new plan. If you downgrade or cancel your subscription, your subscription will remain active until the end of the current billing cycle. After that, your account will be downgr",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "What happens if I upgrade, downgrade, or cancel my subscription?",
+          "snippet": "What happens if I upgrade, downgrade, or cancel my subscription? What should I do if I run out of credits? Do you offer add-ons?",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "tures as per their pricing.\"}},{\"@type\":\"Question\",\"name\":\"What happens if I upgrade, downgrade, or cancel my subscription?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"If you upgrade to a higher plan, any unused credits from your previous plan wi",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "any unused credits from your previous plan will be rolled over to the new plan. If you downgrade or cancel your subscription, your subscription will remain active until the end of the current billing cycle. After that, your account will be downgr",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "What happens if I upgrade, downgrade, or cancel my subscription?",
+          "snippet": "What happens if I upgrade, downgrade, or cancel my subscription? What should I do if I run out of credits? Do you offer add-ons?",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_toggled.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "tures as per their pricing.\"}},{\"@type\":\"Question\",\"name\":\"What happens if I upgrade, downgrade, or cancel my subscription?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"If you upgrade to a higher plan, any unused credits from your previous plan wi",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_toggled.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "any unused credits from your previous plan will be rolled over to the new plan. If you downgrade or cancel your subscription, your subscription will remain active until the end of the current billing cycle. After that, your account will be downgr",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_toggled.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "start\"),n5=n0(\"transitioncancel\"),n6=n0(\"transitionend\"),n9=new Map,n7=\"abort auxClick beforeToggle cancel canPlay canPlayThrough click close contextMenu copy cut drag dragEnd dragEnter dragExit dragLeave dragOver dragStart drop durationChange em",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/9cf0c0cf4a337a0c.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/9cf0c0cf4a337a0c.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "ction rX(e){var t=e.stateNode,n=e.type,r=e.memoizedProps;switch(t[eW]=e,t[eq]=r,n){case\"dialog\":sJ(\"cancel\",t),sJ(\"close\",t);break;case\"iframe\":case\"object\":case\"embed\":sJ(\"load\",t);break;case\"video\":case\"audio\":for(n=0;n<sX.length;n++)sJ(sX[n],t",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/9cf0c0cf4a337a0c.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/9cf0c0cf4a337a0c.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "null!==e&&u(e)}finally{r(),l(),o()}}),c.finished.finally(function(){for(var e=0;e<f.length;e++)f[e].cancel();s.__reactViewTransition===c&&(s.__reactViewTransition=null),i()}),c}catch(e){return r(),l(),o(),null}}(f,e.containerInfo,u1,sy,sb,sv,sw,s",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/9cf0c0cf4a337a0c.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/9cf0c0cf4a337a0c.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "seeked seeking stalled suspend timeupdate volumechange waiting\".split(\" \"),sG=new Set(\"beforetoggle cancel close invalid load scroll scrollend toggle\".split(\" \").concat(sX));function sY(e,t){t=0!=(4&t);for(var n=0;n<e.length;n++){var r=e[n],l=r.e",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/9cf0c0cf4a337a0c.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/9cf0c0cf4a337a0c.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "&\"symbol\"!=typeof l:cn(e,t,s,l,n,null));return;case\"dialog\":sJ(\"beforetoggle\",e),sJ(\"toggle\",e),sJ(\"cancel\",e),sJ(\"close\",e);break;case\"iframe\":case\"object\":sJ(\"load\",e);break;case\"video\":case\"audio\":for(l=0;l<sX.length;l++)sJ(sX[l],e);break;case",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/9cf0c0cf4a337a0c.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/9cf0c0cf4a337a0c.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "null;e=null}else t!==e&&(e=null)}}return fO=e,null}function fL(e){switch(e){case\"beforetoggle\":case\"cancel\":case\"click\":case\"close\":case\"contextmenu\":case\"copy\":case\"cut\":case\"auxclick\":case\"dblclick\":case\"dragend\":case\"dragstart\":case\"drop\":case",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/9cf0c0cf4a337a0c.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/9cf0c0cf4a337a0c.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": ")),u++,e(l)}let c={schedule:(t,e=!1,n=!1)=>{let o=n&&r?i:s;return e&&a.add(t),o.has(t)||o.add(t),t},cancel:t=>{s.delete(t),a.delete(t)},process:t=>{if(l=t,r){o=!0;return}r=!0,[i,s]=[s,i],i.forEach(h),e&&n.value&&n.value.frameloop[e].push(u),u=0,i",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/73527ee9b1d0c82e.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/73527ee9b1d0c82e.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "t s=u[i];return e[i]=(e,i=!1,n=!1)=>(!r&&(r=!0,o=!0,a.isProcessing||t(y)),s.schedule(e,i,n)),e},{}),cancel:t=>{for(let e=0;e<s.length;e++)u[s[e]].cancel(t)},state:a,steps:u}}t.s([\"statsBuffer\",()=>n],86614),t.s([\"createRenderBatcher\",()=>r],93876",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/73527ee9b1d0c82e.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/73527ee9b1d0c82e.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": ",o=!0,a.isProcessing||t(y)),s.schedule(e,i,n)),e},{}),cancel:t=>{for(let e=0;e<s.length;e++)u[s[e]].cancel(t)},state:a,steps:u}}t.s([\"statsBuffer\",()=>n],86614),t.s([\"createRenderBatcher\",()=>r],93876);let{schedule:o,cancel:a,state:l,steps:u}=r(\"",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/73527ee9b1d0c82e.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/73527ee9b1d0c82e.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "a,steps:u}}t.s([\"statsBuffer\",()=>n],86614),t.s([\"createRenderBatcher\",()=>r],93876);let{schedule:o,cancel:a,state:l,steps:u}=r(\"u\">typeof requestAnimationFrame?requestAnimationFrame:e.noop,!0);t.s([\"cancelFrame\",()=>a,\"frame\",()=>o,\"frameData\",(",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/73527ee9b1d0c82e.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/73527ee9b1d0c82e.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "this.state=\"complete\",this.onComplete(this.unresolvedKeyframes,this.finalKeyframe,t),w.delete(this)}cancel(){\"scheduled\"===this.state&&(w.delete(this),this.state=\"pending\")}resume(){\"pending\"===this.state&&this.scheduleResolve()}}t.s([\"KeyframeRe",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/73527ee9b1d0c82e.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/73527ee9b1d0c82e.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "exportLimits": [
+        {
+          "valueCandidate": "Exports with invideo logo",
+          "snippet": "Exports with invideo logo No credit card required",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited exports without watermark",
+          "snippet": "Unlimited exports without watermark Most popular",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited exports without watermark",
+          "snippet": "Unlimited exports without watermark Generative",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited exports without watermark",
+          "snippet": "Unlimited exports without watermark All paid plans include:",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "MP4 Compressor",
+          "snippet": "MP4 Compressor Help",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "e\":true,\"type\":\"invoice_billing\"}],\"usage_quota\":{\"ai_credits\":0,\"credits_v2\":200,\"credits_v4\":600,\"exports\":-1,\"express_clones\":40,\"nano_banana_2\":-1,\"premium_media\":3200,\"premium_minutes\":2000,\"pro_clones\":4,\"storage\":4000,\"ugc_ads\":50,\"user_cou",
+          "sourcePath": "data/runtime-captures/invideo-io/network_responses.json",
+          "sourceUrl": "https://pro-api.invideo.io/api/plans/v9/detailed",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Exports",
+          "snippet": "ls\",\"id\":\"ai_access\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"ai_access\"},{\"description\":\"Exports with invideo logo\",\"id\":\"exports\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"exports\"},{\"description\":\"No credit card required\",\"id",
+          "sourcePath": "data/runtime-captures/invideo-io/network_responses.json",
+          "sourceUrl": "https://pro-api.invideo.io/api/plans/v9/detailed",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "lic\",\"app\"],\"top_feature\":true,\"type\":\"ai_access\"},{\"description\":\"Exports with invideo logo\",\"id\":\"exports\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"exports\"},{\"description\":\"No credit card required\",\"id\":\"no_credit_card\",\"tags\":[\"publi",
+          "sourcePath": "data/runtime-captures/invideo-io/network_responses.json",
+          "sourceUrl": "https://pro-api.invideo.io/api/plans/v9/detailed",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "tion\":\"Exports with invideo logo\",\"id\":\"exports\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"exports\"},{\"description\":\"No credit card required\",\"id\":\"no_credit_card\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"no_credit_card\"}],\"usag",
+          "sourcePath": "data/runtime-captures/invideo-io/network_responses.json",
+          "sourceUrl": "https://pro-api.invideo.io/api/plans/v9/detailed",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "eature\":true,\"type\":\"no_credit_card\"}],\"usage_quota\":{\"ai_credits\":0,\"credits_v2\":0,\"credits_v4\":5,\"exports\":4,\"express_clones\":1,\"premium_media\":0,\"premium_minutes\":10,\"pro_clones\":0,\"storage\":10,\"user_count\":1,\"voices\":0},\"yearly\":{\"amount\":0,",
+          "sourcePath": "data/runtime-captures/invideo-io/network_responses.json",
+          "sourceUrl": "https://pro-api.invideo.io/api/plans/v9/detailed",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Exports with invideo logo",
+          "snippet": "Exports with invideo logo No credit card required",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited exports without watermark",
+          "snippet": "Unlimited exports without watermark Most popular",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited exports without watermark",
+          "snippet": "Unlimited exports without watermark Generative",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited exports without watermark",
+          "snippet": "Unlimited exports without watermark All paid plans include:",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "MP4 Compressor",
+          "snippet": "MP4 Compressor Help",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Exports with invideo logo",
+          "snippet": "Exports with invideo logo No credit card required",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_toggled.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited exports without watermark",
+          "snippet": "Unlimited exports without watermark Most popular",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_toggled.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited exports without watermark",
+          "snippet": "Unlimited exports without watermark Generative",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_toggled.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited exports without watermark",
+          "snippet": "Unlimited exports without watermark All paid plans include:",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_toggled.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "MP4 Compressor",
+          "snippet": "MP4 Compressor Help",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_toggled.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "InVideo paid plans include unlimited premium media and unlimited exports.",
+          "snippet": "The current usage help article says paid plans include unlimited premium media and unlimited exports.",
+          "sourcePath": null,
+          "sourceUrl": "https://help.invideo.io/en/articles/9382129-where-can-i-check-my-current-usage",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Where can I check my current usage? | InVideo Help"
+        }
+      ]
+    },
+    "mainLimitations": [
+      {
+        "valueCandidate": "Limited credits",
+        "snippet": "Limited credits Includes",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Limited credits",
+        "snippet": "Limited credits No access to the unlimited mode on image generations",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "No credit card required",
+        "snippet": "No credit card required Plus",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "100 credits is enough for:",
+        "snippet": "100 credits is enough for: 400 Nano banana pro, 800 Nano banana 2 generations",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "400 credits is enough for:",
+        "snippet": "400 credits is enough for: 1600 Nano banana pro, 3200 Nano banana 2 generations",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "1000 credits is enough for:",
+        "snippet": "1000 credits is enough for: 4000 Nano banana pro, 8000 Nano banana 2 generations",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Access to invideo v4 agent that can create up to 30 mins of video from a single prompt.",
+        "snippet": "Access to invideo v4 agent that can create up to 30 mins of video from a single prompt. Access to top stock providers like iStock, Storyblocks & more.",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "On-demand credit top-ups available.",
+        "snippet": "On-demand credit top-ups available. Trusted everyday by teams that build world-class videos",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "What is a credit, and how is it charged?",
+        "snippet": "What is a credit, and how is it charged? Credits work like currency on our platform and are used for video creation, generative models and across other features, not for downloading content. Generative models are priced differently, All models available at...",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Credits work like currency on our platform and are used for video creation, generative models and across other features, not for downloading content. Generative models are priced differently, All models available at their original API pricing. You can use your credits however you like across the platform. We reserve the right to update credit costs at any time, without prior notice.",
+        "snippet": "Credits work like currency on our platform and are used for video creation, generative models and across other features, not for downloading content. Generative models are priced differently, All models available at their original API pricing. You can use y...",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Heads up: Unused credits don't roll over to the next month.",
+        "snippet": "Heads up: Unused credits don't roll over to the next month. Am I charged for every generation?",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "What should I do if I run out of credits? Do you offer add-ons?",
+        "snippet": "What should I do if I run out of credits? Do you offer add-ons? When do my credits reset, and do unused credits roll over?",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "When do my credits reset, and do unused credits roll over?",
+        "snippet": "When do my credits reset, and do unused credits roll over? What is counted as a seat?",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "What is counted as a seat?",
+        "snippet": "What is counted as a seat? What payments do you support?",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "monthly limit",
+        "snippet": "dAnswer\":{\"@type\":\"Answer\",\"text\":\"If you need more credits, you can upgrade your plan for a higher monthly limit or buy credit packs to generate more media without changing your current subscription. Purchased credits are added instantly and can be use",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "limit",
+        "snippet": ":{\"@type\":\"Answer\",\"text\":\"If you need more credits, you can upgrade your plan for a higher monthly limit or buy credit packs to generate more media without changing your current subscription. Purchased credits are added instantly and can be use",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "credit",
+        "snippet": "context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"What is a credit, and how is it charged?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Credits work like currency on our platform and are used for video creat",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Credits",
+        "snippet": "stion\",\"name\":\"What is a credit, and how is it charged?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Credits work like currency on our platform and are used for video creation, generative models and across other features, not for downloading conten",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "credits",
+        "snippet": "models are priced differently, All models available at their original API pricing. You can use your credits however you like across the platform. We reserve the right to update credit costs at any time, without prior notice.\\n\\nHeads up: Unused cr",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "credit",
+        "snippet": "cing. You can use your credits however you like across the platform. We reserve the right to update credit costs at any time, without prior notice.\\n\\nHeads up: Unused credits don't roll over to the next month.\"}},{\"@type\":\"Question\",\"name\":\"Am I",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "InVideo usage is tracked through credits, video minutes, iStock usage, and storage quotas.",
+        "snippet": "The usage help page says account usage is metered through monthly credits, video minutes, iStock usage, and storage.",
+        "sourcePath": null,
+        "sourceUrl": "https://help.invideo.io/en/articles/9382129-where-can-i-check-my-current-usage",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "Where can I check my current usage? | InVideo Help"
+      }
+    ],
+    "workflowFeatureDocs": [
+      {
+        "valueCandidate": "AI Avatars",
+        "snippet": "AI Avatars Product Clone",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Voice Cloning",
+        "snippet": "Voice Cloning Video Translator",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "4 AI avatars & voice clones",
+        "snippet": "4 AI avatars & voice clones Limited concurrency",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "16 AI avatars & voice clones",
+        "snippet": "16 AI avatars & voice clones 2x more concurrency than Plus",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "40 AI avatars & voice clones",
+        "snippet": "40 AI avatars & voice clones 10x more concurrency than Plus",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Avatar Generator",
+        "snippet": "AI Avatar Generator Text to Video",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Text to Video",
+        "snippet": "Text to Video Image to Video",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Image to Video",
+        "snippet": "Image to Video UGC Ads",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Voice Cloning",
+        "snippet": "Voice Cloning Audio Models",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Avatars",
+        "snippet": "AI Avatars Product Clone",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Voice Cloning",
+        "snippet": "Voice Cloning Video Translator",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "4 AI avatars & voice clones",
+        "snippet": "4 AI avatars & voice clones Limited concurrency",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "16 AI avatars & voice clones",
+        "snippet": "16 AI avatars & voice clones 2x more concurrency than Plus",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "40 AI avatars & voice clones",
+        "snippet": "40 AI avatars & voice clones 10x more concurrency than Plus",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Avatar Generator",
+        "snippet": "AI Avatar Generator Text to Video",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Text to Video",
+        "snippet": "Text to Video Image to Video",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Image to Video",
+        "snippet": "Image to Video UGC Ads",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Voice Cloning",
+        "snippet": "Voice Cloning Audio Models",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Avatars",
+        "snippet": "AI Avatars Product Clone",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_toggled.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Voice Cloning",
+        "snippet": "Voice Cloning Video Translator",
+        "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_toggled.html",
+        "sourceUrl": "https://invideo.io/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "InVideo export visibility supports private, unlisted, and public sharing states.",
+        "snippet": "The export-visibility help page explains private, unlisted, and public settings for shared video previews.",
+        "sourcePath": null,
+        "sourceUrl": "https://help.invideo.io/en/articles/9382156-what-does-export-visibility-mean",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "What does export visibility mean? | InVideo Help"
+      }
+    ],
+    "securityApiEnterprise": {
+      "security": [
+        {
+          "valueCandidate": "Privacy policy",
+          "snippet": "Privacy policy •",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SOC2",
+          "snippet": "],\"supported_item_plans\":[],\"tagline\":\"for large teams\",\"tags\":[],\"usage_features\":[{\"description\":\"SOC2 & GDPR\",\"id\":\"soc2_gdpr\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"soc2_gdpr\"},{\"description\":\"SSO & SCIM\",\"id\":\"sso\",\"tags\":[\"pub",
+          "sourcePath": "data/runtime-captures/invideo-io/network_responses.json",
+          "sourceUrl": "https://pro-api.invideo.io/api/plans/v9/detailed",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "GDPR",
+          "snippet": "orted_item_plans\":[],\"tagline\":\"for large teams\",\"tags\":[],\"usage_features\":[{\"description\":\"SOC2 & GDPR\",\"id\":\"soc2_gdpr\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"soc2_gdpr\"},{\"description\":\"SSO & SCIM\",\"id\":\"sso\",\"tags\":[\"public\",\"a",
+          "sourcePath": "data/runtime-captures/invideo-io/network_responses.json",
+          "sourceUrl": "https://pro-api.invideo.io/api/plans/v9/detailed",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "id\":\"analytics\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"analytics\"},{\"description\":\"Data privacy agreement available\",\"id\":\"data_privacy\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"data_privacy\"},{\"description\":\"Spend control fo",
+          "sourcePath": "data/runtime-captures/invideo-io/network_responses.json",
+          "sourceUrl": "https://pro-api.invideo.io/api/plans/v9/detailed",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Privacy policy",
+          "snippet": "Privacy policy •",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy policy",
+          "snippet": "Privacy policy •",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_toggled.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "security",
+          "snippet": "on tC(e){return tN.test(\"\"+e)?\"javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')\":e}function tT(){}var tO=null;function tz(e){return(e=e.target||e.srcElement||window).correspondingUseElement&&(e=e.correspon",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/9cf0c0cf4a337a0c.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/9cf0c0cf4a337a0c.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "security",
+          "snippet": "n:\"These cookies are essential for the site to function and cannot be toggled off. They assist with security, user authentication, customer support, etc.\"})]})]}),(0,t.jsxs)(\"div\",{className:\"flex gap-3 cursor-pointer\",onClick:()=>v(e=>({...e,analy",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/d74610cab3af1941.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/d74610cab3af1941.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "you deem fit. You can change your consent at any time.\",\" \",(0,t.jsx)(\"a\",{href:\"https://invideo.io/privacy-policy/\",className:\"text-[#141414] font-semibold underline hover:text-[#141414]/80\",children:\"Learn more\"}),\".\"]}),(0,t.jsxs)(\"div\",{classN",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/d74610cab3af1941.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/d74610cab3af1941.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "et our services to you. You can read our Cookie Policy\",\" \",(0,t.jsx)(\"a\",{href:\"https://invideo.io/privacy-policy/\",className:\"text-[#141414] font-semibold underline hover:text-[#141414]/80\",children:\"here\"}),\".\"]})]}),(0,t.jsxs)(\"div\",{className",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/d74610cab3af1941.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/d74610cab3af1941.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "erences);return(0,e.jsxs)(\"div\",{className:\"mb-2\",children:[(0,e.jsx)(\"a\",{href:\"https://invideo.io/privacy-policy/\",className:\"hover:text-white transition-colors\",children:\"Privacy policy\"}),(0,e.jsx)(\"span\",{className:\"mx-2\",children:\"•\"}),(0,e.",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/73527ee9b1d0c82e.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/73527ee9b1d0c82e.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "{href:\"https://invideo.io/privacy-policy/\",className:\"hover:text-white transition-colors\",children:\"Privacy policy\"}),(0,e.jsx)(\"span\",{className:\"mx-2\",children:\"•\"}),(0,e.jsx)(\"a\",{href:\"https://invideo.io/terms-and-conditions/\",className:\"hover",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/73527ee9b1d0c82e.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/73527ee9b1d0c82e.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "erences);return(0,e.jsxs)(\"div\",{className:\"mb-2\",children:[(0,e.jsx)(\"a\",{href:\"https://invideo.io/privacy-policy/\",className:\"hover:text-white transition-colors\",children:\"Privacy policy\"}),(0,e.jsx)(\"span\",{className:\"mx-2\",children:\"•\"}),(0,e.",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/43b797d655a2ba8f.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/43b797d655a2ba8f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "{href:\"https://invideo.io/privacy-policy/\",className:\"hover:text-white transition-colors\",children:\"Privacy policy\"}),(0,e.jsx)(\"span\",{className:\"mx-2\",children:\"•\"}),(0,e.jsx)(\"a\",{href:\"https://invideo.io/terms-and-conditions/\",className:\"hover",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/43b797d655a2ba8f.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/43b797d655a2ba8f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "erences);return(0,e.jsxs)(\"div\",{className:\"mb-2\",children:[(0,e.jsx)(\"a\",{href:\"https://invideo.io/privacy-policy/\",className:\"hover:text-white transition-colors\",children:\"Privacy policy\"}),(0,e.jsx)(\"span\",{className:\"mx-2\",children:\"•\"}),(0,e.",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/5ae96bc5940f1e2c.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/5ae96bc5940f1e2c.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "{href:\"https://invideo.io/privacy-policy/\",className:\"hover:text-white transition-colors\",children:\"Privacy policy\"}),(0,e.jsx)(\"span\",{className:\"mx-2\",children:\"•\"}),(0,e.jsx)(\"a\",{href:\"https://invideo.io/terms-and-conditions/\",className:\"hover",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/5ae96bc5940f1e2c.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/5ae96bc5940f1e2c.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Privacy policy",
+          "snippet": "Privacy policy •",
+          "sourcePath": "invideo.io/invideo.io/pricing/index.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "referenced_asset",
+          "contentType": "html"
+        }
+      ],
+      "api": [
+        {
+          "valueCandidate": "Credits work like currency on our platform and are used for video creation, generative models and across other features, not for downloading content. Generative models are priced differently, All models available at their original API pricing. You can use your credits however you like across the platform. We reserve the right to update credit costs at any time, without prior notice.",
+          "snippet": "Credits work like currency on our platform and are used for video creation, generative models and across other features, not for downloading content. Generative models are priced differently, All models available at their original API pricing. You can use y...",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "wnloading content. Generative models are priced differently, All models available at their original API pricing. You can use your credits however you like across the platform. We reserve the right to update credit costs at any time, without pr",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Credits work like currency on our platform and are used for video creation, generative models and across other features, not for downloading content. Generative models are priced differently, All models available at their original API pricing. You can use your credits however you like across the platform. We reserve the right to update credit costs at any time, without prior notice.",
+          "snippet": "Credits work like currency on our platform and are used for video creation, generative models and across other features, not for downloading content. Generative models are priced differently, All models available at their original API pricing. You can use y...",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "wnloading content. Generative models are priced differently, All models available at their original API pricing. You can use your credits however you like across the platform. We reserve the right to update credit costs at any time, without pr",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Credits work like currency on our platform and are used for video creation, generative models and across other features, not for downloading content. Generative models are priced differently, All models available at their original API pricing. You can use your credits however you like across the platform. We reserve the right to update credit costs at any time, without prior notice.",
+          "snippet": "Credits work like currency on our platform and are used for video creation, generative models and across other features, not for downloading content. Generative models are priced differently, All models available at their original API pricing. You can use y...",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_toggled.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "wnloading content. Generative models are priced differently, All models available at their original API pricing. You can use your credits however you like across the platform. We reserve the right to update credit costs at any time, without pr",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_toggled.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "o[e]}return r.exports}u.ab=\"/ROOT/node_modules/.pnpm/next@16.1.6_@babel+core@7.28.3_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_9415f6fab19861077fcaf179a182b04a/node_modules/next/dist/compiled/process/\",t.exports=u(229)},9850,(e,",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/9045e4e7e5be344d.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/9045e4e7e5be344d.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "or(){super(\"Method unavailable on `ReadonlyURLSearchParams`. Read more: https://nextjs.org/docs/app/api-reference/functions/use-search-params#updating-searchparams\")}}class a extends URLSearchParams{append(){throw new n}delete(){throw new n}se",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/22a98eba0e0288a3.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/22a98eba0e0288a3.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "${e}\\` was called outside a request scope. Read more: https://nextjs.org/docs/messages/next-dynamic-api-wrong-context`),\"__NEXT_ERROR_CODE\",{value:\"E251\",enumerable:!1,configurable:!0})}function c(){throw Object.defineProperty(new u.InvariantE",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/22a98eba0e0288a3.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/22a98eba0e0288a3.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "es(\"node_modules/next/\")||e.includes(\" (<anonymous>)\")||e.includes(\" (node:\"))).join(\"\\n\"),`Dynamic API Usage Debug - ${e}: ${t}`))}function L(){let e=new AbortController;return e.abort(Object.defineProperty(new m.BailoutToCSRError(\"Render in",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/22a98eba0e0288a3.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/22a98eba0e0288a3.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "ngify(e),{expires:365,sameSite:\"lax\",path:\"/\",...i&&{domain:i}})}function d(e,i){fetch(\"https://pro-api.invideo.io/api/cookie-consent\",{method:\"POST\",headers:{\"Content-Type\":\"application/json\"},body:JSON.stringify({action:e,preferences:i,conse",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/d74610cab3af1941.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/d74610cab3af1941.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "es:365,sameSite:\"lax\",path:\"/\",...i&&{domain:i}})}function d(e,i){fetch(\"https://pro-api.invideo.io/api/cookie-consent\",{method:\"POST\",headers:{\"Content-Type\":\"application/json\"},body:JSON.stringify({action:e,preferences:i,consent_version:\"1.0",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/d74610cab3af1941.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/d74610cab3af1941.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "dyState?addEventListener(\"load\",()=>B(e),!0):setTimeout(e)},R=\"https://pro-landing-pages.invideo.io/api/report/\",D=parseFloat(\"0.1\"),U=[],O=null,F=null,H=()=>{U.length>0&&((e=>{if(0===e.length)return;let t=JSON.stringify({metrics:e.map(e=>({na",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/d74610cab3af1941.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/d74610cab3af1941.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "SDK",
+          "snippet": "r=()=>{eR.loadRudderStackSDK(e).then(()=>{eR.isLoaded=!0,eR.isLoading=!1,g.logEvent(L.RUDDER_STACK,\"SDK Loaded Successfully\"),t()}).catch(r=>{eR.isLoading=!1,g.logEvent(L.RUDDER_STACK,\"SDK Load Failed\"),console.error(\"RudderStack SDK Load Fail",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/c1dcc322868a619f.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/c1dcc322868a619f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "SDK",
+          "snippet": ".RUDDER_STACK,\"SDK Loaded Successfully\"),t()}).catch(r=>{eR.isLoading=!1,g.logEvent(L.RUDDER_STACK,\"SDK Load Failed\"),console.error(\"RudderStack SDK Load Failed:\",r),eR.retryLoad(e,t,i)})};(0,f.isServer)()||(\"requestIdleCallback\"in window?wind",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/c1dcc322868a619f.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/c1dcc322868a619f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "SDK",
+          "snippet": ").catch(r=>{eR.isLoading=!1,g.logEvent(L.RUDDER_STACK,\"SDK Load Failed\"),console.error(\"RudderStack SDK Load Failed:\",r),eR.retryLoad(e,t,i)})};(0,f.isServer)()||(\"requestIdleCallback\"in window?window.requestIdleCallback(r,{timeout:5e3}):setTi",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/c1dcc322868a619f.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/c1dcc322868a619f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "SDK",
+          "snippet": "dderStack failed to load after ${a} attempts`)):setTimeout(()=>{g.logEvent(L.RUDDER_STACK,\"Retrying SDK Load\"),eR.loadRudderStackSDK(e).then(()=>{eR.isLoaded=!0,eR.isLoading=!1,t()}).catch(()=>{eR.retryLoad(e,t,i,r+1,a)})},1e3*Math.pow(2,r))}s",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/c1dcc322868a619f.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/c1dcc322868a619f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "integrations",
+          "snippet": "12e5},storage:{migrate:!1,encryption:{version:\"legacy\"}},sendAdblockPage:!0,sendAdblockPageOptions:{integrations:{All:!0}},configUrl:\"https://a-config-cache.invideo.io\",consentManagement:{enabled:!0,provider:\"custom\"},preConsent:{enabled:!0,storage:{st",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/c1dcc322868a619f.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/c1dcc322868a619f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "orBoundary(...e){let{error:t}=this.state;null!==t&&(this.props.onReset?.({args:e,reason:\"imperative-api\"}),this.setState(i))}componentDidCatch(e,t){this.props.onError?.(e,t)}componentDidUpdate(e,t){let{didCatch:r}=this.state,{resetKeys:n}=this",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/2b55579e206c0527.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/2b55579e206c0527.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "o[e]}return r.exports}i.ab=\"/ROOT/node_modules/.pnpm/next@16.1.6_@babel+core@7.28.3_@opentelemetry+api@1.9.0_@playwright+test@1.58.2_react-d_9415f6fab19861077fcaf179a182b04a/node_modules/next/dist/compiled/buffer/\",t.exports=i(72)},669,e=>{\"u",
+          "sourcePath": "invideo.io/invideo.io/pro-landing-pages-assets/_next/static/chunks/33320f427243cb25.js",
+          "sourceUrl": "https://invideo.io/pro-landing-pages-assets/_next/static/chunks/33320f427243cb25.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "InVideo terms describe integrations and transfers with third-party services through API-linked workflows.",
+          "snippet": "The current terms mention linking InVideo with third-party services such as YouTube and Facebook using application programming interface connections.",
+          "sourcePath": null,
+          "sourceUrl": "https://invideo.io/terms-and-conditions/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Terms and Conditions - InVideo"
+        }
+      ],
+      "enterprise": [
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Login Sign up",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Individual Team & Enterprise",
+          "snippet": "Individual Team & Enterprise Free",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Trusted everyday by teams that build world-class videos",
+          "snippet": "Trusted everyday by teams that build world-class videos FAQs",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Do you offer Enterprise plans? / How can I contact the sales team?",
+          "snippet": "Do you offer Enterprise plans? / How can I contact the sales team? invideo AI",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "ly or yearly basis starting from the day you subscribe.\"}},{\"@type\":\"Question\",\"name\":\"Do you offer Enterprise plans? / How can I contact the sales team?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes we do offer enterprise plans. For inquiries abou",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "ns? / How can I contact the sales team?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes we do offer enterprise plans. For inquiries about choosing the right plan or creating a personalised package for your organisation, please reach out to our [sales",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "personalised package for your organisation, please reach out to our [sales team](https://invideo.io/enterprise).\"}}]}",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "workspace",
+          "snippet": "unted as a seat?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Any teammate you added in your Invideo workspace would be counted as a seat. Teammates are invited from Members page. [Learn more](https://help.invideo.io/en/articles/9382163-how-to-add-te",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "team",
+          "snippet": "are invited from Members page. [Learn more](https://help.invideo.io/en/articles/9382163-how-to-add-team-members).\"}},{\"@type\":\"Question\",\"name\":\"What payments do you support?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"We accept Credit Card, A",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "team",
+          "snippet": "scribe.\"}},{\"@type\":\"Question\",\"name\":\"Do you offer Enterprise plans? / How can I contact the sales team?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes we do offer enterprise plans. For inquiries about choosing the right plan or creating a pe",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "team",
+          "snippet": "right plan or creating a personalised package for your organisation, please reach out to our [sales team](https://invideo.io/enterprise).\"}}]}",
+          "sourcePath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "sourceUrl": "https://invideo.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": ",\"currency\":\"usd\",\"gated_features\":[],\"plan_id\":\"team_premium_yearly_usd\",\"symbol\":\"$\"}}},\"plans\":{\"enterprise\":{\"action\":{\"text\":\"Book a demo\",\"type\":\"link\",\"url\":\"https://invideo.io/enterprise/#contact\"},\"active\":true,\"deprecated\":false,\"display_na",
+          "sourcePath": "data/runtime-captures/invideo-io/network_responses.json",
+          "sourceUrl": "https://pro-api.invideo.io/api/plans/v9/detailed",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "$\"}}},\"plans\":{\"enterprise\":{\"action\":{\"text\":\"Book a demo\",\"type\":\"link\",\"url\":\"https://invideo.io/enterprise/#contact\"},\"active\":true,\"deprecated\":false,\"display_name\":\"Enterprise\",\"feature_tagline\":\"\",\"has_base_price\":false,\"min_seats\":10,\"monthly",
+          "sourcePath": "data/runtime-captures/invideo-io/network_responses.json",
+          "sourceUrl": "https://pro-api.invideo.io/api/plans/v9/detailed",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "k\",\"url\":\"https://invideo.io/enterprise/#contact\"},\"active\":true,\"deprecated\":false,\"display_name\":\"Enterprise\",\"feature_tagline\":\"\",\"has_base_price\":false,\"min_seats\":10,\"monthly\":{\"amount\":-1,\"amount_per_seat\":true,\"billing_cycle\":\"monthly\",\"curren",
+          "sourcePath": "data/runtime-captures/invideo-io/network_responses.json",
+          "sourceUrl": "https://pro-api.invideo.io/api/plans/v9/detailed",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "SSO",
+          "snippet": "PR\",\"id\":\"soc2_gdpr\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"soc2_gdpr\"},{\"description\":\"SSO & SCIM\",\"id\":\"sso\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"sso\"},{\"description\":\"Custom tailored solutions\",\"id\":\"custom_solutio",
+          "sourcePath": "data/runtime-captures/invideo-io/network_responses.json",
+          "sourceUrl": "https://pro-api.invideo.io/api/plans/v9/detailed",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "sso",
+          "snippet": "r\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"soc2_gdpr\"},{\"description\":\"SSO & SCIM\",\"id\":\"sso\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"sso\"},{\"description\":\"Custom tailored solutions\",\"id\":\"custom_solutions\",\"tags\":[\"publi",
+          "sourcePath": "data/runtime-captures/invideo-io/network_responses.json",
+          "sourceUrl": "https://pro-api.invideo.io/api/plans/v9/detailed",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "sso",
+          "snippet": "c2_gdpr\"},{\"description\":\"SSO & SCIM\",\"id\":\"sso\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"sso\"},{\"description\":\"Custom tailored solutions\",\"id\":\"custom_solutions\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"custom_solutions\"},",
+          "sourcePath": "data/runtime-captures/invideo-io/network_responses.json",
+          "sourceUrl": "https://pro-api.invideo.io/api/plans/v9/detailed",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Onboarding",
+          "snippet": ":\"spend_control\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"spend_control\"},{\"description\":\"Onboarding, training & technical support\",\"id\":\"onboarding\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"onboarding\"},{\"description\":\"Dedicated",
+          "sourcePath": "data/runtime-captures/invideo-io/network_responses.json",
+          "sourceUrl": "https://pro-api.invideo.io/api/plans/v9/detailed",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "onboarding",
+          "snippet": "ature\":true,\"type\":\"spend_control\"},{\"description\":\"Onboarding, training & technical support\",\"id\":\"onboarding\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"onboarding\"},{\"description\":\"Dedicated success manager\",\"id\":\"success_manager\",\"tags\":[",
+          "sourcePath": "data/runtime-captures/invideo-io/network_responses.json",
+          "sourceUrl": "https://pro-api.invideo.io/api/plans/v9/detailed",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "onboarding",
+          "snippet": "training & technical support\",\"id\":\"onboarding\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"onboarding\"},{\"description\":\"Dedicated success manager\",\"id\":\"success_manager\",\"tags\":[\"public\",\"app\"],\"top_feature\":true,\"type\":\"success_manager\"},{\"",
+          "sourcePath": "data/runtime-captures/invideo-io/network_responses.json",
+          "sourceUrl": "https://pro-api.invideo.io/api/plans/v9/detailed",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        }
+      ]
+    },
+    "logoSources": [
+      {
+        "assetPath": null,
+        "assetUrl": "https://web-assets.invideo.io/favicons/prod/black_favicon.ico"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://web-assets.invideo.io/favicons/prod/white_favicon.ico"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://invideo.io/favicon.ico"
+      }
+    ]
+  },
+  "missingFields": [
+    "policy.commercialUse",
+    "policy.usageRights"
+  ],
+  "nextFetchTargets": [
+    {
+      "url": "https://help.invideo.io/",
+      "discoveredFromPath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://invideo.io/pricing"
+    },
+    {
+      "url": "https://invideo.io/privacy-policy",
+      "discoveredFromPath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://invideo.io/pricing"
+    },
+    {
+      "url": "https://invideo.io/terms-and-conditions",
+      "discoveredFromPath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://invideo.io/pricing"
+    }
+  ],
+  "remoteFetches": {
+    "rounds": [
+      {
+        "roundId": "2026-04-08-remote-round-1",
+        "fetchedAt": "2026-04-08T13:38:41.674911+00:00",
+        "pages": [
+          {
+            "title": "Where can I check my current usage? | InVideo Help",
+            "url": "https://help.invideo.io/en/articles/9382129-where-can-i-check-my-current-usage"
+          },
+          {
+            "title": "What does export visibility mean? | InVideo Help",
+            "url": "https://help.invideo.io/en/articles/9382156-what-does-export-visibility-mean"
+          },
+          {
+            "title": "Terms and Conditions - InVideo",
+            "url": "https://invideo.io/terms-and-conditions/"
+          },
+          {
+            "title": "Privacy Policy - InVideo",
+            "url": "https://invideo.io/privacy-policy/"
+          }
+        ],
+        "fetchedFields": [
+          "mainLimitations",
+          "policy.exportLimits",
+          "securityApiEnterprise.api",
+          "workflowFeatureDocs"
+        ],
+        "unresolvedFields": [
+          "policy.commercialUse",
+          "policy.usageRights"
+        ],
+        "mergedRecordCount": 4
+      }
+    ],
+    "latestRoundId": "2026-04-08-remote-round-1"
+  }
+}

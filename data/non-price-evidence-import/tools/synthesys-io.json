@@ -1,0 +1,193 @@
+{
+  "generatedAt": "2026-04-08T13:18:41.606681+00:00",
+  "slug": "synthesys-io",
+  "toolName": "Synthesys",
+  "officialHost": "synthesys.io",
+  "siteRootDir": "synthesys.io",
+  "runtimeCaptureDir": null,
+  "artifacts": {
+    "counts": {},
+    "availablePageUrls": [
+      "https://synthesys.io/",
+      "https://synthesys.io/features/",
+      "https://synthesys.io/text-to-speech-api/",
+      "https://synthesys.io/ai-terms/",
+      "https://synthesys.io/ai-privacy-policy/",
+      "https://synthesys.io/ai-refund-policy/"
+    ],
+    "keywordPageUrls": [],
+    "paths": []
+  },
+  "fields": {
+    "officialUrl": {
+      "value": "https://synthesys.io/",
+      "sourceUrl": "https://synthesys.io/",
+      "sourcePath": null
+    },
+    "sourceUrls": [
+      "https://synthesys.io/",
+      "https://synthesys.io/features/",
+      "https://synthesys.io/text-to-speech-api/",
+      "https://synthesys.io/ai-terms/",
+      "https://synthesys.io/ai-privacy-policy/",
+      "https://synthesys.io/ai-refund-policy/"
+    ],
+    "policy": {
+      "watermark": [],
+      "commercialUse": [
+        {
+          "valueCandidate": "Synthesys markets AI UGC creation without licensing restrictions.",
+          "snippet": "The homepage says Synthesys can generate lifelike AI UGC-style videos without licensing restrictions.",
+          "sourcePath": null,
+          "sourceUrl": "https://synthesys.io/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Synthesys.io"
+        }
+      ],
+      "usageRights": [
+        {
+          "valueCandidate": "Synthesys privacy policy says clients retain full ownership of their data and client data is not used to train AI models.",
+          "snippet": "The privacy policy says client data is not used to train or retrain models and that clients retain full ownership of their data.",
+          "sourcePath": null,
+          "sourceUrl": "https://synthesys.io/ai-privacy-policy/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Privacy Policy | Synthesys.io"
+        }
+      ],
+      "refundCancellation": [
+        {
+          "valueCandidate": "Synthesys refunds are limited to requests within 72 hours and below 5 minutes of usage.",
+          "snippet": "Synthesys states that refund requests must be made within 72 hours and are only eligible when plan usage stays below 5 minutes of video or voice usage.",
+          "sourcePath": null,
+          "sourceUrl": "https://synthesys.io/ai-refund-policy/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Refund Policy | Synthesys.io"
+        },
+        {
+          "valueCandidate": "Synthesys cancellations are handled from the My Plan section and access continues until the end of the billing cycle.",
+          "snippet": "The refund and cancellation policy explains that users cancel from My Plan and continue to have service access until the current cycle ends.",
+          "sourcePath": null,
+          "sourceUrl": "https://synthesys.io/ai-refund-policy/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Refund Policy | Synthesys.io"
+        }
+      ],
+      "exportLimits": []
+    },
+    "mainLimitations": [],
+    "workflowFeatureDocs": [
+      {
+        "valueCandidate": "Synthesys features include voice cloning, AI talking avatars, AI talking photos, instant avatars, multilingual translation, and idea-to-video.",
+        "snippet": "The features page lists voice cloning, talking avatars, talking photos, instant avatars, multilingual translation, and idea-to-video among the core capabilities.",
+        "sourcePath": null,
+        "sourceUrl": "https://synthesys.io/features/",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "Our Features | Synthesys.io"
+      }
+    ],
+    "securityApiEnterprise": {
+      "security": [
+        {
+          "valueCandidate": "Synthesys privacy policy states that client data is not used for AI model training.",
+          "snippet": "The privacy policy explicitly states no client data is used to train, retrain, or enhance AI models.",
+          "sourcePath": null,
+          "sourceUrl": "https://synthesys.io/ai-privacy-policy/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Privacy Policy | Synthesys.io"
+        }
+      ],
+      "api": [
+        {
+          "valueCandidate": "Synthesys exposes a text-to-speech API with API key access, 140+ languages, 300+ voices, and SSML support.",
+          "snippet": "The TTS API page says users obtain an API key, can automate voice generation in 140+ languages with 300+ voices, and have SSML support.",
+          "sourcePath": null,
+          "sourceUrl": "https://synthesys.io/text-to-speech-api/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Text-to-speech API: Automate your voiceovers | Synthesys.io"
+        }
+      ],
+      "enterprise": [
+        {
+          "valueCandidate": "Synthesys API onboarding is handled through the sales team for custom setup.",
+          "snippet": "The API page recommends speaking with the sales team to get the right API setup and onboarding path.",
+          "sourcePath": null,
+          "sourceUrl": "https://synthesys.io/text-to-speech-api/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Text-to-speech API: Automate your voiceovers | Synthesys.io"
+        }
+      ]
+    },
+    "logoSources": [
+      {
+        "assetPath": null,
+        "assetUrl": "https://synthesys.io/",
+        "note": "Official homepage logo source candidate"
+      }
+    ]
+  },
+  "missingFields": [
+    "policy.watermark",
+    "policy.exportLimits",
+    "mainLimitations"
+  ],
+  "nextFetchTargets": [],
+  "remoteFetches": {
+    "rounds": [
+      {
+        "roundId": "2026-04-08-remote-round-1",
+        "fetchedAt": "2026-04-08T13:38:41.674711+00:00",
+        "pages": [
+          {
+            "title": "Synthesys.io",
+            "url": "https://synthesys.io/"
+          },
+          {
+            "title": "Our Features | Synthesys.io",
+            "url": "https://synthesys.io/features/"
+          },
+          {
+            "title": "Text-to-speech API: Automate your voiceovers | Synthesys.io",
+            "url": "https://synthesys.io/text-to-speech-api/"
+          },
+          {
+            "title": "Terms and Conditions | Synthesys.io",
+            "url": "https://synthesys.io/ai-terms/"
+          },
+          {
+            "title": "Privacy Policy | Synthesys.io",
+            "url": "https://synthesys.io/ai-privacy-policy/"
+          },
+          {
+            "title": "Refund Policy | Synthesys.io",
+            "url": "https://synthesys.io/ai-refund-policy/"
+          }
+        ],
+        "fetchedFields": [
+          "logoSources",
+          "policy.commercialUse",
+          "policy.refundCancellation",
+          "policy.usageRights",
+          "securityApiEnterprise.api",
+          "securityApiEnterprise.enterprise",
+          "securityApiEnterprise.security",
+          "workflowFeatureDocs"
+        ],
+        "unresolvedFields": [
+          "policy.watermark",
+          "policy.exportLimits",
+          "mainLimitations"
+        ],
+        "mergedRecordCount": 8
+      }
+    ],
+    "latestRoundId": "2026-04-08-remote-round-1"
+  }
+}

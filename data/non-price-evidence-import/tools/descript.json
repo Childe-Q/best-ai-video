@@ -1,0 +1,1288 @@
+{
+  "generatedAt": "2026-04-08T13:18:31.699466+00:00",
+  "slug": "descript",
+  "toolName": "Descript",
+  "officialHost": "www.descript.com",
+  "siteRootDir": "www.descript.com",
+  "runtimeCaptureDir": "data/runtime-captures/descript",
+  "artifacts": {
+    "counts": {
+      "htmlCount": 5,
+      "jsonCount": 1,
+      "mdCount": 1,
+      "official_page_htmlCount": 1,
+      "referenced_assetCount": 2,
+      "runtime_capture_htmlCount": 2,
+      "runtime_capture_jsonCount": 1,
+      "runtime_capture_reportCount": 1
+    },
+    "availablePageUrls": [
+      "https://www.descript.com/pricing",
+      "https://get.descript.com/pr/js",
+      "https://help.descript.com/hc/en-us/articles/10255865751181-Enterprise-plan",
+      "https://www.descript.com/security",
+      "https://help.descript.com/hc/en-us/articles/10255866490125-Account-data-and-privacy"
+    ],
+    "keywordPageUrls": [],
+    "paths": [
+      "www.descript.com/www.descript.com/pricing.html",
+      "data/runtime-captures/descript/report.md",
+      "data/runtime-captures/descript/rendered_dom_initial.html",
+      "data/runtime-captures/descript/network_responses.json",
+      "data/runtime-captures/descript/rendered_dom.html",
+      "www.descript.com/www.descript.com/pricing.html",
+      "www.descript.com/get.descript.com/pr/js.html"
+    ]
+  },
+  "fields": {
+    "officialUrl": {
+      "value": "https://www.descript.com/",
+      "sourceUrl": "https://www.descript.com/",
+      "sourcePath": "www.descript.com/www.descript.com/pricing.html"
+    },
+    "sourceUrls": [
+      "https://www.descript.com/pricing",
+      "https://get.descript.com/pr/js",
+      "https://help.descript.com/hc/en-us/articles/10255865751181-Enterprise-plan",
+      "https://www.descript.com/security",
+      "https://help.descript.com/hc/en-us/articles/10255866490125-Account-data-and-privacy"
+    ],
+    "policy": {
+      "watermark": [
+        {
+          "valueCandidate": "Elevate your projects, watermark-free",
+          "snippet": "Elevate your projects, watermark-free 10 media hours / month",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export 1080p, watermark-free",
+          "snippet": "Export 1080p, watermark-free Access to Underlord, our AI video co-editor",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export 4k, watermark-free",
+          "snippet": "Export 4k, watermark-free Full access to Underlord, our AI video co-editor and 20+ more AI tools",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark-free video export",
+          "snippet": "Watermark-free video export Video export (local) resolution",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Elevate your projects, watermark-free",
+          "snippet": "Elevate your projects, watermark-free 10 media hours / month",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export 1080p, watermark-free",
+          "snippet": "Export 1080p, watermark-free Access to Underlord, our AI video co-editor",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export 4k, watermark-free",
+          "snippet": "Export 4k, watermark-free Full access to Underlord, our AI video co-editor and 20+ more AI tools",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark-free video export",
+          "snippet": "Watermark-free video export Video export (local) resolution",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Elevate your projects, watermark-free",
+          "snippet": "Elevate your projects, watermark-free 10 media hours / month",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export 1080p, watermark-free",
+          "snippet": "Export 1080p, watermark-free Access to Underlord, our AI video co-editor",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export 4k, watermark-free",
+          "snippet": "Export 4k, watermark-free Full access to Underlord, our AI video co-editor and 20+ more AI tools",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark-free video export",
+          "snippet": "Watermark-free video export Video export (local) resolution",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "commercialUse": [],
+      "usageRights": [
+        {
+          "valueCandidate": "Unlimited access to royalty-free stock media library",
+          "snippet": "Unlimited access to royalty-free stock media library Access to top ups for more media hours and AI credits",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Flexible licensing model",
+          "snippet": "Flexible licensing model Flexible billing",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Access to built-in libraries of royalty-free videos, images, GIFs, music, and sound effects for use in your projects. Limitation is on the number of results you can use per search.",
+          "snippet": "Access to built-in libraries of royalty-free videos, images, GIFs, music, and sound effects for use in your projects. Limitation is on the number of results you can use per search.",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited access to royalty-free stock media library",
+          "snippet": "Unlimited access to royalty-free stock media library Access to top ups for more media hours and AI credits",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Flexible licensing model",
+          "snippet": "Flexible licensing model Flexible billing",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Access to built-in libraries of royalty-free videos, images, GIFs, music, and sound effects for use in your projects. Limitation is on the number of results you can use per search.",
+          "snippet": "Access to built-in libraries of royalty-free videos, images, GIFs, music, and sound effects for use in your projects. Limitation is on the number of results you can use per search.",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited access to royalty-free stock media library",
+          "snippet": "Unlimited access to royalty-free stock media library Access to top ups for more media hours and AI credits",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Flexible licensing model",
+          "snippet": "Flexible licensing model Flexible billing",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Access to built-in libraries of royalty-free videos, images, GIFs, music, and sound effects for use in your projects. Limitation is on the number of results you can use per search.",
+          "snippet": "Access to built-in libraries of royalty-free videos, images, GIFs, music, and sound effects for use in your projects. Limitation is on the number of results you can use per search.",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "refundCancellation": [
+        {
+          "valueCandidate": "How do I cancel my subscription?",
+          "snippet": "How do I cancel my subscription? You can easily cancel your subscription from your",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "You can easily cancel your subscription from your",
+          "snippet": "You can easily cancel your subscription from your Descript subscription page",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "How do I cancel my subscription?",
+          "snippet": "How do I cancel my subscription? You can easily cancel your subscription from your",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "You can easily cancel your subscription from your",
+          "snippet": "You can easily cancel your subscription from your Descript subscription page",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "SOC 2 Type II compliant. Read more about Descript Security.\"}},{\"@type\":\"Question\",\"name\":\"How do I cancel my subscription?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"You can easily cancel your subscription from your Descript subscription page.",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "\"name\":\"How do I cancel my subscription?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"You can easily cancel your subscription from your Descript subscription page. You can also delete your account and permanently wipe your data from our servers.\"}",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "How do I cancel my subscription?",
+          "snippet": "How do I cancel my subscription? You can easily cancel your subscription from your",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "You can easily cancel your subscription from your",
+          "snippet": "You can easily cancel your subscription from your Descript subscription page",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "SOC 2 Type II compliant. Read more about Descript Security.\"}},{\"@type\":\"Question\",\"name\":\"How do I cancel my subscription?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"You can easily cancel your subscription from your Descript subscription page.",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "\"name\":\"How do I cancel my subscription?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"You can easily cancel your subscription from your Descript subscription page. You can also delete your account and permanently wipe your data from our servers.\"}",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "exportLimits": [
+        {
+          "valueCandidate": "Export 1080p, watermark-free",
+          "snippet": "Export 1080p, watermark-free Access to Underlord, our AI video co-editor",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export 4k, watermark-free",
+          "snippet": "Export 4k, watermark-free Full access to Underlord, our AI video co-editor and 20+ more AI tools",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Automatically transcribe multiple synchronized recordings with speakers on separate tracks and get precise speaker labeling and transcription accuracy. You can also export sessions while retaining separate tracks for editing workflows.",
+          "snippet": "Automatically transcribe multiple synchronized recordings with speakers on separate tracks and get precise speaker labeling and transcription accuracy. You can also export sessions while retaining separate tracks for editing workflows.",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export & publish",
+          "snippet": "Export & publish Watermark-free video export",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark-free video export",
+          "snippet": "Watermark-free video export Video export (local) resolution",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Video export (local) resolution",
+          "snippet": "Video export (local) resolution 720p",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Video export (web link) resolution",
+          "snippet": "Video export (web link) resolution Export a standalone web page with a shareable link and an embeddable web player to showcase your video content. Easily customize the access, resolution, transcript, comments, custom branding, and more.",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export a standalone web page with a shareable link and an embeddable web player to showcase your video content. Easily customize the access, resolution, transcript, comments, custom branding, and more.",
+          "snippet": "Export a standalone web page with a shareable link and an embeddable web player to showcase your video content. Easily customize the access, resolution, transcript, comments, custom branding, and more.",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Video export (web link) duration",
+          "snippet": "Video export (web link) duration Export a standalone web page with a shareable link and an embeddable web player to showcase your video content. Easily customize the access, resolution, transcript, comments, custom branding, and more.",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Audio export duration",
+          "snippet": "Audio export duration Unlimited",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Batch file export",
+          "snippet": "Batch file export Export audio into discrete chunks divided by line breaks or markers, or every composition in a project in one go.",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export audio into discrete chunks divided by line breaks or markers, or every composition in a project in one go.",
+          "snippet": "Export audio into discrete chunks divided by line breaks or markers, or every composition in a project in one go. Timeline export",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Timeline export",
+          "snippet": "Timeline export Timeline export",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Timeline export",
+          "snippet": "Timeline export Samplitude & Reaper",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "up to 4k",
+          "snippet": "up to 4k up to 4k",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "up to 4k",
+          "snippet": "up to 4k up to 5k",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export 1080p, watermark-free",
+          "snippet": "Export 1080p, watermark-free Access to Underlord, our AI video co-editor",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export 4k, watermark-free",
+          "snippet": "Export 4k, watermark-free Full access to Underlord, our AI video co-editor and 20+ more AI tools",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Automatically transcribe multiple synchronized recordings with speakers on separate tracks and get precise speaker labeling and transcription accuracy. You can also export sessions while retaining separate tracks for editing workflows.",
+          "snippet": "Automatically transcribe multiple synchronized recordings with speakers on separate tracks and get precise speaker labeling and transcription accuracy. You can also export sessions while retaining separate tracks for editing workflows.",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export & publish",
+          "snippet": "Export & publish Watermark-free video export",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ]
+    },
+    "mainLimitations": [
+      {
+        "valueCandidate": "Save up to 35% with annual billing",
+        "snippet": "Save up to 35% with annual billing Saving up to 35% over monthly plan",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Saving up to 35% over monthly plan",
+        "snippet": "Saving up to 35% over monthly plan Hobbyist",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Elevate your projects, watermark-free",
+        "snippet": "Elevate your projects, watermark-free 10 media hours / month",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "400 AI credits / month",
+        "snippet": "400 AI credits / month Export 1080p, watermark-free",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "800 AI credits / month",
+        "snippet": "800 AI credits / month +500 bonus credits",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "+500 bonus credits",
+        "snippet": "+500 bonus credits Export 4k, watermark-free",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Access to top ups for more media hours and AI credits",
+        "snippet": "Access to top ups for more media hours and AI credits Business",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "1500 AI credits / month",
+        "snippet": "1500 AI credits / month +1000 bonus credits",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "+1000 bonus credits",
+        "snippet": "+1000 bonus credits Team-wide access to Brand Studio",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Access to top ups for more media hours and AI credits",
+        "snippet": "Access to top ups for more media hours and AI credits Enterprise",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Custom AI credits",
+        "snippet": "Custom AI credits Custom media minutes",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Custom media minutes",
+        "snippet": "Custom media minutes Custom legal terms",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Media minutes",
+        "snippet": "Media minutes Media minutes (per editor)",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Media minutes (per editor)",
+        "snippet": "Media minutes (per editor) Number of minutes of imported or recorded media processed in Descript included in your plan per editor.",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Number of minutes of imported or recorded media processed in Descript included in your plan per editor.",
+        "snippet": "Number of minutes of imported or recorded media processed in Descript included in your plan per editor. 60 minutes (1 hr) / month",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "60 minutes (1 hr) / month",
+        "snippet": "60 minutes (1 hr) / month 600 minutes (10 hrs) / month",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "600 minutes (10 hrs) / month",
+        "snippet": "600 minutes (10 hrs) / month 1800 minutes (30 hrs) / month",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "1800 minutes (30 hrs) / month",
+        "snippet": "1800 minutes (30 hrs) / month 2400 minutes (40 hrs) / month",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "2400 minutes (40 hrs) / month",
+        "snippet": "2400 minutes (40 hrs) / month Top up media minutes",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Top up media minutes",
+        "snippet": "Top up media minutes Purchase additional media minutes when needed",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      }
+    ],
+    "workflowFeatureDocs": [
+      {
+        "valueCandidate": "Screen recorder",
+        "snippet": "Screen recorder Capture your screen for instant sharing or polished B-roll.",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Easily create a realistic voice clone or pick from our stock AI voices.",
+        "snippet": "Easily create a realistic voice clone or pick from our stock AI voices. Templates",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Templates",
+        "snippet": "Templates Jumpstart your workflow with battle-tested AI templates.",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Jumpstart your workflow with battle-tested AI templates.",
+        "snippet": "Jumpstart your workflow with battle-tested AI templates. AI avatars",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI avatars",
+        "snippet": "AI avatars Pick an avatar from our gallery or upload a photo to create your own.",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Translate and dub video in 30+ languages with proofread",
+        "snippet": "Translate and dub video in 30+ languages with proofread Generate custom avatars from photo upload or text",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Translate captions",
+        "snippet": "Translate captions Available in 61 languages: Afrikaans, Armenian, Assamese, Azerbaijani, Belarusian, Bengali, Bosnian, Bulgarian, Catalan, Chinese, Croatian, Czech, Danish, Dutch, English, Estonian, Filipino, Finnish, French, Galician, Georgian, German, Gr...",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Translate audio (dubbing)",
+        "snippet": "Translate audio (dubbing) Available in 30 languages: Bulgarian, Chinese, Croatian, Czech, Danish, Dutch, English, Filipino, Finnish, French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Malay, Norwegian, Polish, Portuguese, Romani...",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "(captions and dubbing)",
+        "snippet": "(captions and dubbing) Review and edit the translated script vs. the original for accuracy and tone in our editor.",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Review and edit the translated script vs. the original for accuracy and tone in our editor.",
+        "snippet": "Review and edit the translated script vs. the original for accuracy and tone in our editor. Native-sounding AI speakers",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Screen recording",
+        "snippet": "Screen recording Up to 2 screens can be shared and recorded simultaneously.",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "“Do not translate” list",
+        "snippet": "“Do not translate” list Make sure important brand names and terms don’t get translated when you’re talking to a global audience.",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Make sure important brand names and terms don’t get translated when you’re talking to a global audience.",
+        "snippet": "Make sure important brand names and terms don’t get translated when you’re talking to a global audience. Stock library",
+        "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Screen recorder",
+        "snippet": "Screen recorder Capture your screen for instant sharing or polished B-roll.",
+        "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Easily create a realistic voice clone or pick from our stock AI voices.",
+        "snippet": "Easily create a realistic voice clone or pick from our stock AI voices. Templates",
+        "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Templates",
+        "snippet": "Templates Jumpstart your workflow with battle-tested AI templates.",
+        "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Jumpstart your workflow with battle-tested AI templates.",
+        "snippet": "Jumpstart your workflow with battle-tested AI templates. AI avatars",
+        "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI avatars",
+        "snippet": "AI avatars Pick an avatar from our gallery or upload a photo to create your own.",
+        "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Translate and dub video in 30+ languages with proofread",
+        "snippet": "Translate and dub video in 30+ languages with proofread Generate custom avatars from photo upload or text",
+        "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Translate captions",
+        "snippet": "Translate captions Available in 61 languages: Afrikaans, Armenian, Assamese, Azerbaijani, Belarusian, Bengali, Bosnian, Bulgarian, Catalan, Chinese, Croatian, Czech, Danish, Dutch, English, Estonian, Filipino, Finnish, French, Galician, Georgian, German, Gr...",
+        "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+        "sourceUrl": "https://www.descript.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      }
+    ],
+    "securityApiEnterprise": {
+      "security": [
+        {
+          "valueCandidate": "Tailored solutions and enterprise-grade security for large or growing teams",
+          "snippet": "Tailored solutions and enterprise-grade security for large or growing teams Advanced Security and SSO / SCIM",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Advanced Security and SSO / SCIM",
+          "snippet": "Advanced Security and SSO / SCIM Granular brand controls",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Make everyone a collaborator—and make more video. Get enterprise-grade security, personalized support, and extra features like Brand Studio, which keeps brand elements aligned across distributed teams.",
+          "snippet": "Make everyone a collaborator—and make more video. Get enterprise-grade security, personalized support, and extra features like Brand Studio, which keeps brand elements aligned across distributed teams.",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "How does Descript protect my privacy?",
+          "snippet": "How does Descript protect my privacy? Your Project Information is confidential, even from Descript. We are SOC 2 Type II compliant. Read more about",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Your Project Information is confidential, even from Descript. We are SOC 2 Type II compliant. Read more about",
+          "snippet": "Your Project Information is confidential, even from Descript. We are SOC 2 Type II compliant. Read more about Descript Security",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Descript Security",
+          "snippet": "Descript Security .",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Advanced Security and SSO / SCIM",
+          "snippet": "Advanced Security and SSO / SCIM",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Tailored solutions and enterprise-grade security for large or growing teams",
+          "snippet": "Tailored solutions and enterprise-grade security for large or growing teams Advanced Security and SSO / SCIM",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Advanced Security and SSO / SCIM",
+          "snippet": "Advanced Security and SSO / SCIM Granular brand controls",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Make everyone a collaborator—and make more video. Get enterprise-grade security, personalized support, and extra features like Brand Studio, which keeps brand elements aligned across distributed teams.",
+          "snippet": "Make everyone a collaborator—and make more video. Get enterprise-grade security, personalized support, and extra features like Brand Studio, which keeps brand elements aligned across distributed teams.",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "How does Descript protect my privacy?",
+          "snippet": "How does Descript protect my privacy? Your Project Information is confidential, even from Descript. We are SOC 2 Type II compliant. Read more about",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Your Project Information is confidential, even from Descript. We are SOC 2 Type II compliant. Read more about",
+          "snippet": "Your Project Information is confidential, even from Descript. We are SOC 2 Type II compliant. Read more about Descript Security",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Descript Security",
+          "snippet": "Descript Security .",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "Privacy Terms",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Advanced Security and SSO / SCIM",
+          "snippet": "Advanced Security and SSO / SCIM",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security",
+          "snippet": "ation is confidential, even from Descript. We are SOC 2 Type II compliant. Read more about Descript Security.\"}},{\"@type\":\"Question\",\"name\":\"How do I cancel my subscription?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"You can easily cancel your sub",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SOC 2",
+          "snippet": "wer\":{\"@type\":\"Answer\",\"text\":\"Your Project Information is confidential, even from Descript. We are SOC 2 Type II compliant. Read more about Descript Security.\"}},{\"@type\":\"Question\",\"name\":\"How do I cancel my subscription?\",\"acceptedAnswer\":{\"@",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "compliant",
+          "snippet": "\"Answer\",\"text\":\"Your Project Information is confidential, even from Descript. We are SOC 2 Type II compliant. Read more about Descript Security.\"}},{\"@type\":\"Question\",\"name\":\"How do I cancel my subscription?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"te",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "swer\",\"text\":\"Yes, fill out this form\\n\"}},{\"@type\":\"Question\",\"name\":\"How does Descript protect my privacy?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Your Project Information is confidential, even from Descript. We are SOC 2 Type II compliant.",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Tailored solutions and enterprise-grade security for large or growing teams",
+          "snippet": "Tailored solutions and enterprise-grade security for large or growing teams Advanced Security and SSO / SCIM",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Descript is SOC 2 Type II compliant and encrypts stored data with AES-256 and data in transit with TLS 1.2.",
+          "snippet": "Descript's security page states SOC 2 alignment plus AES-256 encryption for stored data and HTTPS / TLS 1.2 for data sent over the internet.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.descript.com/security",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Security & Data Protection | Descript"
+        },
+        {
+          "valueCandidate": "Descript says production AI models use no Descript user data, and enterprise drives have data sharing disabled by default.",
+          "snippet": "The account data and privacy help page says enterprise drives have data sharing disabled by default and current production AI models use no Descript user data.",
+          "sourcePath": null,
+          "sourceUrl": "https://help.descript.com/hc/en-us/articles/10255866490125-Account-data-and-privacy",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Account data and privacy – Descript Help"
+        }
+      ],
+      "api": [
+        {
+          "valueCandidate": "Integrations",
+          "snippet": "Integrations Resources",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Integrations",
+          "snippet": "Integrations Resources",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "enterprise": [
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Collaborate better, work faster, produce more.",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Scale to a team of 3 (billed separately)",
+          "snippet": "Scale to a team of 3 (billed separately) Unlock advanced AI-powered creativity",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Scale to a team of 5 (billed separately)",
+          "snippet": "Scale to a team of 5 (billed separately) Empower collaboration on your team",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Empower collaboration on your team",
+          "snippet": "Empower collaboration on your team 40 media hours / month",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team-wide access to Brand Studio",
+          "snippet": "Team-wide access to Brand Studio Translate and dub video in 30+ languages with proofread",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Custom",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Tailored solutions and enterprise-grade security for large or growing teams",
+          "snippet": "Tailored solutions and enterprise-grade security for large or growing teams Advanced Security and SSO / SCIM",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Advanced Security and SSO / SCIM",
+          "snippet": "Advanced Security and SSO / SCIM Granular brand controls",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "More than 6 million creators & teams use Descript, including:",
+          "snippet": "More than 6 million creators & teams use Descript, including: What’s the difference?",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Set default layout pack for team",
+          "snippet": "Set default layout pack for team Custom drive & page branding",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Live chat support inside the Descript app with our customer support team is available Monday through Friday from 5:00 a.m. to 5:00 p.m. Pacific Time.",
+          "snippet": "Live chat support inside the Descript app with our customer support team is available Monday through Friday from 5:00 a.m. to 5:00 p.m. Pacific Time.",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Get support with guaranteed response times. Our Service Level Agreement (SLA) ensures questions addressed promptly by our dedicated customer support team.",
+          "snippet": "Get support with guaranteed response times. Our Service Level Agreement (SLA) ensures questions addressed promptly by our dedicated customer support team.",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise:",
+          "snippet": "Enterprise: a plan for any team",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "a plan for any team",
+          "snippet": "a plan for any team Make everyone a collaborator—and make more video. Get enterprise-grade security, personalized support, and extra features like Brand Studio, which keeps brand elements aligned across distributed teams.",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Make everyone a collaborator—and make more video. Get enterprise-grade security, personalized support, and extra features like Brand Studio, which keeps brand elements aligned across distributed teams.",
+          "snippet": "Make everyone a collaborator—and make more video. Get enterprise-grade security, personalized support, and extra features like Brand Studio, which keeps brand elements aligned across distributed teams.",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "I’m interested in setting up an Enterprise plan for my business. Where can I learn more?",
+          "snippet": "I’m interested in setting up an Enterprise plan for my business. Where can I learn more? to learn more about our Enterprise plans.",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "to learn more about our Enterprise plans.",
+          "snippet": "to learn more about our Enterprise plans. Do I need to enter a credit card to try Descript?",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise team",
+          "snippet": "Enterprise team to learn more.",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Advanced Security and SSO / SCIM",
+          "snippet": "Advanced Security and SSO / SCIM",
+          "sourcePath": "www.descript.com/www.descript.com/pricing.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Collaborate better, work faster, produce more.",
+          "sourcePath": "data/runtime-captures/descript/rendered_dom_initial.html",
+          "sourceUrl": "https://www.descript.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Descript Enterprise includes SSO, SCIM, centralized administration, customer success, and seat management.",
+          "snippet": "Descript's enterprise help page describes centralized administration, SSO, SCIM, customer success, support, and usage-oriented seat types.",
+          "sourcePath": null,
+          "sourceUrl": "https://help.descript.com/hc/en-us/articles/10255865751181-Enterprise-plan",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Enterprise plan – Descript Help"
+        },
+        {
+          "valueCandidate": "Descript Enterprise SSO uses SAML 2.0 and is limited to Enterprise customers.",
+          "snippet": "The enterprise help page states that SSO is available only to Enterprise customers and supports SAML 2.0 IdPs.",
+          "sourcePath": null,
+          "sourceUrl": "https://help.descript.com/hc/en-us/articles/10255865751181-Enterprise-plan",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Enterprise plan – Descript Help"
+        }
+      ]
+    },
+    "logoSources": [
+      {
+        "assetPath": "www.descript.com/descript-website.vercel.app/images/descript-nav-logo-light.svg",
+        "assetUrl": "https://descript-website.vercel.app/images/descript-nav-logo-light.svg"
+      },
+      {
+        "assetPath": "www.descript.com/descript-website.vercel.app/images/nav-icons/screen-recorder-icon-white.svg",
+        "assetUrl": "https://descript-website.vercel.app/images/nav-icons/screen-recorder-icon-white.svg"
+      },
+      {
+        "assetPath": "www.descript.com/descript-website.vercel.app/images/nav-icons/avatar-icon-white.svg",
+        "assetUrl": "https://descript-website.vercel.app/images/nav-icons/avatar-icon-white.svg"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://static-cdn.descript.com/web/icons/favicon-96x96.png"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://static-cdn.descript.com/web/icons/favicon.svg"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://static-cdn.descript.com/web/icons/favicon.ico"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://static-cdn.descript.com/web/icons/apple-touch-icon.png"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://www.descript.com/brand-studio"
+      },
+      {
+        "assetPath": "www.descript.com/descript-website.vercel.app/images/chatgpt-logo-white.svg",
+        "assetUrl": "https://descript-website.vercel.app/images/chatgpt-logo-white.svg"
+      }
+    ]
+  },
+  "missingFields": [
+    "policy.commercialUse"
+  ],
+  "nextFetchTargets": [
+    {
+      "url": "https://www.descript.com/enterprise",
+      "discoveredFromPath": "www.descript.com/www.descript.com/pricing.html",
+      "discoveredFromUrl": "https://www.descript.com/pricing"
+    },
+    {
+      "url": "https://www.descript.com/teams/customer-support",
+      "discoveredFromPath": "www.descript.com/www.descript.com/pricing.html",
+      "discoveredFromUrl": "https://www.descript.com/pricing"
+    },
+    {
+      "url": "https://help.descript.com/",
+      "discoveredFromPath": "www.descript.com/www.descript.com/pricing.html",
+      "discoveredFromUrl": "https://www.descript.com/pricing"
+    },
+    {
+      "url": "https://www.descript.com/security",
+      "discoveredFromPath": "www.descript.com/www.descript.com/pricing.html",
+      "discoveredFromUrl": "https://www.descript.com/pricing"
+    },
+    {
+      "url": "https://feedback.descript.com/features",
+      "discoveredFromPath": "www.descript.com/www.descript.com/pricing.html",
+      "discoveredFromUrl": "https://www.descript.com/pricing"
+    },
+    {
+      "url": "https://help.descript.com/hc/en-us",
+      "discoveredFromPath": "www.descript.com/www.descript.com/pricing.html",
+      "discoveredFromUrl": "https://www.descript.com/pricing"
+    },
+    {
+      "url": "https://www.descript.com/privacy",
+      "discoveredFromPath": "www.descript.com/www.descript.com/pricing.html",
+      "discoveredFromUrl": "https://www.descript.com/pricing"
+    },
+    {
+      "url": "https://www.descript.com/terms",
+      "discoveredFromPath": "www.descript.com/www.descript.com/pricing.html",
+      "discoveredFromUrl": "https://www.descript.com/pricing"
+    }
+  ],
+  "remoteFetches": {
+    "rounds": [
+      {
+        "roundId": "2026-04-08-remote-round-1",
+        "fetchedAt": "2026-04-08T13:38:41.674799+00:00",
+        "pages": [
+          {
+            "title": "Enterprise plan – Descript Help",
+            "url": "https://help.descript.com/hc/en-us/articles/10255865751181-Enterprise-plan"
+          },
+          {
+            "title": "Security & Data Protection | Descript",
+            "url": "https://www.descript.com/security"
+          },
+          {
+            "title": "Account data and privacy – Descript Help",
+            "url": "https://help.descript.com/hc/en-us/articles/10255866490125-Account-data-and-privacy"
+          }
+        ],
+        "fetchedFields": [
+          "securityApiEnterprise.enterprise",
+          "securityApiEnterprise.security"
+        ],
+        "unresolvedFields": [
+          "policy.commercialUse"
+        ],
+        "mergedRecordCount": 4
+      }
+    ],
+    "latestRoundId": "2026-04-08-remote-round-1"
+  }
+}

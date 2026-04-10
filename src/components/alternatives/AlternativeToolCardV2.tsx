@@ -4,7 +4,16 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import CTAButton from '@/components/CTAButton';
-import { ExclamationTriangleIcon } from '@heroicons/react/24/solid';
+import {
+  ArrowPathIcon,
+  CheckCircleIcon,
+  ChevronDownIcon,
+  ChevronUpIcon,
+  CurrencyDollarIcon,
+  ExclamationTriangleIcon,
+  NoSymbolIcon,
+  VideoCameraIcon,
+} from '@heroicons/react/24/solid';
 import { AlternativeTool, AlternativeToolWithEvidence } from './types';
 
 interface AlternativeToolCardV2Props {
@@ -13,6 +22,8 @@ interface AlternativeToolCardV2Props {
   isExpanded: boolean;
   onToggle: () => void;
   currentSlug?: string;
+  detailMode?: 'compact' | 'full';
+  onShowEvidence?: (links: string[], toolName: string) => void;
 }
 
 export default function AlternativeToolCardV2({
@@ -20,7 +31,9 @@ export default function AlternativeToolCardV2({
   cardId,
   isExpanded,
   onToggle,
-  currentSlug
+  currentSlug,
+  detailMode = 'compact',
+  onShowEvidence,
 }: AlternativeToolCardV2Props) {
   const getSafeText = (value?: string) => {
     if (!value) return undefined;
@@ -33,16 +46,29 @@ export default function AlternativeToolCardV2({
     ...tool,
     affiliateUrl: (tool as any).affiliateUrl || tool.affiliateLink,
     bestFor: (tool.bestFor || []).filter((t) => getSafeText(t)),
+    whySwitch: ((tool.whySwitch || []) as string[]).filter((t) => getSafeText(t)),
+    evidenceLinks: ((tool.evidenceLinks || []) as string[]).filter(Boolean),
     limitations: getSafeText(tool.tradeOff || ('limitations' in tool ? (tool as any).limitations : undefined) as string | undefined)
   } : {
     ...tool,
     affiliateUrl: (tool as any).affiliateUrl || tool.affiliateLink,
     bestFor: (tool.bestFor || []).filter((t) => getSafeText(t)),
+    whySwitch: (((tool as any).whySwitch || []) as string[]).filter((t) => getSafeText(t)),
+    evidenceLinks: ((((tool as any).evidenceLinks) || []) as string[]).filter(Boolean),
     limitations: getSafeText(('limitations' in tool ? (tool as any).limitations : undefined) as string | undefined)
   };
 
   const bestForLine = getSafeText(normalizedTool.bestFor?.[0]);
+  const whySwitchPrimary = getSafeText(normalizedTool.whySwitch?.[0]);
+  const whySwitchSecondary = getSafeText(normalizedTool.whySwitch?.[1]);
   const tradeOffLine = getSafeText(normalizedTool.limitations);
+  const hasPricingSignals = Boolean(
+    normalizedTool.pricingSignals.freePlan ||
+      normalizedTool.pricingSignals.watermark ||
+      normalizedTool.pricingSignals.exportQuality ||
+      normalizedTool.pricingSignals.refundCancel
+  );
+  const hasDetails = detailMode === 'full' && Boolean(tradeOffLine || whySwitchSecondary || hasPricingSignals || normalizedTool.evidenceLinks?.length);
 
   const handleCardClick = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
@@ -94,8 +120,21 @@ export default function AlternativeToolCardV2({
         </div>
       </div>
 
-      {/* Best for (single line) */}
-      {bestForLine && (
+      {/* Best for */}
+      {detailMode === 'full' && normalizedTool.bestFor.length > 0 ? (
+        <div className="mb-4 flex flex-wrap gap-2">
+          {normalizedTool.bestFor.slice(0, 3).map((tag) => (
+            <span
+              key={`${cardId}-${tag}`}
+              className="rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs font-semibold text-gray-700"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      ) : null}
+
+      {detailMode !== 'full' && bestForLine && (
         <div className="mb-3">
           <p className="text-sm text-gray-800 leading-relaxed">
             <span className="font-semibold text-gray-900">Best for:</span> {bestForLine}
@@ -103,7 +142,21 @@ export default function AlternativeToolCardV2({
         </div>
       )}
 
-      {/* Trade-off (single line) */}
+      {detailMode === 'full' && whySwitchPrimary ? (
+        <div className="mb-3 rounded-r border-l-4 border-yellow-400 bg-yellow-50/60 py-2 pl-4">
+          <p className="text-sm leading-relaxed text-gray-800">
+            <span className="font-semibold text-gray-900">Pick this if:</span> {whySwitchPrimary}
+          </p>
+        </div>
+      ) : null}
+
+      {detailMode === 'full' && whySwitchSecondary ? (
+        <div className="mb-4 flex items-start gap-2">
+          <CheckCircleIcon className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />
+          <p className="text-sm leading-relaxed text-gray-700">{whySwitchSecondary}</p>
+        </div>
+      ) : null}
+
       {tradeOffLine && (
         <div className="mb-4 flex-shrink-0">
           <div className="flex items-start gap-2">
@@ -133,7 +186,74 @@ export default function AlternativeToolCardV2({
             Visit website
           </Link>
         )}
+
+        {hasDetails ? (
+          <button
+            onClick={onToggle}
+            className="mt-2 flex w-full items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 transition-all hover:border-gray-400 hover:bg-gray-50"
+          >
+            {isExpanded ? (
+              <>
+                <span>Hide details</span>
+                <ChevronUpIcon className="h-4 w-4" />
+              </>
+            ) : (
+              <>
+                <span>Show details</span>
+                <ChevronDownIcon className="h-4 w-4" />
+              </>
+            )}
+          </button>
+        ) : null}
       </div>
+
+      {hasDetails && isExpanded ? (
+        <div className="mt-4 space-y-4 border-t border-dashed border-gray-200 pt-4" onClick={(e) => e.stopPropagation()}>
+          {hasPricingSignals ? (
+            <div>
+              <h4 className="mb-2 text-sm font-semibold text-gray-900">Pricing details</h4>
+              <div className="space-y-2 rounded-lg border border-gray-200 bg-gray-50 p-3">
+                {normalizedTool.pricingSignals.freePlan ? (
+                  <div className="flex items-start gap-2 text-sm leading-relaxed text-gray-700">
+                    <CurrencyDollarIcon className="mt-0.5 h-4 w-4 shrink-0" />
+                    <span>{normalizedTool.pricingSignals.freePlan}</span>
+                  </div>
+                ) : null}
+                {normalizedTool.pricingSignals.watermark ? (
+                  <div className="flex items-start gap-2 text-sm leading-relaxed text-gray-700">
+                    <NoSymbolIcon className="mt-0.5 h-4 w-4 shrink-0" />
+                    <span>{normalizedTool.pricingSignals.watermark}</span>
+                  </div>
+                ) : null}
+                {normalizedTool.pricingSignals.exportQuality ? (
+                  <div className="flex items-start gap-2 text-sm leading-relaxed text-gray-700">
+                    <VideoCameraIcon className="mt-0.5 h-4 w-4 shrink-0" />
+                    <span>{normalizedTool.pricingSignals.exportQuality}</span>
+                  </div>
+                ) : null}
+                {normalizedTool.pricingSignals.refundCancel ? (
+                  <div className="flex items-start gap-2 text-sm leading-relaxed text-gray-700">
+                    <ArrowPathIcon className="mt-0.5 h-4 w-4 shrink-0" />
+                    <span>{normalizedTool.pricingSignals.refundCancel}</span>
+                  </div>
+                ) : null}
+              </div>
+            </div>
+          ) : null}
+
+          {normalizedTool.evidenceLinks?.length && onShowEvidence ? (
+            <div>
+              <h4 className="mb-2 text-sm font-semibold text-gray-900">Evidence</h4>
+              <button
+                onClick={() => onShowEvidence(normalizedTool.evidenceLinks!, normalizedTool.name)}
+                className="flex w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 transition-all hover:border-gray-400 hover:bg-gray-50"
+              >
+                View evidence links ({normalizedTool.evidenceLinks.length})
+              </button>
+            </div>
+          ) : null}
+        </div>
+      ) : null}
     </div>
   );
 }

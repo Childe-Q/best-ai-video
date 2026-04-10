@@ -1,0 +1,1125 @@
+{
+  "generatedAt": "2026-04-08T13:18:30.843672+00:00",
+  "slug": "aistudios-com",
+  "toolName": "AI Studios",
+  "officialHost": "www.aistudios.com",
+  "siteRootDir": "www.aistudios.com",
+  "runtimeCaptureDir": null,
+  "artifacts": {
+    "counts": {
+      "htmlCount": 2,
+      "official_page_htmlCount": 1,
+      "referenced_assetCount": 1
+    },
+    "availablePageUrls": [
+      "https://www.aistudios.com/pricing",
+      "https://www.aistudios.com/features/ai-dubbing",
+      "https://www.aistudios.com/features/text-to-video",
+      "https://www.aistudios.com/features/auto-captions"
+    ],
+    "keywordPageUrls": [],
+    "paths": [
+      "www.aistudios.com/www.aistudios.com/pricing.html",
+      "www.aistudios.com/www.aistudios.com/pricing.html"
+    ]
+  },
+  "fields": {
+    "officialUrl": {
+      "value": "https://www.aistudios.com/",
+      "sourceUrl": "https://www.aistudios.com/",
+      "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html"
+    },
+    "sourceUrls": [
+      "https://www.aistudios.com/pricing",
+      "https://www.aistudios.com/features/ai-dubbing",
+      "https://www.aistudios.com/features/text-to-video",
+      "https://www.aistudios.com/features/auto-captions"
+    ],
+    "policy": {
+      "watermark": [],
+      "commercialUse": [
+        {
+          "valueCandidate": "Commercial Use Rights",
+          "snippet": "Commercial Use Rights Use AI-generated avatars and voices for commercial projects with no attribution required.",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Use AI-generated avatars and voices for commercial projects with no attribution required.",
+          "snippet": "Use AI-generated avatars and voices for commercial projects with no attribution required. AI Dubbing",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "AI Studios states commercial use rights are included for AI-generated avatars and voices without attribution requirements.",
+          "snippet": "The current pricing page includes a commercial-use-rights note covering AI-generated avatars and voices with no attribution requirement.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "AI Studios Pricing"
+        }
+      ],
+      "usageRights": [
+        {
+          "valueCandidate": "Access royalty-free images, videos, and music for worry-free, copyright-compliant use.",
+          "snippet": "Access royalty-free images, videos, and music for worry-free, copyright-compliant use. Custom Font Import",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Copyright © 2026 DeepBrain AI.",
+          "snippet": "Copyright © 2026 DeepBrain AI. aistudios.com",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        }
+      ],
+      "refundCancellation": [
+        {
+          "valueCandidate": "You can change your plan at any time. Upgrades take effect immediately, allowing you to access the new plan’s features and limits right away. Downgrades and cancellations take effect at the end of your current billing cycle. Even after canceling, you will retain access to your plan until the billing period ends.",
+          "snippet": "You can change your plan at any time. Upgrades take effect immediately, allowing you to access the new plan’s features and limits right away. Downgrades and cancellations take effect at the end of your current billing cycle. Even after canceling, you will r...",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "canceling",
+          "snippet": "away. Downgrades and cancellations take effect at the end of your current billing cycle. Even after canceling, you will retain access to your plan until the billing period ends.\" } }, { \"@type\": \"Question\", \"name\": \"What’s included in the Enterprise",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        }
+      ],
+      "exportLimits": [
+        {
+          "valueCandidate": "Export videos in 720p",
+          "snippet": "Export videos in 720p 1 Priority video per month",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export videos in 1080p",
+          "snippet": "Export videos in 1080p 50 priority videos per month",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SRT Upload & Download",
+          "snippet": "SRT Upload & Download Extend with Add-ons",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export videos in 4K",
+          "snippet": "Export videos in 4K 150 priority videos per month",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export videos in 4K",
+          "snippet": "Export videos in 4K Always priority processing",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SCORM Export",
+          "snippet": "SCORM Export Interactive Quizzes",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Generate captions in one-click. SRT file available for download",
+          "snippet": "Generate captions in one-click. SRT file available for download AI Avatars & Voices",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SRT Upload & Download",
+          "snippet": "SRT Upload & Download Upload and download SRT subtitle files for easier editing and localization.",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Upload and download SRT subtitle files for easier editing and localization.",
+          "snippet": "Upload and download SRT subtitle files for easier editing and localization. Proofreading Editor",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download YouTube videos to use as source media in your projects.",
+          "snippet": "Download YouTube videos to use as source media in your projects. Limited",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited Video Downloads",
+          "snippet": "Unlimited Video Downloads Download videos without limits across your projects.",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download videos without limits across your projects.",
+          "snippet": "Download videos without limits across your projects. Export Quality",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export Quality",
+          "snippet": "Export Quality Export videos in the maximum resolution supported by your plan.",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export videos in the maximum resolution supported by your plan.",
+          "snippet": "Export videos in the maximum resolution supported by your plan. 720p",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Up to 1080p",
+          "snippet": "Up to 1080p Up to 4K",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Up to 4K",
+          "snippet": "Up to 4K Up to 4K",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Up to 4K",
+          "snippet": "Up to 4K Tech & Support",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "AI Studios auto captions can be downloaded as SRT files.",
+          "snippet": "The Auto Captions feature page says subtitle output can be downloaded as SRT for platforms such as YouTube and LMS workflows.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.aistudios.com/features/auto-captions",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Auto Captions - AI Studios"
+        }
+      ]
+    },
+    "mainLimitations": [
+      {
+        "valueCandidate": "Create up to 3 AI videos",
+        "snippet": "Create up to 3 AI videos Videos up to 3 minutes",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Videos up to 3 minutes",
+        "snippet": "Videos up to 3 minutes 1 Custom Avatar",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "16 one-time generative credits",
+        "snippet": "16 one-time generative credits Limited generative models",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Best for solo creators producing AI videos without limits",
+        "snippet": "Best for solo creators producing AI videos without limits AI Videos",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Videos up to 30 minutes",
+        "snippet": "Videos up to 30 minutes 3 Custom Avatars",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Add-ons for additional generative credits",
+        "snippet": "Add-ons for additional generative credits Advanced Capabilities",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Videos up to 60 minutes",
+        "snippet": "Videos up to 60 minutes 5 Custom Avatars",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Add-ons for additional generative credits",
+        "snippet": "Add-ons for additional generative credits Available for Teams",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Enterprise-scale generative credit",
+        "snippet": "Enterprise-scale generative credit Full access to generative models with custom options",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Get more premium AI dubbing minutes",
+        "snippet": "Get more premium AI dubbing minutes at the same price",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "The maximum length allowed for a single video.",
+        "snippet": "The maximum length allowed for a single video. 3 minutes",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "3 minutes",
+        "snippet": "3 minutes 30 minutes",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "30 minutes",
+        "snippet": "30 minutes 60 minutes",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "60 minutes",
+        "snippet": "60 minutes Unlimited",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Store imported images, videos, music, and brand assets for reuse across projects.",
+        "snippet": "Store imported images, videos, music, and brand assets for reuse across projects. AI Script & Text Generator",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Use AI-generated avatars and voices for commercial projects with no attribution required.",
+        "snippet": "Use AI-generated avatars and voices for commercial projects with no attribution required. AI Dubbing",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Dub a single video up to the maximum length supported by your plan.",
+        "snippet": "Dub a single video up to the maximum length supported by your plan. Max Duration per Video",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Generate AI-dubbed videos up to your plan’s total monthly duration, across all videos.",
+        "snippet": "Generate AI-dubbed videos up to your plan’s total monthly duration, across all videos. 3 min",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Generative Credits",
+        "snippet": "Generative Credits Included Credits",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Included Credits",
+        "snippet": "Included Credits Credits included with your plan for generative videos and images.",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      }
+    ],
+    "workflowFeatureDocs": [
+      {
+        "valueCandidate": "AI Avatars",
+        "snippet": "AI Avatars 2000+ Realistic AI Avatars",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "2000+ Realistic AI Avatars",
+        "snippet": "2000+ Realistic AI Avatars AI Dubbing",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Dubbing",
+        "snippet": "AI Dubbing Localize videos in 150+ languages with voice cloning and lip-sync",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Localize videos in 150+ languages with voice cloning and lip-sync",
+        "snippet": "Localize videos in 150+ languages with voice cloning and lip-sync Video Generator",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Video Templates",
+        "snippet": "Video Templates Stylized, Editable Video Templates",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Stylized, Editable Video Templates",
+        "snippet": "Stylized, Editable Video Templates Interactive AI Avatar",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Interactive AI Avatar",
+        "snippet": "Interactive AI Avatar Engage with Interactive, LLM Compatible AI Avatars",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Engage with Interactive, LLM Compatible AI Avatars",
+        "snippet": "Engage with Interactive, LLM Compatible AI Avatars AI Detector",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Avatar",
+        "snippet": "AI Avatar Product Avatar",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Text to Video",
+        "snippet": "Text to Video Topic to Video",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Dubbing",
+        "snippet": "AI Dubbing All Tools",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Templates",
+        "snippet": "Templates Business",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "All Templates",
+        "snippet": "All Templates Conversational Avatar",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Interactive AI Avatar",
+        "snippet": "Interactive AI Avatar Custom LLMs",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Screen Recording",
+        "snippet": "Screen Recording Auto Captions",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Brand Kit",
+        "snippet": "Brand Kit Text to Speech",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Dubbing",
+        "snippet": "AI Dubbing Audio-only AI Dubbing",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Audio-only AI Dubbing",
+        "snippet": "Audio-only AI Dubbing Generative usage",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Dubbing",
+        "snippet": "AI Dubbing AI Dubbing with lip-sync",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Dubbing with lip-sync",
+        "snippet": "AI Dubbing with lip-sync 120 minutes of AI Dubbing per month",
+        "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+        "sourceUrl": "https://www.aistudios.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Studios supports AI dubbing with translation, voice cloning, and lip sync in 150+ languages.",
+        "snippet": "The AI dubbing and translation feature pages describe automatic translation, multilingual dubbing, voice cloning, and lip-synced delivery across 150+ languages.",
+        "sourcePath": null,
+        "sourceUrl": "https://www.aistudios.com/features/ai-dubbing",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "AI Dubbing - AI Studios"
+      },
+      {
+        "valueCandidate": "AI Studios text-to-video is API-integrable and supports bulk video generation for enterprise workflows.",
+        "snippet": "The text-to-video FAQ says AI Studios can automate text-to-video creation with bulk generation, templates, and API integration for enterprise workflows.",
+        "sourcePath": null,
+        "sourceUrl": "https://www.aistudios.com/features/text-to-video",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "Text to Video - AI Studios"
+      }
+    ],
+    "securityApiEnterprise": {
+      "security": [
+        {
+          "valueCandidate": "Access royalty-free images, videos, and music for worry-free, copyright-compliant use.",
+          "snippet": "Access royalty-free images, videos, and music for worry-free, copyright-compliant use. Custom Font Import",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Depending on your contract, generative credits and AI Dubbing minutes can be flexibly configured, and additional generative models can be enabled. Enterprise plans also support bulk video generation, Proofread-based review workflows, enterprise-grade security (such as SAML SSO), and dedicated technical support.",
+          "snippet": "Depending on your contract, generative credits and AI Dubbing minutes can be flexibly configured, and additional generative models can be enabled. Enterprise plans also support bulk video generation, Proofread-based review workflows, enterprise-grade securi...",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "If you need a custom setup based on usage, workflows, or security requirements, feel free to contact us.",
+          "snippet": "If you need a custom setup based on usage, workflows, or security requirements, feel free to contact us. View Enterprise plan details →",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Terms of Use",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security Portal",
+          "snippet": "Security Portal Copyright © 2026 DeepBrain AI.",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "security",
+          "snippet": "rprise plans also support bulk video generation, Proofread-based review workflows, enterprise-grade security (such as SAML SSO), and dedicated technical support. For more details, visit the page below. If you need a custom setup based on usage, wor",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "security",
+          "snippet": "t. For more details, visit the page below. If you need a custom setup based on usage, workflows, or security requirements, feel free to contact us. [**View Enterprise plan details →**](https://www.aistudios.com/enterprise) [**Talk to us →**](https:",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        }
+      ],
+      "api": [
+        {
+          "valueCandidate": "Integrations",
+          "snippet": "Integrations Company",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Developer Docs",
+          "snippet": "Developer Docs Blog",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Integrations",
+          "snippet": "Integrations Customer Stories",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        }
+      ],
+      "enterprise": [
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise AI 기본법 솔루션",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Built for teams collaborating on unlimited AI video creation",
+          "snippet": "Built for teams collaborating on unlimited AI video creation AI Videos",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "1800 generative credits per year(per seat, shared across the team)",
+          "snippet": "1800 generative credits per year(per seat, shared across the team) 150 generative credits per month(per seat, shared across the team)",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "150 generative credits per month(per seat, shared across the team)",
+          "snippet": "150 generative credits per month(per seat, shared across the team) Full access to generative models",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Available for Teams",
+          "snippet": "Available for Teams Interactive Videos",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Shared Workspaces",
+          "snippet": "Shared Workspaces More collaboration and control features",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Custom",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Advanced AI video solutions for enterprise needs",
+          "snippet": "Advanced AI video solutions for enterprise needs Contact Us",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-scale generative credit",
+          "snippet": "Enterprise-scale generative credit Full access to generative models with custom options",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Exclusive to Enterprise",
+          "snippet": "Exclusive to Enterprise Enterprise-grade SAML SSO",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-grade SAML SSO",
+          "snippet": "Enterprise-grade SAML SSO SCORM Export",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "More enterprise-ready features",
+          "snippet": "More enterprise-ready features View All Features",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Request a demo",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Store and reuse brand assets across your workspace and team.",
+          "snippet": "Store and reuse brand assets across your workspace and team. One‑Click Translation",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Add team members to collaborate within the same workspace.",
+          "snippet": "Add team members to collaborate within the same workspace. 1 seat",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Shared Workspaces",
+          "snippet": "Shared Workspaces Work together in shared workspaces across your team.",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Work together in shared workspaces across your team.",
+          "snippet": "Work together in shared workspaces across your team. Shared Templates",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Create and reuse templates shared across your team.",
+          "snippet": "Create and reuse templates shared across your team. Brand Kit",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Edit videos together with real-time access for your team.",
+          "snippet": "Edit videos together with real-time access for your team. SAML SSO",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SAML SSO",
+          "snippet": "SAML SSO Enable SAML-based single sign-on for enterprise-level access control.",
+          "sourcePath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "AI Studios enterprise features include SAML SSO, SCORM export, interactive quizzes, bulk video generation, and 4K exports.",
+          "snippet": "The pricing page lists enterprise-only features such as SAML SSO, SCORM export, interactive quizzes, bulk video generation, and 4K exports.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.aistudios.com/pricing",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "AI Studios Pricing"
+        }
+      ]
+    },
+    "logoSources": [
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/6710fc52c1b4308c5d43631c_Favicon_aistudios.svg"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/648c0d004f6e6b847cc2d4b3_favicon-32x32.ico"
+      },
+      {
+        "assetPath": "www.aistudios.com/cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/6710d50ef309ad7ed4fce937_studios_bay_deepbrainAI_logo.svg",
+        "assetUrl": "https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/6710d50ef309ad7ed4fce937_studios_bay_deepbrainAI_logo.svg"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://www.aistudios.com/features/brand-kit"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://www.aistudios.com/solutions/brand-ambassador"
+      },
+      {
+        "assetPath": "www.aistudios.com/cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/69577409731e836e00e189ec_icon-help-center.svg",
+        "assetUrl": "https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/69577409731e836e00e189ec_icon-help-center.svg"
+      },
+      {
+        "assetPath": "www.aistudios.com/cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/6957740935fb3e3b042b330f_icon-blog.svg",
+        "assetUrl": "https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/6957740935fb3e3b042b330f_icon-blog.svg"
+      },
+      {
+        "assetPath": "www.aistudios.com/cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/6957740982fd80a2e248f2e8_icon-integrations.svg",
+        "assetUrl": "https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/6957740982fd80a2e248f2e8_icon-integrations.svg"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/69577409b5bca5f62edb3390_icon-about.svg"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/69577409748ddab8a4156c92_icon-contact.svg"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/6957740953f69be64b523232_icon-careers.svg"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/69577409de66375d6be8a6c1_icon-affiliate.svg"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn.prod.website-files.com/63da3362f67ed6f71c9489c1/69577409df82deec97b590c5_icon-partners.svg"
+      },
+      {
+        "assetPath": "www.aistudios.com/cdn.prod.website-files.com/63da3362f67ed649a19489ea/68524a7ffaf24f4ea5db07b2_logo_aws.svg",
+        "assetUrl": "https://cdn.prod.website-files.com/63da3362f67ed649a19489ea/68524a7ffaf24f4ea5db07b2_logo_aws.svg"
+      },
+      {
+        "assetPath": "www.aistudios.com/cdn.prod.website-files.com/63da3362f67ed649a19489ea/685250bcc8221ed66fa8b3b0_logo_bmw.svg",
+        "assetUrl": "https://cdn.prod.website-files.com/63da3362f67ed649a19489ea/685250bcc8221ed66fa8b3b0_logo_bmw.svg"
+      },
+      {
+        "assetPath": "www.aistudios.com/cdn.prod.website-files.com/63da3362f67ed649a19489ea/685249fb82beb2dbec40126e_logo_intel.svg",
+        "assetUrl": "https://cdn.prod.website-files.com/63da3362f67ed649a19489ea/685249fb82beb2dbec40126e_logo_intel.svg"
+      },
+      {
+        "assetPath": "www.aistudios.com/cdn.prod.website-files.com/63da3362f67ed649a19489ea/685249e64ab7da5c48ec6cf4_logo_lenovo.svg",
+        "assetUrl": "https://cdn.prod.website-files.com/63da3362f67ed649a19489ea/685249e64ab7da5c48ec6cf4_logo_lenovo.svg"
+      },
+      {
+        "assetPath": "www.aistudios.com/cdn.prod.website-files.com/63da3362f67ed649a19489ea/685249d033fc11d1598bd644_logo_pfizer.svg",
+        "assetUrl": "https://cdn.prod.website-files.com/63da3362f67ed649a19489ea/685249d033fc11d1598bd644_logo_pfizer.svg"
+      },
+      {
+        "assetPath": "www.aistudios.com/cdn.prod.website-files.com/63da3362f67ed649a19489ea/68524b5da2e89b02fac76186_logo_kellanova.svg",
+        "assetUrl": "https://cdn.prod.website-files.com/63da3362f67ed649a19489ea/68524b5da2e89b02fac76186_logo_kellanova.svg"
+      },
+      {
+        "assetPath": "www.aistudios.com/cdn.prod.website-files.com/63da3362f67ed649a19489ea/68524b1aaafc5fa36437b0f4_logo_seveneleven.svg",
+        "assetUrl": "https://cdn.prod.website-files.com/63da3362f67ed649a19489ea/68524b1aaafc5fa36437b0f4_logo_seveneleven.svg"
+      }
+    ]
+  },
+  "missingFields": [
+    "policy.watermark"
+  ],
+  "nextFetchTargets": [
+    {
+      "url": "https://www.aistudios.com/features/ai-dubbing",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/ai-video-generator",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/topic-to-video",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/product-to-avatar",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/dream-avatar",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/custom-studio-avatar",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/3d-avatars",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/avatar-gestures",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/multi-avatar-scenes",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/dictionary",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/create-avatar",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/product-to-video",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/text-to-video",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/url-to-video",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/docs-to-video",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/article-to-video",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/custom-llm",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/interactive-video",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/ai-video-editor",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/screen-recording",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/auto-captions",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/brand-kit",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/face-swap",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/enterprise",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/talking-avatar",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/video-messages",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/ai-video-translator",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/deepfake",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/chatgpt",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    },
+    {
+      "url": "https://www.aistudios.com/features/powerpoint-to-video",
+      "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+      "discoveredFromUrl": "https://www.aistudios.com/pricing"
+    }
+  ],
+  "remoteFetches": {
+    "rounds": [
+      {
+        "roundId": "2026-04-08-remote-round-1",
+        "fetchedAt": "2026-04-08T13:38:41.674955+00:00",
+        "pages": [
+          {
+            "title": "AI Dubbing - AI Studios",
+            "url": "https://www.aistudios.com/features/ai-dubbing"
+          },
+          {
+            "title": "Text to Video - AI Studios",
+            "url": "https://www.aistudios.com/features/text-to-video"
+          },
+          {
+            "title": "AI Studios Pricing",
+            "url": "https://www.aistudios.com/pricing"
+          },
+          {
+            "title": "Auto Captions - AI Studios",
+            "url": "https://www.aistudios.com/features/auto-captions"
+          }
+        ],
+        "fetchedFields": [
+          "policy.commercialUse",
+          "policy.exportLimits",
+          "securityApiEnterprise.enterprise",
+          "workflowFeatureDocs"
+        ],
+        "unresolvedFields": [
+          "policy.watermark"
+        ],
+        "mergedRecordCount": 5
+      }
+    ],
+    "latestRoundId": "2026-04-08-remote-round-1"
+  }
+}

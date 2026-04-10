@@ -1,0 +1,1561 @@
+{
+  "generatedAt": "2026-04-08T13:18:38.940513+00:00",
+  "slug": "opus-pro",
+  "toolName": "Opus Pro",
+  "officialHost": "www.opus.pro",
+  "siteRootDir": "www.opus.pro",
+  "runtimeCaptureDir": "data/runtime-captures/opus-pro",
+  "artifacts": {
+    "counts": {
+      "htmlCount": 5,
+      "jsCount": 3,
+      "jsonCount": 1,
+      "mdCount": 1,
+      "official_page_htmlCount": 1,
+      "referenced_assetCount": 5,
+      "runtime_capture_htmlCount": 2,
+      "runtime_capture_jsonCount": 1,
+      "runtime_capture_reportCount": 1
+    },
+    "availablePageUrls": [
+      "https://www.opus.pro/pricing",
+      "https://clip.opus.pro/lp-embed",
+      "https://www.opus.pro/export-to-xml",
+      "https://help.opus.pro/docs/article/opusclip-data-training",
+      "https://trust.opus.pro/subprocessors",
+      "https://help.opus.pro/docs/article/terms-of-service",
+      "https://help.opus.pro/docs/article/privacy-policy"
+    ],
+    "keywordPageUrls": [],
+    "paths": [
+      "www.opus.pro/www.opus.pro/pricing.html",
+      "data/runtime-captures/opus-pro/report.md",
+      "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+      "data/runtime-captures/opus-pro/network_responses.json",
+      "data/runtime-captures/opus-pro/rendered_dom.html",
+      "www.opus.pro/www.opus.pro/pricing.html",
+      "www.opus.pro/www.opus.pro/cdn-cgi/challenge-platform/scripts/jsd/main.js",
+      "www.opus.pro/a.opus.pro/gtm/tag.js",
+      "www.opus.pro/a.opus.pro/gtm/init.js",
+      "www.opus.pro/clip.opus.pro/lp-embed.html"
+    ]
+  },
+  "fields": {
+    "officialUrl": {
+      "value": "https://www.opus.pro/",
+      "sourceUrl": "https://www.opus.pro/",
+      "sourcePath": "www.opus.pro/www.opus.pro/pricing.html"
+    },
+    "sourceUrls": [
+      "https://www.opus.pro/pricing",
+      "https://clip.opus.pro/lp-embed",
+      "https://www.opus.pro/export-to-xml",
+      "https://help.opus.pro/docs/article/opusclip-data-training",
+      "https://trust.opus.pro/subprocessors",
+      "https://help.opus.pro/docs/article/terms-of-service",
+      "https://help.opus.pro/docs/article/privacy-policy"
+    ],
+    "policy": {
+      "watermark": [
+        {
+          "valueCandidate": "Remove Watermark",
+          "snippet": "Remove Watermark Pro",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Has watermark",
+          "snippet": "Has watermark No editing",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "With watermark",
+          "snippet": "With watermark Multi-language transcription",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark-free video export",
+          "snippet": "Watermark-free video export -",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark-free video export",
+          "snippet": "Watermark-free video export Export as MP4",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Remove Watermark",
+          "snippet": "Remove Watermark Pro",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Has watermark",
+          "snippet": "Has watermark No editing",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "With watermark",
+          "snippet": "With watermark Multi-language transcription",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark-free video export",
+          "snippet": "Watermark-free video export -",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark-free video export",
+          "snippet": "Watermark-free video export Export as MP4",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark",
+          "snippet": "\"Intercom chat support\", \"filler_silence\": \"Filler & silence removal\", \"remove_watermark\": \"Remove Watermark\", \"1_brand_template_per\": \"1 brand template per pack\", \"2_brand_templates\": \"2 brand templates\", \"import_from_10\": \"Import from 10+ sources",
+          "sourcePath": "data/runtime-captures/opus-pro/network_responses.json",
+          "sourceUrl": "https://clip.opus.pro/locales/en/subscription.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "frame\", \"ai_captions_with\": \"AI captions with emoji and keyword highlighter\", \"has_watermark\": \"Has watermark\", \"no_editing\": \"No editing\", \"auto_post_to_youtube_1\": \"Auto post to YouTube, TikTok, IG Reels, Facebook, LinkedIn, X\", \"features\": \"Featu",
+          "sourcePath": "data/runtime-captures/opus-pro/network_responses.json",
+          "sourceUrl": "https://clip.opus.pro/locales/en/subscription.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Remove Watermark",
+          "snippet": "Remove Watermark Pro",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Has watermark",
+          "snippet": "Has watermark No editing",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "With watermark",
+          "snippet": "With watermark Multi-language transcription",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark-free video export",
+          "snippet": "Watermark-free video export -",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark-free video export",
+          "snippet": "Watermark-free video export Export as MP4",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "commercialUse": [
+        {
+          "valueCandidate": "Use this calculator to understand how OpusClip helps you save time, post daily, and grow/monetize faster.",
+          "snippet": "Use this calculator to understand how OpusClip helps you save time, post daily, and grow/monetize faster. How many credits do you need?",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "From zero to monetization for a new YouTube channel in 40 days",
+          "snippet": "From zero to monetization for a new YouTube channel in 40 days How to Turn Long Videos into Viral Shorts: The Ultimate Guide for 2026",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Use this calculator to understand how OpusClip helps you save time, post daily, and grow/monetize faster.",
+          "snippet": "Use this calculator to understand how OpusClip helps you save time, post daily, and grow/monetize faster. How many credits do you need?",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "From zero to monetization for a new YouTube channel in 40 days",
+          "snippet": "From zero to monetization for a new YouTube channel in 40 days How to Turn Long Videos into Viral Shorts: The Ultimate Guide for 2026",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Use this calculator to understand how OpusClip helps you save time, post daily, and grow/monetize faster.",
+          "snippet": "Use this calculator to understand how OpusClip helps you save time, post daily, and grow/monetize faster. How many credits do you need?",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "From zero to monetization for a new YouTube channel in 40 days",
+          "snippet": "From zero to monetization for a new YouTube channel in 40 days How to Turn Long Videos into Viral Shorts: The Ultimate Guide for 2026",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "usageRights": [
+        {
+          "valueCandidate": "Software License Management (SLM)",
+          "snippet": "Software License Management (SLM) -",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Software License Management (SLM)",
+          "snippet": "Software License Management (SLM) SOC II Type 2 compliant",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Software License Management (SLM)",
+          "snippet": "Software License Management (SLM) -",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Software License Management (SLM)",
+          "snippet": "Software License Management (SLM) SOC II Type 2 compliant",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Software License Management (SLM)",
+          "snippet": "Software License Management (SLM) -",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Software License Management (SLM)",
+          "snippet": "Software License Management (SLM) SOC II Type 2 compliant",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License",
+          "snippet": "]=arguments[c];return b},Qa=function(a){return a};/* Copyright The Closure Library Authors. SPDX-License-Identifier: Apache-2.0 */ var Ra=this||self,Sa=function(a,b){function c(){}c.prototype=b.prototype;a.mt=b.prototype;a.prototype=new c;a.pro",
+          "sourcePath": "www.opus.pro/a.opus.pro/gtm/tag.js",
+          "sourceUrl": "https://a.opus.pro/gtm/tag.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "license",
+          "snippet": "replace(/^https?:\\/\\//,\"\"));return e}};/* jQuery (c) 2005, 2012 jQuery Foundation, Inc. jquery.org/license. */ var Dd=/\\[object (Boolean|Number|String|Function|Array|Date|RegExp)\\]/,Ed=function(a){if(a==null)return String(a);var b=Dd.exec(Object.",
+          "sourcePath": "www.opus.pro/a.opus.pro/gtm/tag.js",
+          "sourceUrl": "https://a.opus.pro/gtm/tag.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Copyright",
+          "snippet": "// Copyright 2012 Google Inc. All rights reserved. (function(){ var data = { \"resource\": { \"version\":\"8\", \"macros\":[{\"function\":\"__e\"},{\"funct",
+          "sourcePath": "www.opus.pro/a.opus.pro/gtm/tag.js",
+          "sourceUrl": "https://a.opus.pro/gtm/tag.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Copyright",
+          "snippet": "r(this),b=[],c=a;c<arguments.length;c++)b[c-a]=arguments[c];return b},Qa=function(a){return a};/* Copyright The Closure Library Authors. SPDX-License-Identifier: Apache-2.0 */ var Ra=this||self,Sa=function(a,b){function c(){}c.prototype=b.prototy",
+          "sourcePath": "www.opus.pro/a.opus.pro/gtm/tag.js",
+          "sourceUrl": "https://a.opus.pro/gtm/tag.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "License",
+          "snippet": "]=arguments[c];return b},Qa=function(a){return a};/* Copyright The Closure Library Authors. SPDX-License-Identifier: Apache-2.0 */ var Ra=this||self,Sa=function(a,b){function c(){}c.prototype=b.prototype;a.mt=b.prototype;a.prototype=new c;a.pro",
+          "sourcePath": "www.opus.pro/a.opus.pro/gtm/init.js",
+          "sourceUrl": "https://a.opus.pro/gtm/init.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "license",
+          "snippet": "replace(/^https?:\\/\\//,\"\"));return e}};/* jQuery (c) 2005, 2012 jQuery Foundation, Inc. jquery.org/license. */ var Dd=/\\[object (Boolean|Number|String|Function|Array|Date|RegExp)\\]/,Ed=function(a){if(a==null)return String(a);var b=Dd.exec(Object.",
+          "sourcePath": "www.opus.pro/a.opus.pro/gtm/init.js",
+          "sourceUrl": "https://a.opus.pro/gtm/init.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Copyright",
+          "snippet": "// Copyright 2012 Google Inc. All rights reserved. (function(w,g){w[g]=w[g]||{}; w[g].e=function(s){return eval(s);};})(window,'google_tag_manager')",
+          "sourcePath": "www.opus.pro/a.opus.pro/gtm/init.js",
+          "sourceUrl": "https://a.opus.pro/gtm/init.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Copyright",
+          "snippet": "r(this),b=[],c=a;c<arguments.length;c++)b[c-a]=arguments[c];return b},Qa=function(a){return a};/* Copyright The Closure Library Authors. SPDX-License-Identifier: Apache-2.0 */ var Ra=this||self,Sa=function(a,b){function c(){}c.prototype=b.prototy",
+          "sourcePath": "www.opus.pro/a.opus.pro/gtm/init.js",
+          "sourceUrl": "https://a.opus.pro/gtm/init.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "refundCancellation": [
+        {
+          "valueCandidate": "cancel",
+          "snippet": "_deleting_my\": \"By deleting my account, I understand that:\", \"contact_support\": \"Contact support\", \"cancel\": \"Cancel\", \"profile\": \"Profile\", \"user_name\": \"User Name\", \"email\": \"Email\", \"not_in_a_team\": \"Not in a team\", \"sign_in_method\": \"Sign in",
+          "sourcePath": "data/runtime-captures/opus-pro/network_responses.json",
+          "sourceUrl": "https://clip.opus.pro/locales/en/common.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Cancel",
+          "snippet": "my\": \"By deleting my account, I understand that:\", \"contact_support\": \"Contact support\", \"cancel\": \"Cancel\", \"profile\": \"Profile\", \"user_name\": \"User Name\", \"email\": \"Email\", \"not_in_a_team\": \"Not in a team\", \"sign_in_method\": \"Sign in Method\", \"",
+          "sourcePath": "data/runtime-captures/opus-pro/network_responses.json",
+          "sourceUrl": "https://clip.opus.pro/locales/en/common.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Cancel",
+          "snippet": ", \"billing_invoice\": \"Billing & invoice details\", \"uncancel_plan\": \"Uncancel plan\", \"cancel_plan\": \"Cancel plan\", \"subscribed_in\": \"Subscribed in\", \"app_store\": \"App Store\", \"your_subscription_was_made_through_apple\": \"Your subscription was made",
+          "sourcePath": "data/runtime-captures/opus-pro/network_responses.json",
+          "sourceUrl": "https://clip.opus.pro/locales/en/subscription.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "\"your_subscription_was_made_through_apple\": \"Your subscription was made through Apple. To manage or cancel it, please go to the App Store.\", \"for_greater_flexibility\": \"For greater flexibility and access to extra packs, we recommend subscribing o",
+          "sourcePath": "data/runtime-captures/opus-pro/network_responses.json",
+          "sourceUrl": "https://clip.opus.pro/locales/en/subscription.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "rrentPlan}} plan to the Pro plan.\", \"upgrade_to_pro\": \"Upgrade to Pro plan\", \"confirm\": \"Confirm\", \"cancel\": \"Cancel\", \"tiktok_connection_expired\": \"Your TikTok connection has expired.\", \"tiktok_reconnect_description\": \"To continue, please connec",
+          "sourcePath": "data/runtime-captures/opus-pro/network_responses.json",
+          "sourceUrl": "https://clip.opus.pro/locales/en/plansocial.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Cancel",
+          "snippet": "} plan to the Pro plan.\", \"upgrade_to_pro\": \"Upgrade to Pro plan\", \"confirm\": \"Confirm\", \"cancel\": \"Cancel\", \"tiktok_connection_expired\": \"Your TikTok connection has expired.\", \"tiktok_reconnect_description\": \"To continue, please connect your Tik",
+          "sourcePath": "data/runtime-captures/opus-pro/network_responses.json",
+          "sourceUrl": "https://clip.opus.pro/locales/en/plansocial.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "refund",
+          "snippet": "\",Ae:\"select_item\",Ac:\"view_item_list\",Tc:\"select_promotion\", Bc:\"view_promotion\",Ob:\"purchase\",Be:\"refund\",Cc:\"view_item\",rl:\"add_to_wishlist\",up:\"exception\",vp:\"first_open\",wp:\"first_visit\",ra:\"gtag.config\",Pb:\"gtag.get\",xp:\"in_app_purchase\",Dc",
+          "sourcePath": "www.opus.pro/a.opus.pro/gtm/tag.js",
+          "sourceUrl": "https://a.opus.pro/gtm/tag.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "refund",
+          "snippet": "\",Ae:\"select_item\",Ac:\"view_item_list\",Tc:\"select_promotion\", Bc:\"view_promotion\",Ob:\"purchase\",Be:\"refund\",Cc:\"view_item\",rl:\"add_to_wishlist\",up:\"exception\",vp:\"first_open\",wp:\"first_visit\",ra:\"gtag.config\",Pb:\"gtag.get\",xp:\"in_app_purchase\",Dc",
+          "sourcePath": "www.opus.pro/a.opus.pro/gtm/init.js",
+          "sourceUrl": "https://a.opus.pro/gtm/init.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "refund",
+          "snippet": ":\"remove_from_cart\",checkout:\"begin_checkout\",checkout_option:\"checkout_option\",purchase:\"purchase\",refund:\"refund\"};(function(f){Y.__gaawe=f;Y.__gaawe.N=\"gaawe\";Y.__gaawe.isVendorTemplate=!0;Y.__gaawe.priorityOverride=0;Y.__gaawe.isInfrastructur",
+          "sourcePath": "www.opus.pro/a.opus.pro/gtm/init.js",
+          "sourceUrl": "https://a.opus.pro/gtm/init.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "refund",
+          "snippet": "_from_cart\",checkout:\"begin_checkout\",checkout_option:\"checkout_option\",purchase:\"purchase\",refund:\"refund\"};(function(f){Y.__gaawe=f;Y.__gaawe.N=\"gaawe\";Y.__gaawe.isVendorTemplate=!0;Y.__gaawe.priorityOverride=0;Y.__gaawe.isInfrastructure=!1;Y._",
+          "sourcePath": "www.opus.pro/a.opus.pro/gtm/init.js",
+          "sourceUrl": "https://a.opus.pro/gtm/init.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "exportLimits": [
+        {
+          "valueCandidate": "Export to XML",
+          "snippet": "Export to XML Schedule a month’s posts to all platforms in 10 minutes",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Auto post to YouTube Shorts, TikTok, IG Reels, or download",
+          "snippet": "Auto post to YouTube Shorts, TikTok, IG Reels, or download Powerful editor",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export to Adobe Premiere Pro & DaVinci Resolve",
+          "snippet": "Export to Adobe Premiere Pro & DaVinci Resolve Multiple aspect ratios (9:16, 1:1, 16:9)",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Up to 1080p rendered clips",
+          "snippet": "Up to 1080p rendered clips Auto reframe",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export & publish",
+          "snippet": "Export & publish Watermark-free video export",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark-free video export",
+          "snippet": "Watermark-free video export -",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export as MP4",
+          "snippet": "Export as MP4 3-day limit; Up to 1080p rendered clips",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "3-day limit; Up to 1080p rendered clips",
+          "snippet": "3-day limit; Up to 1080p rendered clips Export in bulk",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export in bulk",
+          "snippet": "Export in bulk -",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export to Adobe Premiere Pro & DaVinci Resolve",
+          "snippet": "Export to Adobe Premiere Pro & DaVinci Resolve -",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark-free video export",
+          "snippet": "Watermark-free video export Export as MP4",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export as MP4",
+          "snippet": "Export as MP4 30-day limit; highest resolution available",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Local video (Up to 30GB per video) and Public mp4 url",
+          "snippet": "Local video (Up to 30GB per video) and Public mp4 url Auto video import",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export as MP4",
+          "snippet": "Export as MP4 No limit, highest resolution available",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export in bulk",
+          "snippet": "Export in bulk Export to Adobe Premiere Pro & DaVinci Resolve",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export to Adobe Premiere Pro & DaVinci Resolve",
+          "snippet": "Export to Adobe Premiere Pro & DaVinci Resolve Shareable links to projects",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Local video (Up to 30GB per video) and Public mp4 url",
+          "snippet": "Local video (Up to 30GB per video) and Public mp4 url Local video (Up to 30GB per video) and Public mp4 url",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "3-day limit; Up to 1080p rendered clips",
+          "snippet": "3-day limit; Up to 1080p rendered clips 30-day limit; highest resolution available",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export to XML",
+          "snippet": "Export to XML Schedule a month’s posts to all platforms in 10 minutes",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Auto post to YouTube Shorts, TikTok, IG Reels, or download",
+          "snippet": "Auto post to YouTube Shorts, TikTok, IG Reels, or download Powerful editor",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "OpusClip exports an XML folder with XML, SRT, original video segments, and tutorials.",
+          "snippet": "The export page explains that completed projects can be downloaded as an XML bundle that includes XML, SRT files, original segments, and tutorials.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.opus.pro/export-to-xml",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Export to XML - OpusClip"
+        }
+      ]
+    },
+    "mainLimitations": [
+      {
+        "valueCandidate": "Get relevant AI B-Roll in 1 click, under 1 minute",
+        "snippet": "Get relevant AI B-Roll in 1 click, under 1 minute Social scheduler",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Schedule a month’s posts to all platforms in 10 minutes",
+        "snippet": "Schedule a month’s posts to all platforms in 10 minutes Brand template",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Schedule a month’s posts to all platforms in 10 minutes",
+        "snippet": "Schedule a month’s posts to all platforms in 10 minutes Team workspace",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Save up to",
+        "snippet": "Save up to 50",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "No credit card required",
+        "snippet": "No credit card required $15 billed monthly",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "150 credits",
+        "snippet": "150 credits per month",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Contact us for more credits",
+        "snippet": "Contact us for more credits Arrow up",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "No credit card required",
+        "snippet": "No credit card required Start your free trial",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "No credit card required",
+        "snippet": "No credit card required $",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "3,600 credits",
+        "snippet": "3,600 credits per",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Team workspace with 2 seats",
+        "snippet": "Team workspace with 2 seats 2 brand templates",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Priority project processing",
+        "snippet": "Priority project processing Customized credits, team seats and social account connections",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Customized credits, team seats and social account connections",
+        "snippet": "Customized credits, team seats and social account connections Tailored business assets: brand templates, fonts, vocabulary & more",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "60 credits",
+        "snippet": "60 credits per month",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Up to 1080p rendered clips",
+        "snippet": "Up to 1080p rendered clips Auto reframe",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "How many credits do you need?",
+        "snippet": "How many credits do you need? Arrow up",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "credits",
+        "snippet": "credits Average views of your clips",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Local video (Up to 10GB per video)",
+        "snippet": "Local video (Up to 10GB per video) Auto video import",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Rename clips and projects",
+        "snippet": "Rename clips and projects -",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "3-day limit; Up to 1080p rendered clips",
+        "snippet": "3-day limit; Up to 1080p rendered clips Export in bulk",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      }
+    ],
+    "workflowFeatureDocs": [
+      {
+        "valueCandidate": "Brand template",
+        "snippet": "Brand template Easily create and add brand templates in 1 click",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Easily create and add brand templates in 1 click",
+        "snippet": "Easily create and add brand templates in 1 click Editor",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "1 brand template",
+        "snippet": "1 brand template Filler & silence removal",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "2 brand templates",
+        "snippet": "2 brand templates 6 social account connections",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Tailored business assets: brand templates, fonts, vocabulary & more",
+        "snippet": "Tailored business assets: brand templates, fonts, vocabulary & more Dedicated storage",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Animated caption templates",
+        "snippet": "Animated caption templates With watermark",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Brand template",
+        "snippet": "Brand template 1 template",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "1 template",
+        "snippet": "1 template Intro/outro cards",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Team collaboration",
+        "snippet": "Team collaboration Team workspace",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Animated caption templates",
+        "snippet": "Animated caption templates Multi-language transcription",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Brand template",
+        "snippet": "Brand template Up to 2 templates",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Up to 2 templates",
+        "snippet": "Up to 2 templates Intro/outro cards",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Brand template",
+        "snippet": "Brand template Custom solution",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "1 template",
+        "snippet": "1 template 1 template",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "1 template",
+        "snippet": "1 template Up to 2 templates",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Up to 2 templates",
+        "snippet": "Up to 2 templates Custom solution",
+        "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Brand template",
+        "snippet": "Brand template Easily create and add brand templates in 1 click",
+        "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Easily create and add brand templates in 1 click",
+        "snippet": "Easily create and add brand templates in 1 click Editor",
+        "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "1 brand template",
+        "snippet": "1 brand template Filler & silence removal",
+        "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "2 brand templates",
+        "snippet": "2 brand templates 6 social account connections",
+        "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+        "sourceUrl": "https://www.opus.pro/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Opus XML export currently supports YouTube, Google Drive, Vimeo, Zoom, Twitch, LinkedIn, Loom, Riverside, and more.",
+        "snippet": "The XML export page lists a broad set of supported source platforms, including YouTube, Google Drive, Vimeo, Zoom, Twitch, LinkedIn, Loom, and Riverside.",
+        "sourcePath": null,
+        "sourceUrl": "https://www.opus.pro/export-to-xml",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "Export to XML - OpusClip"
+      },
+      {
+        "valueCandidate": "Opus XML export supports English, German, Spanish, French, Portuguese, and 20+ additional languages.",
+        "snippet": "The export page says the feature supports English, German, Spanish, French, Portuguese, and more than 20 other languages.",
+        "sourcePath": null,
+        "sourceUrl": "https://www.opus.pro/export-to-xml",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "Export to XML - OpusClip"
+      }
+    ],
+    "securityApiEnterprise": {
+      "security": [
+        {
+          "valueCandidate": "Enterprise-level security",
+          "snippet": "Enterprise-level security Used by teams at",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security",
+          "snippet": "Security Email OTP login",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SOC II Type 2 compliant",
+          "snippet": "SOC II Type 2 compliant Support",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Cookies Preferences",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy .",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-level security",
+          "snippet": "Enterprise-level security Used by teams at",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security",
+          "snippet": "Security Email OTP login",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SOC II Type 2 compliant",
+          "snippet": "SOC II Type 2 compliant Support",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Cookies Preferences",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy .",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-level security",
+          "snippet": "Enterprise-level security Used by teams at",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security",
+          "snippet": "Security Email OTP login",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SOC II Type 2 compliant",
+          "snippet": "SOC II Type 2 compliant Support",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Cookies Preferences",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy .",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "gdpr",
+          "snippet": "G.D.Ke]=\"evnid\", O[G.D.Le]=\"excid\",O[G.D.Gh]=\"gac\",O[G.D.Me]=\"gacgb\",O[G.D.Il]=\"gacmcov\",O[G.D.Ne]=\"gdpr\",O[G.D.Yc]=\"gdid\",O[G.D.Ld]=\"_ng\",O[G.D.Yp]=\"_ono\",O[G.D.Ih]=\"gpp_sid\",O[G.D.Jh]=\"gpp\",O[G.D.Kl]=\"gsaexp\",O[G.D.cg]=\"_tu\",O[G.D.Md]=\"frm\",O",
+          "sourcePath": "www.opus.pro/a.opus.pro/gtm/tag.js",
+          "sourceUrl": "https://a.opus.pro/gtm/tag.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "gdpr",
+          "snippet": "pa=0\"):u.push(\"npa=1\");zr()&&u.push(\"_ng=1\");Tq(ar())&&u.push(\"tcfd=\"+yr());var da=hr();da&&u.push(\"gdpr=\"+da);var M=gr();M&&u.push(\"gdpr_consent=\"+M);P(123)&&Ps(!1)._up&&u.push(\"gtm_up=1\");var S=Ui();S&&u.push(\"tag_exp=\"+S);if(D.length>0)for(v",
+          "sourcePath": "www.opus.pro/a.opus.pro/gtm/tag.js",
+          "sourceUrl": "https://a.opus.pro/gtm/tag.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "gdpr",
+          "snippet": "x[G.D.Rf]=\"ncl\",Ex[G.D.Bh]=\"gcldc\",Ex[G.D.Id]=\"dclid\",Ex[G.D.Wc]=\"edid\",Ex[G.D.Xc]=\"en\",Ex[G.D.Ne]=\"gdpr\",Ex[G.D.Yc]=\"gdid\",Ex[G.D.wb]=null,Ex[G.D.Ld]=\"_ng\",Ex[G.D.Ih]=\"gpp_sid\",Ex[G.D.Jh]=\"gpp\",Ex[G.D.cg]=\"_tu\",Ex[G.D.Ll]=\"gtm_up\",Ex[G.D.Md]=",
+          "sourcePath": "www.opus.pro/a.opus.pro/gtm/tag.js",
+          "sourceUrl": "https://a.opus.pro/gtm/tag.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "gdpr",
+          "snippet": "a\",wr());M(\"npa\",or(h)?0:1);zr()&&M(\"_ng\",1);Tq(ar())&&M(\"tcfd\",yr());M(\"gdpr_consent\",gr()||\"\");M(\"gdpr\",hr()||\"\");Ps(!1)._up===\"1\"&&M(\"gtm_up\",1);M(\"gclid\",Vz(f,p));M(\"gclsrc\",q);if(!(da.hasOwnProperty(\"gclid\")||da.hasOwnProperty(\"dclid\")||da",
+          "sourcePath": "www.opus.pro/a.opus.pro/gtm/tag.js",
+          "sourceUrl": "https://a.opus.pro/gtm/tag.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "gdpr",
+          "snippet": "Ua));W(a,H.J.Ua)}}, IP=function(a){if(QJ(a)){var b=uL();b&&NJ(a,\"us_privacy\",b);var c=hr();c&&NJ(a,\"gdpr\",c);var d=gr();d&&NJ(a,\"gdpr_consent\",d);var e=kD.gppString;e&&NJ(a,\"gpp\",e);var f=kD.H;f&&NJ(a,\"gpp_sid\",f)}},JP=function(a){QJ(a)&&Pl()&&",
+          "sourcePath": "www.opus.pro/a.opus.pro/gtm/tag.js",
+          "sourceUrl": "https://a.opus.pro/gtm/tag.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "OpusClip trust center exposes SOC 2 Type 2 and SOC 3 resources and notes that production data use is restricted.",
+          "snippet": "The trust portal lists SOC 2 Type 2 and SOC 3 resources and highlights restricted production-data use among monitored controls.",
+          "sourcePath": null,
+          "sourceUrl": "https://trust.opus.pro/subprocessors",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Opus Clip | Trust Center"
+        }
+      ],
+      "api": [
+        {
+          "valueCandidate": "For organizations that need tailored solutions, API, and more",
+          "snippet": "For organizations that need tailored solutions, API, and more Custom pricing and packs",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API & custom integrations",
+          "snippet": "API & custom integrations Master Service Agreement (MSA)",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API access",
+          "snippet": "API access -",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API & integration",
+          "snippet": "API & integration API",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "CMS integration",
+          "snippet": "CMS integration -",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Zapier integration",
+          "snippet": "Zapier integration -",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Zapier integration",
+          "snippet": "Zapier integration up to 300 credits/mo",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API access",
+          "snippet": "API access Single-Sign On (SSO)",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "CMS integration",
+          "snippet": "CMS integration Zapier integration",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Zapier integration",
+          "snippet": "Zapier integration Create an account",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "For organizations that need tailored solutions, API, and more",
+          "snippet": "For organizations that need tailored solutions, API, and more Custom pricing and packs",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API & custom integrations",
+          "snippet": "API & custom integrations Master Service Agreement (MSA)",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API access",
+          "snippet": "API access -",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API & integration",
+          "snippet": "API & integration API",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "CMS integration",
+          "snippet": "CMS integration -",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Zapier integration",
+          "snippet": "Zapier integration -",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Zapier integration",
+          "snippet": "Zapier integration up to 300 credits/mo",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API access",
+          "snippet": "API access Single-Sign On (SSO)",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "CMS integration",
+          "snippet": "CMS integration Zapier integration",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Zapier integration",
+          "snippet": "Zapier integration Create an account",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "enterprise": [
+        {
+          "valueCandidate": "Team workspace",
+          "snippet": "Team workspace Maximize your team's productivity with AI",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Maximize your team's productivity with AI",
+          "snippet": "Maximize your team's productivity with AI Thumbnail generator",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "For professional creators, marketers, & teams",
+          "snippet": "For professional creators, marketers, & teams $ 29 USD",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team workspace with 2 seats",
+          "snippet": "Team workspace with 2 seats 2 brand templates",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Customized credits, team seats and social account connections",
+          "snippet": "Customized credits, team seats and social account connections Tailored business assets: brand templates, fonts, vocabulary & more",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-level security",
+          "snippet": "Enterprise-level security Used by teams at",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Used by teams at",
+          "snippet": "Used by teams at Free",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team collaboration",
+          "snippet": "Team collaboration Team workspace",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team workspace",
+          "snippet": "Team workspace -",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Sub-teams",
+          "snippet": "Sub-teams -",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Single-Sign On (SSO)",
+          "snippet": "Single-Sign On (SSO) -",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Custom onboarding",
+          "snippet": "Custom onboarding -",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team workspace",
+          "snippet": "Team workspace Member seats",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Dedicated enterprise queue;",
+          "snippet": "Dedicated enterprise queue; Fastest processing with more powerful servers",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Sub-teams",
+          "snippet": "Sub-teams Member permissions",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Single-Sign On (SSO)",
+          "snippet": "Single-Sign On (SSO) Software License Management (SLM)",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Custom onboarding",
+          "snippet": "Custom onboarding Invoice and ACH Payment",
+          "sourcePath": "www.opus.pro/www.opus.pro/pricing.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team workspace",
+          "snippet": "Team workspace Maximize your team's productivity with AI",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Maximize your team's productivity with AI",
+          "snippet": "Maximize your team's productivity with AI Thumbnail generator",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "For professional creators, marketers, & teams",
+          "snippet": "For professional creators, marketers, & teams $ 29 USD",
+          "sourcePath": "data/runtime-captures/opus-pro/rendered_dom_initial.html",
+          "sourceUrl": "https://www.opus.pro/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "OpusClip says enterprise customer data is not used to train AI models and is instead governed by contract.",
+          "snippet": "The data-training help article distinguishes enterprise customers by stating their data is not used to train AI models and is governed contractually.",
+          "sourcePath": null,
+          "sourceUrl": "https://help.opus.pro/docs/article/opusclip-data-training",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Does OpusClip use my data to train AI models? - Opus Clip"
+        }
+      ]
+    },
+    "logoSources": [
+      {
+        "assetPath": null,
+        "assetUrl": "https://www.opus.pro/brand-templates"
+      },
+      {
+        "assetPath": "www.opus.pro/cdn.prod.website-files.com/6388604483b03a9ecb34d695/67db752ae31508fc0c51f990_Dropbox_Icon.svg",
+        "assetUrl": "https://cdn.prod.website-files.com/6388604483b03a9ecb34d695/67db752ae31508fc0c51f990_Dropbox_Icon.svg"
+      }
+    ]
+  },
+  "missingFields": [],
+  "nextFetchTargets": [
+    {
+      "url": "https://www.opus.pro/export-to-xml",
+      "discoveredFromPath": "www.opus.pro/www.opus.pro/pricing.html",
+      "discoveredFromUrl": "https://www.opus.pro/pricing"
+    },
+    {
+      "url": "https://help.opus.pro/",
+      "discoveredFromPath": "www.opus.pro/www.opus.pro/pricing.html",
+      "discoveredFromUrl": "https://www.opus.pro/pricing"
+    },
+    {
+      "url": "https://www.opus.pro/opusclip-helps-marketing-agencies-boost-revenue-and-client-acquisition",
+      "discoveredFromPath": "www.opus.pro/www.opus.pro/pricing.html",
+      "discoveredFromUrl": "https://www.opus.pro/pricing"
+    },
+    {
+      "url": "https://www.opus.pro/api",
+      "discoveredFromPath": "www.opus.pro/www.opus.pro/pricing.html",
+      "discoveredFromUrl": "https://www.opus.pro/pricing"
+    },
+    {
+      "url": "https://www.opus.pro/contact-support",
+      "discoveredFromPath": "www.opus.pro/www.opus.pro/pricing.html",
+      "discoveredFromUrl": "https://www.opus.pro/pricing"
+    },
+    {
+      "url": "https://help.opus.pro/docs/introduction",
+      "discoveredFromPath": "www.opus.pro/www.opus.pro/pricing.html",
+      "discoveredFromUrl": "https://www.opus.pro/pricing"
+    },
+    {
+      "url": "https://www.opus.pro/terms-of-service",
+      "discoveredFromPath": "www.opus.pro/www.opus.pro/pricing.html",
+      "discoveredFromUrl": "https://www.opus.pro/pricing"
+    },
+    {
+      "url": "https://www.opus.pro/privacy-policy",
+      "discoveredFromPath": "www.opus.pro/www.opus.pro/pricing.html",
+      "discoveredFromUrl": "https://www.opus.pro/pricing"
+    },
+    {
+      "url": "https://trust.opus.pro/",
+      "discoveredFromPath": "www.opus.pro/www.opus.pro/pricing.html",
+      "discoveredFromUrl": "https://www.opus.pro/pricing"
+    }
+  ],
+  "remoteFetches": {
+    "rounds": [
+      {
+        "roundId": "2026-04-08-remote-round-1",
+        "fetchedAt": "2026-04-08T13:38:41.674935+00:00",
+        "pages": [
+          {
+            "title": "Export to XML - OpusClip",
+            "url": "https://www.opus.pro/export-to-xml"
+          },
+          {
+            "title": "Does OpusClip use my data to train AI models? - Opus Clip",
+            "url": "https://help.opus.pro/docs/article/opusclip-data-training"
+          },
+          {
+            "title": "Opus Clip | Trust Center",
+            "url": "https://trust.opus.pro/subprocessors"
+          },
+          {
+            "title": "What are your Terms of Service? - Opus Clip",
+            "url": "https://help.opus.pro/docs/article/terms-of-service"
+          },
+          {
+            "title": "What is your Privacy Policy? - Opus Clip",
+            "url": "https://help.opus.pro/docs/article/privacy-policy"
+          }
+        ],
+        "fetchedFields": [
+          "policy.exportLimits",
+          "securityApiEnterprise.enterprise",
+          "securityApiEnterprise.security",
+          "workflowFeatureDocs"
+        ],
+        "unresolvedFields": [],
+        "mergedRecordCount": 5
+      }
+    ],
+    "latestRoundId": "2026-04-08-remote-round-1"
+  }
+}

@@ -41,6 +41,13 @@
           "confidence": "high"
         },
         {
+          "text": "Zebracat's pricing FAQ says the free plan allows up to 5 videos with standard AI voices at 720p, capped at 30 seconds per video.",
+          "theme": "usage",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "capturedAt": "2026-04-08T00:00:00Z",
+          "confidence": "high"
+        },
+        {
           "text": "Offers 'Unlimited Cat' plan with 3,600 generative AI credits per month.",
           "theme": "limits",
           "sourceUrl": "https://www.zebracat.ai/",

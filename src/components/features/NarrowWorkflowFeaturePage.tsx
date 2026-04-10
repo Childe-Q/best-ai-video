@@ -985,6 +985,8 @@ export default function NarrowWorkflowFeaturePage({
 }: NarrowWorkflowFeaturePageProps) {
   const override = narrowWorkflowOverrides[pageData.slug];
   const promoteSafeFeatureHrefSet = new Set(promoteSafeFeatureHrefs ?? []);
+  const resolveFeatureExit = (href: string) =>
+    resolvePromoteSafeFeatureHref(href, promoteSafeFeatureHrefSet, SAFE_FEATURE_HUB_EXIT.href);
 
   useEffect(() => {
     track('page_view', {
@@ -1000,7 +1002,7 @@ export default function NarrowWorkflowFeaturePage({
   const safeOverride = {
     ...override,
     fitCards: override.fitCards.map((card) => {
-      const resolved = resolvePromoteSafeFeatureHref(card.href, promoteSafeFeatureHrefSet, SAFE_FEATURE_HUB_EXIT.href);
+      const resolved = resolveFeatureExit(card.href);
 
       return resolved.usedFallback
         ? {
@@ -1019,7 +1021,7 @@ export default function NarrowWorkflowFeaturePage({
         {
           ...sectionOverride,
           contextualExits: sectionOverride.contextualExits.map((item) => {
-            const resolved = resolvePromoteSafeFeatureHref(item.href, promoteSafeFeatureHrefSet, SAFE_FEATURE_HUB_EXIT.href);
+            const resolved = resolveFeatureExit(item.href);
 
             return resolved.usedFallback
               ? {

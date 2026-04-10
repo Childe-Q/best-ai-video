@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-04-08T13:38:41.687741+00:00",
+  "basedOn": {
+    "existingMappings": [
+      {
+        "file": "src/lib/alternatives/fillLongformFromScraped.ts",
+        "symbol": "TOOL_SLUG_ALIASES"
+      },
+      {
+        "file": "scripts/convert-gemini-alternatives.ts",
+        "symbol": "getToolSlug"
+      },
+      {
+        "file": "src/lib/getTool.ts",
+        "symbol": "getTool"
+      }
+    ]
+  },
+  "canonicalByImportSlug": {
+    "aistudios-com": null,
+    "colossyan": "colossyan",
+    "d-id": "d-id",
+    "descript": "descript",
+    "elai-io": "elai-io",
+    "flexclip": "flexclip",
+    "fliki-ai": "fliki",
+    "heygen": "heygen",
+    "invideo-io": "invideo",
+    "lumen5": "lumen5",
+    "opus-pro": "opus-clip",
+    "pictory-ai": "pictory",
+    "pika-art": "pika",
+    "runwayml-com": "runway",
+    "steve-ai": "steve-ai",
+    "synthesia": "synthesia",
+    "synthesys-io": "synthesys",
+    "veed-io": "veed-io",
+    "zebracat-ai": "zebracat"
+  },
+  "manualReview": {
+    "unmapped": [
+      "aistudios-com"
+    ],
+    "duplicateEvidenceTargets": {
+      "elai-io": [
+        "elai-io",
+        "elai"
+      ]
+    }
+  }
+}

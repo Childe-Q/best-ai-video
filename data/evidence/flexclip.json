@@ -24,6 +24,30 @@
       "confidence": "high"
     },
     {
+      "text": "FlexClip says commercial use is allowed for Plus and Business subscribers and AI-credit purchasers, while free users do not get the same commercial-use rights.",
+      "theme": "commercial",
+      "sourceUrl": "https://help.flexclip.com/en/articles/7266809-commercial-use-regulations",
+      "sourceType": "help_center_article",
+      "capturedAt": "2026-04-08T13:38:41+00:00",
+      "confidence": "high"
+    },
+    {
+      "text": "FlexClip says canceled subscriptions stay active through the current billing cycle, and the first payment is covered by a 7-day money-back window.",
+      "theme": "support",
+      "sourceUrl": "https://www.flexclip.com/pricing.html",
+      "sourceType": "pricing",
+      "capturedAt": "2026-04-08T13:38:41+00:00",
+      "confidence": "high"
+    },
+    {
+      "text": "FlexClip offers a separate Teams plan for seat-based team rollout.",
+      "theme": "team",
+      "sourceUrl": "https://www.flexclip.com/pricing.html",
+      "sourceType": "pricing",
+      "capturedAt": "2026-04-08T13:38:41+00:00",
+      "confidence": "high"
+    },
+    {
       "text": "Plus also includes 3600 AI credits per year, FlexClip premium resources, 30GB cloud space, 100GB video hosting space, and up to 5 stock videos and 5 stock audio items per project.",
       "theme": "workflow",
       "sourceUrl": "https://www.flexclip.com/pricing.html",
@@ -87,5 +111,78 @@
       "capturedAt": "2026-03-21T18:45:00+08:00",
       "confidence": "high"
     }
-  ]
+  ],
+  "nonPriceEvidenceImport": {
+    "bundleDate": "2026-04-08",
+    "sourceBundle": "data/non-price-evidence-import/tools/flexclip.json",
+    "sourceUrls": [
+      "https://www.flexclip.com/pricing",
+      "https://www.flexclip.com/pricing.html",
+      "https://help.flexclip.com/en/articles/7266809-commercial-use-regulations",
+      "https://help.flexclip.com/en/articles/7213375-why-is-my-video-watermarked",
+      "https://www.flexclip.com/terms.html"
+    ],
+    "safeWriteback": {
+      "policy": {
+        "watermark": [
+          {
+            "value": "Paid Plus and Business exports remove the FlexClip watermark, while free exports stay watermarked.",
+            "sourceUrl": "https://www.flexclip.com/pricing.html"
+          },
+          {
+            "value": "Exceeding plan resource limits can still trigger watermarking even after upgrading.",
+            "sourceUrl": "https://help.flexclip.com/en/articles/7213375-why-is-my-video-watermarked"
+          }
+        ],
+        "commercialUse": [
+          {
+            "value": "Commercial use is allowed for Plus and Business subscribers and AI-credit purchasers; free users do not get the same commercial-use rights.",
+            "sourceUrl": "https://help.flexclip.com/en/articles/7266809-commercial-use-regulations"
+          }
+        ],
+        "refundCancellation": [
+          {
+            "value": "Subscriptions can be canceled anytime, downgrade at cycle end, and the first payment is covered by a 7-day money-back window.",
+            "sourceUrl": "https://www.flexclip.com/pricing.html"
+          }
+        ],
+        "exportLimits": [
+          {
+            "value": "Free exports at 720p, Plus upgrades to 1080p, and Business upgrades to 4K.",
+            "sourceUrl": "https://www.flexclip.com/pricing.html"
+          }
+        ]
+      },
+      "mainLimitations": [
+        {
+          "value": "The free tier caps projects at 12 saved videos, 1 stock video and 1 stock audio item per project, and 10-minute video length.",
+          "sourceUrl": "https://www.flexclip.com/pricing.html"
+        }
+      ],
+      "workflowFeatureDocs": [
+        {
+          "value": "The pricing surface exposes template-led creation, AI image-to-video, AI text-to-video, AI voice cloning, and screen recording workflows.",
+          "sourceUrl": "https://www.flexclip.com/pricing"
+        }
+      ],
+      "securityApiEnterprise": {
+        "security": [
+          {
+            "value": "FlexClip documents SSL-secured checkout for subscription payments.",
+            "sourceUrl": "https://www.flexclip.com/pricing.html"
+          }
+        ],
+        "enterprise": [
+          {
+            "value": "FlexClip exposes a separate Teams plan for seat-based team rollout.",
+            "sourceUrl": "https://www.flexclip.com/pricing.html"
+          }
+        ]
+      }
+    },
+    "retainedUnresolved": [
+      "policy.usageRights",
+      "securityApiEnterprise.api"
+    ]
+  }
 }

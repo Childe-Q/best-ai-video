@@ -25,6 +25,38 @@
       "confidence": "high"
     },
     {
+      "text": "Descript's pricing FAQ says you can cancel from the Descript subscription page, and the same account guidance says you can delete your account and permanently wipe your data from Descript's servers.",
+      "theme": "support",
+      "sourceUrl": "https://www.descript.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Descript Enterprise help says the enterprise plan includes SSO, SCIM, centralized administration, customer success, and seat management.",
+      "theme": "enterprise",
+      "sourceUrl": "https://help.descript.com/hc/en-us/articles/10255865751181-Enterprise-plan",
+      "sourceType": "help",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Descript's translation workflow says teams can translate and dub video in 30 plus languages with proofread and script review inside the editor.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.descript.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Descript's enterprise materials position advanced security and SSO or SCIM for larger teams, with SAML 2.0 SSO reserved for Enterprise customers.",
+      "theme": "security",
+      "sourceUrl": "https://help.descript.com/hc/en-us/articles/10255865751181-Enterprise-plan",
+      "sourceType": "help",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
       "text": "Creator adds 30 media hours plus 5 bonus hours, 800 monthly AI credits plus 500 bonus credits, and 4K watermark-free export.",
       "theme": "export",
       "sourceUrl": "https://www.descript.com/pricing",

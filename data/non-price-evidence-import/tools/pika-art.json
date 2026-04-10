@@ -1,0 +1,1563 @@
+{
+  "generatedAt": "2026-04-08T13:18:40.067184+00:00",
+  "slug": "pika-art",
+  "toolName": "Pika",
+  "officialHost": "pika.art",
+  "siteRootDir": "pika.art",
+  "runtimeCaptureDir": "data/runtime-captures/pika-art",
+  "artifacts": {
+    "counts": {
+      "htmlCount": 14,
+      "jsCount": 24,
+      "jsonCount": 1,
+      "mdCount": 1,
+      "official_page_htmlCount": 6,
+      "referenced_assetCount": 29,
+      "runtime_capture_htmlCount": 3,
+      "runtime_capture_jsonCount": 1,
+      "runtime_capture_reportCount": 1
+    },
+    "availablePageUrls": [
+      "https://pika.art/blog",
+      "https://pika.art/login",
+      "https://pika.art/pricing",
+      "https://pika.art/careers",
+      "https://pika.art/api"
+    ],
+    "keywordPageUrls": [
+      "https://pika.art/api"
+    ],
+    "paths": [
+      "pika.art/pika.art/blog.html",
+      "pika.art/pika.art/login (1).html",
+      "pika.art/pika.art/pricing.html",
+      "pika.art/pika.art/login.html",
+      "pika.art/pika.art/careers.html",
+      "pika.art/pika.art/api.html",
+      "data/runtime-captures/pika-art/report.md",
+      "data/runtime-captures/pika-art/rendered_dom_initial.html",
+      "data/runtime-captures/pika-art/network_responses.json",
+      "data/runtime-captures/pika-art/rendered_dom.html",
+      "data/runtime-captures/pika-art/rendered_dom_toggled.html",
+      "pika.art/pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+      "pika.art/pika.art/_next/static/chunks/0904c4bfa5ecc3b3.js",
+      "pika.art/pika.art/_next/static/chunks/4783d50c2296f115.js",
+      "pika.art/pika.art/_next/static/chunks/57551641de4fafee.js",
+      "pika.art/pika.art/_next/static/chunks/857b5ddd6b558d10.js",
+      "pika.art/pika.art/_next/static/chunks/turbopack-2be29c7e9eb3946d.js",
+      "pika.art/pika.art/_next/static/chunks/42fb8d7e72470792.js",
+      "pika.art/pika.art/_next/static/chunks/1447558650d72181.js",
+      "pika.art/pika.art/_next/static/chunks/edf5aa7c47b0acbf.js",
+      "pika.art/pika.art/_next/static/chunks/f4c2a72f6f304978.js",
+      "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+      "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+      "pika.art/pika.art/_next/static/chunks/78ae877e5fcc983a.js",
+      "pika.art/pika.art/_next/static/chunks/591741c5f0f799ff.js",
+      "pika.art/pika.art/_next/static/chunks/ca73071e1dc433aa.js",
+      "pika.art/pika.art/_next/static/chunks/33c21be3509e9314.js",
+      "pika.art/pika.art/_next/static/chunks/59f8677fa0bd8afd.js",
+      "pika.art/pika.art/blog.html",
+      "pika.art/pika.art/careers.html",
+      "pika.art/pika.art/api.html",
+      "pika.art/pika.art/login.html",
+      "pika.art/pika.art/pricing.html",
+      "pika.art/pika.art/_next/static/chunks/8cee8ceee46cabb0.js",
+      "pika.art/pika.art/_next/static/chunks/8a4aea77aa24c7ad.js",
+      "pika.art/pika.art/_next/static/chunks/ff70d9e07f6fb7bf.js",
+      "pika.art/pika.art/_next/static/chunks/09abba7f630c5bf5.js",
+      "pika.art/pika.art/_next/static/chunks/67f4061d7d37ab4f.js",
+      "pika.art/pika.art/_next/static/chunks/72b783633128be5a.js",
+      "pika.art/pika.art/_next/static/chunks/5c9a3ebd4bb4cdd4.js"
+    ]
+  },
+  "fields": {
+    "officialUrl": {
+      "value": "https://pika.art/",
+      "sourceUrl": "https://pika.art/",
+      "sourcePath": "pika.art/pika.art/blog.html"
+    },
+    "sourceUrls": [
+      "https://pika.art/blog",
+      "https://pika.art/login",
+      "https://pika.art/pricing",
+      "https://pika.art/careers",
+      "https://pika.art/api"
+    ],
+    "policy": {
+      "watermark": [
+        {
+          "valueCandidate": "Download videos with no watermark",
+          "snippet": "Download videos with no watermark Purchase more roll over video credits",
+          "sourcePath": "pika.art/pika.art/pricing.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download videos with no watermark",
+          "snippet": "Download videos with no watermark Commercial use",
+          "sourcePath": "pika.art/pika.art/pricing.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download videos with no watermark",
+          "snippet": "Download videos with no watermark Purchase more roll over video credits",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_initial.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download videos with no watermark",
+          "snippet": "Download videos with no watermark Commercial use",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_initial.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download videos with no watermark",
+          "snippet": "Download videos with no watermark Purchase more roll over video credits",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download videos with no watermark",
+          "snippet": "Download videos with no watermark Commercial use",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download videos with no watermark",
+          "snippet": "Download videos with no watermark Purchase more roll over video credits",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_toggled.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download videos with no watermark",
+          "snippet": "Download videos with no watermark Commercial use",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_toggled.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "ikadditions, Pikaswaps, Pikatwists, Pikaffects Image-to-Video only\"},{text:\"Download videos with no watermark\",notIncluded:!0},{text:\"Purchase more roll over video credits\",notIncluded:!0},{text:\"Commercial use\",notIncluded:!0}]},standard_weekly:{ke",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "t:\"Fast generations\"},{text:\"Purchase more roll over video credits\"},{text:\"Download videos with no watermark\",notIncluded:!0},{text:\"Commercial use\",notIncluded:!0}]},standard_monthly_apple:{key:l.standardMonthlyApple,title:\"Standard\",description:\"",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "t:\"Fast generations\"},{text:\"Purchase more roll over video credits\"},{text:\"Download videos with no watermark\",notIncluded:!0},{text:\"Commercial use\",notIncluded:!0}]},standard_yearly_apple:{key:l.standardYearlyApple,title:\"Standard\",description:\"Mo",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "t:\"Fast generations\"},{text:\"Purchase more roll over video credits\"},{text:\"Download videos with no watermark\",notIncluded:!0},{text:\"Commercial use\",notIncluded:!0}]},standard_monthly:{key:l.standardMonthly,title:\"Standard\",description:\"More videos",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "t:\"Fast generations\"},{text:\"Purchase more roll over video credits\"},{text:\"Download videos with no watermark\",notIncluded:!0},{text:\"Commercial use\",notIncluded:!0}]},standard_yearly:{key:l.standardYearly,title:\"Standard\",description:\"More videos m",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "t:\"Fast generations\"},{text:\"Purchase more roll over video credits\"},{text:\"Download videos with no watermark\",notIncluded:!0},{text:\"Commercial use\",notIncluded:!0}]},unlimited_weekly:{key:l.unlimitedWeekly,title:\"Pro\",description:\"More speed, more",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "\"Faster generations\"},{text:\"Purchase more roll over video credits\"},{text:\"Download videos with no watermark\"},{text:\"Commercial use\"}]},unlimited_monthly_apple:{key:l.unlimitedMonthlyApple,title:\"Pro\",description:\"More speed, more videos, more fun",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "\"Faster generations\"},{text:\"Purchase more roll over video credits\"},{text:\"Download videos with no watermark\"},{text:\"Commercial use\"}],discount:{condition:u.UserLessThan24Hours,discountPercentage:20}},unlimited_yearly_apple:{key:l.unlimitedYearlyA",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "\"Faster generations\"},{text:\"Purchase more roll over video credits\"},{text:\"Download videos with no watermark\"},{text:\"Commercial use\"}]},unlimited_monthly:{key:l.unlimitedMonthly,title:\"Pro\",description:\"More speed, more videos, more fun\",monthlyPr",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "\"Faster generations\"},{text:\"Purchase more roll over video credits\"},{text:\"Download videos with no watermark\"},{text:\"Commercial use\"}],discount:{condition:u.UserLessThan24Hours,discountPercentage:20}},unlimited_yearly:{key:l.unlimitedYearly,title:",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "\"Faster generations\"},{text:\"Purchase more roll over video credits\"},{text:\"Download videos with no watermark\"},{text:\"Commercial use\"}]},ultimate_weekly:{key:l.ultimateWeekly,title:\"Fancy\",description:\"The crème de la creativity\",monthlyPrice:209,w",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "Fastest generations\"},{text:\"Purchase more roll over video credits\"},{text:\"Download videos with no watermark\"},{text:\"Commercial use\"}]},ultimate_monthly_apple:{key:l.ultimateMonthlyApple,title:\"Fancy\",description:\"The crème de la creativity\",month",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "commercialUse": [
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use $8",
+          "sourcePath": "pika.art/pika.art/pricing.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use $28",
+          "sourcePath": "pika.art/pika.art/pricing.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use $76",
+          "sourcePath": "pika.art/pika.art/pricing.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use Pikaffects",
+          "sourcePath": "pika.art/pika.art/pricing.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use $8",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_initial.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use $28",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_initial.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use $76",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_initial.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use Pikaffects",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_initial.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use $8",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use $28",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use $76",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use Pikaffects",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use $8",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_toggled.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use $28",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_toggled.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use $76",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_toggled.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use Pikaffects",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_toggled.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "no watermark\",notIncluded:!0},{text:\"Purchase more roll over video credits\",notIncluded:!0},{text:\"Commercial use\",notIncluded:!0}]},standard_weekly:{key:l.standardWeekly,title:\"Standard\",description:\"More videos meets more editing features\",monthlyPric",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "ase more roll over video credits\"},{text:\"Download videos with no watermark\",notIncluded:!0},{text:\"Commercial use\",notIncluded:!0}]},standard_monthly_apple:{key:l.standardMonthlyApple,title:\"Standard\",description:\"More videos meets more editing features",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "ase more roll over video credits\"},{text:\"Download videos with no watermark\",notIncluded:!0},{text:\"Commercial use\",notIncluded:!0}]},standard_yearly_apple:{key:l.standardYearlyApple,title:\"Standard\",description:\"More videos meets more editing features\",",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "ase more roll over video credits\"},{text:\"Download videos with no watermark\",notIncluded:!0},{text:\"Commercial use\",notIncluded:!0}]},standard_monthly:{key:l.standardMonthly,title:\"Standard\",description:\"More videos meets more editing features\",monthlyPr",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "usageRights": [
+        {
+          "valueCandidate": "right to use",
+          "snippet": "r text-light-secondary text-s\",children:\"By clicking generate, you confirm that you own or have the right to use all inputs provided.\"}),(0,s.jsx)(eM,{}),i.error?.image||i.error?.video?(0,s.jsx)(\"p\",{className:\"text-center text-danger-primary text-m\",c",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/72b783633128be5a.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/72b783633128be5a.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "refundCancellation": [
+        {
+          "valueCandidate": "Upgrade, switch and cancel plan any time. VAT rate may be charged, depending on your country of residence.",
+          "snippet": "Upgrade, switch and cancel plan any time. VAT rate may be charged, depending on your country of residence.",
+          "sourcePath": "pika.art/pika.art/pricing.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Upgrade, switch and cancel plan any time. VAT rate may be charged, depending on your country of residence.",
+          "snippet": "Upgrade, switch and cancel plan any time. VAT rate may be charged, depending on your country of residence. Be the first to hear about Pika updates",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_initial.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Upgrade, switch and cancel plan any time. VAT rate may be charged, depending on your country of residence.",
+          "snippet": "Upgrade, switch and cancel plan any time. VAT rate may be charged, depending on your country of residence. Be the first to hear about Pika updates",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Upgrade, switch and cancel plan any time. VAT rate may be charged, depending on your country of residence.",
+          "snippet": "Upgrade, switch and cancel plan any time. VAT rate may be charged, depending on your country of residence. Be the first to hear about Pika updates",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_toggled.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "start\"),n8=n0(\"transitioncancel\"),n6=n0(\"transitionend\"),n9=new Map,n7=\"abort auxClick beforeToggle cancel canPlay canPlayThrough click close contextMenu copy cut drag dragEnd dragEnter dragExit dragLeave dragOver dragStart drop durationChange em",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/57551641de4fafee.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/57551641de4fafee.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "ction rX(e){var t=e.stateNode,n=e.type,r=e.memoizedProps;switch(t[eW]=e,t[eq]=r,n){case\"dialog\":sJ(\"cancel\",t),sJ(\"close\",t);break;case\"iframe\":case\"object\":case\"embed\":sJ(\"load\",t);break;case\"video\":case\"audio\":for(n=0;n<sX.length;n++)sJ(sX[n],t",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/57551641de4fafee.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/57551641de4fafee.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "null!==e&&u(e)}finally{r(),l(),o()}}),c.finished.finally(function(){for(var e=0;e<f.length;e++)f[e].cancel();s.__reactViewTransition===c&&(s.__reactViewTransition=null),i()}),c}catch(e){return r(),l(),o(),null}}(f,e.containerInfo,u1,sy,sb,sv,sw,s",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/57551641de4fafee.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/57551641de4fafee.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "seeked seeking stalled suspend timeupdate volumechange waiting\".split(\" \"),sG=new Set(\"beforetoggle cancel close invalid load scroll scrollend toggle\".split(\" \").concat(sX));function sY(e,t){t=0!=(4&t);for(var n=0;n<e.length;n++){var r=e[n],l=r.e",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/57551641de4fafee.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/57551641de4fafee.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "&\"symbol\"!=typeof l:cn(e,t,s,l,n,null));return;case\"dialog\":sJ(\"beforetoggle\",e),sJ(\"toggle\",e),sJ(\"cancel\",e),sJ(\"close\",e);break;case\"iframe\":case\"object\":sJ(\"load\",e);break;case\"video\":case\"audio\":for(l=0;l<sX.length;l++)sJ(sX[l],e);break;case",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/57551641de4fafee.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/57551641de4fafee.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "null;e=null}else t!==e&&(e=null)}}return fO=e,null}function fL(e){switch(e){case\"beforetoggle\":case\"cancel\":case\"click\":case\"close\":case\"contextmenu\":case\"copy\":case\"cut\":case\"auxclick\":case\"dblclick\":case\"dragend\":case\"dragstart\":case\"drop\":case",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/57551641de4fafee.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/57551641de4fafee.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "CANCELLED",
+          "snippet": "gth===n}}return r!=r&&i!=i}])},451902,726376,e=>{\"use strict\";var t,r,i,a,n,o=e.i(211030),s=((t={}).CANCELLED=\"cancelled\",t),l=((r={}).ultimateWeekly=\"ultimate_weekly\",r.ultimateMonthly=\"ultimate_monthly\",r.ultimateYearly=\"ultimate_yearly\",r.ultimat",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancelled",
+          "snippet": "turn r!=r&&i!=i}])},451902,726376,e=>{\"use strict\";var t,r,i,a,n,o=e.i(211030),s=((t={}).CANCELLED=\"cancelled\",t),l=((r={}).ultimateWeekly=\"ultimate_weekly\",r.ultimateMonthly=\"ultimate_monthly\",r.ultimateYearly=\"ultimate_yearly\",r.ultimateYearlyAppl",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "CRIPTION=\"purchase-subscription\",a.UPDATE_SUBSCRIPTION=\"update-subscription\",a.CANCEL_SUBSCRIPTION=\"cancel-subscription\",a.RENEWAL_DISCOUNT=\"renewal-discount\",a.ERROR=\"error\",a),u=((n={}).UserLessThan24Hours=\"USER_LESS_THAN_24_HOURS\",n);e.s([\"Dis",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": ".broadcastEndpointURL,o,null!=(r=t.timeout)?r:this.timeout);return await (null==(s=e.body)?void 0:s.cancel()),e.ok?\"ok\":\"error\"}catch(e){if(\"AbortError\"===e.name)return\"timed out\";return\"error\"}}}updateJoinPayload(e){this.joinPush.updatePayload(e",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Cancelling",
+          "snippet": "ror\",this.originalError=t}}let t4=new class{createNewAbortSignal(){if(this.controller){let e=Error(\"Cancelling existing WebAuthn API call for new one\");e.name=\"AbortError\",this.controller.abort(e)}let e=new AbortController;return this.controller=e,e.",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancelling",
+          "snippet": "roller;return this.controller=e,e.signal}cancelCeremony(){if(this.controller){let e=Error(\"Manually cancelling existing WebAuthn API call\");e.name=\"AbortError\",this.controller.abort(e),this.controller=void 0}}};function t3(e){return\"localhost\"===e||/",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Cancellation",
+          "snippet": "dingTour(e){var t;null==(t=this.Ri)||t.cancelPendingTour(e)}}var rk=((nb={}).Activation=\"events\",nb.Cancellation=\"cancelEvents\",nb),rS=((nw={}).Button=\"button\",nw.Tab=\"tab\",nw.Selector=\"selector\",(nE={}).TopLeft=\"top_left\",nE.TopRight=\"top_right\",nE.To",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/78ae877e5fcc983a.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/78ae877e5fcc983a.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Cancellation",
+          "snippet": "._instance)||t.Bi((e,t)=>{this.onEvent(e,t)}),this.Yi=this.te(e,rk.Activation),this.Xi=this.te(e,rk.Cancellation))}onEvent(e,t){var i,s=this.oe(),r=this.ae(),n=this.le(),o=(null==(i=this._instance)||null==(i=i.persistence)?void 0:i.props[r])||[];if(n==",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/78ae877e5fcc983a.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/78ae877e5fcc983a.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Cancellation",
+          "snippet": "){var u=o.indexOf(c);u>=0&&(o.splice(u,1),this.ue(o))}}else{if(this.Xi.has(e)){var h=this.ie(e,t,rk.Cancellation);h.length>0&&(s.info(\"cancel event matched, cancelling items\",{event:e,itemsToCancel:h.map(e=>e.id)}),h.forEach(e=>{var t=o.indexOf(e.id);t",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/78ae877e5fcc983a.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/78ae877e5fcc983a.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "e(u,1),this.ue(o))}}else{if(this.Xi.has(e)){var h=this.ie(e,t,rk.Cancellation);h.length>0&&(s.info(\"cancel event matched, cancelling items\",{event:e,itemsToCancel:h.map(e=>e.id)}),h.forEach(e=>{var t=o.indexOf(e.id);t>=0&&o.splice(t,1),this.he(e.",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/78ae877e5fcc983a.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/78ae877e5fcc983a.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "exportLimits": [
+        {
+          "valueCandidate": "Download videos with no watermark",
+          "snippet": "Download videos with no watermark Purchase more roll over video credits",
+          "sourcePath": "pika.art/pika.art/pricing.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download videos with no watermark",
+          "snippet": "Download videos with no watermark Commercial use",
+          "sourcePath": "pika.art/pika.art/pricing.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download videos with no watermark",
+          "snippet": "Download videos with no watermark Purchase more roll over video credits",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_initial.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download videos with no watermark",
+          "snippet": "Download videos with no watermark Commercial use",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_initial.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download videos with no watermark",
+          "snippet": "Download videos with no watermark Purchase more roll over video credits",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download videos with no watermark",
+          "snippet": "Download videos with no watermark Commercial use",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download videos with no watermark",
+          "snippet": "Download videos with no watermark Purchase more roll over video credits",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_toggled.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download videos with no watermark",
+          "snippet": "Download videos with no watermark Commercial use",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_toggled.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": ".__esModule&&(Object.defineProperty(r.default,\"__esModule\",{value:!0}),Object.assign(r.default,r),t.exports=r.default)},599723,(e,t,r)=>{\"use strict\";Object.defineProperty(r,\"__esModule\",{value:!0}),Object.defineProperty(r,\"useUntrackedPathname\",{",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": ".__esModule&&(Object.defineProperty(r.default,\"__esModule\",{value:!0}),Object.assign(r.default,r),t.exports=r.default)},147529,(e,t,r)=>{\"use strict\";Object.defineProperty(r,\"__esModule\",{value:!0});var n={handleHardNavError:function(){return u},u",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": ".__esModule&&(Object.defineProperty(r.default,\"__esModule\",{value:!0}),Object.assign(r.default,r),t.exports=r.default)},86968,(e,t,r)=>{\"use strict\";Object.defineProperty(r,\"__esModule\",{value:!0});var n={ErrorBoundary:function(){return y},ErrorBo",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": ".__esModule&&(Object.defineProperty(r.default,\"__esModule\",{value:!0}),Object.assign(r.default,r),t.exports=r.default)},463372,(e,t,r)=>{\"use strict\";Object.defineProperty(r,\"__esModule\",{value:!0});var n={RedirectBoundary:function(){return p},Red",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": ".__esModule&&(Object.defineProperty(r.default,\"__esModule\",{value:!0}),Object.assign(r.default,r),t.exports=r.default)},250020,(e,t,r)=>{\"use strict\";Object.defineProperty(r,\"__esModule\",{value:!0}),Object.defineProperty(r,\"unresolvedThenable\",{en",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": ".__esModule&&(Object.defineProperty(r.default,\"__esModule\",{value:!0}),Object.assign(r.default,r),t.exports=r.default)},708499,(e,t,r)=>{\"use strict\";Object.defineProperty(r,\"__esModule\",{value:!0});var n={MetadataBoundary:function(){return s},Out",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": ",props:r}}r.Fragment=Symbol.for(\"react.fragment\"),r.jsx=o,r.jsxs=o},720910,(e,t,r)=>{\"use strict\";t.exports=e.r(235173)},220321,(e,t,r)=>{var n={229:function(e){var t,r,n,o=e.exports={};function i(){throw Error(\"setTimeout has not been defined\")}f",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "(e,t,r)=>{\"use strict\";t.exports=e.r(235173)},220321,(e,t,r)=>{var n={229:function(e){var t,r,n,o=e.exports={};function i(){throw Error(\"setTimeout has not been defined\")}function u(){throw Error(\"clearTimeout has not been defined\")}try{t=\"functio",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "ot supported\")},o.umask=function(){return 0}}},o={};function i(e){var t=o[e];if(void 0!==t)return t.exports;var r=o[e]={exports:{}},u=!0;try{n[e](r,r.exports,i),u=!1}finally{u&&delete o[e]}return r.exports}i.ab=\"/ROOT/node_modules/.pnpm/next@16.1.",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "ask=function(){return 0}}},o={};function i(e){var t=o[e];if(void 0!==t)return t.exports;var r=o[e]={exports:{}},u=!0;try{n[e](r,r.exports,i),u=!1}finally{u&&delete o[e]}return r.exports}i.ab=\"/ROOT/node_modules/.pnpm/next@16.1.4_@babel+core@7.28.6",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "};function i(e){var t=o[e];if(void 0!==t)return t.exports;var r=o[e]={exports:{}},u=!0;try{n[e](r,r.exports,i),u=!1}finally{u&&delete o[e]}return r.exports}i.ab=\"/ROOT/node_modules/.pnpm/next@16.1.4_@babel+core@7.28.6_@opentelemetry+api@1.9.0_reac",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "t.exports;var r=o[e]={exports:{}},u=!0;try{n[e](r,r.exports,i),u=!1}finally{u&&delete o[e]}return r.exports}i.ab=\"/ROOT/node_modules/.pnpm/next@16.1.4_@babel+core@7.28.6_@opentelemetry+api@1.9.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_mod",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ]
+    },
+    "mainLimitations": [
+      {
+        "valueCandidate": "80 monthly video credits",
+        "snippet": "80 monthly video credits Cost per video:",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "10 credits - Turbo model (using Pikascenes, Pikadditions or Pikaswaps)",
+        "snippet": "10 credits - Turbo model (using Pikascenes, Pikadditions or Pikaswaps) 60 credits - Turbo model (using Pikatwists)",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "60 credits - Turbo model (using Pikatwists)",
+        "snippet": "60 credits - Turbo model (using Pikatwists) 20 credits - Pro model (using Pikadditions or Pikaswaps)",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "20 credits - Pro model (using Pikadditions or Pikaswaps)",
+        "snippet": "20 credits - Pro model (using Pikadditions or Pikaswaps) 30 credits - Pro model (using Selfie With Your Younger Self template)",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "30 credits - Pro model (using Selfie With Your Younger Self template)",
+        "snippet": "30 credits - Pro model (using Selfie With Your Younger Self template) 80 credits - Pro model (using Pikatwists)",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "80 credits - Pro model (using Pikatwists)",
+        "snippet": "80 credits - Pro model (using Pikatwists) Cost per video:",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "80 credits - Pro model (using Pikatwists)",
+        "snippet": "80 credits - Pro model (using Pikatwists) Access to Pika 2.5 (480p only), Pikascenes, Pikadditions, Pikaswaps, Pikatwists, Pikaffects Image-to-Video only",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Purchase more roll over video credits",
+        "snippet": "Purchase more roll over video credits Commercial use",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "700 monthly video credits",
+        "snippet": "700 monthly video credits Cost per video:",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "80 credits - Pro model (using Pikatwists)",
+        "snippet": "80 credits - Pro model (using Pikatwists) Access to Pika 2.5 (all resolutions), Pikaframes, Pikascenes, Pikadditions, Pikaswaps, Pikatwists, all Pikaffects",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Purchase more roll over video credits",
+        "snippet": "Purchase more roll over video credits Download videos with no watermark",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "2300 monthly video credits",
+        "snippet": "2300 monthly video credits Cost per video:",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "6000 monthly video credits",
+        "snippet": "6000 monthly video credits Cost per video:",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Credits + Plan",
+        "snippet": "Credits + Plan 15 credits",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "15 credits",
+        "snippet": "15 credits Free",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "18 credits",
+        "snippet": "18 credits Paid",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Credits + Plan",
+        "snippet": "Credits + Plan 20 credits",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "20 credits",
+        "snippet": "20 credits Free",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "35 credits",
+        "snippet": "35 credits Paid",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "65 credits",
+        "snippet": "65 credits Paid",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      }
+    ],
+    "workflowFeatureDocs": [
+      {
+        "valueCandidate": "30 credits - Pro model (using Selfie With Your Younger Self template)",
+        "snippet": "30 credits - Pro model (using Selfie With Your Younger Self template) 80 credits - Pro model (using Pikatwists)",
+        "sourcePath": "pika.art/pika.art/pricing.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "30 credits - Pro model (using Selfie With Your Younger Self template)",
+        "snippet": "30 credits - Pro model (using Selfie With Your Younger Self template) 80 credits - Pro model (using Pikatwists)",
+        "sourcePath": "data/runtime-captures/pika-art/rendered_dom_initial.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "30 credits - Pro model (using Selfie With Your Younger Self template)",
+        "snippet": "30 credits - Pro model (using Selfie With Your Younger Self template) 80 credits - Pro model (using Pikatwists)",
+        "sourcePath": "data/runtime-captures/pika-art/rendered_dom.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "30 credits - Pro model (using Selfie With Your Younger Self template)",
+        "snippet": "30 credits - Pro model (using Selfie With Your Younger Self template) 80 credits - Pro model (using Pikatwists)",
+        "sourcePath": "data/runtime-captures/pika-art/rendered_dom_toggled.html",
+        "sourceUrl": "https://pika.art/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "template",
+        "snippet": "tion w({parallelRouterKey:e,error:t,errorStyles:r,errorScripts:n,templateStyles:a,templateScripts:s,template:d,notFound:f,forbidden:y,unauthorized:P,segmentViewBoundaries:_}){let S=(0,i.useContext)(c.LayoutRouterContext);if(!S)throw Object.definePr",
+        "sourcePath": "pika.art/pika.art/_next/static/chunks/1447558650d72181.js",
+        "sourceUrl": "https://pika.art/_next/static/chunks/1447558650d72181.js",
+        "artifactType": "referenced_asset",
+        "contentType": "js"
+      },
+      {
+        "valueCandidate": "Template",
+        "snippet": "iantError(\"Expected workStore to exist when handling params in a client segment such as a Layout or Template.\"),\"__NEXT_ERROR_CODE\",{value:\"E600\",enumerable:!1,configurable:!0});let{createParamsFromClient:u}=e.r(29185);return o=u(c,s),(0,n.jsx)(t,{",
+        "sourcePath": "pika.art/pika.art/_next/static/chunks/1447558650d72181.js",
+        "sourceUrl": "https://pika.art/_next/static/chunks/1447558650d72181.js",
+        "artifactType": "referenced_asset",
+        "contentType": "js"
+      },
+      {
+        "valueCandidate": "templates",
+        "snippet": "tions:({userId:e,page:t,perPage:r=12})=>`${i}/admin/generations?userId=${e}&page=${t}&perPage=${r}`,templates:`${i}/templates`};var n=((t={}).File=\"file\",t.Encrypt=\"encrypt\",t.Extend=\"extend\",t.Outpainting=\"outpainting\",t.Inpainting=\"inpainting\",t.N",
+        "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+        "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+        "artifactType": "referenced_asset",
+        "contentType": "js"
+      },
+      {
+        "valueCandidate": "templates",
+        "snippet": ",page:t,perPage:r=12})=>`${i}/admin/generations?userId=${e}&page=${t}&perPage=${r}`,templates:`${i}/templates`};var n=((t={}).File=\"file\",t.Encrypt=\"encrypt\",t.Extend=\"extend\",t.Outpainting=\"outpainting\",t.Inpainting=\"inpainting\",t.Normal=\"normal\",t",
+        "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+        "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+        "artifactType": "referenced_asset",
+        "contentType": "js"
+      },
+      {
+        "valueCandidate": "template",
+        "snippet": ":!0,link:!0,meta:!0,script:!0,style:!0,title:!0,br:!0,hr:!0,wbr:!0,noscript:!0,picture:!0,source:!0,template:!0,track:!0},s4={article:!0,div:!0,h1:!0,h2:!0,h3:!0,h4:!0,h5:!0,h6:!0,p:!0,section:!0,span:!0},s5=[\"onclick\",\"onmousedown\",\"onmouseup\",\"on",
+        "sourcePath": "pika.art/pika.art/_next/static/chunks/591741c5f0f799ff.js",
+        "sourceUrl": "https://pika.art/_next/static/chunks/591741c5f0f799ff.js",
+        "artifactType": "referenced_asset",
+        "contentType": "js"
+      },
+      {
+        "valueCandidate": "translate",
+        "snippet": "dUserInput:ev},o.default.createElement(V,tW(tW({role:F?void 0:\"textbox\",\"aria-multiline\":!F||void 0,translate:\"no\"},H),{},{spellCheck:(!!W||!_)&&H.spellCheck,autoCorrect:W||!_?H.autoCorrect:\"false\",autoCapitalize:W||!_?H.autoCapitalize:\"false\",\"data",
+        "sourcePath": "pika.art/pika.art/_next/static/chunks/ca73071e1dc433aa.js",
+        "sourceUrl": "https://pika.art/_next/static/chunks/ca73071e1dc433aa.js",
+        "artifactType": "referenced_asset",
+        "contentType": "js"
+      },
+      {
+        "valueCandidate": "translate",
+        "snippet": "nt-primary pt-15 fixed bottom-0 left-0 h-full w-full px-5 transition-all duration-500 lg:hidden\",{\"-translate-y-full opacity-0\":!o}),children:[(0,t.jsxs)(\"ul\",{className:\"text-dark-gray mt-[26px] flex flex-col text-[1.88rem] leading-[1.2]\",children:",
+        "sourcePath": "pika.art/pika.art/_next/static/chunks/33c21be3509e9314.js",
+        "sourceUrl": "https://pika.art/_next/static/chunks/33c21be3509e9314.js",
+        "artifactType": "referenced_asset",
+        "contentType": "js"
+      },
+      {
+        "valueCandidate": "translate",
+        "snippet": "ex items-center ease-out after:absolute after:bottom-0 after:left-0 after:h-[2.5px] after:w-0 after:translate-y-[.5px] after:transition-[width] hover:after:w-full\",children:\"Careers\"}),(0,t.jsx)(r.default,{href:\"/api\",className:\"after:bg-light-tan r",
+        "sourcePath": "pika.art/pika.art/_next/static/chunks/33c21be3509e9314.js",
+        "sourceUrl": "https://pika.art/_next/static/chunks/33c21be3509e9314.js",
+        "artifactType": "referenced_asset",
+        "contentType": "js"
+      },
+      {
+        "valueCandidate": "translate",
+        "snippet": "ex items-center ease-out after:absolute after:bottom-0 after:left-0 after:h-[2.5px] after:w-0 after:translate-y-[.5px] after:transition-[width] hover:after:w-full\",children:\"API\"}),(0,t.jsx)(r.default,{href:\"/blog\",className:\"after:bg-light-tan rela",
+        "sourcePath": "pika.art/pika.art/_next/static/chunks/33c21be3509e9314.js",
+        "sourceUrl": "https://pika.art/_next/static/chunks/33c21be3509e9314.js",
+        "artifactType": "referenced_asset",
+        "contentType": "js"
+      },
+      {
+        "valueCandidate": "translate",
+        "snippet": "ex items-center ease-out after:absolute after:bottom-0 after:left-0 after:h-[2.5px] after:w-0 after:translate-y-[.5px] after:transition-[width] hover:after:w-full\",children:\"Blog\"})]}),(0,t.jsx)(\"div\",{className:(0,n.default)(\"text-light-tan flex h-",
+        "sourcePath": "pika.art/pika.art/_next/static/chunks/33c21be3509e9314.js",
+        "sourceUrl": "https://pika.art/_next/static/chunks/33c21be3509e9314.js",
+        "artifactType": "referenced_asset",
+        "contentType": "js"
+      },
+      {
+        "valueCandidate": "translate",
+        "snippet": "ing-[.01125rem] ease-out after:absolute after:bottom-0 after:left-0 after:h-[2.5px] after:w-0 after:translate-y-[.5px] after:transition-[width] hover:after:w-full max-lg:hidden\",children:\"Sign In\"}),(0,t.jsx)(r.default,{href:\"/login\",className:\" hov",
+        "sourcePath": "pika.art/pika.art/_next/static/chunks/33c21be3509e9314.js",
+        "sourceUrl": "https://pika.art/_next/static/chunks/33c21be3509e9314.js",
+        "artifactType": "referenced_asset",
+        "contentType": "js"
+      },
+      {
+        "valueCandidate": "translate",
+        "snippet": "r group-hover:bg-[url(/images/super_collaborator_tag_bg.png)]\",children:[(0,t.jsx)(\"p\",{className:\"-translate-x-1/2 absolute left-1/2 opacity-0 group-hover:animate-scInTextWrapper\",children:(0,t.jsx)(\"span\",{className:\"animate-glowing-text-shadow\",c",
+        "sourcePath": "pika.art/pika.art/_next/static/chunks/33c21be3509e9314.js",
+        "sourceUrl": "https://pika.art/_next/static/chunks/33c21be3509e9314.js",
+        "artifactType": "referenced_asset",
+        "contentType": "js"
+      },
+      {
+        "valueCandidate": "translate",
+        "snippet": "t.jsx)(\"div\",{className:(0,r.default)(\"absolute left-0.5 top-0.5 h-4 w-4 rounded-full transition\",{\"translate-x-3 bg-dark-elements\":n,\"translate-x-0 bg-accent-primary\":!n})})]})})})}e.s([\"default\",()=>n])},844022,e=>{\"use strict\";var t=e.i(720910),r",
+        "sourcePath": "pika.art/pika.art/_next/static/chunks/33c21be3509e9314.js",
+        "sourceUrl": "https://pika.art/_next/static/chunks/33c21be3509e9314.js",
+        "artifactType": "referenced_asset",
+        "contentType": "js"
+      },
+      {
+        "valueCandidate": "translate",
+        "snippet": "t)(\"absolute left-0.5 top-0.5 h-4 w-4 rounded-full transition\",{\"translate-x-3 bg-dark-elements\":n,\"translate-x-0 bg-accent-primary\":!n})})]})})})}e.s([\"default\",()=>n])},844022,e=>{\"use strict\";var t=e.i(720910),r=e.i(625443),i=e.i(264458);function",
+        "sourcePath": "pika.art/pika.art/_next/static/chunks/33c21be3509e9314.js",
+        "sourceUrl": "https://pika.art/_next/static/chunks/33c21be3509e9314.js",
+        "artifactType": "referenced_asset",
+        "contentType": "js"
+      },
+      {
+        "valueCandidate": "translate",
+        "snippet": "-touchscreen group relative\",e),...d,ref:m,children:[i,r?(0,t.jsx)(\"div\",{className:(0,s.default)(\"-translate-x-1/2 -translate-y-1 after:-translate-x-1/2 absolute bottom-full left-1/2 rounded-md bg-dark-pop-up/50 px-1.5 py-1 text-s-mobile backdrop-b",
+        "sourcePath": "pika.art/pika.art/_next/static/chunks/8a4aea77aa24c7ad.js",
+        "sourceUrl": "https://pika.art/_next/static/chunks/8a4aea77aa24c7ad.js",
+        "artifactType": "referenced_asset",
+        "contentType": "js"
+      },
+      {
+        "valueCandidate": "translate",
+        "snippet": "p relative\",e),...d,ref:m,children:[i,r?(0,t.jsx)(\"div\",{className:(0,s.default)(\"-translate-x-1/2 -translate-y-1 after:-translate-x-1/2 absolute bottom-full left-1/2 rounded-md bg-dark-pop-up/50 px-1.5 py-1 text-s-mobile backdrop-blur-2xl after:abs",
+        "sourcePath": "pika.art/pika.art/_next/static/chunks/8a4aea77aa24c7ad.js",
+        "sourceUrl": "https://pika.art/_next/static/chunks/8a4aea77aa24c7ad.js",
+        "artifactType": "referenced_asset",
+        "contentType": "js"
+      }
+    ],
+    "securityApiEnterprise": {
+      "security": [
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy",
+          "sourcePath": "pika.art/pika.art/blog.html",
+          "sourceUrl": "https://pika.art/blog",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy We’re",
+          "sourcePath": "pika.art/pika.art/login (1).html",
+          "sourceUrl": "https://pika.art/login",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy policy",
+          "snippet": "Privacy policy Terms of service",
+          "sourcePath": "pika.art/pika.art/login (1).html",
+          "sourceUrl": "https://pika.art/login",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Subscription Pricing",
+          "sourcePath": "pika.art/pika.art/pricing.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy",
+          "sourcePath": "pika.art/pika.art/careers.html",
+          "sourceUrl": "https://pika.art/careers",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy",
+          "sourcePath": "pika.art/pika.art/api.html",
+          "sourceUrl": "https://pika.art/api",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_initial.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy",
+          "sourcePath": "data/runtime-captures/pika-art/rendered_dom_toggled.html",
+          "sourceUrl": "https://pika.art/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "security",
+          "snippet": "on tC(e){return tP.test(\"\"+e)?\"javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')\":e}function tT(){}var tO=null;function tz(e){return(e=e.target||e.srcElement||window).correspondingUseElement&&(e=e.correspon",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/57551641de4fafee.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/57551641de4fafee.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "security",
+          "snippet": "rred\",code:\"ERROR_PASSTHROUGH_SEE_CAUSE_PROPERTY\",cause:e})}({error:t,options:e})}}}let rt={hints:[\"security-key\"],authenticatorSelection:{authenticatorAttachment:\"cross-platform\",requireResidentKey:!1,userVerification:\"preferred\",residentKey:\"disc",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "security",
+          "snippet": "referred\",residentKey:\"discouraged\"},attestation:\"direct\"},rr={userVerification:\"preferred\",hints:[\"security-key\"],attestation:\"direct\"};function rs(...e){let t=e=>null!==e&&\"object\"==typeof e&&!Array.isArray(e),r=e=>e instanceof ArrayBuffer||Array",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "gdpr",
+          "snippet": "r.track&&e&&r.track(r.trackEventName||\"$opt_in\",r.trackProperties,{send_immediately:!0})):oH.error(\"gdpr.\"+(e?\"optIn\":\"optOut\")+\" called with an invalid token\")}function sk(e,t){return function(){var r=!1;try{var n=t.call(this,\"token\"),i=t.call",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/591741c5f0f799ff.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/591741c5f0f799ff.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "r\",className:\"underline\",children:\"Acceptable Use Policy\"}),\", and\",\" \",(0,t.jsx)(i.default,{href:\"/privacy-policy\",target:\"_blank\",rel:\"noopener noreferrer\",className:\"underline\",children:\"Privacy Policy\"})]})})]})]})}e.s([\"default\",()=>L],333349",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/33c21be3509e9314.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/33c21be3509e9314.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "t,{href:\"/privacy-policy\",target:\"_blank\",rel:\"noopener noreferrer\",className:\"underline\",children:\"Privacy Policy\"})]})})]})]})}e.s([\"default\",()=>L],333349)},627901,e=>{\"use strict\";var t=e.i(720910),r=e.i(634053),i=e.i(451902),n=e.i(963325);let",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/33c21be3509e9314.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/33c21be3509e9314.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "api": [
+        {
+          "valueCandidate": "PIKA API",
+          "snippet": "PIKA API TAKE PIKA TO GO",
+          "sourcePath": "pika.art/pika.art/api.html",
+          "sourceUrl": "https://pika.art/api",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "All about the Pika API",
+          "snippet": "All about the Pika API Be the first to hear about Pika updates",
+          "sourcePath": "pika.art/pika.art/api.html",
+          "sourceUrl": "https://pika.art/api",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "o[e]}return r.exports}i.ab=\"/ROOT/node_modules/.pnpm/next@16.1.4_@babel+core@7.28.6_@opentelemetry+api@1.9.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/compiled/process/\",t.exports=i(229)},211030,(e,t,r)=>{\"use strict\"",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/6e5212fa315c7e2f.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "or(){super(\"Method unavailable on `ReadonlyURLSearchParams`. Read more: https://nextjs.org/docs/app/api-reference/functions/use-search-params#updating-searchparams\")}}class a extends URLSearchParams{append(){throw new n}delete(){throw new n}se",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/857b5ddd6b558d10.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/857b5ddd6b558d10.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "${e}\\` was called outside a request scope. Read more: https://nextjs.org/docs/messages/next-dynamic-api-wrong-context`),\"__NEXT_ERROR_CODE\",{value:\"E251\",enumerable:!1,configurable:!0})}function c(){throw Object.defineProperty(new u.InvariantE",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/857b5ddd6b558d10.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/857b5ddd6b558d10.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "es(\"node_modules/next/\")||e.includes(\" (<anonymous>)\")||e.includes(\" (node:\"))).join(\"\\n\"),`Dynamic API Usage Debug - ${e}: ${t}`))}function L(){let e=new AbortController;return e.abort(Object.defineProperty(new m.BailoutToCSRError(\"Render in",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/857b5ddd6b558d10.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/857b5ddd6b558d10.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "o[t]}return r.exports}i.ab=\"/ROOT/node_modules/.pnpm/next@16.1.4_@babel+core@7.28.6_@opentelemetry+api@1.9.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/next/dist/compiled/buffer/\",e.exports=i(72)}]);",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/f4c2a72f6f304978.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/f4c2a72f6f304978.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "assign(r.default,r),t.exports=r.default)},92285,e=>{\"use strict\";var t,r=e.i(211030);let i=\"https://api.pika.art\",a={feedGenerations:({after:e,perPage:t=9,category:r,subCategory:a,userId:n})=>`${i}/generations/v2?${e?`id=${e}&`:\"\"}&perPage=${t",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "tion=\"addition\",t.Scene=\"scene\",t);let o=r.default.env.NEXT_PUBLIC_CALENDLY_BOOK_CALL_URL||\"\";e.s([\"API\",0,a,\"ASPECT_RATIOS\",0,[{label:\"5:2\",description:\"Cinematic\",value:2.5},{label:\"16:9\",description:\"YouTube\",value:16/9},{label:\"4:3\",descri",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "eturn i.getMonth()!==r&&(i=new Date(t+1,r+1,0)),i.toString()},v=()=>fetch(\"https://worldtimeapi.org/api/timezone/Etc/UTC\").then(e=>{if(!e.ok)throw Error(\"Network response was not ok\");return e.json()}).then(e=>new Date(e.utc_datetime)).catch(e",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "not supported by our provider and we'll keep using the previous key. If you need to toggle between API Keys you need to control the `client` yourself and pass it in as a prop rather than an `apiKey` prop.\"),d&&!function e(t,r,i){if(void 0===i",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "@]+$/.test(b))return void _(\"Please enter a valid email address\");h(async()=>{try{if((await fetch(\"/api/support\",{method:\"POST\",headers:{\"Content-Type\":\"application/json\"},body:JSON.stringify({name:g,email:u||b,subject:v,message:P})})).ok)retu",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "cket clients are not supported in Cloudflare Workers.\",workaround:\"Use Cloudflare Workers WebSocket API for server-side WebSocket handling, or deploy to a different runtime.\"};if(\"u\">typeof globalThis&&globalThis.EdgeRuntime||\"u\">typeof naviga",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "replace(/\\/socket$/i,\"\").replace(/\\/websocket$/i,\"\"),\"\"===t.pathname||\"/\"===t.pathname?t.pathname=\"/api/broadcast\":t.pathname=t.pathname+\"/api/broadcast\",t.href};class Q{constructor(e,t,r={},s=1e4){this.channel=e,this.event=t,this.payload=r,th",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "socket$/i,\"\"),\"\"===t.pathname||\"/\"===t.pathname?t.pathname=\"/api/broadcast\":t.pathname=t.pathname+\"/api/broadcast\",t.href};class Q{constructor(e,t,r={},s=1e4){this.channel=e,this.event=t,this.payload=r,this.timeout=s,this.sent=!1,this.timeoutT",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "timeout\",()=>r(\"timed out\"))});{console.warn(\"Realtime send() is automatically falling back to REST API. This behavior will be deprecated in the future. Please use httpSend() explicitly for REST delivery.\");let{event:i,payload:n}=e,a={apikey:t",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "..t)=>e(...t):(...e)=>fetch(...e),!(null==(r=null==t?void 0:t.params)?void 0:r.apikey))throw Error(\"API key is required to connect to Realtime\");this.apiKey=t.params.apikey,this.endPoint=`${e}/${w.websocket}`,this.httpEndpoint=X(e),this._initi",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "}),n=new URL(this.url+i.url),a=n.searchParams.get(\"token\");if(!a)throw new ef(\"No token returned by API\");return{data:{signedUrl:n.toString(),path:e,token:a},error:null}}catch(e){if(this.shouldThrowOnError)throw e;if(ep(e))return{data:null,err",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Api",
+          "snippet": "g\",this.headers,this.fetch)}};let e2=\"2.90.1\",e6={\"X-Client-Info\":`gotrue-js/${e2}`},e5=\"X-Supabase-Api-Version\",e8={\"2024-01-01\":{timestamp:Date.parse(\"2024-01-01T00:00:00.0Z\"),name:\"2024-01-01\"}},e4=/^([a-z0-9_-]{4})*($|[a-z0-9_-]{3}$|[a-z0-",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "?btoa(await tI(e)).replace(/\\+/g,\"-\").replace(/\\//g,\"_\").replace(/=+$/,\"\"):(console.warn(\"WebCrypto API is not supported. Code challenge method will default to use plain instead of sha256.\"),e)}async function tP(e,t,r=!1){let s=function(){let",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "enterprise": [
+        {
+          "valueCandidate": "Today is a big day for us. It’s been a year since we dropped out of Stanford to build Pika, and in that time, we’ve done a stealth launch on Discord, released our 1.0 model and web app, shipped multiple first-to-market features, and grown our team from three to thirteen.",
+          "snippet": "Today is a big day for us. It’s been a year since we dropped out of Stanford to build Pika, and in that time, we’ve done a stealth launch on Discord, released our 1.0 model and web app, shipped multiple first-to-market features, and grown our team from thre...",
+          "sourcePath": "pika.art/pika.art/blog.html",
+          "sourceUrl": "https://pika.art/blog",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "That’s why we’re thrilled and humbled to announce that we’ve raised an $80M series B, bringing our total funding to $135M. Led by the incredible team at Spark Capital, this round will enable us to accelerate our progress in building the best video foundation model, and the best possible product for video creators.",
+          "snippet": "That’s why we’re thrilled and humbled to announce that we’ve raised an $80M series B, bringing our total funding to $135M. Led by the incredible team at Spark Capital, this round will enable us to accelerate our progress in building the best video foundatio...",
+          "sourcePath": "pika.art/pika.art/blog.html",
+          "sourceUrl": "https://pika.art/blog",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "We're revolutionizing video creation to be seamless and accessible for everyone. Our small, dynamic team values efficiency, collaboration, and creativity. We're seeking individuals with intellect, work ethic, and ambition to join us in breaking down barriers and making a real impact. Experience career growth in a culture that fosters both individual and collective development.",
+          "snippet": "We're revolutionizing video creation to be seamless and accessible for everyone. Our small, dynamic team values efficiency, collaboration, and creativity. We're seeking individuals with intellect, work ethic, and ambition to join us in breaking down barrier...",
+          "sourcePath": "pika.art/pika.art/careers.html",
+          "sourceUrl": "https://pika.art/careers",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "admin",
+          "snippet": "musicVideo:e=>`${i}/fetch/musicVideo/${e}`,adminGenerations:({userId:e,page:t,perPage:r=12})=>`${i}/admin/generations?userId=${e}&page=${t}&perPage=${r}`,templates:`${i}/templates`};var n=((t={}).File=\"file\",t.Encrypt=\"encrypt\",t.Extend=\"extend\"",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "team",
+          "snippet": "us know how we can help\"}),(0,t.jsx)(\"p\",{className:\"mb-5 text-sm font-light\",children:\"Our support team is here to assist you with any questions or issues\"}),p?(0,t.jsxs)(\"div\",{className:\"text-sm font-light\",children:[(0,t.jsx)(\"p\",{className",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/1a05b2e4ba6c91c9.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "sso",
+          "snippet": "wType&&([a,o]=await tP(this.storage,this.storageKey));let l=await tW(this.fetch,\"POST\",`${this.url}/sso`,{body:Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({},\"providerId\"in e?{provider_id:e.providerId}:null),\"domain\"i",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "admin",
+          "snippet": "&&(s.new_email=null==r?void 0:r.newEmail,delete s.newEmail),await tW(this.fetch,\"POST\",`${this.url}/admin/generate_link`,{body:s,headers:this.headers,xform:tH,redirectTo:null==t?void 0:t.redirectTo})}catch(e){if(e9(e))return{data:{properties:nul",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "admin",
+          "snippet": "user:null},error:e};throw e}}async createUser(e){try{return await tW(this.fetch,\"POST\",`${this.url}/admin/users`,{body:e,headers:this.headers,xform:tz})}catch(e){if(e9(e))return{data:{user:null},error:e};throw e}}async listUsers(e){var t,r,s,i,n",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "admin",
+          "snippet": "t,r,s,i,n,a,o;try{let l={nextPage:null,lastPage:0,total:0},h=await tW(this.fetch,\"GET\",`${this.url}/admin/users`,{headers:this.headers,noResolveJson:!0,query:{page:null!=(r=null==(t=null==e?void 0:e.page)?void 0:t.toString())?r:\"\",per_page:null!",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "admin",
+          "snippet": ":[]},error:e};throw e}}async getUserById(e){tU(e);try{return await tW(this.fetch,\"GET\",`${this.url}/admin/users/${e}`,{headers:this.headers,xform:tz})}catch(e){if(e9(e))return{data:{user:null},error:e};throw e}}async updateUserById(e,t){tU(e);tr",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "admin",
+          "snippet": "error:e};throw e}}async updateUserById(e,t){tU(e);try{return await tW(this.fetch,\"PUT\",`${this.url}/admin/users/${e}`,{body:t,headers:this.headers,xform:tz})}catch(e){if(e9(e))return{data:{user:null},error:e};throw e}}async deleteUser(e,t=!1){tU",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "admin",
+          "snippet": "ror:e};throw e}}async deleteUser(e,t=!1){tU(e);try{return await tW(this.fetch,\"DELETE\",`${this.url}/admin/users/${e}`,{headers:this.headers,body:{should_soft_delete:t},xform:tz})}catch(e){if(e9(e))return{data:{user:null},error:e};throw e}}async",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "admin",
+          "snippet": "}}async _listFactors(e){tU(e.userId);try{let{data:t,error:r}=await tW(this.fetch,\"GET\",`${this.url}/admin/users/${e.userId}/factors`,{headers:this.headers,xform:e=>({data:{factors:e},error:null})});return{data:t,error:r}}catch(e){if(e9(e))return",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "admin",
+          "snippet": "nc _deleteFactor(e){tU(e.userId),tU(e.id);try{return{data:await tW(this.fetch,\"DELETE\",`${this.url}/admin/users/${e.userId}/factors/${e.id}`,{headers:this.headers}),error:null}}catch(e){if(e9(e))return{data:null,error:e};throw e}}async _listOAut",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "admin",
+          "snippet": "t,r,s,i,n,a,o;try{let l={nextPage:null,lastPage:0,total:0},h=await tW(this.fetch,\"GET\",`${this.url}/admin/oauth/clients`,{headers:this.headers,noResolveJson:!0,query:{page:null!=(r=null==(t=null==e?void 0:e.page)?void 0:t.toString())?r:\"\",per_pa",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "admin",
+          "snippet": "]},error:e};throw e}}async _createOAuthClient(e){try{return await tW(this.fetch,\"POST\",`${this.url}/admin/oauth/clients`,{body:e,headers:this.headers,xform:e=>({data:e,error:null})})}catch(e){if(e9(e))return{data:null,error:e};throw e}}async _ge",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "admin",
+          "snippet": "a:null,error:e};throw e}}async _getOAuthClient(e){try{return await tW(this.fetch,\"GET\",`${this.url}/admin/oauth/clients/${e}`,{headers:this.headers,xform:e=>({data:e,error:null})})}catch(e){if(e9(e))return{data:null,error:e};throw e}}async _upda",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "admin",
+          "snippet": "l,error:e};throw e}}async _updateOAuthClient(e,t){try{return await tW(this.fetch,\"PUT\",`${this.url}/admin/oauth/clients/${e}`,{body:t,headers:this.headers,xform:e=>({data:e,error:null})})}catch(e){if(e9(e))return{data:null,error:e};throw e}}asyn",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "admin",
+          "snippet": ",error:e};throw e}}async _deleteOAuthClient(e){try{return await tW(this.fetch,\"DELETE\",`${this.url}/admin/oauth/clients/${e}`,{headers:this.headers,noResolveJson:!0}),{data:null,error:null}}catch(e){if(e9(e))return{data:null,error:e};throw e}}as",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "admin",
+          "snippet": "};throw e}}async _regenerateOAuthClientSecret(e){try{return await tW(this.fetch,\"POST\",`${this.url}/admin/oauth/clients/${e}/regenerate_secret`,{headers:this.headers,xform:e=>({data:e,error:null})})}catch(e){if(e9(e))return{data:null,error:e};th",
+          "sourcePath": "pika.art/pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "sourceUrl": "https://pika.art/_next/static/chunks/b6d8159a13702451.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ]
+    },
+    "logoSources": [
+      {
+        "assetPath": "pika.art/pika.art/favicon.ico",
+        "assetUrl": "https://pika.art/favicon.ico"
+      }
+    ]
+  },
+  "missingFields": [],
+  "nextFetchTargets": [
+    {
+      "url": "https://pika.art/terms-of-service",
+      "discoveredFromPath": "pika.art/pika.art/blog.html",
+      "discoveredFromUrl": "https://pika.art/blog"
+    },
+    {
+      "url": "https://pika.art/acceptable-use-policy",
+      "discoveredFromPath": "pika.art/pika.art/blog.html",
+      "discoveredFromUrl": "https://pika.art/blog"
+    },
+    {
+      "url": "https://pika.art/privacy-policy",
+      "discoveredFromPath": "pika.art/pika.art/blog.html",
+      "discoveredFromUrl": "https://pika.art/blog"
+    },
+    {
+      "url": "https://cdn.pika.art/pika/api/launch/3fa56d02-ca8f-4269-80a5-6003ccdd1b99.mp4",
+      "discoveredFromPath": "pika.art/pika.art/login (1).html",
+      "discoveredFromUrl": "https://pika.art/login"
+    },
+    {
+      "url": "https://cdn.pika.art/pika/api/launch/3fa56d02-ca8f-4269-80a5-6003ccdd1b99.webm",
+      "discoveredFromPath": "pika.art/pika.art/login (1).html",
+      "discoveredFromUrl": "https://pika.art/login"
+    },
+    {
+      "url": "https://cdn.pika.art/pika/api/launch/512be5d5-5b83-4106-bbca-1eff6c73b44c.mp4",
+      "discoveredFromPath": "pika.art/pika.art/api.html",
+      "discoveredFromUrl": "https://pika.art/api"
+    },
+    {
+      "url": "https://cdn.pika.art/pika/api/launch/41b7b89d-adde-4ba8-b4c8-87f612185166.webm",
+      "discoveredFromPath": "pika.art/pika.art/api.html",
+      "discoveredFromUrl": "https://pika.art/api"
+    }
+  ]
+}

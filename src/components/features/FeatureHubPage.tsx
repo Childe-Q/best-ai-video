@@ -927,13 +927,7 @@ function buildDecisionCards(
         ? 'If this is not the main constraint, this page may be too narrow for the job.'
         : 'If this check is secondary, you may need a different route before choosing a tool.',
     compareHint: pageData.meta.comparisonAxes[index] ?? null,
-    redirect:
-      redirects[index] ??
-      redirects[0] ?? {
-        href: '/features/best-ai-video-generators',
-        label: 'Need a broader route instead?',
-        note: 'Use the broader generators page if this page feels too narrow.',
-      },
+    redirect: redirects[index] ?? redirects[0] ?? SAFE_FEATURE_HUB_REDIRECT,
   }));
 
   return cardsFromCriteria.length > 0
@@ -944,12 +938,7 @@ function buildDecisionCards(
           whenWins: pageData.hero.subheadline,
           whenDisappoints: 'This page disappoints if its main constraint is not actually what drives the decision.',
           compareHint: pageData.meta.comparisonAxes[0] ?? null,
-          redirect:
-            redirects[0] ?? {
-              href: '/features/best-ai-video-generators',
-              label: 'Need a broader route instead?',
-              note: 'Use the broader generators page if this page feels too narrow.',
-            },
+          redirect: redirects[0] ?? SAFE_FEATURE_HUB_REDIRECT,
         },
       ];
 }

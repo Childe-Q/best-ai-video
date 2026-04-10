@@ -5,7 +5,7 @@ import Link from 'next/link';
 import FeatureNextSteps from '@/components/features/FeatureNextSteps';
 import ToolCard from '@/components/features/ToolCard';
 import FeaturesFAQ from '@/components/features/FeaturesFAQ';
-import { isPromoteSafeFeatureHref, toPromoteSafeFeatureHref } from '@/components/features/filterPromoteSafeFeatureHrefs';
+import { resolvePromoteSafeFeatureHref } from '@/components/features/filterPromoteSafeFeatureHrefs';
 import { track } from '@/lib/features/track';
 import {
   FeatureFaqItem,
@@ -77,6 +77,12 @@ type ReadingGroup = {
   title: string;
   items: FeatureRecommendedReadingLink[];
 };
+
+const SAFE_FEATURE_EXIT = {
+  href: '/features',
+  label: 'Browse feature hub',
+  note: 'Return to the feature hub if this narrower route is not promote-safe yet.',
+} as const;
 
 function getRecommendedSectionTitle(linkType: FeatureRecommendedReadingLink['linkType']): string {
   switch (linkType) {
@@ -581,25 +587,57 @@ export default function PolicyThresholdFeaturePage({
   promoteSafeFeatureHrefs,
 }: PolicyThresholdFeaturePageProps) {
   const rawOverride = policyThresholdOverrides[pageData.slug];
-  const promoteSafeFeatureHrefSet = new Set(promoteSafeFeatureHrefs);
+  const promoteSafeFeatureHrefSet = new Set(promoteSafeFeatureHrefs ?? []);
+  const resolveFeatureExit = (href: string) =>
+    resolvePromoteSafeFeatureHref(href, promoteSafeFeatureHrefSet, SAFE_FEATURE_EXIT.href);
   const safeOverride = rawOverride
     ? {
         ...rawOverride,
-        wrongFitHref: toPromoteSafeFeatureHref(rawOverride.wrongFitHref, promoteSafeFeatureHrefSet) ?? '/features',
-        summaryCards: rawOverride.summaryCards.filter(
-          (card) => !card.href || isPromoteSafeFeatureHref(card.href, promoteSafeFeatureHrefSet)
-        ),
-        bucketCards: rawOverride.bucketCards.filter((card) =>
-          isPromoteSafeFeatureHref(card.href, promoteSafeFeatureHrefSet)
-        ),
+        wrongFitHref: resolveFeatureExit(rawOverride.wrongFitHref).href ?? SAFE_FEATURE_EXIT.href,
+        wrongFitLabel: resolveFeatureExit(rawOverride.wrongFitHref).usedFallback
+          ? SAFE_FEATURE_EXIT.label
+          : rawOverride.wrongFitLabel,
+        summaryCards: rawOverride.summaryCards.map((card) => {
+          if (!card.href) {
+            return card;
+          }
+
+          const resolved = resolveFeatureExit(card.href);
+          return resolved.usedFallback
+            ? {
+                ...card,
+                href: SAFE_FEATURE_EXIT.href,
+                cta: SAFE_FEATURE_EXIT.label,
+                external: false,
+              }
+            : {
+                ...card,
+                href: resolved.href ?? card.href,
+              };
+        }),
+        bucketCards: rawOverride.bucketCards.map((card) => {
+          const resolved = resolveFeatureExit(card.href);
+          return resolved.usedFallback
+            ? { ...card, href: SAFE_FEATURE_EXIT.href, label: SAFE_FEATURE_EXIT.label }
+            : { ...card, href: resolved.href ?? card.href };
+        }),
         bucketOverrides: Object.fromEntries(
           Object.entries(rawOverride.bucketOverrides).map(([bucketTitle, bucketOverride]) => [
             bucketTitle,
-            {
-              ...bucketOverride,
-              nextStepHref:
-                toPromoteSafeFeatureHref(bucketOverride.nextStepHref, promoteSafeFeatureHrefSet) ?? '/features',
-            },
+            (() => {
+              const resolved = resolveFeatureExit(bucketOverride.nextStepHref);
+              return resolved.usedFallback
+                ? {
+                    ...bucketOverride,
+                    nextStepHref: SAFE_FEATURE_EXIT.href,
+                    nextStepLabel: SAFE_FEATURE_EXIT.label,
+                    nextStepNote: SAFE_FEATURE_EXIT.note,
+                  }
+                : {
+                    ...bucketOverride,
+                    nextStepHref: resolved.href ?? bucketOverride.nextStepHref,
+                  };
+            })(),
           ])
         ),
       }
@@ -898,10 +936,10 @@ export default function PolicyThresholdFeaturePage({
                   <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">If this threshold stops fitting</p>
                   <div className="mt-3 flex flex-wrap gap-3">
                     <Link
-                      href={bucketOverride?.nextStepHref ?? '/features/best-ai-video-generators'}
+                      href={bucketOverride?.nextStepHref ?? SAFE_FEATURE_EXIT.href}
                       className="rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-semibold text-gray-800 transition-colors hover:border-indigo-300 hover:text-indigo-600"
                     >
-                      {bucketOverride?.nextStepLabel ?? 'Go back to the broader shortlist'}
+                      {bucketOverride?.nextStepLabel ?? SAFE_FEATURE_EXIT.label}
                     </Link>
                     <span className="self-center text-sm text-gray-500">{bucketOverride?.nextStepNote}</span>
                   </div>

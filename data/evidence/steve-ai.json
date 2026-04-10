@@ -24,6 +24,38 @@
       "confidence": "high"
     },
     {
+      "text": "Steve AI says premium plans remove the Steve AI watermark from exported videos.",
+      "theme": "export",
+      "sourceUrl": "https://support.steve.ai/en/articles/8295526-how-do-i-remove-the-steve-ai-watermark-from-the-videos",
+      "sourceType": "help_center_article",
+      "capturedAt": "2026-04-08T13:38:41+00:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Steve AI says premium plans include commercial rights, while Enterprise adds reseller rights for client work.",
+      "theme": "commercial",
+      "sourceUrl": "https://support.steve.ai/en/articles/8295575-can-i-use-ai-generated-videos-from-steve-ai-on-my-website",
+      "sourceType": "help_center_article",
+      "capturedAt": "2026-04-08T13:38:41+00:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Steve AI says videos are private by default and only become public when edit or view links are shared.",
+      "theme": "security",
+      "sourceUrl": "https://support.steve.ai/en/articles/8532006-how-to-set-video-privacy-in-steve-ai",
+      "sourceType": "help_center_article",
+      "capturedAt": "2026-04-08T13:38:41+00:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Steve AI caps generated videos at 20 minutes and enforces scene-count limits by format.",
+      "theme": "usage",
+      "sourceUrl": "https://support.steve.ai/en/articles/8524340-what-is-the-maximum-video-duration-i-can-create-with-steve-ai-s-ai-video-maker",
+      "sourceType": "help_center_article",
+      "capturedAt": "2026-04-08T13:38:41+00:00",
+      "confidence": "high"
+    },
+    {
       "text": "Steve AI highlights an Advanced Prompter that shapes tone, style, and length before turning the script into a finished video draft.",
       "theme": "features",
       "sourceUrl": "https://steve.ai/",
@@ -144,5 +176,97 @@
       "writebackClass": "direct"
     }
   ],
-  "topUpFlags": []
+  "topUpFlags": [],
+  "nonPriceEvidenceImport": {
+    "bundleDate": "2026-04-08",
+    "sourceBundle": "data/non-price-evidence-import/tools/steve-ai.json",
+    "sourceUrls": [
+      "https://www.steve.ai/",
+      "https://support.steve.ai/en/articles/8294217-what-is-steve-ai",
+      "https://support.steve.ai/en/articles/8531919-how-secure-is-steve-ai",
+      "https://support.steve.ai/en/articles/8532019-how-do-i-set-up-sso-for-my-company",
+      "https://support.steve.ai/en/articles/8524890-how-do-i-get-a-refund-of-my-subscription-fee",
+      "https://support.steve.ai/en/articles/8524881-can-i-cancel-the-plan-anytime-and-are-there-any-cancelation-charges",
+      "https://support.steve.ai/en/articles/8295526-how-do-i-remove-the-steve-ai-watermark-from-the-videos",
+      "https://support.steve.ai/en/articles/8295555-can-i-monetize-the-videos-i-create-with-steve-ai",
+      "https://support.steve.ai/en/articles/8295575-can-i-use-ai-generated-videos-from-steve-ai-on-my-website",
+      "https://support.steve.ai/en/articles/10974727-do-i-fully-own-the-videos-i-create-on-steve-ai",
+      "https://support.steve.ai/en/articles/8525398-what-are-the-formats-in-which-the-project-can-be-downloaded",
+      "https://support.steve.ai/en/articles/11271973-how-do-i-download-a-video-on-the-premium-video-plan",
+      "https://support.steve.ai/en/articles/8524340-what-is-the-maximum-video-duration-i-can-create-with-each-plan",
+      "https://www.steve.ai/ai-terms",
+      "https://www.steve.ai/privacy-policy"
+    ],
+    "safeWriteback": {
+      "policy": {
+        "watermark": [
+          {
+            "value": "Premium Steve AI plans remove the Steve AI watermark.",
+            "sourceUrl": "https://support.steve.ai/en/articles/8295526-how-do-i-remove-the-steve-ai-watermark-from-the-videos"
+          }
+        ],
+        "commercialUse": [
+          {
+            "value": "Paid Steve AI plans include commercial and monetization rights, while Enterprise adds reseller rights for client work.",
+            "sourceUrl": "https://support.steve.ai/en/articles/8295575-can-i-use-ai-generated-videos-from-steve-ai-on-my-website"
+          }
+        ],
+        "usageRights": [
+          {
+            "value": "Steve AI says users own the videos they create, subject to third-party rights and policy compliance.",
+            "sourceUrl": "https://support.steve.ai/en/articles/10974727-do-i-fully-own-the-videos-i-create-on-steve-ai"
+          }
+        ],
+        "refundCancellation": [
+          {
+            "value": "Steve AI does not refund subscription fees after signup and allows cancellation any time with no cancellation charge.",
+            "sourceUrl": "https://support.steve.ai/en/articles/8524890-how-do-i-get-a-refund-of-my-subscription-fee"
+          }
+        ],
+        "exportLimits": [
+          {
+            "value": "Steve AI exports as MP4 and documents plan-based resolution upgrades across paid tiers.",
+            "sourceUrl": "https://support.steve.ai/en/articles/8525398-what-are-the-formats-in-which-the-project-can-be-downloaded"
+          }
+        ]
+      },
+      "mainLimitations": [
+        {
+          "value": "Steve AI caps generated videos at 20 minutes and enforces scene-count limits by format.",
+          "sourceUrl": "https://support.steve.ai/en/articles/8524340-what-is-the-maximum-video-duration-i-can-create-with-steve-ai-s-ai-video-maker"
+        }
+      ],
+      "workflowFeatureDocs": [
+        {
+          "value": "Steve AI turns text, blogs, and audio into animated, live-action, and generative AI videos.",
+          "sourceUrl": "https://support.steve.ai/en/articles/8294217-what-is-steve-ai"
+        },
+        {
+          "value": "Steve AI documents explainer, tutorial, product-demo, social, and educational video workflows.",
+          "sourceUrl": "https://support.steve.ai/en/articles/8294241-what-type-of-videos-can-i-create-with-steve-ai"
+        }
+      ],
+      "securityApiEnterprise": {
+        "security": [
+          {
+            "value": "Steve AI documents 2FA, SSL/TLS-only endpoints, AES-256 at rest, and GDPR/CCPA alignment.",
+            "sourceUrl": "https://support.steve.ai/en/articles/8531919-how-secure-is-steve-ai"
+          }
+        ],
+        "api": [
+          {
+            "value": "Steve AI states its API and application endpoints are TLS/SSL only.",
+            "sourceUrl": "https://support.steve.ai/en/articles/8531919-how-secure-is-steve-ai"
+          }
+        ],
+        "enterprise": [
+          {
+            "value": "SSO is exposed as an Enterprise-plan capability.",
+            "sourceUrl": "https://support.steve.ai/en/articles/8532019-how-do-i-set-up-sso-for-my-company"
+          }
+        ]
+      }
+    },
+    "retainedUnresolved": []
+  }
 }

@@ -1,0 +1,1551 @@
+{
+  "generatedAt": "2026-04-08T13:18:36.877448+00:00",
+  "slug": "heygen",
+  "toolName": "HeyGen",
+  "officialHost": "www.heygen.com",
+  "siteRootDir": "www.heygen.com ",
+  "runtimeCaptureDir": "data/runtime-captures/heygen",
+  "artifacts": {
+    "counts": {
+      "htmlCount": 6,
+      "jsCount": 21,
+      "jsonCount": 1,
+      "mdCount": 1,
+      "official_page_htmlCount": 1,
+      "referenced_assetCount": 25,
+      "runtime_capture_htmlCount": 3,
+      "runtime_capture_jsonCount": 1,
+      "runtime_capture_reportCount": 1,
+      "svgCount": 2
+    },
+    "availablePageUrls": [
+      "https://www.heygen.com/pricing",
+      "https://www.heygen.com/_next/image",
+      "https://www.heygen.com/trust-and-safety",
+      "https://www.heygen.com/moderation-policy",
+      "https://help.heygen.com/en/articles/8304807-refund-process-and-policy",
+      "https://docs.heygen.com/docs/streaming-api",
+      "https://help.heygen.com/en/collections/3984458-trust-safety-content-moderation"
+    ],
+    "keywordPageUrls": [],
+    "paths": [
+      "www.heygen.com /www.heygen.com/pricing.html",
+      "data/runtime-captures/heygen/report.md",
+      "data/runtime-captures/heygen/rendered_dom_initial.html",
+      "data/runtime-captures/heygen/network_responses.json",
+      "data/runtime-captures/heygen/rendered_dom.html",
+      "data/runtime-captures/heygen/rendered_dom_toggled.html",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/webpack-60bdef239f6e7980.js",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/059f4c2b-679a50029fdc409b.js",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/08cecb49-61ee3aa8ec859848.js",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/1281-9e793ff715c2a2f0.js",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/main-app-d20ba029cdca735d.js",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/5773-de30832d78e7bc9e.js",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/2689-d8667dc491791e17.js",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/2238-8c32bf51d5e58485.js",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/5382-a5d8673f6baf4fa6.js",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/7006-d2ab74936379cb52.js",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/app/[locale]/layout-767358d2c8083782.js",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/5672-469f7b205367b96e.js",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/5944-2d22e09163b7655c.js",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/6995-eabaad1735d76eb8.js",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/9439-a23cda94a2de56ff.js",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/8604-5b2302e99a3c88ed.js",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/8146-b1e521dbfc4410e3.js",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/5393-15dc454335b6f7e1.js",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/chunks/app/[locale]/pricing/page-387ee98956e2be66.js",
+      "www.heygen.com /www.heygen.com/pricing.html",
+      "www.heygen.com /www.heygen.com/_next/image.html",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/media/individual-pricing.63719ce3.svg",
+      "www.heygen.com /www.heygen.com/assets_2025_redesign/_next/static/media/business-pricing.05e8f8f9.svg",
+      "www.heygen.com /www.heygen.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+      "www.heygen.com /www.heygen.com/cdn-cgi/challenge-platform/scripts/jsd/main.js"
+    ]
+  },
+  "fields": {
+    "officialUrl": {
+      "value": "https://www.heygen.com/",
+      "sourceUrl": "https://www.heygen.com/",
+      "sourcePath": "www.heygen.com /www.heygen.com/pricing.html"
+    },
+    "sourceUrls": [
+      "https://www.heygen.com/pricing",
+      "https://www.heygen.com/_next/image",
+      "https://www.heygen.com/trust-and-safety",
+      "https://www.heygen.com/moderation-policy",
+      "https://help.heygen.com/en/articles/8304807-refund-process-and-policy",
+      "https://docs.heygen.com/docs/streaming-api",
+      "https://help.heygen.com/en/collections/3984458-trust-safety-content-moderation"
+    ],
+    "policy": {
+      "watermark": [
+        {
+          "valueCandidate": "Watermark removal",
+          "snippet": "Watermark removal Access to all Premium features:",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark removal",
+          "snippet": "Watermark removal AI Avatars & Voices",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark removal",
+          "snippet": "Watermark removal Access to all Premium features:",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark removal",
+          "snippet": "Watermark removal AI Avatars & Voices",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark removal",
+          "snippet": "Watermark removal Access to all Premium features:",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark removal",
+          "snippet": "Watermark removal AI Avatars & Voices",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark removal",
+          "snippet": "Watermark removal Access to all Premium features:",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark removal",
+          "snippet": "Watermark removal AI Avatars & Voices",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "commercialUse": [],
+      "usageRights": [
+        {
+          "valueCandidate": "Yes. We donʼt limit how you use or distribute the videos once you make them, as long as the materials and input you use are within acceptable guidelines (for example, no copyright violation of your uploads, no sensitive or bad words for character inputs).",
+          "snippet": "Yes. We donʼt limit how you use or distribute the videos once you make them, as long as the materials and input you use are within acceptable guidelines (for example, no copyright violation of your uploads, no sensitive or bad words for character inputs).",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Copyright © 2026 HeyGen",
+          "snippet": "Copyright © 2026 HeyGen •",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "copyright",
+          "snippet": "them, as long as the materials and input you use are within acceptable guidelines (for example, no copyright violation of your uploads, no sensitive or bad words for character inputs).\"}},{\"@type\":\"Question\",\"name\":\"What payment methods do you offe",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes. We donʼt limit how you use or distribute the videos once you make them, as long as the materials and input you use are within acceptable guidelines (for example, no copyright violation of your uploads, no sensitive or bad words for character inputs).",
+          "snippet": "Yes. We donʼt limit how you use or distribute the videos once you make them, as long as the materials and input you use are within acceptable guidelines (for example, no copyright violation of your uploads, no sensitive or bad words for character inputs).",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Copyright © 2026 HeyGen",
+          "snippet": "Copyright © 2026 HeyGen •",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "copyright",
+          "snippet": "them, as long as the materials and input you use are within acceptable guidelines (for example, no copyright violation of your uploads, no sensitive or bad words for character inputs).\"}},{\"@type\":\"Question\",\"name\":\"What payment methods do you offe",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes. We donʼt limit how you use or distribute the videos once you make them, as long as the materials and input you use are within acceptable guidelines (for example, no copyright violation of your uploads, no sensitive or bad words for character inputs).",
+          "snippet": "Yes. We donʼt limit how you use or distribute the videos once you make them, as long as the materials and input you use are within acceptable guidelines (for example, no copyright violation of your uploads, no sensitive or bad words for character inputs).",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Copyright © 2026 HeyGen",
+          "snippet": "Copyright © 2026 HeyGen •",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "copyright",
+          "snippet": "them, as long as the materials and input you use are within acceptable guidelines (for example, no copyright violation of your uploads, no sensitive or bad words for character inputs).\"}},{\"@type\":\"Question\",\"name\":\"What payment methods do you offe",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes. We donʼt limit how you use or distribute the videos once you make them, as long as the materials and input you use are within acceptable guidelines (for example, no copyright violation of your uploads, no sensitive or bad words for character inputs).",
+          "snippet": "Yes. We donʼt limit how you use or distribute the videos once you make them, as long as the materials and input you use are within acceptable guidelines (for example, no copyright violation of your uploads, no sensitive or bad words for character inputs).",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Copyright © 2026 HeyGen",
+          "snippet": "Copyright © 2026 HeyGen •",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "copyright",
+          "snippet": "them, as long as the materials and input you use are within acceptable guidelines (for example, no copyright violation of your uploads, no sensitive or bad words for character inputs).\"}},{\"@type\":\"Question\",\"name\":\"What payment methods do you offe",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "HeyGen says users retain ownership of photo and custom avatars they create, subject to having legal rights and explicit consent.",
+          "snippet": "HeyGen's moderation and trust materials say users own created photo/custom avatars, but must have legal rights and explicit consent for any likeness uploaded.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.heygen.com/moderation-policy",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "HeyGen Moderation Policy"
+        }
+      ],
+      "refundCancellation": [
+        {
+          "valueCandidate": "What happens when I cancel my subscription?",
+          "snippet": "What happens when I cancel my subscription? When you cancel your subscription, you are canceling your billing cycle renewal. This means you will still have access to your subscription features until the end of the active billing cycle. However, you will not...",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "When you cancel your subscription, you are canceling your billing cycle renewal. This means you will still have access to your subscription features until the end of the active billing cycle. However, you will not be charged for any more renewals.",
+          "snippet": "When you cancel your subscription, you are canceling your billing cycle renewal. This means you will still have access to your subscription features until the end of the active billing cycle. However, you will not be charged for any more renewals.",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "How can I cancel my plan?",
+          "snippet": "How can I cancel my plan? You can directly go to your account page to find the pause or cancel option for your subscription.",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "You can directly go to your account page to find the pause or cancel option for your subscription.",
+          "snippet": "You can directly go to your account page to find the pause or cancel option for your subscription. Testimonials",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "\":\"What happens when I cancel my subscription?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"When you cancel your subscription, you are canceling your billing cycle renewal. This means you will still have access to your subscription features until",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "canceling",
+          "snippet": "ubscription?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"When you cancel your subscription, you are canceling your billing cycle renewal. This means you will still have access to your subscription features until the end of the active billing cycle.",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "or additional local payment methods based on your region.\"}},{\"@type\":\"Question\",\"name\":\"How can I cancel my plan?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"You can directly go to your account page to find the pause or cancel option for your s",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "ptedAnswer\":{\"@type\":\"Answer\",\"text\":\"You can directly go to your account page to find the pause or cancel option for your subscription.\"}}]}]}",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "What happens when I cancel my subscription?",
+          "snippet": "What happens when I cancel my subscription? When you cancel your subscription, you are canceling your billing cycle renewal. This means you will still have access to your subscription features until the end of the active billing cycle. However, you will not...",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "When you cancel your subscription, you are canceling your billing cycle renewal. This means you will still have access to your subscription features until the end of the active billing cycle. However, you will not be charged for any more renewals.",
+          "snippet": "When you cancel your subscription, you are canceling your billing cycle renewal. This means you will still have access to your subscription features until the end of the active billing cycle. However, you will not be charged for any more renewals.",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "How can I cancel my plan?",
+          "snippet": "How can I cancel my plan? You can directly go to your account page to find the pause or cancel option for your subscription.",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "You can directly go to your account page to find the pause or cancel option for your subscription.",
+          "snippet": "You can directly go to your account page to find the pause or cancel option for your subscription. Testimonials",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "\":\"What happens when I cancel my subscription?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"When you cancel your subscription, you are canceling your billing cycle renewal. This means you will still have access to your subscription features until",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "canceling",
+          "snippet": "ubscription?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"When you cancel your subscription, you are canceling your billing cycle renewal. This means you will still have access to your subscription features until the end of the active billing cycle.",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "or additional local payment methods based on your region.\"}},{\"@type\":\"Question\",\"name\":\"How can I cancel my plan?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"You can directly go to your account page to find the pause or cancel option for your s",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "ptedAnswer\":{\"@type\":\"Answer\",\"text\":\"You can directly go to your account page to find the pause or cancel option for your subscription.\"}}]}]}",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "What happens when I cancel my subscription?",
+          "snippet": "What happens when I cancel my subscription? When you cancel your subscription, you are canceling your billing cycle renewal. This means you will still have access to your subscription features until the end of the active billing cycle. However, you will not...",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "When you cancel your subscription, you are canceling your billing cycle renewal. This means you will still have access to your subscription features until the end of the active billing cycle. However, you will not be charged for any more renewals.",
+          "snippet": "When you cancel your subscription, you are canceling your billing cycle renewal. This means you will still have access to your subscription features until the end of the active billing cycle. However, you will not be charged for any more renewals.",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "How can I cancel my plan?",
+          "snippet": "How can I cancel my plan? You can directly go to your account page to find the pause or cancel option for your subscription.",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "You can directly go to your account page to find the pause or cancel option for your subscription.",
+          "snippet": "You can directly go to your account page to find the pause or cancel option for your subscription. Testimonials",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "HeyGen payments are generally non-refundable except where required by law or specific eligibility criteria.",
+          "snippet": "The refund policy says payments are generally non-refundable, with limited exceptions and refund windows handled through HeyGen or Apple depending on purchase channel.",
+          "sourcePath": null,
+          "sourceUrl": "https://help.heygen.com/en/articles/8304807-refund-process-and-policy",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Refund Process and Policy | HeyGen Help Center"
+        }
+      ],
+      "exportLimits": [
+        {
+          "valueCandidate": "720p video export",
+          "snippet": "720p video export Share & download videos",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Share & download videos",
+          "snippet": "Share & download videos Trial access to Premium features:",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "1080p video export",
+          "snippet": "1080p video export Brand kit",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Built for advanced individuals creating premium content at scale. Unlock 10× more access to premium features and export in stunning 4K video quality.",
+          "snippet": "Built for advanced individuals creating premium content at scale. Unlock 10× more access to premium features and export in stunning 4K video quality.",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "4K video export",
+          "snippet": "4K video export Maximum access to all Premium features:",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "4k video export",
+          "snippet": "4k video export Faster video processing",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SCORM Export",
+          "snippet": "SCORM Export LMS Integrations",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "4k video export",
+          "snippet": "4k video export Fastest video processing",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export resolution",
+          "snippet": "Export resolution 720P",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Up to 1080P",
+          "snippet": "Up to 1080P Up to 4K",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Up to 4K",
+          "snippet": "Up to 4K Video templates",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SCORM Export",
+          "snippet": "SCORM Export Workspace & Collaboration",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Up to 4K",
+          "snippet": "Up to 4K Up to 4K",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "720p video export",
+          "snippet": "720p video export Share & download videos",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Share & download videos",
+          "snippet": "Share & download videos Trial access to Premium features:",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "1080p video export",
+          "snippet": "1080p video export Brand kit",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Built for advanced individuals creating premium content at scale. Unlock 10× more access to premium features and export in stunning 4K video quality.",
+          "snippet": "Built for advanced individuals creating premium content at scale. Unlock 10× more access to premium features and export in stunning 4K video quality.",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "4K video export",
+          "snippet": "4K video export Maximum access to all Premium features:",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "4k video export",
+          "snippet": "4k video export Faster video processing",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SCORM Export",
+          "snippet": "SCORM Export LMS Integrations",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ]
+    },
+    "mainLimitations": [
+      {
+        "valueCandidate": "Videos up to 3-mins",
+        "snippet": "Videos up to 3-mins 1 Custom Digital Twin",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Videos up to 30-mins",
+        "snippet": "Videos up to 30-mins 1 Custom Digital Twin",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum access to all Premium features:",
+        "snippet": "Maximum access to all Premium features: Video generation with Avatar IV",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Videos up to 60-mins",
+        "snippet": "Videos up to 60-mins 4k video export",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Auto-reload credits so you never run out",
+        "snippet": "Auto-reload credits so you never run out Add team members for $20/seat/mo",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Proofreader seats for video translation",
+        "snippet": "Proofreader seats for video translation Centrally manage roles and access",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "3 minutes",
+        "snippet": "3 minutes 30 minutes",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "30 minutes",
+        "snippet": "30 minutes 30 minutes",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "30 minutes",
+        "snippet": "30 minutes Video processing speed",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Up to 1080P",
+        "snippet": "Up to 1080P Up to 4K",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Up to 4K",
+        "snippet": "Up to 4K Video templates",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Up to 3",
+        "snippet": "Up to 3 Unlimited",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Avatar IV Gen Minutes",
+        "snippet": "Avatar IV Gen Minutes Avatar IV max duration per video",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "3 minutes",
+        "snippet": "3 minutes 3 minutes",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "3 minutes",
+        "snippet": "3 minutes Motion / Gesture Control",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "User seats",
+        "snippet": "User seats 1",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "30 minutes",
+        "snippet": "30 minutes 60 minutes",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "60 minutes",
+        "snippet": "60 minutes No video duration max",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Up to 4K",
+        "snippet": "Up to 4K Up to 4K",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Yes. We donʼt limit how you use or distribute the videos once you make them, as long as the materials and input you use are within acceptable guidelines (for example, no copyright violation of your uploads, no sensitive or bad words for character inputs).",
+        "snippet": "Yes. We donʼt limit how you use or distribute the videos once you make them, as long as the materials and input you use are within acceptable guidelines (for example, no copyright violation of your uploads, no sensitive or bad words for character inputs).",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      }
+    ],
+    "workflowFeatureDocs": [
+      {
+        "valueCandidate": "Voice cloning",
+        "snippet": "Voice cloning 175+ languages and dialects",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Brand kit",
+        "snippet": "Brand kit Watermark removal",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Screen Recorder",
+        "snippet": "Screen Recorder SCORM Export",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Video templates",
+        "snippet": "Video templates 75+",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Screen recorder",
+        "snippet": "Screen recorder Save designs as templates",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Save designs as templates",
+        "snippet": "Save designs as templates Watermark removal",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Avatars & Voices",
+        "snippet": "AI Avatars & Voices Stock Video Avatars",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Voice Cloning",
+        "snippet": "Voice Cloning 1 voice clone",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "1 voice clone",
+        "snippet": "1 voice clone Unlimited",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Brand kit",
+        "snippet": "Brand kit Video draft collaboration",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Team templates",
+        "snippet": "Team templates Role controls",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Avatar Generator",
+        "snippet": "AI Avatar Generator AI Voice Cloning",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Voice Cloning",
+        "snippet": "AI Voice Cloning AI Podcast Generator",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Text to Video",
+        "snippet": "Text to Video Image to Video",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Image to Video",
+        "snippet": "Image to Video Audio to Video",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Dubbing",
+        "snippet": "AI Dubbing Industry",
+        "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Voice cloning",
+        "snippet": "Voice cloning 175+ languages and dialects",
+        "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Brand kit",
+        "snippet": "Brand kit Watermark removal",
+        "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Screen Recorder",
+        "snippet": "Screen Recorder SCORM Export",
+        "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Video templates",
+        "snippet": "Video templates 75+",
+        "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+        "sourceUrl": "https://www.heygen.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      }
+    ],
+    "securityApiEnterprise": {
+      "security": [
+        {
+          "valueCandidate": "Enterprise-grade security & privacy",
+          "snippet": "Enterprise-grade security & privacy SCIM User Provisioning",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy & Security",
+          "snippet": "Privacy & Security Multi-factor authentication (MFA)",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security Portal",
+          "snippet": "Security Portal Trust & Safety",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Terms of Service",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "GDPR Compliance",
+          "snippet": "GDPR Compliance Copyright © 2026 HeyGen",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-grade security & privacy",
+          "snippet": "Enterprise-grade security & privacy SCIM User Provisioning",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy & Security",
+          "snippet": "Privacy & Security Multi-factor authentication (MFA)",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security Portal",
+          "snippet": "Security Portal Trust & Safety",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Terms of Service",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "GDPR Compliance",
+          "snippet": "GDPR Compliance Copyright © 2026 HeyGen",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-grade security & privacy",
+          "snippet": "Enterprise-grade security & privacy SCIM User Provisioning",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy & Security",
+          "snippet": "Privacy & Security Multi-factor authentication (MFA)",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security Portal",
+          "snippet": "Security Portal Trust & Safety",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Terms of Service",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "GDPR Compliance",
+          "snippet": "GDPR Compliance Copyright © 2026 HeyGen",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-grade security & privacy",
+          "snippet": "Enterprise-grade security & privacy SCIM User Provisioning",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy & Security",
+          "snippet": "Privacy & Security Multi-factor authentication (MFA)",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security Portal",
+          "snippet": "Security Portal Trust & Safety",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Terms of Service",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "GDPR Compliance",
+          "snippet": "GDPR Compliance Copyright © 2026 HeyGen",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "HeyGen trust materials list encryption at rest, SSL/TLS enforcement, daily backups, and incident response controls.",
+          "snippet": "The trust and safety page enumerates encryption at rest, SSL/TLS enforcement, daily backups, access controls, monitoring, and incident response processes.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.heygen.com/trust-and-safety",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "HeyGen Trust & Safety"
+        },
+        {
+          "valueCandidate": "HeyGen says it is GDPR and SOC 2 Type II compliant.",
+          "snippet": "HeyGen's trust and safety materials describe compliance with GDPR and SOC 2 Type II among its security and policy updates.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.heygen.com/trust-and-safety",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "HeyGen Trust & Safety"
+        }
+      ],
+      "api": [
+        {
+          "valueCandidate": "LMS Integrations",
+          "snippet": "LMS Integrations Integrations with n8n, Make, Hubspot & Zapier",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Integrations with n8n, Make, Hubspot & Zapier",
+          "snippet": "Integrations with n8n, Make, Hubspot & Zapier Monthly Yearly",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Explore API pricing →",
+          "snippet": "Explore API pricing → Plan features",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Pricing",
+          "snippet": "API Pricing Products",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Docs",
+          "snippet": "API Docs FAQ",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "LMS Integrations",
+          "snippet": "LMS Integrations Integrations with n8n, Make, Hubspot & Zapier",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Integrations with n8n, Make, Hubspot & Zapier",
+          "snippet": "Integrations with n8n, Make, Hubspot & Zapier Monthly Yearly",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Explore API pricing →",
+          "snippet": "Explore API pricing → Plan features",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Pricing",
+          "snippet": "API Pricing Products",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Docs",
+          "snippet": "API Docs FAQ",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_initial.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "LMS Integrations",
+          "snippet": "LMS Integrations Integrations with n8n, Make, Hubspot & Zapier",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Integrations with n8n, Make, Hubspot & Zapier",
+          "snippet": "Integrations with n8n, Make, Hubspot & Zapier Monthly Yearly",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Explore API pricing →",
+          "snippet": "Explore API pricing → Plan features",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Pricing",
+          "snippet": "API Pricing Products",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Docs",
+          "snippet": "API Docs FAQ",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "LMS Integrations",
+          "snippet": "LMS Integrations Integrations with n8n, Make, Hubspot & Zapier",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Integrations with n8n, Make, Hubspot & Zapier",
+          "snippet": "Integrations with n8n, Make, Hubspot & Zapier Monthly Yearly",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Explore API pricing →",
+          "snippet": "Explore API pricing → Plan features",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Pricing",
+          "snippet": "API Pricing Products",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Docs",
+          "snippet": "API Docs FAQ",
+          "sourcePath": "data/runtime-captures/heygen/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "HeyGen Streaming API enables real-time interactive avatars over WebRTC.",
+          "snippet": "The Streaming API documentation describes low-latency interactive avatars and WebRTC-based real-time integrations.",
+          "sourcePath": null,
+          "sourceUrl": "https://docs.heygen.com/docs/streaming-api",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Streaming API Overview | HeyGen Docs"
+        }
+      ],
+      "enterprise": [
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Use cases",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Flexible pricing plans for every creator and team",
+          "snippet": "Flexible pricing plans for every creator and team HeyGen empowers 100,000+ businesses to create, localize, scale, and collaborate on video, no camera or crew needed. Recognized as G2’s #1 Fastest Growing Product of 2025, we make professional video creation...",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Additional Seats are $20/seat. Secure, scalable video creation for teams and businesses",
+          "snippet": "Additional Seats are $20/seat. Secure, scalable video creation for teams and businesses Video Generation:",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Add team members for $20/seat/mo",
+          "snippet": "Add team members for $20/seat/mo Workspace collaboration",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Workspace collaboration",
+          "snippet": "Workspace collaboration Video draft commenting & editing",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Invites & team management",
+          "snippet": "Invites & team management Interactive Video (Quizzes, Links, & Branching)",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Studio-quality video creation custom to your business needs.",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Multi-workspace control",
+          "snippet": "Multi-workspace control Proofreader seats for video translation",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-grade security & privacy",
+          "snippet": "Enterprise-grade security & privacy SCIM User Provisioning",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team Member MFA",
+          "snippet": "Team Member MFA Commercial terms",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Tailored onboarding",
+          "snippet": "Tailored onboarding Enterprise Community access",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise Community access",
+          "snippet": "Enterprise Community access Invoice billing",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Contact Sales →",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Workspace & Collaboration",
+          "snippet": "Workspace & Collaboration User seats",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Collaborative workspace",
+          "snippet": "Collaborative workspace Team templates",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team templates",
+          "snippet": "Team templates Role controls",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SAML/SSO",
+          "snippet": "SAML/SSO SCIM",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team Member 2FA Enforcement",
+          "snippet": "Team Member 2FA Enforcement Support & Resources",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "You can use HeyGen for free and generate up 3 videos a month, no credit card required. HeyGen paid plans include unlimited video creation. For individuals creating short-form videos, HeyGen Creator plan costs $29 per month (or $24/month if you pay annually). For teams looking to create high quality videos and collaborate, HeyGen Business Plan plan costs $149/month and $20/per additional seat/month.",
+          "snippet": "You can use HeyGen for free and generate up 3 videos a month, no credit card required. HeyGen paid plans include unlimited video creation. For individuals creating short-form videos, HeyGen Creator plan costs $29 per month (or $24/month if you pay annually)...",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "\"As a solo entrepreneur, HeyGen helps me create professional content without any production team. It`s very straightforward and effective.\"",
+          "snippet": "\"As a solo entrepreneur, HeyGen helps me create professional content without any production team. It`s very straightforward and effective.\"",
+          "sourcePath": "www.heygen.com /www.heygen.com/pricing.html",
+          "sourceUrl": "https://www.heygen.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "HeyGen trust and safety help center groups moderation, privacy/security, and compliance resources for enterprise review workflows.",
+          "snippet": "The official help collection centralizes Trust, Safety & Content Moderation, privacy/security standards, and AI Act compliance resources.",
+          "sourcePath": null,
+          "sourceUrl": "https://help.heygen.com/en/collections/3984458-trust-safety-content-moderation",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "HeyGen Trust, Safety & Content Moderation"
+        }
+      ]
+    },
+    "logoSources": [
+      {
+        "assetPath": null,
+        "assetUrl": "https://www.heygen.com/favicon.ico"
+      }
+    ]
+  },
+  "missingFields": [
+    "policy.commercialUse"
+  ],
+  "nextFetchTargets": [
+    {
+      "url": "https://api2.heygen.com/",
+      "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+      "discoveredFromUrl": "https://www.heygen.com/pricing"
+    },
+    {
+      "url": "https://www.heygen.com/api-pricing",
+      "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+      "discoveredFromUrl": "https://www.heygen.com/pricing"
+    },
+    {
+      "url": "https://docs.heygen.com/",
+      "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+      "discoveredFromUrl": "https://www.heygen.com/pricing"
+    },
+    {
+      "url": "https://help.heygen.com/en",
+      "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+      "discoveredFromUrl": "https://www.heygen.com/pricing"
+    },
+    {
+      "url": "https://www.heygen.com/faq",
+      "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+      "discoveredFromUrl": "https://www.heygen.com/pricing"
+    },
+    {
+      "url": "https://www.heygen.com/enterprise",
+      "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+      "discoveredFromUrl": "https://www.heygen.com/pricing"
+    },
+    {
+      "url": "https://www.heygen.com/enterprise/pricing",
+      "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+      "discoveredFromUrl": "https://www.heygen.com/pricing"
+    },
+    {
+      "url": "https://security.heygen.com/",
+      "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+      "discoveredFromUrl": "https://www.heygen.com/pricing"
+    },
+    {
+      "url": "https://www.heygen.com/trust-and-safety",
+      "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+      "discoveredFromUrl": "https://www.heygen.com/pricing"
+    },
+    {
+      "url": "https://www.heygen.com/privacy",
+      "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+      "discoveredFromUrl": "https://www.heygen.com/pricing"
+    },
+    {
+      "url": "https://www.heygen.com/terms",
+      "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+      "discoveredFromUrl": "https://www.heygen.com/pricing"
+    },
+    {
+      "url": "https://www.heygen.com/moderation-policy",
+      "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+      "discoveredFromUrl": "https://www.heygen.com/pricing"
+    }
+  ],
+  "remoteFetches": {
+    "rounds": [
+      {
+        "roundId": "2026-04-08-remote-round-1",
+        "fetchedAt": "2026-04-08T13:38:41.674831+00:00",
+        "pages": [
+          {
+            "title": "HeyGen Trust & Safety",
+            "url": "https://www.heygen.com/trust-and-safety"
+          },
+          {
+            "title": "HeyGen Moderation Policy",
+            "url": "https://www.heygen.com/moderation-policy"
+          },
+          {
+            "title": "Refund Process and Policy | HeyGen Help Center",
+            "url": "https://help.heygen.com/en/articles/8304807-refund-process-and-policy"
+          },
+          {
+            "title": "Streaming API Overview | HeyGen Docs",
+            "url": "https://docs.heygen.com/docs/streaming-api"
+          },
+          {
+            "title": "HeyGen Trust, Safety & Content Moderation",
+            "url": "https://help.heygen.com/en/collections/3984458-trust-safety-content-moderation"
+          }
+        ],
+        "fetchedFields": [
+          "policy.refundCancellation",
+          "policy.usageRights",
+          "securityApiEnterprise.api",
+          "securityApiEnterprise.enterprise",
+          "securityApiEnterprise.security"
+        ],
+        "unresolvedFields": [
+          "policy.commercialUse"
+        ],
+        "mergedRecordCount": 6
+      }
+    ],
+    "latestRoundId": "2026-04-08-remote-round-1"
+  }
+}

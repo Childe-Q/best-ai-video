@@ -1,0 +1,636 @@
+{
+  "generatedAt": "2026-04-08T13:38:41.686943+00:00",
+  "toolCount": 19,
+  "tools": [
+    {
+      "slug": "aistudios-com",
+      "toolName": "AI Studios",
+      "sourceUrlCount": 4,
+      "missingFields": [
+        "policy.watermark"
+      ],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 0,
+        "policy.commercialUse": 3,
+        "policy.usageRights": 2,
+        "policy.refundCancellation": 2,
+        "policy.exportLimits": 18,
+        "mainLimitations": 20,
+        "workflowFeatureDocs": 22,
+        "securityApiEnterprise.security": 7,
+        "securityApiEnterprise.api": 3,
+        "securityApiEnterprise.enterprise": 21,
+        "logoSources": 20
+      },
+      "remoteFetchedThisRound": true,
+      "remoteFetchedPageCount": 4,
+      "remoteFetchedFields": [
+        "policy.commercialUse",
+        "policy.exportLimits",
+        "securityApiEnterprise.enterprise",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedAfterRemote": [
+        "policy.watermark"
+      ],
+      "outputFile": "data/non-price-evidence/tools/aistudios-com.json"
+    },
+    {
+      "slug": "colossyan",
+      "toolName": "Colossyan",
+      "sourceUrlCount": 5,
+      "missingFields": [
+        "policy.commercialUse"
+      ],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 2,
+        "policy.commercialUse": 0,
+        "policy.usageRights": 2,
+        "policy.refundCancellation": 4,
+        "policy.exportLimits": 16,
+        "mainLimitations": 20,
+        "workflowFeatureDocs": 20,
+        "securityApiEnterprise.security": 22,
+        "securityApiEnterprise.api": 20,
+        "securityApiEnterprise.enterprise": 21,
+        "logoSources": 4
+      },
+      "remoteFetchedThisRound": true,
+      "remoteFetchedPageCount": 4,
+      "remoteFetchedFields": [
+        "securityApiEnterprise.api",
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security"
+      ],
+      "unresolvedAfterRemote": [
+        "policy.commercialUse"
+      ],
+      "outputFile": "data/non-price-evidence/tools/colossyan.json"
+    },
+    {
+      "slug": "d-id",
+      "toolName": "D-ID",
+      "sourceUrlCount": 6,
+      "missingFields": [],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 20,
+        "policy.commercialUse": 20,
+        "policy.usageRights": 21,
+        "policy.refundCancellation": 20,
+        "policy.exportLimits": 20,
+        "mainLimitations": 20,
+        "workflowFeatureDocs": 21,
+        "securityApiEnterprise.security": 20,
+        "securityApiEnterprise.api": 22,
+        "securityApiEnterprise.enterprise": 20,
+        "logoSources": 8
+      },
+      "remoteFetchedThisRound": true,
+      "remoteFetchedPageCount": 4,
+      "remoteFetchedFields": [
+        "policy.usageRights",
+        "securityApiEnterprise.api",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedAfterRemote": [],
+      "outputFile": "data/non-price-evidence/tools/d-id.json"
+    },
+    {
+      "slug": "descript",
+      "toolName": "Descript",
+      "sourceUrlCount": 5,
+      "missingFields": [
+        "policy.commercialUse"
+      ],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 12,
+        "policy.commercialUse": 0,
+        "policy.usageRights": 9,
+        "policy.refundCancellation": 10,
+        "policy.exportLimits": 20,
+        "mainLimitations": 20,
+        "workflowFeatureDocs": 20,
+        "securityApiEnterprise.security": 22,
+        "securityApiEnterprise.api": 2,
+        "securityApiEnterprise.enterprise": 22,
+        "logoSources": 9
+      },
+      "remoteFetchedThisRound": true,
+      "remoteFetchedPageCount": 3,
+      "remoteFetchedFields": [
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security"
+      ],
+      "unresolvedAfterRemote": [
+        "policy.commercialUse"
+      ],
+      "outputFile": "data/non-price-evidence/tools/descript.json"
+    },
+    {
+      "slug": "elai-io",
+      "toolName": "Elai",
+      "sourceUrlCount": 7,
+      "missingFields": [
+        "policy.watermark",
+        "policy.commercialUse",
+        "policy.usageRights",
+        "policy.exportLimits",
+        "mainLimitations"
+      ],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 0,
+        "policy.commercialUse": 0,
+        "policy.usageRights": 0,
+        "policy.refundCancellation": 2,
+        "policy.exportLimits": 0,
+        "mainLimitations": 0,
+        "workflowFeatureDocs": 2,
+        "securityApiEnterprise.security": 2,
+        "securityApiEnterprise.api": 2,
+        "securityApiEnterprise.enterprise": 2,
+        "logoSources": 1
+      },
+      "remoteFetchedThisRound": true,
+      "remoteFetchedPageCount": 7,
+      "remoteFetchedFields": [
+        "logoSources",
+        "policy.refundCancellation",
+        "securityApiEnterprise.api",
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedAfterRemote": [
+        "policy.watermark",
+        "policy.commercialUse",
+        "policy.usageRights",
+        "policy.exportLimits",
+        "mainLimitations"
+      ],
+      "outputFile": "data/non-price-evidence/tools/elai-io.json"
+    },
+    {
+      "slug": "flexclip",
+      "toolName": "FlexClip",
+      "sourceUrlCount": 5,
+      "missingFields": [],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 12,
+        "policy.commercialUse": 2,
+        "policy.usageRights": 21,
+        "policy.refundCancellation": 20,
+        "policy.exportLimits": 20,
+        "mainLimitations": 20,
+        "workflowFeatureDocs": 20,
+        "securityApiEnterprise.security": 12,
+        "securityApiEnterprise.api": 7,
+        "securityApiEnterprise.enterprise": 20,
+        "logoSources": 3
+      },
+      "remoteFetchedThisRound": true,
+      "remoteFetchedPageCount": 3,
+      "remoteFetchedFields": [
+        "policy.commercialUse",
+        "policy.usageRights",
+        "policy.watermark"
+      ],
+      "unresolvedAfterRemote": [],
+      "outputFile": "data/non-price-evidence/tools/flexclip.json"
+    },
+    {
+      "slug": "fliki-ai",
+      "toolName": "Fliki",
+      "sourceUrlCount": 3,
+      "missingFields": [],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 20,
+        "policy.commercialUse": 14,
+        "policy.usageRights": 20,
+        "policy.refundCancellation": 20,
+        "policy.exportLimits": 20,
+        "mainLimitations": 20,
+        "workflowFeatureDocs": 21,
+        "securityApiEnterprise.security": 17,
+        "securityApiEnterprise.api": 20,
+        "securityApiEnterprise.enterprise": 20,
+        "logoSources": 4
+      },
+      "remoteFetchedThisRound": true,
+      "remoteFetchedPageCount": 1,
+      "remoteFetchedFields": [
+        "workflowFeatureDocs"
+      ],
+      "unresolvedAfterRemote": [],
+      "outputFile": "data/non-price-evidence/tools/fliki-ai.json"
+    },
+    {
+      "slug": "heygen",
+      "toolName": "HeyGen",
+      "sourceUrlCount": 7,
+      "missingFields": [
+        "policy.commercialUse"
+      ],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 8,
+        "policy.commercialUse": 0,
+        "policy.usageRights": 13,
+        "policy.refundCancellation": 21,
+        "policy.exportLimits": 20,
+        "mainLimitations": 20,
+        "workflowFeatureDocs": 20,
+        "securityApiEnterprise.security": 22,
+        "securityApiEnterprise.api": 21,
+        "securityApiEnterprise.enterprise": 21,
+        "logoSources": 1
+      },
+      "remoteFetchedThisRound": true,
+      "remoteFetchedPageCount": 5,
+      "remoteFetchedFields": [
+        "policy.refundCancellation",
+        "policy.usageRights",
+        "securityApiEnterprise.api",
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security"
+      ],
+      "unresolvedAfterRemote": [
+        "policy.commercialUse"
+      ],
+      "outputFile": "data/non-price-evidence/tools/heygen.json"
+    },
+    {
+      "slug": "invideo-io",
+      "toolName": "InVideo",
+      "sourceUrlCount": 5,
+      "missingFields": [
+        "policy.commercialUse",
+        "policy.usageRights"
+      ],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 9,
+        "policy.commercialUse": 0,
+        "policy.usageRights": 0,
+        "policy.refundCancellation": 20,
+        "policy.exportLimits": 21,
+        "mainLimitations": 21,
+        "workflowFeatureDocs": 21,
+        "securityApiEnterprise.security": 17,
+        "securityApiEnterprise.api": 21,
+        "securityApiEnterprise.enterprise": 20,
+        "logoSources": 3
+      },
+      "remoteFetchedThisRound": true,
+      "remoteFetchedPageCount": 4,
+      "remoteFetchedFields": [
+        "mainLimitations",
+        "policy.exportLimits",
+        "securityApiEnterprise.api",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedAfterRemote": [
+        "policy.commercialUse",
+        "policy.usageRights"
+      ],
+      "outputFile": "data/non-price-evidence/tools/invideo-io.json"
+    },
+    {
+      "slug": "lumen5",
+      "toolName": "Lumen5",
+      "sourceUrlCount": 6,
+      "missingFields": [],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 8,
+        "policy.commercialUse": 1,
+        "policy.usageRights": 7,
+        "policy.refundCancellation": 6,
+        "policy.exportLimits": 16,
+        "mainLimitations": 20,
+        "workflowFeatureDocs": 21,
+        "securityApiEnterprise.security": 13,
+        "securityApiEnterprise.api": 9,
+        "securityApiEnterprise.enterprise": 20,
+        "logoSources": 1
+      },
+      "remoteFetchedThisRound": true,
+      "remoteFetchedPageCount": 5,
+      "remoteFetchedFields": [
+        "policy.commercialUse",
+        "policy.usageRights",
+        "policy.watermark",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedAfterRemote": [],
+      "outputFile": "data/non-price-evidence/tools/lumen5.json"
+    },
+    {
+      "slug": "opus-pro",
+      "toolName": "Opus Pro",
+      "sourceUrlCount": 7,
+      "missingFields": [],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 17,
+        "policy.commercialUse": 6,
+        "policy.usageRights": 14,
+        "policy.refundCancellation": 10,
+        "policy.exportLimits": 21,
+        "mainLimitations": 20,
+        "workflowFeatureDocs": 22,
+        "securityApiEnterprise.security": 21,
+        "securityApiEnterprise.api": 20,
+        "securityApiEnterprise.enterprise": 21,
+        "logoSources": 2
+      },
+      "remoteFetchedThisRound": true,
+      "remoteFetchedPageCount": 5,
+      "remoteFetchedFields": [
+        "policy.exportLimits",
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedAfterRemote": [],
+      "outputFile": "data/non-price-evidence/tools/opus-pro.json"
+    },
+    {
+      "slug": "pictory-ai",
+      "toolName": "Pictory",
+      "sourceUrlCount": 9,
+      "missingFields": [
+        "policy.commercialUse"
+      ],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 1,
+        "policy.commercialUse": 0,
+        "policy.usageRights": 1,
+        "policy.refundCancellation": 1,
+        "policy.exportLimits": 1,
+        "mainLimitations": 1,
+        "workflowFeatureDocs": 2,
+        "securityApiEnterprise.security": 1,
+        "securityApiEnterprise.api": 1,
+        "securityApiEnterprise.enterprise": 1,
+        "logoSources": 9
+      },
+      "remoteFetchedThisRound": true,
+      "remoteFetchedPageCount": 9,
+      "remoteFetchedFields": [
+        "mainLimitations",
+        "policy.exportLimits",
+        "policy.refundCancellation",
+        "policy.usageRights",
+        "policy.watermark",
+        "securityApiEnterprise.api",
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedAfterRemote": [
+        "policy.commercialUse"
+      ],
+      "outputFile": "data/non-price-evidence/tools/pictory-ai.json"
+    },
+    {
+      "slug": "pika-art",
+      "toolName": "Pika",
+      "sourceUrlCount": 5,
+      "missingFields": [],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 20,
+        "policy.commercialUse": 20,
+        "policy.usageRights": 1,
+        "policy.refundCancellation": 20,
+        "policy.exportLimits": 20,
+        "mainLimitations": 20,
+        "workflowFeatureDocs": 20,
+        "securityApiEnterprise.security": 15,
+        "securityApiEnterprise.api": 20,
+        "securityApiEnterprise.enterprise": 20,
+        "logoSources": 1
+      },
+      "remoteFetchedThisRound": false,
+      "remoteFetchedPageCount": 0,
+      "remoteFetchedFields": [],
+      "unresolvedAfterRemote": [],
+      "outputFile": "data/non-price-evidence/tools/pika-art.json"
+    },
+    {
+      "slug": "runwayml-com",
+      "toolName": "Runway",
+      "sourceUrlCount": 8,
+      "missingFields": [
+        "policy.commercialUse",
+        "policy.usageRights"
+      ],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 3,
+        "policy.commercialUse": 0,
+        "policy.usageRights": 0,
+        "policy.refundCancellation": 20,
+        "policy.exportLimits": 20,
+        "mainLimitations": 20,
+        "workflowFeatureDocs": 20,
+        "securityApiEnterprise.security": 22,
+        "securityApiEnterprise.api": 20,
+        "securityApiEnterprise.enterprise": 21,
+        "logoSources": 2
+      },
+      "remoteFetchedThisRound": true,
+      "remoteFetchedPageCount": 3,
+      "remoteFetchedFields": [
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security"
+      ],
+      "unresolvedAfterRemote": [
+        "policy.commercialUse",
+        "policy.usageRights"
+      ],
+      "outputFile": "data/non-price-evidence/tools/runwayml-com.json"
+    },
+    {
+      "slug": "steve-ai",
+      "toolName": "Steve AI",
+      "sourceUrlCount": 15,
+      "missingFields": [],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 1,
+        "policy.commercialUse": 2,
+        "policy.usageRights": 2,
+        "policy.refundCancellation": 2,
+        "policy.exportLimits": 1,
+        "mainLimitations": 1,
+        "workflowFeatureDocs": 2,
+        "securityApiEnterprise.security": 1,
+        "securityApiEnterprise.api": 1,
+        "securityApiEnterprise.enterprise": 1,
+        "logoSources": 1
+      },
+      "remoteFetchedThisRound": true,
+      "remoteFetchedPageCount": 15,
+      "remoteFetchedFields": [
+        "logoSources",
+        "mainLimitations",
+        "policy.commercialUse",
+        "policy.exportLimits",
+        "policy.refundCancellation",
+        "policy.usageRights",
+        "policy.watermark",
+        "securityApiEnterprise.api",
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedAfterRemote": [],
+      "outputFile": "data/non-price-evidence/tools/steve-ai.json"
+    },
+    {
+      "slug": "synthesia",
+      "toolName": "Synthesia",
+      "sourceUrlCount": 7,
+      "missingFields": [],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 1,
+        "policy.commercialUse": 1,
+        "policy.usageRights": 13,
+        "policy.refundCancellation": 10,
+        "policy.exportLimits": 20,
+        "mainLimitations": 20,
+        "workflowFeatureDocs": 21,
+        "securityApiEnterprise.security": 21,
+        "securityApiEnterprise.api": 20,
+        "securityApiEnterprise.enterprise": 21,
+        "logoSources": 5
+      },
+      "remoteFetchedThisRound": true,
+      "remoteFetchedPageCount": 4,
+      "remoteFetchedFields": [
+        "policy.commercialUse",
+        "policy.usageRights",
+        "policy.watermark",
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedAfterRemote": [],
+      "outputFile": "data/non-price-evidence/tools/synthesia.json"
+    },
+    {
+      "slug": "synthesys-io",
+      "toolName": "Synthesys",
+      "sourceUrlCount": 6,
+      "missingFields": [
+        "policy.watermark",
+        "policy.exportLimits",
+        "mainLimitations"
+      ],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 0,
+        "policy.commercialUse": 1,
+        "policy.usageRights": 1,
+        "policy.refundCancellation": 2,
+        "policy.exportLimits": 0,
+        "mainLimitations": 0,
+        "workflowFeatureDocs": 1,
+        "securityApiEnterprise.security": 1,
+        "securityApiEnterprise.api": 1,
+        "securityApiEnterprise.enterprise": 1,
+        "logoSources": 1
+      },
+      "remoteFetchedThisRound": true,
+      "remoteFetchedPageCount": 6,
+      "remoteFetchedFields": [
+        "logoSources",
+        "policy.commercialUse",
+        "policy.refundCancellation",
+        "policy.usageRights",
+        "securityApiEnterprise.api",
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedAfterRemote": [
+        "policy.watermark",
+        "policy.exportLimits",
+        "mainLimitations"
+      ],
+      "outputFile": "data/non-price-evidence/tools/synthesys-io.json"
+    },
+    {
+      "slug": "veed-io",
+      "toolName": "VEED.io",
+      "sourceUrlCount": 7,
+      "missingFields": [],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 20,
+        "policy.commercialUse": 6,
+        "policy.usageRights": 10,
+        "policy.refundCancellation": 20,
+        "policy.exportLimits": 20,
+        "mainLimitations": 20,
+        "workflowFeatureDocs": 21,
+        "securityApiEnterprise.security": 21,
+        "securityApiEnterprise.api": 22,
+        "securityApiEnterprise.enterprise": 22,
+        "logoSources": 6
+      },
+      "remoteFetchedThisRound": true,
+      "remoteFetchedPageCount": 5,
+      "remoteFetchedFields": [
+        "securityApiEnterprise.api",
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedAfterRemote": [],
+      "outputFile": "data/non-price-evidence/tools/veed-io.json"
+    },
+    {
+      "slug": "zebracat-ai",
+      "toolName": "Zebracat",
+      "sourceUrlCount": 3,
+      "missingFields": [],
+      "fieldsExtracted": {
+        "officialUrl": true,
+        "policy.watermark": 7,
+        "policy.commercialUse": 1,
+        "policy.usageRights": 6,
+        "policy.refundCancellation": 21,
+        "policy.exportLimits": 21,
+        "mainLimitations": 21,
+        "workflowFeatureDocs": 21,
+        "securityApiEnterprise.security": 9,
+        "securityApiEnterprise.api": 7,
+        "securityApiEnterprise.enterprise": 20,
+        "logoSources": 4
+      },
+      "remoteFetchedThisRound": true,
+      "remoteFetchedPageCount": 2,
+      "remoteFetchedFields": [
+        "mainLimitations",
+        "policy.commercialUse",
+        "policy.exportLimits",
+        "policy.refundCancellation",
+        "policy.watermark",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedAfterRemote": [],
+      "outputFile": "data/non-price-evidence/tools/zebracat-ai.json"
+    }
+  ]
+}

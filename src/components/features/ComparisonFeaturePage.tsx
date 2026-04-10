@@ -347,6 +347,50 @@ function renderComparisonSummaryCard(card: ComparisonSummaryCard) {
   );
 }
 
+function sanitizeComparisonSummaryCard(
+  card: ComparisonSummaryCard,
+  promoteSafeFeatureHrefs: Set<string>,
+): ComparisonSummaryCard {
+  if (!card.href) {
+    return card;
+  }
+
+  const resolved = resolvePromoteSafeFeatureHref(card.href, promoteSafeFeatureHrefs, SAFE_FEATURE_HUB_EXIT.href);
+  if (!resolved.usedFallback) {
+    return {
+      ...card,
+      href: resolved.href ?? card.href,
+    };
+  }
+
+  return {
+    ...card,
+    href: SAFE_FEATURE_HUB_EXIT.href,
+    cta: SAFE_FEATURE_HUB_EXIT.label,
+    external: false,
+  };
+}
+
+function sanitizeComparisonPriorityCard(
+  card: ComparisonPriorityCard,
+  promoteSafeFeatureHrefs: Set<string>,
+): ComparisonPriorityCard {
+  const resolved = resolvePromoteSafeFeatureHref(card.href, promoteSafeFeatureHrefs, SAFE_FEATURE_HUB_EXIT.href);
+  if (!resolved.usedFallback) {
+    return {
+      ...card,
+      href: resolved.href ?? card.href,
+    };
+  }
+
+  return {
+    ...card,
+    href: SAFE_FEATURE_HUB_EXIT.href,
+    label: SAFE_FEATURE_HUB_EXIT.label,
+    external: false,
+  };
+}
+
 function renderToolLink(
   tool: FeatureToolCardDisplay,
   featureSlug: string,
@@ -437,6 +481,12 @@ export default function ComparisonFeaturePage({
     '/features/best-ai-video-generators',
     promoteSafeFeatureHrefSet,
     SAFE_FEATURE_HUB_EXIT.href
+  );
+  const safeSummaryCards = override.summaryCards.map((card) =>
+    sanitizeComparisonSummaryCard(card, promoteSafeFeatureHrefSet)
+  );
+  const safePriorityCards = override.priorityCards.map((card) =>
+    sanitizeComparisonPriorityCard(card, promoteSafeFeatureHrefSet)
   );
   const safeLaneOverrides = Object.fromEntries(
     Object.entries(override.laneOverrides).map(([laneTitle, laneOverride]) => {
@@ -572,7 +622,7 @@ export default function ComparisonFeaturePage({
           </div>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            {override.summaryCards.map((card) => (
+            {safeSummaryCards.map((card) => (
               <div key={`${card.eyebrow}-${card.title}`}>{renderComparisonSummaryCard(card)}</div>
             ))}
           </div>
@@ -626,7 +676,7 @@ export default function ComparisonFeaturePage({
           </div>
 
           <div className="mt-8 grid gap-4 xl:grid-cols-2">
-            {override.priorityCards.map((card) => (
+            {safePriorityCards.map((card) => (
               <article key={card.title} className="rounded-2xl border border-gray-200 bg-[#FCFBF7] p-5">
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <h3 className="text-xl font-bold text-gray-900">{card.title}</h3>

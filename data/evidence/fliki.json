@@ -62,6 +62,22 @@
       "note": "Includes voiceover, media, and text layers."
     },
     {
+      "text": "Fliki says credits are deducted from generated audio duration or exported video time, and reprocessing text with new voice or pause settings consumes additional credits.",
+      "theme": "usage",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-04-08T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "Fliki's pricing page lists Make and Zapier integration on higher tiers.",
+      "theme": "integrations",
+      "sourceUrl": "https://fliki.ai/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-04-08T00:00:00Z",
+      "confidence": "high"
+    },
+    {
       "text": "Video export supports 1080p resolution.",
       "theme": "export",
       "sourceUrl": "https://fliki.ai/guide",

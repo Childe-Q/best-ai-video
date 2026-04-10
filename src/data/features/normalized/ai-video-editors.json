@@ -122,9 +122,9 @@
       "slug": "descript",
       "verdictSeed": "Edit video by editing text. Transcript-first workflow with AI voice cloning and Studio Sound.",
       "pricingSeed": "Free plus paid tiers that expand media hours, AI access, recording, and 1080p-to-4K export",
-      "policySeed": "Free already exports without a watermark at 720p, while paid tiers mostly expand media hours, AI access, collaboration, and export quality",
-      "bestForSeed": "Talking-head, podcast, and interview workflows",
-      "mainLimitationSeed": "It is heavier than lightweight browser clippers, and the strongest AI, translation, and collaboration paths show up more clearly on higher tiers",
+      "policySeed": "Free already exports watermark-free at 720p; Enterprise is where SSO, SCIM, and SAML become explicit.",
+      "bestForSeed": "Talking-head, podcast, interview, and 30-plus-language dubbing workflows",
+      "mainLimitationSeed": "4K export and the strongest admin controls sit above the entry tiers.",
       "officialUrl": "https://descript.com/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/descript",
@@ -132,7 +132,8 @@
       "sourceUrls": [
         "https://www.descript.com/pricing",
         "https://www.descript.com/features",
-        "https://www.descript.com/faq"
+        "https://www.descript.com/faq",
+        "https://help.descript.com/hc/en-us/articles/10255865751181-Enterprise-plan"
       ],
       "flags": []
     }

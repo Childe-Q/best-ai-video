@@ -120,17 +120,18 @@
       "slug": "colossyan",
       "verdictSeed": "Governance-aware training platform with branching scenarios, quizzes, shared workspaces, and enterprise rollout features that fit LMS and onboarding programs.",
       "pricingSeed": "Self-serve plans available; Business and Enterprise are where SCORM, SAML SSO, and stronger governance appear",
-      "policySeed": "Colossyan becomes materially more procurement-ready on Business and Enterprise, where SCORM export, auto-translation, shared workspaces, role controls, and SAML SSO show up.",
-      "bestForSeed": "Interactive L&D, onboarding, and LMS-driven rollout",
-      "mainLimitationSeed": "Starter is viable for pilots, but the strongest governance and rollout controls sit above the entry tier.",
+      "policySeed": "Business and Enterprise are where SCORM, SAML SSO, SOC 2 or GDPR signals, and clear cancel or refund rules show up.",
+      "bestForSeed": "Interactive L&D, onboarding, and LMS rollouts",
+      "mainLimitationSeed": "Starter is fine for pilots; 4K, translation scale, and stronger governance sit higher up.",
       "officialUrl": "https://www.colossyan.com/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/colossyan",
       "logoUrl": "/logos/colossyan.png",
       "sourceUrls": [
         "https://www.colossyan.com/pricing",
-        "https://www.colossyan.com/terms-and-conditions",
-        "https://www.colossyan.com/privacy-policy"
+        "https://www.colossyan.com/security/",
+        "https://www.colossyan.com/api",
+        "https://www.colossyan.com/refund-policy"
       ],
       "flags": []
     },
@@ -139,17 +140,18 @@
       "slug": "elai-io",
       "verdictSeed": "Structured presenter-video system for enterprise onboarding and internal comms, with role-based workspaces and SCORM or SSO on the enterprise path.",
       "pricingSeed": "Free proof-of-concept tier; paid self-serve 1080p lane; enterprise path adds workspaces, SSO, and SCORM",
-      "policySeed": "Elai's enterprise value is tied to workspaces, role-based access, SSO, and SCORM export rather than headline entry pricing.",
-      "bestForSeed": "Presenter-led training, onboarding, and internal updates",
-      "mainLimitationSeed": "Minute bundles and seat-gated collaboration still matter, so self-serve plans are better for pilots than procurement-scale rollout.",
+      "policySeed": "Enterprise adds workspaces, role-based access, SSO, and SCORM, while paid fees stay non-refundable.",
+      "bestForSeed": "Presenter-led training, onboarding, and PPTX- or URL-to-video workflows",
+      "mainLimitationSeed": "Self-serve stays minute-bundled and seat-gated.",
       "officialUrl": "https://elai.io/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/elai-io",
       "logoUrl": "/logos/tools/elai-io.png",
       "sourceUrls": [
-        "https://elai.io/pricing",
-        "https://elai.freshdesk.com/support/solutions/articles/73000560715-workspace-settings",
-        "https://elai.freshdesk.com/support/solutions/articles/73000561776-team-plan"
+        "https://elai.io/enterprise",
+        "https://elai.io/security-policy/",
+        "https://elai.io/terms-of-service/",
+        "https://elai.io/getting-started-with-api"
       ],
       "flags": []
     }

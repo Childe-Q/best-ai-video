@@ -219,18 +219,37 @@ export function mapAlternativeCardCopy(
 
   // Ensure we have at least 2 pricing bullets, max 4
   if (pricingBullets.length > 0) {
-    // Update pricingSignals with the bullets we collected
     const uniqueBullets = pricingBullets
       .filter((bullet, index, self) => self.indexOf(bullet) === index)
       .slice(0, 4);
 
-    // Map to pricingSignals structure (if we have 4, use all fields)
-    enhanced.pricingSignals = {
-      freePlan: uniqueBullets[0] || enhanced.pricingSignals.freePlan,
-      watermark: uniqueBullets[1] || enhanced.pricingSignals.watermark,
-      exportQuality: uniqueBullets[2] || enhanced.pricingSignals.exportQuality,
-      refundCancel: uniqueBullets[3] || enhanced.pricingSignals.refundCancel
-    };
+    const slots: Array<keyof AlternativeTool['pricingSignals']> = [
+      'freePlan',
+      'watermark',
+      'exportQuality',
+      'refundCancel',
+    ];
+    const nextSignals = { ...enhanced.pricingSignals };
+    const seen = new Set<string>();
+
+    for (const slot of slots) {
+      const value = nextSignals[slot];
+      if (value && !seen.has(value)) {
+        seen.add(value);
+      } else {
+        nextSignals[slot] = undefined;
+      }
+    }
+
+    for (const bullet of uniqueBullets) {
+      if (seen.has(bullet)) continue;
+      const emptySlot = slots.find((slot) => !nextSignals[slot]);
+      if (!emptySlot) break;
+      nextSignals[emptySlot] = bullet;
+      seen.add(bullet);
+    }
+
+    enhanced.pricingSignals = nextSignals;
   }
 
   return enhanced;

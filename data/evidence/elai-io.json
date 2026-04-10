@@ -16,11 +16,67 @@
       "confidence": "high"
     },
     {
+      "text": "Elai's API materials describe text-to-video generation with digital presenters and multilingual output in more than 75 languages.",
+      "theme": "workflow",
+      "sourceUrl": "https://elai.io/getting-started-with-api",
+      "sourceType": "api",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Elai's enterprise pages list text-to-video, PPTX-to-video, auto translation, screen recording, voice cloning, and realtime AI chat in the core workflow stack.",
+      "theme": "workflow",
+      "sourceUrl": "https://elai.io/enterprise",
+      "sourceType": "features",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Elai's enterprise offering lists SSO, team collaboration, brand kit support, custom integrations, screen recording, and custom avatar plus voice cloning features.",
+      "theme": "enterprise",
+      "sourceUrl": "https://elai.io/enterprise",
+      "sourceType": "features",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Elai's security policy says uploaded scripts, texts, photos, videos, and music are covered as protected data categories.",
+      "theme": "security",
+      "sourceUrl": "https://elai.io/security-policy/",
+      "sourceType": "security_policy",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Elai's current terms say paid service fees, including renewal fees, are non-refundable.",
+      "theme": "support",
+      "sourceUrl": "https://elai.io/terms-of-service/",
+      "sourceType": "terms",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
       "text": "The same features page highlights prompt-based generation, AI script crafting, video generation from URLs, presentation-to-video conversion, voice cloning, and four types of custom avatars.",
       "theme": "features",
       "sourceUrl": "https://elai.io/features",
       "sourceType": "features",
       "capturedAt": "2026-03-21T19:40:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Elai's current terms say users may terminate paid service access at any time by contacting Elai Support.",
+      "theme": "support",
+      "sourceUrl": "https://elai.io/terms-of-service/",
+      "sourceType": "terms",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Elai's API onboarding uses a personal API token and points users to dedicated API documentation for implementation details.",
+      "theme": "integrations",
+      "sourceUrl": "https://elai.io/getting-started-with-api",
+      "sourceType": "api",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
       "confidence": "high"
     },
     {

@@ -435,6 +435,20 @@
   ],
   "nuggets": [
     {
+      "text": "HeyGen's Streaming API supports real-time interactive avatars over WebRTC for low-latency integrations.",
+      "theme": "workflow",
+      "sourceUrl": "https://docs.heygen.com/docs/streaming-api",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "HeyGen lists integrations with n8n, Make, Hubspot, and Zapier in its pricing materials.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.heygen.com/pricing",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
       "text": "You paste a webpage URL and choose a template, aspect ratio, and visual tone to start a video.",
       "theme": "features",
       "sourceUrl": "https://www.heygen.com/tool/url-to-video",

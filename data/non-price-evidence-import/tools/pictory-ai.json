@@ -1,0 +1,259 @@
+{
+  "generatedAt": "2026-04-08T13:18:38.951049+00:00",
+  "slug": "pictory-ai",
+  "toolName": "Pictory",
+  "officialHost": "pictory.ai",
+  "siteRootDir": "pictory.ai",
+  "runtimeCaptureDir": null,
+  "artifacts": {
+    "counts": {},
+    "availablePageUrls": [
+      "https://pictory.ai/pricing/",
+      "https://pictory.ai/pictory-api",
+      "https://docs.pictory.ai/",
+      "https://kb.pictory.ai/en/articles/8468756-general-faq",
+      "https://kb.pictory.ai/en/articles/9250487-frequently-asked-questions-subscriptions",
+      "https://kb.pictory.ai/en/articles/8468876-how-to-remove-the-pictory-watermark-and-branding-from-my-video",
+      "https://kb.pictory.ai/en/articles/8468849-how-to-download-a-generated-video",
+      "https://pictory.ai/terms-of-service",
+      "https://pictory.ai/privacy-policy"
+    ],
+    "keywordPageUrls": [],
+    "paths": []
+  },
+  "fields": {
+    "officialUrl": {
+      "value": "https://pictory.ai/",
+      "sourceUrl": "https://pictory.ai/",
+      "sourcePath": null
+    },
+    "sourceUrls": [
+      "https://pictory.ai/pricing/",
+      "https://pictory.ai/pictory-api",
+      "https://docs.pictory.ai/",
+      "https://kb.pictory.ai/en/articles/8468756-general-faq",
+      "https://kb.pictory.ai/en/articles/9250487-frequently-asked-questions-subscriptions",
+      "https://kb.pictory.ai/en/articles/8468876-how-to-remove-the-pictory-watermark-and-branding-from-my-video",
+      "https://kb.pictory.ai/en/articles/8468849-how-to-download-a-generated-video",
+      "https://pictory.ai/terms-of-service",
+      "https://pictory.ai/privacy-policy"
+    ],
+    "policy": {
+      "watermark": [
+        {
+          "valueCandidate": "Pictory watermark appears on Free Trial downloads and is removed on paid-plan re-downloads.",
+          "snippet": "The help article explains that videos downloaded during the free trial include Pictory branding, and that paid-plan downloads remove the Pictory watermark after re-generation or re-download.",
+          "sourcePath": null,
+          "sourceUrl": "https://kb.pictory.ai/en/articles/8468876-how-to-remove-the-pictory-watermark-and-branding-from-my-video",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "How to remove the Pictory watermark and branding from my video?"
+        }
+      ],
+      "commercialUse": [],
+      "usageRights": [
+        {
+          "valueCandidate": "Pictory says users do not need to pay royalties for visuals and music provided in the product.",
+          "snippet": "Pictory's general FAQ says stock visuals and music are pre-licensed, so users do not owe royalties for using that media in their videos.",
+          "sourcePath": null,
+          "sourceUrl": "https://kb.pictory.ai/en/articles/8468756-general-faq",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "General FAQ | Pictory Help Center"
+        }
+      ],
+      "refundCancellation": [
+        {
+          "valueCandidate": "Pictory subscriptions can be changed or canceled later and cancellation takes effect at the end of the current term.",
+          "snippet": "The subscription FAQ says plans can be changed or canceled anytime, with cancellations taking effect at the end of the current billing term.",
+          "sourcePath": null,
+          "sourceUrl": "https://kb.pictory.ai/en/articles/9250487-frequently-asked-questions-subscriptions",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Frequently Asked Questions - Subscriptions"
+        }
+      ],
+      "exportLimits": [
+        {
+          "valueCandidate": "Pictory exports generated videos as MP4 and supports subtitle export in SRT, TXT, and VTT plus audio export as MP3.",
+          "snippet": "The download help page documents MP4 video downloads, SRT/TXT/VTT text export, MP3 audio export, and shareable video links.",
+          "sourcePath": null,
+          "sourceUrl": "https://kb.pictory.ai/en/articles/8468849-how-to-download-a-generated-video",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "How to download a generated video?"
+        }
+      ]
+    },
+    "mainLimitations": [
+      {
+        "valueCandidate": "After the free trial, account access remains but video downloads stay restricted until a paid subscription is added.",
+        "snippet": "Pictory's subscription help says free-trial accounts remain accessible after expiry, but downloading videos is restricted until the user subscribes.",
+        "sourcePath": null,
+        "sourceUrl": "https://kb.pictory.ai/en/articles/9250487-frequently-asked-questions-subscriptions",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "Frequently Asked Questions - Subscriptions"
+      }
+    ],
+    "workflowFeatureDocs": [
+      {
+        "valueCandidate": "Pictory API converts text, URLs, PowerPoints, and existing videos into video workflows.",
+        "snippet": "The API page describes automated video creation from text, URLs, PowerPoint presentations, and existing videos for business and enterprise workflows.",
+        "sourcePath": null,
+        "sourceUrl": "https://pictory.ai/pictory-api",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "Pictory API"
+      },
+      {
+        "valueCandidate": "Pictory API docs cover storyboard, templates, transcription, branding, media management, and voiceovers.",
+        "snippet": "The API documentation lists storyboard creation, reusable templates, transcription and AI summaries, branding and styling, media management, and voiceover/music controls.",
+        "sourcePath": null,
+        "sourceUrl": "https://docs.pictory.ai/",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "Pictory API Docs"
+      }
+    ],
+    "securityApiEnterprise": {
+      "security": [
+        {
+          "valueCandidate": "Pictory API pages claim enterprise-grade security and global compliance, including SOC 2 and ISO 27001 references.",
+          "snippet": "The API landing page presents enterprise-grade security and global compliance, and shows SOC 2 and ISO 27001 trust marks.",
+          "sourcePath": null,
+          "sourceUrl": "https://pictory.ai/pictory-api",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Pictory API"
+        }
+      ],
+      "api": [
+        {
+          "valueCandidate": "Pictory has a public API and separate API documentation.",
+          "snippet": "Official API landing pages and docs position Pictory as a programmable video creation service with documentation and onboarding for integration teams.",
+          "sourcePath": null,
+          "sourceUrl": "https://docs.pictory.ai/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Pictory API Docs"
+        }
+      ],
+      "enterprise": [
+        {
+          "valueCandidate": "Pictory API is marketed for small businesses, systems integrators, and large enterprises building custom video workflows.",
+          "snippet": "The API page explicitly frames the product for small business automation, systems integrator deployments, and large enterprise custom workflows.",
+          "sourcePath": null,
+          "sourceUrl": "https://pictory.ai/pictory-api",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Pictory API"
+        }
+      ]
+    },
+    "logoSources": [
+      {
+        "assetPath": "pictory.ai/pictory.ai/wp-content/uploads/2022/08/logo-new-font-TM.png",
+        "assetUrl": null
+      },
+      {
+        "assetPath": "pictory.ai/pictory.ai/wp-content/uploads/2025/09/Icon_StoryBlocks.png",
+        "assetUrl": null
+      },
+      {
+        "assetPath": "pictory.ai/pictory.ai/wp-content/uploads/2025/09/Icon_Unsplash-1.png",
+        "assetUrl": null
+      },
+      {
+        "assetPath": "pictory.ai/pictory.ai/wp-content/uploads/2025/09/Icon_Getty-1.png",
+        "assetUrl": null
+      },
+      {
+        "assetPath": "pictory.ai/pictory.ai/wp-content/uploads/2025/09/Icon_ElevenLabs-3.png",
+        "assetUrl": null
+      },
+      {
+        "assetPath": "pictory.ai/pictory.ai/wp-content/uploads/2024/10/d2l_logo.svg-1.png",
+        "assetUrl": null
+      },
+      {
+        "assetPath": "pictory.ai/pictory.ai/wp-content/uploads/2024/10/royal_canin_logo.svg-1-300x105.png",
+        "assetUrl": null
+      },
+      {
+        "assetPath": "pictory.ai/pictory.ai/wp-content/uploads/2024/10/coursera_logo.svg-1-300x97.png",
+        "assetUrl": null
+      },
+      {
+        "assetPath": "pictory.ai/pictory.ai/wp-content/uploads/2024/12/colibri_group_logo.svg.svg",
+        "assetUrl": null
+      }
+    ]
+  },
+  "missingFields": [
+    "policy.commercialUse"
+  ],
+  "nextFetchTargets": [],
+  "remoteFetches": {
+    "rounds": [
+      {
+        "roundId": "2026-04-08-remote-round-1",
+        "fetchedAt": "2026-04-08T13:38:41.674682+00:00",
+        "pages": [
+          {
+            "title": "Pictory Pricing",
+            "url": "https://pictory.ai/pricing/"
+          },
+          {
+            "title": "Pictory API",
+            "url": "https://pictory.ai/pictory-api"
+          },
+          {
+            "title": "Pictory API Docs",
+            "url": "https://docs.pictory.ai/"
+          },
+          {
+            "title": "General FAQ | Pictory Help Center",
+            "url": "https://kb.pictory.ai/en/articles/8468756-general-faq"
+          },
+          {
+            "title": "Frequently Asked Questions - Subscriptions",
+            "url": "https://kb.pictory.ai/en/articles/9250487-frequently-asked-questions-subscriptions"
+          },
+          {
+            "title": "How to remove the Pictory watermark and branding from my video?",
+            "url": "https://kb.pictory.ai/en/articles/8468876-how-to-remove-the-pictory-watermark-and-branding-from-my-video"
+          },
+          {
+            "title": "How to download a generated video?",
+            "url": "https://kb.pictory.ai/en/articles/8468849-how-to-download-a-generated-video"
+          },
+          {
+            "title": "Terms of Service - Pictory.ai",
+            "url": "https://pictory.ai/terms-of-service"
+          },
+          {
+            "title": "Privacy Policy - Pictory.ai",
+            "url": "https://pictory.ai/privacy-policy"
+          }
+        ],
+        "fetchedFields": [
+          "mainLimitations",
+          "policy.exportLimits",
+          "policy.refundCancellation",
+          "policy.usageRights",
+          "policy.watermark",
+          "securityApiEnterprise.api",
+          "securityApiEnterprise.enterprise",
+          "securityApiEnterprise.security",
+          "workflowFeatureDocs"
+        ],
+        "unresolvedFields": [
+          "policy.commercialUse"
+        ],
+        "mergedRecordCount": 10
+      }
+    ],
+    "latestRoundId": "2026-04-08-remote-round-1"
+  }
+}

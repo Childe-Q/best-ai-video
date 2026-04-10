@@ -1,0 +1,1749 @@
+{
+  "generatedAt": "2026-04-08T13:18:35.677421+00:00",
+  "slug": "fliki-ai",
+  "toolName": "Fliki",
+  "officialHost": "fliki.ai",
+  "siteRootDir": "fliki.ai",
+  "runtimeCaptureDir": "data/runtime-captures/fliki-ai",
+  "artifacts": {
+    "counts": {
+      "htmlCount": 13,
+      "jpegCount": 6,
+      "jsCount": 19,
+      "jsonCount": 1,
+      "official_page_htmlCount": 8,
+      "referenced_assetCount": 29,
+      "runtime_capture_htmlCount": 3,
+      "runtime_capture_jsonCount": 1,
+      "svgCount": 2
+    },
+    "availablePageUrls": [
+      "https://fliki.ai/",
+      "https://fliki.ai/pricing",
+      "https://fliki.ai/features"
+    ],
+    "keywordPageUrls": [],
+    "paths": [
+      "fliki.ai/fliki.ai/index.html",
+      "fliki.ai/fliki.ai/pricing.html",
+      "fliki.ai/fliki.ai/index (1).html",
+      "fliki.ai/fliki.ai/pricing (1).html",
+      "fliki.ai/fliki.ai/pricing (3).html",
+      "fliki.ai/fliki.ai/pricing (5).html",
+      "fliki.ai/fliki.ai/pricing (2).html",
+      "fliki.ai/fliki.ai/pricing (4).html",
+      "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+      "data/runtime-captures/fliki-ai/network_responses.json",
+      "data/runtime-captures/fliki-ai/rendered_dom.html",
+      "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+      "fliki.ai/cdn.fliki.ai/public/image/marketplace/g2crowd.svg",
+      "fliki.ai/cdn.fliki.ai/public/image/marketplace/capterra.svg",
+      "fliki.ai/fliki.ai/_next/static/chunks/f8ec5750592e7a0b.js",
+      "fliki.ai/fliki.ai/_next/static/chunks/33f70fb5266cc826.js",
+      "fliki.ai/fliki.ai/_next/static/chunks/985260ae746c1a6e.js",
+      "fliki.ai/fliki.ai/_next/static/chunks/b1ffe1ec1043765a.js",
+      "fliki.ai/fliki.ai/_next/static/chunks/turbopack-cee11f7eded5f08b.js",
+      "fliki.ai/fliki.ai/_next/static/chunks/e38ae84accb78ce5.js",
+      "fliki.ai/fliki.ai/_next/static/chunks/be395583ff5d709b.js",
+      "fliki.ai/fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+      "fliki.ai/fliki.ai/_next/static/chunks/0712e72f12d0c5d8.js",
+      "fliki.ai/fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+      "fliki.ai/fliki.ai/_next/static/chunks/eb148ddcce6ba43a.js",
+      "fliki.ai/fliki.ai/_next/static/chunks/feb6e780644989d5.js",
+      "fliki.ai/fliki.ai/_next/static/chunks/77264b2c8ed79411.js",
+      "fliki.ai/fliki.ai/_next/static/chunks/eac503f82f402ac1.js",
+      "fliki.ai/fliki.ai/_next/static/chunks/b2aa9f4b12e57cbe.js",
+      "fliki.ai/fliki.ai/_next/static/chunks/a53008b58ae9db30.js",
+      "fliki.ai/fliki.ai/_next/static/chunks/60af261ff9d0b351.js",
+      "fliki.ai/fliki.ai/_next/static/chunks/78560c0333d7d2c9.js",
+      "fliki.ai/fliki.ai/pricing.html",
+      "fliki.ai/fliki.ai/index.html",
+      "fliki.ai/fliki.ai/_next/static/chunks/571d9d0804d7a0d8.js",
+      "fliki.ai/cdn.fliki.ai/public/image/testimonial/andy p.jpeg",
+      "fliki.ai/cdn.fliki.ai/public/image/testimonial/cindy L.jpeg",
+      "fliki.ai/cdn.fliki.ai/public/image/testimonial/sara a.jpeg",
+      "fliki.ai/cdn.fliki.ai/public/image/testimonial/priyankaba.jpeg",
+      "fliki.ai/cdn.fliki.ai/public/image/testimonial/timv.jpeg",
+      "fliki.ai/cdn.fliki.ai/public/image/testimonial/don.jpeg"
+    ]
+  },
+  "fields": {
+    "officialUrl": {
+      "value": "https://fliki.ai/",
+      "sourceUrl": "https://fliki.ai/",
+      "sourcePath": "fliki.ai/fliki.ai/index.html"
+    },
+    "sourceUrls": [
+      "https://fliki.ai/",
+      "https://fliki.ai/pricing",
+      "https://fliki.ai/features"
+    ],
+    "policy": {
+      "watermark": [
+        {
+          "valueCandidate": "Contains Fliki Watermark",
+          "snippet": "Contains Fliki Watermark Standard",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "No watermark",
+          "snippet": "No watermark ﹣",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "The paid subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support.",
+          "snippet": "The paid subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support.",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "ncludes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support. Payments can be made through the secure payment gateway provided. Check out our pricing page for mo",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Contains Fliki Watermark",
+          "snippet": "Contains Fliki Watermark Standard",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "No watermark",
+          "snippet": "No watermark ﹣",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "The paid subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support.",
+          "snippet": "The paid subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support.",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "ncludes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support. Payments can be made through the secure payment gateway provided. Check out our pricing page for mo",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Contains Fliki Watermark",
+          "snippet": "Contains Fliki Watermark Standard",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "No watermark",
+          "snippet": "No watermark ﹣",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "The paid subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support.",
+          "snippet": "The paid subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support.",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "ncludes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support. Payments can be made through the secure payment gateway provided. Check out our pricing page for mo",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Contains Fliki Watermark",
+          "snippet": "Contains Fliki Watermark Standard",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "No watermark",
+          "snippet": "No watermark ﹣",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "The paid subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support.",
+          "snippet": "The paid subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support.",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "ncludes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support. Payments can be made through the secure payment gateway provided. Check out our pricing page for mo",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": ":!0,onMobile:!0,onCommon:!1,description:\"Create audio using text-to-speech using voiceover layer.\"},watermark:{key:\"watermark\",name:\"Watermark\",index:800,color:\"gray\",allowKey:!0,onMobile:!0,onCommon:!0,description:\"Add your logo or watermark to mak",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "onCommon:!1,description:\"Create audio using text-to-speech using voiceover layer.\"},watermark:{key:\"watermark\",name:\"Watermark\",index:800,color:\"gray\",allowKey:!0,onMobile:!0,onCommon:!0,description:\"Add your logo or watermark to make your content l",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Watermark",
+          "snippet": "iption:\"Create audio using text-to-speech using voiceover layer.\"},watermark:{key:\"watermark\",name:\"Watermark\",index:800,color:\"gray\",allowKey:!0,onMobile:!0,onCommon:!0,description:\"Add your logo or watermark to make your content look on brand.\",op",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "Watermark\",index:800,color:\"gray\",allowKey:!0,onMobile:!0,onCommon:!0,description:\"Add your logo or watermark to make your content look on brand.\",options:{upload:{key:\"upload\",name:\"Upload\",description:\"Upload image or video from your files.\"},gene",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "commercialUse": [
+        {
+          "valueCandidate": "You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.",
+          "snippet": "You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "monetize",
+          "snippet": "content you create. You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.\"}},{\"@type\":\"Question\",\"name\":\"Will I get co",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "6 long 10 min videos.\",\"Note: These are just estimations and credits usage would depend on how often one edits the script.\"]},{\"question\":\"What is the maximum length of an audio/video file I can create?\",\"answer\":[\"The standard plan offers creating audio/video upto 15 minutes in length.\",\"The premium plan offers creating audio/video upto 30 minutes in length.\"]},{\"question\":\"Can I use Fliki to create Youtube videos?\",\"answer\":[\"Yes, with our subscription plans you get commercial license to all the content you create.\",\"You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.\"]},{\"question\":\"Will I get copyright issues with content created with Fliki?\",\"answer\":[\"Fliki provides media from royalty free media sources and also have license to the premium media to be used with commercial rights on all social media platforms.\"]},{\"question\":\"Does Fliki support Voice Cloning? How can it help me?\",\"answer\":[\"Fliki supports voice cloning, allowing you to replicate your own voice or create unique voices for different characters. This feature saves time on recording and adds authenticity to your content.\",\"It also opens up creative possibilities and assists individuals with speech impairments. With Fliki, you can personalize your content, enhance creativity, and overcome limitations with ease.\"]},{\"question\":\"Should I have prior experience as a designer or video editor to use this tool?\",\"answer\":[\"No, prior experience as a designer or video editor is not required to use Fliki. Our intuitive and user-friendly platform offers capabilities that make it super easy for anyone to create content.\",\"Our Voice Cloning AI, Text to Speech AI, and Text to Video AI, combined with our ready to use templates and 10 million+ rich stock media, allow you to create high-quality videos without any design or video editing expertise.\"]},{\"question\":\"What if I only need Fliki for a short amount of time?\",\"answer\":[\"You can cancel your subscription at anytime by navigating to",
+          "snippet": "6 long 10 min videos.\",\"Note: These are just estimations and credits usage would depend on how often one edits the script.\"]},{\"question\":\"What is the maximum length of an audio/video file I can create?\",\"answer\":[\"The standard plan offers creating audio/vi...",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (4).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.",
+          "snippet": "You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "monetize",
+          "snippet": "content you create. You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.\"}},{\"@type\":\"Question\",\"name\":\"Will I get co",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.",
+          "snippet": "You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "monetize",
+          "snippet": "content you create. You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.\"}},{\"@type\":\"Question\",\"name\":\"Will I get co",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.",
+          "snippet": "You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "monetize",
+          "snippet": "content you create. You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.\"}},{\"@type\":\"Question\",\"name\":\"Will I get co",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "monetize",
+          "snippet": "ze},commercialRights:{key:\"commercialRights\",label:\"Commercial rights\",info:\"License to publish and monetize all content you create\",compact:!1,free:\"false\",standard:\"true\",premium:\"true\",enterprise:\"true\"},integrations:{key:\"integrations\",label:\"M",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "for commercial",
+          "snippet": "t individuals' privacy and obtain their permission before using their voice for cloning, especially for commercial or public applications.\",\"Unauthorized voice cloning can raise ethical and legal concerns, so always ensure you have proper consent from th",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "for commercial",
+          "snippet": "roviding a seamless and natural-sounding audio experience.\"]},{question:\"Can I use AI Voice Cloning for commercial purposes?\",answer:[\"Certainly, you can use AI Voice Cloning for commercial purposes, provided that you have the user's consent and the voic",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "for commercial",
+          "snippet": "n I use AI Voice Cloning for commercial purposes?\",answer:[\"Certainly, you can use AI Voice Cloning for commercial purposes, provided that you have the user's consent and the voice being cloned belongs to the user. This consent ensures that you are using",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "for commercial",
+          "snippet": "creating AI videos is legal. Just ensure you’re using royalty-free or licensed content, especially for commercial purposes.\"]}],otherFeatures:!0},script:{lastModified:\"2024-10-18\",key:\"script\",type:\"video\",slug:\"script-to-video\",name:\"Script to video\",t",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "usageRights": [
+        {
+          "valueCandidate": "Yes, with our subscription plans you get commercial license to all the content you create.",
+          "snippet": "Yes, with our subscription plans you get commercial license to all the content you create. You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any co...",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.",
+          "snippet": "You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Will I get copyright issues with content created with Fliki?",
+          "snippet": "Will I get copyright issues with content created with Fliki? Fliki provides media from royalty free media sources and also have license to the premium media to be used with commercial rights on all social media platforms.",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Fliki provides media from royalty free media sources and also have license to the premium media to be used with commercial rights on all social media platforms.",
+          "snippet": "Fliki provides media from royalty free media sources and also have license to the premium media to be used with commercial rights on all social media platforms.",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "The paid subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support.",
+          "snippet": "The paid subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support.",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "usage rights",
+          "snippet": "subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support. Payments can be made through the secure payment gateway provided. Check out our pricing",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "license",
+          "snippet": "os?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes, with our subscription plans you get commercial license to all the content you create. You can use the content created to publish on Youtube or other social media and monetize it, provided your t",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "license",
+          "snippet": "nswer\":{\"@type\":\"Answer\",\"text\":\"Fliki provides media from royalty free media sources and also have license to the premium media to be used with commercial rights on all social media platforms.\"}},{\"@type\":\"Question\",\"name\":\"Does Fliki support Voi",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "royalty free",
+          "snippet": "h content created with Fliki?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Fliki provides media from royalty free media sources and also have license to the premium media to be used with commercial rights on all social media platforms.\"}},{\"@type\":\"Ques",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "copyright",
+          "snippet": "ocial media and monetize it, provided your text content is original in nature and does not have any copyright conflict.\"}},{\"@type\":\"Question\",\"name\":\"Will I get copyright issues with content created with Fliki?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "copyright",
+          "snippet": "ginal in nature and does not have any copyright conflict.\"}},{\"@type\":\"Question\",\"name\":\"Will I get copyright issues with content created with Fliki?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Fliki provides media from royalty free media sources an",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "6 long 10 min videos.\",\"Note: These are just estimations and credits usage would depend on how often one edits the script.\"]},{\"question\":\"What is the maximum length of an audio/video file I can create?\",\"answer\":[\"The standard plan offers creating audio/video upto 15 minutes in length.\",\"The premium plan offers creating audio/video upto 30 minutes in length.\"]},{\"question\":\"Can I use Fliki to create Youtube videos?\",\"answer\":[\"Yes, with our subscription plans you get commercial license to all the content you create.\",\"You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.\"]},{\"question\":\"Will I get copyright issues with content created with Fliki?\",\"answer\":[\"Fliki provides media from royalty free media sources and also have license to the premium media to be used with commercial rights on all social media platforms.\"]},{\"question\":\"Does Fliki support Voice Cloning? How can it help me?\",\"answer\":[\"Fliki supports voice cloning, allowing you to replicate your own voice or create unique voices for different characters. This feature saves time on recording and adds authenticity to your content.\",\"It also opens up creative possibilities and assists individuals with speech impairments. With Fliki, you can personalize your content, enhance creativity, and overcome limitations with ease.\"]},{\"question\":\"Should I have prior experience as a designer or video editor to use this tool?\",\"answer\":[\"No, prior experience as a designer or video editor is not required to use Fliki. Our intuitive and user-friendly platform offers capabilities that make it super easy for anyone to create content.\",\"Our Voice Cloning AI, Text to Speech AI, and Text to Video AI, combined with our ready to use templates and 10 million+ rich stock media, allow you to create high-quality videos without any design or video editing expertise.\"]},{\"question\":\"What if I only need Fliki for a short amount of time?\",\"answer\":[\"You can cancel your subscription at anytime by navigating to",
+          "snippet": "6 long 10 min videos.\",\"Note: These are just estimations and credits usage would depend on how often one edits the script.\"]},{\"question\":\"What is the maximum length of an audio/video file I can create?\",\"answer\":[\"The standard plan offers creating audio/vi...",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (4).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes, with our subscription plans you get commercial license to all the content you create.",
+          "snippet": "Yes, with our subscription plans you get commercial license to all the content you create. You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any co...",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.",
+          "snippet": "You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Will I get copyright issues with content created with Fliki?",
+          "snippet": "Will I get copyright issues with content created with Fliki? Fliki provides media from royalty free media sources and also have license to the premium media to be used with commercial rights on all social media platforms.",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Fliki provides media from royalty free media sources and also have license to the premium media to be used with commercial rights on all social media platforms.",
+          "snippet": "Fliki provides media from royalty free media sources and also have license to the premium media to be used with commercial rights on all social media platforms.",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "The paid subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support.",
+          "snippet": "The paid subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support.",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "usage rights",
+          "snippet": "subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support. Payments can be made through the secure payment gateway provided. Check out our pricing",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "license",
+          "snippet": "os?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Yes, with our subscription plans you get commercial license to all the content you create. You can use the content created to publish on Youtube or other social media and monetize it, provided your t",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "license",
+          "snippet": "nswer\":{\"@type\":\"Answer\",\"text\":\"Fliki provides media from royalty free media sources and also have license to the premium media to be used with commercial rights on all social media platforms.\"}},{\"@type\":\"Question\",\"name\":\"Does Fliki support Voi",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "refundCancellation": [
+        {
+          "valueCandidate": "You can cancel your subscription at anytime by navigating to",
+          "snippet": "You can cancel your subscription at anytime by navigating to Account",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "f I only need Fliki for a short amount of time?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"You can cancel your subscription at anytime by navigating to <a href=\\\"https://app.fliki.ai/account\\\" target=\\\"_blank\\\">Account</a> and selecting \\\"Manage",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "6 long 10 min videos.\",\"Note: These are just estimations and credits usage would depend on how often one edits the script.\"]},{\"question\":\"What is the maximum length of an audio/video file I can create?\",\"answer\":[\"The standard plan offers creating audio/video upto 15 minutes in length.\",\"The premium plan offers creating audio/video upto 30 minutes in length.\"]},{\"question\":\"Can I use Fliki to create Youtube videos?\",\"answer\":[\"Yes, with our subscription plans you get commercial license to all the content you create.\",\"You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.\"]},{\"question\":\"Will I get copyright issues with content created with Fliki?\",\"answer\":[\"Fliki provides media from royalty free media sources and also have license to the premium media to be used with commercial rights on all social media platforms.\"]},{\"question\":\"Does Fliki support Voice Cloning? How can it help me?\",\"answer\":[\"Fliki supports voice cloning, allowing you to replicate your own voice or create unique voices for different characters. This feature saves time on recording and adds authenticity to your content.\",\"It also opens up creative possibilities and assists individuals with speech impairments. With Fliki, you can personalize your content, enhance creativity, and overcome limitations with ease.\"]},{\"question\":\"Should I have prior experience as a designer or video editor to use this tool?\",\"answer\":[\"No, prior experience as a designer or video editor is not required to use Fliki. Our intuitive and user-friendly platform offers capabilities that make it super easy for anyone to create content.\",\"Our Voice Cloning AI, Text to Speech AI, and Text to Video AI, combined with our ready to use templates and 10 million+ rich stock media, allow you to create high-quality videos without any design or video editing expertise.\"]},{\"question\":\"What if I only need Fliki for a short amount of time?\",\"answer\":[\"You can cancel your subscription at anytime by navigating to",
+          "snippet": "6 long 10 min videos.\",\"Note: These are just estimations and credits usage would depend on how often one edits the script.\"]},{\"question\":\"What is the maximum length of an audio/video file I can create?\",\"answer\":[\"The standard plan offers creating audio/vi...",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (4).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "You can cancel your subscription at anytime by navigating to",
+          "snippet": "You can cancel your subscription at anytime by navigating to Account",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "f I only need Fliki for a short amount of time?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"You can cancel your subscription at anytime by navigating to <a href=\\\"https://app.fliki.ai/account\\\" target=\\\"_blank\\\">Account</a> and selecting \\\"Manage",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "You can cancel your subscription at anytime by navigating to",
+          "snippet": "You can cancel your subscription at anytime by navigating to Account",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "f I only need Fliki for a short amount of time?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"You can cancel your subscription at anytime by navigating to <a href=\\\"https://app.fliki.ai/account\\\" target=\\\"_blank\\\">Account</a> and selecting \\\"Manage",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "You can cancel your subscription at anytime by navigating to",
+          "snippet": "You can cancel your subscription at anytime by navigating to Account",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "f I only need Fliki for a short amount of time?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"You can cancel your subscription at anytime by navigating to <a href=\\\"https://app.fliki.ai/account\\\" target=\\\"_blank\\\">Account</a> and selecting \\\"Manage",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "start\"),n5=n0(\"transitioncancel\"),n6=n0(\"transitionend\"),n9=new Map,n7=\"abort auxClick beforeToggle cancel canPlay canPlayThrough click close contextMenu copy cut drag dragEnd dragEnter dragExit dragLeave dragOver dragStart drop durationChange em",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/b1ffe1ec1043765a.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/b1ffe1ec1043765a.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "ction rX(e){var t=e.stateNode,n=e.type,r=e.memoizedProps;switch(t[eW]=e,t[eq]=r,n){case\"dialog\":sJ(\"cancel\",t),sJ(\"close\",t);break;case\"iframe\":case\"object\":case\"embed\":sJ(\"load\",t);break;case\"video\":case\"audio\":for(n=0;n<sX.length;n++)sJ(sX[n],t",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/b1ffe1ec1043765a.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/b1ffe1ec1043765a.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "null!==e&&u(e)}finally{r(),l(),o()}}),c.finished.finally(function(){for(var e=0;e<f.length;e++)f[e].cancel();s.__reactViewTransition===c&&(s.__reactViewTransition=null),i()}),c}catch(e){return r(),l(),o(),null}}(f,e.containerInfo,u1,sy,sb,sv,sw,s",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/b1ffe1ec1043765a.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/b1ffe1ec1043765a.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "seeked seeking stalled suspend timeupdate volumechange waiting\".split(\" \"),sG=new Set(\"beforetoggle cancel close invalid load scroll scrollend toggle\".split(\" \").concat(sX));function sY(e,t){t=0!=(4&t);for(var n=0;n<e.length;n++){var r=e[n],l=r.e",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/b1ffe1ec1043765a.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/b1ffe1ec1043765a.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "&\"symbol\"!=typeof l:cn(e,t,s,l,n,null));return;case\"dialog\":sJ(\"beforetoggle\",e),sJ(\"toggle\",e),sJ(\"cancel\",e),sJ(\"close\",e);break;case\"iframe\":case\"object\":sJ(\"load\",e);break;case\"video\":case\"audio\":for(l=0;l<sX.length;l++)sJ(sX[l],e);break;case",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/b1ffe1ec1043765a.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/b1ffe1ec1043765a.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "null;e=null}else t!==e&&(e=null)}}return fz=e,null}function fL(e){switch(e){case\"beforetoggle\":case\"cancel\":case\"click\":case\"close\":case\"contextmenu\":case\"copy\":case\"cut\":case\"auxclick\":case\"dblclick\":case\"dragend\":case\"dragstart\":case\"drop\":case",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/b1ffe1ec1043765a.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/b1ffe1ec1043765a.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "ice_clone_recording_started\",stopRecording:\"voice_clone_recording_stopped\",save:\"voice_clone_saved\",cancel:\"voice_clone_creation_canceled\",remove:\"voice_clone_removed\",created:\"voice_clone_created\",failed:\"voice_clone_failed\"},custom:{create:\"voi",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "\"voice_custom_creation_started\",generate:\"voice_custom_preview_generated\",save:\"voice_custom_saved\",cancel:\"voice_custom_creation_canceled\",created:\"voice_custom_created\",failed:\"voice_custom_failed\"}},brand:{brandKitCreate:{start:\"brand_kit_crea",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "e_custom_failed\"}},brand:{brandKitCreate:{start:\"brand_kit_creation_started\",save:\"brand_kit_saved\",cancel:\"brand_kit_creation_canceled\",delete:\"brand_kit_deleted\",created:\"brand_kit_created\",failed:\"brand_kit_failed\"},customFonts:\"custom_fonts\",",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": ":{subscriptionUpgrade:{start:\"subscription_upgrade_started\",submit:\"subscription_upgrade_submitted\",cancel:\"subscription_upgrade_canceled\",complete:\"subscription_upgrade_completed\",cycleChange:\"subscription_upgrade_switch_cycle\"},subscriptionRene",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "r:\"mobile_banner\"},team:{teamCreate:{start:\"team_creation_started\",submit:\"team_creation_submitted\",cancel:\"team_creation_canceled\",addMember:\"team_member_added\",removeMember:\"team_member_removed\",created:\"team_created\",failed:\"team_failed\",invit",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/3ad5d09246640910.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "exportLimits": [
+        {
+          "valueCandidate": "HD - 720p low-res videos",
+          "snippet": "HD - 720p low-res videos Create thumbnail designs, presentations or social carousels",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Full HD - 1080p videos",
+          "snippet": "Full HD - 1080p videos Millions of premium stock images, video clips, stickers and music assets",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "1080p and higher",
+          "snippet": "1080p and higher Export length",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export length",
+          "snippet": "Export length 10 minutes",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Faster exports",
+          "snippet": "Faster exports ﹣",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Credits are deducted based on the duration of the audio generated from text or video exported. If you modify the text or adjust settings like the voice or pauses, Fliki reprocesses the text to generate new audio and charges credits.",
+          "snippet": "Credits are deducted based on the duration of the audio generated from text or video exported. If you modify the text or adjust settings like the voice or pauses, Fliki reprocesses the text to generate new audio and charges credits.",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "No technical skills or software download required.",
+          "snippet": "No technical skills or software download required. Home",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "exported",
+          "snippet": "nswer\",\"text\":\"Credits are deducted based on the duration of the audio generated from text or video exported. If you modify the text or adjust settings like the voice or pauses, Fliki reprocesses the text to generate new audio and charges credits.",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "HD - 720p low-res videos",
+          "snippet": "HD - 720p low-res videos Create thumbnail designs, presentations or social carousels",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Full HD - 1080p videos",
+          "snippet": "Full HD - 1080p videos Millions of premium stock images, video clips, stickers and music assets",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "1080p and higher",
+          "snippet": "1080p and higher Export length",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export length",
+          "snippet": "Export length 10 minutes",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Faster exports",
+          "snippet": "Faster exports ﹣",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Credits are deducted based on the duration of the audio generated from text or video exported. If you modify the text or adjust settings like the voice or pauses, Fliki reprocesses the text to generate new audio and charges credits.",
+          "snippet": "Credits are deducted based on the duration of the audio generated from text or video exported. If you modify the text or adjust settings like the voice or pauses, Fliki reprocesses the text to generate new audio and charges credits.",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "No technical skills or software download required.",
+          "snippet": "No technical skills or software download required. Home",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "exported",
+          "snippet": "nswer\",\"text\":\"Credits are deducted based on the duration of the audio generated from text or video exported. If you modify the text or adjust settings like the voice or pauses, Fliki reprocesses the text to generate new audio and charges credits.",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "HD - 720p low-res videos",
+          "snippet": "HD - 720p low-res videos Create thumbnail designs, presentations or social carousels",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Full HD - 1080p videos",
+          "snippet": "Full HD - 1080p videos Millions of premium stock images, video clips, stickers and music assets",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "1080p and higher",
+          "snippet": "1080p and higher Export length",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export length",
+          "snippet": "Export length 10 minutes",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ]
+    },
+    "mainLimitations": [
+      {
+        "valueCandidate": "No credit card required",
+        "snippet": "No credit card required Start now",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "15 minutes",
+        "snippet": "15 minutes 1 active Series",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "40 minutes",
+        "snippet": "40 minutes Multiple brand kits",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Custom credits",
+        "snippet": "Custom credits Bulk discounts",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Higher quotas",
+        "snippet": "Higher quotas Invoiced billing",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Estimate your credits",
+        "snippet": "Estimate your credits Adjust the parameters to see credit requirements.",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Adjust the parameters to see credit requirements.",
+        "snippet": "Adjust the parameters to see credit requirements. Video Duration",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Estimated Credits",
+        "snippet": "Estimated Credits 25",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Credits",
+        "snippet": "Credits 5 credits / min",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "5 credits / min",
+        "snippet": "5 credits / min Includes AI voiceover. This estimate assumes AI video and avatar appear in about 25% of the video . Actual credit usage may vary depending on the models and settings used.",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Includes AI voiceover. This estimate assumes AI video and avatar appear in about 25% of the video . Actual credit usage may vary depending on the models and settings used.",
+        "snippet": "Includes AI voiceover. This estimate assumes AI video and avatar appear in about 25% of the video . Actual credit usage may vary depending on the models and settings used.",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Detailed credit guide →",
+        "snippet": "Detailed credit guide → Loved by",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Credits",
+        "snippet": "Credits 60",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "10 minutes",
+        "snippet": "10 minutes 15 minutes",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "15 minutes",
+        "snippet": "15 minutes 40 minutes",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "40 minutes",
+        "snippet": "40 minutes 40 minutes",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "40 minutes",
+        "snippet": "40 minutes Standard voices",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Scene limits",
+        "snippet": "Scene limits 50",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "How do credits work? How does Fliki calculate the minutes used?",
+        "snippet": "How do credits work? How does Fliki calculate the minutes used? Credits are deducted based on the duration of the audio generated from text or video exported. If you modify the text or adjust settings like the voice or pauses, Fliki reprocesses the text to...",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Credits are deducted based on the duration of the audio generated from text or video exported. If you modify the text or adjust settings like the voice or pauses, Fliki reprocesses the text to generate new audio and charges credits.",
+        "snippet": "Credits are deducted based on the duration of the audio generated from text or video exported. If you modify the text or adjust settings like the voice or pauses, Fliki reprocesses the text to generate new audio and charges credits.",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      }
+    ],
+    "workflowFeatureDocs": [
+      {
+        "valueCandidate": "0:{\"buildId\":\"gKisTgjmwW1dGYEvZsK40\",\"rsc\":[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"template\":[\"$\",\"$L3\",null,{}]}]]}],\"loading\":null,\"isPartial\":false}",
+        "snippet": "0:{\"buildId\":\"gKisTgjmwW1dGYEvZsK40\",\"rsc\":[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"template\":[\"$\",\"$L3\",null,{}]}]]}],\"loading\":null,\"isPartial\":false}",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (3).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Translate content to 80+ languages",
+        "snippet": "Translate content to 80+ languages Videos of length upto",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Voice cloning",
+        "snippet": "Voice cloning AI Playground",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Limited AI avatars with custom Avatar",
+        "snippet": "Limited AI avatars with custom Avatar Commercial rights",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Multiple brand kits",
+        "snippet": "Multiple brand kits Multiple voice cloning",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Multiple voice cloning",
+        "snippet": "Multiple voice cloning Multiple custom voices",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "All AI avatars",
+        "snippet": "All AI avatars Photo avatars",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI avatars with custom Avatar",
+        "snippet": "AI avatars with custom Avatar Priority support",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Professional voice cloning",
+        "snippet": "Professional voice cloning Branded custom templates",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Branded custom templates",
+        "snippet": "Branded custom templates Dedicated account manager",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Team collaboration",
+        "snippet": "Team collaboration Plus all features from premium plan",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Avatar",
+        "snippet": "AI Avatar AI Video Clips",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Translate",
+        "snippet": "Translate ﹣",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Brand kits",
+        "snippet": "Brand kits ﹣",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Avatar",
+        "snippet": "AI Avatar ﹣",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Voice cloning",
+        "snippet": "Voice cloning ﹣",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Templates",
+        "snippet": "Templates ﹣",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Team collaboration",
+        "snippet": "Team collaboration ﹣",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Yes, Fliki offers a tier that allows users to explore text to voice and text to video features without any cost.",
+        "snippet": "Yes, Fliki offers a tier that allows users to explore text to voice and text to video features without any cost. You can generate 5 minutes of free audio and video content per month. However, certain advanced features and premium AI capabilities may require...",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Fliki stands out from other tools because we combine text to video AI and text to speech AI capabilities to give you an all in one platform for your content creation needs.",
+        "snippet": "Fliki stands out from other tools because we combine text to video AI and text to speech AI capabilities to give you an all in one platform for your content creation needs.",
+        "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+        "sourceUrl": "https://fliki.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Fliki features include text to video, AI voiceover, idea to video, AI avatar, text to speech, PPT to video, image to video, and translator tools.",
+        "snippet": "Fliki's feature index enumerates video and voice workflows including text-to-video, AI voiceover, idea-to-video, AI avatars, PPT-to-video, image-to-video, and translation.",
+        "sourcePath": null,
+        "sourceUrl": "https://fliki.ai/features",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "Features - Fliki"
+      }
+    ],
+    "securityApiEnterprise": {
+      "security": [
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Terms of Use",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Terms of Use",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Terms of Use",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Terms of Use",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "security",
+          "snippet": "on tC(e){return tP.test(\"\"+e)?\"javascript:throw new Error('React has blocked a javascript: URL as a security precaution.')\":e}function tT(){}var tz=null;function tO(e){return(e=e.target||e.srcElement||window).correspondingUseElement&&(e=e.correspon",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/b1ffe1ec1043765a.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/b1ffe1ec1043765a.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "=>`/masterclass/${t}/${e}`}}},pricing:{path:\"/pricing\"},about:{path:\"/about\"},terms:{path:\"/terms\"},privacy:{path:\"/privacy\"},press:{path:\"/press\"},blog:{path:(t=null)=>`/blog${t?`?page=${t}`:\"\"}`,detail:{path:t=>`/blog/${t}`},category:{path:(t,e=",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/be395583ff5d709b.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/be395583ff5d709b.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "${t}/${e}`}}},pricing:{path:\"/pricing\"},about:{path:\"/about\"},terms:{path:\"/terms\"},privacy:{path:\"/privacy\"},press:{path:\"/press\"},blog:{path:(t=null)=>`/blog${t?`?page=${t}`:\"\"}`,detail:{path:t=>`/blog/${t}`},category:{path:(t,e=null)=>`/blog/ca",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/be395583ff5d709b.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/be395583ff5d709b.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "security",
+          "snippet": "\",\"pragma\",\"proxy-authenticate\",\"public-key-pins\",\"retry-after\",\"server\",\"status\",\"strict-transport-security\",\"trailer\",\"transfer-encoding\",\"tk\",\"upgrade\",\"vary\",\"via\",\"warning\",\"www-authenticate\",\"x-b3-traceid\",\"x-frame-options\"],ei=[\"authorizatio",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/0712e72f12d0c5d8.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/0712e72f12d0c5d8.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "security",
+          "snippet": "monial/don.jpeg\"}]},compliance:{title:\"Fliki for enterprise\",subheading:\"Create branded videos with security and privacy\",description:\"Fliki is <strong>GDPR</strong> & <strong>CCPA</strong> compliant, working with 73% of Fortune 500 companies and e",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "GDPR",
+          "snippet": "erprise\",subheading:\"Create branded videos with security and privacy\",description:\"Fliki is <strong>GDPR</strong> & <strong>CCPA</strong> compliant, working with 73% of Fortune 500 companies and empowering enterprises to use AI for high-quality",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "GDPR",
+          "snippet": "rea videos de marca con total seguridad y privacidad.\",description:\"Fliki es compatible con <strong>GDPR</strong> y <strong>CCPA</strong>, trabajando con el 73% de las empresas Fortune 500 y capacitando a las empresas para usar IA en la producc",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "compliant",
+          "snippet": "deos with security and privacy\",description:\"Fliki is <strong>GDPR</strong> & <strong>CCPA</strong> compliant, working with 73% of Fortune 500 companies and empowering enterprises to use AI for high-quality video production safely and quickly.\",cta:",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "licit consent for their voice to be used for cloning purposes. It's crucial to respect individuals' privacy and obtain their permission before using their voice for cloning, especially for commercial or public applications.\",\"Unauthorized voice cl",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "eg\"}]},compliance:{title:\"Fliki for enterprise\",subheading:\"Create branded videos with security and privacy\",description:\"Fliki is <strong>GDPR</strong> & <strong>CCPA</strong> compliant, working with 73% of Fortune 500 companies and empowering en",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/b6c0fdb11dddad13.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in, or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the sit",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/60af261ff9d0b351.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/60af261ff9d0b351.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "ms.site.copyright.year,\" \",u.params.site.copyright.company]})]}),(0,t.jsx)(r.default,{href:p.routes.privacy.path,children:\"Privacy Policy\"}),(0,t.jsx)(r.default,{href:p.routes.terms.path,children:\"Terms of Use\"}),(0,t.jsx)(r.default,{href:p.routes",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/60af261ff9d0b351.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/60af261ff9d0b351.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "\" \",u.params.site.copyright.company]})]}),(0,t.jsx)(r.default,{href:p.routes.privacy.path,children:\"Privacy Policy\"}),(0,t.jsx)(r.default,{href:p.routes.terms.path,children:\"Terms of Use\"}),(0,t.jsx)(r.default,{href:p.routes.about.path,children:\"A",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/60af261ff9d0b351.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/60af261ff9d0b351.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "api": [
+        {
+          "valueCandidate": "Make and Zapier integration",
+          "snippet": "Make and Zapier integration Limited stock avatars",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Access",
+          "snippet": "API Access Personalized avatars",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Make and Zapier integration",
+          "snippet": "Make and Zapier integration ﹣",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Access",
+          "snippet": "API Access ﹣",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Make and Zapier integration",
+          "snippet": "Make and Zapier integration Limited stock avatars",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Access",
+          "snippet": "API Access Personalized avatars",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Make and Zapier integration",
+          "snippet": "Make and Zapier integration ﹣",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Access",
+          "snippet": "API Access ﹣",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Make and Zapier integration",
+          "snippet": "Make and Zapier integration Limited stock avatars",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Access",
+          "snippet": "API Access Personalized avatars",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Make and Zapier integration",
+          "snippet": "Make and Zapier integration ﹣",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Access",
+          "snippet": "API Access ﹣",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Make and Zapier integration",
+          "snippet": "Make and Zapier integration Limited stock avatars",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Access",
+          "snippet": "API Access Personalized avatars",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Make and Zapier integration",
+          "snippet": "Make and Zapier integration ﹣",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Access",
+          "snippet": "API Access ﹣",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "o[e]}return r.exports}u.ab=\"/ROOT/node_modules/.pnpm/next@16.1.6_@babel+core@7.29.0_@opentelemetry+api@1.9.0_babel-plugin-react-compiler@1.0_8b0858bb53447dda625a938d9df47daa/node_modules/next/dist/compiled/process/\",t.exports=u(229)},449480,(",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/f8ec5750592e7a0b.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/f8ec5750592e7a0b.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "or(){super(\"Method unavailable on `ReadonlyURLSearchParams`. Read more: https://nextjs.org/docs/app/api-reference/functions/use-search-params#updating-searchparams\")}}class a extends URLSearchParams{append(){throw new n}delete(){throw new n}se",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/33f70fb5266cc826.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/33f70fb5266cc826.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "${e}\\` was called outside a request scope. Read more: https://nextjs.org/docs/messages/next-dynamic-api-wrong-context`),\"__NEXT_ERROR_CODE\",{value:\"E251\",enumerable:!1,configurable:!0})}function c(){throw Object.defineProperty(new u.InvariantE",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/33f70fb5266cc826.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/33f70fb5266cc826.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "es(\"node_modules/next/\")||e.includes(\" (<anonymous>)\")||e.includes(\" (node:\"))).join(\"\\n\"),`Dynamic API Usage Debug - ${e}: ${t}`))}function L(){let e=new AbortController;return e.abort(Object.defineProperty(new m.BailoutToCSRError(\"Render in",
+          "sourcePath": "fliki.ai/fliki.ai/_next/static/chunks/33f70fb5266cc826.js",
+          "sourceUrl": "https://fliki.ai/_next/static/chunks/33f70fb5266cc826.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "enterprise": [
+        {
+          "valueCandidate": "For emerging & experienced video creators, perfect for teams of any size.",
+          "snippet": "For emerging & experienced video creators, perfect for teams of any size. $",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Custom plan tailored to your organization's specific needs.",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team collaboration",
+          "snippet": "Team collaboration Plus all features from premium plan",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Custom pricing",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team collaboration",
+          "snippet": "Team collaboration ﹣",
+          "sourcePath": "fliki.ai/fliki.ai/pricing (5).html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "For emerging & experienced video creators, perfect for teams of any size.",
+          "snippet": "For emerging & experienced video creators, perfect for teams of any size. $",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Custom plan tailored to your organization's specific needs.",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team collaboration",
+          "snippet": "Team collaboration Plus all features from premium plan",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Custom pricing",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team collaboration",
+          "snippet": "Team collaboration ﹣",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "For emerging & experienced video creators, perfect for teams of any size.",
+          "snippet": "For emerging & experienced video creators, perfect for teams of any size. $",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Custom plan tailored to your organization's specific needs.",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team collaboration",
+          "snippet": "Team collaboration Plus all features from premium plan",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Custom pricing",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team collaboration",
+          "snippet": "Team collaboration ﹣",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "For emerging & experienced video creators, perfect for teams of any size.",
+          "snippet": "For emerging & experienced video creators, perfect for teams of any size. $",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Custom plan tailored to your organization's specific needs.",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team collaboration",
+          "snippet": "Team collaboration Plus all features from premium plan",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Custom pricing",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team collaboration",
+          "snippet": "Team collaboration ﹣",
+          "sourcePath": "data/runtime-captures/fliki-ai/rendered_dom_toggled.html",
+          "sourceUrl": "https://fliki.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ]
+    },
+    "logoSources": [
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn.fliki.ai/public/favicon/apple-touch-icon.png"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn.fliki.ai/public/favicon/favicon-32x32.png"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn.fliki.ai/public/favicon/favicon-16x16.png"
+      },
+      {
+        "assetPath": "fliki.ai/cdn.fliki.ai/public/favicon/favicon.ico",
+        "assetUrl": "https://cdn.fliki.ai/public/favicon/favicon.ico"
+      }
+    ]
+  },
+  "missingFields": [],
+  "nextFetchTargets": [
+    {
+      "url": "https://fliki.ai/features",
+      "discoveredFromPath": "fliki.ai/fliki.ai/pricing (5).html",
+      "discoveredFromUrl": "https://fliki.ai/pricing"
+    },
+    {
+      "url": "https://fliki.ai/privacy",
+      "discoveredFromPath": "fliki.ai/fliki.ai/pricing (5).html",
+      "discoveredFromUrl": "https://fliki.ai/pricing"
+    },
+    {
+      "url": "https://fliki.ai/terms",
+      "discoveredFromPath": "fliki.ai/fliki.ai/pricing (5).html",
+      "discoveredFromUrl": "https://fliki.ai/pricing"
+    },
+    {
+      "url": "https://fliki.ai/features/text-to-video",
+      "discoveredFromPath": "fliki.ai/fliki.ai/pricing (5).html",
+      "discoveredFromUrl": "https://fliki.ai/pricing"
+    },
+    {
+      "url": "https://fliki.ai/features/voiceover",
+      "discoveredFromPath": "fliki.ai/fliki.ai/pricing (5).html",
+      "discoveredFromUrl": "https://fliki.ai/pricing"
+    },
+    {
+      "url": "https://fliki.ai/features/idea-to-video",
+      "discoveredFromPath": "fliki.ai/fliki.ai/pricing (5).html",
+      "discoveredFromUrl": "https://fliki.ai/pricing"
+    },
+    {
+      "url": "https://fliki.ai/features/ai-avatar",
+      "discoveredFromPath": "fliki.ai/fliki.ai/pricing (5).html",
+      "discoveredFromUrl": "https://fliki.ai/pricing"
+    },
+    {
+      "url": "https://fliki.ai/features/text-to-speech",
+      "discoveredFromPath": "fliki.ai/fliki.ai/pricing (5).html",
+      "discoveredFromUrl": "https://fliki.ai/pricing"
+    },
+    {
+      "url": "https://fliki.ai/features/ppt-to-video",
+      "discoveredFromPath": "fliki.ai/fliki.ai/pricing (5).html",
+      "discoveredFromUrl": "https://fliki.ai/pricing"
+    },
+    {
+      "url": "https://fliki.ai/features/image-to-video",
+      "discoveredFromPath": "fliki.ai/fliki.ai/pricing (5).html",
+      "discoveredFromUrl": "https://fliki.ai/pricing"
+    },
+    {
+      "url": "https://fliki.ai/features/translator",
+      "discoveredFromPath": "fliki.ai/fliki.ai/pricing (5).html",
+      "discoveredFromUrl": "https://fliki.ai/pricing"
+    },
+    {
+      "url": "https://fliki.ai/features/ai-thumbnail-maker",
+      "discoveredFromPath": "fliki.ai/fliki.ai/pricing (5).html",
+      "discoveredFromUrl": "https://fliki.ai/pricing"
+    },
+    {
+      "url": "https://fliki.ai/features/screen-recorder",
+      "discoveredFromPath": "fliki.ai/fliki.ai/pricing (5).html",
+      "discoveredFromUrl": "https://fliki.ai/pricing"
+    }
+  ],
+  "remoteFetches": {
+    "rounds": [
+      {
+        "roundId": "2026-04-08-remote-round-1",
+        "fetchedAt": "2026-04-08T13:38:41.674984+00:00",
+        "pages": [
+          {
+            "title": "Features - Fliki",
+            "url": "https://fliki.ai/features"
+          }
+        ],
+        "fetchedFields": [
+          "workflowFeatureDocs"
+        ],
+        "unresolvedFields": [],
+        "mergedRecordCount": 1
+      }
+    ],
+    "latestRoundId": "2026-04-08-remote-round-1"
+  }
+}

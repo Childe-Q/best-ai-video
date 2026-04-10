@@ -2,30 +2,31 @@
   {
     "tool": "colossyan",
     "bestFor": [
-      "Learning and Development",
-      "Interactive training scenarios"
+      "Interactive L&D",
+      "Corporate onboarding",
+      "Scenario-based training"
     ],
     "whySwitch": [
       {
-        "claim": "Unique side-view avatars enable engaging dialogue between characters, ideal for scenario-based learning.",
+        "claim": "Branching scenarios, quizzes, and side-view avatars fit onboarding and compliance training better than a generic avatar studio.",
         "sources": [
           {
-            "url": "/tool/colossyan/reviews",
+            "url": "/tool/colossyan",
             "facts": [
-              "Their \"side-view\" avatars (two AI characters chatting) made my onboarding videos 40% more engaging.",
-              "[NEED VERIFICATION: external source, verify on official site]"
+              "Colossyan supports side-view avatars for dialogue scenes.",
+              "Colossyan's training workflows include branching scenarios and quizzes."
             ]
           }
         ]
       },
       {
-        "claim": "Unique side-view avatars enable engaging dialogue between characters, ideal for scenario-based learning.",
+        "claim": "Business and Enterprise add SCORM, SAML SSO, and API personalization for LMS rollout.",
         "sources": [
           {
-            "url": "/tool/colossyan/reviews",
+            "url": "/tool/colossyan",
             "facts": [
-              "Their \"side-view\" avatars (two AI characters chatting) made my onboarding videos 40% more engaging.",
-              "[NEED VERIFICATION: external source, verify on official site]"
+              "Business and Enterprise add SCORM export and SAML SSO.",
+              "API personalization is available for programmatic rollout."
             ]
           }
         ]
@@ -33,31 +34,69 @@
     ],
     "tradeoffs": [
       {
-        "claim": "Has a smaller selection of stock avatars compared to HeyGen's library.",
+        "claim": "Starter is fine for pilots, but 4K, translation scale, and stronger governance sit higher up.",
         "sources": [
           {
-            "url": "/tool/colossyan/reviews",
+            "url": "/tool/colossyan/pricing",
             "facts": [
-              "Cons of Colossyan: Fewer avatars compared to HeyGen.",
-              "[NEED VERIFICATION: external source, verify on official site]"
-            ]
-          }
-        ]
-      },
-      {
-        "claim": "Has a smaller selection of stock avatars compared to HeyGen's library.",
-        "sources": [
-          {
-            "url": "/tool/colossyan/reviews",
-            "facts": [
-              "Cons of Colossyan: Fewer avatars compared to HeyGen.",
-              "[NEED VERIFICATION: external source, verify on official site]"
+              "Starter sits below the tiers that unlock 4K and stronger governance posture.",
+              "Higher plans carry clearer enterprise rollout capabilities."
             ]
           }
         ]
       }
     ],
-    "pricingSignals": {}
+    "pricingSignals": {
+      "freePlan": {
+        "claim": "Colossyan Free is a trial lane with 3 video minutes, 15 scenes, a 3-minute max video, and watermarking.",
+        "sources": [
+          {
+            "url": "/tool/colossyan/pricing",
+            "facts": [
+              "Free includes 3 video minutes.",
+              "Free includes 15 scenes and a 3-minute max video.",
+              "Free output includes a watermark."
+            ]
+          }
+        ]
+      },
+      "watermark": {
+        "claim": "Starter is the first clean publishing lane because it removes the watermark from downloads.",
+        "sources": [
+          {
+            "url": "/tool/colossyan/pricing",
+            "facts": [
+              "Starter removes the watermark from downloads."
+            ]
+          }
+        ]
+      },
+      "exportQuality": {
+        "claim": "Starter adds 1080p downloads, while Business is where 4K delivery appears.",
+        "sources": [
+          {
+            "url": "/tool/colossyan/pricing",
+            "facts": [
+              "Starter adds 1080p download resolution.",
+              "Business adds 4K download resolution."
+            ]
+          }
+        ]
+      },
+      "refundCancel": {
+        "claim": "Monthly plans can be canceled at any time; annual plans are prepaid, and refunds are limited to low-usage requests inside 14 days.",
+        "sources": [
+          {
+            "url": "/tool/colossyan",
+            "facts": [
+              "Monthly plans can be canceled at any time.",
+              "Annual plans are paid upfront and unused months are not refunded.",
+              "Paid self-serve plans can qualify for a refund within 14 days if usage stays below the documented threshold."
+            ]
+          }
+        ]
+      }
+    }
   },
   {
     "tool": "deepbrain-ai",
@@ -122,44 +161,30 @@
   {
     "tool": "elai-io",
     "bestFor": [
-      "Small businesses",
-      "Budget-conscious corporate teams"
+      "PPTX-to-video training",
+      "URL-to-video explainers",
+      "SSO workspaces"
     ],
     "whySwitch": [
       {
-        "claim": "Favored by smaller organizations for its lower entry-level pricing and ease of use.",
+        "claim": "Elai turns PPTX decks, URLs, and scripts into presenter-led videos with 75+ language coverage.",
         "sources": [
           {
-            "url": "/tool/elai-io/reviews",
+            "url": "/tool/elai-io",
             "facts": [
-              "Elai.io is particularly favored by small businesses for its affordability and ease of use.",
-              "[NEED VERIFICATION: external source, verify on official site]"
-            ]
-          },
-          {
-            "url": "/tool/elai-io/reviews",
-            "facts": [
-              "Elai's pricing is very competitive, making it accessible to creators with any budget.",
-              "[NEED VERIFICATION: external source, verify on official site]"
+              "API materials describe text-to-video with digital presenters in 75+ languages.",
+              "Enterprise materials list PPTX-to-video and URL-to-video workflows."
             ]
           }
         ]
       },
       {
-        "claim": "Favored by smaller organizations for its lower entry-level pricing and ease of use.",
+        "claim": "Enterprise adds workspaces, role-based access, SSO, SCORM, and custom integrations.",
         "sources": [
           {
-            "url": "/tool/elai-io/reviews",
+            "url": "/tool/elai-io",
             "facts": [
-              "Elai.io is particularly favored by small businesses for its affordability and ease of use.",
-              "[NEED VERIFICATION: external source, verify on official site]"
-            ]
-          },
-          {
-            "url": "/tool/elai-io/reviews",
-            "facts": [
-              "Elai's pricing is very competitive, making it accessible to creators with any budget.",
-              "[NEED VERIFICATION: external source, verify on official site]"
+              "Enterprise materials list workspaces, role-based access, SSO, SCORM, and custom integrations."
             ]
           }
         ]
@@ -167,31 +192,457 @@
     ],
     "tradeoffs": [
       {
-        "claim": "Lip-sync accuracy in certain languages like Japanese may lag behind HeyGen.",
+        "claim": "Self-serve plans stay minute-bundled, and paid fees are non-refundable.",
         "sources": [
           {
-            "url": "/tool/elai-io/reviews",
+            "url": "/tool/elai-io",
             "facts": [
-              "However, lip-sync accuracy lags slightly behind HeyGen in languages like Japanese.",
-              "[NEED VERIFICATION: external source, verify on official site]"
+              "Self-serve plans remain minute-bundled.",
+              "Paid service fees, including renewals, are non-refundable."
             ]
           }
         ]
       },
       {
-        "claim": "Lip-sync accuracy in certain languages like Japanese may lag behind HeyGen.",
+        "claim": "Self-serve plans stay minute-bundled, and paid fees are non-refundable.",
         "sources": [
           {
-            "url": "/tool/elai-io/reviews",
+            "url": "/tool/elai-io",
             "facts": [
-              "However, lip-sync accuracy lags slightly behind HeyGen in languages like Japanese.",
-              "[NEED VERIFICATION: external source, verify on official site]"
+              "Self-serve plans remain minute-bundled.",
+              "Paid service fees, including renewals, are non-refundable."
             ]
           }
         ]
       }
     ],
-    "pricingSignals": {}
+    "pricingSignals": {
+      "freePlan": {
+        "claim": "Elai's Free plan publishes with a watermark before you move into the paid export lanes.",
+        "sources": [
+          {
+            "url": "/tool/elai-io/pricing",
+            "facts": [
+              "Free plan adds a watermark."
+            ]
+          }
+        ]
+      },
+      "watermark": {
+        "claim": "Creator is the first paid lane that removes watermarks on published videos.",
+        "sources": [
+          {
+            "url": "/tool/elai-io/pricing",
+            "facts": [
+              "Creator removes watermarks on published videos."
+            ]
+          }
+        ]
+      },
+      "exportQuality": {
+        "claim": "Creator renders at 1080p Full HD, while Team renders at Ultra 4K HD.",
+        "sources": [
+          {
+            "url": "/tool/elai-io/pricing",
+            "facts": [
+              "Creator renders at 1080p Full HD.",
+              "Team renders at Ultra 4K HD."
+            ]
+          }
+        ]
+      },
+      "refundCancel": {
+        "claim": "Subscriptions can be canceled from account settings, but paid fees and renewals are non-refundable.",
+        "sources": [
+          {
+            "url": "/tool/elai-io",
+            "facts": [
+              "Subscriptions can be canceled any time from account settings.",
+              "Paid service fees, including renewals, are non-refundable."
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "tool": "descript",
+    "bestFor": [
+      "Text-based video editing",
+      "Podcast and interview cleanup",
+      "Multilingual repurposing"
+    ],
+    "whySwitch": [
+      {
+        "claim": "Text-based editing, Studio Sound, and 30+ language dubbing fit fast podcast-to-video workflows.",
+        "sources": [
+          {
+            "url": "/tool/descript",
+            "facts": [
+              "Descript centers editing around text-based workflows.",
+              "Descript supports 30+ language translate and dub workflows."
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Enterprise adds SSO, SCIM, centralized admin, and SAML for managed teams.",
+        "sources": [
+          {
+            "url": "/tool/descript",
+            "facts": [
+              "Enterprise includes SSO, SCIM, centralized administration, and SAML."
+            ]
+          }
+        ]
+      }
+    ],
+    "tradeoffs": [
+      {
+        "claim": "4K export and the strongest admin controls sit above the entry tiers.",
+        "sources": [
+          {
+            "url": "/tool/descript/pricing",
+            "facts": [
+              "Creator adds 4K export.",
+              "SSO, SCIM, centralized admin, and SAML are Enterprise-only."
+            ]
+          }
+        ]
+      }
+    ],
+    "pricingSignals": {
+      "freePlan": {
+        "claim": "Descript Free includes 60 media minutes per month, 100 one-time AI credits, and 720p export.",
+        "sources": [
+          {
+            "url": "/tool/descript/pricing",
+            "facts": [
+              "Free includes 60 media minutes per month.",
+              "Free includes 100 one-time AI credits.",
+              "Free exports are 720p."
+            ]
+          }
+        ]
+      },
+      "watermark": {
+        "claim": "Current Descript plans publish without a watermark, so upgrades are about quality and admin depth rather than cleanup.",
+        "sources": [
+          {
+            "url": "/tool/descript/pricing",
+            "facts": [
+              "Free exports are watermark-free.",
+              "Hobbyist exports without a watermark.",
+              "Creator exports without a watermark."
+            ]
+          }
+        ]
+      },
+      "exportQuality": {
+        "claim": "Free stays at 720p, Hobbyist moves to 1080p, and Creator adds 4K export.",
+        "sources": [
+          {
+            "url": "/tool/descript/pricing",
+            "facts": [
+              "Free stays at 720p export.",
+              "Hobbyist exports at 1080p.",
+              "Creator adds 4K export."
+            ]
+          }
+        ]
+      },
+      "refundCancel": {
+        "claim": "You can cancel from the subscription page, and deleting the account permanently wipes stored data from Descript's servers.",
+        "sources": [
+          {
+            "url": "/tool/descript",
+            "facts": [
+              "Cancellation is available from the subscription page.",
+              "Deleting the account permanently wipes stored data from Descript's servers."
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "tool": "steve-ai",
+    "bestFor": [
+      "Template-led explainers",
+      "Fast social video drafts",
+      "Clear export tiers"
+    ],
+    "whySwitch": [
+      {
+        "claim": "Free exports are watermarked, but paid tiers clean them up and scale from 720p to 4K.",
+        "sources": [
+          {
+            "url": "/tool/steve-ai/pricing",
+            "facts": [
+              "Free exports include a watermark.",
+              "Premium tiers remove the watermark.",
+              "Export quality scales from 720p to 4K across tiers."
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Private-by-default projects and clear duration caps make production limits easier to predict.",
+        "sources": [
+          {
+            "url": "/tool/steve-ai",
+            "facts": [
+              "Videos are private by default.",
+              "The platform documents a 20-minute cap and scene limits."
+            ]
+          }
+        ]
+      }
+    ],
+    "tradeoffs": [
+      {
+        "claim": "Long videos still run into a 20-minute cap unless you move up the ladder.",
+        "sources": [
+          {
+            "url": "/tool/steve-ai",
+            "facts": [
+              "The platform documents a 20-minute max duration.",
+              "Higher tiers gate stronger rights and export options."
+            ]
+          }
+        ]
+      }
+    ],
+    "pricingSignals": {
+      "freePlan": {
+        "claim": "Steve AI's free lane is usable for testing, but exports keep the platform watermark until you upgrade.",
+        "sources": [
+          {
+            "url": "/tool/steve-ai/pricing",
+            "facts": [
+              "Free exports include the Steve AI watermark.",
+              "Premium plans remove the Steve AI watermark."
+            ]
+          }
+        ]
+      },
+      "watermark": {
+        "claim": "Premium plans remove the Steve AI watermark for publishable exports.",
+        "sources": [
+          {
+            "url": "/tool/steve-ai/pricing",
+            "facts": [
+              "Premium plans remove the Steve AI watermark."
+            ]
+          }
+        ]
+      },
+      "exportQuality": {
+        "claim": "Basic supports 720p, Starter adds 1080p, Pro adds 2K, and Enterprise adds 4K exports.",
+        "sources": [
+          {
+            "url": "/tool/steve-ai/pricing",
+            "facts": [
+              "Basic supports 720p exports.",
+              "Starter adds 1080p exports.",
+              "Pro adds 2K exports.",
+              "Enterprise adds 4K exports."
+            ]
+          }
+        ]
+      },
+      "refundCancel": {
+        "claim": "Steve AI does not refund subscription fees, and cancellations can be made any time before renewal with no cancellation charge.",
+        "sources": [
+          {
+            "url": "/tool/steve-ai",
+            "facts": [
+              "Subscription fees are not refunded.",
+              "Plans can be canceled any time before renewal.",
+              "There is no cancellation charge."
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "tool": "invideo",
+    "bestFor": [
+      "Prompt-to-video drafts",
+      "Stock-heavy social videos",
+      "Fast faceless channel output"
+    ],
+    "whySwitch": [
+      {
+        "claim": "InVideo combines prompt-based scripting, stock footage access, subtitles, and voiceover in one faceless-video workflow.",
+        "sources": [
+          {
+            "url": "/tool/invideo",
+            "facts": [
+              "InVideo handles scripting, B-roll, subtitles, and voiceover from a single workflow.",
+              "The product is positioned around prompt-to-video generation."
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Selected models reach 4K, and paid plans remove the watermark on active paid-project downloads.",
+        "sources": [
+          {
+            "url": "/tool/invideo",
+            "facts": [
+              "Selected models support up to 4K output.",
+              "Paid plans remove the watermark from active paid-project downloads."
+            ]
+          }
+        ]
+      }
+    ],
+    "tradeoffs": [
+      {
+        "claim": "Heavy revision loops still burn credits, and plan changes only take effect at cycle end.",
+        "sources": [
+          {
+            "url": "/tool/invideo",
+            "facts": [
+              "Credits continue to meter generation and revision.",
+              "Canceling or downgrading takes effect at the end of the current billing cycle."
+            ]
+          }
+        ]
+      }
+    ],
+    "pricingSignals": {
+      "freePlan": {
+        "claim": "Free exports include the InVideo watermark, so the no-cost lane is better for testing than final publishing.",
+        "sources": [
+          {
+            "url": "/tool/invideo/pricing",
+            "facts": [
+              "Free plan exports include an InVideo watermark."
+            ]
+          }
+        ]
+      },
+      "watermark": {
+        "claim": "Paid plans remove the watermark for active paid-project downloads.",
+        "sources": [
+          {
+            "url": "/tool/invideo/pricing",
+            "facts": [
+              "Paid plans remove the watermark from active paid-project downloads."
+            ]
+          }
+        ]
+      },
+      "exportQuality": {
+        "claim": "Selected InVideo models support output up to 4K once you move past the free lane.",
+        "sources": [
+          {
+            "url": "/tool/invideo",
+            "facts": [
+              "Selected models support up to 4K output."
+            ]
+          }
+        ]
+      },
+      "refundCancel": {
+        "claim": "Canceling or downgrading takes effect at the end of the current billing cycle, and paid-generated media remains accessible after cancellation.",
+        "sources": [
+          {
+            "url": "/tool/invideo",
+            "facts": [
+              "Canceling or downgrading takes effect at the end of the current billing cycle.",
+              "Media generated for your projects remains accessible after cancellation."
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "tool": "runway",
+    "bestFor": [
+      "Cinematic ad creative",
+      "Brand storytelling",
+      "Enterprise-controlled video teams"
+    ],
+    "whySwitch": [
+      {
+        "claim": "Paid plans unlock watermark-free exports and all video models, including Gen-4.",
+        "sources": [
+          {
+            "url": "/tool/runway/pricing",
+            "facts": [
+              "Free keeps a watermark and excludes Gen-4 video access.",
+              "Paid plans remove the watermark and unlock all video models."
+            ]
+          }
+        ]
+      },
+      {
+        "claim": "Enterprise adds private-by-default assets, SSO, workspace controls, and blocked external sharing.",
+        "sources": [
+          {
+            "url": "/tool/runway",
+            "facts": [
+              "Enterprise materials list private-by-default assets, SSO, workspace controls, and the option to disable external link sharing."
+            ]
+          }
+        ]
+      }
+    ],
+    "tradeoffs": [
+      {
+        "claim": "Credits still drive cost, and the strongest controls sit on the enterprise path.",
+        "sources": [
+          {
+            "url": "/tool/runway",
+            "facts": [
+              "Credits continue to meter usage.",
+              "The strongest governance controls are documented on the enterprise path."
+            ]
+          }
+        ]
+      }
+    ],
+    "pricingSignals": {
+      "freePlan": {
+        "claim": "Runway Free is a testing lane with watermarking and no Gen-4 video access.",
+        "sources": [
+          {
+            "url": "/tool/runway/pricing",
+            "facts": [
+              "The Free plan keeps a watermark.",
+              "The Free plan does not include Gen-4 video access."
+            ]
+          }
+        ]
+      },
+      "watermark": {
+        "claim": "Paid plans remove the watermark from published exports.",
+        "sources": [
+          {
+            "url": "/tool/runway/pricing",
+            "facts": [
+              "Paid plans include watermark removal."
+            ]
+          }
+        ]
+      },
+      "exportQuality": {
+        "claim": "Paid plans unlock all video models, including Gen-4, instead of the restricted free lane.",
+        "sources": [
+          {
+            "url": "/tool/runway/pricing",
+            "facts": [
+              "Paid plans include access to all video models."
+            ]
+          }
+        ]
+      }
+    }
   },
   {
     "tool": "pictory",

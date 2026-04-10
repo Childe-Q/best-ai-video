@@ -16,6 +16,38 @@
       "confidence": "high"
     },
     {
+      "text": "OpusClip help says cancellations normally stay active through the current billing cycle, while some downgrade paths return the account to Free immediately.",
+      "theme": "support",
+      "sourceUrl": "https://help.opus.pro/docs/article/plans-and-credits",
+      "sourceType": "help",
+      "capturedAt": "2026-04-08T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "OpusClip help says credits are consumed from imported-video duration, Starter includes 150 monthly credits, Pro includes 300 credits per pack, and monthly credits remain valid for 60 days.",
+      "theme": "usage",
+      "sourceUrl": "https://help.opus.pro/docs/article/how-are-credits-consumed",
+      "sourceType": "help",
+      "capturedAt": "2026-04-08T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "OpusClip help says team workspaces can share credits, videos, and brand templates, and removed members lose access to the workspace.",
+      "theme": "team",
+      "sourceUrl": "https://help.opus.pro/docs/article/6219255-team-management",
+      "sourceType": "help",
+      "capturedAt": "2026-04-08T00:00:00Z",
+      "confidence": "high"
+    },
+    {
+      "text": "OpusClip positions enterprise-level security and SOC 2 Type 2 compliance for higher-tier business usage.",
+      "theme": "security",
+      "sourceUrl": "https://trust.opus.pro/subprocessors",
+      "sourceType": "trust",
+      "capturedAt": "2026-04-08T00:00:00Z",
+      "confidence": "high"
+    },
+    {
       "text": "The Free plan supports local video uploads up to 10GB, vertical 9:16 output, watermarking, and clips that expire after 3 days.",
       "theme": "export",
       "sourceUrl": "https://www.opus.pro/pricing",

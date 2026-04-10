@@ -1,0 +1,1257 @@
+{
+  "generatedAt": "2026-04-08T13:18:45.658657+00:00",
+  "slug": "zebracat-ai",
+  "toolName": "Zebracat",
+  "officialHost": "www.zebracat.ai",
+  "siteRootDir": "www.zebracat.ai",
+  "runtimeCaptureDir": "data/runtime-captures/zebracat-ai",
+  "artifacts": {
+    "counts": {
+      "htmlCount": 5,
+      "jsCount": 2,
+      "jsonCount": 1,
+      "mdCount": 1,
+      "official_page_htmlCount": 1,
+      "referenced_assetCount": 4,
+      "runtime_capture_htmlCount": 2,
+      "runtime_capture_jsonCount": 1,
+      "runtime_capture_reportCount": 1
+    },
+    "availablePageUrls": [
+      "https://www.zebracat.ai/pricing",
+      "https://gtm.zebracat.ai/gtag/js",
+      "https://www.zebracat.ai/"
+    ],
+    "keywordPageUrls": [],
+    "paths": [
+      "www.zebracat.ai/www.zebracat.ai/pricing.html",
+      "data/runtime-captures/zebracat-ai/report.md",
+      "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+      "data/runtime-captures/zebracat-ai/network_responses.json",
+      "data/runtime-captures/zebracat-ai/rendered_dom.html",
+      "www.zebracat.ai/www.zebracat.ai/pricing.html",
+      "www.zebracat.ai/gtm.zebracat.ai/787brueorku.js",
+      "www.zebracat.ai/gtm.zebracat.ai/gtag/js.html",
+      "www.zebracat.ai/gtm.zebracat.ai/gtm.js"
+    ]
+  },
+  "fields": {
+    "officialUrl": {
+      "value": "https://www.zebracat.ai/",
+      "sourceUrl": "https://www.zebracat.ai/",
+      "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html"
+    },
+    "sourceUrls": [
+      "https://www.zebracat.ai/pricing",
+      "https://gtm.zebracat.ai/gtag/js",
+      "https://www.zebracat.ai/"
+    ],
+    "policy": {
+      "watermark": [
+        {
+          "valueCandidate": "Remove Watermark",
+          "snippet": "Remove Watermark Remove Watermark",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Remove Watermark",
+          "snippet": "Remove Watermark Audio & Visuals",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Remove Watermark",
+          "snippet": "Remove Watermark Remove Watermark",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Remove Watermark",
+          "snippet": "Remove Watermark Audio & Visuals",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Remove Watermark",
+          "snippet": "Remove Watermark Remove Watermark",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Remove Watermark",
+          "snippet": "Remove Watermark Audio & Visuals",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Zebracat Free plan contains a watermark, while paid Cat Mode is described as having no watermarks.",
+          "snippet": "The pricing page says the free plan contains a Zebracat watermark and the paid Cat Mode includes no watermarks.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Zebracat Pricing"
+        }
+      ],
+      "commercialUse": [
+        {
+          "valueCandidate": "Zebracat pricing table lists commercial rights as a feature.",
+          "snippet": "The pricing page includes Commercial Rights in the feature matrix for plan comparison.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Zebracat Pricing"
+        }
+      ],
+      "usageRights": [
+        {
+          "valueCandidate": "License",
+          "snippet": "]=arguments[c];return b},Qa=function(a){return a};/* Copyright The Closure Library Authors. SPDX-License-Identifier: Apache-2.0 */ var Ra=this||self,Sa=function(a,b){function c(){}c.prototype=b.prototype;a.mt=b.prototype;a.prototype=new c;a.pro",
+          "sourcePath": "www.zebracat.ai/gtm.zebracat.ai/787brueorku.js",
+          "sourceUrl": "https://gtm.zebracat.ai/787brueorku.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "license",
+          "snippet": "replace(/^https?:\\/\\//,\"\"));return e}};/* jQuery (c) 2005, 2012 jQuery Foundation, Inc. jquery.org/license. */ var Dd=/\\[object (Boolean|Number|String|Function|Array|Date|RegExp)\\]/,Ed=function(a){if(a==null)return String(a);var b=Dd.exec(Object.",
+          "sourcePath": "www.zebracat.ai/gtm.zebracat.ai/787brueorku.js",
+          "sourceUrl": "https://gtm.zebracat.ai/787brueorku.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Copyright",
+          "snippet": "// Copyright 2012 Google Inc. All rights reserved. (function(w,g){w[g]=w[g]||{}; w[g].e=function(s){return eval(s);};})(window,'google_tag_manager')",
+          "sourcePath": "www.zebracat.ai/gtm.zebracat.ai/787brueorku.js",
+          "sourceUrl": "https://gtm.zebracat.ai/787brueorku.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Copyright",
+          "snippet": "r(this),b=[],c=a;c<arguments.length;c++)b[c-a]=arguments[c];return b},Qa=function(a){return a};/* Copyright The Closure Library Authors. SPDX-License-Identifier: Apache-2.0 */ var Ra=this||self,Sa=function(a,b){function c(){}c.prototype=b.prototy",
+          "sourcePath": "www.zebracat.ai/gtm.zebracat.ai/787brueorku.js",
+          "sourceUrl": "https://gtm.zebracat.ai/787brueorku.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "// Copyright 2012 Google Inc. All rights reserved.",
+          "snippet": "// Copyright 2012 Google Inc. All rights reserved. (function(){",
+          "sourcePath": "www.zebracat.ai/gtm.zebracat.ai/gtag/js.html",
+          "sourceUrl": "https://gtm.zebracat.ai/gtag/js",
+          "artifactType": "referenced_asset",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "jQuery (c) 2005, 2012 jQuery Foundation, Inc. jquery.org/license.",
+          "snippet": "jQuery (c) 2005, 2012 jQuery Foundation, Inc. jquery.org/license. */",
+          "sourcePath": "www.zebracat.ai/gtm.zebracat.ai/gtag/js.html",
+          "sourceUrl": "https://gtm.zebracat.ai/gtag/js",
+          "artifactType": "referenced_asset",
+          "contentType": "html"
+        }
+      ],
+      "refundCancellation": [
+        {
+          "valueCandidate": "7-day money-back guarantee",
+          "snippet": "7-day money-back guarantee Didn't download any video?",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Get a full refund within 7 days",
+          "snippet": "Get a full refund within 7 days Product Champion 2025",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Can I cancel my subscription anytime?",
+          "snippet": "Can I cancel my subscription anytime? Is there a limit to how many videos I can create?",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Can I cancel my subscription anytime?",
+          "snippet": "Can I cancel my subscription anytime? Yes, you can cancel your subscription at any time. If you cancel, you'll still have access to your plan until the end of your current billing period. We don't offer refunds for partial months.",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes, you can cancel your subscription at any time. If you cancel, you'll still have access to your plan until the end of your current billing period. We don't offer refunds for partial months.",
+          "snippet": "Yes, you can cancel your subscription at any time. If you cancel, you'll still have access to your plan until the end of your current billing period. We don't offer refunds for partial months.",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "7-day money-back guarantee",
+          "snippet": "7-day money-back guarantee Didn't download any video?",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Get a full refund within 7 days",
+          "snippet": "Get a full refund within 7 days Product Champion 2025",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Can I cancel my subscription anytime?",
+          "snippet": "Can I cancel my subscription anytime? Is there a limit to how many videos I can create?",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Can I cancel my subscription anytime?",
+          "snippet": "Can I cancel my subscription anytime? Yes, you can cancel your subscription at any time. If you cancel, you'll still have access to your plan until the end of your current billing period. We don't offer refunds for partial months.",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes, you can cancel your subscription at any time. If you cancel, you'll still have access to your plan until the end of your current billing period. We don't offer refunds for partial months.",
+          "snippet": "Yes, you can cancel your subscription at any time. If you cancel, you'll still have access to your plan until the end of your current billing period. We don't offer refunds for partial months.",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "7-day money-back guarantee",
+          "snippet": "7-day money-back guarantee Didn't download any video?",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Get a full refund within 7 days",
+          "snippet": "Get a full refund within 7 days Product Champion 2025",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Can I cancel my subscription anytime?",
+          "snippet": "Can I cancel my subscription anytime? Is there a limit to how many videos I can create?",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Can I cancel my subscription anytime?",
+          "snippet": "Can I cancel my subscription anytime? Yes, you can cancel your subscription at any time. If you cancel, you'll still have access to your plan until the end of your current billing period. We don't offer refunds for partial months.",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes, you can cancel your subscription at any time. If you cancel, you'll still have access to your plan until the end of your current billing period. We don't offer refunds for partial months.",
+          "snippet": "Yes, you can cancel your subscription at any time. If you cancel, you'll still have access to your plan until the end of your current billing period. We don't offer refunds for partial months.",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "refund",
+          "snippet": "\"function\":\"_eq\",\"arg0\":[\"macro\",0],\"arg1\":\"purchase\"},{\"function\":\"_eq\",\"arg0\":[\"macro\",0],\"arg1\":\"refund\"},{\"function\":\"_eq\",\"arg0\":[\"macro\",0],\"arg1\":\"sign_up\"},{\"function\":\"_eq\",\"arg0\":[\"macro\",0],\"arg1\":\"trial_offer\"},{\"function\":\"_cn\",\"arg0",
+          "sourcePath": "www.zebracat.ai/gtm.zebracat.ai/787brueorku.js",
+          "sourceUrl": "https://gtm.zebracat.ai/787brueorku.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "refund",
+          "snippet": "\",Ae:\"select_item\",Ac:\"view_item_list\",Tc:\"select_promotion\", Bc:\"view_promotion\",Ob:\"purchase\",Be:\"refund\",Cc:\"view_item\",rl:\"add_to_wishlist\",up:\"exception\",vp:\"first_open\",wp:\"first_visit\",ra:\"gtag.config\",Pb:\"gtag.get\",xp:\"in_app_purchase\",Dc",
+          "sourcePath": "www.zebracat.ai/gtm.zebracat.ai/787brueorku.js",
+          "sourceUrl": "https://gtm.zebracat.ai/787brueorku.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "refund",
+          "snippet": ":\"remove_from_cart\",checkout:\"begin_checkout\",checkout_option:\"checkout_option\",purchase:\"purchase\",refund:\"refund\"};(function(f){Y.__gaawe=f;Y.__gaawe.N=\"gaawe\";Y.__gaawe.isVendorTemplate=!0;Y.__gaawe.priorityOverride=0;Y.__gaawe.isInfrastructur",
+          "sourcePath": "www.zebracat.ai/gtm.zebracat.ai/787brueorku.js",
+          "sourceUrl": "https://gtm.zebracat.ai/787brueorku.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "refund",
+          "snippet": "_from_cart\",checkout:\"begin_checkout\",checkout_option:\"checkout_option\",purchase:\"purchase\",refund:\"refund\"};(function(f){Y.__gaawe=f;Y.__gaawe.N=\"gaawe\";Y.__gaawe.isVendorTemplate=!0;Y.__gaawe.priorityOverride=0;Y.__gaawe.isInfrastructure=!1;Y._",
+          "sourcePath": "www.zebracat.ai/gtm.zebracat.ai/787brueorku.js",
+          "sourceUrl": "https://gtm.zebracat.ai/787brueorku.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancelation",
+          "snippet": "[\"macro\",18]],[\"map\",\"parameter\",\"purchase_period\",\"parameterValue\",[\"macro\",19]]],\"vtp_eventName\":\"cancelation\",\"vtp_measurementIdOverride\":[\"macro\",1],\"vtp_enableUserProperties\":true,\"vtp_enableEuid\":true,\"vtp_migratedToV2\":true,\"vtp_demoV2\":false,\"",
+          "sourcePath": "www.zebracat.ai/gtm.zebracat.ai/787brueorku.js",
+          "sourceUrl": "https://gtm.zebracat.ai/787brueorku.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Zebracat says monthly subscriptions can be canceled anytime and annual plans can be canceled for the following year.",
+          "snippet": "The pricing FAQ says monthly plans can be canceled anytime, while annual plans run for one year with cancellation available for the following year.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Zebracat Pricing"
+        }
+      ],
+      "exportLimits": [
+        {
+          "valueCandidate": "Didn't download any video?",
+          "snippet": "Didn't download any video? Get a full refund within 7 days",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export Resolution",
+          "snippet": "Export Resolution Export Resolution",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export Resolution",
+          "snippet": "Export Resolution 1080p",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export & Sharing",
+          "snippet": "Export & Sharing MP4 Downloads",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "MP4 Downloads",
+          "snippet": "MP4 Downloads MP4 Downloads",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "MP4 Downloads",
+          "snippet": "MP4 Downloads Branded Video Page",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Our free plan allows you to create up to 5 videos with standard AI voices in 720p quality, with a maximum length of 30 seconds per video. No credit card is required to sign up for the free plan.",
+          "snippet": "Our free plan allows you to create up to 5 videos with standard AI voices in 720p quality, with a maximum length of 30 seconds per video. No credit card is required to sign up for the free plan.",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Didn't download any video?",
+          "snippet": "Didn't download any video? Get a full refund within 7 days",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export Resolution",
+          "snippet": "Export Resolution Export Resolution",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export Resolution",
+          "snippet": "Export Resolution 1080p",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export & Sharing",
+          "snippet": "Export & Sharing MP4 Downloads",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "MP4 Downloads",
+          "snippet": "MP4 Downloads MP4 Downloads",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "MP4 Downloads",
+          "snippet": "MP4 Downloads Branded Video Page",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Our free plan allows you to create up to 5 videos with standard AI voices in 720p quality, with a maximum length of 30 seconds per video. No credit card is required to sign up for the free plan.",
+          "snippet": "Our free plan allows you to create up to 5 videos with standard AI voices in 720p quality, with a maximum length of 30 seconds per video. No credit card is required to sign up for the free plan.",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Didn't download any video?",
+          "snippet": "Didn't download any video? Get a full refund within 7 days",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export Resolution",
+          "snippet": "Export Resolution Export Resolution",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export Resolution",
+          "snippet": "Export Resolution 1080p",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export & Sharing",
+          "snippet": "Export & Sharing MP4 Downloads",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "MP4 Downloads",
+          "snippet": "MP4 Downloads MP4 Downloads",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "MP4 Downloads",
+          "snippet": "MP4 Downloads Branded Video Page",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Zebracat free exports up to 720p and paid plans export up to 1080p.",
+          "snippet": "The pricing page's feature table lists 720p export for free and 1080p export on paid plans.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Zebracat Pricing"
+        }
+      ]
+    },
+    "mainLimitations": [
+      {
+        "valueCandidate": "Additional Generative Minutes",
+        "snippet": "Additional Generative Minutes 0",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "350 generative AI credits / mo",
+        "snippet": "350 generative AI credits / mo access to cutting-edge AI models such as VEO3, Kling, Nano Banana, Seedance, Pixverse & many more",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "1400 generative AI credits / mo",
+        "snippet": "1400 generative AI credits / mo access to cutting-edge AI video models such as VEO3, Kling, Nano Banana, Seedance, Pixverse & many",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Create up to 5 new custom avatars each month:",
+        "snippet": "Create up to 5 new custom avatars each month: - From prompts",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Create up to 5 new voice clones each month. Once created, you can use them in unlimited videos, forever.",
+        "snippet": "Create up to 5 new voice clones each month. Once created, you can use them in unlimited videos, forever. 120+ premium AI avatars",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "3,600 generative AI credits / mo",
+        "snippet": "3,600 generative AI credits / mo access to cutting-edge AI models such as VEO3, Kling, Nano Banana, Seedance, Pixverse & many more",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Create up to 10 new custom avatars each month:",
+        "snippet": "Create up to 10 new custom avatars each month: - From prompts",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Create up to 10 new voice clones each month. Once created, you can use them in unlimited videos, forever.",
+        "snippet": "Create up to 10 new voice clones each month. Once created, you can use them in unlimited videos, forever. Unlimited Brand Kits",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Custom generative AI credits",
+        "snippet": "Custom generative AI credits Priority processing",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "“After a few minutes and what it created for me, I was hooked. The quality, ease of use - everything. I’m planning to upgrade to the highest tier. Don't miss out!”",
+        "snippet": "“After a few minutes and what it created for me, I was hooked. The quality, ease of use - everything. I’m planning to upgrade to the highest tier. Don't miss out!”",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Video Length Limit",
+        "snippet": "Video Length Limit Video Length Limit",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Video Length Limit",
+        "snippet": "Video Length Limit 2 min",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Generative AI Credits",
+        "snippet": "Generative AI Credits 350 / mo",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Scene Credits",
+        "snippet": "AI Scene Credits Translate your Video",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Character Consistency",
+        "snippet": "Character Consistency Character Consistency",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Character Consistency",
+        "snippet": "Character Consistency Limited",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Is there a limit to how many videos I can create?",
+        "snippet": "Is there a limit to how many videos I can create? What is Zebracat AI?",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Zebracat AI is a powerful AI-driven video creation platform that helps teams create professional videos at scale, saving up to 80% of their time and budget compared to traditional video production methods.",
+        "snippet": "Zebracat AI is a powerful AI-driven video creation platform that helps teams create professional videos at scale, saving up to 80% of their time and budget compared to traditional video production methods.",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "We accept all major credit cards including Visa, Mastercard, American Express, and Discover. For enterprise customers with Unlimited Cat plans, we also support invoicing and wire transfers.",
+        "snippet": "We accept all major credit cards including Visa, Mastercard, American Express, and Discover. For enterprise customers with Unlimited Cat plans, we also support invoicing and wire transfers.",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Our free plan allows you to create up to 5 videos with standard AI voices in 720p quality, with a maximum length of 30 seconds per video. No credit card is required to sign up for the free plan.",
+        "snippet": "Our free plan allows you to create up to 5 videos with standard AI voices in 720p quality, with a maximum length of 30 seconds per video. No credit card is required to sign up for the free plan.",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Zebracat says unused credits do not carry forward to the next billing cycle unless the user upgrades.",
+        "snippet": "The pricing FAQ says unused credits do not roll into the next cycle, except when upgrading to a higher plan.",
+        "sourcePath": null,
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "Zebracat Pricing"
+      }
+    ],
+    "workflowFeatureDocs": [
+      {
+        "valueCandidate": "Text to Video",
+        "snippet": "Text to Video Transform audio content into engaging videos with synchronized visuals and dynamic presentations.",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Avatar Generator",
+        "snippet": "AI Avatar Generator Create realistic AI avatars for your videos with customizable appearances and natural movements.",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Create realistic AI avatars for your videos with customizable appearances and natural movements.",
+        "snippet": "Create realistic AI avatars for your videos with customizable appearances and natural movements. AI Scene Generator",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Voice Cloning",
+        "snippet": "AI Voice Cloning Clone voices with AI technology to create consistent narration across all your video content.",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Templates",
+        "snippet": "Templates Ready-to-use video templates",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Ready-to-use video templates",
+        "snippet": "Ready-to-use video templates Community",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Limited AI Avatars",
+        "snippet": "Limited AI Avatars Use avatars from our public library. Creating your own digital twin and product presenters are not included.",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "1 Brand Kit",
+        "snippet": "1 Brand Kit See all features",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "120+ premium AI avatars",
+        "snippet": "120+ premium AI avatars Premium AI voices",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Translate videos into 25+ languages",
+        "snippet": "Translate videos into 25+ languages Upload a video and instantly translate it into other languages. Voice and lip-sync adapt automatically so your content works across audiences.",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Upload a video and instantly translate it into other languages. Voice and lip-sync adapt automatically so your content works across audiences.",
+        "snippet": "Upload a video and instantly translate it into other languages. Voice and lip-sync adapt automatically so your content works across audiences.",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "5 Brand Kits",
+        "snippet": "5 Brand Kits See all features",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Unlimited Brand Kits",
+        "snippet": "Unlimited Brand Kits Priority support",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Avatars",
+        "snippet": "AI Avatars AI Avatars",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Avatars",
+        "snippet": "AI Avatars Avatar Clone",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Translate your Video",
+        "snippet": "Translate your Video Translate your Video",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Translate your Video",
+        "snippet": "Translate your Video Voice Cloning",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Voice Cloning",
+        "snippet": "Voice Cloning Voice Cloning",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Voice Cloning",
+        "snippet": "Voice Cloning Millions of stock media assets",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Brand Kits",
+        "snippet": "Brand Kits Brand Kits",
+        "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+        "sourceUrl": "https://www.zebracat.ai/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Zebracat is positioned as an AI video growth agent that generates ideas, creates videos from text, and auto-schedules across platforms.",
+        "snippet": "The homepage describes Zebracat as an AI video agent for social media growth with idea generation, text-based video creation, and auto-scheduling.",
+        "sourcePath": null,
+        "sourceUrl": "https://www.zebracat.ai/",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "Zebracat"
+      }
+    ],
+    "securityApiEnterprise": {
+      "security": [
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Thank you! Your submission has been received!",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Imprint",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Thank you! Your submission has been received!",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Imprint",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Thank you! Your submission has been received!",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Imprint",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "gdpr",
+          "snippet": "G.D.Ke]=\"evnid\", O[G.D.Le]=\"excid\",O[G.D.Gh]=\"gac\",O[G.D.Me]=\"gacgb\",O[G.D.Il]=\"gacmcov\",O[G.D.Ne]=\"gdpr\",O[G.D.Yc]=\"gdid\",O[G.D.Ld]=\"_ng\",O[G.D.Yp]=\"_ono\",O[G.D.Ih]=\"gpp_sid\",O[G.D.Jh]=\"gpp\",O[G.D.Kl]=\"gsaexp\",O[G.D.cg]=\"_tu\",O[G.D.Md]=\"frm\",O",
+          "sourcePath": "www.zebracat.ai/gtm.zebracat.ai/787brueorku.js",
+          "sourceUrl": "https://gtm.zebracat.ai/787brueorku.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "var Ex={},Fx=(Ex[G.D.oa]=\"gcu\",Ex[G.D.hc]=\"gclgb\",Ex[G.D.tb]=\"gclaw\",Ex[G.D.Cf]=\"gad_source\",Ex[G.D.Df]=\"gad_source_src\",Ex[G.D.Dd]=\"gclid\",Ex[G.D.tl]=\"gclsrc\",Ex[G.D.Ef]=\"gbraid\",Ex[G.D.Fe]=\"wbraid\",Ex[G.D.Ed]=\"auid\",Ex[G.D.vl]=\"ae\",Ex[G.D.Aa]=null,Ex[G.D.xl]=\"rnd\",Ex[G.D.Rf]=\"ncl\",Ex[G.D.Bh]=\"gcldc\",Ex[G.D.Id]=\"dclid\",Ex[G.D.Wc]=\"edid\",Ex[G.D.Xc]=\"en\",Ex[G.D.Ne]=\"gdpr\",Ex[G.D.Yc]=\"gdid\",Ex[G.D.wb]=null,Ex[G.D.Ld]=\"_ng\",Ex[G.D.Ih]=\"gpp_sid\",Ex[G.D.Jh]=\"gpp\",Ex[G.D.cg]=\"_tu\",Ex[G.D.Ll]=\"gtm_up\",Ex[G.D.Md]=",
+          "snippet": "var Ex={},Fx=(Ex[G.D.oa]=\"gcu\",Ex[G.D.hc]=\"gclgb\",Ex[G.D.tb]=\"gclaw\",Ex[G.D.Cf]=\"gad_source\",Ex[G.D.Df]=\"gad_source_src\",Ex[G.D.Dd]=\"gclid\",Ex[G.D.tl]=\"gclsrc\",Ex[G.D.Ef]=\"gbraid\",Ex[G.D.Fe]=\"wbraid\",Ex[G.D.Ed]=\"auid\",Ex[G.D.vl]=\"ae\",Ex[G.D.Aa]=null,Ex[G.D....",
+          "sourcePath": "www.zebracat.ai/gtm.zebracat.ai/gtag/js.html",
+          "sourceUrl": "https://gtm.zebracat.ai/gtag/js",
+          "artifactType": "referenced_asset",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "IP=function(a){if(QJ(a)){var b=uL();b&&NJ(a,\"us_privacy\",b);var c=hr();c&&NJ(a,\"gdpr\",c);var d=gr();d&&NJ(a,\"gdpr_consent\",d);var e=kD.gppString;e&&NJ(a,\"gpp\",e);var f=kD.H;f&&NJ(a,\"gpp_sid\",f)}},JP=function(a){QJ(a)&&Pl()&&T(a.K,G.D.Pa)&&NJ(a,\"adr\",1)},KP=function(a){if(QJ(a)){var b=Bm();b&&NJ(a,\"gcsub\",b)}},LP=function(a){if(QJ(a)){T(a.K,G.D.Ib,void 0,4)===!1&&NJ(a,\"ngs\",1);zm()&&NJ(a,\"ga_rd\",1);MJ()||NJ(a,\"ngst\",1);var b=Cm();b&&NJ(a,\"etld\",b)}},MP=function(a){},NP=function(a){QJ(a)&&Pl()&&NJ(a,\"rnd\",Uz())},wP=[G.D.ba,G.D.fa,G.D.Oa];",
+          "snippet": "IP=function(a){if(QJ(a)){var b=uL();b&&NJ(a,\"us_privacy\",b);var c=hr();c&&NJ(a,\"gdpr\",c);var d=gr();d&&NJ(a,\"gdpr_consent\",d);var e=kD.gppString;e&&NJ(a,\"gpp\",e);var f=kD.H;f&&NJ(a,\"gpp_sid\",f)}},JP=function(a){QJ(a)&&Pl()&&T(a.K,G.D.Pa)&&NJ(a,\"adr\",1)},KP=...",
+          "sourcePath": "www.zebracat.ai/gtm.zebracat.ai/gtag/js.html",
+          "sourceUrl": "https://gtm.zebracat.ai/gtag/js",
+          "artifactType": "referenced_asset",
+          "contentType": "html"
+        }
+      ],
+      "api": [
+        {
+          "valueCandidate": "API access",
+          "snippet": "API access Custom AI models",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API access",
+          "snippet": "API access Custom AI models",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API access",
+          "snippet": "API access Custom AI models",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "nction which already exists: \"+a+\".\");if(this.H.hasOwnProperty(a))throw Error(\"Attempting to add an API with an existing private API name: \"+a+\".\");this.M[a]=c?void 0:yb(b)?lh(a,b):mh(a,b)};function Th(a,b){var c=void 0;return c};function Uh()",
+          "sourcePath": "www.zebracat.ai/gtm.zebracat.ai/787brueorku.js",
+          "sourceUrl": "https://gtm.zebracat.ai/787brueorku.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "\"+a+\".\");if(this.H.hasOwnProperty(a))throw Error(\"Attempting to add an API with an existing private API name: \"+a+\".\");this.M[a]=c?void 0:yb(b)?lh(a,b):mh(a,b)};function Th(a,b){var c=void 0;return c};function Uh(){var a={}; return a};var O={}",
+          "sourcePath": "www.zebracat.ai/gtm.zebracat.ai/787brueorku.js",
+          "sourceUrl": "https://gtm.zebracat.ai/787brueorku.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "f}else d=!0}if(d){var h=c.H.hasOwnProperty(a)?c.H[a]:void 0;b=h}else throw Error(a+\" is not a valid API name.\");}return b}},yS;function AS(a,b,c){yS||(yS=new xS);yS.H.add(a,b,c)}function BS(a,b){yS||(yS=new xS);var c=yS.H;if(c.H.hasOwnProperty",
+          "sourcePath": "www.zebracat.ai/gtm.zebracat.ai/787brueorku.js",
+          "sourceUrl": "https://gtm.zebracat.ai/787brueorku.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "xists: \"+a+\".\");if(c.contains(a))throw Error(\"Attempting to add a private function with an existing API name: \"+a+\".\");c.H[a]=yb(b)?lh(a,b):mh(a,b)};function CS(){var a=function(c){return void BS(c.O,c)},b=function(c){return void AS(c.publicNa",
+          "sourcePath": "www.zebracat.ai/gtm.zebracat.ai/787brueorku.js",
+          "sourceUrl": "https://gtm.zebracat.ai/787brueorku.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "enterprise": [
+        {
+          "valueCandidate": "Join our growing team",
+          "snippet": "Join our growing team Contact",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise $599+/mo",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited custom avatars & voice clones (enterprise quality)",
+          "snippet": "Unlimited custom avatars & voice clones (enterprise quality) API access",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Advanced team roles / permissions",
+          "snippet": "Advanced team roles / permissions Dedicated success manager",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise $599+",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Zebracat AI is a powerful AI-driven video creation platform that helps teams create professional videos at scale, saving up to 80% of their time and budget compared to traditional video production methods.",
+          "snippet": "Zebracat AI is a powerful AI-driven video creation platform that helps teams create professional videos at scale, saving up to 80% of their time and budget compared to traditional video production methods.",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "We accept all major credit cards including Visa, Mastercard, American Express, and Discover. For enterprise customers with Unlimited Cat plans, we also support invoicing and wire transfers.",
+          "snippet": "We accept all major credit cards including Visa, Mastercard, American Express, and Discover. For enterprise customers with Unlimited Cat plans, we also support invoicing and wire transfers.",
+          "sourcePath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Join our growing team",
+          "snippet": "Join our growing team Contact",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise $599+/mo",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited custom avatars & voice clones (enterprise quality)",
+          "snippet": "Unlimited custom avatars & voice clones (enterprise quality) API access",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Advanced team roles / permissions",
+          "snippet": "Advanced team roles / permissions Dedicated success manager",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise $599+",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Zebracat AI is a powerful AI-driven video creation platform that helps teams create professional videos at scale, saving up to 80% of their time and budget compared to traditional video production methods.",
+          "snippet": "Zebracat AI is a powerful AI-driven video creation platform that helps teams create professional videos at scale, saving up to 80% of their time and budget compared to traditional video production methods.",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "We accept all major credit cards including Visa, Mastercard, American Express, and Discover. For enterprise customers with Unlimited Cat plans, we also support invoicing and wire transfers.",
+          "snippet": "We accept all major credit cards including Visa, Mastercard, American Express, and Discover. For enterprise customers with Unlimited Cat plans, we also support invoicing and wire transfers.",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom_initial.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Join our growing team",
+          "snippet": "Join our growing team Contact",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise $599+/mo",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Unlimited custom avatars & voice clones (enterprise quality)",
+          "snippet": "Unlimited custom avatars & voice clones (enterprise quality) API access",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Advanced team roles / permissions",
+          "snippet": "Advanced team roles / permissions Dedicated success manager",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise $599+",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Zebracat AI is a powerful AI-driven video creation platform that helps teams create professional videos at scale, saving up to 80% of their time and budget compared to traditional video production methods.",
+          "snippet": "Zebracat AI is a powerful AI-driven video creation platform that helps teams create professional videos at scale, saving up to 80% of their time and budget compared to traditional video production methods.",
+          "sourcePath": "data/runtime-captures/zebracat-ai/rendered_dom.html",
+          "sourceUrl": "https://www.zebracat.ai/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ]
+    },
+    "logoSources": [
+      {
+        "assetPath": "www.zebracat.ai/cdn.prod.website-files.com/653c03c7c53a2bcd281722c6/65eed56bb67ec56a8456f152_fav.png",
+        "assetUrl": "https://cdn.prod.website-files.com/653c03c7c53a2bcd281722c6/65eed56bb67ec56a8456f152_fav.png"
+      },
+      {
+        "assetPath": "www.zebracat.ai/cdn.prod.website-files.com/653c03c7c53a2bcd281722c6/6564a8e4a1311fa18fac11b4_zebracat-black-logo.webp",
+        "assetUrl": "https://cdn.prod.website-files.com/653c03c7c53a2bcd281722c6/6564a8e4a1311fa18fac11b4_zebracat-black-logo.webp"
+      },
+      {
+        "assetPath": "www.zebracat.ai/cdn.prod.website-files.com/653c03c7c53a2bcd281722c6/67fa30105cf0810424d74406_close-icon.svg",
+        "assetUrl": "https://cdn.prod.website-files.com/653c03c7c53a2bcd281722c6/67fa30105cf0810424d74406_close-icon.svg"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn.prod.website-files.com/653c03c7c53a2bcd281722c6/653cdd32efe0c8de128df3f4_zebraca-whit-logo.webp"
+      }
+    ]
+  },
+  "missingFields": [],
+  "nextFetchTargets": [
+    {
+      "url": "https://www.zebracat.ai/features/blog-to-video",
+      "discoveredFromPath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+      "discoveredFromUrl": "https://www.zebracat.ai/pricing"
+    },
+    {
+      "url": "https://www.zebracat.ai/features/text-to-video",
+      "discoveredFromPath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+      "discoveredFromUrl": "https://www.zebracat.ai/pricing"
+    },
+    {
+      "url": "https://www.zebracat.ai/features/ai-avatar-generator",
+      "discoveredFromPath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+      "discoveredFromUrl": "https://www.zebracat.ai/pricing"
+    },
+    {
+      "url": "https://www.zebracat.ai/features/ai-scene-generator",
+      "discoveredFromPath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+      "discoveredFromUrl": "https://www.zebracat.ai/pricing"
+    },
+    {
+      "url": "https://www.zebracat.ai/features/ai-automated-video-editing",
+      "discoveredFromPath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+      "discoveredFromUrl": "https://www.zebracat.ai/pricing"
+    },
+    {
+      "url": "https://www.zebracat.ai/features/ai-voice-cloning",
+      "discoveredFromPath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+      "discoveredFromUrl": "https://www.zebracat.ai/pricing"
+    },
+    {
+      "url": "https://www.zebracat.ai/features",
+      "discoveredFromPath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+      "discoveredFromUrl": "https://www.zebracat.ai/pricing"
+    },
+    {
+      "url": "https://www.zebracat.ai/enterprise-form",
+      "discoveredFromPath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+      "discoveredFromUrl": "https://www.zebracat.ai/pricing"
+    },
+    {
+      "url": "https://www.zebracat.ai/privacy-policy",
+      "discoveredFromPath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+      "discoveredFromUrl": "https://www.zebracat.ai/pricing"
+    },
+    {
+      "url": "https://www.zebracat.ai/features/text-to-speech",
+      "discoveredFromPath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+      "discoveredFromUrl": "https://www.zebracat.ai/pricing"
+    },
+    {
+      "url": "https://www.zebracat.ai/terms-and-conditions",
+      "discoveredFromPath": "www.zebracat.ai/www.zebracat.ai/pricing.html",
+      "discoveredFromUrl": "https://www.zebracat.ai/pricing"
+    }
+  ],
+  "remoteFetches": {
+    "rounds": [
+      {
+        "roundId": "2026-04-08-remote-round-1",
+        "fetchedAt": "2026-04-08T13:38:41.675019+00:00",
+        "pages": [
+          {
+            "title": "Zebracat",
+            "url": "https://www.zebracat.ai/"
+          },
+          {
+            "title": "Zebracat Pricing",
+            "url": "https://www.zebracat.ai/pricing"
+          }
+        ],
+        "fetchedFields": [
+          "mainLimitations",
+          "policy.commercialUse",
+          "policy.exportLimits",
+          "policy.refundCancellation",
+          "policy.watermark",
+          "workflowFeatureDocs"
+        ],
+        "unresolvedFields": [],
+        "mergedRecordCount": 6
+      }
+    ],
+    "latestRoundId": "2026-04-08-remote-round-1"
+  }
+}

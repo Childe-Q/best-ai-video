@@ -1,0 +1,1852 @@
+{
+  "generatedAt": "2026-04-08T13:18:33.150245+00:00",
+  "slug": "d-id",
+  "toolName": "D-ID",
+  "officialHost": "www.d-id.com",
+  "siteRootDir": "www.d_id.com",
+  "runtimeCaptureDir": "data/runtime-captures/d-id",
+  "artifacts": {
+    "counts": {
+      "htmlCount": 4,
+      "jsCount": 9,
+      "jsonCount": 1,
+      "mdCount": 1,
+      "pngCount": 5,
+      "referenced_assetCount": 23,
+      "runtime_capture_htmlCount": 3,
+      "runtime_capture_jsonCount": 1,
+      "runtime_capture_reportCount": 1,
+      "svgCount": 8
+    },
+    "availablePageUrls": [
+      "https://www.d-id.com/pricing",
+      "https://www.d-id.com/pricing/studio",
+      "https://docs.d-id.com/docs/quickstart",
+      "https://docs.d-id.com/docs/v3-instant-avatar-quickstart",
+      "https://www.d-id.com/privacy-policy/",
+      "https://help.d-id.com/hc/en-us/articles/31262544439697-Is-there-an-API-that-I-can-use-to-create-Agents"
+    ],
+    "keywordPageUrls": [],
+    "paths": [
+      "data/runtime-captures/d-id/report.md",
+      "data/runtime-captures/d-id/rendered_dom_initial.html",
+      "data/runtime-captures/d-id/network_responses.json",
+      "data/runtime-captures/d-id/rendered_dom.html",
+      "data/runtime-captures/d-id/rendered_dom_toggled.html",
+      "www.d_id.com/www.d-id.com/pricing/studio/index.html",
+      "www.d_id.com/www.d-id.com/wp-content/uploads/2024/11/SyntheticMedia_Leader_Leader.png",
+      "www.d_id.com/www.d-id.com/wp-content/cache/min/1/wp-content/plugins/sitepress-multilingual-cms/res/js/cookies/language-cookie.js",
+      "www.d_id.com/www.d-id.com/wp-includes/js/jquery/jquery.min.js",
+      "www.d_id.com/www.d-id.com/wp-includes/js/jquery/jquery-migrate.min.js",
+      "www.d_id.com/www.d-id.com/wp-content/uploads/2024/10/D-ID-logo-350x350-1-150x150.png",
+      "www.d_id.com/www.d-id.com/wp-content/uploads/2023/11/d-id-logo.svg",
+      "www.d_id.com/www.d-id.com/wp-content/uploads/2025/01/Coca-Cola_logo.svg",
+      "www.d_id.com/www.d-id.com/wp-content/uploads/2025/01/Gameloft_Logo.svg",
+      "www.d_id.com/www.d-id.com/wp-content/uploads/2025/01/MH_logo_RGB.svg",
+      "www.d_id.com/www.d-id.com/wp-content/uploads/2025/01/Wayfair_logo.svg",
+      "www.d_id.com/www.d-id.com/wp-content/uploads/2025/01/reddit-1-1.svg",
+      "www.d_id.com/www.d-id.com/wp-content/uploads/2025/01/shell.svg",
+      "www.d_id.com/www.d-id.com/wp-content/uploads/2025/01/Warner_Bros_logo.svg",
+      "www.d_id.com/www.d-id.com/wp-content/uploads/2024/11/VideoEditing_HighPerformer_HighPerformer.png",
+      "www.d_id.com/www.d-id.com/wp-content/uploads/2024/11/AIVideoGenerators_HighestUserAdoption_Small-Business_Adoption.png",
+      "www.d_id.com/www.d-id.com/wp-content/uploads/2024/11/SyntheticMedia_HighPerformer_Europe_HighPerformer.png",
+      "www.d_id.com/www.d-id.com/wp-content/cache/min/1/25480953.js",
+      "www.d_id.com/www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+      "www.d_id.com/www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/slim.js",
+      "www.d_id.com/www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/critical.js",
+      "www.d_id.com/www.d-id.com/wp-content/themes/airfleet/dist/pricing-page-app.js",
+      "www.d_id.com/www.d-id.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"
+    ]
+  },
+  "fields": {
+    "officialUrl": {
+      "value": "https://www.d-id.com/",
+      "sourceUrl": "https://www.d-id.com/",
+      "sourcePath": "data/runtime-captures/d-id/report.md"
+    },
+    "sourceUrls": [
+      "https://www.d-id.com/pricing",
+      "https://www.d-id.com/pricing/studio",
+      "https://docs.d-id.com/docs/quickstart",
+      "https://docs.d-id.com/docs/v3-instant-avatar-quickstart",
+      "https://www.d-id.com/privacy-policy/",
+      "https://help.d-id.com/hc/en-us/articles/31262544439697-Is-there-an-API-that-I-can-use-to-create-Agents"
+    ],
+    "policy": {
+      "watermark": [
+        {
+          "valueCandidate": "Full-screen watermark",
+          "snippet": "Full-screen watermark A D-ID watermark will appear on the video",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "A D-ID watermark will appear on the video",
+          "snippet": "A D-ID watermark will appear on the video API access",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "D-ID watermark",
+          "snippet": "D-ID watermark 1 Embedded Agent",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "AI watermark",
+          "snippet": "AI watermark An \"AI\" watermark will appear on the video",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "An \"AI\" watermark will appear on the video",
+          "snippet": "An \"AI\" watermark will appear on the video 1 Embedded Agent",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Remove the watermark and replace it with your own logo, or leave it blank",
+          "snippet": "Remove the watermark and replace it with your own logo, or leave it blank Faster video processing",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark",
+          "snippet": "Watermark Full-screen watermark",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Full-screen watermark",
+          "snippet": "Full-screen watermark Watermark for Trial plan: Full-screen watermark",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark for Trial plan: Full-screen watermark",
+          "snippet": "Watermark for Trial plan: Full-screen watermark D-ID watermark",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "D-ID watermark",
+          "snippet": "D-ID watermark Watermark for Lite plan: D-ID watermark",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark for Lite plan: D-ID watermark",
+          "snippet": "Watermark for Lite plan: D-ID watermark AI watermark",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "AI watermark",
+          "snippet": "AI watermark Watermark for Pro plan: AI watermark",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark for Pro plan: AI watermark",
+          "snippet": "Watermark for Pro plan: AI watermark Custom logo",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark for Advanced plan: Custom logo",
+          "snippet": "Watermark for Advanced plan: Custom logo Custom logo",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark for Enterprise plan: Custom logo",
+          "snippet": "Watermark for Enterprise plan: Custom logo Subtitles",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Why do videos have a D-ID watermark on the Trial and Lite plans?",
+          "snippet": "Why do videos have a D-ID watermark on the Trial and Lite plans? It is important for us, as a company that enables users to create AI-based content, that there is transparency about the synthetic nature of the videos they generate. This is also reflected in...",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": ". Note, a full-screen watermark appears for trial users.",
+          "snippet": ". Note, a full-screen watermark appears for trial users. How do I cancel my subscription?",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Full-screen watermark",
+          "snippet": "Full-screen watermark A D-ID watermark will appear on the video",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "A D-ID watermark will appear on the video",
+          "snippet": "A D-ID watermark will appear on the video API access",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "D-ID watermark",
+          "snippet": "D-ID watermark 1 Embedded Agent",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "commercialUse": [
+        {
+          "valueCandidate": "Commercial use license",
+          "snippet": "Commercial use license For business-related projects. Includes any content or media used for marketing, profit, or in connection with a business or organization.",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use License for Pro plan: Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License for Pro plan: Commercial use",
+          "snippet": "License for Pro plan: Commercial use Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use License for Advanced plan: Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License for Advanced plan: Commercial use",
+          "snippet": "License for Advanced plan: Commercial use Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use License for Enterprise plan: Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License for Enterprise plan: Commercial use",
+          "snippet": "License for Enterprise plan: Commercial use Support",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use license",
+          "snippet": "Commercial use license For business-related projects. Includes any content or media used for marketing, profit, or in connection with a business or organization.",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use License for Pro plan: Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License for Pro plan: Commercial use",
+          "snippet": "License for Pro plan: Commercial use Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use License for Advanced plan: Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License for Advanced plan: Commercial use",
+          "snippet": "License for Advanced plan: Commercial use Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use License for Enterprise plan: Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License for Enterprise plan: Commercial use",
+          "snippet": "License for Enterprise plan: Commercial use Support",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use license",
+          "snippet": "Commercial use license For business-related projects. Includes any content or media used for marketing, profit, or in connection with a business or organization.",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use License for Pro plan: Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License for Pro plan: Commercial use",
+          "snippet": "License for Pro plan: Commercial use Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use License for Advanced plan: Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License for Advanced plan: Commercial use",
+          "snippet": "License for Advanced plan: Commercial use Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use",
+          "snippet": "Commercial use License for Enterprise plan: Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "usageRights": [
+        {
+          "valueCandidate": "End User License",
+          "snippet": "End User License D-ID Products Terms of Use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Personal use license",
+          "snippet": "Personal use license For non-business projects or individual use. Suitable for personal hobbies, learning, or non-commercial content creation.",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use license",
+          "snippet": "Commercial use license For business-related projects. Includes any content or media used for marketing, profit, or in connection with a business or organization.",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License",
+          "snippet": "License Personal use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License for Trial plan: Personal use",
+          "snippet": "License for Trial plan: Personal use Personal use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License for Lite plan: Personal use",
+          "snippet": "License for Lite plan: Personal use Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License for Pro plan: Commercial use",
+          "snippet": "License for Pro plan: Commercial use Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License for Advanced plan: Commercial use",
+          "snippet": "License for Advanced plan: Commercial use Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License for Enterprise plan: Commercial use",
+          "snippet": "License for Enterprise plan: Commercial use Support",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "End User License",
+          "snippet": "End User License D-ID Products Terms of Use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Personal use license",
+          "snippet": "Personal use license For non-business projects or individual use. Suitable for personal hobbies, learning, or non-commercial content creation.",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Commercial use license",
+          "snippet": "Commercial use license For business-related projects. Includes any content or media used for marketing, profit, or in connection with a business or organization.",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License",
+          "snippet": "License Personal use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License for Trial plan: Personal use",
+          "snippet": "License for Trial plan: Personal use Personal use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License for Lite plan: Personal use",
+          "snippet": "License for Lite plan: Personal use Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License for Pro plan: Commercial use",
+          "snippet": "License for Pro plan: Commercial use Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License for Advanced plan: Commercial use",
+          "snippet": "License for Advanced plan: Commercial use Commercial use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "License for Enterprise plan: Commercial use",
+          "snippet": "License for Enterprise plan: Commercial use Support",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "End User License",
+          "snippet": "End User License D-ID Products Terms of Use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Personal use license",
+          "snippet": "Personal use license For non-business projects or individual use. Suitable for personal hobbies, learning, or non-commercial content creation.",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "D-ID instant avatar creation requires a consent verification process and a rights confirmation statement.",
+          "snippet": "The instant avatar quickstart says custom avatar creation requires consent verification, including a spoken confirmation that the user has necessary rights or consents for footage and voice.",
+          "sourcePath": null,
+          "sourceUrl": "https://docs.d-id.com/docs/v3-instant-avatar-quickstart",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Instant Avatar Quickstart | D-ID Docs"
+        }
+      ],
+      "refundCancellation": [
+        {
+          "valueCandidate": "How do I cancel my subscription?",
+          "snippet": "How do I cancel my subscription? To cancel your subscription, go to “Billing” > “Cancel plan”",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "To cancel your subscription, go to “Billing” > “Cancel plan”",
+          "snippet": "To cancel your subscription, go to “Billing” > “Cancel plan” How do I delete my account?",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "What happens to my data if I cancel my subscription?",
+          "snippet": "What happens to my data if I cancel my subscription? If you cancel your subscription, your plan will remain active until the end of the current billing period. Afterward, your account will be downgraded. As a free user, if you do not use D-ID for 6 months,...",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "If you cancel your subscription, your plan will remain active until the end of the current billing period. Afterward, your account will be downgraded. As a free user, if you do not use D-ID for 6 months, your data will be deleted, but we will notify you via email before this happens.",
+          "snippet": "If you cancel your subscription, your plan will remain active until the end of the current billing period. Afterward, your account will be downgraded. As a free user, if you do not use D-ID for 6 months, your data will be deleted, but we will notify you via...",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "How do I cancel my subscription?",
+          "snippet": "How do I cancel my subscription? To cancel your subscription, go to “Billing” > “Cancel plan”",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "To cancel your subscription, go to “Billing” > “Cancel plan”",
+          "snippet": "To cancel your subscription, go to “Billing” > “Cancel plan” How do I delete my account?",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "What happens to my data if I cancel my subscription?",
+          "snippet": "What happens to my data if I cancel my subscription? If you cancel your subscription, your plan will remain active until the end of the current billing period. Afterward, your account will be downgraded. As a free user, if you do not use D-ID for 6 months,...",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "If you cancel your subscription, your plan will remain active until the end of the current billing period. Afterward, your account will be downgraded. As a free user, if you do not use D-ID for 6 months, your data will be deleted, but we will notify you via email before this happens.",
+          "snippet": "If you cancel your subscription, your plan will remain active until the end of the current billing period. Afterward, your account will be downgraded. As a free user, if you do not use D-ID for 6 months, your data will be deleted, but we will notify you via...",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "How do I cancel my subscription?",
+          "snippet": "How do I cancel my subscription? To cancel your subscription, go to “Billing” > “Cancel plan”",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "To cancel your subscription, go to “Billing” > “Cancel plan”",
+          "snippet": "To cancel your subscription, go to “Billing” > “Cancel plan” How do I delete my account?",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "What happens to my data if I cancel my subscription?",
+          "snippet": "What happens to my data if I cancel my subscription? If you cancel your subscription, your plan will remain active until the end of the current billing period. Afterward, your account will be downgraded. As a free user, if you do not use D-ID for 6 months,...",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "If you cancel your subscription, your plan will remain active until the end of the current billing period. Afterward, your account will be downgraded. As a free user, if you do not use D-ID for 6 months, your data will be deleted, but we will notify you via email before this happens.",
+          "snippet": "If you cancel your subscription, your plan will remain active until the end of the current billing period. Afterward, your account will be downgraded. As a free user, if you do not use D-ID for 6 months, your data will be deleted, but we will notify you via...",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "How do I cancel my subscription?",
+          "snippet": "How do I cancel my subscription? To cancel your subscription, go to “Billing” > “Cancel plan”",
+          "sourcePath": "www.d_id.com/www.d-id.com/pricing/studio/index.html",
+          "sourceUrl": "https://www.d-id.com/pricing/studio",
+          "artifactType": "referenced_asset",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "To cancel your subscription, go to “Billing” > “Cancel plan”",
+          "snippet": "To cancel your subscription, go to “Billing” > “Cancel plan” How do I delete my account?",
+          "sourcePath": "www.d_id.com/www.d-id.com/pricing/studio/index.html",
+          "sourceUrl": "https://www.d-id.com/pricing/studio",
+          "artifactType": "referenced_asset",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "What happens to my data if I cancel my subscription?",
+          "snippet": "What happens to my data if I cancel my subscription? If you cancel your subscription, your plan will remain active until the end of the current billing period. Afterward, your account will be downgraded. As a free user, if you do not use D-ID for 6 months,...",
+          "sourcePath": "www.d_id.com/www.d-id.com/pricing/studio/index.html",
+          "sourceUrl": "https://www.d-id.com/pricing/studio",
+          "artifactType": "referenced_asset",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "If you cancel your subscription, your plan will remain active until the end of the current billing period. Afterward, your account will be downgraded. As a free user, if you do not use D-ID for 6 months, your data will be deleted, but we will notify you via email before this happens.",
+          "snippet": "If you cancel your subscription, your plan will remain active until the end of the current billing period. Afterward, your account will be downgraded. As a free user, if you do not use D-ID for 6 months, your data will be deleted, but we will notify you via...",
+          "sourcePath": "www.d_id.com/www.d-id.com/pricing/studio/index.html",
+          "sourceUrl": "https://www.d-id.com/pricing/studio",
+          "artifactType": "referenced_asset",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "canceled",
+          "snippet": "query)?ce(y):ce.event,x=ce.Deferred(),b=ce.Callbacks(\"once memory\"),w=v.statusCode||{},a={},s={},u=\"canceled\",T={readyState:0,getResponseHeader:function(e){var t;if(h){if(!n){n={};while(t=Wt.exec(p))n[t[1].toLowerCase()+\" \"]=(n[t[1].toLowerCase()+\"",
+          "sourcePath": "www.d_id.com/www.d-id.com/wp-includes/js/jquery/jquery.min.js",
+          "sourceUrl": "https://www.d-id.com/wp-includes/js/jquery/jquery.min.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": ",a[f](o.move,t.onTouchMove,c.passiveListener?{passive:!1,capture:u}:u),a[f](o.end,t.onTouchEnd,e),o.cancel&&a[f](o.cancel,t.onTouchEnd,e)}else a[f](o.start,t.onTouchStart,!1),r[f](o.move,t.onTouchMove,u),r[f](o.end,t.onTouchEnd,!1);(i.preventClic",
+          "sourcePath": "www.d_id.com/www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "sourceUrl": "https://www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "onTouchMove,c.passiveListener?{passive:!1,capture:u}:u),a[f](o.end,t.onTouchEnd,e),o.cancel&&a[f](o.cancel,t.onTouchEnd,e)}else a[f](o.start,t.onTouchStart,!1),r[f](o.move,t.onTouchMove,u),r[f](o.end,t.onTouchEnd,!1);(i.preventClicks||i.preventCl",
+          "sourcePath": "www.d_id.com/www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "sourceUrl": "https://www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "=[\"pointerdown\",\"pointermove\",\"pointerup\"];return n.touchEventsTouch={start:t[0],move:t[1],end:t[2],cancel:t[3]},n.touchEventsDesktop={start:e[0],move:e[1],end:e[2]},n.support.touch||!n.params.simulateTouch?n.touchEventsTouch:n.touchEventsDesktop",
+          "sourcePath": "www.d_id.com/www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "sourceUrl": "https://www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "exportLimits": [
+        {
+          "valueCandidate": "Download the transcripted speech as an SRT file",
+          "snippet": "Download the transcripted speech as an SRT file Subtitles for Trial plan: not included",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download the transcripted speech as an SRT file",
+          "snippet": "Download the transcripted speech as an SRT file Subtitles for Trial plan: included",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download the transcripted speech as an SRT file",
+          "snippet": "Download the transcripted speech as an SRT file Subtitles for Trial plan: not included",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download the transcripted speech as an SRT file",
+          "snippet": "Download the transcripted speech as an SRT file Subtitles for Trial plan: included",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download the transcripted speech as an SRT file",
+          "snippet": "Download the transcripted speech as an SRT file Subtitles for Trial plan: not included",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download the transcripted speech as an SRT file",
+          "snippet": "Download the transcripted speech as an SRT file Subtitles for Trial plan: included",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "jquery.org/license */ !function(e,t){\"use strict\";\"object\"==typeof module&&\"object\"==typeof module.exports?module.exports=e.document?t(e,!0):function(e){if(!e.document)throw new Error(\"jQuery requires a window with a document\");return t(e)}:t(e)}",
+          "sourcePath": "www.d_id.com/www.d-id.com/wp-includes/js/jquery/jquery.min.js",
+          "sourceUrl": "https://www.d-id.com/wp-includes/js/jquery/jquery.min.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "ense */ !function(e,t){\"use strict\";\"object\"==typeof module&&\"object\"==typeof module.exports?module.exports=e.document?t(e,!0):function(e){if(!e.document)throw new Error(\"jQuery requires a window with a document\");return t(e)}:t(e)}(\"undefined\"!=t",
+          "sourcePath": "www.d_id.com/www.d-id.com/wp-includes/js/jquery/jquery.min.js",
+          "sourceUrl": "https://www.d-id.com/wp-includes/js/jquery/jquery.min.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "fine&&define.amd?define([\"jquery\"],function(e){return t(e,window)}):\"object\"==typeof module&&module.exports?module.exports=t(require(\"jquery\"),window):t(jQuery,window)}(function(s,n){\"use strict\";function e(e){return 0<=function(e,t){for(var r=/^(",
+          "sourcePath": "www.d_id.com/www.d-id.com/wp-includes/js/jquery/jquery-migrate.min.js",
+          "sourceUrl": "https://www.d-id.com/wp-includes/js/jquery/jquery-migrate.min.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "d?define([\"jquery\"],function(e){return t(e,window)}):\"object\"==typeof module&&module.exports?module.exports=t(require(\"jquery\"),window):t(jQuery,window)}(function(s,n){\"use strict\";function e(e){return 0<=function(e,t){for(var r=/^(\\d+)\\.(\\d+)\\.(\\",
+          "sourcePath": "www.d_id.com/www.d-id.com/wp-includes/js/jquery/jquery-migrate.min.js",
+          "sourceUrl": "https://www.d-id.com/wp-includes/js/jquery/jquery-migrate.min.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "ormation please see theme.js.LICENSE.txt */ !function(t){var e={};function r(n){if(e[n])return e[n].exports;var i=e[n]={i:n,l:!1,exports:{}};return t[n].call(i.exports,i,i.exports,r),i.l=!0,i.exports}r.m=t,r.c=e,r.d=function(t,e,n){r.o(t,e)||Objec",
+          "sourcePath": "www.d_id.com/www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "sourceUrl": "https://www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "LICENSE.txt */ !function(t){var e={};function r(n){if(e[n])return e[n].exports;var i=e[n]={i:n,l:!1,exports:{}};return t[n].call(i.exports,i,i.exports,r),i.l=!0,i.exports}r.m=t,r.c=e,r.d=function(t,e,n){r.o(t,e)||Object.defineProperty(t,e,{enumera",
+          "sourcePath": "www.d_id.com/www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "sourceUrl": "https://www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "e={};function r(n){if(e[n])return e[n].exports;var i=e[n]={i:n,l:!1,exports:{}};return t[n].call(i.exports,i,i.exports,r),i.l=!0,i.exports}r.m=t,r.c=e,r.d=function(t,e,n){r.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:n})},r.r=function(t)",
+          "sourcePath": "www.d_id.com/www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "sourceUrl": "https://www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "on r(n){if(e[n])return e[n].exports;var i=e[n]={i:n,l:!1,exports:{}};return t[n].call(i.exports,i,i.exports,r),i.l=!0,i.exports}r.m=t,r.c=e,r.d=function(t,e,n){r.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:n})},r.r=function(t){\"undefined\"",
+          "sourcePath": "www.d_id.com/www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "sourceUrl": "https://www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "rn e[n].exports;var i=e[n]={i:n,l:!1,exports:{}};return t[n].call(i.exports,i,i.exports,r),i.l=!0,i.exports}r.m=t,r.c=e,r.d=function(t,e,n){r.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:n})},r.r=function(t){\"undefined\"!=typeof Symbol&&Sym",
+          "sourcePath": "www.d_id.com/www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "sourceUrl": "https://www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "n l(){const t=\"undefined\"!=typeof window?window:{};return i(t,s),t}},function(t,e,r){\"use strict\";t.exports=TypeError},function(t,e,r){\"use strict\";function n(t){if(void 0===t)throw new ReferenceError(\"this hasn't been initialised - super() hasn't",
+          "sourcePath": "www.d_id.com/www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "sourceUrl": "https://www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "e file an issue!\");return{alias:r,name:n,value:i}}throw new s(\"intrinsic \"+t+\" does not exist!\")};t.exports=function(t,e){if(\"string\"!=typeof t||0===t.length)throw new l(\"intrinsic name must be a non-empty string\");if(arguments.length>1&&\"boolean\"",
+          "sourcePath": "www.d_id.com/www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "sourceUrl": "https://www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "video-sound-mute\",unmute:\"vimeo-video-sound-unmute\",restart:\"vimeo-video-restart\"}},function(t,e){t.exports=jQuery},function(t,e,r){\"use strict\";var n=r(5),i=r(34),o=i(n(\"String.prototype.indexOf\"));t.exports=function(t,e){var r=n(t,!!e);return\"fu",
+          "sourcePath": "www.d_id.com/www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "sourceUrl": "https://www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "xports=jQuery},function(t,e,r){\"use strict\";var n=r(5),i=r(34),o=i(n(\"String.prototype.indexOf\"));t.exports=function(t,e){var r=n(t,!!e);return\"function\"==typeof r&&o(t,\".prototype.\")>-1?i(r):r}},function(t,e,r){\"use strict\";r.d(e,\"d\",(function(){",
+          "sourcePath": "www.d_id.com/www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "sourceUrl": "https://www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "spaceBetween:0,virtualTranslate:!t.params.cssMode})})}},function(t,e,r){\"use strict\";var n=r(102);t.exports=function(t){return\"symbol\"==typeof t?\"Symbol\":\"bigint\"==typeof t?\"BigInt\":n(t)}},function(t,e,r){\"use strict\";var n=r(253),i=\"function\"==ty",
+          "sourcePath": "www.d_id.com/www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "sourceUrl": "https://www.d-id.com/wp-content/cache/min/1/wp-content/themes/airfleet/dist/theme.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ]
+    },
+    "mainLimitations": [
+      {
+        "valueCandidate": "Maximum Storage Duration : Persistent",
+        "snippet": "Maximum Storage Duration : Persistent Type : HTML Local Storage",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : 1 year",
+        "snippet": "Maximum Storage Duration : 1 year Type : HTTP Cookie",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : Session",
+        "snippet": "Maximum Storage Duration : Session Type : HTTP Cookie",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : 1 day",
+        "snippet": "Maximum Storage Duration : 1 day Type : HTTP Cookie",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : 180 days",
+        "snippet": "Maximum Storage Duration : 180 days Type : HTTP Cookie",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : Session",
+        "snippet": "Maximum Storage Duration : Session Type : HTML Local Storage",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : 2 months",
+        "snippet": "Maximum Storage Duration : 2 months Type : HTTP Cookie",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : 2 years",
+        "snippet": "Maximum Storage Duration : 2 years Type : HTTP Cookie",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : Session",
+        "snippet": "Maximum Storage Duration : Session Type : Pixel Tracker",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : Persistent",
+        "snippet": "Maximum Storage Duration : Persistent Type : IndexedDB",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : 3 months",
+        "snippet": "Maximum Storage Duration : 3 months Type : HTTP Cookie",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum Storage Duration : 400 days",
+        "snippet": "Maximum Storage Duration : 400 days Type : HTTP Cookie",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Collects data on visitor behaviour from multiple websites, in order to present more relevant advertisement - This also allows the website to limit the number of times that they are shown the same advertisement.",
+        "snippet": "Collects data on visitor behaviour from multiple websites, in order to present more relevant advertisement - This also allows the website to limit the number of times that they are shown the same advertisement.",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Choose your billing cycle: Monthly Annual Save up to 45%",
+        "snippet": "Choose your billing cycle: Monthly Annual Save up to 45% Trial",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "3 minutes for Videos,",
+        "snippet": "3 minutes for Videos, Agents, Video Translate & API",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "For non-business projects or individual use. Suitable for personal hobbies, learning, or non-commercial content creation.",
+        "snippet": "For non-business projects or individual use. Suitable for personal hobbies, learning, or non-commercial content creation.",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "credits",
+        "snippet": "credits 40 credits",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "40 credits",
+        "snippet": "40 credits 52",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "credits",
+        "snippet": "credits 52 credits",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "52 credits",
+        "snippet": "52 credits 64",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      }
+    ],
+    "workflowFeatureDocs": [
+      {
+        "valueCandidate": "AI Avatars",
+        "snippet": "AI Avatars AI Videos",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Video Translate",
+        "snippet": "Video Translate Video Campaigns",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Scale your business with AI Avatars",
+        "snippet": "Scale your business with AI Avatars Choose your billing cycle: Monthly Annual Save up to 45%",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Agents, Video Translate & API",
+        "snippet": "Agents, Video Translate & API Create videos, translate videos, send Campaigns, or build Agents during your 14-day trial",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Create videos, translate videos, send Campaigns, or build Agents during your 14-day trial",
+        "snippet": "Create videos, translate videos, send Campaigns, or build Agents during your 14-day trial FEATURES INCLUDED",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "100+ Stock AI Avatars",
+        "snippet": "100+ Stock AI Avatars Video & Photo Avatars",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "1 Personal Avatar",
+        "snippet": "1 Personal Avatar Upload a video to create custom Avatars and use them in the Videos you create on D-ID",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Agents, Video Translate & API",
+        "snippet": "Agents, Video Translate & API Create videos, translate videos, send Campaigns, or build Agents",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Create videos, translate videos, send Campaigns, or build Agents",
+        "snippet": "Create videos, translate videos, send Campaigns, or build Agents FEATURES INCLUDED",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "3 Personal Avatars",
+        "snippet": "3 Personal Avatars Upload a video to create custom Avatars and use them in the Videos you create on D-ID",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "1 Voice clone",
+        "snippet": "1 Voice clone Upload a voice recording and make your Avatars say anything you type with a custom voice",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "5 Personal Avatars",
+        "snippet": "5 Personal Avatars Upload a video to create custom Avatars and use them in the Videos you create on D-ID",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Professional voice cloning",
+        "snippet": "Professional voice cloning Customer Success Manager",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Team collaboration",
+        "snippet": "Team collaboration Create and edit anything together as a team",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Personal Avatars",
+        "snippet": "Personal Avatars 1",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Personal Avatars for Trial plan: 1",
+        "snippet": "Personal Avatars for Trial plan: 1 1",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Personal Avatars for Lite plan: 1",
+        "snippet": "Personal Avatars for Lite plan: 1 3",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Personal Avatars for Pro plan: 3",
+        "snippet": "Personal Avatars for Pro plan: 3 5",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Personal Avatars for Advanced plan: 5",
+        "snippet": "Personal Avatars for Advanced plan: 5 5+",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Personal Avatars for Enterprise plan: 5+",
+        "snippet": "Personal Avatars for Enterprise plan: 5+ Studio Avatar",
+        "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+        "sourceUrl": "https://www.d-id.com/pricing",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "D-ID video APIs cover expressive avatars, pro avatars, instant avatars, photo avatars, and video translate.",
+        "snippet": "The D-ID docs list expressive avatars, full-HD pro avatars, custom instant avatars, talking photo avatars, and video translation with lip-sync and voice cloning.",
+        "sourcePath": null,
+        "sourceUrl": "https://docs.d-id.com/docs/quickstart",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "Quickstart | D-ID Docs"
+      }
+    ],
+    "securityApiEnterprise": {
+      "security": [
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy for further details.",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Learn more about who we are, how you can contact us and how we process personal data in our Privacy Policy.",
+          "snippet": "Learn more about who we are, how you can contact us and how we process personal data in our Privacy Policy. Please state your consent ID and date when you contact us regarding your consent.",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Help Center",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-grade security",
+          "snippet": "Enterprise-grade security Integrations support",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy & Security",
+          "snippet": "Privacy & Security SAML/SSO",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-grade Security",
+          "snippet": "Enterprise-grade Security Enterprise-grade Security for Trial plan: not included",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-grade Security for Trial plan: not included",
+          "snippet": "Enterprise-grade Security for Trial plan: not included Enterprise-grade Security for Lite plan: not included",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-grade Security for Lite plan: not included",
+          "snippet": "Enterprise-grade Security for Lite plan: not included Enterprise-grade Security for Pro plan: not included",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-grade Security for Pro plan: not included",
+          "snippet": "Enterprise-grade Security for Pro plan: not included Enterprise-grade Security for Advanced plan: not included",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-grade Security for Advanced plan: not included",
+          "snippet": "Enterprise-grade Security for Advanced plan: not included Enterprise-grade Security for Enterprise plan: included",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-grade Security for Enterprise plan: included",
+          "snippet": "Enterprise-grade Security for Enterprise plan: included Content Moderation",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Content Moderation",
+          "snippet": "Content Moderation Automated",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Content Moderation for Trial plan: Automated",
+          "snippet": "Content Moderation for Trial plan: Automated Automated",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Content Moderation for Lite plan: Automated",
+          "snippet": "Content Moderation for Lite plan: Automated Automated",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Content Moderation for Pro plan: Automated",
+          "snippet": "Content Moderation for Pro plan: Automated Manual",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Content Moderation for Advanced plan: Manual",
+          "snippet": "Content Moderation for Advanced plan: Manual Manual",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Content Moderation for Enterprise plan: Manual",
+          "snippet": "Content Moderation for Enterprise plan: Manual Work with a trusted industry leader",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy Pricing",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "D-ID Privacy Policy",
+          "snippet": "D-ID Privacy Policy Terms of Use",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy Policy",
+          "snippet": "Privacy Policy for further details.",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "api": [
+        {
+          "valueCandidate": "Integrations",
+          "snippet": "Integrations Solutions",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Go to API Pricing",
+          "snippet": "Go to API Pricing Scale your business with AI Avatars",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Agents, Video Translate & API",
+          "snippet": "Agents, Video Translate & API Create videos, translate videos, send Campaigns, or build Agents during your 14-day trial",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API access",
+          "snippet": "API access Create Avatars, Videos, Campaigns, Agents, or stream Avatars using our API",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Create Avatars, Videos, Campaigns, Agents, or stream Avatars using our API",
+          "snippet": "Create Avatars, Videos, Campaigns, Agents, or stream Avatars using our API Personal use license",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Agents, Video Translate & API",
+          "snippet": "Agents, Video Translate & API Create videos, translate videos, send Campaigns, or build Agents",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Custom minutes for API",
+          "snippet": "Custom minutes for API Key Features",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Integrations support",
+          "snippet": "Integrations support Video editing services",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Access",
+          "snippet": "API Access Create Avatars, Videos, Campaigns, Agents, or stream Avatars using our API",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Create Avatars, Videos, Campaigns, Agents, or stream Avatars using our API",
+          "snippet": "Create Avatars, Videos, Campaigns, Agents, or stream Avatars using our API API Access for Trial plan: included",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Access for Trial plan: included",
+          "snippet": "API Access for Trial plan: included API Access for Lite plan: included",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Access for Lite plan: included",
+          "snippet": "API Access for Lite plan: included API Access for Pro plan: included",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Access for Pro plan: included",
+          "snippet": "API Access for Pro plan: included API Access for Advanced plan: included",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Access for Advanced plan: included",
+          "snippet": "API Access for Advanced plan: included API Access for Enterprise plan: included",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Access for Enterprise plan: included",
+          "snippet": "API Access for Enterprise plan: included Agents",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Access for Enterprise plan: included",
+          "snippet": "API Access for Enterprise plan: included Video Studio",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Access for Enterprise plan: included",
+          "snippet": "API Access for Enterprise plan: included Video Translate",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Access for Enterprise plan: included",
+          "snippet": "API Access for Enterprise plan: included General",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Apps & Integrations",
+          "snippet": "Apps & Integrations Canva App",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "How can I get an API key?",
+          "snippet": "How can I get an API key? Login to D-ID, go to your",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "D-ID APIs support real-time conversational agents and asynchronous video generation.",
+          "snippet": "The quickstart page splits the platform into realtime agents and video-generation APIs, covering both interactive and asynchronous use cases.",
+          "sourcePath": null,
+          "sourceUrl": "https://docs.d-id.com/docs/quickstart",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Quickstart | D-ID Docs"
+        },
+        {
+          "valueCandidate": "D-ID help center says the API is available to all users with a D-ID Studio account.",
+          "snippet": "The help article states that the D-ID API is available to users who have a D-ID Studio account and points them to the developer hub.",
+          "sourcePath": null,
+          "sourceUrl": "https://help.d-id.com/hc/en-us/articles/31262544439697-Is-there-an-API-that-I-can-use-to-create-Agents",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Is there an API that I can use to create Agents? – D-ID Help Center"
+        }
+      ],
+      "enterprise": [
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Plan name: Enterprise",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Plan name: Enterprise",
+          "snippet": "Plan name: Enterprise Let's talk",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise-grade security",
+          "snippet": "Enterprise-grade security Integrations support",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Team collaboration",
+          "snippet": "Team collaboration Create and edit anything together as a team",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Create and edit anything together as a team",
+          "snippet": "Create and edit anything together as a team See all features",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Custom pricing",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Photo Avatars for Enterprise plan: included",
+          "snippet": "Photo Avatars for Enterprise plan: included Video Avatars",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Video Avatars for Enterprise plan: included",
+          "snippet": "Video Avatars for Enterprise plan: included Personal Avatars",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Personal Avatars for Enterprise plan: 5+",
+          "snippet": "Personal Avatars for Enterprise plan: 5+ Studio Avatar",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Studio Avatar for Enterprise plan: Add-on",
+          "snippet": "Studio Avatar for Enterprise plan: Add-on AI Prompted Avatar Generations",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "AI Prompted Avatar Generations for Enterprise plan: Custom",
+          "snippet": "AI Prompted Avatar Generations for Enterprise plan: Custom Emotions & Expressions",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Emotions & Expressions for Enterprise plan: included",
+          "snippet": "Emotions & Expressions for Enterprise plan: included Avatars Voices",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Avatars Voices for Enterprise plan: Premium",
+          "snippet": "Avatars Voices for Enterprise plan: Premium Avatar Voice Styles",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Avatar Voice Styles for Enterprise plan: included",
+          "snippet": "Avatar Voice Styles for Enterprise plan: included Avatar Voice Clones",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Avatar Voice Clones for Enterprise plan: Professional Service",
+          "snippet": "Avatar Voice Clones for Enterprise plan: Professional Service Upload Audio",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Upload Audio for Enterprise plan: included",
+          "snippet": "Upload Audio for Enterprise plan: included Import 3rd Party Voices",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Import 3rd Party Voices for Enterprise plan: included",
+          "snippet": "Import 3rd Party Voices for Enterprise plan: included API Access",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Access for Enterprise plan: included",
+          "snippet": "API Access for Enterprise plan: included Agents",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Avatars & Voices for Enterprise plan:",
+          "snippet": "Avatars & Voices for Enterprise plan: See Avatars & Voices section",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Embedded Agents for Enterprise plan: Custom",
+          "snippet": "Embedded Agents for Enterprise plan: Custom API Access",
+          "sourcePath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+          "sourceUrl": "https://www.d-id.com/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ]
+    },
+    "logoSources": [
+      {
+        "assetPath": "www.d_id.com/www.d-id.com/wp-content/uploads/2025/01/Gameloft_Logo.svg",
+        "assetUrl": null
+      },
+      {
+        "assetPath": "www.d_id.com/www.d-id.com/wp-content/uploads/2025/01/MH_logo_RGB.svg",
+        "assetUrl": null
+      },
+      {
+        "assetPath": "www.d_id.com/www.d-id.com/wp-content/uploads/2025/01/Coca-Cola_logo.svg",
+        "assetUrl": null
+      },
+      {
+        "assetPath": "www.d_id.com/www.d-id.com/wp-content/uploads/2025/01/Warner_Bros_logo.svg",
+        "assetUrl": null
+      },
+      {
+        "assetPath": "www.d_id.com/www.d-id.com/wp-content/uploads/2025/01/Wayfair_logo.svg",
+        "assetUrl": null
+      },
+      {
+        "assetPath": "www.d_id.com/www.d-id.com/wp-content/uploads/2024/10/D-ID-logo-350x350-1-150x150.png",
+        "assetUrl": null
+      },
+      {
+        "assetPath": "www.d_id.com/www.d-id.com/wp-content/uploads/2023/11/d-id-logo.svg",
+        "assetUrl": null
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://www.d-id.com/wp-content/uploads/2024/10/D-ID-logo-350x350-1-300x300.png"
+      }
+    ]
+  },
+  "missingFields": [],
+  "nextFetchTargets": [
+    {
+      "url": "https://www.d-id.com/cookies-policy",
+      "discoveredFromPath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.d-id.com/pricing"
+    },
+    {
+      "url": "https://www.d-id.com/privacy-policy",
+      "discoveredFromPath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.d-id.com/pricing"
+    },
+    {
+      "url": "https://www.d-id.com/api",
+      "discoveredFromPath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.d-id.com/pricing"
+    },
+    {
+      "url": "https://www.d-id.com/pricing/api",
+      "discoveredFromPath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.d-id.com/pricing"
+    },
+    {
+      "url": "https://www.d-id.com/security-and-privacy-compliance",
+      "discoveredFromPath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.d-id.com/pricing"
+    },
+    {
+      "url": "https://help.d-id.com/hc/en-us",
+      "discoveredFromPath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.d-id.com/pricing"
+    },
+    {
+      "url": "https://docs.d-id.com/reference/get-started",
+      "discoveredFromPath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.d-id.com/pricing"
+    },
+    {
+      "url": "https://docs.d-id.com/docs/quickstart",
+      "discoveredFromPath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.d-id.com/pricing"
+    },
+    {
+      "url": "https://www.d-id.com/faqs",
+      "discoveredFromPath": "data/runtime-captures/d-id/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.d-id.com/pricing"
+    }
+  ],
+  "remoteFetches": {
+    "rounds": [
+      {
+        "roundId": "2026-04-08-remote-round-1",
+        "fetchedAt": "2026-04-08T13:38:41.674750+00:00",
+        "pages": [
+          {
+            "title": "Quickstart | D-ID Docs",
+            "url": "https://docs.d-id.com/docs/quickstart"
+          },
+          {
+            "title": "Instant Avatar Quickstart | D-ID Docs",
+            "url": "https://docs.d-id.com/docs/v3-instant-avatar-quickstart"
+          },
+          {
+            "title": "D-ID Privacy Policy",
+            "url": "https://www.d-id.com/privacy-policy/"
+          },
+          {
+            "title": "Is there an API that I can use to create Agents? – D-ID Help Center",
+            "url": "https://help.d-id.com/hc/en-us/articles/31262544439697-Is-there-an-API-that-I-can-use-to-create-Agents"
+          }
+        ],
+        "fetchedFields": [
+          "policy.usageRights",
+          "securityApiEnterprise.api",
+          "workflowFeatureDocs"
+        ],
+        "unresolvedFields": [],
+        "mergedRecordCount": 4
+      }
+    ],
+    "latestRoundId": "2026-04-08-remote-round-1"
+  }
+}

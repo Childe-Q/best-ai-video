@@ -1,0 +1,336 @@
+{
+  "generatedAt": "2026-04-08T13:38:41.687741+00:00",
+  "tools": [
+    {
+      "slug": "aistudios-com",
+      "toolName": "AI Studios",
+      "targets": [
+        {
+          "url": "https://www.aistudios.com/features/ai-video-generator",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/topic-to-video",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/product-to-avatar",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/dream-avatar",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/custom-studio-avatar",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/3d-avatars",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/avatar-gestures",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/multi-avatar-scenes",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/dictionary",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/create-avatar",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/product-to-video",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/url-to-video",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/docs-to-video",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/article-to-video",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/custom-llm",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/interactive-video",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/ai-video-editor",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/screen-recording",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/brand-kit",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/face-swap",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/enterprise",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/talking-avatar",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/video-messages",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/ai-video-translator",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/deepfake",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/chatgpt",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "url": "https://www.aistudios.com/features/powerpoint-to-video",
+          "discoveredFromPath": "www.aistudios.com/www.aistudios.com/pricing.html",
+          "discoveredFromUrl": "https://www.aistudios.com/pricing"
+        }
+      ]
+    },
+    {
+      "slug": "colossyan",
+      "toolName": "Colossyan",
+      "targets": [
+        {
+          "url": "http://help.colossyan.com/",
+          "discoveredFromPath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "discoveredFromUrl": "https://www.colossyan.com/pricing"
+        },
+        {
+          "url": "https://www.colossyan.com/enterprise",
+          "discoveredFromPath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "discoveredFromUrl": "https://www.colossyan.com/pricing"
+        },
+        {
+          "url": "https://www.colossyan.com/collaboration-for-enterprise",
+          "discoveredFromPath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "discoveredFromUrl": "https://www.colossyan.com/pricing"
+        },
+        {
+          "url": "https://security.colossyan.com/",
+          "discoveredFromPath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "discoveredFromUrl": "https://www.colossyan.com/pricing"
+        },
+        {
+          "url": "https://app.colossyan.com/api/auth/signup",
+          "discoveredFromPath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "discoveredFromUrl": "https://www.colossyan.com/pricing"
+        },
+        {
+          "url": "https://www.colossyan.com/terms",
+          "discoveredFromPath": "data/runtime-captures/colossyan/rendered_dom_initial.html",
+          "discoveredFromUrl": "https://www.colossyan.com/pricing"
+        }
+      ]
+    },
+    {
+      "slug": "descript",
+      "toolName": "Descript",
+      "targets": [
+        {
+          "url": "https://www.descript.com/enterprise",
+          "discoveredFromPath": "www.descript.com/www.descript.com/pricing.html",
+          "discoveredFromUrl": "https://www.descript.com/pricing"
+        },
+        {
+          "url": "https://www.descript.com/teams/customer-support",
+          "discoveredFromPath": "www.descript.com/www.descript.com/pricing.html",
+          "discoveredFromUrl": "https://www.descript.com/pricing"
+        },
+        {
+          "url": "https://help.descript.com/",
+          "discoveredFromPath": "www.descript.com/www.descript.com/pricing.html",
+          "discoveredFromUrl": "https://www.descript.com/pricing"
+        },
+        {
+          "url": "https://feedback.descript.com/features",
+          "discoveredFromPath": "www.descript.com/www.descript.com/pricing.html",
+          "discoveredFromUrl": "https://www.descript.com/pricing"
+        },
+        {
+          "url": "https://help.descript.com/hc/en-us",
+          "discoveredFromPath": "www.descript.com/www.descript.com/pricing.html",
+          "discoveredFromUrl": "https://www.descript.com/pricing"
+        },
+        {
+          "url": "https://www.descript.com/privacy",
+          "discoveredFromPath": "www.descript.com/www.descript.com/pricing.html",
+          "discoveredFromUrl": "https://www.descript.com/pricing"
+        },
+        {
+          "url": "https://www.descript.com/terms",
+          "discoveredFromPath": "www.descript.com/www.descript.com/pricing.html",
+          "discoveredFromUrl": "https://www.descript.com/pricing"
+        }
+      ]
+    },
+    {
+      "slug": "heygen",
+      "toolName": "HeyGen",
+      "targets": [
+        {
+          "url": "https://api2.heygen.com/",
+          "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+          "discoveredFromUrl": "https://www.heygen.com/pricing"
+        },
+        {
+          "url": "https://www.heygen.com/api-pricing",
+          "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+          "discoveredFromUrl": "https://www.heygen.com/pricing"
+        },
+        {
+          "url": "https://docs.heygen.com/",
+          "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+          "discoveredFromUrl": "https://www.heygen.com/pricing"
+        },
+        {
+          "url": "https://help.heygen.com/en",
+          "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+          "discoveredFromUrl": "https://www.heygen.com/pricing"
+        },
+        {
+          "url": "https://www.heygen.com/faq",
+          "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+          "discoveredFromUrl": "https://www.heygen.com/pricing"
+        },
+        {
+          "url": "https://www.heygen.com/enterprise",
+          "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+          "discoveredFromUrl": "https://www.heygen.com/pricing"
+        },
+        {
+          "url": "https://www.heygen.com/enterprise/pricing",
+          "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+          "discoveredFromUrl": "https://www.heygen.com/pricing"
+        },
+        {
+          "url": "https://security.heygen.com/",
+          "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+          "discoveredFromUrl": "https://www.heygen.com/pricing"
+        },
+        {
+          "url": "https://www.heygen.com/privacy",
+          "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+          "discoveredFromUrl": "https://www.heygen.com/pricing"
+        },
+        {
+          "url": "https://www.heygen.com/terms",
+          "discoveredFromPath": "www.heygen.com /www.heygen.com/pricing.html",
+          "discoveredFromUrl": "https://www.heygen.com/pricing"
+        }
+      ]
+    },
+    {
+      "slug": "invideo-io",
+      "toolName": "InVideo",
+      "targets": [
+        {
+          "url": "https://help.invideo.io/",
+          "discoveredFromPath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "discoveredFromUrl": "https://invideo.io/pricing"
+        },
+        {
+          "url": "https://invideo.io/privacy-policy",
+          "discoveredFromPath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "discoveredFromUrl": "https://invideo.io/pricing"
+        },
+        {
+          "url": "https://invideo.io/terms-and-conditions",
+          "discoveredFromPath": "data/runtime-captures/invideo-io/rendered_dom_initial.html",
+          "discoveredFromUrl": "https://invideo.io/pricing"
+        }
+      ]
+    },
+    {
+      "slug": "runwayml-com",
+      "toolName": "Runway",
+      "targets": [
+        {
+          "url": "https://runwayml.com/enterprise",
+          "discoveredFromPath": "runwayml.com/runwayml.com/index.html",
+          "discoveredFromUrl": "https://runwayml.com/"
+        },
+        {
+          "url": "https://runwayml.com/api",
+          "discoveredFromPath": "runwayml.com/runwayml.com/index.html",
+          "discoveredFromUrl": "https://runwayml.com/"
+        },
+        {
+          "url": "https://help.runwayml.com/hc/en-us",
+          "discoveredFromPath": "runwayml.com/runwayml.com/index.html",
+          "discoveredFromUrl": "https://runwayml.com/"
+        },
+        {
+          "url": "https://runwayml.com/terms-of-use",
+          "discoveredFromPath": "runwayml.com/runwayml.com/index.html",
+          "discoveredFromUrl": "https://runwayml.com/"
+        },
+        {
+          "url": "https://runwayml.com/privacy-policy",
+          "discoveredFromPath": "runwayml.com/runwayml.com/index.html",
+          "discoveredFromUrl": "https://runwayml.com/"
+        },
+        {
+          "url": "https://help.runwayml.com/hc/en-us/articles/20821762056723-Getting-Help-with-your-Runway-Account",
+          "discoveredFromPath": "runwayml.com/runwayml.com/sales.html",
+          "discoveredFromUrl": "https://runwayml.com/sales"
+        }
+      ]
+    }
+  ]
+}

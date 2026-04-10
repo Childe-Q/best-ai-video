@@ -107,17 +107,17 @@
       "slug": "runway",
       "verdictSeed": "Cinematic-grade generative video with professional controls including color grading. Suited for hero ads and brand narrative content.",
       "pricingSeed": "Free testing plus paid creative-production paths that expand model access, storage, and team workflow",
-      "policySeed": "Paid Runway plans remove the watermark, and the platform is the cleaner path when a brand team needs commercial-ready generated footage rather than test output",
-      "bestForSeed": "High-end cinematic brand storytelling",
-      "mainLimitationSeed": "Credit-based generation and model-specific burn rates make polished campaign iteration more expensive than template-led marketing tools",
+      "policySeed": "Free keeps a watermark; paid removes it. Private-by-default assets and SSO or workspace controls sit on enterprise.",
+      "bestForSeed": "Hero ads, brand trailers, and cinematic campaign footage",
+      "mainLimitationSeed": "Credits add up fast, and the strongest governance controls sit on enterprise.",
       "officialUrl": "https://runwayml.com/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/runway",
       "logoUrl": "/logos/runway.png",
       "sourceUrls": [
         "https://runwayml.com/pricing",
-        "https://runwayml.com/features",
-        "https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights"
+        "https://runwayml.com/data-security",
+        "https://help.runwayml.com/hc/en-us/articles/48625698573075-Enterprise-Features"
       ],
       "flags": []
     },

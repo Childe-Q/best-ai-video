@@ -1,0 +1,1718 @@
+{
+  "generatedAt": "2026-04-08T13:18:45.057770+00:00",
+  "slug": "veed-io",
+  "toolName": "VEED.io",
+  "officialHost": "www.veed.io",
+  "siteRootDir": "www.veed.io",
+  "runtimeCaptureDir": "data/runtime-captures/veed-io",
+  "artifacts": {
+    "counts": {
+      "htmlCount": 4,
+      "jsCount": 19,
+      "jsonCount": 1,
+      "mdCount": 1,
+      "official_page_htmlCount": 1,
+      "referenced_assetCount": 20,
+      "runtime_capture_htmlCount": 2,
+      "runtime_capture_jsonCount": 1,
+      "runtime_capture_reportCount": 1
+    },
+    "availablePageUrls": [
+      "https://www.veed.io/pricing",
+      "https://www.veed.io/",
+      "https://www.veed.io/enterprise",
+      "https://www.veed.io/security",
+      "https://www.veed.io/tools/lip-sync-api",
+      "https://www.veed.io/ai/fabric-1-0-api?ref_type=adv",
+      "https://www.veed.io/privacy"
+    ],
+    "keywordPageUrls": [],
+    "paths": [
+      "www.veed.io/www.veed.io/pricing.html",
+      "data/runtime-captures/veed-io/report.md",
+      "data/runtime-captures/veed-io/rendered_dom_initial.html",
+      "data/runtime-captures/veed-io/network_responses.json",
+      "data/runtime-captures/veed-io/rendered_dom_toggled.html",
+      "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/webpack-756d83a4cf9e62c3.js",
+      "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/framework-43f7e669a6d3b18c.js",
+      "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/main-19d3c4ac274c5eb3.js",
+      "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/pages/_app-2aadfb44117f7477.js",
+      "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/e99fbe2f-34ffd25008897f3e.js",
+      "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/e48a499e-69e909bcf670f0bf.js",
+      "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/3bd8c309-0733ca31103a5481.js",
+      "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/fa8b4d42-e11fe4856aa513a7.js",
+      "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/2f4507e8-05c6530fb991e261.js",
+      "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/174-cf3de256760217cc.js",
+      "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/449-681cf4c65c5a0877.js",
+      "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/700-587f42f7aa15dea1.js",
+      "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/607-cf520f0b0244310f.js",
+      "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/663-0f275700803bd8e8.js",
+      "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/478-7a861e5b2e2eee16.js",
+      "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/pages/index-39795132f2b2947b.js",
+      "www.veed.io/www.veed.io/pricing-ap/_next/static/856pIchzRK0wYQzVxlY-T/_buildManifest.js",
+      "www.veed.io/www.veed.io/pricing-ap/_next/static/856pIchzRK0wYQzVxlY-T/_ssgManifest.js",
+      "www.veed.io/www.veed.io/pricing.html",
+      "www.veed.io/www.veed.io/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ]
+  },
+  "fields": {
+    "officialUrl": {
+      "value": "https://www.veed.io/",
+      "sourceUrl": "https://www.veed.io/",
+      "sourcePath": "www.veed.io/www.veed.io/pricing.html"
+    },
+    "sourceUrls": [
+      "https://www.veed.io/pricing",
+      "https://www.veed.io/",
+      "https://www.veed.io/enterprise",
+      "https://www.veed.io/security",
+      "https://www.veed.io/tools/lip-sync-api",
+      "https://www.veed.io/ai/fabric-1-0-api?ref_type=adv",
+      "https://www.veed.io/privacy"
+    ],
+    "policy": {
+      "watermark": [
+        {
+          "valueCandidate": "watermarks",
+          "snippet": "003c0\\u003eBrand Kit allows you to add custom brand fonts, colors, images, videos, audio files, and watermarks and reuse them across all projects effortlessly.\\u003c/0\\u003e\",\"question\":\"What is Brand Kit?\"},\"cancel\":{\"answer\":\"\\u003c0\\u003eYes, abso",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "econtacting sales.\\u003c/2\\u003e\\u003c/0\\u003e\",\"question\":\"Do you offer a trial for paid plans?\"},\"watermark\":{\"answer\":\"\\u003c0\\u003eThe watermark is shown in the corner of videos that are created on the free plan. To remove the watermark, you can",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "0\\u003e\",\"question\":\"Do you offer a trial for paid plans?\"},\"watermark\":{\"answer\":\"\\u003c0\\u003eThe watermark is shown in the corner of videos that are created on the free plan. To remove the watermark, you can choose any of our paid plans.\\u003c/0\\",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "003eThe watermark is shown in the corner of videos that are created on the free plan. To remove the watermark, you can choose any of our paid plans.\\u003c/0\\u003e\\u003c1\\u003e\\u003c/1\\u003e\",\"question\":\"What does the watermark look like?\"}}},\"featur",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "n choose any of our paid plans.\\u003c/0\\u003e\\u003c1\\u003e\\u003c/1\\u003e\",\"question\":\"What does the watermark look like?\"}}},\"featureCategories\":{\"aITools\":\"AI Tools\",\"collaborationAndBrandManagement\":\"Collaboration \\u0026 Brand Management\",\"powerfu",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermarks",
+          "snippet": "n templates to make video creation faster and more consistent\"},\"customWatermarks\":{\"label\":\"Custom Watermarks\",\"tooltip\":\"Add custom watermarks on your projects\"},\"downloadSubtitles\":{\"label\":\"Download Subtitles\",\"tooltip\":\"Ability to export .srt, .",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermarks",
+          "snippet": "faster and more consistent\"},\"customWatermarks\":{\"label\":\"Custom Watermarks\",\"tooltip\":\"Add custom watermarks on your projects\"},\"downloadSubtitles\":{\"label\":\"Download Subtitles\",\"tooltip\":\"Ability to export .srt, .vtt and .txt files with generated",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark",
+          "snippet": "{\"label\":\"Remove Silences\",\"tooltip\":\"Remove long pauses and silences\"},\"removeWatermark\":{\"label\":\"Watermark-free Exports\",\"tooltip\":\"Remove the Veed watermark from your videos\"},\"reviewerRole\":{\"annual\":{\"basic\":\"0\",\"business\":\"1\",\"enterprise\":\"Un",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "auses and silences\"},\"removeWatermark\":{\"label\":\"Watermark-free Exports\",\"tooltip\":\"Remove the Veed watermark from your videos\"},\"reviewerRole\":{\"annual\":{\"basic\":\"0\",\"business\":\"1\",\"enterprise\":\"Unlimited\",\"free\":\"0\",\"pro\":\"0\"},\"label\":\"Number of r",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "\"voiceClone\":{\"label\":\"Voice Clone\",\"tooltip\":\"Create an immersive voice clone of your own voice\"},\"watermark\":{\"label\":\"Watermark-free Exports\",\"tooltip\":\"Remove the watermark from your videos\"},\"workspaceSetup\":{\"label\":\"Workspace setup\",\"tooltip\"",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark",
+          "snippet": ":\"Voice Clone\",\"tooltip\":\"Create an immersive voice clone of your own voice\"},\"watermark\":{\"label\":\"Watermark-free Exports\",\"tooltip\":\"Remove the watermark from your videos\"},\"workspaceSetup\":{\"label\":\"Workspace setup\",\"tooltip\":\"We help you get set",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "voice clone of your own voice\"},\"watermark\":{\"label\":\"Watermark-free Exports\",\"tooltip\":\"Remove the watermark from your videos\"},\"workspaceSetup\":{\"label\":\"Workspace setup\",\"tooltip\":\"We help you get set up\"}},\"header\":{\"bestDiscount\":\"Save up to {{",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark",
+          "snippet": "ite\",\"description\":\"Enhance your social media videos\"},\"basicIcpV3\":{\"cta\":\"Go Lite\",\"description\":\"Watermark-free social videos\"},\"business\":{\"annualPricingSubText\":\"Billed {{annualPrice}} annually, per user\",\"cta\":\"Go Business\",\"description\":\"For",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark",
+          "snippet": "cription\":\"Create studio-quality videos with AI\"},\"creatorIcpV2\":{\"cta\":\"Go Creator\",\"description\":\"Watermark-free social videos with AI\"},\"discount\":{\"description\":\"Save {{annualDiscount}}%\"},\"enterprise\":{\"cta\":\"Contact Sales\",\"description\":\"Tailo",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermarks",
+          "snippet": "emplates\",\"customTemplates\":\"Custom Templates\",\"customTemplatesAndWatermarks\":\"Custom Templates and Watermarks\",\"customTemplatesICPV3\":\"Start from custom branded templates\",\"customUsageLimits\":\"Custom caption/subtitle usage\",\"customUsageLimitsICPV3\":",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "tyICPV3\":\"Full HD 1080p Exports\",\"exportVideosIn4k\":\"4K Ultra HD Exports\",\"exports\":\"Exports with a watermark\",\"eyeContact\":\"Eye Contact Correction\",\"fullBrandKit\":\"Full Brand Kit\",\"genVideoWithAIStudio\":\"Generate videos with AI-studio\",\"iOSAppAcces",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Watermark",
+          "snippet": "its\":\"Add credits to generate videos using VEED Fabric 1, Google Veo 3, and more\",\"noWatermark\":\"No Watermark\",\"personalAiAvatars\":\"Custom AI Avatars\",\"personalAiAvatarsICPV3\":\"Custom AI Avatars\",\"playgroundCreditsCustom\":\"Custom AI Credits\",\"playgr",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "trols\",\"privacyControlsICPV3\":\"Advanced security \\u0026 access controls\",\"removeWatermarkICPV3\":\"No watermark on videos\",\"reviewerRole\":\"Review mode for videos\",\"selfServeAvatars\":\"1 Personal Avatar\",\"singleSignOn\":\"Single sign-on\",\"srtSubtitlesDown",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "to {{allowance}} minutes\",\"videoLengthLongerThan10Minutes\":\"Export videos longer than 10 minutes\",\"watermark\":\"No watermark\",\"watermarkedVideo\":\"Watermarked videos\"}},\"free\":{\"annualPricingSubText\":\"No credit card required\",\"cta\":\"Sign up, it's fre",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "}} minutes\",\"videoLengthLongerThan10Minutes\":\"Export videos longer than 10 minutes\",\"watermark\":\"No watermark\",\"watermarkedVideo\":\"Watermarked videos\"}},\"free\":{\"annualPricingSubText\":\"No credit card required\",\"cta\":\"Sign up, it's free\",\"description",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        }
+      ],
+      "commercialUse": [
+        {
+          "valueCandidate": "MONETIZATION",
+          "snippet": "]=\"DONE\",e[e.ERROR=6]=\"ERROR\",e[e.TRANSCRIPTION=7]=\"TRANSCRIPTION\",e[e.CANCELLED=8]=\"CANCELLED\",e[e.MONETIZATION=9]=\"MONETIZATION\",e[e.YOUTUBE_DOWNLOAD=10]=\"YOUTUBE_DOWNLOAD\",e))(pv||{}),pS=nz(pg,0),pE=(e=>(e[e.UNSPECIFIED=0]=\"UNSPECIFIED\",e[e.TRANSCRI",
+          "sourcePath": "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/pages/_app-2aadfb44117f7477.js",
+          "sourceUrl": "https://www.veed.io/pricing-ap/_next/static/chunks/pages/_app-2aadfb44117f7477.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "MONETIZATION",
+          "snippet": "R=6]=\"ERROR\",e[e.TRANSCRIPTION=7]=\"TRANSCRIPTION\",e[e.CANCELLED=8]=\"CANCELLED\",e[e.MONETIZATION=9]=\"MONETIZATION\",e[e.YOUTUBE_DOWNLOAD=10]=\"YOUTUBE_DOWNLOAD\",e))(pv||{}),pS=nz(pg,0),pE=(e=>(e[e.UNSPECIFIED=0]=\"UNSPECIFIED\",e[e.TRANSCRIPTION_ERROR=1]=\"T",
+          "sourcePath": "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/pages/_app-2aadfb44117f7477.js",
+          "sourceUrl": "https://www.veed.io/pricing-ap/_next/static/chunks/pages/_app-2aadfb44117f7477.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Monetization",
+          "snippet": "Error=\"moderationError\",b.Unknown=\"unknown\",(y=eX||(t.ClipJobStatusEnum=eX={})).Pending=\"pending\",y.Monetization=\"monetization\",y.YoutubeDownload=\"youtubeDownload\",y.Transcription=\"transcription\",y.Topics=\"topics\",y.Highlights=\"highlights\",y.Cuts=\"cuts",
+          "sourcePath": "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/pages/_app-2aadfb44117f7477.js",
+          "sourceUrl": "https://www.veed.io/pricing-ap/_next/static/chunks/pages/_app-2aadfb44117f7477.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "monetization",
+          "snippet": "ionError\",b.Unknown=\"unknown\",(y=eX||(t.ClipJobStatusEnum=eX={})).Pending=\"pending\",y.Monetization=\"monetization\",y.YoutubeDownload=\"youtubeDownload\",y.Transcription=\"transcription\",y.Topics=\"topics\",y.Highlights=\"highlights\",y.Cuts=\"cuts\",y.Done=\"done",
+          "sourcePath": "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/pages/_app-2aadfb44117f7477.js",
+          "sourceUrl": "https://www.veed.io/pricing-ap/_next/static/chunks/pages/_app-2aadfb44117f7477.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Monetization",
+          "snippet": "Error=\"moderationError\",p.Unknown=\"unknown\",(h=eO||(t.ClipJobStatusEnum=eO={})).Pending=\"pending\",h.Monetization=\"monetization\",h.YoutubeDownload=\"youtubeDownload\",h.Transcription=\"transcription\",h.Topics=\"topics\",h.Highlights=\"highlights\",h.Cuts=\"cuts",
+          "sourcePath": "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/pages/_app-2aadfb44117f7477.js",
+          "sourceUrl": "https://www.veed.io/pricing-ap/_next/static/chunks/pages/_app-2aadfb44117f7477.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "monetization",
+          "snippet": "ionError\",p.Unknown=\"unknown\",(h=eO||(t.ClipJobStatusEnum=eO={})).Pending=\"pending\",h.Monetization=\"monetization\",h.YoutubeDownload=\"youtubeDownload\",h.Transcription=\"transcription\",h.Topics=\"topics\",h.Highlights=\"highlights\",h.Cuts=\"cuts\",h.Done=\"done",
+          "sourcePath": "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/pages/_app-2aadfb44117f7477.js",
+          "sourceUrl": "https://www.veed.io/pricing-ap/_next/static/chunks/pages/_app-2aadfb44117f7477.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "usageRights": [
+        {
+          "valueCandidate": "© Copyright 2026 VEED",
+          "snippet": "© Copyright 2026 VEED Video Editor",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "© Copyright 2026 VEED",
+          "snippet": "© Copyright 2026 VEED",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "© Copyright 2026 VEED",
+          "snippet": "© Copyright 2026 VEED Video Editor",
+          "sourcePath": "data/runtime-captures/veed-io/rendered_dom_initial.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "© Copyright 2026 VEED",
+          "snippet": "© Copyright 2026 VEED Cookies Button",
+          "sourcePath": "data/runtime-captures/veed-io/rendered_dom_initial.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "© Copyright 2026 VEED",
+          "snippet": "© Copyright 2026 VEED Video Editor",
+          "sourcePath": "data/runtime-captures/veed-io/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "© Copyright 2026 VEED",
+          "snippet": "© Copyright 2026 VEED Cookies Button",
+          "sourcePath": "data/runtime-captures/veed-io/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "license",
+          "snippet": "ain.\",\"open\":\"Open\",\"openid_redirect\":{\"description\":\"Your e-mail was associated with an enterprise license. You will now be redirected.\",\"title\":\"You\\'re being redirected\"},\"or\":\"OR\",\"recaptcha_notice\":\"This site is protected by reCAPTCHA and the",
+          "sourcePath": "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/pages/_app-2aadfb44117f7477.js",
+          "sourceUrl": "https://www.veed.io/pricing-ap/_next/static/chunks/pages/_app-2aadfb44117f7477.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "licence",
+          "snippet": "er.\",\"open\":\"Ouvrir\",\"openid_redirect\":{\"description\":\"Votre e-mail a \\xe9t\\xe9 associ\\xe9 \\xe0 une licence d\\'entreprise. Vous allez maintenant \\xeatre redirig\\xe9.\",\"title\":\"Vous \\xeates redirig\\xe9\"},\"or\":\"OU\",\"recaptcha_notice\":\"Ce site est pr",
+          "sourcePath": "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/pages/_app-2aadfb44117f7477.js",
+          "sourceUrl": "https://www.veed.io/pricing-ap/_next/static/chunks/pages/_app-2aadfb44117f7477.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Copyright",
+          "snippet": "xt-xs\",children:t.subtitle})]}),(0,eV.jsx)(\"p\",{className:\"hidden text-xs lg:inline\",children:\"\\xa9 Copyright \".concat(new Date().getFullYear(),\" VEED\")})]})]}),(0,eV.jsx)(\"hr\",{className:\"mt-8 mb-12 border-[#454545] border-b-[1.2px] border-solid md",
+          "sourcePath": "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/pages/index-39795132f2b2947b.js",
+          "sourceUrl": "https://www.veed.io/pricing-ap/_next/static/chunks/pages/index-39795132f2b2947b.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Copyright",
+          "snippet": "Open:n.width>1023})]}),(0,eV.jsx)(\"p\",{className:\"mb-4 text-sm md:text-xs lg:hidden\",children:\"\\xa9 Copyright \".concat(new Date().getFullYear(),\" VEED\")}),(0,eV.jsx)(tV,{className:\"w-full text-white\"})]})})};var t0=r(34737),t1=r(17840),t2=r(41354),t",
+          "sourcePath": "www.veed.io/www.veed.io/pricing-ap/_next/static/chunks/pages/index-39795132f2b2947b.js",
+          "sourceUrl": "https://www.veed.io/pricing-ap/_next/static/chunks/pages/index-39795132f2b2947b.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "refundCancellation": [
+        {
+          "valueCandidate": "refund",
+          "snippet": "open the 'Invoices' tab.\\u003c/0\\u003e\",\"question\":\"Will I receive receipts for my transactions?\"},\"refund\":{\"answer\":\"\\u003c0\\u003eYou can find our refund policy on our \\u003c2\\u003eTerms of Sale page\\u003c/2\\u003e.\\u003c/0\\u003e\",\"question\":\"Wh",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "refund",
+          "snippet": "\":\"Will I receive receipts for my transactions?\"},\"refund\":{\"answer\":\"\\u003c0\\u003eYou can find our refund policy on our \\u003c2\\u003eTerms of Sale page\\u003c/2\\u003e.\\u003c/0\\u003e\",\"question\":\"What is your refund policy?\"},\"subtitlesAndTranslat",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "refund",
+          "snippet": "olicy on our \\u003c2\\u003eTerms of Sale page\\u003c/2\\u003e.\\u003c/0\\u003e\",\"question\":\"What is your refund policy?\"},\"subtitlesAndTranslations\":{\"answer\":\"\\u003c0\\u003eEach plan has a limit on the number of transcription minutes you're allowed in",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "s and reuse them across all projects effortlessly.\\u003c/0\\u003e\",\"question\":\"What is Brand Kit?\"},\"cancel\":{\"answer\":\"\\u003c0\\u003eYes, absolutely. If you want to cancel your plan, simply go to your dashboard and select 'Team Billing' in the top",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "\",\"question\":\"What is Brand Kit?\"},\"cancel\":{\"answer\":\"\\u003c0\\u003eYes, absolutely. If you want to cancel your plan, simply go to your dashboard and select 'Team Billing' in the top left dropdown and click on 'Turn off auto-renewal'. If you do c",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "and select 'Team Billing' in the top left dropdown and click on 'Turn off auto-renewal'. If you do cancel, you will continue to have access to all the premium features until the end of your billing cycle.\\u003c/0\\u003e\",\"question\":\"Can I really",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "l the premium features until the end of your billing cycle.\\u003c/0\\u003e\",\"question\":\"Can I really cancel anytime?\"},\"companiesHouse\":{\"answer\":\"\\u003c0\\u003eOur Companies House number is \\u003c2\\u003e11264311\\u003c/2\\u003e.\\u003c/0\\u003e\",\"ques",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel anytime",
+          "snippet": "l the premium features until the end of your billing cycle.\\u003c/0\\u003e\",\"question\":\"Can I really cancel anytime?\"},\"companiesHouse\":{\"answer\":\"\\u003c0\\u003eOur Companies House number is \\u003c2\\u003e11264311\\u003c/2\\u003e.\\u003c/0\\u003e\",\"question\":\"W",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Can I really cancel anytime?",
+          "snippet": "Can I really cancel anytime? What currencies and payment options are available?",
+          "sourcePath": "data/runtime-captures/veed-io/rendered_dom_initial.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "What is your refund policy?",
+          "snippet": "What is your refund policy? What are the limits on subtitles and translations?",
+          "sourcePath": "data/runtime-captures/veed-io/rendered_dom_initial.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Apply Cancel",
+          "snippet": "Apply Cancel Consent",
+          "sourcePath": "data/runtime-captures/veed-io/rendered_dom_initial.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "refund",
+          "snippet": "open the 'Invoices' tab.\\u003c/0\\u003e\",\"question\":\"Will I receive receipts for my transactions?\"},\"refund\":{\"answer\":\"\\u003c0\\u003eYou can find our refund policy on our \\u003c2\\u003eTerms of Sale page\\u003c/2\\u003e.\\u003c/0\\u003e\",\"question\":\"Wh",
+          "sourcePath": "data/runtime-captures/veed-io/rendered_dom_initial.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "refund",
+          "snippet": "\":\"Will I receive receipts for my transactions?\"},\"refund\":{\"answer\":\"\\u003c0\\u003eYou can find our refund policy on our \\u003c2\\u003eTerms of Sale page\\u003c/2\\u003e.\\u003c/0\\u003e\",\"question\":\"What is your refund policy?\"},\"subtitlesAndTranslat",
+          "sourcePath": "data/runtime-captures/veed-io/rendered_dom_initial.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "refund",
+          "snippet": "olicy on our \\u003c2\\u003eTerms of Sale page\\u003c/2\\u003e.\\u003c/0\\u003e\",\"question\":\"What is your refund policy?\"},\"subtitlesAndTranslations\":{\"answer\":\"\\u003c0\\u003eEach plan has a limit on the number of transcription minutes you're allowed in",
+          "sourcePath": "data/runtime-captures/veed-io/rendered_dom_initial.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "s and reuse them across all projects effortlessly.\\u003c/0\\u003e\",\"question\":\"What is Brand Kit?\"},\"cancel\":{\"answer\":\"\\u003c0\\u003eYes, absolutely. If you want to cancel your plan, simply go to your dashboard and select 'Team Billing' in the top",
+          "sourcePath": "data/runtime-captures/veed-io/rendered_dom_initial.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "\",\"question\":\"What is Brand Kit?\"},\"cancel\":{\"answer\":\"\\u003c0\\u003eYes, absolutely. If you want to cancel your plan, simply go to your dashboard and select 'Team Billing' in the top left dropdown and click on 'Turn off auto-renewal'. If you do c",
+          "sourcePath": "data/runtime-captures/veed-io/rendered_dom_initial.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "and select 'Team Billing' in the top left dropdown and click on 'Turn off auto-renewal'. If you do cancel, you will continue to have access to all the premium features until the end of your billing cycle.\\u003c/0\\u003e\",\"question\":\"Can I really",
+          "sourcePath": "data/runtime-captures/veed-io/rendered_dom_initial.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "l the premium features until the end of your billing cycle.\\u003c/0\\u003e\",\"question\":\"Can I really cancel anytime?\"},\"companiesHouse\":{\"answer\":\"\\u003c0\\u003eOur Companies House number is \\u003c2\\u003e11264311\\u003c/2\\u003e.\\u003c/0\\u003e\",\"ques",
+          "sourcePath": "data/runtime-captures/veed-io/rendered_dom_initial.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel anytime",
+          "snippet": "l the premium features until the end of your billing cycle.\\u003c/0\\u003e\",\"question\":\"Can I really cancel anytime?\"},\"companiesHouse\":{\"answer\":\"\\u003c0\\u003eOur Companies House number is \\u003c2\\u003e11264311\\u003c/2\\u003e.\\u003c/0\\u003e\",\"question\":\"W",
+          "sourcePath": "data/runtime-captures/veed-io/rendered_dom_initial.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Can I really cancel anytime?",
+          "snippet": "Can I really cancel anytime? What currencies and payment options are available?",
+          "sourcePath": "data/runtime-captures/veed-io/rendered_dom_toggled.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "exportLimits": [
+        {
+          "valueCandidate": "Export",
+          "snippet": "},\"embeds\":{\"label\":\"Embeds\",\"tooltip\":\"Embed videos into your websites\"},\"exportQuality\":{\"label\":\"Export Quality\",\"tooltip\":\"The maximum video resolution you can export\"},\"eyeContact\":{\"label\":\"Eye Contact\",\"tooltip\":\"Make it seem like you are",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "export",
+          "snippet": "ebsites\"},\"exportQuality\":{\"label\":\"Export Quality\",\"tooltip\":\"The maximum video resolution you can export\"},\"eyeContact\":{\"label\":\"Eye Contact\",\"tooltip\":\"Make it seem like you are directly looking into the camera\"},\"genAICustomCharacters\":{\"lab",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Exports",
+          "snippet": "e Silences\",\"tooltip\":\"Remove long pauses and silences\"},\"removeWatermark\":{\"label\":\"Watermark-free Exports\",\"tooltip\":\"Remove the Veed watermark from your videos\"},\"reviewerRole\":{\"annual\":{\"basic\":\"0\",\"business\":\"1\",\"enterprise\":\"Unlimited\",\"fre",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export",
+          "snippet": "nlimited\",\"enterprise\":\"Unlimited\",\"free\":\"{{allowance}} minutes\",\"pro\":\"Unlimited\"},\"label\":\"Video Export Length\",\"monthly\":{\"basic\":\"Unlimited\",\"business\":\"Unlimited\",\"enterprise\":\"Unlimited\",\"free\":\"{{allowance}} minutes\",\"pro\":\"Unlimited\"},\"t",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "export",
+          "snippet": "erprise\":\"Unlimited\",\"free\":\"{{allowance}} minutes\",\"pro\":\"Unlimited\"},\"tooltip\":\"The maximum video export length per project\"},\"voiceClone\":{\"label\":\"Voice Clone\",\"tooltip\":\"Create an immersive voice clone of your own voice\"},\"watermark\":{\"label",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Exports",
+          "snippet": "\"tooltip\":\"Create an immersive voice clone of your own voice\"},\"watermark\":{\"label\":\"Watermark-free Exports\",\"tooltip\":\"Remove the watermark from your videos\"},\"workspaceSetup\":{\"label\":\"Workspace setup\",\"tooltip\":\"We help you get set up\"}},\"heade",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Exports",
+          "snippet": "l up your team\",\"embedAnywhere\":\"Embed your videos anywhere\",\"exportQuality\":{\"1080\":\"Full HD 1080p Exports\",\"4000\":\"4k Export Quality\"},\"exportQualityICPV3\":\"Full HD 1080p Exports\",\"exportVideosIn4k\":\"4K Ultra HD Exports\",\"exports\":\"Exports with",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export",
+          "snippet": "edAnywhere\":\"Embed your videos anywhere\",\"exportQuality\":{\"1080\":\"Full HD 1080p Exports\",\"4000\":\"4k Export Quality\"},\"exportQualityICPV3\":\"Full HD 1080p Exports\",\"exportVideosIn4k\":\"4K Ultra HD Exports\",\"exports\":\"Exports with a watermark\",\"eyeCo",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Exports",
+          "snippet": "ty\":{\"1080\":\"Full HD 1080p Exports\",\"4000\":\"4k Export Quality\"},\"exportQualityICPV3\":\"Full HD 1080p Exports\",\"exportVideosIn4k\":\"4K Ultra HD Exports\",\"exports\":\"Exports with a watermark\",\"eyeContact\":\"Eye Contact Correction\",\"fullBrandKit\":\"Full B",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Exports",
+          "snippet": "\":\"4k Export Quality\"},\"exportQualityICPV3\":\"Full HD 1080p Exports\",\"exportVideosIn4k\":\"4K Ultra HD Exports\",\"exports\":\"Exports with a watermark\",\"eyeContact\":\"Eye Contact Correction\",\"fullBrandKit\":\"Full Brand Kit\",\"genVideoWithAIStudio\":\"Generat",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "exports",
+          "snippet": "rt Quality\"},\"exportQualityICPV3\":\"Full HD 1080p Exports\",\"exportVideosIn4k\":\"4K Ultra HD Exports\",\"exports\":\"Exports with a watermark\",\"eyeContact\":\"Eye Contact Correction\",\"fullBrandKit\":\"Full Brand Kit\",\"genVideoWithAIStudio\":\"Generate videos w",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Exports",
+          "snippet": "\"},\"exportQualityICPV3\":\"Full HD 1080p Exports\",\"exportVideosIn4k\":\"4K Ultra HD Exports\",\"exports\":\"Exports with a watermark\",\"eyeContact\":\"Eye Contact Correction\",\"fullBrandKit\":\"Full Brand Kit\",\"genVideoWithAIStudio\":\"Generate videos with AI-stu",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Exports",
+          "snippet": "} {{unit}}\",\"translationsV2\":\"{{allowance}} {{unit}} of Translations\",\"unlimitedExports\":\"Unlimited Exports\",\"unlimitedGenAiVideoCreation\":\"Unlimited Gen-AI video creation\",\"unlimitedSubtitleMinutes\":\"Unlimited Subtitle minutes\",\"uploadFileSize\":\"",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export",
+          "snippet": "D Motion\",\"videoAnalytics\":\"Video Analytics\",\"videoCta\":\"Video call-to-action\",\"videoExportLength\":\"Export videos up to {{allowance}} minutes\",\"videoLengthLongerThan10Minutes\":\"Export videos longer than 10 minutes\",\"watermark\":\"No watermark\",\"wat",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export",
+          "snippet": "\",\"videoExportLength\":\"Export videos up to {{allowance}} minutes\",\"videoLengthLongerThan10Minutes\":\"Export videos longer than 10 minutes\",\"watermark\":\"No watermark\",\"watermarkedVideo\":\"Watermarked videos\"}},\"free\":{\"annualPricingSubText\":\"No cred",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "export",
+          "snippet": "a video from a description will use credits every time, regardless if the video is used in a final export\",\"dropdown\":\"{{creditAmount}} AI {{cadence}} credits\",\"exploreAiModels\":\"\\u003c0\\u003eExplore \\u003c2\\u003eAI video models\\u003c/2\\u003e\\u0",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download",
+          "snippet": "ustom Watermarks\",\"tooltip\":\"Add custom watermarks on your projects\"},\"downloadSubtitles\":{\"label\":\"Download Subtitles\",\"tooltip\":\"Ability to export .srt, .vtt and .txt files with generated subtitles\"},\"dubbing\":{\"annual\":{\"basic\":\"{{allowance}} {{",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download",
+          "snippet": "aption/subtitle usage\",\"dedicatedCustomerSuccess\":\"Dedicated Customer Success\",\"downloadSubtitles\":\"Download Subtitles\",\"dubbing\":\"AI Dubbing\",\"editWithScript\":\"Edit with Script\",\"editorTrainingWorkshops\":\"Editor Training Workshops\",\"editorTraining",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download",
+          "snippet": "os\",\"selfServeAvatars\":\"1 Personal Avatar\",\"singleSignOn\":\"Single sign-on\",\"srtSubtitlesDownloads\":\"Download Subtitles\",\"stockAudioAndVideo\":\"Full stock audio \\u0026 video library\",\"stockAudioVideoICPV3\":\"Some Stock Audio \\u0026 Video\",\"stockTempla",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "1080p",
+          "snippet": "th\",\"planTitle\":\"Enterprise\",\"startingFrom\":\"Starting from\"},\"exportQuality\":{\"1280\":\"720p\",\"2000\":\"1080p\",\"4096\":\"4k\"},\"faq\":{\"header\":\"Frequently Asked Questions\",\"items\":{\"VAT\":{\"answer\":\"\\u003c0\\u003eOur VAT number is GB354412222.\\u003c/0\\u0",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        }
+      ]
+    },
+    "mainLimitations": [
+      {
+        "valueCandidate": "monthly limit",
+        "snippet": "ou offer plans for educational institutions?\"},\"highVolumeSubtitles\":{\"answer\":\"\\u003c0\\u003eIf the monthly limit is not high enough for your transcription needs then you may want to consider shifting to a higher plan or an annual plan (you can use up y",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "quotas",
+        "snippet": "pTranslationsLimit\":\"Translate video subtitles into more than 150 languages and dialects. Different quotas are allowed per plan.\"},\"support\":{\"annual\":{\"basic\":\"Chat\",\"business\":\"Chat\",\"enterprise\":\"Chat 24/5\",\"free\":\"AI chatbot\",\"pro\":\"Chat\"},\"l",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "limit",
+        "snippet": "plans for educational institutions?\"},\"highVolumeSubtitles\":{\"answer\":\"\\u003c0\\u003eIf the monthly limit is not high enough for your transcription needs then you may want to consider shifting to a higher plan or an annual plan (you can use up y",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "limits",
+        "snippet": "may want to consider shifting to a higher plan or an annual plan (you can use up your entire annual limits within a single month if you want).\\u003c/0\\u003e\",\"answerThreeTier\":\"\\u003c0\\u003eAll paid plans include unlimited subtitles, subject to a",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "limit",
+        "snippet": "\":\"What is your refund policy?\"},\"subtitlesAndTranslations\":{\"answer\":\"\\u003c0\\u003eEach plan has a limit on the number of transcription minutes you're allowed in a certain timeframe. Both subtitles and translations count towards your transcript",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "limit",
+        "snippet": "re allowed in a certain timeframe. Both subtitles and translations count towards your transcription limit.\\u003c/0\\u003e\\u003c1\\u003eFor example, if you subtitle a 30 minute video this will count as 30 minutes towards your limit. If you then tra",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "limit",
+        "snippet": "03c1\\u003eFor example, if you subtitle a 30 minute video this will count as 30 minutes towards your limit. If you then translate it from English to Spanish, this will add another 30 minutes. So the total amount of transcription time used is 60 m",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "limit",
+        "snippet": "inutes. So the total amount of transcription time used is 60 minutes.\\u003c/1\\u003e\\u003c2\\u003eThe limit is set annually or monthly depending on what billing cycle you select. Any unused minutes in a billing cycle do not roll over to the next c",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "limits",
+        "snippet": "se translation minutes, an annual plan may be a better fit.\\u003c/3\\u003e\",\"question\":\"What are the limits on subtitles and translations?\"},\"support\":{\"answer\":\"\\u003c0\\u003eYour business is really important to us and we know video editing can be",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "limit",
+        "snippet": "Audio\",\"clips\":\"Clips - get AI highlights from videos\",\"compressAndConvert\":\"{{allowance}}GB upload limit\",\"createVideosWithGenAiStudio\":{\"basic\":\"{{allowance}} videos / day in Gen-AI Studio\",\"enterprise\":\"Create unlimited videos with Gen-AI Stu",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "limits",
+        "snippet": "limited Subtitle minutes\",\"uploadFileSize\":\"Unlimited file upload size\",\"usageCustom\":\"Custom usage limits\",\"veedMotion\":\"Generate unlimited videos with VEED Motion\",\"videoAnalytics\":\"Video Analytics\",\"videoCta\":\"Video call-to-action\",\"videoExpor",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "up to",
+        "snippet": "tup\":{\"label\":\"Workspace setup\",\"tooltip\":\"We help you get set up\"}},\"header\":{\"bestDiscount\":\"Save up to {{bestDiscount}}% with yearly\",\"countdown\":{\"days\":\"Days\",\"hours\":\"Hours\",\"minutes\":\"Minutes\",\"newYear\":{\"text\":\"Up to {{discountPercentage",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Up to",
+        "snippet": "t}}% with yearly\",\"countdown\":{\"days\":\"Days\",\"hours\":\"Hours\",\"minutes\":\"Minutes\",\"newYear\":{\"text\":\"Up to {{discountPercentage}}% OFF\",\"title\":\"WITH CODE \\\"NEWYEAR\\\"\"},\"seconds\":\"Seconds\"},\"freePlanPrompt\":\"Get a limited-time discount — just ent",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "up to",
+        "snippet": "\\u003c/0\\u003e\",\"intervalToggle\":{\"annualDiscount\":\"Pay yearly\",\"annualDiscountClarification\":\"Save up to {{bestDiscount}}% with yearly\",\"annualDiscountClarificationHighlighted\":\"\\u003ca\\u003eSave up to {{bestDiscount}}%\\u003c/a\\u003e with yearl",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "up to",
+        "snippet": "ve up to {{bestDiscount}}% with yearly\",\"annualDiscountClarificationHighlighted\":\"\\u003ca\\u003eSave up to {{bestDiscount}}%\\u003c/a\\u003e with yearly\",\"annualDiscountClarificationShort\":\"Save up to {{bestDiscount}}%\",\"monthly\":\"Monthly\",\"payMont",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "up to",
+        "snippet": "03eSave up to {{bestDiscount}}%\\u003c/a\\u003e with yearly\",\"annualDiscountClarificationShort\":\"Save up to {{bestDiscount}}%\",\"monthly\":\"Monthly\",\"payMonthly\":\"Pay monthly\",\"payYearly\":\"Pay yearly\",\"savingsPillBadge\":\"Get ~2 months free\",\"yearly\"",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Up to",
+        "snippet": "randKit\":{\"full\":\"Full\",\"limited\":\"Limited\",\"multi\":\"Multiple brands\"}},\"numberOfEditors\":{\"range\":\"Up to {{max}}\",\"unlimited\":\"{{max}}+\"},\"plans\":{\"basic\":{\"annualPricingSubText\":\"Billed {{annualPrice}} annually, per user\",\"cta\":\"Go Basic\",\"des",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "up to",
+        "snippet": "lPricingSubText\":\"Billed {{annualPrice}} annually, per user\",\"cta\":\"Go Business\",\"description\":\"For up to 5 people\"},\"continueFreeTrial\":\"Continue Free Trial\",\"continueTrial\":\"Continue Trial\",\"creatorIcp\":{\"cta\":\"Go Creator\",\"description\":\"Creat",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Up to",
+        "snippet": "ates\",\"max1Editor\":\"Single Editor account\",\"max1EditorICPV3\":\"Single Editor account\",\"max3Editors\":\"Up to 3 Editors (billed per Editor)\",\"max5Editors\":\"Up to 5 Editors (billed per Editor)\",\"max5EditorsICPV3\":\"Up to 5 Editors (billed per Editor)\"",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Up to",
+        "snippet": "orICPV3\":\"Single Editor account\",\"max3Editors\":\"Up to 3 Editors (billed per Editor)\",\"max5Editors\":\"Up to 5 Editors (billed per Editor)\",\"max5EditorsICPV3\":\"Up to 5 Editors (billed per Editor)\",\"mobileApp\":\"Veed iOS App\",\"multipleBrandKits\":\"Mul",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      }
+    ],
+    "workflowFeatureDocs": [
+      {
+        "valueCandidate": "Screen Recorder",
+        "snippet": "Screen Recorder Teleprompter",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Add Image to Video",
+        "snippet": "Add Image to Video Add Music to Video",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Add Text to Video",
+        "snippet": "Add Text to Video Crop Video",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Avatars",
+        "snippet": "AI Avatars Edit",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Text To Video",
+        "snippet": "Text To Video AI Avatars",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Avatars",
+        "snippet": "AI Avatars AI Reel Generator",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Text to Video AI",
+        "snippet": "Text to Video AI VEO3",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Voice & Dubbing",
+        "snippet": "Voice & Dubbing AI Voice Generator",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Image to Video Models",
+        "snippet": "Image to Video Models Image to Video Models",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Image to Video Models",
+        "snippet": "Image to Video Models VEO 3 Image to Video",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "VEO 3 Image to Video",
+        "snippet": "VEO 3 Image to Video VEO 3 Fast Image to Video",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "VEO 3 Fast Image to Video",
+        "snippet": "VEO 3 Fast Image to Video Kling Image to Video",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Kling Image to Video",
+        "snippet": "Kling Image to Video Seedance Image to Video",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Seedance Image to Video",
+        "snippet": "Seedance Image to Video MiniMax Image to Video",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "MiniMax Image to Video",
+        "snippet": "MiniMax Image to Video Luma Ray Image to Video",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Luma Ray Image to Video",
+        "snippet": "Luma Ray Image to Video Lightricks Image to Video",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Lightricks Image to Video",
+        "snippet": "Lightricks Image to Video Wan 2.2 Image to Video",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Wan 2.2 Image to Video",
+        "snippet": "Wan 2.2 Image to Video Avatars & AI Voices",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Avatars",
+        "snippet": "AI Avatars Custom Avatars",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Voice Cloning",
+        "snippet": "Voice Cloning Voice Dubbing",
+        "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+        "sourceUrl": "https://www.veed.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "VEED Enterprise workflow includes translation in 125+ languages, voice translation, voice cloning, AI avatars, screen recording, shared workspaces, and review/comments.",
+        "snippet": "The VEED enterprise page groups translation, editing, branding, and collaboration capabilities for team video workflows.",
+        "sourcePath": null,
+        "sourceUrl": "https://www.veed.io/enterprise",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "VEED Enterprise"
+      }
+    ],
+    "securityApiEnterprise": {
+      "security": [
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "Privacy Terms",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "security",
+          "snippet": "iption\":\"Create separate team, client and personal private spaces.\",\"title\":\"Multiple workspaces\"},\"security\":{\"description\":\"Single sign-on (SSO), security reviews and activity logs.\",\"title\":\"Security and SSO\"},\"subtitleTranslation\":{\"description",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "security",
+          "snippet": "al private spaces.\",\"title\":\"Multiple workspaces\"},\"security\":{\"description\":\"Single sign-on (SSO), security reviews and activity logs.\",\"title\":\"Security and SSO\"},\"subtitleTranslation\":{\"description\":\"Video localization and accessibility tools. E",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security",
+          "snippet": "es\"},\"security\":{\"description\":\"Single sign-on (SSO), security reviews and activity logs.\",\"title\":\"Security and SSO\"},\"subtitleTranslation\":{\"description\":\"Video localization and accessibility tools. Engage a global audience.\",\"title\":\"Translation",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "security",
+          "snippet": "andKit\":{\"title\":\"Brand fonts, logo, colors\"},\"brandTemplates\":{\"title\":\"Branded video templates\"},\"security\":{\"title\":\"Org controls, security \\u0026 SSO\"},\"spaces\":{\"title\":\"Multiple team spaces\"},\"translation\":{\"title\":\"Video translation and loca",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "security",
+          "snippet": "o, colors\"},\"brandTemplates\":{\"title\":\"Branded video templates\"},\"security\":{\"title\":\"Org controls, security \\u0026 SSO\"},\"spaces\":{\"title\":\"Multiple team spaces\"},\"translation\":{\"title\":\"Video translation and localization\"}},\"headerSubtext\":\"Ask u",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "security",
+          "snippet": "hods like PayPal and Google and Apple Pay in specific countries. Our payment system uses the latest security technology and is powered by Stripe, one of the world’s most reliable payment companies. If you have any trouble with paying by card, pleas",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "security",
+          "snippet": "nager\",\"accountManagerV2\":\"Dedicated customer success manager\",\"advancedSecurityControls\":\"Advanced security \\u0026 SSO\",\"aiAvatars\":\"AI Avatars ({{allowance}} {{unit}})\",\"aiAvatarsAndAIDubbing\":\"AI Avatars \\u0026 AI dubbing ({{allowance}} {{unit}}",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "security",
+          "snippet": "\":\"Priority Customer Support\",\"privacyControls\":\"Privacy controls\",\"privacyControlsICPV3\":\"Advanced security \\u0026 access controls\",\"removeWatermarkICPV3\":\"No watermark on videos\",\"reviewerRole\":\"Review mode for videos\",\"selfServeAvatars\":\"1 Perso",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security",
+          "snippet": "\":\".svg\"},\"description\":\"Video for teams that require collaboration, access and privacy\"},{\"label\":\"Security \\u0026 Privacy\",\"link\":\"https://www.veed.io/security\",\"icon\":{\"height\":48,\"width\":48,\"alt\":\"Property 1=Privacy.svg\",\"hash\":\"Property_1_Priv",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "security",
+          "snippet": "collaboration, access and privacy\"},{\"label\":\"Security \\u0026 Privacy\",\"link\":\"https://www.veed.io/security\",\"icon\":{\"height\":48,\"width\":48,\"alt\":\"Property 1=Privacy.svg\",\"hash\":\"Property_1_Privacy_2eb0d91b78\",\"ext\":\".svg\"},\"description\":\"Data pri",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "ed\"},\"tooltip\":\"Choose from a library of customizable subtitle styles\"},\"privacyControls\":{\"label\":\"Privacy Controls\",\"tooltip\":\"Comprehensive control over your video privacy settings\"},\"privateHostingAndPlayer\":{\"label\":\"Private Hosting \\u0026 Pl",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "es\"},\"privacyControls\":{\"label\":\"Privacy Controls\",\"tooltip\":\"Comprehensive control over your video privacy settings\"},\"privateHostingAndPlayer\":{\"label\":\"Private Hosting \\u0026 Player\",\"tooltip\":\"Secure hosting and online video player\"},\"privateW",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "m video and audio library\",\"priorityCustomerSupport\":\"Priority Customer Support\",\"privacyControls\":\"Privacy controls\",\"privacyControlsICPV3\":\"Advanced security \\u0026 access controls\",\"removeWatermarkICPV3\":\"No watermark on videos\",\"reviewerRole\":",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "ess_88f1333247\",\"ext\":\".svg\"},\"description\":\"Video for teams that require collaboration, access and privacy\"},{\"label\":\"Security \\u0026 Privacy\",\"link\":\"https://www.veed.io/security\",\"icon\":{\"height\":48,\"width\":48,\"alt\":\"Property 1=Privacy.svg\",\"h",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "iption\":\"Video for teams that require collaboration, access and privacy\"},{\"label\":\"Security \\u0026 Privacy\",\"link\":\"https://www.veed.io/security\",\"icon\":{\"height\":48,\"width\":48,\"alt\":\"Property 1=Privacy.svg\",\"hash\":\"Property_1_Privacy_2eb0d91b78\"",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "026 Privacy\",\"link\":\"https://www.veed.io/security\",\"icon\":{\"height\":48,\"width\":48,\"alt\":\"Property 1=Privacy.svg\",\"hash\":\"Property_1_Privacy_2eb0d91b78\",\"ext\":\".svg\"},\"description\":\"Data privacy, SSO and more\"}]},\"products\":{\"label\":\"Products\",\"lin",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "\":\"Property 1=Privacy.svg\",\"hash\":\"Property_1_Privacy_2eb0d91b78\",\"ext\":\".svg\"},\"description\":\"Data privacy, SSO and more\"}]},\"products\":{\"label\":\"Products\",\"links\":[{\"label\":\"Video Editor\",\"link\":\"https://www.veed.io/tools/video-editor\",\"icon\":{\"",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "bel\":\"Company\",\"link\":null,\"links\":[{\"label\":\"Jobs\",\"link\":\"https://www.veed.io/careers\"},{\"label\":\"Privacy\",\"link\":\"https://www.veed.io/privacy\"},{\"label\":\"Terms\",\"link\":\"https://www.veed.io/terms-of-use\"},{\"label\":\"Cookies\",\"link\":\"https://www.v",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "\"label\":\"Jobs\",\"link\":\"https://www.veed.io/careers\"},{\"label\":\"Privacy\",\"link\":\"https://www.veed.io/privacy\"},{\"label\":\"Terms\",\"link\":\"https://www.veed.io/terms-of-use\"},{\"label\":\"Cookies\",\"link\":\"https://www.veed.io/cookie-policy\"},{\"label\":\"Cont",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "VEED says it complies with GDPR and the CPPA and uses access controls and security audits.",
+          "snippet": "VEED's enterprise and security pages describe data protection by design, GDPR / CPPA compliance, access controls, and recurring security audits.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.veed.io/enterprise",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "VEED Enterprise"
+        }
+      ],
+      "api": [
+        {
+          "valueCandidate": "Fabric 1.0 API",
+          "snippet": "Fabric 1.0 API AI Lip Sync API",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "AI Lip Sync API",
+          "snippet": "AI Lip Sync API Green Screen API",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Green Screen API",
+          "snippet": "Green Screen API Background Removal API",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Background Removal API",
+          "snippet": "Background Removal API Background Removal Fast API",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Background Removal Fast API",
+          "snippet": "Background Removal Fast API Subtitle API Waitlist",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Subtitle API Waitlist",
+          "snippet": "Subtitle API Waitlist Live Avatar API Waitlist",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Live Avatar API Waitlist",
+          "snippet": "Live Avatar API Waitlist Resources",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Fabric 1.0 API",
+          "snippet": "Fabric 1.0 API AI Avatars",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "Video\",\"link\":\"https://www.veed.io/ai-models/image-to-video/wan-2.2-img2vid\"}]}]}},\"aiModels\":null,\"api\":{\"label\":\"APIs\",\"icon\":null,\"groups\":[{\"label\":\"AI Video APIs\",\"categories\":[{\"label\":\"Fabric 1.0 API\",\"link\":\"https://www.veed.io/ai/fabr",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "\":{\"label\":\"APIs\",\"icon\":null,\"groups\":[{\"label\":\"AI Video APIs\",\"categories\":[{\"label\":\"Fabric 1.0 API\",\"link\":\"https://www.veed.io/ai/fabric-1-0-api\",\"icon\":{\"height\":894,\"width\":894,\"alt\":\"\",\"hash\":\"Fabric_1_0_API_ce8b7b4db1\",\"ext\":\".png\"}}",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "\":\"AI Video APIs\",\"categories\":[{\"label\":\"Fabric 1.0 API\",\"link\":\"https://www.veed.io/ai/fabric-1-0-api\",\"icon\":{\"height\":894,\"width\":894,\"alt\":\"\",\"hash\":\"Fabric_1_0_API_ce8b7b4db1\",\"ext\":\".png\"}},{\"label\":\"AI Lip Sync API\",\"link\":\"https://www",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "t\":894,\"width\":894,\"alt\":\"\",\"hash\":\"Fabric_1_0_API_ce8b7b4db1\",\"ext\":\".png\"}},{\"label\":\"AI Lip Sync API\",\"link\":\"https://www.veed.io/tools/lip-sync-api\",\"icon\":{\"height\":894,\"width\":894,\"alt\":\"\",\"hash\":\"Lipsync_API_3c6ea3de76\",\"ext\":\".png\"}},{",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "PI_ce8b7b4db1\",\"ext\":\".png\"}},{\"label\":\"AI Lip Sync API\",\"link\":\"https://www.veed.io/tools/lip-sync-api\",\"icon\":{\"height\":894,\"width\":894,\"alt\":\"\",\"hash\":\"Lipsync_API_3c6ea3de76\",\"ext\":\".png\"}},{\"label\":\"Green Screen API\",\"link\":\"https://www.v",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "ght\":894,\"width\":894,\"alt\":\"\",\"hash\":\"Lipsync_API_3c6ea3de76\",\"ext\":\".png\"}},{\"label\":\"Green Screen API\",\"link\":\"https://www.veed.io/tools/background-remover-api/green-screen-api\",\"icon\":{\"height\":894,\"width\":894,\"alt\":\"\",\"hash\":\"Green_Screen_",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "76\",\"ext\":\".png\"}},{\"label\":\"Green Screen API\",\"link\":\"https://www.veed.io/tools/background-remover-api/green-screen-api\",\"icon\":{\"height\":894,\"width\":894,\"alt\":\"\",\"hash\":\"Green_Screen_API_1c889a6617\",\"ext\":\".png\"}},{\"label\":\"Background Remova",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "},{\"label\":\"Green Screen API\",\"link\":\"https://www.veed.io/tools/background-remover-api/green-screen-api\",\"icon\":{\"height\":894,\"width\":894,\"alt\":\"\",\"hash\":\"Green_Screen_API_1c889a6617\",\"ext\":\".png\"}},{\"label\":\"Background Removal API\",\"link\":\"ht",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "idth\":894,\"alt\":\"\",\"hash\":\"Green_Screen_API_1c889a6617\",\"ext\":\".png\"}},{\"label\":\"Background Removal API\",\"link\":\"https://www.veed.io/tools/background-remover-api\",\"icon\":{\"height\":894,\"width\":894,\"alt\":\"\",\"hash\":\"Background_Removal_API_e851247",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "xt\":\".png\"}},{\"label\":\"Background Removal API\",\"link\":\"https://www.veed.io/tools/background-remover-api\",\"icon\":{\"height\":894,\"width\":894,\"alt\":\"\",\"hash\":\"Background_Removal_API_e851247229\",\"ext\":\".png\"}},{\"label\":\"Background Removal Fast API\"",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API",
+          "snippet": "alt\":\"\",\"hash\":\"Background_Removal_API_e851247229\",\"ext\":\".png\"}},{\"label\":\"Background Removal Fast API\",\"link\":\"https://www.veed.io/tools/background-remover-api/fast\",\"icon\":{\"height\":894,\"width\":894,\"alt\":\"\",\"hash\":\"Background_Removal_Fast_A",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": ".png\"}},{\"label\":\"Background Removal Fast API\",\"link\":\"https://www.veed.io/tools/background-remover-api/fast\",\"icon\":{\"height\":894,\"width\":894,\"alt\":\"\",\"hash\":\"Background_Removal_Fast_API_6d244c0c54\",\"ext\":\".png\"}},{\"label\":\"Subtitle API Waitl",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "VEED Lip Sync API accepts standard video and audio formats and returns MP4 output.",
+          "snippet": "The Lip Sync API page documents MP4/MOV/WebM/M4V video inputs, MP3/OGG/WAV/M4A/AAC audio inputs, and MP4 output URLs.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.veed.io/tools/lip-sync-api",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Lip Sync API - VEED.IO"
+        },
+        {
+          "valueCandidate": "VEED Fabric 1.0 is an image-to-video API for longer talking-head outputs.",
+          "snippet": "The Fabric 1.0 API page positions the model as a scalable image-to-video API that creates lifelike talking videos from image and audio inputs.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.veed.io/ai/fabric-1-0-api?ref_type=adv",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "VEED Fabric 1.0 API"
+        }
+      ],
+      "enterprise": [
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Other use cases",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Resources",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "ful editing tools!\"},\"compressAndConvert\":{\"unlimited\":\"Unlimited\",\"upTo\":\"Up to {{allowance}}GB\"},\"enterprise\":{\"bannerSubtext\":\"Per user, annual billing only\",\"billedAnnually\":\"Billed annually\",\"contactSales\":\"Contact Sales\",\"custom\":\"Custom\",\"feat",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "s\"},\"translation\":{\"title\":\"Video translation and localization\"}},\"headerSubtext\":\"Ask us about our Enterprise Plan\",\"largerTeams\":\"Larger Teams?\",\"learnMore\":\"Learn more\",\"perMonth\":\"/mo\",\"perUser\":\"per user\",\"perUserPerMonth\":\"Per user, per month\",",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "rn more\",\"perMonth\":\"/mo\",\"perUser\":\"per user\",\"perUserPerMonth\":\"Per user, per month\",\"planTitle\":\"Enterprise\",\"startingFrom\":\"Starting from\"},\"exportQuality\":{\"1280\":\"720p\",\"2000\":\"1080p\",\"4096\":\"4k\"},\"faq\":{\"header\":\"Frequently Asked Questions\",\"i",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "t way to reach you in case I need help?\"},\"trial\":{\"answer\":\"\\u003c0\\u003eWe offer a free trial for enterprise customers. You will need a minimum of 3 users. To set this up please \\u003c2\\u003eContact Sales.\\u003c/2\\u003e\\u003c/0\\u003e\",\"answer-trial",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "\\u003c0\\u003eYes, there is an option to trial our paid plans for 7 days (credit card required). For enterprise customers, a minimum of 3 users is required and a trial can be set up by \\u003c2\\u003econtacting sales.\\u003c/2\\u003e\\u003c/0\\u003e\",\"quest",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "ocial media platforms\"},\"autoSubtitles3tier\":{\"annual\":{\"basic\":\"Unlimited\",\"business\":\"Unlimited\",\"enterprise\":\"Unlimited\",\"free\":\"{{allowance}} {{unit}}/mo\",\"pro\":\"Unlimited\"},\"label\":\"Auto Subtitles\",\"monthly\":{\"basic\":\"Unlimited\",\"business\":\"Unli",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": ",\"pro\":\"Unlimited\"},\"label\":\"Auto Subtitles\",\"monthly\":{\"basic\":\"Unlimited\",\"business\":\"Unlimited\",\"enterprise\":\"Unlimited\",\"free\":\"{{allowance}} {{unit}}/mo\",\"pro\":\"Unlimited\"},\"tooltip\":\"Add subtitles automatically\"},\"autoSubtitles\":{\"annual\":{\"bas",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "toSubtitles\":{\"annual\":{\"basic\":\"{{allowance}} {{unit}}/yr\",\"business\":\"{{allowance}} {{unit}}/yr\",\"enterprise\":\"Custom\",\"free\":\"{{allowance}} {{unit}}/mo\",\"pro\":\"{{allowance}} {{unit}}/yr\"},\"label\":\"Auto Subtitles\",\"monthly\":{\"basic\":\"{{allowance}}",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "o Subtitles\",\"monthly\":{\"basic\":\"{{allowance}} {{unit}}/mo\",\"business\":\"{{allowance}} {{unit}}/mo\",\"enterprise\":\"Custom\",\"free\":\"{{allowance}} {{unit}}/mo\",\"pro\":\"{{allowance}} {{unit}}/mo\"},\"tooltip\":\"Maximum allowed transcription time in one billin",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "\"},\"avatars\":{\"annual\":{\"basic\":\"{{allowance}} {{unit}}/yr\",\"business\":\"{{allowance}} {{unit}}/yr\",\"enterprise\":\"Custom\",\"free\":\"{{allowance}} {{unit}}/mo\",\"pro\":\"{{allowance}} {{unit}}/yr\"},\"business\":\"240 minutes\",\"enterprise\":\"Custom\",\"label\":\"AI",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "om\",\"free\":\"{{allowance}} {{unit}}/mo\",\"pro\":\"{{allowance}} {{unit}}/yr\"},\"business\":\"240 minutes\",\"enterprise\":\"Custom\",\"label\":\"AI Avatars\",\"monthly\":{\"basic\":\"{{allowance}} {{unit}}/mo\",\"business\":\"{{allowance}} {{unit}}/mo\",\"enterprise\":\"Custom\",",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "\"AI Avatars\",\"monthly\":{\"basic\":\"{{allowance}} {{unit}}/mo\",\"business\":\"{{allowance}} {{unit}}/mo\",\"enterprise\":\"Custom\",\"free\":\"{{allowance}} {{unit}}/mo\",\"pro\":\"{{allowance}} {{unit}}/mo\"},\"tooltip\":\"Transform your text into AI-powered virtual char",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "ty\"},\"clips\":{\"annual\":{\"basic\":\"{{allowance}} {{unit}}/yr\",\"business\":\"{{allowance}} {{unit}}/yr\",\"enterprise\":\"Custom\",\"free\":\"{{allowance}} {{unit}}/mo\",\"pro\":\"{{allowance}} {{unit}}/yr\"},\"label\":\"Clips\",\"monthly\":{\"basic\":\"{{allowance}} {{unit}}/",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "bel\":\"Clips\",\"monthly\":{\"basic\":\"{{allowance}} {{unit}}/mo\",\"business\":\"{{allowance}} {{unit}}/mo\",\"enterprise\":\"Custom\",\"free\":\"{{allowance}} {{unit}}/mo\",\"pro\":\"{{allowance}} {{unit}}/mo\"},\"tooltip\":\"Generate AI highlights from your videos.\"},\"comm",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "\"},\"dubbing\":{\"annual\":{\"basic\":\"{{allowance}} {{unit}}/yr\",\"business\":\"{{allowance}} {{unit}}/yr\",\"enterprise\":\"Custom\",\"free\":\"{{allowance}} {{unit}}/mo\",\"pro\":\"{{allowance}} {{unit}}/yr\"},\"label\":\"AI Dubbing\",\"monthly\":{\"basic\":\"{{allowance}} {{un",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "\"AI Dubbing\",\"monthly\":{\"basic\":\"{{allowance}} {{unit}}/mo\",\"business\":\"{{allowance}} {{unit}}/mo\",\"enterprise\":\"Custom\",\"free\":\"{{allowance}} {{unit}}/mo\",\"pro\":\"{{allowance}} {{unit}}/mo\"},\"tooltip\":\"Dub your videos in 25+ languages\"},\"dynamicSubti",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "\"},\"genAIMediaImages\":{\"annual\":{\"basic\":\"Up to 300 images/mo with Credits\",\"business\":\"Unlimited\",\"enterprise\":\"Unlimited\",\"free\":\"Up to 100 images/mo with Credits\",\"pro\":\"Up to 1,500 images/mo with Credits\"},\"label\":\"AI Image Generation with AI mod",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "enterprise",
+          "snippet": "ation with AI models\",\"monthly\":{\"basic\":\"Up to 300 images/mo with Credits\",\"business\":\"Unlimited\",\"enterprise\":\"Custom\",\"free\":\"Up to 100 images/mo with Credits\",\"pro\":\"Up to 1,500 images/mo with Credits\"},\"tooltip\":\"Generate images from text with A",
+          "sourcePath": "www.veed.io/www.veed.io/pricing.html",
+          "sourceUrl": "https://www.veed.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "VEED Enterprise includes Brand Kit, custom templates, custom avatars, and shared workspaces.",
+          "snippet": "The enterprise page says teams can store logos, fonts, colors, media, templates, custom avatars, and use shared workspaces with comments and review.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.veed.io/enterprise",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "VEED Enterprise"
+        },
+        {
+          "valueCandidate": "VEED offers SSO options for Enterprise users.",
+          "snippet": "The security FAQ states that SSO is available for Enterprise plan users.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.veed.io/security",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "VEED Security"
+        }
+      ]
+    },
+    "logoSources": [
+      {
+        "assetPath": null,
+        "assetUrl": "https://www.veed.io/favicon.ico"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn-site-assets.veed.io/cdn-cgi/image/width=96,quality=75,format=auto/thumbnail_icon_large_brand_categories_3b64cb0cc1/thumbnail_icon_large_brand_categories_3b64cb0cc1.png"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn-site-assets.veed.io/cdn-cgi/image/width=96,quality=75,format=auto/Media_and_Publishing_Icon_4a7868c914/Media_and_Publishing_Icon_4a7868c914.png"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn-site-assets.veed.io/cdn-cgi/image/width=32,quality=75,format=auto/icon_small_brand_ai_features_95c7cc5c82/icon_small_brand_ai_features_95c7cc5c82.svg"
+      },
+      {
+        "assetPath": "www.veed.io/cdn.cookielaw.org/logos/static/ot_company_logo.png",
+        "assetUrl": "https://cdn.cookielaw.org/logos/static/ot_company_logo.png"
+      },
+      {
+        "assetPath": "www.veed.io/cdn.cookielaw.org/logos/static/powered_by_logo.svg",
+        "assetUrl": "https://cdn.cookielaw.org/logos/static/powered_by_logo.svg"
+      }
+    ]
+  },
+  "missingFields": [],
+  "nextFetchTargets": [
+    {
+      "url": "https://www.veed.io/enterprise",
+      "discoveredFromPath": "www.veed.io/www.veed.io/pricing.html",
+      "discoveredFromUrl": "https://www.veed.io/pricing"
+    },
+    {
+      "url": "https://cdn-site-assets.veed.io/cdn-cgi/image/width=32,quality=75,format=auto/icon_small_brand_ai_features_95c7cc5c82/icon_small_brand_ai_features_95c7cc5c82.svg",
+      "discoveredFromPath": "www.veed.io/www.veed.io/pricing.html",
+      "discoveredFromUrl": "https://www.veed.io/pricing"
+    },
+    {
+      "url": "https://www.veed.io/ai/fabric-1-0-api",
+      "discoveredFromPath": "www.veed.io/www.veed.io/pricing.html",
+      "discoveredFromUrl": "https://www.veed.io/pricing"
+    },
+    {
+      "url": "https://cdn-site-assets.veed.io/cdn-cgi/image/width=96,quality=75,format=auto/Fabric_1_0_API_ce8b7b4db1/Fabric_1_0_API_ce8b7b4db1.png",
+      "discoveredFromPath": "www.veed.io/www.veed.io/pricing.html",
+      "discoveredFromUrl": "https://www.veed.io/pricing"
+    },
+    {
+      "url": "https://www.veed.io/tools/lip-sync-api",
+      "discoveredFromPath": "www.veed.io/www.veed.io/pricing.html",
+      "discoveredFromUrl": "https://www.veed.io/pricing"
+    },
+    {
+      "url": "https://cdn-site-assets.veed.io/cdn-cgi/image/width=96,quality=75,format=auto/Lipsync_API_3c6ea3de76/Lipsync_API_3c6ea3de76.png",
+      "discoveredFromPath": "www.veed.io/www.veed.io/pricing.html",
+      "discoveredFromUrl": "https://www.veed.io/pricing"
+    },
+    {
+      "url": "https://www.veed.io/tools/background-remover-api/green-screen-api",
+      "discoveredFromPath": "www.veed.io/www.veed.io/pricing.html",
+      "discoveredFromUrl": "https://www.veed.io/pricing"
+    },
+    {
+      "url": "https://cdn-site-assets.veed.io/cdn-cgi/image/width=96,quality=75,format=auto/Green_Screen_API_1c889a6617/Green_Screen_API_1c889a6617.png",
+      "discoveredFromPath": "www.veed.io/www.veed.io/pricing.html",
+      "discoveredFromUrl": "https://www.veed.io/pricing"
+    },
+    {
+      "url": "https://www.veed.io/tools/background-remover-api",
+      "discoveredFromPath": "www.veed.io/www.veed.io/pricing.html",
+      "discoveredFromUrl": "https://www.veed.io/pricing"
+    },
+    {
+      "url": "https://cdn-site-assets.veed.io/cdn-cgi/image/width=96,quality=75,format=auto/Background_Removal_API_e851247229/Background_Removal_API_e851247229.png",
+      "discoveredFromPath": "www.veed.io/www.veed.io/pricing.html",
+      "discoveredFromUrl": "https://www.veed.io/pricing"
+    },
+    {
+      "url": "https://www.veed.io/tools/background-remover-api/fast",
+      "discoveredFromPath": "www.veed.io/www.veed.io/pricing.html",
+      "discoveredFromUrl": "https://www.veed.io/pricing"
+    },
+    {
+      "url": "https://cdn-site-assets.veed.io/cdn-cgi/image/width=96,quality=75,format=auto/Background_Removal_Fast_API_6d244c0c54/Background_Removal_Fast_API_6d244c0c54.png",
+      "discoveredFromPath": "www.veed.io/www.veed.io/pricing.html",
+      "discoveredFromUrl": "https://www.veed.io/pricing"
+    },
+    {
+      "url": "https://cdn-site-assets.veed.io/cdn-cgi/image/width=96,quality=75,format=auto/Subtitle_API_ce4ae115cd/Subtitle_API_ce4ae115cd.png",
+      "discoveredFromPath": "www.veed.io/www.veed.io/pricing.html",
+      "discoveredFromUrl": "https://www.veed.io/pricing"
+    },
+    {
+      "url": "https://cdn-site-assets.veed.io/cdn-cgi/image/width=96,quality=75,format=auto/thumbnail_Green_Screen_API_37378c34a2/thumbnail_Green_Screen_API_37378c34a2.png",
+      "discoveredFromPath": "www.veed.io/www.veed.io/pricing.html",
+      "discoveredFromUrl": "https://www.veed.io/pricing"
+    },
+    {
+      "url": "https://www.veed.io/privacy",
+      "discoveredFromPath": "www.veed.io/www.veed.io/pricing.html",
+      "discoveredFromUrl": "https://www.veed.io/pricing"
+    },
+    {
+      "url": "https://www.veed.io/terms-of-use",
+      "discoveredFromPath": "www.veed.io/www.veed.io/pricing.html",
+      "discoveredFromUrl": "https://www.veed.io/pricing"
+    },
+    {
+      "url": "https://www.veed.io/cookie-policy",
+      "discoveredFromPath": "www.veed.io/www.veed.io/pricing.html",
+      "discoveredFromUrl": "https://www.veed.io/pricing"
+    },
+    {
+      "url": "https://help.veed.io/",
+      "discoveredFromPath": "www.veed.io/www.veed.io/pricing.html",
+      "discoveredFromUrl": "https://www.veed.io/pricing"
+    }
+  ],
+  "remoteFetches": {
+    "rounds": [
+      {
+        "roundId": "2026-04-08-remote-round-1",
+        "fetchedAt": "2026-04-08T13:38:41.674876+00:00",
+        "pages": [
+          {
+            "title": "VEED Enterprise",
+            "url": "https://www.veed.io/enterprise"
+          },
+          {
+            "title": "VEED Security",
+            "url": "https://www.veed.io/security"
+          },
+          {
+            "title": "Lip Sync API - VEED.IO",
+            "url": "https://www.veed.io/tools/lip-sync-api"
+          },
+          {
+            "title": "VEED Fabric 1.0 API",
+            "url": "https://www.veed.io/ai/fabric-1-0-api?ref_type=adv"
+          },
+          {
+            "title": "Privacy | VEED",
+            "url": "https://www.veed.io/privacy"
+          }
+        ],
+        "fetchedFields": [
+          "securityApiEnterprise.api",
+          "securityApiEnterprise.enterprise",
+          "securityApiEnterprise.security",
+          "workflowFeatureDocs"
+        ],
+        "unresolvedFields": [],
+        "mergedRecordCount": 6
+      }
+    ],
+    "latestRoundId": "2026-04-08-remote-round-1"
+  }
+}

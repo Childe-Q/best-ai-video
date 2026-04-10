@@ -32,6 +32,22 @@
       "confidence": "high"
     },
     {
+      "text": "D-ID says canceled subscriptions remain active until the end of the current billing period before the account is downgraded.",
+      "theme": "support",
+      "sourceUrl": "https://www.d-id.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-04-08T13:38:41+00:00",
+      "confidence": "high"
+    },
+    {
+      "text": "D-ID's pricing matrix says storage duration varies by plan, with shorter retention on entry tiers and longer or persistent retention on higher plans.",
+      "theme": "usage",
+      "sourceUrl": "https://www.d-id.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-04-08T13:38:41+00:00",
+      "confidence": "high"
+    },
+    {
       "text": "Pro is listed at $16 per month and includes 15 minutes per month, premium and standard avatars, 3 personal avatars, 1 voice clone, and commercial-use licensing.",
       "theme": "workflow",
       "sourceUrl": "https://www.d-id.com/pricing/",
@@ -145,5 +161,74 @@
       "capturedAt": "2026-03-22",
       "writebackClass": "flag"
     }
-  ]
+  ],
+  "nonPriceEvidenceImport": {
+    "bundleDate": "2026-04-08",
+    "sourceBundle": "data/non-price-evidence-import/tools/d-id.json",
+    "sourceUrls": [
+      "https://www.d-id.com/pricing",
+      "https://www.d-id.com/pricing/studio",
+      "https://docs.d-id.com/docs/quickstart",
+      "https://docs.d-id.com/docs/v3-instant-avatar-quickstart",
+      "https://www.d-id.com/privacy-policy/",
+      "https://help.d-id.com/hc/en-us/articles/31262544439697-Is-there-an-API-that-I-can-use-to-create-Agents"
+    ],
+    "safeWriteback": {
+      "policy": {
+        "commercialUse": [
+          {
+            "value": "The pricing matrix marks Pro, Advanced, and Enterprise as commercial-use tiers.",
+            "sourceUrl": "https://www.d-id.com/pricing"
+          }
+        ],
+        "refundCancellation": [
+          {
+            "value": "Cancellation is self-serve from Billing and the subscription stays active through the current billing period.",
+            "sourceUrl": "https://www.d-id.com/pricing"
+          }
+        ]
+      },
+      "mainLimitations": [
+        {
+          "value": "Storage duration varies by plan, with shorter retention on entry tiers and longer or persistent retention on higher tiers.",
+          "sourceUrl": "https://www.d-id.com/pricing"
+        }
+      ],
+      "workflowFeatureDocs": [
+        {
+          "value": "D-ID packages AI avatars, video translation, and API-led generation on the same pricing surface.",
+          "sourceUrl": "https://www.d-id.com/pricing"
+        },
+        {
+          "value": "The trial positions videos, campaigns, agents, and API usage as part of the starter workflow.",
+          "sourceUrl": "https://www.d-id.com/pricing"
+        }
+      ],
+      "securityApiEnterprise": {
+        "security": [
+          {
+            "value": "Enterprise-grade security is positioned as a higher-tier capability.",
+            "sourceUrl": "https://www.d-id.com/pricing"
+          }
+        ],
+        "api": [
+          {
+            "value": "D-ID exposes dedicated API pricing and positions the API for avatars, videos, campaigns, agents, and streaming avatars.",
+            "sourceUrl": "https://www.d-id.com/pricing"
+          }
+        ],
+        "enterprise": [
+          {
+            "value": "Enterprise adds team collaboration alongside enterprise-grade security controls.",
+            "sourceUrl": "https://www.d-id.com/pricing"
+          }
+        ]
+      }
+    },
+    "retainedUnresolved": [
+      "policy.watermark",
+      "policy.exportLimits",
+      "policy.usageRights"
+    ]
+  }
 }

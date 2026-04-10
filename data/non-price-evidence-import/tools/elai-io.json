@@ -1,0 +1,217 @@
+{
+  "generatedAt": "2026-04-08T13:18:33.157384+00:00",
+  "slug": "elai-io",
+  "toolName": "Elai",
+  "officialHost": "elai.io",
+  "siteRootDir": "elai.io",
+  "runtimeCaptureDir": null,
+  "artifacts": {
+    "counts": {},
+    "availablePageUrls": [
+      "https://elai.io/",
+      "https://elai.io/features",
+      "https://elai.io/enterprise",
+      "https://elai.io/getting-started-with-api",
+      "https://elai.io/security-policy/",
+      "https://elai.io/website-privacy-policy/",
+      "https://elai.io/terms-of-service/"
+    ],
+    "keywordPageUrls": [],
+    "paths": []
+  },
+  "fields": {
+    "officialUrl": {
+      "value": "https://elai.io/",
+      "sourceUrl": "https://elai.io/",
+      "sourcePath": null
+    },
+    "sourceUrls": [
+      "https://elai.io/",
+      "https://elai.io/features",
+      "https://elai.io/enterprise",
+      "https://elai.io/getting-started-with-api",
+      "https://elai.io/security-policy/",
+      "https://elai.io/website-privacy-policy/",
+      "https://elai.io/terms-of-service/"
+    ],
+    "policy": {
+      "watermark": [],
+      "commercialUse": [],
+      "usageRights": [],
+      "refundCancellation": [
+        {
+          "valueCandidate": "Elai paid service fees are non-refundable.",
+          "snippet": "The current terms state that fees for paid services, including renewal fees, are non-refundable.",
+          "sourcePath": null,
+          "sourceUrl": "https://elai.io/terms-of-service/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Terms of Service - Elai.io"
+        },
+        {
+          "valueCandidate": "Elai service access can be terminated by contacting support.",
+          "snippet": "The current terms say users may terminate access to paid services at any time by contacting Elai Support.",
+          "sourcePath": null,
+          "sourceUrl": "https://elai.io/terms-of-service/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Terms of Service - Elai.io"
+        }
+      ],
+      "exportLimits": []
+    },
+    "mainLimitations": [],
+    "workflowFeatureDocs": [
+      {
+        "valueCandidate": "Elai generates AI videos with digital human avatars from text and supports 75+ languages.",
+        "snippet": "Official product and API pages describe text-to-video creation with digital presenters, broad avatar selection, and multilingual output in more than 75 languages.",
+        "sourcePath": null,
+        "sourceUrl": "https://elai.io/getting-started-with-api",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "Getting started with API - Elai.io"
+      },
+      {
+        "valueCandidate": "Elai feature set includes text to video, PPTX-to-video, auto translation, screen recording, voice cloning, and realtime AI chat.",
+        "snippet": "The enterprise and features pages enumerate creation and workflow tools including text-to-video, PPTX-to-video, auto translation, screen recording, voice cloning, and realtime chat.",
+        "sourcePath": null,
+        "sourceUrl": "https://elai.io/enterprise",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "Enterprise - Elai.io"
+      }
+    ],
+    "securityApiEnterprise": {
+      "security": [
+        {
+          "valueCandidate": "Elai positions privacy and data protection as a core part of the platform.",
+          "snippet": "The security policy states that Elai prioritizes protection of client data and user experience across the platform.",
+          "sourcePath": null,
+          "sourceUrl": "https://elai.io/security-policy/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Security Policy - Elai.io"
+        },
+        {
+          "valueCandidate": "Elai security policy explicitly covers uploaded scripts, text, photos, videos, and music.",
+          "snippet": "Elai's security documentation names scripts, texts, photos, videos, and music uploaded by users as protected data categories.",
+          "sourcePath": null,
+          "sourceUrl": "https://elai.io/security-policy/",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Security Policy - Elai.io"
+        }
+      ],
+      "api": [
+        {
+          "valueCandidate": "Elai offers API access for customization, automation, and app integrations.",
+          "snippet": "Elai describes a dedicated API that supports integrations across applications and programmatic video creation workflows.",
+          "sourcePath": null,
+          "sourceUrl": "https://elai.io/enterprise",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Enterprise - Elai.io"
+        },
+        {
+          "valueCandidate": "Elai API access uses a personal API token and has dedicated API docs.",
+          "snippet": "The getting started page instructs users to create or find an API token and points to API documentation for implementation details.",
+          "sourcePath": null,
+          "sourceUrl": "https://elai.io/getting-started-with-api",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Getting started with API - Elai.io"
+        }
+      ],
+      "enterprise": [
+        {
+          "valueCandidate": "Elai enterprise supports SSO, team collaboration, brand kit, custom integrations, screen recording, and custom avatar plus voice cloning.",
+          "snippet": "The enterprise page lists SSO, team collaboration, brand kit support, custom integration, screen recording, and custom avatar / voice cloning as enterprise-ready capabilities.",
+          "sourcePath": null,
+          "sourceUrl": "https://elai.io/enterprise",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Enterprise - Elai.io"
+        },
+        {
+          "valueCandidate": "Elai enterprise includes a dedicated account manager.",
+          "snippet": "The enterprise page says account managers guide customers throughout implementation and ongoing usage.",
+          "sourcePath": null,
+          "sourceUrl": "https://elai.io/enterprise",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Enterprise - Elai.io"
+        }
+      ]
+    },
+    "logoSources": [
+      {
+        "assetPath": null,
+        "assetUrl": "https://elai.io/",
+        "note": "Official homepage logo source candidate"
+      }
+    ]
+  },
+  "missingFields": [
+    "policy.watermark",
+    "policy.commercialUse",
+    "policy.usageRights",
+    "policy.exportLimits",
+    "mainLimitations"
+  ],
+  "nextFetchTargets": [],
+  "remoteFetches": {
+    "rounds": [
+      {
+        "roundId": "2026-04-08-remote-round-1",
+        "fetchedAt": "2026-04-08T13:38:41.674665+00:00",
+        "pages": [
+          {
+            "title": "Elai.io",
+            "url": "https://elai.io/"
+          },
+          {
+            "title": "Our features - Elai.io",
+            "url": "https://elai.io/features"
+          },
+          {
+            "title": "Enterprise - Elai.io",
+            "url": "https://elai.io/enterprise"
+          },
+          {
+            "title": "Getting started with API - Elai.io",
+            "url": "https://elai.io/getting-started-with-api"
+          },
+          {
+            "title": "Security Policy - Elai.io",
+            "url": "https://elai.io/security-policy/"
+          },
+          {
+            "title": "Website Privacy Policy - Elai.io",
+            "url": "https://elai.io/website-privacy-policy/"
+          },
+          {
+            "title": "Terms of Service - Elai.io",
+            "url": "https://elai.io/terms-of-service/"
+          }
+        ],
+        "fetchedFields": [
+          "logoSources",
+          "policy.refundCancellation",
+          "securityApiEnterprise.api",
+          "securityApiEnterprise.enterprise",
+          "securityApiEnterprise.security",
+          "workflowFeatureDocs"
+        ],
+        "unresolvedFields": [
+          "policy.watermark",
+          "policy.commercialUse",
+          "policy.usageRights",
+          "policy.exportLimits",
+          "mainLimitations"
+        ],
+        "mergedRecordCount": 10
+      }
+    ],
+    "latestRoundId": "2026-04-08-remote-round-1"
+  }
+}

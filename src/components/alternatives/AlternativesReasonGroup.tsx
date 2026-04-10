@@ -16,8 +16,6 @@ export default function AlternativesReasonGroup({
   onToggleCard,
   currentSlug
 }: AlternativesReasonGroupProps) {
-  const editorialTools = displayTools;
-
   return (
     <div>
       <h2 className="text-xl font-semibold text-gray-900 mb-1">
@@ -27,9 +25,9 @@ export default function AlternativesReasonGroup({
         Use this group to narrow your choice based on this scenario.
       </p>
       {/* Editorial Tools Grid */}
-      {editorialTools.length > 0 && (
+      {displayTools.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {editorialTools.map((tool) => {
+          {displayTools.map((tool) => {
             const cardId = `${group.id}-${tool.slug}`;
             return (
               <AlternativeToolCardV2

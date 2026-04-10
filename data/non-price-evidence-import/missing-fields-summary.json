@@ -1,0 +1,47 @@
+{
+  "generatedAt": "2026-04-08T13:38:41.687268+00:00",
+  "fields": {
+    "policy.watermark": {
+      "count": 3,
+      "tools": [
+        "aistudios-com",
+        "elai-io",
+        "synthesys-io"
+      ]
+    },
+    "policy.commercialUse": {
+      "count": 7,
+      "tools": [
+        "colossyan",
+        "descript",
+        "elai-io",
+        "heygen",
+        "invideo-io",
+        "pictory-ai",
+        "runwayml-com"
+      ]
+    },
+    "policy.usageRights": {
+      "count": 3,
+      "tools": [
+        "elai-io",
+        "invideo-io",
+        "runwayml-com"
+      ]
+    },
+    "policy.exportLimits": {
+      "count": 2,
+      "tools": [
+        "elai-io",
+        "synthesys-io"
+      ]
+    },
+    "mainLimitations": {
+      "count": 2,
+      "tools": [
+        "elai-io",
+        "synthesys-io"
+      ]
+    }
+  }
+}

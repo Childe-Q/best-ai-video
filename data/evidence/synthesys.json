@@ -24,6 +24,38 @@
       "confidence": "high"
     },
     {
+      "text": "Synthesys says refund requests are only eligible within 72 hours of purchase and only when total usage stays below 5 minutes of video or voice generation.",
+      "theme": "support",
+      "sourceUrl": "https://synthesys.io/ai-refund-policy/",
+      "sourceType": "refund_policy",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesys says cancellations are handled from the My Plan section and access continues until the end of the current billing cycle.",
+      "theme": "support",
+      "sourceUrl": "https://synthesys.io/ai-refund-policy/",
+      "sourceType": "refund_policy",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesys' privacy policy says client data is not used to train or retrain AI models and that clients retain full ownership of their data.",
+      "theme": "security",
+      "sourceUrl": "https://synthesys.io/ai-privacy-policy/",
+      "sourceType": "privacy_policy",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Synthesys exposes a text-to-speech API with API key access, 140 plus languages, 300 plus voices, and SSML support.",
+      "theme": "integrations",
+      "sourceUrl": "https://synthesys.io/text-to-speech-api/",
+      "sourceType": "api",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
       "text": "Synthesys also highlights built-in dubbing plus a voice layer with hundreds of human-sounding voices and multilingual coverage, making it more than a pure avatar tool.",
       "theme": "voice",
       "sourceUrl": "https://synthesys.io/",

@@ -24,6 +24,30 @@
       "confidence": "medium"
     },
     {
+      "text": "Pictory's subscription help says plans can be changed or canceled any time, with cancellation taking effect at the end of the current billing term.",
+      "theme": "support",
+      "sourceUrl": "https://kb.pictory.ai/en/articles/9250487-frequently-asked-questions-subscriptions",
+      "sourceType": "help_center_article",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Pictory says free-trial accounts remain accessible after expiry, but video downloads stay restricted until a paid subscription is added.",
+      "theme": "usage",
+      "sourceUrl": "https://kb.pictory.ai/en/articles/9250487-frequently-asked-questions-subscriptions",
+      "sourceType": "help_center_article",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Pictory's API pages position the product as a programmable workflow that can turn text, URLs, PowerPoint presentations, and existing videos into generated videos.",
+      "theme": "workflow",
+      "sourceUrl": "https://pictory.ai/pictory-api",
+      "sourceType": "api",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
       "text": "The Free tier is positioned as a testing entry point with 15 minutes total, 720p export, and a visible watermark.",
       "theme": "usage",
       "sourceUrl": "https://pictory.ai/pricing",

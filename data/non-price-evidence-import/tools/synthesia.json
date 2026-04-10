@@ -1,0 +1,1487 @@
+{
+  "generatedAt": "2026-04-08T13:18:41.604993+00:00",
+  "slug": "synthesia",
+  "toolName": "Synthesia",
+  "officialHost": "www.synthesia.io",
+  "siteRootDir": "www.synthesia.io",
+  "runtimeCaptureDir": "data/runtime-captures/synthesia",
+  "artifacts": {
+    "counts": {
+      "htmlCount": 8,
+      "jsCount": 2,
+      "jsonCount": 1,
+      "mdCount": 1,
+      "official_page_htmlCount": 3,
+      "referenced_assetCount": 5,
+      "runtime_capture_htmlCount": 2,
+      "runtime_capture_jsonCount": 1,
+      "runtime_capture_reportCount": 1
+    },
+    "availablePageUrls": [
+      "https://www.synthesia.io/",
+      "https://www.synthesia.io/pricing",
+      "https://www.synthesia.io/book-a-demo",
+      "https://www.synthesia.io/legal/security-practices",
+      "https://www.synthesia.io/features",
+      "https://help.synthesia.io/en/articles/9564635-how-do-i-remove-the-synthesia-watermark",
+      "https://help.synthesia.io/en/articles/8330564-platform-integrity"
+    ],
+    "keywordPageUrls": [],
+    "paths": [
+      "www.synthesia.io/www.synthesia.io/index.html",
+      "www.synthesia.io/www.synthesia.io/pricing.html",
+      "www.synthesia.io/www.synthesia.io/book-a-demo.html",
+      "data/runtime-captures/synthesia/report.md",
+      "data/runtime-captures/synthesia/rendered_dom_initial.html",
+      "data/runtime-captures/synthesia/network_responses.json",
+      "data/runtime-captures/synthesia/rendered_dom.html",
+      "www.synthesia.io/www.synthesia.io/pricing.html",
+      "www.synthesia.io/webcdn.synthesia.io/geo.js",
+      "www.synthesia.io/www.synthesia.io/index.html",
+      "www.synthesia.io/www.synthesia.io/book-a-demo.html",
+      "www.synthesia.io/webcdn.synthesia.io/wfjs/intercom/v2026.02.03/intercom-facade.js"
+    ]
+  },
+  "fields": {
+    "officialUrl": {
+      "value": "https://www.synthesia.io/",
+      "sourceUrl": "https://www.synthesia.io/",
+      "sourcePath": "www.synthesia.io/www.synthesia.io/index.html"
+    },
+    "sourceUrls": [
+      "https://www.synthesia.io/",
+      "https://www.synthesia.io/pricing",
+      "https://www.synthesia.io/book-a-demo",
+      "https://www.synthesia.io/legal/security-practices",
+      "https://www.synthesia.io/features",
+      "https://help.synthesia.io/en/articles/9564635-how-do-i-remove-the-synthesia-watermark",
+      "https://help.synthesia.io/en/articles/8330564-platform-integrity"
+    ],
+    "policy": {
+      "watermark": [
+        {
+          "valueCandidate": "Synthesia watermark appears on Freemium videos and on API videos generated with test=true.",
+          "snippet": "Synthesia's watermark help says freemium videos carry the logo watermark, and API requests with test=true generate watermarked videos while test=false removes the watermark.",
+          "sourcePath": null,
+          "sourceUrl": "https://help.synthesia.io/en/articles/9564635-how-do-i-remove-the-synthesia-watermark",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "How do I remove the Synthesia Watermark? | Synthesia Help"
+        }
+      ],
+      "commercialUse": [
+        {
+          "valueCandidate": "Synthesia allows authorised branded use and business promotion with custom or webcam avatars.",
+          "snippet": "Synthesia's platform-integrity guidance says authorised branded use and business promotion are allowed with custom/webcam avatars when content follows moderation policies.",
+          "sourcePath": null,
+          "sourceUrl": "https://help.synthesia.io/en/articles/8330564-platform-integrity",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Platform Integrity | Synthesia Help"
+        }
+      ],
+      "usageRights": [
+        {
+          "valueCandidate": "Get access to royalty-free images, videos, icons, shapes, and more.",
+          "snippet": "Get access to royalty-free images, videos, icons, shapes, and more. Limited royalty-free content including videos and images from Pexels and music from Soundstripe",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Limited royalty-free content including videos and images from Pexels and music from Soundstripe",
+          "snippet": "Limited royalty-free content including videos and images from Pexels and music from Soundstripe Royalty-free content including videos and images from Getty Images and Pexels, music from Soundstripe and icons from Icons8",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Royalty-free content including videos and images from Getty Images and Pexels, music from Soundstripe and icons from Icons8",
+          "snippet": "Royalty-free content including videos and images from Getty Images and Pexels, music from Soundstripe and icons from Icons8",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Get access to a selection of royalty-free soundtracks.",
+          "snippet": "Get access to a selection of royalty-free soundtracks. Voiceover Uploads",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Get access to royalty-free images, videos, icons, shapes, and more.",
+          "snippet": "Get access to royalty-free images, videos, icons, shapes, and more. Limited royalty-free content including videos and images from Pexels and music from Soundstripe",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Limited royalty-free content including videos and images from Pexels and music from Soundstripe",
+          "snippet": "Limited royalty-free content including videos and images from Pexels and music from Soundstripe Royalty-free content including videos and images from Getty Images and Pexels, music from Soundstripe and icons from Icons8",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Royalty-free content including videos and images from Getty Images and Pexels, music from Soundstripe and icons from Icons8",
+          "snippet": "Royalty-free content including videos and images from Getty Images and Pexels, music from Soundstripe and icons from Icons8",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Get access to a selection of royalty-free soundtracks.",
+          "snippet": "Get access to a selection of royalty-free soundtracks. Voiceover Uploads",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Get access to royalty-free images, videos, icons, shapes, and more.",
+          "snippet": "Get access to royalty-free images, videos, icons, shapes, and more. Limited royalty-free content including videos and images from Pexels and music from Soundstripe",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Limited royalty-free content including videos and images from Pexels and music from Soundstripe",
+          "snippet": "Limited royalty-free content including videos and images from Pexels and music from Soundstripe Royalty-free content including videos and images from Getty Images and Pexels, music from Soundstripe and icons from Icons8",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Royalty-free content including videos and images from Getty Images and Pexels, music from Soundstripe and icons from Icons8",
+          "snippet": "Royalty-free content including videos and images from Getty Images and Pexels, music from Soundstripe and icons from Icons8",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Get access to a selection of royalty-free soundtracks.",
+          "snippet": "Get access to a selection of royalty-free soundtracks. Voiceover Uploads",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Synthesia says customers create and own the content they create and must have the rights to use branding and IP in videos.",
+          "snippet": "The platform-integrity article says customers create and own their content, while requiring that they hold the relevant copyright, trademark, and branding rights.",
+          "sourcePath": null,
+          "sourceUrl": "https://help.synthesia.io/en/articles/8330564-platform-integrity",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Platform Integrity | Synthesia Help"
+        }
+      ],
+      "refundCancellation": [
+        {
+          "valueCandidate": "Can I cancel Synthesia at any time?",
+          "snippet": "Can I cancel Synthesia at any time? Yes. Simply go to your account settings in Synthesia and cancel your plan.",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes. Simply go to your account settings in Synthesia and cancel your plan.",
+          "snippet": "Yes. Simply go to your account settings in Synthesia and cancel your plan. Can I upgrade my account at any time?",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Can I cancel Synthesia at any time?",
+          "snippet": "Can I cancel Synthesia at any time? Yes. Simply go to your account settings in Synthesia and cancel your plan.",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes. Simply go to your account settings in Synthesia and cancel your plan.",
+          "snippet": "Yes. Simply go to your account settings in Synthesia and cancel your plan. Can I upgrade my account at any time?",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "ed videos do not roll over to the next billing period.<br></p>\"}},{\"@type\":\"Question\",\"name\":\"Can I cancel Synthesia at any time?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"<p>Yes. Simply go to your account settings in Synthesia and cancel your",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "ceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"<p>Yes. Simply go to your account settings in Synthesia and cancel your plan.</p>\"}},{\"@type\":\"Question\",\"name\":\"Can I upgrade my account at any time? \",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"<p>Yes. If",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Can I cancel Synthesia at any time?",
+          "snippet": "Can I cancel Synthesia at any time? Yes. Simply go to your account settings in Synthesia and cancel your plan.",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes. Simply go to your account settings in Synthesia and cancel your plan.",
+          "snippet": "Yes. Simply go to your account settings in Synthesia and cancel your plan. Can I upgrade my account at any time?",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "ed videos do not roll over to the next billing period.<br></p>\"}},{\"@type\":\"Question\",\"name\":\"Can I cancel Synthesia at any time?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"<p>Yes. Simply go to your account settings in Synthesia and cancel your",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "ceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"<p>Yes. Simply go to your account settings in Synthesia and cancel your plan.</p>\"}},{\"@type\":\"Question\",\"name\":\"Can I upgrade my account at any time? \",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"<p>Yes. If",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "exportLimits": [
+        {
+          "valueCandidate": "Download your videos",
+          "snippet": "Download your videos AI Video Assistant",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SCORM export",
+          "snippet": "SCORM export AI Dubbing (paid add-on)",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Sharing & Export",
+          "snippet": "Sharing & Export MP4 Downloads",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "MP4 Downloads",
+          "snippet": "MP4 Downloads Download your videos in Full HD, 1920 x 1080.",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download your videos in Full HD, 1920 x 1080.",
+          "snippet": "Download your videos in Full HD, 1920 x 1080. Multilingual Video Player",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SCORM Export",
+          "snippet": "SCORM Export Export your content as a SCORM package and easily upload it into your LMS. With all translated versions.",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export your content as a SCORM package and easily upload it into your LMS. With all translated versions.",
+          "snippet": "Export your content as a SCORM package and easily upload it into your LMS. With all translated versions. Video Embeds",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download your videos",
+          "snippet": "Download your videos AI Video Assistant",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SCORM export",
+          "snippet": "SCORM export AI Dubbing (paid add-on)",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Sharing & Export",
+          "snippet": "Sharing & Export MP4 Downloads",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "MP4 Downloads",
+          "snippet": "MP4 Downloads Download your videos in Full HD, 1920 x 1080.",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download your videos in Full HD, 1920 x 1080.",
+          "snippet": "Download your videos in Full HD, 1920 x 1080. Multilingual Video Player",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SCORM Export",
+          "snippet": "SCORM Export Export your content as a SCORM package and easily upload it into your LMS. With all translated versions.",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Export your content as a SCORM package and easily upload it into your LMS. With all translated versions.",
+          "snippet": "Export your content as a SCORM package and easily upload it into your LMS. With all translated versions. Video Embeds",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download your videos",
+          "snippet": "Download your videos AI Video Assistant",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SCORM export",
+          "snippet": "SCORM export AI Dubbing (paid add-on)",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Sharing & Export",
+          "snippet": "Sharing & Export MP4 Downloads",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "MP4 Downloads",
+          "snippet": "MP4 Downloads Download your videos in Full HD, 1920 x 1080.",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Download your videos in Full HD, 1920 x 1080.",
+          "snippet": "Download your videos in Full HD, 1920 x 1080. Multilingual Video Player",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SCORM Export",
+          "snippet": "SCORM Export Export your content as a SCORM package and easily upload it into your LMS. With all translated versions.",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ]
+    },
+    "mainLimitations": [
+      {
+        "valueCandidate": "- Save up to",
+        "snippet": "- Save up to Platform",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Produce branded product videos in minutes.",
+        "snippet": "Produce branded product videos in minutes. Business Operations",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Create engaging technical videos in minutes.",
+        "snippet": "Create engaging technical videos in minutes. Compliance Training",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Create engaging product demos and tutorials in minutes.",
+        "snippet": "Create engaging product demos and tutorials in minutes. Industry",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Synthesia is the world's #1 rated AI video software. It's used by 50,000+ teams to create videos at scale, saving up to 90% of their time and budget.",
+        "snippet": "Synthesia is the world's #1 rated AI video software. It's used by 50,000+ teams to create videos at scale, saving up to 90% of their time and budget.",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "No credit card required",
+        "snippet": "No credit card required No credit card required",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "No credit card required",
+        "snippet": "No credit card required Get started on desktop",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "No credit card required",
+        "snippet": "No credit card required Includes",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "credits",
+        "snippet": "credits /mo",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "What are Credits?",
+        "snippet": "What are Credits? Credits are now the shared currency across all AI usage-based features - one common pool for everything you create.",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Credits are now the shared currency across all AI usage-based features - one common pool for everything you create.",
+        "snippet": "Credits are now the shared currency across all AI usage-based features - one common pool for everything you create. Usable for up to",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Usable for up to",
+        "snippet": "Usable for up to 10 minutes of video/month",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Usable for up to",
+        "snippet": "Usable for up to 10 minutes of video or AI Dubbing/month",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Usable for up to",
+        "snippet": "Usable for up to 30 minutes of video or AI Dubbing/month",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Unlimited video minutes",
+        "snippet": "Unlimited video minutes 1-Click Translations into 80+ languages",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Custom Credits",
+        "snippet": "Custom Credits What are Credits?",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Credits are now the shared currency across all AI usage-based features - one common pool for everything you create.",
+        "snippet": "Credits are now the shared currency across all AI usage-based features - one common pool for everything you create. See all features",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "The maximum number of seats your workspace includes.",
+        "snippet": "The maximum number of seats your workspace includes. 1 editor",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Usage limits",
+        "snippet": "Usage limits Number of minutes of video you can generate per month (calculated in seconds). For example, if you're on Starter plan and create a video that's 59 seconds long, you'll still have 9:01 minutes left.",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "10 minutes of video / month",
+        "snippet": "10 minutes of video / month 10 minutes of video / month",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      }
+    ],
+    "workflowFeatureDocs": [
+      {
+        "valueCandidate": "240+ AI Avatars",
+        "snippet": "240+ AI Avatars Personal Avatars",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Personal Avatars",
+        "snippet": "Personal Avatars 160+ Languages",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Screen Recorder",
+        "snippet": "AI Screen Recorder AI Video Generator",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Dubbing",
+        "snippet": "AI Dubbing New",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Brand Kit",
+        "snippet": "Brand Kit Live Collaboration",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Deliver consistent updates with video templates.",
+        "snippet": "Deliver consistent updates with video templates. Knowledge Management",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Video Templates",
+        "snippet": "Video Templates Synthesia Blog",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Synthesia Academy",
+        "snippet": "Synthesia Academy Live sessions",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Create AI videos with your own Personal Avatar",
+        "snippet": "Create AI videos with your own Personal Avatar Billed monthly.",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Dubbing",
+        "snippet": "AI Dubbing Remove Synthesia logo",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "125+ Synthesia AI Avatars",
+        "snippet": "125+ Synthesia AI Avatars Custom on-brand Avatars",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "10 minutes of video or AI Dubbing/month",
+        "snippet": "10 minutes of video or AI Dubbing/month See all features",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "5 Personal Avatars",
+        "snippet": "5 Personal Avatars AI Dubbing",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Dubbing",
+        "snippet": "AI Dubbing Branded video pages",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "180+ Synthesia AI Avatars",
+        "snippet": "180+ Synthesia AI Avatars Custom on-brand Avatars",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "30 minutes of video or AI Dubbing/month",
+        "snippet": "30 minutes of video or AI Dubbing/month See all features",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "240+ stock AI Avatars",
+        "snippet": "240+ stock AI Avatars Unlimited Personal Avatars",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Unlimited Personal Avatars",
+        "snippet": "Unlimited Personal Avatars SAML/SSO",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Live team collaboration",
+        "snippet": "Live team collaboration Brand Kits",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Brand Kits",
+        "snippet": "Brand Kits SCORM export",
+        "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+        "sourceUrl": "https://www.synthesia.io/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Synthesia features include AI video assistant, expressive avatars, 1-click translation, AI dubbing, brand kits, organizations, live collaboration, SCORM export, and interactivity.",
+        "snippet": "The features page covers creation, localization, management, publishing, and engagement features including translation, dubbing, brand kits, organizations, SCORM export, and interactive video.",
+        "sourcePath": null,
+        "sourceUrl": "https://www.synthesia.io/features",
+        "artifactType": "remote_official_page",
+        "contentType": "html",
+        "sourceTitle": "Synthesia Features"
+      }
+    ],
+    "securityApiEnterprise": {
+      "security": [
+        {
+          "valueCandidate": "AI Safety & Security",
+          "snippet": "AI Safety & Security SOC 2 Type II compliant",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SOC 2 Type II compliant",
+          "snippet": "SOC 2 Type II compliant ISO 42001 compliant",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "ISO 42001 compliant",
+          "snippet": "ISO 42001 compliant GDPR compliant",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "GDPR compliant",
+          "snippet": "GDPR compliant All features",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Train employees on security and compliance with videos.",
+          "snippet": "Train employees on security and compliance with videos. Use case",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Content Moderation",
+          "snippet": "Content Moderation We apply content moderation to all Synthesia videos.",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "We apply content moderation to all Synthesia videos.",
+          "snippet": "We apply content moderation to all Synthesia videos. Regular content moderation time",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Regular content moderation time",
+          "snippet": "Regular content moderation time Regular content moderation time",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Regular content moderation time",
+          "snippet": "Regular content moderation time Priority content moderation time",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Priority content moderation time",
+          "snippet": "Priority content moderation time Basic",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Priority content moderation time",
+          "snippet": "Priority content moderation time Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus...",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Priority content moderation time",
+          "snippet": "Priority content moderation time for big companies",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SOC 2 & GDPR compliant",
+          "snippet": "SOC 2 & GDPR compliant Security is core to everything we do, from how we develop the product to how we treat customer data.",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security is core to everything we do, from how we develop the product to how we treat customer data.",
+          "snippet": "Security is core to everything we do, from how we develop the product to how we treat customer data. Ethical use of AI",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Ethical use of AI",
+          "snippet": "Ethical use of AI AI safety is a big part of our mission. We aim to amplify people’s capabilities, never to replace them.",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Security",
+          "snippet": "Security Legal",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "AI Safety & Security",
+          "snippet": "AI Safety & Security SOC 2 Type II compliant",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SOC 2 Type II compliant",
+          "snippet": "SOC 2 Type II compliant ISO 42001 compliant",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "ISO 42001 compliant",
+          "snippet": "ISO 42001 compliant GDPR compliant",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "GDPR compliant",
+          "snippet": "GDPR compliant All features",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Synthesia uses AES-256 encryption at rest and undergoes ISO 42001, ISO 27001, and SOC 2 Type II audits.",
+          "snippet": "Synthesia's legal security page says customer data is encrypted with AES-256 and the platform is audited against ISO 42001, ISO 27001, and SOC 2 Type II.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.synthesia.io/legal/security-practices",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Security Practices | Synthesia"
+        }
+      ],
+      "api": [
+        {
+          "valueCandidate": "API access",
+          "snippet": "API access Multiple avatars per scene",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Media & Integrations",
+          "snippet": "Media & Integrations Veo 3.1 and Sora 2 Integration",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Veo 3.1 and Sora 2 Integration",
+          "snippet": "Veo 3.1 and Sora 2 Integration Create 8-second video clips from your prompt with Google Veo 3 or Sora 2 — each asset costs 48 credits.",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Synthesia API",
+          "snippet": "Synthesia API Automate video creation with Synthesia API.",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Automate video creation with Synthesia API.",
+          "snippet": "Automate video creation with Synthesia API. Up to 360 minutes of video / year, deducted from the plan's usage limits.",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Automate video creation with Synthesia API.",
+          "snippet": "Automate video creation with Synthesia API. Up to 360 minutes of video / year, deducted from the plan's usage limits",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Documentation",
+          "snippet": "API Documentation Product Updates",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Integrations",
+          "snippet": "Integrations Blog",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API access",
+          "snippet": "API access Multiple avatars per scene",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Media & Integrations",
+          "snippet": "Media & Integrations Veo 3.1 and Sora 2 Integration",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Veo 3.1 and Sora 2 Integration",
+          "snippet": "Veo 3.1 and Sora 2 Integration Create 8-second video clips from your prompt with Google Veo 3 or Sora 2 — each asset costs 48 credits.",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Synthesia API",
+          "snippet": "Synthesia API Automate video creation with Synthesia API.",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Automate video creation with Synthesia API.",
+          "snippet": "Automate video creation with Synthesia API. Up to 360 minutes of video / year, deducted from the plan's usage limits.",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Automate video creation with Synthesia API.",
+          "snippet": "Automate video creation with Synthesia API. Up to 360 minutes of video / year, deducted from the plan's usage limits",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API Documentation",
+          "snippet": "API Documentation Product Updates",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Integrations",
+          "snippet": "Integrations Blog",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom_initial.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "API access",
+          "snippet": "API access Multiple avatars per scene",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Media & Integrations",
+          "snippet": "Media & Integrations Veo 3.1 and Sora 2 Integration",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Veo 3.1 and Sora 2 Integration",
+          "snippet": "Veo 3.1 and Sora 2 Integration Create 8-second video clips from your prompt with Google Veo 3 or Sora 2 — each asset costs 48 credits.",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Synthesia API",
+          "snippet": "Synthesia API Automate video creation with Synthesia API.",
+          "sourcePath": "data/runtime-captures/synthesia/rendered_dom.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ],
+      "enterprise": [
+        {
+          "valueCandidate": "SSO Video Page",
+          "snippet": "SSO Video Page Engage",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Provide video training tailored to your sales team.",
+          "snippet": "Provide video training tailored to your sales team. Employee Development",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Transform onboarding and policies into quick videos.",
+          "snippet": "Transform onboarding and policies into quick videos. Retail",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise en",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Synthesia is the world's #1 rated AI video software. It's used by 50,000+ teams to create videos at scale, saving up to 90% of their time and budget.",
+          "snippet": "Synthesia is the world's #1 rated AI video software. It's used by 50,000+ teams to create videos at scale, saving up to 90% of their time and budget.",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Produce AI videos regularly with your team",
+          "snippet": "Produce AI videos regularly with your team Billed monthly.",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "For teams",
+          "snippet": "For teams Enterprise",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Let’s talk.",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Scale on-brand AI videos across large teams",
+          "snippet": "Scale on-brand AI videos across large teams $",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "SAML/SSO",
+          "snippet": "SAML/SSO Live team collaboration",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Live team collaboration",
+          "snippet": "Live team collaboration Brand Kits",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Tailored onboarding",
+          "snippet": "Tailored onboarding Implementation services",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Implementation services",
+          "snippet": "Implementation services Dedicated CSM",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Dedicated CSM",
+          "snippet": "Dedicated CSM Enterprise community",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise community",
+          "snippet": "Enterprise community Access to live events",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Workspaces",
+          "snippet": "Workspaces Basic",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Enterprise",
+          "snippet": "Enterprise Custom",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Workspaces",
+          "snippet": "Workspaces Seats",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "The maximum number of seats your workspace includes.",
+          "snippet": "The maximum number of seats your workspace includes. 1 editor",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Workspaces",
+          "snippet": "Workspaces Invite team members to your unified workspace.",
+          "sourcePath": "www.synthesia.io/www.synthesia.io/pricing.html",
+          "sourceUrl": "https://www.synthesia.io/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Synthesia enterprise workflows include SCORM export, SSO video pages, password-protected pages, and analytics.",
+          "snippet": "The features page marks SCORM export, SSO video pages, password protection, analytics, and several management features as enterprise capabilities.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.synthesia.io/features",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Synthesia Features"
+        }
+      ]
+    },
+    "logoSources": [
+      {
+        "assetPath": "www.synthesia.io/cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/664f0f482fa5a4d527d892bc_Favicon-Web-Security 1.png",
+        "assetUrl": "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/664f0f482fa5a4d527d892bc_Favicon-Web-Security%201.png"
+      },
+      {
+        "assetPath": "www.synthesia.io/cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/65eae689ace95f5017dc17a0_Logo-main.svg",
+        "assetUrl": "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/65eae689ace95f5017dc17a0_Logo-main.svg"
+      },
+      {
+        "assetPath": "www.synthesia.io/cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/65eae6894e82dff052cd139f_Logo-white.svg",
+        "assetUrl": "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/65eae6894e82dff052cd139f_Logo-white.svg"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d70e/66f408bd00f1a412da6b42a7_Poster-brand-kit.jpg"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/65e89895c5a4b8d764c0dd44_G2_Logo_Red_RGB%202.svg"
+      }
+    ]
+  },
+  "missingFields": [],
+  "nextFetchTargets": [
+    {
+      "url": "https://www.synthesia.io/features/avatars",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://www.synthesia.io/features/custom-avatar/personal",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://www.synthesia.io/features/languages",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://www.synthesia.io/features/ai-screen-recorder",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://www.synthesia.io/features/ai-video-generator",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://www.synthesia.io/features/ai-dubbing",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://www.synthesia.io/features/video-translator",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://www.synthesia.io/features",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://www.synthesia.io/features/interactivity",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://www.synthesia.io/features/video-agents",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://security.synthesia.io/",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://help.synthesia.io/",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://www.synthesia.io/enterprise",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://webcdn.synthesia.io/pricing-enterprise-card.mp4",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://api.synthesia.io/4b8d9d08-4f9e-4168-a2f5-054a41bf4506/thumbnail.gif",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://api.synthesia.io/93507d07-f69f-4773-ac27-9b3e50c153c5/thumbnail.gif",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://api.synthesia.io/4a9f2b1f-ab4a-4019-af4c-880cbc2b333b/thumbnail.gif",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://api.synthesia.io/11ce4e8f-a3c8-4089-b007-7b803626cbc1/thumbnail.gif",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://api.synthesia.io/dc9b20e5-a727-4c5f-86be-e38c11272e2d/thumbnail.gif",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://api.synthesia.io/000821dd-6fc6-4e25-9db1-2e5d68ba75cb/thumbnail.gif",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://www.synthesia.io/features/custom-avatar",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://www.synthesia.io/features/custom-avatar/studio",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://www.synthesia.io/features/ai-voice-generator",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://www.synthesia.io/features/ai-voice-cloning",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://www.synthesia.io/features/text-to-video",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://www.synthesia.io/features/ai-script-generator",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://help.synthesia.io/en",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://docs.synthesia.io/",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://docs.synthesia.io/docs/synthesia-integrations",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    },
+    {
+      "url": "https://help.synthesia.io/en/articles/7182166-how-to-contact-us",
+      "discoveredFromPath": "www.synthesia.io/www.synthesia.io/pricing.html",
+      "discoveredFromUrl": "https://www.synthesia.io/pricing"
+    }
+  ],
+  "remoteFetches": {
+    "rounds": [
+      {
+        "roundId": "2026-04-08-remote-round-1",
+        "fetchedAt": "2026-04-08T13:38:41.674975+00:00",
+        "pages": [
+          {
+            "title": "Security Practices | Synthesia",
+            "url": "https://www.synthesia.io/legal/security-practices"
+          },
+          {
+            "title": "Synthesia Features",
+            "url": "https://www.synthesia.io/features"
+          },
+          {
+            "title": "How do I remove the Synthesia Watermark? | Synthesia Help",
+            "url": "https://help.synthesia.io/en/articles/9564635-how-do-i-remove-the-synthesia-watermark"
+          },
+          {
+            "title": "Platform Integrity | Synthesia Help",
+            "url": "https://help.synthesia.io/en/articles/8330564-platform-integrity"
+          }
+        ],
+        "fetchedFields": [
+          "policy.commercialUse",
+          "policy.usageRights",
+          "policy.watermark",
+          "securityApiEnterprise.enterprise",
+          "securityApiEnterprise.security",
+          "workflowFeatureDocs"
+        ],
+        "unresolvedFields": [],
+        "mergedRecordCount": 6
+      }
+    ],
+    "latestRoundId": "2026-04-08-remote-round-1"
+  }
+}

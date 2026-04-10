@@ -87,6 +87,14 @@
       "confidence": "medium"
     },
     {
+      "text": "VEED's pricing surface bundles screen recording, image-to-video, text-to-video, AI avatars, and voice-and-dubbing workflows in the same product line.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.veed.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-04-08T13:38:41+00:00",
+      "confidence": "high"
+    },
+    {
       "text": "VEED terms state the provider will implement appropriate technical and organisational measures to protect Personal Data against accidental, unauthorised or unlawful processing and against loss or damage.",
       "theme": "security",
       "sourceUrl": "https://www.veed.io/terms-of-use",
@@ -2193,5 +2201,53 @@
         }
       ]
     }
-  ]
+  ],
+  "nonPriceEvidenceImport": {
+    "bundleDate": "2026-04-08",
+    "sourceBundle": "data/non-price-evidence-import/tools/veed-io.json",
+    "sourceUrls": [
+      "https://www.veed.io/pricing",
+      "https://www.veed.io/",
+      "https://www.veed.io/enterprise",
+      "https://www.veed.io/security",
+      "https://www.veed.io/tools/lip-sync-api",
+      "https://www.veed.io/ai/fabric-1-0-api?ref_type=adv",
+      "https://www.veed.io/privacy"
+    ],
+    "safeWriteback": {
+      "workflowFeatureDocs": [
+        {
+          "value": "VEED exposes screen recording, image-to-video, text-to-video, AI avatars, and voice-and-dubbing workflows on pricing.",
+          "sourceUrl": "https://www.veed.io/pricing"
+        }
+      ],
+      "securityApiEnterprise": {
+        "api": [
+          {
+            "value": "VEED surfaces Fabric 1.0 API and AI Lip Sync API on pricing.",
+            "sourceUrl": "https://www.veed.io/pricing"
+          },
+          {
+            "value": "Pricing also references Green Screen, Background Removal, Subtitle, and Live Avatar API paths or waitlists.",
+            "sourceUrl": "https://www.veed.io/pricing"
+          }
+        ],
+        "enterprise": [
+          {
+            "value": "VEED exposes a distinct enterprise path on its pricing surface.",
+            "sourceUrl": "https://www.veed.io/pricing"
+          }
+        ]
+      }
+    },
+    "retainedUnresolved": [
+      "policy.watermark",
+      "policy.commercialUse",
+      "policy.usageRights",
+      "policy.refundCancellation",
+      "policy.exportLimits",
+      "mainLimitations",
+      "securityApiEnterprise.security"
+    ]
+  }
 }

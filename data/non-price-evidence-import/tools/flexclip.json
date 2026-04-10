@@ -1,0 +1,1422 @@
+{
+  "generatedAt": "2026-04-08T13:18:34.461073+00:00",
+  "slug": "flexclip",
+  "toolName": "FlexClip",
+  "officialHost": "www.flexclip.com",
+  "siteRootDir": "www.flexclip.com",
+  "runtimeCaptureDir": "data/runtime-captures/flexclip",
+  "artifacts": {
+    "counts": {
+      "htmlCount": 4,
+      "jsCount": 16,
+      "jsonCount": 1,
+      "mdCount": 1,
+      "official_page_htmlCount": 1,
+      "referenced_assetCount": 28,
+      "runtime_capture_htmlCount": 2,
+      "runtime_capture_jsonCount": 1,
+      "runtime_capture_reportCount": 1,
+      "svgCount": 5,
+      "webpCount": 6
+    },
+    "availablePageUrls": [
+      "https://www.flexclip.com/pricing",
+      "https://www.flexclip.com/pricing.html",
+      "https://help.flexclip.com/en/articles/7266809-commercial-use-regulations",
+      "https://help.flexclip.com/en/articles/7213375-why-is-my-video-watermarked",
+      "https://www.flexclip.com/terms.html"
+    ],
+    "keywordPageUrls": [],
+    "paths": [
+      "www.flexclip.com/www.flexclip.com/pricing.html",
+      "data/runtime-captures/flexclip/report.md",
+      "data/runtime-captures/flexclip/rendered_dom_initial.html",
+      "data/runtime-captures/flexclip/network_responses.json",
+      "data/runtime-captures/flexclip/rendered_dom.html",
+      "www.flexclip.com/www.flexclip.com/media/system/js/core.min.js",
+      "www.flexclip.com/www.flexclip.com/templates/fujie/js/analytics.js",
+      "www.flexclip.com/www.flexclip.com/web-res/js/dependencies.js",
+      "www.flexclip.com/www.flexclip.com/web-res/js/ealog.js",
+      "www.flexclip.com/resource.flexclip.com/pages/header/logo.svg",
+      "www.flexclip.com/resource.flexclip.com/pages/header/hot.svg",
+      "www.flexclip.com/www.flexclip.com/pricing.html",
+      "www.flexclip.com/resource.flexclip.com/pages/header/more.svg",
+      "www.flexclip.com/www.flexclip.com/media/fj4-header/js/header.js",
+      "www.flexclip.com/www.flexclip.com/web-res/js/login-btn.js",
+      "www.flexclip.com/www.flexclip.com/app/login/button/assets/index.js",
+      "www.flexclip.com/www.flexclip.com/app/login/login-panel/static/2.1.9.8/js/index.js",
+      "www.flexclip.com/www.flexclip.com/web-res/js/fj4-subscription.js",
+      "www.flexclip.com/www.flexclip.com/app/subscription/static/1.9.7.7.4/js/index.js",
+      "www.flexclip.com/www.flexclip.com/media/fj4-footer/js/footer.js",
+      "www.flexclip.com/www.flexclip.com/media/share-tools/assets/index.js",
+      "www.flexclip.com/www.flexclip.com/media/message/js/v1/assets/index.f7f476e6.js",
+      "www.flexclip.com/www.flexclip.com/media/message/js/v1/assets/vendor.318d63a8.js",
+      "www.flexclip.com/www.flexclip.com/app/global-event/static/js/index.js",
+      "www.flexclip.com/www.flexclip.com/media/cookies/js/cookies.js",
+      "www.flexclip.com/resource.flexclip.com/app/subscription/img/banner.webp",
+      "www.flexclip.com/resource.flexclip.com/app/subscription/img/sub-active.svg",
+      "www.flexclip.com/resource.flexclip.com/app/subscription/img/credit.svg",
+      "www.flexclip.com/resource.flexclip.com/pages/company/pricing/1.webp",
+      "www.flexclip.com/resource.flexclip.com/pages/company/pricing/2.webp",
+      "www.flexclip.com/resource.flexclip.com/pages/company/pricing/3.webp",
+      "www.flexclip.com/resource.flexclip.com/pages/company/pricing/4.webp",
+      "www.flexclip.com/resource.flexclip.com/pages/company/pricing/5.webp"
+    ]
+  },
+  "fields": {
+    "officialUrl": {
+      "value": "https://www.flexclip.com/",
+      "sourceUrl": "https://www.flexclip.com/",
+      "sourcePath": "www.flexclip.com/www.flexclip.com/pricing.html"
+    },
+    "sourceUrls": [
+      "https://www.flexclip.com/pricing",
+      "https://www.flexclip.com/pricing.html",
+      "https://help.flexclip.com/en/articles/7266809-commercial-use-regulations",
+      "https://help.flexclip.com/en/articles/7213375-why-is-my-video-watermarked",
+      "https://www.flexclip.com/terms.html"
+    ],
+    "policy": {
+      "watermark": [
+        {
+          "valueCandidate": "No FlexClip watermark",
+          "snippet": "No FlexClip watermark Your video will be exported without a FlexClip watermark.",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Your video will be exported without a FlexClip watermark.",
+          "snippet": "Your video will be exported without a FlexClip watermark. Business",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Your video will be exported without a FlexClip watermark.",
+          "snippet": "Your video will be exported without a FlexClip watermark. FlexClip for Teams, how many seats you need?",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Your video will be exported without a FlexClip watermark.",
+          "snippet": "Your video will be exported without a FlexClip watermark. -",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "FEATURE_4\": \"Video length up to 25 mins\", \"COMPARE_TD_5\": \"Brand Kit\", \"COMPARE_TD_6\": \"No FlexClip watermark\", \"BASIC_FEATURE_7\": \"10GB cloud space\", \"BASIC_FEATURE_8\": \"50GB video hosting space\", \"BASIC_FEATURE_9\": \"Upload custom fonts\", \"BASIC_FE",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/subscription/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "os that have been exported. \", \"COMPARE_TD_6_desc\": \"Your video will be exported without a FlexClip watermark.\", \"PLANS_TITLE\": \"Choose the plan that's right for you\", \"PAY_BILLED_MONTHLY\": \"Monthly\", \"PAY_BILLED_ANNUALLY\": \"Annually\", \"SAVE_UP_TO\":",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/subscription/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "No FlexClip watermark",
+          "snippet": "No FlexClip watermark Your video will be exported without a FlexClip watermark.",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Your video will be exported without a FlexClip watermark.",
+          "snippet": "Your video will be exported without a FlexClip watermark. Business",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Your video will be exported without a FlexClip watermark.",
+          "snippet": "Your video will be exported without a FlexClip watermark. FlexClip for Teams, how many seats you need?",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Your video will be exported without a FlexClip watermark.",
+          "snippet": "Your video will be exported without a FlexClip watermark. -",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "watermark",
+          "snippet": "et T=C.filter(Q=>Q.selected).map(Q=>Q.id),G={\"questionnaire-survey-list-1\":\"Export videos without a watermark.\",\"questionnaire-survey-list-2\":\"Get more Cloud Space.\",\"questionnaire-survey-list-3\":\"Export 1080p (full HD) videos.\",\"questionnaire-surve",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/app/subscription/static/1.9.7.7.4/js/index.js",
+          "sourceUrl": "https://www.flexclip.com/app/subscription/static/1.9.7.7.4/js/index.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "FlexClip free projects carry a watermark, and exceeding Plus-plan limits can also trigger a watermark.",
+          "snippet": "FlexClip's watermark article says free-version watermarks cannot be removed and watermarking can also appear when a project exceeds Plus-plan limits.",
+          "sourcePath": null,
+          "sourceUrl": "https://help.flexclip.com/en/articles/7213375-why-is-my-video-watermarked",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Why is my video watermarked? | FlexClip Help Center"
+        }
+      ],
+      "commercialUse": [
+        {
+          "valueCandidate": "FlexClip allows Plus/Business subscribers and AI-credit purchasers to use stock resources and AI-generated content commercially.",
+          "snippet": "FlexClip's commercial-use help says Plus and Business subscribers, as well as AI credit purchasers, can use provided stock resources and AI-generated content commercially.",
+          "sourcePath": null,
+          "sourceUrl": "https://help.flexclip.com/en/articles/7266809-commercial-use-regulations",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Commercial Use Regulations | FlexClip Help Center"
+        },
+        {
+          "valueCandidate": "FlexClip free users cannot use stock resources and generated content for commercial use.",
+          "snippet": "The same commercial-use guidance says free users are not allowed to use FlexClip stock resources or generated content commercially.",
+          "sourcePath": null,
+          "sourceUrl": "https://help.flexclip.com/en/articles/7266809-commercial-use-regulations",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Commercial Use Regulations | FlexClip Help Center"
+        }
+      ],
+      "usageRights": [
+        {
+          "valueCandidate": "Copyright © 2026",
+          "snippet": "Copyright © 2026 PearlMountain",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/pricing.html",
+          "sourceUrl": "https://www.flexclip.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Add a custom branding to protect your copyright.",
+          "snippet": "Add a custom branding to protect your copyright. -",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Copyright © 2026",
+          "snippet": "Copyright © 2026 PearlMountain",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "copyright",
+          "snippet": "{ \"info\": { \"version\": \"1.0\", \"product\": \"FlexClip\", \"copyright\": \"Copyright © 2018 PearlMountain Limited. All Rights Reserved.\" }, \"signUp\": \"Sign Up\", \"signUpFree\": \"Login\", \"login\": \"Login\", \"register",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Copyright",
+          "snippet": "{ \"info\": { \"version\": \"1.0\", \"product\": \"FlexClip\", \"copyright\": \"Copyright © 2018 PearlMountain Limited. All Rights Reserved.\" }, \"signUp\": \"Sign Up\", \"signUpFree\": \"Login\", \"login\": \"Login\", \"register\": \"Sign Up\",",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "copyright",
+          "snippet": "{ \"info\": { \"version\": \"1.0\", \"product\": \"FlexClip\", \"copyright\": \"Copyright © 2018 PearlMountain Limited. All Rights Reserved.\" }, \"great-to-meet\": \"Great to meet you here.\", \"forget-password?\": \"Forgot",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/login-panel/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Copyright",
+          "snippet": "{ \"info\": { \"version\": \"1.0\", \"product\": \"FlexClip\", \"copyright\": \"Copyright © 2018 PearlMountain Limited. All Rights Reserved.\" }, \"great-to-meet\": \"Great to meet you here.\", \"forget-password?\": \"Forgot Password?\",",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/login-panel/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "copyright",
+          "snippet": "{ \"info\": { \"version\": \"1.0\", \"product\": \"FlexClip\", \"copyright\": \"Copyright © 2018 PearlMountain Limited. All Rights Reserved.\" }, \"FREE_NAME\": \"Free\", \"FREE_FEATURE_1\": \"480p SD downloads\", \"FREE_FEATU",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/subscription/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Copyright",
+          "snippet": "{ \"info\": { \"version\": \"1.0\", \"product\": \"FlexClip\", \"copyright\": \"Copyright © 2018 PearlMountain Limited. All Rights Reserved.\" }, \"FREE_NAME\": \"Free\", \"FREE_FEATURE_1\": \"480p SD downloads\", \"FREE_FEATURE_2\": \"1 sto",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/subscription/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Add a custom branding to protect your copyright.",
+          "snippet": "Add a custom branding to protect your copyright. -",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Copyright © 2026",
+          "snippet": "Copyright © 2026 PearlMountain",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "license",
+          "snippet": "/*! jQuery v3.6.0 | (c) OpenJS Foundation and other contributors | jquery.org/license */ !function(e,t){\"use strict\";\"object\"==typeof module&&\"object\"==typeof module.exports?module.exports=e.document?t(e,!0):function(e){if(!e",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/web-res/js/dependencies.js",
+          "sourceUrl": "https://www.flexclip.com/web-res/js/dependencies.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "Copyright © 2026",
+          "snippet": "Copyright © 2026 PearlMountain",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/pricing.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "referenced_asset",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "license",
+          "snippet": "dow:typeof global!=\"undefined\"?global:typeof self!=\"undefined\"?self:{},q={exports:{}},ve={};/** * @license React * react.production.min.js * * Copyright (c) Facebook, Inc. and its affiliates. * * This source code is licensed under the MIT li",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/app/login/button/assets/index.js",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/assets/index.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "licensed",
+          "snippet": ".production.min.js * * Copyright (c) Facebook, Inc. and its affiliates. * * This source code is licensed under the MIT license found in the * LICENSE file in the root directory of this source tree. */var po=Symbol.for(\"react.element\"),f0=Symb",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/app/login/button/assets/index.js",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/assets/index.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "license",
+          "snippet": "* Copyright (c) Facebook, Inc. and its affiliates. * * This source code is licensed under the MIT license found in the * LICENSE file in the root directory of this source tree. */var po=Symbol.for(\"react.element\"),f0=Symbol.for(\"react.portal\")",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/app/login/button/assets/index.js",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/assets/index.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "LICENSE",
+          "snippet": ", Inc. and its affiliates. * * This source code is licensed under the MIT license found in the * LICENSE file in the root directory of this source tree. */var po=Symbol.for(\"react.element\"),f0=Symbol.for(\"react.portal\"),d0=Symbol.for(\"react.fr",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/app/login/button/assets/index.js",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/assets/index.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "license",
+          "snippet": "ateElement!=\"undefined\"?q.exports.useLayoutEffect:q.exports.useEffect,ql={exports:{}},Gl={};/** * @license React * react-jsx-runtime.production.min.js * * Copyright (c) Facebook, Inc. and its affiliates. * * This source code is licensed unde",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/app/login/button/assets/index.js",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/assets/index.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "licensed",
+          "snippet": ".production.min.js * * Copyright (c) Facebook, Inc. and its affiliates. * * This source code is licensed under the MIT license found in the * LICENSE file in the root directory of this source tree. */var L0=q.exports,M0=Symbol.for(\"react.elem",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/app/login/button/assets/index.js",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/assets/index.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "license",
+          "snippet": "* Copyright (c) Facebook, Inc. and its affiliates. * * This source code is licensed under the MIT license found in the * LICENSE file in the root directory of this source tree. */var L0=q.exports,M0=Symbol.for(\"react.element\"),P0=Symbol.for(\"r",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/app/login/button/assets/index.js",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/assets/index.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "FlexClip says uploaded content remains your property and will not be used for AI model training.",
+          "snippet": "The current terms say uploaded content remains the user's property and FlexClip will not use that content for AI model training or similar analysis.",
+          "sourcePath": null,
+          "sourceUrl": "https://www.flexclip.com/terms.html",
+          "artifactType": "remote_official_page",
+          "contentType": "html",
+          "sourceTitle": "Terms of Use - FlexClip"
+        }
+      ],
+      "refundCancellation": [
+        {
+          "valueCandidate": "7-Day Money Back Guarantee",
+          "snippet": "7-Day Money Back Guarantee 128-bit SSL Secure Checkout",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Can I cancel my subscription anytime?",
+          "snippet": "Can I cancel my subscription anytime? Yes, absolutely. Once you cancel your subscription, you will enjoy the benefits of the current plan until the end of your billing cycle. After the end of the billing cycle, you will be downgraded to a free plan.",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes, absolutely. Once you cancel your subscription, you will enjoy the benefits of the current plan until the end of your billing cycle. After the end of the billing cycle, you will be downgraded to a free plan.",
+          "snippet": "Yes, absolutely. Once you cancel your subscription, you will enjoy the benefits of the current plan until the end of your billing cycle. After the end of the billing cycle, you will be downgraded to a free plan.",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Do you offer a refund?",
+          "snippet": "Do you offer a refund? Yes. We value every customer and always try our best to provide customers with satisfying products and services. Therefore, we offer a 7 days money-back guarantee (for the first payment of the subscription period). If you have any con...",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes. We value every customer and always try our best to provide customers with satisfying products and services. Therefore, we offer a 7 days money-back guarantee (for the first payment of the subscription period). If you have any concerns, just contact our support team.",
+          "snippet": "Yes. We value every customer and always try our best to provide customers with satisfying products and services. Therefore, we offer a 7 days money-back guarantee (for the first payment of the subscription period). If you have any concerns, just contact our...",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "canceled",
+          "snippet": "{ \"canceled-favorite\": \"Unfavorited\", \"undo\": \"Undo\", \"account-change\": \"Login Account Change\", \"continue\": \"Continue\", \"account-change-desc\": \"It is d",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/global-event/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "</span>\", \"failed-to-restore\": \"Failed to restore. Please try again later.\", \"restore\": \"Restore\", \"cancel\": \"Cancel\" }",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/login-panel/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Cancel",
+          "snippet": "\"failed-to-restore\": \"Failed to restore. Please try again later.\", \"restore\": \"Restore\", \"cancel\": \"Cancel\" }",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/login-panel/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Cancel",
+          "snippet": "ON_PAY_NOW\": \"Pay Now\", \"BUTTON_GET_START\": \"Get Started\", \"BUTTON_BACK\": \"Back\", \"BUTTON_CANCEL\": \"Cancel\", \"BUTTON_SAVE\": \"Save\", \"REDEEM\": \"Redeem\", \"FREE_BUTTON_SELECT\": \"Choose Free\", \"BASIC_BUTTON_SELECT\": \"Choose Basic\", \"PLUS_BUTTON_SELEC",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/subscription/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Money Back",
+          "snippet": "illed annually\", \"TOTAL_BILLED\": \"Total Billed\", \"HAVE_A_COUPON\": \"Have a coupon?\", \"DAY_7\": \"7-Day Money Back Guarantee\", \"PAY_SECURE\": \"128-bit SSL Secure Checkout\", \"REDEEM_SUCCESSFUL\": \"You’ve successfully redeemed coupon code!\", \"PAY_TERMS_OF_US",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/subscription/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "7-Day Money Back Guarantee",
+          "snippet": "7-Day Money Back Guarantee 128-bit SSL Secure Checkout",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Can I cancel my subscription anytime?",
+          "snippet": "Can I cancel my subscription anytime? Yes, absolutely. Once you cancel your subscription, you will enjoy the benefits of the current plan until the end of your billing cycle. After the end of the billing cycle, you will be downgraded to a free plan.",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes, absolutely. Once you cancel your subscription, you will enjoy the benefits of the current plan until the end of your billing cycle. After the end of the billing cycle, you will be downgraded to a free plan.",
+          "snippet": "Yes, absolutely. Once you cancel your subscription, you will enjoy the benefits of the current plan until the end of your billing cycle. After the end of the billing cycle, you will be downgraded to a free plan.",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Do you offer a refund?",
+          "snippet": "Do you offer a refund? Yes. We value every customer and always try our best to provide customers with satisfying products and services. Therefore, we offer a 7 days money-back guarantee (for the first payment of the subscription period). If you have any con...",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes. We value every customer and always try our best to provide customers with satisfying products and services. Therefore, we offer a 7 days money-back guarantee (for the first payment of the subscription period). If you have any concerns, just contact our support team.",
+          "snippet": "Yes. We value every customer and always try our best to provide customers with satisfying products and services. Therefore, we offer a 7 days money-back guarantee (for the first payment of the subscription period). If you have any concerns, just contact our...",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "canceled",
+          "snippet": "|y.jquery)?S(y):S.event,x=S.Deferred(),b=S.Callbacks(\"once memory\"),w=v.statusCode||{},a={},s={},u=\"canceled\",T={readyState:0,getResponseHeader:function(e){var t;if(h){if(!n){n={};while(t=qt.exec(p))n[t[1].toLowerCase()+\" \"]=(n[t[1].toLowerCase()+\"",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/web-res/js/dependencies.js",
+          "sourceUrl": "https://www.flexclip.com/web-res/js/dependencies.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "593-3.593c0.24-0.239,0.314-0.598,0.185-0.912C7.774,1.242,7.47,1.037,7.131,1.035z\"/></svg>', cancel: '<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" x=\"0px\" y=\"0px\" width=\"12px\" height=\"12px\" viewBox=\"0 0 12 12\"><path fill=\"#080A10\"",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/media/fj4-header/js/header.js",
+          "sourceUrl": "https://www.flexclip.com/media/fj4-header/js/header.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "eNode.containerInfo:null;e=null}else t!==e&&(e=null);return El=e,null}function Ep(e){switch(e){case\"cancel\":case\"click\":case\"close\":case\"contextmenu\":case\"copy\":case\"cut\":case\"auxclick\":case\"dblclick\":case\"dragend\":case\"dragstart\":case\"drop\":case",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/app/login/button/assets/index.js",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/assets/index.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "(\"animationiteration\"),jp=us(\"animationstart\"),Rp=us(\"transitionend\"),Qp=new Map,Ef=\"abort auxClick cancel canPlay canPlayThrough click close contextMenu copy cut drag dragEnd dragEnter dragExit dragLeave dragOver dragStart drop durationChange em",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/app/login/button/assets/index.js",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/assets/index.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "cancel",
+          "snippet": "hange resize seeked seeking stalled suspend timeupdate volumechange waiting\".split(\" \"),A1=new Set(\"cancel close invalid load scroll toggle\".split(\" \").concat(ji));function _f(e,t,n){var r=e.type||\"unknown-event\";e.currentTarget=n,vm(r,t,void 0,e",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/app/login/button/assets/index.js",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/assets/index.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "exportLimits": [
+        {
+          "valueCandidate": "720p HD downloads",
+          "snippet": "720p HD downloads Free trial of AI features",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "1080p Full-HD downloads",
+          "snippet": "1080p Full-HD downloads 3600 AI credits bonus/yr",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Store up to 100GB of videos that have been exported.",
+          "snippet": "Store up to 100GB of videos that have been exported. Upload custom fonts",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Your video will be exported without a FlexClip watermark.",
+          "snippet": "Your video will be exported without a FlexClip watermark. Business",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "4K Ultra HD downloads",
+          "snippet": "4K Ultra HD downloads 9600 AI credits bonus/yr",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Store up to 1TB of videos that have been exported.",
+          "snippet": "Store up to 1TB of videos that have been exported. Upload custom fonts",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Your video will be exported without a FlexClip watermark.",
+          "snippet": "Your video will be exported without a FlexClip watermark. FlexClip for Teams, how many seats you need?",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Video export quality",
+          "snippet": "Video export quality The highest resolution of video that you can export.",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "The highest resolution of video that you can export.",
+          "snippet": "The highest resolution of video that you can export. 720P",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Video export length",
+          "snippet": "Video export length The maximum length of video that you can export.",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "The maximum length of video that you can export.",
+          "snippet": "The maximum length of video that you can export. Up to 10 mins",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Video exports",
+          "snippet": "Video exports Number of videos that you can export.",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Number of videos that you can export.",
+          "snippet": "Number of videos that you can export. Unlimited",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Your video will be exported without a FlexClip watermark.",
+          "snippet": "Your video will be exported without a FlexClip watermark. -",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "The space to store your videos that have been exported.",
+          "snippet": "The space to store your videos that have been exported. 1/account",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "The maximum number of video creations you can save online. Then make unlimited edits and re-download at any time.",
+          "snippet": "The maximum number of video creations you can save online. Then make unlimited edits and re-download at any time. 12",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "exported",
+          "snippet": "d and access them anywhere.\", \"PLANS_ITEM_BASIC_INFO_8\": \"Store up to 50GB of videos that have been exported. \", \"PLANS_ITEM_PLUS_INFO_2\": \"You can use 5 stock videos in each video creation.\", \"PLANS_ITEM_PLUS_INFO_7\": \"Store up to 30GB of videos,",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/subscription/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "exported",
+          "snippet": "d and access them anywhere.\", \"PLANS_ITEM_PLUS_INFO_8\": \"Store up to 100GB of videos that have been exported. \", \"PLANS_ITEM_BUSINESS_INFO_2\": \"You can use unlimited stock videos in each video creation.\", \"PLANS_ITEM_BUSINESS_INFO_7\": \"Store up to",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/subscription/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "exported",
+          "snippet": "and access them anywhere.\", \"PLANS_ITEM_BUSINESS_INFO_8\": \"Store up to 1TB of videos that have been exported. \", \"COMPARE_TD_6_desc\": \"Your video will be exported without a FlexClip watermark.\", \"PLANS_TITLE\": \"Choose the plan that's right for you\"",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/subscription/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "exported",
+          "snippet": "8\": \"Store up to 1TB of videos that have been exported. \", \"COMPARE_TD_6_desc\": \"Your video will be exported without a FlexClip watermark.\", \"PLANS_TITLE\": \"Choose the plan that's right for you\", \"PAY_BILLED_MONTHLY\": \"Monthly\", \"PAY_BILLED_ANNUALL",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/subscription/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        }
+      ]
+    },
+    "mainLimitations": [
+      {
+        "valueCandidate": "Credits Composition",
+        "snippet": "Credits Composition Personal Credits Package",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Personal Credits Package",
+        "snippet": "Personal Credits Package 1",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Lifetime Credits",
+        "snippet": "Lifetime Credits 1",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Credits",
+        "snippet": "Credits Monthly",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "1 stock video per project",
+        "snippet": "1 stock video per project 1 stock audio per project",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "1 stock audio per project",
+        "snippet": "1 stock audio per project Maximum 12 projects",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Maximum 12 projects",
+        "snippet": "Maximum 12 projects Save up to 12 video projects online and make edits at any time.",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Save up to 12 video projects online and make edits at any time.",
+        "snippet": "Save up to 12 video projects online and make edits at any time. Video length up to 10 mins",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Video length up to 10 mins",
+        "snippet": "Video length up to 10 mins MOST POPULAR",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "5 stock videos per project",
+        "snippet": "5 stock videos per project 5 stock audio per project",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "5 stock audio per project",
+        "snippet": "5 stock audio per project FlexClip premium resources",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Save unlimited projects online",
+        "snippet": "Save unlimited projects online Unlimited video length",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Store up to 30GB of videos, photos, & audio you upload and access them anywhere.",
+        "snippet": "Store up to 30GB of videos, photos, & audio you upload and access them anywhere. 100GB video hosting space",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Store up to 100GB of videos that have been exported.",
+        "snippet": "Store up to 100GB of videos that have been exported. Upload custom fonts",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Save up to 100 templates",
+        "snippet": "Save up to 100 templates No FlexClip watermark",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Store up to 100GB of videos, photos, & audio you upload and access them anywhere.",
+        "snippet": "Store up to 100GB of videos, photos, & audio you upload and access them anywhere. 1TB video hosting space",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Store up to 1TB of videos that have been exported.",
+        "snippet": "Store up to 1TB of videos that have been exported. Upload custom fonts",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Save up to 200 templates",
+        "snippet": "Save up to 200 templates No FlexClip watermark",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "FlexClip for Teams, how many seats you need?",
+        "snippet": "FlexClip for Teams, how many seats you need? 1-3",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "save up to 40%",
+        "snippet": "save up to 40% Free Get Started",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      }
+    ],
+    "workflowFeatureDocs": [
+      {
+        "valueCandidate": "Templates",
+        "snippet": "Templates Create",
+        "sourcePath": "www.flexclip.com/www.flexclip.com/pricing.html",
+        "sourceUrl": "https://www.flexclip.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Image to Video",
+        "snippet": "AI Image to Video AI Video BG Remover",
+        "sourcePath": "www.flexclip.com/www.flexclip.com/pricing.html",
+        "sourceUrl": "https://www.flexclip.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Text to Video",
+        "snippet": "AI Text to Video AI Auto Subtitle",
+        "sourcePath": "www.flexclip.com/www.flexclip.com/pricing.html",
+        "sourceUrl": "https://www.flexclip.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Voice Cloning",
+        "snippet": "AI Voice Cloning AI Video to SFX",
+        "sourcePath": "www.flexclip.com/www.flexclip.com/pricing.html",
+        "sourceUrl": "https://www.flexclip.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Screen Recorder",
+        "snippet": "Screen Recorder Chroma Key",
+        "sourcePath": "www.flexclip.com/www.flexclip.com/pricing.html",
+        "sourceUrl": "https://www.flexclip.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Add Text to Video",
+        "snippet": "Add Text to Video Text Animations",
+        "sourcePath": "www.flexclip.com/www.flexclip.com/pricing.html",
+        "sourceUrl": "https://www.flexclip.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Text to Video",
+        "snippet": "AI Text to Video Screen Recorder",
+        "sourcePath": "www.flexclip.com/www.flexclip.com/pricing.html",
+        "sourceUrl": "https://www.flexclip.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Screen Recorder",
+        "snippet": "Screen Recorder All Tools",
+        "sourcePath": "www.flexclip.com/www.flexclip.com/pricing.html",
+        "sourceUrl": "https://www.flexclip.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Templates",
+        "snippet": "Templates Stock Video",
+        "sourcePath": "www.flexclip.com/www.flexclip.com/pricing.html",
+        "sourceUrl": "https://www.flexclip.com/pricing",
+        "artifactType": "official_page_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Templates",
+        "snippet": "Templates Create",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Image to Video",
+        "snippet": "AI Image to Video AI Video BG Remover",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Text to Video",
+        "snippet": "AI Text to Video AI Auto Subtitle",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "AI Voice Cloning",
+        "snippet": "AI Voice Cloning AI Video to SFX",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Screen Recorder",
+        "snippet": "Screen Recorder Chroma Key",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Add Text to Video",
+        "snippet": "Add Text to Video Text Animations",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Brand Kit",
+        "snippet": "Brand Kit 30GB cloud space",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Save up to 100 templates",
+        "snippet": "Save up to 100 templates No FlexClip watermark",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Brand Kit",
+        "snippet": "Brand Kit 100GB cloud space",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Save up to 200 templates",
+        "snippet": "Save up to 200 templates No FlexClip watermark",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      },
+      {
+        "valueCandidate": "Custom template",
+        "snippet": "Custom template Use Timeline Mode to create your own templates, and you can use or share them anytime.",
+        "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+        "sourceUrl": "https://www.flexclip.com/pricing.html",
+        "artifactType": "runtime_capture_html",
+        "contentType": "html"
+      }
+    ],
+    "securityApiEnterprise": {
+      "security": [
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "Privacy",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/pricing.html",
+          "sourceUrl": "https://www.flexclip.com/pricing",
+          "artifactType": "official_page_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Absolutely. We employ advanced Secure Socket Layer (SSL) internet encryption technology to safeguard the security of your payment details. Your data is entirely protected. For more details about payments, please refer to our",
+          "snippet": "Absolutely. We employ advanced Secure Socket Layer (SSL) internet encryption technology to safeguard the security of your payment details. Your data is entirely protected. For more details about payments, please refer to our",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "Privacy",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "cy\": \"By signing up, you agree to our \", \"terms\": \"Terms of Use\", \"and\": \" and \", \"privacyPolicy\": \"Privacy Policy\", \"privacyPolicySub\": \".\", \"rememberMe\": \"Remember me\", \"forgotPassword\": \"Forgot password?\", \"language\": \"Language\", \"selectLanguag",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "tinuing, you agree to our </br><a href='/terms.html' target='_blank'>Terms of Use</a> and <a href='/privacy.html' target='_blank'>Privacy Policy</a>\", \"and\": \"and\", \"terms-of-use\": \"<a href='/terms.html' target='_blank'>Terms of Use</a>\", \"privacy",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/login-panel/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "><a href='/terms.html' target='_blank'>Terms of Use</a> and <a href='/privacy.html' target='_blank'>Privacy Policy</a>\", \"and\": \"and\", \"terms-of-use\": \"<a href='/terms.html' target='_blank'>Terms of Use</a>\", \"privacy-policy\": \"<a href='/privacy.h",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/login-panel/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "licy</a>\", \"and\": \"and\", \"terms-of-use\": \"<a href='/terms.html' target='_blank'>Terms of Use</a>\", \"privacy-policy\": \"<a href='/privacy.html' target='_blank'>Privacy Policy</a>\", \"sign-up\": \"Sign Up\", \"creating-account-using\": \"You are creating an",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/login-panel/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "privacy",
+          "snippet": "rms-of-use\": \"<a href='/terms.html' target='_blank'>Terms of Use</a>\", \"privacy-policy\": \"<a href='/privacy.html' target='_blank'>Privacy Policy</a>\", \"sign-up\": \"Sign Up\", \"creating-account-using\": \"You are creating an account using <span>xxx</sp",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/login-panel/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "html' target='_blank'>Terms of Use</a>\", \"privacy-policy\": \"<a href='/privacy.html' target='_blank'>Privacy Policy</a>\", \"sign-up\": \"Sign Up\", \"creating-account-using\": \"You are creating an account using <span>xxx</span>\", \"password\": \"Password\",",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/login-panel/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Absolutely. We employ advanced Secure Socket Layer (SSL) internet encryption technology to safeguard the security of your payment details. Your data is entirely protected. For more details about payments, please refer to our",
+          "snippet": "Absolutely. We employ advanced Secure Socket Layer (SSL) internet encryption technology to safeguard the security of your payment details. Your data is entirely protected. For more details about payments, please refer to our",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "Privacy",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Privacy",
+          "snippet": "Privacy",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/pricing.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "referenced_asset",
+          "contentType": "html"
+        }
+      ],
+      "api": [
+        {
+          "valueCandidate": "api",
+          "snippet": "} let _this = this; $.ajax({ url: \"https://www.flexclip.com/api/statistics/record-page-conversion\", type: 'POST', data: JSON.stringify({ url: page,",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/web-res/js/ealog.js",
+          "sourceUrl": "https://www.flexclip.com/web-res/js/ealog.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "div id=\"grc\" class=\"g-recaptcha\" data-size=\"invisible\" style=\"display: none\"></div> * 第二步，引入google api：<script src=\"https://www.google.com/recaptcha/api.js?onload=captchaCallback&render=explicit\" async defer></script> * 第三步，引入本js文件 * 第四步，调用",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/web-res/js/login-btn.js",
+          "sourceUrl": "https://www.flexclip.com/web-res/js/login-btn.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "ble\" style=\"display: none\"></div> * 第二步，引入google api：<script src=\"https://www.google.com/recaptcha/api.js?onload=captchaCallback&render=explicit\" async defer></script> * 第三步，引入本js文件 * 第四步，调用addTarget 添加验证目标 * 第五步，调用submit 触发验证 */ window.",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/web-res/js/login-btn.js",
+          "sourceUrl": "https://www.flexclip.com/web-res/js/login-btn.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "js.async = 'async'; js.defer = 'defer'; js.src = \"https://www.google.com/recaptcha/api.js?onload=captchaCallback&render=explicit\"; fjs.parentNode.insertBefore(js, fjs); if (js.addEventListener) { j",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/web-res/js/login-btn.js",
+          "sourceUrl": "https://www.flexclip.com/web-res/js/login-btn.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "dCaptchaApi:function(e){return async(t,n)=>{try{await a.Z.loadApi(\"https://www.google.com/recaptcha/api.js?render=explicit\"),e&&e()}catch(e){throw Error(e)}}},emailRegister:function(e,t){return async(n,r)=>{let a=r().mainStore.method,s=r().mai",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/app/login/login-panel/static/2.1.9.8/js/index.js",
+          "sourceUrl": "https://www.flexclip.com/app/login/login-panel/static/2.1.9.8/js/index.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": ":async e=>{if(Array.from(document.getElementsByTagName(\"script\")).find(e=>e.src.includes(\"recaptcha/api.js\"))){a=!0,o=!1;return}o=!0,a=!1,i&&document.body.removeChild(i),(i=document.createElement(\"script\")).async=!0,i.defer=!0,i.src=e;try{awai",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/app/login/login-panel/static/2.1.9.8/js/index.js",
+          "sourceUrl": "https://www.flexclip.com/app/login/login-panel/static/2.1.9.8/js/index.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        },
+        {
+          "valueCandidate": "api",
+          "snippet": "tps://web.skype.com/share?url=%s&lang=en&flow_id=6274ebbd5c659f65&source=AddThis\",whatsapp:\"https://api.whatsapp.com/send?text=%s\",message:\"https://www.facebook.com/dialog/send?app_id=140586622674265&link=%s&redirect_uri=%s\",google_classroom:\"",
+          "sourcePath": "www.flexclip.com/www.flexclip.com/media/share-tools/assets/index.js",
+          "sourceUrl": "https://www.flexclip.com/media/share-tools/assets/index.js",
+          "artifactType": "referenced_asset",
+          "contentType": "js"
+        }
+      ],
+      "enterprise": [
+        {
+          "valueCandidate": "FlexClip for Teams, how many seats you need?",
+          "snippet": "FlexClip for Teams, how many seats you need? 1-3",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Check Team Plan",
+          "snippet": "Check Team Plan Compare plans",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Yes. We value every customer and always try our best to provide customers with satisfying products and services. Therefore, we offer a 7 days money-back guarantee (for the first payment of the subscription period). If you have any concerns, just contact our support team.",
+          "snippet": "Yes. We value every customer and always try our best to provide customers with satisfying products and services. Therefore, we offer a 7 days money-back guarantee (for the first payment of the subscription period). If you have any concerns, just contact our...",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "team",
+          "snippet": "ccount status has changed (such as login expiration, disconnection, or switching to another account/team account). Continuing or closing will refresh the current page, and all settings and uploads will not be retained.\" }",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/global-event/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Team",
+          "snippet": "eo\": \"Create a Video\", \"business\": \"Business\", \"private\": \"Private\", \"free\": \"Free\", \"policyTeam\": \"Team Plan\", \"Contact the team owner to upgrade team features.\": \"Contact the team owner to upgrade team features.\", \"credits\": \"Credits\", \"credi",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "team",
+          "snippet": "usiness\": \"Business\", \"private\": \"Private\", \"free\": \"Free\", \"policyTeam\": \"Team Plan\", \"Contact the team owner to upgrade team features.\": \"Contact the team owner to upgrade team features.\", \"credits\": \"Credits\", \"credit\": \"Credit\", \"tier\": \"Ti",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "team",
+          "snippet": "\"private\": \"Private\", \"free\": \"Free\", \"policyTeam\": \"Team Plan\", \"Contact the team owner to upgrade team features.\": \"Contact the team owner to upgrade team features.\", \"credits\": \"Credits\", \"credit\": \"Credit\", \"tier\": \"Tier xxx\", \"subscription",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "team",
+          "snippet": "\"Free\", \"policyTeam\": \"Team Plan\", \"Contact the team owner to upgrade team features.\": \"Contact the team owner to upgrade team features.\", \"credits\": \"Credits\", \"credit\": \"Credit\", \"tier\": \"Tier xxx\", \"subscription-credits\": \"Subscription Credi",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "team",
+          "snippet": "\"Team Plan\", \"Contact the team owner to upgrade team features.\": \"Contact the team owner to upgrade team features.\", \"credits\": \"Credits\", \"credit\": \"Credit\", \"tier\": \"Tier xxx\", \"subscription-credits\": \"Subscription Credits\", \"credits-package\"",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "team",
+          "snippet": "ECS\", \"minutes\": \"MINS\", \"switch-workplace\": \"Switch Workplace\", \"basic\": \"Basic\", \"plus\": \"Plus\", \"team\": \"Team\", \"business-up\": \"Business\", \"switch-space-error-description\": \"Failed to switch the team.\", \"editor-subscription-bonus\": \"Personal",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Team",
+          "snippet": "inutes\": \"MINS\", \"switch-workplace\": \"Switch Workplace\", \"basic\": \"Basic\", \"plus\": \"Plus\", \"team\": \"Team\", \"business-up\": \"Business\", \"switch-space-error-description\": \"Failed to switch the team.\", \"editor-subscription-bonus\": \"Personal Subscri",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "team",
+          "snippet": "\"team\": \"Team\", \"business-up\": \"Business\", \"switch-space-error-description\": \"Failed to switch the team.\", \"editor-subscription-bonus\": \"Personal Subscription Bonus\", \"editor-subscription-bonus-team\": \"Team Subscription Bonus\", \"credit-subscri",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "team",
+          "snippet": "the team.\", \"editor-subscription-bonus\": \"Personal Subscription Bonus\", \"editor-subscription-bonus-team\": \"Team Subscription Bonus\", \"credit-subscription\": \"Personal Credits Subscription\", \"credit-subscription-team\": \"Team Credits Subscription",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Team",
+          "snippet": "m.\", \"editor-subscription-bonus\": \"Personal Subscription Bonus\", \"editor-subscription-bonus-team\": \"Team Subscription Bonus\", \"credit-subscription\": \"Personal Credits Subscription\", \"credit-subscription-team\": \"Team Credits Subscription\", \"one-",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "team",
+          "snippet": "m Subscription Bonus\", \"credit-subscription\": \"Personal Credits Subscription\", \"credit-subscription-team\": \"Team Credits Subscription\", \"one-time-credit\": \"Personal Credits Package\", \"one-time-credit-team\": \"Team Credits Package\", \"ai-home\": \"H",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Team",
+          "snippet": "iption Bonus\", \"credit-subscription\": \"Personal Credits Subscription\", \"credit-subscription-team\": \"Team Credits Subscription\", \"one-time-credit\": \"Personal Credits Package\", \"one-time-credit-team\": \"Team Credits Package\", \"ai-home\": \"Home\" }",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "team",
+          "snippet": "team\": \"Team Credits Subscription\", \"one-time-credit\": \"Personal Credits Package\", \"one-time-credit-team\": \"Team Credits Package\", \"ai-home\": \"Home\" }",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "Team",
+          "snippet": "Team Credits Subscription\", \"one-time-credit\": \"Personal Credits Package\", \"one-time-credit-team\": \"Team Credits Package\", \"ai-home\": \"Home\" }",
+          "sourcePath": "data/runtime-captures/flexclip/network_responses.json",
+          "sourceUrl": "https://www.flexclip.com/app/login/button/language/local.en.json",
+          "artifactType": "runtime_network_response",
+          "contentType": "json"
+        },
+        {
+          "valueCandidate": "FlexClip for Teams, how many seats you need?",
+          "snippet": "FlexClip for Teams, how many seats you need? 1-3",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        },
+        {
+          "valueCandidate": "Check Team Plan",
+          "snippet": "Check Team Plan Compare plans",
+          "sourcePath": "data/runtime-captures/flexclip/rendered_dom.html",
+          "sourceUrl": "https://www.flexclip.com/pricing.html",
+          "artifactType": "runtime_capture_html",
+          "contentType": "html"
+        }
+      ]
+    },
+    "logoSources": [
+      {
+        "assetPath": null,
+        "assetUrl": "https://www.flexclip.com/templates/fujie/favicon.ico"
+      },
+      {
+        "assetPath": "www.flexclip.com/resource.flexclip.com/pages/header/logo.svg",
+        "assetUrl": "https://resource.flexclip.com/pages/header/logo.svg"
+      },
+      {
+        "assetPath": null,
+        "assetUrl": "https://resource.flexclip.com/pages/common/icon-add1.png"
+      }
+    ]
+  },
+  "missingFields": [],
+  "nextFetchTargets": [
+    {
+      "url": "https://resource.flexclip.com/pages/header/help.svg",
+      "discoveredFromPath": "www.flexclip.com/www.flexclip.com/pricing.html",
+      "discoveredFromUrl": "https://www.flexclip.com/pricing"
+    },
+    {
+      "url": "https://help.flexclip.com/en",
+      "discoveredFromPath": "www.flexclip.com/www.flexclip.com/pricing.html",
+      "discoveredFromUrl": "https://www.flexclip.com/pricing"
+    },
+    {
+      "url": "https://www.flexclip.com/features",
+      "discoveredFromPath": "www.flexclip.com/www.flexclip.com/pricing.html",
+      "discoveredFromUrl": "https://www.flexclip.com/pricing"
+    },
+    {
+      "url": "https://www.flexclip.com/privacy.html",
+      "discoveredFromPath": "www.flexclip.com/www.flexclip.com/pricing.html",
+      "discoveredFromUrl": "https://www.flexclip.com/pricing"
+    },
+    {
+      "url": "https://www.flexclip.com/faq.html",
+      "discoveredFromPath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.flexclip.com/pricing.html"
+    },
+    {
+      "url": "https://www.flexclip.com/terms.html",
+      "discoveredFromPath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.flexclip.com/pricing.html"
+    },
+    {
+      "url": "https://help.flexclip.com/en/collections/3934002-billing-payment-and-subscription",
+      "discoveredFromPath": "data/runtime-captures/flexclip/rendered_dom_initial.html",
+      "discoveredFromUrl": "https://www.flexclip.com/pricing.html"
+    }
+  ],
+  "remoteFetches": {
+    "rounds": [
+      {
+        "roundId": "2026-04-08-remote-round-1",
+        "fetchedAt": "2026-04-08T13:38:41.674889+00:00",
+        "pages": [
+          {
+            "title": "Commercial Use Regulations | FlexClip Help Center",
+            "url": "https://help.flexclip.com/en/articles/7266809-commercial-use-regulations"
+          },
+          {
+            "title": "Why is my video watermarked? | FlexClip Help Center",
+            "url": "https://help.flexclip.com/en/articles/7213375-why-is-my-video-watermarked"
+          },
+          {
+            "title": "Terms of Use - FlexClip",
+            "url": "https://www.flexclip.com/terms.html"
+          }
+        ],
+        "fetchedFields": [
+          "policy.commercialUse",
+          "policy.usageRights",
+          "policy.watermark"
+        ],
+        "unresolvedFields": [],
+        "mergedRecordCount": 4
+      }
+    ],
+    "latestRoundId": "2026-04-08-remote-round-1"
+  }
+}

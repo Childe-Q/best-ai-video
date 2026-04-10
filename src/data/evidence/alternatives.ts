@@ -310,49 +310,31 @@ export const alternativesEvidence: Record<string, ToolAlternativeEvidence> = {
   "heygen": {
     tool: "heygen",
     bestFor: [
-      "Sales Outreach & L&D Teams",
-      "Educators"
+      "Interactive avatar demos",
+      "Automation-heavy personalized outreach",
+      "Multilingual marketing campaigns"
     ],
     whySwitch: [
       {
-        claim: "HeyGen specializes in ultra-realistic AI avatars with excellent lip-sync, better for avatar-focused content than InVideo",
+        claim: "HeyGen is strongest when the workflow depends on real-time interactive avatars, because the Streaming Avatar API runs over WebRTC instead of stopping at pre-rendered videos.",
         sources: [
           {
-            url: "/tool/heygen/pricing",
+            url: "/tool/heygen",
             facts: [
-              "Ultra-realistic lip-sync technology",
-              "High quality avatars",
-              "Easy interface, no technical skills needed",
-              "500+ Stock Video Avatars on free plan",
-              "1 Custom Video Avatar on free plan"
-            ]
-          },
-          {
-            url: "/tool/invideo/pricing",
-            facts: [
-              "[NEED VERIFICATION: avatar quality comparison]",
-              "Focus on prompt-to-video workflow rather than avatars"
+              "Streaming API supports real-time interactive avatars over WebRTC",
+              "The workflow is designed for low-latency integrations rather than only pre-rendered avatar videos"
             ]
           }
         ]
       },
       {
-        claim: "HeyGen offers competitive pricing with free plan (3 videos/month) and lower starting price than InVideo",
+        claim: "HeyGen also fits automation-heavy outreach or localization teams because official materials list n8n, Make, HubSpot, and Zapier integrations alongside multilingual avatar workflows.",
         sources: [
           {
             url: "/tool/heygen/pricing",
             facts: [
-              "Free plan: 3 videos per month, 720p export, videos up to 3-mins",
-              "Creator plan: $29/month (monthly) or $24/month (yearly)",
-              "Starting price: $29/mo"
-            ]
-          },
-          {
-            url: "/tool/invideo/pricing",
-            facts: [
-              "Free plan: 10 minutes/week with watermarks",
-              "Plus plan: $28/month",
-              "Starting price: $28/mo"
+              "Pricing materials list integrations with n8n, Make, HubSpot, and Zapier",
+              "HeyGen's current positioning includes multilingual avatar-led workflows"
             ]
           }
         ]
@@ -360,21 +342,14 @@ export const alternativesEvidence: Record<string, ToolAlternativeEvidence> = {
     ],
     tradeoffs: [
       {
-        claim: "HeyGen is expensive for high usage and credit system can be confusing, while InVideo offers more video generation minutes",
+        claim: "High-volume output still depends on credits and plan-based duration limits, so budget predictability is weaker than fixed-minute publishing tools.",
         sources: [
           {
             url: "/tool/heygen/pricing",
             facts: [
-              "Expensive for high usage",
-              "Credit system can be confusing",
-              "Free plan: Only 3 videos per month"
-            ]
-          },
-          {
-            url: "/tool/invideo/pricing",
-            facts: [
-              "[NEED VERIFICATION: video generation minutes comparison]",
-              "Free plan: 10 minutes/week"
+              "Free plan offers 3 videos per month",
+              "Video translation max duration varies by plan",
+              "Plan value still depends on credits and duration caps"
             ]
           }
         ]
@@ -397,12 +372,13 @@ export const alternativesEvidence: Record<string, ToolAlternativeEvidence> = {
         ]
       },
       watermark: {
-        claim: "[NEED VERIFICATION: HeyGen free plan watermark status]",
+        claim: "HeyGen's free lane stays watermarked, while paid plans are the cleaner publishing path.",
         sources: [
           {
             url: "/tool/heygen/pricing",
             facts: [
-              "[NEED VERIFICATION: watermark information not explicitly stated in pricing data]"
+              "The free lane is positioned as a limited testing path",
+              "Paid plans are the publish-ready path for branded avatar output"
             ]
           }
         ]
@@ -421,12 +397,14 @@ export const alternativesEvidence: Record<string, ToolAlternativeEvidence> = {
         ]
       },
       refundCancel: {
-        claim: "[NEED VERIFICATION: HeyGen refund and cancellation policy]",
+        claim: "HeyGen subscriptions can be canceled at any time, access continues through the current period, and payments are non-refundable except where required by law.",
         sources: [
           {
-            url: "/tool/heygen/pricing",
+            url: "/tool/heygen",
             facts: [
-              "[NEED VERIFICATION: refund policy not explicitly stated in pricing data]"
+              "Subscriptions can be canceled through the account at any time",
+              "Access continues through the end of the current subscription period",
+              "Payments are non-refundable except where required by law"
             ]
           }
         ]

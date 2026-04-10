@@ -32,6 +32,38 @@
       "confidence": "high"
     },
     {
+      "text": "Colossyan's pricing FAQ says monthly plans can be canceled at any time, while annual plans can also be canceled but unused months are not refunded because the year is paid upfront.",
+      "theme": "support",
+      "sourceUrl": "https://www.colossyan.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "The pricing page states Colossyan includes a full commercial license and says videos you create do not require attribution.",
+      "theme": "licensing",
+      "sourceUrl": "https://www.colossyan.com/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Colossyan's API positioning pairs personalization with reusable templates for scaled video generation workflows.",
+      "theme": "workflow",
+      "sourceUrl": "https://www.colossyan.com/api",
+      "sourceType": "api",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "Colossyan's security materials highlight a security portal with SOC 2, GDPR, and related certification references, while enterprise pricing lists SAML and SSO controls.",
+      "theme": "security",
+      "sourceUrl": "https://www.colossyan.com/security/",
+      "sourceType": "security",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
       "text": "Business begins around $88 monthly or $70 billed annually, adds unlimited video minutes, 170 plus stock avatars, 10 instant avatars per editor, and 4K download resolution.",
       "theme": "team",
       "sourceUrl": "https://www.colossyan.com/pricing",

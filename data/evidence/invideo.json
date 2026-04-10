@@ -70,6 +70,30 @@
       "confidence": "high"
     },
     {
+      "text": "InVideo's pricing FAQ says if you upgrade plans, unused credits from the previous plan roll over to the new plan.",
+      "theme": "usage",
+      "sourceUrl": "https://invideo.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "InVideo says if you downgrade or cancel, the subscription stays active until the end of the current billing cycle before the account is downgraded.",
+      "theme": "support",
+      "sourceUrl": "https://invideo.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "InVideo's pricing page says all paid plans include unlimited exports without a watermark.",
+      "theme": "export",
+      "sourceUrl": "https://invideo.io/pricing",
+      "sourceType": "pricing",
+      "capturedAt": "2026-04-10T12:00:00+08:00",
+      "confidence": "high"
+    },
+    {
       "text": "AI-generated videos can be monetised depending on the platform and specific content; users should check platform monetisation policies.",
       "theme": "commercial",
       "sourceUrl": "https://help.invideo.io/en/articles/9974482-can-ai-generated-videos-be-monetised",

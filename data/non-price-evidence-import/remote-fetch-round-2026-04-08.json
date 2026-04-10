@@ -1,0 +1,635 @@
+{
+  "roundId": "2026-04-08-remote-round-1",
+  "generatedAt": "2026-04-08T13:38:41.674568+00:00",
+  "tools": {
+    "elai-io": {
+      "toolName": "Elai",
+      "pages": [
+        {
+          "title": "Elai.io",
+          "url": "https://elai.io/"
+        },
+        {
+          "title": "Our features - Elai.io",
+          "url": "https://elai.io/features"
+        },
+        {
+          "title": "Enterprise - Elai.io",
+          "url": "https://elai.io/enterprise"
+        },
+        {
+          "title": "Getting started with API - Elai.io",
+          "url": "https://elai.io/getting-started-with-api"
+        },
+        {
+          "title": "Security Policy - Elai.io",
+          "url": "https://elai.io/security-policy/"
+        },
+        {
+          "title": "Website Privacy Policy - Elai.io",
+          "url": "https://elai.io/website-privacy-policy/"
+        },
+        {
+          "title": "Terms of Service - Elai.io",
+          "url": "https://elai.io/terms-of-service/"
+        }
+      ],
+      "fetchedFields": [
+        "logoSources",
+        "policy.refundCancellation",
+        "securityApiEnterprise.api",
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedFields": [
+        "policy.watermark",
+        "policy.commercialUse",
+        "policy.usageRights",
+        "policy.exportLimits",
+        "mainLimitations"
+      ],
+      "mergedRecordCount": 10
+    },
+    "pictory-ai": {
+      "toolName": "Pictory",
+      "pages": [
+        {
+          "title": "Pictory Pricing",
+          "url": "https://pictory.ai/pricing/"
+        },
+        {
+          "title": "Pictory API",
+          "url": "https://pictory.ai/pictory-api"
+        },
+        {
+          "title": "Pictory API Docs",
+          "url": "https://docs.pictory.ai/"
+        },
+        {
+          "title": "General FAQ | Pictory Help Center",
+          "url": "https://kb.pictory.ai/en/articles/8468756-general-faq"
+        },
+        {
+          "title": "Frequently Asked Questions - Subscriptions",
+          "url": "https://kb.pictory.ai/en/articles/9250487-frequently-asked-questions-subscriptions"
+        },
+        {
+          "title": "How to remove the Pictory watermark and branding from my video?",
+          "url": "https://kb.pictory.ai/en/articles/8468876-how-to-remove-the-pictory-watermark-and-branding-from-my-video"
+        },
+        {
+          "title": "How to download a generated video?",
+          "url": "https://kb.pictory.ai/en/articles/8468849-how-to-download-a-generated-video"
+        },
+        {
+          "title": "Terms of Service - Pictory.ai",
+          "url": "https://pictory.ai/terms-of-service"
+        },
+        {
+          "title": "Privacy Policy - Pictory.ai",
+          "url": "https://pictory.ai/privacy-policy"
+        }
+      ],
+      "fetchedFields": [
+        "mainLimitations",
+        "policy.exportLimits",
+        "policy.refundCancellation",
+        "policy.usageRights",
+        "policy.watermark",
+        "securityApiEnterprise.api",
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedFields": [
+        "policy.commercialUse"
+      ],
+      "mergedRecordCount": 10
+    },
+    "steve-ai": {
+      "toolName": "Steve AI",
+      "pages": [
+        {
+          "title": "Steve AI",
+          "url": "https://www.steve.ai/"
+        },
+        {
+          "title": "What is Steve AI? | FAQ - Steve AI",
+          "url": "https://support.steve.ai/en/articles/8294217-what-is-steve-ai"
+        },
+        {
+          "title": "How secure is Steve AI? | FAQ - Steve AI",
+          "url": "https://support.steve.ai/en/articles/8531919-how-secure-is-steve-ai"
+        },
+        {
+          "title": "How do I set up SSO for my company? | FAQ - Steve AI",
+          "url": "https://support.steve.ai/en/articles/8532019-how-do-i-set-up-sso-for-my-company"
+        },
+        {
+          "title": "How do I get a refund of my subscription fee? | FAQ - Steve AI",
+          "url": "https://support.steve.ai/en/articles/8524890-how-do-i-get-a-refund-of-my-subscription-fee"
+        },
+        {
+          "title": "Can I cancel the plan anytime, and are there any cancelation charges? | FAQ - Steve AI",
+          "url": "https://support.steve.ai/en/articles/8524881-can-i-cancel-the-plan-anytime-and-are-there-any-cancelation-charges"
+        },
+        {
+          "title": "How do I remove the Steve AI watermark from the videos? | FAQ - Steve AI",
+          "url": "https://support.steve.ai/en/articles/8295526-how-do-i-remove-the-steve-ai-watermark-from-the-videos"
+        },
+        {
+          "title": "Can I monetize the videos I create with Steve.AI? | FAQ - Steve AI",
+          "url": "https://support.steve.ai/en/articles/8295555-can-i-monetize-the-videos-i-create-with-steve-ai"
+        },
+        {
+          "title": "Can I use AI-generated videos from Steve.AI on my website? | FAQ - Steve AI",
+          "url": "https://support.steve.ai/en/articles/8295575-can-i-use-ai-generated-videos-from-steve-ai-on-my-website"
+        },
+        {
+          "title": "Do I fully own the videos I create on Steve.AI? | FAQ - Steve AI",
+          "url": "https://support.steve.ai/en/articles/10974727-do-i-fully-own-the-videos-i-create-on-steve-ai"
+        },
+        {
+          "title": "What are the formats in which the project can be downloaded? | FAQ - Steve AI",
+          "url": "https://support.steve.ai/en/articles/8525398-what-are-the-formats-in-which-the-project-can-be-downloaded"
+        },
+        {
+          "title": "How do I download a video on the premium video plan? | FAQ - Steve AI",
+          "url": "https://support.steve.ai/en/articles/11271973-how-do-i-download-a-video-on-the-premium-video-plan"
+        },
+        {
+          "title": "What is the maximum video duration I can create with Steve.AI’s AI video maker? | FAQ - Steve AI",
+          "url": "https://support.steve.ai/en/articles/8524340-what-is-the-maximum-video-duration-i-can-create-with-each-plan"
+        },
+        {
+          "title": "AI Terms - Steve AI",
+          "url": "https://www.steve.ai/ai-terms"
+        },
+        {
+          "title": "Privacy Policy - Steve AI",
+          "url": "https://www.steve.ai/privacy-policy"
+        }
+      ],
+      "fetchedFields": [
+        "logoSources",
+        "mainLimitations",
+        "policy.commercialUse",
+        "policy.exportLimits",
+        "policy.refundCancellation",
+        "policy.usageRights",
+        "policy.watermark",
+        "securityApiEnterprise.api",
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedFields": [],
+      "mergedRecordCount": 14
+    },
+    "synthesys-io": {
+      "toolName": "Synthesys",
+      "pages": [
+        {
+          "title": "Synthesys.io",
+          "url": "https://synthesys.io/"
+        },
+        {
+          "title": "Our Features | Synthesys.io",
+          "url": "https://synthesys.io/features/"
+        },
+        {
+          "title": "Text-to-speech API: Automate your voiceovers | Synthesys.io",
+          "url": "https://synthesys.io/text-to-speech-api/"
+        },
+        {
+          "title": "Terms and Conditions | Synthesys.io",
+          "url": "https://synthesys.io/ai-terms/"
+        },
+        {
+          "title": "Privacy Policy | Synthesys.io",
+          "url": "https://synthesys.io/ai-privacy-policy/"
+        },
+        {
+          "title": "Refund Policy | Synthesys.io",
+          "url": "https://synthesys.io/ai-refund-policy/"
+        }
+      ],
+      "fetchedFields": [
+        "logoSources",
+        "policy.commercialUse",
+        "policy.refundCancellation",
+        "policy.usageRights",
+        "securityApiEnterprise.api",
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedFields": [
+        "policy.watermark",
+        "policy.exportLimits",
+        "mainLimitations"
+      ],
+      "mergedRecordCount": 8
+    },
+    "d-id": {
+      "toolName": "D-ID",
+      "pages": [
+        {
+          "title": "Quickstart | D-ID Docs",
+          "url": "https://docs.d-id.com/docs/quickstart"
+        },
+        {
+          "title": "Instant Avatar Quickstart | D-ID Docs",
+          "url": "https://docs.d-id.com/docs/v3-instant-avatar-quickstart"
+        },
+        {
+          "title": "D-ID Privacy Policy",
+          "url": "https://www.d-id.com/privacy-policy/"
+        },
+        {
+          "title": "Is there an API that I can use to create Agents? – D-ID Help Center",
+          "url": "https://help.d-id.com/hc/en-us/articles/31262544439697-Is-there-an-API-that-I-can-use-to-create-Agents"
+        }
+      ],
+      "fetchedFields": [
+        "policy.usageRights",
+        "securityApiEnterprise.api",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedFields": [],
+      "mergedRecordCount": 4
+    },
+    "colossyan": {
+      "toolName": "Colossyan",
+      "pages": [
+        {
+          "title": "Security and Compliance — Colossyan",
+          "url": "https://www.colossyan.com/security/"
+        },
+        {
+          "title": "Colossyan API",
+          "url": "https://www.colossyan.com/api"
+        },
+        {
+          "title": "Colossyan API Docs - Authentication",
+          "url": "https://docs.colossyan.com/basics/editor"
+        },
+        {
+          "title": "Colossyan Privacy Policy",
+          "url": "https://www.colossyan.com/privacy"
+        }
+      ],
+      "fetchedFields": [
+        "securityApiEnterprise.api",
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security"
+      ],
+      "unresolvedFields": [
+        "policy.commercialUse"
+      ],
+      "mergedRecordCount": 5
+    },
+    "descript": {
+      "toolName": "Descript",
+      "pages": [
+        {
+          "title": "Enterprise plan – Descript Help",
+          "url": "https://help.descript.com/hc/en-us/articles/10255865751181-Enterprise-plan"
+        },
+        {
+          "title": "Security & Data Protection | Descript",
+          "url": "https://www.descript.com/security"
+        },
+        {
+          "title": "Account data and privacy – Descript Help",
+          "url": "https://help.descript.com/hc/en-us/articles/10255866490125-Account-data-and-privacy"
+        }
+      ],
+      "fetchedFields": [
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security"
+      ],
+      "unresolvedFields": [
+        "policy.commercialUse"
+      ],
+      "mergedRecordCount": 4
+    },
+    "heygen": {
+      "toolName": "HeyGen",
+      "pages": [
+        {
+          "title": "HeyGen Trust & Safety",
+          "url": "https://www.heygen.com/trust-and-safety"
+        },
+        {
+          "title": "HeyGen Moderation Policy",
+          "url": "https://www.heygen.com/moderation-policy"
+        },
+        {
+          "title": "Refund Process and Policy | HeyGen Help Center",
+          "url": "https://help.heygen.com/en/articles/8304807-refund-process-and-policy"
+        },
+        {
+          "title": "Streaming API Overview | HeyGen Docs",
+          "url": "https://docs.heygen.com/docs/streaming-api"
+        },
+        {
+          "title": "HeyGen Trust, Safety & Content Moderation",
+          "url": "https://help.heygen.com/en/collections/3984458-trust-safety-content-moderation"
+        }
+      ],
+      "fetchedFields": [
+        "policy.refundCancellation",
+        "policy.usageRights",
+        "securityApiEnterprise.api",
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security"
+      ],
+      "unresolvedFields": [
+        "policy.commercialUse"
+      ],
+      "mergedRecordCount": 6
+    },
+    "runwayml-com": {
+      "toolName": "Runway",
+      "pages": [
+        {
+          "title": "Data Security & Privacy | Runway AI",
+          "url": "https://runwayml.com/data-security"
+        },
+        {
+          "title": "Enterprise Features – Runway",
+          "url": "https://help.runwayml.com/hc/en-us/articles/48625698573075-Enterprise-Features"
+        },
+        {
+          "title": "Understanding Runway’s security and privacy standards – Runway",
+          "url": "https://help.runwayml.com/hc/en-us/articles/24300377879827-Understanding-Runway-s-security-and-privacy-standards"
+        }
+      ],
+      "fetchedFields": [
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security"
+      ],
+      "unresolvedFields": [
+        "policy.commercialUse",
+        "policy.usageRights"
+      ],
+      "mergedRecordCount": 3
+    },
+    "veed-io": {
+      "toolName": "VEED.io",
+      "pages": [
+        {
+          "title": "VEED Enterprise",
+          "url": "https://www.veed.io/enterprise"
+        },
+        {
+          "title": "VEED Security",
+          "url": "https://www.veed.io/security"
+        },
+        {
+          "title": "Lip Sync API - VEED.IO",
+          "url": "https://www.veed.io/tools/lip-sync-api"
+        },
+        {
+          "title": "VEED Fabric 1.0 API",
+          "url": "https://www.veed.io/ai/fabric-1-0-api?ref_type=adv"
+        },
+        {
+          "title": "Privacy | VEED",
+          "url": "https://www.veed.io/privacy"
+        }
+      ],
+      "fetchedFields": [
+        "securityApiEnterprise.api",
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedFields": [],
+      "mergedRecordCount": 6
+    },
+    "flexclip": {
+      "toolName": "FlexClip",
+      "pages": [
+        {
+          "title": "Commercial Use Regulations | FlexClip Help Center",
+          "url": "https://help.flexclip.com/en/articles/7266809-commercial-use-regulations"
+        },
+        {
+          "title": "Why is my video watermarked? | FlexClip Help Center",
+          "url": "https://help.flexclip.com/en/articles/7213375-why-is-my-video-watermarked"
+        },
+        {
+          "title": "Terms of Use - FlexClip",
+          "url": "https://www.flexclip.com/terms.html"
+        }
+      ],
+      "fetchedFields": [
+        "policy.commercialUse",
+        "policy.usageRights",
+        "policy.watermark"
+      ],
+      "unresolvedFields": [],
+      "mergedRecordCount": 4
+    },
+    "invideo-io": {
+      "toolName": "InVideo",
+      "pages": [
+        {
+          "title": "Where can I check my current usage? | InVideo Help",
+          "url": "https://help.invideo.io/en/articles/9382129-where-can-i-check-my-current-usage"
+        },
+        {
+          "title": "What does export visibility mean? | InVideo Help",
+          "url": "https://help.invideo.io/en/articles/9382156-what-does-export-visibility-mean"
+        },
+        {
+          "title": "Terms and Conditions - InVideo",
+          "url": "https://invideo.io/terms-and-conditions/"
+        },
+        {
+          "title": "Privacy Policy - InVideo",
+          "url": "https://invideo.io/privacy-policy/"
+        }
+      ],
+      "fetchedFields": [
+        "mainLimitations",
+        "policy.exportLimits",
+        "securityApiEnterprise.api",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedFields": [
+        "policy.commercialUse",
+        "policy.usageRights"
+      ],
+      "mergedRecordCount": 4
+    },
+    "opus-pro": {
+      "toolName": "Opus Pro",
+      "pages": [
+        {
+          "title": "Export to XML - OpusClip",
+          "url": "https://www.opus.pro/export-to-xml"
+        },
+        {
+          "title": "Does OpusClip use my data to train AI models? - Opus Clip",
+          "url": "https://help.opus.pro/docs/article/opusclip-data-training"
+        },
+        {
+          "title": "Opus Clip | Trust Center",
+          "url": "https://trust.opus.pro/subprocessors"
+        },
+        {
+          "title": "What are your Terms of Service? - Opus Clip",
+          "url": "https://help.opus.pro/docs/article/terms-of-service"
+        },
+        {
+          "title": "What is your Privacy Policy? - Opus Clip",
+          "url": "https://help.opus.pro/docs/article/privacy-policy"
+        }
+      ],
+      "fetchedFields": [
+        "policy.exportLimits",
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedFields": [],
+      "mergedRecordCount": 5
+    },
+    "aistudios-com": {
+      "toolName": "AI Studios",
+      "pages": [
+        {
+          "title": "AI Dubbing - AI Studios",
+          "url": "https://www.aistudios.com/features/ai-dubbing"
+        },
+        {
+          "title": "Text to Video - AI Studios",
+          "url": "https://www.aistudios.com/features/text-to-video"
+        },
+        {
+          "title": "AI Studios Pricing",
+          "url": "https://www.aistudios.com/pricing"
+        },
+        {
+          "title": "Auto Captions - AI Studios",
+          "url": "https://www.aistudios.com/features/auto-captions"
+        }
+      ],
+      "fetchedFields": [
+        "policy.commercialUse",
+        "policy.exportLimits",
+        "securityApiEnterprise.enterprise",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedFields": [
+        "policy.watermark"
+      ],
+      "mergedRecordCount": 5
+    },
+    "synthesia": {
+      "toolName": "Synthesia",
+      "pages": [
+        {
+          "title": "Security Practices | Synthesia",
+          "url": "https://www.synthesia.io/legal/security-practices"
+        },
+        {
+          "title": "Synthesia Features",
+          "url": "https://www.synthesia.io/features"
+        },
+        {
+          "title": "How do I remove the Synthesia Watermark? | Synthesia Help",
+          "url": "https://help.synthesia.io/en/articles/9564635-how-do-i-remove-the-synthesia-watermark"
+        },
+        {
+          "title": "Platform Integrity | Synthesia Help",
+          "url": "https://help.synthesia.io/en/articles/8330564-platform-integrity"
+        }
+      ],
+      "fetchedFields": [
+        "policy.commercialUse",
+        "policy.usageRights",
+        "policy.watermark",
+        "securityApiEnterprise.enterprise",
+        "securityApiEnterprise.security",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedFields": [],
+      "mergedRecordCount": 6
+    },
+    "fliki-ai": {
+      "toolName": "Fliki",
+      "pages": [
+        {
+          "title": "Features - Fliki",
+          "url": "https://fliki.ai/features"
+        }
+      ],
+      "fetchedFields": [
+        "workflowFeatureDocs"
+      ],
+      "unresolvedFields": [],
+      "mergedRecordCount": 1
+    },
+    "lumen5": {
+      "toolName": "Lumen5",
+      "pages": [
+        {
+          "title": "What is Lumen5? | Lumen5 Knowledge Base",
+          "url": "https://help.lumen5.com/en/article/what-is-lumen5-liun7a/"
+        },
+        {
+          "title": "How does Lumen5 work? | Lumen5 Knowledge Base",
+          "url": "https://help.lumen5.com/en/article/how-does-lumen5-work-112fo9k/"
+        },
+        {
+          "title": "Can I monetize my videos or create them for my clients? | Lumen5 Knowledge Base",
+          "url": "https://help.lumen5.com/en/article/can-i-monetize-my-videos-or-create-them-for-my-clients-jwdt3l/"
+        },
+        {
+          "title": "Why are there watermarks on my video? | Lumen5 Knowledge Base",
+          "url": "https://help.lumen5.com/en/article/why-are-there-watermarks-on-my-video-1jrrc9y/"
+        },
+        {
+          "title": "Uploading your logo as a watermark | Lumen5 Knowledge Base",
+          "url": "https://help.lumen5.com/en/article/uploading-your-logo-as-a-watermark-vntfoy/"
+        }
+      ],
+      "fetchedFields": [
+        "policy.commercialUse",
+        "policy.usageRights",
+        "policy.watermark",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedFields": [],
+      "mergedRecordCount": 4
+    },
+    "zebracat-ai": {
+      "toolName": "Zebracat",
+      "pages": [
+        {
+          "title": "Zebracat",
+          "url": "https://www.zebracat.ai/"
+        },
+        {
+          "title": "Zebracat Pricing",
+          "url": "https://www.zebracat.ai/pricing"
+        }
+      ],
+      "fetchedFields": [
+        "mainLimitations",
+        "policy.commercialUse",
+        "policy.exportLimits",
+        "policy.refundCancellation",
+        "policy.watermark",
+        "workflowFeatureDocs"
+      ],
+      "unresolvedFields": [],
+      "mergedRecordCount": 6
+    }
+  }
+}

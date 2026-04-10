@@ -380,11 +380,13 @@ export function normalizeEvidence(raw: RawEvidence, slug: string): EvidenceNorma
   // 1. nuggets array (fliki, heygen standard)
   // 2. hardFacts array (heygen)
   // 3. pageEvidence array (zebracat)
-  const rawNuggets = raw.nuggets || raw.hardFacts
-    ? convertHardFactsToNuggets(raw.hardFacts || [])
-    : raw.pageEvidence
-      ? convertPageEvidenceToNuggets(raw.pageEvidence)
-      : [];
+  const rawNuggets = Array.isArray(raw.nuggets)
+    ? raw.nuggets
+    : Array.isArray(raw.hardFacts)
+      ? convertHardFactsToNuggets(raw.hardFacts)
+      : Array.isArray(raw.pageEvidence)
+        ? convertPageEvidenceToNuggets(raw.pageEvidence)
+        : [];
 
   // Support sources from both standard format and zebracat linkIndex
   const rawSources = raw.sources || {};
