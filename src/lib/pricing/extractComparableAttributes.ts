@@ -604,6 +604,87 @@ function extractDimension(
   }
 }
 
+function isMeaningfulComparableValue(value: string | null | undefined): value is string {
+  if (!value) return false;
+
+  const normalized = value.toLowerCase().trim();
+  return (
+    normalized !== '' &&
+    normalized !== '—' &&
+    normalized !== 'see plan details' &&
+    normalized !== 'paid'
+  );
+}
+
+function joinComparableParts(parts: Array<string | null>): string | null {
+  const uniqueParts = Array.from(
+    new Set(parts.filter((part): part is string => isMeaningfulComparableValue(part)))
+  );
+
+  if (uniqueParts.length === 0) return null;
+  return uniqueParts.join(' / ');
+}
+
+function extractFormalTableValue(
+  plan: PricingPlan,
+  texts: string[],
+  rowKey: string,
+  toolKeyFacts?: string[]
+): string {
+  switch (rowKey) {
+    case 'price':
+      return normalizePlanPrice(plan, 'monthly');
+
+    case 'watermark':
+      return deriveWatermarkStatus(plan, toolKeyFacts);
+
+    case 'plan_allowance':
+      return (
+        extractDimension(plan.name, texts, 'quota_videos') ||
+        extractDimension(plan.name, texts, 'minutes') ||
+        extractDimension(plan.name, texts, 'credits') ||
+        extractDimension(plan.name, texts, 'exports') ||
+        ''
+      );
+
+    case 'voice_language':
+      return (
+        joinComparableParts([
+          extractDimension(plan.name, texts, 'voices'),
+          extractDimension(plan.name, texts, 'languages'),
+        ]) || ''
+      );
+
+    case 'team_admin':
+      return (
+        joinComparableParts([
+          extractDimension(plan.name, texts, 'seats'),
+          extractDimension(plan.name, texts, 'workspace_collab'),
+        ]) || ''
+      );
+
+    case 'security_admin':
+      return (
+        joinComparableParts([
+          extractDimension(plan.name, texts, 'sso_saml'),
+          extractDimension(plan.name, texts, 'security_features'),
+        ]) || ''
+      );
+
+    case 'integrations_api':
+      return (
+        joinComparableParts([
+          extractDimension(plan.name, texts, 'integrations'),
+          extractDimension(plan.name, texts, 'api_access'),
+          extractDimension(plan.name, texts, 'scorm_lms'),
+        ]) || ''
+      );
+
+    default:
+      return extractDimension(plan.name, texts, rowKey) || '';
+  }
+}
+
 /**
  * Get price display text for a plan
  */
@@ -790,45 +871,25 @@ export function extractComparableAttributes(
   billing: 'monthly' | 'yearly' = 'monthly',
   toolKeyFacts?: string[]
 ): ComparableAttribute[] {
-  // Dimension definitions with labels and keys
+  // Canonical pricing cards are the primary source now, so formal table rows
+  // should map to stable buyer-facing questions instead of legacy comparison-table semantics.
   const dimensionDefs: Array<{ key: string; label: string; decisionWeight: number }> = [
-    { key: 'price', label: 'Price', decisionWeight: 10 },
+    { key: 'price', label: 'Price', decisionWeight: 12 },
+    { key: 'plan_allowance', label: 'Plan allowance', decisionWeight: 10 },
+    { key: 'export_quality', label: 'Output quality', decisionWeight: 9 },
+    { key: 'max_duration', label: 'Video length', decisionWeight: 9 },
     { key: 'watermark', label: 'Watermark', decisionWeight: 8 },
-    { key: 'export_quality', label: 'Export quality', decisionWeight: 8 },
-    { key: 'max_duration', label: 'Max duration', decisionWeight: 8 },
-    { key: 'quota_videos', label: 'Videos per month', decisionWeight: 7 },
-    { key: 'minutes', label: 'Video minutes', decisionWeight: 7 },
-    { key: 'languages', label: 'Languages', decisionWeight: 6 },
-    { key: 'credits', label: 'Credits', decisionWeight: 8 },
-    { key: 'seats', label: 'Seats', decisionWeight: 6 },
-    { key: 'storage', label: 'Storage', decisionWeight: 5 },
-    { key: 'seats_storage', label: 'Seats / Storage', decisionWeight: 6 },
-    { key: 'exports', label: 'Exports', decisionWeight: 7 },
-    { key: 'voice_cloning', label: 'Voice cloning', decisionWeight: 6 },
-    { key: 'sso_saml', label: 'SSO / SAML', decisionWeight: 5 },
-    { key: 'scorm_lms', label: 'SCORM / LMS', decisionWeight: 5 },
-    { key: 'integrations', label: 'Integrations', decisionWeight: 4 },
-    { key: 'workspace_collab', label: 'Workspace collaboration', decisionWeight: 5 },
-    { key: 'security_features', label: 'Security features', decisionWeight: 5 },
+    { key: 'avatars_clones', label: 'Avatars / clones', decisionWeight: 8 },
+    { key: 'voice_language', label: 'Voices / languages', decisionWeight: 7 },
+    { key: 'voice_cloning', label: 'Voice cloning', decisionWeight: 7 },
+    { key: 'team_admin', label: 'Seats / workspace', decisionWeight: 6 },
+    { key: 'security_admin', label: 'Admin / security', decisionWeight: 6 },
+    { key: 'integrations_api', label: 'Integrations / API', decisionWeight: 5 },
+    { key: 'processing_speed', label: 'Processing speed', decisionWeight: 5 },
     { key: 'stock_assets', label: 'Stock / Assets', decisionWeight: 4 },
-    { key: 'avatars_clones', label: 'Avatars / Clones', decisionWeight: 4 },
-    { key: 'generative_video', label: 'Generative video', decisionWeight: 5 },
-    { key: 'processing_speed', label: 'Processing speed', decisionWeight: 4 },
-    { key: 'voices', label: 'Voices', decisionWeight: 5 },
-    { key: 'scene_limits', label: 'Scene limits', decisionWeight: 5 },
-    { key: 'support', label: 'Support', decisionWeight: 4 },
-    { key: 'teams_security', label: 'Teams / Security', decisionWeight: 5 },
-    { key: 'branding', label: 'Branding', decisionWeight: 3 },
-    { key: 'api_access', label: 'API access', decisionWeight: 4 },
-    { key: 'ai_images', label: 'AI images', decisionWeight: 3 },
-    { key: 'media_library', label: 'Media library', decisionWeight: 3 },
-    { key: 'billing', label: 'Billing', decisionWeight: 3 },
     { key: 'subtitles', label: 'Subtitles', decisionWeight: 5 },
-    { key: 'tts', label: 'Text-to-speech', decisionWeight: 4 },
-    { key: 'upload_limit', label: 'Upload limit', decisionWeight: 4 },
-    { key: 'ai_generation', label: 'AI generation', decisionWeight: 5 },
-    { key: 'templates', label: 'Templates / Brand kit', decisionWeight: 3 },
-    { key: 'included_paid', label: 'Included (paid)', decisionWeight: 3 },
+    { key: 'templates', label: 'Templates / brand kit', decisionWeight: 4 },
+    { key: 'support', label: 'Support', decisionWeight: 3 },
   ];
   
   // Create plan ID map
@@ -845,16 +906,15 @@ export function extractComparableAttributes(
     
     for (const plan of plans) {
       const planId = planIdMap.get(plan)!;
-      
-      if (dim.key === 'price') {
-        valuesByPlanId[planId] = normalizePlanPrice(plan, billing);
-      } else if (dim.key === 'watermark') {
-        valuesByPlanId[planId] = deriveWatermarkStatus(plan, toolKeyFacts);
-      } else {
-        const texts = collectPlanText(plan);
-        const value = extractDimension(planId, texts, dim.key);
-        valuesByPlanId[planId] = value || '';
-      }
+      const texts = collectPlanText(plan);
+      const value =
+        dim.key === 'price'
+          ? normalizePlanPrice(plan, billing)
+          : dim.key === 'watermark'
+          ? deriveWatermarkStatus(plan, toolKeyFacts)
+          : extractFormalTableValue(plan, texts, dim.key, toolKeyFacts);
+
+      valuesByPlanId[planId] = value || '';
     }
     
     // Calculate coverage (how many plans have non-empty values)
@@ -887,266 +947,90 @@ export function selectAttributesForDisplay(
   maxRows: number = 12,
   aggressiveMode: boolean = false
 ): ComparableAttribute[] {
-  // Always include price
   const priceAttr = attributes.find(a => a.key === 'price');
+  const normalize = (value: string): string => value.toLowerCase().trim().replace(/\s+/g, ' ');
   const otherAttrs = attributes.filter(a => a.key !== 'price');
-  
-  // Decision weights (from dimensionDefs)
-  const decisionWeights: Record<string, number> = {
-    watermark: 8,
-    export_quality: 8,
-    max_duration: 8,
-    quota_videos: 7,
-    minutes: 7,
-    languages: 6,
-    credits: 8,
-    seats: 6,
-    storage: 5,
-    seats_storage: 6,
-    exports: 7,
-    voice_cloning: 6,
-    sso_saml: 5,
-    scorm_lms: 5,
-    integrations: 4,
-    workspace_collab: 5,
-    security_features: 5,
-    stock_assets: 4,
-    avatars_clones: 4,
-    generative_video: 5,
-    processing_speed: 4,
-    voices: 5,
-    scene_limits: 5,
-    support: 4,
-    teams_security: 5,
-    branding: 3,
-    api_access: 4,
-    ai_images: 3,
-    media_library: 3,
-    billing: 3,
-    subtitles: 5,
-    tts: 4,
-    upload_limit: 4,
-    ai_generation: 5,
-    templates: 3,
-    included_paid: 3,
-  };
-  
-  // Normalize function for comparing values
-  const normalize = (value: string): string => {
-    return value.toLowerCase().trim().replace(/\s+/g, ' ');
-  };
-  
-  // Score each attribute
-  const scored = otherAttrs.map(attr => {
-    const decisionWeight = decisionWeights[attr.key] || 1;
-    const totalPlans: number = Object.keys(attr.valuesByPlanId).length;
-    
-    // Coverage: how many plans have a value
-    const coverage = attr.coverage / totalPlans;
-    
-    // Variance: how many distinct values (normalized, excluding empty/fallback)
-    const distinctValues = new Set(
-      Object.values(attr.valuesByPlanId)
-        .filter(v => v && v !== '' && v !== '—' && v !== 'See plan details')
-        .map(normalize)
-    );
-    const distinct = distinctValues.size;
-    
-    // Information score: coverage * distinct (higher is better)
-    const infoScore = coverage * distinct;
-    
-    // Total score: priority first, then info score
-    const totalScore = decisionWeight * 100 + infoScore * 10;
-    
-    return {
-      ...attr,
-      score: totalScore,
-      coverage,
-      distinct,
-      infoScore,
-    } as ComparableAttribute & { score: number; coverage: number; distinct: number; infoScore: number };
-  });
-  
-  // Core decision dimensions (always include even if coverage is 0, to ensure they appear)
-  const coreDecisionKeys = ['watermark', 'export_quality', 'max_duration'];
-  let coreDecisionAttrs: Array<ComparableAttribute & { score: number; coverage: number; distinct: number; infoScore: number }> = 
-    scored.filter(attr => coreDecisionKeys.includes(attr.key));
-  
-  // Ensure core decision attributes exist even if they have no coverage
-  for (const key of coreDecisionKeys) {
-    if (!coreDecisionAttrs.some(a => a.key === key)) {
-      // Find the attribute from otherAttrs and score it
-      const existingAttr = otherAttrs.find(a => a.key === key);
-      if (existingAttr) {
-        // Score it (even if coverage is 0)
-        const decisionWeight = decisionWeights[existingAttr.key] || 1;
-        const totalPlans: number = Object.keys(existingAttr.valuesByPlanId).length;
-        const coverage = totalPlans > 0 ? existingAttr.coverage / totalPlans : 0;
-        const distinctValues = new Set(
-          Object.values(existingAttr.valuesByPlanId)
-            .filter(v => v && v !== '' && v !== '—' && v !== 'See plan details')
-            .map(normalize)
-        );
-        const distinct = distinctValues.size;
-        const infoScore = coverage * distinct;
-        const totalScore = decisionWeight * 100 + infoScore * 10;
-        
-        const scoredAttr: ComparableAttribute & { score: number; coverage: number; distinct: number; infoScore: number } = {
-          ...existingAttr,
-          score: totalScore,
-          coverage,
-          distinct,
-          infoScore,
-        };
-        
-        coreDecisionAttrs.push(scoredAttr);
-      }
-    }
-  }
-  
-  // Round 1: Select attributes with good coverage and variance
-  // In aggressive mode: use coverage >= 0.3 (30%) instead of 0.5 (50%)
-  const coverageThreshold = aggressiveMode ? 0.3 : 0.5;
-  const round1Filtered = scored.filter(attr => {
-    // Core decision dimensions are already included
-    if (coreDecisionKeys.includes(attr.key)) return false;
-    
-    // Good coverage and variance
-    if (attr.coverage >= coverageThreshold && (attr as any).distinct >= 2) {
-      return true;
-    }
-    
-    return false;
-  });
-  
-  // Round 2: Strong selling points (even with lower coverage)
-  const strongSellingPoints = [
-    'sso_saml', 'scorm_lms', 'integrations', 'workspace_collab', 
-    'security_features', 'voice_cloning', 'avatars_clones', 
-    'generative_video', 'stock_assets', 'languages', 'seats', 
-    'processing_speed', 'voices', 'scene_limits', 'support', 
-    'teams_security', 'api_access', 'branding', 'ai_images', 'media_library',
-    'subtitles', 'tts', 'upload_limit', 'ai_generation', 'templates'
+
+  const priorityOrder = [
+    'plan_allowance',
+    'export_quality',
+    'max_duration',
+    'watermark',
+    'avatars_clones',
+    'voice_language',
+    'voice_cloning',
+    'team_admin',
+    'security_admin',
+    'integrations_api',
+    'processing_speed',
+    'stock_assets',
+    'subtitles',
+    'templates',
+    'support',
   ];
-  const round2Filtered = scored.filter(attr => {
-    // Skip if already included
-    if (coreDecisionKeys.includes(attr.key)) return false;
-    if (round1Filtered.some(a => a.key === attr.key)) return false;
-    
-    // Strong selling points: coverage >= 1 (at least one plan has it)
-    if (strongSellingPoints.includes(attr.key) && attr.coverage >= 1) {
-      return true;
+
+  const fallbackOrder: string[] = [];
+
+  const byKey = new Map(otherAttrs.map((attr) => [attr.key, attr]));
+
+  const shouldRender = (attr: ComparableAttribute): boolean => {
+    const values = Object.values(attr.valuesByPlanId);
+    const meaningfulValues = values.filter((value) => isMeaningfulComparableValue(value));
+    if (meaningfulValues.length < 2) {
+      return aggressiveMode && meaningfulValues.length >= 1;
     }
-    
-    return false;
-  });
-  
-  // Combine Round 1 and Round 2
-  const filtered = [...round1Filtered, ...round2Filtered];
-  
-  // Sort filtered by score descending
-  filtered.sort((a, b) => (b as any).score - (a as any).score);
-  
-  // Combine core decision + filtered, then remove duplicates
-  const combined = [...coreDecisionAttrs, ...filtered];
-  const uniqueCombined = combined.filter((attr, idx, self) => 
-    idx === self.findIndex(a => a.key === attr.key)
-  );
-  
-  // Sort combined by priority (core decision first, then by score)
-  uniqueCombined.sort((a, b) => {
-    const aIsCore = coreDecisionKeys.includes(a.key);
-    const bIsCore = coreDecisionKeys.includes(b.key);
-    if (aIsCore && !bIsCore) return -1;
-    if (!aIsCore && bIsCore) return 1;
-    return (b as any).score - (a as any).score;
-  });
-  
-  // Fallback Round 3: if we still have less than minRows, relax further
-  const currentCount = uniqueCombined.length;
-  if (currentCount < minRows - 1) {
-    // In aggressive mode: use even more relaxed rules
-    const minNonEmptyCells = aggressiveMode ? 1 : 2;
-    const minDecisionWeight = aggressiveMode ? 3 : 4;
-    
-    // Allow coverage >= 1 AND distinct >= 1, but must have at least N non-empty cells
-    const relaxed = scored.filter(attr => {
-      if (coreDecisionKeys.includes(attr.key)) return false; // Already included
-      if (uniqueCombined.some(c => c.key === attr.key)) return false; // Already included
-      
-      // Count non-empty cells (excluding "—" and empty strings)
-      const nonEmptyCount = Object.values(attr.valuesByPlanId).filter(v => 
-        v && v !== '' && v !== '—' && v !== 'See plan details'
-      ).length;
-      
-      // Relaxed rule: coverage >= 1, distinct >= 1, and at least N non-empty cells
-      if (attr.coverage >= 1 && (attr as any).distinct >= 1 && nonEmptyCount >= minNonEmptyCells) {
-        // Prefer attributes with higher decision weight
-        const weight = decisionWeights[attr.key] || 1;
-        return weight >= minDecisionWeight;
-      }
-      
-      // In aggressive mode: also allow attributes with coverage >= 1 even if distinct is 0 (all same value)
-      if (aggressiveMode && attr.coverage >= 1 && nonEmptyCount >= 1) {
-        const weight = decisionWeights[attr.key] || 1;
-        // Only for strong selling points or important dimensions
-        if (weight >= 4 || strongSellingPoints.includes(attr.key)) {
-          return true;
-        }
-      }
-      
-      return false;
-    });
-    
-    // Dynamic fallback: Extract high-value sentences from plan text if still insufficient
-    if (aggressiveMode && uniqueCombined.length + relaxed.length < minRows - 1) {
-      // Get all plans from attributes (they all have the same plan set)
-      const allPlans = attributes.length > 0 ? 
-        Object.keys(attributes[0].valuesByPlanId).map(planId => {
-          // Find plan by ID (we need to get plans from the extractComparableAttributes call)
-          // This is a fallback, so we'll create synthetic attributes from text
-          return null;
-        }).filter(Boolean) : [];
-      
-      // This will be handled by the caller if needed - for now, just use relaxed rules
-    }
-    
-    // Sort relaxed by decision weight and infoScore
-    relaxed.sort((a, b) => {
-      const weightA = decisionWeights[a.key] || 1;
-      const weightB = decisionWeights[b.key] || 1;
-      if (weightA !== weightB) return weightB - weightA;
-      return (b as any).infoScore - (a as any).infoScore;
-    });
-    
-    // Merge with uniqueCombined, avoiding duplicates
-    const existingKeys = new Set(uniqueCombined.map(a => a.key));
-    const additional = relaxed.filter(a => !existingKeys.has(a.key));
-    uniqueCombined.push(...additional);
-    
-    // Re-sort after adding relaxed attributes
-    uniqueCombined.sort((a, b) => {
-      const aIsCore = coreDecisionKeys.includes(a.key);
-      const bIsCore = coreDecisionKeys.includes(b.key);
-      if (aIsCore && !bIsCore) return -1;
-      if (!aIsCore && bIsCore) return 1;
-      const priorityA = decisionWeights[a.key] || 1;
-      const priorityB = decisionWeights[b.key] || 1;
-      if (priorityA !== priorityB) return priorityB - priorityA;
-      return (b as any).infoScore - (a as any).infoScore;
-    });
+
+    const distinctMeaningfulValues = new Set(meaningfulValues.map(normalize));
+    const hasTieredCoverage = meaningfulValues.length < values.length;
+
+    return distinctMeaningfulValues.size >= 2 || hasTieredCoverage;
+  };
+
+  const selected: ComparableAttribute[] = [];
+  const selectedKeys = new Set<string>();
+
+  const takeIfRenderable = (key: string) => {
+    const attr = byKey.get(key);
+    if (!attr || selectedKeys.has(key) || !shouldRender(attr)) return;
+    selected.push(attr);
+    selectedKeys.add(key);
+  };
+
+  priorityOrder.forEach(takeIfRenderable);
+
+  if (selected.length < minRows - 1) {
+    fallbackOrder.forEach(takeIfRenderable);
   }
-  
-  // Take top N (maxRows - 1 for price, but ensure at least minRows - 1)
-  const targetRows = Math.max(minRows - 1, Math.min(maxRows - 1, uniqueCombined.length));
-  const selected = uniqueCombined.slice(0, targetRows);
-  
-  // Combine: price first, then selected
+
+  if (selected.length < minRows - 1) {
+    otherAttrs
+      .filter((attr) => !selectedKeys.has(attr.key))
+      .filter(shouldRender)
+      .sort((a, b) => {
+        if (b.coverage !== a.coverage) return b.coverage - a.coverage;
+
+        const aDistinct = new Set(
+          Object.values(a.valuesByPlanId)
+            .filter((value): value is string => isMeaningfulComparableValue(value))
+            .map(normalize)
+        ).size;
+        const bDistinct = new Set(
+          Object.values(b.valuesByPlanId)
+            .filter((value): value is string => isMeaningfulComparableValue(value))
+            .map(normalize)
+        ).size;
+
+        return bDistinct - aDistinct;
+      })
+      .forEach((attr) => {
+        if (selected.length >= maxRows - 1) return;
+        selected.push(attr);
+        selectedKeys.add(attr.key);
+      });
+  }
+
   const result: ComparableAttribute[] = [];
-  if (priceAttr) {
-    result.push(priceAttr);
-  }
-  result.push(...selected);
-  
+  if (priceAttr) result.push(priceAttr);
+  result.push(...selected.slice(0, maxRows - 1));
   return result;
 }

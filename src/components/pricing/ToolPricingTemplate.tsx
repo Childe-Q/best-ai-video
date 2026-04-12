@@ -6,13 +6,12 @@ import PricingSnapshot from './PricingSnapshot';
 import PricingUsageExplainer from './PricingUsageExplainer';
 import BillingToggle from './BillingToggle';
 import PricingCardsGrid from '@/components/PricingCardsGrid';
-import PlansComparedTable from './PlansComparedTable';
 import PricingDetailsSection from './PricingDetailsSection';
 import VerdictSection from './VerdictSection';
-import PricingFitGuide from './PricingFitGuide';
 import DisclosureSection from '@/components/DisclosureSection';
 import DisclosurePopover from '@/components/DisclosurePopover';
 import CommonPaidFeatures from './CommonPaidFeatures';
+import PricingEssentials from './PricingEssentials';
 import { generatePricingSnapshot } from '@/lib/generatePricingSnapshot';
 import { filterPaidPlans } from '@/lib/pricing/filterPaidPlans';
 import { deriveRecommendations } from '@/lib/pricing/deriveRecommendations';
@@ -49,12 +48,7 @@ interface ToolPricingTemplateProps {
     title: string;
     text: string;
   };
-  editorialGuide?: {
-    planFit: string;
-    upgradeTrigger: string;
-    whoOverpays: string;
-  };
-  
+
   // Tool data for content derivation
   toolData?: {
     key_facts?: string[];
@@ -107,7 +101,6 @@ export default function ToolPricingTemplate({
   creditUsage,
   planPicker,
   verdict,
-  editorialGuide,
   toolData,
   usageNotes,
   usageGroups,
@@ -688,8 +681,6 @@ export default function ToolPricingTemplate({
             toolName={toolName}
           />
 
-          {editorialGuide ? <PricingFitGuide {...editorialGuide} /> : null}
-
           {/* 3. Billing Toggle */}
           {hasYearlyPricing && (
             <BillingToggle 
@@ -729,21 +720,17 @@ export default function ToolPricingTemplate({
 
           {pricingDetails && <PricingDetailsSection detailSection={pricingDetails} />}
 
-          {/* 5. Plans Compared Table (New) */}
+          {/* 5. Lightweight pricing section */}
           {pricingPlans.length > 0 && (
-            <PlansComparedTable 
-              plans={pricingPlans} 
+            <PricingEssentials
+              pricingPlans={pricingPlans}
+              startingPrice={startingPrice}
+              hasFreeTrial={hasFreeTrial}
               toolName={toolName}
               toolSlug={toolSlug}
               toolData={toolData}
               snapshotPlans={snapshotPlans}
-              billing={billing}
             />
-          )}
-
-          {/* Elegant Spacing */}
-          {pricingPlans.length > 0 && (
-            <div className="mt-16"></div>
           )}
 
           {/* 6. Verdict / Recommendation */}

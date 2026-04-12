@@ -144,6 +144,10 @@ export type Tool = {
         footageMatch?: string; // e.g., "8/10 clips were relevant" or "[NEED_TEST]"
         subtitleAccuracy?: string; // e.g., "100% accurate" or "[NEED_TEST]"
         verdict?: string; // e.g., "Ideally suited for [User Type], but expect to spend [Time] minutes refining"
+        checklist?: Array<{
+          label: string;
+          value: string;
+        }>;
       };
       useCases?: Array<{
         title: string;
@@ -172,6 +176,7 @@ export type Tool = {
         title: string; // May contain {price} placeholder
         text: string;
       };
+      limits?: string[] | null;
     };
     features?: {
       keyFeatures?: string[]; // Already exists in tool.features, but can override
@@ -211,6 +216,16 @@ export type Tool = {
       howToVerify: string; // Instructions for verification
       suggestedQuery?: string; // Google search query suggestion
     }>;
+    related?: {
+      comparisons?: Array<{
+        slug: string;
+        title: string;
+      }>;
+      alternatives?: {
+        slug: string;
+        title: string;
+      };
+    };
   };
 };
 

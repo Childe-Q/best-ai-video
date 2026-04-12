@@ -1,16 +1,12 @@
 import { redirect } from 'next/navigation';
-import toolsData from '@/data/tools.json';
-import { Tool } from '@/types/tool';
-
-const tools: Tool[] = toolsData as Tool[];
+import { getToolBySlug } from '@/lib/toolData';
 
 export async function GET(
   request: Request,
   { params }: { params: Promise<{ slug: string }> }
 ) {
   const { slug } = await params;
-  
-  const tool = tools.find((t) => t.slug === slug);
+  const tool = getToolBySlug(slug)?.tool;
 
   if (tool && tool.affiliate_link) {
     redirect(tool.affiliate_link);
@@ -18,4 +14,3 @@ export async function GET(
     redirect('/');
   }
 }
-

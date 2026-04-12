@@ -289,18 +289,22 @@ const PLAN_CONTROL_PATTERNS = [/\bper seat\b/i, /\bseat\b/i, /\bshared across th
 
 function loadSiteReadyFile(slug: ProductizedPricingSlug): SiteReadyPricingFile | null {
   try {
-    const informationPath = path.join(
-      process.cwd(),
-      '..',
-      'information',
-      'data',
-      'pricing-site-ready',
-      SITE_READY_FILE_BY_SLUG[slug],
-    );
-    if (!fs.existsSync(informationPath)) {
-      return null;
+    const fileName = SITE_READY_FILE_BY_SLUG[slug];
+    const candidatePaths = [
+      path.join(process.cwd(), 'data', 'pricing-site-ready', fileName),
+      path.join(process.cwd(), 'information', 'data', 'pricing-site-ready', fileName),
+      path.join(process.cwd(), '..', 'information', 'data', 'pricing-site-ready', fileName),
+    ];
+
+    for (const candidatePath of candidatePaths) {
+      if (!fs.existsSync(candidatePath)) {
+        continue;
+      }
+
+      return JSON.parse(fs.readFileSync(candidatePath, 'utf-8')) as SiteReadyPricingFile;
     }
-    return JSON.parse(fs.readFileSync(informationPath, 'utf-8')) as SiteReadyPricingFile;
+
+    return null;
   } catch {
     return null;
   }

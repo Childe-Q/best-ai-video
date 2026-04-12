@@ -46,9 +46,19 @@ export function readEvidence(slug: string): EvidenceNormalized | null {
     return null;
   }
 
-  // Validate basic structure - support nuggets, hardFacts, and pageEvidence
-  if (!rawData || (!rawData.nuggets && !rawData.hardFacts && !rawData.pageEvidence)) {
-    console.warn(`[evidence] Invalid structure for ${slug}: missing nuggets/hardFacts/pageEvidence array`);
+  // Validate basic structure - support nuggets, hardFacts, pageEvidence, and nonPriceEvidenceImport.
+  const hasRecognizedPayload = Boolean(
+    rawData &&
+    (
+      rawData.nuggets ||
+      rawData.hardFacts ||
+      rawData.pageEvidence ||
+      rawData.nonPriceEvidenceImport?.safeWriteback
+    )
+  );
+
+  if (!hasRecognizedPayload) {
+    console.warn(`[evidence] Invalid structure for ${slug}: missing nuggets/hardFacts/pageEvidence/nonPriceEvidenceImport payload`);
     return null;
   }
 
@@ -73,13 +83,7 @@ export function getEvidenceSources(slug: string): string[] {
   const evidence = readEvidence(slug);
   if (!evidence) return [];
 
-  const sources = new Set<string>();
-  evidence.nuggets.forEach(nugget => {
-    if (nugget.sourceUrl) {
-      sources.add(nugget.sourceUrl);
-    }
-  });
-  return Array.from(sources);
+  return evidence.sourceUrls;
 }
 
 /**

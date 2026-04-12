@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getTool } from '@/lib/getTool';
+import { getAllTools, getToolBySlug } from '@/lib/toolData';
 import AlternativesLongformTemplate from '@/components/alternatives/longform/AlternativesLongformTemplate';
 import {
   buildToolAlternativesLongformData,
@@ -7,14 +7,13 @@ import {
 } from '@/lib/alternatives/buildLongformData';
 
 export async function generateStaticParams() {
-  const { getAllTools } = await import('@/lib/getTool');
   const tools = getAllTools();
   return tools.map((tool) => ({ slug: tool.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const tool = getTool(slug);
+  const tool = getToolBySlug(slug)?.tool;
 
   if (!tool) return {};
 
@@ -38,7 +37,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function AlternativesPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const tool = getTool(slug);
+  const tool = getToolBySlug(slug)?.tool;
 
   if (!tool) {
     notFound();

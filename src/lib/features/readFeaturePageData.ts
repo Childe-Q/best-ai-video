@@ -2,7 +2,7 @@ import '@/lib/optionalServerOnly';
 
 import fs from 'fs';
 import path from 'path';
-import toolsData from '@/data/tools.json';
+import { getAllTools } from '@/lib/toolData';
 import {
   FeatureFaqItem,
   FeaturePageData,
@@ -36,7 +36,7 @@ const NORMALIZED_VALIDATION_SLUGS = new Set([
   'content-repurposing-ai-tools',
   'professional-ai-video-tools',
 ]);
-const TOOL_BY_SLUG = new Map((toolsData as Tool[]).map((tool) => [tool.slug, tool] as const));
+const TOOL_BY_SLUG = new Map(getAllTools().map((tool) => [tool.slug, tool] as const));
 
 function isNonEmptyString(value: unknown): value is string {
   return typeof value === 'string' && value.trim().length > 0;

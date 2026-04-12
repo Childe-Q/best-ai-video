@@ -1,9 +1,9 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getTool, getYouTubeVideoId, extractDetailedReview } from '@/lib/getTool';
+import { getYouTubeVideoId, extractDetailedReview } from '@/lib/getTool';
+import { getAllTools, getToolBySlug } from '@/lib/toolData';
 import { getSEOCurrentYear } from '@/lib/utils';
-import { loadToolContent } from '@/lib/loadToolContent';
-import { getRelatedComparisons, getAlternativesLink } from '@/lib/getRelatedLinks';
+import { getRelatedComparisons, getAlternativesLink, getMostRelevantWorkflowLink } from '@/lib/getRelatedLinks';
 import TldrBlock from '@/components/tool/TldrBlock';
 import MiniTestBlock from '@/components/tool/MiniTestBlock';
 import UseCaseCards from '@/components/tool/UseCaseCards';
@@ -13,7 +13,6 @@ import EditorialSummary from '@/components/tool/EditorialSummary';
 // import FeaturesList from '@/components/tool/FeaturesList';
 import EvidenceNotes from '@/components/tool/EvidenceNotes';
 import EvidenceNuggets from '@/components/tool/EvidenceNuggets';
-import { ToolContent } from '@/types/toolContent';
 import { buildSoftwareApplicationJsonLd } from '@/lib/jsonLd';
 import { getPageReadiness } from '@/lib/readiness';
 
@@ -48,27 +47,17 @@ const editorialSummaries: Record<
   },
 };
 
-function hasProsConsContent(content: unknown): content is Pick<ToolContent, 'pros' | 'cons'> {
-  if (!content || typeof content !== 'object') {
-    return false;
-  }
-
-  return 'pros' in content || 'cons' in content;
-}
-
 export async function generateStaticParams() {
-  const { getAllTools } = await import('@/lib/getTool');
   const tools = getAllTools();
   return tools.map((tool) => ({ slug: tool.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const tool = getTool(slug);
+  const tool = getToolBySlug(slug)?.tool;
   if (!tool) return {};
 
   const seoYear = getSEOCurrentYear();
-  const { getAllTools } = await import('@/lib/getTool');
   const tools = getAllTools();
 
   return {
@@ -82,13 +71,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function OverviewPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const tool = getTool(slug);
+  const toolEntry = getToolBySlug(slug);
+  const tool = toolEntry?.tool;
 
   if (!tool) notFound();
 
-  // Load content JSON (preferred) or fallback to tool.content
-  const contentJson = loadToolContent(slug);
-  const content = contentJson || tool.content;
+  const content = tool.content;
+  const miniTest = toolEntry?.miniTest;
 
   // Extract video ID from video_url
   const videoId = tool.video_url ? getYouTubeVideoId(tool.video_url) : null;
@@ -99,12 +88,12 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
   // Get related links
   const relatedComparisons = getRelatedComparisons(slug);
   const alternativesLink = await getAlternativesLink(slug);
+  const workflowLink = getMostRelevantWorkflowLink(slug);
   const [featuresReadiness, reviewsReadiness] = await Promise.all([
     getPageReadiness('toolFeatures', slug),
     getPageReadiness('toolReviews', slug),
   ]);
   const editorialSummary = editorialSummaries[slug];
-  const contentProsCons = hasProsConsContent(content) ? content : undefined;
 
   return (
     <>
@@ -151,32 +140,42 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
           {editorialSummary ? <EditorialSummary {...editorialSummary} /> : null}
 
           <div className="rounded-2xl border border-slate-200 bg-white p-6">
-            <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Use-case hub</p>
-            <h2 className="mt-2 text-xl font-bold text-gray-900">Still choosing by workflow, not just by product?</h2>
+            <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Workflow handoff</p>
+            <h2 className="mt-2 text-xl font-bold text-gray-900">Still choosing the workflow before the product?</h2>
             <p className="mt-3 max-w-3xl text-sm leading-7 text-gray-600">
-              Browse the feature hub to compare the routes first: presenter-led video, text-to-video, repurposing,
-              social publishing, or team buying. It is the fastest way to decide whether this tool is even in the right
-              category before you compare it against nearby options.
+              {workflowLink
+                ? `${tool.name} only makes sense once the job is clear. If you are still deciding the route first, step back to ${workflowLink.title} before you compare it against nearby tools.`
+                : 'Browse the feature hub to compare the routes first: presenter-led video, text-to-video, repurposing, social publishing, or team buying. It is the fastest way to decide whether this tool is even in the right category before you compare it against nearby options.'}
             </p>
-            <Link
-              href="/features"
-              className="mt-4 inline-flex items-center text-sm font-bold text-indigo-600 hover:text-indigo-700"
-            >
-              Browse AI video tools by workflow
-              <span className="ml-2">→</span>
-            </Link>
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <Link
+                href={workflowLink?.href ?? '/features'}
+                className="inline-flex items-center rounded-full bg-slate-900 px-4 py-2 text-sm font-bold !text-[#FFFFFF] transition-colors hover:bg-slate-800 hover:!text-[#FFFFFF] active:bg-slate-950 active:!text-[#FFFFFF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
+              >
+                {workflowLink ? `Back to ${workflowLink.title}` : 'Browse AI video tools by workflow'}
+                <span className="ml-2">→</span>
+              </Link>
+              {workflowLink && (
+                <Link
+                  href="/features"
+                  className="inline-flex items-center rounded-full px-1 text-sm font-semibold !text-[#111111] transition-colors hover:opacity-80 active:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#111111] focus-visible:ring-offset-2"
+                >
+                  Browse all workflow pages
+                </Link>
+              )}
+            </div>
           </div>
 
           {/* Mini Test Section */}
-          {content?.overview?.miniTest && (
+          {miniTest && (
             <div id={videoId ? undefined : 'mini-test'}>
               <MiniTestBlock
-                prompt={content.overview.miniTest.prompt}
-                generationTime={content.overview.miniTest.generationTime}
-                footageMatch={content.overview.miniTest.footageMatch}
-                subtitleAccuracy={content.overview.miniTest.subtitleAccuracy}
-                verdict={content.overview.miniTest.verdict}
-                checklist={'checklist' in content.overview.miniTest ? content.overview.miniTest.checklist : undefined}
+                prompt={miniTest.prompt}
+                generationTime={miniTest.generationTime}
+                footageMatch={miniTest.footageMatch}
+                subtitleAccuracy={miniTest.subtitleAccuracy}
+                verdict={miniTest.verdict}
+                checklist={miniTest.checklist}
               />
             </div>
           )}
@@ -218,8 +217,8 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
 
           {/* Pros & Cons */}
           <ProsCons
-            pros={contentProsCons?.pros ?? tool.pros ?? []}
-            cons={contentProsCons?.cons ?? tool.cons ?? []}
+            pros={tool.pros ?? []}
+            cons={tool.cons ?? []}
           />
 
           {/* Evidence Nuggets - Verified facts from official pages */}
@@ -278,33 +277,48 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
           {/* Related Comparisons & Alternatives */}
           {(relatedComparisons.length > 0 || alternativesLink) && (
             <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Related Comparisons & Alternatives</h2>
-              <div className="space-y-5">
+              <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Next step</p>
+              <h2 className="mt-2 text-2xl font-bold text-gray-900">What should you compare next?</h2>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-gray-600">
+                Use a pairwise compare page when your shortlist is already narrow. Use the alternatives page when you
+                still need a wider replacement set around {tool.name}.
+              </p>
+              <div className="mt-6 grid gap-4 md:grid-cols-2">
                 {relatedComparisons.length > 0 && (
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">Comparisons</h3>
-                    <ul className="space-y-2">
-                      {relatedComparisons.map((comp) => (
-                        <li key={comp.slug}>
-                          <Link
-                            href={`/vs/${comp.slug}`}
-                            className="text-base text-indigo-600 hover:text-indigo-700 font-medium leading-[1.65]"
-                          >
-                            {comp.title} →
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  relatedComparisons.map((comp) => (
+                    <Link
+                      key={comp.slug}
+                      href={`/vs/${comp.slug}`}
+                      className="group rounded-xl border border-slate-200 bg-slate-50 p-5 transition-all hover:border-indigo-300 hover:bg-indigo-50"
+                    >
+                      <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Pairwise compare</p>
+                      <h3 className="mt-2 text-lg font-bold text-slate-900 group-hover:text-indigo-700">
+                        {comp.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-6 text-slate-600">
+                        Start here if these are the two tools left on the shortlist and you need a tighter decision page.
+                      </p>
+                      <span className="mt-4 inline-flex items-center text-sm font-semibold text-indigo-600 group-hover:text-indigo-700">
+                        Compare this pair
+                        <span className="ml-2">→</span>
+                      </span>
+                    </Link>
+                  ))
                 )}
                 {alternativesLink && (
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">Alternatives</h3>
+                  <div className="rounded-xl border border-slate-200 bg-white p-5">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Wider shortlist</p>
+                    <h3 className="mt-2 text-lg font-bold text-slate-900">Need broader replacements than a single compare?</h3>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">
+                      Step into the dedicated {tool.name} alternatives page to review replacements by pricing, workflow
+                      fit, and trade-offs.
+                    </p>
                     <Link
                       href={alternativesLink.slug}
-                      className="text-base text-indigo-600 hover:text-indigo-700 font-medium leading-[1.65]"
+                      className="mt-4 inline-flex items-center text-sm font-semibold text-indigo-600 hover:text-indigo-700"
                     >
-                      {alternativesLink.title} →
+                      Open the alternatives shortlist
+                      <span className="ml-2">→</span>
                     </Link>
                   </div>
                 )}

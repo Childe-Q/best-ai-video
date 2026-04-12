@@ -39,6 +39,12 @@ Typical outputs support:
 - pricing validation
 - downstream pricing-card or pricing-page work
 
+For `/tool/[slug]/pricing` specifically:
+
+- override-backed pricing inputs should be treated as the primary plan-table source
+- root `src/data/pricing/*.json` records are legacy fallback inputs when a page has not been switched to an override-backed pricing source yet
+- formal table rows should be derived from the canonical plan content itself, not from legacy `comparison_table` row semantics
+
 ## Default Write Surface
 
 Choose one pricing layer before editing:
@@ -64,4 +70,3 @@ When a pricing task arrives:
 1. decide whether it is raw, normalized, audit, or review work
 2. read only that subline plus the nearest evidence inputs
 3. write to the narrowest pricing layer that actually owns the problem
-

@@ -1,6 +1,5 @@
 import { MetadataRoute } from 'next';
-import toolsData from '@/data/tools.json';
-import { Tool } from '@/types/tool';
+import { getAllTools } from '@/lib/toolData';
 import { getFeaturePageSlugs } from '@/lib/features/readFeaturePageData';
 import { listVsSlugs, getVsComparisonWithStatus } from '@/data/vs';
 import {
@@ -11,10 +10,7 @@ import {
 } from '@/lib/alternatives/buildLongformData';
 import { isFeaturePageThin } from '@/lib/features/isFeaturePageThin';
 import { isReviewPageThin } from '@/lib/reviews/isReviewPageThin';
-import { loadToolContent } from '@/lib/loadToolContent';
 import { isComparisonReady } from '@/lib/vsComparisonReady';
-
-const tools: Tool[] = toolsData as Tool[];
 
 // Change this to your actual domain
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://best-ai-video.com';
@@ -22,6 +18,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://best-ai-video.com'
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes: MetadataRoute.Sitemap = [];
   const seen = new Set<string>();
+  const tools = getAllTools();
 
   const pushRoute = (route: MetadataRoute.Sitemap[number]) => {
     if (seen.has(route.url)) {
@@ -127,8 +124,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
 
     // Features Page — only include if page is not thin (matches page-level noindex logic)
-    const featContent = loadToolContent(tool.slug);
-    if (!isFeaturePageThin(tool, featContent)) {
+    if (!isFeaturePageThin(tool, tool.content)) {
       pushRoute({
         url: `${BASE_URL}/tool/${tool.slug}/features`,
         lastModified: new Date(),
@@ -138,7 +134,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
 
     // Reviews Page — only include if page is not thin (matches page-level noindex logic)
-    if (!isReviewPageThin(tool, featContent)) {
+    if (!isReviewPageThin(tool, tool.content)) {
       pushRoute({
         url: `${BASE_URL}/tool/${tool.slug}/reviews`,
         lastModified: new Date(),

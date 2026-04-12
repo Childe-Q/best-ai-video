@@ -33,6 +33,9 @@ type VsAuthoredOverride = {
   decisionCases?: VsComparison['decisionCases'];
   editorialNotes?: VsComparison['editorialNotes'];
   faq?: NonNullable<VsComparison['faq']>;
+  facts?: NonNullable<VsComparison['facts']>;
+  externalValidation?: NonNullable<VsComparison['externalValidation']>;
+  derived?: VsComparison['derived'];
   promptBox?: {
     helperText?: string;
   };
@@ -739,21 +742,111 @@ const AUTHORED_VS_OVERRIDES: Record<string, VsAuthoredOverride> = {
   },
   'runway-vs-sora': {
     decisionSummary:
-      'Choose Runway when the team needs cinematic generation with a heavier studio-style workflow, more post-generation control, and a clearer publish-ready path. Choose Sora when the buying question is flagship model quality, realism, and style range from a generation-first system rather than an editor-heavy creative stack.',
+      'Choose Runway when the team needs cinematic generation inside a heavier studio-style workflow with clearer publish-ready controls, workspace progression, and post-generation tooling. Choose Sora when the buying question is flagship model quality, style range, and direct generation capability with audio-native output rather than a fuller creative-production stack.',
+    facts: [
+      {
+        key: 'pricing-posture',
+        label: 'Pricing posture',
+        a: 'Runway Standard starts at $15/mo with 625 monthly credits, while Free starts with 125 one-time credits.',
+        b: 'Sora is priced like premium model access, with official docs listing $0.10/sec for sora-2 720p and $0.30-$0.50/sec for sora-2-pro output tiers.',
+        sources: {
+          a: ['https://runwayml.com/pricing'],
+          b: ['https://platform.openai.com/docs/pricing'],
+        },
+        note: 'This is one of the clearest real-world buying splits: creator-plan credits versus per-second premium generation pricing.',
+      },
+      {
+        key: 'publish-path',
+        label: 'Publish-ready path',
+        a: 'Runway Free keeps a watermark and excludes Gen-4 video, while paid plans remove the watermark and open the cleaner delivery path.',
+        b: 'Current Sora materials are stronger as a premium generation-access path, and visible watermarks remain part of the default output posture in the local source set.',
+        sources: {
+          a: ['https://runwayml.com/pricing'],
+          b: ['https://openai.com/sora/'],
+        },
+      },
+      {
+        key: 'workflow-center',
+        label: 'Workflow center',
+        a: 'Runway combines generation with inpainting, outpainting, motion tracking, background removal, and other post-generation controls.',
+        b: 'Sora centers on direct generation from prompts or images, with remixing, style changes, scene extension, and generation-native audio features.',
+        sources: {
+          a: ['https://runwayml.com/ai-tools', 'https://help.runwayml.com/'],
+          b: ['https://openai.com/sora/'],
+        },
+      },
+      {
+        key: 'output-style',
+        label: 'Output style edge',
+        a: 'Runway is stronger when the team wants controlled cinematic drafts that continue into a broader creative pipeline.',
+        b: 'Sora is stronger when the team wants flagship realism, style range, hyperreal motion, and built-in sound generation as the main evaluation target.',
+        sources: {
+          a: ['https://runwayml.com/ai-tools'],
+          b: ['https://openai.com/sora/'],
+        },
+      },
+      {
+        key: 'team-security-path',
+        label: 'Team and governance path',
+        a: 'Runway publicly documents private-by-default assets, SOC 2 Type II coverage, encryption, and enterprise controls such as SSO, analytics, and sharing restrictions.',
+        b: 'Current local official Sora materials are much stronger on model and output capability than on a documented team-workspace or enterprise-control story.',
+        sources: {
+          a: [
+            'https://help.runwayml.com/hc/en-us/articles/24300377879827-Understanding-Runway-s-security-and-privacy-standards',
+            'https://runwayml.com/data-security',
+            'https://help.runwayml.com/hc/en-us/articles/48625698573075-Enterprise-Features'
+          ],
+          b: ['https://openai.com/sora/', 'https://platform.openai.com/docs/sora'],
+        },
+        note: 'For procurement-sensitive teams, this often matters more than raw model quality alone.',
+      },
+    ],
+    externalValidation: [
+      {
+        label: 'Official pricing proof',
+        summary:
+          'This pair is unusually concrete on pricing posture: Runway exposes a creator-plan credit ladder, while OpenAI publishes Sora video costs per second and per output tier.',
+        sourceName: 'Runway and OpenAI pricing docs',
+        sourceUrl: 'https://platform.openai.com/docs/pricing',
+        kind: 'official-proof',
+      },
+      {
+        label: 'Official workflow split',
+        summary:
+          'Runway public materials emphasize a broader creative-production stack around generation, while Sora public materials emphasize direct prompt-or-image generation, remixing, and audio-native scene output.',
+        sourceName: 'Product pages',
+        sourceUrl: 'https://openai.com/sora/',
+        kind: 'official-proof',
+      },
+      {
+        label: 'Enterprise-readiness check',
+        summary:
+          'Runway currently has the clearer documented security and enterprise trail in the local source set, which makes the pair less about abstract model quality and more about deployment posture for serious teams.',
+        sourceName: 'Runway security docs',
+        sourceUrl: 'https://runwayml.com/data-security',
+        kind: 'security',
+      },
+    ],
+    derived: {
+      hardDataIntro:
+        'If the verdict still feels close, anchor the decision on these source-backed checks first: pricing posture, watermark path, workflow center, and the public team-governance trail.',
+      externalValidationIntro:
+        'These official proof points are supporting material only. They exist to make the comparison less abstract and more operational.',
+    },
     shortAnswer: {
-      a: 'Runway is the better fit for teams that want cinematic generation plus a more complete creative workflow around the footage.',
-      b: 'Sora is the better fit for teams that mostly want premium model quality, realism, and direct generation capability.',
+      a: 'Runway is the better fit for teams that want cinematic generation plus a fuller creative workflow around the footage, from testing into publish-ready or enterprise usage.',
+      b: 'Sora is the better fit for teams that mostly want flagship model quality, realism, style range, and direct generation capability rather than a studio-style production stack.',
     },
     bestFor: {
       a: [
         'Cinematic concept footage and premium creative drafts',
         'Brand and studio teams that need stronger creative control around generated video',
-        'Workflows where publish-ready generation matters more than a pure model benchmark',
+        'Workflows where publish-ready output and team controls matter more than a pure model benchmark',
       ],
       b: [
         'Flagship text-to-video quality and realism benchmarking',
-        'Teams that want generation-first video with broad style range and strong model-led output',
-        'Prototype creative where model quality matters more than built-in editing depth',
+        'Teams that want generation-first video with broad style range, sound, and strong model-led output',
+        'Prototype creative where model quality matters more than built-in editing depth or team controls',
       ],
     },
     notFor: {
@@ -764,8 +857,8 @@ const AUTHORED_VS_OVERRIDES: Record<string, VsAuthoredOverride> = {
       ],
       b: [
         'Buyers who need a fuller editor-centric workflow around the generated footage',
-        'Teams that want a cleaner publish-ready path instead of default watermarked output',
-        'Workflows where built-in post-production matters more than pure generation quality',
+        'Teams that want a cleaner publish-ready path instead of a premium generation-access posture',
+        'Workflows where built-in post-production, workspace controls, or enterprise readiness matter more than pure generation quality',
       ],
     },
     keyDiffs: [
@@ -775,19 +868,24 @@ const AUTHORED_VS_OVERRIDES: Record<string, VsAuthoredOverride> = {
         b: 'Sora is stronger when the team wants a generation-first system focused on realism, style range, and direct model-driven output.',
       },
       {
-        label: 'Watermark path',
-        a: 'Runway Free keeps a watermark, while paid plans become the practical publish-ready path for cleaner creative delivery.',
-        b: 'Sora applies visible watermarks by default, so the default path is better treated as model access than as a clean publishing lane.',
+        label: 'Pricing and access posture',
+        a: 'Runway behaves more like a creator-plan ladder with credits and a visible upgrade path from Free to Standard, Pro, and Enterprise.',
+        b: 'Sora behaves more like premium generation access, where costs are published per second and rise with higher output tiers.',
       },
       {
-        label: 'Workflow weight',
-        a: 'Runway is heavier and more studio-like, which helps when the team wants stronger creative control.',
-        b: 'Sora is less editor-centric and behaves more like premium generation infrastructure than like a full creative suite.',
+        label: 'Publish-ready path',
+        a: 'Runway Free keeps a watermark and excludes higher-end video, while paid plans become the practical clean-delivery path.',
+        b: 'Sora is better treated as premium model access first, not as the clearest out-of-the-box publishing lane in the current source set.',
       },
       {
-        label: 'Commercial-use posture',
-        a: 'Runway is easier to position for commercial creative use, especially once the team is already operating inside a paid publish-ready workflow.',
-        b: 'Sora is more generation-first, and buyers should keep the watermark and premium-access posture in mind before treating it as a publishing stack.',
+        label: 'Output stack',
+        a: 'Runway pairs generation with post-generation tools such as inpainting, outpainting, motion tracking, and background removal.',
+        b: 'Sora pairs direct generation with prompt-or-image starts, remixing, style shifts, scene extension, and generation-native sound.',
+      },
+      {
+        label: 'Team and governance path',
+        a: 'Runway has the clearer public trail for private-by-default assets, enterprise controls, and deployment-sensitive use.',
+        b: 'Sora has the clearer public trail for flagship model capability, but not the same documented team-workspace or enterprise-control posture in the local dataset.',
       },
       {
         label: 'Best-fit output',
@@ -796,11 +894,31 @@ const AUTHORED_VS_OVERRIDES: Record<string, VsAuthoredOverride> = {
       },
     ],
     matrixRows: [
-      { label: 'Best for', a: 'Cinematic concept footage and stronger creative workflow control', b: 'Flagship model quality and generation-first realism' },
-      { label: 'Watermark path', a: 'Free is watermarked; paid plans are the cleaner publish path', b: 'Visible watermarks are part of the default output path' },
-      { label: 'Workflow weight', a: 'Heavier, more studio-style generation workflow', b: 'More generation-first and less editor-centric' },
-      { label: 'Commercial-use posture', a: 'Easier to position for commercial creative use', b: 'Better treated as premium model access than as a straightforward publishing stack' },
-      { label: 'Best-fit output', a: 'Controlled cinematic drafts and brand creative', b: 'Realistic flagship generation and model benchmarking' },
+      {
+        label: 'Best for',
+        a: 'Cinematic concept footage and stronger creative workflow control',
+        b: 'Flagship model quality and generation-first realism',
+      },
+      {
+        label: 'Output type',
+        a: 'Cinematic concept clips that continue into editing, compositing, and publish-ready finishing',
+        b: 'Generation-first clips with audio-native output, stronger realism, and model-led scene creation',
+      },
+      {
+        label: 'Workflow speed',
+        a: 'Depends on workflow setup',
+        b: 'Fast for short iterations',
+      },
+      {
+        label: 'Templates',
+        a: 'Scene-building workflow with editor-style shot iteration and post-generation controls',
+        b: 'Storyboard-style scene starts with remixing, style shifts, and prompt-led iteration',
+      },
+      {
+        label: 'Pricing starting point',
+        a: '$15/mo',
+        b: '$20/mo',
+      },
     ],
     decisionCases: [
       {
@@ -813,32 +931,32 @@ const AUTHORED_VS_OVERRIDES: Record<string, VsAuthoredOverride> = {
         label: 'Flagship model benchmark',
         keywords: ['realism', 'benchmark', 'model', 'quality', 'prototype'],
         winner: 'b',
-        verdict: 'Sora is the better fit when the buyer mostly wants a flagship text-to-video benchmark for realism, style range, and direct model output.',
+        verdict: 'Sora is the better fit when the buyer mostly wants a flagship text-to-video benchmark for realism, style range, sound, and direct model output.',
       },
       {
         label: 'Publish-ready creative workflow',
         keywords: ['publish', 'workflow', 'edit', 'creative', 'control'],
         winner: 'a',
-        verdict: 'Runway is the stronger choice when the team needs more control around generated footage instead of a purer generation-first experience.',
+        verdict: 'Runway is the stronger choice when the team needs more control, a clearer paid publish path, and a documented team-governance story around generated footage.',
       },
     ],
     editorialNotes: {
       whyPeopleCompareTheseTools:
-        'People compare Runway and Sora because both sit near the top of the cinematic-generation category and both can produce high-end AI video from prompts. The overlap is real, but the workflow posture is not the same.',
+        'People compare Runway and Sora because both sit near the top of the cinematic-generation category and both can produce high-end AI video from prompts. The overlap is real, but the buying posture is not the same.',
       looksSimilarButActuallyDifferent:
-        'Both tools can produce cinematic-looking output. Runway feels more like a studio-style creative environment with a heavier workflow around the footage. Sora feels more like premium generation infrastructure with stronger emphasis on model quality and direct output.',
+        'Both tools can produce cinematic-looking output. Runway feels more like a studio-style creative environment with a heavier workflow around the footage. Sora feels more like premium generation infrastructure with stronger emphasis on model quality, direct output, and flagship model performance.',
       realDecision:
-        'The real decision is whether the team needs a fuller creative workflow around generated video or a more generation-first system centered on flagship model quality.',
+        'The real decision is whether the team needs a fuller creative workflow around generated video or a more generation-first system centered on flagship model quality and audio-native output.',
       hiddenTradeOff:
-        'Runway gives teams more control and a cleaner publish-ready path, but the workflow is heavier and more credit-sensitive. Sora gives teams a stronger flagship model benchmark, but it is less editor-centric and the default output path is not the same as a straightforward publishing workflow.',
+        'Runway gives teams more control, a clearer paid publish-ready path, and a better documented team-governance trail, but the workflow is heavier and more credit-sensitive. Sora gives teams a stronger flagship model benchmark, but it is less editor-centric and behaves more like premium generation access than like a fuller production stack.',
       whoWillRegretTheWrongChoice:
-        'Creative teams regret Sora when they really needed a heavier workflow around the generated footage. Model-benchmark buyers regret Runway when they mostly wanted flagship generation quality and not the extra studio-style workflow.',
+        'Creative and procurement-sensitive teams regret Sora when they really needed a heavier workflow and clearer deployment posture around generated footage. Model-benchmark buyers regret Runway when they mostly wanted flagship generation quality and not the extra studio-style workflow.',
     },
     faq: [
       {
         question: 'Runway vs Sora: which should I choose first?',
         answer:
-          'Choose Runway for cinematic generation plus a stronger creative workflow around the output. Choose Sora when the main buying question is flagship model quality, realism, and generation-first capability.',
+          'Choose Runway for cinematic generation plus a stronger creative workflow, cleaner paid publish path, and clearer team controls. Choose Sora when the main buying question is flagship model quality, realism, sound, and generation-first capability.',
       },
       {
         question: 'What is the practical difference?',
@@ -848,7 +966,12 @@ const AUTHORED_VS_OVERRIDES: Record<string, VsAuthoredOverride> = {
       {
         question: 'What should buyers verify before choosing?',
         answer:
-          'On Runway, verify whether the team can support a heavier creative workflow in exchange for more control. On Sora, verify whether the generation-first posture, visible watermarking, and premium-access model fit the intended use.',
+          'On Runway, verify whether the team can support a heavier credit-sensitive workflow in exchange for more control and a clearer deployment path. On Sora, verify whether the per-second premium pricing, watermark posture, and generation-first workflow fit the intended use.',
+      },
+      {
+        question: 'Which tool is better for serious team deployment?',
+        answer:
+          'Runway is the stronger fit when the team needs a clearer public security and enterprise trail around the generation workflow. Sora is the stronger fit when the team is primarily buying flagship model capability rather than a documented production environment.',
       },
     ],
     promptBox: {
@@ -2347,6 +2470,9 @@ function applyAuthoredVsOverride(base: VsComparison, parsed: ParsedVsSlug): VsCo
     },
     keyDiffs: override.keyDiffs?.length ? override.keyDiffs : base.keyDiffs,
     matrixRows: mergedMatrixRows,
+    ...(override.facts?.length ? { facts: override.facts } : {}),
+    ...(override.externalValidation?.length ? { externalValidation: override.externalValidation } : {}),
+    ...(override.derived ? { derived: override.derived } : {}),
     ...(override.decisionCases?.length ? { decisionCases: override.decisionCases } : {}),
     ...(override.editorialNotes ? { editorialNotes: override.editorialNotes } : {}),
     ...(override.faq?.length ? { faq: override.faq } : {}),
@@ -3005,7 +3131,8 @@ function resolveVsComparison(slug: string, options?: { debug?: boolean }): VsLoa
 
   const authoredOverride = AUTHORED_VS_OVERRIDES[canonicalSlug];
   if (authoredOverride) {
-    const authoredComparison = adaptComparisonFromRaw(authoredOverride, parsed);
+    const authoredBase = buildLegacyComparison(parsed).comparison;
+    const authoredComparison = authoredBase ? applyAuthoredVsOverride(authoredBase, parsed) : null;
     if (authoredComparison) {
       if (debug) {
         logDebug('entry hit', { hit: true, source: 'canonical', normalizedSlug, reason: 'authored override merged onto legacy base' });

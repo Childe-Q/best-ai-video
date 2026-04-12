@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import VsPageTemplate from '@/components/vs/VsPageTemplate';
 import { getCanonicalVsSlug, getVsComparisonWithStatus, listVsSlugs, parseVsSlug } from '@/data/vs';
-import { getTool } from '@/lib/getTool';
+import { getToolBySlug } from '@/lib/toolData';
 import { buildVsFaqJsonLd } from '@/lib/vsPageModel';
 import { getSEOCurrentYear } from '@/lib/utils';
 import { isComparisonReady } from '@/lib/vsComparisonReady';
@@ -22,7 +22,7 @@ function toTitleCase(value: string): string {
 
 function getDisplayToolName(slug?: string): string {
   if (!slug) return 'AI Video Tool';
-  const tool = getTool(slug);
+  const tool = getToolBySlug(slug)?.tool;
   return tool?.name ?? toTitleCase(slug);
 }
 export const dynamicParams = true;

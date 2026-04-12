@@ -31,9 +31,9 @@ const workflowChecks = [
 ];
 
 const broadRouteCallout = {
-  title: 'Still not sure which family fits?',
+  title: 'Still choosing the right lane?',
   body:
-    'Start with the broad shortlist. It separates generation, avatar-led delivery, and faster social-first routes before you go narrower.',
+    'Start with the broad shortlist when the job is still ambiguous. It is the best first stop for separating generation, avatar-led delivery, source-to-video conversion, and faster creator routes before you commit to a narrower page.',
   href: '/features/best-ai-video-generators',
   cta: 'Open the broad shortlist',
 };
@@ -42,6 +42,7 @@ const toolTypeExplainers = [
   {
     kind: 'feature' as const,
     slug: 'text-to-video-ai-tools',
+    group: 'primary' as const,
     label: 'Net-new scenes',
     checkRef: 'Usually follows Check 1',
     title: 'Text to video tools',
@@ -53,6 +54,7 @@ const toolTypeExplainers = [
   {
     kind: 'feature' as const,
     slug: 'ai-avatar-video-generators',
+    group: 'primary' as const,
     label: 'Presenter-led output',
     checkRef: 'Usually follows Check 2',
     title: 'AI avatar tools',
@@ -64,6 +66,7 @@ const toolTypeExplainers = [
   {
     kind: 'feature' as const,
     slug: 'content-repurposing-ai-tools',
+    group: 'primary' as const,
     label: 'Source-to-video conversion',
     checkRef: 'Usually follows Check 3',
     title: 'Video repurposing tools',
@@ -75,6 +78,7 @@ const toolTypeExplainers = [
   {
     kind: 'feature' as const,
     slug: 'ai-video-editors',
+    group: 'specialist' as const,
     label: 'Improve existing footage',
     checkRef: 'Usually follows Check 3',
     title: 'AI video editors',
@@ -82,6 +86,54 @@ const toolTypeExplainers = [
       'Pick this type when you are improving existing clips rather than generating new scenes or converting long-form content into a fresh format.',
     wrongFirstStop:
       'Do not start here if the real bottleneck is creation from scratch or turning articles and webinars into first-pass videos.',
+  },
+];
+
+const quickRoutes = [
+  {
+    title: 'I still do not know the right lane',
+    body:
+      'Start with the broad shortlist first. It is the fastest route when the choice is still between generation, avatars, repurposing, and creator-first drafting. Once the lane is clear, the next stop is usually a focused compare such as Runway vs Sora, HeyGen vs Synthesia, or Descript vs Veed.io.',
+    href: '/features/best-ai-video-generators',
+    cta: 'Start with the broad shortlist',
+  },
+  {
+    title: 'I need a presenter, not cinematic footage',
+    body:
+      'Go straight to avatar tools when the format depends on a visible speaker, repeatable delivery, dubbing, or training-style communication. When avatar fit is clear, the default next compare is usually HeyGen vs Synthesia.',
+    href: '/features/ai-avatar-video-generators',
+    cta: 'Go to avatar tools',
+  },
+  {
+    title: 'I already have blogs, webinars, or podcasts',
+    body:
+      'Go to repurposing first when the source already exists and the real job is clipping, script extraction, summarization, or reformatting. The usual next compare there is InVideo vs Pictory once the route is fixed.',
+    href: '/features/content-repurposing-ai-tools',
+    cta: 'Go to repurposing tools',
+  },
+  {
+    title: 'I already have footage and just need polish',
+    body:
+      'Use editors when the bottleneck is cleanup, speed, subtitles, templating, or getting an existing cut into publishable shape. Once editing is clearly the lane, move toward Descript vs Veed.io instead of reopening the route choice.',
+    href: '/features/ai-video-editors',
+    cta: 'Go to AI video editors',
+  },
+];
+
+const routeGroups = [
+  {
+    key: 'primary' as const,
+    eyebrow: 'Primary routes',
+    title: 'Start with the main workflow families first',
+    body:
+      'Most users should be able to place the job into one of these routes before they compare individual tools.',
+  },
+  {
+    key: 'specialist' as const,
+    eyebrow: 'Specialist routes',
+    title: 'Use narrower routes only when the workflow is already obvious',
+    body:
+      'These pages are stronger second stops once the starting asset and delivery format are already clear.',
   },
 ];
 
@@ -126,12 +178,12 @@ export function generateMetadata(): Metadata {
   return {
     title: `Which Type of AI Video Tool Do You Need? Workflow Guide ${seoYear}`,
     description:
-      'Figure out which type of AI video tool fits your workflow before comparing products. A guide to the main types of AI video tools, including text to video tools, AI avatar tools, video repurposing tools, and editors.',
+      'Use this AI video workflow hub to choose the right route before comparing products. Start with generation, avatars, repurposing, or editing, then move into the strongest feature pages from there.',
     alternates: { canonical: '/features' },
     openGraph: {
       title: `Which Type of AI Video Tool Do You Need? Workflow Guide ${seoYear}`,
       description:
-        'A workflow decision hub that helps you choose the right type of AI video tool before you compare individual products.',
+        'A feature hub that routes users into the right AI video workflow before they compare individual tools.',
       url: '/features',
     },
     robots: { index: true, follow: true },
@@ -161,10 +213,10 @@ export default function FeaturesHubPage() {
             </h1>
 
             <p className="mt-5 max-w-2xl text-base font-medium leading-7 text-gray-600 md:text-lg">
-              Most AI video tools are not solving the same job. Start by choosing the right workflow type first, then compare products inside that lane.
+              Use this page to choose the right workflow lane before you compare products. Most AI video tools are solving different jobs, so the first decision is route selection, not brand selection.
             </p>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-black/52 md:text-[15px]">
-              Text to video, AI avatars, video repurposing, and AI video editors each solve a different workflow.
+              The fastest split is usually this: create net-new scenes, deliver with a presenter, convert existing source material, or polish footage that already exists. The handoff after that should narrow into a feature shortlist first, then a specific compare inside `/vs`.
             </p>
           </div>
         </div>
@@ -182,7 +234,7 @@ export default function FeaturesHubPage() {
               Use this three-part framework first
             </h2>
             <p className="mt-3 max-w-4xl text-sm leading-6 text-black/54 lg:text-[15px]">
-              Choose the workflow family first. Then compare tools inside that lane.
+              These three checks are enough to send most buyers into the right route without reading every feature page in the library.
             </p>
             <div className="mt-4 flex max-w-[52rem] items-start gap-2.5 border-l border-black/8 pl-3 text-[13px] leading-5 text-black/47">
               <span className="mt-0.5 inline-flex shrink-0 rounded-full border border-black/7 bg-[#F7F5EE]/82 px-2 py-0.5 text-[10px] font-black uppercase tracking-[0.14em] text-black/38">
@@ -194,8 +246,8 @@ export default function FeaturesHubPage() {
             </div>
           </div>
 
-          <div className="mt-10 divide-y divide-black/8 border-y border-black/8 md:grid md:grid-cols-3 md:divide-x md:divide-y-0">
-            {workflowChecks.map((item) => (
+            <div className="mt-10 divide-y divide-black/8 border-y border-black/8 md:grid md:grid-cols-3 md:divide-x md:divide-y-0">
+              {workflowChecks.map((item) => (
               <div key={item.title} className="py-6 md:px-6 md:py-7 first:md:pl-0 last:md:pr-0">
                 <p className="text-[11px] font-black uppercase tracking-[0.16em] text-black/35">
                   {item.eyebrow}
@@ -207,6 +259,24 @@ export default function FeaturesHubPage() {
                 </p>
                 <p className="mt-1 text-sm font-bold leading-6 text-gray-900">{item.leadsTo}</p>
               </div>
+              ))}
+            </div>
+
+          <div className="mt-8 grid gap-4 lg:grid-cols-2">
+            {quickRoutes.map((route) => (
+              <Link
+                key={route.href}
+                href={route.href}
+                className="group rounded-[24px] border border-black/8 bg-white px-5 py-5 no-underline transition-colors hover:border-black/16"
+              >
+                <h3 className="text-[15px] font-black leading-6 text-gray-900 transition-colors group-hover:text-black/70">
+                  {route.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-black/52">{route.body}</p>
+                <p className="mt-4 text-[11px] font-black uppercase tracking-[0.16em] text-black/38">
+                  {route.cta} →
+                </p>
+              </Link>
             ))}
           </div>
         </section>
@@ -248,40 +318,58 @@ export default function FeaturesHubPage() {
             </div>
           </div>
 
-          <div className="mt-10 lg:grid lg:grid-cols-2 lg:gap-x-12">
-            {toolTypeExplainers.map((item, index) => (
-              <Link
-                key={item.slug}
-                href={`/features/${item.slug}`}
-                className={`group block py-6 no-underline transition-colors duration-200 hover:text-black/68 ${
-                  index > 0 ? 'border-t border-black/8' : ''
-                } ${index < 2 ? 'lg:border-t-0 lg:pt-0' : ''} ${
-                  index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8'
-                }`}
-              >
-                <div className="flex flex-wrap items-center justify-between gap-3">
-                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-black/35">
-                    {item.label}
-                  </p>
-                  <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-black/28">
-                    {item.checkRef}
-                  </p>
+          <div className="mt-10 space-y-12">
+            {routeGroups.map((group) => {
+              const items = toolTypeExplainers.filter((item) => item.group === group.key);
+
+              return (
+                <div key={group.key}>
+                  <div className="max-w-4xl">
+                    <p className="text-[11px] font-black uppercase tracking-[0.16em] text-black/35">
+                      {group.eyebrow}
+                    </p>
+                    <h3 className="mt-2 text-xl font-black text-gray-900">{group.title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-black/52">{group.body}</p>
+                  </div>
+
+                  <div className="mt-6 lg:grid lg:grid-cols-2 lg:gap-x-12">
+                    {items.map((item, index) => (
+                      <Link
+                        key={item.slug}
+                        href={`/features/${item.slug}`}
+                        className={`group block py-6 no-underline transition-colors duration-200 hover:text-black/68 ${
+                          index > 0 ? 'border-t border-black/8' : ''
+                        } ${index < 2 ? 'lg:border-t-0 lg:pt-0' : ''} ${
+                          index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8'
+                        }`}
+                      >
+                        <div className="flex flex-wrap items-center justify-between gap-3">
+                          <p className="text-[11px] font-black uppercase tracking-[0.16em] text-black/35">
+                            {item.label}
+                          </p>
+                          <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-black/28">
+                            {item.checkRef}
+                          </p>
+                        </div>
+                        <h3 className="mt-3 text-xl font-black text-gray-900 transition-colors duration-200 group-hover:text-black/70">
+                          {item.title}
+                        </h3>
+                        <div className="mt-4 grid gap-2 text-sm leading-6 text-black/52">
+                          <p>
+                            <span className="font-bold text-gray-900">Best when:</span>{' '}
+                            {item.bestWhen}
+                          </p>
+                          <p>
+                            <span className="font-bold text-gray-900">Not for:</span>{' '}
+                            {item.wrongFirstStop}
+                          </p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-                <h3 className="mt-3 text-xl font-black text-gray-900 transition-colors duration-200 group-hover:text-black/70">
-                  {item.title}
-                </h3>
-                <div className="mt-4 grid gap-2 text-sm leading-6 text-black/52">
-                  <p>
-                    <span className="font-bold text-gray-900">Best when:</span>{' '}
-                    {item.bestWhen}
-                  </p>
-                  <p>
-                    <span className="font-bold text-gray-900">Not for:</span>{' '}
-                    {item.wrongFirstStop}
-                  </p>
-                </div>
-              </Link>
-            ))}
+              );
+            })}
           </div>
         </section>
 

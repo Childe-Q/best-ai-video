@@ -1,9 +1,8 @@
 import fs from 'fs';
 import path from 'path';
-import { getAllTools, getTool } from '@/lib/getTool';
+import { getAllTools, getToolBySlug } from '@/lib/toolData';
 import { getCurrentMonthYear, getSEOCurrentYear } from '@/lib/utils';
 import { generateSmartFAQs } from '@/lib/generateSmartFAQs';
-import { loadToolContent } from '@/lib/loadToolContent';
 import { canonicalAlternativesConfigs } from '@/data/alternatives/canonical';
 import { alternativesEvidence, ToolAlternativeEvidence } from '@/data/evidence/alternatives';
 import { mergeCanonicalAndEvidence } from '@/lib/alternatives/mergeCanonicalAndEvidence';
@@ -1570,7 +1569,7 @@ function toEvidenceMap(): Map<string, any> {
 }
 
 async function getToolAlternativesGroups(slug: string): Promise<AlternativeGroupWithEvidence[]> {
-  const tool = getTool(slug);
+  const tool = getToolBySlug(slug)?.tool;
   if (!tool) return [];
 
   const allTools = getAllTools();
@@ -1926,7 +1925,7 @@ function evaluateContentReady(data: {
 }
 
 export async function buildToolAlternativesLongformData(slug: string): Promise<AlternativesTemplateData | null> {
-  const tool = getTool(slug);
+  const tool = getToolBySlug(slug)?.tool;
   if (!tool) return null;
   const arcadeIntersection = slug === 'invideo' ? getArcadeInVideoIntersection() : null;
 
@@ -2173,7 +2172,7 @@ export async function buildToolAlternativesLongformData(slug: string): Promise<A
     .filter((item): item is AlternativesDeepDive => Boolean(item));
   const finalMoreAlternatives = moreAlternatives.filter((item) => !finalDeepDiveKeys.has(uniqueDeepDiveKey(item)));
 
-  const content = loadToolContent(slug);
+  const content = tool.content;
   const rawFaqs = [
     ...(content?.reviews?.faqs || []),
     ...(tool.content?.reviews?.faqs || []),
@@ -2401,7 +2400,7 @@ export function buildTopicAlternativesLongformData(slug: string): AlternativesTe
   const deepDives: AlternativesDeepDive[] = topic.tools.slice(0, 8).map((tool) => {
     const mappedSlug = mapToolNameToSlug(tool.name) || undefined;
     const fallbackInternal = mappedSlug ? `/tool/${mappedSlug}` : '/alternatives';
-    const mappedTool = mappedSlug ? getTool(mappedSlug) : undefined;
+    const mappedTool = mappedSlug ? getToolBySlug(mappedSlug)?.tool : undefined;
     const sourceUrls = uniqueStrings([
       ...tool.sourceUrls.map((item) => cleanText(item) || '').filter(Boolean),
       ...(mappedSlug ? [`/tool/${mappedSlug}/pricing`, `/tool/${mappedSlug}/reviews`] : []),

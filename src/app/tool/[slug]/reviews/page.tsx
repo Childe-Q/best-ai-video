@@ -1,9 +1,8 @@
 import { notFound } from 'next/navigation';
-import { getTool, getAllTools } from '@/lib/getTool';
+import { getAllTools, getToolBySlug } from '@/lib/toolData';
 import { getSEOCurrentYear } from '@/lib/utils';
-import ReviewsPageTemplate, { ReviewsPageData } from '@/components/reviews/ReviewsPageTemplate';
+import ReviewsPageTemplate from '@/components/reviews/ReviewsPageTemplate';
 import { loadReviewsData } from '@/lib/loadReviewsData';
-import { loadToolContent } from '@/lib/loadToolContent';
 import { generateSmartFAQs } from '@/lib/generateSmartFAQs';
 import { buildReviewsData } from '@/lib/reviews/buildReviewsData';
 import { isReviewPageThin } from '@/lib/reviews/isReviewPageThin';
@@ -15,11 +14,12 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const tool = getTool(slug);
+  const toolEntry = getToolBySlug(slug);
+  const tool = toolEntry?.tool;
   if (!tool) return {};
 
   const seoYear = getSEOCurrentYear();
-  const content = loadToolContent(slug);
+  const content = tool.content;
   const thin = isReviewPageThin(tool, content);
 
   return {
@@ -41,7 +41,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ReviewsPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const tool = getTool(slug);
+  const toolEntry = getToolBySlug(slug);
+  const tool = toolEntry?.tool;
 
   if (!tool) notFound();
 
@@ -49,13 +50,12 @@ export default async function ReviewsPage({ params }: { params: Promise<{ slug: 
   const reviewsData = loadReviewsData(slug);
   
   // Priority 2: Fallback to tool.content or tool data
-  const content = loadToolContent(slug);
-  const reviewHighlights = content?.reviews?.reviewHighlights || tool.content?.reviews?.reviewHighlights;
+  const content = tool.content;
+  const reviewHighlights = content.reviews?.reviewHighlights;
   
   // Collect all available FAQs from different sources
   const rawFaqs = [
-    ...(content?.reviews?.faqs || []),
-    ...(tool.content?.reviews?.faqs || []),
+    ...(content.reviews?.faqs || []),
     ...(tool.faqs || [])
   ];
   
@@ -98,7 +98,7 @@ export default async function ReviewsPage({ params }: { params: Promise<{ slug: 
       rawFaqsCount: rawFaqs.length,
       smartFAQsCount: smartFAQs.length,
       toolCons: tool.cons?.length || 0,
-      contentCons: content?.cons?.length || 0,
+      contentCons: tool.cons?.length || 0,
       finalData: {
         userFeedbackSnapshot: pageData.userFeedbackSnapshot,
         commonIssues: pageData.commonIssues,

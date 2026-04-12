@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
-import { getTool, getAllTools } from '@/lib/getTool';
-import { loadToolContent } from '@/lib/loadToolContent';
+import { getAllTools, getToolBySlug } from '@/lib/toolData';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ToolLogo from '@/components/ToolLogo';
 import VerdictCard from '@/components/VerdictCard';
@@ -18,6 +17,7 @@ import { buildBreadcrumbJsonLd } from '@/lib/jsonLd';
 import { getPricingDisplay, getToolPricingSummary } from '@/lib/pricing/display';
 import { getToolCardPricingDisplay } from '@/lib/pricing/cardDisplay';
 import { getPricingAcceptanceResult } from '@/lib/pricing/acceptance';
+import ToolPageHeading from '@/components/tool/ToolPageHeading';
 
 interface ToolLayoutProps {
   children: ReactNode;
@@ -26,7 +26,8 @@ interface ToolLayoutProps {
 
 export default async function ToolLayout({ children, params }: ToolLayoutProps) {
   const { slug } = await params;
-  const tool = getTool(slug);
+  const toolEntry = getToolBySlug(slug);
+  const tool = toolEntry?.tool;
 
   if (!tool) notFound();
 
@@ -51,21 +52,9 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
   );
   const topSummaryPricingText = acceptedPricing?.displayText ?? pricingDisplay.displayText;
 
-  // Load content JSON and merge with tool.content
-  const contentJson = loadToolContent(slug);
-  const mergedContent = contentJson ? {
-    ...tool.content,
-    ...contentJson,
-    reviews: {
-      ...tool.content?.reviews,
-      ...contentJson.reviews,
-      verdict: contentJson.reviews?.verdict || tool.content?.reviews?.verdict,
-    },
-  } : tool.content;
-
   // Get all tools for differentiators calculation
   const allTools = getAllTools();
-  const { core, differentiators } = getCapabilityChips(tool, mergedContent, allTools);
+  const { core, differentiators } = getCapabilityChips(tool, tool.content, allTools);
 
   return (
     <div className="min-h-screen bg-slate-50 text-gray-900 font-sans">
@@ -113,9 +102,7 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
                 {/* Title and Content */}
                 <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                      <h1 className="text-2xl font-bold text-gray-900">
-                        {tool.name}
-                      </h1>
+                      <ToolPageHeading toolName={tool.name} />
                     </div>
 
                     {/* Editorial Score */}
@@ -134,7 +121,7 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
 
                     {/* Double Layer Chips */}
                     <DoubleLayerChips
-                      useCases={getUseCaseChips(tool, mergedContent)}
+                      useCases={getUseCaseChips(tool, tool.content)}
                       coreCapabilities={core}
                       differentiators={differentiators}
                     />
@@ -314,7 +301,7 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
                 bestFor={tool.best_for}
                 startingPrice={pricingSummary.verification === 'verified' ? pricingDisplay.displayText : undefined}
                 embedded={true}
-                verdictData={mergedContent?.reviews?.verdict}
+                verdictData={tool.content?.reviews?.verdict}
               />
             </div>
             {/* Footer CTA (Pinned to bottom) */}

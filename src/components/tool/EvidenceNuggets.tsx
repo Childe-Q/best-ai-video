@@ -7,7 +7,6 @@
 
 import { EvidenceNugget, EvidenceTheme } from '@/data/evidence/schema';
 import { readEvidence } from '@/lib/evidence/readEvidence';
-import Link from 'next/link';
 
 interface EvidenceNuggetsProps {
   slug: string;
@@ -52,12 +51,66 @@ const themeColors: Record<EvidenceTheme, string> = {
   general: 'bg-gray-50 text-gray-700 border-gray-200',
 };
 
-function getThemeFromUrl(url: string): EvidenceTheme {
-  if (url.includes('pricing')) return 'pricing';
-  if (url.includes('feature')) return 'export';
-  if (url.includes('help') || url.includes('guide')) return 'support';
-  if (url.includes('terms') || url.includes('privacy')) return 'licensing';
-  return 'general';
+const displayThemePriority: Partial<Record<EvidenceTheme, number>> = {
+  security: 120,
+  licensing: 115,
+  workflow: 110,
+  integrations: 105,
+  export: 100,
+  usage: 95,
+  team: 90,
+  editing: 85,
+  voice: 80,
+  avatar: 80,
+  models: 75,
+  support: 70,
+  stock: 65,
+  general: 20,
+};
+
+function scoreDisplaySourceType(sourceType: string): number {
+  const normalized = sourceType.toLowerCase();
+
+  if (normalized.startsWith('non_price_')) return 120;
+  if (normalized.includes('privacy') || normalized.includes('terms') || normalized.includes('security')) return 95;
+  if (normalized.includes('docs') || normalized.includes('help')) return 88;
+  if (normalized.includes('pricing')) return 72;
+  if (normalized.includes('home')) return 10;
+
+  return 40;
+}
+
+function scoreDisplayText(text: string): number {
+  let score = 0;
+
+  if (/\d/.test(text)) score += 12;
+  if (/(policy|watermark|commercial|refund|cancel|rights|security|sso|api|workflow|privacy|export|storage|retention)/i.test(text)) {
+    score += 18;
+  }
+  if (/(trusted by|rated|reviews|no credit card required|4m\+|2m\+)/i.test(text)) {
+    score -= 40;
+  }
+
+  return score;
+}
+
+function rankEvidenceNuggetsForDisplay(nuggets: EvidenceNugget[]): EvidenceNugget[] {
+  return [...nuggets].sort((left, right) => {
+    const rightScore =
+      (displayThemePriority[right.theme] ?? 0) +
+      scoreDisplaySourceType(right.sourceType) +
+      scoreDisplayText(right.text);
+    const leftScore =
+      (displayThemePriority[left.theme] ?? 0) +
+      scoreDisplaySourceType(left.sourceType) +
+      scoreDisplayText(left.text);
+
+    if (rightScore !== leftScore) {
+      return rightScore - leftScore;
+    }
+
+    return left.text.localeCompare(right.text);
+  });
 }
 
 export default function EvidenceNuggets({ slug, limit = 6, theme, showSources = true }: EvidenceNuggetsProps) {
@@ -77,6 +130,7 @@ export default function EvidenceNuggets({ slug, limit = 6, theme, showSources = 
 
   // Filter out pricing theme (we have separate pricing page)
   nuggets = nuggets.filter(n => n.theme !== 'pricing');
+  nuggets = rankEvidenceNuggetsForDisplay(nuggets);
 
   // Limit results
   nuggets = nuggets.slice(0, limit);
@@ -88,7 +142,7 @@ export default function EvidenceNuggets({ slug, limit = 6, theme, showSources = 
 
   // Get unique sources
   const sources = showSources
-    ? [...new Set(evidence.nuggets.map(n => n.sourceUrl).filter(Boolean))]
+    ? evidence.sourceUrls
     : [];
 
   return (
@@ -173,6 +227,18 @@ export function EvidenceListCompact({ slug, limit = 3 }: { slug: string; limit?:
   // Filter out pricing and limit
   const nuggets = evidence.nuggets
     .filter(n => n.theme !== 'pricing')
+    .sort((left, right) => {
+      const rightScore =
+        (displayThemePriority[right.theme] ?? 0) +
+        scoreDisplaySourceType(right.sourceType) +
+        scoreDisplayText(right.text);
+      const leftScore =
+        (displayThemePriority[left.theme] ?? 0) +
+        scoreDisplaySourceType(left.sourceType) +
+        scoreDisplayText(left.text);
+
+      return rightScore - leftScore;
+    })
     .slice(0, limit);
 
   if (nuggets.length === 0) {
@@ -201,7 +267,7 @@ export function EvidenceSourcesList({ slug }: { slug: string }) {
     return { sources: [], nuggets: [], metadata: null };
   }
 
-  const sources = [...new Set(evidence.nuggets.map(n => n.sourceUrl).filter(Boolean))];
+  const sources = evidence.sourceUrls;
 
   return {
     sources,

@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getTool, getAllTools } from '@/lib/getTool';
+import { getAllTools, getToolBySlug } from '@/lib/toolData';
 import { getSEOCurrentYear } from '@/lib/utils';
 import ToolFeaturesPageTemplate from '@/components/features/ToolFeaturesPageTemplate';
 import { isFeaturePageThinBySlug } from '@/lib/features/isFeaturePageThin';
@@ -11,7 +11,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const tool = getTool(slug);
+  const tool = getToolBySlug(slug)?.tool;
   if (!tool) return {};
 
   const seoYear = getSEOCurrentYear();
@@ -36,10 +36,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function FeaturesPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const tool = getTool(slug);
+  const tool = getToolBySlug(slug)?.tool;
 
   if (!tool) notFound();
 
   return <ToolFeaturesPageTemplate tool={tool} slug={slug} />;
 }
-

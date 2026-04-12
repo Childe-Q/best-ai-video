@@ -1,14 +1,7 @@
 import { ImageResponse } from 'next/og';
-import toolsData from '@/data/tools.json';
-import { Tool } from '@/types/tool';
+import { getTool } from '@/lib/getTool';
 
 export const runtime = 'edge';
-
-const tools: Tool[] = toolsData as Tool[];
-
-function getTool(slug: string): Tool | undefined {
-  return tools.find((t) => t.slug === slug);
-}
 
 // Helper to format rating
 function formatRating(rating?: number): string {
@@ -205,4 +198,3 @@ export default async function Image({
     }
   );
 }
-

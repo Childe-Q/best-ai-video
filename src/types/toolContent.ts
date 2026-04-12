@@ -76,6 +76,19 @@ export interface ToolContent {
       }>;
       note?: string;
     };
+    creditUsage?: {
+      title: string;
+      bullets: string[];
+    };
+    planPicker?: {
+      title: string;
+      bullets: string[];
+    };
+    verdict?: {
+      title: string;
+      text: string;
+    };
+    limits?: string[] | null;
   };
   
   // Sources

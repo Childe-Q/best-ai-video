@@ -33,7 +33,7 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
             {/* Question Row - Clickable */}
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full flex items-center justify-between py-4 text-left bg-transparent hover:bg-black/5 transition-colors rounded-lg px-2 -mx-2"
+              className="group -mx-2 flex w-full items-center justify-between rounded-lg bg-transparent px-2 py-4 text-left transition-colors hover:bg-black/[0.06] focus-visible:bg-black/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/15 focus-visible:ring-offset-2"
               aria-expanded={isOpen}
             >
               <span className="text-base font-semibold text-gray-900 pr-4 leading-[1.65]">
@@ -41,9 +41,9 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
               </span>
               <div className="flex-shrink-0">
                 {isOpen ? (
-                  <MinusIcon className="w-5 h-5 text-gray-600 transition-transform duration-200" />
+                  <MinusIcon className="h-5 w-5 text-gray-800 transition-transform duration-200" />
                 ) : (
-                  <PlusIcon className="w-5 h-5 text-gray-600 transition-transform duration-200" />
+                  <PlusIcon className="h-5 w-5 text-gray-600 transition-transform duration-200 group-hover:text-gray-900 group-focus-visible:text-gray-900" />
                 )}
               </div>
             </button>
@@ -55,7 +55,7 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
               }`}
             >
               <div className="pb-4 pt-0 px-2">
-                <p className="text-base text-gray-600 leading-[1.65]">
+                <p className="text-base text-gray-700 leading-[1.65]">
                   {faq.answer}
                 </p>
               </div>

@@ -3,44 +3,44 @@
   "slug": "content-repurposing-ai-tools",
   "title": "Best AI Tools for Content Repurposing (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares AI tools that turn existing source material — blog posts, scripts, webinars, podcasts, and long-form recordings — into new video formats. Tools are grouped by conversion workflow: written source to video, or recorded source to short clips. They are compared across the operating details that usually decide the shortlist: watermark removal, export ceilings, credit expiry or quota reset rules, and whether the tool adds shared workspaces or stays a solo repurposing lane.",
+    "oneLiner": "This page is for teams starting with existing content rather than blank-canvas generation. The key split is whether the source is written material that needs scene assembly, or long-form audio/video that needs clipping into shorts. The shortlist usually gets decided by ingestion fit, transcript-editing depth, watermark and export rules, project retention, and whether the paid tier adds durable team reuse instead of just more monthly credits.",
     "boundaries": [
       "Must import existing assets: URLs, long videos, podcasts, or scripts.",
       "Must automate conversion from one format to another (text to video, long video to shorts).",
-      "Excludes basic text-to-video tools that cannot ingest long-form URLs or podcast audio.",
+      "Excludes basic text-to-video tools that cannot ingest long-form URLs, recordings, or podcast-style source material.",
       "Excludes post-production editors where the main workflow is timeline editing, transcript cleanup, caption polishing, or manual footage refinement."
     ],
-    "primaryClassificationRule": "Group by source content type.",
+    "primaryClassificationRule": "Group by the source content the workflow is designed to ingest first.",
     "comparisonAxes": [
-      "pricing and credit limits",
-      "watermark and export policy",
-      "workflow limits and retention",
+      "source fit and ingestion workflow",
+      "watermark and publish-ready export path",
+      "quota, storage, and retention limits",
       "team sharing and reuse controls"
     ]
   },
   "howToChooseSeeds": [
     {
-      "title": "Start with your source format: text or video.",
-      "desc": "If you are converting blog posts and articles, Lumen5 (paste a URL and the AI builds scenes) or Pictory (transcript-based editing) are designed for that. If you are clipping highlights from existing long-form recordings, Opus Clip and Munch are built for that pipeline. These are fundamentally different workflows."
+      "title": "Match the shortlist to the source asset first.",
+      "desc": "If the input is a blog post, article, script, or URL, you need tools built for scene assembly from text. If the input is a webinar, podcast, interview, or livestream recording, you need clipping and reframing workflows instead. These are different operating models, not minor feature variations."
     },
     {
-      "title": "Check transcript editing quality for audio/video sources.",
-      "desc": "For podcast or webinar repurposing, transcript-based editing — where deleting a sentence from the transcript cuts the corresponding video — saves significant time. Pictory is reported to feature this capability."
+      "title": "Decide whether you need assembly or clipping at scale.",
+      "desc": "Written-source tools help turn existing content libraries into narrated scene-based videos. Recorded-source tools help break long-form assets into shorter channel-ready clips. Choose based on where the team is losing time today, not on whichever tool has the loudest AI marketing."
     },
     {
-      "title": "Evaluate stock media libraries for blog-to-video tools.",
-      "desc": "Blog conversion tools rely heavily on B-roll and stock media to illustrate text content. Verify that the platform includes access to high-quality stock libraries (e.g., Storyblocks, Getty) in the plan price, rather than charging separately."
+      "title": "Check clean exports, storage, and credit expiry together.",
+      "desc": "For repurposing workflows, publish-ready value is not only watermark removal. Check whether the plan keeps branded exports, how long projects or credits stay usable, and whether saved assets remain accessible once you move beyond a trial or lighter paid tier."
     },
     {
-      "title": "Check which tier actually gives you clean exports and durable project storage.",
-      "desc": "Some tools keep branding, short retention windows, or expiring credits on free or lighter plans. For example, paid upgrades remove branding on Lumen5 and Opus Clip, while Opus credits and saved-project access still depend on plan and storage tier."
+      "title": "Verify whether the workflow stays solo or becomes reusable for a team.",
+      "desc": "Some repurposing tools stay strongest as solo creator utilities, while others add workspace permissions, saved projects, or team handoff on higher tiers. If multiple people will reuse assets or output templates, the collaboration layer matters early."
     }
   ],
   "groups": [
     {
       "id": "article-and-script-conversion",
       "title": "Written source to video",
-      "rule": "These tools turn written source material — blog posts, articles, scripts, and documents — into video. They typically ingest a URL or pasted text, then assemble scenes with stock media, text animation, and voiceover. They suit teams whose real job is conversion from a content library, not post-production on a finished timeline.",
+      "rule": "Choose this route when the source asset is written content: blog posts, articles, scripts, landing pages, or documents that need to become narrated video. The buying logic here is scene assembly speed, stock-media support, publish-ready branding, and how reusable the workflow becomes for a content team.",
       "toolSlugs": [
         "pictory",
         "lumen5"
@@ -49,7 +49,7 @@
     {
       "id": "long-form-video-clipping",
       "title": "Recorded source to short clips",
-      "rule": "This group covers tools that take existing long-form recordings — podcasts, webinars, live streams, interviews — and automatically turn them into short clips. They suit teams repackaging source material for new channels at scale, not editors who need deeper timeline control over an existing cut.",
+      "rule": "Choose this route when the source is already recorded and the job is extracting, reframing, and publishing short clips across channels. These tools fit teams repackaging webinars, interviews, podcasts, or livestreams at scale rather than doing deep timeline editing on a finished cut.",
       "toolSlugs": [
         "munch",
         "opus-clip"
@@ -60,7 +60,7 @@
     {
       "name": "Pictory",
       "slug": "pictory",
-      "verdictSeed": "Converts scripts, articles, and long-form recordings into platform-ready clips, with transcript-led editing and clearer team-sharing rules than most solo repurposing tools.",
+      "verdictSeed": "Flexible repurposing stack for scripts, articles, and long-form recordings, with transcript-led editing and a clearer bridge from solo creation into reusable team workflows than most lighter repurposing tools.",
       "pricingSeed": "Free trial plus paid plans; larger quotas and cleaner branded exports sit on paid tiers",
       "policySeed": "Free output keeps a watermark, while paid plans are the practical route for branded repurposing and larger monthly export-minute capacity",
       "bestForSeed": "Podcasts, webinars, and long-form script conversion",
@@ -79,7 +79,7 @@
     {
       "name": "Lumen5",
       "slug": "lumen5",
-      "verdictSeed": "Paste a blog URL and the AI builds scenes with stock media and text animations. Paid tiers remove branding, while higher business tiers add workspace permissions and stronger publishing controls.",
+      "verdictSeed": "Fast URL-and-blog-to-video workflow that assembles scenes from written content with stock media and text animation. Paid tiers remove branding, while higher business tiers add workspace permissions and stronger publishing controls.",
       "pricingSeed": "Free Community Plan available; paid tiers remove branding and Starter is the first clear 1080p self-serve lane",
       "policySeed": "Free output keeps Lumen5 branding, while paid plans remove the platform watermark for publishable marketing use",
       "bestForSeed": "Fast blog-to-video conversion for social media",
@@ -125,7 +125,7 @@
     {
       "name": "Opus Clip",
       "slug": "opus-clip",
-      "verdictSeed": "Turns long videos into short-form clips with a virality score, automated captions, and reframing. Paid plans remove branding, while Pro adds cloud-saved projects and team workspace.",
+      "verdictSeed": "Turns long videos into short-form clips with automated reframing, captions, and scoring oriented toward short-form distribution. Paid plans remove branding, while Pro adds saved projects and team workspace.",
       "pricingSeed": "Free trial plus paid plans; Starter is the first paid lane, while Pro adds workspace and storage",
       "policySeed": "Free Trial and Free Plan carry watermark constraints, paid plans remove the watermark, and monthly credits remain valid for 60 days",
       "bestForSeed": "Long-form video to viral shorts",
@@ -158,18 +158,24 @@
       "invideo-vs-pictory"
     ],
     "guideSlugs": [
-      "ai-video-for-youtube"
+      "ai-video-for-youtube",
+      "ai-video-for-social-media"
     ]
   },
   "faqSeeds": [
     {
       "question": "What qualifies a tool for Best AI Tools for Content Repurposing (2026)?",
-      "answerSeed": "Group by source content type. Must have explicit features for importing existing assets (URLs, long videos, podcasts, text). Must automate the conversion of one format to another (e.g., text to video, long video to shorts). Excludes basic text-to-video generators that cannot ingest long-form URLs or podcast audio files.",
+      "answerSeed": "A tool qualifies only if it starts with existing assets such as URLs, scripts, podcasts, webinars, or long videos and automates conversion into another video format. This page excludes blank-canvas generators and post-production editors whose main job is manual timeline cleanup.",
       "sourceToolSlugs": []
     },
     {
       "question": "What should readers compare first on this page?",
-      "answerSeed": "Match Input to Output: If you are starting with text (blogs/articles), you need tools like Lumen5 or Pictory. If starting with long video/audio, look at Opus Clip or Munch. Check Transcript Editing Quality: For audio/video repurposing, ensure the tool offers transcript-based editing where deleting text automatically cuts the corresponding media.",
+      "answerSeed": "Start with source fit: written content that needs scene assembly, or recorded content that needs clipping into shorts. Then compare the publish-ready operating model on each candidate: watermark rules, export path, retention or credit expiry, and whether the plan structure supports reusable team workflows or only solo output.",
+      "sourceToolSlugs": []
+    },
+    {
+      "question": "Which repurposing tools on this page are the most fully specified today?",
+      "answerSeed": "In the current normalized dataset, Pictory, Lumen5, and Opus Clip have the clearest internal review coverage plus clearer watermark, export, or plan-structure notes. Munch remains a lighter-coverage shortlist candidate rather than the most fully specified recommendation on this page.",
       "sourceToolSlugs": []
     },
     {
@@ -182,13 +188,15 @@
       ]
     }
   ],
-  "lastReviewed": "2026-03-22T00:00:00Z",
+  "lastReviewed": "2026-04-11T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/content-repurposing-ai-tools.raw.json",
     "sourceCount": 3,
     "uniqueToolCount": 4,
     "needsManualReview": false,
-    "reviewNotes": []
+    "reviewNotes": [
+      "Manual review tightened the route split, publish-ready comparison framing, and research-transparency language while keeping thinner-source Munch fields unresolved."
+    ]
   }
 }

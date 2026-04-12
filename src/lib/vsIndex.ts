@@ -52,7 +52,7 @@ export const VS_INDEX_INTENT_HELPERS: Record<VsIntent, string> = {
   editor:
     'For post-draft editing decisions. Not the right track when you still need a visible presenter, net-new scene generation, or content repurposing.',
   text:
-    'For net-new video created from prompts, scripts, or narration. Not the right track for editing an existing cut or turning long-form source material into clips.',
+    'For net-new video created from prompts, scripts, or narration. This is also the right track when the buying split is studio workflow versus flagship model capability. Not the right track for editing an existing cut or turning long-form source material into clips.',
   repurpose:
     'For turning existing webinars, podcasts, articles, or recordings into clips. Not the right track for prompt-led generation or presenter-led avatar workflows.',
 };
@@ -67,7 +67,7 @@ export const VS_INDEX_TRACK_GUIDES: Record<VsIntent, { useWhen: string; notFor: 
     notFor: 'Not for avatar delivery, net-new generation, or turning long-form content into clips.',
   },
   text: {
-    useWhen: 'Best for net-new video from prompts, scripts, or narration.',
+    useWhen: 'Best for net-new video from prompts, scripts, or narration, especially when the decision is workflow control versus flagship model quality.',
     notFor: 'Not for avatar-led delivery, editing an existing cut, or repurposing source content.',
   },
   repurpose: {
@@ -105,6 +105,8 @@ const VS_INDEX_DECISION_LINE_OVERRIDES: Record<string, string> = {
     'Pick HeyGen for outreach and spokesperson videos. Pick Synthesia for training, internal comms, and governed rollout.',
   'invideo-vs-pictory':
     'Pick InVideo if the workflow starts from a fresh idea. Pick Pictory if it starts from existing long-form content.',
+  'runway-vs-sora':
+    'Pick Runway for a heavier studio-style workflow and cleaner paid publish path. Pick Sora for flagship generation quality and audio-native model output.',
   'invideo-vs-veed-io':
     'Pick InVideo to reach a first draft faster. Pick Veed.io when the draft exists and needs cleanup or edits.',
   'invideo-vs-zebracat':
@@ -122,6 +124,8 @@ const VS_INDEX_STARTING_POINT_REASONS: Record<string, string> = {
     'Why start here: it exposes the core text-to-video split between narration-led creation and broader visual assembly.',
   'invideo-vs-pictory':
     'Why start here: it is the fastest way to tell whether the job is new-draft creation or repurposing existing long-form content.',
+  'runway-vs-sora':
+    'Why start here: it is the clearest first stop when the text-to-video decision is really studio workflow versus flagship model benchmark.',
 };
 
 // Home-page starting points should be explainable, not editorially arbitrary.
@@ -161,6 +165,12 @@ const VS_INDEX_STARTING_POINT_SIGNALS: Record<string, VsStartingPointSignals> = 
     marketFamiliarity: 4,
     entryPointUsefulness: 5,
     internalLinkPriority: 4,
+  },
+  'runway-vs-sora': {
+    pairIntentClarity: 5,
+    marketFamiliarity: 5,
+    entryPointUsefulness: 5,
+    internalLinkPriority: 5,
   },
   'invideo-vs-zebracat': {
     pairIntentClarity: 4,

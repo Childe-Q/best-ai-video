@@ -11,7 +11,7 @@ import VsExternalProofSection from '@/components/vs/VsExternalProofSection';
 import VsHardDataSection from '@/components/vs/VsHardDataSection';
 import VsScoreChart from '@/components/vs/VsScoreChart';
 import { canonicalizeVsHref, listVsSlugs, parseVsSlug, toCanonicalVsSlug, VsLoadResult } from '@/data/vs';
-import { getAllTools, getTool } from '@/lib/getTool';
+import { getAllTools, getToolBySlug } from '@/lib/toolData';
 import { buildVsPairCopy } from '@/lib/vsPairType';
 import { buildVsPageModel } from '@/lib/vsPageModel';
 import { applyIntentProfileOverride, buildIntentProfile, getKeyDiffLead, getPreferredUseCaseLabels, orderKeyDiffsForIntent } from '@/lib/vsIntent';
@@ -203,7 +203,7 @@ function buildToolMeta(slug: string | undefined, fallbackLabel: string): ToolMet
     };
   }
 
-  const tool = getTool(slug);
+  const tool = getToolBySlug(slug)?.tool;
   return {
     slug,
     name: tool?.name ?? toTitleCase(slug),
@@ -448,13 +448,13 @@ function getFallbackComparisonLinks(currentSlug: string, slugA: string, slugB: s
 }
 
 function buildBestForFallback(slug: string): string[] {
-  const tool = getTool(slug);
+  const tool = getToolBySlug(slug)?.tool;
   const fromTool = dedupe([tool?.best_for ?? '', ...(tool?.pros ?? []).slice(0, 2)]);
   return normalizeStringArray(fromTool, GENERIC_BEST_FOR);
 }
 
 function buildNotForFallback(slug: string): string[] {
-  const tool = getTool(slug);
+  const tool = getToolBySlug(slug)?.tool;
   const fromTool = dedupe([...(tool?.cons ?? []).slice(0, 3)]);
   return normalizeStringArray(fromTool, GENERIC_NOT_FOR);
 }
@@ -622,6 +622,9 @@ function ensureTemplateComparison(base: VsComparison | null, currentSlug: string
       ? { decisionCases: base?.decisionCases?.length ? base.decisionCases : pairCopy?.decisionCases }
       : {}),
     ...(base?.useCases?.length ? { useCases: base.useCases } : {}),
+    ...(base?.facts?.length ? { facts: base.facts } : {}),
+    ...(base?.externalValidation?.length ? { externalValidation: base.externalValidation } : {}),
+    ...(base?.derived ? { derived: base.derived } : {}),
     ...(base?.editorialNotes ? { editorialNotes: base.editorialNotes } : {}),
     verdict: {
       winnerPrice: base?.verdict?.winnerPrice ?? 'a',
@@ -664,7 +667,7 @@ function labelForPath(path: string): string {
 
   if (normalizedPath.startsWith('/tool/')) {
     const [, , slug, subPath] = normalizedPath.split('/');
-    const tool = getTool(slug);
+    const tool = getToolBySlug(slug)?.tool;
     if (subPath === 'alternatives') {
       return `${tool?.name ?? toTitleCase(slug)} Alternatives`;
     }
@@ -675,8 +678,8 @@ function labelForPath(path: string): string {
     const slug = normalizedPath.replace('/vs/', '');
     const parsed = parseVsSlug(slug);
     if (!parsed) return toTitleCase(slug);
-    const toolA = getTool(parsed.slugA);
-    const toolB = getTool(parsed.slugB);
+    const toolA = getToolBySlug(parsed.slugA)?.tool;
+    const toolB = getToolBySlug(parsed.slugB)?.tool;
     return `${toolA?.name ?? toTitleCase(parsed.slugA)} vs ${toolB?.name ?? toTitleCase(parsed.slugB)}`;
   }
 

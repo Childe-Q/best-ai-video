@@ -133,3 +133,17 @@ The safest default is:
 2. find the upstream input
 3. write to the narrowest documented output surface
 
+## Page Consumption Rule
+
+For tool-facing runtime pages, do not reassemble data in each route from `tools.json`, `content/tools/*.json`, and page-local fallbacks.
+
+Use `src/lib/toolData.ts` as the unified read entry for:
+
+- `/tool/[slug]`
+- `/tool/[slug]/pricing`
+- `/tool/[slug]/reviews`
+- `/tool/[slug]/features`
+- `/tool/[slug]/alternatives`
+- VS helpers that need tool identity plus editorial overlays
+
+This keeps `src/data/*` as the write surface while making runtime pages consume one merged tool record instead of multiple ad hoc reads.

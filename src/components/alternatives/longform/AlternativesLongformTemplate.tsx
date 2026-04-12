@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import FAQAccordion from '@/components/FAQAccordion';
 import { AlternativesComparisonRow, AlternativesDeepDive, AlternativesTemplateData } from '@/types/alternativesLongform';
+import { getComparisonLinkBetweenTools } from '@/lib/getRelatedLinks';
 
 interface AlternativesLongformTemplateProps {
   data: AlternativesTemplateData;
@@ -205,6 +206,9 @@ export default function AlternativesLongformTemplate({ data }: AlternativesLongf
     const hasInternalSlug = Boolean(tool.toolSlug);
     const viewPricingHref = hasInternalSlug ? `/tool/${tool.toolSlug}/pricing` : tool.ctaHref;
     const reviewHref = hasInternalSlug ? `/tool/${tool.toolSlug}` : tool.ctaHref;
+    const compareLink = isToolAlternativesPage && tool.toolSlug
+      ? getComparisonLinkBetweenTools(data.slug, tool.toolSlug)
+      : null;
     const secondaryCtaClass = 'inline-flex items-center rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-100 hover:text-slate-900';
 
     return (
@@ -270,6 +274,11 @@ export default function AlternativesLongformTemplate({ data }: AlternativesLongf
           >
             {tool.ctaLabel}
           </Link>
+          {compareLink && (
+            <Link href={compareLink.href} className={secondaryCtaClass}>
+              Compare {baseToolName} vs {tool.toolName}
+            </Link>
+          )}
           <Link href={viewPricingHref} className={secondaryCtaClass}>
             View pricing
           </Link>
@@ -289,7 +298,7 @@ export default function AlternativesLongformTemplate({ data }: AlternativesLongf
       <div className={pageContainerClass}>
         <article className={articleContainerClass}>
           <header id="article-header" className={isToolAlternativesPage ? 'pb-12' : 'pb-10'}>
-            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-slate-500">Alternatives Guide</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-slate-500">Replacement Shortlist</p>
             <h1 className={isToolAlternativesPage
               ? 'mt-4 text-[2.6rem] md:text-[3.25rem] font-black tracking-tight text-slate-900 leading-[1.06]'
               : 'mt-3 text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-tight'}>
@@ -299,7 +308,7 @@ export default function AlternativesLongformTemplate({ data }: AlternativesLongf
             <div className={isToolAlternativesPage ? 'mt-7 space-y-6 text-[18px] leading-[1.9] text-slate-700' : 'mt-6 space-y-5 text-[18px] leading-9 text-slate-700'}>
               <p>{data.heroConclusion}</p>
               <p>
-                This guide is for creators and teams who want a cleaner decision path: where each option is good, what you gain over {baseToolName}, and what trade-offs you accept.
+                This page is the replacement shortlist for teams moving off {baseToolName}: where each option fits, what you gain over {baseToolName}, and what trade-offs you accept.
               </p>
               <p>
                 Instead of browsing long feature grids, start with the top {topPicksLimit} picks below and compare them by editing control, workflow speed, pricing behavior, and delivery reliability.

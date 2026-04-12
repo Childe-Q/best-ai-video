@@ -1,6 +1,35 @@
-import { getAllTools } from '@/lib/getTool';
+import { getAllTools, getToolBySlug } from '@/lib/toolData';
+import { getFeaturePageSlugs, readFeaturePageData } from '@/lib/features/readFeaturePageData';
+import { getFeaturePageType } from '@/lib/features/pageType';
 import { toCanonicalVsSlug } from '@/data/vs';
 import { getPageReadiness, getPageReadinessSync } from '@/lib/readiness';
+
+const FEATURE_HREF_PATTERN = /^\/features\/([a-z0-9-]+)(?:[/?#].*)?$/i;
+const FEATURE_TYPE_PRIORITY = {
+  'narrow-workflow': 0,
+  'business-procurement': 1,
+  'policy-threshold': 2,
+  'broad-chooser': 3,
+  comparison: 4,
+} as const;
+
+function toFeatureSlug(href: string): string | null {
+  const match = href.trim().match(FEATURE_HREF_PATTERN);
+  return match?.[1] ?? null;
+}
+
+function toUniqueStrings(values: Array<string | null | undefined>): string[] {
+  return Array.from(new Set(values.filter((value): value is string => Boolean(value))));
+}
+
+function buildFeatureLink(featureSlug: string): { href: string; title: string } {
+  const pageData = readFeaturePageData(featureSlug);
+
+  return {
+    href: `/features/${featureSlug}`,
+    title: pageData?.hero.h1 ?? featureSlug,
+  };
+}
 
 /**
  * Find related comparison pages (VS pages) for a tool
@@ -45,6 +74,81 @@ export function getRelatedComparisons(slug: string): Array<{ slug: string; title
   }
 
   return comparisons;
+}
+
+export function getComparisonLinkBetweenTools(
+  currentSlug: string,
+  otherSlug: string,
+): { href: string; title: string } | null {
+  if (currentSlug === otherSlug) {
+    return null;
+  }
+
+  const currentTool = getToolBySlug(currentSlug)?.tool;
+  const otherTool = getToolBySlug(otherSlug)?.tool;
+  if (!currentTool || !otherTool) {
+    return null;
+  }
+
+  const comparisonSlug = toCanonicalVsSlug(currentSlug, otherSlug);
+  const comparisonReadiness = getPageReadinessSync('vs', comparisonSlug);
+  if (!comparisonReadiness.ready) {
+    return null;
+  }
+
+  const title =
+    comparisonSlug === `${currentSlug}-vs-${otherSlug}`
+      ? `${currentTool.name} vs ${otherTool.name}`
+      : `${otherTool.name} vs ${currentTool.name}`;
+
+  return {
+    href: `/vs/${comparisonSlug}`,
+    title,
+  };
+}
+
+export function getMostRelevantWorkflowLink(slug: string): { href: string; title: string } | null {
+  const content = getToolBySlug(slug)?.content;
+  const configuredFeatureSlugs = toUniqueStrings(
+    (content?.overview?.useCases ?? []).map((useCase) => toFeatureSlug(useCase.linkHref)),
+  );
+
+  for (const featureSlug of configuredFeatureSlugs) {
+    const readiness = getPageReadinessSync('feature', featureSlug);
+    if (readiness.ready) {
+      return buildFeatureLink(featureSlug);
+    }
+  }
+
+  const readyFeatureCandidates: Array<{ featureSlug: string; priority: number }> = [];
+
+  for (const featureSlug of getFeaturePageSlugs()) {
+    const pageData = readFeaturePageData(featureSlug);
+    const includesTool = pageData?.groups.some((group) =>
+      group.tools.some((toolCard) => toolCard.toolSlug === slug),
+    );
+
+    if (!pageData || !includesTool) {
+      continue;
+    }
+
+    const readiness = getPageReadinessSync('feature', featureSlug);
+    if (!readiness.ready) {
+      continue;
+    }
+
+    readyFeatureCandidates.push({
+      featureSlug,
+      priority: FEATURE_TYPE_PRIORITY[getFeaturePageType(featureSlug)],
+    });
+  }
+
+  readyFeatureCandidates.sort(
+    (left, right) => left.priority - right.priority || left.featureSlug.localeCompare(right.featureSlug),
+  );
+
+  const bestMatch = readyFeatureCandidates[0];
+  return bestMatch ? buildFeatureLink(bestMatch.featureSlug) : null;
 }
 
 /**

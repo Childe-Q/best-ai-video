@@ -1,15 +1,15 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { canonicalizeVsHref } from '@/data/vs';
-import toolsData from '@/data/tools.json';
 import { Tool } from '@/types/tool';
+import { getAllTools } from '@/lib/toolData';
 import { getSEOCurrentYear, getCurrentMonthYear } from '@/lib/utils';
 import HomeToolGrid from '@/components/HomeToolGrid';
 import GlobalScoringRubric from '@/components/GlobalScoringRubric';
 import { filterPromoteSafeLinks, getPageReadiness } from '@/lib/readiness';
+import { getPrimaryStartingPointCards, listVsIndexCards } from '@/lib/vsIndex';
 
-// Force cast to Tool[] to ensure type safety if JSON import inference is loose
-const tools: Tool[] = toolsData as Tool[];
+const tools: Tool[] = getAllTools();
 const flagshipToolSlugs = ['heygen', 'invideo', 'fliki'];
 
 function prioritizeFlagshipTools(allTools: Tool[]): Tool[] {
@@ -39,6 +39,8 @@ type HomepagePrimaryPromo = {
   href: string;
   reviewLabel: string;
   desc: string;
+  routeLabel: string;
+  routeHref: string;
   compareSlug: string;
   compareHref: string;
   compareLabel: string;
@@ -51,7 +53,9 @@ const homepagePrimaryPromotedTools: HomepagePrimaryPromo[] = [
     tool: 'HeyGen',
     href: '/tool/heygen',
     reviewLabel: 'HeyGen review',
-    desc: 'Top AI avatar platform',
+    desc: 'Best first stop when the workflow is presenter-led video, training, or avatar-based outreach.',
+    routeLabel: 'Avatar route',
+    routeHref: '/features/ai-avatar-video-generators',
     compareSlug: 'heygen-vs-synthesia',
     compareHref: canonicalizeVsHref('/vs/heygen-vs-synthesia'),
     compareLabel: 'HeyGen vs Synthesia',
@@ -61,7 +65,9 @@ const homepagePrimaryPromotedTools: HomepagePrimaryPromo[] = [
     tool: 'InVideo',
     href: '/tool/invideo',
     reviewLabel: 'InVideo review',
-    desc: 'Fast prompt-to-video pick',
+    desc: 'Best first stop when the team needs fast drafting for ads, social video, and prompt-to-video assembly.',
+    routeLabel: 'Broad shortlist route',
+    routeHref: '/features/best-ai-video-generators',
     compareSlug: 'invideo-vs-heygen',
     compareHref: canonicalizeVsHref('/vs/invideo-vs-heygen'),
     compareLabel: 'InVideo vs HeyGen',
@@ -71,7 +77,9 @@ const homepagePrimaryPromotedTools: HomepagePrimaryPromo[] = [
     tool: 'Fliki',
     href: '/tool/fliki',
     reviewLabel: 'Fliki review',
-    desc: 'Fast text-to-video and voiceover pick',
+    desc: 'Best first stop when the job is text-first video with voiceover, script-led flow, and lightweight publishing.',
+    routeLabel: 'Text-to-video route',
+    routeHref: '/features/text-to-video-ai-tools',
     compareSlug: 'fliki-vs-heygen',
     compareHref: canonicalizeVsHref('/vs/fliki-vs-heygen'),
     compareLabel: 'Fliki vs HeyGen',
@@ -89,9 +97,9 @@ type StartPath = {
 
 const startPaths: StartPath[] = [
   {
-    title: 'Use case',
-    stage: 'Early-stage research',
-    verdict: 'Start here if you know the workflow but not the shortlist yet.',
+    title: 'Workflow route',
+    stage: 'Broad discovery',
+    verdict: 'Start here when the job is clear but the shortlist is not. This is the default first stop for most new visitors.',
     href: '/features',
     cta: 'Open feature hub',
     links: [
@@ -103,19 +111,25 @@ const startPaths: StartPath[] = [
       },
       {
         kind: 'feature' as const,
-        slug: 'text-to-video-ai-tools',
-        href: '/features/text-to-video-ai-tools',
-        label: 'Text-to-video tools',
+        slug: 'ai-avatar-video-generators',
+        href: '/features/ai-avatar-video-generators',
+        label: 'AI avatar tools',
+      },
+      {
+        kind: 'feature' as const,
+        slug: 'content-repurposing-ai-tools',
+        href: '/features/content-repurposing-ai-tools',
+        label: 'Repurposing tools',
       },
     ],
   },
   {
     title: 'Tool review',
     stage: 'Shortlist validation',
-    verdict: 'Start here if one product is already in play and you need fit fast.',
+    verdict: 'Start here when one product is already in play and you need fit, limitations, and buying posture fast.',
     href: '/#tools-section',
     cta: 'Browse tool reviews',
-    links: homepagePrimaryPromotedTools.slice(0, 2).map((tool) => ({
+    links: homepagePrimaryPromotedTools.map((tool) => ({
       kind: 'tool' as const,
       slug: tool.slug,
       href: tool.href,
@@ -123,9 +137,9 @@ const startPaths: StartPath[] = [
     })),
   },
   {
-    title: 'Comparison',
+    title: 'Head-to-head comparison',
     stage: 'Final decision',
-    verdict: 'Start here if the choice is down to two credible options.',
+    verdict: 'Start here when the shortlist is down to two credible options and the next step is a direct tradeoff.',
     href: '/vs',
     cta: 'Open VS pages',
     links: [
@@ -137,9 +151,9 @@ const startPaths: StartPath[] = [
       },
       {
         kind: 'vs' as const,
-        slug: 'heygen-vs-invideo',
-        href: canonicalizeVsHref('/vs/invideo-vs-heygen'),
-        label: 'InVideo vs HeyGen',
+        slug: 'runway-vs-sora',
+        href: canonicalizeVsHref('/vs/runway-vs-sora'),
+        label: 'Runway vs Sora',
       },
     ],
   },
@@ -149,6 +163,8 @@ const topPicks = homepagePrimaryPromotedTools.map((tool) => ({
   tool: tool.tool,
   href: tool.href,
   desc: tool.desc,
+  routeLabel: tool.routeLabel,
+  routeHref: tool.routeHref,
   compareSlug: tool.compareSlug,
   compareHref: tool.compareHref,
   compareLabel: tool.compareLabel,
@@ -157,7 +173,7 @@ const topPicks = homepagePrimaryPromotedTools.map((tool) => ({
 export function generateMetadata(): Metadata {
   return {
     title: `${displayCount ? `${displayCount} ` : ''}Best AI Video Generators & Tools ${seoYear} | Free & Paid Reviews`,
-    description: `Discover ${displayCount ? `${displayCount} ` : ''}best AI video generators for ${seoYear}. Free plans, no watermark, text-to-video, 4K export. In-depth reviews, pricing comparisons & alternatives for YouTube creators.`,
+    description: `Use best-ai-video.com as your AI video decision hub for ${seoYear}. Start with workflow routes, compare the strongest tools, and move from /features to /vs to detailed tool reviews without guessing.`,
     alternates: {
       canonical: 'https://best-ai-video.com/',
     },
@@ -166,11 +182,27 @@ export function generateMetadata(): Metadata {
 
 export default async function Home() {
   const prioritizedTools = prioritizeFlagshipTools(tools);
+  const comparisonStartPathLinks = await filterPromoteSafeLinks(
+    getPrimaryStartingPointCards(listVsIndexCards()).map((comparison) => ({
+      kind: 'vs' as const,
+      slug: comparison.slug,
+      href: canonicalizeVsHref(`/vs/${comparison.slug}`),
+      label: comparison.comparisonName,
+    }))
+  );
   const readyStartPaths = await Promise.all(
     startPaths.map(async (path) => ({
       ...path,
       links: await filterPromoteSafeLinks(path.links),
     }))
+  );
+  const alignedStartPaths = readyStartPaths.map((path) =>
+    path.title === 'Head-to-head comparison'
+      ? {
+          ...path,
+          links: comparisonStartPathLinks,
+        }
+      : path
   );
   const readyTopPicks = (
     await Promise.all(
@@ -219,7 +251,10 @@ export default async function Home() {
           </h1>
 
           <p className="mx-auto mt-8 max-w-2xl text-base font-medium leading-7 text-gray-600 md:text-lg">
-            Stop guessing. Start from the path that matches your decision: use case, tool review, or direct comparison. Then narrow down the top {toolCount}+ tools for YouTube, text-to-video, avatars, and business workflows.
+            Use the homepage as the site entry point: choose the right workflow route first, open a tool review when one name is already shortlisted, or jump straight to a VS page when the decision is down to two.
+          </p>
+          <p className="mx-auto mt-3 max-w-3xl text-sm leading-6 text-black/52 md:text-[15px]">
+            The fastest sequence is usually <span className="font-semibold text-black">/features</span> when the route is still broad, <span className="font-semibold text-black">/tool/[slug]</span> when one product is already under evaluation, and <span className="font-semibold text-black">/vs</span> when the shortlist is already tight.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
@@ -227,21 +262,27 @@ export default async function Home() {
               href="/features"
               className="inline-flex items-center rounded-full border border-black/10 bg-[#B8F500] px-5 py-3 text-sm font-bold text-black transition-colors hover:bg-[#A7E100] no-underline"
             >
-              Browse by Use Case
+              Choose Workflow First
             </Link>
             <Link
               href="/vs"
               className="inline-flex items-center rounded-full border border-black/10 bg-white px-5 py-3 text-sm font-bold text-black transition-colors hover:bg-[#F6D200] no-underline"
             >
-              View Comparisons
+              Compare Two Tools
             </Link>
           </div>
 
           <div className="mx-auto mt-14 max-w-4xl border-t border-black/8 pt-6 text-left">
             <div className="grid gap-3 text-sm text-black/60 md:grid-cols-3">
-              <p>Start from the workflow when the problem is still broad.</p>
-              <p>Start from a tool review when one name is already shortlisted.</p>
-              <p>Start from comparison when the decision is down to two.</p>
+              <Link href="/features" className="no-underline transition-colors hover:text-black">
+                Start with <span className="font-semibold text-black">/features</span> when the problem is still broad.
+              </Link>
+              <Link href="/#tools-section" className="no-underline transition-colors hover:text-black">
+                Start with a <span className="font-semibold text-black">tool review</span> when one name is already shortlisted.
+              </Link>
+              <Link href="/vs" className="no-underline transition-colors hover:text-black">
+                Start with <span className="font-semibold text-black">/vs</span> when the decision is already down to two.
+              </Link>
             </div>
           </div>
         </div>
@@ -256,12 +297,12 @@ export default async function Home() {
               Pick the route that matches your buying stage
             </h2>
             <p className="mt-3 text-sm leading-6 text-gray-600">
-              Three ways in, depending on how far the shortlist has progressed.
+              These three routes map to the way most buyers actually move through the site: route first, tool second, pairwise comparison last.
             </p>
           </div>
           <div className="mt-8 border-y border-black/6">
             <div className="grid gap-2 xl:grid-cols-3 xl:gap-0">
-              {readyStartPaths.map((path) => (
+              {alignedStartPaths.map((path) => (
                 <article
                   key={path.title}
                   className="group flex flex-col px-1 py-5 sm:px-0 xl:px-4 xl:py-6"
@@ -297,7 +338,7 @@ export default async function Home() {
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="text-[11px] font-black uppercase tracking-[0.16em] text-black/35">Editorial picks</p>
-                <p className="mt-1 text-sm text-black/55">Three quick places to jump in if you want a fast starting point.</p>
+                <p className="mt-1 text-sm text-black/55">Use these when one of the flagship tools is already in play and you want the fastest review entry point.</p>
               </div>
               <Link
                 href="/#tools-section"
@@ -309,27 +350,39 @@ export default async function Home() {
             </div>
             <div className="mt-4 grid gap-3 lg:grid-cols-3">
             {readyTopPicks.map((item) => (
-              <Link
+              <article
                 key={item.tool}
-                href={item.href}
-                className="group rounded-2xl border border-black/8 bg-white px-4 py-4 no-underline transition-all duration-200 ease-out hover:-translate-y-1 hover:border-black/14 hover:bg-[#FFFEFB] hover:shadow-[0_10px_24px_rgba(0,0,0,0.04)]"
+                className="rounded-2xl border border-black/8 bg-white px-4 py-4 transition-all duration-200 ease-out hover:-translate-y-1 hover:border-black/14 hover:bg-[#FFFEFB] hover:shadow-[0_10px_24px_rgba(0,0,0,0.04)]"
               >
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <p className="text-[11px] font-black uppercase tracking-[0.16em] text-black/35">Pick</p>
-                    <p className="mt-2 text-base font-black text-black transition-colors duration-200 group-hover:text-black/70">
-                  {item.tool}
-                    </p>
-                    <p className="mt-1 text-sm text-black/55">{item.desc}</p>
+                <Link href={item.href} className="group block no-underline">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="text-[11px] font-black uppercase tracking-[0.16em] text-black/35">Pick</p>
+                      <p className="mt-2 text-base font-black text-black transition-colors duration-200 group-hover:text-black/70">
+                        {item.tool}
+                      </p>
+                      <p className="mt-1 text-sm text-black/55">{item.desc}</p>
+                    </div>
+                    <span className="mt-1 text-black/25 transition-transform duration-200 group-hover:translate-x-1 group-hover:text-black/45">→</span>
                   </div>
-                  <span className="mt-1 text-black/25 transition-transform duration-200 group-hover:translate-x-1 group-hover:text-black/45">→</span>
+                </Link>
+                <div className="mt-4 flex flex-wrap items-center gap-2">
+                  <Link
+                    href={item.routeHref}
+                    className="inline-flex items-center rounded-full bg-[#F7F4EC] px-3 py-1.5 text-xs font-semibold text-black/65 no-underline transition-colors hover:bg-[#F6D200] hover:text-black"
+                  >
+                    {item.routeLabel}
+                  </Link>
+                  {item.compareHref ? (
+                    <Link
+                      href={item.compareHref}
+                      className="inline-flex w-fit items-center rounded-full bg-[#F7F4EC] px-3 py-1.5 text-xs font-semibold text-black/65 no-underline transition-colors hover:bg-[#F6D200] hover:text-black"
+                    >
+                      {item.compareLabel}
+                    </Link>
+                  ) : null}
                 </div>
-                {item.compareHref ? (
-                  <span className="mt-4 inline-flex w-fit items-center rounded-full bg-[#F7F4EC] px-3 py-1.5 text-xs font-semibold text-black/65">
-                    {item.compareLabel}
-                  </span>
-                ) : null}
-              </Link>
+              </article>
             ))}
             </div>
           </div>

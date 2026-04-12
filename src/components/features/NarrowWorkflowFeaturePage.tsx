@@ -93,7 +93,10 @@ function buildRecommendedGroups(
   featureSlug: string,
   recommendedReadingLinks: FeatureRecommendedReadingLink[],
 ): ReadingGroup[] {
-  const primaryGroups = readingOrder
+  const prioritizedReadingOrder = featureSlug === 'ai-video-editors'
+    ? (['vs', 'tool', 'tool_alternatives', 'guide'] as const)
+    : readingOrder;
+  const primaryGroups = prioritizedReadingOrder
     .filter((linkType) => narrowWorkflowPrimaryReadingTypes.has(linkType))
     .map((linkType) => ({
       title: getRecommendedSectionTitle(linkType),
@@ -109,7 +112,7 @@ function buildRecommendedGroups(
     return [];
   }
 
-  return readingOrder
+  return prioritizedReadingOrder
     .filter((linkType) => linkType === 'guide')
     .map((linkType) => ({
       title: getRecommendedSectionTitle(linkType),
@@ -897,7 +900,7 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
     decisionLead:
       'This page is for post-production. The first question is not which editor is best, but whether editing is actually the workflow or just a symptom of a different route.',
     shortlistLead:
-      'The split below is about editing posture: deeper narrative cleanup versus faster clip packaging once the footage already exists.',
+      'The split below is about editing posture: deeper narrative cleanup versus faster clip packaging once the footage already exists. Once that split is clear, the default next compare is usually Descript vs Veed.io.',
     sectionOverrides: {
       'Timeline and transcript post-production': {
         chooseWhen:
@@ -965,7 +968,7 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
       {
         question: 'What should I compare first once I know I need an AI editor?',
         answer:
-          'Start with interface style, because the wrong editing paradigm creates friction immediately. Then check whether timeline control or turnaround speed is the bigger constraint for the actual post-production workflow you run most often.',
+          'Start with interface style, because the wrong editing paradigm creates friction immediately. For many teams the cleanest next compare is Descript vs Veed.io, because it surfaces transcript-first depth versus faster browser editing before smaller pricing differences matter. After that, check whether timeline control or turnaround speed is the bigger constraint for the workflow you run most often.',
       },
       {
         question: 'When does this page stop being the right frame?',

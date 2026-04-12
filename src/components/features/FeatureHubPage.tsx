@@ -87,6 +87,11 @@ const SAFE_FEATURE_HUB_REDIRECT: RouteRedirect = {
   note: 'Return to the feature hub to continue through promote-safe routes only.',
 };
 
+const comparisonFirstReadingSlugs = new Set([
+  'best-ai-video-generators',
+  'ai-avatar-video-generators',
+]);
+
 const faqQuestionOverrides: Partial<Record<string, Partial<Record<string, string>>>> = {
   'ai-video-editors': {
     qualifies: 'Do I need an AI editor, or a generator that starts from scratch?',
@@ -142,6 +147,17 @@ function formatDate(value?: string | null): string | null {
 
 function compactJoin(values: string[]): string {
   return values.filter(Boolean).join(' · ');
+}
+
+function getVsPairSlugs(destinationSlug: string): string[] {
+  if (!destinationSlug.includes('-vs-')) {
+    return [];
+  }
+
+  return destinationSlug
+    .split('-vs-')
+    .map((item) => item.trim())
+    .filter(Boolean);
 }
 
 function getPageTypeEyebrow(pageType: FeaturePageType): string {
@@ -393,7 +409,7 @@ const featurePageOverrides: Partial<Record<string, FeaturePageOverride>> = {
       {
         question: 'When should I leave this page for a narrower guide?',
         answer:
-          'Leave this page once the route is clear. If you already know you need avatars, go narrower into the avatar page. If you are already comparing top text-to-video models directly, the comparison page becomes more useful than this broad chooser.',
+          'Leave this page once the route is clear. If you already know you need avatars, go narrower into the avatar page and then move into HeyGen vs Synthesia when the shortlist is down to two. If you are already comparing top text-to-video models directly, Runway vs Sora is usually more useful than this broad chooser.',
       },
       {
         question: 'What should I compare first after I pick the right route?',
@@ -543,7 +559,7 @@ const featurePageOverrides: Partial<Record<string, FeaturePageOverride>> = {
       {
         question: 'What should I compare first after I know avatar tools are the right route?',
         answer:
-          'Start with avatar workflow fit, then compare the one constraint most likely to break the rollout. For outward-facing presenter teams that is usually language coverage, voice quality, and speed. For L&D and compliance teams it is governance and admin structure. Cost per minute matters, but only after you know a presenter-led workflow is really the job.',
+          'Start with avatar workflow fit, then compare the one constraint most likely to break the rollout. For many teams the default next compare is HeyGen vs Synthesia, because it surfaces the core split between faster campaign-style delivery and more governed training rollout. After that, compare language coverage, voice quality, governance, and admin structure before you worry about minute pricing.',
       },
       {
         question: 'When does this page stop being the right frame?',
@@ -961,13 +977,22 @@ function getContextLinksForGroup(
       return toolSlugs.has(rootSlug);
     }
 
+    if (item.linkType === 'vs') {
+      return getVsPairSlugs(item.destinationSlug).some((toolSlug) => toolSlugs.has(toolSlug));
+    }
+
     return false;
   });
 
-  if (pageData.slug === 'ai-avatar-video-generators') {
-    const matchedReviews = matched.filter((item) => item.linkType === 'tool');
-    if (matchedReviews.length > 0) {
-      return matchedReviews.slice(0, 2);
+  if (comparisonFirstReadingSlugs.has(pageData.slug)) {
+    const prioritized = [
+      ...matched.filter((item) => item.linkType === 'vs').slice(0, 1),
+      ...matched.filter((item) => item.linkType === 'tool').slice(0, 1),
+      ...matched.filter((item) => item.linkType === 'tool_alternatives').slice(0, 1),
+    ];
+
+    if (prioritized.length > 0) {
+      return prioritized;
     }
   }
 
@@ -1013,21 +1038,17 @@ function buildRecommendedGroups(
   pageData: FeaturePageData,
   recommendedReadingLinks: FeatureRecommendedReadingLink[],
 ) {
-  if (pageData.slug === 'ai-avatar-video-generators') {
-    return (['tool', 'vs'] as const)
-      .map((linkType) => ({
-        linkType,
-        title: getRecommendedSectionTitle(linkType),
-        items: recommendedReadingLinks.filter((item) => item.linkType === linkType).slice(0, 2),
-      }))
-      .filter((group) => group.items.length > 0);
-  }
+  const readingOrder = comparisonFirstReadingSlugs.has(pageData.slug)
+    ? (['vs', 'tool', 'guide', 'tool_alternatives'] as const)
+    : recommendedReadingOrder;
 
-  return recommendedReadingOrder
+  return readingOrder
     .map((linkType) => ({
       linkType,
       title: getRecommendedSectionTitle(linkType),
-      items: recommendedReadingLinks.filter((item) => item.linkType === linkType),
+      items: recommendedReadingLinks
+        .filter((item) => item.linkType === linkType)
+        .slice(0, comparisonFirstReadingSlugs.has(pageData.slug) ? 2 : undefined),
     }))
     .filter((group) => group.items.length > 0);
 }

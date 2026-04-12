@@ -3,7 +3,6 @@ import { Tool } from '@/types/tool';
 import { ToolContent } from '@/types/toolContent';
 import { getSEOCurrentYear } from '@/lib/utils';
 import { getRelatedLinks } from '@/lib/getRelatedLinks';
-import { loadToolContent } from '@/lib/loadToolContent';
 import { getPageReadiness } from '@/lib/readiness';
 import CTAButton from '@/components/CTAButton';
 
@@ -29,8 +28,7 @@ interface FeaturesPageData {
 export default async function ToolFeaturesPageTemplate({ tool, slug }: ToolFeaturesPageTemplateProps) {
   const seoYear = getSEOCurrentYear();
 
-  // Load content JSON if available
-  const content = loadToolContent(slug);
+  const content = (tool.content as ToolContent | undefined) ?? null;
 
   // Generate H1 title
   const h1Title = `${tool.name} Features (${seoYear})`;

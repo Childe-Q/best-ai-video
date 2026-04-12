@@ -14,7 +14,7 @@ const seoYear = getSEOCurrentYear();
 export const metadata = {
   title: `AI Video Tool Comparisons | Side-by-Side Comparisons ${seoYear}`,
   description:
-    'Find the right AI video tool comparison for your buying situation. Source-backed head-to-head pages with structured decision tables and explainable scoring.',
+    'Find the right AI video tool comparison for your buying situation. Source-backed head-to-head pages with clearer workflow splits, structured decision tables, and natural next-step routes.',
   alternates: {
     canonical: 'https://best-ai-video.com/vs',
   },
@@ -110,9 +110,9 @@ export default function VSIndexPage() {
             </h1>
 
             <p className="mt-5 max-w-2xl text-base font-medium leading-7 text-gray-600 md:text-lg">
-              Use `/vs` to compare AI video tools after the workflow is clear. This page is here to
-              move you into the right two-tool decision, not make you browse a loose stack of
-              unrelated matchups.
+              Use `/vs` only after the workflow is clear. This page is here to move you into the
+              right two-tool decision with the least possible noise: presenter versus editor,
+              flagship model versus studio workflow, or repurposing versus from-scratch creation.
             </p>
           </div>
 
@@ -122,7 +122,7 @@ export default function VSIndexPage() {
                 <p className="text-[11px] font-black uppercase tracking-[0.16em] text-black/35">Use this page when</p>
                 <p className="mt-2 text-sm leading-6 text-black/55">
                   The workflow is already clear and the next job is one direct AI video software
-                  comparison between credible tools.
+                  comparison between credible tools with a real buying split, not a cosmetic matchup.
                 </p>
               </div>
               <div>
@@ -150,7 +150,7 @@ export default function VSIndexPage() {
           <SectionIntro
             eyebrow="Choose the track"
             title="Which comparison track fits the buying situation?"
-            description="Pick the lane that changes the buying criteria first. If the lane is wrong, the comparison will be wrong too."
+            description="Pick the lane that changes the buying criteria first. If the lane is wrong, the comparison will be wrong too, even when both tools are strong."
           />
 
           <div className="mt-8 grid gap-x-10 gap-y-8 md:grid-cols-2">
@@ -205,7 +205,7 @@ export default function VSIndexPage() {
           <SectionIntro
             eyebrow="Best starting points"
             title="Start with these comparisons"
-            description="These four are the best AI video comparisons to open first when the track is clear. Each works as a reliable first stop for one workflow family."
+            description="These four are the strongest first comparisons to open when the track is clear. They are also the same default handoff points now surfaced from the homepage and the matching feature routes."
           />
 
           <div className="mt-8 grid gap-3 md:grid-cols-2">
@@ -219,7 +219,7 @@ export default function VSIndexPage() {
           <SectionIntro
             eyebrow="Browse by workflow"
             title="Keep browsing only inside the right track"
-            description="Use these lists only when the track is already right and the remaining question is which head-to-head to open next."
+            description="Use these lists only when the track is already right and the remaining question is which head-to-head exposes the real trade-off fastest."
           />
 
           <div className="mt-8 grid gap-x-10 gap-y-12 xl:grid-cols-2">
@@ -250,7 +250,7 @@ export default function VSIndexPage() {
           <SectionIntro
             eyebrow="Library"
             title="All comparisons"
-            description="Index of all live AI video tool comparisons. Best when the pair is already clear and you only need the right route."
+            description="Index of all live AI video tool comparisons. Best when the pair is already clear and you only need the right route, not more category guidance."
           />
 
           <div className="mt-8 grid gap-x-8 gap-y-1 md:grid-cols-2 xl:grid-cols-3">

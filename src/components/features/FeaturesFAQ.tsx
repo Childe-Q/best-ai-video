@@ -79,14 +79,16 @@ function AccordionItem({
     >
       <button
         onClick={onToggle}
-        className={`group flex w-full items-center justify-between gap-4 bg-transparent text-left ${
-          variant === 'minimal' ? 'py-5 sm:py-6' : 'py-5'
+        className={`group flex w-full items-center justify-between gap-4 rounded-2xl bg-transparent text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/15 focus-visible:ring-offset-2 ${
+          variant === 'minimal'
+            ? 'py-5 sm:py-6 hover:bg-black/[0.03] focus-visible:bg-black/[0.03]'
+            : 'py-5 hover:bg-black/[0.02] focus-visible:bg-black/[0.02]'
         }`}
         aria-expanded={isOpen}
       >
         <span
           className={`text-[15px] font-black leading-6 transition-colors duration-200 ${
-            isOpen ? 'text-gray-900' : 'text-gray-700'
+            isOpen ? 'text-gray-900' : 'text-gray-800 group-hover:text-gray-900 group-focus-visible:text-gray-900'
           }`}
         >
           {item.question}
@@ -96,11 +98,11 @@ function AccordionItem({
           className={`flex h-6 w-6 shrink-0 items-center justify-center transition-all duration-300 ${
             variant === 'minimal'
               ? isOpen
-                ? 'rotate-45 text-black/60'
-                : 'text-black/26 group-hover:text-black/48'
+                ? 'rotate-45 text-black/80'
+                : 'text-black/45 group-hover:text-black/75 group-focus-visible:text-black/75'
               : isOpen
-                ? 'rotate-45 rounded-full bg-black/8 text-black/60'
-                : 'rounded-full bg-[#F4F2EA] text-black/30 group-hover:bg-black/5 group-hover:text-black/50'
+                ? 'rotate-45 rounded-full bg-black/10 text-black/80'
+                : 'rounded-full bg-[#F4F2EA] text-black/45 group-hover:bg-black/8 group-hover:text-black/75 group-focus-visible:bg-black/8 group-focus-visible:text-black/75'
           }`}
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="transition-transform duration-300">
@@ -117,7 +119,7 @@ function AccordionItem({
           ref={contentRef}
           className={variant === 'minimal' ? 'max-w-4xl pb-6 pr-10' : 'pb-6 pr-10'}
         >
-          <p className="text-sm leading-7 text-black/55">{item.answer}</p>
+          <p className="text-sm leading-7 text-black/70">{item.answer}</p>
         </div>
       </div>
     </div>

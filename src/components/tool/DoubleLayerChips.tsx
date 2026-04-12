@@ -77,10 +77,10 @@ export default function DoubleLayerChips({
             <button
               key={chip.id}
               onClick={() => jumpTo(chip.targetId, chip.id)}
-              className={`inline-flex items-center rounded-full border px-3 py-1 text-sm font-medium transition ${
+              className={`inline-flex items-center rounded-full border px-3 py-1 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/15 focus-visible:ring-offset-2 ${
                 activeCapId === chip.id
                   ? 'bg-black text-white border-black'
-                  : 'border-black/10 bg-black/[0.02] text-black/80 hover:bg-black/[0.04] hover:border-black/20'
+                  : 'border-black/10 bg-black/[0.02] text-black/85 hover:bg-black/[0.07] hover:border-black/25 hover:text-black'
               }`}
             >
               {chip.label}
@@ -99,10 +99,10 @@ export default function DoubleLayerChips({
             <button
               key={`diff-${chip.id}`}
               onClick={() => jumpTo(chip.targetId, `diff-${chip.id}`)}
-              className={`inline-flex items-center rounded-full border px-3 py-1 text-sm font-semibold transition ${
+              className={`inline-flex items-center rounded-full border px-3 py-1 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/15 focus-visible:ring-offset-2 ${
                 activeCapId === `diff-${chip.id}`
                   ? 'bg-black text-white border-black'
-                  : 'border-black/20 bg-white text-black hover:bg-black/[0.03] hover:border-black/30'
+                  : 'border-black/20 bg-white text-black/85 hover:bg-black/[0.07] hover:border-black/30 hover:text-black'
               }`}
             >
               {chip.label}

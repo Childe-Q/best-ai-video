@@ -32,10 +32,11 @@ export interface RawEvidence {
     about?: string | string[];
     useCases?: string | string[];
     other?: string | string[];
-    [key: string]: string | string[] | undefined;
+    [key: string]: unknown;
   };
   nuggets?: RawNugget[];
   hardFacts?: RawHardFact[];  // heygen 使用 hardFacts
+  nonPriceEvidenceImport?: RawNonPriceEvidenceImport;
   // zebracat 新结构
   linkIndex?: {
     slug?: string;
@@ -69,6 +70,26 @@ export interface RawNugget {
   [key: string]: unknown;
 }
 
+export interface RawNonPriceEvidenceImportItem {
+  value?: string;
+  sourceUrl?: string;
+  [key: string]: unknown;
+}
+
+export interface RawNonPriceEvidenceImport {
+  bundleDate?: string;
+  sourceBundle?: string;
+  sourceUrls?: string[];
+  safeWriteback?: {
+    policy?: Record<string, RawNonPriceEvidenceImportItem[] | undefined>;
+    workflowFeatureDocs?: RawNonPriceEvidenceImportItem[];
+    securityApiEnterprise?: Record<string, RawNonPriceEvidenceImportItem[] | undefined>;
+    mainLimitations?: RawNonPriceEvidenceImportItem[];
+    [key: string]: unknown;
+  };
+  retainedUnresolved?: string[];
+}
+
 // heygen hardFacts 结构
 export interface RawHardFact {
   field: string;
@@ -94,6 +115,7 @@ export interface EvidenceNormalized {
     examples?: string[];
     [key: string]: string | string[] | undefined;
   };
+  sourceUrls: string[];
   nuggets: EvidenceNugget[];
   metadata: {
     totalNuggets: number;
@@ -132,6 +154,14 @@ function cleanUrlsInValue(value: unknown): string | string[] | undefined {
     return value.map(v => typeof v === 'string' ? cleanUrl(v) : v).filter((v): v is string => typeof v === 'string');
   }
   return undefined;
+}
+
+function uniqueStrings(values: string[]): string[] {
+  return Array.from(new Set(values.filter(Boolean)));
+}
+
+function isHttpUrl(value: string): boolean {
+  return /^https?:\/\//i.test(value);
 }
 
 // =============================================================================
@@ -300,6 +330,27 @@ function mapSources(rawSources: RawEvidence['sources']) {
   };
 }
 
+function collectSourceUrls(value: unknown, target: Set<string>) {
+  if (!value) return;
+
+  if (typeof value === 'string') {
+    const cleaned = cleanUrl(value);
+    if (isHttpUrl(cleaned)) {
+      target.add(cleaned);
+    }
+    return;
+  }
+
+  if (Array.isArray(value)) {
+    value.forEach((entry) => collectSourceUrls(entry, target));
+    return;
+  }
+
+  if (typeof value === 'object') {
+    Object.values(value as Record<string, unknown>).forEach((entry) => collectSourceUrls(entry, target));
+  }
+}
+
 function mapToEvidenceTheme(rawTheme: string): EvidenceTheme {
   const themeMap: Record<string, EvidenceTheme> = {
     'privacy': 'security',
@@ -319,6 +370,9 @@ function mapToEvidenceTheme(rawTheme: string): EvidenceTheme {
     'general': 'general',
     'usage': 'usage',
     'security': 'security',
+    'api': 'integrations',
+    'enterprise': 'team',
+    'avatars': 'avatar',
     // invideo custom themes
     'commercial': 'licensing',
     'features': 'general',
@@ -330,6 +384,123 @@ function mapToEvidenceTheme(rawTheme: string): EvidenceTheme {
     'watermark': 'export',
   };
   return themeMap[rawTheme?.toLowerCase()] || 'general';
+}
+
+function createImportedNuggets(
+  items: RawNonPriceEvidenceImportItem[] | undefined,
+  theme: EvidenceTheme,
+  sourceType: string,
+  capturedAt: string
+): RawNugget[] {
+  if (!Array.isArray(items)) {
+    return [];
+  }
+
+  const nuggets: RawNugget[] = [];
+
+  items.forEach((item) => {
+    if (!item || typeof item !== 'object' || typeof item.value !== 'string' || !item.value.trim()) {
+      return;
+    }
+
+    nuggets.push({
+      text: item.value.trim(),
+      theme,
+      sourceUrl: typeof item.sourceUrl === 'string' ? item.sourceUrl : '',
+      sourceType,
+      capturedAt,
+      confidence: 'high',
+    });
+  });
+
+  return nuggets;
+}
+
+function convertNonPriceEvidenceImportToNuggets(
+  nonPriceEvidenceImport: RawNonPriceEvidenceImport | undefined,
+  capturedAt: string
+): RawNugget[] {
+  if (!nonPriceEvidenceImport?.safeWriteback) {
+    return [];
+  }
+
+  const { safeWriteback } = nonPriceEvidenceImport;
+
+  return [
+    ...createImportedNuggets(safeWriteback.policy?.watermark, 'export', 'non_price_policy', capturedAt),
+    ...createImportedNuggets(safeWriteback.policy?.exportLimits, 'export', 'non_price_policy', capturedAt),
+    ...createImportedNuggets(safeWriteback.policy?.commercialUse, 'licensing', 'non_price_policy', capturedAt),
+    ...createImportedNuggets(safeWriteback.policy?.usageRights, 'licensing', 'non_price_policy', capturedAt),
+    ...createImportedNuggets(safeWriteback.policy?.refundCancellation, 'support', 'non_price_policy', capturedAt),
+    ...createImportedNuggets(safeWriteback.workflowFeatureDocs, 'workflow', 'non_price_workflow', capturedAt),
+    ...createImportedNuggets(safeWriteback.securityApiEnterprise?.security, 'security', 'non_price_security', capturedAt),
+    ...createImportedNuggets(safeWriteback.securityApiEnterprise?.api, 'integrations', 'non_price_api', capturedAt),
+    ...createImportedNuggets(safeWriteback.securityApiEnterprise?.enterprise, 'team', 'non_price_enterprise', capturedAt),
+    ...createImportedNuggets(safeWriteback.mainLimitations, 'usage', 'non_price_limitation', capturedAt),
+  ];
+}
+
+const THEME_PRIORITY: Partial<Record<EvidenceTheme, number>> = {
+  security: 120,
+  licensing: 115,
+  workflow: 110,
+  integrations: 105,
+  export: 100,
+  usage: 95,
+  team: 90,
+  editing: 85,
+  voice: 80,
+  avatar: 80,
+  models: 75,
+  support: 70,
+  stock: 65,
+  general: 20,
+};
+
+function scoreSourceType(sourceType: string): number {
+  const normalized = sourceType.toLowerCase();
+
+  if (normalized.startsWith('non_price_')) return 120;
+  if (normalized.includes('privacy') || normalized.includes('terms') || normalized.includes('security')) return 95;
+  if (normalized.includes('docs') || normalized.includes('help')) return 88;
+  if (normalized.includes('pricing')) return 72;
+  if (normalized.includes('home')) return 10;
+
+  return 40;
+}
+
+function scoreTextSignal(text: string): number {
+  let score = 0;
+  const normalized = text.toLowerCase();
+
+  if (/\d/.test(text)) score += 12;
+  if (/(policy|watermark|commercial|refund|cancel|rights|security|sso|api|workflow|privacy|export|storage|retention)/i.test(text)) {
+    score += 18;
+  }
+  if (/(trusted by|rated|reviews|no credit card required|4m\+|2m\+)/i.test(normalized)) {
+    score -= 40;
+  }
+
+  return score;
+}
+
+function sortNuggetsForConsumption(nuggets: EvidenceNugget[]): EvidenceNugget[] {
+  return [...nuggets].sort((left, right) => {
+    const rightScore =
+      (THEME_PRIORITY[right.theme] ?? 0) +
+      scoreSourceType(right.sourceType) +
+      scoreTextSignal(right.text);
+    const leftScore =
+      (THEME_PRIORITY[left.theme] ?? 0) +
+      scoreSourceType(left.sourceType) +
+      scoreTextSignal(left.text);
+
+    if (rightScore !== leftScore) {
+      return rightScore - leftScore;
+    }
+
+    return left.text.localeCompare(right.text);
+  });
 }
 
 // =============================================================================
@@ -380,13 +551,15 @@ export function normalizeEvidence(raw: RawEvidence, slug: string): EvidenceNorma
   // 1. nuggets array (fliki, heygen standard)
   // 2. hardFacts array (heygen)
   // 3. pageEvidence array (zebracat)
-  const rawNuggets = Array.isArray(raw.nuggets)
+  const directRawNuggets = Array.isArray(raw.nuggets)
     ? raw.nuggets
     : Array.isArray(raw.hardFacts)
       ? convertHardFactsToNuggets(raw.hardFacts)
       : Array.isArray(raw.pageEvidence)
         ? convertPageEvidenceToNuggets(raw.pageEvidence)
         : [];
+  const importedRawNuggets = convertNonPriceEvidenceImportToNuggets(raw.nonPriceEvidenceImport, effectiveLastUpdated);
+  const rawNuggets = [...directRawNuggets, ...importedRawNuggets];
 
   // Support sources from both standard format and zebracat linkIndex
   const rawSources = raw.sources || {};
@@ -427,14 +600,24 @@ export function normalizeEvidence(raw: RawEvidence, slug: string): EvidenceNorma
 
   // Step 4: Deduplication & Step 5: Conflict resolution
   const dedupedNuggets = resolveConflicts(nuggets);
+  const sortedNuggets = sortNuggetsForConsumption(dedupedNuggets);
+  const sourceUrls = new Set<string>();
+  collectSourceUrls(raw.sources, sourceUrls);
+  collectSourceUrls(raw.nonPriceEvidenceImport?.sourceUrls, sourceUrls);
+  sortedNuggets.forEach((nugget) => {
+    if (nugget.sourceUrl && isHttpUrl(nugget.sourceUrl)) {
+      sourceUrls.add(nugget.sourceUrl);
+    }
+  });
 
   // Step 6: Field completion (metadata)
   return {
     slug: effectiveSlug,
     lastUpdated: effectiveLastUpdated,
     sources: mapSources(raw.sources),
-    nuggets: dedupedNuggets,
-    metadata: buildMetadata(dedupedNuggets),
+    sourceUrls: uniqueStrings(Array.from(sourceUrls)),
+    nuggets: sortedNuggets,
+    metadata: buildMetadata(sortedNuggets),
   };
 }
 
@@ -446,6 +629,7 @@ export function getEmptyEvidence(slug: string): EvidenceNormalized {
     slug,
     lastUpdated: new Date().toISOString(),
     sources: {},
+    sourceUrls: [],
     nuggets: [],
     metadata: {
       totalNuggets: 0,
