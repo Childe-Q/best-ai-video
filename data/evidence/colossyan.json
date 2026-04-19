@@ -167,5 +167,163 @@
       "writebackClass": "cautious"
     }
   ],
-  "topUpFlags": []
+  "topUpFlags": [],
+  "nonPriceEvidenceImport": {
+    "bundleDate": "2026-04-08",
+    "sourceBundle": "data/non-price-evidence-import/tools/colossyan.json",
+    "sourceUrls": [
+      "https://www.colossyan.com/pricing",
+      "https://www.colossyan.com/security/",
+      "https://www.colossyan.com/api",
+      "https://docs.colossyan.com/basics/editor",
+      "https://www.colossyan.com/privacy"
+    ],
+    "safeWriteback": {
+      "policy": {
+        "watermark": [
+          {
+            "value": "Remove Colossyan watermark",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          }
+        ],
+        "usageRights": [
+          {
+            "value": "Full commercial license",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          }
+        ],
+        "refundCancellation": [
+          {
+            "value": "Can I cancel Colossyan at any time?",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          },
+          {
+            "value": "Monthly plans can be canceled at any time. Although annual plans can also be canceled, please note they are paid upfront for the year, so you won’t be refunded for any unused months.",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          }
+        ],
+        "exportLimits": [
+          {
+            "value": "SCORM export",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          },
+          {
+            "value": "Video download resolution",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          },
+          {
+            "value": "Video download resolution determines a video's clarity, with higher resolutions being sharper but larger in size.",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          },
+          {
+            "value": "Full HD (1080p)",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          }
+        ]
+      },
+      "mainLimitations": [
+        {
+          "value": "Maximum Storage Duration : 7 days",
+          "sourceUrl": "https://www.colossyan.com/pricing"
+        },
+        {
+          "value": "Maximum Storage Duration : Persistent",
+          "sourceUrl": "https://www.colossyan.com/pricing"
+        },
+        {
+          "value": "Maximum Storage Duration : 1 day",
+          "sourceUrl": "https://www.colossyan.com/pricing"
+        },
+        {
+          "value": "Maximum Storage Duration : Session",
+          "sourceUrl": "https://www.colossyan.com/pricing"
+        }
+      ],
+      "workflowFeatureDocs": [
+        {
+          "value": "Screen Recorder",
+          "sourceUrl": "https://www.colossyan.com/pricing"
+        },
+        {
+          "value": "AI Avatars",
+          "sourceUrl": "https://www.colossyan.com/pricing"
+        },
+        {
+          "value": "Instantly translate videos into over 80 languages.",
+          "sourceUrl": "https://www.colossyan.com/pricing"
+        },
+        {
+          "value": "Brand Kits",
+          "sourceUrl": "https://www.colossyan.com/pricing"
+        },
+        {
+          "value": "Easily apply your company’s brand kit to videos.",
+          "sourceUrl": "https://www.colossyan.com/pricing"
+        },
+        {
+          "value": "Scale video personalization with Colossyan’s API and templates.",
+          "sourceUrl": "https://www.colossyan.com/pricing"
+        }
+      ],
+      "securityApiEnterprise": {
+        "security": [
+          {
+            "value": "Used in order to detect spam and improve the website's security.",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          },
+          {
+            "value": "Ensures visitor browsing-security by preventing cross-site request forgery. This cookie is essential for the security of the website and visitor.",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          },
+          {
+            "value": "Learn more about who we are, how you can contact us and how we process personal data in our Privacy Policy.",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          },
+          {
+            "value": "Review our security portal",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          }
+        ],
+        "api": [
+          {
+            "value": "Colossyan API",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          },
+          {
+            "value": "Scale video personalization with Colossyan’s API and templates.",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          },
+          {
+            "value": "Explore our range of integrations",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          },
+          {
+            "value": "Use the Colossyan API and easily integrate our service into any technology stack.",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          }
+        ],
+        "enterprise": [
+          {
+            "value": "Colossyan Pricing | Free, Starter, Pro & Enterprise Plans",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          },
+          {
+            "value": "Edit and review videos together with your team.",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          },
+          {
+            "value": "Empower your team and clients",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          },
+          {
+            "value": "Help your team achieve success",
+            "sourceUrl": "https://www.colossyan.com/pricing"
+          }
+        ]
+      }
+    },
+    "retainedUnresolved": [
+      "policy.commercialUse"
+    ]
+  }
 }

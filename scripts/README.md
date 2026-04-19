@@ -58,3 +58,26 @@ Where:
 - **Caching**: Automatically caches fetched content to avoid redundant requests
 - **Retry logic**: Up to 2 retries with exponential backoff (500ms, 1500ms)
 - **Timeout**: 15s for static, 45s for dynamic content
+
+## Evidence Extraction Note
+
+`scripts/extract-tool-evidence.ts` writes extractor output to `data/evidence/{slug}.evidence.json`.
+Runtime evidence readers now fall back to that file when a curated `data/evidence/{slug}.json` file is not present, so scraper output can land in existing tool and alternatives evidence slots without a second manual rename step.
+
+## Non-Price Evidence Sync
+
+Use `scripts/sync-non-price-evidence-import.ts` to merge existing `data/non-price-evidence-import/tools/*.json` bundles into the runtime-facing `data/evidence/{slug}.json` files.
+
+Examples:
+
+```bash
+pnpm exec tsx scripts/sync-non-price-evidence-import.ts
+pnpm exec tsx scripts/sync-non-price-evidence-import.ts --force --slugs heygen,invideo-io,runwayml-com
+```
+
+Behavior:
+
+- skips unmapped import slugs
+- skips already-synced evidence files unless `--force` is passed
+- accepts either import slugs or site slugs in `--slugs`
+- writes into the existing `nonPriceEvidenceImport.safeWriteback` structure that `readEvidence()` already consumes at runtime

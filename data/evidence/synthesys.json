@@ -177,5 +177,62 @@
       "capturedAt": "2026-03-22",
       "writebackClass": "flag"
     }
-  ]
+  ],
+  "nonPriceEvidenceImport": {
+    "bundleDate": "2026-04-08",
+    "sourceBundle": "data/non-price-evidence-import/tools/synthesys-io.json",
+    "sourceUrls": [
+      "https://synthesys.io/",
+      "https://synthesys.io/features/",
+      "https://synthesys.io/text-to-speech-api/",
+      "https://synthesys.io/ai-terms/",
+      "https://synthesys.io/ai-privacy-policy/",
+      "https://synthesys.io/ai-refund-policy/"
+    ],
+    "safeWriteback": {
+      "policy": {
+        "usageRights": [
+          {
+            "value": "Privacy policy says clients retain ownership of their data and that client data is not used to train AI models.",
+            "sourceUrl": "https://synthesys.io/ai-privacy-policy/"
+          }
+        ],
+        "refundCancellation": [
+          {
+            "value": "Refunds are limited to requests within 72 hours and below 5 minutes of usage.",
+            "sourceUrl": "https://synthesys.io/ai-refund-policy/"
+          },
+          {
+            "value": "Cancellations are handled from My Plan and access continues until the end of the billing cycle.",
+            "sourceUrl": "https://synthesys.io/ai-refund-policy/"
+          }
+        ]
+      },
+      "workflowFeatureDocs": [
+        {
+          "value": "Features include voice cloning, AI talking avatars, talking photos, multilingual translation, and idea-to-video.",
+          "sourceUrl": "https://synthesys.io/features/"
+        }
+      ],
+      "securityApiEnterprise": {
+        "security": [
+          {
+            "value": "Privacy policy states that client data is not used for AI model training.",
+            "sourceUrl": "https://synthesys.io/ai-privacy-policy/"
+          }
+        ],
+        "api": [
+          {
+            "value": "Text-to-speech API uses API keys and supports 140+ languages, 300+ voices, and SSML.",
+            "sourceUrl": "https://synthesys.io/text-to-speech-api/"
+          }
+        ]
+      }
+    },
+    "retainedUnresolved": [
+      "policy.watermark",
+      "policy.exportLimits",
+      "mainLimitations"
+    ]
+  }
 }

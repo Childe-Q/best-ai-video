@@ -177,5 +177,151 @@
       "capturedAt": "2026-03-22",
       "writebackClass": "flag"
     }
-  ]
+  ],
+  "nonPriceEvidenceImport": {
+    "bundleDate": "2026-04-08",
+    "sourceBundle": "data/non-price-evidence-import/tools/opus-pro.json",
+    "sourceUrls": [
+      "https://www.opus.pro/pricing",
+      "https://clip.opus.pro/lp-embed",
+      "https://www.opus.pro/export-to-xml",
+      "https://help.opus.pro/docs/article/opusclip-data-training",
+      "https://trust.opus.pro/subprocessors",
+      "https://help.opus.pro/docs/article/terms-of-service",
+      "https://help.opus.pro/docs/article/privacy-policy"
+    ],
+    "safeWriteback": {
+      "policy": {
+        "watermark": [
+          {
+            "value": "Remove Watermark",
+            "sourceUrl": "https://www.opus.pro/pricing"
+          },
+          {
+            "value": "Has watermark",
+            "sourceUrl": "https://www.opus.pro/pricing"
+          },
+          {
+            "value": "With watermark",
+            "sourceUrl": "https://www.opus.pro/pricing"
+          },
+          {
+            "value": "Watermark-free video export",
+            "sourceUrl": "https://www.opus.pro/pricing"
+          }
+        ],
+        "exportLimits": [
+          {
+            "value": "Export to XML",
+            "sourceUrl": "https://www.opus.pro/pricing"
+          },
+          {
+            "value": "Auto post to YouTube Shorts, TikTok, IG Reels, or download",
+            "sourceUrl": "https://www.opus.pro/pricing"
+          },
+          {
+            "value": "Export to Adobe Premiere Pro & DaVinci Resolve",
+            "sourceUrl": "https://www.opus.pro/pricing"
+          },
+          {
+            "value": "Up to 1080p rendered clips",
+            "sourceUrl": "https://www.opus.pro/pricing"
+          }
+        ]
+      },
+      "mainLimitations": [
+        {
+          "value": "150 credits",
+          "sourceUrl": "https://www.opus.pro/pricing"
+        },
+        {
+          "value": "Contact us for more credits",
+          "sourceUrl": "https://www.opus.pro/pricing"
+        },
+        {
+          "value": "3,600 credits",
+          "sourceUrl": "https://www.opus.pro/pricing"
+        },
+        {
+          "value": "Team workspace with 2 seats",
+          "sourceUrl": "https://www.opus.pro/pricing"
+        }
+      ],
+      "workflowFeatureDocs": [
+        {
+          "value": "Brand template",
+          "sourceUrl": "https://www.opus.pro/pricing"
+        },
+        {
+          "value": "1 brand template",
+          "sourceUrl": "https://www.opus.pro/pricing"
+        },
+        {
+          "value": "2 brand templates",
+          "sourceUrl": "https://www.opus.pro/pricing"
+        },
+        {
+          "value": "Tailored business assets: brand templates, fonts, vocabulary & more",
+          "sourceUrl": "https://www.opus.pro/pricing"
+        },
+        {
+          "value": "Animated caption templates",
+          "sourceUrl": "https://www.opus.pro/pricing"
+        },
+        {
+          "value": "1 template",
+          "sourceUrl": "https://www.opus.pro/pricing"
+        }
+      ],
+      "securityApiEnterprise": {
+        "security": [
+          {
+            "value": "Enterprise-level security",
+            "sourceUrl": "https://www.opus.pro/pricing"
+          },
+          {
+            "value": "SOC II Type 2 compliant",
+            "sourceUrl": "https://www.opus.pro/pricing"
+          }
+        ],
+        "api": [
+          {
+            "value": "API & custom integrations",
+            "sourceUrl": "https://www.opus.pro/pricing"
+          },
+          {
+            "value": "API access",
+            "sourceUrl": "https://www.opus.pro/pricing"
+          },
+          {
+            "value": "API & integration",
+            "sourceUrl": "https://www.opus.pro/pricing"
+          },
+          {
+            "value": "CMS integration",
+            "sourceUrl": "https://www.opus.pro/pricing"
+          }
+        ],
+        "enterprise": [
+          {
+            "value": "Team workspace",
+            "sourceUrl": "https://www.opus.pro/pricing"
+          },
+          {
+            "value": "Maximize your team's productivity with AI",
+            "sourceUrl": "https://www.opus.pro/pricing"
+          },
+          {
+            "value": "For professional creators, marketers, & teams",
+            "sourceUrl": "https://www.opus.pro/pricing"
+          },
+          {
+            "value": "Team workspace with 2 seats",
+            "sourceUrl": "https://www.opus.pro/pricing"
+          }
+        ]
+      }
+    },
+    "retainedUnresolved": []
+  }
 }

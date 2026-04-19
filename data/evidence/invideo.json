@@ -2194,5 +2194,92 @@
         "note": "This article distinguishes preview watermarks vs exported output."
       }
     ]
+  },
+  "nonPriceEvidenceImport": {
+    "bundleDate": "2026-04-08",
+    "sourceBundle": "data/non-price-evidence-import/tools/invideo-io.json",
+    "sourceUrls": [
+      "https://invideo.io/pricing",
+      "https://help.invideo.io/en/articles/9382129-where-can-i-check-my-current-usage",
+      "https://help.invideo.io/en/articles/9382156-what-does-export-visibility-mean",
+      "https://invideo.io/terms-and-conditions/",
+      "https://invideo.io/privacy-policy/"
+    ],
+    "safeWriteback": {
+      "policy": {
+        "watermark": [
+          {
+            "value": "Unlimited exports without watermark",
+            "sourceUrl": "https://invideo.io/pricing"
+          }
+        ],
+        "exportLimits": [
+          {
+            "value": "Exports with invideo logo",
+            "sourceUrl": "https://invideo.io/pricing"
+          },
+          {
+            "value": "Unlimited exports without watermark",
+            "sourceUrl": "https://invideo.io/pricing"
+          }
+        ]
+      },
+      "mainLimitations": [
+        {
+          "value": "Limited credits",
+          "sourceUrl": "https://invideo.io/pricing"
+        },
+        {
+          "value": "Access to invideo v4 agent that can create up to 30 mins of video from a single prompt.",
+          "sourceUrl": "https://invideo.io/pricing"
+        },
+        {
+          "value": "What is a credit, and how is it charged?",
+          "sourceUrl": "https://invideo.io/pricing"
+        },
+        {
+          "value": "Credits work like currency on our platform and are used for video creation, generative models and across other features, not for downloading content. Generative models are priced differently, All models available at their original API pricing. You can use your credits however you like across the platform. We reserve the right to update credit costs at any time, without prior notice.",
+          "sourceUrl": "https://invideo.io/pricing"
+        }
+      ],
+      "workflowFeatureDocs": [
+        {
+          "value": "AI Avatars",
+          "sourceUrl": "https://invideo.io/pricing"
+        },
+        {
+          "value": "Voice Cloning",
+          "sourceUrl": "https://invideo.io/pricing"
+        },
+        {
+          "value": "4 AI avatars & voice clones",
+          "sourceUrl": "https://invideo.io/pricing"
+        },
+        {
+          "value": "16 AI avatars & voice clones",
+          "sourceUrl": "https://invideo.io/pricing"
+        },
+        {
+          "value": "40 AI avatars & voice clones",
+          "sourceUrl": "https://invideo.io/pricing"
+        },
+        {
+          "value": "AI Avatar Generator",
+          "sourceUrl": "https://invideo.io/pricing"
+        }
+      ],
+      "securityApiEnterprise": {
+        "enterprise": [
+          {
+            "value": "Individual Team & Enterprise",
+            "sourceUrl": "https://invideo.io/pricing"
+          }
+        ]
+      }
+    },
+    "retainedUnresolved": [
+      "policy.commercialUse",
+      "policy.usageRights"
+    ]
   }
 }

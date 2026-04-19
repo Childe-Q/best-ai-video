@@ -87,5 +87,96 @@
       "capturedAt": "2026-03-21T17:10:00+08:00",
       "confidence": "high"
     }
-  ]
+  ],
+  "nonPriceEvidenceImport": {
+    "bundleDate": "2026-04-08",
+    "sourceBundle": "data/non-price-evidence-import/tools/aistudios-com.json",
+    "sourceUrls": [
+      "https://www.aistudios.com/pricing",
+      "https://www.aistudios.com/features/ai-dubbing",
+      "https://www.aistudios.com/features/text-to-video",
+      "https://www.aistudios.com/features/auto-captions"
+    ],
+    "safeWriteback": {
+      "policy": {
+        "commercialUse": [
+          {
+            "value": "Commercial use rights cover AI-generated avatars and voices without attribution.",
+            "sourceUrl": "https://www.aistudios.com/pricing"
+          }
+        ],
+        "usageRights": [
+          {
+            "value": "Pricing includes royalty-free images, videos, and music for copyright-compliant use.",
+            "sourceUrl": "https://www.aistudios.com/pricing"
+          }
+        ],
+        "refundCancellation": [
+          {
+            "value": "Downgrades and cancellations take effect at the end of the current billing cycle.",
+            "sourceUrl": "https://www.aistudios.com/pricing"
+          }
+        ],
+        "exportLimits": [
+          {
+            "value": "Export videos in 720p",
+            "sourceUrl": "https://www.aistudios.com/pricing"
+          },
+          {
+            "value": "Export videos in 1080p",
+            "sourceUrl": "https://www.aistudios.com/pricing"
+          },
+          {
+            "value": "SRT Upload & Download",
+            "sourceUrl": "https://www.aistudios.com/pricing"
+          },
+          {
+            "value": "Export videos in 4K",
+            "sourceUrl": "https://www.aistudios.com/pricing"
+          }
+        ]
+      },
+      "mainLimitations": [
+        {
+          "value": "16 one-time generative credits",
+          "sourceUrl": "https://www.aistudios.com/pricing"
+        }
+      ],
+      "workflowFeatureDocs": [
+        {
+          "value": "Pricing lists 2,000+ AI avatars.",
+          "sourceUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "value": "AI dubbing supports 150+ languages with voice cloning and lip-sync.",
+          "sourceUrl": "https://www.aistudios.com/pricing"
+        },
+        {
+          "value": "Pricing includes editable video templates.",
+          "sourceUrl": "https://www.aistudios.com/pricing"
+        }
+      ],
+      "securityApiEnterprise": {
+        "security": [
+          {
+            "value": "Enterprise plans list enterprise-grade security such as SAML SSO.",
+            "sourceUrl": "https://www.aistudios.com/pricing"
+          }
+        ],
+        "enterprise": [
+          {
+            "value": "Team plans add collaboration on AI video creation.",
+            "sourceUrl": "https://www.aistudios.com/pricing"
+          },
+          {
+            "value": "Team plans share generative credits across seats.",
+            "sourceUrl": "https://www.aistudios.com/pricing"
+          }
+        ]
+      }
+    },
+    "retainedUnresolved": [
+      "policy.watermark"
+    ]
+  }
 }

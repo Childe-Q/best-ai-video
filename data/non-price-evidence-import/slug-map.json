@@ -17,7 +17,7 @@
     ]
   },
   "canonicalByImportSlug": {
-    "aistudios-com": null,
+    "aistudios-com": "deepbrain-ai",
     "colossyan": "colossyan",
     "d-id": "d-id",
     "descript": "descript",
@@ -38,9 +38,7 @@
     "zebracat-ai": "zebracat"
   },
   "manualReview": {
-    "unmapped": [
-      "aistudios-com"
-    ],
+    "unmapped": [],
     "duplicateEvidenceTargets": {
       "elai-io": [
         "elai-io",

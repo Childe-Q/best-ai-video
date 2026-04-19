@@ -882,5 +882,95 @@
         }
       ]
     }
-  ]
+  ],
+  "nonPriceEvidenceImport": {
+    "bundleDate": "2026-04-08",
+    "sourceBundle": "data/non-price-evidence-import/tools/pika-art.json",
+    "sourceUrls": [
+      "https://pika.art/blog",
+      "https://pika.art/login",
+      "https://pika.art/pricing",
+      "https://pika.art/careers",
+      "https://pika.art/api"
+    ],
+    "safeWriteback": {
+      "policy": {
+        "watermark": [
+          {
+            "value": "Download videos with no watermark",
+            "sourceUrl": "https://pika.art/pricing"
+          }
+        ],
+        "commercialUse": [
+          {
+            "value": "Commercial use",
+            "sourceUrl": "https://pika.art/pricing"
+          }
+        ],
+        "refundCancellation": [
+          {
+            "value": "Upgrade, switch and cancel plan any time. VAT rate may be charged, depending on your country of residence.",
+            "sourceUrl": "https://pika.art/pricing"
+          }
+        ],
+        "exportLimits": [
+          {
+            "value": "Download videos with no watermark",
+            "sourceUrl": "https://pika.art/pricing"
+          }
+        ]
+      },
+      "mainLimitations": [
+        {
+          "value": "80 monthly video credits",
+          "sourceUrl": "https://pika.art/pricing"
+        },
+        {
+          "value": "10 credits - Turbo model (using Pikascenes, Pikadditions or Pikaswaps)",
+          "sourceUrl": "https://pika.art/pricing"
+        },
+        {
+          "value": "60 credits - Turbo model (using Pikatwists)",
+          "sourceUrl": "https://pika.art/pricing"
+        },
+        {
+          "value": "20 credits - Pro model (using Pikadditions or Pikaswaps)",
+          "sourceUrl": "https://pika.art/pricing"
+        }
+      ],
+      "workflowFeatureDocs": [
+        {
+          "value": "30 credits - Pro model (using Selfie With Your Younger Self template)",
+          "sourceUrl": "https://pika.art/pricing"
+        }
+      ],
+      "securityApiEnterprise": {
+        "api": [
+          {
+            "value": "PIKA API",
+            "sourceUrl": "https://pika.art/api"
+          },
+          {
+            "value": "All about the Pika API",
+            "sourceUrl": "https://pika.art/api"
+          }
+        ],
+        "enterprise": [
+          {
+            "value": "Today is a big day for us. It’s been a year since we dropped out of Stanford to build Pika, and in that time, we’ve done a stealth launch on Discord, released our 1.0 model and web app, shipped multiple first-to-market features, and grown our team from three to thirteen.",
+            "sourceUrl": "https://pika.art/blog"
+          },
+          {
+            "value": "That’s why we’re thrilled and humbled to announce that we’ve raised an $80M series B, bringing our total funding to $135M. Led by the incredible team at Spark Capital, this round will enable us to accelerate our progress in building the best video foundation model, and the best possible product for video creators.",
+            "sourceUrl": "https://pika.art/blog"
+          },
+          {
+            "value": "We're revolutionizing video creation to be seamless and accessible for everyone. Our small, dynamic team values efficiency, collaboration, and creativity. We're seeking individuals with intellect, work ethic, and ambition to join us in breaking down barriers and making a real impact. Experience career growth in a culture that fosters both individual and collective development.",
+            "sourceUrl": "https://pika.art/careers"
+          }
+        ]
+      }
+    },
+    "retainedUnresolved": []
+  }
 }

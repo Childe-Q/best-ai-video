@@ -201,5 +201,73 @@
       "capturedAt": "2026-03-22",
       "writebackClass": "flag"
     }
-  ]
+  ],
+  "nonPriceEvidenceImport": {
+    "bundleDate": "2026-04-08",
+    "sourceBundle": "data/non-price-evidence-import/tools/elai-io.json",
+    "sourceUrls": [
+      "https://elai.io/",
+      "https://elai.io/features",
+      "https://elai.io/enterprise",
+      "https://elai.io/getting-started-with-api",
+      "https://elai.io/security-policy/",
+      "https://elai.io/website-privacy-policy/",
+      "https://elai.io/terms-of-service/"
+    ],
+    "safeWriteback": {
+      "policy": {
+        "refundCancellation": [
+          {
+            "value": "Elai paid service fees are non-refundable.",
+            "sourceUrl": "https://elai.io/terms-of-service/"
+          }
+        ]
+      },
+      "workflowFeatureDocs": [
+        {
+          "value": "Elai supports text-to-video with digital avatars in 75+ languages.",
+          "sourceUrl": "https://elai.io/getting-started-with-api"
+        },
+        {
+          "value": "Enterprise pages list PPTX-to-video, auto translation, screen recording, voice cloning, and AI chat.",
+          "sourceUrl": "https://elai.io/enterprise"
+        }
+      ],
+      "securityApiEnterprise": {
+        "security": [
+          {
+            "value": "Security policy covers uploaded scripts, text, photos, videos, and music.",
+            "sourceUrl": "https://elai.io/security-policy/"
+          }
+        ],
+        "api": [
+          {
+            "value": "Elai offers API access for automation and app integrations.",
+            "sourceUrl": "https://elai.io/enterprise"
+          },
+          {
+            "value": "API access uses a personal token and dedicated API docs.",
+            "sourceUrl": "https://elai.io/getting-started-with-api"
+          }
+        ],
+        "enterprise": [
+          {
+            "value": "Enterprise supports SSO, team collaboration, brand kit, custom integrations, screen recording, and custom avatars.",
+            "sourceUrl": "https://elai.io/enterprise"
+          },
+          {
+            "value": "Enterprise includes a dedicated account manager.",
+            "sourceUrl": "https://elai.io/enterprise"
+          }
+        ]
+      }
+    },
+    "retainedUnresolved": [
+      "policy.watermark",
+      "policy.commercialUse",
+      "policy.usageRights",
+      "policy.exportLimits",
+      "mainLimitations"
+    ]
+  }
 }

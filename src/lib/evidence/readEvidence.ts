@@ -26,14 +26,26 @@ import { normalizeEvidence, getEmptyEvidence, RawEvidence, EvidenceNormalized } 
  * }
  */
 export function readEvidence(slug: string): EvidenceNormalized | null {
-  const evidencePath = path.join(process.cwd(), 'data', 'evidence', `${slug}.json`);
+  const candidatePaths = [
+    path.join(process.cwd(), 'data', 'evidence', `${slug}.json`),
+    path.join(process.cwd(), 'data', 'evidence', `${slug}.evidence.json`),
+  ];
 
-  // Read file
-  let fileContent: string;
-  try {
-    fileContent = fs.readFileSync(evidencePath, 'utf-8');
-  } catch (error) {
-    console.warn(`[evidence] File not found: ${evidencePath}`);
+  let fileContent: string | null = null;
+  let resolvedPath: string | null = null;
+
+  for (const candidatePath of candidatePaths) {
+    try {
+      fileContent = fs.readFileSync(candidatePath, 'utf-8');
+      resolvedPath = candidatePath;
+      break;
+    } catch {
+      continue;
+    }
+  }
+
+  if (!fileContent || !resolvedPath) {
+    console.warn(`[evidence] File not found for ${slug}: ${candidatePaths.join(', ')}`);
     return null;
   }
 
@@ -42,7 +54,7 @@ export function readEvidence(slug: string): EvidenceNormalized | null {
   try {
     rawData = JSON.parse(fileContent) as RawEvidence;
   } catch (error) {
-    console.warn(`[evidence] Invalid JSON for ${slug}:`, error);
+    console.warn(`[evidence] Invalid JSON for ${slug} at ${resolvedPath}:`, error);
     return null;
   }
 

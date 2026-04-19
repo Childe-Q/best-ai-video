@@ -159,5 +159,87 @@
       "writebackClass": "cautious"
     }
   ],
-  "topUpFlags": []
+  "topUpFlags": [],
+  "nonPriceEvidenceImport": {
+    "bundleDate": "2026-04-08",
+    "sourceBundle": "data/non-price-evidence-import/tools/pictory-ai.json",
+    "sourceUrls": [
+      "https://pictory.ai/pricing/",
+      "https://pictory.ai/pictory-api",
+      "https://docs.pictory.ai/",
+      "https://kb.pictory.ai/en/articles/8468756-general-faq",
+      "https://kb.pictory.ai/en/articles/9250487-frequently-asked-questions-subscriptions",
+      "https://kb.pictory.ai/en/articles/8468876-how-to-remove-the-pictory-watermark-and-branding-from-my-video",
+      "https://kb.pictory.ai/en/articles/8468849-how-to-download-a-generated-video",
+      "https://pictory.ai/terms-of-service",
+      "https://pictory.ai/privacy-policy"
+    ],
+    "safeWriteback": {
+      "policy": {
+        "watermark": [
+          {
+            "value": "Free-trial downloads include a Pictory watermark; paid-plan re-downloads remove it.",
+            "sourceUrl": "https://kb.pictory.ai/en/articles/8468876-how-to-remove-the-pictory-watermark-and-branding-from-my-video"
+          }
+        ],
+        "usageRights": [
+          {
+            "value": "Pictory says stock visuals and music in the product are pre-licensed, so users do not owe royalties for that media.",
+            "sourceUrl": "https://kb.pictory.ai/en/articles/8468756-general-faq"
+          }
+        ],
+        "refundCancellation": [
+          {
+            "value": "Subscriptions can be changed or canceled later, with cancellation taking effect at the end of the current term.",
+            "sourceUrl": "https://kb.pictory.ai/en/articles/9250487-frequently-asked-questions-subscriptions"
+          }
+        ],
+        "exportLimits": [
+          {
+            "value": "Exports include MP4 video, subtitles in SRT/TXT/VTT, and MP3 audio.",
+            "sourceUrl": "https://kb.pictory.ai/en/articles/8468849-how-to-download-a-generated-video"
+          }
+        ]
+      },
+      "mainLimitations": [
+        {
+          "value": "After the free trial, account access remains but video downloads stay locked until a paid subscription is added.",
+          "sourceUrl": "https://kb.pictory.ai/en/articles/9250487-frequently-asked-questions-subscriptions"
+        }
+      ],
+      "workflowFeatureDocs": [
+        {
+          "value": "Pictory API converts text, URLs, PowerPoints, and existing videos into videos.",
+          "sourceUrl": "https://pictory.ai/pictory-api"
+        },
+        {
+          "value": "API docs cover storyboard, templates, transcription, branding, media management, and voiceovers.",
+          "sourceUrl": "https://docs.pictory.ai/"
+        }
+      ],
+      "securityApiEnterprise": {
+        "security": [
+          {
+            "value": "API pages reference enterprise-grade security plus SOC 2 and ISO 27001.",
+            "sourceUrl": "https://pictory.ai/pictory-api"
+          }
+        ],
+        "api": [
+          {
+            "value": "Pictory has a public API and separate API docs.",
+            "sourceUrl": "https://docs.pictory.ai/"
+          }
+        ],
+        "enterprise": [
+          {
+            "value": "Pictory API is positioned for custom business and enterprise video workflows.",
+            "sourceUrl": "https://pictory.ai/pictory-api"
+          }
+        ]
+      }
+    },
+    "retainedUnresolved": [
+      "policy.commercialUse"
+    ]
+  }
 }

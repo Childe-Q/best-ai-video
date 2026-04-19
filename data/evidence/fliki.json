@@ -327,7 +327,7 @@
       "confidence": "high"
     },
     {
-      "text": "Quota and usage are shown under Account \u2192 Credits.",
+      "text": "Quota and usage are shown under Account → Credits.",
       "theme": "usage",
       "sourceUrl": "https://fliki.ai/frequently-asked-questions",
       "sourceType": "faq",
@@ -351,7 +351,7 @@
       "confidence": "high"
     },
     {
-      "text": "Credits cannot be carried over or accumulated to the next month\u2019s quota.",
+      "text": "Credits cannot be carried over or accumulated to the next month’s quota.",
       "theme": "usage",
       "sourceUrl": "https://fliki.ai/frequently-asked-questions",
       "sourceType": "faq",
@@ -469,7 +469,7 @@
       "confidence": "high"
     },
     {
-      "text": "Editing text in one scene only uses credits for that scene\u2019s duration.",
+      "text": "Editing text in one scene only uses credits for that scene’s duration.",
       "theme": "usage",
       "sourceUrl": "https://fliki.ai/frequently-asked-questions",
       "sourceType": "faq",
@@ -1066,7 +1066,7 @@
       "confidence": "high"
     },
     {
-      "text": "Voice Cloning states Fliki supports emotions on certain voices marked with a \u26a1\ufe0f icon.",
+      "text": "Voice Cloning states Fliki supports emotions on certain voices marked with a ⚡️ icon.",
       "theme": "features",
       "sourceUrl": "https://fliki.ai/features/voice-cloning",
       "capturedAt": "2026-01-30T22:00:00-08:00",
@@ -1234,7 +1234,7 @@
       "confidence": "high"
     },
     {
-      "text": "Translator Step 2 is selecting \u201cTranslate\u201d and choosing your language and dialect.",
+      "text": "Translator Step 2 is selecting “Translate” and choosing your language and dialect.",
       "theme": "usage",
       "sourceUrl": "https://fliki.ai/features/translator",
       "capturedAt": "2026-01-30T22:00:00-08:00",
@@ -1269,21 +1269,21 @@
       "confidence": "high"
     },
     {
-      "text": "Templates page lists a ready-made template named \u201cCase Study \u00b7 Corporate\u201d.",
+      "text": "Templates page lists a ready-made template named “Case Study · Corporate”.",
       "theme": "features",
       "sourceUrl": "https://fliki.ai/features/templates",
       "capturedAt": "2026-01-30T22:00:00-08:00",
       "confidence": "high"
     },
     {
-      "text": "Templates page lists a ready-made template named \u201cMyHealth Mobile App \u00b7 Product Demo\u201d.",
+      "text": "Templates page lists a ready-made template named “MyHealth Mobile App · Product Demo”.",
       "theme": "features",
       "sourceUrl": "https://fliki.ai/features/templates",
       "capturedAt": "2026-01-30T22:00:00-08:00",
       "confidence": "high"
     },
     {
-      "text": "Templates page lists a ready-made template named \u201cThailand travel guide \u00b7 Travel & Tourism\u201d.",
+      "text": "Templates page lists a ready-made template named “Thailand travel guide · Travel & Tourism”.",
       "theme": "features",
       "sourceUrl": "https://fliki.ai/features/templates",
       "capturedAt": "2026-01-30T22:00:00-08:00",
@@ -1801,7 +1801,7 @@
       "confidence": "high"
     },
     {
-      "text": "AI Talking Avatar Generator states Fliki\u2019s AI voiceover offers 2500+ ultra-realistic voices.",
+      "text": "AI Talking Avatar Generator states Fliki’s AI voiceover offers 2500+ ultra-realistic voices.",
       "theme": "limits",
       "sourceUrl": "https://fliki.ai/features/ai-taking-avatar-generator",
       "capturedAt": "2026-01-30T22:00:00-08:00",
@@ -1958,7 +1958,7 @@
       "confidence": "high"
     },
     {
-      "text": "/5 \u00a9 2025 Nine Thirty Five Privacy Policy Terms of Use About Media kit Cookie settings Features Text to video AI voiceover Idea to video AI avatar Text to",
+      "text": "/5 © 2025 Nine Thirty Five Privacy Policy Terms of Use About Media kit Cookie settings Features Text to video AI voiceover Idea to video AI avatar Text to",
       "theme": "security",
       "sourceUrl": "https://fliki.ai/help",
       "sourceType": "help",
@@ -2195,5 +2195,159 @@
         "items": 2
       }
     ]
+  },
+  "nonPriceEvidenceImport": {
+    "bundleDate": "2026-04-08",
+    "sourceBundle": "data/non-price-evidence-import/tools/fliki-ai.json",
+    "sourceUrls": [
+      "https://fliki.ai/",
+      "https://fliki.ai/pricing",
+      "https://fliki.ai/features"
+    ],
+    "safeWriteback": {
+      "policy": {
+        "watermark": [
+          {
+            "value": "Contains Fliki Watermark",
+            "sourceUrl": "https://fliki.ai/pricing"
+          },
+          {
+            "value": "No watermark",
+            "sourceUrl": "https://fliki.ai/pricing"
+          },
+          {
+            "value": "The paid subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support.",
+            "sourceUrl": "https://fliki.ai/pricing"
+          },
+          {
+            "value": "watermark",
+            "sourceUrl": "https://fliki.ai/pricing"
+          }
+        ],
+        "commercialUse": [
+          {
+            "value": "You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.",
+            "sourceUrl": "https://fliki.ai/pricing"
+          },
+          {
+            "value": "6 long 10 min videos.\",\"Note: These are just estimations and credits usage would depend on how often one edits the script.\"]},{\"question\":\"What is the maximum length of an audio/video file I can create?\",\"answer\":[\"The standard plan offers creating audio/video upto 15 minutes in length.\",\"The premium plan offers creating audio/video upto 30 minutes in length.\"]},{\"question\":\"Can I use Fliki to create Youtube videos?\",\"answer\":[\"Yes, with our subscription plans you get commercial license to all the content you create.\",\"You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.\"]},{\"question\":\"Will I get copyright issues with content created with Fliki?\",\"answer\":[\"Fliki provides media from royalty free media sources and also have license to the premium media to be used with commercial rights on all social media platforms.\"]},{\"question\":\"Does Fliki support Voice Cloning? How can it help me?\",\"answer\":[\"Fliki supports voice cloning, allowing you to replicate your own voice or create unique voices for different characters. This feature saves time on recording and adds authenticity to your content.\",\"It also opens up creative possibilities and assists individuals with speech impairments. With Fliki, you can personalize your content, enhance creativity, and overcome limitations with ease.\"]},{\"question\":\"Should I have prior experience as a designer or video editor to use this tool?\",\"answer\":[\"No, prior experience as a designer or video editor is not required to use Fliki. Our intuitive and user-friendly platform offers capabilities that make it super easy for anyone to create content.\",\"Our Voice Cloning AI, Text to Speech AI, and Text to Video AI, combined with our ready to use templates and 10 million+ rich stock media, allow you to create high-quality videos without any design or video editing expertise.\"]},{\"question\":\"What if I only need Fliki for a short amount of time?\",\"answer\":[\"You can cancel your subscription at anytime by navigating to",
+            "sourceUrl": "https://fliki.ai/pricing"
+          }
+        ],
+        "usageRights": [
+          {
+            "value": "Yes, with our subscription plans you get commercial license to all the content you create.",
+            "sourceUrl": "https://fliki.ai/pricing"
+          },
+          {
+            "value": "You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.",
+            "sourceUrl": "https://fliki.ai/pricing"
+          },
+          {
+            "value": "Will I get copyright issues with content created with Fliki?",
+            "sourceUrl": "https://fliki.ai/pricing"
+          },
+          {
+            "value": "Fliki provides media from royalty free media sources and also have license to the premium media to be used with commercial rights on all social media platforms.",
+            "sourceUrl": "https://fliki.ai/pricing"
+          }
+        ],
+        "refundCancellation": [
+          {
+            "value": "You can cancel your subscription at anytime by navigating to",
+            "sourceUrl": "https://fliki.ai/pricing"
+          },
+          {
+            "value": "6 long 10 min videos.\",\"Note: These are just estimations and credits usage would depend on how often one edits the script.\"]},{\"question\":\"What is the maximum length of an audio/video file I can create?\",\"answer\":[\"The standard plan offers creating audio/video upto 15 minutes in length.\",\"The premium plan offers creating audio/video upto 30 minutes in length.\"]},{\"question\":\"Can I use Fliki to create Youtube videos?\",\"answer\":[\"Yes, with our subscription plans you get commercial license to all the content you create.\",\"You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.\"]},{\"question\":\"Will I get copyright issues with content created with Fliki?\",\"answer\":[\"Fliki provides media from royalty free media sources and also have license to the premium media to be used with commercial rights on all social media platforms.\"]},{\"question\":\"Does Fliki support Voice Cloning? How can it help me?\",\"answer\":[\"Fliki supports voice cloning, allowing you to replicate your own voice or create unique voices for different characters. This feature saves time on recording and adds authenticity to your content.\",\"It also opens up creative possibilities and assists individuals with speech impairments. With Fliki, you can personalize your content, enhance creativity, and overcome limitations with ease.\"]},{\"question\":\"Should I have prior experience as a designer or video editor to use this tool?\",\"answer\":[\"No, prior experience as a designer or video editor is not required to use Fliki. Our intuitive and user-friendly platform offers capabilities that make it super easy for anyone to create content.\",\"Our Voice Cloning AI, Text to Speech AI, and Text to Video AI, combined with our ready to use templates and 10 million+ rich stock media, allow you to create high-quality videos without any design or video editing expertise.\"]},{\"question\":\"What if I only need Fliki for a short amount of time?\",\"answer\":[\"You can cancel your subscription at anytime by navigating to",
+            "sourceUrl": "https://fliki.ai/pricing"
+          }
+        ],
+        "exportLimits": [
+          {
+            "value": "HD - 720p low-res videos",
+            "sourceUrl": "https://fliki.ai/pricing"
+          },
+          {
+            "value": "Full HD - 1080p videos",
+            "sourceUrl": "https://fliki.ai/pricing"
+          },
+          {
+            "value": "1080p and higher",
+            "sourceUrl": "https://fliki.ai/pricing"
+          },
+          {
+            "value": "Export length",
+            "sourceUrl": "https://fliki.ai/pricing"
+          }
+        ]
+      },
+      "mainLimitations": [
+        {
+          "value": "15 minutes",
+          "sourceUrl": "https://fliki.ai/pricing"
+        },
+        {
+          "value": "40 minutes",
+          "sourceUrl": "https://fliki.ai/pricing"
+        },
+        {
+          "value": "Custom credits",
+          "sourceUrl": "https://fliki.ai/pricing"
+        },
+        {
+          "value": "Estimate your credits",
+          "sourceUrl": "https://fliki.ai/pricing"
+        }
+      ],
+      "workflowFeatureDocs": [
+        {
+          "value": "0:{\"buildId\":\"gKisTgjmwW1dGYEvZsK40\",\"rsc\":[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"template\":[\"$\",\"$L3\",null,{}]}]]}],\"loading\":null,\"isPartial\":false}",
+          "sourceUrl": "https://fliki.ai/pricing"
+        },
+        {
+          "value": "Translate content to 80+ languages",
+          "sourceUrl": "https://fliki.ai/pricing"
+        },
+        {
+          "value": "Voice cloning",
+          "sourceUrl": "https://fliki.ai/pricing"
+        },
+        {
+          "value": "Limited AI avatars with custom Avatar",
+          "sourceUrl": "https://fliki.ai/pricing"
+        },
+        {
+          "value": "Multiple brand kits",
+          "sourceUrl": "https://fliki.ai/pricing"
+        },
+        {
+          "value": "Multiple voice cloning",
+          "sourceUrl": "https://fliki.ai/pricing"
+        }
+      ],
+      "securityApiEnterprise": {
+        "api": [
+          {
+            "value": "Make and Zapier integration",
+            "sourceUrl": "https://fliki.ai/pricing"
+          },
+          {
+            "value": "API Access",
+            "sourceUrl": "https://fliki.ai/pricing"
+          }
+        ],
+        "enterprise": [
+          {
+            "value": "For emerging & experienced video creators, perfect for teams of any size.",
+            "sourceUrl": "https://fliki.ai/pricing"
+          },
+          {
+            "value": "Team collaboration",
+            "sourceUrl": "https://fliki.ai/pricing"
+          }
+        ]
+      }
+    },
+    "retainedUnresolved": []
   }
 }

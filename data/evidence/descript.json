@@ -120,5 +120,147 @@
       "capturedAt": "2026-03-21T16:30:00+08:00",
       "confidence": "high"
     }
-  ]
+  ],
+  "nonPriceEvidenceImport": {
+    "bundleDate": "2026-04-08",
+    "sourceBundle": "data/non-price-evidence-import/tools/descript.json",
+    "sourceUrls": [
+      "https://www.descript.com/pricing",
+      "https://get.descript.com/pr/js",
+      "https://help.descript.com/hc/en-us/articles/10255865751181-Enterprise-plan",
+      "https://www.descript.com/security",
+      "https://help.descript.com/hc/en-us/articles/10255866490125-Account-data-and-privacy"
+    ],
+    "safeWriteback": {
+      "policy": {
+        "watermark": [
+          {
+            "value": "Elevate your projects, watermark-free",
+            "sourceUrl": "https://www.descript.com/pricing"
+          },
+          {
+            "value": "Export 1080p, watermark-free",
+            "sourceUrl": "https://www.descript.com/pricing"
+          },
+          {
+            "value": "Export 4k, watermark-free",
+            "sourceUrl": "https://www.descript.com/pricing"
+          },
+          {
+            "value": "Watermark-free video export",
+            "sourceUrl": "https://www.descript.com/pricing"
+          }
+        ],
+        "refundCancellation": [
+          {
+            "value": "You can easily cancel your subscription from your",
+            "sourceUrl": "https://www.descript.com/pricing"
+          }
+        ],
+        "exportLimits": [
+          {
+            "value": "Export 1080p, watermark-free",
+            "sourceUrl": "https://www.descript.com/pricing"
+          },
+          {
+            "value": "Export 4k, watermark-free",
+            "sourceUrl": "https://www.descript.com/pricing"
+          },
+          {
+            "value": "Automatically transcribe multiple synchronized recordings with speakers on separate tracks and get precise speaker labeling and transcription accuracy. You can also export sessions while retaining separate tracks for editing workflows.",
+            "sourceUrl": "https://www.descript.com/pricing"
+          },
+          {
+            "value": "Export & publish",
+            "sourceUrl": "https://www.descript.com/pricing"
+          }
+        ]
+      },
+      "mainLimitations": [
+        {
+          "value": "Saving up to 35% over monthly plan",
+          "sourceUrl": "https://www.descript.com/pricing"
+        },
+        {
+          "value": "Elevate your projects, watermark-free",
+          "sourceUrl": "https://www.descript.com/pricing"
+        },
+        {
+          "value": "400 AI credits / month",
+          "sourceUrl": "https://www.descript.com/pricing"
+        },
+        {
+          "value": "800 AI credits / month",
+          "sourceUrl": "https://www.descript.com/pricing"
+        }
+      ],
+      "workflowFeatureDocs": [
+        {
+          "value": "Screen recorder",
+          "sourceUrl": "https://www.descript.com/pricing"
+        },
+        {
+          "value": "Easily create a realistic voice clone or pick from our stock AI voices.",
+          "sourceUrl": "https://www.descript.com/pricing"
+        },
+        {
+          "value": "Templates",
+          "sourceUrl": "https://www.descript.com/pricing"
+        },
+        {
+          "value": "Jumpstart your workflow with battle-tested AI templates.",
+          "sourceUrl": "https://www.descript.com/pricing"
+        },
+        {
+          "value": "AI avatars",
+          "sourceUrl": "https://www.descript.com/pricing"
+        },
+        {
+          "value": "Translate and dub video in 30+ languages with proofread",
+          "sourceUrl": "https://www.descript.com/pricing"
+        }
+      ],
+      "securityApiEnterprise": {
+        "security": [
+          {
+            "value": "Tailored solutions and enterprise-grade security for large or growing teams",
+            "sourceUrl": "https://www.descript.com/pricing"
+          },
+          {
+            "value": "Advanced Security and SSO / SCIM",
+            "sourceUrl": "https://www.descript.com/pricing"
+          },
+          {
+            "value": "Make everyone a collaborator—and make more video. Get enterprise-grade security, personalized support, and extra features like Brand Studio, which keeps brand elements aligned across distributed teams.",
+            "sourceUrl": "https://www.descript.com/pricing"
+          },
+          {
+            "value": "How does Descript protect my privacy?",
+            "sourceUrl": "https://www.descript.com/pricing"
+          }
+        ],
+        "enterprise": [
+          {
+            "value": "Scale to a team of 3 (billed separately)",
+            "sourceUrl": "https://www.descript.com/pricing"
+          },
+          {
+            "value": "Scale to a team of 5 (billed separately)",
+            "sourceUrl": "https://www.descript.com/pricing"
+          },
+          {
+            "value": "Empower collaboration on your team",
+            "sourceUrl": "https://www.descript.com/pricing"
+          },
+          {
+            "value": "Team-wide access to Brand Studio",
+            "sourceUrl": "https://www.descript.com/pricing"
+          }
+        ]
+      }
+    },
+    "retainedUnresolved": [
+      "policy.commercialUse"
+    ]
+  }
 }

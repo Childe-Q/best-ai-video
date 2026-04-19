@@ -42,7 +42,7 @@
         {
           "url": "https://www.heygen.com/faq",
           "type": "faq",
-          "quote": "After a video is successfully submitted, editing requires duplicating it (creating a clone) from the \u2018My Video\u2019 tab."
+          "quote": "After a video is successfully submitted, editing requires duplicating it (creating a clone) from the ‘My Video’ tab."
         }
       ]
     },
@@ -70,12 +70,12 @@
     },
     {
       "field": "gesture_control_limit",
-      "value": "Users currently cannot control avatars\u2019 gestures and movements.",
+      "value": "Users currently cannot control avatars’ gestures and movements.",
       "sources": [
         {
           "url": "https://www.heygen.com/faq",
           "type": "faq",
-          "quote": "Currently, users are not able to control avatars\u2019 gestures and movements."
+          "quote": "Currently, users are not able to control avatars’ gestures and movements."
         }
       ]
     },
@@ -108,7 +108,7 @@
         {
           "url": "https://www.heygen.com/pricing?nb=02",
           "type": "pricing",
-          "quote": "Video translation max duration per video is listed as 3 minutes, 30 minutes, 60 minutes, and \u2018No video duration max\u2019 (depending on plan)."
+          "quote": "Video translation max duration per video is listed as 3 minutes, 30 minutes, 60 minutes, and ‘No video duration max’ (depending on plan)."
         }
       ]
     },
@@ -152,7 +152,7 @@
         {
           "url": "https://www.heygen.com/pricing?nb=02",
           "type": "pricing",
-          "quote": "Voice Cloning is listed as \u20181 voice clone\u2019 for one plan and \u2018Unlimited\u2019 for multiple plans."
+          "quote": "Voice Cloning is listed as ‘1 voice clone’ for one plan and ‘Unlimited’ for multiple plans."
         }
       ]
     },
@@ -163,7 +163,7 @@
         {
           "url": "https://www.heygen.com/pricing?nb=02",
           "type": "pricing",
-          "quote": "Photo Avatars are listed as \u2018Up to 3\u2019 for one plan and \u2018Unlimited\u2019 for multiple plans."
+          "quote": "Photo Avatars are listed as ‘Up to 3’ for one plan and ‘Unlimited’ for multiple plans."
         }
       ]
     },
@@ -174,7 +174,7 @@
         {
           "url": "https://www.heygen.com/pricing?nb=02",
           "type": "pricing",
-          "quote": "Global Language Suite is listed as \u201830+ languages\u2019 for one plan and \u2018175 languages & dialects\u2019 for multiple plans."
+          "quote": "Global Language Suite is listed as ‘30+ languages’ for one plan and ‘175 languages & dialects’ for multiple plans."
         }
       ]
     },
@@ -196,7 +196,7 @@
         {
           "url": "https://www.heygen.com/pricing?nb=02",
           "type": "pricing",
-          "quote": "The pricing page includes a feature labeled \u2018Watermark removal\u2019 (availability varies by plan)."
+          "quote": "The pricing page includes a feature labeled ‘Watermark removal’ (availability varies by plan)."
         }
       ]
     },
@@ -207,7 +207,7 @@
         {
           "url": "https://security.heygen.com/",
           "type": "security",
-          "quote": "The security portal page title indicates \u2018Trust Center | Powered by Drata\u2019."
+          "quote": "The security portal page title indicates ‘Trust Center | Powered by Drata’."
         }
       ],
       "confidence": "medium"
@@ -231,7 +231,7 @@
         {
           "url": "https://www.heygen.com/faq",
           "type": "faq",
-          "quote": "FAQ: Paying subscribers own generated videos; free-version users\u2019 videos are owned by HeyGen but may be used for non-commercial purposes."
+          "quote": "FAQ: Paying subscribers own generated videos; free-version users’ videos are owned by HeyGen but may be used for non-commercial purposes."
         }
       ],
       "conflictGroup": "output_ownership_free_paid"
@@ -325,12 +325,12 @@
     },
     {
       "field": "privacy_training_opt_out",
-      "value": "Privacy policy says users may object to their information being used to train HeyGen\u2019s models by contacting an email in the policy.",
+      "value": "Privacy policy says users may object to their information being used to train HeyGen’s models by contacting an email in the policy.",
       "sources": [
         {
           "url": "https://www.heygen.com/privacy",
           "type": "privacy",
-          "quote": "HeyGen states users may object to their information being used to train HeyGen\u2019s models by contacting an email address provided in the Privacy Policy."
+          "quote": "HeyGen states users may object to their information being used to train HeyGen’s models by contacting an email address provided in the Privacy Policy."
         }
       ]
     },
@@ -363,12 +363,12 @@
         {
           "url": "https://www.heygen.com/business",
           "type": "business",
-          "quote": "HeyGen for Business page states \u2018SOC 2 Type II + GDPR compliant\u2019."
+          "quote": "HeyGen for Business page states ‘SOC 2 Type II + GDPR compliant’."
         },
         {
           "url": "https://www.heygen.com/business",
           "type": "business",
-          "quote": "HeyGen for Business page lists \u2018Self-serve SAML SSO\u2019."
+          "quote": "HeyGen for Business page lists ‘Self-serve SAML SSO’."
         }
       ]
     },
@@ -379,12 +379,12 @@
         {
           "url": "https://www.heygen.com/business",
           "type": "business",
-          "quote": "HeyGen for Business page lists \u2018Translation up to 60 min\u2019."
+          "quote": "HeyGen for Business page lists ‘Translation up to 60 min’."
         },
         {
           "url": "https://www.heygen.com/business",
           "type": "business",
-          "quote": "HeyGen for Business page states \u2018Avatar IV\u2019 can create photo avatars up to 5 minutes."
+          "quote": "HeyGen for Business page states ‘Avatar IV’ can create photo avatars up to 5 minutes."
         }
       ]
     },
@@ -395,7 +395,7 @@
         {
           "url": "https://www.heygen.com/business",
           "type": "business",
-          "quote": "HeyGen for Business page states \u2018Commercial use rights\u2019."
+          "quote": "HeyGen for Business page states ‘Commercial use rights’."
         }
       ]
     },
@@ -406,12 +406,12 @@
         {
           "url": "https://community.heygen.com/public/content",
           "type": "community",
-          "quote": "HeyGen Hub \u2018Content\u2019 page lists categories including \u2018Tutorials by Use Case (46 items)\u2019 and \u2018Tutorials by Feature (42 items)\u2019."
+          "quote": "HeyGen Hub ‘Content’ page lists categories including ‘Tutorials by Use Case (46 items)’ and ‘Tutorials by Feature (42 items)’."
         },
         {
           "url": "https://community.heygen.com/public/content",
           "type": "community",
-          "quote": "HeyGen Hub \u2018Content\u2019 page lists \u2018AI Video Jumpstart Guides\u2019 as 5 items."
+          "quote": "HeyGen Hub ‘Content’ page lists ‘AI Video Jumpstart Guides’ as 5 items."
         }
       ]
     }
@@ -879,7 +879,7 @@
       "confidence": "medium"
     },
     {
-      "text": "\u200d We do not \u201csell\u201d or \u201cshare\u201d (as those terms are defined in the CCPA) personal information, nor have we done so in the preceding 12 months",
+      "text": "‍ We do not “sell” or “share” (as those terms are defined in the CCPA) personal information, nor have we done so in the preceding 12 months",
       "theme": "security",
       "sourceUrl": "https://www.heygen.com/privacy",
       "sourceType": "privacy",
@@ -889,7 +889,7 @@
       "confidence": "medium"
     },
     {
-      "text": "We do not \u201csell\u201d or \u201cshare\u201d (as those terms are defined in the CCPA) personal information, nor have we done so in the preceding 12 months. Further, we do not",
+      "text": "We do not “sell” or “share” (as those terms are defined in the CCPA) personal information, nor have we done so in the preceding 12 months. Further, we do not",
       "theme": "security",
       "sourceUrl": "https://www.heygen.com/privacy",
       "sourceType": "privacy",
@@ -939,7 +939,7 @@
       "confidence": "medium"
     },
     {
-      "text": "As described in section 1 \u201cIntroduction\u201d, HeyGen, Inc. is usually the processor of your personal data. We are the controller only if we process data for our",
+      "text": "As described in section 1 “Introduction”, HeyGen, Inc. is usually the processor of your personal data. We are the controller only if we process data for our",
       "theme": "security",
       "sourceUrl": "https://www.heygen.com/privacy",
       "sourceType": "privacy",
@@ -989,7 +989,7 @@
       "confidence": "medium"
     },
     {
-      "text": "Exporting videos Click the &#x27;\u2611\ufe0f Submit&#x27; button in the upper right corner, the video will be submitted for generation",
+      "text": "Exporting videos Click the &#x27;☑️ Submit&#x27; button in the upper right corner, the video will be submitted for generation",
       "theme": "usage",
       "sourceUrl": "https://www.heygen.com/faq",
       "sourceType": "faq",
@@ -1029,7 +1029,7 @@
       "confidence": "medium"
     },
     {
-      "text": "\u200d As described in section 1 \u201cIntroduction\u201d, HeyGen, Inc",
+      "text": "‍ As described in section 1 “Introduction”, HeyGen, Inc",
       "theme": "general",
       "sourceUrl": "https://www.heygen.com/privacy",
       "sourceType": "privacy",
@@ -1039,7 +1039,7 @@
       "confidence": "medium"
     },
     {
-      "text": "\u201d and section 4 \u201cHow Do We Use Your Information\u201d above",
+      "text": "” and section 4 “How Do We Use Your Information” above",
       "theme": "general",
       "sourceUrl": "https://www.heygen.com/privacy",
       "sourceType": "privacy",
@@ -1059,7 +1059,7 @@
       "confidence": "medium"
     },
     {
-      "text": "\u200d Jonathan Bailey Copyright &amp; Plagiarism Consultant, CopyByte 3157 Gentilly Blvd",
+      "text": "‍ Jonathan Bailey Copyright &amp; Plagiarism Consultant, CopyByte 3157 Gentilly Blvd",
       "theme": "general",
       "sourceUrl": "https://www.heygen.com/terms",
       "sourceType": "terms",
@@ -1149,7 +1149,7 @@
       "confidence": "medium"
     },
     {
-      "text": "\u200d If you submit a request to delete your information, we strive to take steps to delete that information within 72 hours of your request, unless we are",
+      "text": "‍ If you submit a request to delete your information, we strive to take steps to delete that information within 72 hours of your request, unless we are",
       "theme": "general",
       "sourceUrl": "https://www.heygen.com/privacy",
       "sourceType": "privacy",
@@ -1704,5 +1704,165 @@
         }
       ]
     }
-  ]
+  ],
+  "nonPriceEvidenceImport": {
+    "bundleDate": "2026-04-08",
+    "sourceBundle": "data/non-price-evidence-import/tools/heygen.json",
+    "sourceUrls": [
+      "https://www.heygen.com/pricing",
+      "https://www.heygen.com/_next/image",
+      "https://www.heygen.com/trust-and-safety",
+      "https://www.heygen.com/moderation-policy",
+      "https://help.heygen.com/en/articles/8304807-refund-process-and-policy",
+      "https://docs.heygen.com/docs/streaming-api",
+      "https://help.heygen.com/en/collections/3984458-trust-safety-content-moderation"
+    ],
+    "safeWriteback": {
+      "policy": {
+        "watermark": [
+          {
+            "value": "Watermark removal",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          }
+        ],
+        "usageRights": [
+          {
+            "value": "Yes. We donʼt limit how you use or distribute the videos once you make them, as long as the materials and input you use are within acceptable guidelines (for example, no copyright violation of your uploads, no sensitive or bad words for character inputs).",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          }
+        ],
+        "refundCancellation": [
+          {
+            "value": "When you cancel your subscription, you are canceling your billing cycle renewal. This means you will still have access to your subscription features until the end of the active billing cycle. However, you will not be charged for any more renewals.",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          },
+          {
+            "value": "You can directly go to your account page to find the pause or cancel option for your subscription.",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          },
+          {
+            "value": "canceling",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          }
+        ],
+        "exportLimits": [
+          {
+            "value": "720p video export",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          },
+          {
+            "value": "Share & download videos",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          },
+          {
+            "value": "1080p video export",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          },
+          {
+            "value": "Built for advanced individuals creating premium content at scale. Unlock 10× more access to premium features and export in stunning 4K video quality.",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          }
+        ]
+      },
+      "mainLimitations": [
+        {
+          "value": "Videos up to 3-mins",
+          "sourceUrl": "https://www.heygen.com/pricing"
+        },
+        {
+          "value": "Videos up to 30-mins",
+          "sourceUrl": "https://www.heygen.com/pricing"
+        },
+        {
+          "value": "Videos up to 60-mins",
+          "sourceUrl": "https://www.heygen.com/pricing"
+        },
+        {
+          "value": "Proofreader seats for video translation",
+          "sourceUrl": "https://www.heygen.com/pricing"
+        }
+      ],
+      "workflowFeatureDocs": [
+        {
+          "value": "Voice cloning",
+          "sourceUrl": "https://www.heygen.com/pricing"
+        },
+        {
+          "value": "Brand kit",
+          "sourceUrl": "https://www.heygen.com/pricing"
+        },
+        {
+          "value": "Screen Recorder",
+          "sourceUrl": "https://www.heygen.com/pricing"
+        },
+        {
+          "value": "Video templates",
+          "sourceUrl": "https://www.heygen.com/pricing"
+        },
+        {
+          "value": "Save designs as templates",
+          "sourceUrl": "https://www.heygen.com/pricing"
+        },
+        {
+          "value": "AI Avatars & Voices",
+          "sourceUrl": "https://www.heygen.com/pricing"
+        }
+      ],
+      "securityApiEnterprise": {
+        "security": [
+          {
+            "value": "Enterprise-grade security & privacy",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          },
+          {
+            "value": "Security Portal",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          },
+          {
+            "value": "GDPR Compliance",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          }
+        ],
+        "api": [
+          {
+            "value": "LMS Integrations",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          },
+          {
+            "value": "Integrations with n8n, Make, Hubspot & Zapier",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          },
+          {
+            "value": "Explore API pricing →",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          },
+          {
+            "value": "API Pricing",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          }
+        ],
+        "enterprise": [
+          {
+            "value": "Flexible pricing plans for every creator and team",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          },
+          {
+            "value": "Additional Seats are $20/seat. Secure, scalable video creation for teams and businesses",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          },
+          {
+            "value": "Add team members for $20/seat/mo",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          },
+          {
+            "value": "Workspace collaboration",
+            "sourceUrl": "https://www.heygen.com/pricing"
+          }
+        ]
+      }
+    },
+    "retainedUnresolved": [
+      "policy.commercialUse"
+    ]
+  }
 }

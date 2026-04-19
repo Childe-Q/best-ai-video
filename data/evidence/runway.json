@@ -119,5 +119,117 @@
       "capturedAt": "2026-03-21T12:00:00+08:00",
       "confidence": "high"
     }
-  ]
+  ],
+  "nonPriceEvidenceImport": {
+    "bundleDate": "2026-04-08",
+    "sourceBundle": "data/non-price-evidence-import/tools/runwayml-com.json",
+    "sourceUrls": [
+      "https://runwayml.com/",
+      "https://runwayml.com/about",
+      "https://runwayml.com/pricing",
+      "https://runwayml.com/sales",
+      "https://runwayml.com/solutions",
+      "https://runwayml.com/data-security",
+      "https://help.runwayml.com/hc/en-us/articles/48625698573075-Enterprise-Features",
+      "https://help.runwayml.com/hc/en-us/articles/24300377879827-Understanding-Runway-s-security-and-privacy-standards"
+    ],
+    "safeWriteback": {
+      "policy": {
+        "watermark": [
+          {
+            "value": "Remove watermarks",
+            "sourceUrl": "https://runwayml.com/pricing"
+          }
+        ]
+      },
+      "mainLimitations": [
+        {
+          "value": "Includes 125 credits (one time)",
+          "sourceUrl": "https://runwayml.com/pricing"
+        },
+        {
+          "value": "125 credits = 25s of Gen-4 Turbo or Gen-3 Alpha Turbo",
+          "sourceUrl": "https://runwayml.com/pricing"
+        },
+        {
+          "value": "Includes 625 credits monthly",
+          "sourceUrl": "https://runwayml.com/pricing"
+        },
+        {
+          "value": "625 credits = 25s of Gen-4.5, 52s of Gen-4, 125s of Gen-4 Turbo, 78 Gen-4 Images or Gen-3 Alpha Turbo or 62s of Gen-3 Alpha",
+          "sourceUrl": "https://runwayml.com/pricing"
+        }
+      ],
+      "workflowFeatureDocs": [
+        {
+          "value": "Gen-4 Turbo (Image to Video)",
+          "sourceUrl": "https://runwayml.com/pricing"
+        },
+        {
+          "value": "Gen-4.5 (Text to Video)",
+          "sourceUrl": "https://runwayml.com/pricing"
+        },
+        {
+          "value": "Gen-4 (Image to Video)",
+          "sourceUrl": "https://runwayml.com/pricing"
+        }
+      ],
+      "securityApiEnterprise": {
+        "security": [
+          {
+            "value": "For teams and organizations that need customization, advanced security and support.",
+            "sourceUrl": "https://runwayml.com/pricing"
+          },
+          {
+            "value": "Advanced security and compliance",
+            "sourceUrl": "https://runwayml.com/pricing"
+          },
+          {
+            "value": "/ Your Privacy Choices",
+            "sourceUrl": "https://runwayml.com/pricing"
+          }
+        ],
+        "api": [
+          {
+            "value": "A real-time video agent API that lets you build fully custom conversational characters. These video agents can have any appearance and any visual style, with full control over voice, personality, knowledge and actions.",
+            "sourceUrl": "https://runwayml.com/"
+          },
+          {
+            "value": "Robotics SDK",
+            "sourceUrl": "https://runwayml.com/"
+          },
+          {
+            "value": "Robotics SDK",
+            "sourceUrl": "https://runwayml.com/about"
+          },
+          {
+            "value": "Integration with internal tools",
+            "sourceUrl": "https://runwayml.com/pricing"
+          }
+        ],
+        "enterprise": [
+          {
+            "value": "Max. 5 users per workspace.",
+            "sourceUrl": "https://runwayml.com/pricing"
+          },
+          {
+            "value": "For individuals and teams looking to add all of Runway's features into their workflows.",
+            "sourceUrl": "https://runwayml.com/pricing"
+          },
+          {
+            "value": "Max. 10 users per workspace.",
+            "sourceUrl": "https://runwayml.com/pricing"
+          },
+          {
+            "value": "For teams and organizations that need customization, advanced security and support.",
+            "sourceUrl": "https://runwayml.com/pricing"
+          }
+        ]
+      }
+    },
+    "retainedUnresolved": [
+      "policy.commercialUse",
+      "policy.usageRights"
+    ]
+  }
 }
