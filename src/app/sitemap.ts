@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 import { getAllTools } from '@/lib/toolData';
-import { getFeaturePageSlugs } from '@/lib/features/readFeaturePageData';
+import { getIndexableFeaturePageSlugs } from '@/lib/features/indexability';
 import { listVsSlugs, getVsComparisonWithStatus } from '@/data/vs';
 import {
   getTopicAlternativesSlugs,
@@ -11,6 +11,7 @@ import {
 import { isFeaturePageThin } from '@/lib/features/isFeaturePageThin';
 import { isReviewPageThin } from '@/lib/reviews/isReviewPageThin';
 import { isComparisonReady } from '@/lib/vsComparisonReady';
+import { getPricingPageExposure } from '@/lib/pricing/indexability';
 
 // Change this to your actual domain
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://best-ai-video.com';
@@ -85,7 +86,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   });
 
   // 5. Feature Category Pages (only real routable slugs)
-  getFeaturePageSlugs().forEach((slug) => {
+  getIndexableFeaturePageSlugs().forEach((slug) => {
     pushRoute({
       url: `${BASE_URL}/features/${slug}`,
       lastModified: new Date(),
@@ -105,12 +106,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
 
     // Pricing Page
-    pushRoute({
-      url: `${BASE_URL}/tool/${tool.slug}/pricing`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    });
+    const pricingExposure = getPricingPageExposure(tool.slug, tool);
+    if (pricingExposure.indexable) {
+      pushRoute({
+        url: `${BASE_URL}/tool/${tool.slug}/pricing`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      });
+    }
 
     // Alternatives Page — only include if page is not thin (matches page-level noindex logic)
     const altData = await buildToolAlternativesLongformData(tool.slug);

@@ -25,6 +25,10 @@ export async function generateMetadata({
   return {
     title: `${tool.toolName} pricing cards`,
     description: `Canonical pricing cards for ${tool.toolName}.`,
+    robots: {
+      index: false,
+      follow: false,
+    },
   };
 }
 

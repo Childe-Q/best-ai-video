@@ -13,6 +13,7 @@
     "extract:tools": "tsx scripts/extract-tools-from-cache.ts",
     "validate:tools": "tsx scripts/validate-tools.ts",
     "validate:pricing": "tsx scripts/validate-pricing-json.ts",
+    "validate:seo": "node --import tsx scripts/validate-seo-rules.ts",
     "export:dossiers": "tsx scripts/export_tool_dossiers.ts"
   },
   "dependencies": {

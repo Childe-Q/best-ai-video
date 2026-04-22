@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { buildCollectionPageJsonLd, buildFaqJsonLd } from '@/lib/jsonLd';
 import { getSEOCurrentYear } from '@/lib/utils';
 import {
   getComparisonLibraryCards,
@@ -10,6 +11,28 @@ import {
 } from '@/lib/vsIndex';
 
 const seoYear = getSEOCurrentYear();
+const vsIndexFaqs = [
+  {
+    question: 'When should I use a vs page instead of a feature page?',
+    answer:
+      'Use a vs page when the workflow is already fixed and you need one direct AI video software comparison between two credible tools. Use a feature page when you are still deciding what kind of tool the job needs.',
+  },
+  {
+    question: 'Should I compare tools before choosing the workflow?',
+    answer:
+      'Usually no. Most low-value AI video tool comparisons happen because the workflow is still mixed up. Narrow the workflow first, then compare AI video tools inside that lane.',
+  },
+  {
+    question: 'What is the difference between avatar and text-to-video comparisons?',
+    answer:
+      'Avatar comparisons are about presenter-led delivery. Text-to-video comparisons are about generating net-new scenes from prompts, scripts, or narration. They solve different buying questions, so they should not share the same shortlist.',
+  },
+  {
+    question: 'What if I already know the pair?',
+    answer:
+      'Go straight to the library. It is the fastest route when the pair is already clear and you just need the right AI video tool comparison page.',
+  },
+];
 
 export const metadata = {
   title: `AI Video Tool Comparisons | Side-by-Side Comparisons ${seoYear}`,
@@ -95,6 +118,29 @@ export default function VSIndexPage() {
 
   return (
     <div className="min-h-screen bg-[#FCFBF7] pb-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildCollectionPageJsonLd({
+              name: `AI video tool comparisons ${seoYear}`,
+              description:
+                'Browse live head-to-head AI video tool comparisons once the workflow is already clear.',
+              href: '/vs',
+              items: startingPoints.map((comparison) => ({
+                name: comparison.comparisonName,
+                href: `/vs/${comparison.slug}`,
+              })),
+            })
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFaqJsonLd(vsIndexFaqs)),
+        }}
+      />
       <header className="relative overflow-hidden border-b border-black/10 bg-white">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-full bg-[radial-gradient(circle_at_top_right,_rgba(184,245,0,0.10),_transparent_48%),radial-gradient(circle_at_12%_24%,_rgba(246,210,0,0.08),_transparent_34%)]" />
 

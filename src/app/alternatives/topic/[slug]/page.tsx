@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import AlternativesLongformTemplate from '@/components/alternatives/longform/AlternativesLongformTemplate';
+import { buildBreadcrumbJsonLd, buildFaqJsonLd } from '@/lib/jsonLd';
 import {
   buildTopicAlternativesLongformData,
   getTopicAlternativesSlugs,
@@ -41,5 +42,29 @@ export default async function TopicAlternativesPage({ params }: { params: Promis
     notFound();
   }
 
-  return <AlternativesLongformTemplate data={data} />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildBreadcrumbJsonLd([
+              { name: 'Home', href: '/' },
+              { name: 'Alternatives', href: '/alternatives' },
+              { name: data.title },
+            ])
+          ),
+        }}
+      />
+      {data.faqs.length > 0 ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildFaqJsonLd(data.faqs)),
+          }}
+        />
+      ) : null}
+      <AlternativesLongformTemplate data={data} />
+    </>
+  );
 }

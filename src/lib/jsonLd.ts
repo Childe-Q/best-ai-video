@@ -1,5 +1,4 @@
 import { Tool } from '@/types/tool';
-import { getToolPricingSummary } from '@/lib/pricing/display';
 import { getToolCardPricingDisplay } from '@/lib/pricing/cardDisplay';
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://best-ai-video.com';
@@ -88,6 +87,16 @@ export type BreadcrumbItem = {
   href?: string; // omit for last item (current page)
 };
 
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
+export type PageLinkItem = {
+  name: string;
+  href: string;
+};
+
 export function buildBreadcrumbJsonLd(items: BreadcrumbItem[]) {
   return {
     '@context': 'https://schema.org',
@@ -105,6 +114,77 @@ export function buildBreadcrumbJsonLd(items: BreadcrumbItem[]) {
       }
       return element;
     }),
+  };
+}
+
+/* ------------------------------------------------------------------ */
+/*  FAQPage                                                            */
+/* ------------------------------------------------------------------ */
+
+export function buildFaqJsonLd(items: FaqItem[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  };
+}
+
+/* ------------------------------------------------------------------ */
+/*  WebPage / CollectionPage                                           */
+/* ------------------------------------------------------------------ */
+
+function toAbsoluteUrl(href: string): string {
+  return href.startsWith('http') ? href : `${BASE_URL}${href}`;
+}
+
+export function buildWebPageJsonLd({
+  name,
+  description,
+  href,
+}: {
+  name: string;
+  description: string;
+  href: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name,
+    description,
+    url: toAbsoluteUrl(href),
+  };
+}
+
+export function buildCollectionPageJsonLd({
+  name,
+  description,
+  href,
+  items = [],
+}: {
+  name: string;
+  description: string;
+  href: string;
+  items?: PageLinkItem[];
+}) {
+  return {
+    ...buildWebPageJsonLd({ name, description, href }),
+    '@type': 'CollectionPage',
+    ...(items.length > 0
+      ? {
+          hasPart: items.map((item) => ({
+            '@type': 'WebPage',
+            name: item.name,
+            url: toAbsoluteUrl(item.href),
+          })),
+        }
+      : {}),
   };
 }
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import Link from 'next/link';
 import { PricingPlan, ComparisonTable } from '@/types/tool';
 import PricingSnapshot from './PricingSnapshot';
 import PricingUsageExplainer from './PricingUsageExplainer';
@@ -661,6 +662,41 @@ export default function ToolPricingTemplate({
               )}
               <span>•</span>
               <DisclosurePopover />
+            </div>
+          </div>
+
+          <div className="mb-12 rounded-2xl border border-slate-200 bg-white p-6">
+            <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">What to do next</p>
+            <h2 className="mt-2 text-2xl font-bold text-gray-900">Use pricing to judge fit, then move to the next decision page</h2>
+            <p className="mt-3 max-w-3xl text-sm leading-7 text-gray-600">
+              This page is for plan fit and usage math. If the budget still works, go back to the review. If the plan
+              structure feels off, move sideways into alternatives instead of forcing the tool to fit.
+            </p>
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              <Link
+                href={`/tool/${toolSlug}`}
+                className="rounded-xl border border-slate-200 bg-slate-50 p-5 transition-all hover:border-indigo-300 hover:bg-indigo-50"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Full context</p>
+                <h3 className="mt-2 text-lg font-bold text-slate-900">Read the full review</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Go back to the product page if workflow fit and trade-offs matter more than the plan table.</p>
+              </Link>
+              <Link
+                href={`/tool/${toolSlug}/alternatives`}
+                className="rounded-xl border border-slate-200 bg-slate-50 p-5 transition-all hover:border-indigo-300 hover:bg-indigo-50"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Replacement set</p>
+                <h3 className="mt-2 text-lg font-bold text-slate-900">Compare alternatives</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Open the broader shortlist if the pricing model already looks wrong for how you buy or publish.</p>
+              </Link>
+              <Link
+                href="/features"
+                className="rounded-xl border border-slate-200 bg-slate-50 p-5 transition-all hover:border-indigo-300 hover:bg-indigo-50"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Route reset</p>
+                <h3 className="mt-2 text-lg font-bold text-slate-900">Browse by workflow</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Step back if the real issue is that the workflow category itself may be wrong.</p>
+              </Link>
             </div>
           </div>
 

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import VsPageTemplate from '@/components/vs/VsPageTemplate';
 import { getCanonicalVsSlug, getVsComparisonWithStatus, listVsSlugs, parseVsSlug } from '@/data/vs';
+import { buildBreadcrumbJsonLd } from '@/lib/jsonLd';
 import { getToolBySlug } from '@/lib/toolData';
 import { buildVsFaqJsonLd } from '@/lib/vsPageModel';
 import { getSEOCurrentYear } from '@/lib/utils';
@@ -110,6 +111,20 @@ export default async function ComparisonPage({ params, searchParams }: PageProps
 
   return (
     <>
+      {load.parsed ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              buildBreadcrumbJsonLd([
+                { name: 'Home', href: '/' },
+                { name: 'VS', href: '/vs' },
+                { name: `${toolAName} vs ${toolBName}` },
+              ])
+            ),
+          }}
+        />
+      ) : null}
       {faqJsonLd ? (
         <script
           type="application/ld+json"

@@ -12,6 +12,8 @@ import { getProofPricingPageData } from '@/lib/pricing/proofPages';
 import type { PricingVerification } from '@/lib/pricing/display';
 import { getCanonicalPricingPageOverride } from '@/lib/pricing/canonicalPricingAdapter';
 import { getProductizedPricingPageOverride } from '@/lib/pricing/productPageOverrides';
+import { buildCollectionPageJsonLd } from '@/lib/jsonLd';
+import { getPricingPageExposure } from '@/lib/pricing/indexability';
 
 // Helper function to get last updated date (use current date for now)
 function getLastUpdatedDate(): string {
@@ -30,6 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!tool) return {};
 
   const seoYear = getSEOCurrentYear();
+  const pricingExposure = getPricingPageExposure(slug, tool);
 
   return {
     title: `${tool.name} Plans & Pricing ${seoYear}`,
@@ -37,6 +40,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     alternates: {
       canonical: `/tool/${slug}/pricing`,
     },
+    ...(pricingExposure.indexable
+      ? {}
+      : {
+          robots: {
+            index: false,
+            follow: true,
+          },
+        }),
   };
 }
 
@@ -48,6 +59,8 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
   const comparisonTable = toolEntry?.comparisonTable ?? null;
 
   if (!tool) notFound();
+
+  const pricingExposure = getPricingPageExposure(slug, tool);
 
   const canonicalPricingOverride = getCanonicalPricingPageOverride(slug, tool);
   const pricingPageOverride = canonicalPricingOverride ?? getProductizedPricingPageOverride(slug, tool);
@@ -112,37 +125,57 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
 
   // Use the new template for all tools (including InVideo for consistency)
   return (
-    <ToolPricingTemplate
-      toolName={tool.name}
-      toolSlug={slug}
-      pricingPlans={pricingPlans}
-      comparisonTable={comparisonTable ?? undefined}
-      pricingSnapshot={pricingSnapshot}
-      creditUsage={creditUsage}
-      planPicker={pricingContent?.planPicker}
-      verdict={verdict}
-      toolData={{
-        key_facts: tool.key_facts,
-        highlights: tool.highlights,
-        best_for: tool.best_for
-      }}
-      usageNotes={usageNotes} // Pre-computed on server
-      usageGroups={pricingPageOverride?.usageGroups}
-      pricingDetails={pricingPageOverride?.pricingDetails}
-      verdictText={generatedVerdictText} // Pre-computed on server
-      lastUpdated={lastUpdated}
-      officialPricingUrl={officialPricingUrl}
-      affiliateLink={tool.affiliate_link}
-      hasFreeTrial={
-        pricingPageOverride
-          ? pricingPageOverride.hasFreeTrial
-          : pricingSummary.verification === 'verified'
-          ? tool.has_free_trial
-          : false
-      }
-      startingPrice={pricingPageOverride?.startingPrice ?? pricingDisplay.displayText}
-      pricingStatusHint={pricingPageOverride?.pricingStatusHint ?? pricingDisplay.hintText}
-      pricingVerification={effectivePricingVerification as PricingVerification}
-    />
+    <>
+      {pricingExposure.indexable ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              buildCollectionPageJsonLd({
+                name: `${tool.name} pricing`,
+                description: `Pricing plans, billing notes, and plan-selection guidance for ${tool.name}.`,
+                href: `/tool/${slug}/pricing`,
+                items: pricingPlans.slice(0, 6).map((plan) => ({
+                  name: plan.name,
+                  href: `/tool/${slug}/pricing`,
+                })),
+              })
+            ),
+          }}
+        />
+      ) : null}
+      <ToolPricingTemplate
+        toolName={tool.name}
+        toolSlug={slug}
+        pricingPlans={pricingPlans}
+        comparisonTable={comparisonTable ?? undefined}
+        pricingSnapshot={pricingSnapshot}
+        creditUsage={creditUsage}
+        planPicker={pricingContent?.planPicker}
+        verdict={verdict}
+        toolData={{
+          key_facts: tool.key_facts,
+          highlights: tool.highlights,
+          best_for: tool.best_for
+        }}
+        usageNotes={usageNotes} // Pre-computed on server
+        usageGroups={pricingPageOverride?.usageGroups}
+        pricingDetails={pricingPageOverride?.pricingDetails}
+        verdictText={generatedVerdictText} // Pre-computed on server
+        lastUpdated={lastUpdated}
+        officialPricingUrl={officialPricingUrl}
+        affiliateLink={tool.affiliate_link}
+        hasFreeTrial={
+          pricingPageOverride
+            ? pricingPageOverride.hasFreeTrial
+            : pricingSummary.verification === 'verified'
+            ? tool.has_free_trial
+            : false
+        }
+        startingPrice={pricingPageOverride?.startingPrice ?? pricingDisplay.displayText}
+        pricingStatusHint={pricingPageOverride?.pricingStatusHint ?? pricingDisplay.hintText}
+        pricingVerification={effectivePricingVerification as PricingVerification}
+      />
+    </>
   );
 }

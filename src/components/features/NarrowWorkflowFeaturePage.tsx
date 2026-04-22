@@ -1167,6 +1167,15 @@ export default function NarrowWorkflowFeaturePage({
           </div>
         </section>
 
+        {recommendedGroups.length > 0 && (
+          <FeatureNextSteps
+            featureSlug={featureSlug}
+            title="If the route still fits, move straight to the decision pages"
+            intro="These links are the fastest next move once the workflow is confirmed. Use them to jump into full reviews, head-to-head compares, and alternatives without reopening the route decision."
+            groups={recommendedGroups}
+          />
+        )}
+
         {groups.map((group) => {
           const sectionOverride = safeOverride.sectionOverrides[group.groupTitle];
 
@@ -1254,14 +1263,6 @@ export default function NarrowWorkflowFeaturePage({
           </section>
         )}
 
-        {recommendedGroups.length > 0 && (
-          <FeatureNextSteps
-            featureSlug={featureSlug}
-            title="Keep going only if the fit still holds"
-            intro="These are follow-on paths for people who have already confirmed the workflow. They should not pull attention away from the main shortlist above."
-            groups={recommendedGroups}
-          />
-        )}
       </main>
     </div>
   );

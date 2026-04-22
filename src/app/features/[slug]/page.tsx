@@ -4,6 +4,8 @@ import FeatureHubPage from '@/components/features/FeatureHubPage';
 import { getCanonicalVsSlug } from '@/data/vs';
 import { getTool } from '@/lib/getTool';
 import { getFeaturePageSlugs, readFeaturePageData } from '@/lib/features/readFeaturePageData';
+import { buildBreadcrumbJsonLd } from '@/lib/jsonLd';
+import { isFeaturePageIndexable } from '@/lib/features/indexability';
 import { filterPromoteSafeLinks, getPageReadiness } from '@/lib/readiness';
 import { FeaturePageData, FeatureRecommendedReadingLink } from '@/types/featurePage';
 
@@ -29,6 +31,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates: {
       canonical: `/features/${slug}`,
     },
+    ...(isFeaturePageIndexable(slug)
+      ? {}
+      : {
+          robots: {
+            index: false,
+            follow: true,
+          },
+        }),
   };
 }
 
@@ -199,12 +209,26 @@ export default async function FeatureDetailPage({ params }: PageProps) {
   ).filter((href): href is string => Boolean(href));
 
   return (
-    <FeatureHubPage
-      featureSlug={slug}
-      pageData={pageData}
-      groups={groups}
-      recommendedReadingLinks={recommendedReadingLinks}
-      promoteSafeFeatureHrefs={promoteSafeFeatureHrefs}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildBreadcrumbJsonLd([
+              { name: 'Home', href: '/' },
+              { name: 'Features', href: '/features' },
+              { name: pageData.hero.h1 },
+            ])
+          ),
+        }}
+      />
+      <FeatureHubPage
+        featureSlug={slug}
+        pageData={pageData}
+        groups={groups}
+        recommendedReadingLinks={recommendedReadingLinks}
+        promoteSafeFeatureHrefs={promoteSafeFeatureHrefs}
+      />
+    </>
   );
 }

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { getSEOCurrentYear } from '@/lib/utils';
 import FeaturesFAQ from '@/components/features/FeaturesFAQ';
+import { buildCollectionPageJsonLd, buildFaqJsonLd } from '@/lib/jsonLd';
 
 const seoYear = getSEOCurrentYear();
 
@@ -197,6 +198,29 @@ export function generateMetadata(): Metadata {
 export default function FeaturesHubPage() {
   return (
     <div className="min-h-screen bg-[#FCFBF7] pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildCollectionPageJsonLd({
+              name: `AI video workflow hub ${seoYear}`,
+              description:
+                'Choose the right AI video workflow before comparing products: generation, avatars, repurposing, or editing.',
+              href: '/features',
+              items: quickRoutes.map((route) => ({
+                name: route.title,
+                href: route.href,
+              })),
+            })
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildFaqJsonLd(faqItems)),
+        }}
+      />
       {/* ── Hero ─────────────────────────────────────────────── */}
       <header className="relative overflow-hidden bg-white">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-full bg-[radial-gradient(circle_at_top_right,_rgba(184,245,0,0.12),_transparent_50%),radial-gradient(circle_at_10%_30%,_rgba(246,210,0,0.10),_transparent_35%)]" />

@@ -5,6 +5,7 @@ import ReviewsPageTemplate from '@/components/reviews/ReviewsPageTemplate';
 import { loadReviewsData } from '@/lib/loadReviewsData';
 import { generateSmartFAQs } from '@/lib/generateSmartFAQs';
 import { buildReviewsData } from '@/lib/reviews/buildReviewsData';
+import { buildFaqJsonLd } from '@/lib/jsonLd';
 import { isReviewPageThin } from '@/lib/reviews/isReviewPageThin';
 
 export async function generateStaticParams() {
@@ -107,5 +108,21 @@ export default async function ReviewsPage({ params }: { params: Promise<{ slug: 
     });
   }
 
-  return <ReviewsPageTemplate toolSlug={slug} data={pageData} />;
+  const visibleFaqs = (pageData.faqs ?? [])
+    .slice(0, 8)
+    .map((faq) => ({ question: faq.q, answer: faq.a }));
+
+  return (
+    <>
+      {visibleFaqs.length >= 3 ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildFaqJsonLd(visibleFaqs)),
+          }}
+        />
+      ) : null}
+      <ReviewsPageTemplate toolSlug={slug} data={pageData} />
+    </>
+  );
 }

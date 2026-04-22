@@ -203,14 +203,6 @@ function getFaqHeading(pageType: FeaturePageType): string {
   }
 }
 
-function getFurtherReadingHeading(pageType: FeaturePageType): string {
-  if (pageType === 'broad-chooser') {
-    return 'Keep going only after the route is clear';
-  }
-
-  return 'Keep going only if the fit still holds';
-}
-
 function getAtAGlanceTitle(pageType: FeaturePageType, groupCount: number): string {
   if (pageType === 'comparison') {
     return 'At a glance: start with the comparison lane that fits the decision';
@@ -1032,7 +1024,7 @@ function getRecommendedSectionTitle(linkType: FeatureRecommendedReadingLink['lin
   }
 }
 
-const recommendedReadingOrder: FeatureRecommendedReadingLink['linkType'][] = ['tool', 'vs', 'guide', 'tool_alternatives'];
+const recommendedReadingOrder: FeatureRecommendedReadingLink['linkType'][] = ['tool', 'vs', 'tool_alternatives', 'guide'];
 
 function buildRecommendedGroups(
   pageData: FeaturePageData,
@@ -1500,6 +1492,26 @@ export default function FeatureHubPage({
           </section>
         )}
 
+        {modules.furtherReading !== 'hidden' && recommendedGroups.length > 0 && (
+          <FeatureNextSteps
+            featureSlug={featureSlug}
+            title={
+              isBroadChooser
+                ? 'If the route is clear, move straight to the decision pages'
+                : 'If the fit still holds, move straight to the decision pages'
+            }
+            intro={
+              isBroadChooser
+                ? 'Use these next only after the route is clear. The tool reviews, pairwise compares, and alternatives pages below are where the shortlist gets tighter.'
+                : 'Use these next only if this shortlist still looks right. They are the fastest way to move from route judgment into tool-level decisions.'
+            }
+            groups={recommendedGroups.map((group) => ({
+              title: group.title,
+              items: group.items,
+            }))}
+          />
+        )}
+
         {groups.map((group) => {
           const contextualLinks = getContextLinksForGroup(
             pageData,
@@ -1618,21 +1630,6 @@ export default function FeatureHubPage({
           </section>
         )}
 
-        {modules.furtherReading !== 'hidden' && recommendedGroups.length > 0 && (
-          <FeatureNextSteps
-            featureSlug={featureSlug}
-            title={getFurtherReadingHeading(pageType)}
-            intro={
-              isBroadChooser
-                ? 'These links help only after the route is clear. They are next steps, not substitutes for the decision this page is trying to make.'
-                : 'These links help only after the current route still looks right. Treat them as the next layer of research, not as a new starting point.'
-            }
-            groups={recommendedGroups.map((group) => ({
-              title: group.title,
-              items: group.items,
-            }))}
-          />
-        )}
       </main>
     </div>
   );

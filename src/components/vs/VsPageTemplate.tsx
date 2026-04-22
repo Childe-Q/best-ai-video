@@ -782,10 +782,10 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
               <span className="ml-2">→</span>
             </Link>
           </div>
-          <div className="mx-auto mt-6 grid max-w-4xl gap-4 md:grid-cols-2">
-            <p className="rounded-xl border border-gray-200 bg-white p-4 text-sm leading-6 text-gray-700 shadow-sm shadow-gray-100/60">
-              <strong>{toolA.name}:</strong> {cardTextA}
-            </p>
+        <div className="mx-auto mt-6 grid max-w-4xl gap-4 md:grid-cols-2">
+          <p className="rounded-xl border border-gray-200 bg-white p-4 text-sm leading-6 text-gray-700 shadow-sm shadow-gray-100/60">
+            <strong>{toolA.name}:</strong> {cardTextA}
+          </p>
             <p className="rounded-xl border border-gray-200 bg-white p-4 text-sm leading-6 text-gray-700 shadow-sm shadow-gray-100/60">
               <strong>{toolB.name}:</strong> {cardTextB}
             </p>
@@ -797,6 +797,55 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
       </header>
 
       <main className="mx-auto max-w-7xl space-y-10 px-4 py-10 sm:px-6 lg:px-8">
+        <section className="rounded-xl border border-gray-200 bg-white p-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Next move</p>
+          <h2 className="mt-2 text-2xl font-bold text-gray-900">Choose the action that matches how close the shortlist is</h2>
+          <p className="mt-3 max-w-3xl text-sm leading-7 text-gray-600">
+            Stay on this page when the pair is real. Jump to pricing when budget decides the choice. Jump back to the
+            tool pages when one product still needs a fuller read. Use alternatives when this pair is too narrow.
+          </p>
+          <div className="mt-6 grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,0.8fr)]">
+            {[
+              {
+                tool: toolA,
+                reviewHref: `/tool/${comparison.slugA}`,
+                pricingHref: `/tool/${comparison.slugA}/pricing`,
+                alternativesHref: `/tool/${comparison.slugA}/alternatives`,
+              },
+              {
+                tool: toolB,
+                reviewHref: `/tool/${comparison.slugB}`,
+                pricingHref: `/tool/${comparison.slugB}/pricing`,
+                alternativesHref: `/tool/${comparison.slugB}/alternatives`,
+              },
+            ].map((item) => (
+              <article key={item.tool.slug} className="rounded-xl border border-gray-200 bg-gray-50/70 p-5">
+                <h3 className="text-lg font-semibold text-gray-900">{item.tool.name}</h3>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  <Link href={item.reviewHref} className="inline-flex items-center rounded-full border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-100">
+                    Read review
+                  </Link>
+                  <Link href={item.pricingHref} className="inline-flex items-center rounded-full border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-100">
+                    View pricing
+                  </Link>
+                  <Link href={item.alternativesHref} className="inline-flex items-center rounded-full border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-100">
+                    Alternatives
+                  </Link>
+                </div>
+              </article>
+            ))}
+            <article className="rounded-xl border border-gray-200 bg-gray-50/70 p-5">
+              <h3 className="text-lg font-semibold text-gray-900">Need to reset the route?</h3>
+              <p className="mt-3 text-sm leading-6 text-gray-700">
+                Leave this pair if the workflow still is not settled. Go back to the workflow hub instead of forcing a tool-vs-tool choice too early.
+              </p>
+              <Link href="/features" className="mt-4 inline-flex items-center rounded-full border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-100">
+                Browse by workflow
+              </Link>
+            </article>
+          </div>
+        </section>
+
         {comparison.editorialNotes &&
         (comparison.editorialNotes.whyPeopleCompareTheseTools ||
           comparison.editorialNotes.looksSimilarButActuallyDifferent ||
@@ -1149,45 +1198,19 @@ export default function VsPageTemplate({ load, resolved, showDebug = false }: Vs
         ) : null}
 
         <section className="rounded-xl border border-gray-200 bg-white p-6">
-          <h2 className="text-2xl font-bold text-gray-900">Related Pages</h2>
-          <div className="mt-4 grid gap-6 md:grid-cols-3">
-            <div>
-              <p className="text-sm font-semibold text-gray-800">Tool pages</p>
-              <ul className="mt-2 space-y-1">
-                {comparison.related.toolPages.slice(0, 2).map((path) => (
-                  <li key={path}>
-                    <Link href={path} className="inline-flex items-center rounded-md px-1 py-1 text-sm text-indigo-600 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:text-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-2">
-                      {labelForPath(path)} →
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="text-sm font-semibold text-gray-800">Alternatives</p>
-              <ul className="mt-2 space-y-1">
-                {comparison.related.alternatives.slice(0, 2).map((path) => (
-                  <li key={path}>
-                    <Link href={path} className="inline-flex items-center rounded-md px-1 py-1 text-sm text-indigo-600 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:text-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-2">
-                      {labelForPath(path)} →
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="text-sm font-semibold text-gray-800">Comparisons</p>
-              <ul className="mt-2 space-y-1">
-                {comparison.related.comparisons.slice(0, 6).map((path) => (
-                  <li key={path}>
-                    <Link href={path} className="inline-flex items-center rounded-md px-1 py-1 text-sm text-indigo-600 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:text-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-2">
-                      {labelForPath(path)} →
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          <h2 className="text-2xl font-bold text-gray-900">Keep comparing</h2>
+          <p className="mt-3 max-w-3xl text-sm leading-7 text-gray-600">
+            Open another comparison only if this pair is no longer the real decision. Tool reviews and alternatives are linked near the top so this footer stays focused on adjacent comparisons.
+          </p>
+          <ul className="mt-5 grid gap-2 md:grid-cols-2 xl:grid-cols-3">
+            {comparison.related.comparisons.slice(0, 6).map((path) => (
+              <li key={path}>
+                <Link href={path} className="inline-flex items-center rounded-md px-1 py-1 text-sm text-indigo-600 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:text-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-2">
+                  {labelForPath(path)} →
+                </Link>
+              </li>
+            ))}
+          </ul>
         </section>
 
         <section className="rounded-xl border border-gray-200 bg-white p-6">

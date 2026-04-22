@@ -5,6 +5,10 @@ import { getCanonicalPricingIndex } from '@/lib/pricingCards';
 export const metadata: Metadata = {
   title: 'Pricing Cards Index',
   description: 'Canonical pricing cards index backed by pricing-cards JSON.',
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function PricingCardsIndexPage() {

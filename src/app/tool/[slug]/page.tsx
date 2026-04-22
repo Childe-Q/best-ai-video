@@ -14,7 +14,6 @@ import EditorialSummary from '@/components/tool/EditorialSummary';
 import EvidenceNotes from '@/components/tool/EvidenceNotes';
 import EvidenceNuggets from '@/components/tool/EvidenceNuggets';
 import { buildSoftwareApplicationJsonLd } from '@/lib/jsonLd';
-import { getPageReadiness } from '@/lib/readiness';
 
 const editorialSummaries: Record<
   string,
@@ -89,10 +88,6 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
   const relatedComparisons = getRelatedComparisons(slug);
   const alternativesLink = await getAlternativesLink(slug);
   const workflowLink = getMostRelevantWorkflowLink(slug);
-  const [featuresReadiness, reviewsReadiness] = await Promise.all([
-    getPageReadiness('toolFeatures', slug),
-    getPageReadiness('toolReviews', slug),
-  ]);
   const editorialSummary = editorialSummaries[slug];
 
   return (
@@ -166,6 +161,55 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
             </div>
           </div>
 
+          <div className="rounded-2xl border border-slate-200 bg-white p-6">
+            <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Next move</p>
+            <h2 className="mt-2 text-2xl font-bold text-gray-900">Decide what you need from {tool.name} before you over-read the review</h2>
+            <p className="mt-3 max-w-3xl text-sm leading-7 text-gray-600">
+              Use pricing when budget or usage limits decide the purchase. Use alternatives when {tool.name} is close
+              but not quite right. Use a direct compare page only when the shortlist is already down to two.
+            </p>
+            <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+              <Link
+                href={`/tool/${slug}/pricing`}
+                className="rounded-xl border border-slate-200 bg-slate-50 p-5 transition-all hover:border-indigo-300 hover:bg-indigo-50"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Budget check</p>
+                <h3 className="mt-2 text-lg font-bold text-slate-900">Review pricing</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">See plans, usage limits, and which tier fits the workflow.</p>
+              </Link>
+              {alternativesLink && (
+                <Link
+                  href={alternativesLink.slug}
+                  className="rounded-xl border border-slate-200 bg-slate-50 p-5 transition-all hover:border-indigo-300 hover:bg-indigo-50"
+                >
+                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Wider shortlist</p>
+                  <h3 className="mt-2 text-lg font-bold text-slate-900">Compare alternatives</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">Open the replacement set around {tool.name} instead of reading this page as a final answer.</p>
+                </Link>
+              )}
+              {relatedComparisons[0] && (
+                <Link
+                  href={`/vs/${relatedComparisons[0].slug}`}
+                  className="rounded-xl border border-slate-200 bg-slate-50 p-5 transition-all hover:border-indigo-300 hover:bg-indigo-50"
+                >
+                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Head-to-head</p>
+                  <h3 className="mt-2 text-lg font-bold text-slate-900">{relatedComparisons[0].title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">Use the compare page when only one nearby rival is still seriously in play.</p>
+                </Link>
+              )}
+              <Link
+                href={workflowLink?.href ?? '/features'}
+                className="rounded-xl border border-slate-200 bg-slate-50 p-5 transition-all hover:border-indigo-300 hover:bg-indigo-50"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Route check</p>
+                <h3 className="mt-2 text-lg font-bold text-slate-900">
+                  {workflowLink ? `Back to ${workflowLink.title}` : 'Browse workflows'}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Go back up a level if the real question is still the workflow, not this specific tool.</p>
+              </Link>
+            </div>
+          </div>
+
           {/* Mini Test Section */}
           {miniTest && (
             <div id={videoId ? undefined : 'mini-test'}>
@@ -226,53 +270,6 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
 
           {/* Evidence Notes — Sources used for this review */}
           {content?.sources && <EvidenceNotes sources={content.sources} />}
-
-          {/* Explore this tool — mini hub links */}
-          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-5">
-              Explore {tool.name}
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <Link
-                href={`/tool/${slug}/pricing`}
-                className="group flex flex-col items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-5 text-center transition-all hover:border-indigo-300 hover:bg-indigo-50"
-              >
-                <span className="text-2xl">💰</span>
-                <span className="text-sm font-bold text-gray-900 group-hover:text-indigo-600">Pricing</span>
-                <span className="text-xs text-gray-500">Plans & costs</span>
-              </Link>
-              {featuresReadiness.ready && (
-                <Link
-                  href={`/tool/${slug}/features`}
-                  className="group flex flex-col items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-5 text-center transition-all hover:border-indigo-300 hover:bg-indigo-50"
-                >
-                  <span className="text-2xl">⚡</span>
-                  <span className="text-sm font-bold text-gray-900 group-hover:text-indigo-600">Features</span>
-                  <span className="text-xs text-gray-500">Full capabilities</span>
-                </Link>
-              )}
-              {reviewsReadiness.ready && (
-                <Link
-                  href={`/tool/${slug}/reviews`}
-                  className="group flex flex-col items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-5 text-center transition-all hover:border-indigo-300 hover:bg-indigo-50"
-                >
-                  <span className="text-2xl">💬</span>
-                  <span className="text-sm font-bold text-gray-900 group-hover:text-indigo-600">Reviews</span>
-                  <span className="text-xs text-gray-500">User feedback</span>
-                </Link>
-              )}
-              {alternativesLink && (
-                <Link
-                  href={`/tool/${slug}/alternatives`}
-                  className="group flex flex-col items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-5 text-center transition-all hover:border-indigo-300 hover:bg-indigo-50"
-                >
-                  <span className="text-2xl">🔄</span>
-                  <span className="text-sm font-bold text-gray-900 group-hover:text-indigo-600">Alternatives</span>
-                  <span className="text-xs text-gray-500">Compare options</span>
-                </Link>
-              )}
-            </div>
-          </div>
 
           {/* Related Comparisons & Alternatives */}
           {(relatedComparisons.length > 0 || alternativesLink) && (

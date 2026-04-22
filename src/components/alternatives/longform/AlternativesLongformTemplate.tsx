@@ -331,7 +331,7 @@ export default function AlternativesLongformTemplate({ data }: AlternativesLongf
 
             <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-slate-500">Updated {data.heroUpdatedAt}</p>
 
-            {data.toolSummary && (
+            {isToolAlternativesPage && data.toolSummary && (
               <div className="mt-7 rounded-2xl border border-slate-200 bg-white p-5">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <div className="rounded-lg bg-slate-50 px-3 py-2.5">
@@ -369,6 +369,45 @@ export default function AlternativesLongformTemplate({ data }: AlternativesLongf
                   >
                     Read full review
                   </Link>
+                </div>
+              </div>
+            )}
+
+            {data.toolSummary && (
+              <div className="mt-7 rounded-2xl border border-slate-200 bg-white p-5">
+                <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-500">Next move</p>
+                <h2 className="mt-2 text-2xl font-bold text-slate-900">Use this page to replace {baseToolName}, not to re-read it</h2>
+                <p className="mt-3 text-[16px] leading-8 text-slate-700">
+                  If {baseToolName} is still viable, go back to the review or pricing page. Stay here only if you are
+                  actively looking for a better-fit replacement or a broader route.
+                </p>
+                <div className="mt-5 grid gap-4 md:grid-cols-3">
+                  <Link
+                    href={data.toolSummary.reviewHref}
+                    className="rounded-xl border border-slate-200 bg-slate-50 p-5 transition-all hover:border-slate-400 hover:bg-slate-100"
+                  >
+                    <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Base tool</p>
+                    <h3 className="mt-2 text-lg font-bold text-slate-900">Read the full review</h3>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">Go back if the question is still whether {baseToolName} itself is good enough.</p>
+                  </Link>
+                  <Link
+                    href={`/tool/${data.slug}/pricing`}
+                    className="rounded-xl border border-slate-200 bg-slate-50 p-5 transition-all hover:border-slate-400 hover:bg-slate-100"
+                  >
+                    <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Budget check</p>
+                    <h3 className="mt-2 text-lg font-bold text-slate-900">View pricing</h3>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">Check plans and usage limits before you assume the problem is the product rather than the price model.</p>
+                  </Link>
+                  {data.notSureHref && (
+                    <Link
+                      href={data.notSureHref}
+                      className="rounded-xl border border-slate-200 bg-slate-50 p-5 transition-all hover:border-slate-400 hover:bg-slate-100"
+                    >
+                      <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Route reset</p>
+                      <h3 className="mt-2 text-lg font-bold text-slate-900">Browse by workflow</h3>
+                      <p className="mt-2 text-sm leading-6 text-slate-600">Step back if you now need a broader workflow page instead of a tool-for-tool replacement list.</p>
+                    </Link>
+                  )}
                 </div>
               </div>
             )}
@@ -454,21 +493,6 @@ export default function AlternativesLongformTemplate({ data }: AlternativesLongf
               <FAQAccordion faqs={data.faqs.slice(0, 10)} />
             </div>
           </section>
-
-          {data.notSureHref && (
-            <section className="mt-14 rounded-xl border border-slate-200 bg-white p-5">
-              <h2 className="text-lg font-bold text-slate-900">Not sure what you need?</h2>
-              <p className="text-sm text-slate-700 mt-2">
-                Explore alternatives by exact tool and by workflow topic.
-              </p>
-              <Link
-                href={data.notSureHref}
-                className="mt-3 inline-flex items-center rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-100 hover:text-slate-900"
-              >
-                Browse Alternatives Hub
-              </Link>
-            </section>
-          )}
 
         </article>
       </div>

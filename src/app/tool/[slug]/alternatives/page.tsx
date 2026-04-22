@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getAllTools, getToolBySlug } from '@/lib/toolData';
 import AlternativesLongformTemplate from '@/components/alternatives/longform/AlternativesLongformTemplate';
+import { buildFaqJsonLd } from '@/lib/jsonLd';
 import {
   buildToolAlternativesLongformData,
   isAlternativesPageThin,
@@ -49,5 +50,17 @@ export default async function AlternativesPage({ params }: { params: Promise<{ s
     notFound();
   }
 
-  return <AlternativesLongformTemplate data={data} />;
+  return (
+    <>
+      {data.faqs.length > 0 ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildFaqJsonLd(data.faqs)),
+          }}
+        />
+      ) : null}
+      <AlternativesLongformTemplate data={data} />
+    </>
+  );
 }

@@ -6,6 +6,7 @@ import { getAllTools } from '@/lib/toolData';
 import { getSEOCurrentYear, getCurrentMonthYear } from '@/lib/utils';
 import HomeToolGrid from '@/components/HomeToolGrid';
 import GlobalScoringRubric from '@/components/GlobalScoringRubric';
+import { buildWebPageJsonLd } from '@/lib/jsonLd';
 import { filterPromoteSafeLinks, getPageReadiness } from '@/lib/readiness';
 import { getPrimaryStartingPointCards, listVsIndexCards } from '@/lib/vsIndex';
 
@@ -223,6 +224,18 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen bg-[#FCFBF7] pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildWebPageJsonLd({
+              name: `Best AI Video Generators & Tools ${seoYear}`,
+              description: `Use best-ai-video.com as your AI video decision hub for ${seoYear}. Start with workflow routes, compare the strongest tools, and move from features to VS pages to detailed tool reviews.`,
+              href: '/',
+            })
+          ),
+        }}
+      />
       {/* Hero Section */}
       <header className="relative overflow-hidden border-b border-black/10 bg-white">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-full bg-[radial-gradient(circle_at_top,_rgba(184,245,0,0.18),_transparent_42%),radial-gradient(circle_at_20%_20%,_rgba(246,210,0,0.18),_transparent_28%)]" />

@@ -63,6 +63,11 @@ Always prefer:
 - improving high-value pages next
 - expanding and promoting only after quality and routing confidence improve
 
+## Technical SEO exposure rules
+- Pricing pages should not stay indexable by default when pricing is still unverified. Current rule: public pricing pages stay in the sitemap only when the route has verified/trusted exposure or a proof-backed pricing page path.
+- `/pricing-cards` is treated as support infrastructure, not a public search surface. Current rule: noindex those routes unless their public-search intent changes later.
+- Feature detail pages should keep sitemap and robots behavior aligned with the same readiness floor. Current rule: feature routes remain accessible, but non-indexable feature states should not stay in sitemap or default-index by accident.
+
 ## Expected task output format from Codex
 For each phase, Codex should report:
 1. changed files
