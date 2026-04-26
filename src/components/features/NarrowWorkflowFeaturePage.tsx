@@ -29,11 +29,6 @@ type FitCheckCard = {
   label: string;
 };
 
-type DecisionFrameCard = {
-  title: string;
-  summary: string;
-};
-
 type WorkflowSectionOverride = {
   chooseWhen: string;
   disappoints: string;
@@ -49,8 +44,6 @@ type NarrowWorkflowOverride = {
   fitSummary: string;
   keyAxes: string[];
   fitCards: FitCheckCard[];
-  decisionFrameCards: DecisionFrameCard[];
-  decisionLead?: string;
   shortlistLead?: string;
   faqLead?: string;
   sectionOverrides: Record<string, WorkflowSectionOverride>;
@@ -125,56 +118,37 @@ const readingOrder: FeatureRecommendedReadingLink['linkType'][] = ['tool', 'vs',
 
 const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> = {
   'text-to-video-ai-tools': {
-    fitHeading: 'Stay here only if the job starts from a prompt or script',
+    fitHeading: 'Use this route when the job starts from a prompt or script',
     fitSummary:
-      'Use this page only when the input is a blank prompt, loose script, or narration brief and the footage has to be generated from scratch. If you already have source material to convert or need a presenter on screen, this is the wrong first route.',
+      'Use this page when the input is a blank prompt, loose script, or narration brief and the footage has to be generated from scratch.',
     keyAxes: ['prompt adherence', 'clip length', 'commercial rights', 'scene quality', 'workflow fit'],
     fitCards: [
       {
-        title: 'Prompt or script in -> stay here',
+        title: 'Prompt or script in',
         summary:
-          'Stay when the output is net-new footage: cinematic B-roll, concept scenes, product visuals, or short clips that do not start from an article, webinar, podcast, or recorded timeline.',
+          'Net-new footage, cinematic B-roll, concept scenes, product visuals, or short clips start here.',
         href: '#cinematic-text-to-video',
         label: 'Go to the shortlist',
       },
       {
-        title: 'Existing source in -> leave for repurposing',
+        title: 'Existing source in',
         summary:
-          'If you are converting articles, webinars, podcasts, or long-form footage into video, text-to-video is the wrong first page. Start with the repurposing workflow instead.',
+          'Articles, webinars, podcasts, or long-form footage usually belong in the repurposing workflow.',
         href: '/features/content-repurposing-ai-tools',
         label: 'Go to repurposing',
       },
       {
-        title: 'Presenter needed -> leave for avatars',
+        title: 'Presenter needed',
         summary:
-          'If the output needs a presenter, lip-sync, or multilingual on-screen delivery, text-to-video is usually the wrong workflow. Start with avatar tools instead.',
+          'Presenter delivery, lip-sync, or multilingual talking-head output usually belongs in avatar tools.',
         href: '/features/ai-avatar-video-generators',
         label: 'Go to avatar tools',
       },
     ],
-    decisionFrameCards: [
-      {
-        title: 'Input signal',
-        summary:
-          'Blank prompt or script: stay. Existing article, webinar, podcast, or footage: leave for repurposing or editing.',
-      },
-      {
-        title: 'Output signal',
-        summary:
-          'Need scenes, motion, or visual concepts: stay. Need a visible speaker carrying the message: leave for avatar tools.',
-      },
-      {
-        title: 'Compare first',
-        summary:
-          'Once the route is right, compare prompt adherence, usable clip length, and commercial posture before you compare price.',
-      },
-    ],
-    decisionLead:
-      'This page only has one real lane. These checks are here to confirm that the workflow is still prompt-first before you read the tools like a generic generator list.',
     shortlistLead:
       'Once prompt-first generation is clearly the job, the page should narrow quickly. This shortlist is here to compare scene-generation options, not to reopen the route decision.',
     faqLead:
-      'If you are still here after the shortlist, the remaining questions are usually about whether text-to-video still holds as the route or whether it is time to move sideways into comparison or an adjacent workflow.',
+      'Use these questions to compare prompt-led generators after the route is clear.',
     sectionOverrides: {
       'Cinematic text-to-video': {
         chooseWhen:
@@ -202,84 +176,55 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
     },
     faqItems: [
       {
-        question: 'I have a prompt or a script. Is this still the right page?',
+        question: 'What should I check first for prompt or script quality?',
         answer:
-          'Yes, if that prompt or script is being used to generate net-new scenes from scratch. No, if it is really supporting an existing recording, article, webinar, or presenter-led workflow.',
+          'Start with prompt adherence: whether the tool follows subject, style, motion, framing, and scene order without repeated retries. Then check whether scripts can be broken into usable shots instead of one generic clip.',
       },
       {
-        question: 'What if I already have a blog, webinar, or podcast?',
+        question: 'How much prompt control matters before clip length or price?',
         answer:
-          'Use text-to-video only when the output begins from a prompt and the footage has to be generated from scratch. If you already have an article, webinar, podcast, or long-form recording, repurposing is usually the better first route.',
+          'Prompt control comes first because longer or cheaper clips do not help if the scene misses the brief. Once the model follows direction reliably, compare usable duration, retries, and commercial posture.',
       },
       {
-        question: 'Should I use avatar tools instead if someone needs to speak on screen?',
+        question: 'When does text-to-video still need an editing handoff?',
         answer:
-          'Use text-to-video when scenes, B-roll, or visual storytelling are carrying the message. Use avatar tools when a speaker, lip-sync, or multilingual presenter format is doing the real work.',
-      },
-      {
-        question: 'What should I compare first once I know this is the right route?',
-        answer:
-          'Start with prompt adherence, because a cheaper model is still a bad fit if it cannot reliably follow the scene you asked for. Then check clip length, then cost. Rights and production posture should enter before you commit to a real workflow.',
+          'Most prompt-led clips still need editing when the final asset requires pacing, captions, music, overlays, voiceover, or multiple scenes stitched together. Treat the generator as the footage source, not the whole post-production system.',
       },
       {
         question: 'Which tools make the most sense for flagship scenes versus lighter experiments?',
         answer:
           'Start with Sora or Runway when scene quality and control matter most. Start with Kling when you care more about faster, high-energy output and want a lighter entry point for experiments.',
       },
-      {
-        question: 'When should I leave this page for direct comparison?',
-        answer:
-          'Move to direct comparison once you are no longer deciding whether text-to-video is the right workflow. If you are already comparing model-to-model tradeoffs, this page has done its job and the comparison page becomes more useful.',
-      },
     ],
   },
   'content-repurposing-ai-tools': {
-    fitHeading: 'Stay here only if the workflow starts with content you already have',
+    fitHeading: 'Use this route when the workflow starts with content you already have',
     fitSummary:
-      'Use this page only if the job starts with an existing asset and the outcome is a new format: article to video, script to video, webinar to clips, or podcast to shorts. If the real work is shaping an existing edit with timeline control, transcript cleanup, captions, or polish, leave for the editors page instead.',
+      'Use this page when an existing asset needs to become a new format: article to video, script to video, webinar to clips, or podcast to shorts.',
     keyAxes: ['source format', 'conversion path', 'transcript extraction', 'reuse at scale', 'workflow fit'],
     fitCards: [
       {
-        title: 'Blog, script, webinar, or podcast in -> stay here',
+        title: 'Blog, script, webinar, or podcast in',
         summary:
-          'This is the right route when the asset already exists and the job is to turn it into another format: article to video, script to video, webinar to shorts, or podcast to clips.',
+          'Start here when the asset already exists and the job is source-to-output conversion.',
         href: '#written-source-to-video',
         label: 'Go to the shortlist',
       },
       {
-        title: 'Assembled footage in -> leave for editors',
+        title: 'Assembled footage in',
         summary:
-          'If you already have footage assembled and need timeline edits, transcript cleanup, captions, or tighter polish, use the editors page. Repurposing is for source-to-output conversion, not post-production depth.',
+          'Timeline edits, transcript cleanup, captions, or polish usually belong in the editors workflow.',
         href: '/features/ai-video-editors',
         label: 'Go to editors',
       },
       {
-        title: 'No source asset yet -> leave for text-to-video',
+        title: 'No source asset yet',
         summary:
-          'If there is no article, recording, or source transcript to work from, repurposing is the wrong first page. Start with text-to-video instead of forcing a conversion workflow.',
+          'Prompt-led scene generation usually belongs in the text-to-video workflow.',
         href: '/features/text-to-video-ai-tools',
         label: 'Go to text-to-video',
       },
     ],
-    decisionFrameCards: [
-      {
-        title: 'Source asset',
-        summary:
-          'Text, article, or script: start with written-source conversion. Webinar, podcast, live stream, or interview: start with recorded-source clipping.',
-      },
-      {
-        title: 'Conversion versus editing',
-        summary:
-          'Stay when the job is converting one source format into another. Leave when the footage already has editorial shape and mainly needs cleanup, cuts, captions, or polish.',
-      },
-      {
-        title: 'Scale signal',
-        summary:
-          'Stay here if the job is repeatable reuse: pulling moments from long recordings or packaging written assets into video without rebuilding each piece manually.',
-      },
-    ],
-    decisionLead:
-      'Start with the asset, not the brand. The first call is written source versus recording, then whether the real job is conversion or post-production.',
     shortlistLead:
       'These two routes exist to narrow the conversion workflow quickly. They should feel like source-based choices, not like two generic tool buckets.',
     sectionOverrides: {
@@ -332,34 +277,24 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
     },
     faqItems: [
       {
-        question: 'I have blog posts or scripts. Is this the right route?',
+        question: 'Which source formats should I verify first?',
         answer:
-          'Yes. Written-source conversion belongs here when the job is turning articles, scripts, or documents into video without rebuilding everything manually in an editor.',
-      },
-      {
-        question: 'I have webinars, podcasts, or recordings. Is this repurposing or editing?',
-        answer:
-          'It is repurposing if the job is converting that source into clips or another publishable format. It is editing if you already have a cut or assembled footage and mainly need cleanup, trimming, captions, or deeper post-production control.',
-      },
-      {
-        question: 'Should I start with written-source conversion or recorded-source clipping?',
-        answer:
-          'Start with written-source conversion when the asset is text. Start with recorded-source clipping when the asset is a webinar, interview, live stream, or podcast. The source format should decide the first bucket, not pricing or brand familiarity.',
-      },
-      {
-        question: 'Are repurposing tools the same as AI editors?',
-        answer:
-          'No. Repurposing tools are for source-to-output conversion. AI editors are for shaping footage that already exists. The overlap is real, but the first question is still whether you are converting a source asset or polishing an edit.',
+          'Check whether the tool handles your actual source type: article, script, document, webinar, podcast, interview, or long-form video. A tool that works well for written inputs may be weak at transcript-based clipping, and the reverse is also common.',
       },
       {
         question: 'What matters most for podcast or webinar repurposing?',
         answer:
-          'Transcript extraction matters most when the source is spoken content and the workflow depends on finding usable moments fast. If the source is a webinar, podcast, or interview, weak transcription usually destroys the efficiency of repurposing at scale.',
+          'Transcript extraction and moment selection matter first. If the transcript is weak or the tool cannot identify usable segments, the workflow still turns into manual review even if export templates look polished.',
       },
       {
-        question: 'When should I leave this page?',
+        question: 'How should I compare long-form to short-form workflows?',
         answer:
-          'Leave this page once source-material conversion is no longer the main constraint. If you need deeper editing control, an on-screen presenter, or net-new scene generation, a neighboring workflow page will usually be more useful than staying here.',
+          'Compare how each tool finds highlights, preserves context, reframes video, writes captions, and exports platform-ready clips. The best workflow is usually the one that reduces review time, not just the one that creates the most clips.',
+      },
+      {
+        question: 'When does repurposing still need an editing handoff?',
+        answer:
+          'Use an editor after repurposing when the chosen clips need narrative cleanup, tighter pacing, audio repair, brand overlays, or manual trimming. Repurposing should create the candidate outputs; editing finishes the best ones.',
       },
     ],
   },
@@ -389,23 +324,6 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
           'If hooks, captions, and templates matter but the page does not need trend intelligence or virality scoring, the social workflow page is usually the cleaner frame.',
         href: '/features/ai-video-for-social-media',
         label: 'Go to social media',
-      },
-    ],
-    decisionFrameCards: [
-      {
-        title: 'Clip scoring versus content planning',
-        summary:
-          'Start by deciding whether the workflow begins with existing footage that needs to be scored and clipped, or with trend signals that tell you what to make next. Those are different viral jobs.',
-      },
-      {
-        title: 'Virality layer versus generic short-form output',
-        summary:
-          'This page is only worth using if the tool adds a real viral lens: hook scoring, trend signals, algorithmic clip selection, or caption styles that change how the content is shaped.',
-      },
-      {
-        title: 'Trend fit versus editing depth',
-        summary:
-          'If the main decision is manual editing quality or a broader repurposing workflow, this page is already too narrow. Stay only if performance-oriented automation is the reason the shortlist exists.',
       },
     ],
     sectionOverrides: {
@@ -485,48 +403,31 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
     ],
   },
   'ai-video-for-youtube': {
-    fitHeading: 'Stay here only if YouTube is the real workflow constraint',
+    fitHeading: 'Use this route when YouTube changes the workflow',
     fitSummary:
-      'Use this page only if the job is building a YouTube-first publishing system: recurring uploads, faceless channel cadence, long-form adjacency, or a YouTube-specific host format. If the real constraint is vertical speed, hooks, captions, or fast social posting, exit early instead of treating YouTube and social media as the same workflow.',
+      'Use this page for recurring uploads, faceless channel cadence, long-form adjacency, or a YouTube-specific host format.',
     keyAxes: ['channel automation', 'voice and cloning', 'long-form support', 'publishing cadence', 'workflow fit'],
     fitCards: [
       {
-        title: 'Stay here if you need a YouTube-first publishing workflow',
+        title: 'YouTube-first publishing workflow',
         summary:
-          'This is the right route when the output is built around faceless channels, recurring uploads, Shorts programs that still belong to a channel system, or YouTube-specific host formats.',
+          'Faceless channels, recurring uploads, Shorts inside a channel system, or YouTube host formats start here.',
         href: '#youtube-channel-systems',
         label: 'Go to the shortlist',
       },
       {
-        title: 'Leave for social media if vertical speed matters more than YouTube depth',
+        title: 'Vertical speed matters more',
         summary:
-          'If the real job is high-volume TikTok, Reels, or Shorts output driven by templates, captions, hooks, and social pacing, the social media workflow is the better first page.',
+          'High-volume TikTok, Reels, or Shorts output usually belongs in the social media workflow.',
         href: '/features/ai-video-for-social-media',
         label: 'Go to social media',
       },
       {
-        title: 'Leave for avatar tools if presenter delivery is the whole job',
+        title: 'Presenter delivery is the whole job',
         summary:
-          'If you already know the real requirement is a realistic spokesperson, multilingual presenter, or custom avatar library, the broader avatar page is a better starting point than a YouTube-specific workflow page.',
+          'Realistic spokespeople, multilingual presenters, or custom avatar libraries usually belong in avatar tools.',
         href: '/features/ai-avatar-video-generators',
         label: 'Go to avatar tools',
-      },
-    ],
-    decisionFrameCards: [
-      {
-        title: 'Pipeline depth first',
-        summary:
-          'Decide whether you need script-to-publish automation or just one missing piece like the host. A tool that only solves avatars is very different from one that automates scripts, visuals, subtitles, and export.',
-      },
-      {
-        title: 'Voice and publishing cadence',
-        summary:
-          'For faceless channels, audio quality and output volume matter early. If voice cloning, credits, or minute limits break your publishing rhythm, the rest of the page matters less.',
-      },
-      {
-        title: 'Long-form versus presenter-led output',
-        summary:
-          'YouTube workflows split between channel systems that keep a publishing cadence alive and host-layer tools that mainly solve delivery. Confirm which job you are actually doing before reading tool-by-tool details.',
       },
     ],
     sectionOverrides: {
@@ -579,29 +480,24 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
     },
     faqItems: [
       {
-        question: 'Do I actually need a YouTube workflow page, or a broader generators shortlist?',
-        answer:
-          'Use this page when YouTube publishing is the real job: recurring uploads, long-form adjacency, faceless channel production, or recurring YouTube hosts. If you are still choosing between broad routes, the broader generators shortlist is the better first page.',
-      },
-      {
-        question: 'Should I start with channel automation tools or avatar support tools?',
-        answer:
-          'Start with channel automation if the real bottleneck is scripting, visuals, voiceover, and repeatable publishing. Start with avatar support if you already know the missing piece is the host or presenter layer.',
-      },
-      {
         question: 'What matters most for faceless YouTube workflows: voice quality, credits, or automation depth?',
         answer:
           'Start with automation depth, because a tool that cannot carry enough of the pipeline will still create manual work. Then check voice quality and cloning, then minute or credit limits against your publishing cadence.',
       },
       {
-        question: 'When is a YouTube-specific workflow better than the social media page?',
+        question: 'How should I compare long-form editing support for YouTube?',
         answer:
-          'Use this page when the workflow is built around recurring YouTube output, channel cadence, faceless pipeline depth, or longer-form adjacency. Use the social media page when vertical speed, hooks, caption styles, templates, and fast short-form publishing are the real constraints.',
+          'Check whether the tool can support your typical episode length, script structure, visuals, subtitles, and revision workflow. YouTube tools break quickly when they only produce short assets but the channel needs repeatable long-form production.',
       },
       {
-        question: 'When should I stop using this page and move to direct comparison?',
+        question: 'When should Shorts extraction be part of the YouTube workflow?',
         answer:
-          'Move to direct comparison once you are no longer deciding whether a YouTube-first workflow is the right frame. If the workflow is already clear and you are comparing generators head-to-head, the comparison page becomes more useful.',
+          'Use Shorts extraction when short clips support the channel system rather than replacing it. Compare highlight selection, reframing, captions, and whether the workflow keeps long-form and short-form assets connected.',
+      },
+      {
+        question: 'Where do thumbnail and title workflows fit?',
+        answer:
+          'Treat thumbnails and titles as workflow-adjacent checks. They matter for publishing cadence, but they should not outweigh video pipeline fit unless the tool is explicitly replacing your channel packaging process.',
       },
     ],
   },
@@ -631,23 +527,6 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
           'If you are building a faceless YouTube channel or care more about recurring upload cadence and channel depth than social hooks and template velocity, the YouTube workflow page is the better fit.',
         href: '/features/ai-video-for-youtube',
         label: 'Go to YouTube workflows',
-      },
-    ],
-    decisionFrameCards: [
-      {
-        title: 'Social-first speed',
-        summary:
-          'Confirm that turnaround time, template reuse, and fast publishing are the real constraints. If not, this page is probably too feed-specific for what you actually need.',
-      },
-      {
-        title: 'Prompt creation versus repurposing',
-        summary:
-          'Some tools are strongest when you need net-new vertical output, while others are only good because they turn long recordings into clips. Decide which job you are really doing first.',
-      },
-      {
-        title: 'Presenter format versus clip workflow',
-        summary:
-          'Social workflows split quickly between clip velocity tools and presenter-led output. If the recurring on-screen host matters more than hooks, captions, and effects, do not read both lanes as if they are interchangeable.',
       },
     ],
     sectionOverrides: {
@@ -752,23 +631,6 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
           'If the real question is which avatar platform gives you the right talking-head delivery, lip-sync, or language coverage, use the avatar page first. Marketing context alone is not enough if presenter format is the real filter.',
         href: '/features/ai-avatar-video-generators',
         label: 'Go to avatar tools',
-      },
-    ],
-    decisionFrameCards: [
-      {
-        title: 'Governance first',
-        summary:
-          'Check whether brand kits, approvals, localization review, and output consistency matter before anything else. If they do not, this page may be too marketing-specific for the real workflow.',
-      },
-      {
-        title: 'Variant scale versus hero quality',
-        summary:
-          'Marketing workflows split quickly between producing many personalized variants and making fewer, more cinematic brand pieces. Pick the lane before you compare tools.',
-      },
-      {
-        title: 'Localization depth',
-        summary:
-          'If multilingual campaigns, translation, or regional versions matter, that usually reshapes the shortlist more than price does. Treat localization as a campaign workflow filter, not as a generic avatar feature check.',
       },
     ],
     sectionOverrides: {
@@ -880,25 +742,6 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
         label: 'Go to repurposing',
       },
     ],
-    decisionFrameCards: [
-      {
-        title: 'Route signal',
-        summary:
-          'Stay only if the asset already exists and the job is post-production. Leave if you still need source conversion or prompt-led generation.',
-      },
-      {
-        title: 'Interface fit',
-        summary:
-          'Transcript-first editing, timeline control, and fast clip packaging are different jobs. The wrong editing paradigm usually breaks the workflow faster than pricing does.',
-      },
-      {
-        title: 'Depth versus speed',
-        summary:
-          'Choose between longer-form narrative control and faster clip packaging before you compare tools. This split is about editing posture, not just product popularity.',
-      },
-    ],
-    decisionLead:
-      'This page is for post-production. The first question is not which editor is best, but whether editing is actually the workflow or just a symptom of a different route.',
     shortlistLead:
       'The split below is about editing posture: deeper narrative cleanup versus faster clip packaging once the footage already exists. Once that split is clear, the default next compare is usually Descript vs Veed.io.',
     sectionOverrides: {
@@ -1075,7 +918,7 @@ export default function NarrowWorkflowFeaturePage({
             <div className="flex flex-wrap items-center gap-3">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gray-700">Workflow guide</p>
               <span className="rounded-full border border-black/10 bg-white/80 px-3 py-1 text-xs font-semibold text-gray-700">
-                Stay only if this is the right route
+                Workflow shortlist
               </span>
             </div>
 
@@ -1083,7 +926,7 @@ export default function NarrowWorkflowFeaturePage({
               {pageData.hero.h1}
             </h1>
             <p className="mt-4 max-w-4xl text-sm font-semibold uppercase tracking-[0.12em] text-gray-600">
-              Use this page if the route is mostly clear and the next job is getting to a shortlist fast.
+              Pick the workflow route, then compare the shortlist.
             </p>
             <p className="mt-5 max-w-4xl text-lg leading-8 text-gray-700">{pageData.hero.subheadline}</p>
 
@@ -1128,7 +971,7 @@ export default function NarrowWorkflowFeaturePage({
       >
         <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Fit check</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Quick route decision</p>
             <h2 className="mt-3 text-3xl font-bold text-gray-900">{safeOverride.fitHeading}</h2>
             <p className="mt-4 text-base leading-8 text-gray-600">{safeOverride.fitSummary}</p>
           </div>
@@ -1148,112 +991,51 @@ export default function NarrowWorkflowFeaturePage({
           </div>
         </section>
 
-        <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
-          <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Route checks</p>
-            <h2 className="mt-3 text-3xl font-bold text-gray-900">Use these checks before you over-read the page</h2>
-            {safeOverride.decisionLead ? (
-              <p className="mt-4 text-base leading-8 text-gray-600">{safeOverride.decisionLead}</p>
+        {groups.map((group) => (
+          <section
+            key={group.groupTitle}
+            id={group.groupTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
+            className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Main shortlist</p>
+            <h2 className="mt-3 text-3xl font-bold text-gray-900">{group.groupTitle}</h2>
+            {safeOverride.shortlistLead ? (
+              <p className="mt-4 max-w-3xl text-base leading-8 text-gray-600">{safeOverride.shortlistLead}</p>
             ) : null}
-          </div>
+            {group.groupSummary ? (
+              <p className={`${safeOverride.shortlistLead ? 'mt-3' : 'mt-4'} max-w-3xl text-base leading-8 text-gray-600`}>
+                {group.groupSummary}
+              </p>
+            ) : null}
 
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {safeOverride.decisionFrameCards.map((card) => (
-              <div key={card.title} className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
-                <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">{card.title}</p>
-                <p className="mt-3 text-sm leading-7 text-gray-700">{card.summary}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+            <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {group.tools.map((tool, index) => (
+                <ToolCard
+                  key={`${group.groupTitle}-${tool.toolSlug}`}
+                  tool={tool}
+                  featureSlug={featureSlug}
+                  groupTitle={group.groupTitle}
+                  position={index + 1}
+                />
+              ))}
+            </div>
+          </section>
+        ))}
 
         {recommendedGroups.length > 0 && (
           <FeatureNextSteps
             featureSlug={featureSlug}
-            title="If the route still fits, move straight to the decision pages"
-            intro="These links are the fastest next move once the workflow is confirmed. Use them to jump into full reviews, head-to-head compares, and alternatives without reopening the route decision."
+            title="Contextual next steps"
+            intro="Use these links after the shortlist when you are ready for reviews, head-to-head compares, or alternatives."
             groups={recommendedGroups}
           />
         )}
-
-        {groups.map((group) => {
-          const sectionOverride = safeOverride.sectionOverrides[group.groupTitle];
-
-          return (
-            <section key={group.groupTitle} id={group.groupTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-')} className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Main shortlist</p>
-              <h2 className="mt-3 text-3xl font-bold text-gray-900">{group.groupTitle}</h2>
-              {safeOverride.shortlistLead ? (
-                <p className="mt-4 max-w-3xl text-base leading-8 text-gray-600">{safeOverride.shortlistLead}</p>
-              ) : null}
-              {group.groupSummary ? (
-                <p className={`${safeOverride.shortlistLead ? 'mt-3' : 'mt-4'} max-w-3xl text-base leading-8 text-gray-600`}>
-                  {group.groupSummary}
-                </p>
-              ) : null}
-
-              <div className="mt-6 grid gap-3 md:grid-cols-2">
-                <div className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
-                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Use this shortlist when</p>
-                  <p className="mt-2 text-sm leading-7 text-gray-700">{sectionOverride?.chooseWhen}</p>
-                </div>
-                <div className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
-                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Leave this route if...</p>
-                  <p className="mt-2 text-sm leading-7 text-gray-700">{sectionOverride?.disappoints}</p>
-                </div>
-              </div>
-
-              <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-                {group.tools.map((tool, index) => (
-                  <ToolCard
-                    key={`${group.groupTitle}-${tool.toolSlug}`}
-                    tool={tool}
-                    featureSlug={featureSlug}
-                    groupTitle={group.groupTitle}
-                    position={index + 1}
-                  />
-                ))}
-              </div>
-
-              {sectionOverride?.contextualExits?.length ? (
-                <div className="mt-8 border-t border-gray-200 pt-5">
-                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">If this route stops fitting</p>
-                  <div className="mt-3 flex flex-wrap gap-3">
-                    {sectionOverride.contextualExits.map((item) => (
-                      <Link
-                        key={`${group.groupTitle}-${item.href}`}
-                        href={item.href}
-                        onClick={() =>
-                          track('click_internal_link', {
-                            link_type: 'guide',
-                            destination_slug: item.href.replace(/^\/+/, ''),
-                            feature_slug: featureSlug,
-                          })
-                        }
-                        className="rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-semibold text-gray-800 transition-colors hover:border-indigo-300 hover:text-indigo-600"
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                  <div className="mt-3 space-y-2">
-                    {sectionOverride.contextualExits.map((item) => (
-                      <p key={`${group.groupTitle}-${item.note}`} className="text-sm text-gray-500">
-                        {item.note}
-                      </p>
-                    ))}
-                  </div>
-                </div>
-              ) : null}
-            </section>
-          );
-        })}
 
         {safeOverride.faqItems.length > 0 && (
           <section className="rounded-3xl border border-black/10 bg-[#F3F1EA] p-8 shadow-sm sm:p-10">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">FAQ</p>
-              <h2 className="mt-3 text-3xl font-bold text-gray-900">Questions that usually decide whether the route still fits</h2>
+              <h2 className="mt-3 text-3xl font-bold text-gray-900">Workflow questions to verify before choosing</h2>
               {safeOverride.faqLead ? <p className="mt-4 text-base leading-8 text-gray-600">{safeOverride.faqLead}</p> : null}
             </div>
 

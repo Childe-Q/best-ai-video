@@ -3,7 +3,7 @@
   "slug": "ai-video-for-social-media",
   "title": "Best AI Video Tools for Social Media (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares AI video tools built for social-native output: vertical speed, hooks, captions, templates, reframing, and rapid posting for TikTok, Reels, Shorts, and similar feeds. The most useful split is whether the tool is stronger for generation-first social drafts, long-form-to-short repurposing, or presenter-led social output.",
+    "oneLiner": "This page compares AI video tools built for social-native output: vertical speed, hooks, captions, templates, reframing, faceless assembly, and rapid posting for TikTok, Reels, Shorts, and similar feeds. The most useful split is whether the tool is stronger for generation-first social drafts, long-form-to-short repurposing, subtitle-heavy cleanup, or presenter-led social output.",
     "boundaries": [
       "Must support vertical (9:16) output and social-native publishing speed.",
       "Must include engagement-first features such as dynamic captions, hook generation, templates, or fast reframing.",
@@ -14,6 +14,8 @@
       "workflow fit and automation",
       "watermark and publish path",
       "repurposing versus generation model",
+      "faceless assembly and reroll control",
+      "subtitle cleanup and packaging",
       "team and export posture"
     ]
   },
@@ -28,7 +30,7 @@
     },
     {
       "title": "Decide between from-scratch generation and long-to-short repurposing.",
-      "desc": "If you already have long-form video, prioritize clipping and reframing tools. If you need original social drafts from prompts, use generation-first tools. These are fundamentally different pipelines."
+      "desc": "If you already have long-form video, prioritize clipping, cleanup, captions, and reframing tools like Opus Clip or VEED. If you need original social drafts from prompts or blog text, compare InVideo's broader prompt workflow with Zebracat's faceless assembly-line approach."
     },
     {
       "title": "Verify commercial music rights if running paid ads.",
@@ -39,11 +41,13 @@
     {
       "id": "template-and-clip-workflows",
       "title": "Vertical templates and clip velocity",
-      "rule": "These tools are built for repeatable social output at speed: hooks, captions, templates, reframing, and quick idea-to-post cycles. They fit creators who need a high volume of vertical content with minimal manual editing and social-native pacing.",
+      "rule": "These tools are built for repeatable social output at speed: hooks, captions, templates, reframing, faceless drafting, and quick idea-to-post cycles. They fit creators who need a high volume of vertical content with minimal manual editing and social-native pacing, while still checking whether the workflow is prompt drafting, cleanup, clipping, or reroll-based assembly.",
       "toolSlugs": [
         "capcut",
         "reelbase",
         "invideo",
+        "zebracat",
+        "veed-io",
         "opus-clip"
       ]
     },
@@ -106,11 +110,11 @@
     {
       "name": "InVideo",
       "slug": "invideo",
-      "verdictSeed": "Generation-first social video workflow for faceless Shorts, prompt-led drafts, and fast stock-scene content.",
+      "verdictSeed": "Prompt-first social video workflow for faceless Shorts, YouTube drafts, and fast stock-scene content, with command-box revisions and light manual Edit module controls.",
       "pricingSeed": "Free plus paid publishing lanes that scale usage, export freedom, and workflow headroom",
       "policySeed": "Free exports keep the InVideo watermark, while paid exports remove it and make social publishing more practical",
-      "bestForSeed": "Faceless YouTube Shorts and text-to-video social content",
-      "mainLimitationSeed": "Heavy social iteration still depends on credit discipline, and shared videos default to public unless the setting is changed",
+      "bestForSeed": "Prompt-led social drafts, faceless Shorts, and long-script-to-short workflows",
+      "mainLimitationSeed": "Ultra impact, 300+ decisions claims, and deep scene-level control still need testing; heavy social iteration also depends on credit discipline",
       "officialUrl": "https://invideo.io/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/invideo",
@@ -119,6 +123,43 @@
         "https://invideo.io/pricing/",
         "https://invideo.io/make/ai-video-generator/",
         "https://help.invideo.io/en/collections/9486043-pricing-plans"
+      ],
+      "flags": []
+    },
+    {
+      "name": "Zebracat",
+      "slug": "zebracat",
+      "verdictSeed": "Faceless social assembly-line for turning blogs, scripts, or short prompts into social-native drafts with storyboard review and scene-by-scene prompt reroll.",
+      "pricingSeed": "Free or trial-style testing plus paid plans for cleaner output and higher usage",
+      "policySeed": "Free output may carry branding; paid tiers are the practical route for cleaner recurring social publishing.",
+      "bestForSeed": "Faceless Shorts, Reels, TikToks, and novelty-style social testing",
+      "mainLimitationSeed": "Reroll controllability, subtitle correction depth, and ready-to-upload quality still need hands-on validation.",
+      "officialUrl": "https://www.zebracat.ai/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/zebracat",
+      "logoUrl": "/logos/zebracat-logo.png",
+      "sourceUrls": [
+        "https://www.zebracat.ai/",
+        "https://www.zebracat.ai/pricing"
+      ],
+      "flags": []
+    },
+    {
+      "name": "VEED.IO",
+      "slug": "veed-io",
+      "verdictSeed": "Browser editor for subtitle-heavy social repurposing, cleanup, and AI inserts from existing footage rather than a pure from-scratch social generator.",
+      "pricingSeed": "Free testing lane with paid tiers for cleaner exports and higher resolution",
+      "policySeed": "Free exports keep a VEED.IO watermark; paid tiers unlock cleaner social exports depending on plan.",
+      "bestForSeed": "Captioned social clips, cleanup, and repurposing from existing footage",
+      "mainLimitationSeed": "AI Rephrase lip-sync, talking avatar quality, and full generative-video maturity still need hands-on validation.",
+      "officialUrl": "https://www.veed.io/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/veed-io",
+      "logoUrl": "/logos/veed-io.png",
+      "sourceUrls": [
+        "https://www.veed.io/",
+        "https://www.veed.io/pricing",
+        "https://support.veed.io/"
       ],
       "flags": []
     },
@@ -164,16 +205,22 @@
   "relatedLinks": {
     "reviewSlugs": [
       "invideo",
+      "zebracat",
+      "veed-io",
       "deepbrain-ai",
       "opus-clip"
     ],
     "alternativesSlugs": [
       "invideo",
+      "zebracat",
+      "veed-io",
       "deepbrain-ai",
       "opus-clip"
     ],
     "vsSlugs": [
-      "invideo-vs-pictory"
+      "invideo-vs-pictory",
+      "invideo-vs-zebracat",
+      "descript-vs-veed-io"
     ],
     "guideSlugs": []
   },
@@ -185,29 +232,32 @@
     },
     {
       "question": "What should readers compare first on this page?",
-      "answerSeed": "Start with workflow shape: do you need generation-first social drafts, long-form-to-short repurposing, or presenter-led social output? Then check whether the publish path is actually workable: InVideo free exports keep visible branding, Opus Clip's clean clip path starts on paid plans, and DeepBrain AI only becomes a realistic publish route once you move beyond the demo tier.",
+      "answerSeed": "Start with workflow shape: do you need generation-first drafts, faceless assembly, subtitle-heavy cleanup, long-form-to-short repurposing, or presenter-led social output? InVideo is broader for prompt-led drafts, Zebracat is tighter for faceless social assembly, VEED is stronger when existing footage needs cleanup and captions, and Opus Clip is stronger for automated long-form-to-short clipping.",
       "sourceToolSlugs": []
     },
     {
       "question": "Which tools already have internal review coverage?",
-      "answerSeed": "Current internal review coverage in this normalized dataset: invideo, deepbrain-ai, opus-clip.",
+      "answerSeed": "Current internal review coverage in this normalized dataset: invideo, zebracat, veed-io, deepbrain-ai, opus-clip.",
       "sourceToolSlugs": [
         "invideo",
+        "zebracat",
+        "veed-io",
         "deepbrain-ai",
         "opus-clip"
       ]
     }
   ],
-  "lastReviewed": "2026-03-25T00:00:00Z",
+  "lastReviewed": "2026-04-26T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/ai-video-for-social-media.raw.json",
     "sourceCount": 4,
-    "uniqueToolCount": 5,
+    "uniqueToolCount": 7,
     "needsManualReview": false,
     "reviewNotes": [
       "Opus Clip was added from completed top-up and editorial handoff evidence to cover long-form-to-short social repurposing.",
-      "Interactive pricing states were intentionally excluded in favor of watermark path, workflow shape, and export posture."
+      "Interactive pricing states were intentionally excluded in favor of watermark path, workflow shape, and export posture.",
+      "Official YouTube body assets landed on InVideo, Zebracat, and VEED were used to split prompt drafting, faceless assembly, and subtitle-heavy cleanup without treating weak claims as proven."
     ]
   }
 }

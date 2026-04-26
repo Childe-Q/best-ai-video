@@ -7,6 +7,7 @@
 
 import { EvidenceNugget, EvidenceTheme } from '@/data/evidence/schema';
 import { readEvidence } from '@/lib/evidence/readEvidence';
+import { getToolBySlug } from '@/lib/toolData';
 
 interface EvidenceNuggetsProps {
   slug: string;
@@ -52,29 +53,32 @@ const themeColors: Record<EvidenceTheme, string> = {
 };
 
 const displayThemePriority: Partial<Record<EvidenceTheme, number>> = {
-  security: 120,
-  licensing: 115,
-  workflow: 110,
-  integrations: 105,
-  export: 100,
+  workflow: 130,
+  editing: 125,
+  stock: 118,
+  voice: 116,
+  avatar: 114,
+  models: 112,
+  export: 105,
   usage: 95,
-  team: 90,
-  editing: 85,
-  voice: 80,
-  avatar: 80,
-  models: 75,
-  support: 70,
-  stock: 65,
+  integrations: 90,
+  team: 70,
+  licensing: 55,
+  security: 45,
+  support: 40,
   general: 20,
 };
 
 function scoreDisplaySourceType(sourceType: string): number {
   const normalized = sourceType.toLowerCase();
 
-  if (normalized.startsWith('non_price_')) return 120;
-  if (normalized.includes('privacy') || normalized.includes('terms') || normalized.includes('security')) return 95;
-  if (normalized.includes('docs') || normalized.includes('help')) return 88;
-  if (normalized.includes('pricing')) return 72;
+  if (normalized.includes('non_price_workflow')) return 65;
+  if (normalized.includes('features') || normalized.includes('docs') || normalized.includes('help')) return 88;
+  if (normalized.includes('non_price_api')) return 75;
+  if (normalized.includes('non_price_policy') || normalized.includes('non_price_security')) return 35;
+  if (normalized.startsWith('non_price_')) return 55;
+  if (normalized.includes('privacy') || normalized.includes('terms') || normalized.includes('security')) return 25;
+  if (normalized.includes('pricing')) return 45;
   if (normalized.includes('home')) return 10;
 
   return 40;
@@ -84,8 +88,14 @@ function scoreDisplayText(text: string): number {
   let score = 0;
 
   if (/\d/.test(text)) score += 12;
-  if (/(policy|watermark|commercial|refund|cancel|rights|security|sso|api|workflow|privacy|export|storage|retention)/i.test(text)) {
+  if (/(workflow|editor|edit|subtitle|caption|transcript|script|prompt|storyboard|scene|voice|avatar|stock|template|export)/i.test(text)) {
     score += 18;
+  }
+  if (/(policy|refund|cancel|rights|security|sso|privacy|storage|retention|personal data|subcontractor|legal basis)/i.test(text)) {
+    score -= 35;
+  }
+  if (/(pricing|paid plan|paid packaging|free plan|credit|subscription|billing|watermark|tier|packaging|allowance)/i.test(text)) {
+    score -= 18;
   }
   if (/(trusted by|rated|reviews|no credit card required|4m\+|2m\+)/i.test(text)) {
     score -= 40;
@@ -111,6 +121,99 @@ function rankEvidenceNuggetsForDisplay(nuggets: EvidenceNugget[]): EvidenceNugge
 
     return left.text.localeCompare(right.text);
   });
+}
+
+type SourceChip = {
+  key: string;
+  label: string;
+  url: string;
+  score: number;
+};
+
+function toDomainLabel(url: string): string {
+  try {
+    const parsed = new URL(url);
+    return parsed.hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
+}
+
+function getOfficialYoutubeUrl(slug: string): string | null {
+  const source = getToolBySlug(slug)?.content?.sources?.['Official YouTube channel and product demos'];
+  const candidate = source?.suggestedQuery?.trim();
+  if (!candidate) return null;
+
+  try {
+    const url = new URL(candidate);
+    return url.hostname.includes('youtube.com') ? url.toString() : null;
+  } catch {
+    return null;
+  }
+}
+
+function scoreSourceUrl(url: string): number {
+  try {
+    const parsed = new URL(url);
+    const hostname = parsed.hostname.replace(/^www\./, '');
+    const full = `${hostname}${parsed.pathname}`.toLowerCase();
+
+    if (hostname.includes('youtube.com')) return 220;
+    if (hostname.startsWith('gtm.')) return -50;
+    if (/(privacy|terms|legal|security|status)/.test(full)) return 10;
+    if (/(pricing)/.test(full)) return 55;
+    if (/(help|support|docs)/.test(full)) return 75;
+    return 140;
+  } catch {
+    return 0;
+  }
+}
+
+function buildSourceChips(slug: string, sourceUrls: string[]): { visible: SourceChip[]; hiddenCount: number } {
+  const candidates: SourceChip[] = [];
+  const officialYoutubeUrl = getOfficialYoutubeUrl(slug);
+
+  if (officialYoutubeUrl) {
+    candidates.push({
+      key: 'youtube-official',
+      label: 'Official YouTube',
+      url: officialYoutubeUrl,
+      score: 220,
+    });
+  }
+
+  sourceUrls.forEach((url) => {
+    try {
+      const parsed = new URL(url);
+      const hostname = parsed.hostname.replace(/^www\./, '');
+      if (hostname.startsWith('gtm.')) return;
+
+      candidates.push({
+        key: hostname,
+        label: toDomainLabel(url),
+        url,
+        score: scoreSourceUrl(url),
+      });
+    } catch {
+      // Ignore invalid source URLs in front-end chips.
+    }
+  });
+
+  const deduped = new Map<string, SourceChip>();
+  candidates
+    .sort((left, right) => right.score - left.score)
+    .forEach((chip) => {
+      if (!deduped.has(chip.key)) {
+        deduped.set(chip.key, chip);
+      }
+    });
+
+  const allChips = Array.from(deduped.values()).sort((left, right) => right.score - left.score);
+  const visible = allChips.slice(0, 5);
+  return {
+    visible,
+    hiddenCount: Math.max(allChips.length - visible.length, 0),
+  };
 }
 
 export default function EvidenceNuggets({ slug, limit = 6, theme, showSources = true }: EvidenceNuggetsProps) {
@@ -141,9 +244,9 @@ export default function EvidenceNuggets({ slug, limit = 6, theme, showSources = 
   }
 
   // Get unique sources
-  const sources = showSources
-    ? evidence.sourceUrls
-    : [];
+  const sourceChips = showSources
+    ? buildSourceChips(slug, evidence.sourceUrls)
+    : { visible: [], hiddenCount: 0 };
 
   return (
     <div className="bg-white rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_#000] p-6">
@@ -176,35 +279,24 @@ export default function EvidenceNuggets({ slug, limit = 6, theme, showSources = 
       </div>
 
       {/* Sources */}
-      {showSources && sources.length > 0 && (
+      {showSources && sourceChips.visible.length > 0 && (
         <div className="mt-4 pt-4 border-t border-gray-100">
           <p className="text-xs text-gray-500 mb-2">Sources:</p>
           <div className="flex flex-wrap gap-2">
-            {sources.slice(0, 5).map((url, idx) => {
-              // Extract domain from URL for cleaner display
-              let label = url;
-              try {
-                const urlObj = new URL(url);
-                label = urlObj.hostname.replace('www.', '');
-              } catch {
-                // Use as-is if not a valid URL
-              }
-
-              return (
-                <a
-                  key={idx}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-2 py-1 bg-gray-100 hover:bg-gray-200 rounded text-xs text-gray-600 transition-colors"
-                >
-                  {label}
-                </a>
-              );
-            })}
-            {sources.length > 5 && (
+            {sourceChips.visible.map((chip) => (
+              <a
+                key={chip.key}
+                href={chip.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-2 py-1 bg-gray-100 hover:bg-gray-200 rounded text-xs text-gray-600 transition-colors"
+              >
+                {chip.label}
+              </a>
+            ))}
+            {sourceChips.hiddenCount > 0 && (
               <span className="inline-flex items-center px-2 py-1 text-xs text-gray-400">
-                +{sources.length - 5} more
+                +{sourceChips.hiddenCount} more
               </span>
             )}
           </div>
@@ -267,7 +359,7 @@ export function EvidenceSourcesList({ slug }: { slug: string }) {
     return { sources: [], nuggets: [], metadata: null };
   }
 
-  const sources = evidence.sourceUrls;
+  const sources = buildSourceChips(slug, evidence.sourceUrls).visible.map((chip) => chip.url);
 
   return {
     sources,

@@ -3,9 +3,9 @@
   "slug": "content-repurposing-ai-tools",
   "title": "Best AI Tools for Content Repurposing (2026)",
   "summarySeed": {
-    "oneLiner": "This page is for teams starting with existing content rather than blank-canvas generation. The key split is whether the source is written material that needs scene assembly, or long-form audio/video that needs clipping into shorts. The shortlist usually gets decided by ingestion fit, transcript-editing depth, watermark and export rules, project retention, and whether the paid tier adds durable team reuse instead of just more monthly credits.",
+    "oneLiner": "This page is for teams starting with existing content rather than blank-canvas generation. The key split is whether the source is written material, decks, or PDFs that need narrated scene assembly, or long-form audio/video that needs clipping into shorts. The shortlist usually gets decided by ingestion fit, transcript-editing depth, voice and pronunciation control, watermark and export rules, project retention, and whether the paid tier adds durable team reuse instead of just more monthly credits.",
     "boundaries": [
-      "Must import existing assets: URLs, long videos, podcasts, or scripts.",
+      "Must import existing assets: URLs, long videos, podcasts, scripts, presentations, or documents.",
       "Must automate conversion from one format to another (text to video, long video to shorts).",
       "Excludes basic text-to-video tools that cannot ingest long-form URLs, recordings, or podcast-style source material.",
       "Excludes post-production editors where the main workflow is timeline editing, transcript cleanup, caption polishing, or manual footage refinement."
@@ -13,6 +13,8 @@
     "primaryClassificationRule": "Group by the source content the workflow is designed to ingest first.",
     "comparisonAxes": [
       "source fit and ingestion workflow",
+      "script, deck, or document cleanup effort",
+      "voice and pronunciation control",
       "watermark and publish-ready export path",
       "quota, storage, and retention limits",
       "team sharing and reuse controls"
@@ -25,7 +27,7 @@
     },
     {
       "title": "Decide whether you need assembly or clipping at scale.",
-      "desc": "Written-source tools help turn existing content libraries into narrated scene-based videos. Recorded-source tools help break long-form assets into shorter channel-ready clips. Choose based on where the team is losing time today, not on whichever tool has the loudest AI marketing."
+      "desc": "Written-source tools help turn existing content libraries into narrated scene-based videos. Fliki is a useful fit when the source is a script, blog, PPT, or PDF and the team can budget cleanup after baseline generation. Recorded-source tools help break long-form assets into shorter channel-ready clips."
     },
     {
       "title": "Check clean exports, storage, and credit expiry together.",
@@ -43,6 +45,7 @@
       "rule": "Choose this route when the source asset is written content: blog posts, articles, scripts, landing pages, or documents that need to become narrated video. The buying logic here is scene assembly speed, stock-media support, publish-ready branding, and how reusable the workflow becomes for a content team.",
       "toolSlugs": [
         "pictory",
+        "fliki",
         "lumen5"
       ]
     },
@@ -98,6 +101,25 @@
       ]
     },
     {
+      "name": "Fliki",
+      "slug": "fliki",
+      "verdictSeed": "Turns scripts, blogs, PPTs, and PDFs into narrated baseline videos with voiceover, scene containers, and pronunciation control. Best treated as a drafting and cleanup workflow rather than a fully finished deck-to-video conversion.",
+      "pricingSeed": "Free and paid self-serve plans exist; higher tiers matter for larger output, integrations, and cleaner business use",
+      "policySeed": "The stable workflow value is source-material ingestion, pronunciation maps, language control, and Make/Zapier/API-style integration paths rather than heavy enterprise governance.",
+      "bestForSeed": "PPT/PDF/script/blog to narrated baseline video",
+      "mainLimitationSeed": "PPT/PDF finishing, B-roll precision, translation rerenders, and automation setup still need hands-on review before scaled publishing.",
+      "officialUrl": "https://fliki.ai/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/fliki",
+      "logoUrl": "/logos/fliki.png",
+      "sourceUrls": [
+        "https://fliki.ai/",
+        "https://fliki.ai/pricing",
+        "https://fliki.ai/features"
+      ],
+      "flags": []
+    },
+    {
       "name": "Munch",
       "slug": "munch",
       "verdictSeed": "Automatically extracts engaging moments from long-form videos, optimized for current trends. No technical skills required.",
@@ -145,16 +167,19 @@
   "relatedLinks": {
     "reviewSlugs": [
       "pictory",
+      "fliki",
       "lumen5",
       "opus-clip"
     ],
     "alternativesSlugs": [
       "pictory",
+      "fliki",
       "lumen5",
       "opus-clip"
     ],
     "vsSlugs": [
       "descript-vs-pictory",
+      "fliki-vs-heygen",
       "invideo-vs-pictory"
     ],
     "guideSlugs": [
@@ -170,33 +195,42 @@
     },
     {
       "question": "What should readers compare first on this page?",
-      "answerSeed": "Start with source fit: written content that needs scene assembly, or recorded content that needs clipping into shorts. Then compare the publish-ready operating model on each candidate: watermark rules, export path, retention or credit expiry, and whether the plan structure supports reusable team workflows or only solo output.",
+      "answerSeed": "Start with source fit: written content, slides, or PDFs that need narrated assembly, or recorded content that needs clipping into shorts. Then compare cleanup effort and the publish-ready operating model: watermark rules, export path, retention or credit expiry, voice and pronunciation control, and whether the plan structure supports reusable team workflows or only solo output.",
       "sourceToolSlugs": []
     },
     {
+      "question": "Where does Fliki fit in content repurposing?",
+      "answerSeed": "Fliki fits the written-source lane when scripts, blogs, PPTs, or PDFs need a narrated baseline video. Its strongest stable value is baseline generation plus pronunciation and language control; PPT/PDF finishing, B-roll precision, and automation setup should still be tested before treating the output as publish-ready.",
+      "sourceToolSlugs": [
+        "fliki"
+      ]
+    },
+    {
       "question": "Which repurposing tools on this page are the most fully specified today?",
-      "answerSeed": "In the current normalized dataset, Pictory, Lumen5, and Opus Clip have the clearest internal review coverage plus clearer watermark, export, or plan-structure notes. Munch remains a lighter-coverage shortlist candidate rather than the most fully specified recommendation on this page.",
+      "answerSeed": "In the current normalized dataset, Pictory, Fliki, Lumen5, and Opus Clip have the clearest internal review coverage plus clearer workflow, watermark, export, or plan-structure notes. Munch remains a lighter-coverage shortlist candidate rather than the most fully specified recommendation on this page.",
       "sourceToolSlugs": []
     },
     {
       "question": "Which tools already have internal review coverage?",
-      "answerSeed": "Current internal review coverage in this normalized dataset: pictory, lumen5, opus-clip.",
+      "answerSeed": "Current internal review coverage in this normalized dataset: pictory, fliki, lumen5, opus-clip.",
       "sourceToolSlugs": [
         "pictory",
+        "fliki",
         "lumen5",
         "opus-clip"
       ]
     }
   ],
-  "lastReviewed": "2026-04-11T00:00:00Z",
+  "lastReviewed": "2026-04-26T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/content-repurposing-ai-tools.raw.json",
     "sourceCount": 3,
-    "uniqueToolCount": 4,
+    "uniqueToolCount": 5,
     "needsManualReview": false,
     "reviewNotes": [
-      "Manual review tightened the route split, publish-ready comparison framing, and research-transparency language while keeping thinner-source Munch fields unresolved."
+      "Manual review tightened the route split, publish-ready comparison framing, and research-transparency language while keeping thinner-source Munch fields unresolved.",
+      "Official YouTube body assets already landed on Fliki were used to add PPT/PDF/script/blog-to-narrated-baseline positioning without treating cleanup or automation as fully proven."
     ]
   }
 }

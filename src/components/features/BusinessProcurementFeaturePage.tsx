@@ -88,6 +88,12 @@ type ReadingGroup = {
   items: FeatureRecommendedReadingLink[];
 };
 
+type ProcurementExitLink = {
+  href: string;
+  title: string;
+  label: string;
+};
+
 const SAFE_FEATURE_EXIT = {
   href: '/features',
   label: 'Browse feature hub',
@@ -107,6 +113,20 @@ function getRecommendedSectionTitle(linkType: FeatureRecommendedReadingLink['lin
     default:
       return 'Related';
   }
+}
+
+function hasDisplayValue(value?: string | null): value is string {
+  return typeof value === 'string' && value.trim().length > 0;
+}
+
+function firstSentence(value?: string | null): string {
+  if (!value) {
+    return '';
+  }
+
+  const trimmed = value.trim();
+  const match = trimmed.match(/^(.+?[.!?])(\s|$)/);
+  return match ? match[1].trim() : trimmed;
 }
 
 const readingOrder: FeatureRecommendedReadingLink['linkType'][] = ['tool', 'tool_alternatives', 'vs', 'guide'];
@@ -305,65 +325,82 @@ const businessProcurementOverrides: Partial<Record<string, BusinessProcurementOv
     wrongFitLabel: 'Go to professional tools',
     fitHeading: 'Stay here only if enterprise deployment is the real constraint',
     fitSummary:
-      'Use this page only if the buying process is shaped by procurement, security review, admin rollout, or enterprise integration requirements. If you mainly need a business team tool with collaboration and brand control, exit early instead of treating enterprise signals as normal.',
+      'Start here only if one of these can block adoption.',
     fitCards: [
       {
-        title: 'Stay here if security, admin, and rollout requirements decide the shortlist',
+        title: 'Security, admin, or rollout decides the shortlist',
         summary:
-          'This is the right route when SSO, SCORM, API access, role-based controls, or enterprise rollout posture decide whether a vendor can even be evaluated.',
+          'Use this page when SSO, SCORM, API access, role-based controls, or rollout posture decide whether a vendor can be evaluated.',
         href: '#governed-training-and-communications',
         label: 'Go to the shortlist',
       },
       {
-        title: 'Leave for professional tools if you need a business team solution',
+        title: 'Need a business-team tool?',
         summary:
-          'If the buyer is a department lead and the main question is collaboration, brand governance, and commercial output, the professional page is the better first route.',
+          'Use professional tools when a department lead mainly needs collaboration, brand control, and business-ready output.',
         href: '/features/professional-ai-video-tools',
         label: 'Go to professional tools',
       },
       {
-        title: 'Leave for the broader shortlist if you are still choosing the lane',
+        title: 'Still choosing the workflow?',
         summary:
-          'If you have not yet decided between avatars, repurposing, or broader generator routes, do not start with an enterprise deployment page.',
+          'Use the broader shortlist if you have not picked between avatars, repurposing, editing, or generation.',
         href: '/features/best-ai-video-generators',
         label: 'Go to the broader shortlist',
       },
     ],
     checklistLabel: 'Procurement checklist',
-    checklistHeading: 'Check enterprise fit before you compare vendors',
+    checklistHeading: 'Confirm procurement fit before comparing vendors',
     checklistIntro:
-      'Use procurement filters first. If these fail, the rest of the shortlist usually stops mattering.',
+      'Use only the checks that can block adoption. If none of these apply, the professional page is usually the cleaner frame.',
+    checklistItems: [
+      {
+        title: 'SSO / SAML / identity review',
+      },
+      {
+        title: 'SCORM / LMS or API integration',
+      },
+      {
+        title: 'Admin roles / approvals / governance',
+      },
+      {
+        title: 'Data handling / security documentation',
+      },
+      {
+        title: 'Enterprise plan gating',
+      },
+    ],
     matrixLabel: 'Capability matrix',
-    matrixHeading: 'See which deployment path actually matches the organization',
+    matrixHeading: 'Choose the enterprise lane',
     matrixIntro:
-      'Use the matrix to separate governed training rollout from API-led repurposing before you over-read vendors.',
+      'Pick the deployment path before comparing vendors.',
     matrixRows: [
       {
         label: 'Primary buyer',
         values: {
-          'Governed training and communications': 'L&D, HR enablement, internal communications, procurement',
-          'Programmatic repurposing and knowledge ops': 'Knowledge ops, content systems, platform owners, procurement',
+          'Governed training and communications': 'L&D, HR, internal comms, procurement',
+          'Programmatic repurposing and knowledge ops': 'Knowledge ops, content systems, platform owners',
         },
       },
       {
         label: 'Core deployment need',
         values: {
-          'Governed training and communications': 'Governed avatar delivery, multilingual rollout, admin control',
-          'Programmatic repurposing and knowledge ops': 'Programmatic content transformation, API-led reuse, system integration',
+          'Governed training and communications': 'Avatar delivery, multilingual rollout, admin control',
+          'Programmatic repurposing and knowledge ops': 'API-led reuse, automation, system integration',
         },
       },
       {
         label: 'Must verify first',
         values: {
-          'Governed training and communications': 'SSO/SAML, SCORM or LMS posture, language coverage, admin controls',
-          'Programmatic repurposing and knowledge ops': 'API depth, workflow automation, SSO, brand governance, integration limits',
+          'Governed training and communications': 'SSO/SAML, SCORM/LMS posture, language coverage',
+          'Programmatic repurposing and knowledge ops': 'API depth, automation limits, admin governance',
         },
       },
       {
         label: 'Main procurement risk',
         values: {
-          'Governed training and communications': 'Looks enterprise-ready until SCORM, SSO, or governance is locked to a higher tier',
-          'Programmatic repurposing and knowledge ops': 'Looks flexible until API, scale, or admin controls are too thin for real deployment',
+          'Governed training and communications': 'Key controls may sit behind a higher tier',
+          'Programmatic repurposing and knowledge ops': 'API, scale, or admin controls may be too thin',
         },
       },
       {
@@ -375,9 +412,9 @@ const businessProcurementOverrides: Partial<Record<string, BusinessProcurementOv
       },
     ],
     shortlistLabel: 'Enterprise shortlist',
-    sectionsHeading: 'Shortlist only after procurement fit is clear',
+    sectionsHeading: 'Representative vendors by enterprise lane',
     sectionsIntro:
-      'The sections below assume procurement fit is already established. If that is still not true, this page should stop being the main frame.',
+      'Use these examples to validate the lane before opening full reviews or pricing pages.',
     laneLabel: 'Shortlist lane',
     exitOptionsLabel: 'If this frame stops fitting',
     verifyLabel: 'Check before procurement',
@@ -385,38 +422,24 @@ const businessProcurementOverrides: Partial<Record<string, BusinessProcurementOv
     furtherReadingHeading: 'Keep going only if deployment fit still holds',
     faqItems: [
       {
-        question: 'Do I actually need an enterprise page, or just a business team tool?',
-        answer:
-          'Use this page only when procurement, security review, SSO, SCORM, API access, or governed rollout are the real blockers. If the buyer is mainly a department lead choosing a team tool, the professional page is the better first stop.',
-      },
-      {
         question: 'What should I verify first: security posture, SCORM, or API access?',
         answer:
           'Start with the requirement that can disqualify a vendor fastest. For L&D and internal enablement, that is often SSO, SCORM, and governance. For programmatic repurposing, that is usually API depth, automation limits, and admin posture.',
       },
       {
-        question: 'When is the training and communications route the right enterprise lane?',
+        question: 'What usually gets gated to enterprise plans?',
         answer:
-          'Use it when the platform will support internal training, multilingual communications, or governed avatar rollout across teams. It is the right lane when delivery control matters more than content transformation pipelines.',
-      },
-      {
-        question: 'When is repurposing and knowledge ops the better enterprise lane?',
-        answer:
-          'Use it when the enterprise need is turning existing knowledge assets, recordings, or documents into video at scale through a more programmatic workflow. It is the better lane when integration and transformation matter more than avatar-led delivery.',
-      },
-      {
-        question: 'When should I leave this page and move back to the professional page?',
-        answer:
-          'Leave when the decision is no longer about procurement readiness or governed deployment. If a business team could realistically self-serve the tool and rollout without enterprise controls, the professional page is the cleaner frame.',
+          'Expect identity controls, admin governance, advanced security documentation, SCORM/LMS posture, API scale, custom avatar governance, and larger localization workflows to be gated by plan or sales process.',
       },
     ],
     sectionOverrides: {
       'Governed training and communications': {
         title: 'Governed training and communications',
+        displayToolSlugs: ['synthesia', 'deepbrain-ai'],
         startHereWhen:
-          'Start here when the organization needs governed avatar delivery for training, internal communications, HR enablement, or multilingual rollout across teams and regions, and procurement will scrutinize the platform.',
+          'Best for avatar-led training, internal comms, multilingual rollout, and SCORM/LMS-driven adoption.',
         verifyFirst:
-          'Verify SSO/SAML, admin controls, language coverage, SCORM or LMS fit, and how much governance is actually available on the enterprise tier rather than assumed from marketing copy.',
+          'Verify SSO/SAML, admin controls, language coverage, SCORM or LMS fit, and which governance controls are actually on the buying plan.',
         contextualExits: [
           {
             href: '/features/professional-ai-video-tools',
@@ -437,10 +460,11 @@ const businessProcurementOverrides: Partial<Record<string, BusinessProcurementOv
       },
       'Programmatic repurposing and knowledge ops': {
         title: 'Programmatic repurposing and knowledge ops',
+        displayToolSlugs: ['pictory'],
         startHereWhen:
-          'Start here when the enterprise job is turning existing content systems, recordings, or documents into video through a scalable, integrated workflow rather than through a business-team content workflow.',
+          'Best for turning existing recordings, documents, or knowledge assets into video through API or scalable workflows.',
         verifyFirst:
-          'Verify API posture, automation limits, admin governance, brand controls, and whether the workflow really supports programmatic reuse instead of only light business-team repurposing.',
+          'Verify API posture, automation limits, admin governance, brand controls, and whether reuse works beyond a light team workflow.',
         contextualExits: [
           {
             href: '/features/professional-ai-video-tools',
@@ -462,6 +486,88 @@ const businessProcurementOverrides: Partial<Record<string, BusinessProcurementOv
     },
   },
 };
+
+function ProcurementRepresentativeToolCard({
+  tool,
+  featureSlug,
+  groupTitle,
+  position,
+}: {
+  tool: FeatureGroupDisplay['tools'][number];
+  featureSlug: string;
+  groupTitle: string;
+  position: number;
+}) {
+  const reviewHref = tool.hasReviewPage && hasDisplayValue(tool.reviewUrl) ? tool.reviewUrl : null;
+  const pricingHref = `/tool/${tool.toolSlug}/pricing`;
+  const bestFitText = hasDisplayValue(tool.bestFor) ? firstSentence(tool.bestFor) : 'Enterprise video teams validating this lane.';
+  const whyText = firstSentence(tool.reasonLine1);
+  const watchText = firstSentence(tool.mainTradeoff ?? tool.watermarkPolicy);
+
+  const trackToolCardClick = () => {
+    track('click_tool_card', {
+      tool_slug: tool.toolSlug,
+      position,
+      group_title: groupTitle,
+      feature_slug: featureSlug,
+    });
+  };
+
+  return (
+    <article className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
+      <div className="flex items-start gap-3">
+        {hasDisplayValue(tool.resolvedLogoUrl) ? (
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white p-2">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={tool.resolvedLogoUrl}
+              alt={`${tool.displayName} logo`}
+              className="h-full w-full object-contain"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        ) : null}
+        <div className="min-w-0">
+          <h4 className="text-lg font-bold leading-tight text-gray-900">{tool.displayName}</h4>
+        </div>
+      </div>
+
+      <div className="mt-4 space-y-2 text-sm leading-6 text-gray-800">
+        <p>
+          <span className="font-bold text-gray-900">Best fit:</span> {bestFitText}
+        </p>
+        <p>
+          <span className="font-bold text-gray-900">Why it belongs here:</span> {whyText}
+        </p>
+        {hasDisplayValue(watchText) ? (
+          <p>
+            <span className="font-bold text-gray-900">Watch out:</span> {watchText}
+          </p>
+        ) : null}
+      </div>
+
+      <div className="mt-5 flex flex-wrap gap-3 border-t border-gray-100 pt-4">
+        {reviewHref ? (
+          <Link
+            href={reviewHref}
+            onClick={trackToolCardClick}
+            className="inline-flex items-center justify-center rounded-xl border-2 border-black bg-[#FFF16A] px-4 py-2 text-sm font-semibold text-gray-900 shadow-[3px_3px_0px_0px_#000]"
+          >
+            View review
+          </Link>
+        ) : null}
+        <Link
+          href={pricingHref}
+          onClick={trackToolCardClick}
+          className="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-800 hover:border-gray-400"
+        >
+          Pricing
+        </Link>
+      </div>
+    </article>
+  );
+}
 
 export default function BusinessProcurementFeaturePage({
   featureSlug,
@@ -525,7 +631,7 @@ export default function BusinessProcurementFeaturePage({
 
   const override = safeOverride;
 
-  const recommendedGroups: ReadingGroup[] = readingOrder
+  const defaultRecommendedGroups: ReadingGroup[] = readingOrder
     .map((linkType) => ({
       title: getRecommendedSectionTitle(linkType),
       items: recommendedReadingLinks.filter((item) => item.linkType === linkType),
@@ -533,6 +639,54 @@ export default function BusinessProcurementFeaturePage({
     .filter((group) => group.items.length > 0);
   const isBusinessLight = override.mode === 'business-light';
   const isProcurementHeavy = override.mode === 'procurement-heavy';
+  const checklistItems = override.checklistItems ?? pageData.howToChoose?.criteria ?? [];
+  const enterpriseRecommendedGroups: ReadingGroup[] = [
+    {
+      title: 'Representative reviews',
+      items: [
+        { href: '/tool/synthesia', label: 'Synthesia review', linkType: 'tool', destinationSlug: 'synthesia' },
+        { href: '/tool/deepbrain-ai', label: 'DeepBrain AI review', linkType: 'tool', destinationSlug: 'deepbrain-ai' },
+        { href: '/tool/pictory', label: 'Pictory review', linkType: 'tool', destinationSlug: 'pictory' },
+      ],
+    },
+    {
+      title: 'Pricing checks',
+      items: [
+        { href: '/tool/synthesia/pricing', label: 'Synthesia pricing', linkType: 'guide', destinationSlug: 'tool/synthesia/pricing' },
+        { href: '/tool/deepbrain-ai/pricing', label: 'DeepBrain AI pricing', linkType: 'guide', destinationSlug: 'tool/deepbrain-ai/pricing' },
+        { href: '/tool/pictory/pricing', label: 'Pictory pricing', linkType: 'guide', destinationSlug: 'tool/pictory/pricing' },
+      ],
+    },
+    {
+      title: 'Adjacent decisions',
+      items: [
+        {
+          href: '/tool/synthesia/alternatives',
+          label: 'Synthesia alternatives',
+          linkType: 'tool_alternatives',
+          destinationSlug: 'synthesia/alternatives',
+        },
+        { href: '/vs/heygen-vs-synthesia', label: 'HeyGen vs Synthesia', linkType: 'vs', destinationSlug: 'heygen-vs-synthesia' },
+      ],
+    },
+  ];
+  const recommendedGroups = isProcurementHeavy ? enterpriseRecommendedGroups : defaultRecommendedGroups;
+  const procurementExitLinks: ProcurementExitLink[] = isProcurementHeavy
+    ? [
+        {
+          href: safeOverride.wrongFitHref ?? '/features/professional-ai-video-tools',
+          title: 'Need a business-team tool?',
+          label: safeOverride.wrongFitLabel,
+        },
+        {
+          href:
+            safeOverride.fitCards.find((card) => card.href === '/features/best-ai-video-generators')?.href ??
+            '/features/best-ai-video-generators',
+          title: 'Still choosing the workflow?',
+          label: 'Go to the broader shortlist',
+        },
+      ]
+    : [];
 
   return (
     <div
@@ -579,38 +733,45 @@ export default function BusinessProcurementFeaturePage({
             <p className="mt-4 max-w-4xl text-sm font-semibold uppercase tracking-[0.12em] text-gray-600">
               {override.heroDefinition}
             </p>
-            <p className="mt-5 max-w-4xl text-lg leading-8 text-gray-700">{pageData.hero.subheadline}</p>
+            <p className="mt-5 max-w-4xl text-lg leading-8 text-gray-700">
+              {isProcurementHeavy
+                ? 'A procurement-first shortlist for teams checking deployment path, governance, and plan-gated enterprise controls before vendor review.'
+                : pageData.hero.subheadline}
+            </p>
 
-            <div className="mt-8 grid gap-4 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
-              <div className="rounded-2xl border border-black/15 bg-white/85 p-5">
-                <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Scope and classification rule</p>
-                <p className="mt-3 text-sm leading-7 text-gray-800">{pageData.meta.primaryClassificationRule}</p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {pageData.hero.definitionBullets.map((bullet) => (
-                    <span
-                      key={bullet}
-                      className="rounded-full border border-black/10 bg-gray-50 px-3 py-1.5 text-xs font-semibold text-gray-700"
+            {!isProcurementHeavy ? (
+              <div className="mt-8 grid gap-4 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
+                <div className="rounded-2xl border border-black/15 bg-white/85 p-5">
+                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Scope and classification rule</p>
+                  <p className="mt-3 text-sm leading-7 text-gray-800">{pageData.meta.primaryClassificationRule}</p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {pageData.hero.definitionBullets.map((bullet) => (
+                      <span
+                        key={bullet}
+                        className="rounded-full border border-black/10 bg-gray-50 px-3 py-1.5 text-xs font-semibold text-gray-700"
+                      >
+                        {bullet}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="rounded-2xl border border-black/15 bg-white/85 p-5">
+                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Leave this page if...</p>
+                  <p className="mt-3 text-sm leading-7 text-gray-800">{override.wrongFitText}</p>
+                  <div className="mt-5">
+                  <Link
+                    href={safeOverride.wrongFitHref ?? '/features'}
+                      className="inline-flex items-center rounded-xl border-2 border-black bg-[#FFF16A] px-4 py-2.5 text-sm font-semibold text-gray-900 shadow-[3px_3px_0px_0px_#000]"
                     >
-                      {bullet}
-                    </span>
-                  ))}
+                      {safeOverride.wrongFitLabel}
+                    </Link>
+                  </div>
                 </div>
               </div>
+            ) : null}
 
-              <div className="rounded-2xl border border-black/15 bg-white/85 p-5">
-                <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Leave this page if...</p>
-                <p className="mt-3 text-sm leading-7 text-gray-800">{override.wrongFitText}</p>
-                <div className="mt-5">
-                <Link
-                  href={safeOverride.wrongFitHref ?? '/features'}
-                    className="inline-flex items-center rounded-xl border-2 border-black bg-[#FFF16A] px-4 py-2.5 text-sm font-semibold text-gray-900 shadow-[3px_3px_0px_0px_#000]"
-                  >
-                    {safeOverride.wrongFitLabel}
-                  </Link>
-                </div>
-              </div>
-            </div>
-
+            {!isProcurementHeavy ? (
             <div className="mt-8 rounded-2xl border border-black/15 bg-white/85 p-5">
               <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">What matters most</p>
               <div className="mt-3 flex flex-wrap gap-2">
@@ -624,6 +785,7 @@ export default function BusinessProcurementFeaturePage({
                 ))}
               </div>
             </div>
+            ) : null}
           </div>
         </div>
       </header>
@@ -633,59 +795,82 @@ export default function BusinessProcurementFeaturePage({
           isProcurementHeavy ? 'space-y-12' : 'space-y-14'
         }`}
       >
-        <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
-          <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Fit check</p>
-            <h2 className="mt-3 text-3xl font-bold text-gray-900">{override.fitHeading}</h2>
-            <p className="mt-4 text-base leading-8 text-gray-600">{override.fitSummary}</p>
-          </div>
+        {isProcurementHeavy ? (
+          <section className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm sm:p-8">
+            <div className="max-w-4xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Procurement fit</p>
+              <h2 className="mt-2 text-2xl font-bold text-gray-900">Quick procurement check</h2>
+              <p className="mt-2 text-sm leading-6 text-gray-600">{override.fitSummary}</p>
+            </div>
 
-          <div className={`mt-6 grid gap-3 ${isBusinessLight ? 'xl:grid-cols-3' : 'lg:grid-cols-3'}`}>
-            {safeOverride.fitCards.map((card) => (
-              <article
-                key={card.title}
-                className={`rounded-2xl border border-gray-200 bg-[#FCFBF7] ${isProcurementHeavy ? 'p-4' : 'p-5'}`}
-              >
-                <h3 className={`${isProcurementHeavy ? 'text-lg' : 'text-xl'} font-bold text-gray-900`}>{card.title}</h3>
-                <p className={`mt-2.5 text-sm ${isProcurementHeavy ? 'leading-6' : 'leading-7'} text-gray-700`}>
-                  {card.summary}
-                </p>
-                <div className="mt-3">
-                  <Link href={card.href} className="text-sm font-bold text-indigo-600 hover:text-indigo-700">
-                    {card.label}
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
-          <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">{override.checklistLabel}</p>
-            <h2 className="mt-3 text-3xl font-bold text-gray-900">{override.checklistHeading}</h2>
-            <p className="mt-4 text-base leading-8 text-gray-600">{override.checklistIntro}</p>
-          </div>
-
-          <div className={`mt-6 grid gap-3 ${isBusinessLight ? 'lg:grid-cols-3' : 'md:grid-cols-2'}`}>
-            {(override.checklistItems ?? pageData.howToChoose?.criteria ?? []).map((criterion) => (
-              <div
-                key={criterion.title}
-                className={`rounded-2xl border border-gray-200 bg-[#F9FAFB] ${isProcurementHeavy ? 'p-4' : 'p-5'}`}
-              >
-                <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Checklist item</p>
-                <h3 className={`mt-2.5 ${isProcurementHeavy ? 'text-base' : 'text-lg'} font-bold text-gray-900`}>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {checklistItems.map((criterion) => (
+                <span
+                  key={criterion.title}
+                  className="rounded-full border border-gray-200 bg-[#F9FAFB] px-3 py-1.5 text-sm font-semibold text-gray-800"
+                >
                   {criterion.title}
-                </h3>
-                {criterion.desc ? (
-                  <p className={`mt-2.5 text-sm ${isProcurementHeavy ? 'leading-6' : 'leading-7'} text-gray-600`}>
-                    {criterion.desc}
-                  </p>
-                ) : null}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-4 text-sm leading-6 text-gray-600">
+              Not procurement-heavy?{' '}
+              <Link href={procurementExitLinks[0]?.href ?? '/features/professional-ai-video-tools'} className="font-semibold text-indigo-600 hover:text-indigo-700">
+                Use professional tools
+              </Link>{' '}
+              or{' '}
+              <Link href={procurementExitLinks[1]?.href ?? '/features/best-ai-video-generators'} className="font-semibold text-indigo-600 hover:text-indigo-700">
+                the broader AI video shortlist
+              </Link>
+              .
+            </div>
+          </section>
+        ) : (
+          <>
+            <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
+              <div className="max-w-3xl">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Fit check</p>
+                <h2 className="mt-3 text-3xl font-bold text-gray-900">{override.fitHeading}</h2>
+                <p className="mt-4 text-base leading-8 text-gray-600">{override.fitSummary}</p>
               </div>
-            ))}
-          </div>
-        </section>
+
+              <div className={`mt-6 grid gap-3 ${isBusinessLight ? 'xl:grid-cols-3' : 'lg:grid-cols-3'}`}>
+                {safeOverride.fitCards.map((card) => (
+                  <article key={card.title} className="rounded-2xl border border-gray-200 bg-[#FCFBF7] p-5">
+                    <h3 className="text-xl font-bold text-gray-900">{card.title}</h3>
+                    <p className="mt-2.5 text-sm leading-7 text-gray-700">{card.summary}</p>
+                    <div className="mt-3">
+                      <Link href={card.href} className="text-sm font-bold text-indigo-600 hover:text-indigo-700">
+                        {card.label}
+                      </Link>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
+              <div className="max-w-3xl">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">{override.checklistLabel}</p>
+                <h2 className="mt-3 text-3xl font-bold text-gray-900">{override.checklistHeading}</h2>
+                <p className="mt-4 text-base leading-8 text-gray-600">{override.checklistIntro}</p>
+              </div>
+
+              <div className="mt-6 grid gap-3 lg:grid-cols-3">
+                {checklistItems.map((criterion) => (
+                  <div key={criterion.title} className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
+                    <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Checklist item</p>
+                    <h3 className="mt-2.5 text-lg font-bold text-gray-900">{criterion.title}</h3>
+                    {criterion.desc ? (
+                      <p className="mt-2.5 text-sm leading-7 text-gray-600">{criterion.desc}</p>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+            </section>
+          </>
+        )}
 
         <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
           <div className="max-w-3xl">
@@ -742,7 +927,9 @@ export default function BusinessProcurementFeaturePage({
 
         <section className="space-y-5">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">{override.shortlistLabel}</p>
+            {!isProcurementHeavy ? (
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">{override.shortlistLabel}</p>
+            ) : null}
             <h2 className="mt-3 text-3xl font-bold text-gray-900">{override.sectionsHeading}</h2>
             <p className="mt-4 text-base leading-8 text-gray-600">{override.sectionsIntro}</p>
           </div>
@@ -753,15 +940,20 @@ export default function BusinessProcurementFeaturePage({
 
             return (
               <section key={group.groupTitle} id={sectionId} className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">{override.laneLabel}</p>
+                {!isProcurementHeavy ? (
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">{override.laneLabel}</p>
+                ) : null}
                 <h3 className="mt-3 text-3xl font-bold text-gray-900">{sectionOverride?.title ?? override.groupLabels?.[group.groupTitle] ?? group.groupTitle}</h3>
-                {sectionOverride?.summary ?? group.groupSummary ? (
+                {isProcurementHeavy ? (
+                  <p className="mt-3 max-w-3xl text-base leading-7 text-gray-600">{sectionOverride?.startHereWhen}</p>
+                ) : (sectionOverride?.summary ?? group.groupSummary) ? (
                   <p className="mt-4 max-w-3xl text-base leading-8 text-gray-600">{sectionOverride?.summary ?? group.groupSummary}</p>
                 ) : null}
 
+                {!isProcurementHeavy ? (
                 <div className="mt-6 grid gap-3 md:grid-cols-2">
                   <div className={`rounded-2xl border border-gray-200 bg-[#F9FAFB] ${isProcurementHeavy ? 'p-4' : 'p-5'}`}>
-                    <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Start here when</p>
+                    <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Use when</p>
                     <p className={`mt-2 text-sm ${isProcurementHeavy ? 'leading-6' : 'leading-7'} text-gray-700`}>
                       {sectionOverride?.startHereWhen}
                     </p>
@@ -773,8 +965,9 @@ export default function BusinessProcurementFeaturePage({
                     </p>
                   </div>
                 </div>
+                ) : null}
 
-                <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                <div className={`${isProcurementHeavy ? 'mt-6' : 'mt-8'} grid gap-4 md:grid-cols-2 xl:grid-cols-3`}>
                   {group.tools
                     .filter((tool) =>
                       sectionOverride?.displayToolSlugs?.length
@@ -782,17 +975,27 @@ export default function BusinessProcurementFeaturePage({
                         : true,
                     )
                     .map((tool, index) => (
-                    <ToolCard
-                      key={`${group.groupTitle}-${tool.toolSlug}`}
-                      tool={tool}
-                      featureSlug={featureSlug}
-                      groupTitle={group.groupTitle}
-                      position={index + 1}
-                    />
+                      isProcurementHeavy ? (
+                        <ProcurementRepresentativeToolCard
+                          key={`${group.groupTitle}-${tool.toolSlug}`}
+                          tool={tool}
+                          featureSlug={featureSlug}
+                          groupTitle={group.groupTitle}
+                          position={index + 1}
+                        />
+                      ) : (
+                        <ToolCard
+                          key={`${group.groupTitle}-${tool.toolSlug}`}
+                          tool={tool}
+                          featureSlug={featureSlug}
+                          groupTitle={group.groupTitle}
+                          position={index + 1}
+                        />
+                      )
                     ))}
                 </div>
 
-                {sectionOverride?.contextualExits?.length ? (
+                {!isProcurementHeavy && sectionOverride?.contextualExits?.length ? (
                   <div className="mt-8 border-t border-gray-200 pt-5">
                     <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">{override.exitOptionsLabel}</p>
                     <div className="mt-3 flex flex-wrap gap-3">

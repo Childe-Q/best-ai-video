@@ -34,16 +34,45 @@ const workflowChecks = [
 const broadRouteCallout = {
   title: 'Still choosing the right lane?',
   body:
-    'Start with the broad shortlist when the job is still ambiguous. It is the best first stop for separating generation, avatar-led delivery, source-to-video conversion, and faster creator routes before you commit to a narrower page.',
+    'Start with the broad shortlist when the job is still ambiguous. It is the best first stop for separating generation, avatar-led delivery, source-to-video conversion, and creator routes before you commit to a narrower page.',
   href: '/features/best-ai-video-generators',
   cta: 'Open the broad shortlist',
 };
 
-const toolTypeExplainers = [
+type RouteCollectionKey =
+  | 'primary'
+  | 'business'
+  | 'channel'
+  | 'constraint'
+  | 'comparison';
+
+type FeatureRoute = {
+  slug: string;
+  group: RouteCollectionKey;
+  label: string;
+  checkRef: string;
+  title: string;
+  bestWhen: string;
+  wrongFirstStop: string;
+  weight: 'primary' | 'secondary';
+};
+
+const featureRoutes: FeatureRoute[] = [
   {
-    kind: 'feature' as const,
+    slug: 'best-ai-video-generators',
+    group: 'primary',
+    label: 'Broad shortlist',
+    checkRef: 'Start here if the lane is unclear',
+    title: 'Best AI video generators',
+    bestWhen:
+      'Use this when you still need to separate cinematic generation, avatar-led delivery, social output, and broader creator workflows.',
+    wrongFirstStop:
+      'Do not start here if procurement, channel format, or budget policy is already the hard filter.',
+    weight: 'primary',
+  },
+  {
     slug: 'text-to-video-ai-tools',
-    group: 'primary' as const,
+    group: 'primary',
     label: 'Net-new scenes',
     checkRef: 'Usually follows Check 1',
     title: 'Text to video tools',
@@ -51,11 +80,11 @@ const toolTypeExplainers = [
       'Pick this type when there is no source footage yet and the output itself has to be created.',
     wrongFirstStop:
       'Do not start here if you already have a webinar, blog, transcript, or rough cut to work from.',
+    weight: 'primary',
   },
   {
-    kind: 'feature' as const,
     slug: 'ai-avatar-video-generators',
-    group: 'primary' as const,
+    group: 'primary',
     label: 'Presenter-led output',
     checkRef: 'Usually follows Check 2',
     title: 'AI avatar tools',
@@ -63,11 +92,11 @@ const toolTypeExplainers = [
       'Pick this type when a face, voice, and repeatable presenter format matter more than original scene generation.',
     wrongFirstStop:
       'Do not start here if the real job is cinematic footage, b-roll, or editing existing material.',
+    weight: 'primary',
   },
   {
-    kind: 'feature' as const,
     slug: 'content-repurposing-ai-tools',
-    group: 'primary' as const,
+    group: 'primary',
     label: 'Source-to-video conversion',
     checkRef: 'Usually follows Check 3',
     title: 'Video repurposing tools',
@@ -75,11 +104,11 @@ const toolTypeExplainers = [
       'Pick this type when the core asset already exists and the job is conversion, clipping, or reformatting.',
     wrongFirstStop:
       'Do not start here if there is no source material yet or if you need a presenter-first format.',
+    weight: 'primary',
   },
   {
-    kind: 'feature' as const,
     slug: 'ai-video-editors',
-    group: 'specialist' as const,
+    group: 'primary',
     label: 'Improve existing footage',
     checkRef: 'Usually follows Check 3',
     title: 'AI video editors',
@@ -87,6 +116,127 @@ const toolTypeExplainers = [
       'Pick this type when you are improving existing clips rather than generating new scenes or converting long-form content into a fresh format.',
     wrongFirstStop:
       'Do not start here if the real bottleneck is creation from scratch or turning articles and webinars into first-pass videos.',
+    weight: 'secondary',
+  },
+  {
+    slug: 'professional-ai-video-tools',
+    group: 'business',
+    label: 'Business team rollout',
+    checkRef: 'Team workflow first',
+    title: 'Professional AI video tools',
+    bestWhen:
+      'Use this when a team needs collaboration, brand control, and business-ready output without a procurement-heavy platform search.',
+    wrongFirstStop:
+      'Do not start here if SSO, SCORM/API, security review, or governed deployment already decide the shortlist.',
+    weight: 'primary',
+  },
+  {
+    slug: 'enterprise-ai-video-solutions',
+    group: 'business',
+    label: 'Procurement-ready deployment',
+    checkRef: 'Governance first',
+    title: 'Enterprise AI video solutions',
+    bestWhen:
+      'Use this when security review, admin controls, SSO, SCORM/API posture, integration depth, or global rollout risk decide whether a vendor can move forward.',
+    wrongFirstStop:
+      'Do not start here for a solo creator or a department team that mainly needs lighter collaboration and brand control.',
+    weight: 'primary',
+  },
+  {
+    slug: 'ai-video-for-youtube',
+    group: 'channel',
+    label: 'YouTube workflow',
+    checkRef: 'Channel format first',
+    title: 'AI video for YouTube',
+    bestWhen:
+      'Use this when the job is channel production, long-form to Shorts, faceless videos, or a repeatable YouTube publishing system.',
+    wrongFirstStop:
+      'Do not start here if the real decision is generic generation, enterprise procurement, or social-first short-form output.',
+    weight: 'secondary',
+  },
+  {
+    slug: 'ai-video-for-social-media',
+    group: 'channel',
+    label: 'Social cadence',
+    checkRef: 'Platform speed first',
+    title: 'AI video for social media',
+    bestWhen:
+      'Use this when the workflow is TikTok, Reels, Shorts, captioned clips, presenter-led social output, or high-volume platform packaging.',
+    wrongFirstStop:
+      'Do not start here if the main constraint is procurement, cinematic realism, or long-form channel structure.',
+    weight: 'secondary',
+  },
+  {
+    slug: 'ai-video-for-marketing',
+    group: 'channel',
+    label: 'Campaign output',
+    checkRef: 'Marketing format first',
+    title: 'AI video for marketing',
+    bestWhen:
+      'Use this when campaign variants, product messaging, brand storytelling, or personalization drive the shortlist.',
+    wrongFirstStop:
+      'Do not start here if the team is still choosing between avatars, repurposing, or generic generation.',
+    weight: 'secondary',
+  },
+  {
+    slug: 'free-ai-video-no-watermark',
+    group: 'constraint',
+    label: 'Free no-watermark rule',
+    checkRef: 'Policy first',
+    title: 'Free AI video tools with no watermark',
+    bestWhen:
+      'Use this when free-tier export policy and watermark removal are the first filters.',
+    wrongFirstStop:
+      'Do not start here if output quality, workflow fit, or business rollout matters more than staying free.',
+    weight: 'secondary',
+  },
+  {
+    slug: 'budget-friendly-ai-video-tools',
+    group: 'constraint',
+    label: 'Budget cap',
+    checkRef: 'Price ceiling first',
+    title: 'Budget-friendly AI video tools',
+    bestWhen:
+      'Use this when a low monthly cap, usable credits, and clean exports matter more than finding the strongest tool overall.',
+    wrongFirstStop:
+      'Do not start here if price is only a secondary filter after workflow, quality, or governance.',
+    weight: 'secondary',
+  },
+  {
+    slug: 'fast-ai-video-generators',
+    group: 'constraint',
+    label: 'Speed constraint',
+    checkRef: 'Turnaround first',
+    title: 'Fast AI video generators',
+    bestWhen:
+      'Use this when render speed, rapid prototyping, or fast short-form iteration is the constraint that decides the shortlist.',
+    wrongFirstStop:
+      'Do not start here if the buyer cares more about rights, governance, or polished cinematic quality.',
+    weight: 'secondary',
+  },
+  {
+    slug: 'ai-video-generators-comparison',
+    group: 'comparison',
+    label: 'Direct generator comparison',
+    checkRef: 'After route selection',
+    title: 'AI video generators comparison',
+    bestWhen:
+      'Use this after the route is already generator-to-generator comparison rather than workflow discovery.',
+    wrongFirstStop:
+      'Do not start here if you are still deciding between avatars, repurposing, editing, and generation.',
+    weight: 'secondary',
+  },
+  {
+    slug: 'viral-ai-video-generators',
+    group: 'comparison',
+    label: 'Viral and trend-led output',
+    checkRef: 'Lowest hub weight',
+    title: 'Viral AI video generators',
+    bestWhen:
+      'Use this when trend-led creation and clip packaging are the actual goal, not the whole AI video tool search.',
+    wrongFirstStop:
+      'Do not start here if a broader social, YouTube, or generation page would clarify the route first.',
+    weight: 'secondary',
   },
 ];
 
@@ -119,24 +269,66 @@ const quickRoutes = [
     href: '/features/ai-video-editors',
     cta: 'Go to AI video editors',
   },
+  {
+    title: 'I am buying for a team or procurement review',
+    body:
+      'Use the business lane when collaboration, brand control, SSO, SCORM/API posture, security review, admin controls, or governed rollout decide the shortlist. Start professional for team adoption, enterprise for procurement-heavy deployment.',
+    href: '/features/enterprise-ai-video-solutions',
+    cta: 'Go to enterprise solutions',
+  },
 ];
 
-const routeGroups = [
+const routeGroups: Array<{
+  key: RouteCollectionKey;
+  eyebrow: string;
+  title: string;
+  body: string;
+}> = [
   {
-    key: 'primary' as const,
+    key: 'primary',
     eyebrow: 'Primary routes',
     title: 'Start with the main workflow families first',
     body:
-      'Most users should be able to place the job into one of these routes before they compare individual tools.',
+      'Most users should be able to place the job into one of these routes before comparing individual tools.',
   },
   {
-    key: 'specialist' as const,
-    eyebrow: 'Specialist routes',
-    title: 'Use narrower routes only when the workflow is already obvious',
+    key: 'business',
+    eyebrow: 'Teams and procurement',
+    title: 'Use this lane when adoption or governance changes the decision',
     body:
-      'These pages are stronger second stops once the starting asset and delivery format are already clear.',
+      'Business-team rollout and enterprise procurement are different jobs, so they need their own entry point instead of being buried under avatar or repurposing pages.',
+  },
+  {
+    key: 'channel',
+    eyebrow: 'Channel routes',
+    title: 'Use channel pages after the workflow and audience are clear',
+    body:
+      'These pages are useful second stops for YouTube, social, and marketing teams that already know where the video will be published.',
+  },
+  {
+    key: 'constraint',
+    eyebrow: 'Constraint routes',
+    title: 'Use these pages when a hard limit decides the shortlist',
+    body:
+      'Free-tier policy, budget ceiling, and speed are strong filters, but they should not replace workflow fit when the route is still unclear.',
+  },
+  {
+    key: 'comparison',
+    eyebrow: 'Comparison routes',
+    title: 'Use these only after the route is already narrow',
+    body:
+      'These pages help once the user is comparing models or trend-led output, not when they are still choosing the main workflow lane.',
   },
 ];
+
+const collectionJsonLdItems = Array.from(
+  new Map(
+    [...quickRoutes, ...featureRoutes.map((route) => ({
+      title: route.title,
+      href: `/features/${route.slug}`,
+    }))].map((item) => [item.href, item])
+  ).values()
+);
 
 const faqItems = [
   {
@@ -179,12 +371,12 @@ export function generateMetadata(): Metadata {
   return {
     title: `Which Type of AI Video Tool Do You Need? Workflow Guide ${seoYear}`,
     description:
-      'Use this AI video workflow hub to choose the right route before comparing products. Start with generation, avatars, repurposing, or editing, then move into the strongest feature pages from there.',
+      'Use this AI video workflow hub to choose the right route before comparing products. Start with generation, avatars, repurposing, editing, or business procurement, then move into the strongest feature pages from there.',
     alternates: { canonical: '/features' },
     openGraph: {
       title: `Which Type of AI Video Tool Do You Need? Workflow Guide ${seoYear}`,
       description:
-        'A feature hub that routes users into the right AI video workflow before they compare individual tools.',
+        'A feature hub that routes users into the right AI video workflow or business procurement lane before they compare individual tools.',
       url: '/features',
     },
     robots: { index: true, follow: true },
@@ -205,9 +397,9 @@ export default function FeaturesHubPage() {
             buildCollectionPageJsonLd({
               name: `AI video workflow hub ${seoYear}`,
               description:
-                'Choose the right AI video workflow before comparing products: generation, avatars, repurposing, or editing.',
+                'Choose the right AI video workflow before comparing products: generation, avatars, repurposing, editing, or business procurement.',
               href: '/features',
-              items: quickRoutes.map((route) => ({
+              items: collectionJsonLdItems.map((route) => ({
                 name: route.title,
                 href: route.href,
               })),
@@ -240,7 +432,7 @@ export default function FeaturesHubPage() {
               Use this page to choose the right workflow lane before you compare products. Most AI video tools are solving different jobs, so the first decision is route selection, not brand selection.
             </p>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-black/52 md:text-[15px]">
-              The fastest split is usually this: create net-new scenes, deliver with a presenter, convert existing source material, or polish footage that already exists. The handoff after that should narrow into a feature shortlist first, then a specific compare inside `/vs`.
+              The fastest split is usually this: create net-new scenes, deliver with a presenter, convert existing source material, polish footage that already exists, or move into team and procurement checks. The handoff after that should narrow into a feature shortlist first, then a specific compare inside `/vs`.
             </p>
           </div>
         </div>
@@ -258,14 +450,14 @@ export default function FeaturesHubPage() {
               Use this three-part framework first
             </h2>
             <p className="mt-3 max-w-4xl text-sm leading-6 text-black/54 lg:text-[15px]">
-              These three checks are enough to send most buyers into the right route without reading every feature page in the library.
+              These three checks are enough to send most buyers into the right workflow route. If team rollout or procurement is already the blocker, use the business lane below instead.
             </p>
             <div className="mt-4 flex max-w-[52rem] items-start gap-2.5 border-l border-black/8 pl-3 text-[13px] leading-5 text-black/47">
               <span className="mt-0.5 inline-flex shrink-0 rounded-full border border-black/7 bg-[#F7F5EE]/82 px-2 py-0.5 text-[10px] font-black uppercase tracking-[0.14em] text-black/38">
                 Maps to
               </span>
               <p className="min-w-0">
-                Blank-canvas generation, presenter-led delivery, source-to-video repurposing, and editing existing footage.
+                Blank-canvas generation, presenter-led delivery, source-to-video repurposing, editing existing footage, and business/procurement routing.
               </p>
             </div>
           </div>
@@ -305,18 +497,18 @@ export default function FeaturesHubPage() {
           </div>
         </section>
 
-        {/* ── Workflow type explainer ────────────────────────── */}
+        {/* ── Workflow route library ─────────────────────────── */}
         <section className="mt-20 border-t border-black/8 pt-10 lg:mt-24 lg:pt-12">
           <div>
             <div className="max-w-5xl">
               <p className="text-[11px] font-black uppercase tracking-[0.18em] text-black/40">
-                Types of AI video tools
+                Feature routes
               </p>
               <h2 className="mt-3 max-w-4xl text-2xl font-black text-gray-900 md:text-3xl lg:text-[2.35rem] lg:leading-[1.1]">
-                The tool families solve different jobs
+                Use the route library without turning it into a flat directory
               </h2>
               <p className="mt-3 max-w-4xl text-sm leading-6 text-black/54 lg:text-[15px]">
-                The categories matter most at the workflow level: what you start from, what you need to produce, and what the tool is actually for.
+                Start with the primary workflow family. Move into business, channel, constraint, or comparison pages only when that condition is already the deciding factor.
               </p>
             </div>
 
@@ -344,7 +536,7 @@ export default function FeaturesHubPage() {
 
           <div className="mt-10 space-y-12">
             {routeGroups.map((group) => {
-              const items = toolTypeExplainers.filter((item) => item.group === group.key);
+              const items = featureRoutes.filter((item) => item.group === group.key);
 
               return (
                 <div key={group.key}>
@@ -365,7 +557,7 @@ export default function FeaturesHubPage() {
                           index > 0 ? 'border-t border-black/8' : ''
                         } ${index < 2 ? 'lg:border-t-0 lg:pt-0' : ''} ${
                           index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8'
-                        }`}
+                        } ${item.weight === 'primary' ? '' : 'opacity-90'}`}
                       >
                         <div className="flex flex-wrap items-center justify-between gap-3">
                           <p className="text-[11px] font-black uppercase tracking-[0.16em] text-black/35">

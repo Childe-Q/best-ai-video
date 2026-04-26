@@ -3,10 +3,10 @@
   "slug": "text-to-video-ai-tools",
   "title": "Text to Video AI Tools (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares AI tools that generate net-new video content directly from text prompts, from short cinematic clips to photorealistic scenes. The most useful split is not price but generation posture: model quality, watermark path, commercial-use boundary, and whether the workflow behaves like premium generation infrastructure or a lighter creator tool.",
+    "oneLiner": "This page compares AI tools that generate net-new video content directly from text prompts, from short cinematic clips to creator-facing faceless drafts. The most useful split is not price but generation posture: cinematic model quality, prompt-first creator workflow, social assembly speed, watermark path, commercial-use boundary, and whether the workflow behaves like premium generation infrastructure or a lighter creator tool.",
     "boundaries": [
       "Must generate new video directly from text prompts, not just edit existing footage.",
-      "Covers short cinematic clips through to longer-form text-to-video conversions.",
+      "Covers short cinematic clips through creator-facing prompt-to-video and faceless social drafting.",
       "Excludes audio-only generators, static image tools, and clip editors."
     ],
     "primaryClassificationRule": "Group by text-to-video control and fidelity.",
@@ -14,7 +14,9 @@
       "generation fidelity and control",
       "watermark and publish path",
       "commercial-use posture",
-      "workflow weight"
+      "workflow weight",
+      "prompt revision and scene control",
+      "faceless social assembly fit"
     ]
   },
   "howToChooseSeeds": [
@@ -24,7 +26,7 @@
     },
     {
       "title": "Understand maximum clip length per generation.",
-      "desc": "Cinematic tools in this category are still strongest for short scene generation rather than full-length editing or long source conversion. If you need a longer conversion workflow, this is usually the wrong page."
+      "desc": "Cinematic tools in this category are still strongest for short scene generation. Creator-facing tools such as InVideo and Zebracat can produce longer social drafts from prompts or scripts, but they should be judged on edit control, reroll behavior, and publish-readiness rather than cinematic model fidelity."
     },
     {
       "title": "Confirm commercial use rights on your plan.",
@@ -40,6 +42,15 @@
         "sora",
         "runway",
         "kling-ai"
+      ]
+    },
+    {
+      "id": "creator-social-text-to-video",
+      "title": "Creator and faceless text-to-video",
+      "rule": "These tools are not trying to beat cinematic models on raw scene fidelity. They fit creators who need prompt-led drafts, stock-scene assembly, captions, voiceover, or faceless social videos from scripts and short briefs. Compare command-box revision, scene reroll, credit usage, and cleanup needs before model quality.",
+      "toolSlugs": [
+        "invideo",
+        "zebracat"
       ]
     }
   ],
@@ -104,52 +115,97 @@
         "https://platform.openai.com/docs/sora"
       ],
       "flags": []
+    },
+    {
+      "name": "InVideo",
+      "slug": "invideo",
+      "verdictSeed": "Prompt-first creator workflow for turning briefs or scripts into stock-scene drafts with captions, voiceover, command-box revisions, and light manual edit controls.",
+      "pricingSeed": "Free testing plus paid publishing lanes that scale usage, export freedom, and workflow headroom",
+      "policySeed": "Free exports keep the InVideo watermark, while paid exports remove it and make recurring publishing more practical.",
+      "bestForSeed": "Prompt-led YouTube, social, and faceless stock-scene drafts",
+      "mainLimitationSeed": "Ultra impact, 300+ decisions claims, and precise scene-level editing still need hands-on validation.",
+      "officialUrl": "https://invideo.io/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/invideo",
+      "logoUrl": "/logos/InVideo_logo.svg",
+      "sourceUrls": [
+        "https://invideo.io/",
+        "https://invideo.io/pricing/",
+        "https://help.invideo.io/"
+      ],
+      "flags": []
+    },
+    {
+      "name": "Zebracat",
+      "slug": "zebracat",
+      "verdictSeed": "Faceless social text-to-video assembly line for turning blogs, scripts, or short prompts into social-native drafts with storyboard review and scene reroll.",
+      "pricingSeed": "Free or trial-style testing plus paid plans for cleaner output and higher usage",
+      "policySeed": "Free output may carry branding; paid tiers are the practical route for cleaner recurring text-to-social publishing.",
+      "bestForSeed": "Faceless social videos from scripts, blogs, and short prompts",
+      "mainLimitationSeed": "Storyboard edit depth, scene reroll controllability, subtitle correction, and ready-to-upload quality still need hands-on validation.",
+      "officialUrl": "https://www.zebracat.ai/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/zebracat",
+      "logoUrl": "/logos/zebracat-logo.png",
+      "sourceUrls": [
+        "https://www.zebracat.ai/",
+        "https://www.zebracat.ai/pricing"
+      ],
+      "flags": []
     }
   ],
   "relatedLinks": {
     "reviewSlugs": [
       "runway",
-      "sora"
+      "sora",
+      "invideo",
+      "zebracat"
     ],
     "alternativesSlugs": [
       "runway",
-      "sora"
+      "sora",
+      "invideo",
+      "zebracat"
     ],
     "vsSlugs": [
-      "runway-vs-sora"
+      "runway-vs-sora",
+      "invideo-vs-zebracat"
     ],
     "guideSlugs": []
   },
   "faqSeeds": [
     {
       "question": "What qualifies a tool for Text to Video AI Tools (2026)?",
-      "answerSeed": "Group by text-to-video control and fidelity. Must generate net-new video content directly from text prompts (not just editing existing clips). Must handle text-to-video as a primary workflow, ranging from short cinematic clips to full blog conversions. Excludes purely audio-driven or image-only generators without motion.",
+      "answerSeed": "Group by text-to-video control and fidelity. Must generate net-new video content directly from text prompts, scripts, or briefs rather than only editing existing clips. This includes cinematic prompt models and creator-facing faceless video systems, but excludes tools whose main workflow is transcript cleanup or long-form clipping.",
       "sourceToolSlugs": []
     },
     {
       "question": "What should readers compare first on this page?",
-      "answerSeed": "Start with generation posture: do you need a heavier studio-style workflow around generated footage, or a purer model-first generation path? Runway is stronger when the team wants more creative control and publish-ready workflow around the output. Sora is stronger when the team mostly wants flagship model quality, realism, and style range from a generation-first system.",
+      "answerSeed": "Start with generation posture: cinematic model output or creator-facing prompt workflow. Runway and Sora are stronger when raw visual fidelity is the decision. InVideo is stronger when the team needs prompt-to-stock-scene drafting with light edits. Zebracat is stronger when faceless social assembly and scene reroll speed matter more than cinematic control.",
       "sourceToolSlugs": []
     },
     {
       "question": "Which tools already have internal review coverage?",
-      "answerSeed": "Current internal review coverage in this normalized dataset: runway, sora.",
+      "answerSeed": "Current internal review coverage in this normalized dataset: runway, sora, invideo, zebracat.",
       "sourceToolSlugs": [
         "runway",
-        "sora"
+        "sora",
+        "invideo",
+        "zebracat"
       ]
     }
   ],
-  "lastReviewed": "2026-03-25T00:00:00Z",
+  "lastReviewed": "2026-04-26T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/text-to-video-ai-tools.raw.json",
     "sourceCount": 3,
-    "uniqueToolCount": 3,
+    "uniqueToolCount": 5,
     "needsManualReview": false,
     "reviewNotes": [
       "Runway and Sora were tightened using completed editorial evidence around watermark path, workflow weight, and generation posture.",
-      "Kling AI was intentionally left at lighter seed depth because the current coverage remains thinner than the Runway and Sora anchors."
+      "Kling AI was intentionally left at lighter seed depth because the current coverage remains thinner than the Runway and Sora anchors.",
+      "Official YouTube body assets landed on InVideo and Zebracat were used to add a creator/faceless text-to-video lane without treating Ultra, scene reroll, or ready-to-upload claims as proven."
     ]
   }
 }

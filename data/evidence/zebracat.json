@@ -1612,17 +1612,17 @@
       "policy": {
         "watermark": [
           {
-            "value": "Remove Watermark",
+            "value": "Zebracat pricing lists watermark removal as a paid-plan benefit.",
             "sourceUrl": "https://www.zebracat.ai/pricing"
           }
         ],
         "refundCancellation": [
           {
-            "value": "Get a full refund within 7 days",
+            "value": "Zebracat pricing references a 7-day full refund window.",
             "sourceUrl": "https://www.zebracat.ai/pricing"
           },
           {
-            "value": "Can I cancel my subscription anytime?",
+            "value": "Zebracat pricing includes cancellation guidance for subscriptions.",
             "sourceUrl": "https://www.zebracat.ai/pricing"
           },
           {
@@ -1632,81 +1632,77 @@
         ],
         "exportLimits": [
           {
-            "value": "Didn't download any video?",
+            "value": "Zebracat pricing references export resolution limits by plan.",
             "sourceUrl": "https://www.zebracat.ai/pricing"
           },
           {
-            "value": "Export Resolution",
+            "value": "Zebracat pricing includes export and sharing features.",
             "sourceUrl": "https://www.zebracat.ai/pricing"
           },
           {
-            "value": "Export & Sharing",
-            "sourceUrl": "https://www.zebracat.ai/pricing"
-          },
-          {
-            "value": "MP4 Downloads",
+            "value": "Zebracat pricing references MP4 downloads.",
             "sourceUrl": "https://www.zebracat.ai/pricing"
           }
         ]
       },
       "mainLimitations": [
         {
-          "value": "Additional Generative Minutes",
+          "value": "Zebracat pricing references additional generative minutes as a usage-related packaging item.",
           "sourceUrl": "https://www.zebracat.ai/pricing"
         },
         {
-          "value": "350 generative AI credits / mo",
+          "value": "Zebracat public packaging lists monthly generative AI credit limits by plan.",
           "sourceUrl": "https://www.zebracat.ai/pricing"
         },
         {
-          "value": "1400 generative AI credits / mo",
+          "value": "Higher Zebracat public tiers list larger monthly generative AI credit allowances.",
           "sourceUrl": "https://www.zebracat.ai/pricing"
         },
         {
-          "value": "Create up to 5 new custom avatars each month:",
+          "value": "Zebracat public packaging limits how many new custom avatars can be created each month on some tiers.",
           "sourceUrl": "https://www.zebracat.ai/pricing"
         }
       ],
       "workflowFeatureDocs": [
         {
-          "value": "Text to Video",
+          "value": "Zebracat lists text-to-video as a workflow.",
           "sourceUrl": "https://www.zebracat.ai/pricing"
         },
         {
-          "value": "AI Avatar Generator",
+          "value": "Zebracat lists an AI avatar generator.",
           "sourceUrl": "https://www.zebracat.ai/pricing"
         },
         {
-          "value": "Create realistic AI avatars for your videos with customizable appearances and natural movements.",
+          "value": "Zebracat describes AI avatars with customizable appearances and natural movements.",
           "sourceUrl": "https://www.zebracat.ai/pricing"
         },
         {
-          "value": "AI Voice Cloning",
+          "value": "Zebracat lists AI voice cloning.",
           "sourceUrl": "https://www.zebracat.ai/pricing"
         },
         {
-          "value": "Templates",
+          "value": "Zebracat lists video templates.",
           "sourceUrl": "https://www.zebracat.ai/pricing"
         },
         {
-          "value": "Ready-to-use video templates",
+          "value": "Zebracat lists ready-to-use video templates.",
           "sourceUrl": "https://www.zebracat.ai/pricing"
         }
       ],
       "securityApiEnterprise": {
         "api": [
           {
-            "value": "API access",
+            "value": "Zebracat lists API access on higher-tier packaging.",
             "sourceUrl": "https://www.zebracat.ai/pricing"
           }
         ],
         "enterprise": [
           {
-            "value": "Join our growing team",
+            "value": "Zebracat includes a contact-oriented enterprise path rather than only self-serve tiers.",
             "sourceUrl": "https://www.zebracat.ai/pricing"
           },
           {
-            "value": "Unlimited custom avatars & voice clones (enterprise quality)",
+            "value": "Zebracat enterprise packaging references unlimited custom avatars and voice clones.",
             "sourceUrl": "https://www.zebracat.ai/pricing"
           },
           {

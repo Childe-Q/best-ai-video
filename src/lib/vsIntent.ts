@@ -34,6 +34,7 @@ const INTENT_KEY_DIFF_PRIORITY: Record<VsIntent, string[]> = {
 export const VS_INTENT_OVERRIDES: Record<string, VsIntent> = {
   'fliki-vs-invideo': 'text',
   'heygen-vs-invideo': 'avatar',
+  'invideo-vs-veed-io': 'editor',
   'invideo-vs-pictory': 'repurpose',
   'invideo-vs-zebracat': 'text',
   'runway-vs-sora': 'text',

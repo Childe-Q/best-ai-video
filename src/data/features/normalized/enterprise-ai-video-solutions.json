@@ -3,11 +3,12 @@
   "slug": "enterprise-ai-video-solutions",
   "title": "Enterprise AI Video Solutions (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares enterprise AI video platforms that can survive procurement and deployment review: security posture, admin controls, integration depth, and large-scale rollout readiness. Tools are grouped by enterprise deployment path: governed training and communications, or programmatic repurposing and knowledge operations. The most useful differences now come from evidence-backed deployment signals such as SSO, SCORM, workspace roles, watermark-free paid delivery, and whether data-handling or commercial-use rules are clear enough for procurement review.",
+    "oneLiner": "This page compares enterprise AI video platforms that can survive procurement and deployment review: security posture, admin controls, integration depth, and large-scale rollout readiness. Tools are grouped by enterprise deployment path: governed training and communications, or programmatic repurposing and knowledge operations. The most useful differences now come from evidence-backed deployment signals such as reviewed localization, structured training entry paths, SCORM or LMS posture, workspace roles, automation setup friction, and whether data-handling or commercial-use rules are clear enough for procurement review.",
     "boundaries": [
       "Must support procurement-grade deployment signals such as SSO/SAML, admin controls, or integration depth.",
       "Must support enterprise rollout requirements such as security posture, governance, or large-scale operational use.",
-      "Excludes business-team tools where collaboration and brand control matter, but procurement review is not the first filter."
+      "Excludes business-team tools where collaboration and brand control matter, but procurement review is not the first filter.",
+      "Separates presenter-led localization, structured training production, and source-material repurposing instead of treating every enterprise video workflow as the same buyer problem."
     ],
     "primaryClassificationRule": "Group by enterprise deployment path.",
     "comparisonAxes": [
@@ -15,7 +16,9 @@
       "integration depth",
       "admin rollout",
       "governance and access control",
-      "workflow limits and plan gating"
+      "workflow limits and plan gating",
+      "reviewed localization and language production",
+      "source ingestion path and automation setup"
     ]
   },
   "howToChooseSeeds": [
@@ -32,6 +35,10 @@
       "desc": "Look for role-based access control (RBAC) and shared brand kits. For global teams, these features determine whether distributed contributors can produce on-brand output without bottlenecks."
     },
     {
+      "title": "Match the source entry path to the enterprise workflow.",
+      "desc": "Presenter-led localization, script/file-based training, and PPT/PDF/blog repurposing need different controls. HeyGen is stronger when reviewer-controlled presenter delivery matters, Synthesia is stronger when structured training and repeatable multilingual variants matter, and Fliki is a lighter repurposing fit when existing documents need narrated baseline videos with cleanup."
+    },
+    {
       "title": "Clarify pricing structure before committing.",
       "desc": "Enterprise tiers typically involve custom quotes. Ask whether pricing is per-seat, per-minute, or per-render — and whether unused capacity rolls over. Some tools list consumer entry prices that do not reflect enterprise cost."
     }
@@ -40,9 +47,10 @@
     {
       "id": "training-and-communications",
       "title": "Governed training and communications",
-      "rule": "These platforms fit enterprise training, HR enablement, and internal communications programs that need multilingual avatar delivery, admin control, and a rollout posture that can survive procurement review.",
+      "rule": "These platforms fit enterprise training, HR enablement, and internal communications programs that need multilingual avatar delivery, admin control, and a rollout posture that can survive procurement review. The key split is reviewed presenter localization versus structured training production.",
       "toolSlugs": [
         "synthesia",
+        "heygen",
         "deepbrain-ai",
         "colossyan",
         "elai-io"
@@ -51,9 +59,10 @@
     {
       "id": "repurposing-and-knowledge-ops",
       "title": "Programmatic repurposing and knowledge ops",
-      "rule": "This group covers platforms for enterprise-scale content transformation: turning existing assets, recordings, or knowledge systems into video through integrated, repeatable workflows. The emphasis is on APIs, automation, and operational rollout rather than manual team editing.",
+      "rule": "This group covers platforms for enterprise-scale content transformation: turning existing assets, recordings, documents, or knowledge systems into video through integrated, repeatable workflows. The emphasis is on source ingestion fit, APIs, automation setup, and operational rollout rather than manual team editing.",
       "toolSlugs": [
-        "pictory"
+        "pictory",
+        "fliki"
       ]
     }
   ],
@@ -61,11 +70,11 @@
     {
       "name": "Synthesia",
       "slug": "synthesia",
-      "verdictSeed": "Leading enterprise video platform for HR, L&D, and corporate training. Reports adoption by 60% of Fortune 100 companies.",
+      "verdictSeed": "Structured enterprise training platform for HR, L&D, and internal communications, with strong evidence for script/file starts, interactive training signals, and repeatable one-source-many-language production.",
       "pricingSeed": "Enterprise: custom pricing, unlimited minutes",
-      "policySeed": "Enterprise posture is anchored in Synthesia's governance and security stack, including AI governance, content integrity, and security-practices coverage rather than just a higher minute allowance",
-      "bestForSeed": "Corporate training, L&D, and internal communications",
-      "mainLimitationSeed": "The strongest controls and rollout features sit behind enterprise contracting, so self-serve plans are not a full proxy for procurement-ready deployment",
+      "policySeed": "Enterprise posture is anchored in Synthesia's governance and security stack plus repeatable production controls such as Brand Kit, localization exports, and structured training workflows rather than just a higher minute allowance",
+      "bestForSeed": "Structured corporate training, L&D, and multilingual internal communications",
+      "mainLimitationSeed": "URL input, media reliability, and very large localization batches still need hands-on validation, so do not treat every source path as equally proven",
       "officialUrl": "https://www.synthesia.io/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/synthesia",
@@ -74,6 +83,25 @@
         "https://www.synthesia.io/pricing",
         "https://www.synthesia.io/legal/security-practices",
         "https://www.synthesia.io/legal/ai-governance-practices"
+      ],
+      "flags": []
+    },
+    {
+      "name": "HeyGen",
+      "slug": "heygen",
+      "verdictSeed": "Presenter-led enterprise video candidate when reviewed localization, proofreader control, voice direction, admin restrictions, and SCORM-style handoff matter more than generic avatar generation.",
+      "pricingSeed": "Self-serve plans exist; enterprise and higher tiers matter when governance, scale, or formal delivery are required",
+      "policySeed": "The strongest official-body evidence is around proofreader review, voice and phonetic control, admin restrictions, public-avatar governance, and SCORM export settings.",
+      "bestForSeed": "Reviewed presenter localization, training updates, and governed avatar delivery",
+      "mainLimitationSeed": "Auto-SCORM live sync and broad Video Agent automation should stay in testing rather than being treated as proven enterprise automation.",
+      "officialUrl": "https://www.heygen.com/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/heygen",
+      "logoUrl": "/logos/heygen-logo.png",
+      "sourceUrls": [
+        "https://www.heygen.com/",
+        "https://www.heygen.com/pricing?nb=02",
+        "https://docs.heygen.com/"
       ],
       "flags": []
     },
@@ -93,6 +121,25 @@
         "https://pictory.ai/api-enterprise-2",
         "https://pictory.ai/pricing",
         "https://pictory.ai/features"
+      ],
+      "flags": []
+    },
+    {
+      "name": "Fliki",
+      "slug": "fliki",
+      "verdictSeed": "Document and written-source repurposing tool for teams turning PPTs, PDFs, blogs, or scripts into narrated baseline videos with pronunciation control and manual cleanup.",
+      "pricingSeed": "Self-serve plans exist; higher tiers matter for larger output, integrations, and cleaner business use",
+      "policySeed": "Enterprise fit is narrower than training-avatar platforms: the stable value is baseline generation, pronunciation maps, language control, and Make/Zapier/API-style integration paths.",
+      "bestForSeed": "PPT/PDF/script/blog to narrated baseline video and pronunciation-controlled voiceover",
+      "mainLimitationSeed": "PPT/PDF finishing and automation setup are not effortless; expect cleanup and configuration rather than a fully push-button enterprise workflow.",
+      "officialUrl": "https://fliki.ai/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/fliki",
+      "logoUrl": "/logos/fliki.png",
+      "sourceUrls": [
+        "https://fliki.ai/",
+        "https://fliki.ai/pricing",
+        "https://fliki.ai/features"
       ],
       "flags": []
     },
@@ -159,19 +206,26 @@
   "relatedLinks": {
     "reviewSlugs": [
       "synthesia",
+      "heygen",
       "pictory",
+      "fliki",
       "deepbrain-ai",
       "colossyan",
       "elai-io"
     ],
     "alternativesSlugs": [
       "synthesia",
+      "heygen",
       "pictory",
+      "fliki",
       "deepbrain-ai",
       "colossyan",
       "elai-io"
     ],
-    "vsSlugs": [],
+    "vsSlugs": [
+      "heygen-vs-synthesia",
+      "fliki-vs-heygen"
+    ],
     "guideSlugs": []
   },
   "faqSeeds": [
@@ -182,30 +236,42 @@
     },
     {
       "question": "What should readers compare first on this page?",
-      "answerSeed": "Verify Security Certifications: Before procurement, ensure the platform holds SOC 2 Type II and GDPR compliance, which are standard for enterprise vendors like Synthesia. Evaluate API Rate Limits: If you are integrating video generation directly into your CRM or internal tools, request their developer documentation to check concurrent processing limits.",
+      "answerSeed": "Start with the enterprise workflow shape. If the job is reviewed presenter localization, compare proofreader controls, voice control, admin restrictions, and SCORM-style handoff. If the job is structured training, compare script/file entry, branching or interactive signals, Brand Kit repeatability, and localization exports. If the job is repurposing existing documents, compare source ingestion quality, cleanup effort, and automation setup friction.",
       "sourceToolSlugs": []
     },
     {
+      "question": "How do HeyGen, Synthesia, and Fliki split across enterprise workflows?",
+      "answerSeed": "HeyGen is the stronger fit when a visible presenter needs reviewer-controlled localization and governed delivery. Synthesia is the stronger fit when the enterprise workflow starts from structured scripts or files and needs repeatable training or multilingual variants. Fliki belongs in the repurposing lane when PPTs, PDFs, blogs, or scripts need narrated baseline videos, but its cleanup and automation setup should be evaluated before rollout.",
+      "sourceToolSlugs": [
+        "heygen",
+        "synthesia",
+        "fliki"
+      ]
+    },
+    {
       "question": "Which tools already have internal review coverage?",
-      "answerSeed": "Current internal review coverage in this normalized dataset: synthesia, pictory, deepbrain-ai, colossyan, elai-io.",
+      "answerSeed": "Current internal review coverage in this normalized dataset: synthesia, heygen, pictory, fliki, deepbrain-ai, colossyan, elai-io.",
       "sourceToolSlugs": [
         "synthesia",
+        "heygen",
         "pictory",
+        "fliki",
         "deepbrain-ai",
         "colossyan",
         "elai-io"
       ]
     }
   ],
-  "lastReviewed": "2026-03-22T00:00:00Z",
+  "lastReviewed": "2026-04-26T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/enterprise-ai-video-solutions.raw.json",
     "sourceCount": 3,
-    "uniqueToolCount": 5,
+    "uniqueToolCount": 7,
     "needsManualReview": false,
     "reviewNotes": [
-      "Manual evidence backfill added Colossyan and Elai.io and tightened procurement-oriented governance framing from completed tool evidence."
+      "Manual evidence backfill added Colossyan and Elai.io and tightened procurement-oriented governance framing from completed tool evidence.",
+      "Official YouTube body assets already landed on HeyGen, Fliki, and Synthesia tool and VS pages were aggregated into enterprise workflow distinctions without adding schema."
     ]
   }
 }

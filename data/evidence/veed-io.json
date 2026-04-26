@@ -1699,7 +1699,7 @@
       "confidence": "low"
     },
     {
-      "text": "(a) Necessary for our legitimate interests (for running our business, provision of administration and IT services, network security, to prevent fraud and in",
+      "text": "VEED privacy policy lists legitimate interests such as service administration, IT services, network security, and fraud prevention.",
       "theme": "security",
       "sourceUrl": "https://www.veed.io/privacy",
       "sourceType": "privacy",
@@ -2217,24 +2217,24 @@
     "safeWriteback": {
       "workflowFeatureDocs": [
         {
-          "value": "VEED exposes screen recording, image-to-video, text-to-video, AI avatars, and voice-and-dubbing workflows on pricing.",
+          "value": "VEED groups screen recording, image-to-video, text-to-video, AI avatars, and voice-and-dubbing workflows in its public product packaging.",
           "sourceUrl": "https://www.veed.io/pricing"
         }
       ],
       "securityApiEnterprise": {
         "api": [
           {
-            "value": "VEED surfaces Fabric 1.0 API and AI Lip Sync API on pricing.",
+            "value": "VEED surfaces Fabric 1.0 API and AI Lip Sync API paths in its public product packaging.",
             "sourceUrl": "https://www.veed.io/pricing"
           },
           {
-            "value": "Pricing also references Green Screen, Background Removal, Subtitle, and Live Avatar API paths or waitlists.",
+            "value": "VEED also references Green Screen, Background Removal, Subtitle, and Live Avatar API paths or waitlists.",
             "sourceUrl": "https://www.veed.io/pricing"
           }
         ],
         "enterprise": [
           {
-            "value": "VEED exposes a distinct enterprise path on its pricing surface.",
+            "value": "VEED exposes a distinct enterprise path in its public product packaging.",
             "sourceUrl": "https://www.veed.io/pricing"
           }
         ]

@@ -1,56 +1,60 @@
 {
   "overview": {
     "tldr": {
-      "bestFor": "Marketers, YouTubers, and faceless creators who need fast prompt-to-video drafts with built-in stock and voiceover",
-      "notFor": "Teams that need frame-level editing control or users who iterate heavily without closely tracking credits",
-      "why": "InVideo combines prompt-to-video generation, built-in stock sources, captions, and credit-cost preview in one workflow"
+      "bestFor": "Creators and marketers who need prompt-first drafts for YouTube, social videos, and faceless stock-scene explainers",
+      "notFor": "Teams that need deterministic timeline editing, deep scene control, direct publishing, or proven enterprise collaboration",
+      "why": "Official video assets support a prompt generate -> prompt revise -> light manual edit -> export loop; Ultra, broad 300+ decisions claims, and deep scene-level control still need testing"
     },
     "miniTest": {
-      "prompt": "Create a 30-second vertical video explaining a tech product launch with upbeat music and text overlays",
+      "prompt": "Create a 45-second vertical video from a 500-word product script. Ask InVideo to summarize it for Shorts, translate one scene, use a different voice, make the story more intense, and replace the first scene's media manually.",
       "checklist": [
         {
-          "label": "Credit cost preview",
-          "value": "Shown in the UI before you create the video"
+          "label": "Prompt-first draft quality",
+          "value": "Does the first pass produce a coherent script, stock-scene sequence, captions, and voiceover?"
         },
         {
-          "label": "Free plan export",
-          "value": "Exports include an InVideo watermark and stock-media watermarks"
+          "label": "Command box boundary",
+          "value": "Which changes work through prompts: translate, use my voice, intensity, or scene-specific edits?"
         },
         {
-          "label": "Watermark removal",
-          "value": "Paid exports remove the InVideo watermark"
+          "label": "Edit module control",
+          "value": "Check media replacement, script tweak, music tab, and overlay update depth"
         },
         {
-          "label": "Free allowance",
-          "value": "2 video minutes, 1 AI credit, and 4 exports per week"
+          "label": "Long script to vertical short",
+          "value": "Measure whether summarization keeps the key points or creates a shallow rewrite"
         },
         {
-          "label": "Shared visibility default",
-          "value": "Shared videos default to public unless you change the setting"
+          "label": "Ultra switch",
+          "value": "Treat Ultra as a higher-model route until output differences are tested"
         },
         {
-          "label": "After cancellation",
-          "value": "Paid access remains until the billing period ends, then downgrades to Free"
+          "label": "Scene-level control",
+          "value": "Verify whether local scene overrides are precise or cause broader unwanted rewrites"
+        },
+        {
+          "label": "Export boundary",
+          "value": "Confirm whether the workflow ends at export/download rather than direct publishing"
         }
       ],
-      "verdict": "Best for fast social and faceless drafts, but less forgiving when cost control and repeated revisions matter."
+      "verdict": "Use this as a source-backed workflow check, not a completed hands-on run. InVideo looks strongest for prompt-led creator drafts and long-script-to-short repurposing, while Ultra, deep edit control, and broad automation claims still need validation."
     },
     "useCases": [
       {
-        "title": "YouTube Shorts",
-        "why": "Good for stock-first Shorts workflows when you want script, visuals, and voiceover assembled in one pass",
+        "title": "Prompt-first YouTube and Shorts drafts",
+        "why": "Best fit when the team wants a quick first pass with script, stock scenes, captions, voiceover, and export in one loop",
         "linkHref": "/vs/invideo-vs-pictory",
         "linkText": "Compare with alternatives →"
       },
       {
-        "title": "Marketing Ads",
-        "why": "Useful for fast ad drafts when marketers need built-in media libraries instead of sourcing assets separately",
+        "title": "Prompt revision workflow",
+        "why": "Official material repeatedly shows high-level prompt edits such as translation, voice changes, intensity changes, and local scene changes",
         "linkHref": "/tool/invideo/features",
         "linkText": "Explore features →"
       },
       {
-        "title": "Blog-to-video",
-        "why": "Fits content repurposing teams that want text-led drafts before moving into deeper manual editing",
+        "title": "Long script to vertical short",
+        "why": "A strong scenario when a longer script needs a shorter social draft, but it should be treated as model summarization rather than a guaranteed production module",
         "linkHref": "/vs/invideo-vs-fliki",
         "linkText": "See comparison →"
       }
@@ -58,42 +62,43 @@
   },
   "features": {
     "keyFeatures": [
-      "Prompt-to-video workflow from a text brief",
-      "Built-in stock media from Storyblocks, Shutterstock, and iStock",
-      "Subtitle and caption workflows",
-      "AI voiceover for faceless production",
-      "Credit cost preview before generation",
-      "Private, unlisted, and public shared visibility",
-      "Paid exports remove the InVideo watermark",
-      "Unlimited HD exports on InVideo AI plans"
+      "Prompt generate -> prompt revise -> light manual edit -> export is the most stable official-body workflow",
+      "Edit command box is repeatedly shown for translate, use my voice, and tone or intensity changes",
+      "Edit module provides more granular media, script, music, and overlay adjustment than prompt-only workflows",
+      "Long script to vertical short is a useful creator scenario, but still behaves like prompt-led summarization",
+      "Scene-level override exists, but current evidence supports light local control rather than deep timeline editing",
+      "Ultra is currently safer to describe as a higher-model route, not a proven workflow transformation",
+      "No direct publishing signal is stable; export/download remains the clear endpoint",
+      "Paid exports remove the InVideo watermark"
     ]
   },
   "pros": [
-    "Shows credit deduction before you generate",
+    "Strong fit for fast prompt-led drafts when there is no source footage",
+    "Command box plus Edit module gives a useful split between high-level revision and light manual control",
+    "Long-script-to-short workflow is a real creator-use scenario worth testing",
     "Built-in stock libraries reduce asset sourcing work",
-    "Paid exports remove the InVideo watermark",
-    "Shared videos support private, unlisted, and public visibility",
-    "Media stays accessible after cancellation",
-    "Free plan gives a limited weekly test path"
+    "Paid exports remove the InVideo watermark"
   ],
   "cons": [
+    "Deep timeline-style editing is not the stable official-body story",
+    "Ultra, 300+ decisions, and all-models-in-one-place claims need testing before strong conclusions",
+    "Team, admin, direct publishing, and integration evidence remains weak",
     "Free exports include InVideo and stock-media watermarks",
-    "Free usage is capped at 2 minutes, 1 AI credit, and 4 exports weekly",
-    "v4 generative workflows can consume credits quickly",
-    "Usage rules differ between older and newer systems",
-    "Older exports keep watermarks until re-exported on paid",
-    "Shared videos default to public unless changed"
+    "Draft-heavy generation can consume credits quickly"
   ],
   "sources": {
-    "help.invideo.io": {
-      "type": "HELP_CENTER",
-      "howToVerify": "Check official help documentation",
-      "suggestedQuery": "site:help.invideo.io invideo watermark credits export visibility cancellation"
+    "Official YouTube channel and product demos": {
+      "type": "OFFICIAL_VIDEO_SOURCE",
+      "howToVerify": "Review InVideo's official YouTube channel and official product demo videos.",
+      "suggestedQuery": "https://www.youtube.com/@InVideoOfficial"
     },
-    "invideo.io": {
-      "type": "OFFICIAL_PRICING",
-      "howToVerify": "Visit official pricing page",
-      "suggestedQuery": "invideo.io pricing plans"
+    "Official product pages and pricing": {
+      "type": "OFFICIAL_PRODUCT_MATERIALS",
+      "howToVerify": "Check InVideo's official website and pricing pages."
+    },
+    "Official help resources": {
+      "type": "OFFICIAL_HELP_RESOURCES",
+      "howToVerify": "Check InVideo's official help center."
     }
   }
 }

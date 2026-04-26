@@ -1,67 +1,73 @@
 {
   "overview": {
     "tldr": {
-      "bestFor": "Sales outreach, training, and localization teams that want avatar-led videos with plan-based export limits",
-      "notFor": "Light users who dislike monthly credit expiry or anyone expecting unlimited avatar generation",
-      "why": "Free outputs are watermarked, credits expire after 30 days, and refunds are discretionary"
+      "bestFor": "Teams building multilingual training, internal comms, or avatar-led review workflows with formal delivery needs",
+      "notFor": "Light users, prompt-only creators, or teams expecting unlimited generation, zero identity drift, or fully proven one-click automation",
+      "why": "Official video assets show stronger evidence for proofreader review, voice controls, admin restrictions, and SCORM export than for broad Video Agent automation"
     },
     "miniTest": {
-      "prompt": "Create a 20-30 second talking-head video explaining a topic for an audience. Tone: professional. Include 1 hook, 3 key points, and a 1-sentence CTA",
+      "prompt": "Create a 45-60 second multilingual training update with an avatar presenter. Include one translated scene, proofreader review, voice/phonetic correction, and export-ready delivery notes.",
       "checklist": [
         {
           "label": "Primary workflow fit",
-          "value": "Sales outreach / training / localization"
+          "value": "Multilingual training / internal comms / LMS delivery"
         },
         {
-          "label": "Watermark on Free",
-          "value": "Expected on free outputs"
+          "label": "Review gate",
+          "value": "Proofreader can edit wording, phonetics, voice, and glossary before final generation"
         },
         {
-          "label": "Export resolution",
-          "value": "720p / up to 1080p / up to 4K based on plan"
+          "label": "Voice control",
+          "value": "Check Voice Director, voice mirroring, per-scene override, and apply-all behavior"
         },
         {
-          "label": "Credit expiry",
-          "value": "Credits expire 30 days after issuance"
+          "label": "Formal delivery",
+          "value": "SCORM export has version, hosting mode, and completion-threshold signals"
         },
         {
-          "label": "Free-plan commercial use",
-          "value": "FAQ says free-version videos may be used only for non-commercial purposes"
+          "label": "Identity drift risk",
+          "value": "Avoid regenerate-look changes mid-project; official material treats this as recurring boundary"
         },
         {
-          "label": "Cancellation timing",
-          "value": "Access continues through the current billing cycle after cancellation"
+          "label": "Admin controls",
+          "value": "Verify publish/download restrictions, public avatar exposure, and feature restrictions"
         },
         {
-          "label": "Unlimited AvatarIV plan",
-          "value": "No plan offers unlimited AvatarIV usage and credits"
+          "label": "Unproven convenience layer",
+          "value": "Auto-SCORM live sync and Video Agent need hands-on validation before strong claims"
         }
       ],
-      "verdict": "Use this as a source-backed workflow check, not a completed hands-on run. HeyGen fits avatar-led outreach, training, and localization when export limits, credit expiry, and ownership rules match your use case."
+      "verdict": "Use this as a source-backed workflow check, not a completed hands-on run. HeyGen looks strongest when review, voice control, governance, and SCORM-style delivery matter more than generic avatar generation."
     },
     "useCases": [
       {
-        "title": "Sales Outreach",
-        "why": "Fits personalized avatar-led outreach when teams need quick presenter videos and can work within plan-based export limits",
+        "title": "Multilingual training review",
+        "why": "Official material supports a translation-to-proofreader workflow where reviewers can adjust wording, phonetics, voice choice, and glossary mapping before final generation",
         "linkHref": "/vs/heygen-vs-synthesia",
-        "linkText": "Compare with alternatives →"
+        "linkText": "Compare training platforms →"
       },
       {
-        "title": "Training Videos",
-        "why": "Works for onboarding and internal explainers where avatar delivery matters more than frame-level editing control",
+        "title": "Formal LMS delivery",
+        "why": "SCORM is more than an export label here: the official workflow references version choice, hosting mode, and completion-threshold configuration",
         "linkHref": "/tool/heygen/pricing",
-        "linkText": "Check pricing →"
+        "linkText": "Check plan limits →"
       },
       {
-        "title": "Localization",
-        "why": "Useful for multilingual presenter-style videos when language coverage and plan limits fit the rollout",
+        "title": "Voice-controlled presenter updates",
+        "why": "Voice Director, voice mirroring, phonetic review, and per-scene overrides make HeyGen better suited to presenter consistency than simple script-to-video conversion",
         "linkHref": "/vs/heygen-vs-elai-io",
-        "linkText": "See comparison →"
+        "linkText": "Compare avatar workflows →"
       }
     ]
   },
   "features": {
     "keyFeatures": [
+      "Proofreader workflow can edit wording, phonetics, voice choice, and glossary mapping",
+      "Admin controls cover workspace access, publish/download restrictions, public avatar exposure, and feature restrictions",
+      "SCORM export includes delivery-layer settings such as version, hosting mode, and completion threshold",
+      "Voice Director supports preset tone, custom prompt, per-scene override, and apply-to-all controls",
+      "Avatar 5 is positioned for stable longer A-roll; Seedance 2.0 is positioned for shorter cinematic B-roll",
+      "Identity drift is a recurring boundary when regenerating avatar look mid-project",
       "Free plan outputs include a watermark",
       "Export resolution depends on plan tier (Free/Creator/Team)",
       "Credits expire 30 days after issuance",
@@ -74,19 +80,22 @@
     ]
   },
   "pros": [
+    "Strong official evidence for proofreader-led localization review",
+    "Voice controls go deeper than basic emotion labels",
+    "SCORM delivery signals support formal training workflows",
+    "Admin controls are more concrete than a generic enterprise label",
     "Clear plan-based export resolution limits",
     "Officially documented credit expiry window",
-    "Cancellation timing is explicitly stated",
-    "Free tier available for basic testing",
-    "Discloses no unlimited AvatarIV credits"
+    "Cancellation timing is explicitly stated"
   ],
   "cons": [
+    "Identity drift remains a structural risk when avatar looks are regenerated",
+    "Auto-SCORM live sync is described but not fully demonstrated in a real LMS flow",
+    "Video Agent automation remains weaker evidence than the review and delivery workflow",
+    "Complex final polish may still require an external editor",
     "Credits expiring monthly can waste spend for light users",
     "Free outputs are watermarked",
-    "Refund policy is discretionary, not guaranteed",
-    "Unlimited marketing can confuse versus feature credit limits",
-    "User reports: consent verification can fail and block progress",
-    "Export format and system requirements need verification"
+    "Refund policy is discretionary, not guaranteed"
   ],
   "reviews": {
     "verdict": {
@@ -133,20 +142,18 @@
     ]
   },
   "sources": {
-    "help.heygen.com": {
-      "type": "HELP_CENTER",
-      "howToVerify": "Check official help documentation",
-      "suggestedQuery": "site:help.heygen.com credits expiry"
+    "Official YouTube channel and product demos": {
+      "type": "OFFICIAL_VIDEO_SOURCE",
+      "howToVerify": "Review HeyGen's official YouTube channel and official product demo videos.",
+      "suggestedQuery": "https://www.youtube.com/@heygen_official"
     },
-    "heygen.com": {
-      "type": "OFFICIAL_PRICING",
-      "howToVerify": "Visit official pricing page",
-      "suggestedQuery": "heygen.com pricing plans"
+    "Official product pages and pricing": {
+      "type": "OFFICIAL_PRODUCT_MATERIALS",
+      "howToVerify": "Check HeyGen's official website and pricing pages."
     },
-    "trustpilot.com": {
-      "type": "USER_REVIEWS",
-      "howToVerify": "Check user reviews on Trustpilot",
-      "suggestedQuery": "heygen trustpilot reviews"
+    "Official help and documentation": {
+      "type": "OFFICIAL_HELP_RESOURCES",
+      "howToVerify": "Check HeyGen's official help center and developer documentation."
     }
   }
 }

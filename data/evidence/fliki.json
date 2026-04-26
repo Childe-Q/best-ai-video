@@ -1958,14 +1958,14 @@
       "confidence": "high"
     },
     {
-      "text": "/5 © 2025 Nine Thirty Five Privacy Policy Terms of Use About Media kit Cookie settings Features Text to video AI voiceover Idea to video AI avatar Text to",
+      "text": "Fliki publishes privacy policy and terms pages for account and usage review.",
       "theme": "security",
       "sourceUrl": "https://fliki.ai/help",
       "sourceType": "help",
       "capturedAt": "2026-01-28T09:05:17.367Z",
-      "hasNumber": true,
+      "hasNumber": false,
       "keywords": [],
-      "confidence": "high"
+      "confidence": "medium"
     },
     {
       "text": "Easily clone yourself, your voice, and your personality to create videos that feel authentic with Fliki&#x27;s professional AI avatar and voice cloning features",
@@ -2208,19 +2208,15 @@
       "policy": {
         "watermark": [
           {
-            "value": "Contains Fliki Watermark",
+            "value": "Free plan exports include a Fliki watermark.",
             "sourceUrl": "https://fliki.ai/pricing"
           },
           {
-            "value": "No watermark",
+            "value": "Paid plan exports remove the Fliki watermark.",
             "sourceUrl": "https://fliki.ai/pricing"
           },
           {
             "value": "The paid subscription includes benefits like ultra realistic AI voices, extended video durations, commercial usage rights, watermark removal, and priority customer support.",
-            "sourceUrl": "https://fliki.ai/pricing"
-          },
-          {
-            "value": "watermark",
             "sourceUrl": "https://fliki.ai/pricing"
           }
         ],
@@ -2230,13 +2226,13 @@
             "sourceUrl": "https://fliki.ai/pricing"
           },
           {
-            "value": "6 long 10 min videos.\",\"Note: These are just estimations and credits usage would depend on how often one edits the script.\"]},{\"question\":\"What is the maximum length of an audio/video file I can create?\",\"answer\":[\"The standard plan offers creating audio/video upto 15 minutes in length.\",\"The premium plan offers creating audio/video upto 30 minutes in length.\"]},{\"question\":\"Can I use Fliki to create Youtube videos?\",\"answer\":[\"Yes, with our subscription plans you get commercial license to all the content you create.\",\"You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.\"]},{\"question\":\"Will I get copyright issues with content created with Fliki?\",\"answer\":[\"Fliki provides media from royalty free media sources and also have license to the premium media to be used with commercial rights on all social media platforms.\"]},{\"question\":\"Does Fliki support Voice Cloning? How can it help me?\",\"answer\":[\"Fliki supports voice cloning, allowing you to replicate your own voice or create unique voices for different characters. This feature saves time on recording and adds authenticity to your content.\",\"It also opens up creative possibilities and assists individuals with speech impairments. With Fliki, you can personalize your content, enhance creativity, and overcome limitations with ease.\"]},{\"question\":\"Should I have prior experience as a designer or video editor to use this tool?\",\"answer\":[\"No, prior experience as a designer or video editor is not required to use Fliki. Our intuitive and user-friendly platform offers capabilities that make it super easy for anyone to create content.\",\"Our Voice Cloning AI, Text to Speech AI, and Text to Video AI, combined with our ready to use templates and 10 million+ rich stock media, allow you to create high-quality videos without any design or video editing expertise.\"]},{\"question\":\"What if I only need Fliki for a short amount of time?\",\"answer\":[\"You can cancel your subscription at anytime by navigating to",
+            "value": "Fliki says subscription plans include a commercial license for created content.",
             "sourceUrl": "https://fliki.ai/pricing"
           }
         ],
         "usageRights": [
           {
-            "value": "Yes, with our subscription plans you get commercial license to all the content you create.",
+            "value": "Fliki says subscription plans include a commercial license for created content.",
             "sourceUrl": "https://fliki.ai/pricing"
           },
           {
@@ -2244,21 +2240,21 @@
             "sourceUrl": "https://fliki.ai/pricing"
           },
           {
-            "value": "Will I get copyright issues with content created with Fliki?",
+            "value": "Fliki says provided media is royalty-free or licensed for commercial rights on paid plans.",
             "sourceUrl": "https://fliki.ai/pricing"
           },
           {
-            "value": "Fliki provides media from royalty free media sources and also have license to the premium media to be used with commercial rights on all social media platforms.",
+            "value": "Fliki says provided media is royalty-free or licensed for commercial rights on paid plans.",
             "sourceUrl": "https://fliki.ai/pricing"
           }
         ],
         "refundCancellation": [
           {
-            "value": "You can cancel your subscription at anytime by navigating to",
+            "value": "Fliki says subscription auto-renewal can be managed from Account > Manage billing.",
             "sourceUrl": "https://fliki.ai/pricing"
           },
           {
-            "value": "6 long 10 min videos.\",\"Note: These are just estimations and credits usage would depend on how often one edits the script.\"]},{\"question\":\"What is the maximum length of an audio/video file I can create?\",\"answer\":[\"The standard plan offers creating audio/video upto 15 minutes in length.\",\"The premium plan offers creating audio/video upto 30 minutes in length.\"]},{\"question\":\"Can I use Fliki to create Youtube videos?\",\"answer\":[\"Yes, with our subscription plans you get commercial license to all the content you create.\",\"You can use the content created to publish on Youtube or other social media and monetize it, provided your text content is original in nature and does not have any copyright conflict.\"]},{\"question\":\"Will I get copyright issues with content created with Fliki?\",\"answer\":[\"Fliki provides media from royalty free media sources and also have license to the premium media to be used with commercial rights on all social media platforms.\"]},{\"question\":\"Does Fliki support Voice Cloning? How can it help me?\",\"answer\":[\"Fliki supports voice cloning, allowing you to replicate your own voice or create unique voices for different characters. This feature saves time on recording and adds authenticity to your content.\",\"It also opens up creative possibilities and assists individuals with speech impairments. With Fliki, you can personalize your content, enhance creativity, and overcome limitations with ease.\"]},{\"question\":\"Should I have prior experience as a designer or video editor to use this tool?\",\"answer\":[\"No, prior experience as a designer or video editor is not required to use Fliki. Our intuitive and user-friendly platform offers capabilities that make it super easy for anyone to create content.\",\"Our Voice Cloning AI, Text to Speech AI, and Text to Video AI, combined with our ready to use templates and 10 million+ rich stock media, allow you to create high-quality videos without any design or video editing expertise.\"]},{\"question\":\"What if I only need Fliki for a short amount of time?\",\"answer\":[\"You can cancel your subscription at anytime by navigating to",
+            "value": "Fliki says usage estimates depend on how often the script is edited.",
             "sourceUrl": "https://fliki.ai/pricing"
           }
         ],
@@ -2276,7 +2272,7 @@
             "sourceUrl": "https://fliki.ai/pricing"
           },
           {
-            "value": "Export length",
+            "value": "Export length varies by plan.",
             "sourceUrl": "https://fliki.ai/pricing"
           }
         ]
@@ -2301,10 +2297,6 @@
       ],
       "workflowFeatureDocs": [
         {
-          "value": "0:{\"buildId\":\"gKisTgjmwW1dGYEvZsK40\",\"rsc\":[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"template\":[\"$\",\"$L3\",null,{}]}]]}],\"loading\":null,\"isPartial\":false}",
-          "sourceUrl": "https://fliki.ai/pricing"
-        },
-        {
           "value": "Translate content to 80+ languages",
           "sourceUrl": "https://fliki.ai/pricing"
         },
@@ -2328,11 +2320,11 @@
       "securityApiEnterprise": {
         "api": [
           {
-            "value": "Make and Zapier integration",
+            "value": "Higher Fliki tiers list Make and Zapier integration.",
             "sourceUrl": "https://fliki.ai/pricing"
           },
           {
-            "value": "API Access",
+            "value": "Fliki lists API access on the Enterprise plan.",
             "sourceUrl": "https://fliki.ai/pricing"
           }
         ],

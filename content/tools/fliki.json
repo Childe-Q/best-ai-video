@@ -1,75 +1,73 @@
 {
   "overview": {
     "tldr": {
-      "bestFor": "Turning scripts or blog posts into simple narrated videos with quick exports and subtitles",
-      "notFor": "Creators who need highly context-accurate auto-selected stock footage without manual swaps",
-      "why": "Free exports are watermarked at 720p, commercial rights are paid-only, and refunds are discretionary"
+      "bestFor": "Teams turning PPTs, PDFs, blogs, or scripts into narrated baseline videos with manual cleanup and language control",
+      "notFor": "Creators expecting a nearly finished PPT-to-video conversion, workspace-wide pronunciation rules, or effortless no-code automation",
+      "why": "Official video assets show useful baseline generation, pronunciation mapping, phrase-level B-roll, and automation hooks, but also clear cleanup and setup friction"
     },
     "miniTest": {
-      "prompt": "Turn this text into a 30-45 second video for [platform] with a clear hook, 3 key points, and a CTA. Use a natural voice in [language/accent], add readable captions, and pick stock visuals that match each sentence closely",
+      "prompt": "Import a 10-15 slide training deck or PDF and turn it into a 60-90 second narrated video. Track the cleanup needed for script, B-roll timing, avatar placement, pronunciation, and translated output.",
       "checklist": [
         {
-          "label": "Input type",
-          "value": "Script / blog excerpt / bullet outline"
+          "label": "Baseline generation",
+          "value": "Does PPT/PDF import create useful scene containers, script, and voiceover?"
         },
         {
-          "label": "Target platform",
-          "value": "YouTube Shorts / Reels / TikTok / Ads"
+          "label": "Manual cleanup",
+          "value": "Count B-roll inserts, avatar repositioning, audio rebalance, and slide replacements"
         },
         {
-          "label": "Voice quality",
-          "value": "1-5 rating"
+          "label": "Pronunciation map",
+          "value": "Test whether a brand term applies across scenes and only changes spoken output"
         },
         {
-          "label": "Caption timing & readability",
-          "value": "1-5 rating"
+          "label": "B-roll precision",
+          "value": "Compare phrase-level B-roll insertion against autopick scene-level media"
         },
         {
-          "label": "Visual relevance to script",
-          "value": "User reports: may miss context"
+          "label": "Translation rerender",
+          "value": "Check whether translated voice/text changes break avatar lip-sync until regenerated"
         },
         {
-          "label": "Watermark present",
-          "value": "Yes - expected on Free plan"
+          "label": "Automation setup",
+          "value": "Record API key, Template ID, Voice ID, Folder ID, webhook, and filter friction"
         },
         {
-          "label": "Export resolution",
-          "value": "720p / 1080p based on plan"
-        },
-        {
-          "label": "Export format",
-          "value": "MP4/MOV/MP3/WAV/SRT/VTT"
-        },
-        {
-          "label": "Browser used",
-          "value": "Chrome recommended"
+          "label": "Apply-all risk",
+          "value": "Check how global voice/layout changes affect rerender scope and cleanup cost"
         }
       ],
-      "verdict": "Result: partial. Biggest time sink was visual replacement. If you need commercial use or 1080p, you'll likely need a paid plan"
+      "verdict": "Use this as a source-backed workflow check, not a completed hands-on run. Fliki looks strongest as a baseline-generation and voice-control tool, but PPT/PDF finishing, automation setup, and translation rerenders need hands-on validation."
     },
     "useCases": [
       {
-        "title": "YouTube Shorts",
-        "why": "Convert a short script into a captioned, narrated vertical video fast",
-        "linkHref": "/tool/fliki/pricing",
-        "linkText": "Check pricing →"
-      },
-      {
-        "title": "Marketing Ads",
-        "why": "Draft multiple voiceover variants, then manually tighten visuals for relevance",
+        "title": "PPT/PDF training drafts",
+        "why": "Official material supports slide-to-scene baseline generation with auto script and voiceover, but the valuable framing is first draft plus cleanup rather than publish-ready conversion",
         "linkHref": "/tool/fliki/features",
-        "linkText": "See features →"
+        "linkText": "See feature workflow →"
       },
       {
-        "title": "Blog-to-video",
-        "why": "Turn an article into a narrated slideshow and export subtitles separately",
+        "title": "Pronunciation-controlled voiceovers",
+        "why": "Pronunciation map is a high-value spoken-output control for brand terms and names, while on-screen text and subtitles still need separate review",
+        "linkHref": "/vs/fliki-vs-heygen",
+        "linkText": "Compare voice workflows →"
+      },
+      {
+        "title": "Automation-assisted publishing",
+        "why": "API, template, voice, folder, webhook, and filter dependencies make Fliki useful for automated pipelines, but not frictionless",
         "linkHref": "/vs/fliki-vs-invideo",
-        "linkText": "Compare alternatives →"
+        "linkText": "Compare automation fit →"
       }
     ]
   },
   "features": {
     "keyFeatures": [
+      "PPT/PDF import creates baseline scene containers with auto script and voiceover",
+      "Pronunciation map acts like a project-level spoken-output rule, not a workspace-wide policy",
+      "Phrase-level B-roll can be tied to highlighted script text; autopick remains scene-level and less precise",
+      "Translation changes voice and text, but media or slide content may still need manual localization",
+      "Voice/text changes can require manual avatar regeneration to restore lip-sync",
+      "Automation depends on API key, Template ID, Voice ID, Folder ID, webhook, and filters",
       "Free plan exports include visible watermark",
       "Free exports are 720p; paid plans support 1080p",
       "Free includes 5 minutes monthly; paid offers higher allowances",
@@ -83,19 +81,21 @@
     ]
   },
   "pros": [
+    "Strong official evidence for PPT/PDF baseline generation",
+    "Pronunciation map gives useful spoken-output control",
+    "Phrase-level B-roll provides more precise timing than scene-level autopick",
+    "Automation hooks are concrete enough for pipeline experiments",
     "Straightforward export format options, including audio-only",
-    "Separate subtitle downloads in SRT and VTT",
-    "Clear plan split: 720p free, 1080p paid",
-    "Commercial rights available on paid plans",
-    "Works in browser; Chrome recommended",
-    "Large royalty-free media library included"
+    "Separate subtitle downloads in SRT and VTT"
   ],
   "cons": [
+    "PPT/PDF output still needs manual cleanup before publishing",
+    "Automation setup is configuration-heavy, not no-code effortless",
+    "Translation can create avatar lip-sync rerender work",
+    "Autopick media is not proven to be phrase-accurate",
     "Free plan watermark limits professional publishing",
     "Commercial use requires a paid plan",
-    "Refunds are case-by-case at sole discretion",
-    "User reports: stock footage often mismatches script context",
-    "User reports: monthly minutes can feel pricey or limited"
+    "Refunds are case-by-case at sole discretion"
   ],
   "reviews": {
     "verdict": {
@@ -158,20 +158,14 @@
     ]
   },
   "sources": {
-    "fliki.ai": {
-      "type": "OFFICIAL_WEBSITE",
-      "howToVerify": "Check official Fliki website and documentation",
-      "suggestedQuery": "site:fliki.ai pricing features"
+    "Official YouTube channel and product demos": {
+      "type": "OFFICIAL_VIDEO_SOURCE",
+      "howToVerify": "Review Fliki's official YouTube channel and official product demo videos.",
+      "suggestedQuery": "https://www.youtube.com/@flikiai"
     },
-    "trustpilot.com": {
-      "type": "USER_REVIEWS",
-      "howToVerify": "Check user reviews on Trustpilot",
-      "suggestedQuery": "fliki trustpilot reviews"
-    },
-    "reddit.com": {
-      "type": "USER_DISCUSSIONS",
-      "howToVerify": "Check Reddit discussions about Fliki",
-      "suggestedQuery": "fliki reddit user experience"
+    "Official product pages and documentation": {
+      "type": "OFFICIAL_PRODUCT_MATERIALS",
+      "howToVerify": "Check Fliki's official website, product pages, and documentation."
     }
   }
 }

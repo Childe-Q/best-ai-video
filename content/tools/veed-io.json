@@ -1,68 +1,60 @@
 {
   "overview": {
     "tldr": {
-      "bestFor": "Creators and small teams that need browser-based editing, captions, and straightforward MP4 or audio exports",
-      "notFor": "Anyone who expects watermark-free exports on Free or wants advanced editing without a paid tier",
-      "why": "Free exports are watermarked at 720p, paid plans unlock cleaner exports, and existing projects must be re-exported after upgrading"
+      "bestFor": "Creators and small teams cleaning up existing footage with script-based edits, subtitles, and social repurposing",
+      "notFor": "Teams expecting mature end-to-end generative video, proven lip-sync rephrasing, or deep governance controls",
+      "why": "Official video assets repeatedly support edit-with-script, subtitle correction, cleanup, and repurposing; AI Playground is useful as an editor feed, but full generative workflows and AI Rephrase lip-sync need testing"
     },
     "miniTest": {
-      "prompt": "Create a 30-45 second video about [topic] for [audience]. Include a 1-sentence hook, 3 key points, and a CTA. Add captions, keep pacing tight, and export in the highest available resolution for my plan",
+      "prompt": "Import a 3-5 minute talking-head or webinar clip. Use transcript editing to remove filler words, silence, and one mistaken sentence; create a captioned 30-second social cut; then generate one AI Playground B-roll insert and export.",
       "checklist": [
         {
-          "label": "Primary workflow fit",
-          "value": "Browser editing / captions / quick exports"
+          "label": "Edit-with-script cleanup",
+          "value": "Can words, filler, silence, and short mistakes be removed without timeline-heavy work?"
         },
         {
-          "label": "Free watermark",
-          "value": "Expected on Free exports and embeds"
+          "label": "Subtitle correction depth",
+          "value": "Check word edits, style, position, size, and whether timing control is exposed"
         },
         {
-          "label": "Free export ceiling",
-          "value": "Free plan exports are documented at 720p"
+          "label": "Repurposing speed",
+          "value": "Measure how quickly a long clip becomes a captioned social cut"
         },
         {
-          "label": "Paid export tiers",
-          "value": "Higher tiers unlock 1080p or up to 4K depending on plan"
+          "label": "AI Playground handoff",
+          "value": "Test whether generated B-roll inserts cleanly into the timeline or asset library"
         },
         {
-          "label": "Export formats",
-          "value": "MP4 / MP3 / GIF"
+          "label": "AI Rephrase boundary",
+          "value": "Verify whether it only changes audio or also preserves believable mouth movement"
         },
         {
-          "label": "Upgrade path",
-          "value": "Removing a watermark from an older export requires re-exporting the original project"
+          "label": "Talking avatar publish quality",
+          "value": "Check whether generated avatar output is usable beyond a demo insert"
         },
         {
-          "label": "Cancellation timing",
-          "value": "Access continues until the current billing period ends after auto-renewal is turned off"
-        },
-        {
-          "label": "Browser workflow",
-          "value": "Runs as a browser-based editor"
-        },
-        {
-          "label": "Refund sensitivity",
-          "value": "Refunds are case-by-case under terms of sale"
+          "label": "Generative B-roll boundary",
+          "value": "Treat AI-generated clips as inserts unless full-video generation proves stable"
         }
       ],
-      "verdict": "Use this as a source-backed workflow check, not a completed hands-on run. VEED fits caption-heavy browser editing and simple exports when the watermark, resolution tier, and re-export rules fit the publishing workflow."
+      "verdict": "Use this as a source-backed workflow check, not a completed hands-on run. VEED looks strongest for existing-footage cleanup, subtitles, and repurposing; AI Rephrase lip-sync, talking avatar quality, and Playground-to-timeline smoothness still need validation."
     },
     "useCases": [
       {
-        "title": "Social Clips",
-        "why": "Fits quick browser-based social edits when teams need captions and straightforward MP4 exports",
+        "title": "Transcript-based cleanup",
+        "why": "Official material supports deleting words, silence, filler, and short mistakes through edit-with-script style workflows",
         "linkHref": "/tool/veed-io/pricing",
         "linkText": "Check pricing →"
       },
       {
-        "title": "Caption-Heavy Videos",
-        "why": "Useful when subtitle workflows and simple export options matter more than deep post-production control",
+        "title": "Subtitle-heavy social repurposing",
+        "why": "Best fit when the job is turning existing clips into captioned social output rather than generating a whole video from scratch",
         "linkHref": "/tool/veed-io/features",
         "linkText": "See features →"
       },
       {
-        "title": "Simple Explainers",
-        "why": "Works for lightweight explainers and internal videos when a browser editor is preferred over a heavier desktop workflow",
+        "title": "AI inserts inside an editor",
+        "why": "AI Playground is better framed as a source of B-roll or avatar inserts feeding the editor, not as the core mature production workflow",
         "linkHref": "/vs/veed-io-vs-invideo",
         "linkText": "Compare alternatives →"
       }
@@ -70,28 +62,29 @@
   },
   "features": {
     "keyFeatures": [
+      "Edit-with-script supports transcript-side cleanup such as deleting words, silence, filler, and short mistakes",
+      "Subtitle workflow supports word correction plus style, position, and size changes; timing control still needs validation",
+      "AI Playground can feed generated assets into the editor or timeline, but it is better treated as an insert layer",
+      "Repurposing existing footage into captioned social clips is the most mature official-body workflow",
+      "AI Rephrase currently has audio-change evidence, not proven real-video lip-sync correction",
+      "Full generative video inside VEED has higher trial-and-error risk than cleanup and repurposing workflows",
       "Free exports always include visible VEED.IO watermark",
-      "Export resolution depends on plan: 720p/1080p/up to 4K",
-      "Export formats include MP4, MP3, and GIF",
-      "Upgrading later requires re-exporting the original project",
-      "Refunds are considered case-by-case; pro-rata if VEED ends contract",
-      "Browser-based editor; Chrome recommended",
-      "Timeline-based editing interface",
-      "Auto-subtitle generation with manual editing support"
+      "Export resolution depends on plan: 720p/1080p/up to 4K"
     ]
   },
   "pros": [
-    "Official help clearly confirms watermark behavior on Free exports",
+    "Strong official-body evidence for edit-with-script cleanup and existing-footage repurposing",
+    "Subtitle correction is more than style switching and fits social distribution work",
+    "AI Playground is integrated enough to serve as an editor asset feed",
     "Clear resolution tiers across Free, Lite, Pro/Enterprise",
-    "Multiple export formats: MP4, MP3, and GIF",
-    "Re-export guidance after upgrading is explicitly documented",
-    "Refund terms exist in official terms of sale"
+    "Re-export guidance after upgrading is explicitly documented"
   ],
   "cons": [
+    "End-to-end generative video is weaker evidence than cleanup and repurposing",
+    "AI Rephrase should not be treated as proven lip-sync correction yet",
+    "Talking avatar publish quality still needs hands-on validation",
     "Free exports are watermarked, no exceptions",
-    "User reports: billing transparency and refunds can be painful",
-    "User reports: editor may lag or break on longer videos",
-    "Upgrading requires re-exporting to remove watermark from existing projects"
+    "User reports: editor may lag or break on longer videos"
   ],
   "reviews": {
     "verdict": {
@@ -154,25 +147,18 @@
     ]
   },
   "sources": {
-    "support.veed.io": {
-      "type": "HELP_CENTER",
-      "howToVerify": "Check official VEED support documentation",
-      "suggestedQuery": "site:support.veed.io watermark export resolution"
+    "Official YouTube channel and product demos": {
+      "type": "OFFICIAL_VIDEO_SOURCE",
+      "howToVerify": "Review VEED's official YouTube channel and official product demo videos.",
+      "suggestedQuery": "https://www.youtube.com/@VEEDSTUDIO"
     },
-    "veed.io": {
-      "type": "OFFICIAL_WEBSITE",
-      "howToVerify": "Visit official VEED website and pricing page",
-      "suggestedQuery": "veed.io pricing plans features"
+    "Official product pages and pricing": {
+      "type": "OFFICIAL_PRODUCT_MATERIALS",
+      "howToVerify": "Check VEED's official website, product pages, and pricing pages."
     },
-    "trustpilot.com": {
-      "type": "USER_REVIEWS",
-      "howToVerify": "Check user reviews on Trustpilot",
-      "suggestedQuery": "veed.io trustpilot reviews"
-    },
-    "reddit.com": {
-      "type": "USER_DISCUSSIONS",
-      "howToVerify": "Check Reddit discussions about VEED",
-      "suggestedQuery": "veed.io reddit user experience"
+    "Official help and support resources": {
+      "type": "OFFICIAL_HELP_RESOURCES",
+      "howToVerify": "Check VEED's official support documentation."
     }
   }
 }

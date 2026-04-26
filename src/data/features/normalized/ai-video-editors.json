@@ -3,7 +3,7 @@
   "slug": "ai-video-editors",
   "title": "Best AI Video Editors (2026)",
   "summarySeed": {
-    "oneLiner": "This page compares AI video editors for post-production workflows that start with footage, audio, or transcripts you already have. The most useful split is editing depth: deeper timeline or transcript control versus faster clipping, reframing, and social packaging once the source already exists.",
+    "oneLiner": "This page compares AI video editors for post-production workflows that start with footage, audio, or transcripts you already have. The most useful split is editing depth: deeper timeline or transcript control versus faster browser cleanup, subtitles, clipping, reframing, and social packaging once the source already exists.",
     "boundaries": [
       "Must have timeline or transcript-based editing capabilities.",
       "Must use AI to automate editing tasks like auto-captions, scene detection, or filler word removal.",
@@ -13,6 +13,7 @@
     "primaryClassificationRule": "Group by editing workflow depth.",
     "comparisonAxes": [
       "editing workflow depth",
+      "transcript and subtitle cleanup",
       "watermark and publish path",
       "export posture",
       "team and recording workflow"
@@ -21,7 +22,7 @@
   "howToChooseSeeds": [
     {
       "title": "Decide which editing paradigm fits your workflow.",
-      "desc": "Text-based editing (Descript) lets you edit video by editing a transcript — ideal for podcasters and talking-head creators. Traditional timeline editing (Premiere Pro) suits professionals who need frame-level precision. Template-first editing (CapCut) suits mobile-first creators who want fast output with minimal learning curve."
+      "desc": "Text-based editing (Descript) lets you edit video by editing a transcript — ideal for podcasters and talking-head creators. VEED is stronger when the job is browser-based cleanup, subtitles, social repurposing, and AI inserts feeding the editor. Traditional timeline editing (Premiere Pro) suits professionals who need frame-level precision."
     },
     {
       "title": "Determine whether you need long-form or short-form tools.",
@@ -39,7 +40,8 @@
       "rule": "These tools are for deeper post-production on footage you already have. They provide timeline precision, transcript-based cleanup, audio polish, and detailed control over cuts, captions, and pacing. They suit editors, podcasters, interview teams, and long-form creators who need to shape an existing piece rather than convert a source library into new formats.",
       "toolSlugs": [
         "adobe-premiere-pro",
-        "descript"
+        "descript",
+        "veed-io"
       ]
     },
     {
@@ -136,16 +138,37 @@
         "https://help.descript.com/hc/en-us/articles/10255865751181-Enterprise-plan"
       ],
       "flags": []
+    },
+    {
+      "name": "VEED.IO",
+      "slug": "veed-io",
+      "verdictSeed": "Browser-based editor strongest for edit-with-script cleanup, subtitle correction, and turning existing footage into captioned social cuts. AI Playground is best framed as an editor feed for B-roll or avatar inserts.",
+      "pricingSeed": "Free testing lane with paid tiers for cleaner exports and higher resolution",
+      "policySeed": "Free exports keep a VEED.IO watermark; paid tiers unlock cleaner exports and higher resolution depending on plan.",
+      "bestForSeed": "Browser cleanup, subtitles, and social repurposing from existing footage",
+      "mainLimitationSeed": "AI Rephrase lip-sync, talking avatar publish quality, and full generative-video maturity still need hands-on validation.",
+      "officialUrl": "https://www.veed.io/",
+      "hasReviewPage": true,
+      "reviewUrl": "/tool/veed-io",
+      "logoUrl": "/logos/veed-io.png",
+      "sourceUrls": [
+        "https://www.veed.io/",
+        "https://www.veed.io/pricing",
+        "https://support.veed.io/"
+      ],
+      "flags": []
     }
   ],
   "relatedLinks": {
     "reviewSlugs": [
       "opus-clip",
-      "descript"
+      "descript",
+      "veed-io"
     ],
     "alternativesSlugs": [
       "opus-clip",
-      "descript"
+      "descript",
+      "veed-io"
     ],
     "vsSlugs": [
       "descript-vs-veed-io",
@@ -161,28 +184,30 @@
     },
     {
       "question": "What should readers compare first on this page?",
-      "answerSeed": "Start with workflow shape: do you need transcript-first editing and cleanup, or fast clipping and social packaging? Descript is much stronger for full spoken-content editing, while Opus Clip is stronger for rapid highlight extraction, captions, reframing, and short-form packaging once the source already exists.",
+      "answerSeed": "Start with workflow shape: do you need transcript-first editing, browser cleanup with subtitle control, or fast clipping and social packaging? Descript is stronger for full spoken-content editing, VEED is stronger for browser-based cleanup and subtitle-heavy repurposing, and Opus Clip is stronger for rapid highlight extraction and reframing once the source already exists.",
       "sourceToolSlugs": []
     },
     {
       "question": "Which tools already have internal review coverage?",
-      "answerSeed": "Current internal review coverage in this normalized dataset: opus-clip, descript.",
+      "answerSeed": "Current internal review coverage in this normalized dataset: opus-clip, descript, veed-io.",
       "sourceToolSlugs": [
         "opus-clip",
-        "descript"
+        "descript",
+        "veed-io"
       ]
     }
   ],
-  "lastReviewed": "2026-03-25T00:00:00Z",
+  "lastReviewed": "2026-04-26T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/ai-video-editors.raw.json",
     "sourceCount": 4,
-    "uniqueToolCount": 4,
+    "uniqueToolCount": 5,
     "needsManualReview": false,
     "reviewNotes": [
       "Descript and Opus Clip were tightened using completed top-up and editorial handoff evidence.",
-      "Interactive pricing states were intentionally excluded in favor of workflow depth, watermark path, export posture, and team behavior."
+      "Interactive pricing states were intentionally excluded in favor of workflow depth, watermark path, export posture, and team behavior.",
+      "Official YouTube body assets landed on VEED were used to add edit-with-script, subtitle cleanup, and AI Playground-as-editor-feed positioning without treating AI Rephrase lip-sync as proven."
     ]
   }
 }

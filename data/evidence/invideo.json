@@ -2209,69 +2209,65 @@
       "policy": {
         "watermark": [
           {
-            "value": "Unlimited exports without watermark",
+            "value": "InVideo pricing lists unlimited exports without watermark on paid packaging.",
             "sourceUrl": "https://invideo.io/pricing"
           }
         ],
         "exportLimits": [
           {
-            "value": "Exports with invideo logo",
+            "value": "InVideo free exports include the InVideo logo.",
             "sourceUrl": "https://invideo.io/pricing"
           },
           {
-            "value": "Unlimited exports without watermark",
+            "value": "InVideo paid packaging lists unlimited exports without watermark.",
             "sourceUrl": "https://invideo.io/pricing"
           }
         ]
       },
       "mainLimitations": [
         {
-          "value": "Limited credits",
+          "value": "InVideo packaging includes credit limits, so heavy generation and revision cycles should be checked against current plan allowances.",
           "sourceUrl": "https://invideo.io/pricing"
         },
         {
-          "value": "Access to invideo v4 agent that can create up to 30 mins of video from a single prompt.",
+          "value": "InVideo lists access to its v4 agent for creating longer videos from a single prompt.",
           "sourceUrl": "https://invideo.io/pricing"
         },
         {
-          "value": "What is a credit, and how is it charged?",
-          "sourceUrl": "https://invideo.io/pricing"
-        },
-        {
-          "value": "Credits work like currency on our platform and are used for video creation, generative models and across other features, not for downloading content. Generative models are priced differently, All models available at their original API pricing. You can use your credits however you like across the platform. We reserve the right to update credit costs at any time, without prior notice.",
+          "value": "InVideo credits are used for video creation, generative models, and other features rather than downloads; model costs can vary and may change.",
           "sourceUrl": "https://invideo.io/pricing"
         }
       ],
       "workflowFeatureDocs": [
         {
-          "value": "AI Avatars",
+          "value": "InVideo lists AI avatars as part of the video creation workflow.",
           "sourceUrl": "https://invideo.io/pricing"
         },
         {
-          "value": "Voice Cloning",
+          "value": "InVideo lists voice cloning as part of the video creation workflow.",
           "sourceUrl": "https://invideo.io/pricing"
         },
         {
-          "value": "4 AI avatars & voice clones",
+          "value": "InVideo packages AI avatars and voice clones by tier, with lower paid tiers listing fewer available clones.",
           "sourceUrl": "https://invideo.io/pricing"
         },
         {
-          "value": "16 AI avatars & voice clones",
+          "value": "Higher InVideo tiers list more AI avatars and voice clones than the lower paid tier.",
           "sourceUrl": "https://invideo.io/pricing"
         },
         {
-          "value": "40 AI avatars & voice clones",
+          "value": "InVideo's highest listed paid tier includes the largest avatar and voice-clone allowance among its public tiers.",
           "sourceUrl": "https://invideo.io/pricing"
         },
         {
-          "value": "AI Avatar Generator",
+          "value": "InVideo lists an AI avatar generator on its pricing surface.",
           "sourceUrl": "https://invideo.io/pricing"
         }
       ],
       "securityApiEnterprise": {
         "enterprise": [
           {
-            "value": "Individual Team & Enterprise",
+            "value": "InVideo separates individual, team, and enterprise packaging.",
             "sourceUrl": "https://invideo.io/pricing"
           }
         ]

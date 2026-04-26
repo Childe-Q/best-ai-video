@@ -20,7 +20,7 @@
   "howToChooseSeeds": [
     {
       "title": "Decide whether you need full pipeline automation or just an avatar.",
-      "desc": "InVideo AI and Syllaby handle scripting, visuals, voiceover, and export from a single prompt. HeyGen focuses specifically on creating a realistic avatar host. These are different tools for different workflow gaps."
+      "desc": "InVideo is strongest when the YouTube workflow starts from a prompt or script and needs a first-pass draft with stock scenes, captions, voiceover, and light revision. Syllaby handles broader channel automation, while HeyGen focuses on a recurring avatar host. These are different workflow gaps."
     },
     {
       "title": "Check voiceover quality and voice cloning options.",
@@ -66,11 +66,11 @@
     {
       "name": "InVideo",
       "slug": "invideo",
-      "verdictSeed": "All-in-one prompt-to-video engine for faceless YouTube channels. Handles scripting, B-roll, subtitles, and voiceover from a single prompt.",
+      "verdictSeed": "Prompt-first drafting workflow for faceless YouTube and Shorts. Official-body evidence supports prompt generation, command-box revision, light manual edits, and long-script-to-vertical-short conversion.",
       "pricingSeed": "Basic, Pro, and Ultra paid tiers with up to 20% annual discount",
       "policySeed": "Free exports stay watermarked; paid removes them, but canceling or downgrading only changes access at cycle end.",
-      "bestForSeed": "Documentary-style faceless YouTube content",
-      "mainLimitationSeed": "Free stays capped at 2 minutes and 1 AI credit a week; heavier revisions still burn credits.",
+      "bestForSeed": "Faceless YouTube drafts, Shorts, and long-script-to-short workflows",
+      "mainLimitationSeed": "Free stays capped at 2 minutes and 1 AI credit a week; heavier revisions still burn credits, and Ultra or deep scene-level control should not be assumed without testing.",
       "officialUrl": "https://invideo.io/",
       "hasReviewPage": true,
       "reviewUrl": "/tool/invideo",
@@ -157,6 +157,7 @@
     ],
     "vsSlugs": [
       "invideo-vs-pictory",
+      "invideo-vs-zebracat",
       "descript-vs-pictory"
     ],
     "guideSlugs": []
@@ -169,7 +170,7 @@
     },
     {
       "question": "What should readers compare first on this page?",
-      "answerSeed": "First decide whether the channel workflow is generation-first, avatar-hosted, or repurposing-first. Then check whether the publish path is actually workable: free or trial tiers often keep visible branding, recurring quotas can be tight, and tools like Opus Clip are much stronger for YouTube-to-Shorts repurposing than for generating a full episode from scratch.",
+      "answerSeed": "First decide whether the channel workflow is prompt-first, avatar-hosted, or repurposing-first. InVideo is useful for prompt-to-draft and long-script-to-short workflows, HeyGen covers avatar-hosted delivery, and Opus Clip is stronger for YouTube-to-Shorts repurposing from existing episodes. Then check watermark rules, credit burn, and export posture.",
       "sourceToolSlugs": []
     },
     {
@@ -182,7 +183,7 @@
       ]
     }
   ],
-  "lastReviewed": "2026-03-25T00:00:00Z",
+  "lastReviewed": "2026-04-26T00:00:00Z",
   "reviewMetadata": {
     "generatedFrom": "research-raw",
     "sourceFile": "src/data/research/features/ai-video-for-youtube.raw.json",
@@ -191,7 +192,8 @@
     "needsManualReview": false,
     "reviewNotes": [
       "Opus Clip was added from completed top-up and editorial handoff evidence to cover long-form-to-Shorts repurposing for YouTube teams.",
-      "Interactive pricing states were intentionally excluded in favor of watermark path, export posture, and recurring workflow fit."
+      "Interactive pricing states were intentionally excluded in favor of watermark path, export posture, and recurring workflow fit.",
+      "Official YouTube body assets landed on InVideo were used to sharpen prompt-first drafting, command-box revision, and long-script-to-short boundaries."
     ]
   }
 }

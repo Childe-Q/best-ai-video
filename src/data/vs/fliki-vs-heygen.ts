@@ -3,119 +3,119 @@ import { VsComparison } from '@/types/vs';
 export const flikiVsHeygen: VsComparison = {
   slugA: 'fliki',
   slugB: 'heygen',
-  updatedAt: '2026-03-03',
+  updatedAt: '2026-04-26',
   pricingCheckedAt: '2026-03-03',
   decisionSummary:
-    'Choose Fliki when the job begins with text, blogs, or voiceover. Choose HeyGen when the message needs a visible presenter on screen.',
+    'Choose Fliki when the job starts from scripts, blogs, PPTs, or PDFs and needs narrated baseline video with pronunciation and automation controls. Choose HeyGen when the job needs presenter-led delivery, proofreader review, governance controls, or SCORM/LMS-style training handoff.',
   shortAnswer: {
-    a: 'Choose Fliki when the workflow is text-first and narration does most of the work.',
-    b: 'Choose HeyGen when the message needs a visible presenter on screen.',
+    a: 'Choose Fliki when source content already exists as text, blog, PPT, or PDF and the team wants a narrated draft plus manual cleanup.',
+    b: 'Choose HeyGen when the video needs a presenter, reviewer-controlled localization, voice direction, or formal training delivery.',
   },
   decisionCases: [
     {
-      label: 'Blog or script to video',
-      keywords: ['blog', 'script', 'text', 'voiceover', 'narrated'],
+      label: 'PPT, PDF, or blog to narrated draft',
+      keywords: ['ppt', 'pdf', 'blog', 'script', 'text', 'voiceover', 'narrated'],
       winner: 'a',
-      verdict: 'Fliki is the better fit when the source material already exists as text or audio and the job is fast narrated output.',
+      verdict: 'Fliki is the better fit when the source already exists and the goal is a narrated baseline video that the team can clean up.',
     },
     {
-      label: 'Avatar-led communication',
-      keywords: ['avatar', 'presenter', 'spokesperson', 'training', 'customer communication'],
+      label: 'Reviewed avatar-led localization',
+      keywords: ['avatar', 'presenter', 'proofreader', 'review', 'localization', 'training'],
       winner: 'b',
-      verdict: 'HeyGen is the better fit when the viewer needs to see a presenter delivering the message.',
+      verdict: 'HeyGen is the better fit when localization needs a presenter plus proofreader control over wording, phonetics, voice, and glossary choices.',
     },
     {
-      label: 'Multilingual presenter updates',
-      keywords: ['multilingual', 'language', 'dubbing', 'presenter', 'voice'],
+      label: 'Formal training delivery',
+      keywords: ['scorm', 'lms', 'training', 'governance', 'admin', 'delivery'],
       winner: 'b',
-      verdict: 'HeyGen is the stronger choice when the output still needs a presenter-led format across multiple languages.',
+      verdict: 'HeyGen is the stronger choice when SCORM-style delivery signals, admin restrictions, and presenter consistency matter more than fast narration.',
     },
   ],
   bestFor: {
     a: [
-      'Turning scripts or blog posts into narrated videos quickly',
-      'Low-overhead social video batches for creators or solo teams',
-      'Voice-first explainers without filming',
+      'Turning scripts, blogs, PPTs, or PDFs into narrated baseline videos',
+      'Teams that value pronunciation mapping and phrase-level B-roll timing',
+      'Automation-assisted publishing where setup friction is acceptable',
     ],
     b: [
-      'Avatar-led videos with presenter-style delivery',
-      'Teams that need shared workspaces and review loops',
-      'Training, onboarding, and customer-facing talking-head content',
+      'Presenter-led videos that need visible avatar delivery',
+      'Localization workflows with proofreader review and voice control',
+      'Training and internal communication workflows that need governance or SCORM-style delivery signals',
     ],
   },
   notFor: {
     a: [
-      'Teams that need advanced approval workflows before publish',
+      'Teams expecting PPT/PDF import to produce a nearly finished video without cleanup',
+      'Organizations that need proofreader-style review gates before final generation',
       'Use cases where a realistic on-screen presenter is mandatory',
-      'Complex enterprise governance requirements',
     ],
     b: [
-      'Very cost-sensitive bulk publishing where voice-led output is enough',
-      'Simple blog-to-video jobs that prioritize speed over avatar polish',
-      'Creators who only need lightweight text-to-video conversion',
+      'Simple document-to-narration jobs where an avatar layer adds overhead',
+      'Automation pipelines where Template ID, Voice ID, Folder ID, and webhook setup are the main buying reason',
+      'Voice-first drafts where scene cleanup matters more than presenter realism',
     ],
   },
   keyDiffs: [
     {
-      label: 'Core workflow',
-      a: 'Text/blog script to narrated video',
-      b: 'Avatar presentation with script and scene control',
+      label: 'Source material entry path',
+      a: 'Fliki is stronger when the workflow begins with text, blogs, PPTs, or PDFs and needs a narrated baseline timeline.',
+      b: 'HeyGen is stronger when the workflow begins with a presenter-led message and the avatar remains central to delivery.',
       sourceUrl: 'https://fliki.ai/',
     },
     {
-      label: 'Team operations',
-      a: 'Best for lightweight creator workflows',
-      b: 'Built for workspace collaboration and approvals',
-      sourceUrl: 'https://www.heygen.com/pricing',
-    },
-    {
-      label: 'Cost posture',
-      a: 'Lower entry pricing for voice-first production',
-      b: 'Higher entry pricing with avatar-centric capabilities',
-      sourceUrl: 'https://www.heygen.com/pricing',
-    },
-    {
-      label: 'Output style',
-      a: 'Narrated stock/media style videos',
-      b: 'Presenter/avatar style videos',
+      label: 'Language control depth',
+      a: 'Fliki gives useful spoken-output control through pronunciation mapping, but displayed text and translated media still need separate review.',
+      b: 'HeyGen goes deeper on presenter language review through proofreader edits, phonetics, voice choice, glossary mapping, and final-generation control.',
       sourceUrl: 'https://www.heygen.com/',
+    },
+    {
+      label: 'Formal delivery posture',
+      a: 'Fliki is better framed as training or creator-content drafting with manual cleanup and publishing setup.',
+      b: 'HeyGen has stronger formal delivery signals through SCORM export settings, admin restrictions, and governed avatar access.',
+      sourceUrl: 'https://www.heygen.com/',
+    },
+    {
+      label: 'Automation friction',
+      a: 'Fliki automation can be valuable, but the stable judgment is that API keys, Template ID, Voice ID, Folder ID, webhooks, and filters add setup friction.',
+      b: 'HeyGen is less about pipeline automation here and more about controlled presenter production, review, and delivery governance.',
+      sourceUrl: 'https://fliki.ai/',
     },
   ],
   matrixRows: [
     {
       label: 'Best for',
-      a: 'Blog/script to narrated video at volume',
-      b: 'Avatar spokesperson and training communication',
+      a: 'Narrated baseline videos from scripts, blogs, PPTs, or PDFs',
+      b: 'Reviewed presenter-led training, internal comms, and localization',
       sourceUrl: 'https://fliki.ai/',
     },
     {
       label: 'Output type',
-      a: 'Voiceover-led video with media scenes',
-      b: 'Talking avatar/presenter video',
+      a: 'Voiceover-led video with media scenes and manual cleanup',
+      b: 'Avatar/presenter video with stronger review and governance signals',
       sourceUrl: 'https://www.heygen.com/',
     },
     {
-      label: 'Workflow speed',
-      a: 'Fast for text-to-video batches',
-      b: 'Fast once avatar templates are prepared',
+      label: 'Document entry maturity',
+      a: 'PPT/PDF import is useful for baseline scene, script, and voiceover generation, not guaranteed publish-ready output',
+      b: 'Less focused on PPT/PDF conversion; stronger when the presenter format is the core requirement',
       sourceUrl: 'https://fliki.ai/',
     },
     {
-      label: 'Languages & dubbing',
-      a: 'Multilingual AI voices and narration options',
-      b: 'Multilingual voice and dubbing for avatar videos',
+      label: 'Language control',
+      a: 'Pronunciation map helps spoken output, while subtitles and on-screen text still need separate checks',
+      b: 'Proofreader workflow supports wording, phonetics, voice, and glossary changes before final generation',
       sourceUrl: 'https://www.heygen.com/',
     },
     {
-      label: 'Templates',
-      a: 'Template-driven scenes for quick assembly',
-      b: 'Avatar scenes and reusable presentation layouts',
+      label: 'Formal training delivery',
+      a: 'Useful for training drafts and presentation-style narration, but LMS-style delivery is not the core evidence',
+      b: 'SCORM export settings and admin controls make the training-delivery story stronger',
       sourceUrl: 'https://fliki.ai/',
     },
     {
-      label: 'API',
-      a: 'API availability depends on plan and account type',
-      b: 'API listed for product integrations on higher tiers',
+      label: 'Automation setup',
+      a: 'Automation depends on IDs, keys, folders, webhooks, and filters; useful but configuration-heavy',
+      b: 'Workflow strength is review, voice control, and governed delivery rather than lightweight automation setup',
       sourceUrl: 'https://www.heygen.com/pricing',
     },
     {
@@ -188,7 +188,7 @@ export const flikiVsHeygen: VsComparison = {
   },
   promptBox: {
     prompt:
-      'Create a 45-second product update video for a B2B SaaS dashboard launch. Tone: clear and professional. Include one hook, three benefit points, one CTA, and on-screen captions.',
+      'Create a 60-second training update from an existing slide deck or script. Include one translated term, a brand pronunciation requirement, a presenter/narrator choice, and an export-ready handoff note.',
     settings: [
       'Duration target: 45 seconds',
       'Aspect ratio: 16:9',
@@ -197,30 +197,30 @@ export const flikiVsHeygen: VsComparison = {
       'Output format: MP4 1080p',
     ],
     helperText:
-      'Run the same script in both tools to compare a narration-first workflow against a presenter-led one.',
+      'Run the same source in both tools to compare document/text-to-narration drafting against presenter-led localization and delivery review.',
   },
   editorialNotes: {
     whyPeopleCompareTheseTools:
-      'People compare Fliki and HeyGen because both reduce traditional video production work and both can start from a script. The similarity is real at the top of the funnel, especially for teams searching for a fast AI video tool. The split happens once format matters. Fliki is usually considered for text-first, narrated, blog-to-video, or voice-led explainers. HeyGen is usually considered for presenter-led communication where an avatar or spokesperson changes how the message lands.',
+      'People compare Fliki and HeyGen because both reduce traditional video production work and both can start from existing words. The split is not feature count. Fliki is closer to source-material conversion: script, blog, PPT, or PDF into a narrated baseline. HeyGen is closer to presenter-led production where review, voice control, and avatar governance matter.',
     looksSimilarButActuallyDifferent:
-      'On the surface, both tools help turn ideas into finished videos without filming. Underneath, they solve different jobs. Fliki is buying fast conversion from text or audio into narrated scenes. HeyGen is buying on-screen delivery through a digital presenter. That is why this comparison often looks closer than it really is.',
+      'On the surface, both tools help turn ideas into videos without filming. Underneath, Fliki buys baseline generation plus voice and scene adjustments. HeyGen buys a visible presenter plus proofreader review, voice direction, admin restrictions, and stronger formal-delivery signals.',
     realDecision:
-      'The real decision is whether the message can ride on narration alone or whether it needs a speaker on screen. If a voiceover is enough, Fliki is usually the simpler workflow. If seeing the presenter matters, HeyGen is the more sensible buy.',
+      'The real decision is whether the source material should become a narrated draft, or whether the message needs a controlled presenter workflow. If narration and cleanup are enough, Fliki is the simpler fit. If proofread localization, avatar consistency, or SCORM-style delivery matters, HeyGen is the safer fit.',
     chooseAIf:
-      'Choose Fliki if the work begins with blog posts, scripts, or voice-led explainers and the priority is getting batches out quickly without adding an avatar layer.',
+      'Choose Fliki if the work begins with scripts, blogs, PPTs, or PDFs and the priority is generating a useful narrated baseline with pronunciation and B-roll controls.',
     chooseBIf:
-      'Choose HeyGen if the video needs a spokesperson for outreach, onboarding, training, or customer communication, especially when a visible presenter adds trust.',
+      'Choose HeyGen if the video needs a presenter, proofreader-controlled localization, voice direction, admin restrictions, or formal training delivery signals.',
     hiddenTradeOff:
-      'Fliki is usually faster and lighter for text-first conversion, but the output can feel more like narrated media than a presentation. HeyGen adds presenter presence, but that also adds more format commitment than some teams actually need.',
+      'Fliki can be lighter for document and text conversion, but PPT/PDF output still needs cleanup and automation is configuration-heavy. HeyGen adds stronger presenter review and governance, but that format can be unnecessary overhead for simple narrated drafts.',
     whoWillRegretTheWrongChoice:
-      'Content teams regret HeyGen when the real job was simple script-to-video conversion and the avatar step adds unnecessary overhead. Sales, enablement, and onboarding teams regret Fliki when the final video still feels too faceless for a message that needed a visible speaker.',
+      'Content teams regret HeyGen when the real job was PPT, PDF, or blog-to-narrated-video conversion. Training, enablement, and localization teams regret Fliki when the final output needed a reviewed presenter workflow or LMS-style handoff rather than a cleaned-up narrated draft.',
   },
   verdict: {
     winnerPrice: 'a',
     winnerQuality: 'b',
     winnerSpeed: 'a',
     recommendation:
-      'Pick Fliki for fast blog/text-to-video batches and cost efficiency. Pick HeyGen when avatar-led communication quality and team workflow controls matter more than entry pricing.',
+      'Pick Fliki for document, script, and blog-to-narrated-video workflows where cleanup is acceptable. Pick HeyGen when presenter-led review, voice control, governance, and SCORM-style delivery matter more than lightweight conversion.',
   },
   related: {
     toolPages: ['/tool/fliki', '/tool/heygen'],
@@ -236,17 +236,17 @@ export const flikiVsHeygen: VsComparison = {
     {
       question: 'Fliki vs HeyGen: which should I choose first?',
       answer:
-        'Choose Fliki if the workflow is text-first and narration is enough. Choose HeyGen if the message needs a presenter on screen.',
+        'Choose Fliki if the workflow starts from scripts, blogs, PPTs, or PDFs and narration is enough. Choose HeyGen if the message needs a controlled presenter, proofreader review, or formal training handoff.',
     },
     {
       question: 'What is the actual workflow difference?',
       answer:
-        'Fliki turns scripts, blog posts, and voice-led ideas into narrated videos. HeyGen builds around avatar scenes and presenter-led delivery.',
+        'Fliki turns existing source material into narrated baseline videos with cleanup and automation setup. HeyGen builds around avatar scenes, presenter delivery, review controls, and stronger governance signals.',
     },
     {
       question: 'Who usually regrets the wrong choice?',
       answer:
-        'Text-first content teams regret paying for a presenter workflow they do not need. Customer-facing teams regret Fliki when the message needed more human presence than narration alone could provide.',
+        'Document-first content teams regret paying for a presenter workflow they do not need. Training and localization teams regret Fliki when the output needed proofreader control, presenter consistency, or SCORM-style delivery.',
     },
   ],
   disclosure:

@@ -1,75 +1,73 @@
 {
   "overview": {
     "tldr": {
-      "bestFor": "Training, internal communications, and product explainer teams that need avatar-led delivery with documented 1080p MP4 downloads",
-      "notFor": "Teams planning paid promotion with stock avatars or buyers who need flexible refund terms",
-      "why": "Freemium videos are watermarked, paid-promotion use is restricted for stock avatars, and refund language varies by customer type"
+      "bestFor": "Training and internal comms teams that need structured document-to-video starts, interactive learning paths, and repeatable multilingual variants",
+      "notFor": "Teams treating URL summarization, Video Agents, or AI B-roll generation as fully predictable production systems",
+      "why": "Official video assets show strong evidence for script/file starts, branching training logic, and one-source-many-language production, while URL input and agentic generation still need testing"
     },
     "miniTest": {
-      "prompt": "Create a 45-60 second presenter-style video about [topic] for [audience]. Use a clear hook, 3 key points, and a short closing line. Add captions, keep language policy-safe, and export a standard downloadable MP4",
+      "prompt": "Create a 60-90 second training module from the same source using script, file, and URL entry paths. Add one branching quiz path, then generate two localized versions and inspect text, voice, lip-sync, and scene duration.",
       "checklist": [
         {
-          "label": "Primary workflow fit",
-          "value": "Training / internal comms / product explainer"
+          "label": "Entry path comparison",
+          "value": "Compare script, file, and URL drafts for outline quality and editability"
         },
         {
-          "label": "Freemium watermark",
-          "value": "Expected on Freemium videos"
+          "label": "URL maturity",
+          "value": "Treat URL summarization as needs testing; official proof is weaker than script/file"
         },
         {
-          "label": "Watermark removal path",
-          "value": "Requires upgrading and re-generating the video"
+          "label": "Branching depth",
+          "value": "Check whether quiz, decision path, and remediation flow work beyond simple navigation"
         },
         {
-          "label": "MP4 download resolution",
-          "value": "Standard downloadable MP4 is documented as 1080p"
+          "label": "Localization reliability",
+          "value": "Verify whether voice, lip-sync, on-screen text, and duration move together"
         },
         {
-          "label": "Export formats",
-          "value": "MP4 / WAV / XLIFF / SRT / VTT"
+          "label": "Brand repeatability",
+          "value": "Test Brand Kit, logo, hex colors, and avatar outfit consistency across scenes"
         },
         {
-          "label": "Interactive elements",
-          "value": "Interactive videos may not be downloadable as MP4"
+          "label": "Media tab role",
+          "value": "Check whether AI B-roll improves placeholders without becoming the core production engine"
         },
         {
-          "label": "Paid promotion restriction",
-          "value": "Stock avatars are restricted for paid promotion use"
-        },
-        {
-          "label": "System requirements",
-          "value": "Modern browsers and supported OS versions are required"
-        },
-        {
-          "label": "Refund sensitivity",
-          "value": "Refund wording differs by customer type and should be checked before purchase"
+          "label": "Free-vs-paid boundary",
+          "value": "Check avatar access, personal clone, and burned-in caption limits, not only watermark"
         }
       ],
-      "verdict": "Use this as a source-backed workflow check, not a completed hands-on run. Synthesia fits training, internal comms, and product explainer use when download, licensing, and policy constraints match the team workflow."
+      "verdict": "Use this as a source-backed workflow check, not a completed hands-on run. Synthesia looks strongest for structured training and localization, but URL input, Media tab reliability, and large-batch localization still need hands-on validation."
     },
     "useCases": [
       {
-        "title": "Training Videos",
-        "why": "Fits structured onboarding and learning content where avatar-led delivery and caption exports matter more than timeline-heavy editing",
-        "linkHref": "/tool/synthesia/pricing",
-        "linkText": "Check pricing →"
-      },
-      {
-        "title": "Internal Communications",
-        "why": "Useful for internal updates and announcements when teams need presenter-style delivery and documented download formats",
+        "title": "Document-to-training drafts",
+        "why": "Official material supports script and file starts that become editable outlines, chapters, bullets, scenes, scripts, and layouts rather than static blocks",
         "linkHref": "/tool/synthesia/features",
-        "linkText": "See features →"
+        "linkText": "See feature workflow →"
       },
       {
-        "title": "Product Explainers",
-        "why": "Works for product walkthroughs and customer education when avatar delivery is the priority and paid-ad restrictions are not the main use case",
+        "title": "Interactive learning paths",
+        "why": "Branching, quiz, decision path, and guided navigation signals are strong enough to position Synthesia as a structured training tool, not just an avatar explainer",
+        "linkHref": "/vs/heygen-vs-synthesia",
+        "linkText": "Compare training platforms →"
+      },
+      {
+        "title": "One-source multilingual variants",
+        "why": "Official material shows localization as one source becoming many variants, with voice, lip-sync, on-screen text, and duration changing together while scene structure stays stable",
         "linkHref": "/vs/synthesia-vs-heygen",
-        "linkText": "Compare alternatives →"
+        "linkText": "Compare localization fit →"
       }
     ]
   },
   "features": {
     "keyFeatures": [
+      "Script and file entry paths can produce editable outlines, chapters, bullets, scenes, scripts, and layouts",
+      "URL input is positioned as a peer entry path, but granular proof is weaker than script or file starts",
+      "Interactive branching supports quiz, decision path, and guided navigation style training flows",
+      "Batch localization can change voice, lip-sync, on-screen text, and scene duration while preserving scene structure",
+      "Brand Kit, logo, hex colors, and avatar styling support repeatable branded production",
+      "Media tab is best treated as B-roll augmentation, not the core presentation engine",
       "Freemium videos include Synthesia logo watermark",
       "Remove watermark by upgrading and re-generating the video",
       "Standard MP4 downloads export in Full HD 1080p (1920×1080)",
@@ -81,18 +79,21 @@
     ]
   },
   "pros": [
+    "Strong official evidence for structured script and file entry paths",
+    "Interactive branching is demonstrated as training logic, not just a link feature",
+    "Multilingual batch production is a clear product-positioning strength",
+    "Brand controls support repeatable business content",
     "Consistent 1080p MP4 download specification",
-    "Multiple export formats including captions and localization (XLIFF)",
-    "Clear watermark removal process (upgrade + re-generate)",
-    "Explicit browser and OS requirements reduce guesswork",
-    "Licensing guidance is documented in help articles"
+    "Multiple export formats including captions and localization (XLIFF)"
   ],
   "cons": [
+    "URL-to-video maturity is less demonstrated than script or file workflows",
+    "Media tab AI B-roll may require trial and error rather than predictable generation",
+    "Large multilingual batches still need manual language QA",
+    "Video Agents remain more claim-heavy than operationally proven",
     "Freemium watermark requires re-generation after upgrading",
     "Stock avatars restricted for paid promotion use",
-    "Refund policy can be strict depending on customer type",
-    "User reports: scripts can be rejected by moderation",
-    "User reports: generation can get stuck near completion"
+    "Refund policy can be strict depending on customer type"
   ],
   "reviews": {
     "verdict": {
@@ -155,25 +156,18 @@
     ]
   },
   "sources": {
-    "help.synthesia.io": {
-      "type": "HELP_CENTER",
-      "howToVerify": "Check official Synthesia help documentation",
-      "suggestedQuery": "site:help.synthesia.io watermark export download"
+    "Official YouTube channel and product demos": {
+      "type": "OFFICIAL_VIDEO_SOURCE",
+      "howToVerify": "Review Synthesia's official YouTube channel and official product demo videos.",
+      "suggestedQuery": "https://www.youtube.com/@synthesia-io"
     },
-    "synthesia.io": {
-      "type": "OFFICIAL_WEBSITE",
-      "howToVerify": "Visit official Synthesia website and terms",
-      "suggestedQuery": "synthesia.io licensing commercial use"
+    "Official product pages and legal materials": {
+      "type": "OFFICIAL_PRODUCT_MATERIALS",
+      "howToVerify": "Check Synthesia's official website, legal pages, and product materials."
     },
-    "docs.synthesia.io": {
-      "type": "DOCUMENTATION",
-      "howToVerify": "Check Synthesia documentation",
-      "suggestedQuery": "site:docs.synthesia.io system requirements browser"
-    },
-    "trustpilot.com": {
-      "type": "USER_REVIEWS",
-      "howToVerify": "Check user reviews on Trustpilot",
-      "suggestedQuery": "synthesia trustpilot reviews"
+    "Official help and documentation": {
+      "type": "OFFICIAL_HELP_RESOURCES",
+      "howToVerify": "Check Synthesia's official help center and documentation."
     }
   }
 }

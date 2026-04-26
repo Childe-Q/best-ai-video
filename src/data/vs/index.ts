@@ -170,6 +170,136 @@ const AUTHORED_VS_OVERRIDES: Record<string, VsAuthoredOverride> = {
         'Run the same brief in both tools to compare generation from scratch against repurposing from existing long-form content.',
     },
   },
+  'invideo-vs-veed-io': {
+    decisionSummary:
+      'Choose InVideo when the job starts from a prompt and needs a first YouTube or social video draft assembled with stock scenes. Choose VEED when the footage or draft already exists and the bottleneck is cleanup, subtitles, and editor-controlled social packaging.',
+    shortAnswer: {
+      a: 'InVideo is the better fit for prompt-first video generation, YouTube and social drafts, and AI-assisted stock-scene assembly.',
+      b: 'VEED is the better fit for editor-controlled cleanup, subtitle correction, and refining existing footage into social-ready cuts.',
+    },
+    bestFor: {
+      a: [
+        'Prompt-first YouTube, social, and faceless video drafts',
+        'Teams starting from a brief or script rather than existing footage',
+        'Creator workflows that need AI assembly plus light scene and media edits',
+      ],
+      b: [
+        'Existing footage that needs cleanup, subtitles, and social packaging',
+        'Teams that want browser editor control instead of prompt-led assembly',
+        'Workflows where AI inserts are useful as timeline material, not the whole production',
+      ],
+    },
+    notFor: {
+      a: [
+        'Teams whose main work is cleaning up an existing recording',
+        'Subtitle-heavy post-production where manual correction and styling matter more than first-draft generation',
+        'Users expecting Ultra, 300+ decisions, or deep scene control to be proven workflow depth without testing',
+      ],
+      b: [
+        'Teams starting from a blank prompt that need a full first draft assembled for them',
+        'Prompt-first faceless explainer production',
+        'Users assuming AI Rephrase lip-sync, talking-avatar quality, or Playground-to-timeline smoothness is already proven',
+      ],
+    },
+    keyDiffs: [
+      {
+        label: 'Core workflow',
+        a: 'InVideo starts from a prompt or script and assembles a first video draft with stock scenes, voiceover, captions, and revision controls.',
+        b: 'VEED starts stronger once there is footage or a draft to clean up with script edits, subtitles, timeline control, and social repurposing.',
+      },
+      {
+        label: 'Control model',
+        a: 'InVideo gives a prompt and command-box revision loop with light manual edits after generation.',
+        b: 'VEED gives more direct editor control over cuts, captions, cleanup, and timeline-side adjustments.',
+      },
+      {
+        label: 'Best input',
+        a: 'InVideo is safer when the input is a creative brief, YouTube idea, social script, or faceless explainer prompt.',
+        b: 'VEED is safer when the input is existing video, webinar footage, talking-head clips, or a draft that needs polish.',
+      },
+      {
+        label: 'Stable evidence',
+        a: 'Stable evidence supports prompt-first drafting and light revision workflows, not a guaranteed deep scene-control system.',
+        b: 'Stable evidence supports edit-with-script cleanup, subtitles, and repurposing, not proven end-to-end generative production quality.',
+      },
+      {
+        label: 'What to test',
+        a: 'Test Ultra, scene-level edit precision, and heavy revision costs before using InVideo as a deterministic production system.',
+        b: 'Test AI Rephrase lip-sync, talking-avatar publish quality, and AI Playground-to-timeline smoothness before relying on those VEED claims.',
+      },
+    ],
+    matrixRows: [
+      { label: 'Best for', a: 'Prompt-first YouTube and social video drafts', b: 'Existing-footage cleanup, subtitles, and social repurposing' },
+      { label: 'Starting point', a: 'Prompt, script, or creator brief', b: 'Existing footage, transcript, or rough video draft' },
+      { label: 'Primary control', a: 'Command-box revisions plus light manual scene/media edits', b: 'Browser editor, script cleanup, subtitle correction, and timeline control' },
+      { label: 'Social workflow', a: 'Generate draft concepts for Shorts, ads, and faceless explainers', b: 'Clean, caption, resize, and package footage for social distribution' },
+      { label: 'AI generation role', a: 'Core first-draft assembly path', b: 'Useful as inserts or editor feed, not the most proven core workflow' },
+      { label: 'Boundary to verify', a: 'Ultra impact, 300+ decisions, and scene-level control depth', b: 'AI Rephrase lip-sync, talking-avatar quality, and Playground-to-timeline smoothness' },
+    ],
+    decisionCases: [
+      {
+        label: 'Blank brief to first draft',
+        keywords: ['prompt', 'script', 'youtube', 'social', 'faceless', 'draft'],
+        winner: 'a',
+        verdict: 'InVideo is the better fit when the team starts from an idea or script and needs AI to assemble the first video draft.',
+      },
+      {
+        label: 'Clean up an existing recording',
+        keywords: ['cleanup', 'subtitles', 'captions', 'existing footage', 'webinar', 'talking head'],
+        winner: 'b',
+        verdict: 'VEED is the better fit when the team already has footage and needs script cleanup, subtitle correction, and social packaging.',
+      },
+      {
+        label: 'Manual polish after AI output',
+        keywords: ['editor', 'timeline', 'manual edit', 'caption style', 'polish'],
+        winner: 'b',
+        verdict: 'VEED is safer when direct editor control is more important than generating the first draft from a prompt.',
+      },
+      {
+        label: 'Fast social concept testing',
+        keywords: ['ads', 'shorts', 'variants', 'stock', 'idea'],
+        winner: 'a',
+        verdict: 'InVideo is stronger when the team needs prompt-led stock-scene drafts for social concepts before there is footage to edit.',
+      },
+    ],
+    editorialNotes: {
+      whyPeopleCompareTheseTools:
+        'People compare InVideo and VEED because both can produce social-ready videos and both include AI features. The practical buying split is whether the work starts before or after a usable draft exists.',
+      looksSimilarButActuallyDifferent:
+        'They overlap at the output layer, but InVideo is generation-first and VEED is editor-first. InVideo helps create the first draft from a prompt. VEED helps clean, caption, and package a draft or recording.',
+      realDecision:
+        'The real decision is first-draft generation versus editor-controlled cleanup. Choose InVideo when the source is a prompt or script. Choose VEED when the source is existing footage or a rough cut.',
+      hiddenTradeOff:
+        'InVideo can move faster from zero to draft, but its deeper control claims still need testing. VEED gives more polish control on existing material, but its flashier generative claims should not be treated as the mature core workflow.',
+      whoWillRegretTheWrongChoice:
+        'Creator teams regret VEED when they needed a full prompt-to-video draft. Editing teams regret InVideo when they mainly needed caption correction, cleanup, and timeline control on footage they already had.',
+    },
+    faq: [
+      {
+        question: 'InVideo vs VEED: which should I choose first?',
+        answer:
+          'Choose InVideo if the job starts from a prompt, script, or YouTube/social idea. Choose VEED if the job starts from existing footage or a rough draft that needs cleanup, subtitles, and polish.',
+      },
+      {
+        question: 'What is the main workflow difference?',
+        answer:
+          'InVideo is prompt-first generation and AI assembly. VEED is editor-controlled cleanup, subtitle correction, and social repurposing.',
+      },
+      {
+        question: 'What should I test before deciding?',
+        answer:
+          'On InVideo, test Ultra, scene-level edit control, and heavy revision costs. On VEED, test AI Rephrase lip-sync, talking-avatar quality, and how smoothly AI Playground assets move into the timeline.',
+      },
+    ],
+    promptBox: {
+      helperText:
+        'Run the same social video brief two ways: generate a first draft in InVideo, then try cleaning and captioning an existing clip in VEED.',
+    },
+    verdict: {
+      recommendation:
+        'Choose InVideo for prompt-first first drafts. Choose VEED for existing-footage cleanup, subtitles, and editor-controlled social packaging.',
+    },
+  },
   'elai-io-vs-synthesia': {
     decisionSummary:
       'Choose Elai when you want a lighter browser workflow for text, URL, or presentation-led presenter videos with straightforward 1080p-to-4K plan gating. Choose Synthesia when governance, export formats, training rollout, and stricter policy controls matter more than the lighter self-serve path.',
@@ -412,92 +542,137 @@ const AUTHORED_VS_OVERRIDES: Record<string, VsAuthoredOverride> = {
   },
   'heygen-vs-synthesia': {
     decisionSummary:
-      'Choose HeyGen for avatar-led outreach, spokesperson videos, and lighter presenter experimentation. Choose Synthesia for structured training, internal communication, and export- or governance-sensitive rollout.',
+      'Choose HeyGen when the workflow needs a reviewed presenter, deeper voice control, admin restrictions, or SCORM-style handoff. Choose Synthesia when the workflow starts from structured content and needs branching lessons, repeatable brand templates, or one-source-many-language production.',
+    shortAnswer: {
+      a: 'HeyGen is the better fit for presenter-led localization where proofreader review, voice direction, governance, and SCORM-style delivery matter.',
+      b: 'Synthesia is the better fit for structured training content built from scripts or files, especially when branching and repeatable localization matter.',
+    },
     bestFor: {
       a: [
-        'Sales outreach, product explainers, and spokesperson-style videos',
-        'Teams experimenting with presenter-led communication outside formal training ops',
-        'Customer-facing avatar videos that need to feel more campaign-like than instructional',
+        'Presenter-led localization with proofreader review over wording, phonetics, voice, and glossary choices',
+        'Teams that need admin restrictions around publish, download, public avatars, or feature access',
+        'Training and internal comms workflows where SCORM-style delivery settings matter',
       ],
       b: [
-        'Structured training programs and internal communication rollout',
-        'Enterprise teams prioritizing governance and repeatable learning workflows',
-        'Localization-heavy training content delivered at organizational scale',
+        'Structured training built from scripts, files, outlines, chapters, and editable scenes',
+        'Interactive learning paths with quiz, decision path, or guided-navigation logic',
+        'Repeatable multilingual variants where voice, lip sync, on-screen text, and duration move together',
       ],
     },
     notFor: {
       a: [
-        'Organizations buying primarily for formal training rollout',
-        'Teams that need heavier enterprise governance than creative flexibility',
-        'Lesson-library workflows centered on structured internal education',
+        'Teams whose main need is document-to-video structure rather than presenter governance',
+        'Training programs that depend on branching, quiz, or remediation paths as the primary content model',
+        'Buyers expecting Video Agent or Auto-SCORM live sync to be fully proven without hands-on validation',
       ],
       b: [
-        'Fast-moving outreach or spokesperson video teams',
-        'Revenue teams that want lighter presenter iteration',
-        'Use cases where campaign agility matters more than rollout structure',
+        'Presenter workflows where proofreader permissions and voice direction are the deciding factors',
+        'Teams prioritizing admin restrictions and public-avatar governance over structured content entry',
+        'Buyers treating URL summarization or Video Agents as fully predictable production systems',
       ],
     },
+    keyDiffs: [
+      {
+        label: 'Review workflow',
+        a: 'HeyGen has the stronger proofreader signal: wording, phonetics, voice choice, glossary mapping, and final-generation control are part of the reviewed presenter workflow.',
+        b: 'Synthesia is stronger at structured content creation, but the current stable evidence is less about proofreader-style project gates.',
+      },
+      {
+        label: 'Structured training logic',
+        a: 'HeyGen supports formal delivery signals, but the reviewed asset strength is presenter localization and SCORM-style handoff.',
+        b: 'Synthesia is stronger when the training itself needs branching, quiz, decision path, or guided-navigation logic.',
+      },
+      {
+        label: 'Localization model',
+        a: 'HeyGen is better when localization needs a controlled presenter review loop and voice/phonetic adjustment before final generation.',
+        b: 'Synthesia is better when one source needs to become many localized variants with scene structure preserved.',
+      },
+      {
+        label: 'Entry path maturity',
+        a: 'HeyGen is less about script/file/URL entry breadth and more about shaping avatar-led delivery after the message is defined.',
+        b: 'Synthesia has stronger structured entry signals for script and file starts; URL input is positioned as a peer path but still needs testing.',
+      },
+      {
+        label: 'Delivery and governance',
+        a: 'HeyGen has stronger official-body signals for admin restrictions, public-avatar exposure control, and SCORM settings such as version, hosting mode, and completion threshold.',
+        b: 'Synthesia has stronger repeatable production signals through Brand Kit, avatar styling, batch localization, and structured training outputs.',
+      },
+    ],
     matrixRows: [
-      { label: 'Best for', a: 'Outreach, spokesperson videos, and avatar-led explainers', b: 'Corporate training, internal communication, and enterprise rollout' },
-      { label: 'Output type', a: 'Presenter-led avatar videos for customer-facing communication', b: 'Avatar videos built for training and internal business communication' },
+      { label: 'Best for', a: 'Reviewed presenter-led localization and governed avatar delivery', b: 'Structured training, branching lessons, and repeatable multilingual variants' },
+      { label: 'Output type', a: 'Avatar presenter videos with proofreader, voice, and admin-control signals', b: 'Training and internal-comms videos built from structured source content' },
+      { label: 'Review workflow', a: 'Proofreader can control wording, phonetics, voice choice, glossary, and final generation', b: 'More focused on structured creation and repeatable rollout than proofreader-style gates' },
+      { label: 'Training structure', a: 'SCORM-style delivery settings are a strong handoff signal', b: 'Branching, quiz, decision path, and guided navigation are stronger content-structure signals' },
+      { label: 'Entry paths', a: 'Presenter format matters more than broad document entry paths', b: 'Script and file starts are strong; URL input is less proven and should be tested' },
+      { label: 'Localization model', a: 'Best when translation needs reviewer control and voice/phonetic correction', b: 'Best when one source becomes multiple language variants with scene structure preserved' },
       { label: 'Watermark path', a: 'Free output is for testing; paid plans are the publish-ready path', b: 'Freemium is watermarked; clean export requires upgrading and re-generating' },
-      { label: 'Export posture', a: 'Resolution and usage scale with plan, but export-format documentation is lighter', b: 'Documented 1080p MP4 plus WAV, XLIFF, SRT, and VTT export paths' },
+      { label: 'Export posture', a: 'Resolution and usage scale with plan, while SCORM-style training handoff has stronger official-body support', b: 'Documented 1080p MP4 plus WAV, XLIFF, SRT, and VTT export paths' },
       { label: 'Commercial / promotion rules', a: 'Free usage is non-commercial and broader paid-plan rights should stay tied to current official docs', b: 'Commercial use exists, but stock avatars are restricted for paid promotion' },
       { label: 'Workflow limits', a: 'Credits expire after issuance and no plan offers unlimited AvatarIV usage', b: 'Credits act as a shared currency and some rollout features stay limited to higher tiers' },
-      { label: 'Governance path', a: 'Better for lighter communication-led use, with less of the governance story at the center', b: 'Better for policy-sensitive training and enterprise deployment' },
+      { label: 'Governance path', a: 'Admin restrictions and public-avatar controls are stronger differentiators than generic workspace claims', b: 'Governance is more tied to repeatable business content and policy-sensitive training rollout' },
     ],
     decisionCases: [
       {
-        label: 'Sales outreach & spokesperson videos',
-        keywords: ['sales', 'outreach', 'spokesperson', 'avatar', 'presenter'],
+        label: 'Reviewed presenter localization',
+        keywords: ['proofreader', 'phonetics', 'glossary', 'voice', 'presenter', 'localization'],
         winner: 'a',
-        verdict: 'HeyGen is the better fit when the video is closer to sales, outreach, or spokesperson-style delivery than formal training.',
+        verdict: 'HeyGen is the better fit when localization needs a presenter plus reviewer control over wording, phonetics, voice, and glossary choices.',
       },
       {
-        label: 'Corporate training rollout',
-        keywords: ['training', 'enterprise', 'internal', 'learning', 'rollout'],
+        label: 'Interactive training structure',
+        keywords: ['training', 'branching', 'quiz', 'decision', 'remediation', 'learning'],
         winner: 'b',
-        verdict: 'Synthesia is the better fit when the workflow is centered on structured training and enterprise internal communication.',
+        verdict: 'Synthesia is the better fit when the content itself needs branching, quiz, decision path, or remediation logic.',
       },
       {
-        label: 'Multilingual internal updates',
-        keywords: ['multilingual', 'language', 'internal', 'localization', 'training'],
+        label: 'One-source multilingual rollout',
+        keywords: ['multilingual', 'language', 'batch', 'localization', 'internal', 'variants'],
         winner: 'b',
-        verdict: 'Synthesia is the stronger choice when localization is tied to formal internal communication and training rollout.',
+        verdict: 'Synthesia is the stronger choice when one structured source must become multiple localized variants with stable scene structure.',
+      },
+      {
+        label: 'Governed avatar handoff',
+        keywords: ['scorm', 'admin', 'download', 'publish', 'public avatar', 'governance'],
+        winner: 'a',
+        verdict: 'HeyGen is the stronger choice when admin restrictions, public-avatar governance, and SCORM-style handoff are the main differentiators.',
       },
     ],
     editorialNotes: {
       whyPeopleCompareTheseTools:
-        'People compare HeyGen and Synthesia because both sit in the same avatar-video category and both can replace traditional talking-head production. On a feature checklist they look close. In buying context, they tend to serve different teams.',
+        'People compare HeyGen and Synthesia because both sit in avatar video and both can serve training or internal communication. The useful split is not avatar quality alone. HeyGen now has stronger official-body signals around proofreader review, voice control, admin restrictions, and SCORM-style handoff. Synthesia has stronger signals around structured content entry, branching training logic, and one-source-many-language production.',
       looksSimilarButActuallyDifferent:
-        'Both tools create avatar-led video without a film crew. The difference is where the workflow naturally lives. HeyGen is often pulled into growth, sales, and customer-facing communication. Synthesia is often pulled into training, internal communication, and enterprise rollout.',
+        'Both tools create avatar-led video without a film crew. HeyGen is more compelling when the presenter workflow needs review gates and governance around the avatar output. Synthesia is more compelling when the production workflow starts from structured material and needs repeatable training modules or localized variants.',
       realDecision:
-        'The real decision is not avatar quality in isolation. It is whether the workflow is closer to campaign communication or structured training operations.',
+        'The real decision is whether the bottleneck is controlling a presenter-led localization workflow or building structured training content from source material. HeyGen wins more often on reviewer-controlled presenter delivery. Synthesia wins more often on branching, structured entry paths, and repeatable multilingual production.',
+      chooseAIf:
+        'Choose HeyGen if proofreader edits, phonetic review, Voice Director-style control, admin restrictions, public-avatar governance, or SCORM-style handoff are the reason the avatar tool matters.',
+      chooseBIf:
+        'Choose Synthesia if the team needs script/file-to-training structure, interactive branching, repeatable brand styling, or one-source-many-language production more than presenter review gates.',
       hiddenTradeOff:
-        'HeyGen tends to feel lighter and more flexible for presenter-led communication, but buyers inherit credit expiry and a thinner export-policy story. Synthesia fits training and rollout structure better, but some teams will feel the workflow is heavier and the promotion rules stricter than the content requires.',
+        'HeyGen has stronger review and governance signals, but Auto-SCORM live sync and broad Video Agent automation should stay in testing rather than being treated as proven. Synthesia has stronger structured-production signals, but URL input, Media tab B-roll reliability, and very large localization batches also need validation.',
       whoWillRegretTheWrongChoice:
-        'Growth and revenue teams regret Synthesia when every presenter video starts to feel heavier than the ask. Enterprise learning and internal comms teams regret HeyGen when governance and rollout discipline matter more than iteration speed.',
+        'Localization and governance teams regret Synthesia if they really needed proofreader-level presenter control. Instructional teams regret HeyGen if they really needed branching lessons, file-to-outline structure, and repeatable localized variants.',
     },
     faq: [
       {
         question: 'HeyGen vs Synthesia: which should I choose first?',
         answer:
-          'Choose HeyGen for avatar-led outreach and presenter-style communication. Choose Synthesia for training, internal communication, and enterprise rollout.',
+          'Choose HeyGen for reviewed presenter localization, voice control, admin restrictions, and SCORM-style handoff. Choose Synthesia for structured training, branching paths, and repeatable multilingual variants.',
       },
       {
         question: 'What is the practical difference?',
         answer:
-          'HeyGen is usually the lighter choice for communication-led workflows. Synthesia is usually the steadier choice when export formats, moderation posture, and enterprise deployment matter more.',
+          'HeyGen is stronger when the presenter workflow needs proofreader review and governance. Synthesia is stronger when the content workflow starts from scripts or files and needs training structure, branching, or batch localization.',
       },
       {
         question: 'Who usually regrets the wrong choice?',
         answer:
-          'Revenue teams regret Synthesia when the workflow becomes too heavy for sales-style video. Enterprise learning teams regret HeyGen when rollout, governance, and training structure matter more than flexibility.',
+          'Teams regret Synthesia when they needed reviewer-controlled presenter localization. Teams regret HeyGen when they needed interactive training structure, source-to-outline workflows, or one-source-many-language production.',
       },
     ],
     promptBox: {
       helperText:
-        'Run the same avatar brief in both tools to compare campaign-style presenter delivery against training-led enterprise rollout.',
+        'Run the same training brief in both tools to compare reviewed presenter localization against structured source-to-training production.',
     },
   },
   'pika-vs-runway': {
@@ -1393,70 +1568,193 @@ const AUTHORED_VS_OVERRIDES: Record<string, VsAuthoredOverride> = {
         'Run the same presenter brief in both tools to compare governed training rollout against lighter outreach-oriented avatar delivery.',
     },
   },
-  'fliki-vs-invideo': {
+  'descript-vs-veed-io': {
     decisionSummary:
-      'Choose Fliki when the workflow is text-first and narration-led. Choose InVideo when the team needs faster stock-scene drafts for ads, explainers, and short-form production.',
+      'Choose Descript when the workflow is transcript-first production for podcasts, interviews, and spoken-content editing. Choose VEED when the job is browser-based cleanup, subtitles, and social repurposing with timeline and AI insert support.',
+    shortAnswer: {
+      a: 'Descript is the better fit when editing the transcript is the primary editing surface for a long spoken-content project.',
+      b: 'VEED is the better fit when the team needs faster browser cleanup, subtitle styling, and social repurposing from existing footage.',
+    },
     bestFor: {
       a: [
-        'Blog-to-video and narration-led explainers',
-        'Teams turning scripts or articles into voice-led videos quickly',
-        'Workflows where the story is carried mostly by narration rather than scene design',
+        'Podcast, interview, and talking-head edits where transcript-first control is the workflow',
+        'Teams that need spoken-content cleanup plus recording and audio polish',
+        'Longer projects where the script/transcript is the editing source of truth',
       ],
       b: [
-        'Faceless explainers, ad creatives, and stock-scene drafts',
-        'Teams producing short-form marketing output at higher volume',
-        'Workflows where scene assembly matters more than narration-first conversion',
+        'Caption-heavy social clips from existing footage',
+        'Fast browser-based cleanup with timeline and subtitle controls',
+        'Repurposing workflows where AI-generated B-roll is an insert layer, not the whole product',
       ],
     },
     notFor: {
       a: [
-        'Teams that need broader stock-scene variation from scratch',
-        'Projects that depend on more visual assembly than voice-led conversion',
-        'Ad workflows centered on scene-driven iteration rather than narration',
+        'Teams that mainly need quick social packaging and subtitle styling',
+        'Workflows centered on visual inserts and browser timeline speed',
+        'Users who do not want transcript-first editing to be the main mental model',
       ],
       b: [
-        'Text-first teams mainly converting blogs or scripts into narrated videos',
-        'Narration-led explainers where a lighter workflow would do',
-        'Projects where the voiceover carries most of the value',
+        'Deep transcript-first spoken-content production',
+        'Teams expecting AI Rephrase to be proven real-video lip-sync correction',
+        'Projects where long-form script restructuring matters more than social repurposing',
+      ],
+    },
+    keyDiffs: [
+      {
+        label: 'Editing model',
+        a: 'Descript is stronger when the transcript is the primary editing surface for spoken content.',
+        b: 'VEED is stronger when the user wants browser cleanup, captions, and timeline-side social repurposing.',
+      },
+      {
+        label: 'Cleanup workflow',
+        a: 'Descript is oriented around transcript-first editing and audio cleanup for podcasts, interviews, and talking-head content.',
+        b: 'VEED official-body evidence supports deleting words, silence, filler, and short mistakes through edit-with-script style cleanup.',
+      },
+      {
+        label: 'Subtitle and social packaging',
+        a: 'Descript can support captions, but its buying logic is deeper spoken-content editing.',
+        b: 'VEED has stronger fit when caption correction, style, position, size, and social packaging are central to the workflow.',
+      },
+      {
+        label: 'AI generation role',
+        a: 'Descript is not being chosen primarily for generative B-roll in this pair.',
+        b: 'VEED AI Playground is best treated as an editor feed for B-roll or avatar inserts, not as proven end-to-end generation.',
+      },
+      {
+        label: 'Boundary to verify',
+        a: 'Check whether the transcript-first model fits the team before choosing it for quick visual social edits.',
+        b: 'Do not treat AI Rephrase as proven lip-sync correction or talking avatars as publish-quality until tested.',
+      },
+    ],
+    matrixRows: [
+      { label: 'Best for', a: 'Transcript-first spoken-content production', b: 'Browser cleanup, subtitles, and social repurposing' },
+      { label: 'Core surface', a: 'Transcript as the editing source of truth', b: 'Timeline/editor with script cleanup and subtitle controls' },
+      { label: 'Social repurposing', a: 'Useful, but not the main buying split here', b: 'One of the strongest official-body workflows' },
+      { label: 'AI generation role', a: 'Secondary to spoken-content editing', b: 'B-roll/avatar inserts feeding the editor' },
+      { label: 'What to test', a: 'Transcript editing fit for the actual content type', b: 'AI Rephrase lip-sync, avatar quality, and Playground-to-timeline smoothness' },
+    ],
+    decisionCases: [
+      {
+        label: 'Podcast or interview edit',
+        keywords: ['podcast', 'interview', 'transcript', 'talking head', 'audio'],
+        winner: 'a',
+        verdict: 'Descript is the better fit when the edit is organized around the spoken transcript and audio cleanup.',
+      },
+      {
+        label: 'Caption-heavy social repurposing',
+        keywords: ['captions', 'subtitles', 'social', 'repurpose', 'clips'],
+        winner: 'b',
+        verdict: 'VEED is the better fit when existing footage needs fast cleanup, subtitles, and social packaging.',
+      },
+      {
+        label: 'AI insert workflow',
+        keywords: ['b-roll', 'ai playground', 'avatar', 'insert', 'timeline'],
+        winner: 'b',
+        verdict: 'VEED is the better fit when generated assets are useful as inserts inside a browser editor, with quality still worth testing.',
+      },
+    ],
+    editorialNotes: {
+      whyPeopleCompareTheseTools:
+        'People compare Descript and VEED because both reduce manual editing work on spoken or existing video. The useful split is not generic AI editing, but whether the project is transcript-first production or faster browser cleanup and social packaging.',
+      looksSimilarButActuallyDifferent:
+        'They both touch transcripts, captions, and cleanup, but Descript is more transcript-first. VEED is more browser editor plus subtitles, cleanup, repurposing, and AI insert generation.',
+      realDecision:
+        'The real decision is whether the transcript should be the main editing surface, or whether the team needs a faster visual editor for captioned social repurposing.',
+      hiddenTradeOff:
+        'VEED is faster to frame around social output, but its flashier AI generation claims need testing. Descript is stronger when the spoken transcript drives the project, but it can be more workflow than a quick captioned clip needs.',
+      whoWillRegretTheWrongChoice:
+        'Podcast teams regret VEED when they needed transcript-first long-form editing. Social teams regret Descript when they mainly needed quick browser cleanup, subtitle styling, and clip packaging.',
+    },
+    faq: [
+      {
+        question: 'Descript vs VEED: which should I choose first?',
+        answer:
+          'Choose Descript for transcript-first spoken-content editing. Choose VEED for browser-based cleanup, subtitles, and social repurposing from existing footage.',
+      },
+      {
+        question: 'What is the practical workflow difference?',
+        answer:
+          'Descript makes the transcript the main edit surface. VEED combines script cleanup, timeline editing, subtitle correction, and AI inserts for faster social packaging.',
+      },
+      {
+        question: 'What should I not assume about VEED?',
+        answer:
+          'Do not assume AI Rephrase proves real-video lip-sync correction or that talking avatars are publish-quality until tested. The stable VEED workflow is cleanup and repurposing.',
+      },
+    ],
+    promptBox: {
+      helperText:
+        'Run the same talking-head clip in both tools to compare transcript-first editing against browser cleanup, subtitle correction, and social repurposing.',
+    },
+    verdict: {
+      recommendation:
+        'Choose Descript when the transcript is the production surface. Choose VEED when the job is faster cleanup, captions, and social repurposing with optional AI inserts.',
+    },
+  },
+  'fliki-vs-invideo': {
+    decisionSummary:
+      'Choose Fliki when the source already exists as a script, blog, PPT, or PDF and the goal is narrated baseline video with cleanup. Choose InVideo when the team needs prompt-first stock-scene drafts for YouTube, social videos, and faceless explainers.',
+    bestFor: {
+      a: [
+        'Scripts, blogs, PPTs, or PDFs that need narrated baseline video',
+        'Teams that value pronunciation maps and voice-led source conversion',
+        'Workflows where cleanup after baseline generation is acceptable',
+      ],
+      b: [
+        'Prompt-first YouTube, social, and faceless stock-scene drafts',
+        'Teams using command-box revisions and light manual scene edits',
+        'Long-script-to-short workflows where model summarization is useful',
+      ],
+    },
+    notFor: {
+      a: [
+        'Teams expecting PPT/PDF import to produce a finished video without cleanup',
+        'Projects that need prompt-first visual assembly from a blank brief',
+        'Ad workflows centered on stock-scene iteration rather than source conversion',
+      ],
+      b: [
+        'Document-first teams converting PPTs, PDFs, blogs, or scripts into narrated baselines',
+        'Workflows where pronunciation control matters more than stock-scene drafting',
+        'Teams expecting deep timeline editing or proven Ultra-led workflow improvements',
       ],
     },
     matrixRows: [
-      { label: 'Best for', a: 'Blog-to-video and narration-led explainers', b: 'Faceless explainers and stock-scene marketing drafts' },
-      { label: 'Output type', a: 'Narrated videos built from scripts, articles, and voiceover', b: 'Prompt-led stock-scene videos with captions and voiceover' },
-      { label: 'Workflow speed', a: 'Fast for short iterations', b: 'Fast for batch drafts' },
-      { label: 'Languages & dubbing', a: 'Voice cloning and multilingual narration workflows', b: 'Multilingual voiceover and caption workflows for stock-scene output' },
+      { label: 'Best for', a: 'Source-material conversion into narrated baselines', b: 'Prompt-first stock-scene drafts and social videos' },
+      { label: 'Input path', a: 'Scripts, blogs, PPTs, and PDFs', b: 'Prompt, script, or long-script-to-short brief' },
+      { label: 'Control depth', a: 'Pronunciation map and scene cleanup around a narrated draft', b: 'Command-box revisions plus light Edit module controls' },
+      { label: 'Workflow risk', a: 'PPT/PDF output still needs cleanup and automation setup can be configuration-heavy', b: 'Scene-level control, Ultra impact, and 300+ decisions claims need testing' },
       { label: 'Pricing starting point', a: '$28/mo', b: '$28/mo' },
       { label: 'Free plan', a: 'Free plan', b: 'Free plan' },
     ],
     decisionCases: [
       {
-        label: 'Blog or article to video',
-        keywords: ['blog', 'article', 'voiceover', 'narrated', 'script'],
+        label: 'PPT, PDF, blog, or script to narration',
+        keywords: ['ppt', 'pdf', 'blog', 'article', 'voiceover', 'narrated', 'script'],
         winner: 'a',
-        verdict: 'Fliki is the better fit when the source material already exists as text and the job is turning it into a narrated video quickly.',
+        verdict: 'Fliki is the better fit when the source material already exists and the team wants a narrated baseline plus pronunciation control.',
       },
       {
-        label: 'Faceless explainers & ad drafts',
-        keywords: ['faceless', 'ads', 'stock', 'social', 'drafts'],
+        label: 'Prompt-first faceless explainers',
+        keywords: ['faceless', 'ads', 'stock', 'social', 'drafts', 'prompt'],
         winner: 'b',
-        verdict: 'InVideo is the better fit when the workflow depends on faster stock-scene drafts for explainers, social clips, and ad variants.',
+        verdict: 'InVideo is the better fit when the workflow starts from a prompt and needs stock-scene drafts, captions, voiceover, and light revision.',
       },
       {
-        label: 'Narration-first explainers',
-        keywords: ['voiceover', 'narration', 'script', 'blog', 'explainer'],
-        winner: 'a',
-        verdict: 'Fliki is the stronger choice when the voiceover is doing most of the communication work.',
+        label: 'Long script to vertical short',
+        keywords: ['long script', 'shorts', 'vertical', 'summary', 'rewrite'],
+        winner: 'b',
+        verdict: 'InVideo is the stronger candidate when a long script needs to become a shorter vertical draft, with output quality still worth testing.',
       },
     ],
     editorialNotes: {
       whyPeopleCompareTheseTools:
         'People compare Fliki and InVideo because both reduce editing overhead and both can turn written ideas into finished video. The overlap is real, especially for teams trying to publish quickly without filming.',
       looksSimilarButActuallyDifferent:
-        'They look similar if you only ask whether text can become video. The split is in format. Fliki is usually a narration-led conversion workflow. InVideo is usually a scene-assembly workflow built for faster visual drafting and broader short-form output.',
+        'They look similar if you only ask whether text can become video. The split is in source and control. Fliki is source-material conversion with narration and pronunciation control. InVideo is prompt-first scene assembly with command-box revision and light manual edit controls.',
       realDecision:
-        'The real decision is whether the video is carried by narration or by scene assembly. If voiceover and scripts do most of the work, Fliki is usually cleaner. If the team needs more stock-scene output and faster ad-style iteration, InVideo is usually stronger.',
+        'The real decision is whether the team already has source material that should become a narrated baseline, or whether it needs a prompt-first visual draft. Choose Fliki for source conversion. Choose InVideo for stock-scene drafting and social iteration.',
       hiddenTradeOff:
-        'Fliki is lighter when the team already thinks in scripts, articles, and voiceover. InVideo is broader for visual drafting, but it can be heavier than necessary if the message did not need that extra scene-assembly layer.',
+        'Fliki can be lighter for document and script conversion, but PPT/PDF output and automation setup still need cleanup. InVideo is broader for visual drafting, but Ultra, scene-level precision, and broad automation claims should not be assumed.',
       whoWillRegretTheWrongChoice:
         'Text-first teams regret InVideo when the workflow becomes more visual-production-heavy than the brief requires. Social and ad teams regret Fliki when narrated conversion is not enough and they need more scene-driven output variety.',
     },
@@ -1464,12 +1762,12 @@ const AUTHORED_VS_OVERRIDES: Record<string, VsAuthoredOverride> = {
       {
         question: 'Fliki vs InVideo: which should I choose first?',
         answer:
-          'Choose Fliki for text-first, narration-led video. Choose InVideo for stock-scene drafts, faceless explainers, and faster ad-style output.',
+          'Choose Fliki for PPT/PDF/blog/script-to-narrated-baseline workflows. Choose InVideo for prompt-first stock-scene drafts, faceless explainers, and faster social output.',
       },
       {
         question: 'What is the main workflow difference?',
         answer:
-          'Fliki turns scripts or articles into narrated videos. InVideo assembles stock scenes and captions more like a production workflow for short-form output.',
+          'Fliki starts from source material and narration. InVideo starts from a prompt or script and assembles scenes, captions, voiceover, and light edits.',
       },
       {
         question: 'Who usually regrets the wrong choice?',
@@ -1479,72 +1777,79 @@ const AUTHORED_VS_OVERRIDES: Record<string, VsAuthoredOverride> = {
     ],
     promptBox: {
       helperText:
-        'Run the same script in both tools to compare a narration-first workflow against a broader scene-assembly workflow.',
+        'Run the same source in both tools to compare source-material narration against prompt-first scene assembly and light revision controls.',
     },
   },
   'invideo-vs-zebracat': {
     decisionSummary:
-      'Choose InVideo when you need broader stock-scene drafts and faceless explainers. Choose Zebracat when the job is short-form social clips, ad variants, and trend-driven output.',
+      'Choose InVideo when you need prompt-first creator drafts with command-box revisions and light manual edit controls. Choose Zebracat when the job is a faceless social assembly line with storyboard review and scene rerolls.',
     bestFor: {
       a: [
-        'Broader stock-scene drafts and faceless explainers',
-        'Teams that need one tool to cover shorts plus general explainer output',
-        'Prompt-led video workflows that extend beyond quick social clips',
+        'Prompt-first YouTube, social, and faceless stock-scene drafts',
+        'Teams that need command-box revisions plus media, script, music, and overlay edits',
+        'Long-script-to-short workflows where summarization and rewriting are useful',
       ],
       b: [
-        'Short-form social clips, ad variants, and trend-driven output',
-        'Teams shipping high-volume marketing cuts for Shorts, Reels, and ads',
-        'Workflows that prioritize speed for social publishing over broader explainer coverage',
+        'Faceless social clips, novelty hooks, and high-volume Shorts/Reels testing',
+        'Teams that want storyboard review and scene-by-scene reroll rather than a broader editor',
+        'Blog/script-to-social assembly where speed matters more than deterministic control',
       ],
     },
     notFor: {
       a: [
-        'Teams that only need a tight short-form social clip engine',
-        'Trend-led output where broader explainer capability adds little value',
-        'Pure social workflows optimized around rapid short-form publishing',
+        'Teams that only need a tight faceless social assembly line',
+        'Workflows where storyboard reroll speed matters more than broader prompt editing',
+        'Users expecting Ultra or 300+ decisions claims to be proven workflow depth',
       ],
       b: [
-        'Broader faceless explainer pipelines',
-        'Teams that need more mixed-format output than short-form social clips',
-        'Prompt-led workflows that also need general-purpose stock-scene coverage',
+        'Broader faceless explainer pipelines and YouTube drafts',
+        'Teams that need light manual scene, script, media, and music controls',
+        'Projects requiring predictable subtitle correction or deterministic scene edits',
       ],
     },
     matrixRows: [
-      { label: 'Best for', a: 'Broader stock-scene drafts and faceless explainers', b: 'Short-form social clips and ad-style marketing output' },
-      { label: 'Output type', a: 'Prompt-led stock-scene videos for explainers and mixed-format output', b: 'Short-form marketing clips optimized for social publishing' },
-      { label: 'Workflow speed', a: 'Fast for batch drafts', b: 'Fast for batch drafts' },
+      { label: 'Best for', a: 'Prompt-first creator drafts and faceless explainers', b: 'Faceless social assembly and scene reroll' },
+      { label: 'Primary control', a: 'Command-box revision plus Edit module controls', b: 'Storyboard review plus prompt-led scene reroll' },
+      { label: 'Output type', a: 'Stock-scene videos for YouTube, explainers, and social drafts', b: 'Novelty, viral, and faceless social-native clips' },
+      { label: 'Workflow risk', a: 'Ultra impact and deep scene control still need testing', b: 'Reroll controllability and ready-to-upload quality still need testing' },
       { label: 'Pricing starting point', a: '$28/mo', b: '$19/mo' },
       { label: 'Free plan', a: 'Free plan', b: 'Free trial' },
     ],
     decisionCases: [
       {
-        label: 'Faceless explainers',
-        keywords: ['explainers', 'stock', 'script', 'faceless', 'drafts'],
+        label: 'Prompt-first creator drafts',
+        keywords: ['prompt', 'explainers', 'stock', 'script', 'faceless', 'drafts'],
         winner: 'a',
-        verdict: 'InVideo is the better fit when the team needs broader faceless explainers and stock-scene drafts, not just short-form social cuts.',
+        verdict: 'InVideo is the better fit when the team needs a broader prompt-to-video loop with command-box revisions and light manual edits.',
       },
       {
-        label: 'Short-form social ads',
-        keywords: ['social', 'shorts', 'reels', 'ads', 'clips'],
+        label: 'Faceless social assembly',
+        keywords: ['faceless', 'social', 'shorts', 'reels', 'ads', 'clips', 'storyboard'],
         winner: 'b',
-        verdict: 'Zebracat is the better fit when the workflow is centered on short-form social ads, Reels, Shorts, and quick marketing clips.',
+        verdict: 'Zebracat is the better fit when the workflow is centered on faceless social output, storyboard review, and scene-by-scene rerolls.',
+      },
+      {
+        label: 'Scene reroll versus scene editing',
+        keywords: ['reroll', 'storyboard', 'edit module', 'scene', 'control'],
+        winner: 'a',
+        verdict: 'InVideo is safer when light manual controls matter; Zebracat is faster when prompt-led reroll is acceptable.',
       },
       {
         label: 'Trend-driven marketing clips',
         keywords: ['trend', 'marketing', 'clips', 'shorts', 'social'],
         winner: 'b',
-        verdict: 'Zebracat is the stronger choice when speed for trend-driven short-form marketing matters more than broader explainer coverage.',
+        verdict: 'Zebracat is the stronger choice when speed for novelty or trend-driven short-form marketing matters more than broader explainer coverage.',
       },
     ],
     editorialNotes: {
       whyPeopleCompareTheseTools:
         'People compare InVideo and Zebracat because both are fast AI video tools aimed at teams that need output volume rather than handcrafted edits. They often show up in the same social-content and ad-production searches.',
       looksSimilarButActuallyDifferent:
-        'Both help teams publish quickly, but they do not aim at the same center of gravity. InVideo covers a broader stock-scene and faceless-explainer workflow. Zebracat is tighter around short-form social cuts and trend-driven marketing output.',
+        'Both help teams publish quickly, but they do not aim at the same center of gravity. InVideo is a prompt-first creator workflow with command-box revision and light manual editing. Zebracat is a faceless social assembly line with storyboard review and scene reroll.',
       realDecision:
-        'The real decision is whether the team needs broader visual drafting or a more short-form-native social clip engine.',
+        'The real decision is whether the team needs broader prompt-led drafting and light edit controls, or a narrower faceless social workflow where scene reroll speed is acceptable.',
       hiddenTradeOff:
-        'InVideo gives more room for broader explainer and stock-scene production, but that can be more workflow than a short-form social team actually needs. Zebracat is faster for social-style clips, but it is narrower if the team also needs more general explainer output.',
+        'InVideo gives more room for script, media, music, and overlay adjustment, but its Ultra and deep-control claims still need testing. Zebracat is tighter for faceless social output, but storyboard depth, subtitle correction, and ready-to-upload quality should not be assumed.',
       whoWillRegretTheWrongChoice:
         'Broader content teams regret Zebracat when the workflow is too narrow for explainers and mixed-format publishing. Short-form ad teams regret InVideo when they wanted a tighter social clip workflow and got a broader tool instead.',
     },
@@ -1552,12 +1857,12 @@ const AUTHORED_VS_OVERRIDES: Record<string, VsAuthoredOverride> = {
       {
         question: 'InVideo vs Zebracat: which should I choose first?',
         answer:
-          'Choose InVideo for broader stock-scene drafts and faceless explainers. Choose Zebracat for short-form social clips and ad-style marketing output.',
+          'Choose InVideo for prompt-first creator drafts with command-box revisions and light manual edits. Choose Zebracat for faceless social assembly, storyboard review, and scene rerolls.',
       },
       {
         question: 'What is the practical difference?',
         answer:
-          'InVideo is broader. Zebracat is narrower but more social-first.',
+          'InVideo is broader and more creator-workflow oriented. Zebracat is narrower and more faceless-social oriented, with more reliance on black-box rerolls.',
       },
       {
         question: 'Who usually regrets the wrong choice?',
@@ -1567,7 +1872,7 @@ const AUTHORED_VS_OVERRIDES: Record<string, VsAuthoredOverride> = {
     ],
     promptBox: {
       helperText:
-        'Run the same short-form brief in both tools to compare broader stock-scene drafting against a tighter social-clip workflow.',
+        'Run the same faceless social brief in both tools to compare prompt revision plus light editing against storyboard-driven scene reroll.',
     },
   },
 };

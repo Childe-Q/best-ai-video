@@ -1,72 +1,60 @@
 {
   "overview": {
     "tldr": {
-      "bestFor": "Quick social videos when you're okay working within monthly credit budgets",
-      "notFor": "Users who want precise manual edits, low credit burn, or flexible refunds",
-      "why": "Free plan has branding watermarks, cancellations can end access immediately, and refunds are stated as not provided"
+      "bestFor": "Faceless creators and growth teams making social-native text-to-video drafts from blogs, scripts, or short prompts",
+      "notFor": "Teams that need deterministic timeline editing, strong subtitle correction, publishing automation, or proven brand/governance controls",
+      "why": "Official video assets position Zebracat as a faceless social assembly line with storyboard and scene reroll controls; ready-to-upload, perfect sync, and complete creative freedom claims need testing"
     },
     "miniTest": {
-      "prompt": "Create a 30-45 second video from this text about [topic] for [platform]. Keep claims factual, add on-screen captions, and use stock visuals that match each sentence. Produce a version optimized for social sharing",
+      "prompt": "Turn a 400-word blog section into a 30-45 second faceless TikTok/Reels video. Use storyboard view to inspect scenes, reroll two scenes with prompt edits, change subtitle style, adjust music/emotion, and export a social-ready version.",
       "checklist": [
         {
-          "label": "Input type",
-          "value": "Script / blog excerpt / bullets"
+          "label": "Faceless assembly-line fit",
+          "value": "Does the first pass create a coherent social video from blog/script input?"
         },
         {
-          "label": "Target platform",
-          "value": "Shorts / Reels / TikTok"
+          "label": "Storyboard depth",
+          "value": "Is storyboard a real scene edit surface or mostly a scene viewer/organizer?"
         },
         {
-          "label": "Watermark present",
-          "value": "Yes - expected on Free plan"
+          "label": "Scene reroll controllability",
+          "value": "Test whether scene-by-scene prompt edits produce predictable changes or reroll lottery"
         },
         {
-          "label": "Credits used for this video",
-          "value": "Track usage"
+          "label": "Subtitle correction depth",
+          "value": "Check whether subtitles can be corrected, or only styled"
         },
         {
-          "label": "Estimated videos per month",
-          "value": "Based on current burn rate"
+          "label": "Emotion setting boundary",
+          "value": "Verify whether emotion affects voice/performance or mainly music and atmosphere"
         },
         {
-          "label": "Visual relevance to script",
-          "value": "1-5 rating"
+          "label": "Ready-to-upload threshold",
+          "value": "Judge whether the export is actually publish-ready or only a draft MP4"
         },
         {
-          "label": "Customization depth",
-          "value": "User reports: limited tweaks"
-        },
-        {
-          "label": "Stability",
-          "value": "User reports: occasional bugs"
-        },
-        {
-          "label": "Export resolution",
-          "value": "HD (verify exact resolution)"
-        },
-        {
-          "label": "Device/browser",
-          "value": "Desktop + Chrome suggested"
+          "label": "Voice clone and pitch/speed",
+          "value": "Treat as light personalization until deeper audio control is proven"
         }
       ],
-      "verdict": "Result: partial. Biggest constraint was credits/customization/bugs/watermark. If you need predictable HD specs or refund flexibility, verify plan terms before committing"
+      "verdict": "Use this as a source-backed workflow check, not a completed hands-on run. Zebracat looks strongest as a faceless social assembly line; storyboard depth, reroll controllability, subtitle correction, and ready-to-upload quality still need validation."
     },
     "useCases": [
       {
-        "title": "YouTube Shorts",
-        "why": "Generate quick captioned clips, but watch credit burn per video",
+        "title": "Faceless social video assembly",
+        "why": "Best fit when the job is fast script/blog-to-social output for Shorts, Reels, TikTok, or viral-style testing",
         "linkHref": "/tool/zebracat/pricing",
         "linkText": "Check pricing →"
       },
       {
-        "title": "Marketing Ads",
-        "why": "Rapid iterations are possible; manual fine-tuning may be limited",
+        "title": "Storyboard and scene reroll",
+        "why": "Official material supports scene-level reroll and prompt edits, but this is still black-box control rather than deterministic editing",
         "linkHref": "/tool/zebracat/features",
         "linkText": "See features →"
       },
       {
-        "title": "Blog-to-video",
-        "why": "Can draft a video script from blog text, then generate a short cut",
+        "title": "Novelty and volume testing",
+        "why": "Works best for high-volume social concepts where draft speed matters more than deep editor precision or governance",
         "linkHref": "/vs/zebracat-vs-fliki",
         "linkText": "Compare alternatives →"
       }
@@ -74,29 +62,30 @@
   },
   "features": {
     "keyFeatures": [
-      "Free plan includes branding watermarks; paid plans remove them",
-      "Free plan includes 25 credits monthly (about 5 minutes)",
-      "Access to royalty-free stock clips, images, and music",
-      "Supports common formats like MP4 and MOV for sharing",
-      "Web-based workflow; desktop mode recommended by users",
-      "Blog-to-video style generation using NLP",
-      "Higher tiers may include advanced features like voice cloning"
+      "Faceless social content assembly is the core product identity, not traditional editing",
+      "Blog/script to social video is the strongest official-body workflow",
+      "Storyboard functions as a scene-level surface, but deep timeline control is not proven",
+      "Scene-by-scene prompt reroll is supported, with controllability still needing validation",
+      "Prompt box can change scenes, background, music, overlays, and subtitle style",
+      "Ready-to-upload should be treated as convenience framing, not proven publishing workflow",
+      "Emotion appears closer to music or atmosphere control than deep performance direction",
+      "Free plan includes branding watermarks; paid plans remove them"
     ]
   },
   "pros": [
-    "Free tier exists for basic testing",
-    "Watermarks removed on paid tiers",
+    "Clear faceless social positioning for Shorts, Reels, TikTok, and high-volume testing",
+    "Storyboard and independent scene reroll give more structure than a single black-box render",
+    "Useful for blog/script-to-social drafts when speed matters more than precision",
     "Stock library included",
-    "Common sharing formats supported (MP4/MOV)",
-    "Can support blog-to-video workflows"
+    "Watermarks removed on paid tiers"
   ],
   "cons": [
-    "User reports: videos can consume too many credits",
-    "User reports: fewer outputs than some competitors",
-    "User reports: bugs or hiccups can occur",
+    "Scene reroll control is not proven deterministic",
+    "Subtitle correction depth is weaker evidence than subtitle styling",
+    "Ready-to-upload and perfect-sync claims should stay in testing",
+    "Voice clone, pitch, speed, and emotion controls look shallow until tested",
     "User reports: limited manual customization and tweaks",
-    "No refunds for paid periods already paid",
-    "Cancellation may end access immediately, without refund"
+    "No refunds for paid periods already paid"
   ],
   "reviews": {
     "verdict": {
@@ -159,25 +148,18 @@
     ]
   },
   "sources": {
-    "subscribed.fyi": {
-      "type": "POLICY_SUMMARY",
-      "howToVerify": "Check subscription policy summary",
-      "suggestedQuery": "zebracat subscribed.fyi cancellation refund"
+    "Official YouTube channel and product demos": {
+      "type": "OFFICIAL_VIDEO_SOURCE",
+      "howToVerify": "Review Zebracat's official YouTube channel and official product demo videos.",
+      "suggestedQuery": "https://www.youtube.com/@zebracatai"
     },
-    "trustpilot.com": {
-      "type": "USER_REVIEWS",
-      "howToVerify": "Check user reviews on Trustpilot",
-      "suggestedQuery": "zebracat trustpilot reviews"
+    "Official product pages and pricing": {
+      "type": "OFFICIAL_PRODUCT_MATERIALS",
+      "howToVerify": "Check Zebracat's official website, product pages, and pricing pages."
     },
-    "g2.com": {
-      "type": "USER_REVIEWS",
-      "howToVerify": "Check user reviews on G2",
-      "suggestedQuery": "zebracat g2 reviews"
-    },
-    "zebracat.ai": {
-      "type": "OFFICIAL_WEBSITE",
-      "howToVerify": "Visit official Zebracat website",
-      "suggestedQuery": "zebracat.ai pricing features"
+    "Official help resources": {
+      "type": "OFFICIAL_HELP_RESOURCES",
+      "howToVerify": "Check Zebracat's official help resources."
     }
   }
 }
