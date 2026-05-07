@@ -1,4 +1,4 @@
-export type CardPriceState = 'free' | 'paid-exact' | 'paid-coarse' | 'custom' | 'unverified';
+export type CardPriceState = 'free' | 'paid-exact' | 'paid-coarse' | 'custom' | 'unverified' | 'discontinued';
 
 export type CardPriceSourceKind = 'canonical' | 'normalized' | 'legacy-summary' | 'feature-seed';
 
@@ -12,11 +12,12 @@ export type CardPriceHintKind =
 
 export type CardPriceBlock = {
   priceState: CardPriceState;
-  priceLabel: 'Paid' | 'Free' | 'Custom pricing' | 'Pricing unverified';
+  priceLabel: 'Paid' | 'Free' | 'Custom pricing' | 'Pricing unverified' | 'Discontinued';
   pricePrimary:
     | 'Free'
     | `Starts at $${string}`
     | 'Custom pricing'
+    | 'Discontinued'
     | 'See pricing';
   priceHelper: string | null;
   priceSourceKind: CardPriceSourceKind;

@@ -30,7 +30,7 @@
     },
     {
       "title": "Confirm commercial use rights on your plan.",
-      "desc": "Check the current publish path before committing. Runway is easier to position for commercial creative work, while Sora is more generation-first and still keeps visible watermarking in its default output path."
+      "desc": "Check the current publish path before committing. Runway is easier to position for commercial creative work, while Sora is now a discontinued historical benchmark and should route users toward replacements."
     }
   ],
   "groups": [
@@ -39,7 +39,6 @@
       "title": "Cinematic text-to-video",
       "rule": "These models are optimized for controlled scene generation and higher fidelity output — producing photorealistic or visually precise clips from detailed text prompts. They suit creators who need cinematic B-roll, product shots, or high-quality short clips where prompt adherence and visual quality are the primary concerns.",
       "toolSlugs": [
-        "sora",
         "runway",
         "kling-ai"
       ]
@@ -100,11 +99,11 @@
     {
       "name": "Sora",
       "slug": "sora",
-      "verdictSeed": "Photorealistic text-to-video generation with a generation-first workflow, strong realism, and style range for teams treating video more like premium model access than like a built-in editor.",
-      "pricingSeed": "Paid access path geared toward premium model use rather than a lightweight free-creator lane",
-      "policySeed": "Visible watermarks are applied by default, so the default output path should be treated as generation-first rather than as a clean publish workflow",
-      "bestForSeed": "Photorealistic cinematic text-to-video",
-      "mainLimitationSeed": "It is less editor-centric than Runway and less attractive when the workflow depends on lightweight testing, built-in editing, or cheap batch output",
+      "verdictSeed": "Discontinued historical text-to-video benchmark. OpenAI discontinued the Sora web and app experiences on April 26, 2026.",
+      "pricingSeed": "Discontinued",
+      "policySeed": "Do not use legacy Sora pricing or watermark posture as a current buying signal.",
+      "bestForSeed": "Historical context and replacement research",
+      "mainLimitationSeed": "Not an active selectable tool; Sora API discontinuation is scheduled for September 24, 2026",
       "officialUrl": "https://openai.com/sora",
       "hasReviewPage": true,
       "reviewUrl": "/tool/sora",
@@ -114,7 +113,9 @@
         "https://platform.openai.com/docs/pricing",
         "https://platform.openai.com/docs/sora"
       ],
-      "flags": []
+      "flags": [
+        "discontinued"
+      ]
     },
     {
       "name": "InVideo",
@@ -157,18 +158,15 @@
   "relatedLinks": {
     "reviewSlugs": [
       "runway",
-      "sora",
       "invideo",
       "zebracat"
     ],
     "alternativesSlugs": [
       "runway",
-      "sora",
       "invideo",
       "zebracat"
     ],
     "vsSlugs": [
-      "runway-vs-sora",
       "invideo-vs-zebracat"
     ],
     "guideSlugs": []
@@ -181,15 +179,14 @@
     },
     {
       "question": "What should readers compare first on this page?",
-      "answerSeed": "Start with generation posture: cinematic model output or creator-facing prompt workflow. Runway and Sora are stronger when raw visual fidelity is the decision. InVideo is stronger when the team needs prompt-to-stock-scene drafting with light edits. Zebracat is stronger when faceless social assembly and scene reroll speed matter more than cinematic control.",
+      "answerSeed": "Start with generation posture: cinematic model output or creator-facing prompt workflow. Runway is the active cinematic review route here; Sora is retained only as a discontinued historical benchmark. InVideo is stronger when the team needs prompt-to-stock-scene drafting with light edits. Zebracat is stronger when faceless social assembly and scene reroll speed matters more than cinematic control.",
       "sourceToolSlugs": []
     },
     {
       "question": "Which tools already have internal review coverage?",
-      "answerSeed": "Current internal review coverage in this normalized dataset: runway, sora, invideo, zebracat.",
+      "answerSeed": "Current active internal review coverage in this normalized dataset: runway, invideo, zebracat. Sora is retained only as a discontinued historical reference.",
       "sourceToolSlugs": [
         "runway",
-        "sora",
         "invideo",
         "zebracat"
       ]
@@ -203,8 +200,8 @@
     "uniqueToolCount": 5,
     "needsManualReview": false,
     "reviewNotes": [
-      "Runway and Sora were tightened using completed editorial evidence around watermark path, workflow weight, and generation posture.",
-      "Kling AI was intentionally left at lighter seed depth because the current coverage remains thinner than the Runway and Sora anchors.",
+      "Runway remains the active cinematic route; Sora is retained only as a discontinued historical benchmark after the 2026-04-26 web/app shutdown.",
+      "Kling AI was intentionally left at lighter seed depth because the current coverage remains thinner than the active Runway anchor.",
       "Official YouTube body assets landed on InVideo and Zebracat were used to add a creator/faceless text-to-video lane without treating Ultra, scene reroll, or ready-to-upload claims as proven."
     ]
   }

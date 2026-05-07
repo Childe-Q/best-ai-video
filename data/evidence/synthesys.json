@@ -184,6 +184,7 @@
     "sourceUrls": [
       "https://synthesys.io/",
       "https://synthesys.io/features/",
+      "https://synthesys.io/pricing/",
       "https://synthesys.io/text-to-speech-api/",
       "https://synthesys.io/ai-terms/",
       "https://synthesys.io/ai-privacy-policy/",
@@ -197,6 +198,12 @@
             "sourceUrl": "https://synthesys.io/ai-privacy-policy/"
           }
         ],
+        "exportLimits": [
+          {
+            "value": "Synthesys official pricing says Free exports up to 720p, Personal and Creator export up to 1080p, and Business Unlimited exports up to 4K.",
+            "sourceUrl": "https://synthesys.io/pricing/"
+          }
+        ],
         "refundCancellation": [
           {
             "value": "Refunds are limited to requests within 72 hours and below 5 minutes of usage.",
@@ -208,6 +215,12 @@
           }
         ]
       },
+      "mainLimitations": [
+        {
+          "value": "Synthesys official pricing documents plan-level video credits, voice credits, Sora or VEO persona credits, and maximum slide counts by tier; Business Unlimited is positioned as unlimited under a fair-use model.",
+          "sourceUrl": "https://synthesys.io/pricing/"
+        }
+      ],
       "workflowFeatureDocs": [
         {
           "value": "Features include voice cloning, AI talking avatars, talking photos, multilingual translation, and idea-to-video.",
@@ -230,9 +243,7 @@
       }
     },
     "retainedUnresolved": [
-      "policy.watermark",
-      "policy.exportLimits",
-      "mainLimitations"
+      "policy.watermark"
     ]
   }
 }

@@ -23,39 +23,33 @@ The current priority is to improve what is already built, not to increase exposu
 - not doing broad structural rewrites unless necessary for readiness consistency
 
 ## Current sequencing
-1. readiness registry
-2. ready-only linking on recommendation surfaces
-3. full feature-template promote-safe filtering
-4. fix top excluded pages
-5. light distribution on mature assets only
+1. readiness registry - completed
+2. ready-only linking on recommendation surfaces - completed
+3. full feature-template promote-safe filtering - completed
+4. feature and pricing exposure parity - completed for current code paths
+5. targeted evidence and pricing follow-through - current focus
+6. light distribution on mature assets only - later
 
-## Why Phase 2 comes next
-The readiness phase already tightened key recommendation surfaces, but feature templates may still contain hardcoded `/features/...` exits that bypass shared filtering.
-This means some ready pages may still push users toward not-ready feature pages.
-That inconsistency should be fixed before content expansion.
+## Current readiness status
+- Current readiness report shows 122 pages checked, 122 promote-safe, and 0 excluded.
+- Earlier 96 promote-safe / 26 excluded notes are stale.
+- There is no current evidence that Phase 2 feature-template filtering needs to be restarted.
 
-## Current Phase 2 boundary
-- focus on feature templates and feature-related linking consistency
-- reuse existing readiness logic
-- avoid inventing a second parallel system
-- do not expand to all browse/index surfaces yet
-- do not shift into broad content writing yet
+## Feature IA and promote-safe status
+- `/features` now functions as a workflow router with primary, business/procurement, channel, constraint, and comparison route groups.
+- Feature detail pages apply feature indexability in metadata and sitemap inclusion.
+- Feature templates receive promote-safe feature hrefs and use shared filtering helpers for hardcoded exits.
+- Future feature work should be evidence or conversion focused unless a concrete linking regression is found.
 
-## What counts as success for Phase 2
-- ready feature pages no longer strongly promote not-ready feature pages
-- shared filtering logic is reused across feature templates
-- known hardcoded feature exits are audited and tightened
-- build / typecheck / relevant audits pass
-- results are documented in a way that future sessions can continue from
-
-## Content priorities after Phase 2
-Highest-priority excluded pages to improve next:
-1. best-ai-video-generators
-2. ai-avatar-video-generators
-3. content-repurposing-ai-tools
-4. professional-ai-video-tools
-5. runway
-6. pictory
+## Current P1 priorities
+1. Decide Sora pricing exposure:
+   - Sora has pricing raw/normalized/audit assets, but public pricing exposure still needs a deliberate indexability decision.
+2. No-price evidence first pass completed:
+   - The clean first pass only changed data/evidence/invideo.json, data/evidence/elai-io.json, and data/evidence/synthesys.json.
+   - Remaining commercial use, usage rights, watermark, and export-limit gaps should wait for external official docs / terms / help / product docs.
+   - Third-party reviews must not be treated as official policy sources.
+3. Convert official YouTube evidence into page-level assets:
+   - Start with a small pilot on high-value tools rather than broad capture.
 
 ## Working principle for future tasks
 Always prefer:
@@ -67,6 +61,7 @@ Always prefer:
 - Pricing pages should not stay indexable by default when pricing is still unverified. Current rule: public pricing pages stay in the sitemap only when the route has verified/trusted exposure or a proof-backed pricing page path.
 - `/pricing-cards` is treated as support infrastructure, not a public search surface. Current rule: noindex those routes unless their public-search intent changes later.
 - Feature detail pages should keep sitemap and robots behavior aligned with the same readiness floor. Current rule: feature routes remain accessible, but non-indexable feature states should not stay in sitemap or default-index by accident.
+- Technical SEO reports must not keep pricing exposure, `/pricing-cards`, or feature indexability items open after code has fixed them.
 
 ## Expected task output format from Codex
 For each phase, Codex should report:

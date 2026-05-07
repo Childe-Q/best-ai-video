@@ -23,7 +23,7 @@ export const editorialTags: Record<string, string[]> = {
   'flexclip': ['Editor'], // G2: Video Editing, Futurepedia: Video Editing
   'lumen5': ['Editor', 'Social Media'], // G2: Video Editing, Futurepedia: Social Media
   'steve-ai': ['Text-to-Video'], // G2: AI Video Generators, Futurepedia: Video Generators
-  'sora': ['Text-to-Video'], // 基于产品定位（OpenAI Sora）
+  'sora': ['Discontinued'], // OpenAI Sora web/app discontinued 2026-04-26
 };
 
 // 标签 label -> features slug 映射（只包含站内已有的 features 页面）

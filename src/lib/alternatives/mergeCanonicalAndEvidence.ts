@@ -13,6 +13,7 @@ import { isTryNowTool } from './affiliateWhitelist';
 import { normalizeEvidenceText } from './normalizeEvidenceText';
 import { getPricingDisplay } from '@/lib/pricing/display';
 import { getToolCardPricingDisplay } from '@/lib/pricing/cardDisplay';
+import { isToolDiscontinued } from '@/lib/toolStatus';
 
 /**
  * Validate that all tool slugs in canonical config exist in tools.json
@@ -408,7 +409,7 @@ export function mergeCanonicalAndEvidence(
   });
 
   // ✅ CRITICAL: Candidate pool must come from ALL tools, NOT from evidenceMap
-  const allCandidateTools = allTools.filter(t => t.slug !== currentSlug);
+  const allCandidateTools = allTools.filter(t => t.slug !== currentSlug && !isToolDiscontinued(t.slug));
   
   // A. Print candidate pool info (dev mode only)
   if (process.env.NODE_ENV !== 'production') {

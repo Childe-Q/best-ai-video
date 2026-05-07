@@ -12,25 +12,29 @@
 ## What has been completed
 - Readiness registry has been introduced
 - Ready-only linking has been applied to key recommendation surfaces
+- Feature-template promote-safe filtering has been connected across the feature route family
+- Pricing-page exposure now uses an independent indexability rule
+- `/pricing-cards` support routes are explicitly noindex
 - Reports exist:
   - reports/readiness-report.md
   - reports/readiness-report.json
-  - reports/seo-audit.md
+  - reports/seo-audit-current.md
 
 ## Current confirmed conclusions
 - Recommendation surfaces should consume readiness
-- Full browse directories should not be fully gated yet
+- Feature detail indexability and sitemap inclusion now follow feature indexability checks
+- Pricing pages should only enter the sitemap when pricing exposure is indexable
+- `/pricing-cards` is support infrastructure, not a public search surface
 - Current priority is to improve mature asset density, not to expand site-wide exposure
 
 ## Current status snapshot
-- 122 pages total
-- 96 promote-safe
-- 26 excluded
-- Main excluded groups:
-  - 12 manual_review_pending features
-  - 12 missing_editorial_pack tool overviews
-  - 1 not_found feature
-  - 1 not-ready VS page
+- 122 pages checked
+- 122 promote-safe
+- 0 excluded
+- Current readiness report:
+  - reports/readiness-report.md
+  - reports/readiness-report.json
+- Earlier 96 promote-safe / 26 excluded notes are stale and should not be reused.
 
 ## Readiness work already completed
 ### Files changed in the readiness phase
@@ -102,50 +106,69 @@
   - /features
   - /alternatives
   - /vs
-- Tool overviews in current safe pool:
-  - invideo
-  - heygen
-  - fliki
-  - veed-io
-  - zebracat
-  - synthesia
-  - elai-io
-  - pika
-- Ready feature pages currently highlighted:
-  - /features/enterprise-ai-video-solutions
-  - /features/free-ai-video-no-watermark
+- Tool overviews:
+  - all 20 current tool overview pages are promote-safe
+- Feature pages:
+  - all 15 current feature detail pages are promote-safe
+- VS pages:
+  - all 21 current VS comparison pages in the readiness report are promote-safe
 - Ready alternatives topics currently highlighted:
   - /alternatives/topic/ai-avatar-video-for-training
   - /alternatives/topic/ai-video-for-youtube-growth
 
 ## Current top priority
-Phase 2:
-1. fully connect all feature templates to the same promote-safe link filtering logic
-2. then fix the highest-priority excluded pages
+P1 recovery tasks:
+1. decide Sora pricing exposure
+2. no-price evidence first pass is completed; remaining policy fields require external official docs
+3. run a small official YouTube evidence-to-page conversion pilot
 
-## Priority content targets after Phase 2
-- best-ai-video-generators
-- ai-avatar-video-generators
-- content-repurposing-ai-tools
-- professional-ai-video-tools
-- runway
-- pictory
+## Priority content targets after readiness normalization
+- Sora pricing exposure decision
+- non-price evidence follow-through only after official docs / terms / help / product docs are available
+- official YouTube evidence conversion for a small set of high-value tools, such as Sora, Runway, or Pictory
 
-## Phase 2 scope
-- Focus on feature templates, contextual exits, recommended reading, and hardcoded `/features/...` cross-links
-- Do not do large-scale content expansion yet
+## P1 no-price evidence first pass
+- Status: completed.
+- Files changed in the first pass:
+  - data/evidence/invideo.json
+  - data/evidence/elai-io.json
+  - data/evidence/synthesys.json
+- Validation:
+  - JSON parsed successfully for the changed evidence files.
+  - `git diff --check` had no findings for the changed evidence files.
+  - No third-party-only source was promoted into an official-confirmed policy conclusion.
+  - No unclear or missing field was written as a strong conclusion.
+- Remaining unresolved fields after the first pass:
+  - InVideo: policy.usageRights
+  - Elai: policy.commercialUse, policy.usageRights
+  - Synthesys: policy.watermark
+- Remaining fields that need external official-source review before writeback:
+  - Runway: policy.commercialUse, policy.usageRights, policy.exportLimits
+  - InVideo: policy.usageRights
+  - Elai: policy.commercialUse, policy.usageRights
+  - Synthesys: policy.commercialUse, policy.usageRights, policy.watermark
+  - Pictory: policy.commercialUse, policy.usageRights
+- Source rule: third-party reviews can support market context, but must not be treated as official policy sources for commercial use, usage rights, watermark, or export-limit conclusions.
+
+## Completed Phase 2 scope
+- Feature hub now exposes all 15 feature routes through weighted route groups.
+- Business/procurement lane is visible from `/features`.
+- Feature detail pages build recommended reading through promote-safe filtering.
+- Feature templates receive `promoteSafeFeatureHrefs` and sanitize hardcoded feature exits through the shared helper.
+
+## Current scope boundary
+- Do not redo broad feature IA or feature-template filtering unless a concrete regression is found.
 - Do not add new pages
-- Do not fully gate browse directories yet
+- Do not run a broad UI redesign
 - Reuse the existing readiness registry and filtering logic wherever possible
 
 ## Acceptance standard for the next task
-- No hardcoded feature cross-links should bypass readiness in ready surfaces
-- Feature templates should use shared filtering, not ad hoc logic
-- Build / typecheck should pass
-- Relevant audit/report should be updated
+- Keep changes inside the owning production line
+- Do not restart Phase 2 work that is already complete
+- Relevant audit/report should be updated when status assumptions change
 - Output should clearly state:
   - changed files
-  - what feature exits were tightened
+  - whether the task is audit, content, or code
   - what remains as risk
   - test results
   - next recommended task
@@ -159,14 +182,12 @@ Ask Codex to:
    - docs/decision-log.md
    - reports/readiness-report.md
    - reports/readiness-report.json
-   - reports/seo-audit.md
-   - PLAN-20260319.md
-   - strategy_report-20260319.md
-2. scan the codebase for readiness / feature linking / recommendation surface logic
+   - reports/seo-audit-current.md
+2. scan the codebase for the specific production line involved in the requested task
 3. first output:
    - current project stage
    - summary of completed work
-   - Phase 2 scope boundary
+   - current scope boundary
    - files it expects to modify
    - test / acceptance plan
 4. wait for confirmation before editing code

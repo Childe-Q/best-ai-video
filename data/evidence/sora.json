@@ -4,9 +4,34 @@
   "sources": {
     "pricing": "https://platform.openai.com/docs/pricing",
     "features": "https://openai.com/sora/",
-    "docs": "https://platform.openai.com/docs/sora"
+    "docs": "https://platform.openai.com/docs/sora",
+    "discontinuation": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation"
   },
   "nuggets": [
+    {
+      "text": "OpenAI Help Center says the Sora web and app experiences were discontinued on April 26, 2026.",
+      "theme": "general",
+      "sourceUrl": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation",
+      "sourceType": "discontinuation",
+      "capturedAt": "2026-05-07T00:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "OpenAI Help Center says the Sora API will be discontinued on September 24, 2026.",
+      "theme": "general",
+      "sourceUrl": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation",
+      "sourceType": "discontinuation",
+      "capturedAt": "2026-05-07T00:00:00+08:00",
+      "confidence": "high"
+    },
+    {
+      "text": "OpenAI recommends users export Sora content as soon as possible.",
+      "theme": "general",
+      "sourceUrl": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation",
+      "sourceType": "discontinuation",
+      "capturedAt": "2026-05-07T00:00:00+08:00",
+      "confidence": "high"
+    },
     {
       "text": "The official Sora page says you can start from a prompt or upload an image to create videos.",
       "theme": "workflow",

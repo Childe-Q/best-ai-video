@@ -21,7 +21,7 @@
   "howToChooseSeeds": [
     {
       "title": "Choose the lane before you compare the brand.",
-      "desc": "Cinematic prompt-led generation (Sora, Runway), avatar-led communication (Synthesia, HeyGen, Elai.io), and effects-first social creation (Pika) are different product categories. Start by deciding which job you are paying for, or every later comparison will be noisy."
+      "desc": "Cinematic prompt-led generation (Runway), avatar-led communication (Synthesia, HeyGen, Elai.io), and effects-first social creation (Pika) are different product categories. Sora is now a discontinued historical benchmark, not an active shortlist pick."
     },
     {
       "title": "Price the tool by usable output, not advertised plan.",
@@ -42,7 +42,6 @@
       "title": "Cinematic generation",
       "rule": "These tools are for prompt-first scene generation: cinematic B-roll, product visuals, and short clips where shot style matters more than presenter format. Choose this route if the core job is creating new footage, not delivering a speaking avatar or clipping existing source material.",
       "toolSlugs": [
-        "sora",
         "runway"
       ]
     },
@@ -69,11 +68,11 @@
     {
       "name": "Sora",
       "slug": "sora",
-      "verdictSeed": "Photorealistic text-to-video generation. Produces 15-second clips (up to 25s in Pro storyboard mode) with strong audio-visual quality.",
-      "pricingSeed": "From $20/mo",
-      "policySeed": "Free outputs include watermarks",
-      "bestForSeed": "Photorealistic cinematic clips and B-roll",
-      "mainLimitationSeed": "Commercial use typically requires a paid subscription",
+      "verdictSeed": "Discontinued historical benchmark for photorealistic text-to-video generation. OpenAI discontinued the web and app experiences on April 26, 2026.",
+      "pricingSeed": "Discontinued",
+      "policySeed": "Use this only for shutdown context and replacement routing; do not treat legacy Sora pricing as current.",
+      "bestForSeed": "Historical Sora context and replacement research",
+      "mainLimitationSeed": "Not available as an active web/app shortlist pick; API discontinuation is scheduled for September 24, 2026",
       "officialUrl": "https://openai.com/sora",
       "hasReviewPage": true,
       "reviewUrl": "/tool/sora",
@@ -83,7 +82,9 @@
         "https://platform.openai.com/docs/pricing",
         "https://platform.openai.com/docs/sora"
       ],
-      "flags": []
+      "flags": [
+        "discontinued"
+      ]
     },
     {
       "name": "Synthesia",
@@ -185,7 +186,6 @@
   ],
   "relatedLinks": {
     "reviewSlugs": [
-      "sora",
       "synthesia",
       "pika",
       "heygen",
@@ -193,13 +193,11 @@
       "elai-io"
     ],
     "alternativesSlugs": [
-      "sora",
       "synthesia",
       "pika",
       "elai-io"
     ],
     "vsSlugs": [
-      "runway-vs-sora",
       "heygen-vs-synthesia"
     ],
     "guideSlugs": [
@@ -226,9 +224,8 @@
     },
     {
       "question": "Which tools already have internal review coverage?",
-      "answerSeed": "Current internal review coverage in this normalized dataset: sora, synthesia, pika, heygen, runway, elai-io.",
+      "answerSeed": "Current active internal review coverage in this normalized dataset: synthesia, pika, heygen, runway, elai-io. Sora is retained only as a discontinued historical reference.",
       "sourceToolSlugs": [
-        "sora",
         "synthesia",
         "pika",
         "heygen",

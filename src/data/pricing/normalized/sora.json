@@ -11,14 +11,15 @@
   },
   "verification": "unverified",
   "status": "pricing-not-verified",
-  "coarseDisplayText": "Pricing not verified",
+  "coarseDisplayText": "Discontinued",
   "hasFreePlan": null,
   "hasFreeTrial": null,
   "hasSelfServePaid": null,
   "hasEnterprise": null,
   "hasInteractivePricing": true,
   "interactiveReasons": [
-    "official source in this repo points to API unit pricing rather than a clear Sora self-serve plan page"
+    "official source in this repo points to API unit pricing rather than a clear Sora self-serve plan page",
+    "OpenAI Help Center says Sora web and app experiences were discontinued on 2026-04-26 and the Sora API will be discontinued on 2026-09-24"
   ],
   "plans": [],
   "verifiedStartingPrice": {
@@ -33,6 +34,7 @@
     "The cached official source is OpenAI pricing docs rather than a simple Sora subscription/pricing page.",
     "Captured dollar amounts appear to be API or unit pricing, so they are not normalized into a public exact tool price candidate.",
     "Manual review should confirm whether Sora should be represented with consumer pricing, API pricing, or no public price.",
+    "As of 2026-05-07, Sora should not be represented as a live pricing exposure; keep the pricing route noindex and route users toward alternatives.",
     "Candidate result only. Do not replace existing frontend pricing or exact-price display without manual review."
   ]
 }

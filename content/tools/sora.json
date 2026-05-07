@@ -1,9 +1,9 @@
 {
   "overview": {
     "tldr": {
-      "bestFor": "Teams and creators who want flagship model-led video generation, prompt-or-image starting points, and stronger realism than template-first tools usually deliver",
-      "notFor": "Buyers who need a free plan, a built-in editor-first workflow, or low-cost high-volume experimentation with predictable spend",
-      "why": "Sora is strongest when the buying question is output realism, style range, and direct generation capability. The official product and pricing material point to a generation-first workflow with paid access and per-second video costs, not a lightweight editor or cheap volume engine."
+      "bestFor": "Readers researching Sora's shutdown, export guidance, API sunset timing, and active alternatives after the web and app experience was discontinued",
+      "notFor": "Buyers building a fresh active shortlist; Sora should now be treated as a historical benchmark rather than a selectable production tool",
+      "why": "OpenAI discontinued the Sora web and app experiences on April 26, 2026, and says the Sora API will be discontinued on September 24, 2026. Keep this page for status context and replacement routing, not as a normal buying recommendation."
     },
     "miniTest": {
       "prompt": "Generate a 10-15 second product teaser with one clear subject, one camera move, one environmental detail, synced sound, and one clean ending frame. Keep the scene realistic and avoid on-screen text.",
@@ -14,7 +14,7 @@
         },
         {
           "label": "Access model",
-          "value": "Confirm whether the team is buying Sora as premium model access rather than as a cheap daily production tool"
+          "value": "Confirm whether you need historical Sora context or an active replacement tool"
         },
         {
           "label": "Prompt adherence",
@@ -34,86 +34,86 @@
         },
         {
           "label": "Cost posture",
-          "value": "Compare whether per-second video pricing and premium access fit the team's generation volume"
+          "value": "Do not treat legacy Sora pricing as a current plan path; move to alternatives for active choices"
         }
       ],
-      "verdict": "Result: strongest when the buying question is model quality, realism, and direct generation range. The trade-off is that Sora is less editor-centric than Runway and less cost-friendly than simpler publishing tools."
+      "verdict": "Result: use Sora only as a historical quality benchmark and shutdown reference. For current production, compare alternatives such as Runway, Pika, InVideo, or other active text-to-video tools."
     },
     "useCases": [
       {
-        "title": "Flagship model benchmark",
-        "why": "Sora is a strong benchmark when the team wants to compare pure generation quality, realism, and style flexibility against other flagship models.",
+        "title": "Historical model benchmark",
+        "why": "Sora remains useful as a historical benchmark for realism and model-led generation, but it should not be treated as an active product shortlist pick.",
         "linkHref": "/vs/runway-vs-sora",
         "linkText": "Compare with Runway →"
       },
       {
-        "title": "Prototype footage",
-        "why": "Useful for early-stage concept videos and visual prototyping where realistic motion, sound, and output quality matter more than template workflows.",
+        "title": "Replacement shortlist",
+        "why": "Use active alternatives when the work still requires text-to-video generation, cinematic prototyping, or publishable creative output after Sora's shutdown.",
         "linkHref": "/features/text-to-video-ai-tools",
         "linkText": "See text-to-video guide →"
       },
       {
-        "title": "Premium generation access",
-        "why": "Best fit when the buyer is comfortable paying for a flagship video model and managing generation cost more like premium compute than like a social editor subscription.",
-        "linkHref": "/tool/sora/pricing",
-        "linkText": "Check pricing →"
+        "title": "Export and API sunset check",
+        "why": "OpenAI advises users to export Sora content as soon as possible, and the API is scheduled to be discontinued on September 24, 2026.",
+        "linkHref": "/tool/sora/alternatives",
+        "linkText": "Compare replacements →"
       }
     ]
   },
   "features": {
     "keyFeatures": [
-      "Prompt-to-video and image-to-video generation from the official Sora app experience",
+      "Historical prompt-to-video and image-to-video generation from the former Sora app experience",
       "Style range that explicitly spans cinematic, animated, photorealistic, and surreal outputs",
       "Automatic inclusion of music, sound effects, and dialogue in generated scenes",
       "Characters workflow for casting yourself or teammates in videos with explicit usage control",
-      "Generation-first workflow with paid access and per-second video pricing rather than a built-in editor-heavy stack"
+      "Shutdown status: web and app discontinued on April 26, 2026, with API discontinuation scheduled for September 24, 2026"
     ]
   },
   "pros": [
-    "Strong credibility as a flagship model benchmark for text-to-video quality",
-    "Clear fit for teams prioritizing realism, style range, and direct generation capability",
-    "Supports prompt and image starting points instead of forcing one workflow",
-    "Official product positioning includes sound and character workflows, not just silent clip generation"
+    "Still useful as a historical benchmark for text-to-video quality",
+    "Clear shutdown dates are now available from OpenAI Help Center",
+    "Useful as a routing page for Sora users who need active replacements",
+    "Preserves context for comparisons against current cinematic generation tools"
   ],
   "cons": [
-    "No free entry point for lightweight testing",
-    "Less appealing if the team needs a full editing workflow in the same tool",
-    "Video output cost can rise quickly because pricing is published per second rather than as a flat creator plan",
-    "Best fit is narrower when the workflow is primarily templated publishing or low-cost batch output"
+    "The Sora web and app experiences have been discontinued",
+    "The Sora API is scheduled to be discontinued on September 24, 2026",
+    "Legacy pricing should not be treated as a current buying path",
+    "Teams need active alternatives for new production work"
   ],
   "reviews": {
     "verdict": {
-      "bottomLine": "Sora is a strong flagship choice when the team cares most about model quality, realism, and premium generation capability. It is a weaker fit when the workflow needs built-in editing depth, cheap experimentation, or a simpler publishing stack.",
+      "bottomLine": "Sora is now a discontinued historical reference, not a current production choice. Use this page to understand the shutdown timeline and move into alternatives for active production tools.",
       "bestFor": [
-        "Flagship text-to-video generation",
-        "Prototype footage",
-        "High-quality concept creative"
+        "Sora shutdown context",
+        "Historical text-to-video comparison",
+        "Finding active replacements"
       ]
     },
     "faqs": [
       {
         "question": "Who is Sora best for?",
-        "answer": "Sora is best for teams and creators who want flagship prompt-to-video quality and are comfortable paying for premium model access instead of starting from a free creator plan."
+        "answer": "Sora is now best treated as a historical reference for readers checking the shutdown timeline, export guidance, API sunset timing, and replacement options."
       },
       {
-        "question": "What does OpenAI's pricing page say about Sora costs?",
-        "answer": "The current pricing docs publish Sora video rates per second: sora-2 at $0.10 per second for 720p output, sora-2-pro at $0.30 per second for 720p, and sora-2-pro at $0.50 per second for higher-resolution output."
+        "question": "Is Sora still an active web or app product?",
+        "answer": "No. OpenAI Help Center says the Sora web and app experiences were discontinued on April 26, 2026."
       },
       {
-        "question": "What is the main trade-off with Sora?",
-        "answer": "The main trade-off is that Sora behaves more like premium generation infrastructure than like an all-in-one editor. You get stronger model-driven output, but you also accept higher cost sensitivity and less editing depth."
+        "question": "What is the Sora API sunset date?",
+        "answer": "OpenAI Help Center says the Sora API will be discontinued on September 24, 2026."
       },
       {
-        "question": "What does the official Sora product page emphasize besides raw generation?",
-        "answer": "The product page explicitly highlights prompt-or-image starts, style flexibility, character casting, remix workflows, and automatic music, sound effects, and dialogue."
+        "question": "What should existing Sora users do?",
+        "answer": "OpenAI recommends exporting Sora content as soon as possible. Use the official Help Center article for the current export path and support details."
       },
       {
         "question": "How does Sora differ from Runway?",
-        "answer": "Sora is more generation-first, while Runway is stronger when the team wants a studio-style workflow with more editing control around the generated footage."
+        "answer": "The comparison is now historical. Runway remains an active studio-style generation workflow, while Sora is a discontinued benchmark and replacement-intent page."
       },
       {
         "question": "When should a buyer skip Sora?",
-        "answer": "Skip Sora when the priority is low-cost testing, a free plan, or a workflow centered on editing and templated publishing rather than pure generation quality."
+        "answer": "Skip Sora for any new active buying decision. Use alternatives if you need a current text-to-video or cinematic generation workflow."
       }
     ]
   },
@@ -132,6 +132,11 @@
       "type": "OFFICIAL_PRICING",
       "howToVerify": "Check the current official pricing documentation for per-second Sora video costs and resolution tiers",
       "suggestedQuery": "site:platform.openai.com/docs/pricing Sora video per second pricing"
+    },
+    "help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation": {
+      "type": "OFFICIAL_HELP_CENTER",
+      "howToVerify": "Check OpenAI Help Center for the Sora web/app discontinuation date, API sunset date, and export guidance",
+      "suggestedQuery": "site:help.openai.com Sora discontinuation April 26 2026 September 24 2026"
     }
   },
   "related": {

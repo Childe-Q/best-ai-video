@@ -20,11 +20,11 @@
   "howToChooseSeeds": [
     {
       "title": "Start with your production goal: social speed or cinematic fidelity.",
-      "desc": "If you need fast social clips at volume, prioritize Kling 3.0 (native 4K at 60fps with the cheapest API cost) or Pika (beginner-friendly with a free tier). If you need photorealistic, physics-aware B-roll, prioritize Sora (longest native clip at 25 seconds) or Runway (exceptional motion quality)."
+      "desc": "If you need fast social clips at volume, prioritize Kling 3.0 or Pika. If you need photorealistic B-roll from an active tool, prioritize Runway first; Sora is now a discontinued historical benchmark."
     },
     {
       "title": "Check native resolution before committing.",
-      "desc": "Not all models generate in 4K. Kling 3.0 offers native 4K (3840×2160) at 60fps. Veo 3.1 supports 1080p to 4K. Sora and Seedance max out at 1080p / 2K for base generations. Resolution requirements should narrow your shortlist early."
+      "desc": "Not all models generate in 4K. Kling 3.0 offers native 4K (3840×2160) at 60fps. Veo 3.1 supports 1080p to 4K. Treat discontinued Sora resolution claims as historical context, not a current shortlist filter."
     },
     {
       "title": "Compare multimodal input support if character consistency matters.",
@@ -32,7 +32,7 @@
     },
     {
       "title": "Evaluate API cost per second if building an integration.",
-      "desc": "API pricing varies dramatically. Kling is currently the cheapest at roughly $0.029/sec. Veo costs $0.15/sec (fast mode). Sora ranges from $0.10–0.50/sec. For app builders generating at volume, this difference compounds quickly."
+      "desc": "API pricing varies dramatically. Kling is currently the cheapest at roughly $0.029/sec, while Veo costs $0.15/sec in fast mode. Sora legacy API prices should not be treated as a durable buying path because the API is scheduled to be discontinued on September 24, 2026."
     }
   ],
   "groups": [
@@ -41,7 +41,6 @@
       "title": "Frontier models",
       "rule": "These are higher-end or closed model systems positioned around maximum fidelity, novel input modes, or cutting-edge capabilities. They represent the current technical frontier of AI video generation — physics-aware rendering, multimodal input, and native audio sync — though they may have limited access or higher cost.",
       "toolSlugs": [
-        "sora",
         "veo",
         "seedance"
       ]
@@ -82,11 +81,11 @@
     {
       "name": "Sora",
       "slug": "sora",
-      "verdictSeed": "Photorealistic text-to-video with physics-aware generation. Longest native clip duration at 25 seconds. Includes a storyboard timeline editor.",
-      "pricingSeed": "Requires ChatGPT Plus ($20/mo); API: ~$0.10–0.50/sec",
-      "policySeed": "High-resolution Sora output is priced per second, making it a premium generation path rather than a low-cost batch workflow.",
-      "bestForSeed": "Cinematic realism and physics simulation",
-      "mainLimitationSeed": "No native audio generation; no free tier",
+      "verdictSeed": "Discontinued historical benchmark for photorealistic text-to-video. OpenAI discontinued the Sora web and app experiences on April 26, 2026.",
+      "pricingSeed": "Discontinued",
+      "policySeed": "Legacy Sora API pricing should not be used as a current buying signal because the API is scheduled to be discontinued on September 24, 2026.",
+      "bestForSeed": "Historical Sora context and replacement research",
+      "mainLimitationSeed": "Not an active selectable web/app tool",
       "officialUrl": "https://openai.com/sora",
       "hasReviewPage": true,
       "reviewUrl": "/tool/sora",
@@ -96,7 +95,9 @@
         "https://platform.openai.com/docs/pricing",
         "https://platform.openai.com/docs/sora"
       ],
-      "flags": []
+      "flags": [
+        "discontinued"
+      ]
     },
     {
       "name": "Veo 3.1",
@@ -181,12 +182,10 @@
   ],
   "relatedLinks": {
     "reviewSlugs": [
-      "sora",
       "runway",
       "pika"
     ],
     "alternativesSlugs": [
-      "sora",
       "runway",
       "pika"
     ],
@@ -201,14 +200,13 @@
     },
     {
       "question": "What should readers compare first on this page?",
-      "answerSeed": "Define Your Production Needs: Are you creating fast social clips (prioritize Kling or Luma) or cinematic, story-driven B-roll (prioritize Sora or Runway)? Check Native Resolutions: Not all models generate in 4K. Kling 3.0 offers native 4K at 60fps, while Sora and Veo generally max out at 1080p for base generations.",
+      "answerSeed": "Define your production needs: are you creating fast social clips or cinematic, story-driven B-roll? Use Runway as the active cinematic review route here, and treat Sora as a discontinued historical benchmark rather than a current selection.",
       "sourceToolSlugs": []
     },
     {
       "question": "Which tools already have internal review coverage?",
-      "answerSeed": "Current internal review coverage in this normalized dataset: sora, runway, pika.",
+      "answerSeed": "Current active internal review coverage in this normalized dataset: runway, pika. Sora is retained only as a discontinued historical reference.",
       "sourceToolSlugs": [
-        "sora",
         "runway",
         "pika"
       ]

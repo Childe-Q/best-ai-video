@@ -18,7 +18,7 @@
   "howToChooseSeeds": [
     {
       "title": "Understand the speed-quality tradeoff.",
-      "desc": "The fastest generators (Luma Dream Machine, Pika) may sacrifice some of the cinematic fidelity found in slower models like Sora. If visual polish matters more than turnaround, a speed-first tool may not be the right fit."
+      "desc": "The fastest generators (Luma Dream Machine, Pika) may sacrifice some of the cinematic fidelity associated with slower historical benchmarks like Sora. If visual polish matters more than turnaround, a speed-first tool may not be the right fit."
     },
     {
       "title": "Check what \"fast\" actually means on your plan tier.",
@@ -125,7 +125,7 @@
     },
     {
       "question": "What should readers compare first on this page?",
-      "answerSeed": "Speed vs. Quality Tradeoff: The absolute fastest generators (like Luma or Pika) may sometimes sacrifice the strict cinematic fidelity seen in slower models (like Sora). Evaluate Priority Queues: Free tiers often place you in slow queues during peak hours. Check if upgrading to a paid tier guarantees 'Fast Mode' generations.",
+      "answerSeed": "Speed vs. Quality Tradeoff: the absolute fastest generators, such as Luma or Pika, may sometimes sacrifice the strict cinematic fidelity associated with slower historical benchmarks like Sora. Evaluate priority queues: free tiers often place you in slow queues during peak hours. Check if upgrading to a paid tier guarantees fast-mode generations.",
       "sourceToolSlugs": []
     },
     {

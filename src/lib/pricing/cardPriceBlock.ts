@@ -13,6 +13,7 @@ import {
   isExplicitContactSalesPlan,
   isExplicitFreePlan,
 } from '@/lib/pricing/display';
+import { isToolDiscontinued } from '@/lib/toolStatus';
 
 const NORMALIZED_CARD_PRICE_SLUGS = new Set([
   'colossyan',
@@ -76,6 +77,8 @@ function buildBlock(params: {
       ? 'Free'
       : priceState === 'custom'
         ? 'Custom pricing'
+        : priceState === 'discontinued'
+          ? 'Discontinued'
         : priceState === 'unverified'
           ? 'Pricing unverified'
           : 'Paid';
@@ -86,9 +89,15 @@ function buildBlock(params: {
       ? 'Free'
       : priceState === 'custom'
         ? 'Custom pricing'
+        : priceState === 'discontinued'
+          ? 'Discontinued'
         : 'See pricing');
 
-  const canShowHelper = priceState === 'paid-exact' || priceState === 'free' || priceState === 'paid-coarse';
+  const canShowHelper =
+    priceState === 'paid-exact' ||
+    priceState === 'free' ||
+    priceState === 'paid-coarse' ||
+    priceState === 'discontinued';
 
   return {
     priceState,
@@ -416,6 +425,17 @@ function buildCategorySafeBlock(params: {
 }
 
 export function getHomeCardPriceBlock(tool: Tool): CardPriceBlock {
+  if (isToolDiscontinued(tool.slug)) {
+    return buildBlock({
+      priceState: 'discontinued',
+      pricePrimary: 'Discontinued',
+      priceHelper: 'See alternatives',
+      priceSourceKind: 'normalized',
+      priceConfidence: 'verified',
+      priceHintKind: 'none',
+    });
+  }
+
   const canonicalExactCandidate = getCanonicalExactPriceCandidate(tool);
   if (canonicalExactCandidate) {
     return buildBlock({

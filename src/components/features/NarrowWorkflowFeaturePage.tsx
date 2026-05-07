@@ -193,7 +193,7 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
       {
         question: 'Which tools make the most sense for flagship scenes versus lighter experiments?',
         answer:
-          'Start with Sora or Runway when scene quality and control matter most. Start with Kling when you care more about faster, high-energy output and want a lighter entry point for experiments.',
+          'Start with Runway when scene quality and control matter most. Treat Sora as a discontinued historical benchmark, and start with Kling when you care more about faster, high-energy output and want a lighter entry point for experiments.',
       },
     ],
   },

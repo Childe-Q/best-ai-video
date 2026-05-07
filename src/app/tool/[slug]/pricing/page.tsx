@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import { getAllTools, getToolBySlug } from '@/lib/toolData';
 import ToolPricingTemplate from '@/components/pricing/ToolPricingTemplate';
 import CapturedPricingPage from '@/components/pricing/CapturedPricingPage';
@@ -14,6 +15,7 @@ import { getCanonicalPricingPageOverride } from '@/lib/pricing/canonicalPricingA
 import { getProductizedPricingPageOverride } from '@/lib/pricing/productPageOverrides';
 import { buildCollectionPageJsonLd } from '@/lib/jsonLd';
 import { getPricingPageExposure } from '@/lib/pricing/indexability';
+import { getToolLifecycleStatus } from '@/lib/toolStatus';
 
 // Helper function to get last updated date (use current date for now)
 function getLastUpdatedDate(): string {
@@ -33,10 +35,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const seoYear = getSEOCurrentYear();
   const pricingExposure = getPricingPageExposure(slug, tool);
+  const lifecycleStatus = getToolLifecycleStatus(slug);
 
   return {
-    title: `${tool.name} Plans & Pricing ${seoYear}`,
-    description: `Choose a plan that fits best for ${tool.name}. Compare pricing, features, and find the perfect plan for your needs.`,
+    title: lifecycleStatus ? `${tool.name} Pricing After Shutdown ${seoYear}` : `${tool.name} Plans & Pricing ${seoYear}`,
+    description: lifecycleStatus
+      ? `${tool.name} is discontinued. This pricing page is noindexed and preserved only for shutdown context and alternatives routing.`
+      : `Choose a plan that fits best for ${tool.name}. Compare pricing, features, and find the perfect plan for your needs.`,
     alternates: {
       canonical: `/tool/${slug}/pricing`,
     },
@@ -61,6 +66,55 @@ export default async function PricingPage({ params }: { params: Promise<{ slug: 
   if (!tool) notFound();
 
   const pricingExposure = getPricingPageExposure(slug, tool);
+  const lifecycleStatus = getToolLifecycleStatus(slug);
+
+  if (lifecycleStatus) {
+    return (
+      <section className="w-full bg-slate-50 py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-3xl border border-amber-200 bg-white p-8 shadow-sm sm:p-10">
+            <p className="text-[11px] font-black uppercase tracking-[0.16em] text-amber-700">Noindex pricing archive</p>
+            <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-gray-900">
+              {tool.name} pricing is no longer a live buying path
+            </h1>
+            <p className="mt-4 max-w-3xl text-sm leading-7 text-gray-700">{lifecycleStatus.summary}</p>
+            <p className="mt-3 max-w-3xl text-sm leading-7 text-gray-700">
+              The web and app experience has already shut down, and the API sunset is scheduled for September 24, 2026.
+              This page stays noindex so legacy pricing does not appear as a current recommendation.
+            </p>
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              <Link
+                href={lifecycleStatus.replacementHref}
+                className="rounded-xl border border-slate-200 bg-slate-50 p-5 no-underline transition-all hover:border-indigo-300 hover:bg-indigo-50"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Replacement set</p>
+                <h2 className="mt-2 text-lg font-bold text-slate-900">Compare Sora alternatives</h2>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Use active tools instead of legacy Sora pricing.</p>
+              </Link>
+              <Link
+                href={`/tool/${slug}`}
+                className="rounded-xl border border-slate-200 bg-slate-50 p-5 no-underline transition-all hover:border-indigo-300 hover:bg-indigo-50"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Status context</p>
+                <h2 className="mt-2 text-lg font-bold text-slate-900">Read the shutdown note</h2>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Review the discontinued status and API timeline.</p>
+              </Link>
+              <a
+                href={lifecycleStatus.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl border border-slate-200 bg-slate-50 p-5 no-underline transition-all hover:border-indigo-300 hover:bg-indigo-50"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Official source</p>
+                <h2 className="mt-2 text-lg font-bold text-slate-900">OpenAI Help Center</h2>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Confirm export guidance and sunset dates.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   const canonicalPricingOverride = getCanonicalPricingPageOverride(slug, tool);
   const pricingPageOverride = canonicalPricingOverride ?? getProductizedPricingPageOverride(slug, tool);

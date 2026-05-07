@@ -3,6 +3,7 @@ import { getToolPricingSummary } from '@/lib/pricing/display';
 import { getCanonicalPricingPageOverride } from '@/lib/pricing/canonicalPricingAdapter';
 import { getProofPricingPageData } from '@/lib/pricing/proofPages';
 import { getProductizedPricingPageOverride } from '@/lib/pricing/productPageOverrides';
+import { isToolDiscontinued } from '@/lib/toolStatus';
 import type { Tool } from '@/types/tool';
 
 export type PricingPageExposure = {
@@ -12,6 +13,14 @@ export type PricingPageExposure = {
 };
 
 export function getPricingPageExposure(slug: string, tool: Tool): PricingPageExposure {
+  if (isToolDiscontinued(slug)) {
+    return {
+      indexable: false,
+      verification: 'unverified',
+      source: 'summary',
+    };
+  }
+
   const canonicalPricingOverride = getCanonicalPricingPageOverride(slug, tool);
   const pricingPageOverride = canonicalPricingOverride ?? getProductizedPricingPageOverride(slug, tool);
 

@@ -6,6 +6,7 @@ import EditorialScoreSimple from './EditorialScoreSimple';
 import { EXTERNAL_TOOL_TAGS } from '@/data/externalToolTags';
 import { getEditorialHomeTags } from '@/data/home/editorialTags';
 import { getHomeCardPriceBlock } from '@/lib/pricing/cardPriceBlock';
+import { getToolLifecycleStatus } from '@/lib/toolStatus';
 
 interface ToolCardProps {
   tool: Tool;
@@ -36,7 +37,10 @@ function isCoreTag(label: string): boolean {
 export default function ToolCard({ tool }: ToolCardProps) {
   const priceBlock = getHomeCardPriceBlock(tool);
   const homeTags = getHomeTags(tool);
-  const pricingHref = `/tool/${tool.slug}/pricing`;
+  const lifecycleStatus = getToolLifecycleStatus(tool.slug);
+  const pricingHref = lifecycleStatus?.replacementHref ?? `/tool/${tool.slug}/pricing`;
+  const visitHref = lifecycleStatus?.replacementHref ?? tool.affiliate_link ?? '#';
+  const visitLabel = lifecycleStatus ? 'Alternatives' : 'Visit site';
 
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-black/10 bg-white px-5 py-5 transition-all duration-200 ease-out hover:-translate-y-1 hover:border-black/16 hover:bg-[#FFFEFB] hover:shadow-[0_16px_34px_rgba(0,0,0,0.06)]">
@@ -113,12 +117,12 @@ export default function ToolCard({ tool }: ToolCardProps) {
               <span className="ml-1.5 transition-transform duration-200 group-hover/link:translate-x-0.5">→</span>
             </Link>
             <Link
-              href={tool.affiliate_link || '#'}
-              target="_blank"
-              rel="noopener noreferrer nofollow"
+              href={visitHref}
+              target={lifecycleStatus ? undefined : '_blank'}
+              rel={lifecycleStatus ? undefined : 'noopener noreferrer nofollow'}
               className="inline-flex items-center rounded-full border border-black/10 bg-[#FAF8F2] px-3 py-2 text-xs font-semibold text-black/75 no-underline transition-all duration-200 hover:-translate-y-0.5 hover:border-black/16 hover:bg-[#F6D200] hover:text-black"
             >
-              Visit site
+              {visitLabel}
             </Link>
           </div>
         </div>

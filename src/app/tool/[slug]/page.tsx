@@ -14,6 +14,7 @@ import EditorialSummary from '@/components/tool/EditorialSummary';
 import EvidenceNotes from '@/components/tool/EvidenceNotes';
 import EvidenceNuggets from '@/components/tool/EvidenceNuggets';
 import { buildSoftwareApplicationJsonLd } from '@/lib/jsonLd';
+import { getToolLifecycleStatus } from '@/lib/toolStatus';
 
 const editorialSummaries: Record<
   string,
@@ -58,6 +59,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const seoYear = getSEOCurrentYear();
   const tools = getAllTools();
+  const lifecycleStatus = getToolLifecycleStatus(slug);
+
+  if (lifecycleStatus) {
+    return {
+      title: `${tool.name} Discontinued Status, Shutdown Timeline & Alternatives (${seoYear})`,
+      description: `${tool.name} is no longer an active selectable tool. Review the shutdown timeline, export note, API sunset date, and replacement options.`,
+      alternates: {
+        canonical: `/tool/${slug}`,
+      },
+    };
+  }
 
   return {
     title: `${tool.name} Review, Pricing & Best Alternatives (${seoYear})`,
@@ -89,6 +101,7 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
   const alternativesLink = await getAlternativesLink(slug);
   const workflowLink = getMostRelevantWorkflowLink(slug);
   const editorialSummary = editorialSummaries[slug];
+  const lifecycleStatus = getToolLifecycleStatus(slug);
 
   return (
     <>
@@ -132,6 +145,37 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
             />
           )}
 
+          {lifecycleStatus ? (
+            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
+              <p className="text-[11px] font-black uppercase tracking-[0.16em] text-amber-700">
+                {lifecycleStatus.label} status
+              </p>
+              <h2 className="mt-2 text-2xl font-bold text-gray-900">Sora is now a historical reference, not an active shortlist pick</h2>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-gray-700">{lifecycleStatus.summary}</p>
+              <p className="mt-2 max-w-3xl text-sm leading-7 text-gray-700">
+                If you still have Sora content, OpenAI recommends exporting it as soon as possible. Use this page for
+                status context, then move to alternatives for active replacement options.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <Link
+                  href={lifecycleStatus.replacementHref}
+                  className="inline-flex items-center rounded-full bg-slate-900 px-4 py-2 text-sm font-bold !text-white no-underline transition-colors hover:bg-slate-800"
+                >
+                  Compare Sora alternatives
+                  <span className="ml-2">→</span>
+                </Link>
+                <a
+                  href={lifecycleStatus.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center rounded-full border border-amber-300 bg-white px-4 py-2 text-sm font-semibold text-amber-800 no-underline transition-colors hover:bg-amber-100"
+                >
+                  OpenAI shutdown notice
+                </a>
+              </div>
+            </div>
+          ) : null}
+
           {editorialSummary ? <EditorialSummary {...editorialSummary} /> : null}
 
           <div className="rounded-2xl border border-slate-200 bg-white p-6">
@@ -165,17 +209,26 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
             <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Next move</p>
             <h2 className="mt-2 text-2xl font-bold text-gray-900">Decide what you need from {tool.name} before you over-read the review</h2>
             <p className="mt-3 max-w-3xl text-sm leading-7 text-gray-600">
-              Use pricing when budget or usage limits decide the purchase. Use alternatives when {tool.name} is close
-              but not quite right. Use a direct compare page only when the shortlist is already down to two.
+              {lifecycleStatus
+                ? `${tool.name} is no longer an active purchase decision. Use the alternatives page for replacements, and use the historical compare page only to understand why buyers now move away from Sora.`
+                : `Use pricing when budget or usage limits decide the purchase. Use alternatives when ${tool.name} is close but not quite right. Use a direct compare page only when the shortlist is already down to two.`}
             </p>
             <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
               <Link
-                href={`/tool/${slug}/pricing`}
+                href={lifecycleStatus ? lifecycleStatus.replacementHref : `/tool/${slug}/pricing`}
                 className="rounded-xl border border-slate-200 bg-slate-50 p-5 transition-all hover:border-indigo-300 hover:bg-indigo-50"
               >
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Budget check</p>
-                <h3 className="mt-2 text-lg font-bold text-slate-900">Review pricing</h3>
-                <p className="mt-2 text-sm leading-6 text-slate-600">See plans, usage limits, and which tier fits the workflow.</p>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                  {lifecycleStatus ? 'Replacement path' : 'Budget check'}
+                </p>
+                <h3 className="mt-2 text-lg font-bold text-slate-900">
+                  {lifecycleStatus ? 'Compare active alternatives' : 'Review pricing'}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  {lifecycleStatus
+                    ? 'Use replacement tools instead of treating discontinued Sora pricing as a live buying path.'
+                    : 'See plans, usage limits, and which tier fits the workflow.'}
+                </p>
               </Link>
               {alternativesLink && (
                 <Link

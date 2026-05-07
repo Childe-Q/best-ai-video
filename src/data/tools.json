@@ -3473,43 +3473,14 @@
     "slug": "sora",
     "name": "Sora",
     "logo_url": "/logos/sora.png",
-    "tagline": "OpenAI's Revolutionary Text-to-Video Model",
-    "short_description": "Generate ultra-realistic videos up to 60 seconds. Cutting-edge AI technology.",
-    "best_for": "Early Adopters & AI Enthusiasts",
+    "tagline": "Discontinued OpenAI Text-to-Video Model",
+    "short_description": "Historical Sora page for shutdown status, API sunset timing, and active alternatives.",
+    "best_for": "Sora Shutdown Research",
     "affiliate_link": "https://openai.com/sora?ref=demo",
-    "pricing_plans": [
-      {
-        "name": "ChatGPT Plus",
-        "price": "$20",
-        "period": "/mo",
-        "description": "Access via ChatGPT Plus",
-        "features": [
-          "Unlimited Sora generations (Beta)",
-          "ChatGPT Plus included",
-          "Beta access",
-          "Standard priority"
-        ],
-        "btn_text": "Get Started",
-        "badge": "⭐ Best Value"
-      },
-      {
-        "name": "Pro",
-        "price": "$200",
-        "period": "/mo",
-        "description": "For professionals",
-        "features": [
-          "Faster access",
-          "Higher limits",
-          "Priority support",
-          "Advanced features"
-        ],
-        "btn_text": "Contact Sales",
-        "badge": "🚀 Power User"
-      }
-    ],
+    "pricing_plans": [],
     "has_free_trial": false,
-    "pricing_model": "Subscription",
-    "starting_price": "$20/mo",
+    "pricing_model": "Discontinued",
+    "starting_price": "Discontinued",
     "rating": 4.8,
     "features": [
       "Text to Video",
@@ -3531,16 +3502,16 @@
       "No free plan",
       "Requires API access"
     ],
-    "review_content": "Sora is OpenAI's groundbreaking text-to-video model that can generate high-quality, realistic videos up to 60 seconds long from simple text prompts. It represents the cutting edge of AI video generation technology.",
-    "long_review": "<p>Sora represents the <strong>next generation of AI video generation</strong>. Developed by OpenAI, it can create highly realistic videos up to 60 seconds long from text prompts, with impressive understanding of physics, lighting, and motion. The quality of generated videos is among the best available, with realistic character movements and scene transitions.</p><p>However, Sora is currently in limited access, primarily available through API or select partnerships. It requires technical knowledge to integrate and doesn't offer a simple web interface like consumer-focused tools. For early adopters and developers, Sora offers unparalleled quality, but it's not yet accessible to the average user.</p>",
+    "review_content": "Sora is now a discontinued OpenAI text-to-video model page on this site. Use it for shutdown status, export guidance, API sunset timing, and replacement research rather than as an active buying recommendation.",
+    "long_review": "<p>Sora is now best treated as a <strong>historical text-to-video benchmark</strong>, not as an active shortlist pick. OpenAI Help Center says the Sora web and app experiences were discontinued on April 26, 2026, and the Sora API will be discontinued on September 24, 2026.</p><p>Keep this page for shutdown context and replacement routing. If you need a current production workflow, move into the Sora alternatives page instead of relying on legacy Sora pricing or availability claims.</p>",
     "faqs": [
       {
         "question": "Is Sora available to the public?",
-        "answer": "Sora is currently in limited access through OpenAI's API. It's not yet available as a standalone consumer product."
+        "answer": "No. OpenAI Help Center says the Sora web and app experiences were discontinued on April 26, 2026."
       },
       {
-        "question": "How long can Sora videos be?",
-        "answer": "Sora can generate videos up to 60 seconds long, which is significantly longer than most other AI video tools."
+        "question": "When is the Sora API discontinued?",
+        "answer": "OpenAI Help Center says the Sora API will be discontinued on September 24, 2026."
       }
     ],
     "output_quality_score": 9.7,

@@ -212,10 +212,24 @@
       "https://elai.io/getting-started-with-api",
       "https://elai.io/security-policy/",
       "https://elai.io/website-privacy-policy/",
-      "https://elai.io/terms-of-service/"
+      "https://elai.io/terms-of-service/",
+      "https://elai.freshdesk.com/support/solutions/articles/73000561775-creator-plan",
+      "https://elai.freshdesk.com/support/solutions/articles/73000561776-team-plan"
     ],
     "safeWriteback": {
       "policy": {
+        "watermark": [
+          {
+            "value": "Elai official help says the Free plan adds a watermark, while Creator removes watermarks on videos.",
+            "sourceUrl": "https://elai.freshdesk.com/support/solutions/articles/73000561775-creator-plan"
+          }
+        ],
+        "exportLimits": [
+          {
+            "value": "Elai official help says Creator renders at 1080p Full HD and Team renders at Ultra 4K HD.",
+            "sourceUrl": "https://elai.freshdesk.com/support/solutions/articles/73000561776-team-plan"
+          }
+        ],
         "refundCancellation": [
           {
             "value": "Elai paid service fees are non-refundable.",
@@ -223,6 +237,12 @@
           }
         ]
       },
+      "mainLimitations": [
+        {
+          "value": "Elai official help says Creator includes 15 video minutes per month, monthly minutes do not roll over, and annual subscriptions provide the full year's minutes upfront.",
+          "sourceUrl": "https://elai.freshdesk.com/support/solutions/articles/73000561775-creator-plan"
+        }
+      ],
       "workflowFeatureDocs": [
         {
           "value": "Elai supports text-to-video with digital avatars in 75+ languages.",
@@ -263,11 +283,8 @@
       }
     },
     "retainedUnresolved": [
-      "policy.watermark",
       "policy.commercialUse",
-      "policy.usageRights",
-      "policy.exportLimits",
-      "mainLimitations"
+      "policy.usageRights"
     ]
   }
 }

@@ -394,14 +394,14 @@ const featurePageOverrides: Partial<Record<string, FeaturePageOverride>> = {
           'Use cinematic generation when the footage itself has to carry the message: B-roll, scenes, product shots, or stylized visuals. Use avatar workflows when the message depends on a speaker, localization, training delivery, or a presenter-led format.',
       },
       {
-        question: 'When should I shortlist Pika instead of Runway or Sora?',
+        question: 'When should I shortlist Pika instead of Runway?',
         answer:
-          'Shortlist Pika when the real goal is fast social iteration and effects-driven clips. Start with Runway or Sora when you care more about cinematic control, higher-end visual output, or a route that can justify a deeper creative workflow.',
+          'Shortlist Pika when the real goal is fast social iteration and effects-driven clips. Start with Runway when you care more about cinematic control, higher-end visual output, or a route that can justify a deeper creative workflow. Treat Sora as historical after shutdown.',
       },
       {
         question: 'When should I leave this page for a narrower guide?',
         answer:
-          'Leave this page once the route is clear. If you already know you need avatars, go narrower into the avatar page and then move into HeyGen vs Synthesia when the shortlist is down to two. If you are already comparing top text-to-video models directly, Runway vs Sora is usually more useful than this broad chooser.',
+          'Leave this page once the route is clear. If you already know you need avatars, go narrower into the avatar page and then move into HeyGen vs Synthesia when the shortlist is down to two. If you are researching Sora, use Runway vs Sora as a historical shutdown comparison rather than an active chooser.',
       },
       {
         question: 'What should I compare first after I pick the right route?',

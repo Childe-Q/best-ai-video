@@ -2213,6 +2213,12 @@
             "sourceUrl": "https://invideo.io/pricing"
           }
         ],
+        "commercialUse": [
+          {
+            "value": "InVideo help says AI-generated videos can be used for commercial purposes as customers see fit, subject to platform policies.",
+            "sourceUrl": "https://help.invideo.io/en/articles/9974482-can-ai-generated-videos-be-monetised"
+          }
+        ],
         "exportLimits": [
           {
             "value": "InVideo free exports include the InVideo logo.",
@@ -2274,7 +2280,6 @@
       }
     },
     "retainedUnresolved": [
-      "policy.commercialUse",
       "policy.usageRights"
     ]
   }

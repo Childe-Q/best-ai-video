@@ -1,5 +1,6 @@
 import { Tool } from '@/types/tool';
 import { isTryNowTool } from './affiliateWhitelist';
+import { isToolDiscontinued } from '@/lib/toolStatus';
 
 /**
  * Circular reference prevention: Tools that should not appear on each other's pages
@@ -84,6 +85,7 @@ export function getTrustedAlternativesPool(
   // 1. Filter candidates: exclude self and circular references
   const candidates = allTools.filter(t => 
     t.slug !== currentSlug && 
+    !isToolDiscontinued(t.slug) &&
     !isBlockedByCircularReference(currentSlug, t.slug)
   );
 

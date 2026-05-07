@@ -152,9 +152,9 @@ const startPaths: StartPath[] = [
       },
       {
         kind: 'vs' as const,
-        slug: 'runway-vs-sora',
-        href: canonicalizeVsHref('/vs/runway-vs-sora'),
-        label: 'Runway vs Sora',
+        slug: 'fliki-vs-invideo',
+        href: canonicalizeVsHref('/vs/fliki-vs-invideo'),
+        label: 'Fliki vs InVideo',
       },
     ],
   },

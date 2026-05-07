@@ -116,12 +116,12 @@ const comparisonPageOverrides: Partial<Record<string, ComparisonPageOverride>> =
   'ai-video-generators-comparison': {
     summaryCards: [
       {
-        eyebrow: 'Best for cinematic realism',
+        eyebrow: 'Historical benchmark',
         title: 'Sora',
-        winner: 'Sora',
-        summary: 'Strongest first check if the comparison starts with physics-aware realism, longer native clips, and scene-first cinematic output.',
+        winner: 'Historical Sora',
+        summary: 'Retained for shutdown context only. OpenAI discontinued the Sora web and app experiences on April 26, 2026.',
         href: '/tool/sora',
-        cta: 'Open review',
+        cta: 'Open status page',
       },
       {
         eyebrow: 'Best for creator workflow',
@@ -151,13 +151,13 @@ const comparisonPageOverrides: Partial<Record<string, ComparisonPageOverride>> =
     ],
     priorityCards: [
       {
-        title: 'Prioritize cinematic realism',
-        winner: 'Sora',
-        compareFirst: 'Realism, clip length, and scene control',
-        summary: 'Start with Sora if the model benchmark is visual fidelity first. Move to Runway if you need a stronger surrounding workflow once the footage quality is close enough.',
-        whenToSkip: 'Skip this lane if what you really need is avatar delivery, daily short-form output, or the cheapest API cost.',
-        href: '/tool/sora',
-        label: 'Open Sora review',
+        title: 'Check historical Sora context',
+        winner: 'Sora alternatives',
+        compareFirst: 'Shutdown status, export needs, and replacement fit',
+        summary: 'Use the Sora page only for shutdown context. Move to alternatives if you need an active cinematic generation workflow.',
+        whenToSkip: 'Skip this lane if you already know you need a current tool; start with Runway, Pika, Kling, or another active option instead.',
+        href: '/tool/sora/alternatives',
+        label: 'Open Sora alternatives',
       },
       {
         title: 'Prioritize creator workflow',
@@ -192,7 +192,7 @@ const comparisonPageOverrides: Partial<Record<string, ComparisonPageOverride>> =
       {
         axis: 'Best fit',
         values: {
-          sora: 'Cinematic realism and longer prompt-based scenes',
+          sora: 'Discontinued historical benchmark',
           veo: 'Developer API workflows with native audio sync',
           seedance: 'Multimodal control and experimental input-heavy generation',
           runway: 'Creative teams that need generation plus workflow tooling',
@@ -203,7 +203,7 @@ const comparisonPageOverrides: Partial<Record<string, ComparisonPageOverride>> =
       {
         axis: 'Cinematic realism',
         values: {
-          sora: 'Strongest headline choice',
+          sora: 'Historical reference only',
           veo: 'Strong, but shorter clips',
           seedance: 'More control-focused than realism-first',
           runway: 'Strong motion quality with workflow advantages',
@@ -236,7 +236,7 @@ const comparisonPageOverrides: Partial<Record<string, ComparisonPageOverride>> =
       {
         axis: 'Pricing / access',
         values: {
-          sora: 'Plus subscription or API pricing',
+          sora: 'Discontinued; API sunset scheduled',
           veo: 'API pricing with limited UI access',
           seedance: 'Free credits, but third-party API path',
           runway: 'Creator-access monthly plans',
@@ -247,7 +247,7 @@ const comparisonPageOverrides: Partial<Record<string, ComparisonPageOverride>> =
       {
         axis: 'Commercial readiness',
         values: {
-          sora: 'Paid path required before serious production use',
+          sora: 'Use alternatives for new production',
           veo: 'Best for teams already comfortable with API workflows',
           seedance: 'Promising, but rougher production posture',
           runway: 'Most practical creator-ready route',
@@ -258,7 +258,7 @@ const comparisonPageOverrides: Partial<Record<string, ComparisonPageOverride>> =
       {
         axis: 'What to watch for',
         values: {
-          sora: 'No free tier and no native audio',
+          sora: 'Web/app discontinued; API sunset scheduled',
           veo: 'Shorter clips and limited preview access',
           seedance: 'Third-party API dependency and rougher access model',
           runway: 'Less of a pure benchmark winner on price',
@@ -270,15 +270,15 @@ const comparisonPageOverrides: Partial<Record<string, ComparisonPageOverride>> =
     faqItems: [
       {
         question: 'Which generator is the strongest for cinematic realism?',
-        answer: 'Start with Sora if realism and scene quality are the headline criteria. Runway is the next practical check when you want strong motion quality but also need a broader creative workflow around the model.',
+        answer: 'For current production, start with Runway or another active alternative. Sora is retained here only as a discontinued historical benchmark after the April 26, 2026 web/app shutdown.',
       },
       {
         question: 'Which one is best for avatar-led video?',
         answer: 'None of the tools on this page are the right first stop if avatar-led delivery is the actual requirement. This page is for direct generator comparison. If a speaker or presenter matters, go back to the broader shortlist and then into the avatar guide.',
       },
       {
-        question: 'When is Pika enough, and when should I move up to Runway or Sora?',
-        answer: 'Pika is enough when fast short-form clips and low-friction social output are the real job. Move up to Runway or Sora when visual quality, scene control, or a more serious production workflow becomes the deciding factor.',
+        question: 'When is Pika enough, and when should I move up to Runway?',
+        answer: 'Pika is enough when fast short-form clips and low-friction social output are the real job. Move up to Runway or another active cinematic workflow when visual quality, scene control, or a more serious production process becomes the deciding factor.',
       },
       {
         question: 'Which tool is the better first choice if pricing matters most?',
@@ -763,9 +763,9 @@ export default function ComparisonFeaturePage({
           </div>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            <Link href="/tool/sora" className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
-              <p className="text-sm font-bold text-gray-900">Already leaning Sora?</p>
-              <p className="mt-2 text-sm leading-6 text-gray-600">Open the review if realism is already winning the decision.</p>
+            <Link href="/tool/sora/alternatives" className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
+              <p className="text-sm font-bold text-gray-900">Researching Sora after shutdown?</p>
+              <p className="mt-2 text-sm leading-6 text-gray-600">Open alternatives if you need an active replacement.</p>
             </Link>
             <Link href="/tool/runway" className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
               <p className="text-sm font-bold text-gray-900">Already leaning Runway?</p>

@@ -106,7 +106,7 @@ const VS_INDEX_DECISION_LINE_OVERRIDES: Record<string, string> = {
   'invideo-vs-pictory':
     'Pick InVideo if the workflow starts from a fresh idea. Pick Pictory if it starts from existing long-form content.',
   'runway-vs-sora':
-    'Pick Runway for a heavier studio-style workflow and cleaner paid publish path. Pick Sora for flagship generation quality and audio-native model output.',
+    'Use this as a historical Sora comparison after shutdown. Pick Runway or another active alternative for new production work.',
   'invideo-vs-veed-io':
     'Pick InVideo to reach a first draft faster. Pick Veed.io when the draft exists and needs cleanup or edits.',
   'invideo-vs-zebracat':
@@ -125,7 +125,7 @@ const VS_INDEX_STARTING_POINT_REASONS: Record<string, string> = {
   'invideo-vs-pictory':
     'Why start here: it is the fastest way to tell whether the job is new-draft creation or repurposing existing long-form content.',
   'runway-vs-sora':
-    'Why start here: it is the clearest first stop when the text-to-video decision is really studio workflow versus flagship model benchmark.',
+    'Why read this now: it explains the historical Runway vs Sora split and points Sora-intent searches toward active replacements after shutdown.',
 };
 
 // Home-page starting points should be explainable, not editorially arbitrary.
@@ -167,10 +167,10 @@ const VS_INDEX_STARTING_POINT_SIGNALS: Record<string, VsStartingPointSignals> = 
     internalLinkPriority: 4,
   },
   'runway-vs-sora': {
-    pairIntentClarity: 5,
+    pairIntentClarity: 2,
     marketFamiliarity: 5,
-    entryPointUsefulness: 5,
-    internalLinkPriority: 5,
+    entryPointUsefulness: 1,
+    internalLinkPriority: 1,
   },
   'invideo-vs-zebracat': {
     pairIntentClarity: 4,

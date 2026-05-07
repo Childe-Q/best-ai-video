@@ -1,62 +1,64 @@
 # Current Technical SEO Audit
 
-Generated from current repository code on 2026-04-22. This document replaces old static conclusions from `reports/seo-audit.md` where code has since changed.
+Updated from current repository code on 2026-05-06. This document replaces old static conclusions from `reports/seo-audit.md` and earlier conclusions in this file where code has since changed.
 
 ## 1. Executive summary
 
 - Core technical SEO is materially stronger than the old audit indicates.
 - The canonical issues previously reported for `/methodology`, `/about`, `/privacy`, `/terms`, and `/vs` are fixed in current code.
-- `robots.ts` and `sitemap.ts` now cover the main public route families, and `llms.txt` now exists in `public/`.
-- Current noindex / sitemap parity is good for:
+- `robots.ts` and `sitemap.ts` cover the main public route families, and `llms.txt` exists in `public/`.
+- Current readiness report shows:
+  - 122 pages checked
+  - 122 promote-safe
+  - 0 excluded
+- Current noindex / sitemap parity is in place for:
   - tool alternatives
   - tool features
   - tool reviews
   - VS detail pages
   - topic alternatives
-- Current data snapshot does not show active thin-page mismatches in those gated families.
-- Remaining technical issues are now narrower:
-  - pricing pages are always indexable and always included in sitemap, even when pricing is unverified
-  - `/pricing-cards` utility routes are indexable by default without canonical or noindex intent
-  - schema coverage is uneven: tool pages are strongest, but hubs, pricing pages, and most static pages still have weak page-level schema
-  - feature pages do not have page-level noindex/sitemap gating, even though readiness logic exists for that family
-
-Static code snapshot used during this audit:
-
-- Feature pages with `needsManualReview=true`: `0`
-- Thin tool features pages: `0`
-- Thin tool reviews pages: `0`
-- Thin tool alternatives pages: `0`
-- Thin topic alternatives pages: `0`
-- VS slugs currently not ready: `7`
-- Tool pricing slugs currently `unverified`: `7`
+  - feature detail pages
+  - pricing pages through pricing exposure
+- `/pricing-cards` utility routes are explicitly noindex.
+- Technical SEO old-report issues that should not remain open:
+  - missing static-page canonicals
+  - missing `/methodology` route
+  - pricing pages always indexable
+  - `/pricing-cards` indexable by default
+  - feature detail pages lacking indexability / sitemap parity
+- Remaining technical work is narrower:
+  - decide Sora pricing exposure
+  - keep schema improvements focused on high-value surfaces if needed
+  - keep reports synchronized with current code after future exposure-rule changes
 
 ## 2. Already fixed
 
 ### Canonical fixes already present
 
-- `/methodology` now has explicit canonical metadata.
-- `/about` now has explicit canonical metadata.
-- `/privacy` now has explicit canonical metadata.
-- `/terms` now has explicit canonical metadata.
-- `/vs` now has explicit canonical metadata.
+- `/methodology` has explicit canonical metadata.
+- `/about` has explicit canonical metadata.
+- `/privacy` has explicit canonical metadata.
+- `/terms` has explicit canonical metadata.
+- `/vs` has explicit canonical metadata.
 
 ### `/methodology` route is live and exposed
 
 - The route exists.
 - It is included in sitemap.
-- Links pointing to `/methodology` should no longer be treated as broken purely from route absence.
+- Links pointing to `/methodology` should not be treated as broken from route absence.
 
-### `llms.txt` now exists
+### `llms.txt` exists
 
 - `public/llms.txt` is present.
 - It is not blocked by `robots.ts`.
-- This closes the earlier “missing root GEO file” gap.
+- This closes the earlier missing root GEO file gap.
 
-### VS canonical redirect logic is in place
+### VS canonical redirect and exposure logic is in place
 
 - Non-canonical VS slugs redirect to the canonical slug.
 - Not-ready VS pages return canonical metadata plus `noindex,follow`.
 - Sitemap includes only ready VS slugs.
+- Current readiness report lists current VS pages as promote-safe.
 
 ### Tool secondary-page noindex/sitemap parity is in place
 
@@ -65,151 +67,146 @@ Static code snapshot used during this audit:
 - Tool reviews pages: page-level `robots` noindex if thin, and sitemap excludes thin pages.
 - Topic alternatives pages: page-level `robots` noindex if thin, and sitemap excludes thin pages.
 
-### Current dataset is not triggering those thin-page gates
+### Feature detail indexability is in place
 
-- In the current code/data snapshot, thin lists for tool alternatives, tool features, tool reviews, and topic alternatives are all empty.
-- This means there is no active live mismatch in those route families right now.
+- `src/lib/features/indexability.ts` defines feature indexability from readable page data, hero, groups, and `meta.needsManualReview`.
+- `src/app/features/[slug]/page.tsx` applies `robots: { index: false, follow: true }` when a feature page is not indexable.
+- `src/app/sitemap.ts` uses `getIndexableFeaturePageSlugs()`, so non-indexable feature states should not remain in sitemap by accident.
+
+### Pricing-page exposure is in place
+
+- `src/lib/pricing/indexability.ts` defines pricing exposure separately from page rendering.
+- `src/app/tool/[slug]/pricing/page.tsx` applies `noindex,follow` when `getPricingPageExposure(...)` is not indexable.
+- `src/app/sitemap.ts` includes `/tool/[slug]/pricing` only when pricing exposure is indexable.
+- Pricing pages with canonical or productized overrides can be indexable even when the older summary fallback is unverified.
+
+### `/pricing-cards` utility routes are noindex
+
+- `/pricing-cards` has `robots: { index: false, follow: false }`.
+- `/pricing-cards/[slug]` has `robots: { index: false, follow: false }`.
+- These support routes remain omitted from sitemap.
 
 ## 3. Still open issues
 
-### A. Pricing pages are always indexable and always in sitemap, even when pricing is unverified
+### A. Sora pricing exposure needs a deliberate decision
 
 Current behavior:
 
-- `src/app/sitemap.ts` includes every `/tool/[slug]/pricing` page unconditionally.
-- `src/app/tool/[slug]/pricing/page.tsx` sets canonical metadata but does not apply any noindex or readiness gate.
-
-Why this is still open:
-
-- Current code/data snapshot shows `7` tool slugs with `pricingSummary.verification === 'unverified'`:
-  - `sora`
-  - `colossyan`
-  - `d-id`
-  - `deepbrain-ai`
-  - `synthesys`
-  - `lumen5`
-  - `steve-ai`
-- So unlike alternatives/features/reviews/VS, pricing pages do not yet use an exposure rule that tracks evidence confidence.
+- Sora has pricing raw, normalized, and audit files.
+- Sora does not currently have the same canonical/productized pricing-page override path as most other tools.
+- `getPricingPageExposure('sora', tool)` currently falls back to summary status and should keep `/tool/sora/pricing` non-indexable unless a trusted exposure path is added.
 
 Assessment:
 
-- This is a real current technical exposure inconsistency, not just an old report artifact.
+- This is a narrow P1 pricing-governance decision, not a sitewide pricing indexability bug.
+- Do not re-open the old conclusion that all pricing pages are always indexable.
 
-### B. `/pricing-cards` routes look like internal utility routes but are indexable by default
-
-Current behavior:
-
-- `/pricing-cards`
-- `/pricing-cards/[slug]`
-
-Both routes:
-
-- have metadata
-- do not define canonical metadata
-- do not define `robots` noindex
-- are omitted from sitemap
-
-Why this is still open:
-
-- Their implementation reads from canonical pricing card support files and looks operational/internal rather than public search-target content.
-- If these routes are not meant to rank, they currently lack explicit index suppression.
-- If they are meant to rank, they currently lack canonical intent and sitemap inclusion.
-
-Assessment:
-
-- This is a real current intent gap in index exposure logic.
-
-### C. Schema coverage is still uneven across route families
+### B. Schema coverage can still be improved selectively
 
 Current strongest coverage:
 
 - sitewide `Organization` + `WebSite`
-- tool overview: `SoftwareApplication`
-- tool family: breadcrumb schema via `tool/[slug]/layout.tsx`
-- VS detail: breadcrumb + FAQ schema
-- topic alternatives: breadcrumb + FAQ schema
-- tool alternatives: FAQ schema
-- tool reviews: FAQ schema when enough FAQs exist
-- feature detail: breadcrumb schema
+- homepage `WebPage`
+- features hub `CollectionPage` + FAQ
+- alternatives hub `CollectionPage`
+- VS index `CollectionPage` + FAQ
+- tool overview `SoftwareApplication`
+- tool family breadcrumb schema
+- tool pricing `CollectionPage` when indexable
+- VS detail breadcrumb + FAQ schema
+- topic alternatives breadcrumb + FAQ schema
+- tool alternatives FAQ schema
+- tool reviews FAQ schema when enough FAQs exist
+- feature detail breadcrumb schema
 
-Still weak / uneven:
+Still weaker / lower priority:
 
-- homepage: no page-specific schema beyond sitewide root schema
-- features hub: no page-level schema
-- alternatives hub: no page-level schema
-- VS index: no page-level schema
-- tool pricing pages: breadcrumb only via tool layout; no page-specific pricing-related schema
-- methodology / about / privacy / terms: metadata exists, but no page-level schema
-
-Assessment:
-
-- This is not a broken-state issue, but it remains a real technical SEO gap in structured data consistency.
-
-### D. Feature route exposure is broader than the readiness model, even though it is not causing a live mismatch today
-
-Current behavior:
-
-- `src/lib/readiness/index.ts` has feature readiness logic, including `manual_review_pending`.
-- `src/app/features/[slug]/page.tsx` does not set noindex based on readiness or `needsManualReview`.
-- `src/app/sitemap.ts` includes all feature slugs returned by `getFeaturePageSlugs()` without readiness filtering.
-
-Current data state:
-
-- Current snapshot shows `0` feature pages with `meta.needsManualReview === true`.
+- methodology / about / privacy / terms have metadata, but no page-specific schema.
+- Pricing pages may eventually need stronger pricing-specific schema beyond `CollectionPage`, but only after pricing exposure and data confidence are settled.
 
 Assessment:
 
-- There is no active live index mismatch right now.
-- But the code path is still asymmetric relative to other route families and can drift again if manual-review flags reappear.
+- This is not a broken-state issue.
+- Do not turn this into a broad schema rewrite. Expand schema only on high-value surfaces with visible content alignment.
 
-## 4. Likely outdated conclusions in old audit
+### C. Evidence and content assets are now the higher-value follow-through
 
-These old conclusions should not be reused as current-state technical findings:
+Current open P1 content assets:
 
-- “Missing canonical” for `/about`
-- “Missing canonical” for `/privacy`
-- “Missing canonical” for `/terms`
-- “Missing canonical” for `/vs`
-- “`/methodology` target not found” / methodology-link brokenness caused by route absence
+- no-price evidence first pass is completed; remaining policy fields require external official docs / terms / help / product docs before writeback
+- official YouTube evidence conversion into concrete page-level claims
+
+Assessment:
+
+- These are content/evidence tasks, not technical SEO crawl bugs.
+- The no-price evidence first pass only changed `data/evidence/invideo.json`, `data/evidence/elai-io.json`, and `data/evidence/synthesys.json`.
+- The first pass was reviewed as clean: JSON parses, `git diff --check` has no findings, no third-party-only evidence was promoted to official-confirmed, and no unclear or missing field was written as a strong conclusion.
+- Current remaining unresolved fields after the first pass:
+  - InVideo: `policy.usageRights`
+  - Elai: `policy.commercialUse`, `policy.usageRights`
+  - Synthesys: `policy.watermark`
+- Additional fields still requiring external official-source review:
+  - Runway: `policy.commercialUse`, `policy.usageRights`, `policy.exportLimits`
+  - InVideo: `policy.usageRights`
+  - Elai: `policy.commercialUse`, `policy.usageRights`
+  - Synthesys: `policy.commercialUse`, `policy.usageRights`, `policy.watermark`
+  - Pictory: `policy.commercialUse`, `policy.usageRights`
+- Third-party reviews are not official policy sources for these fields.
+
+## 4. Likely outdated conclusions in old audits
+
+These conclusions should not be reused as current-state findings:
+
+- Missing canonical for `/about`
+- Missing canonical for `/privacy`
+- Missing canonical for `/terms`
+- Missing canonical for `/vs`
+- `/methodology` target not found
+- pricing pages are always indexable and always included in sitemap
+- `/pricing-cards` routes are indexable by default
+- feature pages lack page-level indexability / sitemap parity
+- 96 promote-safe / 26 excluded readiness status
 
 Why these are outdated:
 
-- Current code now defines canonical metadata for all of those routes.
-- `/methodology` exists as a route and is also included in sitemap.
+- Current code defines canonical metadata for the affected static routes.
+- `/methodology` exists and is included in sitemap.
+- Pricing exposure is centralized in `src/lib/pricing/indexability.ts`.
+- `/pricing-cards` routes explicitly set noindex.
+- Feature detail exposure is centralized in `src/lib/features/indexability.ts`.
+- Current readiness report shows 122 promote-safe pages and 0 excluded.
 
 Also treat these old audit areas as stale or out of scope for current technical status:
 
-- word-count based “thin content” conclusions on hub/feature/VS pages from the old report
-- any canonical conclusions derived from the pre-fix snapshot rather than the current route files
+- word-count based thin-content conclusions on hub/feature/VS pages from the old report
+- canonical conclusions derived from pre-fix route files
+- pricing exposure conclusions that do not account for canonical/productized overrides
 
-## 5. Recommended next technical actions
+## 5. Recommended next actions
 
 ### Priority 1
 
-- Add exposure intent for `/tool/[slug]/pricing`:
-  - either introduce a pricing-readiness/noindex rule
-  - or explicitly confirm that unverified pricing pages should remain indexed
+- Decide Sora pricing exposure:
+  - either keep `/tool/sora/pricing` non-indexable and document why
+  - or add a narrow Sora pricing exposure path if current pricing evidence is strong enough
 
 ### Priority 2
 
-- Decide the intended search posture for `/pricing-cards`:
-  - if internal/support-only: add `noindex`
-  - if public: add canonical metadata and decide whether sitemap inclusion is desired
+- Continue no-price evidence only after external official docs / terms / help / product docs are available for the remaining fields.
+- Do not use third-party reviews as official policy sources.
 
 ### Priority 3
 
-- Normalize feature-family exposure logic with the rest of the site:
-  - either keep broad indexing intentionally and document it
-  - or align sitemap / robots behavior with feature readiness signals
+- Run an official YouTube evidence conversion pilot:
+  - choose a small set of high-value tools
+  - convert official video evidence into concrete workflow claims, Mini Test refinements, or source-backed key facts
+  - do not start with a full-site YouTube capture pass
 
 ### Priority 4
 
-- Expand page-level schema on the high-value hubs first:
-  - homepage
-  - features hub
-  - VS index
-  - alternatives hub
-- Then decide whether pricing pages need stronger page-specific schema beyond inherited breadcrumb markup.
+- Consider selective schema improvements only where visible content already supports the markup:
+  - pricing pages after pricing exposure confidence is settled
+  - static trust pages if they become meaningful search or citation targets
 
 ## 6. Route/file evidence
 
@@ -226,9 +223,9 @@ Also treat these old audit areas as stale or out of scope for current technical 
 
 - Main sitemap builder: `src/app/sitemap.ts`
 - Includes static pages: `/about`, `/privacy`, `/terms`, `/methodology`, `/vs`
-- Includes all feature slugs from `getFeaturePageSlugs()`
+- Includes indexable feature slugs from `getIndexableFeaturePageSlugs()`
 - Includes all tool overview pages
-- Includes all tool pricing pages
+- Includes tool pricing pages only when `getPricingPageExposure(...).indexable` is true
 - Excludes thin tool alternatives/features/reviews via route-family checks
 - Includes only ready VS pages via `isComparisonReady`
 - Excludes thin topic alternatives via `isAlternativesPageThin`
@@ -240,7 +237,7 @@ Also treat these old audit areas as stale or out of scope for current technical 
   - `/go/`
   - `/api/`
   - `/dev/`
-- `llms.txt` is not blocked because it lives in `public/` and no disallow rule targets it
+- `llms.txt` is not blocked because it lives in `public/` and no disallow rule targets it.
 
 ### Noindex / readiness parity evidence
 
@@ -249,26 +246,21 @@ Also treat these old audit areas as stale or out of scope for current technical 
 - Tool reviews noindex gate: `src/app/tool/[slug]/reviews/page.tsx`
 - Topic alternatives noindex gate: `src/app/alternatives/topic/[slug]/page.tsx`
 - VS not-ready noindex gate: `src/app/vs/[slug]/page.tsx`
+- Feature indexability gate: `src/lib/features/indexability.ts`
+- Feature metadata gate: `src/app/features/[slug]/page.tsx`
+- Pricing exposure gate: `src/lib/pricing/indexability.ts`
+- Pricing metadata gate: `src/app/tool/[slug]/pricing/page.tsx`
 - Readiness model: `src/lib/readiness/index.ts`
 
-### Current data snapshot evidence
+### Current readiness evidence
 
-- Feature manual-review count `0`:
-  - source query: `readFeaturePageData(...).meta.needsManualReview`
-  - code source: `src/lib/features/readFeaturePageData.ts`
-- Thin tool features/reviews/alternatives/topic alternatives all `0`:
-  - checks sourced from:
-    - `src/lib/features/isFeaturePageThin.ts`
-    - `src/lib/reviews/isReviewPageThin.ts`
-    - `src/lib/alternatives/buildLongformData.ts`
-- Not-ready VS count `7`:
-  - source logic:
-    - `src/data/vs`
-    - `src/lib/vsComparisonReady.ts`
-- Unverified pricing count `7`:
-  - source logic:
-    - `src/lib/pricing/display.ts`
-    - `src/app/tool/[slug]/pricing/page.tsx`
+- Readiness report:
+  - `reports/readiness-report.md`
+  - `reports/readiness-report.json`
+- Current status:
+  - 122 pages checked
+  - 122 promote-safe
+  - 0 excluded
 
 ### Redirect / canonical redirect evidence
 
@@ -296,11 +288,28 @@ Also treat these old audit areas as stale or out of scope for current technical 
 - Sitewide root schema:
   - `src/app/layout.tsx`
   - `src/lib/jsonLd.ts`
+- Homepage schema:
+  - `src/app/page.tsx`
+  - `buildWebPageJsonLd`
+- Features hub schema:
+  - `src/app/features/page.tsx`
+  - `buildCollectionPageJsonLd`
+  - `buildFaqJsonLd`
+- Alternatives hub schema:
+  - `src/app/alternatives/page.tsx`
+  - `buildCollectionPageJsonLd`
+- VS index schema:
+  - `src/app/vs/page.tsx`
+  - `buildCollectionPageJsonLd`
+  - `buildFaqJsonLd`
 - Tool overview schema:
   - `src/app/tool/[slug]/page.tsx`
   - `buildSoftwareApplicationJsonLd`
 - Tool-family breadcrumb schema:
   - `src/app/tool/[slug]/layout.tsx`
+- Tool pricing schema:
+  - `src/app/tool/[slug]/pricing/page.tsx`
+  - `buildCollectionPageJsonLd`
 - Feature detail breadcrumb schema:
   - `src/app/features/[slug]/page.tsx`
 - Tool alternatives FAQ schema:
@@ -313,21 +322,8 @@ Also treat these old audit areas as stale or out of scope for current technical 
   - `src/app/vs/[slug]/page.tsx`
   - `src/lib/vsPageModel.ts`
 
-### Weak / missing page-level schema evidence
-
-- Homepage: `src/app/page.tsx`
-- Features hub: `src/app/features/page.tsx`
-- Alternatives hub: `src/app/alternatives/page.tsx`
-- VS index: `src/app/vs/page.tsx`
-- Tool pricing pages: `src/app/tool/[slug]/pricing/page.tsx`
-- Static pages:
-  - `src/app/methodology/page.tsx`
-  - `src/app/about/page.tsx`
-  - `src/app/privacy/page.tsx`
-  - `src/app/terms/page.tsx`
-
-### Utility-route exposure gap evidence
+### Utility-route exposure evidence
 
 - `/pricing-cards`: `src/app/pricing-cards/page.tsx`
 - `/pricing-cards/[slug]`: `src/app/pricing-cards/[slug]/page.tsx`
-- Neither file currently adds canonical metadata or noindex logic.
+- Both route files currently add noindex metadata.

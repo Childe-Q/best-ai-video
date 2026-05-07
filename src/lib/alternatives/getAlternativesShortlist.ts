@@ -1,6 +1,7 @@
 import { Tool } from '@/types/tool';
 import alternativesEvidenceData from '@/data/alternativesEvidence.json';
 import { isTryNowTool } from './affiliateWhitelist';
+import { isToolDiscontinued } from '@/lib/toolStatus';
 
 interface ToolScore {
   slug: string;
@@ -73,7 +74,7 @@ export function getAlternativesShortlist(
   });
 
   // Filter candidate tools
-  let candidateTools = allTools.filter(t => t.slug !== currentSlug); // Exclude self
+  let candidateTools = allTools.filter(t => t.slug !== currentSlug && !isToolDiscontinued(t.slug)); // Exclude self and discontinued tools
   
   // Track alwaysInclude tools (runway, sora) - these are non-affiliate benchmarks
   const alwaysIncludeTools = new Set<string>();

@@ -48,7 +48,7 @@
         "title": "Cinematic concept footage",
         "why": "Runway is a strong first stop when the team needs polished visual drafts, camera movement, and scene experimentation before a full shoot or paid production pass.",
         "linkHref": "/vs/runway-vs-sora",
-        "linkText": "Compare with Sora →"
+        "linkText": "Historical Sora comparison →"
       },
       {
         "title": "Creative ad prototypes",
@@ -160,7 +160,7 @@
     "comparisons": [
       {
         "slug": "runway-vs-sora",
-        "title": "Runway vs Sora"
+        "title": "Runway vs Sora after shutdown"
       },
       {
         "slug": "pika-vs-runway",
