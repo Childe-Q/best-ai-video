@@ -1,97 +1,101 @@
 {
   "overview": {
     "tldr": {
-      "bestFor": "Teams that want text-first presenter videos, localization support, and a simple web workflow without assembling multiple avatar and voice tools",
-      "notFor": "Buyers who need deep editing control, open-ended generative video workflows, or a clearer self-serve usage model than Elai's minute bundles provide",
-      "why": "Elai is strongest when the workflow starts from scripts, presentations, or URLs and the team wants avatars, languages, voices, and brand controls inside one browser-based system. Current official pricing, help, and policy pages make the self-serve structure clearer than exact price points: Free is only a proof-of-concept lane, the first paid self-serve tier is the 1080p no-watermark lane, the higher team tier adds 4K and collaboration, and Enterprise is where workspaces, SSO, and broader governance become meaningful."
+      "bestFor": "Teams turning PPTs, PDFs, or structured training content into avatar-led microlearning with branding and multilingual rollout",
+      "notFor": "Buyers who need deep timeline editing, open-ended cinematic generation, or low-friction custom avatars from casual footage",
+      "why": "Official video assets show Elai strongest in PPT-first training workflows, branching remediation, editable-text translation, and enterprise handoff signals, not in open-ended generation or fully proven collaboration depth"
     },
     "miniTest": {
-      "prompt": "Create a 45-60 second avatar video explaining [topic] for [audience], then test one presentation-to-video or URL-to-video input path, add captions, and export the final video while tracking minutes and resolution.",
+      "prompt": "Import a 4-6 slide deck with presenter notes, map the notes into avatar speech, add one branching quiz, translate one section, apply a brand kit, and export the result while checking what stays editable.",
       "checklist": [
         {
-          "label": "Goal",
-          "value": "Training / onboarding / product demo / internal update"
+          "label": "Primary workflow fit",
+          "value": "PPT-first microlearning / onboarding / internal training"
         },
         {
-          "label": "Plan tier",
-          "value": "Free for a proof of concept; the first paid self-serve tier is the 1080p no-watermark lane; the higher team tier matters when 4K or collaboration matters"
+          "label": "Input realism",
+          "value": "Check whether notes become speech text and whether slide text stays editable after import"
         },
         {
-          "label": "Watermark present",
-          "value": "Use Free only as a test tier; Creator and above remove the watermark on current official plan docs"
+          "label": "Interactive logic",
+          "value": "Verify branching quiz behavior, including wrong-answer jumpback and remediation flow"
         },
         {
-          "label": "Export resolution",
-          "value": "1080p / 4K based on plan"
+          "label": "Translation boundary",
+          "value": "Check what changes across editable text, speech text, and any non-editable graphics"
         },
         {
-          "label": "Avatar expressiveness",
-          "value": "Check whether stock avatars or one of the custom avatar types is good enough for the target audience"
+          "label": "Brand control",
+          "value": "Test Brand Kit global application versus slide-level overrides"
         },
         {
-          "label": "Input path",
-          "value": "Check whether script, presentation, or URL input gives the fastest usable result"
+          "label": "Avatar path",
+          "value": "Custom avatar quality depends on controlled source footage, not casual office recordings"
         },
         {
-          "label": "Localization need",
-          "value": "Check whether the language and voice options are enough for the target rollout"
+          "label": "Export handoff",
+          "value": "Treat Panopto export as a video handoff until interactive-state preservation is proven"
         },
         {
-          "label": "Usage bundle fit",
-          "value": "Confirm whether monthly minute bundles are enough, because monthly credits do not roll over while annual plans front-load usage"
+          "label": "Creative flexibility",
+          "value": "Current official-body evidence is stronger for structured training conversion than for open-ended generation or deep editing"
         }
       ],
-      "verdict": "Result: strongest when the buyer wants a browser-based avatar workflow that can start from text, presentations, or URLs and then localize the output. The main trade-off is that Elai feels more like a structured presenter-video system than a flexible editing or generative studio, and self-serve usage is still governed by minute bundles and billing-cycle rules."
+      "verdict": "Use this as a source-backed workflow check, not a completed hands-on run. Elai currently looks strongest as a structured training and presentation-conversion system, not as a freeform AI video studio."
     },
     "useCases": [
       {
-        "title": "Training and onboarding videos",
-        "why": "Elai is a strong fit when the workflow centers on structured presenter-led explainers with multilingual rollout needs.",
+        "title": "PPT-to-microlearning conversion",
+        "why": "The strongest official workflow starts from decks and presenter notes, then turns them into avatar-led training content with minimal copy-paste friction.",
         "linkHref": "/features/enterprise-ai-video-solutions",
         "linkText": "See enterprise guide →"
       },
       {
-        "title": "Presentation-to-video workflows",
-        "why": "Useful when the team already works from decks or documents and wants a faster path to narrated presenter video.",
-        "linkHref": "/tool/elai-io/pricing",
-        "linkText": "Check pricing →"
+        "title": "Multilingual internal training",
+        "why": "Best fit when the team wants editable-text translation, presenter delivery, and a browser workflow for localized internal explainers.",
+        "linkHref": "/vs/heygen-vs-elai-io",
+        "linkText": "Compare training workflows →"
       },
       {
-        "title": "Avatar platform evaluation",
-        "why": "Best fit when the buyer wants custom avatar options and localization without jumping straight to a heavier enterprise stack.",
-        "linkHref": "/vs/elai-io-vs-synthesia",
-        "linkText": "Compare alternatives →"
+        "title": "Branded course handoff",
+        "why": "Useful when the rollout needs Brand Kit consistency and downstream video-platform handoff rather than open-ended creative generation.",
+        "linkHref": "/tool/elai-io/pricing",
+        "linkText": "Check plan limits →"
       }
     ]
   },
   "features": {
     "keyFeatures": [
-      "Text-first presenter video workflow with script, URL, and presentation input paths",
-      "80 plus avatars, 75 plus languages, and 450 plus voices in the product positioning",
-      "Four custom avatar modes: Selfie, Studio, Photo, and Animated mascot",
-      "Current plan docs position the first paid self-serve tier at 1080p with no watermark, while the higher team tier adds Ultra 4K HD and multi-user collaboration",
-      "Enterprise layer adds workspaces, role-based access, SSO, brand kit, premium support, and broader multi-user rollout"
+      "PPT and PDF import can map presenter notes directly into avatar speech text",
+      "Branching quiz workflow supports answer feedback and forced jumpback for remediation-style training",
+      "Translate video acts on editable text objects and speech text rather than acting like full visual OCR translation",
+      "AI Storyboard can batch rewrite multiple slides instead of forcing page-by-page editing only",
+      "Brand Kit supports video-wide brand application with signals of slide-level overrides",
+      "Custom avatar creation depends on highly controlled source-video capture and a dedicated upload workflow",
+      "Export to Panopto is shown as an enterprise handoff path, but preservation of Elai-native interactivity is not proven"
     ]
   },
   "pros": [
-    "1080p exports are available on Creator without jumping straight to enterprise pricing",
-    "Supports multiple structured input paths including text, URLs, and presentations",
-    "Custom avatar options are broader than many lightweight presenter tools",
-    "Enterprise layer adds real team and governance controls like workspaces, roles, and SSO"
+    "Strong official evidence for PPT-first training and presentation conversion",
+    "Notes-to-speech mapping reduces copy-paste friction for training teams",
+    "Branching quiz supports remediation-style learning paths, not just static viewing",
+    "Brand Kit and Panopto handoff strengthen the enterprise-training posture",
+    "Multilingual text-plus-speech translation is clearly demonstrated at the editable-object level"
   ],
   "cons": [
-    "Usage is still governed by minute bundles rather than a simpler unlimited model",
-    "The workflow is less attractive for buyers who need deep editing or cinematic generation",
-    "Free tier is mainly useful for testing rather than polished publishing",
-    "Team-level value depends on whether the buyer will actually use multiple seats, guests, and 4K output, and exact pricing depends on live billing-cycle state"
+    "Translation review and lip-sync quality are not strongly proven",
+    "Complex PPT elements may flatten into non-editable layers",
+    "Custom avatar quality depends on strict source-footage rules",
+    "Collaboration and governance depth are weaker than the Workspace and enterprise language suggests",
+    "Export to Panopto likely behaves more like video handoff than full interactive course transfer"
   ],
   "reviews": {
     "verdict": {
-      "bottomLine": "Elai.io is best for teams that want structured presenter videos with localization support and a simple browser workflow. It is less attractive for buyers who need deeper editing, broader generative freedom, or a simpler usage model than minute-based plans.",
+      "bottomLine": "Elai.io is best for teams converting decks and structured training material into avatar-led microlearning. The strongest official evidence is around PPT-first workflow, branching remediation, editable-layer translation, and enterprise handoff. It is less convincing when the buyer needs freeform generation, deep collaboration proof, or low-friction custom avatars from everyday footage.",
       "bestFor": [
-        "Presenter-led training videos",
-        "Presentation-to-video workflows",
-        "Localized avatar explainers"
+        "PPT-first training videos",
+        "Microlearning with branching logic",
+        "Localized internal presenter explainers"
       ]
     },
     "faqs": [
@@ -126,24 +130,19 @@
     ]
   },
   "sources": {
-    "elai.io/pricing": {
-      "type": "OFFICIAL_PRICING",
-      "howToVerify": "Check the official pricing page for plan limits, seat structure, 1080p vs 4K, and enterprise features",
-      "suggestedQuery": "site:elai.io pricing Elai Creator Team Enterprise 4K SSO"
+    "Official YouTube channel and product demos": {
+      "type": "OFFICIAL_VIDEO_SOURCE",
+      "howToVerify": "Review Elai's official product demos, training walkthroughs, and Panopto handoff videos on the official YouTube channel.",
+      "suggestedQuery": "Elai official YouTube PPT to video branching quiz Panopto"
     },
-    "elai.io/features": {
-      "type": "OFFICIAL_PRODUCT",
-      "howToVerify": "Check the official features page for avatars, languages, voices, URL-to-video, and presentation-to-video workflow",
-      "suggestedQuery": "site:elai.io/features Elai avatars languages voices presentation to video URL to video"
+    "Official product pages and pricing": {
+      "type": "OFFICIAL_PRODUCT_MATERIALS",
+      "howToVerify": "Check Elai's official website, pricing pages, and feature pages for plan structure, input paths, and product positioning.",
+      "suggestedQuery": "site:elai.io pricing features presentation to video URL to video"
     },
-    "elai.io": {
-      "type": "OFFICIAL_WEBSITE",
-      "howToVerify": "Visit the official Elai website for product positioning and workflow examples",
-      "suggestedQuery": "site:elai.io Elai presenter videos localization avatars"
-    },
-    "elai.freshdesk.com": {
-      "type": "HELP_CENTER",
-      "howToVerify": "Check official Elai help documentation",
+    "Official help and documentation": {
+      "type": "OFFICIAL_HELP_RESOURCES",
+      "howToVerify": "Check official Elai help documentation for cancellation, plan behavior, collaboration, and workspace settings.",
       "suggestedQuery": "site:elai.freshdesk.com Elai help cancellation subscriptions"
     }
   }

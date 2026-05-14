@@ -130,6 +130,16 @@ Implementation note:
 - Remove per-lane `Use this shortlist when`, `Leave this route if`, and `If this route stops fitting` blocks from the rendered template.
 - Keep contextual next steps after the shortlist and keep FAQ focused on concrete workflow verification questions.
 
+### P3.5: Narrow Workflow Display Density
+
+Keep narrow workflow pages as decision shortlists after new official-content evidence thickens the underlying data.
+
+Implementation note:
+
+- Preserve normalized tool membership; use template-level display controls for representative tools when a lane becomes too directory-like.
+- For `ai-video-for-social-media`, keep the vertical/social lane to representative tools on the page while leaving the full normalized group intact.
+- For `content-repurposing-ai-tools`, shorten the rendered hero, group summaries, shortlist lead, and FAQ so the page stays source-route-first.
+
 ### P4: Sync External Discovery
 
 Only after the feature hub settles, consider updating:

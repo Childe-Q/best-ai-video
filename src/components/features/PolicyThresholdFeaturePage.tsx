@@ -84,6 +84,60 @@ const SAFE_FEATURE_EXIT = {
   note: 'Return to the feature hub if this narrower route is not promote-safe yet.',
 } as const;
 
+function hasDisplayText(value: unknown): value is string {
+  return typeof value === 'string' && value.trim().length > 0;
+}
+
+function normalizeLookupKey(value: string): string {
+  return value.trim().toLowerCase();
+}
+
+function getLookupValue(values: Record<string, string>, key: string): string | null {
+  if (hasDisplayText(values[key])) {
+    return values[key].trim();
+  }
+
+  const normalizedKey = normalizeLookupKey(key);
+  const matchedEntry = Object.entries(values).find(([candidateKey]) => normalizeLookupKey(candidateKey) === normalizedKey);
+  const matchedValue = matchedEntry?.[1];
+
+  return hasDisplayText(matchedValue) ? matchedValue.trim() : null;
+}
+
+function getBucketOverride(
+  overrides: Record<string, BucketOverride>,
+  groupTitle: string
+): BucketOverride | undefined {
+  return (
+    overrides[groupTitle] ??
+    Object.entries(overrides).find(([candidateTitle]) => normalizeLookupKey(candidateTitle) === normalizeLookupKey(groupTitle))?.[1]
+  );
+}
+
+function buildRenderableMatrixRows(matrixRows: BucketMatrixRow[], groups: FeatureGroupDisplay[]) {
+  return matrixRows
+    .map((row) => {
+      if (!hasDisplayText(row.label)) {
+        return null;
+      }
+
+      const cells = groups.map((group) => ({
+        groupTitle: group.groupTitle,
+        value: getLookupValue(row.values, group.groupTitle),
+      }));
+
+      if (cells.some((cell) => !hasDisplayText(cell.value))) {
+        return null;
+      }
+
+      return {
+        label: row.label.trim(),
+        cells,
+      };
+    })
+    .filter((row): row is NonNullable<typeof row> => row !== null);
+}
+
 function getRecommendedSectionTitle(linkType: FeatureRecommendedReadingLink['linkType']): string {
   switch (linkType) {
     case 'tool':
@@ -662,6 +716,10 @@ export default function PolicyThresholdFeaturePage({
       items: recommendedReadingLinks.filter((item) => item.linkType === linkType),
     }))
     .filter((group) => group.items.length > 0);
+  const checklistItems = (pageData.howToChoose?.criteria ?? []).filter(
+    (criterion) => hasDisplayText(criterion.title) && hasDisplayText(criterion.desc)
+  );
+  const matrixRows = buildRenderableMatrixRows(override.matrixRows, groups);
 
   return (
     <div
@@ -799,65 +857,69 @@ export default function PolicyThresholdFeaturePage({
           </div>
         </section>
 
-        <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
-          <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Threshold checklist</p>
-            <h2 className="mt-3 text-3xl font-bold text-gray-900">Check the threshold before you compare tools</h2>
-            {override.checklistLead ? <p className="mt-4 text-base leading-8 text-gray-600">{override.checklistLead}</p> : null}
-          </div>
+        {checklistItems.length > 0 && (
+          <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Threshold checklist</p>
+              <h2 className="mt-3 text-3xl font-bold text-gray-900">Check the threshold before you compare tools</h2>
+              {override.checklistLead ? <p className="mt-4 text-base leading-8 text-gray-600">{override.checklistLead}</p> : null}
+            </div>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-            {(pageData.howToChoose?.criteria ?? []).map((criterion) => (
-              <div key={criterion.title} className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
-                <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Checklist item</p>
-                <h3 className="mt-3 text-lg font-bold text-gray-900">{criterion.title}</h3>
-                {criterion.desc ? <p className="mt-3 text-sm leading-7 text-gray-600">{criterion.desc}</p> : null}
-              </div>
-            ))}
-          </div>
-        </section>
+            <div className="mt-8 grid gap-4 md:grid-cols-2">
+              {checklistItems.map((criterion) => (
+                <div key={criterion.title} className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
+                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Checklist item</p>
+                  <h3 className="mt-3 text-lg font-bold text-gray-900">{criterion.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-gray-600">{criterion.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
-        <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
-          <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Threshold matrix</p>
-            <h2 className="mt-3 text-3xl font-bold text-gray-900">See the real threshold tradeoff before you scroll to tools</h2>
-            {override.matrixLead ? <p className="mt-4 text-base leading-8 text-gray-600">{override.matrixLead}</p> : null}
-          </div>
+        {matrixRows.length > 0 && (
+          <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Threshold matrix</p>
+              <h2 className="mt-3 text-3xl font-bold text-gray-900">See the real threshold tradeoff before you scroll to tools</h2>
+              {override.matrixLead ? <p className="mt-4 text-base leading-8 text-gray-600">{override.matrixLead}</p> : null}
+            </div>
 
-          <div className="mt-8 overflow-x-auto">
-            <table className="min-w-full border-separate border-spacing-0">
-              <thead>
-                <tr>
-                  <th className="sticky left-0 z-10 border-b border-gray-200 bg-white px-4 py-3 text-left text-xs font-black uppercase tracking-[0.14em] text-gray-500">
-                    Threshold
-                  </th>
-                  {groups.map((group) => (
-                    <th
-                      key={group.groupTitle}
-                      className="border-b border-gray-200 bg-white px-4 py-3 text-left text-sm font-bold text-gray-900"
-                    >
-                      {group.groupTitle}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {override.matrixRows.map((row) => (
-                  <tr key={row.label}>
-                    <th className="sticky left-0 z-10 border-b border-gray-200 bg-[#F9FAFB] px-4 py-4 text-left text-sm font-semibold text-gray-900">
-                      {row.label}
+            <div className="mt-8 overflow-x-auto">
+              <table className="min-w-full border-separate border-spacing-0">
+                <thead>
+                  <tr>
+                    <th className="sticky left-0 z-10 border-b border-gray-200 bg-white px-4 py-3 text-left text-xs font-black uppercase tracking-[0.14em] text-gray-500">
+                      Threshold
                     </th>
                     {groups.map((group) => (
-                      <td key={`${row.label}-${group.groupTitle}`} className="border-b border-gray-200 px-4 py-4 text-sm leading-6 text-gray-700">
-                        {row.values[group.groupTitle]}
-                      </td>
+                      <th
+                        key={group.groupTitle}
+                        className="border-b border-gray-200 bg-white px-4 py-3 text-left text-sm font-bold text-gray-900"
+                      >
+                        {group.groupTitle}
+                      </th>
                     ))}
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
+                </thead>
+                <tbody>
+                  {matrixRows.map((row) => (
+                    <tr key={row.label}>
+                      <th className="sticky left-0 z-10 border-b border-gray-200 bg-[#F9FAFB] px-4 py-4 text-left text-sm font-semibold text-gray-900">
+                        {row.label}
+                      </th>
+                      {row.cells.map((cell) => (
+                        <td key={`${row.label}-${cell.groupTitle}`} className="border-b border-gray-200 px-4 py-4 text-sm leading-6 text-gray-700">
+                          {cell.value}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
 
         <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
           <div className="max-w-3xl">
@@ -897,8 +959,10 @@ export default function PolicyThresholdFeaturePage({
           </div>
 
           {groups.map((group) => {
-            const bucketOverride = override.bucketOverrides[group.groupTitle];
+            const bucketOverride = getBucketOverride(override.bucketOverrides, group.groupTitle);
             const bucketId = group.groupTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            const hasBucketCopy =
+              hasDisplayText(bucketOverride?.startHereWhen) && hasDisplayText(bucketOverride?.watchFor);
 
             return (
               <section key={group.groupTitle} id={bucketId} className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
@@ -908,16 +972,18 @@ export default function PolicyThresholdFeaturePage({
                   <p className="mt-4 max-w-3xl text-base leading-8 text-gray-600">{group.groupSummary}</p>
                 ) : null}
 
-                <div className="mt-6 grid gap-3 md:grid-cols-2">
-                  <div className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
-                    <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Start here when</p>
-                    <p className="mt-2 text-sm leading-7 text-gray-700">{bucketOverride?.startHereWhen}</p>
+                {hasBucketCopy && (
+                  <div className="mt-6 grid gap-3 md:grid-cols-2">
+                    <div className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
+                      <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Start here when</p>
+                      <p className="mt-2 text-sm leading-7 text-gray-700">{bucketOverride?.startHereWhen}</p>
+                    </div>
+                    <div className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
+                      <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">What to watch for</p>
+                      <p className="mt-2 text-sm leading-7 text-gray-700">{bucketOverride?.watchFor}</p>
+                    </div>
                   </div>
-                  <div className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
-                    <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">What to watch for</p>
-                    <p className="mt-2 text-sm leading-7 text-gray-700">{bucketOverride?.watchFor}</p>
-                  </div>
-                </div>
+                )}
 
                 <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
                   {group.tools.map((tool, index) => (
@@ -941,7 +1007,9 @@ export default function PolicyThresholdFeaturePage({
                     >
                       {bucketOverride?.nextStepLabel ?? SAFE_FEATURE_EXIT.label}
                     </Link>
-                    <span className="self-center text-sm text-gray-500">{bucketOverride?.nextStepNote}</span>
+                    <span className="self-center text-sm text-gray-500">
+                      {bucketOverride?.nextStepNote ?? SAFE_FEATURE_EXIT.note}
+                    </span>
                   </div>
                 </div>
               </section>

@@ -1,72 +1,68 @@
 {
   "overview": {
     "tldr": {
-      "bestFor": "Creators who want short stylized text-to-video clips and can move to higher tiers for cleaner exports or commercial use",
-      "notFor": "Teams that need predictable refund terms, private-by-default output, or clearly documented export specs on lower tiers",
-      "why": "Lower tiers are watermarked and limited, while commercial use and unwatermarked downloads are tied to higher plans"
+      "bestFor": "Teams exploring live AI selves, task-taking avatar agents, or persona-led experiments rather than classic text-to-video production",
+      "notFor": "Buyers who need precise scene or camera control, clear enterprise safety boundaries, or already-proven cross-platform automation before rollout",
+      "why": "Official video assets now show stronger evidence for PikaStream live interaction, MCP tool filtering, and persona configuration than for traditional video-edit control or fully proven autonomous workflows"
     },
     "miniTest": {
-      "prompt": "Generate a 6-10 second video of [subject] in [style] with a clear action and stable camera. Keep it safe for work, no logos, no copyrighted characters, and no text overlays. Output in a share-ready format and match [aspect ratio]",
+      "prompt": "Create an AI self for [role] with a distinct voice and personality, ask it to join a short meeting-style interaction, complete one simple tool-backed task, and then review latency, interruption handling, and output control.",
       "checklist": [
         {
           "label": "Primary workflow fit",
-          "value": "Short stylized clips / concept visuals / creative experiments"
+          "value": "Live AI self / digital persona / meeting-style task handling"
         },
         {
-          "label": "Plan tier",
-          "value": "Free / Basic / Standard / Pro / Fancy"
+          "label": "Core evidence lane",
+          "value": "PikaStream 1.0 Beta plus MCP tool action"
         },
         {
-          "label": "Watermark on lower tiers",
-          "value": "Expected on Free and lower paid tiers"
+          "label": "Persona configuration",
+          "value": "Check likeness, voice, personality, skills, and connected platforms"
         },
         {
-          "label": "Commercial use needed",
-          "value": "Commercial use is tied to higher paid plans per pricing and FAQ"
+          "label": "Action proof",
+          "value": "Verify at least one tool-backed task with a visible result, not just spoken confidence"
         },
         {
-          "label": "Privacy mode",
-          "value": "Output privacy is not the default on lower access levels"
+          "label": "Latency and interruption",
+          "value": "Check whether live replies feel usable and whether user interruption is handled cleanly"
         },
         {
-          "label": "Resolution tier",
-          "value": "480p / 720p / 1080p availability depends on plan and mode"
+          "label": "Platform permissions",
+          "value": "Confirm what can actually be connected, authorized, and constrained"
         },
         {
-          "label": "Credits model",
-          "value": "Credits vary by feature, duration, quality, and plan"
+          "label": "Async output need",
+          "value": "Decide whether persona clips matter more than live interaction for the target workflow"
         },
         {
-          "label": "Rollover policy",
-          "value": "Paid plans mention purchasable roll-over credits"
+          "label": "Traditional video control",
+          "value": "Current official-body evidence is weak for scene, camera, and style control depth"
         },
         {
-          "label": "Refund policy",
-          "value": "Subscription payments are described as non-refundable in terms"
-        },
-        {
-          "label": "Ownership baseline",
-          "value": "Terms state you retain ownership rights in your user content"
+          "label": "Risk boundary",
+          "value": "Look for approval, takeover, undo, and memory stability before trusting higher-risk tasks"
         }
       ],
-      "verdict": "Use this as a source-backed workflow check, not a completed hands-on run. Pika fits short-form creative generation when plan tier, watermark, privacy, and commercial-use limits are acceptable before production use."
+      "verdict": "Use this as a source-backed workflow check, not a completed hands-on run. Pika currently looks strongest as an experimental live AI-self or agent platform, not as a well-proven production video system."
     },
     "useCases": [
       {
-        "title": "Stylized Social Clips",
-        "why": "Fits short-form visual experiments when teams can handle captioning and final packaging in another tool",
+        "title": "Live AI self pilots",
+        "why": "Best fit when the team wants to test real-time persona interaction, meeting-style responses, or task-taking avatars before betting on larger automation claims",
         "linkHref": "/tool/pika/pricing",
-        "linkText": "Check pricing →"
+        "linkText": "Check plan limits →"
       },
       {
-        "title": "Creative Prototypes",
-        "why": "Useful for testing visual directions and short concept shots before committing to a fuller production workflow",
+        "title": "Persona-led creator experiments",
+        "why": "Useful when the output is a digital self, fan-facing avatar, or async persona clip rather than a tightly directed video production workflow",
         "linkHref": "/tool/pika/features",
         "linkText": "See features →"
       },
       {
-        "title": "Short Visual Scenes",
-        "why": "Works when the goal is a short standalone scene rather than a long structured explainer or repurposed article workflow",
+        "title": "Agent vs video-tool evaluation",
+        "why": "Most valuable when the buyer is really deciding between AI persona interaction and more traditional creative video tooling",
         "linkHref": "/vs/pika-vs-runway",
         "linkText": "Compare alternatives →"
       }
@@ -74,36 +70,36 @@
   },
   "features": {
     "keyFeatures": [
-      "Free and lower tiers include watermarked videos for personal use only",
-      "Pro and Fancy allow unwatermarked video and commercial use",
-      "Videos are public by default unless Pro or Fancy",
-      "Usable on the web without Discord (website access supported)",
-      "Refunds: subscription payments are non-refundable per terms",
-      "You retain ownership rights in your user-generated content",
-      "Web-based interface; no software download required"
+      "PikaStream 1.0 Beta shows real-time AI-self video interaction rather than only offline clip generation",
+      "MCP demos include parameterized external lookup and filtering instead of pure chat-only responses",
+      "Current product framing centers on configurable AI selves with likeness, voice, personality, skills, and platform connections",
+      "Official material shows both live talking-head interaction and async persona-led video output",
+      "Web and iPhone app entry points are both explicitly referenced in launch material",
+      "Current official-body evidence is stronger for agent interaction than for timeline-like video editing or deep shot control",
+      "Traditional scene, camera, style, and safety controls remain weakly evidenced compared with the live-agent narrative"
     ]
   },
   "pros": [
-    "Clear separation: personal-use tiers vs commercial tiers",
-    "Pro/Fancy support unwatermarked outputs",
-    "Public/private behavior is explicitly stated in FAQ",
-    "Works via website (no Discord required)",
-    "Terms state you keep ownership of your user content"
+    "Strong official evidence for live AI persona interaction, not just offline avatar output",
+    "MCP and filtering signals suggest real action potential beyond passive avatar chat",
+    "Persona configuration is broader than a simple avatar skin swap",
+    "Supports both live interaction and async persona-video use cases in the current product narrative",
+    "Product positioning is clearly differentiated from standard prompt-box video tools"
   ],
   "cons": [
-    "No refunds for subscription periods (per terms)",
-    "User reports: cancellation flow is confusing or hard to find",
-    "User reports: frequent generation failed errors even after paying",
-    "Credit rollover rules are unclear and need verification",
-    "Export specs (resolution/bitrate) are unclear and need verification"
+    "Marketing noise is high around memory, emotions, monetization, and broad autonomy",
+    "There is almost no proof of approval steps, undo, human takeover, or enterprise safety boundaries",
+    "Traditional scene, camera, and style control are largely absent from the current official evidence",
+    "Cross-platform automation and persistent memory remain mostly claimed rather than shown",
+    "The live experience is still beta and lacks strong latency or reliability proof"
   ],
   "reviews": {
     "verdict": {
-      "bottomLine": "Pika is best for creators who want quick text-to-video experiments and occasional commercial use on higher tiers. The trade-off is reliability and UX: most tiers are watermarked/personal-use only, refunds are non-refundable per terms, and users report cancellation/generation issues. Pro and Fancy unlock unwatermarked outputs and commercial rights, but verify export specs before committing.",
+      "bottomLine": "Pika is best viewed as an AI-self and live-agent experiment platform, not just a text-to-video tool. The strongest official evidence is around PikaStream, persona-led interaction, and MCP-style action hooks. The trade-off is that safety, authorization, interruption handling, and long-term memory are still much weaker evidence than the launch narrative suggests.",
       "bestFor": [
-        "Quick text-to-video experiments",
-        "Commercial use (Pro/Fancy)",
-        "Short stylized clips"
+        "Live AI self experiments",
+        "Persona-led creator tests",
+        "Task-taking avatar prototypes"
       ]
     },
     "faqs": [
@@ -158,20 +154,20 @@
     ]
   },
   "sources": {
-    "pika.art": {
-      "type": "OFFICIAL_WEBSITE",
-      "howToVerify": "Visit official Pika website and FAQ",
-      "suggestedQuery": "pika.art pricing commercial use watermark"
+    "Official YouTube channel and product demos": {
+      "type": "OFFICIAL_VIDEO_SOURCE",
+      "howToVerify": "Review Pika's official launch videos and PikaStream demos on the official YouTube channel.",
+      "suggestedQuery": "Pika official YouTube PikaStream AI selves"
     },
-    "trustpilot.com": {
-      "type": "USER_REVIEWS",
-      "howToVerify": "Check user reviews on Trustpilot",
-      "suggestedQuery": "pika trustpilot reviews cancellation"
+    "Official product pages": {
+      "type": "OFFICIAL_PRODUCT_MATERIALS",
+      "howToVerify": "Check the official Pika website or web product entry for current positioning and product access.",
+      "suggestedQuery": "Pika official website AI selves PikaStream"
     },
-    "lovart.ai": {
-      "type": "USER_REVIEWS",
-      "howToVerify": "Check user reviews and tutorials",
-      "suggestedQuery": "pika lovart review credits"
+    "Official app and launch materials": {
+      "type": "OFFICIAL_HELP_RESOURCES",
+      "howToVerify": "Check the iPhone app listing and official launch materials for supported interaction modes and product positioning.",
+      "suggestedQuery": "Pika iPhone app AI selves official"
     }
   }
 }

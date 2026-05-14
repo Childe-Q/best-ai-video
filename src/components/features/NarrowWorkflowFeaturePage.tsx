@@ -32,6 +32,8 @@ type FitCheckCard = {
 type WorkflowSectionOverride = {
   chooseWhen: string;
   disappoints: string;
+  displayToolSlugs?: string[];
+  summary?: string;
   contextualExits: Array<{
     href: string;
     label: string;
@@ -40,6 +42,7 @@ type WorkflowSectionOverride = {
 };
 
 type NarrowWorkflowOverride = {
+  heroSummary?: string;
   fitHeading: string;
   fitSummary: string;
   keyAxes: string[];
@@ -198,6 +201,8 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
     ],
   },
   'content-repurposing-ai-tools': {
+    heroSummary:
+      'Use this page when an existing asset needs to become video: articles and scripts on one side, recordings and long-form video on the other.',
     fitHeading: 'Use this route when the workflow starts with content you already have',
     fitSummary:
       'Use this page when an existing asset needs to become a new format: article to video, script to video, webinar to clips, or podcast to shorts.',
@@ -226,9 +231,11 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
       },
     ],
     shortlistLead:
-      'These two routes exist to narrow the conversion workflow quickly. They should feel like source-based choices, not like two generic tool buckets.',
+      'Pick the source type first, then compare the representative tools.',
     sectionOverrides: {
       'Written source to video': {
+        summary:
+          'Best for turning blogs, scripts, PPTs, PDFs, or documents into a narrated baseline video without rebuilding every scene manually.',
         chooseWhen:
           'Choose this shortlist when the source asset is written content that needs to become video: blog posts, scripts, articles, or documents that should turn into publishable output without building everything manually in an editor.',
         disappoints:
@@ -252,6 +259,8 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
         ],
       },
       'Recorded source to short clips': {
+        summary:
+          'Best for turning webinars, podcasts, interviews, or long-form videos into short clips with transcript extraction, reframing, and captions.',
         chooseWhen:
           'Choose this shortlist when the source asset is an existing recording and the job is to turn it into publishable short clips without doing deep manual editing on every timeline.',
         disappoints:
@@ -279,22 +288,17 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
       {
         question: 'Which source formats should I verify first?',
         answer:
-          'Check whether the tool handles your actual source type: article, script, document, webinar, podcast, interview, or long-form video. A tool that works well for written inputs may be weak at transcript-based clipping, and the reverse is also common.',
+          'Check whether the tool handles your real source type: article, script, document, webinar, podcast, interview, or long-form video. Written-source tools and transcript-clipping tools often fail in different places.',
       },
       {
         question: 'What matters most for podcast or webinar repurposing?',
         answer:
-          'Transcript extraction and moment selection matter first. If the transcript is weak or the tool cannot identify usable segments, the workflow still turns into manual review even if export templates look polished.',
+          'Transcript extraction and moment selection matter first. If either is weak, the workflow turns back into manual review even when the export templates look polished.',
       },
       {
         question: 'How should I compare long-form to short-form workflows?',
         answer:
-          'Compare how each tool finds highlights, preserves context, reframes video, writes captions, and exports platform-ready clips. The best workflow is usually the one that reduces review time, not just the one that creates the most clips.',
-      },
-      {
-        question: 'When does repurposing still need an editing handoff?',
-        answer:
-          'Use an editor after repurposing when the chosen clips need narrative cleanup, tighter pacing, audio repair, brand overlays, or manual trimming. Repurposing should create the candidate outputs; editing finishes the best ones.',
+          'Compare highlight selection, context preservation, reframing, captions, and export readiness. The best workflow reduces review time, not just clip count.',
       },
     ],
   },
@@ -502,35 +506,42 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
     ],
   },
   'ai-video-for-social-media': {
-    fitHeading: 'Stay here only if short-form social output is the real workflow',
+    heroSummary:
+      'Use this page when the job is repeatable social-native video: vertical output, captions, hooks, templates, clipping, or presenter-led posts.',
+    fitHeading: 'Use this route when short-form social output is the real workflow',
     fitSummary:
-      'Use this page only if the real job is social-native output: fast vertical publishing, hooks, captions, templates, and rapid posting for TikTok, Reels, Shorts, or similar feeds. If you need a YouTube-first publishing system, broader generator discovery, or a workflow defined by existing source material, exit early instead of treating social tools as a general video category.',
+      'Use this page when the job is fast vertical publishing for TikTok, Reels, Shorts, or similar feeds.',
     keyAxes: ['native 9:16', 'caption speed', 'publishing volume', 'turnaround time', 'workflow fit'],
     fitCards: [
       {
-        title: 'Stay here if you need high-volume social-first output',
+        title: 'Social-first output',
         summary:
-          'This is the right route when the job is repeatable vertical content with hooks, captions, templates, clip velocity, or quick prompt-driven publishing for social feeds.',
+          'Start here for repeatable vertical content with hooks, captions, templates, clipping, or prompt-led drafts.',
         href: '#vertical-templates-and-clip-velocity',
         label: 'Go to the shortlist',
       },
       {
-        title: 'Leave for repurposing if source material is the main constraint',
+        title: 'Source material first',
         summary:
-          'If you already have webinars, podcasts, interviews, or articles and the real job is converting them into clips, the repurposing workflow is the better first page.',
+          'Use repurposing when the real job is converting webinars, podcasts, interviews, or articles into new outputs.',
         href: '/features/content-repurposing-ai-tools',
         label: 'Go to repurposing',
       },
       {
-        title: 'Leave for YouTube if channel depth matters more than vertical speed',
+        title: 'YouTube channel depth',
         summary:
-          'If you are building a faceless YouTube channel or care more about recurring upload cadence and channel depth than social hooks and template velocity, the YouTube workflow page is the better fit.',
+          'Use YouTube workflows when channel cadence and long-form adjacency matter more than social speed.',
         href: '/features/ai-video-for-youtube',
         label: 'Go to YouTube workflows',
       },
     ],
+    shortlistLead:
+      'The first lane shows representative social-production paths, not every adjacent editor or repurposing tool in the data.',
     sectionOverrides: {
       'Vertical templates and clip velocity': {
+        summary:
+          'Best for fast social-native creation: templates and captions, prompt-led drafts, faceless assembly, or browser cleanup for vertical posts.',
+        displayToolSlugs: ['capcut', 'invideo', 'zebracat', 'veed-io'],
         chooseWhen:
           'Choose this shortlist when the priority is repeatable short-form output: fast hooks, dynamic captions, templates, AI reframing, and a quick path from idea or source clip to publishable social posts.',
         disappoints:
@@ -554,6 +565,8 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
         ],
       },
       'Presenter-led social output': {
+        summary:
+          'Best when the social format needs a recurring presenter or avatar rather than a clip-velocity workflow.',
         chooseWhen:
           'Choose this shortlist when the output still needs to feel social-native, but the content format is a recurring presenter or avatar rather than clip velocity, templates, or visual hooks built around raw footage.',
         disappoints:
@@ -579,29 +592,19 @@ const narrowWorkflowOverrides: Partial<Record<string, NarrowWorkflowOverride>> =
     },
     faqItems: [
       {
-        question: 'Do I actually need a social media workflow page, or a broader generator page?',
+        question: 'What should I compare first for social-native output?',
         answer:
-          'Use this page when the real job is fast vertical publishing for TikTok, Reels, or Shorts, with social-native hooks, captions, and template velocity. If you are still choosing between general generator categories, the broader generators page is a better first step.',
+          'Start with native vertical output, caption quality, and the path from idea or source clip to publishable post. Speed matters only after the format already feels social-native.',
       },
       {
-        question: 'Should I start with template and clip workflows or avatar-led social tools?',
+        question: 'When should I use prompt-led drafts versus clip cleanup?',
         answer:
-          'Start with template and clip workflows when speed, captions, hooks, and throughput matter most. Start with avatar-led social tools when the content format itself depends on a recurring presenter or spokesperson.',
+          'Use prompt-led drafts when there is no finished footage and you need a fast stock-scene or faceless starting point. Use cleanup or clipping tools when footage already exists and captions, reframing, or trimming are the bottleneck.',
       },
       {
-        question: 'When is repurposing a better route than this page?',
+        question: 'When does presenter-led social output matter?',
         answer:
-          'Repurposing is the better route when the workflow starts with existing webinars, podcasts, interviews, or articles and conversion quality matters more than social-native creation features.',
-      },
-      {
-        question: 'What matters most on this page: native 9:16 support, caption templates, or speed?',
-        answer:
-          'Start with native vertical support and usable caption styles, because they define whether the output feels social-native at all. Then check speed and throughput, since social workflows usually break on template velocity and publishing cadence before they break on edge-case features.',
-      },
-      {
-        question: 'When should I leave this page for YouTube or the broader avatar shortlist?',
-        answer:
-          'Leave for YouTube when recurring upload cadence, long-form adjacency, or faceless channel automation is the real job. Leave for the broader avatar shortlist when social media is no longer the main frame and you are really comparing presenter platforms.',
+          'Choose presenter-led tools when a recurring spokesperson or avatar is part of the format. If the speaker is not central, template speed, captions, and clip velocity usually matter more.',
       },
     ],
   },
@@ -887,6 +890,7 @@ export default function NarrowWorkflowFeaturePage({
   };
 
   const recommendedGroups = buildRecommendedGroups(featureSlug, recommendedReadingLinks);
+  const heroSummary = safeOverride.heroSummary ?? pageData.hero.subheadline;
 
   return (
     <div
@@ -928,7 +932,7 @@ export default function NarrowWorkflowFeaturePage({
             <p className="mt-4 max-w-4xl text-sm font-semibold uppercase tracking-[0.12em] text-gray-600">
               Pick the workflow route, then compare the shortlist.
             </p>
-            <p className="mt-5 max-w-4xl text-lg leading-8 text-gray-700">{pageData.hero.subheadline}</p>
+            <p className="mt-5 max-w-4xl text-lg leading-8 text-gray-700">{heroSummary}</p>
 
             <div className="mt-8 grid gap-4 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
               <div className="rounded-2xl border border-black/15 bg-white/85 p-5">
@@ -991,36 +995,44 @@ export default function NarrowWorkflowFeaturePage({
           </div>
         </section>
 
-        {groups.map((group) => (
-          <section
-            key={group.groupTitle}
-            id={group.groupTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
-            className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10"
-          >
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Main shortlist</p>
-            <h2 className="mt-3 text-3xl font-bold text-gray-900">{group.groupTitle}</h2>
-            {safeOverride.shortlistLead ? (
-              <p className="mt-4 max-w-3xl text-base leading-8 text-gray-600">{safeOverride.shortlistLead}</p>
-            ) : null}
-            {group.groupSummary ? (
-              <p className={`${safeOverride.shortlistLead ? 'mt-3' : 'mt-4'} max-w-3xl text-base leading-8 text-gray-600`}>
-                {group.groupSummary}
-              </p>
-            ) : null}
+        {groups.map((group) => {
+          const sectionOverride = safeOverride.sectionOverrides[group.groupTitle];
+          const displayTools = sectionOverride?.displayToolSlugs?.length
+            ? group.tools.filter((tool) => sectionOverride.displayToolSlugs?.includes(tool.toolSlug))
+            : group.tools;
+          const groupSummary = sectionOverride?.summary ?? group.groupSummary;
 
-            <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {group.tools.map((tool, index) => (
-                <ToolCard
-                  key={`${group.groupTitle}-${tool.toolSlug}`}
-                  tool={tool}
-                  featureSlug={featureSlug}
-                  groupTitle={group.groupTitle}
-                  position={index + 1}
-                />
-              ))}
-            </div>
-          </section>
-        ))}
+          return (
+            <section
+              key={group.groupTitle}
+              id={group.groupTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
+              className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10"
+            >
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Main shortlist</p>
+              <h2 className="mt-3 text-3xl font-bold text-gray-900">{group.groupTitle}</h2>
+              {safeOverride.shortlistLead ? (
+                <p className="mt-4 max-w-3xl text-base leading-8 text-gray-600">{safeOverride.shortlistLead}</p>
+              ) : null}
+              {groupSummary ? (
+                <p className={`${safeOverride.shortlistLead ? 'mt-3' : 'mt-4'} max-w-3xl text-base leading-8 text-gray-600`}>
+                  {groupSummary}
+                </p>
+              ) : null}
+
+              <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                {displayTools.map((tool, index) => (
+                  <ToolCard
+                    key={`${group.groupTitle}-${tool.toolSlug}`}
+                    tool={tool}
+                    featureSlug={featureSlug}
+                    groupTitle={group.groupTitle}
+                    position={index + 1}
+                  />
+                ))}
+              </div>
+            </section>
+          );
+        })}
 
         {recommendedGroups.length > 0 && (
           <FeatureNextSteps

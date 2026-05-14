@@ -15,7 +15,7 @@ import { metadata as termsMetadata } from '@/app/terms/page';
 import { generateMetadata as pricingGenerateMetadata } from '@/app/tool/[slug]/pricing/page';
 import { metadata as vsIndexMetadata } from '@/app/vs/page';
 import { getIndexableFeaturePageSlugs, isFeaturePageIndexable } from '@/lib/features/indexability';
-import { getFeaturePageSlugs } from '@/lib/features/readFeaturePageData';
+import { getFeaturePageSlugs, readFeaturePageData } from '@/lib/features/readFeaturePageData';
 import { getCanonicalPricingStaticParams } from '@/lib/pricingCards';
 import { getPricingPageExposure } from '@/lib/pricing/indexability';
 import { getAllTools } from '@/lib/toolData';
@@ -59,6 +59,14 @@ function isNoIndexFollow(metadata: Metadata): boolean {
 function isNoIndexNoFollow(metadata: Metadata): boolean {
   const robots = extractRobots(metadata);
   return robots?.index === false && robots?.follow === false;
+}
+
+function hasReadableText(value: unknown): value is string {
+  return typeof value === 'string' && value.trim().length > 0;
+}
+
+function hasPlaceholderSignal(value: string): boolean {
+  return /\b(TBD|placeholder|undefined|N\/A)\b/i.test(value);
 }
 
 async function withMutedConsole<T>(fn: () => Promise<T>): Promise<T> {
@@ -130,6 +138,60 @@ async function validateFeatureExposureRules() {
   }
 }
 
+function validateVisibleFeatureContentRules() {
+  for (const slug of getFeaturePageSlugs()) {
+    const pageData = readFeaturePageData(slug);
+    assert(pageData, `Feature page data should be readable for ${slug}.`);
+
+    assert(hasReadableText(pageData.hero.h1), `Feature hero h1 is empty for ${slug}.`);
+    assert(hasReadableText(pageData.hero.subheadline), `Feature hero subheadline is empty for ${slug}.`);
+
+    for (const [index, bullet] of pageData.hero.definitionBullets.entries()) {
+      assert(hasReadableText(bullet), `Feature hero bullet ${index} is empty for ${slug}.`);
+      assert(!hasPlaceholderSignal(bullet), `Feature hero bullet ${index} has placeholder text for ${slug}.`);
+    }
+
+    for (const [index, criterion] of (pageData.howToChoose?.criteria ?? []).entries()) {
+      assert(hasReadableText(criterion.title), `Feature checklist card ${index} title is empty for ${slug}.`);
+      assert(hasReadableText(criterion.desc), `Feature checklist card ${index} description is empty for ${slug}.`);
+      assert(!hasPlaceholderSignal(criterion.title), `Feature checklist card ${index} title has placeholder text for ${slug}.`);
+      assert(!hasPlaceholderSignal(criterion.desc), `Feature checklist card ${index} description has placeholder text for ${slug}.`);
+    }
+
+    assert(pageData.groups.length > 0, `Feature page has no rendered tool groups for ${slug}.`);
+    for (const [groupIndex, group] of pageData.groups.entries()) {
+      assert(hasReadableText(group.groupTitle), `Feature tool group ${groupIndex} title is empty for ${slug}.`);
+      assert(group.tools.length > 0, `Feature tool group ${group.groupTitle} has no tools for ${slug}.`);
+
+      for (const [toolIndex, tool] of group.tools.entries()) {
+        assert(hasReadableText(tool.toolSlug), `Feature tool card ${toolIndex} slug is empty in ${group.groupTitle} for ${slug}.`);
+        assert(hasReadableText(tool.reasonLine1), `Feature tool card ${tool.toolSlug} rationale is empty for ${slug}.`);
+        assert(!hasPlaceholderSignal(tool.reasonLine1), `Feature tool card ${tool.toolSlug} rationale has placeholder text for ${slug}.`);
+      }
+    }
+
+    for (const [index, item] of (pageData.faq ?? []).entries()) {
+      assert(hasReadableText(item.question), `Feature FAQ ${index} question is empty for ${slug}.`);
+      assert(hasReadableText(item.answer), `Feature FAQ ${index} answer is empty for ${slug}.`);
+      assert(!hasPlaceholderSignal(item.question), `Feature FAQ ${index} question has placeholder text for ${slug}.`);
+      assert(!hasPlaceholderSignal(item.answer), `Feature FAQ ${index} answer has placeholder text for ${slug}.`);
+    }
+
+    const recommendedReading = pageData.recommendedReading;
+    if (recommendedReading) {
+      for (const key of ['tools', 'alternativesPages', 'vsPages', 'guides'] as const) {
+        for (const [index, destination] of (recommendedReading[key] ?? []).entries()) {
+          assert(hasReadableText(destination), `Feature recommendedReading.${key}[${index}] is empty for ${slug}.`);
+          assert(
+            !hasPlaceholderSignal(destination),
+            `Feature recommendedReading.${key}[${index}] has placeholder text for ${slug}.`
+          );
+        }
+      }
+    }
+  }
+}
+
 async function validatePricingCardsRules() {
   assert(isNoIndexNoFollow(pricingCardsIndexMetadata), 'Pricing cards index should be noindex,nofollow.');
 
@@ -167,6 +229,7 @@ async function validateCanonicalRules() {
 async function main() {
   await validatePricingExposureRules();
   await validateFeatureExposureRules();
+  validateVisibleFeatureContentRules();
   await validatePricingCardsRules();
   await validateCanonicalRules();
 
