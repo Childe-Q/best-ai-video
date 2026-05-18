@@ -58,7 +58,15 @@
         "linkHref": "/vs/zebracat-vs-fliki",
         "linkText": "Compare alternatives →"
       }
-    ]
+    ],
+    "briefingVideo": {
+      "title": "Briefing video",
+      "description": "AI-generated briefing for Zebracat's faceless social video generation workflow.",
+      "url": "/media/briefings/zebracat-briefing.mp4",
+      "provider": "local",
+      "sourceNote": "Based on official source materials and official YouTube product demos.",
+      "disclaimer": "AI-generated briefing. Not a hands-on test."
+    }
   },
   "features": {
     "keyFeatures": [

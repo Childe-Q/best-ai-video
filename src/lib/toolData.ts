@@ -88,6 +88,9 @@ function mergeToolContent(base?: Tool['content'], editorial?: ToolContent | null
     ...(editorial?.overview?.miniTest ? { miniTest: editorial.overview.miniTest } : {}),
     ...(editorial?.overview?.useCases ? { useCases: editorial.overview.useCases } : {}),
     ...(editorial?.overview?.output ? { output: editorial.overview.output } : {}),
+    ...(editorial?.overview?.briefingVideo
+      ? { briefingVideo: editorial.overview.briefingVideo }
+      : {}),
   });
 
   const mergedPricing = withNullIfEmpty({

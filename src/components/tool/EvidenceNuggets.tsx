@@ -14,6 +14,8 @@ interface EvidenceNuggetsProps {
   limit?: number;
   theme?: EvidenceTheme;
   showSources?: boolean;
+  title?: string;
+  description?: string;
 }
 
 const themeLabels: Record<EvidenceTheme, string> = {
@@ -216,7 +218,14 @@ function buildSourceChips(slug: string, sourceUrls: string[]): { visible: Source
   };
 }
 
-export default function EvidenceNuggets({ slug, limit = 6, theme, showSources = true }: EvidenceNuggetsProps) {
+export default function EvidenceNuggets({
+  slug,
+  limit = 3,
+  theme,
+  showSources = true,
+  title = 'Evidence summary',
+  description = 'Selected source-backed notes used to support the review, kept separate from the main buying verdict.',
+}: EvidenceNuggetsProps) {
   // Read evidence data using universal API
   const evidence = readEvidence(slug);
 
@@ -236,7 +245,7 @@ export default function EvidenceNuggets({ slug, limit = 6, theme, showSources = 
   nuggets = rankEvidenceNuggetsForDisplay(nuggets);
 
   // Limit results
-  nuggets = nuggets.slice(0, limit);
+  nuggets = nuggets.slice(0, Math.min(limit, 3));
 
   // Return null if no nuggets after filtering
   if (nuggets.length === 0) {
@@ -249,21 +258,27 @@ export default function EvidenceNuggets({ slug, limit = 6, theme, showSources = 
     : { visible: [], hiddenCount: 0 };
 
   return (
-    <div className="bg-white rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_#000] p-6">
+    <div className="rounded-2xl border border-slate-200 bg-white p-6">
       {/* Header */}
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-bold text-gray-900">Key Facts</h3>
-        <span className="text-xs text-gray-500">
+      <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Evidence</p>
+          <h2 className="mt-1 text-xl font-bold text-gray-900">{title}</h2>
+          {description ? (
+            <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">{description}</p>
+          ) : null}
+        </div>
+        <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-gray-500">
           {evidence.metadata.totalNuggets} verified fact{evidence.metadata.totalNuggets !== 1 ? 's' : ''}
         </span>
       </div>
 
       {/* Nuggets Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
         {nuggets.map((nugget, idx) => (
           <div
             key={idx}
-            className="flex items-start gap-3 p-3 bg-gray-50 rounded-lg border border-gray-100 hover:border-gray-200 transition-colors"
+            className="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50 p-3 transition-colors hover:border-slate-200"
           >
             {/* Theme Badge */}
             <span className={`flex-shrink-0 px-2 py-0.5 rounded text-xs font-medium border ${themeColors[nugget.theme]}`}>

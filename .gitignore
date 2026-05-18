@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# Local-only large media assets (keep out of git; use external hosting/CDN or Git LFS)
+/public/media/briefings/*.mp4
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

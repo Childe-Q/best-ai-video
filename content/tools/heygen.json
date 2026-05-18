@@ -58,7 +58,15 @@
         "linkHref": "/vs/heygen-vs-elai-io",
         "linkText": "Compare avatar workflows →"
       }
-    ]
+    ],
+    "briefingVideo": {
+      "title": "Briefing video",
+      "description": "AI-generated briefing for HeyGen's avatar-led training, localization, and review workflows.",
+      "url": "/media/briefings/heygen-briefing.mp4",
+      "provider": "local",
+      "sourceNote": "Based on official source materials and official YouTube product demos.",
+      "disclaimer": "AI-generated briefing. Not a hands-on test."
+    }
   },
   "features": {
     "keyFeatures": [

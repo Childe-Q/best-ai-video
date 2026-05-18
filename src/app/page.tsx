@@ -112,6 +112,12 @@ const startPaths: StartPath[] = [
       },
       {
         kind: 'feature' as const,
+        slug: 'text-to-video-ai-tools',
+        href: '/features/text-to-video-ai-tools',
+        label: 'Text-to-video tools',
+      },
+      {
+        kind: 'feature' as const,
         slug: 'ai-avatar-video-generators',
         href: '/features/ai-avatar-video-generators',
         label: 'AI avatar tools',
@@ -121,6 +127,18 @@ const startPaths: StartPath[] = [
         slug: 'content-repurposing-ai-tools',
         href: '/features/content-repurposing-ai-tools',
         label: 'Repurposing tools',
+      },
+      {
+        kind: 'feature' as const,
+        slug: 'enterprise-ai-video-solutions',
+        href: '/features/enterprise-ai-video-solutions',
+        label: 'Enterprise procurement',
+      },
+      {
+        kind: 'feature' as const,
+        slug: 'budget-friendly-ai-video-tools',
+        href: '/features/budget-friendly-ai-video-tools',
+        label: 'Budget constraints',
       },
     ],
   },

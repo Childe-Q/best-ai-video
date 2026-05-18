@@ -58,7 +58,15 @@
         "linkHref": "/vs/veed-io-vs-invideo",
         "linkText": "Compare alternatives →"
       }
-    ]
+    ],
+    "briefingVideo": {
+      "title": "Briefing video",
+      "description": "AI-generated briefing for VEED's transcript editing, subtitles, and repurposing workflow.",
+      "url": "/media/briefings/veed-io-briefing.mp4",
+      "provider": "local",
+      "sourceNote": "Based on official source materials and official YouTube product demos.",
+      "disclaimer": "AI-generated briefing. Not a hands-on test."
+    }
   },
   "features": {
     "keyFeatures": [

@@ -155,6 +155,16 @@ export type Tool = {
         linkHref: string;
         linkText?: string; // Optional, defaults to "Compare with alternatives →"
       }>;
+      briefingVideo?: {
+        title: string;
+        description?: string;
+        url: string;
+        duration?: string;
+        provider?: 'local' | 'youtube' | 'cdn';
+        posterUrl?: string;
+        sourceNote: string;
+        disclaimer: string;
+      };
     };
     pricing?: {
       snapshot?: {

@@ -5,6 +5,7 @@ import { getAllTools, getToolBySlug } from '@/lib/toolData';
 import { getSEOCurrentYear } from '@/lib/utils';
 import { getRelatedComparisons, getAlternativesLink, getMostRelevantWorkflowLink } from '@/lib/getRelatedLinks';
 import TldrBlock from '@/components/tool/TldrBlock';
+import BriefingVideoSection from '@/components/tool/BriefingVideoSection';
 import MiniTestBlock from '@/components/tool/MiniTestBlock';
 import UseCaseCards from '@/components/tool/UseCaseCards';
 import ProsCons from '@/components/tool/ProsCons';
@@ -102,6 +103,7 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
   const workflowLink = getMostRelevantWorkflowLink(slug);
   const editorialSummary = editorialSummaries[slug];
   const lifecycleStatus = getToolLifecycleStatus(slug);
+  const hasBriefingVideo = Boolean(content?.overview?.briefingVideo);
 
   return (
     <>
@@ -111,7 +113,7 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
         dangerouslySetInnerHTML={{ __html: JSON.stringify(buildSoftwareApplicationJsonLd(tool)) }}
       />
       {/* 3. The Video Row (Full Width) */}
-      {videoId && (
+      {videoId && !hasBriefingVideo && (
         <div id="mini-test" className="w-full bg-slate-50 py-16 scroll-mt-32">
           <div className="w-full max-w-[1600px] mx-auto px-4 md:px-12 lg:px-24">
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl">
@@ -144,6 +146,10 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
               why={tool.pros && tool.pros.length > 0 ? tool.pros[0] : `Strong value proposition with ${tool.starting_price || 'competitive pricing'} and ${tool.features && tool.features.length > 0 ? tool.features[0] : 'key features'} that streamline video creation workflow`}
             />
           )}
+
+          {content?.overview?.briefingVideo ? (
+            <BriefingVideoSection video={content.overview.briefingVideo} />
+          ) : null}
 
           {lifecycleStatus ? (
             <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
@@ -277,6 +283,27 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
             </div>
           )}
 
+          {videoId && hasBriefingVideo ? (
+            <div id="mini-test" className="rounded-2xl border border-slate-200 bg-white p-6 scroll-mt-32">
+              <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Official demo</p>
+              <h2 className="mt-2 text-xl font-bold text-gray-900">{tool.name} product video</h2>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-gray-600">
+                Use this as supporting context after the briefing and workflow notes, not as the main review verdict.
+              </p>
+              <div className="mt-5 overflow-hidden rounded-2xl border border-slate-200 bg-slate-950">
+                <div className="relative aspect-video w-full">
+                  <iframe
+                    className="absolute left-0 top-0 h-full w-full"
+                    src={`https://www.youtube.com/embed/${videoId}`}
+                    title={`${tool.name} product video`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          ) : null}
+
           {/* Use Cases Section */}
           {content?.overview?.useCases && content.overview.useCases.length > 0 ? (
             <UseCaseCards useCases={content.overview.useCases} />
@@ -318,8 +345,8 @@ export default async function OverviewPage({ params }: { params: Promise<{ slug:
             cons={tool.cons ?? []}
           />
 
-          {/* Evidence Nuggets - Verified facts from official pages */}
-          <EvidenceNuggets slug={slug} limit={6} />
+          {/* Evidence summary - supporting facts from official pages */}
+          <EvidenceNuggets slug={slug} limit={3} showSources={false} />
 
           {/* Evidence Notes — Sources used for this review */}
           {content?.sources && <EvidenceNotes sources={content.sources} />}

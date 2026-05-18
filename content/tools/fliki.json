@@ -58,7 +58,15 @@
         "linkHref": "/vs/fliki-vs-invideo",
         "linkText": "Compare automation fit →"
       }
-    ]
+    ],
+    "briefingVideo": {
+      "title": "Briefing video",
+      "description": "AI-generated briefing for Fliki's PPT/PDF, script, and voiceover-first video workflows.",
+      "url": "/media/briefings/fliki-briefing.mp4",
+      "provider": "local",
+      "sourceNote": "Based on official source materials and official YouTube product demos.",
+      "disclaimer": "AI-generated briefing. Not a hands-on test."
+    }
   },
   "features": {
     "keyFeatures": [

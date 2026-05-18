@@ -155,6 +155,12 @@ P1 recovery tasks:
 - Business/procurement lane is visible from `/features`.
 - Feature detail pages build recommended reading through promote-safe filtering.
 - Feature templates receive `promoteSafeFeatureHrefs` and sanitize hardcoded feature exits through the shared helper.
+- Feature IA cleanup has now completed P1-P4-min:
+  - P2/P2.5/P2.7 converted `enterprise-ai-video-solutions` into a procurement shortlist instead of a gatekeeping explainer.
+  - P3/P3.5 kept narrow workflow pages focused on quick route decision, shortlist, contextual next steps, and non-repetitive FAQ.
+  - P3.6 kept policy/constraint pages focused on threshold summary, matrix, bucket choice, shortlist, and compact FAQ.
+  - P4-min synced `public/llms.txt`, homepage workflow feature slots, and this handoff note to the settled feature IA.
+- P4-min is a light external-discovery sync, not a broad SEO expansion pass. It should not be used as justification to reopen homepage, `/features`, `llms.txt`, or feature templates unless a concrete routing regression is found.
 
 ## Current scope boundary
 - Do not redo broad feature IA or feature-template filtering unless a concrete regression is found.

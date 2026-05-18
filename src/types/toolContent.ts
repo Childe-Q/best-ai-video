@@ -28,6 +28,16 @@ export interface ToolContent {
       videoUrl?: string;
       description?: string;
     };
+    briefingVideo?: {
+      title: string;
+      description?: string;
+      url: string;
+      duration?: string;
+      provider?: 'local' | 'youtube' | 'cdn';
+      posterUrl?: string;
+      sourceNote: string;
+      disclaimer: string;
+    };
   };
   
   // Features section

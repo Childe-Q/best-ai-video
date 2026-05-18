@@ -6,15 +6,14 @@ import ToolLogo from '@/components/ToolLogo';
 import VerdictCard from '@/components/VerdictCard';
 import CTAButton from '@/components/CTAButton';
 import ToolTabs from '@/components/ToolTabs';
-import { CheckBadgeIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import { LinkIcon, BookmarkIcon } from '@heroicons/react/24/outline';
+import { BookmarkIcon } from '@heroicons/react/24/outline';
 import DoubleLayerChips from '@/components/tool/DoubleLayerChips';
 import { getUseCaseChips, getCapabilityChips } from '@/lib/toolChips';
 import EditorialScore from '@/components/tool/EditorialScore';
 import { getCurrentMonthYear } from '@/lib/utils';
 import { buildBreadcrumbJsonLd } from '@/lib/jsonLd';
-import { getPricingDisplay, getToolPricingSummary } from '@/lib/pricing/display';
+import { getToolPricingSummary } from '@/lib/pricing/display';
 import { getToolCardPricingDisplay } from '@/lib/pricing/cardDisplay';
 import { getPricingAcceptanceResult } from '@/lib/pricing/acceptance';
 import ToolPageHeading from '@/components/tool/ToolPageHeading';
@@ -77,13 +76,13 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
           <Breadcrumbs toolName={tool.name} toolSlug={tool.slug} />
         </div>
 
-        {/* 2. THE GRID ROW - Left card, Key facts, and Verdict card in CSS Grid */}
+        {/* 2. THE GRID ROW - Left card and Verdict card in CSS Grid */}
         <div
           id="tool-layout-summary-grid"
-          className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_420px] lg:grid-rows-[auto_1fr] lg:items-stretch mb-8"
+          className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_420px] lg:items-stretch mb-8"
         >
-          {/* Left Column: Hero (Row 1, Col 1) */}
-          <div className="lg:col-start-1 lg:row-start-1 flex flex-col h-full bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+          {/* Left Column: Hero */}
+          <div className="flex flex-col h-full bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
             <div className="p-4 flex-1">
               <div className="flex flex-col md:flex-row gap-3 items-start">
                 {/* Logo */}
@@ -250,7 +249,7 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
               </div>
             </div>
             {/* Footer Buttons (Pinned to bottom) */}
-            <div className="p-4 pt-0 mt-auto flex gap-3">
+            <div className="p-4 pt-0 mt-auto flex flex-col gap-3 sm:flex-row">
               <CTAButton 
                 affiliateLink={tool.affiliate_link}
                 text={tool.deal ? 'Get the deal' : 'Visit Website'}
@@ -258,7 +257,7 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
                 className="flex-1"
               />
               <button
-                className="border border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-900 font-medium px-4 py-2.5 rounded-lg transition-colors flex items-center gap-2"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300 px-4 py-2.5 font-medium text-gray-700 transition-colors hover:border-gray-400 hover:text-gray-900"
                 aria-label="Bookmark"
               >
                 <BookmarkIcon className="w-4 h-4" />
@@ -267,30 +266,9 @@ export default async function ToolLayout({ children, params }: ToolLayoutProps) 
             </div>
           </div>
 
-          {/* Key Facts Block (Row 2, Col 1) */}
-          {tool.key_facts && tool.key_facts.length > 0 && (
-            <div className="lg:col-start-1 lg:row-start-2 h-full">
-              <div id="key-facts" className="bg-gray-50/30 border border-gray-200/60 rounded-md shadow-sm p-2.5 h-full flex flex-col">
-                <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1.5">Key Facts</h3>
-                <ul className="space-y-1">
-                  {tool.key_facts.map((fact, idx) => (
-                    <li 
-                      key={idx} 
-                      id={`key-fact-${idx}`}
-                      className="flex items-start gap-1.5 text-xs text-gray-600 leading-tight transition-colors duration-200"
-                    >
-                      <span className="text-indigo-500 font-bold shrink-0 mt-0.5">•</span>
-                      <span>{fact}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          )}
-
-          {/* Right Column: Verdict (Col 2, Spans both rows) */}
+          {/* Right Column: Verdict */}
           {/* Removed shadow-sm and overflow-hidden to prevent shadow clipping/overlay issues */}
-          <div className="lg:col-start-2 lg:row-span-2 flex flex-col h-full bg-slate-50 border border-slate-200 rounded-xl">
+          <div className="flex flex-col h-full bg-slate-50 border border-slate-200 rounded-xl">
             <div className="p-4 flex-1">
               <VerdictCard
                 reviewContent={tool.review_content || ''}

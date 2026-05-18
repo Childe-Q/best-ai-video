@@ -140,10 +140,28 @@ Implementation note:
 - For `ai-video-for-social-media`, keep the vertical/social lane to representative tools on the page while leaving the full normalized group intact.
 - For `content-repurposing-ai-tools`, shorten the rendered hero, group summaries, shortlist lead, and FAQ so the page stays source-route-first.
 
+### P3.6: Policy / Constraint Page Denoise
+
+Keep constraint pages as hard-threshold decision shortlists instead of repeating policy exits.
+
+Implementation note:
+
+- Preserve normalized tool membership; use the policy-threshold renderer to reduce displayed explanation.
+- Remove the rendered threshold checklist and per-bucket exit blocks from policy pages.
+- Keep threshold summary, matrix, bucket choice, shortlist, and compact FAQ as the core page flow.
+- For `budget-friendly-ai-video-tools`, remove the free-only escape bucket from the rendered bucket cards.
+- For `fast-ai-video-generators`, keep the bucket choice focused on the real speed-first route instead of restating broader comparison exits.
+
 ### P4: Sync External Discovery
 
-Only after the feature hub settles, consider updating:
+After the feature hub and page templates settled, keep external discovery surfaces aligned without expanding the site architecture.
 
 - `public/llms.txt`
 - homepage feature slots
 - docs/handoff notes
+
+Implementation note:
+
+- `public/llms.txt` should expose the cleaned feature IA as curated route-level citation targets, including business/procurement and constraint pages, without dumping every feature URL.
+- Homepage workflow slots should point beyond the old broad/avatar/repurposing set and include enterprise procurement plus at least one constraint route.
+- Handoff notes should record that P1-P3.6 are complete and P4-min is an external-discovery sync, not a new SEO expansion pass.

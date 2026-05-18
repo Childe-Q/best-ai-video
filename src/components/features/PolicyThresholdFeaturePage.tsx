@@ -35,7 +35,6 @@ type PolicyBucketCard = {
   title: string;
   summary: string;
   compareFirst: string;
-  whenToSkip: string;
   href: string;
   label: string;
 };
@@ -45,32 +44,19 @@ type BucketMatrixRow = {
   values: Record<string, string>;
 };
 
-type BucketOverride = {
-  startHereWhen: string;
-  watchFor: string;
-  nextStepHref: string;
-  nextStepLabel: string;
-  nextStepNote: string;
-};
-
 type PolicyThresholdOverride = {
   heroPill: string;
-  wrongFitText: string;
-  wrongFitHref: string;
-  wrongFitLabel: string;
   keyAxes: string[];
   toolPolicyLabel: string;
   summaryCards: PolicySummaryCard[];
   bucketCards: PolicyBucketCard[];
   matrixRows: BucketMatrixRow[];
   summaryLead?: string;
-  checklistLead?: string;
   matrixLead?: string;
   bucketLead?: string;
   shortlistLead?: string;
   faqLead?: string;
   faqItems: FeatureFaqItem[];
-  bucketOverrides: Record<string, BucketOverride>;
 };
 
 type ReadingGroup = {
@@ -102,16 +88,6 @@ function getLookupValue(values: Record<string, string>, key: string): string | n
   const matchedValue = matchedEntry?.[1];
 
   return hasDisplayText(matchedValue) ? matchedValue.trim() : null;
-}
-
-function getBucketOverride(
-  overrides: Record<string, BucketOverride>,
-  groupTitle: string
-): BucketOverride | undefined {
-  return (
-    overrides[groupTitle] ??
-    Object.entries(overrides).find(([candidateTitle]) => normalizeLookupKey(candidateTitle) === normalizeLookupKey(groupTitle))?.[1]
-  );
 }
 
 function buildRenderableMatrixRows(matrixRows: BucketMatrixRow[], groups: FeatureGroupDisplay[]) {
@@ -158,10 +134,6 @@ const readingOrder: FeatureRecommendedReadingLink['linkType'][] = ['tool', 'tool
 const policyThresholdOverrides: Partial<Record<string, PolicyThresholdOverride>> = {
   'free-ai-video-no-watermark': {
     heroPill: 'Free-tier rule and eligibility first',
-    wrongFitText:
-      'If the real question is not “free and no watermark” but simply “which AI video tool is best overall,” this page is too narrow. Go back to the broader shortlist first.',
-    wrongFitHref: '/features/best-ai-video-generators',
-    wrongFitLabel: 'Go back to the broader generators shortlist',
     keyAxes: ['watermark rule', 'free-tier eligibility', 'export limits', 'resolution cap', 'commercial-use risk'],
     toolPolicyLabel: 'Watermark policy',
     summaryCards: [
@@ -199,7 +171,6 @@ const policyThresholdOverrides: Partial<Record<string, PolicyThresholdOverride>>
         title: 'Need truly free no-watermark now',
         summary: 'Start with the truly free bucket when the rule is non-negotiable: free exports must stay clean without hidden upgrade steps.',
         compareFirst: 'Export cap, resolution, and how quickly free credits run out',
-        whenToSkip: 'Skip this bucket if 720p caps, tiny credit allowances, or limited templates make “free” unusable in practice.',
         href: '#truly-free',
         label: 'Go to Truly Free',
       },
@@ -207,7 +178,6 @@ const policyThresholdOverrides: Partial<Record<string, PolicyThresholdOverride>>
         title: 'Okay with limits if the free export stays clean',
         summary: 'Start with conditional free when you can tolerate export count or duration caps as long as the tool occasionally gives you watermark-free output.',
         compareFirst: 'Time limits, export counts, and what happens after the cap',
-        whenToSkip: 'Skip this bucket if you need the no-watermark rule to hold consistently across every export, not just under a narrow condition.',
         href: '#conditional-free',
         label: 'Go to Conditional Free',
       },
@@ -215,7 +185,6 @@ const policyThresholdOverrides: Partial<Record<string, PolicyThresholdOverride>>
         title: 'Okay paying a little to remove branding',
         summary: 'Start with low-cost removal when free is only for evaluation and your real question is which tool becomes clean at the cheapest acceptable upgrade.',
         compareFirst: 'Upgrade price, output quality after upgrade, and whether the tool is worth paying for at all',
-        whenToSkip: 'Skip this bucket if staying at $0 is the whole point or if the paid tier quickly stops being budget-friendly.',
         href: '#low-cost-removal',
         label: 'Go to Low-Cost Removal',
       },
@@ -265,55 +234,20 @@ const policyThresholdOverrides: Partial<Record<string, PolicyThresholdOverride>>
     faqItems: [
       {
         question: 'What actually counts as truly free and watermark-free?',
-        answer: 'It only counts as truly free if the export stays clean on the free tier without requiring an upgrade and without a hidden cap that immediately breaks the promise. This is why the page separates Truly Free from Conditional Free instead of treating every “free” claim as equivalent.',
+        answer: 'It counts only if the free export stays clean without an upgrade and without a hidden cap that immediately breaks the promise. That is why this page separates Truly Free from Conditional Free.',
       },
       {
         question: 'Which bucket should I check first?',
-        answer: 'Start with Truly Free if staying at $0 is non-negotiable. Start with Conditional Free if occasional clean exports are enough. Start with Low-Cost Removal if you already know a small paid upgrade is acceptable and you mainly want the cheapest clean-output path.',
+        answer: 'Start with Truly Free if staying at $0 is non-negotiable. Use Conditional Free for occasional clean exports, and Low-Cost Removal if a small paid upgrade is acceptable.',
       },
       {
         question: 'Which free tools are strongest if commercial use matters?',
-        answer: 'This page is not the best place to assume commercial safety from the watermark rule alone. Free and watermark-free does not automatically mean commercially safe. If commercial use is decisive, treat it as a second-pass filter and verify the terms before publishing.',
-      },
-      {
-        question: 'When is a cheap upgrade better than chasing a fully free tool?',
-        answer: 'A cheap upgrade is better when the free bucket keeps failing on resolution, credits, or reliability. If you already know the free allowance is too small for real use, a low-cost clean-output plan is often more practical than optimizing around a fragile free promise.',
-      },
-      {
-        question: 'Should I use this page, or go back to the broader generators shortlist?',
-        answer: 'Use this page only if watermark rule and free-tier eligibility are the real constraints. If you care more about the overall best tool than about staying free and watermark-free, go back to the broader generators shortlist.',
+        answer: 'Do not infer commercial safety from watermark policy alone. If commercial use is decisive, verify the terms before publishing even when the export is free and clean.',
       },
     ],
-    bucketOverrides: {
-      'Truly Free': {
-        startHereWhen: 'Start here when the rule is simple: you need clean exports on the free tier and do not want the answer to become “upgrade first.” This is the strongest bucket if staying at $0 matters more than polish.',
-        watchFor: 'The bucket is still full of practical constraints. Most tools here trade away output resolution, duration, or usable volume. Treat the no-watermark rule as the first filter, not the whole answer.',
-        nextStepHref: '/features/best-ai-video-generators',
-        nextStepLabel: 'Watermark rule no longer the main filter?',
-        nextStepNote: 'Go back to the broader shortlist if you are ready to optimize for overall tool quality instead.',
-      },
-      'Conditional Free': {
-        startHereWhen: 'Start here when you only need occasional free clean exports and can genuinely stay inside a narrow cap such as a short duration or a tiny number of monthly renders.',
-        watchFor: 'This bucket fails quickly once usage becomes regular. The moment your videos get longer or your export volume rises, the no-watermark promise effectively disappears.',
-        nextStepHref: '/features/budget-friendly-ai-video-tools',
-        nextStepLabel: 'Ready to pay a little for cleaner output?',
-        nextStepNote: 'The budget-friendly page is the better next step once strict free limits become a bottleneck.',
-      },
-      'Low-Cost Removal': {
-        startHereWhen: 'Start here when free is just for testing and the real question is which tool becomes usable after the smallest possible payment.',
-        watchFor: 'A cheap upgrade is not automatically good value. If the tool remains weak after watermark removal, paying a little can still be a bad deal.',
-        nextStepHref: '/features/budget-friendly-ai-video-tools',
-        nextStepLabel: 'Need a stronger paid shortlist instead?',
-        nextStepNote: 'Go there if you are willing to pay and want the better overall sub-$20 options rather than just the cheapest removal.',
-      },
-    },
   },
   'budget-friendly-ai-video-tools': {
     heroPill: 'Budget cap and paid-tier value first',
-    wrongFitText:
-      'If the real question is not “what stays under $20 with clean exports” but simply “which generator is best overall,” this page is too narrow. Go back to the broader shortlist first.',
-    wrongFitHref: '/features/best-ai-video-generators',
-    wrongFitLabel: 'Go back to the broader generators shortlist',
     keyAxes: ['monthly cap', 'credits per dollar', 'watermark removal', 'usable output volume', 'workflow fit'],
     toolPolicyLabel: 'Budget threshold',
     summaryCards: [
@@ -358,8 +292,6 @@ const policyThresholdOverrides: Partial<Record<string, PolicyThresholdOverride>>
         summary:
           'Start with budget generators when the rule is simple: stay under the monthly cap, keep clean exports, and still get a serious generative tool.',
         compareFirst: 'Credits per month, watermark removal on the entry tier, and whether the output still feels usable after the budget cap',
-        whenToSkip:
-          'Skip this bucket if your real workflow is daily social output rather than general generation, or if the sub-$20 cap matters less than overall model quality.',
         href: '#budget-generators',
         label: 'Go to Budget Generators',
       },
@@ -368,20 +300,8 @@ const policyThresholdOverrides: Partial<Record<string, PolicyThresholdOverride>>
         summary:
           'Start with daily creator workflows when the threshold is not pure model quality but repeatable short-form output at a price you can keep paying every month.',
         compareFirst: 'How much output the tier supports, how simple the workflow is, and whether speed matters more than creative control',
-        whenToSkip:
-          'Skip this bucket if you care more about cinematic generation, higher-end controls, or occasional premium output instead of daily publishing volume.',
         href: '#daily-creator-workflows',
         label: 'Go to Daily Creator Workflows',
-      },
-      {
-        title: 'Actually need to stay at $0',
-        summary:
-          'If “budget-friendly” still means no paid plan at all, this page is already too far downstream. Start with the free and no-watermark threshold page instead.',
-        compareFirst: 'Whether free clean exports are truly required or whether a small paid tier is acceptable',
-        whenToSkip:
-          'Skip this bucket if you already know a sub-$20 paid plan is fine and the real question is which one gives the best value.',
-        href: '/features/free-ai-video-no-watermark',
-        label: 'Go to Free / No Watermark',
       },
     ],
     matrixRows: [
@@ -425,58 +345,22 @@ const policyThresholdOverrides: Partial<Record<string, PolicyThresholdOverride>>
       {
         question: 'What actually counts as budget-friendly on this page?',
         answer:
-          'It only counts as budget-friendly if the paid plan stays under $20 per month, removes the watermark, and still gives you meaningful output. A cheap tier that immediately forces an upgrade or collapses under real usage does not qualify in practice.',
+          'It counts only if the paid plan stays under $20 per month, removes the watermark, and still gives meaningful output. A cheap tier that immediately forces an upgrade does not qualify in practice.',
       },
       {
         question: 'Which bucket should I check first?',
         answer:
-          'Start with Budget Generators if you mainly want the strongest generative quality you can afford. Start with Daily Creator Workflows if you publish short-form content frequently and care more about affordable throughput than about model depth.',
+          'Start with Budget Generators if you want the strongest generative quality under the cap. Start with Daily Creator Workflows if repeatable short-form throughput matters more than model depth.',
       },
       {
         question: 'What matters more here: sticker price, credits, or watermark removal?',
         answer:
-          'Start with the real usable output after the budget cap, not just the sticker price. Credits and watermark removal usually decide whether the plan is actually viable long before the monthly price alone does.',
-      },
-      {
-        question: 'When should I leave this page and go back to the free threshold page?',
-        answer:
-          'Go back to the free threshold page if paying anything at all is still the blocker. This page only helps once a sub-$20 paid plan is acceptable and the decision is about value inside that cap.',
-      },
-      {
-        question: 'Should I use this page, or go back to the broader generators shortlist?',
-        answer:
-          'Use this page only if the monthly budget cap is the real first filter. If you care more about the best overall tool than about staying under $20, the broader generators shortlist is the better page.',
+          'Start with usable output after the cap, not sticker price alone. Credits and watermark removal usually decide whether the plan is viable before the monthly price does.',
       },
     ],
-    bucketOverrides: {
-      'Budget Generators': {
-        startHereWhen:
-          'Start here when you want the strongest sub-$20 generative option and can accept a credit-based ceiling as the tradeoff for staying affordable.',
-        watchFor:
-          'Cheap plans often look stronger than they are because the credits disappear quickly. Treat monthly price, credit volume, and watermark removal as one combined threshold, not separate nice-to-haves.',
-        nextStepHref: '/features/ai-video-generators-comparison',
-        nextStepLabel: 'Budget cap no longer the first filter?',
-        nextStepNote:
-          'Move to direct comparison once you are choosing between generators head-to-head instead of optimizing for sub-$20 value.',
-      },
-      'Daily Creator Workflows': {
-        startHereWhen:
-          'Start here when the real threshold is staying cheap while publishing often. This is the better bucket if speed and repeatability matter more than the strongest generative model.',
-        watchFor:
-          'A workflow can stay inexpensive by narrowing what you can create. Make sure the low-cost simplicity is helping the real job instead of boxing you into social-only output.',
-        nextStepHref: '/features/ai-video-for-social-media',
-        nextStepLabel: 'Need the workflow page instead?',
-        nextStepNote:
-          'Go there if daily short-form publishing is the real frame and price is no longer the only decision driver.',
-      },
-    },
   },
   'fast-ai-video-generators': {
     heroPill: 'Latency, queue time, and throughput first',
-    wrongFitText:
-      'If the real question is not “which generator is fastest enough” but simply “which generator is best overall,” this page is too narrow. Go back to the broader shortlist first.',
-    wrongFitHref: '/features/best-ai-video-generators',
-    wrongFitLabel: 'Go back to the broader generators shortlist',
     keyAxes: ['queue time', 'render latency', 'API concurrency', 'quality tradeoff', 'commercial readiness'],
     toolPolicyLabel: 'Speed threshold',
     summaryCards: [
@@ -523,34 +407,10 @@ const policyThresholdOverrides: Partial<Record<string, PolicyThresholdOverride>>
         summary:
           'Start here when the rule is simple: a few extra seconds or minutes matter, and the real workflow depends on fast iteration more than maximum visual polish.',
         compareFirst: 'Real render latency, queue behavior on your tier, and whether the fast mode still gives usable output',
-        whenToSkip:
-          'Skip this bucket if you can tolerate slower renders for better quality, or if the workflow is too infrequent for raw speed to matter first.',
         href: '#rapid-prototyping',
         label: 'Go to Rapid Prototyping',
       },
-      {
-        title: 'Need speed that still survives paid work',
-        summary:
-          'Use this threshold when speed matters, but only if the tool still becomes practical for real publishing after you leave the free queue or move to a paid plan.',
-        compareFirst: 'Commercial-use posture, faster queue access on paid tiers, and whether the speed advantage holds once you upgrade',
-        whenToSkip:
-          'Skip this bucket if you only need fast experimentation and do not care yet about commercial readiness or predictable paid throughput.',
-        href: '#rapid-prototyping',
-        label: 'Compare commercial-ready fast options',
-      },
-      {
-        title: 'Actually need quality or control more than raw speed',
-        summary:
-          'If speed sounds attractive but is not the real bottleneck, this page is already too narrow. Move to comparison or the broader shortlist instead of forcing a speed-first decision.',
-        compareFirst: 'Whether the workflow breaks on render latency or on quality, control, and broader fit',
-        whenToSkip:
-          'Skip this bucket if faster queues are still the main operational problem you are trying to solve.',
-        href: '/features/ai-video-generators-comparison',
-        label: 'Go to Comparison',
-      },
     ],
-    checklistLead:
-      'Because this page only has one real shortlist bucket, the checklist has to do more filtering than usual. If these checks fail, the speed frame usually fails with them.',
     matrixRows: [
       {
         label: 'Threshold rule',
@@ -589,27 +449,17 @@ const policyThresholdOverrides: Partial<Record<string, PolicyThresholdOverride>>
       {
         question: 'What actually counts as fast enough to belong on this page?',
         answer:
-          'It belongs here only if render speed, queue time, or throughput is the real first filter. A tool is not on this page because it is merely “convenient”; it has to change the workflow by producing output in seconds or low minutes instead of longer waits.',
+          'It belongs here only if render speed, queue time, or throughput is the real first filter. The tool has to change the workflow by producing output in seconds or low minutes.',
       },
       {
         question: 'Which speed constraint should I check first: queue time, render time, or API concurrency?',
         answer:
-          'Start with the bottleneck that actually breaks your workflow. For manual creative work, queue time and render latency usually matter first. For batch generation or product workflows, API concurrency and rate limits can matter more than single-render speed.',
-      },
-      {
-        question: 'When is a fast generator the wrong first choice?',
-        answer:
-          'It is the wrong first choice when quality, control, or commercial posture matters more than raw turnaround. If you can tolerate slower rendering for materially better output, speed should stop being the main filter.',
+          'Start with the bottleneck that breaks your workflow. Manual creative work usually fails on queue time and render latency; batch workflows can fail on concurrency and rate limits.',
       },
       {
         question: 'Which fast option is strongest once paid use or commercial work matters?',
         answer:
-          'Pika is the clearest starting point when you want a faster tool with a more explicit paid path and commercial-use context. Luma and Hailuo remain important if absolute speed or low-cost iteration still matters more than that.',
-      },
-      {
-        question: 'Should I use this page, or go back to the broader generators shortlist?',
-        answer:
-          'Use this page only if latency and queue behavior are the real constraints. If you care more about overall generator quality or broader workflow fit than about speed itself, the broader shortlist or comparison page is the better route.',
+          'Pika is the clearest starting point when you want fast output with a more explicit paid path and commercial-use context. Luma and Hailuo remain useful when absolute speed or low-cost testing matters more.',
       },
     ],
     bucketLead:
@@ -618,18 +468,6 @@ const policyThresholdOverrides: Partial<Record<string, PolicyThresholdOverride>>
       'This section is intentionally single-bucket. Once speed is confirmed as the first filter, the remaining job is deciding which fast generator still survives real usage, paid work, and repeated iteration.',
     faqLead:
       'If the page is doing its job, the questions below should feel like the continuation of the shortlist rather than a second guide layered underneath it.',
-    bucketOverrides: {
-      'Rapid prototyping': {
-        startHereWhen:
-          'Start here when rapid iteration is the job. This bucket exists for workflows where waiting is the main failure mode and getting more shots faster beats maximizing polish on every clip.',
-        watchFor:
-          'Fast is not a free win. The same tool that feels great for concept testing can become weak once you care about quality, commercial use, or predictable throughput across real workloads.',
-        nextStepHref: '/features/ai-video-generators-comparison',
-        nextStepLabel: 'Speed no longer the main filter?',
-        nextStepNote:
-          'Move to direct comparison once the workflow is already set and you are comparing broader tradeoffs than render speed alone.',
-      },
-    },
   },
 };
 
@@ -647,10 +485,6 @@ export default function PolicyThresholdFeaturePage({
   const safeOverride = rawOverride
     ? {
         ...rawOverride,
-        wrongFitHref: resolveFeatureExit(rawOverride.wrongFitHref).href ?? SAFE_FEATURE_EXIT.href,
-        wrongFitLabel: resolveFeatureExit(rawOverride.wrongFitHref).usedFallback
-          ? SAFE_FEATURE_EXIT.label
-          : rawOverride.wrongFitLabel,
         summaryCards: rawOverride.summaryCards.map((card) => {
           if (!card.href) {
             return card;
@@ -675,25 +509,6 @@ export default function PolicyThresholdFeaturePage({
             ? { ...card, href: SAFE_FEATURE_EXIT.href, label: SAFE_FEATURE_EXIT.label }
             : { ...card, href: resolved.href ?? card.href };
         }),
-        bucketOverrides: Object.fromEntries(
-          Object.entries(rawOverride.bucketOverrides).map(([bucketTitle, bucketOverride]) => [
-            bucketTitle,
-            (() => {
-              const resolved = resolveFeatureExit(bucketOverride.nextStepHref);
-              return resolved.usedFallback
-                ? {
-                    ...bucketOverride,
-                    nextStepHref: SAFE_FEATURE_EXIT.href,
-                    nextStepLabel: SAFE_FEATURE_EXIT.label,
-                    nextStepNote: SAFE_FEATURE_EXIT.note,
-                  }
-                : {
-                    ...bucketOverride,
-                    nextStepHref: resolved.href ?? bucketOverride.nextStepHref,
-                  };
-            })(),
-          ])
-        ),
       }
     : null;
 
@@ -716,9 +531,6 @@ export default function PolicyThresholdFeaturePage({
       items: recommendedReadingLinks.filter((item) => item.linkType === linkType),
     }))
     .filter((group) => group.items.length > 0);
-  const checklistItems = (pageData.howToChoose?.criteria ?? []).filter(
-    (criterion) => hasDisplayText(criterion.title) && hasDisplayText(criterion.desc)
-  );
   const matrixRows = buildRenderableMatrixRows(override.matrixRows, groups);
 
   return (
@@ -759,7 +571,7 @@ export default function PolicyThresholdFeaturePage({
               {pageData.hero.h1}
             </h1>
             <p className="mt-4 max-w-4xl text-sm font-semibold uppercase tracking-[0.12em] text-gray-600">
-              Use this page if a threshold, bucket, or hard rule is the first filter.
+              Pick the hard constraint first, then compare the shortlist.
             </p>
             <p className="mt-5 max-w-4xl text-lg leading-8 text-gray-700">{pageData.hero.subheadline}</p>
 
@@ -782,30 +594,17 @@ export default function PolicyThresholdFeaturePage({
               </div>
 
               <div className="rounded-2xl border border-black/15 bg-white/85 p-5">
-                <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Leave this page if...</p>
-                <p className="mt-3 text-sm leading-7 text-gray-800">{override.wrongFitText}</p>
-                <div className="mt-5">
-                  <Link
-                    href={override.wrongFitHref}
-                    className="inline-flex items-center rounded-xl border-2 border-black bg-[#FFF16A] px-4 py-2.5 text-sm font-semibold text-gray-900 shadow-[3px_3px_0px_0px_#000]"
-                  >
-                    {override.wrongFitLabel}
-                  </Link>
+                <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">What matters most</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {override.keyAxes.map((axis) => (
+                    <span
+                      key={axis}
+                      className="rounded-full border border-black/10 bg-gray-50 px-3 py-1.5 text-xs font-semibold text-gray-700"
+                    >
+                      {axis}
+                    </span>
+                  ))}
                 </div>
-              </div>
-            </div>
-
-            <div className="mt-8 rounded-2xl border border-black/15 bg-white/85 p-5">
-              <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">What matters most</p>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {override.keyAxes.map((axis) => (
-                  <span
-                    key={axis}
-                    className="rounded-full border border-black/10 bg-gray-50 px-3 py-1.5 text-xs font-semibold text-gray-700"
-                  >
-                    {axis}
-                  </span>
-                ))}
               </div>
             </div>
           </div>
@@ -857,31 +656,11 @@ export default function PolicyThresholdFeaturePage({
           </div>
         </section>
 
-        {checklistItems.length > 0 && (
-          <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
-            <div className="max-w-3xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Threshold checklist</p>
-              <h2 className="mt-3 text-3xl font-bold text-gray-900">Check the threshold before you compare tools</h2>
-              {override.checklistLead ? <p className="mt-4 text-base leading-8 text-gray-600">{override.checklistLead}</p> : null}
-            </div>
-
-            <div className="mt-8 grid gap-4 md:grid-cols-2">
-              {checklistItems.map((criterion) => (
-                <div key={criterion.title} className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
-                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Checklist item</p>
-                  <h3 className="mt-3 text-lg font-bold text-gray-900">{criterion.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-gray-600">{criterion.desc}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-
         {matrixRows.length > 0 && (
           <section className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">Threshold matrix</p>
-              <h2 className="mt-3 text-3xl font-bold text-gray-900">See the real threshold tradeoff before you scroll to tools</h2>
+              <h2 className="mt-3 text-3xl font-bold text-gray-900">Compare the threshold tradeoffs</h2>
               {override.matrixLead ? <p className="mt-4 text-base leading-8 text-gray-600">{override.matrixLead}</p> : null}
             </div>
 
@@ -937,10 +716,6 @@ export default function PolicyThresholdFeaturePage({
                   <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Compare first</p>
                   <p className="mt-2 text-sm leading-7 text-gray-700">{card.compareFirst}</p>
                 </div>
-                <div className="mt-4 rounded-2xl border border-gray-200 bg-white p-4">
-                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Leave this bucket if...</p>
-                  <p className="mt-2 text-sm leading-7 text-gray-700">{card.whenToSkip}</p>
-                </div>
                 <div className="mt-4">
                   <Link href={card.href} className="text-sm font-bold text-indigo-600 hover:text-indigo-700">
                     {card.label}
@@ -959,10 +734,7 @@ export default function PolicyThresholdFeaturePage({
           </div>
 
           {groups.map((group) => {
-            const bucketOverride = getBucketOverride(override.bucketOverrides, group.groupTitle);
             const bucketId = group.groupTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-            const hasBucketCopy =
-              hasDisplayText(bucketOverride?.startHereWhen) && hasDisplayText(bucketOverride?.watchFor);
 
             return (
               <section key={group.groupTitle} id={bucketId} className="rounded-3xl border border-black/10 bg-white p-8 shadow-sm sm:p-10">
@@ -971,19 +743,6 @@ export default function PolicyThresholdFeaturePage({
                 {group.groupSummary ? (
                   <p className="mt-4 max-w-3xl text-base leading-8 text-gray-600">{group.groupSummary}</p>
                 ) : null}
-
-                {hasBucketCopy && (
-                  <div className="mt-6 grid gap-3 md:grid-cols-2">
-                    <div className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
-                      <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">Start here when</p>
-                      <p className="mt-2 text-sm leading-7 text-gray-700">{bucketOverride?.startHereWhen}</p>
-                    </div>
-                    <div className="rounded-2xl border border-gray-200 bg-[#F9FAFB] p-5">
-                      <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">What to watch for</p>
-                      <p className="mt-2 text-sm leading-7 text-gray-700">{bucketOverride?.watchFor}</p>
-                    </div>
-                  </div>
-                )}
 
                 <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
                   {group.tools.map((tool, index) => (
@@ -996,21 +755,6 @@ export default function PolicyThresholdFeaturePage({
                       policyLabel={override.toolPolicyLabel}
                     />
                   ))}
-                </div>
-
-                <div className="mt-8 border-t border-gray-200 pt-5">
-                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-gray-500">If this threshold stops fitting</p>
-                  <div className="mt-3 flex flex-wrap gap-3">
-                    <Link
-                      href={bucketOverride?.nextStepHref ?? SAFE_FEATURE_EXIT.href}
-                      className="rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-semibold text-gray-800 transition-colors hover:border-indigo-300 hover:text-indigo-600"
-                    >
-                      {bucketOverride?.nextStepLabel ?? SAFE_FEATURE_EXIT.label}
-                    </Link>
-                    <span className="self-center text-sm text-gray-500">
-                      {bucketOverride?.nextStepNote ?? SAFE_FEATURE_EXIT.note}
-                    </span>
-                  </div>
                 </div>
               </section>
             );

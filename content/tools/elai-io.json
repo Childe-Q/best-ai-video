@@ -62,7 +62,15 @@
         "linkHref": "/tool/elai-io/pricing",
         "linkText": "Check plan limits →"
       }
-    ]
+    ],
+    "briefingVideo": {
+      "title": "Briefing video",
+      "description": "AI-generated briefing for Elai.io's PPT-to-training and avatar-led microlearning workflow.",
+      "url": "/media/briefings/elai-io-briefing.mp4",
+      "provider": "local",
+      "sourceNote": "Based on official source materials and official YouTube product demos.",
+      "disclaimer": "AI-generated briefing. Not a hands-on test."
+    }
   },
   "features": {
     "keyFeatures": [
