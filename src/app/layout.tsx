@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Suspense } from "react";
 // Removed Google Fonts imports
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GlobalErrorHandler from "@/components/GlobalErrorHandler";
+import ScrollRestorationController from "@/components/navigation/ScrollRestorationController";
 import { getSEOCurrentYear } from "@/lib/utils";
 import { buildOrganizationJsonLd, buildWebSiteJsonLd } from "@/lib/jsonLd";
 
@@ -114,6 +116,9 @@ export default function RootLayout({
         {/* Impact Site Verification */}
         <div style={{ display: 'none' }}>Impact-Site-Verification: 85a12125-5860-4b7e-960f-d1d65fe37656</div>
         <GlobalErrorHandler />
+        <Suspense fallback={null}>
+          <ScrollRestorationController />
+        </Suspense>
         <Header />
         <main className="pt-16">
           {children}

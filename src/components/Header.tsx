@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
 import { categories } from '@/data/categories';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
@@ -10,8 +9,6 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isFeaturesHovered, setIsFeaturesHovered] = useState(false);
   const [featuresTimeoutId, setFeaturesTimeoutId] = useState<NodeJS.Timeout | null>(null);
-  const pathname = usePathname();
-  const router = useRouter();
 
   // Get top 6 categories for the dropdown
   const topCategories = categories.slice(0, 6);
@@ -24,27 +21,6 @@ export default function Header() {
       }
     };
   }, [featuresTimeoutId]);
-
-  // Handle All Tools button click
-  const handleAllToolsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    if (pathname === '/') {
-      // If already on home page, scroll to tools section
-      const toolsSection = document.getElementById('tools-section');
-      if (toolsSection) {
-        toolsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    } else {
-      // If on another page, navigate to home and then scroll
-      router.push('/#tools-section');
-      setTimeout(() => {
-        const toolsSection = document.getElementById('tools-section');
-        if (toolsSection) {
-          toolsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    }
-  };
 
   return (
     <header className="w-full z-[100] fixed top-0 border-b border-gray-100 bg-white/80 backdrop-blur-md">
@@ -151,7 +127,6 @@ export default function Header() {
           <div className="hidden md:flex items-center flex-shrink-0">
             <Link
               href="/#tools-section"
-              onClick={handleAllToolsClick}
               className="px-6 py-2.5 text-sm font-bold text-black bg-[#F6D200] border-2 border-black rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_#111111]"
             >
               All Tools
@@ -219,8 +194,7 @@ export default function Header() {
             
             <Link
               href="/#tools-section"
-              onClick={(e) => {
-                handleAllToolsClick(e);
+              onClick={() => {
                 setIsMobileMenuOpen(false);
               }}
               className="block px-6 py-2.5 text-base font-bold text-black bg-[#F6D200] border-2 border-black rounded-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_#111111] text-center mt-4"
